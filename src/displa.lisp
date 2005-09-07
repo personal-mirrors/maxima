@@ -185,6 +185,7 @@
 (defvar *alt-display1d* nil)
 
 (defmfun displa (form &aux #+kcl(form form))
+  (fresh-line)
   (if (or (not #.ttyoff) #.writefilep)
       (cond #+franz ($typeset (apply #'$photot (list form)))
 	    ($display2d 
