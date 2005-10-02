@@ -20,12 +20,10 @@ set verbose=false
 set path=%maxima_prefix%\bin;%path%
 
 if "%USERPROFILE%" == "" goto win9x
-if "%MAXIMA_USERDIR%" == "" set MAXIMA_USERDIR=%USERPROFILE%\maxima
-if "%MAXIMA_TEMPDIR%" == "" set MAXIMA_TEMPDIR=%USERPROFILE%
+set MAXIMA_USERDIR=%USERPROFILE%\maxima
 goto startparseargs
 :win9x
-if "%MAXIMA_USERDIR%" == "" set MAXIMA_USERDIR=%maxima_prefix%\user
-if "%MAXIMA_TEMPDIR%" == "" set MAXIMA_TEMPDIR=%maxima_prefix%
+set MAXIMA_USERDIR=%maxima_prefix\user
 
 :startparseargs
 if "%1" == "-l" goto foundlisp

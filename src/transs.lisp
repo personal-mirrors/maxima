@@ -112,7 +112,7 @@
     (progn
       (setq in-file (truename transl-file))
       (close transl-file)
-      (setq newname (maxima-string newname))
+      (setq newname (subseq (string newname) 1))
       (rename-file in-file newname))))
 
 (defmspec $compfile (forms)

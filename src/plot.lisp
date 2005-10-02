@@ -15,7 +15,6 @@
 
 
 (defvar *maxima-plotdir* "")
-(defvar *maxima-tmpdir* "")
 
 (defvar *z-range* nil)
 (defvar *original-points* nil)
@@ -23,7 +22,7 @@
 (defvar *rot* (make-array 9 :element-type 'double-float))
 (defvar $rot nil)
 
-(defvar $plot_options `((mlist)
+(defvar $plot_options '((mlist)
 			;; Make the default range on X large.  This
 			;; doesn't impact 2-D plotting, but is useful
 			;; for parametric plots so that the plots
@@ -51,7 +50,7 @@
 			;; Controls the number of splittings
 			;; adaptive-plotting will do.
 			((mlist) $adapt_depth 10)
-			((mlist) $gnuplot_pm3d ,(if (string= *autoconf-win32* "true") t nil))
+			((mlist) $gnuplot_pm3d nil)
 			((mlist) $gnuplot_preamble "")
 			((mlist) $gnuplot_curve_titles 
 			 ((mlist) $default))
@@ -71,7 +70,7 @@
 			 "set size 1.5, 1.5;set term postscript eps enhanced color solid 24")
 			))
 
-(defvar $viewps_command  "(ghostview \"~a\")")
+(defvar $viewps_command  "(ghostview  ~a)")
 
 ;;(defvar $viewps_command  "(gs -I. -Q  ~a)")
 
@@ -708,9 +707,8 @@ setrgbcolor} def
   )
 
 (defun draw2d-discrete (f)
-  (let* ((f (copy-tree f))		; Copy all of F because we destructively modify it below.
-	 (x (third f))
-	 (y (fourth f)))
+  (let ((x (third f))
+	(y (fourth f)))
     (cond 
       ((= (length f) 4)			; [discrete,x,y]
        (if (not ($listp x))
@@ -1021,22 +1019,17 @@ setrgbcolor} def
                              "gnuplot"))
 
 (defvar $gnuplot_view_args (if (string= *autoconf-win32* "true")
-                               "\"~a\" -"
-                               "-persist \"~a\""))
+                               "~a -"
+                               "-persist ~a"))
 
 (defvar $viewtext_command (if (string= *autoconf-win32* "true")
-                              "type \"~a\""
-                              "cat \"~a\""))
+                              "type ~a"
+                              "cat ~a"))
 
 (defvar $mgnuplot_command "mgnuplot")
-(defvar $geomview_command "geomview")
+(defvar $geomview_command "geomview maxout.geomview")
 
 (defvar $openmath_plot_command "omplotdata")
-
-(defun plot-temp-file (file)
-  (if *maxima-tempdir* 
-    (format nil "~a/~a" *maxima-tempdir* file)
-    file))
 
 (defun gnuplot-print-header (dest)
   (let ((gnuplot-out-file nil))
@@ -1069,7 +1062,7 @@ setrgbcolor} def
 	(view-file))
     ;; run gnuplot in batch mode if necessary before viewing
     (if (and gnuplot-out-file (not (eq gnuplot-term '$default)))
-	($system (format nil "~a \"~a\"" $gnuplot_command file)))
+	($system (format nil "~a ~a" $gnuplot_command file)))
     (when run-viewer
       (if (eq gnuplot-term '$default)
 	  (setf view-file file)
@@ -1081,13 +1074,13 @@ setrgbcolor} def
 	($ps
 	 (if gnuplot-out-file
 	     ($system (format nil $viewps_command view-file))
-	     ($system (format nil "~a \"~a\"" $gnuplot_command file))))
+	     ($system (format nil "~a ~a" $gnuplot_command file))))
 	($dumb
 	 (if gnuplot-out-file
-	     ($system (format nil $viewtext_command view-file))
-	     ($system (format nil "~a \"~a\"" $gnuplot_command file))))))
+	     ($system (format nil "~a ~a" $viewtext_command view-file))
+	     ($system (format nil "~a ~a" $gnuplot_command file))))))
     (if gnuplot-out-file
-	(format t "Output file \"~a\".~%" gnuplot-out-file-string))))
+	(format t "output file \"~a\".~%" gnuplot-out-file-string))))
 
 (defun $plot2d (fun &optional range &rest options &aux ($numer t) $display2d
 		(i 0) plot-format gnuplot-term gnuplot-out-file
@@ -1127,7 +1120,7 @@ setrgbcolor} def
 	   (eq gnuplot-term '$default) 
 	   gnuplot-out-file)
       (setf file gnuplot-out-file)
-      (setf file (plot-temp-file (format nil "maxout.~(~a~)" (stripdollar plot-format)))))
+      (setf file (format nil "maxout.~(~a~)" (stripdollar plot-format))))
   
   (with-open-file (st file :direction :output :if-exists :supersede)
     (case plot-format
@@ -1195,10 +1188,9 @@ setrgbcolor} def
     ($gnuplot 
      (gnuplot-process file))
     ($mgnuplot 
-     ($system (concatenate 'string *maxima-plotdir* "/" $mgnuplot_command) 
-              (format nil " -plot2d \"~a\" -title '~a'" file plot-name)))
+     ($system (concatenate 'string *maxima-plotdir* "/" $mgnuplot_command) " -plot2d maxout.mgnuplot -title '" plot-name "'"))
     ($xgraph
-     ($system (format nil "xgraph -t 'Maxima Plot' < \"~a\" &" file)))
+     ($system "xgraph -t 'Maxima Plot' < maxout.xgraph &"))
     )
   "")
 
@@ -1457,7 +1449,7 @@ setrgbcolor} def
 (defun assureps (&optional do-prolog)
   (cond ((streamp $pstream))
 	(t (setq do-prolog t)))
-  (or $pstream (setq $pstream (open (plot-temp-file "maxout.ps") :direction :output :if-exists :supersede)))
+  (or $pstream (setq $pstream (open "maxout.ps" :direction :output :if-exists :supersede)))
   (cond (do-prolog
 	    (p "%!PS-Adobe-2.0")
 	  (p "%%Title: Maxima 2d plot")	;; title could be filename and/or plot equation
@@ -1568,7 +1560,7 @@ setrgbcolor} def
 	  (do-ps-trailer)
 	  (force-output $pstream)))
   (cond (file (setq file (maxima-string file)))
-	(t(setq file (plot-temp-file "maxout.ps"))
+	(t(setq file "maxout.ps")
 	 
 	  (if (and (streamp $pstream))
 	      (force-output $pstream))))
@@ -1768,10 +1760,9 @@ setrgbcolor} def
 
 (defun show-open-plot (ans)
   (cond ($show_openplot
-	 (with-open-file (st1 (plot-temp-file "maxout.openmath") :direction :output :if-exists :supersede)
+	 (with-open-file (st1 "maxout.openmath" :direction :output :if-exists :supersede)
 	   (princ  ans st1))
-	 ($system (concatenate 'string *maxima-plotdir* "/" $openmath_plot_command)
-	          (format nil " \"~a\"" (plot-temp-file "maxout.openmath"))))
+	 ($system (concatenate 'string *maxima-plotdir* "/" $openmath_plot_command) " maxout.openmath" ))
 	(t (princ ans) "")))
 
 (defun $plot3d ( fun &optional (xrange ($get_plot_option '$x))
@@ -1797,7 +1788,7 @@ setrgbcolor} def
 	   (eq gnuplot-term '$default) 
 	   gnuplot-out-file)
       (setf file gnuplot-out-file)
-      (setf file (plot-temp-file (format nil "maxout.~(~a~)" (stripdollar plot-format)))))
+      (setf file (format nil "maxout.~(~a~)" (stripdollar plot-format))))
   (and $in_netmath (setq $in_netmath (eq plot-format '$openmath)))
   (setq xrange (check-range xrange))
   (setq yrange (check-range yrange))
@@ -1946,14 +1937,13 @@ setrgbcolor} def
 		   ($zic ($view_zic))
 		   ($ps ($viewps))
 		   ($openmath
-		     ($system (concatenate 'string *maxima-plotdir* "/" $openmath_plot_command) 
-		              (format nil " \"~a\"" file)))
-		   ($geomview 
-		     ($system $geomview_command
-		              (format nil " \"~a\"" file)))
-		   ($mgnuplot 
-		     ($system (concatenate 'string *maxima-plotdir* "/"	$mgnuplot_command)
-			      (format nil " -parametric3d \"~a\"" file)))
+		    ($system (concatenate 'string *maxima-plotdir* "/" $openmath_plot_command) " maxout.openmath")
+		    )
+		   ($geomview ($system $geomview_command))
+		   ($mgnuplot ($system (concatenate 
+					'string *maxima-plotdir* "/" 
+					$mgnuplot_command)
+				       " -parametric3d maxout.mgnuplot" ))
 		   ))))
       ))
   "")

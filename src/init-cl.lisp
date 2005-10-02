@@ -25,7 +25,6 @@
 (defvar *maxima-htmldir*)
 (defvar *maxima-layout-autotools*)
 (defvar *maxima-userdir*)
-(defvar *maxima-tempdir*)
 
 (defun print-directories ()
   (format t "maxima-prefix=~a~%" *maxima-prefix*)
@@ -41,7 +40,6 @@
   (format t "maxima-plotdir=~a~%" *maxima-plotdir*)
   (format t "maxima-layout-autotools=~a~%" *maxima-layout-autotools*)
   (format t "maxima-userdir=~a~%" *maxima-userdir*)
-  (format t "maxima-tempdir=~a~%" *maxima-tempdir*)
   ($quit))
 
 (defvar *maxima-lispname* #+clisp "clisp"
@@ -170,24 +168,10 @@
 		  "/tmp")))
     (combine-path (list (maxima-parse-dirstring base-dir) maxima-dir))))
 
-(defun default-tempdir ()
-  (let ((home-env (maxima-getenv "HOME"))
-	(base-dir ""))
-    (setf base-dir 
-	  (if (and home-env (string/= home-env ""))
-	      (if (string= home-env "c:\\")
-		  "c:\\user\\"
-		  home-env)
-	      (if (string= *autoconf-win32* "true")
-		  "c:\\user\\"
-		  "/tmp")))
-    (maxima-parse-dirstring base-dir)))
-
 (defun set-pathnames ()
   (let ((maxima-prefix-env (maxima-getenv "MAXIMA_PREFIX"))
 	(maxima-layout-autotools-env (maxima-getenv "MAXIMA_LAYOUT_AUTOTOOLS"))
-	(maxima-userdir-env (maxima-getenv "MAXIMA_USERDIR"))
-	(maxima-tempdir-env (maxima-getenv "MAXIMA_TEMPDIR")))
+	(maxima-userdir-env (maxima-getenv "MAXIMA_USERDIR")))
     ;; MAXIMA_DIRECTORY is a deprecated substitute for MAXIMA_PREFIX
     (if (not maxima-prefix-env)
 	(setq maxima-prefix-env (maxima-getenv "MAXIMA_DIRECTORY")))
@@ -204,10 +188,7 @@
 	(set-pathnames-without-autoconf maxima-prefix-env))
     (if maxima-userdir-env
 	(setq *maxima-userdir* (maxima-parse-dirstring maxima-userdir-env))
-	(setq *maxima-userdir* (default-userdir)))
-    (if maxima-tempdir-env
-	(setq *maxima-tempdir* (maxima-parse-dirstring maxima-tempdir-env))
-	(setq *maxima-tempdir* (default-tempdir))))
+	(setq *maxima-userdir* (default-userdir))))
   
   (let* ((ext #+gcl "o"
 	      #+cmu (c::backend-fasl-file-type c::*target-backend*)
@@ -224,7 +205,7 @@
 	 (maxima-patterns "###.{mac,mc}")
 	 (demo-patterns "###.{dem,dm1,dm2,dm3,dmt}")
 	 (usage-patterns "##.{usg,texi}")
-	 (share-subdirs "{affine,algebra,calculus,combinatorics,contrib,contrib/nset,contrib/pdiff,contrib/numericalio,contrib/descriptive,contrib/distrib,linearalgebra,diffequations,graphics,integequations,integration,macro,matrix,misc,numeric,physics,simplification,specfunctions,sym,tensor,trigonometry,utils,vector}"))
+	 (share-subdirs "{affine,algebra,calculus,combinatorics,contrib,contrib/nset,contrib/pdiff,contrib/numericalio,linearalgebra,diffequations,graphics,integequations,integration,macro,matrix,misc,numeric,physics,simplification,specfunctions,sym,tensor,trigonometry,utils,vector}"))
     (setq $file_search_lisp
 	  (list '(mlist)
 		;; actually, this entry is not correct.

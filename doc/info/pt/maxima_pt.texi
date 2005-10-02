@@ -1,6 +1,6 @@
 
 
-\input texinfo
+\input texinfo_pt
 @c -*-texinfo-*-
 
 @c 2000-04-17 Jim Van Zandt <jrv@vanzandt.mv.com> Added header,
@@ -15,16 +15,15 @@
 @c Portuguese Translator Jorge Barros de Abreu <ficmati01@solar.com.br>
 
 @c %**start of header
-@setfilename  maxima.info
+@setfilename  maxima_pt.info
 @documentencoding ISO-8859-15
-@c @documentencoding ISO-8859-1
 @set cedilha @,{c}
 @set i_agu @'i
 @set I_agu @'I
 @set a_til @~a
 @set a_agu @'a
 @set o_til @~o
-@set mail <maxima at math dot utexas dot edu>
+@set mail <maxima at math.utexas.edu>
 @synindex vr fn
 @settitle Manual do Maxima
 @c %**end of header
@@ -100,9 +99,9 @@ Suporte a @'areas espec@'ificas da matem@'atica
 * Logarithms::                  Manipula@value{cedilha}@~ao de express@~oes envolvendo
                                 logar@'itmos.
 * Trigonometria::               Manipulando express@~oes com trigonometria e
-                                Fun@value{cedilha}@~oes trigonom@'etricas inversas.
-* Fun@value{cedilha}@value{o_til}es Especiais::           Fun@value{cedilha}@~oes especiais
-* Polin@^omios Ortogonais::       Polin@^omios Ortogonais e Fun@value{cedilha}@~oes Especiais
+                                fun@value{cedilha}@~oes trigonom@'etricas inversas.
+* Special Functions::           Fun@value{cedilha}@~oes especiais
+* Orthogonal Polynomials::      Polin@^omios Ortogonais e Fun@value{cedilha}@~oes Especiais
 
 * Fun@value{cedilha}@~oes El@'ipticas::           Fun@value{cedilha}@~oes El@'ipticas e Integrais
 * Limites::                     Limites de express@~oes.
@@ -110,7 +109,7 @@ Suporte a @'areas espec@'ificas da matem@'atica
 * Integra@value{cedilha}@~ao::  		C@'alculo integral.
 * Equa@value{cedilha}@~oes::    		Definindo e resolvendo equa@value{cedilha}@~oes.
 * Equa@value{cedilha}@~oes Diferenciais::       Definindo e resolvendo equa@value{cedilha}@~oes diferenciais.
-* Num@'erico::                    Integra@value{cedilha}@~ao num@'erica, transforma@value{cedilha}@~oes
+* Num@'erico::                     Integra@value{cedilha}@~ao num@'erica, transforma@value{cedilha}@~oes
                                 de Fourier, etc.
 * Estat@'istica::                 Fun@value{cedilha}@~oes estat@'isticas.
 * Arrays e Tabelas::            Criando e trabalhando com arrays.
@@ -131,7 +130,7 @@ Facilidades avan@value{cedilha}adas e programa@value{cedilha}@~ao
 * Rules and Patterns::          Coincid@^encia de express@~oes definidas pelo 
 				usu@'ario e regras de simplifica@value{cedilha}@~ao.
 * Listas::                      Manipula@value{cedilha}@~ao de listas.
-* Conjuntos::                   Manipula@value{cedilha}@~ao de conjuntos.
+* Sets::                        Manipula@value{cedilha}@~ao de conjuntos.
 * Defini@value{cedilha}@~ao de Fun@value{cedilha}@~ao::		Definindo fun@value{cedilha}@~oes.
 * Fluxo de Programa::           Definindo programas do Maxima.
 * Debugging::                   Depurando programas do Maxima.
@@ -218,16 +217,16 @@ Trigonometria
 * Introdu@value{cedilha}@~ao ao Pacote Trigonom@'etrico::  
 * Defini@value{cedilha}@~oes para Trigonometria::  
 
-Fun@value{cedilha}@value{o_til}es Especiais
+Special Functions
 
-* Introdu@value{cedilha}@~ao a Fun@value{cedilha}@value{o_til}es Especiais::   
+* Introduction to Special Functions::  
 * specint::                     
-* Defini@value{cedilha}@value{o_til}es para Fun@value{cedilha}@value{o_til}es Especiais::  
+* Definitions for Special Functions::  
 
-Polin@^omios Ortogonais
+Orthogonal Polynomials
 
-* Introdu@value{cedilha}@~ao a Polin@^omios Ortogonais::
-* Defini@value{cedilha}@~oes para Polin@^omios Ortogonais::
+* Introduction to Orthogonal Polynomials::
+* Definitions for Orthogonal Polynomials::
 
 Fun@value{cedilha}@~oes El@'ipticas
 
@@ -337,10 +336,10 @@ Listas
 * Introdu@value{cedilha}@~ao a Listas::
 * Defini@value{cedilha}@~oes para Listas::
 
-Conjuntos
+Sets
 
-* Introdu@value{cedilha}@~ao a Conjuntos::       
-* Defini@value{cedilha}@~oes para Conjuntos::       
+* Introduction to Sets::       
+* Definitions for Sets::       
 
 Defini@value{cedilha}@~ao de Fun@value{cedilha}@~ao
 
@@ -422,19 +421,19 @@ Debugging
 @chapter Logarithms
 @include Logarithms.texi
 
-@node Trigonometria, Fun@value{cedilha}@value{o_til}es Especiais, Logarithms, Top
+@node Trigonometria, Special Functions, Logarithms, Top
 @chapter Trigonometria
 @include Trigonometric_pt.texi
 
-@node Fun@value{cedilha}@value{o_til}es Especiais, Polin@^omios Ortogonais, Trigonometria, Top
-@chapter Fun@value{cedilha}@value{o_til}es Especiais
-@include Special_pt.texi
+@node Special Functions, Orthogonal Polynomials, Trigonometria, Top
+@chapter Special Functions
+@include Special.texi
 
-@node Polin@^omios Ortogonais, Fun@value{cedilha}@~oes El@'ipticas, Fun@value{cedilha}@value{o_til}es Especiais, Top
-@chapter Polin@^omios Ortogonais
-@include SpecfunII_pt.texi
+@node Orthogonal Polynomials, Fun@value{cedilha}@~oes El@'ipticas, Special Functions, Top
+@chapter Orthogonal Polynomials
+@include SpecfunII.texi
 
-@node Fun@value{cedilha}@~oes El@'ipticas, Limites, Polin@^omios Ortogonais, Top
+@node Fun@value{cedilha}@~oes El@'ipticas, Limites, Orthogonal Polynomials, Top
 @chapter Fun@value{cedilha}@~oes El@'ipticas
 @include Elliptic_pt.texi
 
@@ -522,15 +521,15 @@ Debugging
 @include Rules.texi
 
 
-@node Listas, Conjuntos, Rules and Patterns, Top
+@node Listas, Sets, Rules and Patterns, Top
 @chapter Listas
 @include Lists_pt.texi
 
-@node Conjuntos, Defini@value{cedilha}@~ao de Fun@value{cedilha}@~ao, Listas, Top
-@chapter Conjuntos
-@include nset_pt.texi
+@node Sets, Defini@value{cedilha}@~ao de Fun@value{cedilha}@~ao, Listas, Top
+@chapter Sets
+@include nset.texi
 
-@node Defini@value{cedilha}@~ao de Fun@value{cedilha}@~ao, Fluxo de Programa, Conjuntos, Top
+@node Defini@value{cedilha}@~ao de Fun@value{cedilha}@~ao, Fluxo de Programa, Sets, Top
 @chapter Defini@value{cedilha}@~ao de Fun@value{cedilha}@~ao
 @include Function_pt.texi
 

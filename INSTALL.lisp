@@ -35,7 +35,7 @@ To build Maxima:
 
 (4) Quit Lisp,
     
-    (quit)
+    (bye)
 
     and cd to the directory src/.
 

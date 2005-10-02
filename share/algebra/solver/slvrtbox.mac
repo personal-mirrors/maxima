@@ -26,7 +26,7 @@
 /* Changes      : ||||| |                                                     */
 /******************************************************************************/
 
-put( 'SLVRTBOX, 1, 'Version )$
+Put( 'SLVRTBOX, 1, 'Version )$
 
 /* Version information: see below function definition of SetVersion */
 
@@ -76,7 +76,7 @@ put( 'SLVRTBOX, 1, 'Version )$
 /* Indicator.                                                                 */
 /******************************************************************************/
 
-SetProp( Atom, Indicator, Property ) := put( Atom, Property, Indicator )$
+SetProp( Atom, Indicator, Property ) := Put( Atom, Property, Indicator )$
 
 
 /******************************************************************************/
@@ -86,7 +86,7 @@ SetProp( Atom, Indicator, Property ) := put( Atom, Property, Indicator )$
 
 SetVersion( [ InfoList ] ) := (
 
-  mode_declare(
+  Mode_Declare(
     InfoList, LIST
   ),
 
@@ -94,11 +94,11 @@ SetVersion( [ InfoList ] ) := (
     'AI,
     InfoList[1],
 
-    map(
+    Map(
       '(
-        lambda(
+        Lambda(
           [ x ],
-          assoc( x, rest( InfoList ), "???" )
+          Assoc( x, Rest( InfoList ), "???" )
         )
       ),
       [ 'MODULE, 'DESCRIPTION, 'AUTHORS, 'DATE, 'LASTCHANGE, 'TIME, 'PLAN ]
@@ -123,7 +123,7 @@ SetVersion(
 /* Global variables                                                           */
 /******************************************************************************/
 
-define_variable( MsgLvl, 0, FIXNUM )$
+Define_Variable( MsgLvl, 0, FIXNUM )$
 
 /******************************************************************************/
 /* MsgLevel controls the amount of output AI generates. If MsgLevel is        */
@@ -134,18 +134,18 @@ define_variable( MsgLvl, 0, FIXNUM )$
 /* PrintMsg( <'OFF | 'FALSE  |'SHORT | 'DETAIL | 'ALWAYS>, <stuff> ).         */
 /******************************************************************************/
 
-define_variable( MsgLevel, 'FALSE, ANY_CHECK )$
+Define_Variable( MsgLevel, 'FALSE, ANY_CHECK )$
 
-put(
+Put(
   'MsgLevel,
-  lambda(
+  Lambda(
     [ x ],
-    IF member( x, [ 'OFF, 'FALSE, 'SHORT, 'DETAIL ] )
-      OR ( debugmode AND ( x = 'DEBUG ) )
+    IF Member( x, [ 'OFF, 'FALSE, 'SHORT, 'DETAIL ] )
+      OR ( DebugMode AND ( x = 'DEBUG ) )
     THEN
-      MsgLvl : mode_identity(
+      MsgLvl : Mode_Identity(
         FIXNUM,
-        assoc(
+        Assoc(
           x,
           [
             'OFF = 0, 'FALSE = 0, FALSE = 0,
@@ -160,11 +160,11 @@ put(
 )$
 
 
-define_variable( Solver_Verbose, FALSE, ANY_CHECK )$
+Define_Variable( Solver_Verbose, FALSE, ANY_CHECK )$
 
-put(
+Put(
   'Solver_Verbose,
-  lambda(
+  Lambda(
     [ VerboseMode ],
 
     CASE( VerboseMode,
@@ -186,34 +186,34 @@ put(
 
 GetUserProperties( Symbol ) := (
 
-  mode_declare(
-    Symbol, any
+  Mode_Declare(
+    Symbol, ANY
   ),
 
-  block(
+  BLOCK(
     [ UserProps ],
 
-    mode_declare(
-      User_Props, list
+    Mode_Declare(
+      User_Props, LIST
     ),
 
     /* Get all properties of Symbol and extract the sublist which begins      */
     /* with the keyword "User Properties".                                    */
 
-    UserProps : sublist(
-      apply( 'properties, [ Symbol ] ),
-      lambda( [x],
-        listp(x) and ( length(x) > 1 ) and ( first(x) = "User Properties" )
+    UserProps : Sublist(
+      Apply( 'Properties, [ Symbol ] ),
+      Lambda( [x],
+        ListP(x) AND ( Length(x) > 1 ) AND ( First(x) = "User Properties" )
       )
     ),
 
     /* If the list of user properties is nonempty then return the list with   */
     /* the "User Properties" keyword removed. Otherwise, return an empty list.*/
 
-    if not empty( UserProps ) then
-      return( rest( first( UserProps ) ) )
-    else
-      return( [] )
+    IF NOT Empty( UserProps ) THEN
+      RETURN( Rest( First( UserProps ) ) )
+    ELSE
+      RETURN( [] )
   )
 )$
 
@@ -222,28 +222,28 @@ GetUserProperties( Symbol ) := (
 /* GetVersion prints out the information stored by SetVersion.                */
 /******************************************************************************/
 
-GetVersion() := block(
+GetVersion() := BLOCK(
 
-  [ Package, VersionInfo, Fancy_Display : false ],
+  [ Package, VersionInfo, Fancy_Display : FALSE ],
 
-  mode_declare(
-    Package, any,
-    VersionInfo, list
+  Mode_Declare(
+    Package, ANY,
+    VersionInfo, LIST
   ),
 
-  print( "Analog Insydes version information:" ),
+  Print( "Analog Insydes version information:" ),
 
-  for Package in GetUserProperties( 'AI ) do (
+  FOR Package IN GetUserProperties( 'AI ) DO (
 
-    VersionInfo : get( 'AI, Package ),
-    print( " " ),
-    print( "Module name :", VersionInfo[1] ),
-    print( "Description :", VersionInfo[2] ),
-    print( "Author(s)   :", VersionInfo[3] ),
-    print( "Implemented :", VersionInfo[4] ),
-    print( "Last change :", VersionInfo[5] ),
-    print( "Time        :", VersionInfo[6] ),
-    print( "Plan        :", VersionInfo[7] )
+    VersionInfo : Get( 'AI, Package ),
+    Print( " " ),
+    Print( "Module name :", VersionInfo[1] ),
+    Print( "Description :", VersionInfo[2] ),
+    Print( "Author(s)   :", VersionInfo[3] ),
+    Print( "Implemented :", VersionInfo[4] ),
+    Print( "Last change :", VersionInfo[5] ),
+    Print( "Time        :", VersionInfo[6] ),
+    Print( "Plan        :", VersionInfo[7] )
 
   )
 )$
@@ -258,16 +258,16 @@ GetVersion() := block(
 
 ErrorHandler( ErrorCode, Arg, Action ) := (
 
-   mode_declare(
-     [ ErrorCode, Arg, Action ], any
+   Mode_Declare(
+     [ ErrorCode, Arg, Action ], ANY
    ),
 
-   print( "Error:", ErrMsg[ErrorCode] ),
+   Print( "Error:", ErrMsg[ErrorCode] ),
 
-   if Arg # "" then
-     print( "Cause:", Arg ),
+   IF Arg # "" THEN
+     Print( "Cause:", Arg ),
 
-   apply( Action, [ Arg ] )
+   Apply( Action, [ Arg ] )
 )$
 
 
@@ -275,14 +275,14 @@ ErrorHandler( ErrorCode, Arg, Action ) := (
 /* Error handler: ignore error and continue program execution.                */
 /******************************************************************************/
 
-Ignore( Arg ) := print( ErrMsg["Ignore"] )$
+Ignore( Arg ) := Print( ErrMsg["Ignore"] )$
 
 
 /******************************************************************************/
 /* Error handler: abort program execution and return to Macsyma toplevel.     */
 /******************************************************************************/
 
-Fatal( Arg ) := error( ErrMsg["FatalErr"] )$
+Fatal( Arg ) := Error( ErrMsg["FatalErr"] )$
 
 
 /******************************************************************************/
@@ -290,7 +290,7 @@ Fatal( Arg ) := error( ErrMsg["FatalErr"] )$
 /******************************************************************************/
 
 AssocP( Object ) :=
-  listp( Object ) and not member( 'FALSE, map( 'EquationP, Object ) )$
+  ListP( Object ) AND NOT Member( 'FALSE, Map( 'EquationP, Object ) )$
 
 
 /******************************************************************************/
@@ -298,10 +298,10 @@ AssocP( Object ) :=
 /******************************************************************************/
 
 SumP( Exp ) :=
-  if part( Exp, 0 ) = "+" then
-    true
-  else
-    false$
+  IF Part( Exp, 0 ) = "+" THEN
+    TRUE
+  ELSE
+    FALSE$
 
 
 /******************************************************************************/
@@ -310,22 +310,22 @@ SumP( Exp ) :=
 
 FunctionP( Object ) := (
 
-  mode_declare(
-    Object, any
+  Mode_Declare(
+    Object, ANY
   ),
 
-  block(
+  BLOCK(
 
     [ ObjectProps ],
 
-    mode_declare(
-      ObjectProps, list
+    Mode_Declare(
+      ObjectProps, LIST
     ),
 
-    ObjectProps : apply( 'properties,  [ Object ] ),
+    ObjectProps : Apply( 'Properties,  [ Object ] ),
 
-    return(
-      member( 'transfun, ObjectProps ) or member( 'function, ObjectProps )
+    RETURN(
+      Member( 'TRANSFUN, ObjectProps ) OR Member( 'FUNCTION, ObjectProps )
     )
   )
 )$
@@ -336,10 +336,10 @@ FunctionP( Object ) := (
 /******************************************************************************/
 
 Empty( Lst ) :=
-  if Lst = [] then
-    true
-  else
-    false$
+  IF Lst = [] THEN
+    TRUE
+  ELSE
+    FALSE$
 
 
 /******************************************************************************/
@@ -348,12 +348,12 @@ Empty( Lst ) :=
 
 RowSize( Mat ) := (
 
-  mode_declare(
-    Mat, any,
-    function( length ), fixnum
+  Mode_Declare(
+    Mat, ANY,
+    Function( Length ), FIXNUM
   ),
 
-  length( Mat )
+  Length( Mat )
 )$
 
 
@@ -363,12 +363,12 @@ RowSize( Mat ) := (
 
 ColSize( Mat ) := (
 
-  mode_declare(
-    Mat, any,
-    function( length), fixnum
+  Mode_Declare(
+    Mat, ANY,
+    Function( Length), FIXNUM
   ),
 
-  length( first( Mat ) )
+  Length( First( Mat ) )
 )$
 
 
@@ -378,12 +378,12 @@ ColSize( Mat ) := (
 
 AppendRows( Mat, r ) := (
 
-  mode_declare(
-    Mat, any,
-    [ r, function( ColSize ) ], fixnum
+  Mode_Declare(
+    Mat, ANY,
+    [ r, Function( ColSize ) ], FIXNUM
   ),
 
-  addrow( Mat, zeromatrix( r, ColSize( Mat ) ) )
+  AddRow( Mat, ZeroMatrix( r, ColSize( Mat ) ) )
 )$
 
 
@@ -393,12 +393,12 @@ AppendRows( Mat, r ) := (
 
 AppendCols( Mat, c ) := (
 
-  mode_declare(
-    Mat, any,
-    [ c, function( RowSize ) ], fixnum
+  Mode_Declare(
+    Mat, ANY,
+    [ c, Function( RowSize ) ], FIXNUM
   ),
 
-  addcol( Mat, zeromatrix( RowSize( Mat ), c ) )
+  AddCol( Mat, ZeroMatrix( RowSize( Mat ), c ) )
 )$
 
 
@@ -408,27 +408,27 @@ AppendCols( Mat, c ) := (
 
 PrintMsg( Level, [ Messages ]) := (
 
-  mode_declare(
-    Level, any,
-    Messages, list
+  Mode_Declare(
+    Level, ANY,
+    Messages, LIST
   ),
 
-  block(
+  BLOCK(
 
     [ MsgPriority ],
 
-    mode_declare(
-      [ MsgPriority, function( assoc ) ], fixnum
+    Mode_Declare(
+      [ MsgPriority, Function( Assoc ) ], FIXNUM
     ),
 
-    if (
-      MsgPriority : assoc(
+    IF (
+      MsgPriority : Assoc(
         Level,
         [ 'ALWAYS = 0, 'SHORT = 1, 'DETAIL = 2, 'DEBUG = 10 ]
       )
-    ) # false then (
-      if MsgPriority <= MsgLvl then
-        apply( 'print, Messages )
+    ) # FALSE THEN (
+      IF MsgPriority <= MsgLvl THEN
+        Apply( 'Print, Messages )
     )
   )
 )$
@@ -440,18 +440,18 @@ PrintMsg( Level, [ Messages ]) := (
 
 Flatten( Lst ) := (
 
-  mode_declare(
-    Lst, list
+  Mode_Declare(
+    Lst, LIST
   ),
 
-  apply(
-    'append,
-    map(
-      lambda(
+  Apply(
+    'Append,
+    Map(
+      Lambda(
         [ Sublst ],
-        if listp( Sublst ) then
+        IF ListP( Sublst ) THEN
           Flatten( Sublst )
-        else
+        ELSE
           [ Sublst ]
       ),
       Lst
@@ -465,10 +465,10 @@ Flatten( Lst ) := (
 /******************************************************************************/
 
 ListMatrix( Mat ) :=
-  if MatrixP( Mat ) then
-    substpart( "[", copymatrix(Mat), 0 )
-  else
-    false$
+  IF MatrixP( Mat ) THEN
+    SubstPart( "[", copymatrix(Mat), 0 )
+  ELSE
+    FALSE$
 
 
 /******************************************************************************/
@@ -478,33 +478,33 @@ ListMatrix( Mat ) :=
 
 Position( Element, Lst ) := (
 
-  mode_declare(
-    [ Element, Lst ], any
+  Mode_Declare(
+    [ Element, Lst ], ANY
   ),
 
-  block(
+  BLOCK(
 
     [ i, p, Found ],
 
-    mode_declare(
-      [ i, p ], fixnum,
-      Found, boolean
+    Mode_Declare(
+      [ i, p ], FIXNUM,
+      Found, BOOLEAN
     ),
 
-    if not listp( Lst ) then
+    IF NOT ListP( Lst ) THEN
       Lst : [ Lst ],
 
-    Found : false,
-    for i thru length( Lst ) unless Found do
-      if Element = Lst[i] then (
+    Found : FALSE,
+    FOR i THRU Length( Lst ) UNLESS Found DO
+      IF Element = Lst[i] THEN (
         p : i,
-        Found : true
+        Found : TRUE
       ),
 
-    if Found then
-      return( p )
-    else
-      return( 0 )
+    IF Found THEN
+      RETURN( p )
+    ELSE
+      RETURN( 0 )
   )
 )$
 
@@ -514,7 +514,7 @@ Position( Element, Lst ) := (
 /* FALSE, hence the Solver never stops.                                       */
 /******************************************************************************/
 
-SolverJustDoIt( Eq, Var, Val ) := false$
+SolverJustDoIt( Eq, Var, Val ) := FALSE$
 
 
 /******************************************************************************/
@@ -522,8 +522,8 @@ SolverJustDoIt( Eq, Var, Val ) := false$
 /******************************************************************************/
 
 SortSolveOrder( SlvOrd ) :=
-  sort(
+  Sort(
     SlvOrd,
-    lambda( [a, b], third( a ) < third( b ) )
+    Lambda( [a, b], Third( a ) < Third( b ) )
   )$
 

@@ -70,9 +70,6 @@ rtestode_zp.mac \
 rtestnset.mac \
 rtesthyp.mac \
 rtestmt19937.mac \
-mcond_display_elseif.mac \
-mcond_display_elseif.out \
-rtestmcond_display.mac \
 testsuite.lisp
 
 EXTRA_DIST = $(genericdirDATA)

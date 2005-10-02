@@ -1127,7 +1127,7 @@ Sums and differences are replaced by @code{sum(@var{n})}
 where @var{n} is the number of operands of the sum.
 @item
 Products are replaced by @code{product(@var{n})}
-where @var{n} is the number of operands of the product.
+where @var{n} is the number of operands of the sum.
 @item
 Exponentials are replaced by @code{expt}. 
 @item
@@ -1201,8 +1201,7 @@ See also @code{lmxchar}.
 @deffnx {Function} save (@var{filename}, @var{name_1}=@var{expr_1}, ...)
 @deffnx {Function} save (@var{filename}, all)
 Stores the current values of @var{name_1}, @var{name_2}, @var{name_3}, ..., in @var{filename}.
-The arguments are the names of variables, functions, or other objects.
-If a name has no value or function associated with it, it is ignored.
+The arguments must be names of variables, functions, or other objects.
 @code{save} returns @var{filename}.
 
 @code{save} stores data in the form of Lisp expressions.

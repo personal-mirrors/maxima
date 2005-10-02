@@ -31,11 +31,11 @@
 /******************************************************************************/
 /* Modified by  : Dan Stanger dan.stanger@ieee.org to work under maxima       */
 /******************************************************************************/
-load( "./linsolve.mac" )$
-load( "./slvrtbox.mac" )$
-load( "./slvrmsgs.mac" )$
+Load( "./linsolve.mac" )$
+Load( "./slvrtbox.mac" )$
+Load( "./slvrmsgs.mac" )$
 
-put( 'SOLVER, 1, 'Version )$
+Put( 'SOLVER, 1, 'Version )$
 
 SetVersion(
   /* KEY    = */ 'SOLVER,
@@ -181,7 +181,7 @@ SetVersion(
 /* inserts these constraints into the remaining equations.                    */
 /******************************************************************************/
 
-define_variable( Solver_Immed_Assign, true, boolean )$
+Define_Variable( Solver_Immed_Assign, TRUE, BOOLEAN )$
 
 
 /******************************************************************************/
@@ -189,7 +189,7 @@ define_variable( Solver_Immed_Assign, true, boolean )$
 /* is performed repeatedly until no more of them are found.                   */
 /******************************************************************************/
 
-define_variable( Solver_Repeat_Immed, true, boolean )$
+Define_Variable( Solver_Repeat_Immed, TRUE, BOOLEAN )$
 
 
 /******************************************************************************/
@@ -199,7 +199,7 @@ define_variable( Solver_Repeat_Immed, true, boolean )$
 /* 2. For all var^m in the equations : m=n*k , k integer                      */
 /******************************************************************************/
 
-define_variable( Solver_Subst_Powers, false, boolean )$
+Define_Variable( Solver_Subst_Powers, FALSE, BOOLEAN )$
 
 
 /******************************************************************************/
@@ -212,15 +212,15 @@ define_variable( Solver_Subst_Powers, false, boolean )$
 /* if it does not directly contradict with any of the assumptions made before.*/
 /******************************************************************************/
 
-define_variable( Solver_Incons_Params, 'ASK, any_check )$
+Define_Variable( Solver_Incons_Params, 'ASK, ANY_CHECK )$
 
-put(
+Put(
   'Solver_Incons_Params,
-  lambda( [ x ],
-    if not member( x, [ 'ASK, 'BREAK, 'IGNORE ] ) then
+  Lambda( [ x ],
+    IF NOT Member( x, [ 'ASK, 'BREAK, 'IGNORE ] ) THEN
       ErrorHandler( "InvIncPar", x, 'Fatal )
   ),
-  'value_check
+  'VALUE_CHECK
 )$
 
 
@@ -231,7 +231,7 @@ put(
 /* are known to contain a large linear part.                                  */
 /******************************************************************************/
 
-define_variable( Solver_Linear, true, boolean )$
+Define_Variable( Solver_Linear, TRUE, BOOLEAN )$
 
 
 /******************************************************************************/
@@ -240,7 +240,7 @@ define_variable( Solver_Linear, true, boolean )$
 /* LinearSolver will be called only once.                                     */
 /******************************************************************************/
 
-define_variable( Solver_Repeat_Linear, true, boolean )$
+Define_Variable( Solver_Repeat_Linear, TRUE, BOOLEAN )$
 
 
 /******************************************************************************/
@@ -251,7 +251,7 @@ define_variable( Solver_Repeat_Linear, true, boolean )$
 /* call.                                                                      */
 /******************************************************************************/
 
-define_variable( Solver_Find_All_Linear_Vars, true, boolean )$
+Define_Variable( Solver_Find_All_Linear_Vars, TRUE, BOOLEAN )$
 
 
 /******************************************************************************/
@@ -264,7 +264,7 @@ define_variable( Solver_Find_All_Linear_Vars, true, boolean )$
 /* expressions in Solver_Assumptions.                                         */
 /******************************************************************************/
 
-define_variable( Solver_Assumptions, [], list )$
+Define_Variable( Solver_Assumptions, [], LIST )$
 
 
 /******************************************************************************/
@@ -273,7 +273,7 @@ define_variable( Solver_Assumptions, [], list )$
 /* entire system of equations.                                                */
 /******************************************************************************/
 
-define_variable( Solver_Del_Eq, 'MakeSquareLinearBlocks, any )$
+Define_Variable( Solver_Del_Eq, 'MakeSquareLinearBlocks, ANY )$
 
 
 /******************************************************************************/
@@ -282,7 +282,7 @@ define_variable( Solver_Del_Eq, 'MakeSquareLinearBlocks, any )$
 /* variables which are being searched for at the current step.                */
 /******************************************************************************/
 
-define_variable( Solver_Valuate_All_Nonlin_Vars, false, boolean )$
+Define_Variable( Solver_Valuate_All_Nonlin_Vars, FALSE, BOOLEAN )$
 
 
 /******************************************************************************/
@@ -291,16 +291,16 @@ define_variable( Solver_Valuate_All_Nonlin_Vars, false, boolean )$
 /* the equations are to be solved.                                            */
 /******************************************************************************/
 
-define_variable( Solver_Valuation_Strategy, 'MinVarPathsFirst, any_check )$
+Define_Variable( Solver_Valuation_Strategy, 'MinVarPathsFirst, ANY_CHECK )$
 
-put(
+Put(
   'Solver_Valuation_Strategy,
-  lambda(
+  Lambda(
     [ x ],
-    if not FunctionP( x ) then
+    IF NOT FunctionP( x ) THEN
       ErrorHandler( "UndefStrat", x, 'Fatal )
   ),
-  'value_check
+  'VALUE_CHECK
 )$
 
 

@@ -360,7 +360,7 @@
 (defun scan-macsyma-token ()
   ;; note that only $-ed tokens are GETALIASed.
   (let ((tem (cons '#\$ (scan-token t))))
-    (setq tem (bothcase-implode tem))
+    (setq tem (if $bothcases (bothcase-implode tem) (implode1 tem nil)))
   (getalias tem)))
 
 (defun scan-lisp-token ()
@@ -404,13 +404,15 @@
 (defun lisp-token-fixup-case (list)
   list)
 
+(defvar $bothcases t)
 (defun scan-token (flag)
   (do ((c (parse-tyipeek) (parse-tyipeek))
        (l () (cons c l)))
       ((and flag (not (or (ascii-numberp c) (alphabetp c) (char= c #.back-slash-char)))) ;;#/\
        (nreverse (or l (ncons (parse-tyi))))) ; Read at least one char ...
     (if (char= (parse-tyi) #. back-slash-char);; #/\
-	(setq c (parse-tyi)))
+	(setq c (parse-tyi))
+	(or $bothcases  (setq c (fixnum-char-upcase c))))
     (setq flag t)))
 
 (defun scan-lisp-string ()
