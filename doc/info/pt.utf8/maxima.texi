@@ -79,7 +79,7 @@ A se@,{c}@~ao "Pacotes adicionais" foi anexada ao manual recentemente
 Caso sua d@'uvida persista ou tenha alguma sugest@~ao/aperfei@,{c}oamento/
 cr@'{@dotless{i}}tica mande por e-mail para Jorge Barros de Abreu <ficmatin01 at solar dot
 com dot br>
-        
+	
 Mantenedores:
 @itemize @bullet
 @item
@@ -114,20 +114,20 @@ e desenvolver o Macsyma DOE, agora chamado Maxima.
 @i{Notas de tradu@,{c}@~ao:}
 
     O c@'odigo fonte deste documento encontra-se no formato texinfo.
-        Para contribuir com a equipe do Maxima na tarefa de manter a 
-        tradu@,{c}@~ao para o portugu@^es sempre atualizada envie um 
-        e-mail para @value{mail}.
+	Para contribuir com a equipe do Maxima na tarefa de manter a 
+	tradu@,{c}@~ao para o portugu@^es sempre atualizada envie um 
+	e-mail para @value{mail}.
 
     Em caso de d@'uvida sobre algum trecho deste manual consulte o 
-        original ingl@^es.
+	original ingl@^es.
 
     A se@,{c}@~ao "Pacotes adicionais" foi anexada ao manual recentemente
         (fevereiro/2006) e possui partes a serem traduzidas.
 
     Caso sua d@'uvida persista ou tenha alguma sugest@~ao/aperfei@,{c}oamen-
-        to/cr@'itica mande por e-mail para Jorge Barros de Abreu 
-        <ficmatin01 at solar dot com dot br>
-        
+	to/cr@'itica mande por e-mail para Jorge Barros de Abreu 
+	<ficmatin01 at solar dot com dot br>
+	
 Mantenedores:
 @itemize @bullet
 @item
@@ -175,7 +175,7 @@ Suporte a @'areas espec@'ificas da matem@'atica
 * Num@'erico::                    Integra@value{cedilha}@~ao num@'erica, transforma@value{cedilha}@~oes
                                 de Fourier, etc.
 * Estat@'istica::                 Fun@value{cedilha}@~oes estat@'isticas.
-* Arrays::            Criando e trabalhando com arrays.
+* Arrays e Tabelas::            Criando e trabalhando com arrays.
 * Matrizes e @'Algebra Linear::   Opera@value{cedilha}@~oes com Matrizes.
 * Fun@value{cedilha}@~oes Afins::                        
 * itensor::                     Manipula@value{cedilha}@~ao de @'indice de Tensores.
@@ -354,9 +354,9 @@ Estatistica
 
 * Defini@value{cedilha}@~oes para Estat@'istica::  
 
-Arrays
+Arrays e Tabelas
 
-* Defini@value{cedilha}@~oes para Arrays::  
+* Defini@value{cedilha}@~oes para Arrays e Tabelas::  
 
 Matrizes e @'Algebra Linear
 
@@ -477,7 +477,7 @@ distrib
 
 eval_string
 
-* Defini@value{cedilha}@~oes para eval_string::
+* Definitions for eval_string::
 
 f90
 
@@ -485,7 +485,7 @@ f90
 
 ggf
 
-* Defini@value{cedilha}@~oes para ggf::
+* Definitions for ggf::
 
 impdiff
 
@@ -515,7 +515,7 @@ makeOrders
 
 mnewton
 
-* Defini@value{cedilha}@~oes para mnewton::
+* Definitions for mnewton::
 
 numericalio
 
@@ -552,7 +552,7 @@ solve_rec
 
 stirling
 
-* Defini@value{cedilha}@~oes para stirling::
+* Definitions for stirling::
 
 stringproc
 
@@ -673,15 +673,15 @@ zeilberger
 @chapter Num@'erico
 @include ../pt/Numerical.texi
 
-@node Estat@'istica, Arrays, Num@'erico, Top
+@node Estat@'istica, Arrays e Tabelas, Num@'erico, Top
 @chapter Estat@'istica
 @include ../pt/Statistics.texi
 
-@node Arrays, Matrizes e @'Algebra Linear, Estat@'istica, Top
-@chapter Arrays
+@node Arrays e Tabelas, Matrizes e @'Algebra Linear, Estat@'istica, Top
+@chapter Arrays e Tabelas
 @include ../pt/Arrays.texi
 
-@node Matrizes e @'Algebra Linear, Fun@value{cedilha}@~oes Afins, Arrays, Top
+@node Matrizes e @'Algebra Linear, Fun@value{cedilha}@~oes Afins, Arrays e Tabelas, Top
 @chapter Matrizes e @'Algebra Linear
 @include ../pt/Matrices.texi
 

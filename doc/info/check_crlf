@@ -1,6 +1,0 @@
-#!/bin/sh
-
-BADFILES=`find . -name '*.texi' -print | xargs grep -l $'\x0D$'`
-
-echo $BADFILES
-

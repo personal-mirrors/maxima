@@ -1,6 +1,6 @@
 # -*-mode: tcl; fill-column: 75; tab-width: 8; coding: iso-latin-1-unix -*-
 #
-#       $Id: Printops.tcl,v 1.9 2006-07-30 19:27:22 villate Exp $
+#       $Id: Printops.tcl,v 1.8 2006-06-21 09:03:57 villate Exp $
 #
 ###### Printops.tcl ######
 ############################################################
@@ -14,13 +14,19 @@ set paperSizes {{letter 8.5 11} { A4 8.5 11} {legal 8.5 13}}
 
 set printOptions {
     { landscape 0 "Non zero means use landscape mode in printing"}
+    { tofile 1 "Non zero means print to file"}
+    { pagewidth "" "Figure width"}
+    { pageheight "" "Figure height"}
     { papersize letter "letter, legal or A4"}
-    { hoffset 0.5 "Left margin for printing"}
-    { voffset 0.5 "Top margin for printing"}
+    { hoffset .5 "Left margin for printing"}
+    { voffset .5 "Top margin for printing"}
     { xticks 20 "Rough number of ticks on x axis"}
     { yticks 20 "Rough number of ticks on y axis"}
-#   { title "" "Title"}
+    { domargin 1 "Print the frame and the margin ticks"}
+    { printer "" "Printer to print to"}
+    { title "" "Title"}
     { psfilename "~/sdfplot.ps" "Postscript filename"}
+    { gsview "gsview32" "Postscript viewer, used for printing under Windows"}
     { centeronpage 1 ""}
 }
 
@@ -151,18 +157,22 @@ proc setPrintOptions { lis } {
 	set printOption(setupDone) 1
 	getOptions $printOptions $lis -allowOtherKeys 1 \
 		-setdefaults [catch { source [getEnv HOME]/.printOptions }] -usearray printOption
+        if { "$printOption(printer)" == "" } {
+	    set printOption(printer) [getEnv PRINTER]
+	} else {
+	    set printOption(printer) lw8b
+	}
+	
     }
+    if { [info exists browser_version] } { set printOption(tofile) 2 }
 }
 
 proc mkentryPr { w var text buttonFont }  {
     set fr $w ; frame $fr
     uplevel 1 append topack [list " $fr"]
-    label $fr.lab1
-    label $fr.lab -text "$text:" -font $buttonFont -width 0
+    label $fr.lab -text "$text" -font $buttonFont
     entry $fr.e -width 20 -textvariable $var -font $buttonFont
-    pack $fr.lab1 -side left -expand 1 -fill x
-    pack $fr.lab -side left
-    pack $fr.e -side right -padx 3 -fill x
+    pack $fr.lab $fr.e -side left -expand 1 -padx 3 -fill x
 }
 
 
@@ -193,7 +203,7 @@ proc mkPrintDialog { name args } {
     frame $name.fr
 
     set w $name.fr
-    label $w.msg  -wraplength 600 -justify left -text [mc "Encapsulated PostScript File Options"] -font $buttonFont
+    label $w.msg  -wraplength 600 -justify left -text [mc "Printer Setup"] -font $buttonFont
     pack $w
     pack $w.msg
     set wb $w.buttons
@@ -202,13 +212,22 @@ proc mkPrintDialog { name args } {
     set topack ""
     catch { set printOption(psfilename) \
 	    [file nativename $printOption(psfilename)]}
-    set win [winfo parent $canv]
-    button $wb.save -text "Save" -font $buttonFont -command "destroy $name; writePostscript $win; $canv delete printoptions"
-    button $wb.cancel -text "Cancel" -font $buttonFont -command "destroy $name ; $canv delete printoptions"
-    set writefile "Save"
+    button $wb.ok -text "ok" -font $buttonFont  -command "destroy $name ; $canv delete printoptions"
+    radiobutton $wb.b1 -text [mc "Save as Postscript File"] -variable printOption(tofile) -relief flat -value 1 -command {set writefile "Save"} -font $buttonFont  -highlightthickness 0
+    radiobutton $wb.b2 -text [mc "Print To Printer"] -variable printOption(tofile) -relief flat -value 0 -command {set writefile "Print"} -font $buttonFont -highlightthickness 0
+    checkbutton $wb.b3 -text [mc "Center on Page"] -variable printOption(centeronpage) -relief flat -font $buttonFont -highlightthickness 0
+    checkbutton $wb.b4 -text [mc "Landscape Mode"] -variable printOption(landscape) -relief flat -font $buttonFont -highlightthickness 0
+
+    mkentryPr  $wb.pagewidth printOption(pagewidth) [mc "Figure width"] $buttonFont
+    mkentryPr  $wb.pageheight printOption(pageheight) [mc "Figure height"] $buttonFont
+    mkentryPr  $wb.hoffset printOption(hoffset) [mc "Left margin for printing"] $buttonFont
+    mkentryPr  $wb.voffset printOption(voffset) [mc "Top margin for printing"] $buttonFont
     mkentryPr  $wb.psfilename printOption(psfilename) [mc "Postscript filename"] $buttonFont
-    mkentryPr  $wb.hoffset printOption(hoffset) [mc "Left margin(inches)"] $buttonFont
-    mkentryPr  $wb.voffset printOption(voffset) [mc "Top margin (inches)"] $buttonFont
+    mkentryPr  $wb.printer printOption(printer) [mc "Printer to print to"] $buttonFont
+    mkentryPr  $wb.gsview printOption(gsview) [mc "Postscript viewer, used for printing under Windows"] $buttonFont
+    mkentryPr  $wb.xticks printOption(xticks) [mc "Rough number of x-ticks"] $buttonFont
+    mkentryPr  $wb.yticks printOption(yticks) [mc "Rough number of y-ticks"] $buttonFont
+    eval pack $wb.ok $wb.b1 $wb.b2 $wb.b3 $wb.b4
     eval pack $topack -expand 1
 
     foreach v  $paperSizes {
@@ -218,14 +237,11 @@ proc mkPrintDialog { name args } {
 		-value [lindex $v 0] -font $buttonFont -highlightthickness 0
 	pack $wb.$lower -pady 2 -anchor w -fill x
     }
-
-    checkbutton $wb.b1 -text [mc "Center on Page"] -variable printOption(centeronpage) -relief flat -font $buttonFont
-    checkbutton $wb.b2 -text [mc "Landscape Mode"] -variable printOption(landscape) -relief flat -font $buttonFont
-    pack $wb.b1 $wb.b2
+    checkbutton $wb.domargin -variable printOption(domargin) -text [mc "do margin"] -font $buttonFont
+    pack $wb.domargin -pady 2 -anchor w -fill x
 
     frame $w.grid
     pack $w.grid -expand yes -fill both -padx 1 -pady 1
-    pack $wb.save $wb.cancel
     grid rowconfig    $w.grid 0 -weight 1 -minsize 0
     grid columnconfig $w.grid 0 -weight 1 -minsize 0
 }

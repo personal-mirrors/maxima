@@ -31,18 +31,10 @@ maxima_TEXINFOS = Introduction.texi Help.texi Command.texi Operators.texi \
   solve_rec.texi stringproc.texi numericalio.texi descriptive.texi \
   distrib.texi simplex.texi simplifications.texi unit.texi makeOrders.texi \
   mnewton.texi lsquares.texi plotdf.texi lindstedt.texi impdiff.texi \
-  ggf.texi f90.texi eval_string.texi diag.texi cholesky.texi dynamics.texi\
+  ggf.texi f90.texi eval_string.texi diag.texi cholesky.texi \
   bode.texi augmented_lagrangian.texi opsubst.texi stirling.texi interpol.texi
 
 figurefiles = \
-figures/dynamics1.gif\
-figures/dynamics2.gif\
-figures/dynamics3.gif\
-figures/dynamics4.gif\
-figures/dynamics5.gif\
-figures/dynamics6.gif\
-figures/dynamics7.gif\
-figures/dynamics8.gif\
 figures/plotdf1.gif\
 figures/plotdf2.gif\
 figures/plotdf3.gif\

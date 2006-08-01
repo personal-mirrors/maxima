@@ -70,7 +70,7 @@
 	#+scl "scl"
 	#+sbcl "sbcl"
 	#+gcl "gcl"
-	#+allegro "acl"
+	#+allegro "acl6"
 	#+openmcl "openmcl"
 	#-(or clisp cmu scl sbcl gcl allegro openmcl) "unknownlisp")
 

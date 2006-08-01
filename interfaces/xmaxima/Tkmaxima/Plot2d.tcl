@@ -1,6 +1,6 @@
 # -*-mode: tcl; fill-column: 75; tab-width: 8; coding: iso-latin-1-unix -*-
 #
-#       $Id: Plot2d.tcl,v 1.12 2006-07-30 19:27:22 villate Exp $
+#       $Id: Plot2d.tcl,v 1.11 2006-06-29 13:58:29 villate Exp $
 #
 ###### Plot2d.tcl ######
 ############################################################
@@ -118,30 +118,36 @@ proc doHelp2d {win } {
     doHelp $win [join [list \
 			[mc {
 
-XMAXIMA'S PLOTTER FOR TWO-DIMENSIONAL GRAPHICS
+			       William Schelter's plotter for two dimensional graphics.
 
-To quit this help click anywhere on this text.
+			       to QUIT this HELP click here.
 
-Clicking on Config will open a menu where several settings can be changed, \
-such as the function being plotted, the line width, and the \
-x and y centers and radii. Replot is used to update the plot with the \
-changes made in the Config menu.
+			       By clicking on Zoom, the mouse now allows you to zoom \
+				   in on a region of the plot.  Each click near a point \
+				   magnifies the plot, keeping the center at the point \
+				   you clicked.  Depressing the SHIFT key while clicking \
+				   zooms in the opposite direction.
 
-By clicking on Zoom, the mouse will allow you to zoom in on a region \
-of the plot. Each click near a point magnifies the plot, keeping the center \
-at the point you clicked. Depressing the SHIFT key while clicking \
-zooms in the opposite direction.
+			       To change the functions plotted, click on Config and \
+				   enter new values in the entry windows, and then click on \
+				   Replot in the main menu bar.
 
-Holding the right mouse button down while moving the mouse will drag \
-(translate) the plot sideways or up and down.
+			       Holding the right mouse button down allows you to drag
+			       (translate) the plot sideways or up and down.
 
-The plot can be saved as a postscript file, by clicking on Save.
-}] $Parser(help)]]
+			       Additional parameters such as the number of steps (nsteps), \
+				   and the x and y centers and radii, may be set under the \
+				   Config menu.
+
+			       You may print to a postscript printer, or save the plot \
+				   as a postscript file, by clicking on save.   To change \
+				   between printing and saving see the Print Options under Config.
+			
+			   }] $Parser(help)]]
 }
 
 global plot
 set   plot(numberPlots) 4
-
 proc mkExtraInfo { name args } {
     # global plot 	
     catch { destroy $name }
