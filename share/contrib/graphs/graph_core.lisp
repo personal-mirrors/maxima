@@ -1,7 +1,7 @@
 ;;;
 ;;;  GRAPHS - graph theory package for Maxima
 ;;;
-;;;  Copyright (C) 2007 Andrej Vodopivec <andrej.vodopivec@gmail.com>
+;;;  Copyright (C) 2007-2008 Andrej Vodopivec <andrej.vodopivec@gmail.com>
 ;;;
 ;;;  This program is free software; you can redistribute it and/or modify
 ;;;  it under the terms of the GNU General Public License as published by
@@ -316,7 +316,7 @@
        `((mlist simp) ,d ,v)))))
 
 (defun $min_degree (gr)
-  (require-graph 'max_degree 1 gr)
+  (require-graph 'min_degree 1 gr)
   (cond
     ((= 0 (graph-size gr))
      ($error "min_degree: no min degree in an empty graph."))
@@ -680,27 +680,35 @@
     gr))
 
 (defun $create_graph (v_list e_list &optional dir)
-  (unless (or (integerp v_list) ($listp v_list))
-    ($error "Argument 1 to create_graph is not a list."))
-  (unless ($listp e_list)
-    ($error "Argument 2 to create_graph is not a list."))
-  (let ((gr (if dir (make-digraph) (make-graph))))
-    (if (integerp v_list)
-	(dotimes (v v_list)
-	  ($add_vertex v gr))
-	(dolist (v (cdr v_list))
-	  (if ($listp v)
-	      (progn
-		($add_vertex ($first v) gr)
-		($set_vertex_label ($first v) ($second v) gr))
-	      ($add_vertex v gr))))
-    (dolist (e (cdr e_list))
-      (if ($listp ($first e))
-	  (progn
-	    ($add_edge ($first e) gr)
-	    ($set_edge_weight ($first e) ($second e) gr))
-	  ($add_edge e gr)))
-    gr))
+  (let ((directed nil))
+    ;; check if the graph is a directed graph
+    (cond ((atom dir)
+	   (when dir (setq directed t)))
+	  ((and (eq (caar dir) 'mequal)
+		(eq (cadr dir) '$directed)
+		(eq (caddr dir) t))
+	   (setq directed t)))
+    (unless (or (integerp v_list) ($listp v_list))
+      ($error "Argument 1 to create_graph is not a list."))
+    (unless ($listp e_list)
+      ($error "Argument 2 to create_graph is not a list."))
+    (let ((gr (if directed (make-digraph) (make-graph))))
+      (if (integerp v_list)
+	  (dotimes (v v_list)
+	    ($add_vertex v gr))
+	  (dolist (v (cdr v_list))
+	    (if ($listp v)
+		(progn
+		  ($add_vertex ($first v) gr)
+		  ($set_vertex_label ($first v) ($second v) gr))
+		($add_vertex v gr))))
+      (dolist (e (cdr e_list))
+	(if ($listp ($first e))
+	    (progn
+	      ($add_edge ($first e) gr)
+	      ($set_edge_weight ($first e) ($second e) gr))
+	    ($add_edge e gr)))
+      gr)))
 
 (defun $cycle_graph (n)
   (let ((g ($empty_graph n)))
@@ -1077,6 +1085,31 @@
 (defun $is_tree (gr)
   (require-graph 'is_tree 1 gr)
   (and ($is_connected gr) (= (graph-size gr) (1+ (graph-order gr)))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Reachable vertices
+;;;
+
+
+(defun $reachable_vertices (v gr)
+  (require-graph-or-digraph 'reachable_vertices 2 gr)
+  (require-vertex 'reachable_vertices 1 v)
+  (require-vertex-in-graph 'reachable_vertices v gr)
+  (when (= 0 (if (graph-p gr) (graph-size gr) (digraph-size gr)))
+    (return-from $reachable_vertices '((mlist simp))))
+  (let ((component ()) (visited (make-hash-table)))
+    (unless (gethash v visited)
+      (let ((active ()))
+	(push v active)
+	(loop while active do
+	     (let ((x (pop active)))
+	       (push x component)
+	       (setf (gethash x visited) t)
+	       (dolist (u (if (graph-p gr) (neighbors x gr) (out-neighbors x gr)))
+		 (unless (or (gethash u visited) (member u active))
+		   (push u active)))))))
+    `((mlist simp) ,@component)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
@@ -1710,7 +1743,7 @@
   (require-graph 'max_clique 1 gr)
   (setq *maximum-clique* ())
   (let ((v) (coloring) (h ($copy_graph gr)))
-    (do () ((= (length *maximum-clique*) (graph-size h)))
+    (do () ((>= (length *maximum-clique*) (graph-size h)))
       (setq coloring (greedy-color h))
       (setq v ($second ($max_degree h)))
       (extend-clique `(,v) (neighbors v h) coloring h)
@@ -2008,3 +2041,9 @@
   (unless (stringp file)
     ($error "Argument to `temp_filename' is not a string"))
   (plot-temp-file file))
+
+(defun $read_string (str)
+  (unless (stringp str)
+    ($error "Argument to `read_string' is not a string"))
+  (let ((num (read-from-string str)))
+    (if (numberp num) num str)))

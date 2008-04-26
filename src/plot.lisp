@@ -63,9 +63,8 @@
                         ((mlist) $gnuplot_term $default)
                         ((mlist) $gnuplot_out_file nil)
                         ;; With adaptive plotting, 100 is probably too
-                        ;; many ticks.  I (rtoy) think 10 is a more
-                        ;; reasonable default.
-                        ((mlist) $nticks 10)
+                        ;; many ticks.
+                        ((mlist) $nticks 29)
                         ;; Controls the number of splittings
                         ;; adaptive-plotting will do.
                         ((mlist) $adapt_depth 5)
@@ -1549,40 +1548,6 @@
 (defun msymbolp (x)
   (and (symbolp x) (char= (char (symbol-value x) 0) #\$)))
 
-;; OK, here are some test cases for $SPRINT.
-;; The only strange one is sprint ([s1, s2, s3]) which is printing an expression containing
-;; Lisp strings via STRGRIND, which introduces the ? and \ , dunno if there's anything we
-;; want to do about that.
-
-;; sprint ("foo bar", "Foo Bar", "FOO BAR");
-;; sprint (["foo bar", "Foo Bar", "FOO BAR"]);
-;; :lisp (setq $s1 "foo bar")
-;; :lisp (setq $s2 "Foo Bar")
-;; :lisp (setq $s3 "FOO BAR")
-;; sprint (s1, s2, s3);
-;; sprint ([s1, s2, s3]);  =>  [?foo\ bar,?Foo\ Bar,?FOO\ BAR]  -- strange ??
-;; sprint (aa, Bb, CC);
-;; sprint ([aa, Bb, CC]);
-;; sprint (aa + Bb + CC);
-;; sprint (1234, 12.34, 12.34e300, 12.34b300);
-;; sprint ([1234, 12.34, 12.34e300, 12.34b300]);
-;; sprint (%i, %pi, %phi, %gamma);
-;; sprint ([%i, %pi, %phi, %gamma]);
-;; sprint (%i + %pi + %phi + %gamma);
-;; sprint (foo(xx,yy) + Bar(Xx,Yy) + BAZ(XX,YY));
-
-(defun $sprint (&rest args)
-  (sloop for v in args do
-         (cond
-           ((stringp v)
-            v)
-           ((msymbolp v)
-            (setq v (maybe-invert-string-case (symbol-name (stripdollar v)))))
-           (t
-             (setq v (maybe-invert-string-case (string (implode (strgrind v)))))))
-         (princ v)
-         (princ " "))
-  (car args))
 
 ;; $SHOW_FILE APPEARS TO BE ESSENTIALLY THE SAME AS $PRINTFILE
 
@@ -1961,7 +1926,7 @@
               ($gnuplot_reset)
               (gnuplot-print-header *gnuplot-stream* :const-expr const-expr)
 	      (when xlabel (format *gnuplot-stream* "set xlabel \"~a\"~%" xlabel))
-	      (when ylabel (format *gnuplot-stream "set ylabel \"~a\"~%" ylabel))
+	      (when ylabel (format *gnuplot-stream* "set ylabel \"~a\"~%" ylabel))
 	      (when zlabel (format *gnuplot-stream* "set zlabel \"~a\"~%" zlabel))
 	      (when (and legend (not (first legend)))
 		(format *gnuplot-stream* "unset key~%"))
