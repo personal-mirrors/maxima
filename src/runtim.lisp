@@ -34,9 +34,6 @@
 ;; on the LISPM the &REST list is a stack-allocated cdr-coded list.
 ;; We have to copy it, so might as well try out some optimizations.
 
-;; BANISH THIS CRAP, DON'T KEEP CONFUSING CRAP HANGING AROUND FOREVER. FOR THE LOVE OF MIKE. !!
-
-#|
 (defun add (&rest v)
   (do ((l nil)
        (r)
@@ -72,4 +69,3 @@
 
 (defun mul* (&rest l)
   (simplifya (cons '(mtimes) (copy-list l)) nil))
- |#

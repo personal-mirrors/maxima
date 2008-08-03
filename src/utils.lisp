@@ -27,7 +27,6 @@
 
 (defun maxima-getenv (envvar)
   #+gcl     (si::getenv envvar)
-  #+ecl     (si::getenv envvar)
   #+allegro (system:getenv envvar)
   #+(or cmu scl) (cdr (assoc envvar ext:*environment-list* :test #'string=))
   #+sbcl    (sb-ext:posix-getenv envvar)
@@ -44,7 +43,6 @@
   #+allegro            (excl:exit)
   #+(or mcl openmcl)   (ccl:quit)
   #+gcl                (lisp:quit)
-  #+ecl                (si:quit)
   #+lispworks          (lispworks:quit)
   )
 

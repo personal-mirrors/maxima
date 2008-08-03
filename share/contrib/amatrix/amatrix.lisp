@@ -1,6 +1,6 @@
 ;; amatrix.lisp -- implement Maxima matrix via underlying Lisp array
 ;; copyright 2007 by Robert Dodier
-;; I release this file under the terms of the GNU General Public License.
+;; I release this file under the terms of the GNU General Public License, version 2
 
 (defun $amatrixmap (f &rest m)
   (let*

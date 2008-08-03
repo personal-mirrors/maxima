@@ -2,11 +2,11 @@
 
 (in-package :maxima)
 
-#-(or gcl ecl)
+#-gcl
 (defmacro get-integrand (fun var)
   `(compile nil (coerce-float-fun ,fun `((mlist) ,,var))))
 
-#+(or gcl ecl)
+#+gcl
 (defmacro get-integrand (fun var)
   `(coerce-float-fun ,fun `((mlist) ,,var)))
 

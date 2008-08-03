@@ -1,7 +1,7 @@
 /* ezunits: yet another units package for Maxima
  * This program copyright 2008 by Robert Dodier.
  * I release this program under the terms of the
- * GNU General Public License.
+ * GNU General Public License, version 2.
  */
 
 qput (ezunits, "experimental, usable", version);
@@ -165,14 +165,7 @@ multiply_with_units(x%, u%) :=
   else
     (x%*apply ("*", map (qty, args (u%)))) ` simplify_units (apply ("*", map (units, args (u%))));
 
-matchdeclare (a%, all);
-defrule (runits1, 'units (a%), 1);
-
-constant_factors (e%) := block ([L%, eqns%],
-    e% : apply1 (e%, runits1),
-    L%: listofvars(e%),
-    eqns%: map ("=", L%, L%*0+1),
-    subst (eqns%, e%));
+constant_factors (e%) := block ([L%, eqns%], L%: listofvars(e%), eqns%: map ("=", L%, L%*0+1), subst (eqns%, e%));
 
 everything_else(e%) := e%/constant_factors(e%);
 

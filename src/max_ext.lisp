@@ -302,9 +302,3 @@
        $spherical_harmonic
        $ultraspherical))
   (setf (get f 'autoload) "orthopoly"))
-
-(defprop $unit_step simp-unit-step operators)
-(autof 'simp-unit-step "orthopoly")
-
-(defprop $pochhammer simp-pochhammer operators)
-(autof 'simp-pochhammer "orthopoly")

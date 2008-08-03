@@ -1,5 +1,5 @@
 ; Copyright 2006 by Robert Dodier
-; Released under the terms of the GNU General Public License.
+; Released under the terms of the GNU General Public License, version 2
 
 ; Example 1:
 ; This is the same FOM as computed by FGCOMPUTE in the program sdrive.f

@@ -2208,7 +2208,7 @@
 (defun m2-a*t (exp)
   (m2 exp
    '((mplus)
-     ((mtimes) (t varp) (a freevar))
+     ((coeffpt) (f hasvar) (a freevar))
      ((coeffpp) (c zerp)))
     nil))
 

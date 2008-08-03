@@ -1,7 +1,7 @@
 ;;  Copyright 2005 by Robert Dodier
 
 ;;  This program is free software; you can redistribute it and/or
-;;  modify it under the terms of the GNU General Public License.
+;;  modify it under the terms of the GNU General Public License, version 2.
 
 ;;  This program has NO WARRANTY, not even the implied warranty of
 ;;  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
