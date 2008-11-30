@@ -319,6 +319,15 @@
 
 ; ------------------ begin modified existing Maxima functions ------------------
 
+;; Intern symbols in the current package.
+;; I think the right policy is this:
+;; if the current package :uses :maxima, then intern in current package;
+;; otherwise intern in :maxima.
+;; I don't know how to detect :uses :maxima, maybe that is easy.
+
+(defun intern-invert-case (string)
+  (intern (maybe-invert-string-case string)))
+
 (defun stripdollar-string (x)
   (if (and (stringp x) (equal (car (exploden x)) #\$))
     (subseq x 1)
@@ -334,7 +343,8 @@
      ;; !! THE FOLLOWING DOES NOT DISPLAY NESTED PACKAGES CORRECTLY (ONLY THE INNERMOST IS DISPLAYED)
      (dimension-infix                                                                           ; NEW
        `(($\|)                                                                                  ; NEW
-         ,(make-symbol (package-name (symbol-package form)))                                    ; NEW
+         ,#-gcl (make-symbol (package-name (symbol-package form)))                              ; NEW
+          #+gcl (make-symbol (let ((x (package-name (symbol-package form)))) (if (stringp x) x "(none)"))) ; NEW
          ,(make-symbol (symbol-name form)))                                                     ; NEW
        result))                                                                                 ; NEW
 	(t (dimension-string (makestring form) result))))
@@ -350,7 +360,7 @@
 	  ((not (symbolp atom)) (exploden atom))
 	  ((and (setq dummy (get atom 'reversealias))
 		(not (and (member atom $aliases :test #'eq) (get atom 'noun))))
-	   (exploden dummy))
+	   (exploden (stripdollar dummy)))
       ((equal (symbol-name atom) "") '())                                           ; NEW
 	  ((not (eq (getop atom) atom))
        (makestring (getop atom)))
@@ -460,12 +470,13 @@
           ;; !! THE FOLLOWING DOES NOT DISPLAY NESTED PACKAGES CORRECTLY (ONLY THE INNERMOST IS DISPLAYED)
           (msize                                                                        ; NEW
             `(($\|)                                                                     ; NEW
-              ,(make-symbol (package-name (symbol-package x)))                          ; NEW
+              ,#-gcl (make-symbol (package-name (symbol-package x)))                    ; NEW
+               #+gcl (make-symbol (let ((x (package-name (symbol-package x)))) (if (stringp x) x "(none)"))) ; NEW
               ,(make-symbol (symbol-name x)))                                           ; NEW
             l r lop rop)))                                                              ; NEW
 	   ((and (setq y (safe-get x 'reversealias))
 		 (not (and (member x $aliases :test #'eq) (get x 'noun))))
-	    (setq y (exploden y)))
+	    (setq y (exploden (stripdollar y))))
 	   ((setq y (rassoc x aliaslist :test #'eq)) (return (msize (car y) l r lop rop)))
        ((null (setq y (exploden x))))
        ((safe-get x 'noun) (return (msize-atom (get x 'noun) l r)))

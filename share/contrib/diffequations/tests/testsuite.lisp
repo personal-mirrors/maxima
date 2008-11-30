@@ -25,7 +25,7 @@
          "rtestode_murphy_2_3.mac"
          "rtestode_murphy_2_4.mac"
          "rtestode_murphy_2_5.mac"
-         ((mlist) "rtestode_kamke_1_1.mac" 33 73 191 192)
+         ((mlist) "rtestode_kamke_1_1.mac" 34 75 193)
          ((mlist) "rtestode_kamke_1_2.mac" 9)  ; OK - testsuite issues
          "rtestode_kamke_1_3.mac"
          "rtestode_kamke_1_4.mac" 
@@ -38,7 +38,7 @@
          "rtestode_kamke_2_5.mac"
 	 "rtest_sym.mac" 
 	 "rtest_sym2.mac"
-	 ((mlist) "rtest_ode1_riccati.mac" 138 139)
+	 ((mlist) "rtest_ode1_riccati.mac" 138) ; OK - testsuite issues
          "rtest_ode1_abel.mac"
          "rtestode_odelin.mac"
 	)

@@ -24,7 +24,6 @@ endif
 
 SUBDIRS = $(ES_DIR) $(ES_DIR_UTF8) $(PT_DIR) $(PT_DIR_UTF8) $(PT_BR_DIR) $(PT_BR_DIR_UTF8)
 
-info_TEXINFOS = maxima.texi
 maxima_TEXINFOS = Introduction.texi Help.texi Command.texi Operators.texi \
   Expressions.texi Simplification.texi Plotting.texi Input.texi \
   Floating.texi Contexts.texi Polynomials.texi Constants.texi \
@@ -149,14 +148,17 @@ figures/plotting24.pdf\
 figures/plotting25.pdf\
 figures/orthopoly1.pdf
 
-all-local: maxima-index.lisp
+all-local: maxima.info maxima-index.lisp
+
+maxima.info : maxima.texi
+	makeinfo maxima.texi
 
 html: maxima.html contents.hhc
 
 maxima-index.lisp: maxima.info build_index.pl
 	perl ./build_index.pl maxima.info ':crlf' > maxima-index.lisp
 
-maxima.html: maxima.texi $(maxima_TEXINFOS)
+maxima.html: maxima.texi.in $(maxima_TEXINFOS)
 	sh extract_categories.sh maxima
 
 contents.hhc: maxima.html
@@ -203,21 +205,21 @@ EXTRA_DIST = texi2html manual.css texi2html.init \
 
 check_texinfo:
 	pattern=`printf "\r$$"` ; \
-	bad_files=`find . -name '*.texi' -print | xargs grep -l -e "$$pattern"` ; \
+	bad_files=`find . -name '*.texi' -print | xargs $(EGREP) -l -e "$$pattern"` ; \
 	[ -z  "$$bad_files" ] || ( echo "ERROR: The following files have DOS-style EOLs: $$bad_files" ; \
 	echo "Run make distclean and then /doc/info/fix_crlf to fix the problem." ; exit 1 )
 	pattern=`printf "\t"` ; \
-	bad_files=`find . -name '*.texi' -print | xargs grep -l -e "$$pattern"` ; \
+	bad_files=`find . -name '*.texi' -print | xargs $(EGREP) -l -e "$$pattern"` ; \
 	[ -z  "$$bad_files" ] || ( echo "ERROR: The following files have unexpanded Tabs: $$bad_files" ; \
 	echo "Run make distclean and then /doc/info/fix_tab to fix the problem." ; exit 1 )
 
 warn_texinfo:
 	pattern=`printf "\r$$"` ; \
-	bad_files=`find . -name '*.texi' -print | xargs grep -l -e "$$pattern"` ; \
+	bad_files=`find . -name '*.texi' -print | xargs $(EGREP) -l -e "$$pattern"` ; \
 	[ -z  "$$bad_files" ] || ( echo "WARNING: The following files have DOS-style EOLs: $$bad_files" ; \
 	echo "Run /doc/info/fix_crlf to fix the problem." )
 	pattern=`printf "\t"` ; \
-	bad_files=`find . -name '*.texi' -print | xargs grep -l -e "$$pattern"` ; \
+	bad_files=`find . -name '*.texi' -print | xargs $(EGREP) -l -e "$$pattern"` ; \
 	[ -z  "$$bad_files" ] || ( echo "WARNING: The following files have unexpanded Tabs: $$bad_files" ; \
 	echo "Run /doc/info/fix_tab to fix the problem." )
 

@@ -83,7 +83,7 @@
 	  $rules $savedef $savefactors $scalarmatrixp $setcheck
 	  $setcheckbreak $setval $showtime $signbfloat $simp $simpsum
 	  $solvedecomposes $solveexplicit $solvefactors $solvenullwarn
-	  $solveradcan $solvetrigwarn $solve_inconsistent_error $sparse
+	  $solveradcan $solvetrigwarn $sparse
 	  $special $sqrtdispflag $stardisp $storenum $sublis_apply_lambda
 	  $subnumsimp $subscrmap $sumexpand $sumsplitfact
 	  $superlogcon $suspend $taylor_logexpand
@@ -126,7 +126,7 @@
 	  plusflag preserve-direction prods putl radcanp radpe rd*
 	  real-infinities realonlyratnum refchkl return-mode returns rulefcnl
 	  rulesw scanmapp sfindex sign-imag-errp simplimplus-problems
-	  smallprimes specials sqrt2//2 sqrt3//2 state-pdl $stringdisp substp
+	  *small-primes* specials sqrt2//2 sqrt3//2 state-pdl $stringdisp substp
 	  sums tellratlist timesinp timesp tr-abort tr-progret tr-unique
 	  transl-file translate-time-evalables transp
 	  tstack typel user-mesfile user-timesofar varlist wflag

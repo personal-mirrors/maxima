@@ -1,6 +1,6 @@
 # -*-mode: tcl; fill-column: 75; tab-width: 8; coding: iso-latin-1-unix -*-
 #
-#       $Id: Plotdf.tcl,v 1.12 2008-04-26 20:39:31 villate Exp $
+#       $Id: Plotdf.tcl,v 1.17 2008-11-07 14:56:15 villate Exp $
 #
 ###### Plotdf.tcl ######
 #######################################################################
@@ -12,9 +12,9 @@ set plotdfOptions {
     {dxdt "x-y^2+sin(x)*.3" {specifies dx/dt = dxdt.  eg -dxdt "x+y+sin(x)^2"} }
     {dydt "x+y" {specifies dy/dt = dydt.  eg -dydt "x-y^2+exp(x)"} }
     {dydx "" { may specify dy/dx = x^2+y,instead of dy/dt = x^2+y and dx/dt=1 }}
-    {adamsMoulton red "Color to do adams moulton integration in. None means dont do" }
-    {rungeKuttaA "" "Color to do Runge Kutta adaptive integration in. None means dont do" }
-
+    {vector blue "Color for the vectors"}
+    {trajectory red "Color for the trajectories"}
+    {orthogonal "" "Color for the orthogonal curves"}
     {xradius 10 "Width in x direction of the x values" }
     {yradius 10 "Height in y direction of the y values"}
     {width 560 "Width of canvas in pixels"}
@@ -24,17 +24,17 @@ set plotdfOptions {
     {ycenter 0.0 "see xcenter"}
     {bbox "" "xmin ymin xmax ymax .. overrides the -xcenter etc"}
     {tinitial 0.0 "The initial value of variable t"}
-    {nsteps 100 "Number of steps to do in one pass"}
+    {nsteps 300 "Number of steps to do in one pass"}
     {xfun "" "A semi colon separated list of functions to plot as well"}
     {tstep "" "t step size"}
     {direction "both" "May be both, forward or backward" }
     {versus_t 0 "Plot in a separate window x and y versus t, after each trajectory" }
     {windowname ".dfplot" "window name"}
     {parameters "" "List of parameters and values eg k=3,l=7+k"}
+    {linecolors { green black  brown gray black} "colors for functions plots"}
     {sliders "" "List of parameters ranges k=3:5,u"}
-    {linecolors { green black  brown gray black} "colors to use for lines in data plots"}
     {trajectory_at "" "Place to calculate trajectory"}
-    {linewidth "1.0" "Width of integral lines" }
+    {linewidth "2.0" "Width of integral lines" }
     {nolines 0 "If not 0, plot points and nolines"}
     {bargraph 0 "If not 0 this is the width of the bars on a bar graph" }
     {plotpoints 0 "if not 0 plot the points at pointsize" }
@@ -92,7 +92,7 @@ proc doHelpdf { win } {
     global Parser
     doHelp $win [join [list \
 			 [mc  {
-SOLVER/PLOTTER FOR SYSTEMS OF DIFFERENTIAL EQUAITONS
+SOLVER/PLOTTER FOR SYSTEMS OF DIFFERENTIAL EQUATIONS
 
 To quit this help click anywhere on this text.
 
@@ -138,83 +138,93 @@ proc doIntegrateScreen { win sx sy  } {
 proc doIntegrate { win x0 y0 } {
     # global xradius yradius c tstep  nsteps
     #    puts "dointegrate $win $x0 $y0"
-    makeLocal $win xradius yradius c tstep  nsteps direction linewidth tinitial versus_t linecolors
+    makeLocal $win xradius yradius c tstep  nsteps direction linewidth tinitial versus_t xmin xmax ymin ymax
     linkLocal $win didLast trajectoryStarts
     set rtosx rtosx$win ; set rtosy rtosy$win
+    set x1 [$rtosx $xmin]
+    set y1 [$rtosy $ymax]
+    set x2 [$rtosx $xmax]
+    set y2 [$rtosy $ymin]
     oset $win trajectory_at [format "%.10g  %.10g" $x0 $y0]
     lappend trajectoryStarts [list $x0 $y0]
 
     set didLast {}
     # puts "doing at $trajectory_at"
     set steps $nsteps
+    set hx [expr {$xradius / 100.0}]
+    set hy [expr {$yradius / 100.0}]
     if { "$tstep" == "" } {
 	set h [expr {[vectorlength $xradius $yradius] / 200.0}]
 	set tstep $h
     } else {set h $tstep }
 
     # puts h=$h
-    set todo $h
+    set todo "1"
     switch -- $direction {
-	forward { set todo "$h" }
-	backward { set todo "[expr {- $h}]" }
-	both { set todo "$h [expr {- $h}]" }
+	forward { set todo "1" }
+	backward { set todo "-1" }
+	both { set todo "1 -1" }
     }
-    foreach method { adamsMoulton rungeKuttaA  } {
-						  set color [oget $win $method]
-						  if { "$color" != "" } {
-						      lappend methods $method
-						      lappend useColors $method $color
-						  }
-					      }
+    set methods ""
+    foreach method { trajectory orthogonal } {
+				    set color [oget $win $method]
+				    if {"$color" != "" && "$color" != "blank"} {
+					lappend methods $method
+					lappend useColors $method $color
+				    }
+				}
     set methodNo -1
     foreach method $methods {
 			     incr methodNo
+			     set linecolor [assoc $method $useColors ]
 			     #    puts method=$method
-			     foreach h $todo {
-				 set form [list $method xff yff $tinitial $x0 $y0 $h $steps]
+			     set signs $todo
+			     if {"$method" == "orthogonal"} {
+				 set signs "1 -1"
+			     }
+			     foreach sgn $signs {
+				 set arrow "none"
+				 if { "$method"=="trajectory" } {
+				     if { $sgn < 0 } {
+					 set arrow "first"
+				     } else {
+					 if { "$direction" == "forward"} {
+					     set arrow "last"
+					 }
+				     }
+				 }
+				 set h1 [expr {- $hx}]
+				 set h2 [expr {- $hy}]
+				 set form [list $method xff yff $tinitial $x0 $y0 $hx $hy $steps $sgn]
 				 set ans [eval $form]
 				 lappend didLast $form
 
 				 #puts "doing: $form"
 				 set i -1
-				 set xn1 [$rtosx [lindex $ans [incr i]]]
-				 set yn1 [$rtosy [lindex $ans [incr i]]]
+				 set coords {}
 				 set lim [expr {$steps * 2}]
-				 set mee [expr {pow(10.0,9)}]
-				 set ptColor [assoc $method $useColors ]
-				 set linecolor [lindex $linecolors $methodNo]
-				 #set im [getPoint 2 green]
-				 #set im1 [getPoint 2 purple]
-				 set im [getPoint 2 $ptColor]
-				 #set im1 [getPoint 2 purple]		
-				 catch  {
+				 catch {
 				     while { $i <= $lim } {
-					 set xn2  [$rtosx [lindex $ans [incr i]]]
-					 set yn2  [$rtosy [lindex $ans [incr i]]]
-					 # puts "$xn1 $yn1"
-					 # xxxxxxxx following is for a bug in win95 version
-					 if { abs($xn1) + abs($yn1) +abs($xn2)+abs($yn2) < $mee    } {
-					     $c create line $xn1 $yn1 $xn2 $yn2 -tags path -width $linewidth -fill $linecolor
-					
+					 set xn [$rtosx [lindex $ans [incr i]]]
+					 set yn [$rtosy [lindex $ans [incr i]]]
+					 # puts "$xn $yn"
+					 # Tests if point is inside the domain.
+					 # In version 1.14 there was an if:
+					 # abs($xn1)+abs($yn1)+abs($xn2)
+					 # +abs($yn2) < [expr {pow(10.0,9)}]
+					 # to fix a bug in win95 version.
+					 # That's now out of context, but the
+					 # bug might reappear. (J. Villate)
+					 if { ($xn-$x1)*($xn-$x2) <= 0 &&
+					      ($yn-$y1)*($yn-$y2) <= 0 } {
+					     lappend coords $xn $yn
 					 }
-					
-					 if { "$im" != "" } {
-					     #puts hi
-					     $c create image $xn1 $yn1 -image $im -anchor center \
-						 -tags "point"
-					
-					 } else {
-					     $c create oval [expr $xn1 -2] [expr $yn1 -2] [expr $xn1 +2] [expr $yn1 +2] -fill $color
-
-					 }
-					
-					
-					
-
-					 # puts "$xn1 $yn1"
-					 set xn1 $xn2
-					 set yn1 $yn2
 				     }
+				 }
+				 if { [llength $coords] > 3 } {
+				     $c create line $coords -tags path \
+					 -width $linewidth -fill $linecolor \
+					 -arrow $arrow
 				 }
 			     }
 			 }
@@ -307,7 +317,7 @@ proc lreverse { lis } {
 #----------------------------------------------------------------
 #
 
-proc drawArrowScreen { c atx aty dfx dfy } {
+proc drawArrowScreen { c atx aty dfx dfy color } {
 
     set x1 [expr {$atx + $dfx}]
     set y1 [expr {$aty + $dfy}]
@@ -315,14 +325,14 @@ proc drawArrowScreen { c atx aty dfx dfy } {
     #   set y2 [expr {$aty + .8*$dfy - .1* $dfx}]
     #   set x3 [expr {$atx + .8*$dfx -.1* $dfy}]
     #   set y3 [expr {$aty + .8*$dfy + .1* $dfx}]
-    $c create line $atx $aty $x1 $y1 -tags arrow -fill blue -arrow last -arrowshape {3 5 2}
+    $c create line $atx $aty $x1 $y1 -tags arrow -fill $color -arrow last -arrowshape {3 5 2}
     #  $c create line $x2 $y2  $x1 $y1 -tags arrow -fill red
     #  $c create line $x3 $y3 $x1 $y1 -tags arrow -fill red
 }
 
 proc drawDF { win tinitial } {
     global  axisGray
-    makeLocal  $win xmin xmax   xcenter ycenter c ymin ymax transform
+    makeLocal  $win xmin xmax xcenter ycenter c ymin ymax transform vector
 
     # flush stdout
     set rtosx rtosx$win ; set rtosy rtosy$win
@@ -342,47 +352,49 @@ proc drawDF { win tinitial } {
 #    set uptoy [expr {[$rtosy $ymin] + $extra}]
     # draw the axes:
     #puts "draw [$rtosx $xmin] to $uptox"
-    for { set x [expr {[$rtosx $xmin] + $extra}] } { $x < $uptox } { set x [expr {$x +$stepsize}] } {
-	for { set y [expr {[$rtosy $ymax] + $extra}] } { $y < $uptoy } { set y [expr {$y + $stepsize}] } {
-	    set args "$t0 [$storx $x] [$story $y]"
-	    set dfx [expr {$xfactor * [eval xff $args]}]
-	    # screen y is negative of other y
-	    set dfy [expr  {$yfactor * [eval yff $args]}]
-	    # puts "$dfx $dfy"
-	    set len  [vectorlength $dfx $dfy]
-	    append all " $len $dfx $dfy "
-	    if { $min > $len } { set min $len }
-	    if { $max < $len } {set  max $len}
+    if { "$vector" != "" && "$vector" != "blank" } {
+	for { set x [expr {[$rtosx $xmin] + $extra}] } { $x < $uptox } { set x [expr {$x +$stepsize}] } {
+	    for { set y [expr {[$rtosy $ymax] + $extra}] } { $y < $uptoy } { set y [expr {$y + $stepsize}] } {
+		set args "$t0 [$storx $x] [$story $y]"
+		set dfx [expr {$xfactor * [eval xff $args]}]
+		# screen y is negative of other y
+		set dfy [expr  {$yfactor * [eval yff $args]}]
+		# puts "$dfx $dfy"
+		set len  [vectorlength $dfx $dfy]
+		append all " $len $dfx $dfy "
+		if { $min > $len } { set min $len }
+		if { $max < $len } {set  max $len}
+	    }
 	}
-    }
-    set fac [expr {($stepsize -5 -8)/($max - $min)}]
-    set arrowmin 8
-    set arrowrange [expr {$stepsize -4 - $arrowmin}]
-    set s1 [expr {($arrowrange*$min+$arrowmin*$min-$arrowmin*$max)/($min-$max)}]
-    set s2 [expr {$arrowrange/($max-$min) }]
-    # we calculate fac for each length, so that
-    # when we multiply the vector times fac, its length
-    # will fall somewhere in [arrowmin,arrowmin+arrowrange].
-    # vectors of length min and max resp. should get mapped
-    # to the two end points.
-    # To do this we set fac [expr {$s1/$len + $s2}]
-    # puts "now to draw,s1=$s1 s2=$s2,max=$max,min=$min"
-    # puts "xfactor=$xfactor,yfactor=$yfactor"
-
-    set i -1
-    for { set x [expr {[$rtosx $xmin] + $stepsize}] } { $x < $uptox } { set x [expr {$x +$stepsize}] } {
-	for { set y [expr {[$rtosy $ymax] + $stepsize}] } { $y < $uptoy } { set y [expr {$y + $stepsize}] } {
+	set fac [expr {($stepsize -5 -8)/($max - $min)}]
+	set arrowmin 8
+	set arrowrange [expr {$stepsize -4 - $arrowmin}]
+	set s1 [expr {($arrowrange*$min+$arrowmin*$min-$arrowmin*$max)/($min-$max)}]
+	set s2 [expr {$arrowrange/($max-$min) }]
+	# we calculate fac for each length, so that
+	# when we multiply the vector times fac, its length
+	# will fall somewhere in [arrowmin,arrowmin+arrowrange].
+	# vectors of length min and max resp. should get mapped
+	# to the two end points.
+	# To do this we set fac [expr {$s1/$len + $s2}]
+	# puts "now to draw,s1=$s1 s2=$s2,max=$max,min=$min"
+	# puts "xfactor=$xfactor,yfactor=$yfactor"
 	
+	set i -1
+	for { set x [expr {[$rtosx $xmin] + $stepsize}] } { $x < $uptox } { set x [expr {$x +$stepsize}] } {
+	    for { set y [expr {[$rtosy $ymax] + $stepsize}] } { $y < $uptoy } { set y [expr {$y + $stepsize}] } {
+		
+		
+		set len [lindex $all [incr i]]
 	
-	    set len [lindex $all [incr i]]
-	
-	    set fac [expr {$s1/$len + $s2}]
-	    set dfx [lindex $all [incr i]]
-	    set dfy [lindex $all [incr i]]
-	    #puts "[$storx $x] [$story $y] x=$x y=$y dfx=$dfx dfy=$dfy fac=$fac"
-	    # puts "$len $dfx $dfy"
-	    drawArrowScreen $c $x $y [expr {$fac * $dfx}] [expr {$fac * $dfy}]
-        }
+		set fac [expr {$s1/$len + $s2}]
+		set dfx [lindex $all [incr i]]
+		set dfy [lindex $all [incr i]]
+		#puts "[$storx $x] [$story $y] x=$x y=$y dfx=$dfx dfy=$dfy fac=$fac"
+		# puts "$len $dfx $dfy"
+		drawArrowScreen $c $x $y [expr {$fac * $dfx}] [expr {$fac * $dfy} ] $vector
+	    }
+	}
     }
 
     # Draw the two axes
@@ -505,7 +517,7 @@ proc doConfigdf { win } {
     pack $frdydx.dxdt  $frdydx.dydt -side bottom  -fill x -expand 1
     pack $frdydx.dydxbut $frdydx.dydtbut -side left -fill x -expand 1
 
-    foreach w {versus_t parameters linewidth xradius yradius xcenter ycenter tinitial nsteps tstep direction xfun linecolors rungeKuttaA adamsMoulton } {
+    foreach w {parameters xfun linewidth xradius yradius xcenter ycenter tinitial versus_t nsteps direction orthogonal vector trajectory } {
 	mkentry $wb1.$w [oloc $win $w] $w $buttonFont
 	pack $wb1.$w -side bottom -expand 1 -fill x
     }

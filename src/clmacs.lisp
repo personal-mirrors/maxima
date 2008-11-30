@@ -322,6 +322,11 @@
   (setf (ext:long-float-digits) 128)
   )
 
+;; Make the maximum exponent larger for CMUCL.  Without this, cmucl
+;; will generate a continuable error when raising an integer to a
+;; power greater than this.
+#+cmu
+(setf ext::*intexp-maximum-exponent* 100000)
 ;;;; Setup the mapping from the Maxima 'flonum float type to a CL float type.
 ;;;;
 ;;;; Add :flonum-log to *features* if you want flonum to be a
@@ -488,7 +493,7 @@
 		 (if ,only2fun (funcall ,only2fun (car ,l2var)))
 		 (setq ,l2var (cdr ,l2var))
 		 nil))
-	  (reverse res)))))
+	  (nreverse res)))))
 
 ;;; Test
 ; (do-merge-asym '(a a a b c g h k l)

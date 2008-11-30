@@ -9,6 +9,8 @@
 
 ;;; An ANSI-CL portable initializer to replace init_max1.lisp
 
+#+ecl (defvar cl-user::*maxima-build-time* '#.(multiple-value-list (get-decoded-time)))
+
 ;;; Locations of various types of files. These variables are discussed
 ;;; in more detail in the file doc/implementation/dir_vars.txt. Since
 ;;; these are already in the maxima package, the maxima- prefix is
@@ -73,7 +75,8 @@
 	#+openmcl "openmcl"
 	#+abcl "abcl"
 	#+lispworks "lispworks"
-	#-(or clisp cmu scl sbcl gcl allegro openmcl abcl lispworks) "unknownlisp")
+	#+ecl "ecl"
+	#-(or clisp cmu scl sbcl gcl allegro openmcl abcl lispworks ecl) "unknownlisp")
 
 (defvar $file_search_lisp nil
   "Directories to search for Lisp source code.")
@@ -274,7 +277,8 @@
 	      #+allegro "fasl"
 	      #+openmcl (pathname-type ccl::*.fasl-pathname*)
 	      #+lispworks (pathname-type (compile-file-pathname "foo.lisp"))
-	      #-(or gcl cmu scl sbcl clisp allegro openmcl lispworks)
+	      #+ecl "fas"
+	      #-(or gcl cmu scl sbcl clisp allegro openmcl lispworks ecl)
 	      "")
 	 (lisp-patterns (concatenate 'string "###.{" ext ",lisp,lsp}"))
 	 (maxima-patterns "###.{mac,mc}")
@@ -394,9 +398,9 @@
 	    (combine-path *maxima-infodir* subdir-bit "maxima-index.lisp")))))
 
 (defun get-dirs (path)
-  #+(or :clisp :sbcl)
+  #+(or :clisp :sbcl :ecl)
   (directory (concatenate 'string (namestring path) "/*/"))
-  #-(or :clisp :sbcl)
+  #-(or :clisp :sbcl :ecl)
   (directory (concatenate 'string (namestring path) "/*")))
 
 (defun unix-like-basename (path)

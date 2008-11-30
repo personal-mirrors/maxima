@@ -132,7 +132,7 @@
   #+gcl (setq *gnuplot-stream*
               (open (concatenate 'string "| " path) :direction :output))
   #+ecl (progn
-          (setq *gnuplot-stream* (ext:run-program path nil :input :stream :output t :error :output)))
+          (setq *gnuplot-stream* (ext:run-program path nil :input :stream :output t :error :output :wait nil)))
   #-(or clisp cmu sbcl gcl scl lispworks ecl)
   (merror "Gnuplot not supported with your lisp!")
   
@@ -169,7 +169,7 @@
 
 (defun $gnuplot_reset ()
   (send-gnuplot-command "unset output")
-  (send-gnuplot-command (format nil "set term ~a" (translate-gnuplot-term-option)))
+  (send-gnuplot-command (translate-gnuplot-term-option))
   (send-gnuplot-command "reset"))
 
 ;; If embedded in output, the gnuplot_term option makes Gnuplot unhappy,
@@ -181,7 +181,7 @@
     ($default (get-plot-option-string '$gnuplot_default_term_command))
     ($ps (get-plot-option-string '$gnuplot_ps_term_command))
     ($dumb (get-plot-option-string '$gnuplot_dumb_term_command))
-    (t (get-plot-option-string '$gnuplot_term))))
+    (t (format nil "set term ~a" (get-plot-option-string '$gnuplot_term)))))
 
 (defun $gnuplot_replot (&optional s)
   (if (null *gnuplot-stream*)
@@ -514,7 +514,7 @@
     (setf (symbol-function sym)
           #'(lambda (pts &aux  (x1 0.0)(x2 0.0)(x3 0.0))
               (declare (type flonum  x1 x2 x3))
-              (declare (type (cl:array flonum) pts))
+              (declare (type (cl:array t) pts))
               (loop for i below (length pts) by 3
                      do 
 		     (setq x1 (aref pts i))

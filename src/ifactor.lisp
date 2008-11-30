@@ -24,13 +24,13 @@
 (defmvar $primep_number_of_tests 25 "Number of Miller-Rabin tests." fixnum)
 
 (defmvar $pollard_rho_limit 16000 "Limit for pollard-rho factorization depth." fixnum)
-(defmvar $pollard_pm1_limit 25000 "Limit for pollard-rho factorization depth." fixnum)
+(defmvar $pollard_pm1_limit 25000 "Limit for pollard-p1 factorization depth." fixnum)
 
 (defmvar $pollard_rho_tests 5 "Number of pollard-rho rounds." fixnum)
 (defmvar $pollard_pm1_tests 3 "Number of pollard-p-1 rounds." fixnum)
 
 (defmvar $pollard_rho_limit_step 1000 "Step for pollard-rho factorization limit." fixnum)
-(defmvar $pollard_pm1_limit_step 5000 "Step for pollard-rho factorization limit." fixnum)
+(defmvar $pollard_pm1_limit_step 5000 "Step for pollard-p-1 factorization limit." fixnum)
 
 (defmvar $ecm_number_of_curves 50 "Number of curves tried in one round of ecm." fixnum)
 (defmvar $ecm_limit       200  "Starting smootheness limit for ecm method." fixnum)
@@ -202,6 +202,8 @@
 (defun get-small-factors (n)
   (let (factors)
     ;; first divide off the even part
+    (when (= n 1)
+      (return-from get-small-factors '(1 ())))
     (when (> 4 n)
       (push `(,n 1) factors)
       (when $ifactor_verbose (format t "small cofactor: ~A~%" n))
@@ -382,7 +384,7 @@
 ;;; in general a prime factor p of x is found, if p-1 is
 ;;; a product of prime powers q^k <= lim
 
-(defun get-one-factor-p-1 (n &optional (lim 16000) (lim2 1000000))
+(defun get-one-factor-p-1 (n &optional (lim 16000))
   (declare (integer n lim))
   (let* ((base (+ 2 (random (- n 2))))
 	 (anz 256)
@@ -677,7 +679,7 @@
 ;;;   - x is a random number 1<x<n
 ;;;   - n passes the test if:
 ;;;        o x^q=1 (mod n)
-;;;        o x^(q*2^j)=n-1 (mod n) for some j=1..k-1
+;;;        o x^(q*2^j)=n-1 (mod n) for some j=0..k-1
 ;;;
 ;;; probability of n passing one test and beeing not a prime is less than 1/4
 
@@ -793,9 +795,10 @@
 (defun next-prime (n c)
   (when (evenp n) (incf n c))
   (loop
-     (if (miller-rabin n)
-	 (when (primep n) (return-from next-prime n))
-	 (incf n (* 2 c)))))
+     (and (miller-rabin n)
+          (primep n) 
+          (return-from next-prime n))
+     (incf n (* 2 c))))
 
 ;;; return a list of all primes between start and end
 

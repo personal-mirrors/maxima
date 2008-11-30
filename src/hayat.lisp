@@ -197,7 +197,7 @@
   precison; otherwise (the default) they are truncated based upon the input
   truncation levels.")
 
-(defmvar $taylor_logexpand ()
+(defmvar $taylor_logexpand t
  "Unless FALSE log's of products will be expanded fully in TAYLOR (the default)
   to avoid identically-zero constant terms which involve log's. When FALSE,
   only expansions necessary to produce a formal series will be executed.")
@@ -2373,7 +2373,7 @@
 		  (go begin-expansion)))
 	     (t
 	      (if (and (eq funame '%atan)
-		       (eq (asksign-p-or-n (term-disrep (ps-lt psarg) psarg)) '$neg))
+		       (eq (coef-sign arg) '$neg))
 		  (return (psplus (atrigh arg func) (taylor2 (m- '$%pi))))
 		  (return (atrigh arg func))))))
      (setq temp (t-o-var (gvar psarg)))

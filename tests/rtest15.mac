@@ -3,6 +3,10 @@
 kill(all);
 done$
 
+/* This file assumes fpprec has its default value of 16 */
+fpprec:16;
+16;
+
 /* apropos function added 7 april 2002 */
 apropos('tr_optimize_max_loop);
 [tr_optimize_max_loop]$
@@ -570,12 +574,6 @@ integrate(1/(sin(x)^2+1),x,0,20*%pi);
 
 integrate(sqrt(x^3/(2*a-x)),x,0,2*a);
 3*%pi*a^2/2;
-
-/*
- * Bug [ 1548643 ] limit with abs: tag LIMIT is undefined
- */
-limit(abs(sqrt(1-1/x)-1),x,0);
-und;
 
 /*
  * Bug [1044318] defint(1/(sin(x)^2+1),x,0,3*%pi)

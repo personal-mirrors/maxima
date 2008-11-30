@@ -90,11 +90,15 @@ or if apply is being used are printed.")
 		       (let ((noevalargs t))
 			 (meval (cons (ncons fn) args))))))))
 
+	;; GCL considers interpreted functions and lambdas to be non-atoms
+	#+gcl((functionp fn)
+	 (apply fn args))
+
 	;; extension for pdiff; additional extension are welcomed.
     ;; (AND (CONSP FN) (CONSP (CAR FN)) ...) is an attempt to identify
     ;; conventional Maxima expressions ((FOO) X Y Z); probably should
     ;; encapsulate somewhere, maybe it is already ??
-	((and (consp fn) (consp (car fn)) (get (mop fn) 'mapply1-extension)
+	((and (consp fn) (consp (car fn)) (symbolp (mop fn)) (get (mop fn) 'mapply1-extension)
 	      (apply (get (mop fn) 'mapply1-extension) (list fn args fnname form))))
 	((eq (car fn) 'lambda)
 	 (apply (coerce fn 'function) args))
@@ -2316,7 +2320,7 @@ wrapper for this."
   (|''MAKE| $asinh %asinh) (|''MAKE| $acosh %acosh) (|''MAKE| $atanh %atanh)
   (|''MAKE| $acoth %acoth) (|''MAKE| $asech %asech) (|''MAKE| $acsch %acsch)
   (|''MAKE| $round %round) (|''MAKE| $truncate %truncate) (|''MAKE| $plog %plog)
-  (|''MAKE| $signum %signum) (|''MAKE| $erf %erf) (|''MAKE| $gamma %gamma))
+  (|''MAKE| $signum %signum) (|''MAKE| $gamma %gamma))
 
 (defmfun $binomial (x y)
   (let (($numer t) ($float t))

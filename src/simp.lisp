@@ -242,7 +242,10 @@
 
 (defmfun $integerp (x)
   (or (integerp x)
-      (and ($ratp x) (integerp (cadr x)) (equal (cddr x) 1))))
+      (and ($ratp x)
+	   (not (member 'trunc (car x)))
+	   (integerp (cadr x))
+	   (equal (cddr x) 1))))
 
 ;; The call to $INTEGERP in the following two functions checks for a CRE
 ;; rational number with an integral numerator and a unity denominator.
@@ -262,7 +265,10 @@
 (defmfun $ratnump (x)
   (or (integerp x)
       (ratnump x)
-      (and ($ratp x) (integerp (cadr x)) (integerp (cddr x)))))
+      (and ($ratp x)
+	   (not (member 'trunc (car x)))
+	   (integerp (cadr x))
+	   (integerp (cddr x)))))
 
 (defmfun $ratp (x) (and (not (atom x)) (eq (caar x) 'mrat)))
 
@@ -781,7 +787,12 @@
      del	(cond ((not (mtimesp (cadr fm))) (go check))
 		      ((onep1 (cadadr fm))
 		       (rplacd (cadr fm) (cddadr fm)) (return (cdr fm)))
-		      ((not (zerop1 (cadadr fm))) (return (cdr fm))))
+		      ((not (zerop1 (cadadr fm))) (return (cdr fm)));)
+              ((and (or (not $listarith) (not $doallmxops))
+                    (zerop1 (cadadr fm))
+                    (mxorlistp (caddr (cadr fm))) )
+               (return (rplacd fm (cons (constmx 0 (caddr (cadr fm))) (cddr fm))))
+              ) )
      (return (rplacd fm (cddr fm)))
      equt (setq x1 (testtneg (list* '(mtimes simp)
 				    (addk (cond (flag (cadadr fm))
@@ -804,6 +815,8 @@
 	       ((not errorsw) (merror "log(0) has been generated."))
 	       (t (throw 'errorsw t))))
 	((eq y '$%e) 1)
+	((and (mexptp y) (eq (cadr y) '$%e))	;; log(%e^x) -> x
+	 (simplifya (caddr y) t))
 	((ratnump y)
 	 (cond ((equal (cadr y) 1) (simpln1 (list nil (caddr y) -1)))
 	       ((eq $logexpand '$super)
@@ -987,7 +1000,7 @@
 						(mul2 res (cadr eqnflag))
 						(mul2 res (caddr eqnflag)))))
 			 (t (dolist (u x)
-			      (cond ((mxorlistp1 u)
+			      (cond (  (mxorlistp u)
 				     (return
 				       (setq res (constmx res u))))
 				    ((and (mexptp u)
@@ -1362,14 +1375,23 @@
 (defmfun simpsignum (x y z) 
   (oneargcheck x)
   (setq y (simpcheck (cadr x) z))
-  (cond ((mnump y)
-	 (setq y (num1 y)) (cond ((plusp y) 1) ((minusp y) -1) (t 0))) 
-	((eq (setq z (csign y)) t) (eqtest (list '(%signum) y) x))
-	((eq z '$pos) 1) 
-	((eq z '$neg) -1) 
-	((eq z '$zero) 0) 
-	((mminusp y) (neg (take '(%signum) (neg y))))
-	(t (eqtest (list '(%signum) y) x))))
+  (setq z (csign y))
+  ;; When csign thinks y is complex, let it be.
+  (cond ((eq t z) (eqtest (list '(%signum) y) x))
+	(t 
+	 ;; positive * x --> x and negative * x --> -1 * x.
+	 (if (mtimesp y)
+	     (setq y (muln (mapcar #'(lambda (s) (let ((sgn (csign s)))
+						   (cond ((eq sgn '$neg) -1)
+							 ((eq sgn '$pos) 1)
+							 (t s)))) (margs y)) t)))
+
+	 (cond ((and (not ($mapatom y)) (eq (mop y) '%signum)) y) ;; signum(signum(x)) --> signum(x)
+	       ((eq z '$pos) 1) 
+	       ((eq z '$neg) -1) 
+	       ((eq z '$zero) 0) 
+	       ((great (neg y) y) (neg (take '(%signum) (neg y)))) ;; signum(x) --> -signum(-x).
+	       (t (eqtest (list '(%signum) y) x))))))
 
 (defmfun exptrl (r1 r2)
   (cond ((equal r2 1) r1)
@@ -1466,6 +1488,9 @@
 			     ((not (free pot '$%i))
 			      (cond ((not errorsw)
 				     (merror "0 to a complex quantity has been generated."))
+				    (t (throw 'errorsw t))))
+			     ((and *zexptsimp? (eq ($asksign pot) '$zero))
+			      (cond ((not errorsw) (merror "0^0 has been generated"))
 				    (t (throw 'errorsw t))))
 			     (t (return (zerores gr pot)))))
 		      ((and (mnump gr) (mnump pot)

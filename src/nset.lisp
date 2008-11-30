@@ -25,23 +25,21 @@
 (setf (get '$set  'dimension) 'dimension-match)
 
 ;; Parse {a, b, c} into set(a, b, c).
-;; Don't bother with DEF-NUD etc -- matchfix + ::= works just fine.
-;; Well, MDEFMACRO is a little too zealous in this context, since we
-;; don't really want this macro defn to show up on the $MACROS infolist.
-;; (Maybe it would be cleanest to append built-in defns to FOO::$MACROS
-;; where FOO is something other than MAXIMA, but that awaits
-;; regularization of package use within Maxima.)
 
-(eval-when
-    #+gcl (load eval)
-    #-gcl (:load-toplevel :execute)
-    ;; matchfix ("{", "}")
-    (meval '(($matchfix) "{" "}"))
-    ;; "{" ([L]) ::= buildq ([L], set (splice (L)));
-    (let ((new-defn
-	   (meval '((mdefmacro) ((${) ((mlist) $l)) (($buildq) ((mlist) $l) (($set) (($splice) $l)))))))
-      ;; Simpler to patch up $MACROS here, than to replicate the functionality of MDEFMACRO.
-      (setq $macros (delete (cadr new-defn) $macros :test #'equal))))
+(def-nud-equiv |$}| delim-err)
+(def-led-equiv |$}| erb-err)
+(def-lbp     |$}| 5.)
+
+(def-nud-equiv	|${| parse-matchfix)
+(def-match	|${| |$}|)
+(def-lbp	|${| 200.)
+;No RBP
+(def-mheader	|${| ($set))
+(def-pos	|${| $any)
+;No LPOS
+;No RPOS
+
+(def-operator "{" '$any nil '$any nil nil nil nil '(nud . parse-matchfix) 'msize-matchfix 'dimension-match "}")
 
 ;; Support for TeXing sets. If your mactex doesn't TeX the empty set
 ;; correctly, get the latest mactex.lisp.
@@ -50,10 +48,7 @@
 (defprop $set (("\\left \\{" ) " \\right \\}") texsym)
 
 (defun require-set (x context-string)
-  (cond (($setp x) 
-	 (cdr (simp-set x 1 nil)))
-	(t 
-	 (merror "Function ~:M expects a set, instead found ~:M" context-string x))))
+  (if ($setp x) (cdr x) (merror "Function ~:M expects a set, instead found ~:M" context-string x)))
 
 ;; If x is a Maxima list, return a Lisp list of its members; otherwise,
 ;; signal an error. Unlike require-set, the function require-list does not
@@ -126,14 +121,11 @@
 (defun $setp (a)
   (and (consp a) (consp (car a)) (eq (caar a) '$set)))
 
-;; Return the cardinality of a set; if the argument is a list, convert it to a
-;; set. Works even when simp : false.  For example,
-
-;; (C1) cardinality(set(a,a,a)), simp : false;
-;; (D1) 				   1
+;; Return the cardinality of a set. This function works even when $simp is false.
  
 (defun $cardinality (a)
-  (length (require-set a "$cardinality")))
+  (if $simp (length (require-set a "$cardinality"))
+    (let (($simp t)) ($cardinality (simplify a)))))
 
 ;; Return true iff a is a subset of b. If either argument is a list, first 
 ;; convert it to a set. Signal an error if a or b aren't lists or sets.
@@ -639,7 +631,7 @@
        (acc)
        (tail)
        (x))
-      ((null l) (cons '($set) (mapcar #'(lambda (x) (cons '($set) x)) acc)))
+      ((null l) (simplify (cons '($set) (mapcar #'(lambda (x) (cons '($set) x)) acc))))
     (setq x (car l))
     (setq tail (member-if #'(lambda (z) (bool-checked-mfuncall f x (car z))) acc))
     (cond ((null tail)
@@ -1089,11 +1081,11 @@ a positive integer; instead found ~:M" n-sub))))
 
 (defun xappend (s)
   #+(or cmu scl)
-  (cons '(mlist) (apply 'append (mapcar #'(lambda (x) 
-					    (require-list x "$append")) s)))
+  (cons '(mlist) (apply 'append (mapcar #'(lambda (x)
+                        (require-list x "$append")) s)))
   #-(or cmu scl)
   (let ((acc))
-    (dolist (si s (cons '(mlist) acc))
+    (dolist (si (reverse s) (cons '(mlist) acc))
       (setq acc (append (require-list si "$append") acc)))))
 
 (def-nary 'mand (s) (mevalp (cons '(mand) s)) t)
@@ -1110,15 +1102,27 @@ a positive integer; instead found ~:M" n-sub))))
 ;; When there isn't a Maxima function we can call (actually when (get op '$nary) 
 ;; returns nil) we give up and use rl-reduce with left-associativity.
 
+
 (defun $xreduce (f s &optional (init 'no-init))
-  (let ((op (if (atom f) ($verbify f) nil)))
-    (cond ((get op '$nary)
+  (let* ((op-props (get (if (atom f) ($verbify f) nil) '$nary))
+	 (opfn  (if (consp op-props) (car op-props) nil)))
+  
+    (cond (opfn
 	   (setq s (require-list-or-set s "$xreduce"))
-	   (if (not (equal init 'no-init)) (setq s (cons init s)))
-					;(print "...using nary function")
-	   (mapply1 op s f nil))
+	   (if (not (equal init 'no-init))
+	       (setq s (cons init s)))
+	  
+	   (if (null s)
+	       (cadr op-props)        ; is this clause really needed?
+	     
+	     (funcall opfn s)))
+
+	  (op-props
+	   ($apply f ($listify s)))
+	  
 	  (t
 	   (rl-reduce f ($listify s) nil init "$xreduce")))))
+
 
 ;; Extend a function f : S x S -> S to n arguments using a minimum depth tree.
 ;; The function f should be nary (associative); otherwise, the result is somewhat 

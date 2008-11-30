@@ -1,4 +1,4 @@
-@c version 1.30
+@c version 1.33
 @menu
 * Introducci@'on a draw::
 * Funciones y variables para draw::
@@ -185,11 +185,15 @@ Valor por defecto: @code{screen}
 
 Selecciona el terminal a utilizar por Gnuplot; valores posibles son:
 @code{screen} (por defecto), @code{png}, @code{jpg}, @code{eps}, @code{eps_color},
-@code{gif}, @code{animated_gif}, @code{wxt} y @code{aquaterm}.
+@code{pdf}, @code{pdfcairo}, @code{gif}, @code{animated_gif}, @code{wxt} y @code{aquaterm}.
 
 Puesto que @'esta es una opci@'on global, su posici@'on dentro de la
 descripci@'on de la escena no reviste importancia. Tambi@'en puede
 usarse como argumento de la funci@'on @code{draw}.
+
+pdfcairo necesita Gnuplot 4.3. Actualmente (Nov 2008) Gnuplot 4.3 es una versi@'on en desarrollo.
+pdf necesita que Gnuplot 4.2/4.3 haya sido compilado con la opci@'on @code{--enable-pdf} y libpdf debe
+estar instalado (@url{http://www.pdflib.com/en/download/pdflib-family/pdflib-lite/}).
 
 Ejemplos:
 
@@ -210,7 +214,13 @@ Ejemplos:
       draw2d(file_name = "myfile",
              explicit(x^2,x,-1,1),
              terminal  = 'eps)$
-(%i6) /* ventana wxwidgets */
+(%i6) /* pdf file */
+      draw2d(file_name = "mypdf",
+             pdf_width = 12.0,
+             pdf_height = 8.0,
+             explicit(x^2,x,-1,1),
+             terminal  = 'pdf)$
+(%i7) /* wxwidgets window */
       draw2d(explicit(x^2,x,-1,1),
              terminal  = 'wxt)$
 @end example
@@ -229,7 +239,7 @@ End of animation sequence
 (%o2)          [gr2d(explicit), gr2d(explicit), gr2d(explicit)]
 @end example
 
-La opci@'ob @code{delay} s@'olo se activa en caso de gifs animados; se ignora en
+La opci@'on @code{delay} s@'olo se activa en caso de gifs animados; se ignora en
 cualquier otro caso.
 
 V@'eanse tambi@'en @code{file_name}, @code{pic_width}, @code{pic_height} y @code{delay}.
@@ -321,6 +331,14 @@ Ejemplo:
         label(["Courier-Oblique font, size 15",1,1]),
         terminal = eps)$
 @end example
+
+@item
+@i{pdf}:
+Utiliza las mismas fuentes que @i{Postscript}.
+
+@item
+@i{pdfcairo}:
+Utiliza las mismas fuentes que @i{wxt}.
 
 @item
 @i{wxt}:
@@ -1025,7 +1043,8 @@ pero es posible activarlo haciendo uso de la opci@'on @code{user_preamble},
 Valor por defecto: @code{"maxima_out"}
 
 @code{file_name} es el nombre del fichero en el que los terminales @code{png}, 
-@code{jpg}, @code{eps} y @code{eps_color} guardar@'an el gr@'afico.
+@code{jpg}, @code{eps}, @code{pdf} and @code{pdfcairo} y @code{eps_color}
+guardar@'an el gr@'afico.
 
 Puesto que @'esta es una opci@'on global, su posici@'on dentro de la
 descripci@'on de la escena no reviste importancia. Tambi@'en puede
@@ -1126,7 +1145,7 @@ V@'eanse tambi@'en @code{terminal}, @code{file_name} y @code{pic_width}.
 @defvr {Opci@'on gr@'afica} eps_width
 Valor por defecto: 12
 
-@code{eps_width} es el ancho (medido en cm) del archivo Postscipt
+@code{eps_width} es el ancho (medido en cm) del archivo Postscript
 generado por los terminales @code{eps} y @code{eps_color}.
 
 Puesto que @'esta es una opci@'on global, su posici@'on dentro de la
@@ -1151,7 +1170,7 @@ V@'eanse tambi@'en @code{terminal}, @code{file_name} y @code{eps_height}.
 @defvr {Opci@'on gr@'afica} eps_height
 Valor por defecto: 8
 
-@code{eps_height} es la altura (medida en cm) del archivo Postscipt
+@code{eps_height} es la altura (medida en cm) del archivo Postscript
 generado por los terminales @code{eps} y @code{eps_color}.
 
 Puesto que @'esta es una opci@'on global, su posici@'on dentro de la
@@ -1170,6 +1189,57 @@ Ejemplo:
 
 V@'eanse tambi@'en @code{terminal}, @code{file_name} y @code{eps_width}.
 @end defvr
+
+
+
+@defvr {Opci@'on gr@'afica} pdf_width
+Valor por defecto: 21.0 (ancho A4)
+
+Es el ancho (medida en cm) del documento PDF generado por los
+terminales @code{pdf} y @code{pdfcairo}.
+
+Puesto que @'esta es una opci@'on global, su posici@'on dentro de la
+descripci@'on de la escena no reviste importancia. Tambi@'en puede
+usarse como argumento de la funci@'on @code{draw}.
+
+Ejemplo:
+
+@example
+(%i1) load(draw)$
+(%i2) draw2d(terminal   = 'pdf,
+             pdf_width  = 3.0,
+             pdf_height = 3.0,
+             explicit(x^2,x,-1,1))$
+@end example
+
+V@'eanse tambi@'en @code{terminal}, @code{file_name} y @code{pdf_height}.
+@end defvr
+
+
+
+@defvr {Opci@'on gr@'afica} pdf_height
+Valor por defecto: 29.7 (alto A4)
+
+Es el alto (medida en cm) del documento PDF generado por los
+terminales @code{pdf} y @code{pdfcairo}.
+
+Puesto que @'esta es una opci@'on global, su posici@'on dentro de la
+descripci@'on de la escena no reviste importancia. Tambi@'en puede
+usarse como argumento de la funci@'on @code{draw}.
+
+Ejemplo:
+
+@example
+(%i1) load(draw)$
+(%i2) draw2d(terminal   = 'pdf,
+             pdf_width  = 3.0,
+             pdf_height = 3.0,
+             explicit(x^2,x,-1,1))$
+@end example
+
+V@'eanse tambi@'en @code{terminal}, @code{file_name} y @code{pdf_width}.
+@end defvr
+
 
 
 @defvr {Opci@'on gr@'afica} axis_bottom
@@ -1383,6 +1453,39 @@ Ejemplos:
          /* en explicit mas abajo:     */
          enhanced3d   = sin(x*y),
          explicit(20*exp(-x^2-y^2)-10,x,-3,3,y,-3,3))$
+@end example
+@end defvr
+
+
+@defvr {Opci@'on gr@'afica} meshed_surface
+Valor por defecto: @code{false}
+
+La opci@'on @code{meshed_surface} s@'olo tiene efecto cuando la opci@'on
+@code{enhanced3d} no es @code{false}. En tal caso, si @code{meshed_surface} 
+vale tambi@'en @code{false}, solamente se dibujar@'a la superficie coloreada. Si su
+valor es @code{true}, entonces se dibujar@'an tanto la superficie coloreada
+como las l@'{@dotless{i}}neas de la malla.
+
+Solamente las funciones @code{explicit} en 3d y los objetos @code{parametric_surface}
+se ven afectados por esta opci@'on.
+
+V@'ease tambi@'en @code{enhanced3d}.
+
+Ejemplos:
+
+@example
+(%i1) load(draw)$
+(%i2) draw3d (
+         enhanced3d     = true,
+         color          = green,
+         meshed_surface = true,
+         explicit(x^2+y^2, x,-2,2,y,-2,2)) $
+(%i3) draw3d (
+         enhanced3d     = true,
+         surface_hide   = true,
+         color          = green,
+         meshed_surface = true,
+         parametric_surface(x^2,y,x+y, x,-2,2,y,-2,2)) $
 @end example
 @end defvr
 
@@ -1919,7 +2022,7 @@ V@'ease tambi@'en @code{line_type}.
 
 
 @defvr {Opci@'on gr@'afica} line_type
-Valor por defecto: 1
+Valor por defecto: @code{solid}
 
 @code{line_type} indica c@'omo se van a dibujar las l@'{@dotless{i}}neas;
 valores posibles son @code{solid} y @code{dots}.
@@ -2580,6 +2683,9 @@ Ejemplo:
 @deffnx {Objeto gr@'afico} label ([@var{string},@var{x},@var{y},@var{z}],...)
 Escribe etiquetas en 2D y 3D.
 
+Las etiquetas coloreadas s@'olo trabajan con Gnuplot 4.3. Este es un fallo conocido del
+paquete @code{draw}.
+
 Este objeto se ve afectado por las siguientes @i{opciones gr@'aficas}: @code{label_alignment}, 
 @code{label_orientation} y @code{color}.
 
@@ -2700,8 +2806,9 @@ dibuja la funci@'on expl@'{@dotless{i}}cita @var{fcn}, con la variable
 @code{var1} tomando valores desde @var{minval1} hasta @var{maxval1} y 
 la variable @var{var2} tomando valores desde @var{minval2} hasta @var{maxval2}.
 
-Este objeto se ve afectado por las siguientes @i{opciones gr@'aficas}: @code{xu_grid}, 
-@code{yv_grid}, @code{line_type}, @code{key} y @code{color}.
+Este objeto se ve afectado por las siguientes @i{opciones gr@'aficas}:  @code{xu_grid}, 
+@code{yv_grid}, @code{line_type}, @code{line_width}, @code{key}, @code{enhanced3d},
+@code{meshed_surface} y @code{color}.
 
 Ejemplo:
 
@@ -3177,7 +3284,8 @@ con el par@'ametro @var{par1} tomando valores desde @var{par1min} hasta @var{par
 y el par@'ametro @var{par2} tomando valores desde @var{par2min} hasta @var{par2max}.
 
 Este objeto se ve afectado por las siguientes @i{opciones gr@'aficas}: @code{xu_grid}, 
-@code{yv_grid}, @code{line_type}, @code{key} y @code{color}.
+@code{yv_grid}, @code{line_type}, @code{line_width}, @code{key}, @code{enhanced3d},
+@code{meshed_surface} y @code{color}.
 
 Ejemplo:
 

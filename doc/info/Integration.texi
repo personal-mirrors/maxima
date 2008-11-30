@@ -799,11 +799,11 @@ They all take the form @code{key=val}.  The keyword arguments are:
 
 @table @var
 @item epsrel
-Desired relative error of approximation.  Default is 1d-10.
+Desired relative error of approximation.  Default is 1d-8.
 @item epsabs
 Desired absolute error of approximation.  Default is 0.
 @item limit
-Size of internal work array.  (@var{limit} - @var{limlst})/2 is the
+Size of internal work array.  @var{limit} is the
 maximum number of subintervals to use.  Default is 200.
 @end table
 
@@ -888,11 +888,11 @@ They all take the form @code{key=val}.  The keyword arguments are:
 
 @table @var
 @item epsrel
-Desired relative error of approximation.  Default is 1d-10.
+Desired relative error of approximation.  Default is 1d-8.
 @item epsabs
 Desired absolute error of approximation.  Default is 0.
 @item limit
-Size of internal work array.  (@var{limit} - @var{limlst})/2 is the
+Size of internal work array.  @var{limit} is the
 maximum number of subintervals to use.  Default is 200.
 @end table
 
@@ -947,8 +947,8 @@ Note that @code{quad_qags} is more accurate and efficient than @code{quad_qag} f
 
 @c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
-@deffn {Function} quad_qagi (@var{f(x)}, @var{x}, @var{a}, @var{inftype}, [@var{epsrel}, @var{epsabs}, @var{limit}])
-@deffnx {Function} quad_qagi (@var{f}, @var{x}, @var{a}, @var{inftype}, [@var{epsrel}, @var{epsabs}, @var{limit}])
+@deffn {Function} quad_qagi (@var{f(x)}, @var{x}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}])
+@deffnx {Function} quad_qagi (@var{f}, @var{x}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}])
 
 Integration of a general function over an infinite or semi-infinite interval.
 The interval is mapped onto a finite interval and
@@ -993,27 +993,19 @@ be integrated over an infinite range.
 The integrand may be specified as the name of a Maxima or Lisp function or operator,
 a Maxima lambda expression, or a general Maxima expression.
 
-The parameter @var{inftype} determines the integration interval as follows:
-
-@table @code
-@item inf
-The interval is from @var{a} to positive infinity.
-@item minf
-The interval is from negative infinity to @var{a}.
-@item both
-The interval is the entire real line.
-@end table
+One of the limits of integration must be infinity.  If not, then
+@code{quad_qagi} will just return the noun form.
 
 The keyword arguments are optional and may be specified in any order.
 They all take the form @code{key=val}.  The keyword arguments are:
 
 @table @var
 @item epsrel
-Desired relative error of approximation.  Default is 1d-10.
+Desired relative error of approximation.  Default is 1d-8.
 @item epsabs
 Desired absolute error of approximation.  Default is 0.
 @item limit
-Size of internal work array.  (@var{limit} - @var{limlst})/2 is the
+Size of internal work array.  @var{limit} is the
 maximum number of subintervals to use.  Default is 200.
 @end table
 
@@ -1103,11 +1095,11 @@ They all take the form @code{key=val}.  The keyword arguments are:
 
 @table @var
 @item epsrel
-Desired relative error of approximation.  Default is 1d-10.
+Desired relative error of approximation.  Default is 1d-8.
 @item epsabs
 Desired absolute error of approximation.  Default is 0.
 @item limit
-Size of internal work array.  (@var{limit} - @var{limlst})/2 is the
+Size of internal work array.  @var{limit} is the
 maximum number of subintervals to use.  Default is 200.
 @end table
 
@@ -1315,11 +1307,11 @@ They all take the form @code{key=val}.  The keyword arguments are:
 
 @table @var
 @item epsrel
-Desired relative error of approximation.  Default is 1d-10.
+Desired relative error of approximation.  Default is 1d-8.
 @item epsabs
 Desired absolute error of approximation.  Default is 0.
 @item limit
-Size of internal work array.  (@var{limit} - @var{limlst})/2 is the
+Size of internal work array.  @var{limit}/2 is the
 maximum number of subintervals to use.  Default is 200.
 @item maxp1
 Maximum number of Chebyshev moments.  Must be greater than 0.  Default
@@ -1425,7 +1417,7 @@ They all take the form @code{key=val}.  The keyword arguments are:
 
 @table @var
 @item epsrel
-Desired relative error of approximation.  Default is 1d-10.
+Desired relative error of approximation.  Default is 1d-8.
 @item epsabs
 Desired absolute error of approximation.  Default is 0.
 @item limit

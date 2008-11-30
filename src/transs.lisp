@@ -89,6 +89,8 @@
 
 (defmspec $compfile (forms)
     (setq forms (cdr forms))
+    (if (eq 1 (length forms))
+      (merror "compfile: bravely refusing to write file of length 0"))
     (bind-transl-state
      (setq $transcompile t
 	   *in-compfile* t)
@@ -99,7 +101,7 @@
        (pop forms)
        (unwind-protect
 	    (progn
-	      (setq transl-file (open-out-dsk out-file-name))
+	      (setq transl-file (open out-file-name :direction :output :if-exists :overwrite :if-does-not-exist :create :element-type 'character))
 	      (cond ((or (member '$all forms :test #'eq)
 			 (member '$functions forms :test #'eq))
 		     (setq forms (mapcar #'caar (cdr $functions)))))
@@ -150,7 +152,7 @@
 	 (setq result (list '(mlist) input-file)))
 	(t (setq result (translate-file input-file translation-output-file))
 	   (setq input-file (third result))))
-  #+(or cmu scl sbcl clisp allegro openmcl lispworks)
+  #+(or cmu scl sbcl clisp allegro openmcl lispworks ecl)
   (multiple-value-bind (output-truename warnings-p failure-p)
       (if bin-file
 	  (compile-file input-file :output-file bin-file)
@@ -160,7 +162,7 @@
     ;; indicate that we found errors. Is this what we want?
     (unless failure-p
       (setq bin-file output-truename)))
-  #-(or cmu scl sbcl clisp allegro openmcl lispworks)
+  #-(or cmu scl sbcl clisp allegro openmcl lispworks ecl)
   (setq bin-file (compile-file input-file :output-file bin-file))
   (append result (list bin-file)))
 

@@ -174,8 +174,8 @@
 ;; being quizzed about the sign of x. Thus the call to lenient-extended-realp.
 
 (defun $compare (a b)
-  (cond ((or (not (lenient-extended-realp a)) (not (lenient-extended-realp b)))
-	 (if (eq t (meqp a b)) "=" '$notcomparable))
+  (cond ((eq t (meqp a b)) "=")
+	((or (not (lenient-extended-realp a)) (not (lenient-extended-realp b))) '$notcomparable)
 	(t
 	 (let ((sgn (csign (specrepcheck (sub a b)))))
 	   (cond ((eq sgn '$neg) "<")
@@ -206,8 +206,12 @@
 ;; Convert all floats and big floats in e to an exact rational representation. 
 
 (defun $rationalize (e)
-  (cond ((floatp e) (cl-rat-to-maxima (rationalize e)))
+  (setq e (ratdisrep e))
+  (cond ((floatp e) 
+	 (let ((significand) (expon) (sign))
+	   (multiple-value-setq (significand expon sign) (integer-decode-float e))
+	   (cl-rat-to-maxima (* sign significand (expt 2 expon)))))
 	(($bfloatp e) (cl-rat-to-maxima (* (cadr e)(expt 2 (- (caddr e) (third (car e)))))))
 	(($mapatom e) e)
-	(t (mfuncall '$fullmap '$rationalize e))))
+	(t (simplify (cons (list (mop e)) (mapcar #'$rationalize (margs e)))))))
 

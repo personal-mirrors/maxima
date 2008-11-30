@@ -772,7 +772,7 @@ a^(-p)*gammagreek(p,a)$
 
 /* Formula 37, p 147 */
 specint(exp(-a*exp(t))*exp(-p*t),t);
-a^p*gammaincomplete(-p,a)$
+a^p*gamma_incomplete(-p,a)$
 
 /* Formula 16, p 217 */
 (assume(2*v+2*u+1>0),true);
@@ -1359,15 +1359,22 @@ ratsimp(factor(exponentialize(expand(hgfred([1,3],[2,2],x))))-
 /* test with incomplete gamma */ 
 /*
 hgfred([1/2,b],[3/2,b+1],x);
-b*(sqrt(%pi/x)*erfi(sqrt(x))-(-x)^(-b)*(gamma(b)-gammaincomplete(b,-z)))/(2*b-1)$
+b*(sqrt(%pi/x)*erfi(sqrt(x))-(-x)^(-b)*(gamma(b)-gamma_incomplete(b,-z)))/(2*b-1)$
 */
 
 /* Note: I am unsure about Maxima notation for the incomplte gamma
 function */ 
 
-/* Tests with erfi */
+/* Tests with erfi
+   erfi is implemented as a simplifying function. The following definition no 
+   longer works. When erf_representation is T the simplifier transform erfi to
+   a representation in terms of erf.
 (erfi(x) := -%i*erf(%i*x),0);
 0;
+*/
+
+erf_representation : true;
+true;
 
 ratsimp(factor(hgfred([-1/2,3/2],[1/2,1/2],x))-
 	(exp(x)-2*sqrt(%pi)*sqrt(x)*erfi(sqrt(x))));
@@ -1386,7 +1393,9 @@ ratsimp(factor(hgfred([-1/2,5/2],[1/2,3/2],x))-
 ratsimp(factor(hgfred([-1/2,3],[1/2,2],x))-
 	(exp(x)-5/4*sqrt(%pi)*sqrt(x)*erfi(sqrt(x))));
 0;
- 
+
+erf_representation : false;
+false;
 
 /*
 ratsimp(factor(hgfred([(-1)/2,1],[1/2,2],x))-

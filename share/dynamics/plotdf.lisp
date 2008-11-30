@@ -2,7 +2,7 @@
 ;;              Field for an ordinary 1st order differential equation,
 ;;              or for a system of two autonomous 1st order equations.
 ;;   
-;; Copyright (C) 2004 Jaime E. Villate <villate@gnu.org>
+;; Copyright (C) 2004, 2008 Jaime E. Villate <villate@gnu.org>
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
 ;; See plotdf.usg (which should come together with this program) for
 ;; a usage summary
 ;;
-;; $Id: plotdf.lisp,v 1.3 2007-07-19 08:14:40 villate Exp $
+;; $Id: plotdf.lisp,v 1.6 2008-11-07 15:05:14 villate Exp $
 
 (in-package :maxima)
 
@@ -41,15 +41,17 @@
         ($trajectory_at
          (check-list-items name (rest (rest value)) 'number 2))
         ($bbox (check-list-items name (rest (rest value)) 'number 4))
-        (($xfun $parameters $sliders) value)
+        (($xfun $parameters $sliders $vector $trajectory $orthogonal) value)
         ('$direction
          (or (member (third value) '($forward $backward $both))
              (merror "direction: choose one of [forward,backward,both]")) 
          value)
         (t (cond
             ((eql name s1)
+	     (setq value (check-range value))
              (check-list-items '$x (rest (rest value)) 'number 2))
             ((eql name s2)
+	     (setq value (check-range value))
              (check-list-items '$y (rest (rest value)) 'number 2))
             (t (merror "Unknown option ~M" name))))))
     (setq vv (mapcar #'stripdollar (rest value)))
@@ -80,7 +82,7 @@
 	(member (second (first options))
 		'($xradius $yradius $xcenter $ycenter $tinitial $tstep
 			   $width $height $nsteps $versus_t $xfun $parameters
-			   $sliders))
+			   $sliders $vector $trajectory $orthogonal))
       (if (and (listp (first options)) (= (length (first options)) 3)
 	       (symbolp (second (first options)))
 	       (symbolp (third (first options))))
@@ -103,6 +105,48 @@
           (2 (setq cmd (concatenate 'string " -dydx \""
                                     (expr_to_str (second ode)) "\"")))
           (t (merror "Argument must be either dydx or [dxdt, dydt]")))
+    
+    ;; parse options and copy them to string opts
+    (cond (options
+           (dolist (v options) 
+             (setq opts (concatenate 'string opts " "
+                                  (plotdf-option-to-tcl v s1 s2))))))
+    (show-open-plot
+     (with-output-to-string (st)
+                  (cond ($show_openplot (format st "plotdf ~a ~a~%" cmd opts))
+                              (t (format st "{plotdf ~a ~a}" cmd opts)))))))
+
+;; plot equipotential curves for a scalar field f(x,y)
+(defun $ploteq (fun &rest options)
+  
+  (let (cmd mfun (opts " ") (s1 '$x) (s2 '$y))
+    (setf mfun `((mtimes) -1 ,fun))
+    ;; parse arguments and prepare string cmd with the equation(s)
+    (unless
+	(member (second (first options))
+		'($xradius $yradius $xcenter $ycenter $tinitial $tstep
+			   $width $height $nsteps $versus_t $xfun $parameters
+			   $sliders $vector $trajectory $orthogonal))
+      (if (and (listp (first options)) (= (length (first options)) 3)
+	       (symbolp (second (first options)))
+	       (symbolp (third (first options))))
+	  (progn
+	    (setf s1 (second (first options)))
+	    (setf s2 (third (first options)))
+	    (defun subxy (expr)
+	      (if (listp expr)
+		  (mapcar #'subxy expr)
+		(cond ((eq expr s1) '$x) ((eq expr s2) '$y) (t expr))))
+	    (setf fun (mapcar #'subxy fun))
+	    (setf options (cdr options)))))
+;; the next two lines should take into account parameters given in the options
+;;    (if (delete '$y (delete '$x (rest (mfuncall '$listofvars ode))))
+;;        (merror "The equation(s) can depend only on 2 variable which must be specified!"))
+    (setq cmd (concatenate 'string " -dxdt \""
+			   (expr_to_str (mfuncall '$diff mfun '$x))
+			   "\" -dydt \""
+			   (expr_to_str (mfuncall '$diff mfun '$y)) 
+			   "\" -vector {} -trajectory {} -orthogonal {red} "))
     
     ;; parse options and copy them to string opts
     (cond (options

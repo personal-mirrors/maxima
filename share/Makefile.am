@@ -109,6 +109,7 @@ contrib/Zeilberger/zb_prover.mac\
 contrib/Zeilberger/zeilberger_algorithm.mac\
 contrib/Zeilberger/zeilberger_linear_algebra.mac\
 contrib/Zeilberger/zeilberger.mac\
+contrib/amatrix/amatrix.dem\
 contrib/amatrix/amatrix.lisp\
 contrib/amatrix/amatrix.mac\
 contrib/amatrix/README\
@@ -180,6 +181,7 @@ contrib/diffequations/tests/testsuite.lisp\
 contrib/distrib/distrib.mac\
 contrib/distrib/numdistrib.lisp\
 contrib/distrib/rtest_distrib.mac\
+contrib/ezunits/ezunits.dem\
 contrib/ezunits/ezunits.lisp\
 contrib/ezunits/ezunits.mac\
 contrib/ezunits/physical_constants.mac\
@@ -814,10 +816,12 @@ numeric/forma1.usg\
 numeric/format.lisp\
 numeric/format.usg\
 numeric/interpol.mac\
+numeric/jtroot3.mac\
 numeric/newton.mac\
 numeric/newton1.mac\
 numeric/riemsum.mac\
 numeric/romberg.lisp\
+numeric/rtest_interpol.mac\
 numeric/rtest_romberg.mac\
 numeric/simpsn.dem\
 numeric/simpsn.mac\
@@ -861,6 +865,7 @@ simplification/rducon.dem\
 simplification/rducon.lisp\
 simplification/rncomb.dem\
 simplification/rncomb.mac\
+simplification/rtest_rncomb.mac\
 simplification/scifac.dem\
 simplification/scifac.lisp\
 simplification/sqdnst.mac\
@@ -970,7 +975,10 @@ vector/vect.usg\
 vector/vect_transform.mac\
 vector/vector.dem\
 vector/vector.mac\
-vector/vector.usg
+vector/vector.usg\
+vector/vector_rebuild.lisp\
+vector/vector_rebuild.mac\
+vector/vector_rebuild.usg
 
 genericdirDATA = \
 maxima-init.lisp\

@@ -20,7 +20,8 @@
 
 
 (defun $is_isomorphic (gr1 gr2)
-  (> ($length ($isomorphism gr1 gr2)) 0))
+  (and (= ($graph_order gr1) ($graph_order gr2))
+       (= ($length ($isomorphism gr1 gr2)) ($graph_order gr1))))
 
 (defun $isomorphism (gr1 gr2)
   (cond ((graph-p gr1)
@@ -37,7 +38,7 @@
 	((digraph-p gr1)
 	 (if (digraph-p gr2)
 	     (let (res
-		   (iso (isomorphism-graphs gr1 gr2)))
+		   (iso (isomorphism-digraphs gr1 gr2)))
 	       (when iso
 		 (maphash
 		  (lambda (key val)
@@ -71,7 +72,7 @@
 
 (defun extend-isomorphism-graphs (mapping m1 m2 out1 out2 gr1 gr2)
   ;; check if we have found an isomorphism
-  (when (= (length m1) ($graph_size gr1))
+  (when (= (length m1) ($graph_order gr1))
     (return-from extend-isomorphism-graphs mapping))
 
   ;; try extending the mapping
@@ -174,7 +175,7 @@
 
 (defun extend-isomorphism-digraphs (mapping m1 m2 out1 out2 in1 in2 gr1 gr2)
   ;; check if we have found an isomorphism
-  (when (= (length m1) ($graph_size gr1))
+  (when (= (length m1) ($graph_order gr1))
     (return-from extend-isomorphism-digraphs mapping))
 
   ;; try extending the mapping

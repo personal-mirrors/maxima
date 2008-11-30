@@ -27,7 +27,6 @@
 ;;; For questions, suggestions, bugs and the like, feel free
 ;;; to contact me at
 ;;; mario @@@ edu DOT xunta DOT es
-;;; www.biomates.net
 
 
 (defvar $draw_loaded t)
@@ -35,10 +34,6 @@
 (defvar $draw_compound t)
 
 (defvar *windows-OS* (string= *autoconf-win32* "true"))
-
-(defvar $draw_command (if (string= *autoconf-win32* "true")
-                              "wgnuplot"
-                              "gnuplot"))
 
 (defvar $gnuplot_file_name "maxout.gnuplot")
 
@@ -149,6 +144,7 @@
       (gethash '$yv_grid *gr-options*)        30
       (gethash '$surface_hide *gr-options*)   nil
       (gethash '$enhanced3d *gr-options*)     nil     ; false, true (z levels) or an expression
+      (gethash '$meshed_surface *gr-options*) nil     ; false or true, works together with enhanced3d
       (gethash '$contour *gr-options*)        '$none  ; other options are: $base, $surface, $both and $map
       (gethash '$contour_levels *gr-options*) 5       ; 1-50, [lowest_level,step,highest_level] or {z1,z2,...}
       (gethash '$colorbox *gr-options*)       t       ; in pm3d mode, always show colorbox
@@ -167,6 +163,8 @@
       (gethash '$pic_height *gr-options*) 480    ; points for bitmap pictures
       (gethash '$eps_width *gr-options*)  12     ; cm for eps pictures
       (gethash '$eps_height *gr-options*) 8      ; cm for eps pictures
+      (gethash '$pdf_width *gr-options*)  21.0   ; cm for pdf pictures (A4 portrait width)
+      (gethash '$pdf_height *gr-options*) 29.7   ; cm for pdf pictures (A4 portrait height)
 
       (gethash '$file_name *gr-options*)  "maxima_out"
       (gethash '$delay *gr-options*)  5          ; delay for animated gif's, default 5*(1/100) sec
@@ -210,7 +208,7 @@
                      (<= val 1 ))
                 (setf (gethash opt *gr-options*) val)
                 (merror "draw: fill_density must be a number in [0, 1]")))
-      (($line_width $head_length $head_angle $eps_width $eps_height
+      (($line_width $head_length $head_angle $eps_width $eps_height $pdf_width $pdf_height
         $xaxis_width $yaxis_width $zaxis_width) ; defined as positive numbers
             (setf val (convert-to-float val))
             (if (and (numberp val)
@@ -278,14 +276,12 @@
       (($transparent $border $logx $logy $logz $head_both $grid 
         $axis_bottom $axis_left $axis_top $axis_right $axis_3d $surface_hide $colorbox
         $xaxis $yaxis $zaxis $unit_vectors $xtics_rotate $ytics_rotate $ztics_rotate
-        $xtics_axis $ytics_axis $ztics_axis) ; true or false
+        $xtics_axis $ytics_axis $ztics_axis $meshed_surface) ; true or false
             (if (or (equal val t)
                     (equal val nil))
                 (setf (gethash opt *gr-options*) val)
                 (merror "draw: non boolean value: ~M " val)))
-      ($filled_func ; true, false or an expression
-         (setf (gethash opt *gr-options*) val))
-      ($enhanced3d  ; true or an expression
+      (($filled_func $enhanced3d) ; true, false or an expression
          (setf (gethash opt *gr-options*) val))
       (($xtics $ytics $ztics)  ; $auto or t, $none or nil, number, increment, set, set of pairs
             (cond ((member val '($none nil))   ; nil is maintained for back-portability
@@ -333,8 +329,8 @@
                                          ")")))))
                   (t
                      (merror "draw: illegal tics allocation: ~M" val)) ))
-      ($terminal ; defined as screen, png, jpg, gif, eps, eps_color or wxt
-            (if (member val '($screen $png $jpg $gif $eps $eps_color $wxt $animated_gif $aquaterm))
+      ($terminal ; defined as screen, png, jpg, gif, eps, eps_color, pdf, pdfcairo or wxt
+            (if (member val '($screen $png $jpg $gif $eps $eps_color $pdf $pdfcairo $wxt $animated_gif $aquaterm))
                 (setf (gethash opt *gr-options*) val)
                 (merror "draw: this is not a terminal: ~M" val)))
       ($head_type ; defined as $filled, $empty and $nofilled
@@ -888,7 +884,7 @@
 ;;     label_alignment
 ;;     label_orientation
 ;;     color
-(defun label (&rest lab)
+(defun label (lab)
   (let ((n (length lab))
         (result nil)
         is2d)
@@ -954,7 +950,7 @@
 ;;     fill_color
 ;;     fill_density
 ;;     line_width
-(defun bars (&rest boxes)
+(defun bars (boxes)
   (let ((n (length boxes))
         (count -1)
         (xmin 1.75555970201398e+305)
@@ -1557,9 +1553,12 @@
 ;;     xu_grid
 ;;     yv_grid
 ;;     line_type
+;;     line_width
 ;;     color
 ;;     key
 ;;     enhanced3d
+;;     meshed_surface
+;;     surface_hide
 ;; Note: implements a clon of draw3d (plot.lisp) with some
 ;;       mutations to fit the draw environment.
 ;;       Read source in plot.lisp for more information
@@ -1607,8 +1606,13 @@
     (update-ranges fminval1 fmaxval1 fminval2 fmaxval2 zmin zmax)
     (make-gr-object
        :name   'explicit
-       :command (format nil " ~a w l lt ~a lc rgb '~a'"
+       :command (format nil " ~a w ~a lw ~a lt ~a lc rgb '~a'"
                             (make-obj-title (get-option '$key))
+                            (if (and (get-option '$enhanced3d)
+                                     (not (get-option '$meshed_surface)))
+                                "pm3d"
+                                "l")
+                            (get-option '$line_width)
                             (get-option '$line_type)
                             (get-option '$color))
        :groups `((,ncols ,nx))
@@ -1832,8 +1836,12 @@
 ;;     xu_grid
 ;;     yv_grid
 ;;     line_type
+;;     line_width
 ;;     color
+;;     enhanced3d
 ;;     key
+;;     surface_hide
+;;     meshed_surface
 (defun parametric_surface (xfun yfun zfun par1 par1min par1max par2 par2min par2max)
   (let* ((ugrid (gethash '$xu_grid  *gr-options*))
          (vgrid (gethash '$yv_grid  *gr-options*))
@@ -1880,7 +1888,7 @@
                   (if (< z zmin) (setf zmin z))
                   (if enhanced4d
                      (setf result (append result (list x y z (funcall fcn4d uu vv))))
-                     (setf result (append result (list x y z))) )                  
+                     (setf result (append result (list x y z))) )
                   (setq uu (+ uu ueps))
                   (if (> uu umax) (setf uu umax)))
            (setq vv (+ vv veps))
@@ -1889,8 +1897,13 @@
     (update-ranges xmin xmax ymin ymax zmin zmax)
     (make-gr-object
        :name 'parametric_surface
-       :command (format nil " ~a w l lt ~a lc rgb '~a'"
+       :command (format nil " ~a w ~a lw ~a lt ~a lc rgb '~a'"
                             (make-obj-title (get-option '$key))
+                            (if (and (get-option '$enhanced3d)
+                                     (not (get-option '$meshed_surface)))
+                                "pm3d"
+                                "l")
+                            (get-option '$line_width)
                             (get-option '$line_type)
                             (get-option '$color))
        :groups `((,ncols ,nu)) ; ncols is 4 or 3, depending on colored 4th dimension or not
@@ -2388,8 +2401,8 @@
 				     ($implicit    (apply #'implicit (rest x)))
                                      ($parametric  (apply #'parametric (rest x)))
                                      ($vector      (apply #'vect (rest x)))
-                                     ($label       (apply #'label (rest x)))
-                                     ($bars        (apply #'bars (rest x)))
+                                     ($label       (funcall #'label (rest x)))
+                                     ($bars        (funcall #'bars (rest x)))
                                      ($polar       (apply #'polar (rest x)))
                                      ($image       (apply #'image (rest x)))
                                      ($geomap      (apply #'geomap (rest x)))
@@ -2499,7 +2512,7 @@
                                      ($spherical          (apply #'spherical (rest x)))
                                      ($cylindrical        (apply #'cylindrical (rest x)))
                                      ($geomap             (apply #'geomap3d (rest x)))
-                                     ($label              (apply #'label (rest x)))
+                                     ($label              (funcall #'label (rest x)))
                                      (otherwise (merror "draw: graphical 3d object ~M is not recognized" x)))))))))
       ; save in plotcmd the gnuplot preamble
       (setf plotcmd
@@ -2592,11 +2605,11 @@
             (if (not (get-option '$axis_3d))
                 (format nil "set border 0~%"))
             (if (get-option '$enhanced3d)
-               (format nil "set pm3d~%"))
+                (format nil "set pm3d at s depthorder~%")
+                (if (get-option '$surface_hide)
+                    (format nil "set hidden3d~%")))
             (if (get-option '$xyplane)
                (format nil "set xyplane at ~a~%" (get-option '$xyplane)))
-            (if (get-option '$surface_hide)
-               (format nil "set hidden3d~%"))
             (if (get-option '$colorbox)
                (format nil "set colorbox~%")
                (format nil "unset colorbox~%"))
@@ -2665,6 +2678,8 @@
                 ($pic_height (update-gr-option '$pic_height ($rhs x)))
                 ($eps_width  (update-gr-option '$eps_width ($rhs x)))
                 ($eps_height (update-gr-option '$eps_height ($rhs x)))
+                ($pdf_width  (update-gr-option '$pdf_width ($rhs x)))
+                ($pdf_height (update-gr-option '$pdf_height ($rhs x)))
                 ($file_name  (update-gr-option '$file_name ($rhs x)))
                 ($delay      (update-gr-option '$delay ($rhs x)))
                 (otherwise (merror "draw: unknown global option ~M " ($lhs x)))  ))
@@ -2703,6 +2718,16 @@
                            (write-font-type)
                            (get-option '$eps_width)
                            (get-option '$eps_height)
+                           (get-option '$file_name)))
+      ($pdf (format cmdstorage "set terminal pdf enhanced ~a color size ~acm, ~acm~%set out '~a.pdf'"
+                           (write-font-type)
+                           (get-option '$pdf_width)
+                           (get-option '$pdf_height)
+                           (get-option '$file_name)))
+      ($pdfcairo (format cmdstorage "set terminal pdfcairo enhanced ~a color size ~acm, ~acm~%set out '~a.pdf'"
+                           (write-font-type)
+                           (get-option '$pdf_width)
+                           (get-option '$pdf_height)
                            (get-option '$file_name)))
       ($jpg (format cmdstorage "set terminal jpeg ~a size ~a, ~a~%set out '~a.jpg'"
                            (write-font-type)
@@ -2815,7 +2840,7 @@
              (format cmdstorage "~%quit~%~%")
              (close cmdstorage)
              ($system (format nil "~a \"~a\"" 
-                                  $draw_command
+                                  $gnuplot_command
                                   (plot-temp-file $gnuplot_file_name)) ))
           (t ; non animated gif
              ; command file maxout.gnuplot is now ready
@@ -2828,6 +2853,9 @@
                    ((not (string= (gethash '$xy_file *gr-options*) ""))
                       (format cmdstorage "set print \"~a\" append~%bind x \"print MOUSE_X,MOUSE_Y\"~%"
                                    (gethash '$xy_file *gr-options*))) )
+
+             (format cmdstorage "unset output~%")
+
              (close cmdstorage)
 
              ; get the plot
@@ -2835,32 +2863,41 @@
                 (*windows-OS*
                    ($system (if (equal (gethash '$terminal *gr-options*) '$screen)
                                    (format nil "~a ~a"
-                                               $draw_command
+                                               $gnuplot_command
                                                (format nil $gnuplot_view_args (plot-temp-file $gnuplot_file_name)))
                                    (format nil "~a \"~a\"" 
-                                               $draw_command
+                                               $gnuplot_command
                                                (plot-temp-file $gnuplot_file_name)))) )
                 (t  ; non windows operating system
-                   (setf $gnuplot_command $draw_command)
                    (check-gnuplot-process)
                    (send-gnuplot-command "unset output")
                    (send-gnuplot-command "reset")
                    (send-gnuplot-command (format nil "load '~a'" (plot-temp-file $gnuplot_file_name))) ))))
 
     ; the output is a simplified description of the scene(s)
-    (reverse scenes-list)    ) )
+    (reverse scenes-list)) )
 
 
 
 ;; Equivalent to draw2d(opt & obj)
 (defun $draw2d (&rest args)
-   ($draw (cons '($gr2d) args)) )
+   ($draw (cons '($gr2d) (draw-transform args '$draw2d_transform))) )
 
 
 ;; Equivalent to draw3d(opt & obj)
 (defun $draw3d (&rest args)
-   ($draw (cons '($gr3d) args)) )
+   ($draw (cons '($gr3d) (draw-transform args '$draw3d_transform))) )
 
+(defun draw-transform-one (expr transform)
+  (if (atom expr)
+      (list expr)
+      (if ($get (caar expr) transform)
+	  (cdr (mfuncall ($get (caar expr) transform) expr))
+	  (list expr))))
+
+(defun draw-transform (expr transform)
+  (if (null expr) ()
+      (append (draw-transform-one (car expr) transform) (draw-transform (cdr expr) transform))))
 
 ;; This function transforms an integer number into
 ;; a string, adding zeros at the left side until the
@@ -2868,4 +2905,3 @@
 ;; useful to name a sequence of frames.
 (defun $add_zeroes (num)
    (format nil "~10,'0d" num) )
-
