@@ -24,7 +24,9 @@ endif
 
 SUBDIRS = $(ES_DIR) $(ES_DIR_UTF8) $(PT_DIR) $(PT_DIR_UTF8) $(PT_BR_DIR) $(PT_BR_DIR_UTF8)
 
-maxima_TEXINFOS = Introduction.texi Help.texi Command.texi Operators.texi \
+info_TEXINFOS = maxima.texi
+maxima_TEXINFOS = include-maxima.texi \
+  Introduction.texi Help.texi Command.texi Operators.texi \
   Expressions.texi Simplification.texi Plotting.texi Input.texi \
   Floating.texi Contexts.texi Polynomials.texi Constants.texi \
   Logarithms.texi Trigonometric.texi Special.texi \
@@ -148,17 +150,14 @@ figures/plotting24.pdf\
 figures/plotting25.pdf\
 figures/orthopoly1.pdf
 
-all-local: maxima.info maxima-index.lisp
-
-maxima.info : maxima.texi
-	makeinfo maxima.texi
+all-local: maxima-index.lisp
 
 html: maxima.html contents.hhc
 
 maxima-index.lisp: maxima.info build_index.pl
 	perl ./build_index.pl maxima.info ':crlf' > maxima-index.lisp
 
-maxima.html: maxima.texi.in $(maxima_TEXINFOS)
+maxima.html: maxima.texi $(maxima_TEXINFOS)
 	sh extract_categories.sh maxima
 
 contents.hhc: maxima.html
