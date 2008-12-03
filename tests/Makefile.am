@@ -107,6 +107,8 @@ rtest_round.mac \
 rtest_map.mac \
 rtest_sign.mac \
 rtest_algebraic.mac \
+rtest_gamma.mac \
+rtest_expintegral.mac \
 rtest_hypgeo.mac \
 rtest_signum.mac \
 README.how-to \
