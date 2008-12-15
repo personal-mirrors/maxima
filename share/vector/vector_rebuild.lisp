@@ -8,8 +8,6 @@
 ;; modified 08-12-03: vector_factor factors lists and matrices
 ;;          08-12-05: vector_eval: $ratprint set to false
 ;;          08-12-10: rename stardisp to stardisp1, assign property of $stardisp
-;;          08-12-14: vector_eval: cut out sratsimp, rename it to vector_simp
-;;                    $vector_rebuild: evaluate mnctimes, bugfix case mdefine
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -30,7 +28,7 @@
 
 ;; Functions at Maxima level:
 ;; vector_rebuild(x), vector_rebuild(x,[param_list])
-;; vector_simp(x),    has evfun property
+;; vector_eval(x),    has evfun property
 ;; vector_factor(x),  has evfun property
 ;; extract_equations(x)
 
@@ -48,9 +46,9 @@
 ;; In combination with setting listarith & friends to false 
 ;; mtimesq allows to suppress automatic arithmetrics
 ;; and to bypass the displa function dim-mquotient:
-;;                  1                                       1 [ 2 ]
+;;                  1				            1 [ 2 ]
 ;;   1/r*[2,3]; --> - [2, 3]   or   1/r*matrix([2],[3]);--> - [   ]
-;;                  r                                       r [ 3 ]
+;;                  r				            r [ 3 ]
 ;; mtimesq display symbol is "*" and is settable by stardisp.
 ;; One evaluation steps from mtimesq to mtimes and vice versa.
 
@@ -78,14 +76,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; $vector_simp
+;; $vector_eval
 
-(defun $vector_simp (expre$$ion)
-  (let (($listarith t) ($doallmxops t))
-    ($expand (meval `(($ev) ,expre$$ion $infeval))) ))
+(defun $vector_eval (expre$$ion)
+  (let (($listarith t) ($doallmxops t) $ratprint)
+    ($expand (sratsimp (meval `(($ev) ,expre$$ion $infeval)))) ))
     ;; mtimesq needs an extra evaluation here
 
-(putprop '$vector_simp t 'evfun)
+(putprop '$vector_eval t 'evfun)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -105,13 +103,13 @@
           (args (margs expr)) )
       (if (not (car args)) (return-from $vector_rebuild expr)) ;; noarg-op
       (cond
-        ((eq op 'mequal)
-          (cons `(mequal simp)
+        ((member op '(mequal mnctimes crossq) :test #'eq)
+          (cons `(,op simp)
             (mapcar #'(lambda (arg) ($vector_rebuild arg params)) args) ))
         ((eq op 'mdefine)
           (meval `((mdefine simp) 
             ,(cadr expr) 
-            ,($vector_rebuild (caddr expr) params)) ))
+            ,($vector_rebuild (caddr expr))) ))
         (t
           (vector-rebuild expr (cdr params)) )))))
 
@@ -120,7 +118,7 @@
         (res '((mplus) 0))
         (n 0) 
         (nr-pars (length params))
-        (vec ($vector_simp expr)) )
+        (vec ($vector_eval expr)) )
     (when (not (vector-p vec)) (return-from vector-rebuild expr))
     (when (zero-vector-p vec) (return-from vector-rebuild vec))
     (when (column-vector-p vec) (setq col-flag t))
@@ -162,8 +160,8 @@
          (not (eq (mop equation) 'mequal))
          (merror err-msg))
     (setq args (cdr equation))
-    (setq left ($vector_simp (car args)))
-    (setq right ($vector_simp (cadr args)))
+    (setq left ($vector_eval (car args)))
+    (setq right ($vector_eval (cadr args)))
     (cond
       ((and (vector-p left) (vector-p right))) ;; OK
       ;; due to a bug in Maxima allow left or right to be zero:
@@ -208,7 +206,7 @@
 
 (defun vector-extract-gcd (expr)
   (let (fac vec args minus-flag $ratprint)
-    (setq vec ($vector_simp expr))
+    (setq vec ($vector_eval expr))
     (cond
       ((or (zero-vector-p vec) (zero-$matrix-p vec))
         vec)
@@ -254,7 +252,7 @@
 (defun simp-vector-length (a tmp z)
   (declare (ignore tmp) (ignore z))
   (oneargcheck a)
-  (setq a ($vector_simp (cadr a)))
+  (setq a ($vector_eval (cadr a)))
   (cond
     (($scalarp a)
       (meval `((mabs simp) ,a)) )
@@ -290,15 +288,15 @@
 ;;    ;; again, here is one more step of evaluation needed
 
 ;; (defmfun crossq (a b)
-;;   (let ((v ($vector_simp a))
-;;         (w ($vector_simp b))
+;;   (let ((v ($vector_eval a))
+;;         (w ($vector_eval b))
 ;;         cross col-flag dim-v dim-w) ;;))
 
 (defun simp-vector-cross (a tmp z)
   (declare (ignore tmp) (ignore z))
   (twoargcheck a)
-  (let ((v ($vector_simp (cadr a)))
-        (w ($vector_simp (caddr a)))
+  (let ((v ($vector_eval (cadr a)))
+        (w ($vector_eval (caddr a)))
         cross col-flag dim-v dim-w)
     (if (and (vector-p v) (vector-p w))
       (progn
