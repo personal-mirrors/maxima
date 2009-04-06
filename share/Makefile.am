@@ -481,6 +481,7 @@ contrib/rtest_lsquares.mac\
 contrib/rtest_z_transform.mac\
 contrib/sarag/aliases.mac\
 contrib/sarag/arag_test.mac\
+contrib/sarag/certificateOfPositivity.mac\
 contrib/sarag/constants.mac\
 contrib/sarag/examples.mac\
 contrib/sarag/hard_test.mac\
