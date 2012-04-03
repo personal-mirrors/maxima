@@ -20,7 +20,7 @@ if test x"${git_found}" = xtrue; then
     # When building RPMs, hyphens in the version are not allowed, so
     # replace them with underscores.
     VERSION=`echo $VERSION | sed 's;-;_;g'`
-    AC_MSG_RESULT(Sanitized VERSION, derived from git, is $VERSION)
+    AC_MSG_RESULT(Sanitized VERSION derived from git is $VERSION)
 fi
 
 AM_PATH_LISPDIR
