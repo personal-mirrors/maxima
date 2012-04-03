@@ -7,6 +7,22 @@ dnl Instead, git is used to derive the version based on the closest
 dnl annotated branch tag.
 AM_INIT_AUTOMAKE(maxima,5.27.0)
 
+dnl See if git exists.  If it does, update VERSION to include a git tag
+AC_CHECK_PROG(git_found, git, true, false)
+if test x"${git_found}" = xtrue; then
+    # Test to see if git describe works (discarding any output).  If
+    # it works, use it.  Otherwise, use --tags to use any tag.
+    if git describe > /dev/null 2>&1; then
+        VERSION="`git describe --dirty`"
+    else
+        VERSION="`git describe --tags --dirty`"
+    fi
+    # When building RPMs, hyphens in the version are not allowed, so
+    # replace them with underscores.
+    VERSION=`echo $VERSION | sed 's;-;_;g'`
+    AC_MSG_RESULT(Sanitized VERSION, derived from git, is $VERSION)
+fi
+
 AM_PATH_LISPDIR
 
 AC_CANONICAL_HOST
@@ -76,21 +92,6 @@ if test x"${clisp}" = xtrue ; then
 	if test x"${clisp_found}" = xfalse ; then
 		AC_MSG_WARN(clisp executable ${CLISP_NAME} not found in PATH)
 	fi	   
-fi
-
-dnl See if git exists.  If it does, update VERSION to include a git tag
-AC_CHECK_PROG(git_found, git, true, false)
-if test x"${git_found}" = xtrue; then
-    # Test to see if git describe works (discarding any output).  If
-    # it works, use it.  Otherwise, use --tags to use any tag.
-    if git describe > /dev/null 2>&1; then
-        VERSION="`git describe --dirty`"
-    else
-        VERSION="`git describe --tags --dirty`"
-    fi
-    # When building RPMs, hyphens in the version are not allowed, so
-    # replace them with underscores.
-    VERSION=`echo $VERSION | sed 's;-;_;g'`
 fi
 
 dnl n.b. cmucl_default_name is hardcoded in "with" message
