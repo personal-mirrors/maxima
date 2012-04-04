@@ -11,16 +11,18 @@ dnl See if git exists.  If it does, update VERSION to include a git tag
 AC_CHECK_PROG(git_found, git, true, false)
 if test x"${git_found}" = xtrue; then
     # Test to see if git describe works (discarding any output).  If
-    # it works, use it.  Otherwise, use --tags to use any tag.
+    # it works, use it.  Otherwise, fall back on the AM_INIT_AUTOMAKE version.
     if git describe > /dev/null 2>&1; then
         VERSION="`git describe --dirty`"
+        # When building RPMs, hyphens in the version are not allowed, so
+        # replace them with underscores.
+        VERSION=`echo $VERSION | sed 's;-;_;g'`
+        AC_MSG_RESULT(Sanitized VERSION derived from git is $VERSION)
     else
-        VERSION="`git describe --tags --dirty`"
+        AC_MSG_RESULT(git describe failed so let VERSION be $VERSION)
     fi
-    # When building RPMs, hyphens in the version are not allowed, so
-    # replace them with underscores.
-    VERSION=`echo $VERSION | sed 's;-;_;g'`
-    AC_MSG_RESULT(Sanitized VERSION derived from git is $VERSION)
+else
+    AC_MSG_RESULT(git not present so let VERSION be $VERSION)
 fi
 
 AM_PATH_LISPDIR
