@@ -113,6 +113,7 @@ rtest_gamma.mac \
 rtest_expintegral.mac \
 rtest_signum.mac \
 rtest_lambert_w.mac \
+rtest_laplace.mac \
 rtest_elliptic.mac \
 rtest_integrate.mac \
 rtest_integrate_special.mac \
