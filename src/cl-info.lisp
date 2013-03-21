@@ -52,18 +52,17 @@
 
 ; ------------------ search help topics ------------------
 
+(defun info-pathname (lang-subdir)
+  (merge-pathnames
+   (make-pathname :name "maxima" :type "info"
+                  :directory (when lang-subdir (list :relative lang-subdir)))
+   ;; Append / so that the namestring does actually refer to the directory. A
+   ;; hack, but I don't want to change *maxima-infodir* yet and possibly break
+   ;; stuff elsewhere.
+   (parse-namestring (format nil "~A/" maxima::*maxima-infodir*))))
+
 (defun load-primary-index ()
-  ;; Load the index, but make sure we use a sensible *read-base*.
-  ;; See bug 1951964.  GCL doesn't seem to have
-  ;; with-standard-io-syntax.  Is just binding *read-base* enough?  Is
-  ;; with-standard-io-syntax too much for what we want?
-  (let*
-    ((subdir-bit (or maxima::*maxima-lang-subdir* "."))
-     (path-to-index (maxima::combine-path maxima::*maxima-infodir* subdir-bit "maxima-index.lisp")))
-    #-gcl
-    (with-standard-io-syntax (load path-to-index))
-    #+gcl
-    (let ((*read-base* 10.)) (load path-to-index))))
+  (register-info-file (info-pathname maxima::*maxima-lang-subdir*)))
 
 (defun info-exact (x)
   (let ((exact-matches (exact-topic-match x)))
@@ -89,8 +88,10 @@
 
 (defun exact-topic-match (topic)
   (setq topic (regex-sanitize topic))
-  (loop for dir-name being the hash-keys of *info-tables*
-    collect (list dir-name (exact-topic-match-1 topic dir-name))))
+  (unless (< 0 (hash-table-count *info-tables*))
+    (load-primary-index))
+  (loop for dir-path being the hash-keys of *info-tables*
+    collect (list dir-path (exact-topic-match-1 topic dir-path))))
 
 (defun exact-topic-match-1 (topic d)
   (let*
@@ -129,27 +130,29 @@
 
     (setq wanted
           (if (> nitems 1)
-          (loop
-           for prompt-count from 0
-           thereis (progn
-                 (finish-output *debug-io*)
-                 (print-prompt prompt-count)
-                 (force-output)
-                 (clear-input)
-                 (select-info-items
-                  (parse-user-choice nitems) items-list)))
-          items-list))
+              (loop
+                 for prompt-count from 0
+                 thereis (progn
+                           (finish-output *debug-io*)
+                           (print-prompt prompt-count)
+                           (force-output)
+                           (clear-input)
+                           (select-info-items
+                            (parse-user-choice nitems) items-list)))
+              items-list))
     (clear-input)
     (finish-output *debug-io*)
     (when (consp wanted)
       (format t "~%")
       (loop for item in wanted
-        do (format t "~A~%~%" (read-info-text (first item) (second item)))))))
+        do (format t "~A~%~%" (read-info-text (second item)))))))
 
 (defun inexact-topic-match (topic)
   (setq topic (regex-sanitize topic))
-  (let ((foo (loop for dir-name being the hash-keys of *info-tables*
-    collect (list dir-name (inexact-topic-match-1 topic dir-name)))))
+  (unless (< 0 (hash-table-count *info-tables*))
+    (load-primary-index))
+  (let ((foo (loop for dir-path being the hash-keys of *info-tables*
+    collect (list dir-path (inexact-topic-match-1 topic dir-path)))))
     (remove-if #'(lambda (x) (null (second x))) foo)))
 
 (defun inexact-topic-match-1 (topic d)
@@ -188,15 +191,12 @@
       hashtable)
     (stable-sort regex-matches #'string-lessp :key #'car)))
 
-(defun read-info-text (dir-name parameters)
-  (let*
-    ((value (cdr parameters))
-     (filename (car value))
-     (byte-offset (cadr value))
-     (byte-count (caddr value))
-     (text (make-string byte-count))
-     (path+filename (make-pathname :directory dir-name :name filename)))
-    (with-open-file (in path+filename :direction :input)
+(defun read-info-text (parameters)
+  (let* ((value (cdr parameters))
+         (byte-offset (cadr value))
+         (byte-count (caddr value))
+         (text (make-string byte-count)))
+    (with-open-file (in (car value) :direction :input)
       (file-position in byte-offset)
       #+gcl (gcl-read-sequence text in :start 0 :end byte-count)
       #-gcl (read-sequence text in :start 0 :end byte-count))

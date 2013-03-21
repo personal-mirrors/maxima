@@ -343,8 +343,8 @@ When one changes, the other does too."
     ;; with some data really exists.  If not this probably means that required
     ;; language pack wasn't installed and we reset *maxima-lang-subdir* to nil.
     (when (and *maxima-lang-subdir*
-	       (not (probe-file (combine-path *maxima-infodir* *maxima-lang-subdir* "maxima-index.lisp"))))
-       (setq *maxima-lang-subdir* nil))))
+               (not (probe-file (cl-info:info-pathname *maxima-lang-subdir*))))
+      (setq *maxima-lang-subdir* nil))))
 
 (defun get-dirs (path)
   #+(or :clisp :sbcl :ecl :openmcl)
@@ -577,7 +577,6 @@ When one changes, the other does too."
   (set-locale-subdir)
   (adjust-character-encoding)
   (set-pathnames)
-  (cl-info::load-primary-index)   
   (when (boundp '*maxima-prefix*)
     (push (pathname (concatenate 'string *maxima-prefix*
                                  (if *maxima-layout-autotools*

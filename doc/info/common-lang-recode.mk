@@ -1,5 +1,5 @@
 
-all-local: maxima.info maxima-index.lisp maxima.html contents.hhc
+all-local: maxima.info maxima.html contents.hhc
 
 maxima.info: maxima.texi
 	@rm -f maxima.info* 2>/dev/null
@@ -22,7 +22,7 @@ contents.hhc: maxima.html
 
 install-data-local: install-maxima-info install-maxima-html
 
-install-maxima-info: maxima.info maxima-index.lisp
+install-maxima-info: maxima.info
 	test -z "$(infodir)$(langsdir)" || mkdir -p -- "$(DESTDIR)$(infodir)$(langsdir)"
 	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
 	list='./maxima.info'; \
@@ -41,7 +41,6 @@ install-maxima-info: maxima.info maxima-index.lisp
 	    else : ; fi; \
 	  done; \
 	done
-	$(INSTALL_DATA) maxima-index.lisp "$(DESTDIR)$(infodir)$(langsdir)/maxima-index.lisp"
 
 install-maxima-html: maxima.html
 	@$(NORMAL_INSTALL)
@@ -78,7 +77,6 @@ uninstall-maxima-info:
 	     rm -f $$relfile $$relfile-[0-9] $$relfile-[0-9][0-9] $$relfile_i[0-9] $$relfile_i[0-9][0-9]; \
 	   else :; fi); \
 	done
-	rm -f "$(DESTDIR)$(infodir)$(langsdir)/maxima-index.lisp"
 
 uninstall-maxima-html:
 	@$(NORMAL_UNINSTALL)
@@ -90,7 +88,6 @@ clean-local: clean-info clean-html clean-texi
 
 clean-info:
 	rm -f maxima.info*
-	rm -f maxima-index.lisp
 
 clean-html:
 	rm -f maxima.html maxima_*.html

@@ -5,14 +5,11 @@ UNINSTALL_CHM = uninstall-chm
 CLEAN_CHM = clean-chm
 endif
 
-all-local: maxima-index.lisp maxima.html contents.hhc $(MAXIMA_CHM)
+all-local: maxima.html contents.hhc $(MAXIMA_CHM)
 
 install-data-local: $(INSTALL_CHM)
 
 uninstall-local: $(UNINSTALL_CHM)
-
-maxima-index.lisp: maxima.info ../build_index.pl
-	perl ../build_index.pl maxima.info ':crlf' > maxima-index.lisp
 
 maxima.html: maxima.texi $(maxima_TEXINFOS)
 	perl ../texi2html -split_chapter --lang=$(lang) --output=. --css-include=../manual.css --init-file ../texi2html.init maxima.texi 
@@ -33,14 +30,13 @@ clean-local: clean-info clean-html $(CLEAN_CHM)
 
 clean-info:
 	rm -f maxima.info*
-	rm -f maxima-index.lisp
 
 clean-html:
 	rm -f maxima.html maxima_*.html
 	rm -f contents.hhc
 	rm -f index.hhk
 
-EXTRA_DIST = maxima-index.lisp $(genericdirDATA)
+EXTRA_DIST = $(genericdirDATA)
 
 # This builds the Windows help file maxima.chm
 maxima.chm: maxima.html maxima.hhp contents.hhc index.hhk
@@ -66,7 +62,7 @@ clean-chm:
 	rm -rf chm
 
 
-install-info-am: $(INFO_DEPS) maxima-index.lisp
+install-info-am: $(INFO_DEPS)
 	test -z "$(infodir)$(langsdir)" || mkdir -p -- "$(DESTDIR)$(infodir)$(langsdir)"
 	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
 	list='$(INFO_DEPS)'; \
@@ -85,7 +81,6 @@ install-info-am: $(INFO_DEPS) maxima-index.lisp
 	    else : ; fi; \
 	  done; \
 	done
-	$(INSTALL_DATA) maxima-index.lisp "$(DESTDIR)$(infodir)$(langsdir)/maxima-index.lisp"
 
 uninstall-info-am:
 	@list='$(INFO_DEPS)'; \
@@ -97,4 +92,3 @@ uninstall-info-am:
 	     rm -f $$relfile $$relfile-[0-9] $$relfile-[0-9][0-9] $$relfile_i[0-9] $$relfile_i[0-9][0-9]; \
 	   else :; fi); \
 	done
-	rm -f "$(DESTDIR)$(infodir)$(langsdir)/maxima-index.lisp"

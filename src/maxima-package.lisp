@@ -10,7 +10,8 @@
    ))
 
 (defpackage :cl-info
-  (:use :common-lisp))
+  (:use :common-lisp)
+  (:export :info-pathname :info-exact :info-inexact))
 
 (defpackage :command-line
   (:use :common-lisp)

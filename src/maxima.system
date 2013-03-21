@@ -141,7 +141,8 @@
 				     ;; it.
 				     #+#.(cl:if (cl:and (cl:member :cmu cl:*features*) (cl:find-package '#:intl))  '(or) '(and))
 				     (:file "intl")
-				     (:file "cl-info")))
+				     (:file "cl-info")
+				     (:file "parse-info")))
 	       (:module sloop :source-pathname ""
 			:components ((:file "sloop")))
                (:module declarations :source-pathname ""

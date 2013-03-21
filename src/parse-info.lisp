@@ -1,8 +1,4 @@
-(defpackage :build-index
-  (:use :cl)
-  (:export :build-index))
-
-(in-package :build-index)
+(in-package :cl-info)
 
 (defvar *info-separator* "")
 
@@ -89,12 +85,12 @@ decreasing order in LINE-NUMBER."
 
 ;; An ugly brute of a "parsing" function, but refactoring is rather difficult
 ;; because of interactions like expect-node etc.
-(defun grok-info-file (filespec)
+(defun grok-info-file (pathname)
   "Read through an info file, taking note of the positions of nodes and the
 positions of functions / variable definitions. Returns a list matching (&key
-NFLLS SES LINE-POSITIONS SECTIONS).
+NPLLS SES LINE-POSITIONS SECTIONS).
 
-NFLLS is a list of tuples (NODE FILESPEC LINE-START LINE-END) where NODE is the
+NPLLS is a list of tuples (NODE PATHNAME LINE-START LINE-END) where NODE is the
 name of the node we spotted, LINE-START is the number of the first line and
 LINE-END is the start of the first line not in NODE. Here and in SES, line
 numbers start at 1.
@@ -108,15 +104,15 @@ of the start of the n'th line.
 
 SECTIONS is a list of lists (TITLE LINE-NUMBER POS), one for each section
 found."
-  (with-open-file (stream filespec :direction :input)
+  (with-open-file (stream pathname :direction :input)
     (let ((line) (line-number 0) (pos)
-          (nflls) (ses) (lps)
-          (se-starts) (this-nfll)
-          (expect-node t) (last-blank t) (file) (node) (sections))
-      (flet ((finish-nfll (&optional (delta 0))
-               (when this-nfll
-                 (push (append this-nfll (list (- line-number delta))) nflls)
-                 (setf this-nfll nil)))
+          (nplls) (ses) (lps)
+          (se-starts) (this-npll)
+          (expect-node t) (last-blank t) (node) (sections))
+      (flet ((finish-npll (&optional (delta 0))
+               (when this-npll
+                 (push (append this-npll (list (- line-number delta))) nplls)
+                 (setf this-npll nil)))
              (finish-se (&optional (delta 0))
                (when se-starts
                  (dolist (start (nreverse se-starts))
@@ -134,22 +130,21 @@ found."
              ;; Node separator
              ((string= line *info-separator*)
               (setf expect-node t)
-              (finish-nfll 1)
+              (finish-npll 1)
               (finish-se 1))
 
              ;; Node
              ((when expect-node
-                (multiple-value-setq (file node) (parse-info-node-line line))
-                (setf expect-node nil)
-                file)
-              (setf this-nfll (list node filespec line-number)))
+                (setf expect-node nil
+                      node (nth-value 1 (parse-info-node-line line))))
+              (setf this-npll (list node pathname line-number)))
 
              ;; Section header
              ((let ((header (parse-section-header line)))
                 (when header
                   (push (list header line-number pos) sections)
                   t)))
-           
+
              ;; Function / variable definition.
              ((and (starts-with-p line " -- ")
                    (>= (length line) 5)
@@ -159,16 +154,16 @@ found."
            ;; Used next time around!
            (setf last-blank (= 0 (length line))))
         (finish-se 1)
-        (finish-nfll 1)
-        (list :nflls (nreverse nflls)
+        (finish-npll 1)
+        (list :nplls (nreverse nplls)
               :ses ses
               :line-positions (coerce (nreverse lps) 'simple-vector)
               :sections (nreverse sections))))))
 
-(defun info-indirect-files (filespec)
-  "Search the info file at FILESPEC for an \"Indirect:\" section. If found,
-return the list of files included."
-  (with-open-file (stream filespec :direction :input)
+(defun info-indirect-files (pathname)
+  "Search the info file at PATHNAME for an \"Indirect:\" section. If found,
+return a list of pathnames for the files included."
+  (with-open-file (stream pathname :direction :input)
     (let ((line))
       (loop
          named outer
@@ -182,25 +177,29 @@ return the list of files included."
                     (unless (= 1 (length parsed))
                       (format *error-output*
                               "Warning! Malformed Indirect line:~%~A~%~%" line))
-                    (collect (caar parsed))))))))))
+                    (collect
+                        (merge-pathnames
+                         (parse-namestring (caar parsed))
+                         (make-pathname
+                          :directory (pathname-directory pathname))))))))))))
 
-(defun deep-grok-info-file (filespec)
-  "Search through the info file at FILESPEC. For it, and any info files listed
-in an Indirect section, calculate NFOLS and FLSES. See GROK-INFO-FILE for their
-formats.
+(defun deep-grok-info-file (pathname)
+  "Search through the info file at PATHNAME. For it, and any info files listed
+in an Indirect section, searching for nodes, function / variable declarations,
+line positions and section nodes.
 
-Returns a list matching (&key NFLLS FSES FLPS FSECTIONS), which are in the same
-format as from GROK-INFO-FILE, but the latter three are alists keyed by file
-name."
-  (let (all-nflls fses flps fsections)
-    (dolist (filespec (cons filespec (info-indirect-files filespec)))
-      (destructuring-bind (&key nflls ses line-positions sections)
-          (grok-info-file filespec)
-        (setf all-nflls (nconc all-nflls nflls))
-        (push (cons filespec ses) fses)
-        (push (cons filespec line-positions) flps)
-        (push (cons filespec sections) fsections)))
-    (list :nflls all-nflls :fses fses :flps flps :fsections fsections)))
+Returns a list matching (&key NPLLS PSES PLPS PSECTIONS), which are in the same
+format as from GROK-INFO-FILE, but the latter three are alists keyed by
+pathname."
+  (let (all-nplls pses plps psections)
+    (dolist (pathname (cons pathname (info-indirect-files pathname)))
+      (destructuring-bind (&key nplls ses line-positions sections)
+          (grok-info-file pathname)
+        (setf all-nplls (nconc all-nplls nplls))
+        (push (cons pathname ses) pses)
+        (push (cons pathname line-positions) plps)
+        (push (cons pathname sections) psections)))
+    (list :nplls all-nplls :pses pses :plps plps :psections psections)))
 
 (defun starts-with-p (str start)
   (and (>= (length str) (length start))
@@ -252,27 +251,27 @@ lines from the start of the node for the start of our topic."
                                      node-name
                                      (- line-number 2))))))))))))))
 
-(defun info-get-index (nflls flps)
-  "Take NFLLS and FLPS as returned by DEEP-GROK-INFO-FILE and return a list of
+(defun info-get-index (nplls plps)
+  "Take NPLLS and PLPS as returned by DEEP-GROK-INFO-FILE and return a list of
 index topics in the format (TOPIC-NAME NODE-NAME DELTA-LINES)."
-  (destructuring-bind (name file line-start line-end)
-      (car (last nflls))
+  (destructuring-bind (name pathname line-start line-end)
+      (car (last nplls))
     (declare (ignore name line-end))
-    (with-open-file (s file :direction :input)
-      (file-position s (elt (cdr (assoc file flps :test #'string=))
+    (with-open-file (s pathname :direction :input)
+      (file-position s (elt (cdr (assoc pathname plps :test #'equal))
                             (1- line-start)))
       (info-read-index s))))
 
-(defun idx-list-line-range (idx-list nflls fses)
-  "Given an entry from the index, IDX-LIST, together with NFLLS and FSES,
-return a list (TOPIC FILE LINE-START . LINE-END) with the file containing the
-relevant topic together with a start and end lines for the contents."
+(defun idx-list-line-range (idx-list nplls pses)
+  "Given an entry from the index, IDX-LIST, together with NPLLS and PSES,
+return a list (TOPIC PATHNAME LINE-START . LINE-END) with the file containing
+the relevant topic together with a start and end lines for the contents."
   (destructuring-bind (topic node-name delta-lines) idx-list
-    (destructuring-bind (&optional filename node-line-start node-line-end)
-        (cdr (assoc node-name nflls :test #'string=))
-      (unless filename
+    (destructuring-bind (&optional pathname node-line-start node-line-end)
+        (cdr (assoc node-name nplls :test #'string=))
+      (unless pathname
         (error "Couldn't find ~A in the offset table." node-name))
-      ;; Elements of (assoc fses filename) are of the form (LINE-START
+      ;; Elements of (assoc pathname pses) are of the form (LINE-START
       ;; . LINE-END) and they are in descending order. Search for the largest
       ;; that comes with or before the topic in the file, within the given
       ;; node. If that fails, we resort to starting at the given line from the
@@ -283,7 +282,7 @@ relevant topic together with a start and end lines for the contents."
                             (<= node-line-start
                                 line-num
                                 (+ delta-lines node-line-start)))
-                          (cdr (assoc filename fses))
+                          (cdr (assoc pathname pses))
                           :key #'car)
                  ;; We didn't find a definition! This is unusual (in fact, as I
                  ;; write this there are only two instances in the index), so
@@ -292,37 +291,40 @@ relevant topic together with a start and end lines for the contents."
                         (car (find-if (lambda (line-num)
                                         (<= (+ delta-lines node-line-start)
                                             line-num))
-                                      (cdr (assoc filename fses))
+                                      (cdr (assoc pathname pses))
                                       :key #'car
                                       :from-end t))))
                    (cons (+ delta-lines node-line-start)
                          (if (and next-topic (< next-topic node-line-end))
                              (1- next-topic)
                              node-line-end))))))
-        (list topic filename (car last-pair) (cdr last-pair) node-name)))))
+        (list topic pathname (car last-pair) (cdr last-pair) node-name)))))
 
-(defun topic-ranges (index nflls fses flps)
-  "Calculate the correct ranges and file for each topic in the index. Returns a
-list of lists (TOPIC FILE START-POS LENGTH NODE-NAME)."
+(defun topic-ranges (index nplls pses plps)
+  "Calculate the correct ranges and pathname for each topic in the
+index. Returns a list of lists (TOPIC PATHNAME START-POS LENGTH NODE-NAME)."
   (mapcar (lambda (idx-list)
-            (destructuring-bind (topic file line-start line-end node-name)
-                (idx-list-line-range idx-list nflls fses)
-              (let* ((lps (cdr (assoc file flps :test #'string=)))
+            (destructuring-bind (topic pathname line-start line-end node-name)
+                (idx-list-line-range idx-list nplls pses)
+              (let* ((lps (or (cdr (assoc pathname plps :test #'equal))
+                              (error "Couldn't find line offsets for ~A"
+                                     pathname)))
                      (start-pos (elt lps (1- line-start)))
                      (end-pos (elt lps (1- line-end))))
                 (when (< end-pos start-pos)
-                  (print (list topic file line-start line-end start-pos end-pos)))
-                (unless lps (error "Couldn't find line offsets for ~A" file))
-                (list topic file start-pos (- end-pos start-pos) node-name))))
+                  (error "Unexpected: end position ~A before start position ~A ~
+                          when calculating range for topic ~A at ~A."
+                         end-pos start-pos topic pathname))
+                (list topic pathname start-pos (- end-pos start-pos) node-name))))
           index))
 
-(defun section-ranges (nflls flps fsections)
+(defun section-ranges (nplls plps psections)
   "Calculate the ranges for each section (by working out which node it's in and
 then taking the end of that node as a bound). Returns a list with elements of
-the form (SECTION-TITLE FILENAME OFFSET LENGTH)."
+the form (SECTION-TITLE PATHNAME OFFSET LENGTH)."
   (mapcan
-   (lambda (file-sections)
-     (let ((filename (car file-sections)))
+   (lambda (pathname-sections)
+     (let ((pathname (car pathname-sections)))
        (mapcar
         (lambda (section)
           (destructuring-bind (title line-number pos) section
@@ -330,35 +332,26 @@ the form (SECTION-TITLE FILENAME OFFSET LENGTH)."
             (let ((node
                    (find-if
                     (lambda (node)
-                      (destructuring-bind (nfile line-start line-end) node
-                        (and (string= nfile filename)
+                      (destructuring-bind (node-path line-start line-end) node
+                        (and (equal node-path pathname)
                              (<= line-start line-number line-end))))
-                    nflls :key #'cdr)))
+                    nplls :key #'cdr)))
               (unless node
                 (error "Couldn't find a containing node for section ~A, ~
-                        which should be in file ~A, line ~A."
-                       title filename line-number))
-              (list title filename pos
-                    (- (elt (cdr (assoc filename flps :test #'string=))
+                        which should be at path ~A, line ~A."
+                       title pathname line-number))
+              (list title pathname pos
+                    (- (elt (cdr (assoc pathname plps :test #'equal))
                             (fourth node))
                        pos)))))
-        (cdr file-sections))))
-   fsections))
+        (cdr pathname-sections))))
+   psections))
 
-(defun build-index (filespec target-file)
-  (destructuring-bind (&key nflls fses flps fsections)
-      (deep-grok-info-file filespec)
-    (with-open-file (stream target-file :direction :output
-                            :if-exists :supersede)
-      (prin1 `((in-package :cl-info)
-               (let ((deffn-defvr-pairs
-                      ',(topic-ranges (info-get-index nflls flps) nflls fses flps))
-                     (section-pairs
-                      ',(section-ranges nflls flps fsections))))
-               (load-info-hashtables
-                (pathname-directory
-                 (find-symbol "*LOAD-PATHNAME*"
-                              (if (member :gcl *features*) :sys :cl)))
-                deffn-defvr-pairs section-pairs))
-             stream)))
+(defun register-info-file (pathname)
+  (destructuring-bind (&key nplls pses plps psections)
+      (deep-grok-info-file pathname)
+    (load-info-hashtables
+     (make-pathname :directory (pathname-directory pathname))
+     (topic-ranges (info-get-index nplls plps) nplls pses plps)
+     (section-ranges nplls plps psections)))
   (values))

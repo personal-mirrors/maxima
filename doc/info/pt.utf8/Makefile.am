@@ -19,9 +19,6 @@ maxima.texi: $(origlangsdir)/maxima.texi
 	rm -f *.texi
 	cp -p $(origlangsdir)/*.texi .
 
-maxima-index.lisp: maxima.info ../build_index.pl
-	perl ../build_index.pl maxima.info ':utf8' > maxima-index.lisp
-
 maxima.html: maxima.texi
 	rm -f maxima*.html 2>/dev/null
 	perl ../texi2html -split_chapter --lang=pt --output=. --css-include=../manual.css --init-file ../texi2html.init maxima.texi 
@@ -45,7 +42,7 @@ genericdir = $(dochtmldir)/pt.utf8
 genericdirDATA = \
 contents.hhc index.hhk header.hhp
 
-EXTRA_DIST = maxima-index.lisp $(genericdirDATA)
+EXTRA_DIST = $(genericdirDATA)
 
 include ../common-lang-recode.mk
 
