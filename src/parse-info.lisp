@@ -262,6 +262,13 @@ index topics in the format (TOPIC-NAME NODE-NAME DELTA-LINES)."
                             (1- line-start)))
       (info-read-index s))))
 
+(defun definition-starting-in-range (start end ses)
+  ;; I would use
+  ;;   (find-if (lambda (line-num) (<= start line-num end)) ses :key #'car)
+  ;; but this runs *much* slower on GCL (factor of 10) and slightly slower on
+  ;; other implementations. Odd.
+  (dolist (se ses nil) (when (<= start (car se) end) (return se))))
+
 (defun idx-list-line-range (idx-list nplls pses)
   "Given an entry from the index, IDX-LIST, together with NPLLS and PSES,
 return a list (TOPIC PATHNAME LINE-START . LINE-END) with the file containing
@@ -278,12 +285,9 @@ the relevant topic together with a start and end lines for the contents."
       ;; node and taking data to either the end of the node or the start of the
       ;; next topic, whichever comes first.
       (let ((last-pair
-             (or (find-if (lambda (line-num)
-                            (<= node-line-start
-                                line-num
-                                (+ delta-lines node-line-start)))
-                          (cdr (assoc pathname pses))
-                          :key #'car)
+             (or (definition-starting-in-range node-line-start
+                                               (+ delta-lines node-line-start)
+                                               (cdr (assoc pathname pses)))
                  ;; We didn't find a definition! This is unusual (in fact, as I
                  ;; write this there are only two instances in the index), so
                  ;; the code needn't run fast.
