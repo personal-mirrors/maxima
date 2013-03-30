@@ -11,7 +11,9 @@
 
 (defpackage :cl-info
   (:use :common-lisp)
-  (:export :info-pathname :info-exact :info-inexact))
+  (:export :info-pathname
+           :register-document
+           :search-documentation-exact :search-documentation-inexact))
 
 (defpackage :command-line
   (:use :common-lisp)

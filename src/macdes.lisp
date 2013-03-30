@@ -121,8 +121,8 @@
 	(cl-info::*prompt-prefix* *prompt-prefix*)
 	(cl-info::*prompt-suffix* *prompt-suffix*))
     (if exact-p
-	(cl-info:info-exact topic)
-	(cl-info:info-inexact topic))))
+	(cl-info:search-documentation-exact topic)
+	(cl-info:search-documentation-inexact topic))))
 
 ; The old implementation
 ;(defun $apropos (s)

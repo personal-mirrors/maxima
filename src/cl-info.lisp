@@ -1,7 +1,121 @@
 (in-package :cl-info)
 
-(defvar *info-tables* (make-hash-table :test 'equal))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; A (reasonably) generic documentation system                                ;;
+;;                                                                            ;;
+;; To implement a documentation type, you must provide implementations for    ;;
+;; the three generic functions directly below and then call                   ;;
+;; register-documentation-type to tell the documentation system about it.     ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defclass doc ()
+  ((name :reader doc-name :initarg :name)))
+
+(defmethod print-object ((d doc) stream)
+  (print-unreadable-object (d stream :type t)
+    (princ (doc-name d) stream)))
+
+(defclass doc-topic ()
+  ((name :reader doc-topic-name :initarg :name)
+   (section :reader doc-topic-section :initarg :section :initform nil))
+  (:documentation
+   "A documentation system should probably use this class to return
+topics. SECTION, if non-nil, is the name of a containing chapter or other
+division."))
+
+(defmethod print-object ((dt doc-topic) stream)
+  (print-unreadable-object (dt stream :type t)
+    (princ (doc-topic-name dt) stream)))
+
+(defgeneric documentation-matching-topics (doc predicate)
+  (:documentation "Return a list of all the topics in DOC that match
+PREDICATE. These should implement DOC-TOPIC-NAME and DOC-TOPIC-SECTION (ie
+should probably be instances of a subclass of DOC-TOPIC)."))
+
+(defgeneric documentation-for-topic (doc topic)
+  (:documentation "Given TOPIC which is stored by DOC, return the corresponding
+documentation text."))
+
+;; Infrastructure for doc types ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defvar *documentation-types* nil "See REGISTER-DOCUMENTATION-TYPE.")
+
+(defun register-documentation-type (name predicate register)
+  "NAME is a symbol to identify the documentation type. PREDICATE should be a
+function of one argument, X, which returns T if X is a valid input to REGISTER,
+which should be a function that return a DOC object corresponding to X."
+  (let ((hit (assoc name *documentation-types* :test #'eq)))
+    (if hit
+        (setf (cdr hit) (list predicate register))
+        (push (list name predicate register) *documentation-types*)))
+  (values))
+
+;; Register-document and associated infrastructure ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defvar *documents* nil
+  "A list of DOC objects representing the documents we have in the index.")
+
+(defun info-pathname (lang-subdir)
+  (merge-pathnames
+   (make-pathname :name "maxima" :type "info"
+                  :directory (when lang-subdir (list :relative lang-subdir)))
+   ;; Append / so that the namestring does actually refer to the directory. A
+   ;; hack, but I don't want to change *maxima-infodir* yet and possibly break
+   ;; stuff elsewhere.
+   (parse-namestring (format nil "~A/" maxima::*maxima-infodir*))))
+
+(defvar *standard-document-locations*
+  (list (info-pathname maxima::*maxima-lang-subdir*))
+  "A list of documents that ensure are loaded the first time someone searches
+for documentation.")
+
+(defun ensure-standard-documents ()
+  (mapc (lambda (descriptor)
+          (unless (assoc descriptor *documents*)
+            (register-document descriptor)))
+        *standard-document-locations*)
+  (values))
+
+(defun register-document (x)
+  "Tell the documentation system that X represents some document that we should
+search. Throws an error if no documentation type handles X."
+  (let ((triple (find-if (lambda (doctype-triple)
+                           (funcall (second doctype-triple) x))
+                         *documentation-types*)))
+    (if triple
+        (push (cons x (funcall (third triple) x)) *documents*)
+        (error "No handler for document described by ~A." x))
+    (values)))
+
+;; The two documentation search entry points ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun search-documentation-exact (x)
+  (let ((exact-matches (topic-match x t))
+        (inexact-matches (topic-match x nil))
+        (no-match-msg
+         (format nil (intl:gettext "No exact match found for topic `~a'.") x))
+        (yes-inexact-msg
+         (format nil (intl:gettext
+                      "There are some inexact matches for `~a'.") x)))
+    (cond
+      ((not exact-matches)
+       (format t "  ~A~%~:[~2*~;  ~A~%  ~A~]~%~%"
+               no-match-msg inexact-matches yes-inexact-msg
+               (format nil (intl:gettext
+                            "Try `?? ~a' (inexact match) instead.") x))
+       nil)
+      (t
+       (display-items exact-matches)
+       (when inexact-matches
+         (format t "  ~A~%  ~A~%~%"
+                 yes-inexact-msg
+                 (format nil (intl:gettext "Try `?? ~a' to see them.") x)))
+       t))))
+
+(defun search-documentation-inexact (x)
+  (let ((inexact-matches (topic-match x nil)))
+    (when inexact-matches
+      (display-items inexact-matches))
+    (not (null inexact-matches))))
+
+;; User interaction ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defvar *prompt-prefix* "")
 (defvar *prompt-suffix* "")
 
@@ -37,7 +151,7 @@
        (format *debug-io* (intl:gettext "~&Ignoring trailing garbage in input.")))
      (return (cons keyword list)))))
 
-(defun select-info-items (selection items)
+(defun select-doc-items (selection items)
   (case (pop selection)
     (noop (loop
 	   for i in selection
@@ -45,88 +159,31 @@
     (all items)
     (none 'none)))
 
-; ------------------------------------------------------------------
-; STUFF ABOVE SALVAGED FROM PREVIOUS INCARNATION OF SRC/CL-INFO.LISP
-; STUFF BELOW IS NEW, BASED ON LOOKUP TABLE BUILT AHEAD OF TIME
-; ------------------------------------------------------------------
+;; Outputting documentation ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; ------------------ search help topics ------------------
-
-(defun info-pathname (lang-subdir)
-  (merge-pathnames
-   (make-pathname :name "maxima" :type "info"
-                  :directory (when lang-subdir (list :relative lang-subdir)))
-   ;; Append / so that the namestring does actually refer to the directory. A
-   ;; hack, but I don't want to change *maxima-infodir* yet and possibly break
-   ;; stuff elsewhere.
-   (parse-namestring (format nil "~A/" maxima::*maxima-infodir*))))
-
-(defun load-primary-index ()
-  (register-info-file (info-pathname maxima::*maxima-lang-subdir*)))
-
-(defun info-exact (x)
-  (let ((exact-matches (exact-topic-match x)))
-    (if (not (some-exact x exact-matches))
-      (progn
-        (format t (intl:gettext "  No exact match found for topic `~a'.~%  Try `?? ~a' (inexact match) instead.~%~%") x x)
-        nil)
-      (progn
-        (display-items exact-matches)
-        (if (some-inexact x (inexact-topic-match x))
-          (format t (intl:gettext "  There are also some inexact matches for `~a'.~%  Try `?? ~a' to see them.~%~%") x x))
-        t))))
-
-(defun some-exact (x matches)
-  (some #'identity (flatten-matches x matches)))
-
-(defun some-inexact (x matches)
-  (some #'null (flatten-matches x matches)))
-
-(defun flatten-matches (x matches)
-  ;; OH GODS, SPARE YOUR SERVANT FROM YOUR FIERY WRATH ...
-  (mapcar #'(lambda (y) (equal y x)) (mapcar #'first (apply #'append (mapcar #'second matches)))))
-
-(defun exact-topic-match (topic)
-  (setq topic (regex-sanitize topic))
-  (unless (< 0 (hash-table-count *info-tables*))
-    (load-primary-index))
-  (loop for dir-path being the hash-keys of *info-tables*
-    collect (list dir-path (exact-topic-match-1 topic dir-path))))
-
-(defun exact-topic-match-1 (topic d)
-  (let*
-    ((section-table (first (gethash d *info-tables*)))
-     (defn-table (second (gethash d *info-tables*)))
-     (regex1 (concatenate 'string "^" topic "$"))
-     (regex2 (concatenate 'string "^" topic " *<[0-9]+>$")))
-    (append
-      (find-regex-matches regex1 section-table)
-      (find-regex-matches regex1 defn-table)
-      (find-regex-matches regex2 section-table)
-      (find-regex-matches regex2 defn-table))))
-
-(defun info-inexact (x)
-  (let ((inexact-matches (inexact-topic-match x)))
-    (when inexact-matches
-      (display-items inexact-matches))
-    (not (null inexact-matches))))
-
-;; MATCHES looks like ((D1 (I11 I12 I12 ...)) (D2 (I21 I22 I23 ...)))
-;; Rearrange it to ((D1 I11) (D1 I12) (D1 I13) ... (D2 I21) (D2 I22) (D2 I23) ...)
+;; MATCHES looks like ((D1 I11 I12 I12 ...) (D2 I21 I22 I23 ...))
+;; Rearrange it to
+;;   ((D1 I11) (D1 I12) (D1 I13) ... (D2 I21) (D2 I22) (D2 I23) ...)
 (defun rearrange-matches (matches)
-  (apply #'append (mapcar #'(lambda (di) (let ((d (first di)) (i (second di))) (mapcar #'(lambda (i1) (list d i1)) i))) matches)))
+  (mapcan #'(lambda (di)
+              (let ((d (car di)) (i (cdr di)))
+                (mapcar #'(lambda (i1) (list d i1)) i)))
+          matches))
 
+;; Items looks like ((D1 I11 I12 ...) (D2 I21 I22 ...) ..) where D1, D2 are DOC
+;; objects and I11, I12, I21, I22 are DOC-TOPIC objects.
 (defun display-items (items)
   (let*
     ((items-list (rearrange-matches items))
-     (nitems (length items-list)))
+     (nitems (length items-list))
+     (wanted))
 
-    (loop for i from 0 for item in items-list do
-      (when (> nitems 1)
-        (let
-          ((heading-title (nth 4 (second item)))
-           (item-name (first (second item))))
-          (format t "~% ~d: ~a~@[  (~a)~]" i item-name heading-title))))
+    (when (> nitems 1)
+      (loop
+         for i from 0 for item in items-list
+         do (let ((heading-title (doc-topic-section (second item)))
+                  (item-name (doc-topic-name (second item))))
+              (format t "~% ~d: ~a~@[  (~a)~]" i item-name heading-title))))
 
     (setq wanted
           (if (> nitems 1)
@@ -137,7 +194,7 @@
                            (print-prompt prompt-count)
                            (force-output)
                            (clear-input)
-                           (select-info-items
+                           (select-doc-items
                             (parse-user-choice nitems) items-list)))
               items-list))
     (clear-input)
@@ -145,23 +202,27 @@
     (when (consp wanted)
       (format t "~%")
       (loop for item in wanted
-        do (format t "~A~%~%" (read-info-text (second item)))))))
+        do (format t "~A~%~%" (apply #'documentation-for-topic item))))))
 
-(defun inexact-topic-match (topic)
-  (setq topic (regex-sanitize topic))
-  (unless (< 0 (hash-table-count *info-tables*))
-    (load-primary-index))
-  (let ((foo (loop for dir-path being the hash-keys of *info-tables*
-    collect (list dir-path (inexact-topic-match-1 topic dir-path)))))
-    (remove-if #'(lambda (x) (null (second x))) foo)))
-
-(defun inexact-topic-match-1 (topic d)
-  (let*
-    ((section-table (first (gethash d *info-tables*)))
-     (defn-table (second (gethash d *info-tables*))))
-    (append
-      (find-regex-matches topic section-table)
-      (find-regex-matches topic defn-table))))
+;; Searching within a DOC implementation ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun all-doc-regex-matches (regex-strings)
+  "Return all matches from documentation in the system for the given regular
+expressions: a list keyed by document with matches from that document as the
+CDR."
+  (let ((regexes (mapcar (lambda (regex-string)
+                           (coerce (maxima-nregex::regex-compile
+                                    regex-string :case-sensitive nil)
+                                   'function))
+                         regex-strings)))
+    (remove nil
+            (mapcar
+             (lambda (document)
+               (cons document
+                     (mapcan (lambda (regex)
+                               (documentation-matching-topics document regex))
+                             regexes)))
+             (mapcar #'cdr *documents*))
+            :key #'cdr)))
 
 (defun regex-sanitize (s)
   "Precede any regex special characters with a backslash."
@@ -178,51 +239,11 @@
 					     `(#\\ ,c) `(,c))) (coerce s 'list)))
             'string)))
 
-(defun find-regex-matches (regex-string hashtable)
-  (let*
-    ((regex (maxima-nregex::regex-compile regex-string :case-sensitive nil))
-     (regex-fcn (coerce regex 'function))
-     (regex-matches nil))
-    (maphash
-      #'(lambda (key value)
-          (if (funcall regex-fcn key)
-            (setq regex-matches (cons `(,key . ,value) regex-matches))
-            nil))
-      hashtable)
-    (stable-sort regex-matches #'string-lessp :key #'car)))
-
-(defun read-info-text (parameters)
-  (let* ((value (cdr parameters))
-         (byte-offset (cadr value))
-         (byte-count (caddr value))
-         (text (make-string byte-count)))
-    (with-open-file (in (car value) :direction :input)
-      (file-position in byte-offset)
-      #+gcl (gcl-read-sequence text in :start 0 :end byte-count)
-      #-gcl (read-sequence text in :start 0 :end byte-count))
-    text))
-
-#+gcl
-(defun gcl-read-sequence (s in &key (start 0) (end nil))
-  (dotimes (i (- end start))
-    (setf (aref s i) (read-char in))))
-
-; --------------- build help topic indices ---------------
-
-(defun load-info-hashtables (dir-name deffn-defvr-pairs section-pairs)
-  (if (and (zerop (length section-pairs)) 
-           (zerop (length deffn-defvr-pairs)))
-    (format t (intl:gettext "warning: ignoring an empty documentation index in ~M~%") dir-name)
-    (destructuring-bind
-      (section-hashtable deffn-defvr-hashtable)
-      (ensure-info-tables dir-name)
-      (mapc #'(lambda (x) (setf (gethash (car x) section-hashtable) (cdr x))) section-pairs)
-      (mapc #'(lambda (x) (setf (gethash (car x) deffn-defvr-hashtable) (cdr x))) deffn-defvr-pairs))))
-
-(defun ensure-info-tables (dir-name)
-  (or (gethash dir-name *info-tables*)
-    (let
-      ((t1 (make-hash-table :test 'equal))
-       (t2 (make-hash-table :test 'equal)))
-      (setf (gethash dir-name *info-tables*) (list t1 t2)))))
-
+(defun topic-match (topic exact-p)
+  "Find matches for TOPIC, in the format returned by ALL-DOC-REGEX-MATCHES."
+  (ensure-standard-documents)
+  (all-doc-regex-matches
+   (if exact-p
+       (list (concatenate 'string "^" topic "$")
+             (concatenate 'string "^" topic " *<[0-9]+>$"))
+       (list (regex-sanitize topic)))))
