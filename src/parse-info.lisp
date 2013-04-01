@@ -129,21 +129,21 @@ PATHNAME is the resolved pathname of the relevant file."
     (when (jump-to-info-section stream "Indirect:")
       (let ((line))
         (collecting-loop
-           (set-next-line stream line)
-           (when (info-separator-p line) (return))
-           (let ((parsed (parse-info-csv-line line)))
-             (unless (= 1 (length parsed))
-               (format *error-output*
-                       "Warning! Malformed Indirect line:~%~A~%~%" line))
-             ;; Here we have ((namestring . "offset-num"))
-             (let ((namestring (caar parsed))
-                   (offset-string (cdar parsed)))
-               (collect
-                   (cons (handler-case (parse-integer offset-string)
-                           (parse-error ()
-                             (error "Invalid offset ~S in indirect line ~S"
-                                    offset-string line)))
-                         (parse-info-namestring pathname namestring))))))))))
+          (set-next-line stream line)
+          (when (info-separator-p line) (return))
+          (let ((parsed (parse-info-csv-line line)))
+            (unless (= 1 (length parsed))
+              (format *error-output*
+                      "Warning! Malformed Indirect line:~%~A~%~%" line))
+            ;; Here we have ((namestring . "offset-num"))
+            (let ((namestring (caar parsed))
+                  (offset-string (cdar parsed)))
+              (collect
+                  (cons (handler-case (parse-integer offset-string)
+                          (parse-error ()
+                            (error "Invalid offset ~S in indirect line ~S"
+                                   offset-string line)))
+                        (parse-info-namestring pathname namestring))))))))))
 
 (defun parse-info-csv-line (line &optional (offset 0))
   "Parse text that looks like A: <foo>, B: <bar>, C: <baz> into '((A . foo) (B
