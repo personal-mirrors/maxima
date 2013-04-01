@@ -605,18 +605,19 @@ make topic queries."
    #'string-lessp
    :key #'doc-topic-name))
 
-;; TODO: This doesn't really work with FILE-POSITION properly.
 (defun read-info-text (pathname position length)
-  (let ((text (make-string length)))
-    (with-open-info-file (in pathname)
-      (file-position in position)
-      #+gcl (gcl-read-sequence text in :start 0 :end length)
-      #-gcl (read-sequence text in :start 0 :end length))
-    text))
-#+gcl
-(defun gcl-read-sequence (s in &key (start 0) (end nil))
-  (dotimes (i (- end start))
-    (setf (aref s i) (read-char in))))
+  (with-open-info-file (in pathname)
+    (file-position in position)
+    ;; Read a line at a time and check to see whether we've got enough. This
+    ;; will definitely do the right thing wrt to FILE-POSITION and it doesn't
+    ;; really matter how fast it is: this is text we're outputting to the
+    ;; user!
+    (reduce (lambda (a b) (concatenate 'string a `(#\Newline) b))
+            (collecting-loop
+              (let ((line (read-line in :eof nil)))
+                (when (eq line :eof) (return))
+                (collect line)
+                (when (>= (file-position in) (+ position length)) (return)))))))
 
 (defmethod documentation-for-topic ((doc info-doc) (topic complete-info-topic))
   (read-info-text (complete-topic-pathname topic)
