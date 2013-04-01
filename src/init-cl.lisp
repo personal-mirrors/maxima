@@ -201,41 +201,91 @@ When one changes, the other does too."
 		  "/tmp")))
     (maxima-parse-dirstring base-dir)))
 
-(defun set-locale-subdir ()
-  (let (language territory codeset)
-    ;; Determine *maxima-lang-subdir*
-    ;;   1. from MAXIMA_LANG_SUBDIR environment variable
-    ;;   2. from INTL::*LOCALE* if (1) fails
-    (unless  (setq *maxima-lang-subdir* (maxima-getenv "MAXIMA_LANG_SUBDIR"))
-      (cond ((or (null intl::*locale*) (equal intl::*locale* ""))
-	     (setq *maxima-lang-subdir* nil))
-	      ((member intl::*locale* '("C" "POSIX" "c" "posix") :test #'equal)
-	       (setq *maxima-lang-subdir* nil))
-	      (t  (when (eql (position #\. intl::*locale*) 5)
-		    (setq codeset (string-downcase (subseq intl::*locale* 6))))
-		  (when (eql (position #\_ intl::*locale*) 2)
-		    (setq territory (string-downcase (subseq intl::*locale* 3 5))))
-		  (setq language (string-downcase (subseq intl::*locale* 0 2)))
-		  ;; Set *maxima-lang-subdir* only for known languages.
-		  ;; Extend procedure below as soon as new translation
-		  ;; is available.
-		  (cond ((equal language "en") ;; English
-			 (setq *maxima-lang-subdir* nil))
-			;; Latin-1 aka iso-8859-1 languages
-			((member language '("es" "pt" "fr" "de" "it") :test #'equal)
-			 (if (and (string= language "pt") (string= territory "br"))
-			     (setq *maxima-lang-subdir* (concatenate 'string language "_BR"))
-			     (setq *maxima-lang-subdir* language))
-			 (if (member codeset '("utf-8" "utf8") :test #'equal)
-			     (setq *maxima-lang-subdir* (concatenate 'string *maxima-lang-subdir* ".utf8"))))
-			;; Russian. Default codepage cp1251
-			((string= language "ru")
-			 (setq *maxima-lang-subdir* language)
-			 (cond ((member codeset '("utf-8" "utf8") :test #'equal)
-				(setq *maxima-lang-subdir* (concatenate 'string *maxima-lang-subdir* ".utf8")))
-			       ((member codeset '("koi8-r" "koi8r") :test #'equal)
-				(setq *maxima-lang-subdir* (concatenate 'string *maxima-lang-subdir* ".koi8r")))))
-			(t  (setq *maxima-lang-subdir* nil))))))))
+;; The list is in order of preference (in case we match multiple
+;; entries). General format:
+;;
+;;   (SUBDIR LANGUAGE TERRITORY DEFAULT-CODESET OTHER-CODESETS)
+;;
+;; An entry matches on LANGUAGE and TERRITORY if both components are either nil
+;; or equal to the environment as strings. If not given, DEFAULT-CODESET is
+;; assumed to be :LATIN-1. OTHER-CODESETS lists the other codesets that might
+;; appear in the form (name string1 string2 ...). We always prepend a UTF-8
+;; recipe to it.
+;;
+;; There is also a short-hand format where you just give a one-element list:
+;; (x). This is the same as (x x).
+(defvar *locale-defns*
+  '((nil "en")
+    ("pt_BR" "pt" "br")
+    ("es") ("pt") ("fr") ("de") ("it")
+    ("ru" "ru" nil :cp1251 ((:koi8-r ".koi8r" "koi8-r" "koi8r")))))
+
+;; Conses keyed by :latin1, :utf-8, :cp1251, :koi8-r (add more here). This would
+;; neatly solve the problem of opening with external formats except (surprise,
+;; surprise) GCL doesn't allow an :external-format argument to its OPEN function
+;; so we have to special case it elsewhere. AAAARGH.
+(defvar *external-formats*
+  (mapcar 'cons '(:latin1 :utf-8 :cp1251 :koi8-r)
+          #+(or sbcl cmucl scl) '(:latin1 :utf-8 :cp1251 :koi8-r)
+          #+(and clisp unicode) '(charset:iso-8859-1 charset:utf-8
+                                  charset:cp1251 charset:koi8-r)
+          #+allegro '(:latin1 :utf-8 :1251 :koi8-r)
+          #+ccl '(:latin1 :utf-8)
+          #+(and ecl unicode) '(ext:latin-1 ext:utf-8 ext:windows-1251)
+          #+(or (and clisp (not unicode))
+                (and ecl (not unicode))
+                gcl) nil))
+
+(defun locale-match-p (test-tuple language territory)
+  (if (null (cdr test-tuple))
+      (equal (car test-tuple) language)
+      (every (lambda (test env) (or (not test) (equal test env)))
+             (cdr test-tuple)
+             (list language territory))))
+
+(defun dir-from-codeset (codeset other-codesets)
+  (second
+   (find-if (lambda (lst) (find codeset (cddr lst) :test #'equal))
+            (cons '(:utf-8 ".utf8" "utf-8" "utf8") other-codesets))))
+
+;; Calculate an external format flag suitable for OPEN in the given locale
+;; subdir.
+(defun locale-subdir-external-format (subdir-name)
+  (let* ((dot-pos (position #\. subdir-name))
+         (locale-defn
+          (find (subseq subdir-name 0 dot-pos) *locale-defns*
+                :key #'car :test #'equal)))
+    (or (cdr (assoc
+              (or (and dot-pos
+                       (car (find (subseq subdir-name dot-pos)
+                                  (cons '(:utf-8 ".utf8") (fifth locale-defn))
+                                  :key #'second :test #'equal)))
+                  (fourth locale-defn)
+                  :latin1)
+              *external-formats*))
+        :default)))
+
+;; Determine the appropriate value of *maxima-lang-subdir*
+;;   1. from MAXIMA_LANG_SUBDIR environment variable
+;;   2. from INTL::*LOCALE* if (1) fails
+(defun locale-subdir ()
+  (or (maxima-getenv "MAXIMA_LANG_SUBDIR")
+      (unless
+          (member intl::*locale* '("" "C" "POSIX" "c" "posix") :test #'equal)
+        (let* ((language (string-downcase (subseq intl::*locale* 0 2)))
+               (territory (when (eql (position #\_ intl::*locale*) 2)
+                            (string-downcase (subseq intl::*locale* 3 5))))
+               (codeset (when (eql (position #\. intl::*locale*) 5)
+                          (string-downcase (subseq intl::*locale* 6)))))
+          (destructuring-bind (&optional subdir l tr c other-codesets)
+              (find-if (lambda (defn)
+                         (locale-match-p defn language territory))
+                       *locale-defns*)
+            (declare (ignore l tr c))
+            (when subdir
+              (concatenate 'string
+                           subdir
+                           (dir-from-codeset codeset other-codesets))))))))
 
 (defun set-pathnames ()
   (let ((maxima-prefix-env (maxima-getenv "MAXIMA_PREFIX"))
@@ -579,7 +629,7 @@ When one changes, the other does too."
 
   (initialize-real-and-run-time)
   (intl::setlocale)
-  (set-locale-subdir)
+  (setf *maxima-lang-subdir* (locale-subdir))
   (adjust-character-encoding)
   (set-pathnames)
   (when (boundp '*maxima-prefix*)

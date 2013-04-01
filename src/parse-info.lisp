@@ -113,6 +113,23 @@ to the string SECTION-HEADER. Returns T if we found one and NIL otherwise."
          (t
           (setf expecting nil))))))
 
+(defmacro with-open-info-file ((stream pathname) &body body)
+  "Basically WITH-OPEN-FILE, but gets the EXTERNAL-FORMAT argument right if
+possible. On a lisp that doesn't support the given external format, we shouldn't
+error, but the resulting text stream might well be garbage. The encoding is
+guessed from the directory name - if we don't understand it we default
+to :latin1."
+  (let ((pn (gensym)))
+    `(let ((,pn ,pathname))
+       (with-open-file
+           ;; On GCL, complicated things like external formats are passed over. In
+           ;; fact, there's not even a keyword argument with that name.
+           #+gcl (,stream ,pathname)
+           #-gcl (,stream ,pn
+                  :external-format (maxima::locale-subdir-external-format
+                                    (car (last (pathname-directory ,pn)))))
+           ,@body))))
+
 ;; Multi-file handling ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun info-files-alist (pathname)
   "Calculate a lookup alist for the info file at PATHNAME, as used by
@@ -125,7 +142,7 @@ OFFSET."
 return a list of conses of the form (OFFSET . PATHNAME) where OFFSET is the
 start of the data represented by the line in the logical data stream and
 PATHNAME is the resolved pathname of the relevant file."
-  (with-open-file (stream pathname :direction :input)
+  (with-open-info-file (stream pathname)
     (when (jump-to-info-section stream "Indirect:")
       (let ((line))
         (collecting-loop
@@ -191,7 +208,7 @@ offset."
 format (name . offset). If unsuccessful, raises an error (since every top-level
 Texinfo file should have one)."
   (let ((line) (first t))
-    (with-open-file (stream pathname)
+    (with-open-info-file (stream pathname)
       (unless (jump-to-info-section stream "Tag Table:")
         (error "Couldn't find tag table in Texinfo file: ~S." pathname))
       (collecting-loop
@@ -306,7 +323,7 @@ SECTIONS is a list of lists (TITLE LINE-NUMBER POS STRIPPED NUMBERING), one for
 each section found. STRIPPED is the title, stripped of any commas since Texinfo
 seems to eat them when making tag tables etc. NUMBERING is a list of numbers,
 section 1.2.3 represented by (1 2 3)."
-  (with-open-file (stream pathname :direction :input)
+  (with-open-info-file (stream pathname)
     (let ((line) (line-number 0) (pos)
           (nodes) (fv-line-intervals) (lps)
           (se-starts) (this-node)
@@ -426,7 +443,7 @@ space then a title. If a match, return <name>."
                            file that ends with a section called ~S. We ~
                            expected ~S."
                           (first last-node-data) (doc-topic-name last-node)))
-                 (with-open-file (s (info-node-pathname last-node))
+                 (with-open-info-file (s (info-node-pathname last-node))
                    (file-position s (elt line-positions
                                          (1- (second last-node-data))))
                    (read-info-index s))))))
@@ -588,7 +605,7 @@ make topic queries."
 ;; TODO: This doesn't really work with FILE-POSITION properly.
 (defun read-info-text (pathname position length)
   (let ((text (make-string length)))
-    (with-open-file (in pathname)
+    (with-open-info-file (in pathname)
       (file-position in position)
       #+gcl (gcl-read-sequence text in :start 0 :end length)
       #-gcl (read-sequence text in :start 0 :end length))
