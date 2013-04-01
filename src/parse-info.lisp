@@ -579,7 +579,7 @@ make topic queries."
                           (info-doc-nodes doc))
            (remove-if-not predicate (info-doc-index doc) :key #'doc-topic-name))
    #'string-lessp
-   :key #'human-name))
+   :key #'doc-topic-name))
 
 ;; TODO: This doesn't really work with FILE-POSITION properly.
 (defun read-info-text (pathname position length)
