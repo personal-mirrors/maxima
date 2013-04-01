@@ -66,6 +66,7 @@ broken across multiple lines)."))
 
 (defclass info-doc (doc)
   ((nodes :accessor info-doc-nodes :initarg :nodes)
+   (node-lookup :accessor info-doc-node-lookup :initform nil)
    (index :accessor info-doc-index :initarg :index :initform nil)
    (pathname :reader info-doc-pathname :initarg :pathname))
   (:documentation
@@ -431,11 +432,17 @@ space then a title. If a match, return <name>."
                               (maybe-updated-node node pathname node-data
                                                   line-positions sections))
                             (info-doc-nodes doc))))
+      ;; Update the node lookup hash
+      (setf (info-doc-node-lookup doc)
+            (let ((ht (make-hash-table :test 'equal)))
+              (dolist (node (info-doc-nodes doc))
+                (setf (gethash (info-node-stripped-name node) ht) node))
+              ht))
+
       (setf (info-doc-index doc)
             (mapcar (lambda (entry)
                       (maybe-updated-index-entry
-                       entry pathname (info-doc-nodes doc)
-                       fv-line-intervals line-positions))
+                       entry doc pathname fv-line-intervals line-positions))
                     current-index))
       (values))))
 
@@ -481,7 +488,7 @@ content)"
                                           (third this-node-data))
                                      pos))))))))
 
-(defun maybe-updated-index-entry (entry pathname nodes
+(defun maybe-updated-index-entry (entry doc pathname
                                   fv-line-intervals line-positions)
   "Returns an INFO-INDEX-ENTRY object based on ENTRY. If ENTRY is already a
 COMPLETE-INFO-TOPIC or points to a node that has not yet been fully expanded
@@ -492,9 +499,8 @@ complete the index entry."
     (cond
       ((typep entry 'complete-info-topic) entry)
 
-      ((not (setf node (find (doc-topic-section entry) nodes
-                             :key #'info-node-stripped-name
-                             :test #'string=)))
+      ((not (setf node (gethash (doc-topic-section entry)
+                                (info-doc-node-lookup doc))))
        (error "Couldn't find the parent node, ~S, for index entry ~S."
               (doc-topic-section entry) (doc-topic-name entry)))
 
