@@ -399,7 +399,7 @@ When one changes, the other does too."
     ;; Now it makes sense to ensure that the documentation gets loaded, so call
     ;; cl-info:deferred-register-document to grab the info file.
     (cl-info:deferred-register-document
-     (cl-info:info-pathname maxima::*maxima-lang-subdir*))))
+     (cl-info:info-pathname *maxima-lang-subdir*))))
 
 (defun get-dirs (path)
   #+(or :clisp :sbcl :ecl :openmcl)
