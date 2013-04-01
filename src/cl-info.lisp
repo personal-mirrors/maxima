@@ -62,16 +62,16 @@ which should be a function that return a DOC object corresponding to X."
    ;; stuff elsewhere.
    (parse-namestring (format nil "~A/" maxima::*maxima-infodir*))))
 
-(defvar *standard-document-locations*
-  (list (info-pathname maxima::*maxima-lang-subdir*))
-  "A list of documents that ensure are loaded the first time someone searches
-for documentation.")
+(defvar *deferred-documents* nil
+  "A list of documents that will be loaded up the next time someone requests
+documentation.")
 
-(defun ensure-standard-documents ()
+(defun load-deferred-documents ()
   (mapc (lambda (descriptor)
           (unless (assoc descriptor *documents*)
             (register-document descriptor)))
-        *standard-document-locations*)
+        *deferred-documents*)
+  (setf *deferred-documents* nil)
   (values))
 
 (defun register-document (x)
@@ -84,6 +84,13 @@ search. Throws an error if no documentation type handles X."
         (push (cons x (funcall (third triple) x)) *documents*)
         (error "No handler for document described by ~A." x))
     (values)))
+
+(defun deferred-register-document (x)
+  "Tell the documentation system to load some document represented by X next
+time we are searching documentation. Nothing is loaded immediately, but if X has
+not yet been loaded then (REGISTER-DOCUMENT X) will be called before the next
+documentation search runs."
+  (pushnew x *deferred-documents*))
 
 ;; The two documentation search entry points ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun search-documentation-exact (x)
@@ -241,7 +248,7 @@ CDR."
 
 (defun topic-match (topic exact-p)
   "Find matches for TOPIC, in the format returned by ALL-DOC-REGEX-MATCHES."
-  (ensure-standard-documents)
+  (load-deferred-documents)
   (all-doc-regex-matches
    (if exact-p
        (list (concatenate 'string "^" topic "$")

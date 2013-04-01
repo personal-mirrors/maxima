@@ -344,7 +344,12 @@ When one changes, the other does too."
     ;; language pack wasn't installed and we reset *maxima-lang-subdir* to nil.
     (when (and *maxima-lang-subdir*
                (not (probe-file (cl-info:info-pathname *maxima-lang-subdir*))))
-      (setq *maxima-lang-subdir* nil))))
+      (setq *maxima-lang-subdir* nil))
+
+    ;; Now it makes sense to ensure that the documentation gets loaded, so call
+    ;; cl-info:deferred-register-document to grab the info file.
+    (cl-info:deferred-register-document
+     (cl-info:info-pathname maxima::*maxima-lang-subdir*))))
 
 (defun get-dirs (path)
   #+(or :clisp :sbcl :ecl :openmcl)

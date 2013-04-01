@@ -12,7 +12,7 @@
 (defpackage :cl-info
   (:use :common-lisp)
   (:export :info-pathname
-           :register-document
+           :register-document :deferred-register-document
            :search-documentation-exact :search-documentation-inexact))
 
 (defpackage :command-line
