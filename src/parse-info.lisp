@@ -421,7 +421,7 @@ space then a title. If a match, return <name>."
         (values (subseq line (+ end 1)) dotted)))))
 
 (defun strip-section-title (title)
-  (coerce (delete #\, (coerce title 'list)) 'string))
+  (string-downcase (coerce (delete #\, (coerce title 'list)) 'string)))
 
 ;; Integrating new data ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun integrate-info-file! (pathname doc)
