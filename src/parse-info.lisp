@@ -421,7 +421,10 @@ space then a title. If a match, return <name>."
         (values (subseq line (+ end 1)) dotted)))))
 
 (defun strip-section-title (title)
-  (string-downcase (coerce (delete #\, (coerce title 'list)) 'string)))
+  (string-downcase
+   (coerce (delete-if (lambda (char) (member char '(#\, #\. #\Space)))
+                      (coerce title 'list))
+           'string)))
 
 ;; Integrating new data ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun integrate-info-file! (pathname doc)
@@ -479,9 +482,22 @@ content)"
       ((or (typep node 'complete-info-node)
            (not (equal pathname (info-node-pathname node)))) node)
 
+      ;; Setting SECTION-DATA isn't quite as trivial as you might think it
+      ;; should be. Texinfo inserts spaces, commas and full stops seemingly
+      ;; randomly and doesn't always reproduce the whole of the name in the tag
+      ;; table.
       ((not (setf section-data
-                  (find (info-node-stripped-name node) sections
-                        :test #'string= :key #'fourth))) nil)
+                  (or (find (info-node-stripped-name node) sections
+                            :test #'string= :key #'fourth)
+                      (let ((partial-hits
+                             (remove-if-not
+                              (lambda (section)
+                                (starts-with-p (fourth section)
+                                               (info-node-stripped-name node)))
+                              sections)))
+                        (and (not (cdr partial-hits))
+                             (car partial-hits))))))
+       nil)
 
       (t
        (destructuring-bind (title line-number pos stripped numbering)
