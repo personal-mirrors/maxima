@@ -57,7 +57,9 @@ which should be a function that return a DOC object corresponding to X."
 (defun info-pathname (lang-subdir)
   (merge-pathnames
    (make-pathname :name "maxima" :type "info"
-                  :directory (when lang-subdir (list :relative lang-subdir)))
+                  :directory (when lang-subdir
+                               #-gcl (list :relative lang-subdir)
+                               #+gcl lang-subdir))
    ;; Append / so that the namestring does actually refer to the directory. A
    ;; hack, but I don't want to change *maxima-infodir* yet and possibly break
    ;; stuff elsewhere.
