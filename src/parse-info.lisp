@@ -433,10 +433,6 @@ space then a title. If a match, return <name>."
                ;; The index should be the last node in DOC
                (let ((last-node (car (last (info-doc-nodes doc))))
                      (last-node-data (car (last node-data))))
-                 (unless (search "Index" (doc-topic-name last-node))
-                   (error "The last node in the last file is called ~A, ~
-                           which doesn't sound like an index."
-                          (doc-topic-name last-node)))
                  (unless (typep last-node 'partial-info-node)
                    (error "The index node has already been completed but ~
                            we have no index."))
