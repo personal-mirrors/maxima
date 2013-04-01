@@ -58,7 +58,8 @@ node. NUMBERING is the section number of the node, represented like (1 2 3) for
 section 1.2.3."))
 
 (defclass partial-info-index-entry (doc-topic)
-  ((line-offset :reader info-index-line-offset :initarg :line-offset))
+  ((line-offset :reader info-index-line-offset :initarg :line-offset)
+   (stripped-node :reader info-index-stripped-node :initarg :stripped-node))
   (:documentation
    "LINE-OFFSET is the number of lines into the node to the end of the header of
 the topic (this might not point to the first line of the topic if the header is
@@ -251,7 +252,7 @@ info document and return a list of INFO-NODE objects representing the tags."
     (push (make-instance 'partial-info-node
                          :pathname (cdar alist)
                          :name (caar tags)
-                         :stripped-name (caar tags))
+                         :stripped-name (strip-section-title (caar tags)))
           acc)))
 
 ;; Reading the index ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -296,10 +297,12 @@ lines from the start of the node for the start of our topic."
                       ;; Subtract 2 from line number, since it is given wrt the
                       ;; preceding ^_ line and is indexed starting at 1.
                       (collect
-                          (make-instance 'partial-info-index-entry
-                                         :line-offset (- line-number 2)
-                                         :name topic-name
-                                         :section node-name)))))))))))))
+                          (make-instance
+                           'partial-info-index-entry
+                           :line-offset (- line-number 2)
+                           :name topic-name
+                           :stripped-node (strip-section-title node-name)
+                           :section node-name)))))))))))))
 
 ;; The main (beast of a) parser ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun scan-info-file (pathname)
@@ -520,7 +523,7 @@ complete the index entry."
     (cond
       ((typep entry 'complete-info-topic) entry)
 
-      ((not (setf node (gethash (doc-topic-section entry)
+      ((not (setf node (gethash (info-index-stripped-node entry)
                                 (info-doc-node-lookup doc))))
        (error "Couldn't find the parent node, ~S, for index entry ~S."
               (doc-topic-section entry) (doc-topic-name entry)))
