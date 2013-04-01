@@ -177,6 +177,10 @@ offset."
     ;; suppose it would be cleverer to tell the lisp to parse the namestring
     ;; "literally", but I don't know how to do that and I'm pretty certain we'll
     ;; never have a genuine info file with "*" in the pathname!
+    ;;
+    ;; Oh, and GCL doesn't have WILD-PATHNAME-P. I guess we'll just be a little
+    ;; less bullet-proof there.
+    #-gcl
     (when (wild-pathname-p merged)
       (error "Found an unexpected wild pathname ~S ~A." namestring where))
     merged))

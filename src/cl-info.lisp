@@ -12,8 +12,9 @@
   ((name :reader doc-name :initarg :name)))
 
 (defmethod print-object ((d doc) stream)
-  (print-unreadable-object (d stream :type t)
-    (princ (doc-name d) stream)))
+  (format stream "#<~A ~S>"
+          (type-of d)
+          (if (slot-boundp d 'name) (doc-name d) "<unnamed>")))
 
 (defclass doc-topic ()
   ((name :reader doc-topic-name :initarg :name)
@@ -24,8 +25,8 @@ topics. SECTION, if non-nil, is the name of a containing chapter or other
 division."))
 
 (defmethod print-object ((dt doc-topic) stream)
-  (print-unreadable-object (dt stream :type t)
-    (princ (doc-topic-name dt) stream)))
+  (format stream "#<~A ~S>"
+          (type-of dt) (doc-topic-name dt)))
 
 (defgeneric documentation-matching-topics (doc predicate)
   (:documentation "Return a list of all the topics in DOC that match
