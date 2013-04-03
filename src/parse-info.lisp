@@ -90,14 +90,6 @@ broken across multiple lines)."))
           `(return-from ,from)
           '(return))))
 
-(defmacro collecting-loop (&body forms)
-  "Run FORMS in a loop with #'COLLECT bound to a collector."
-  (let ((acc (gensym)))
-    `(let ((,acc))
-       (flet ((collect (x) (push x ,acc)))
-         (loop ,@forms)
-         (nreverse ,acc)))))
-
 (defun jump-to-info-section (stream section-header)
   "Jump forward in STREAM until finding a section that starts with a line equal
 to the string SECTION-HEADER. Returns T if we found one and NIL otherwise."
@@ -606,16 +598,8 @@ make topic queries."
     (integrate-info-file! (cdar (last files-alist)) d)
     d))
 
-(defmethod documentation-matching-topics ((doc info-doc) predicate)
-  (stable-sort
-   (append (remove-if-not (lambda (node)
-                            (and (funcall predicate (doc-topic-name node))
-                                 (or (not (typep node 'complete-info-topic))
-                                     (cdr (info-node-numbering node)))))
-                          (info-doc-nodes doc))
-           (remove-if-not predicate (info-doc-index doc) :key #'doc-topic-name))
-   #'string-lessp
-   :key #'doc-topic-name))
+(defmethod documentation-all-topics ((doc info-doc))
+  (list (info-doc-nodes doc) (info-doc-index doc)))
 
 (defun read-info-text (pathname position length)
   (with-open-info-file (in pathname)

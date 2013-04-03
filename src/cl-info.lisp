@@ -8,6 +8,14 @@
 ;; register-documentation-type to tell the documentation system about it.     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defmacro collecting-loop (&body forms)
+  "Run FORMS in a loop with #'COLLECT bound to a collector."
+  (let ((acc (gensym)))
+    `(let ((,acc))
+       (flet ((collect (x) (push x ,acc)))
+         (loop ,@forms)
+         (nreverse ,acc)))))
+
 (defclass doc ()
   ((name :reader doc-name :initarg :name)))
 
@@ -18,20 +26,37 @@
 
 (defclass doc-topic ()
   ((name :reader doc-topic-name :initarg :name)
-   (section :reader doc-topic-section :initarg :section :initform nil))
+   (section :reader doc-topic-section :initarg :section :initform nil)
+   (search-name :reader doc-topic-search-name :initform nil))
   (:documentation
    "A documentation system should probably use this class to return
 topics. SECTION, if non-nil, is the name of a containing chapter or other
-division."))
+division. SEARCH-NAME is an upper case version of NAME with all but letters,
+numbers and spaces stripped out."))
+
+(defun make-dt-search-name (string)
+  "Make a canonical version of STRING for inexact searching (the ?? command)."
+  (coerce
+   (delete-if-not (lambda (char) (or (eql char #\Space)
+                                     (alpha-char-p char)
+                                     (digit-char-p char)))
+                  (coerce (string-upcase string) 'list))
+   'string))
+
+(defmethod doc-topic-search-name ((dt doc-topic))
+  (or (slot-value dt 'search-name)
+      (setf (slot-value dt 'search-name)
+            (make-dt-search-name (doc-topic-name dt)))))
 
 (defmethod print-object ((dt doc-topic) stream)
   (format stream "#<~A ~S>"
           (type-of dt) (doc-topic-name dt)))
 
-(defgeneric documentation-matching-topics (doc predicate)
-  (:documentation "Return a list of all the topics in DOC that match
-PREDICATE. These should implement DOC-TOPIC-NAME and DOC-TOPIC-SECTION (ie
-should probably be instances of a subclass of DOC-TOPIC)."))
+;; This slightly bizarre interface is to allow DOC to have multiple lists of
+;; topics and not need to cons much in order to tell us about them.
+(defgeneric documentation-all-topics (doc)
+  (:documentation
+   "Return a list of sequences of all the documentation topics stored in DOC."))
 
 (defgeneric documentation-for-topic (doc topic)
   (:documentation "Given TOPIC which is stored by DOC, return the corresponding
@@ -215,45 +240,48 @@ documentation search runs."
         do (format t "~A~%~%" (apply #'documentation-for-topic item))))))
 
 ;; Searching within a DOC implementation ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun all-doc-regex-matches (regex-strings)
-  "Return all matches from documentation in the system for the given regular
-expressions: a list keyed by document with matches from that document as the
-CDR."
-  (let ((regexes (mapcar (lambda (regex-string)
-                           (coerce (maxima-nregex::regex-compile
-                                    regex-string :case-sensitive nil)
-                                   'function))
-                         regex-strings)))
-    (remove nil
-            (mapcar
-             (lambda (document)
-               (cons document
-                     (mapcan (lambda (regex)
-                               (documentation-matching-topics document regex))
-                             regexes)))
-             (mapcar #'cdr *documents*))
-            :key #'cdr)))
+(defun this-doc-matches (document predicates extractor)
+  (stable-sort (collecting-loop
+                 for seq in (documentation-all-topics document)
+                 do (mapc (lambda (topic)
+                            (when
+                                (let ((string (funcall extractor topic)))
+                                  (some (lambda (pred)
+                                          (funcall pred string))
+                                        predicates))
+                              (collect topic)))
+                          seq))
+               #'string-lessp
+               :key #'doc-topic-name))
 
-(defun regex-sanitize (s)
-  "Precede any regex special characters with a backslash."
-  (let
-    ((L (coerce maxima-nregex::*regex-special-chars* 'list)))
+(defun all-doc-matches (predicates extractor)
+  "Return all matches from documentation in the system for one of the given
+predicates, which should take a string as an argument. Returns a list keyed by
+document with matches from that document as the CDR."
+  (remove nil (mapcar
+               (lambda (doc-pair)
+                 (cons (cdr doc-pair)
+                       (this-doc-matches (cdr doc-pair) predicates extractor)))
+               *documents*)
+          :key #'cdr))
 
-    ; WORK AROUND NREGEX STRANGENESS: CARET (^) IS NOT ON LIST *REGEX-SPECIAL-CHARS*
-    ; INSTEAD OF CHANGING NREGEX (WITH POTENTIAL FOR INTRODUCING SUBTLE BUGS)
-    ; JUST APPEND CARET TO LIST HERE
-    (setq L (cons #\^ L))
-
-    (coerce (apply #'append
-                   (mapcar #'(lambda (c) (if (member c L :test #'eq)
-					     `(#\\ ,c) `(,c))) (coerce s 'list)))
-            'string)))
+(defun regex-strings-to-predicates (regexes)
+  "Compile and coerce regex strings to callable predicates, suitable for
+ALL-DOC-MATCHES."
+  (mapcar (lambda (regex-string)
+            (coerce (maxima-nregex::regex-compile
+                     regex-string :case-sensitive nil)
+                    'function))
+          regexes))
 
 (defun topic-match (topic exact-p)
   "Find matches for TOPIC, in the format returned by ALL-DOC-REGEX-MATCHES."
   (load-deferred-documents)
-  (all-doc-regex-matches
-   (if exact-p
-       (list (concatenate 'string "^" topic "$")
-             (concatenate 'string "^" topic " *<[0-9]+>$"))
-       (list (regex-sanitize topic)))))
+  (if exact-p
+      (all-doc-matches (regex-strings-to-predicates
+                        (list (concatenate 'string "^" topic "$")
+                              (concatenate 'string "^" topic " *<[0-9]+>$")))
+                       #'doc-topic-name)
+      (all-doc-matches (let ((search-name (make-dt-search-name topic)))
+                         (list (lambda (title) (search search-name title))))
+                       #'doc-topic-search-name)))
