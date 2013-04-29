@@ -87,7 +87,7 @@ DEFSYSTEMTESTLOAD = ($(DS_OOS) :load :verbose t :test t)
 ## string or a list of strings); $(2) = <foo>-depends.mk; $(3) = any
 ## postscript that should be added in the progn. It outputs lisp code
 ## that, when run, should create the dependency Makefile fragments.
-MAKE_DEPENDS = '(progn $(LOADDEFSYSTEM) $(LOADMAKEDEPENDS) (funcall (intern "CREATE-DEPENDENCY-FILE" :mk) $(1) "$(2)") $(3))'
+MAKE_DEPENDS = '(progn $(LOADDEFSYSTEM) $(LOADMAKEDEPENDS) (funcall (intern "CREATE-DEPENDENCY-FILE" :mk) $(1) "$(2)"))'
 
 ## CLISP #######################################################################
 if CLISP
@@ -113,7 +113,6 @@ uninstall-clisp-copy:
 	rm -f "$(clisplibdir)/@CLISP_RUNTIME@"
 endif
 
-EXECUTECLISP = $(CLISP_NAME) -norc -q -x
 clisplibdir = $(verpkglibdir)/binary-clisp
 
 BUILT_FILES += $(CLISP_MAXIMA)
@@ -123,14 +122,15 @@ clisp: $(CLISP_MAXIMA)
 
 $(CLISP_MAXIMA):
 	$(MAKE) bd_clisp
-	$(EXECUTECLISP) '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))' && \
-	$(EXECUTECLISP) '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (ext:saveinitmem "$@" :init-function (function cl-user::run) $(clispexeflag)))'
+	$(call run_clisp,'(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))')
+	$(call run_clisp,'(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (ext:saveinitmem "$@" :init-function (function cl-user::run) $(clispexeflag)))')
 
 clean-clisp:
 	rm -rf binary-clisp
 
 clisp-depends.mk: maxima.system
-	$(EXECUTECLISP) $(call MAKE_DEPENDS,"$(CLISP_MAXIMA)",clisp-depends.mk)
+	$(call run_clisp, \
+               $(call MAKE_DEPENDS,"$(CLISP_MAXIMA)",clisp-depends.mk))
 
 -include clisp-depends.mk
 endif CLISP
@@ -156,10 +156,15 @@ endif
 # compile the files, we will get appropriate translations.  (Otherwise
 # we have to put (intl:textdomain "maxima") in each Lisp file.
 INITINTL = (when (find-package "INTL") (set (find-symbol "*DEFAULT-DOMAIN*" "INTL") "maxima"))
-CMU_COMPILE = echo '(progn $(INITINTL) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))' | $(EXECUTECMUCL)
-CMU_WRITE = echo '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (ext:save-lisp "$(CMU_MAXIMA)") $(cmuflag))' | $(EXECUTECMUCL)
+
+CMU_COMPILE =       \
+  $(call run_cmucl, \
+         '(progn $(INITINTL) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))')
+CMU_WRITE =         \
+  $(call run_cmucl, \
+         '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (ext:save-lisp "$(CMU_MAXIMA)") $(cmuflag))')
+
 CMU_BUILD = ($(CMU_COMPILE)) && ($(CMU_WRITE))
-EXECUTECMUCL = $(CMUCL_NAME) -noinit -batch
 
 cmucllibdir = $(verpkglibdir)/binary-cmucl
 BUILT_FILES += $(CMU_MAXIMA)
@@ -175,7 +180,8 @@ clean-cmucl:
 	rm -rf binary-cmucl
 
 cmucl-depends.mk: maxima.system
-	echo $(call MAKE_DEPENDS,"$(CMU_MAXIMA)",cmucl-depends.mk) | $(EXECUTECMUCL)
+	$(call run_cmucl, \
+	       $(call MAKE_DEPENDS,"$(CMU_MAXIMA)",cmucl-depends.mk))
 
 -include cmucl-depends.mk
 endif
@@ -185,7 +191,6 @@ if SCL
 
 scllibdir = $(verpkglibdir)/binary-scl
 
-EXECUTESCL = $(SCL_NAME) -noinit -batch
 BUILT_FILES += binary-scl/maxima.core
 CLEAN_TARGETS += clean-scl
 scllib_DATA = binary-scl/maxima.core
@@ -194,8 +199,8 @@ scl: binary-scl/maxima.core
 
 binary-scl/maxima.core:
 	$(MAKE) bd_scl
-	(echo '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))' | $(EXECUTESCL)) && \
-	(echo '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (ext:save-lisp "binary-scl/maxima.core"))' | $(EXECUTESCL))
+	$(call run_scl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))') && \
+	$(call run_scl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (ext:save-lisp "binary-scl/maxima.core"))')
 
 ## Just like with clisp, we install an extra copy of SCL. No, I don't
 ## understand either. Also, I just read the SCL license agreement. Is
@@ -212,10 +217,10 @@ clean-scl:
 	rm -rf binary-scl
 
 scl-depends.mk: maxima.system
-	echo $(call MAKE_DEPENDS,"binary-scl/maxima.core",scl-depends.mk) | $(EXECUTESCL)
+	$(call run_scl, \
+               $(call MAKE_DEPENDS,"binary-scl/maxima.core",scl-depends.mk))
 
 -include scl-depends.mk
-
 endif
 
 ## ACL #########################################################################
@@ -223,7 +228,6 @@ if ACL
 
 acllibdir = $(verpkglibdir)/binary-acl
 
-EXECUTEACL = $(ACL_NAME) -batch
 BUILT_FILES += binary-acl/maxima.dxl
 CLEAN_TARGETS += clean-acl
 
@@ -233,14 +237,15 @@ acl: binary-acl/maxima.dxl
 
 binary-acl/maxima.dxl:
 	$(MAKE) bd_acl
-	(echo '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))' | $(EXECUTEACL)) && \
-	(echo '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (excl:dumplisp :name "binary-acl/maxima.dxl"))' | $(EXECUTEACL))
+	$(call run_acl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))') && \
+	$(call run_acl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (excl:dumplisp :name "binary-acl/maxima.dxl"))')
 
 clean-acl:
 	rm -rf binary-acl
 
 acl-depends.mk: maxima.system
-	echo $(call MAKE_DEPENDS,"binary-acl/maxima.dxl",acl-depends.mk) | $(EXECUTEACL)
+	$(call run_acl, \
+               $(call MAKE_DEPENDS,"binary-acl/maxima.dxl",acl-depends.mk))
 
 -include acl-depends.mk
 endif
@@ -262,12 +267,13 @@ sbcllib_DATA = $(SBCL_MAXIMA)
 sb_slad = (sb-ext:save-lisp-and-die "$@")
 endif
 
-EXECUTESBCL = "$(SBCL_NAME)" --noinform --noprint --eval
 BUILT_FILES += $(SBCL_MAXIMA)
 CLEAN_TARGETS += clean-sbcl
 
-COMPILE_SBCL = $(EXECUTESBCL) '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (sb-ext:quit))'
-WRITE_SBCL = $(EXECUTESBCL) '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) $(sb_slad) (sb-ext:quit))'
+COMPILE_SBCL = \
+  $(call run_sbcl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))')
+WRITE_SBCL = \
+  $(call run_sbcl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) $(sb_slad))')
 BUILD_SBCL = $(COMPILE_SBCL) && $(WRITE_SBCL)
 
 sbcl: $(SBCL_MAXIMA)
@@ -280,7 +286,8 @@ clean-sbcl:
 	rm -rf binary-sbcl numerical/binary-sbcl numerical/slatec/binary-sbcl
 
 sbcl-depends.mk: maxima.system
-	$(EXECUTESBCL) $(call MAKE_DEPENDS,"$(SBCL_MAXIMA)",sbcl-depends.mk,(sb-ext:quit))
+	$(call run_sbcl, \
+               $(call MAKE_DEPENDS,"$(SBCL_MAXIMA)",sbcl-depends.mk))
 
 -include sbcl-depends.mk
 
@@ -294,7 +301,6 @@ gcllibdir = $(verpkglibdir)/binary-gcl
 EXTRA_SCRIPTS += binary-gcl/maxima
 gcllib_SCRIPTS = binary-gcl/maxima
 
-EXECUTEGCL = $(GCL_NAME) -batch -eval
 BUILT_FILES += binary-gcl/maxima
 CLEAN_TARGETS += clean-gcl
 
@@ -310,7 +316,7 @@ sys-proclaim.lisp:
 	rm -rf binary-gcl
 	touch sys-proclaim.lisp
 	$(MAKE) bd_gcl
-	$(EXECUTEGCL) '(progn (load "generate-sys-proclaim.lisp"))'
+	$(call run_gcl, '(progn (load "generate-sys-proclaim.lisp"))')
 	rm -rf binary-gcl
 else !SYS_PROCLAIM
 sys_proc_dependency =
@@ -322,21 +328,21 @@ gcl: binary-gcl/maxima
 binary-gcl/maxima: $(sys_proc_dependency)
 	$(MAKE) bd_gcl
 if GCL_ALT_LINK
-	$(EXECUTEGCL) '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))' && \
-	$(EXECUTEGCL) '(let ((com (quote (progn (defvar compiler::*gazonk-prefix* "gazonk") (defun compiler::gazonk-name (&aux tem)(dotimes (i 1000) (unless (probe-file (setq tem (merge-pathnames (format nil "~d~d.lsp" compiler::*gazonk-prefix* i))))(return-from compiler::gazonk-name (pathname tem))))(error "1000 gazonk names used already!"))(let ((compiler::*gazonk-prefix* "maxima_gazonk")(compiler::*keep-gaz* t))$(LOADDEFSYSTEM)$(DEFSYSTEMLOAD))))))(let ((si::*collect-binary-modules* t))(eval com)(let ((compiler::*default-system-p* t))(dolist (l (directory "maxima_gazonk*.lsp")) (compile-file l) (delete-file l)))(compiler::link si::*binary-modules* "binary-gcl/maxima" (format nil "~S" com) "" nil)(dolist (l (directory "maxima_gazonk*.lsp")) (delete-file l))))'
+	$(call run_gcl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))') && \
+	$(call run_gcl, '(let ((com (quote (progn (defvar compiler::*gazonk-prefix* "gazonk") (defun compiler::gazonk-name (&aux tem)(dotimes (i 1000) (unless (probe-file (setq tem (merge-pathnames (format nil "~d~d.lsp" compiler::*gazonk-prefix* i))))(return-from compiler::gazonk-name (pathname tem))))(error "1000 gazonk names used already!"))(let ((compiler::*gazonk-prefix* "maxima_gazonk")(compiler::*keep-gaz* t))$(LOADDEFSYSTEM)$(DEFSYSTEMLOAD))))))(let ((si::*collect-binary-modules* t))(eval com)(let ((compiler::*default-system-p* t))(dolist (l (directory "maxima_gazonk*.lsp")) (compile-file l) (delete-file l)))(compiler::link si::*binary-modules* "binary-gcl/maxima" (format nil "~S" com) "" nil)(dolist (l (directory "maxima_gazonk*.lsp")) (delete-file l))))')
 else
-	$(EXECUTEGCL) '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))' && \
-	$(EXECUTEGCL) '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (when (fboundp (quote si::sgc-on))(si::sgc-on t)) (si:save-system "binary-gcl/maxima"))'
+	$(call run_gcl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE))') && \
+	$(call run_gcl, '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (when (fboundp (quote si::sgc-on))(si::sgc-on t)) (si:save-system "binary-gcl/maxima"))')
 endif
 
 clean-gcl:
 	rm -rf binary-gcl
 
 gcl-depends.mk: maxima.system
-	$(EXECUTEGCL) $(call MAKE_DEPENDS,$(gcl_depends_targets),gcl-depends.mk)
+	$(call run_gcl, \
+               $(call MAKE_DEPENDS,$(gcl_depends_targets),gcl-depends.mk))
 
 -include gcl-depends.mk
-
 endif
 
 ## OPENMCL / CCL ###############################################################
@@ -355,33 +361,30 @@ openmcllib_DATA = $(OPENMCL_MAXIMA)
 omcl_flag =
 endif
 
-EXECUTEOPENMCL = $(OPENMCL_NAME) -e
 BUILT_FILES += $(OPENMCL_MAXIMA)
 CLEAN_TARGETS += clean-openmcl
 
-COMPILE_OMCL = $(EXECUTEOPENMCL) \
- '(progn (require :defsystem)  $(DEFSYSTEMCOMPILE) (ccl::quit))'
-WRITE_OMCL = $(EXECUTEOPENMCL) \
- '(progn (require :defsystem) $(DEFSYSTEMLOAD) (ccl:save-application "$@") (ccl::quit))'
+COMPILE_OMCL = \
+  $(call run_ccl,'(progn (require :defsystem)  $(DEFSYSTEMCOMPILE))')
+WRITE_OMCL = \
+  $(call run_ccl,'(progn (require :defsystem) $(DEFSYSTEMLOAD) (ccl:save-application "$@"))')
 BUILD_OMCL = $(COMPILE_OMCL) && $(WRITE_OMCL)
 
 openmcl: $(OPENMCL_MAXIMA)
 
 $(OPENMCL_MAXIMA):
 	$(BUILD_OMCL)
-	$(EXECUTEOPENMCL) \
-	  '(progn (require :defsystem)  $(DEFSYSTEMCOMPILE) (ccl::quit))' && \
-	$(EXECUTEOPENMCL) \
-	  '(progn (require :defsystem) $(DEFSYSTEMLOAD) (ccl:save-application "$@" $(opcl_flag)) (ccl::quit))'
+	$(call run_ccl, '(progn (require :defsystem)  $(DEFSYSTEMCOMPILE))') && \
+	$(call run_ccl, '(progn (require :defsystem) $(DEFSYSTEMLOAD) (ccl:save-application "$@" $(opcl_flag)))')
 
 clean-openmcl:
 	rm -rf binary-openmcl
 
 openmcl-depends.mk: maxima.system
-	$(EXECUTEOPENMCL) $(call MAKE_DEPENDS,"$(OPENMCL_MAXIMA)",openmcl-depends.mk,(ccl:quit))
+	$(call run_ccl, \
+               $(call MAKE_DEPENDS,"$(OPENMCL_MAXIMA)",openmcl-depends.mk))
 
 -include openmcl-depends.mk
-
 endif
 
 ## ECL #########################################################################
@@ -391,7 +394,6 @@ ecllibdir = $(verpkglibdir)/binary-ecl
 EXTRA_SCRIPTS += binary-ecl/maxima
 ecllib_SCRIPTS = binary-ecl/maxima
 
-EXECUTEECL = $(ECL_NAME) -norc
 BUILT_FILES += binary-ecl/maxima
 CLEAN_TARGETS += clean-ecl
 
@@ -399,16 +401,15 @@ ecl:binary-ecl/maxima
 
 binary-ecl/maxima:
 	$(MAKE) bd_ecl
-	$(EXECUTEECL) \
-           -eval '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (build-maxima-lib))' \
-           -eval '(ext:quit)'
+	$(call run_ecl, \
+               '(progn $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (build-maxima-lib))')
 
 clean-ecl:
 	rm -rf binary-ecl libmaxima.a
 
 ecl-depends.mk: maxima.system
-	$(EXECUTEECL) -eval $(call MAKE_DEPENDS,"binary-ecl/maxima",ecl-depends.mk,(quit))
+	$(call run_ecl, \
+               $(call MAKE_DEPENDS,"binary-ecl/maxima",ecl-depends.mk))
 
 -include ecl-depends.mk
-
 endif

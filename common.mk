@@ -47,3 +47,14 @@ uninstall-datafiles:
 	list='$(genericdirDATA)'; for p in $$list; do \
 	  rm -f $(DESTDIR)$(genericdir)/$$p; \
 	done
+
+# Functions to run the various lisp implementations. Each takes a
+# single argument which should be a form to run.
+run_clisp = "$(CLISP_NAME)" -norc -q -x $(1)
+run_cmucl = echo $(1) | "$(CMUCL_NAME)" -noinit -batch
+run_scl = echo $(1) | "$(SCL_NAME)" -noinit -batch
+run_acl = echo $(1) | "$(ACL_NAME)" -batch
+run_sbcl = "$(SBCL_NAME)" --noinform --noprint --eval $(1) --eval '(sb-ext:quit)'
+run_gcl = "$(GCL_NAME)" -batch -eval $(1)
+run_ccl = echo $(1) | "$(OPENMCL_NAME)" -b
+run_ecl = "$(ECL_NAME)" -norc -eval $(1) -eval '(ext:quit)'
