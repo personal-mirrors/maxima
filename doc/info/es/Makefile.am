@@ -1,8 +1,5 @@
 MAKEINFOFLAGS = --enable-encoding
 
-lang = es
-langsdir = /es
-
 info_TEXINFOS = maxima.texi
 maxima_TEXINFOS = \
 Affine.es.texi           Equations.es.texi     Lists.es.texi          Rules.es.texi \

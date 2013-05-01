@@ -1,8 +1,5 @@
 MAKEINFOFLAGS = --enable-encoding
 
-lang = de
-langsdir = /de
-
 info_TEXINFOS = maxima.texi
 maxima_TEXINFOS = include-maxima.de.texi category-macros.de.texi \
 Introduction.de.texi Bugs.de.texi Help.de.texi Command.de.texi \

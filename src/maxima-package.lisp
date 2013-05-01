@@ -13,7 +13,9 @@
   (:use :common-lisp)
   (:export :info-pathname
            :register-document :deferred-register-document
-           :search-documentation-exact :search-documentation-inexact))
+           :search-documentation-exact :search-documentation-inexact
+           :doc :doc-name
+           :doc-topic :doc-topic-name :doc-topic-section :doc-topic-search-name))
 
 (defpackage :command-line
   (:use :common-lisp)

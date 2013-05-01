@@ -1,35 +1,58 @@
-(in-package :cl-info)
+;; This file should be loaded into a Maxima image, rather than run "stand-alone"
+;;
+;; Use something like
+;;
+;;   maxima-local -l sbcl --very-quiet \
+;;     -r ':lisp (progn (load (compile-file "/path/to/parse-info.lisp")) (funcall (find-symbol "make-info-offsets" :parse-info) #p"maxima.info"))'
+;;
+;; Yes, yuck, but ":lisp" doesn't allow more than one line.
 
-;; How info files are handled:
+(defpackage parse-info
+  (:use :cl :cl-info)
+  (:export :make-info-offsets)
+  (:import-from :maxima :*maxima-lispname*)
+  (:import-from :cl-info :info-offset-name :with-open-info-file))
+(in-package :parse-info)
+
+;; The output format
 ;;
-;; (1) We get passed a pathname for a top-level info file.
+;;   The file contains a single, READable, list. The elements of the list are
+;;   lists of the form (NAME FILENAME START LENGTH).
 ;;
-;;     We read it in, taking note of the Indirect and Tag Table sections. The
-;;     former lists other fiinles needed to get the whole of the info document,
-;;     together with their line offsets within the composite document.
+;;   START and LENGTH in the above may be byte offsets or character offsets or
+;;   pretty much anything else, but we know that they are appropriate values for
+;;   FILE-OFFSET on the current lisp. (This may vary between lisps, which is why
+;;   we output an implementation-specific offset table). FILENAME is the file
+;;   name of the portion of the info document that we read. (We don't use
+;;   pathnames, since then you have to worry about accidentally including
+;;   absolute directory info which then breaks when you install)
+
+;; How the code works:
 ;;
-;;     We also read in the last file of the document. Parsing its last section
-;;     gives us an index, which gives topics with line offsets relative to a
-;;     parent node (by name).
+;;   We read in the top-level info file ("maxima.info"), taking note of the
+;;   Indirect and Tag Table sections. The former lists other files needed to
+;;   get the whole of the info document, together with their line offsets within
+;;   the composite document.
 ;;
-;;     While doing so, we scanned the last file to get a list of nodes with
-;;     their line ranges, together with a list of the starts of sections and
-;;     their line numbers and the positions of function or variable declarations
-;;     (together with starting and ending line number).
+;;   Next, we read in the last file of the document. Parsing its last section
+;;   gives us an index, which gives topics with line offsets relative to a
+;;   parent node (by name).
 ;;
-;;     Now we can integrate this information with our index and tag table. For
-;;     any indexed topic that is defined in this file, we look in our list of
-;;     function and variable declarations to calculate the correct starting and
-;;     ending line numbers. Then we have enough information to replace it with a
-;;     complete-info-topic. Similarly, we can combine our list of starting line
-;;     numbers with the nodes in the current file to calculate an offset and
-;;     length for those nodes.
+;;   While doing so, we scanned the last file to get a list of nodes with
+;;   their line ranges, together with a list of the starts of sections and
+;;   their line numbers and the positions of function or variable declarations
+;;   (together with starting and ending line number).
 ;;
-;; (2) A user asks for a topic (node or index topic)
+;;   Now we can integrate this information with our index and tag table. For
+;;   any indexed topic that is defined in this file, we look in our list of
+;;   function and variable declarations to calculate the correct starting and
+;;   ending line numbers. Then we have enough information to replace it with a
+;;   complete-info-topic. Similarly, we can combine our list of starting line
+;;   numbers with the nodes in the current file to calculate an offset and
+;;   length for those nodes.
 ;;
-;;     If the topic is incomplete, we read in the relevant file, then integrate
-;;     it into our cache of file offsets as described in the previous
-;;     section. Then we can output it by a simple seek.
+;;   Now we map through the rest of the files, integrating their contents as
+;;   above.
 
 ;; The classes to represent info documents ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defclass complete-info-topic (doc-topic)
@@ -106,22 +129,13 @@ to the string SECTION-HEADER. Returns T if we found one and NIL otherwise."
          (t
           (setf expecting nil))))))
 
-(defmacro with-open-info-file ((stream pathname) &body body)
-  "Basically WITH-OPEN-FILE, but gets the EXTERNAL-FORMAT argument right if
-possible. On a lisp that doesn't support the given external format, we shouldn't
-error, but the resulting text stream might well be garbage. The encoding is
-guessed from the directory name - if we don't understand it we default
-to :latin1."
-  (let ((pn (gensym)))
-    `(let ((,pn ,pathname))
-       (with-open-file
-           ;; On GCL, complicated things like external formats are passed over. In
-           ;; fact, there's not even a keyword argument with that name.
-           #+gcl (,stream ,pathname)
-           #-gcl (,stream ,pn
-                  :external-format (maxima::locale-subdir-external-format
-                                    (car (last (pathname-directory ,pn)))))
-           ,@body))))
+(defmacro collecting-loop (&body forms)
+  "Run FORMS in a loop with #'COLLECT bound to a collector."
+  (let ((acc (gensym)))
+    `(let ((,acc))
+       (flet ((collect (x) (push x ,acc)))
+         (loop ,@forms)
+         (nreverse ,acc)))))
 
 ;; Multi-file handling ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun info-files-alist (pathname)
@@ -412,11 +426,15 @@ space then a title. If a match, return <name>."
                  (eql #\Space (schar line end)))
         (values (subseq line (+ end 1)) dotted)))))
 
+;; This tries to canonicalize titles so that we ignore some of the minor
+;; variation that Texinfo throws in (just to keep us on our toes). Texinfo:
+;;   (1) Occasionally throws away spaces
+;;   (2) Sometimes ignores commas
+;;   (3) Takes a prefix of long titles (50 chars?)
 (defun strip-section-title (title)
   (string-downcase
-   (coerce (delete-if (lambda (char) (member char '(#\, #\. #\Space)))
-                      (coerce title 'list))
-           'string)))
+   (remove-if (lambda (char) (member char '(#\, #\. #\Space)))
+              (subseq title 0 (min (length title) 50)))))
 
 ;; Integrating new data ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun integrate-info-file! (pathname doc)
@@ -580,14 +598,11 @@ complete the index entry."
   ;; other implementations.
   (dolist (se fv-line-intervals nil) (when (<= start (car se) end) (return se))))
 
-;; Integration with the general documentation system ;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun info-pathnamep (x)
-  (and (pathnamep x)
-       (string= (pathname-type x) "info")))
-
+;; The "top-level" functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::
 (defun read-info (pathname)
-  "Finds a Texinfo document at PATHNAME and reads in just enough to be able to
-make topic queries."
+  "Finds a Texinfo document at PATHNAME (eg #p\"maxima.info\") and read in all
+related files (such as #p\"maxima.info-1\" etc.), letting us work out all the
+offsets to the relevant bits of the document. Returns the resulting document."
   (let* ((files-alist (info-files-alist pathname))
          (d (make-instance 'info-doc
                            :name (namestring pathname)
@@ -595,80 +610,34 @@ make topic queries."
                            :nodes (tag-table-to-nodes
                                    files-alist
                                    (info-read-tag-table pathname)))))
-    (integrate-info-file! (cdar (last files-alist)) d)
+    ;; We have to read the last file first, since that contains the index, so
+    ;; just reverse the alist, but missing out the first entry (maxima.info),
+    ;; since we've already got everything we want from that.
+    (mapc (lambda (cons) (integrate-info-file! (cdr cons) d))
+          (reverse (cdr files-alist)))
     d))
 
-(defmethod documentation-all-topics ((doc info-doc))
-  (list (info-doc-nodes doc) (info-doc-index doc)))
+(defgeneric info-topic-as-list (topic))
+(defmethod info-topic-as-list ((topic complete-info-topic))
+  (let ((pathname (complete-topic-pathname topic)))
+    (list (doc-topic-name topic)
+          (concatenate 'string (pathname-name pathname)
+                       "." (pathname-type pathname))
+          (complete-topic-start topic)
+          (complete-topic-length topic))))
 
-(defun read-info-text (pathname position length)
-  (with-open-info-file (in pathname)
-    (file-position in position)
-    ;; Read a line at a time and check to see whether we've got enough. This
-    ;; will definitely do the right thing wrt to FILE-POSITION and it doesn't
-    ;; really matter how fast it is: this is text we're outputting to the
-    ;; user!
-    (reduce (lambda (a b) (concatenate 'string a `(#\Newline) b))
-            (collecting-loop
-              (let ((line (read-line in :eof nil)))
-                (when (eq line :eof) (return))
-                (collect line)
-                (when (>= (file-position in) (+ position length)) (return)))))))
+(defun dump-info (info-doc stream)
+  "Dump out the two parsed offset tables to a stream, using prin1"
+  (let ((*print-length* nil))
+    (prin1 (mapcar (lambda (topic) (info-topic-as-list topic))
+                   (append (info-doc-nodes info-doc)
+                           (info-doc-index info-doc)))
+           stream)))
 
-(defmethod documentation-for-topic ((doc info-doc) (topic complete-info-topic))
-  (read-info-text (complete-topic-pathname topic)
-                  (complete-topic-start topic)
-                  (complete-topic-length topic)))
-
-(defun node-subsections (numbering sections)
-  (remove-if-not
-   (lambda (section) (starts-with-p (fifth section) numbering))
-   sections))
-
-(defmethod documentation-for-topic ((doc info-doc) (topic partial-info-node))
-  (integrate-info-file! (info-node-pathname topic) doc)
-  (let ((complete
-         (find (doc-topic-name topic) (info-doc-nodes doc)
-               :key #'doc-topic-name :test #'string=)))
-    (cond
-      ((not (typep complete 'complete-info-topic))
-       (error "Although we read in ~A, which should have enabled us to find ~
-               what we needed about ~A, the latter didn't get completed."
-              (info-node-pathname topic) topic))
-
-      ;; If a "top-level node", there's not actually any documentation in the
-      ;; node itself, so we also output subsections.
-      ((null (cdr (info-node-numbering complete)))
-       (reduce (lambda (a b) (concatenate 'string a '(#\Newline #\Newline) b))
-               (mapcar
-                (lambda (subsection) (documentation-for-topic doc subsection))
-                (remove-if-not
-                 (lambda (node)
-                   (and (typep node 'complete-info-topic)
-                        (starts-with-p (info-node-numbering node)
-                                       (info-node-numbering complete))))
-                 (info-doc-nodes doc)))))
-
-      (t
-       (documentation-for-topic doc complete)))))
-
-(defmethod documentation-for-topic ((doc info-doc)
-                                    (topic partial-info-index-entry))
-  (let ((node (find (doc-topic-section topic) (info-doc-nodes doc)
-                    :key #'doc-topic-name :test #'string=)))
-    (unless node
-      (error "Couldn't find node ~S that should contain index entry ~S."
-             (doc-topic-section topic)
-             (doc-topic-name topic)))
-    (integrate-info-file! (info-node-pathname node) doc)
-
-    (let ((complete
-           (find (doc-topic-name topic) (info-doc-index doc)
-                 :key #'doc-topic-name :test #'string=)))
-      (unless complete
-        (error "Although we read in ~A, which should have enabled us to find ~
-                what we needed about ~A, it didn't get completed."
-               (info-node-pathname topic) topic))
-      (documentation-for-topic doc complete))))
-
-(register-documentation-type 'info #'info-pathnamep #'read-info)
+(defun make-info-offsets (pathname)
+  (let ((d (read-info pathname)))
+    (with-open-file (stream (info-offset-name pathname)
+                            :direction :output
+                            :if-exists :supersede)
+      (dump-info d stream))
+    (values)))

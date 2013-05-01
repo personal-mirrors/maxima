@@ -133,7 +133,7 @@
 				     (:file "maxima-package")
 				     #+ecl (:file "ecl-port")
 				     (:file "autoconf-variables")))
-	       (:module info :source-pathname ""
+	       (:module documentation :source-pathname ""
 			:components ((:file "nregex")
 				     ;; Some versions of CMUCL already
 				     ;; have a compatible version of
@@ -141,9 +141,9 @@
 				     ;; it.
 				     #+#.(cl:if (cl:and (cl:member :cmu cl:*features*) (cl:find-package '#:intl))  '(or) '(and))
 				     (:file "intl")
-				     (:file "cl-info")
-				     (:file "parse-info"
-                                            :depends-on ("cl-info"))))
+                                     (:file "locale")
+				     (:file "documentation")
+                                     (:file "info-documentation")))
 	       (:module sloop :source-pathname ""
 			:components ((:file "sloop")))
                (:module declarations :source-pathname ""

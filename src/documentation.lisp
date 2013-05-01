@@ -8,14 +8,6 @@
 ;; register-documentation-type to tell the documentation system about it.     ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defmacro collecting-loop (&body forms)
-  "Run FORMS in a loop with #'COLLECT bound to a collector."
-  (let ((acc (gensym)))
-    `(let ((,acc))
-       (flet ((collect (x) (push x ,acc)))
-         (loop ,@forms)
-         (nreverse ,acc)))))
-
 (defclass doc ()
   ((name :reader doc-name :initarg :name)))
 
@@ -34,6 +26,19 @@ topics. SECTION, if non-nil, is the name of a containing chapter or other
 division. SEARCH-NAME is an upper case version of NAME with all but letters,
 numbers and spaces stripped out."))
 
+(defmethod print-object ((dt doc-topic) stream)
+  (format stream "#<~A ~S>"
+          (type-of dt) (doc-topic-name dt)))
+
+;; TODO: Put this somewhere else?
+(defmacro collecting-loop (&body forms)
+  "Run FORMS in a loop with #'COLLECT bound to a collector."
+  (let ((acc (gensym)))
+    `(let ((,acc))
+       (flet ((collect (x) (push x ,acc)))
+         (loop ,@forms)
+         (nreverse ,acc)))))
+
 (defun make-dt-search-name (string)
   "Make a canonical version of STRING for inexact searching (the ?? command)."
   (coerce
@@ -47,10 +52,6 @@ numbers and spaces stripped out."))
   (or (slot-value dt 'search-name)
       (setf (slot-value dt 'search-name)
             (make-dt-search-name (doc-topic-name dt)))))
-
-(defmethod print-object ((dt doc-topic) stream)
-  (format stream "#<~A ~S>"
-          (type-of dt) (doc-topic-name dt)))
 
 ;; This slightly bizarre interface is to allow DOC to have multiple lists of
 ;; topics and not need to cons much in order to tell us about them.
