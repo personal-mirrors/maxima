@@ -98,11 +98,8 @@ PHONY_TARGETS += clean-info
 info_offset_files=$(foreach x,@BUILT_LISPS@,maxima-info-offsets-$(x).lisp)
 info-offsets: maxima.info $(info_offset_files)
 
-load_parse_info=(load (compile-file "$(top_srcdir)/lisp-utils/parse-info.lisp"))
-run_parse_info=(funcall (find-symbol "MAKE-INFO-OFFSETS" :parse-info) \#p"maxima.info")
-parse_info_lisp=':lisp (progn $(load_parse_info) $(run_parse_info))'
 maxima-info-offsets-%.lisp: maxima.info
-	$(top_srcdir)/maxima-local --very-quiet -l $* -r $(parse_info_lisp)
+	$(top_srcdir)/lisp-utils/parse-info.sh $* maxima.info maxima-info-offsets-$*.lisp
 
 install-offsets: info-offsets
 	$(MKDIR_P) "$(infodir)"

@@ -2,6 +2,9 @@ if ENABLE_GETTEXT
    LOCALE_DIR = locale
 endif
 
+## Note: The lisp-utils makefile assumes that src has already been
+## built and the doc makefile will run much faster if lisp-utils has
+## already been built.
 SUBDIRS = admin src lisp-utils tests doc interfaces share demo plotting $(LOCALE_DIR)
 
 EXTRA_DIST = \

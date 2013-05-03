@@ -1,0 +1,55 @@
+#!/bin/sh
+##
+## A simple utility script for running the code of parse-info.lisp in
+## a Maxima image.
+##
+## The <expected_output> argument is because maxima-local doesn't
+## return a nonzero exit status if something went wrong. As a result,
+## the only foolproof way of telling whether we managed to create the
+## file is, well, to test whether the file exists. If the argument is
+## given, we delete any existing file there just before running Maxima
+## and then exit with an error if it hasn't been created by the end.
+
+maxima_local=@expanded_top_srcdir@/maxima-local
+
+## Don't give a suffix so that we load the compiled version if there
+## is one.
+pi_lisp=@expanded_top_srcdir@/lisp-utils/parse-info
+
+usage () {
+    echo "Usage: parse-info.sh <lisp> <info-file> <expected_output>" >&2
+    exit 1
+}
+if test "$#" '<' 2; then usage; fi
+if test "$#" '>' 3; then usage; fi
+
+lisp=$1
+info_file=$2
+expected_output=$3
+
+echo " @BUILT_LISPS@ " | grep " $lisp " >/dev/null
+if test "$?" '!=' 0; then
+    echo "This Maxima isn't configured for the lisp implementation: $lisp" >&2
+    usage;
+fi
+
+if test ! -f "$info_file"; then
+    echo "Cannot find file: $info_file" >&2
+    usage;
+fi
+
+if test -n "$expected_output"; then
+    rm -f "$expected_output"
+fi
+
+$maxima_local --very-quiet -l $lisp <<EOF
+:lisp (load "$pi_lisp")
+:lisp (parse-info:make-info-offsets "$info_file")
+EOF
+
+if test -n "$expected_output"; then
+    if test ! -f "$expected_output"; then
+        echo "Failed to create expected output file: "$expected_output
+        exit 1
+    fi
+fi

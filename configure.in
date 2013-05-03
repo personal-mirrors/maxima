@@ -1020,6 +1020,8 @@ AC_SUBST(EGREP)
 AC_CONFIG_FILES([maxima-local], chmod +x maxima-local)
 AC_CONFIG_FILES([xmaxima-local], chmod +x xmaxima-local)
 
+AC_CONFIG_FILES([lisp-utils/parse-info.sh], chmod +x lisp-utils/parse-info.sh)
+
 # Convert maxima.bat to DOS line ending
 # sed-3.02 in old mingw distribution doesn't support -i or \r
 # dos2unix may not be present, but perl is required elsewhere
