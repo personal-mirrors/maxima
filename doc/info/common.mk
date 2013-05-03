@@ -12,7 +12,7 @@ langsdir := $(if $(findstring info,$(langsdir_tmp)),,$(langsdir_tmp))
 lang := $(if $(findstring info,$(langsdir_tmp)),en,$(langsdir_tmp))
 
 ## Where to actually install the info files (and offset lists)
-lang_info_dir := $(infodir)/langsdir
+lang_info_dir := $(infodir)/$(langsdir)
 
 PHONY_TARGETS=
 .PHONY: $(PHONY_TARGETS)
