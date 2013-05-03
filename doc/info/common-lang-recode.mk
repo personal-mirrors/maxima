@@ -1,118 +1,72 @@
+include $(top_srcdir)/doc/info/common.mk
 
-all-local: maxima.info maxima.html contents.hhc
+## Converts foo.utf8 to foo
+origlangsdir := $(basename $(langsdir))
 
-maxima.info: maxima.texi
-	@rm -f maxima.info* 2>/dev/null
-	$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) -I $(srcdir) maxima.texi
-	for f in $@ $@-[0-9] $@-[0-9][0-9]; do \
-	    if test -f $$f; then \
-		if test x$(urecode) = xtrue ; then \
-		    recode $(fcharset)..$(tcharset) $$f ; \
-		else \
-		    rm -f foo.$$f 2>/dev/null ; \
-		    iconv -f $(fcharset) -t $(tcharset) $$f > foo.$$f ; \
-		    mv -f foo.$$f $$f ; \
-		fi; \
-	    fi; \
-	done
+## The strategy for copying (and transcoding) all the *.texi files
+##
+##  (1) Make maxima.texi depend on all other .texi files that have to
+##      be copied across.
+##
+##  (2) Make a rule to create foo.texi from
+##      ../$(origlangsdir)/foo.texi, which copies the file across and
+##      recodes it.
+##
+##  (3) We give a rule to make maxima.info here
 
-contents.hhc: maxima.html
-	perl ../create_index
+source_texis := $(wildcard ../$(origlangsdir)/*.texi)
+dest_texis := $(notdir $(source_texis))
+child_dest_texis := $(subst maxima.texi ,,$(dest_texis))
 
+maxima.texi: $(child_dest_texis) texinfo.tex
 
-install-data-local: install-maxima-info install-maxima-html
+texinfo.tex: ../$(origlangsdir)/texinfo.tex
+	cp $< $@
 
-install-maxima-info: maxima.info
-	test -z "$(infodir)$(langsdir)" || mkdir -p -- "$(DESTDIR)$(infodir)$(langsdir)"
-	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
-	list='./maxima.info'; \
-	for file in $$list; do \
-	  case $$file in \
-	    $(srcdir)/*) file=`echo "$$file" | sed "s|^$$srcdirstrip/||"`;; \
-	  esac; \
-	  if test -f $$file; then d=.; else d=$(srcdir); fi; \
-	  file_i=`echo "$$file" | sed 's|\.info$$||;s|$$|.i|'`; \
-	  for ifile in $$d/$$file $$d/$$file-[0-9] $$d/$$file-[0-9][0-9] \
-	               $$d/$$file_i[0-9] $$d/$$file_i[0-9][0-9] ; do \
-	    if test -f $$ifile; then \
-	      relfile=`echo "$$ifile" | sed 's|^.*/||'`; \
-	      echo " $(INSTALL_DATA) '$$ifile' '$(DESTDIR)$(infodir)$(langsdir)/$$relfile'"; \
-	      $(INSTALL_DATA) "$$ifile" "$(DESTDIR)$(infodir)$(langsdir)/$$relfile"; \
-	    else : ; fi; \
-	  done; \
-	done
+## Find the input charset by reading from ../$(origlangsdir)/maxima.texi
+input_charset := \
+  $(shell grep -F @documentencoding <../$(origlangsdir)/maxima.texi | \
+	  cut -d ' ' -f 2)
+output_charset := UTF-8
 
-install-maxima-html: maxima.html
-	@$(NORMAL_INSTALL)
-	$(mkinstalldirs) $(DESTDIR)$(dochtmldir)$(langsdir)
-	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
-	list="$(srcdir)/maxima.html $(srcdir)/maxima_*.html" ; \
-	for p in $$list; do \
-	  f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`; \
-	  if test -f $(srcdir)/$$f; then \
-            if test ! -d `dirname $(DESTDIR)$(dochtmldir)$(langsdir)/$$f`; then \
-              $(mkinstalldirs) `dirname $(DESTDIR)$(dochtmldir)$(langsdir)/$$f`; \
-            fi; \
-	    echo " $(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(dochtmldir)$(langsdir)/$$f"; \
-	    $(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(dochtmldir)$(langsdir)/$$f; \
-	  else if test -f $$f; then \
-            if test ! -d `dirname $(DESTDIR)$(dochtmldir)$(langsdir)/$$f`; then \
-              $(mkinstalldirs) `dirname $(DESTDIR)$(dochtmldir)$(langsdir)/$$f`; \
-            fi; \
-	    echo " $(INSTALL_DATA) $$f $(DESTDIR)$(dochtmldir)$(langsdir)/$$f"; \
-	    $(INSTALL_DATA) $$f $(DESTDIR)$(dochtmldir)$(langsdir)/$$f; \
-	  fi; fi; \
-	done
+recode_trans := $(input_charset)..$(output_charset)
+iconv_trans := -f $(input_charset) -t $(output_charset)
+sed_replace := 's/^@documentencoding.*/@documentencoding $(output_charset)/'
+
+if USE_RECODE
+    clone_cmd = recode $(recode_trans) <"$(1)" | sed $(sed_replace) >"$(2)";
+else
+    clone_cmd = iconv $(iconv_trans) "$(1)" | sed $(sed_replace) >"$(2)";
+endif
 
 
-uninstall-local: uninstall-maxima-info uninstall-maxima-html
+## We transcode the input to Texinfo as we copy it across and make
+## sure to change @documentencoding. The double colon makes the rule
+## terminal, which avoids an infinite pattern matching loop.
+%.texi:: ../$(origlangsdir)/%.texi
+	$(call clone_cmd,$<,$@)
 
-uninstall-maxima-info:
-	@list='./maxima.info'; \
-	for file in $$list; do \
-	  relfile=`echo "$$file" | sed 's|^.*/||'`; \
-	  relfile_i=`echo "$$relfile" | sed 's|\.info$$||;s|$$|.i|'`; \
-	  (if cd "$(DESTDIR)$(infodir)$(langsdir)"; then \
-	     echo " cd '$(DESTDIR)$(infodir)$(langsdir)' && rm -f $$relfile $$relfile-[0-9] $$relfile-[0-9][0-9] $$relfile_i[0-9] $$relfile_i[0-9][0-9]"; \
-	     rm -f $$relfile $$relfile-[0-9] $$relfile-[0-9][0-9] $$relfile_i[0-9] $$relfile_i[0-9][0-9]; \
-	   else :; fi); \
-	done
-
-uninstall-maxima-html:
-	@$(NORMAL_UNINSTALL)
-	rm -f $(DESTDIR)$(dochtmldir)$(langsdir)/maxima.html 
-	rm -f $(DESTDIR)$(dochtmldir)$(langsdir)/maxima_*.html
-
-
-clean-local: clean-info clean-html clean-texi
-
-clean-info:
-	rm -f maxima.info*
-
-clean-html:
-	rm -f maxima.html maxima_*.html
-	rm -f contents.hhc
-	rm -f index.hhk
-
+## This variable gets the target added to clean-local in common.mk
+CLEAN_RECODE=clean-texi
 clean-texi:
 	rm -f *.texi
+	rm -f texinfo.tex
 
+### A rule for actually making the info file. Ideally, we'd hook into
+### Automake's machinery by adding info_TEXINFOS = maxima.texi to each
+### subdirectory's Makefile.am. Unfortunately, that doesn't work,
+### because then Automake tries to read maxima.texi when it's called
+### (and fails, since it doesn't exist yet).
 
-dist-hook: dist-maxima-info dist-maxima-html 
+MAKEINFOFLAGS = --enable-encoding
+maxima.info: maxima.texi
+	$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) $<
 
-dist-maxima-html: maxima.html
-	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
-	list="$(srcdir)/maxima.html $(srcdir)/maxima_*.html" ; \
-	for p in $$list; do \
-	  f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`; \
-	  test -f $(distdir)/$$f || cp -p $(srcdir)/$$f $(distdir)/$$f; \
-	done
+INSTALL_RECODE=install-info
+install-info: maxima.info
+	$(MKDIR_P) "$(lang_info_dir)"
+	$(INSTALL_DATA) -t "$(lang_info_dir)" maxima.info-*
 
-dist-maxima-info: 
-	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
-	list="$(srcdir)/maxima.info*" ; \
-	for p in $$list; do \
-	  f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`; \
-	  test -f $(distdir)/$$f || cp -p $(srcdir)/$$f $(distdir)/$$f; \
-	done
-
+UNINSTALL_RECODE=uninstall-info
+uninstall-info:
+	rm -f "$(lang_info_dir)/maxima.info-*"

@@ -11,14 +11,19 @@ langsdir_tmp := $(shell basename $(shell pwd))
 langsdir := $(if $(findstring info,$(langsdir_tmp)),,$(langsdir_tmp))
 lang := $(if $(findstring info,$(langsdir_tmp)),en,$(langsdir_tmp))
 
+## Where to actually install the info files (and offset lists)
+lang_info_dir := $(infodir)/langsdir
+
 PHONY_TARGETS=
 .PHONY: $(PHONY_TARGETS)
 
 ## Autoconf local targets ############################################
 all-local: info-offsets $(MAXIMA_CHM) warn_texinfo
-install-data-local: install-offsets $(INSTALL_CHM)
-uninstall-local: uninstall-offsets $(UNINSTALL_CHM)
-clean-local: clean-info clean-offsets clean-html $(CLEAN_CHM)
+install-data-local: install-offsets $(INSTALL_CHM) $(INSTALL_RECODE)
+uninstall-local: uninstall-offsets $(UNINSTALL_CHM) $(UNINSTALL_RECODE)
+## CLEAN_TEXI is set in common-lang-recode.mk for when we're in a
+## recoded subdirectory.
+clean-local: clean-info clean-offsets clean-html $(CLEAN_CHM) $(CLEAN_RECODE)
 dist-hook: check_texinfo html
 
 ## CHM Targets #######################################################
@@ -102,11 +107,11 @@ maxima-info-offsets-%.lisp: maxima.info
 	$(top_srcdir)/lisp-utils/parse-info.sh $* maxima.info maxima-info-offsets-$*.lisp
 
 install-offsets: info-offsets
-	$(MKDIR_P) "$(infodir)"
-	$(INSTALL_DATA) -t "$(infodir)" $(info_offset_files)
+	$(MKDIR_P) "$(lang_info_dir)"
+	$(INSTALL_DATA) -t "$(lang_info_dir)" $(info_offset_files)
 
 uninstall-offsets:
-	rm -f $(foreach f,$(info_offset_files),"$(infodir)/$(f)")
+	rm -f $(foreach f,$(info_offset_files),"$(lang_info_dir)/$(f)")
 
 clean-offsets:
 	rm -f maxima-info-offsets-*.lisp
