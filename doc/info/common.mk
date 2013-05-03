@@ -19,8 +19,8 @@ PHONY_TARGETS=
 
 ## Autoconf local targets ############################################
 all-local: info-offsets $(MAXIMA_CHM) warn_texinfo
-install-data-local: install-offsets $(INSTALL_CHM) $(INSTALL_RECODE)
-uninstall-local: uninstall-offsets $(UNINSTALL_CHM) $(UNINSTALL_RECODE)
+install-data-local: install-offsets $(INSTALL_CHM) $(INSTALL_INFO)
+uninstall-local: uninstall-offsets $(UNINSTALL_CHM) $(UNINSTALL_INFO)
 ## CLEAN_TEXI is set in common-lang-recode.mk for when we're in a
 ## recoded subdirectory.
 clean-local: clean-info clean-offsets clean-html $(CLEAN_CHM) $(CLEAN_RECODE)

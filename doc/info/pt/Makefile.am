@@ -1,7 +1,4 @@
-MAKEINFOFLAGS = --enable-encoding
-
-info_TEXINFOS = maxima.texi
-maxima_TEXINFOS = \
+texi_files = \
 Affine.texi \
 Arrays.texi \
 Atensor.texi \

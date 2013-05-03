@@ -1,7 +1,4 @@
-MAKEINFOFLAGS = --enable-encoding
-
-info_TEXINFOS = maxima.texi
-maxima_TEXINFOS = \
+texi_files = \
 Affine.es.texi           Equations.es.texi     Lists.es.texi          Rules.es.texi \
 Arrays.es.texi           Expressions.es.texi   Runtime.es.texi \
 Atensor.es.texi          Matrices.es.texi       Series.es.texi \

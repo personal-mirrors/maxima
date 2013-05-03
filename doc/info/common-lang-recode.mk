@@ -53,22 +53,3 @@ CLEAN_RECODE=clean-texi
 clean-texi:
 	rm -f *.texi
 	rm -f texinfo.tex
-
-### A rule for actually making the info file. Ideally, we'd hook into
-### Automake's machinery by adding info_TEXINFOS = maxima.texi to each
-### subdirectory's Makefile.am. Unfortunately, that doesn't work,
-### because then Automake tries to read maxima.texi when it's called
-### (and fails, since it doesn't exist yet).
-
-MAKEINFOFLAGS = --enable-encoding
-maxima.info: maxima.texi
-	$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) $<
-
-INSTALL_RECODE=install-info
-install-info: maxima.info
-	$(MKDIR_P) "$(lang_info_dir)"
-	$(INSTALL_DATA) -t "$(lang_info_dir)" maxima.info-*
-
-UNINSTALL_RECODE=uninstall-info
-uninstall-info:
-	rm -f "$(lang_info_dir)/maxima.info-*"
