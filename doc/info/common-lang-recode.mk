@@ -45,6 +45,8 @@ endif
 ## terminal, which avoids an infinite pattern matching loop.
 %.texi:: ../$(origlangsdir)/%.texi
 	$(call clone_cmd,$<,$@)
+%.hhp:: ../$(origlangsdir)/%.hhp
+	$(call clone_cmd,$<,$@)
 
 ## This variable gets the target added to clean-local in common.mk
 CLEAN_RECODE=clean-texi
