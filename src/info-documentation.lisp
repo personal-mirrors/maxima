@@ -38,7 +38,7 @@
    pathname))
 
 ;; TODO: This is also used in parse-info. Refactor?
-(defmacro with-open-info-file ((stream pathname) &body body)
+(defmacro with-open-info-file ((stream pathname &rest options) &body body)
   "Basically WITH-OPEN-FILE, but gets the EXTERNAL-FORMAT argument right if
 possible. On a lisp that doesn't support the given external format, we shouldn't
 error, but the resulting text stream might well be garbage. The encoding is
@@ -50,14 +50,15 @@ to :latin1."
            ;; On GCL, complicated things like external formats are passed over. In
            ;; fact, there's not even a keyword argument with that name.
            #+gcl (,stream ,pathname)
-           #-gcl (,stream ,pn
+           #-gcl (,stream ,pn ,@options
                   :external-format (maxima::locale-subdir-external-format
                                     (car (last (pathname-directory ,pn)))))
            ,@body))))
 
 ;; Load up the offsets for the info file at PATHNAME
 (defun load-info (pathname)
-  (with-open-file (stream (info-offset-name pathname) :if-does-not-exist nil)
+  (with-open-info-file (stream (info-offset-name pathname)
+                               :if-does-not-exist nil)
     (unless stream
       (maxima::merror "Cannot read offset file ~S for info document."
                       (info-offset-name pathname)))

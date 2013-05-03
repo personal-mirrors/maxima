@@ -636,8 +636,8 @@ offsets to the relevant bits of the document. Returns the resulting document."
 
 (defun make-info-offsets (pathname)
   (let ((d (read-info pathname)))
-    (with-open-file (stream (info-offset-name pathname)
-                            :direction :output
-                            :if-exists :supersede)
+    (with-open-info-file (stream (info-offset-name pathname)
+                                 :direction :output
+                                 :if-exists :supersede)
       (dump-info d stream))
     (values)))
