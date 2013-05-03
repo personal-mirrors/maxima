@@ -1,4 +1,4 @@
-include $(top_srcdir)/doc/info/common.mk
+include $(top_srcdir)/doc/info/common-lang.mk
 
 ## Converts foo.utf8 to foo
 origlangsdir := $(basename $(langsdir))
