@@ -38,7 +38,7 @@
                                   charset:cp1251 charset:koi8-r)
           #+allegro '(:latin1 :utf-8 :1251 :koi8-r)
           #+ccl '(:latin1 :utf-8)
-          #+(and ecl unicode) '(ext:latin-1 ext:utf-8 ext:windows-1251)
+          #+(and ecl unicode) '(:latin-1 :utf-8 :|windows-1251| :|koi8r|)
           #+(or (and clisp (not unicode))
                 (and ecl (not unicode))
                 gcl) nil))
