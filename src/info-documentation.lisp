@@ -49,7 +49,7 @@ to :latin1."
        (with-open-file
            ;; On GCL, complicated things like external formats are passed over. In
            ;; fact, there's not even a keyword argument with that name.
-           #+gcl (,stream ,pathname)
+           #+gcl (,stream ,pathname ,@options)
            #-gcl (,stream ,pn ,@options
                   :external-format (maxima::locale-subdir-external-format
                                     (car (last (pathname-directory ,pn)))))
