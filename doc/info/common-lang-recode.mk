@@ -25,8 +25,8 @@ texinfo.tex: ../$(origlangsdir)/texinfo.tex
 
 ## Find the input charset by reading from ../$(origlangsdir)/maxima.texi
 input_charset := \
-  $(shell grep -F @documentencoding <../$(origlangsdir)/maxima.texi | \
-	  cut -d ' ' -f 2)
+  $(shell grep -F @documentencoding <../$(origlangsdir)/maxima.texi \
+	  | grep -v '^@c' | cut -d ' ' -f 2)
 output_charset := UTF-8
 
 recode_trans := $(input_charset)..$(output_charset)
