@@ -129,11 +129,15 @@ texinfo_check= \
   test -z $$bad_files || $(call texinfo_complain,$(2),$(3),$(4))
 
 check_texinfo:
-	$(call texinfo_check,"\r$$","DOS-style EOLs","make distclean and then ",fix_crlf)
-	$(call texinfo_check,"\t","unexpanded Tabs","make distclean and then ",fix_crlf)
+	@echo -n "Checking for CR/LF pairs or unexpanded tabs... "
+	@$(call texinfo_check,"\r$$","DOS-style EOLs","make distclean and then ",fix_crlf)
+	@$(call texinfo_check,"\t","unexpanded Tabs","make distclean and then ",fix_crlf)
+	@echo "none found."
 
 warn_texinfo:
-	$(call texinfo_check,"\r$$","DOS-style EOLs","",fix_tab)
-	$(call texinfo_check,"\t","unexpanded Tabs","",fix_tab)
+	@echo -n "Checking for CR/LF pairs or unexpanded tabs... "
+	@$(call texinfo_check,"\r$$","DOS-style EOLs","",fix_tab)
+	@$(call texinfo_check,"\t","unexpanded Tabs","",fix_tab)
+	@echo "none found."
 
 PHONY_TARGETS += check_texinfo warn_texinfo
