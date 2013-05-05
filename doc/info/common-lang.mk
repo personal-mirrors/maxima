@@ -5,7 +5,7 @@
 include $(top_srcdir)/doc/info/common.mk
 
 ## See TODO note at top of common.mk
-maxima.html: maxima.texi $(maxima_TEXINFOS)
+maxima.html: maxima.texi $(texi_files)
 	perl ../texi2html -split_chapter --lang=$(lang) --output=. \
           --css-include=../manual.css --init-file ../texi2html.init  \
           maxima.texi
@@ -23,7 +23,7 @@ maxima.html: maxima.texi $(maxima_TEXINFOS)
 ## info_TEXINFOS to do something like that.
 
 MAKEINFOFLAGS = --enable-encoding
-maxima.info: maxima.texi
+maxima.info: maxima.texi $(texi_files)
 	$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) $<
 
 INSTALL_INFO=install-info
