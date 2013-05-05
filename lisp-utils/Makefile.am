@@ -11,16 +11,27 @@ EXTRA_DIST = \
 all-local: compile-parse-info
 clean-local: clean-pi-fasls
 
-## Don't compile for clisp and ecl because they both make foo.fas and
-## don't compile for acl and sbcl because they both make foo.fasl :-(
-compile_for_these := $(filter-out clisp ecl acl sbcl,@BUILT_LISPS@)
+## This compiles parse-info.lisp for each configured lisp. Normally,
+## just passing output file "parse-info-<foo>" works fine and the lisp
+## implementation appends ".fasl" or whatever. ECL and ACL take us
+## seriously and don't append anything. This isn't a problem for ACL,
+## since it loads the result perfectly well. Unfortunately, if you ask
+## ECL to load "parse-info-ecl", it doesn't realise that it's been
+## compiled and you get a strange error, hence the nasty special
+## casing below.
 compile-parse-info: parse-info.lisp
-	for x in $(compile_for_these); do \
+	@for x in @BUILT_LISPS@; do \
+	  echo "Compiling for lisp: "$$x; \
+	  if echo $$x | grep ecl >/dev/null ; then \
+	    of=parse-info-ecl.fas; \
+	  else \
+	    of=parse-info-$$x; \
+	  fi; \
 	  ../maxima-local --very-quiet -l $$x -r \
-	    ':lisp (compile-file "parse-info.lisp")'; \
+	    ':lisp (compile-file "parse-info.lisp" :output-file "'"$$of"'")'; \
 	done
 
 clean-pi-fasls:
-	rm -f parse-info.{sse2f,x86f,fasl,fas,o,lx32fsl}
+	rm -f parse-info-*
 
 .PHONY: clean-pi-fasls compile-parse-info

@@ -14,7 +14,7 @@ maxima_local=@expanded_top_srcdir@/maxima-local
 
 ## Don't give a suffix so that we load the compiled version if there
 ## is one.
-pi_lisp=@expanded_top_srcdir@/lisp-utils/parse-info
+pi_dir=@expanded_top_srcdir@/lisp-utils
 
 usage () {
     echo "Usage: parse-info.sh <lisp> <info-file> <expected_output>" >&2
@@ -40,6 +40,17 @@ fi
 
 if test -n "$expected_output"; then
     rm -f "$expected_output"
+fi
+
+## The compile command in Makefile.am compiles parse-info.lisp to
+## parse-info-<foo>.<crazything>, so we look here to tell whether it
+## has been made. The "head -n 1" stuff is to avoid duplicate hits
+## from clisp's .lib and .fas.
+pi_compiled=$(find "$pi_dir" -iname "parse-info-$lisp*" | head -n 1)
+if test -n "$pi_compiled"; then
+    pi_lisp=$pi_compiled
+else
+    pi_lisp=$pi_dir/parse-info.lisp
 fi
 
 $maxima_local --very-quiet -l $lisp <<EOF

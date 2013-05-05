@@ -103,8 +103,12 @@ PHONY_TARGETS += clean-info
 info_offset_files=$(foreach x,@BUILT_LISPS@,maxima-info-offsets-$(x).lisp)
 info-offsets: maxima.info $(info_offset_files)
 
+# (the extra echo is because not all the lisps finish by outputting a
+# newline)
 maxima-info-offsets-%.lisp: maxima.info
-	$(top_srcdir)/lisp-utils/parse-info.sh $* maxima.info maxima-info-offsets-$*.lisp
+	$(top_srcdir)/lisp-utils/parse-info.sh $* maxima.info \
+	  maxima-info-offsets-$*.lisp
+	@echo
 
 install-offsets: info-offsets
 	$(MKDIR_P) "$(lang_info_dir)"
