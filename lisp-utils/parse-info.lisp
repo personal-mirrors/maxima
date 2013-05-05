@@ -300,12 +300,22 @@ lines from the start of the node for the start of our topic."
                          (parse-integer line
                                         :start (+ bracket 5) :junk-allowed t)))
                     (when line-number
-                      ;; Subtract 2 from line number, since it is given wrt the
-                      ;; preceding ^_ line and is indexed starting at 1.
+                      ;; With Texinfo 4.*, if you jump <line-number> lines from
+                      ;; the ^_ line starting the node, you land on the first
+                      ;; line after that header has finished. When there is only
+                      ;; one header line for the topic, this means you land at
+                      ;; the start of the corresponding text.
+                      ;;
+                      ;; With Texinfo 5.*, you instead land on the relevant
+                      ;; header line (eg. "-- System variable: blah").
+                      ;;
+                      ;; We subtract one from this number, since as far as we're
+                      ;; concerned the node starts on the line after the ^_
+                      ;; line.
                       (collect
                           (make-instance
                            'partial-info-index-entry
-                           :line-offset (- line-number 2)
+                           :line-offset (- line-number 1)
                            :name topic-name
                            :stripped-node (strip-section-title node-name)
                            :section node-name)))))))))))))
