@@ -129,7 +129,7 @@ Calcula aproximaciones con fracciones continuas. @var{expr} es una expresi@'on
 que contiene fracciones continuas, ra@'{@dotless{i}}ces cuadradas de enteros,
 y n@'umeros reales (enteros, racionales, decimales en coma flotante y decimales de
 precisi@'on arbitraria). @code{cf} calcula expansiones exactas de n@'umeros 
-racionales, pero las expansiones de nÃºmeros decimales de coma flotante se truncan
+racionales, pero las expansiones de números decimales de coma flotante se truncan
 de acuerdo con el valor de @code{ratepsilon}, y la de los de decimales de precisi@'on
 arbitraria (bigfloats) lo hacen respecto de @code{10^(-fpprec)}.
 
