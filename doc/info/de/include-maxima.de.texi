@@ -42,11 +42,8 @@ END-INFO-DIR-ENTRY
 @end format
 @end ifinfo
 
-@ifinfo 
-@macro var {expr}
-<\expr\>
-@end macro
-@end ifinfo
+@c Write variables as <foo>
+@definfoenclose var,<,>
 
 @paragraphindent 0
 

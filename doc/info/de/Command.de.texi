@@ -350,10 +350,11 @@ Siehe auch die Systemvariablen @mrefcomma{_} @mref{__} und @mrefdot{%th}
 @end ifinfo
 
 In zusammengesetzten Ausdr@"ucken, wie in Ausdr@"ucken mit @mref{block} oder
-@mref{lambda} oder in Ausdr@"ucken der Gestalt @code{(@var{s_1}, ...,
-@var{s_n})}, enth@"alt die Systemvariable @code{%%} das Ergebnis des 
-vorhergehenden Ausdrucks.  F@"ur den ersten Ausdruck oder au@ss{}erhalb eines
-zusammengesetzten Ausdrucks ist @code{%%} nicht definiert.
+@mref{lambda} oder in Ausdr@"ucken der Gestalt
+@code{(@var{s_1}, ..., @var{s_n})}, enth@"alt die Systemvariable
+@code{%%} das Ergebnis des vorhergehenden Ausdrucks.  F@"ur den ersten
+Ausdruck oder au@ss{}erhalb eines zusammengesetzten Ausdrucks ist
+@code{%%} nicht definiert.
 
 Die Systemvariable @code{%%} wird von @mref{batch} und @mref{load} erkannt und
 hat dieselbe Bedeutung wie bei der Eingabe in der Konsole.  Siehe auch die 
