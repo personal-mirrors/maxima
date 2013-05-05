@@ -330,7 +330,7 @@ zusammengefasst.  @code{block} wertet die Argument @var{expr_1}, @var{expr_2},
 ausgewerteten Ausdrucks zur@"uck.  Die Liste @code{[v_1, ..., v_m]} am Anfang
 der @code{block}-Anweisung bezeichnet Variablen, die innerhalb der
 @code{block}-Anweisung lokal sind.  Alle anderen Variablen, die in einem Block
-verwendet werden, beziehen sich auf globale Variablen, die au√üerhalb des Block
+verwendet werden, beziehen sich auf globale Variablen, die auﬂerhalb des Block
 definiert sind.  Dies kann ein weiterer Block oder die globale Maxima-Umgebung
 sein.  @code{block} sichert die aktuellen Werte der Variablen @var{v_1}, 
 @dots{}, @var{v_m}.  Wird @code{block} verlassen, werden diese Werte
