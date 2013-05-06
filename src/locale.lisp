@@ -5,6 +5,7 @@
 ;;
 ;;   - locale-subdir
 ;;   - locale-subdir-external-format
+;;   - adjust-character-encoding
 
 (in-package :maxima)
 
@@ -93,3 +94,64 @@
               (concatenate 'string
                            subdir
                            (dir-from-codeset codeset other-codesets))))))))
+
+;; Return T if KEYWORD names a valid external format. This is only implemented
+;; for lisps that don't sort out their own terminal encoding: CCL, ECL and
+;; CMUCL. For the others, we just return NIL.
+(defun valid-external-format-p (keyword)
+  (declare (ignorable keyword))
+  nil
+  #+ccl
+  (nth-value 0 (ignore-errors
+                 (and (ccl:make-external-format :character-encoding keyword) t)))
+  #+cmucl (among keyword (stream:list-all-external-formats))
+  ;; I can't work out how to test on ECL, so I suppose we'll just have to
+  ;; hope. Maybe we'll fail messily when trying to set the thing. Ho hum.
+  #+(and ecl unicode) t)
+
+;; Guess an external format to use, based on intl:*locale*. If it's not
+;; specified, assume UTF-8.
+(defun guess-external-format ()
+  (let* ((dot-pos (position #\. intl:*locale*)))
+    (if dot-pos
+        (intern (string-upcase (subseq intl:*locale* (1+ dot-pos))) :keyword)
+        :utf-8)))
+
+;; Tell the terminal to use a sensible encoding, based on the information we can
+;; glean from the various LC_* variables.
+(defun set-terminal-encoding ()
+  ;; The following lisps just sort this out on their own, without us needing to
+  ;; get involved
+  ;;   CLISP, SCL, ACL, SBCL
+  ;;
+  ;; GCL doesn't do external formats, so we may as well just ignore
+  ;; it. Similarly with ECL when unicode support isn't compiled in.
+  ;;
+  ;; When doing it ourselves, we can't just copy clisp or sbcl, since they do
+  ;; the work by calling out nl_langinfo and we don't have a portable FFI
+  ;; guaranteed. So we may as well be slightly half-hearted about it: use
+  ;; intl:*locale*; strip the stuff after the dot; intern it and then check the
+  ;; result is a valid external format.
+  (let ((external-fmt (guess-external-format)))
+    (when (valid-external-format-p external-fmt)
+      ;; On CCL, see the bug report http://trac.clozure.com/ccl/ticket/912, from
+      ;; which we get the following incantation. (TODO: This works fine, but
+      ;; it's a bit icky to be using an internal variable. What if the interface
+      ;; changes?  How do you put this behind an "if fboundp" equivalent?)
+      #+ccl
+      (mapc (lambda (stream)
+              (setf (ccl::stream-external-format stream)
+                    (ccl:make-external-format :character-encoding external-fmt)))
+            (list (two-way-stream-input-stream  *terminal-io*)
+                  (two-way-stream-output-stream *terminal-io*)))
+      ;; With a unicode-supporting ECL, we set the external format with the
+      ;; function SI:STREAM-EXTERNAL-FORMAT-SET.
+      #+(and ecl unicode)
+      (when (fboundp 'si:stream-external-format-set)
+        (mapc (lambda (stream)
+                (funcall 'si:stream-external-format-set stream external-fmt))
+              (list (two-way-stream-input-stream  *terminal-io*)
+                    (two-way-stream-output-stream *terminal-io*))))
+      ;; CMUCL: Use set-system-external-format, as long as it's defined (>=20a)
+      #+cmucl (when (fboundp 'stream:set-system-external-format)
+                (funcall 'stream:set-system-external-format external-fmt)))))

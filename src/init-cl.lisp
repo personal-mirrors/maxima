@@ -544,7 +544,7 @@ When one changes, the other does too."
   (initialize-real-and-run-time)
   (intl::setlocale)
   (setf *maxima-lang-subdir* (locale-subdir))
-  (adjust-character-encoding)
+  (set-terminal-encoding)
   (set-pathnames)
   (when (boundp '*maxima-prefix*)
     (push (pathname (concatenate 'string *maxima-prefix*
@@ -552,13 +552,6 @@ When one changes, the other does too."
                                      "/share/locale/"
                                      "/locale/")))
           intl::*locale-directories*)))
-
-(defun adjust-character-encoding ()
-  (ignore-errors
-    #+clisp (progn (setf custom:*default-file-encoding*
-                         (ext:make-encoding :input-error-action #\?))
-                   (setf custom:*terminal-encoding*
-                         custom:*default-file-encoding*))))
 
 (import 'cl-user::run)
 
