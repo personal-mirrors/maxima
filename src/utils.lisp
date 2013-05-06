@@ -25,16 +25,18 @@
        ((not ,cond))
      ,@body))
 
+;; Get an environment variable. In case the implementation returns zero-length
+;; strings, we check for them explicitly and replace with null.
 (defun maxima-getenv (envvar)
-  #+gcl     (si::getenv envvar)
-  #+ecl     (si::getenv envvar)
-  #+allegro (system:getenv envvar)
-  #+(or cmu scl) (cdr (assoc envvar ext:*environment-list* :test #'string=))
-  #+sbcl    (sb-ext:posix-getenv envvar)
-  #+clisp   (ext:getenv envvar)
-  #+(or openmcl mcl)     (ccl::getenv envvar)
-  #+lispworks (hcl:getenv envvar)
-  )
+  (let ((val #+gcl     (si::getenv envvar)
+             #+ecl     (si::getenv envvar)
+             #+allegro (system:getenv envvar)
+             #+(or cmu scl) (cdr (assoc envvar ext:*environment-list* :test #'string=))
+             #+sbcl    (sb-ext:posix-getenv envvar)
+             #+clisp   (ext:getenv envvar)
+             #+(or openmcl mcl)     (ccl::getenv envvar)
+             #+lispworks (hcl:getenv envvar)))
+    (if (equal val "") nil val)))
 
 ;; CMUCL needs because when maxima reaches EOF, it calls BYE, not $QUIT.
 
