@@ -71,3 +71,25 @@
                   :latin1)
               *external-formats*))
         :default)))
+
+;; Determine the appropriate value of *maxima-lang-subdir*
+;;   1. from MAXIMA_LANG_SUBDIR environment variable
+;;   2. from INTL::*LOCALE* if (1) fails
+(defun locale-subdir ()
+  (or (maxima-getenv "MAXIMA_LANG_SUBDIR")
+      (unless
+          (member intl::*locale* '("" "C" "POSIX" "c" "posix") :test #'equal)
+        (let* ((language (string-downcase (subseq intl::*locale* 0 2)))
+               (territory (when (eql (position #\_ intl::*locale*) 2)
+                            (string-downcase (subseq intl::*locale* 3 5))))
+               (codeset (when (eql (position #\. intl::*locale*) 5)
+                          (string-downcase (subseq intl::*locale* 6)))))
+          (destructuring-bind (&optional subdir l tr c other-codesets)
+              (find-if (lambda (defn)
+                         (locale-match-p defn language territory))
+                       *locale-defns*)
+            (declare (ignore l tr c))
+            (when subdir
+              (concatenate 'string
+                           subdir
+                           (dir-from-codeset codeset other-codesets))))))))
