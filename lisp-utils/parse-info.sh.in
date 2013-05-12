@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ##
 ## A simple utility script for running the code of parse-info.lisp in
 ## a Maxima image.
@@ -44,17 +44,16 @@ fi
 
 ## The compile command in Makefile.am compiles parse-info.lisp to
 ## parse-info-<foo>.<crazything>, so we look here to tell whether it
-## has been made. The "head -n 1" stuff is to avoid duplicate hits
-## from clisp's .lib and .fas.
-pi_compiled=$(find "$pi_dir" -iname "parse-info-$lisp*" | head -n 1)
+## has been made.
+pi_compiled=$(find "$pi_dir" -name "parse-info-$lisp*")
 if test -n "$pi_compiled"; then
-    pi_lisp=$pi_compiled
+    pi_lisp=$pi_dir/parse-info-$lisp.lisp
 else
     pi_lisp=$pi_dir/parse-info.lisp
 fi
 
 $maxima_local --very-quiet -l $lisp <<EOF
-:lisp (load "$pi_lisp")
+:lisp (load (compile-file-pathname "$pi_lisp"))
 :lisp (parse-info:make-info-offsets "$info_file")
 EOF
 
