@@ -497,52 +497,57 @@ path-name. If NODE should be at PATHNAME, but we can't find a corresponding
 section then return NIL (this might happen if the node had a tag in the
 top-level file, but we're ignoring it because we don't expect any interesting
 content)"
-  (let ((section-data))
-    (cond
-      ((or (typep node 'complete-info-node)
-           (not (equal pathname (info-node-pathname node)))) node)
-
-      ;; Setting SECTION-DATA isn't quite as trivial as you might think it
-      ;; should be. Texinfo inserts spaces, commas and full stops seemingly
-      ;; randomly and doesn't always reproduce the whole of the name in the tag
-      ;; table.
-      ((not (setf section-data
-                  (or (find (info-node-stripped-name node) sections
-                            :test #'string= :key #'fourth)
-                      (let ((partial-hits
-                             (remove-if-not
-                              (lambda (section)
-                                (starts-with-p (fourth section)
-                                               (info-node-stripped-name node)))
-                              sections)))
-                        (and (not (cdr partial-hits))
-                             (car partial-hits))))))
-       nil)
-
-      (t
-       (destructuring-bind (title line-number pos stripped numbering)
+  (cond
+    ;; If the node is complete, or isn't defined in this file, we just return it
+    ;; straight off.
+    ((or (typep node 'complete-info-node)
+         (not (equal pathname (info-node-pathname node)))) node)
+    (t
+     ;; With a bit of luck, we've read in the data we need (which is stored in
+     ;; SECTIONS). Unfortunately, setting SECTION-DATA isn't quite as trivial as
+     ;; you might think it should be. Texinfo inserts spaces, commas and full
+     ;; stops seemingly randomly and doesn't always reproduce the whole of the
+     ;; name in the tag table.
+     (let ((section-data
+            (or (find (info-node-stripped-name node) sections
+                      :test #'string= :key #'fourth)
+                (let ((partial-hits
+                       (remove-if-not
+                        (lambda (section)
+                          (starts-with-p (fourth section)
+                                         (info-node-stripped-name node)))
+                        sections)))
+                  (and (not (cdr partial-hits))
+                       (car partial-hits))))))
+       ;; Use &optional here because SECTION-DATA might actually be NIL.
+       (destructuring-bind (&optional title line-number pos stripped numbering)
            section-data
-         (let ((this-node-data
+         ;; This ignores nodes that are "top-level". This is because these are
+         ;; all actually empty except for links to sub-nodes that contain the
+         ;; actual information. It also skips stuff if SECTION-DATA was nil, of
+         ;; course.
+         (when (cdr numbering)
+           (destructuring-bind (&optional first-line last-line)
+               (cdr
                 (find-if
                  (lambda (line-interval)
                    (destructuring-bind (line-start line-end) line-interval
                      (<= line-start line-number line-end)))
-                 node-data :key #'cdr)))
-           (unless this-node-data
-             (error "Couldn't find a containing node for section ~A, ~
+                 node-data :key #'cdr))
+             (unless first-line
+               (error "Couldn't find a containing node for section ~A, ~
                       which should be at path ~A, line ~A."
-                    title (info-node-pathname node) line-number))
-           (make-instance 'complete-info-node
-                          :name (doc-topic-name node)
-                          :pathname (info-node-pathname node)
-                          :stripped-name stripped
-                          :numbering numbering
-                          :start pos
-                          :first-line (second this-node-data)
-                          :last-line (third this-node-data)
-                          :length (- (elt line-positions
-                                          (third this-node-data))
-                                     pos))))))))
+                      title (info-node-pathname node) line-number))
+             (make-instance 'complete-info-node
+                            :name (doc-topic-name node)
+                            :pathname (info-node-pathname node)
+                            :stripped-name stripped
+                            :numbering numbering
+                            :start pos
+                            :first-line first-line
+                            :last-line last-line
+                            :length (- (elt line-positions last-line)
+                                       pos)))))))))
 
 (defun maybe-updated-index-entry (entry doc pathname
                                   fv-line-intervals line-positions)
