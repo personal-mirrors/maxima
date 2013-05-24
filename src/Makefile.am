@@ -69,11 +69,9 @@ WEIRD_UNINSTALL_TARGETS =
 install-exec-local: $(WEIRD_INSTALL_TARGETS)
 uninstall-hook: $(WEIRD_UNINSTALL_TARGETS)
 
-## A rule to build binary directories of the form binary-<lispname>
-## and subdirectories ./numerical and ./numerical/slatec
+## This makes the bd_<foo> targets we inherit from ../common.mk create
+## numerical and numerical/slatec subdirectories.
 binary_subdirs = / /numerical /numerical/slatec
-bd_%:
-	$(MKDIR_P) $(addprefix $(subst bd_,binary-,$@),$(binary_subdirs))
 
 ## Some hunks of lisp that get used by more than one implementation
 LOADDEFSYSTEM = (load "$(top_srcdir)/lisp-utils/defsystem.lisp")

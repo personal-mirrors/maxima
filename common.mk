@@ -58,3 +58,9 @@ run_sbcl = "$(SBCL_NAME)" --noinform --noprint --eval $(1) --eval '(sb-ext:quit)
 run_gcl = "$(GCL_NAME)" -batch -eval $(1)
 run_ccl = echo $(1) | "$(OPENMCL_NAME)" -b
 run_ecl = "$(ECL_NAME)" -norc -eval $(1) -eval '(ext:quit)'
+
+## A rule to build binary directories of the form
+## binary-<lispname>. If you wish to make some subdirs as well, set
+## $(binary_subdirs). (See src/Makefile.am, for example)
+bd_%:
+	$(MKDIR_P) $(addprefix $(subst bd_,binary-,$@),/ $(binary_subdirs))

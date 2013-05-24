@@ -42,18 +42,19 @@ if test -n "$expected_output"; then
     rm -f "$expected_output"
 fi
 
-## The compile command in Makefile.am compiles parse-info.lisp to
-## parse-info-<foo>.<crazything>, so we look here to tell whether it
-## has been made.
-pi_compiled=$(find "$pi_dir" -name "parse-info-$lisp*")
+## The compile command in Makefile.am compiles parse-info.lisp in
+## binary-<lisp>, so we look here to tell whether it has been made.
+pi_compiled=$(find "$pi_dir/binary-$lisp" \
+                   -name "parse-info*" -not -name "*.lisp" \
+                   2>/dev/null)
 if test -n "$pi_compiled"; then
-    pi_lisp=$pi_dir/parse-info-$lisp.lisp
+    loadit='(load (compile-file-pathname "'"$pi_dir/binary-$lisp/parse-info.lisp"'"))'
 else
-    pi_lisp=$pi_dir/parse-info.lisp
+    loadit='(load "'"$pi_dir/parse-info.lisp"'")'
 fi
 
 $maxima_local --very-quiet -l $lisp <<EOF
-:lisp (load (compile-file-pathname "$pi_lisp"))
+:lisp $loadit
 :lisp (parse-info:make-info-offsets "$info_file")
 EOF
 
