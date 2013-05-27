@@ -595,7 +595,8 @@ complete the index entry."
                                (1- next-topic)
                                node-end)))))
               (pos-start (elt line-positions (1- (car last-pair))))
-              (pos-end (elt line-positions (1- (cdr last-pair)))))
+              (pos-end (elt line-positions (cdr last-pair))))
+
          (make-instance 'complete-info-topic
                         :name (doc-topic-name entry)
                         :section (doc-topic-section entry)
