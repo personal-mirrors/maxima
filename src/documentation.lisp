@@ -53,11 +53,9 @@ numbers and spaces stripped out."))
       (setf (slot-value dt 'search-name)
             (make-dt-search-name (doc-topic-name dt)))))
 
-;; This slightly bizarre interface is to allow DOC to have multiple lists of
-;; topics and not need to cons much in order to tell us about them.
 (defgeneric documentation-all-topics (doc)
   (:documentation
-   "Return a list of sequences of all the documentation topics stored in DOC."))
+   "Return a sequence of all the documentation topics stored in DOC."))
 
 (defgeneric documentation-for-topic (doc topic)
   (:documentation "Given TOPIC which is stored by DOC, return the corresponding
@@ -242,18 +240,18 @@ documentation search runs."
 
 ;; Searching within a DOC implementation ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun this-doc-matches (document predicates extractor)
-  (stable-sort (collecting-loop
-                 for seq in (documentation-all-topics document)
-                 do (mapc (lambda (topic)
-                            (when
-                                (let ((string (funcall extractor topic)))
-                                  (some (lambda (pred)
-                                          (funcall pred string))
-                                        predicates))
-                              (collect topic)))
-                          seq))
-               #'string-lessp
-               :key #'doc-topic-name))
+  (stable-sort
+   (delete nil
+           (map 'list
+                (lambda (topic)
+                  (when (let ((string (funcall extractor topic)))
+                          (some (lambda (pred)
+                                  (funcall pred string))
+                                predicates))
+                    topic))
+                (documentation-all-topics document)))
+   #'string-lessp
+   :key #'doc-topic-name))
 
 (defun all-doc-matches (predicates extractor)
   "Return all matches from documentation in the system for one of the given

@@ -83,9 +83,8 @@ to :latin1."
                                :section section)))
             offsets)))
 
-;; TODO: Update this API!
 (defmethod documentation-all-topics ((doc info-doc))
-  (list (info-doc-topics doc)))
+  (info-doc-topics doc))
 
 (defmethod documentation-for-topic ((doc info-doc) (topic info-topic))
   (read-info-text (merge-pathnames (info-topic-relpath topic)
