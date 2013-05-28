@@ -34,6 +34,17 @@
     :type "lisp")
    pathname))
 
+;; Return a string with the name of the directory that immediately contains
+;; PATHNAME. Used to calculate external formats.
+;;
+;; Yes, the "./" bit isn't portable to anywhere but Unix-ish systems, but (a)
+;; Neither is the rest of Maxima and (b) I have no idea how to get a directory
+;; name if the file doesn't exist without that trick.
+(defun info-file-directory (pathname)
+  (car (last (or (pathname-directory pathname)
+                 (pathname-directory
+                  (truename (merge-pathnames #p"./")))))))
+
 (defmacro with-open-info-file ((stream pathname &rest options) &body body)
   "Basically WITH-OPEN-FILE, but gets the EXTERNAL-FORMAT argument right if
 possible. On a lisp that doesn't support the given external format, we shouldn't
@@ -53,8 +64,9 @@ to :latin1."
            ;; fact, there's not even a keyword argument with that name.
            #+gcl (,stream ,pathname ,@options)
            #-gcl (,stream ,pn ,@options
-                  :external-format (maxima::locale-subdir-external-format
-                                    (car (last (pathname-directory ,pn)))))
+                  :external-format
+                  (maxima::locale-subdir-external-format
+                   (info-file-directory ,pn)))
            ,@body))))
 
 ;; Load up the offsets for the info file at PATHNAME
