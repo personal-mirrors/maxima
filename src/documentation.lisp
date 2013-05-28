@@ -4,8 +4,9 @@
 ;; A (reasonably) generic documentation system                                ;;
 ;;                                                                            ;;
 ;; To implement a documentation type, you must provide implementations for    ;;
-;; the three generic functions directly below and then call                   ;;
-;; register-documentation-type to tell the documentation system about it.     ;;
+;; the generic functions DOCUMENTATION-ALL-TOPICS and DOCUMENTATION-FOR-TOPIC ;;
+;; and then call register-documentation-type to tell the documentation system ;;
+;; about it.                                                                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defclass doc ()
