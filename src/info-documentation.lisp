@@ -79,6 +79,17 @@ to :latin1."
     (let ((*read-eval* nil))
       (info-offsets-to-doc pathname (read stream)))))
 
+;; Return T if the documentation topic with name NAME should be considered
+;; subsidiary. This should be the ones ending "<n>" for an integer, n.
+(defun info-name-subsidiary-p (name)
+  (let ((langle (position #\< name)))
+    (when (and langle (< langle (length name)))
+      (multiple-value-bind (number end-pos)
+          (parse-integer name :start (1+ langle) :junk-allowed t)
+        (and number
+             (= end-pos (1- (length name)))
+             (eql #\> (schar name end-pos)))))))
+
 ;; Make an info-doc object from the list of offsets (presumably just read from
 ;; some offsets file)
 (defun info-offsets-to-doc (pathname offsets)
@@ -92,7 +103,8 @@ to :latin1."
                 (make-instance 'info-topic
                                :name name :start start :length length
                                :relpath (parse-namestring filename)
-                               :section section)))
+                               :section section
+                               :subsidiary-p (info-name-subsidiary-p name))))
             offsets)))
 
 (defmethod documentation-all-topics ((doc info-doc))

@@ -20,7 +20,9 @@
 (defclass doc-topic ()
   ((name :reader doc-topic-name :initarg :name)
    (section :reader doc-topic-section :initarg :section :initform nil)
-   (search-name :reader doc-topic-search-name :initform nil))
+   (search-name :initform nil)
+   (subsidiary-p :reader doc-topic-subsidiary-p
+                 :initform nil :initarg :subsidiary-p))
   (:documentation
    "A documentation system should probably use this class to return
 topics. SECTION, if non-nil, is the name of a containing chapter or other
@@ -240,28 +242,34 @@ documentation search runs."
         do (format t "~A~%~%" (apply #'documentation-for-topic item))))))
 
 ;; Searching within a DOC implementation ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun this-doc-matches (document predicates extractor)
+(defun this-doc-matches (document predicates extractor main-only)
   (stable-sort
    (delete nil
            (map 'list
                 (lambda (topic)
-                  (when (let ((string (funcall extractor topic)))
-                          (some (lambda (pred)
-                                  (funcall pred string))
-                                predicates))
+                  (when (and (or (not main-only)
+                                 (not (doc-topic-subsidiary-p topic)))
+                             (let ((string (funcall extractor topic)))
+                               (some (lambda (pred) (funcall pred string))
+                                     predicates)))
                     topic))
                 (documentation-all-topics document)))
    #'string-lessp
    :key #'doc-topic-name))
 
-(defun all-doc-matches (predicates extractor)
-  "Return all matches from documentation in the system for one of the given
-predicates, which should take a string as an argument. Returns a list keyed by
-document with matches from that document as the CDR."
+(defun all-doc-matches (predicates extractor &key main-only)
+  "Return all matches from documentation in the system for one of PREDICATES,
+which should take a string as an argument. EXTRACTOR is a function that takes a
+topic and returns a string suitable for the predicates. If MAIN-ONLY, then any
+documentation topics marked subsidiary are ignored (see documentation for
+DOC-TOPIC).
+
+Returns a list keyed by document with matches from that document as the CDR."
   (remove nil (mapcar
                (lambda (doc-pair)
                  (cons (cdr doc-pair)
-                       (this-doc-matches (cdr doc-pair) predicates extractor)))
+                       (this-doc-matches (cdr doc-pair)
+                                         predicates extractor main-only)))
                *documents*)
           :key #'cdr))
 
@@ -284,4 +292,5 @@ ALL-DOC-MATCHES."
                        #'doc-topic-name)
       (all-doc-matches (let ((search-name (make-dt-search-name topic)))
                          (list (lambda (title) (search search-name title))))
-                       #'doc-topic-search-name)))
+                       #'doc-topic-search-name
+                       :main-only t)))
