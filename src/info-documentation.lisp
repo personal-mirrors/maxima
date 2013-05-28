@@ -45,7 +45,13 @@ error, but the resulting text stream might well be garbage. The encoding is
 guessed from the directory name - if we don't understand it we default
 to :latin1."
   (let ((pn (gensym)))
-    `(let ((,pn ,pathname))
+    `(let ((,pn ,pathname)
+           ;; I think that CMUCL doesn't compile in character conversion
+           ;; routines until they get called. As a result, there's an ugly
+           ;; signed word -> integer conversion compiler note that appears when
+           ;; we first call READ-LINE or similar here. As a workaround, we just
+           ;; tell CMUCL to shut up about it...
+           #+cmucl (extensions:*efficiency-note-cost-threshold* 50))
        (with-open-file
            ;; On GCL, complicated things like external formats are passed over. In
            ;; fact, there's not even a keyword argument with that name.
