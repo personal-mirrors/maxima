@@ -18,7 +18,6 @@
   ((topics :reader info-doc-topics :initarg :topics)
    (pathname :reader info-doc-pathname :initarg :pathname)))
 
-;; TODO: We aren't storing sections at the moment! Oops.
 (defclass info-topic (doc-topic)
   ((start :reader info-topic-start :initarg :start)
    (length :reader info-topic-length :initarg :length)
@@ -27,8 +26,6 @@
 ;; TODO: This currently throws a warning on compilation since *maxima-lispname*
 ;; is both defined and given in init-cl, which is loaded much later. Maybe we
 ;; need to rejig that a bit?
-;;
-;; TODO: This is also used in parse-info. Refactor?
 (defun info-offset-name (pathname)
   (merge-pathnames
    (make-pathname
@@ -37,7 +34,6 @@
     :type "lisp")
    pathname))
 
-;; TODO: This is also used in parse-info. Refactor?
 (defmacro with-open-info-file ((stream pathname &rest options) &body body)
   "Basically WITH-OPEN-FILE, but gets the EXTERNAL-FORMAT argument right if
 possible. On a lisp that doesn't support the given external format, we shouldn't
