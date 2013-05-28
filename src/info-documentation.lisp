@@ -72,12 +72,14 @@ to :latin1."
    'info-doc
    :name "maxima.info"
    :pathname pathname
-   :topics (mapcar (lambda (lst)
-                     (destructuring-bind (name filename start length) lst
-                       (make-instance 'info-topic
-                                      :name name :start start :length length
-                                      :relpath (parse-namestring filename))))
-                   offsets)))
+   :topics (mapcar
+            (lambda (lst)
+              (destructuring-bind (name filename start length section) lst
+                (make-instance 'info-topic
+                               :name name :start start :length length
+                               :relpath (parse-namestring filename)
+                               :section section)))
+            offsets)))
 
 ;; TODO: Update this API!
 (defmethod documentation-all-topics ((doc info-doc))

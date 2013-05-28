@@ -17,16 +17,23 @@
 ;; The output format
 ;;
 ;;   The file contains a single, READable, list. The elements of the list are
-;;   lists of the form (NAME FILENAME START LENGTH).
+;;   lists of the form (NAME FILENAME START LENGTH NODE).
 ;;
-;;   START and LENGTH in the above may be byte offsets or character offsets or
-;;   pretty much anything else, but we know that they are appropriate values for
-;;   FILE-OFFSET on the current lisp. (This may vary between lisps, which is why
-;;   we output an implementation-specific offset table). FILENAME is the file
-;;   name of the portion of the info document that we read. (We don't use
-;;   pathnames, since then you have to worry about accidentally including
-;;   absolute directory info which then breaks when you install)
-
+;;   - NAME is the name of the documentation topic
+;;
+;;   - FILENAME is the file name of the portion of the info document where this
+;;     topic is found. (We don't use pathnames, since then you have to worry
+;;     about accidentally including absolute directory info which then breaks
+;;     when you install).
+;;
+;;   - START and LENGTH in the above may be byte offsets or character offsets or
+;;     pretty much anything else, but we know that they are appropriate values for
+;;     FILE-OFFSET on the current lisp. (This may vary between lisps, which is why
+;;     we output an implementation-specific offset table).
+;;
+;;   - NODE is either NIL or is a string naming the node that contains the topic
+;;     (used for index entries)
+;;
 ;; How the code works:
 ;;
 ;;   We read in the top-level info file ("maxima.info"), taking note of the
@@ -641,7 +648,8 @@ offsets to the relevant bits of the document. Returns the resulting document."
           (concatenate 'string (pathname-name pathname)
                        "." (pathname-type pathname))
           (complete-topic-start topic)
-          (complete-topic-length topic))))
+          (complete-topic-length topic)
+          (doc-topic-section topic))))
 
 (defun dump-info (info-doc stream)
   "Dump out the two parsed offset tables to a stream, using prin1"
