@@ -338,10 +338,9 @@ file. It is ordered so the numbers are decreasing.
 LINE-POSITIONS is a vector of integers whose n'th element is the file-position
 of the start of the n'th line.
 
-SECTIONS is a list of lists (TITLE LINE-NUMBER POS STRIPPED NUMBERING), one for
-each section found. STRIPPED is the title, stripped of any commas since Texinfo
-seems to eat them when making tag tables etc. NUMBERING is a list of numbers,
-section 1.2.3 represented by (1 2 3)."
+SECTIONS is a list of lists (TITLE LINE-NUMBER POS NUMBERING), one for each
+section found. NUMBERING is a list of numbers, where section 1.2.3 is
+represented by (1 2 3)."
   (with-open-info-file (stream pathname)
     (let ((line) (line-number 0) (pos)
           (nodes) (fv-line-intervals) (lps)
@@ -381,10 +380,7 @@ section 1.2.3 represented by (1 2 3)."
              ((multiple-value-bind (title numbering)
                   (parse-section-header line)
                 (when title
-                  (push (list title line-number pos
-                              (strip-section-title title) numbering)
-                        sections)
-                  t)))
+                  (push (list title line-number pos numbering) sections) t)))
 
              ;; Function / variable definition.
              ((and (starts-with-p line " -- ")
@@ -440,11 +436,8 @@ space then a title. If a match, return <name>."
 ;; variation that Texinfo throws in (just to keep us on our toes). Texinfo:
 ;;   (1) Occasionally throws away spaces
 ;;   (2) Sometimes ignores commas
-;;   (3) Takes a prefix of long titles (50 chars?)
 (defun strip-section-title (title)
-  (string-downcase
-   (remove-if (lambda (char) (member char '(#\, #\. #\Space)))
-              (subseq title 0 (min (length title) 50)))))
+  (remove-if (lambda (char) (member char '(#\, #\. #\Space))) title))
 
 ;; Integrating new data ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun integrate-info-file! (pathname doc)
@@ -475,11 +468,19 @@ space then a title. If a match, return <name>."
                               (maybe-updated-node node pathname node-data
                                                   line-positions sections))
                             (info-doc-nodes doc))))
-      ;; Update the node lookup hash
+      ;; Update the node lookup hash. We check that we haven't got a duplicate
+      ;; on the way: this should never happen, but I had a couple of bugs when I
+      ;; incorrectly "normalised" Texinfo's names and this check would have
+      ;; caught them.
       (setf (info-doc-node-lookup doc)
             (let ((ht (make-hash-table :test 'equal)))
               (dolist (node (info-doc-nodes doc))
-                (setf (gethash (info-node-stripped-name node) ht) node))
+                (let ((stripped (info-node-stripped-name node)))
+                  (when (gethash stripped ht)
+                    (error "Two nodes found with the same stripped name: ~A and ~A."
+                           (doc-topic-name node)
+                           (doc-topic-name (gethash stripped ht))))
+                  (setf (gethash stripped ht) node)))
               ht))
 
       (setf (info-doc-index doc)
@@ -503,51 +504,51 @@ content)"
     ((or (typep node 'complete-info-node)
          (not (equal pathname (info-node-pathname node)))) node)
     (t
-     ;; With a bit of luck, we've read in the data we need (which is stored in
-     ;; SECTIONS). Unfortunately, setting SECTION-DATA isn't quite as trivial as
-     ;; you might think it should be. Texinfo inserts spaces, commas and full
-     ;; stops seemingly randomly and doesn't always reproduce the whole of the
-     ;; name in the tag table.
-     (let ((section-data
-            (or (find (info-node-stripped-name node) sections
-                      :test #'string= :key #'fourth)
-                (let ((partial-hits
-                       (remove-if-not
-                        (lambda (section)
-                          (starts-with-p (fourth section)
-                                         (info-node-stripped-name node)))
-                        sections)))
-                  (and (not (cdr partial-hits))
-                       (car partial-hits))))))
-       ;; Use &optional here because SECTION-DATA might actually be NIL.
-       (destructuring-bind (&optional title line-number pos stripped numbering)
-           section-data
-         ;; This ignores nodes that are "top-level". This is because these are
-         ;; all actually empty except for links to sub-nodes that contain the
-         ;; actual information. It also skips stuff if SECTION-DATA was nil, of
-         ;; course.
-         (when (cdr numbering)
-           (destructuring-bind (&optional first-line last-line)
-               (cdr
-                (find-if
-                 (lambda (line-interval)
-                   (destructuring-bind (line-start line-end) line-interval
-                     (<= line-start line-number line-end)))
-                 node-data :key #'cdr))
-             (unless first-line
-               (error "Couldn't find a containing node for section ~A, ~
+     (let ((this-node-data
+            (find (doc-topic-name node) node-data :key 'first :test 'string=))
+           (node-section-data))
+       (unless this-node-data
+         (error "Can't find node data for node ~A in file ~A."
+                (doc-topic-name node) pathname))
+       ;; Look in the list of sections that we've found in this file (in
+       ;; SECTIONS) and find the first one that lies in this node. (We assume
+       ;; that there is at most one section node per node, which is true for the
+       ;; Maxima documentation). There might not be one (for an index section),
+       ;; in which case we will return NIL and the node will be skipped.
+       (setf node-section-data
+             (find-if
+              (lambda (line-number)
+                (<= (second this-node-data) line-number (third this-node-data)))
+              sections :key 'second))
+       (when node-section-data
+         (destructuring-bind (title line-number pos numbering)
+             node-section-data
+           ;; This ignores nodes that are "top-level". This is because these are
+           ;; all actually empty except for links to sub-nodes that contain the
+           ;; actual information. It also skips stuff if SECTION-DATA was nil, of
+           ;; course.
+           (when (cdr numbering)
+             (destructuring-bind (&optional first-line last-line)
+                 (cdr
+                  (find-if
+                   (lambda (line-interval)
+                     (destructuring-bind (line-start line-end) line-interval
+                       (<= line-start line-number line-end)))
+                   node-data :key #'cdr))
+               (unless first-line
+                 (error "Couldn't find a containing node for section ~A, ~
                       which should be at path ~A, line ~A."
-                      title (info-node-pathname node) line-number))
-             (make-instance 'complete-info-node
-                            :name (doc-topic-name node)
-                            :pathname (info-node-pathname node)
-                            :stripped-name stripped
-                            :numbering numbering
-                            :start pos
-                            :first-line first-line
-                            :last-line last-line
-                            :length (- (elt line-positions last-line)
-                                       pos)))))))))
+                        title (info-node-pathname node) line-number))
+               (make-instance 'complete-info-node
+                              :name (doc-topic-name node)
+                              :pathname (info-node-pathname node)
+                              :stripped-name (info-node-stripped-name node)
+                              :numbering numbering
+                              :start pos
+                              :first-line first-line
+                              :last-line last-line
+                              :length (- (elt line-positions last-line)
+                                         pos))))))))))
 
 (defun maybe-updated-index-entry (entry doc pathname
                                   fv-line-intervals line-positions)
