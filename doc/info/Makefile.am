@@ -101,7 +101,7 @@ pdffigures = \
   figures/bodegain6.pdf figures/bodegain7.pdf figures/bodegain8.pdf \
   figures/bodephase1.pdf figures/bodephase2.pdf figures/bodephase3.pdf \
   figures/bodephase4.pdf figures/bodephase5.pdf figures/bodephase6.pdf \
-  figures/bodephase7.pdf figures/bodephase8.pdf figures/bodephase9.pd f
+  figures/bodephase7.pdf figures/bodephase8.pdf figures/bodephase9.pdf
 
 ## TODO: Do this the same as for other languages (in common-lang.mk)
 maxima.html: maxima.texi $(maxima_TEXINFOS)
