@@ -42,7 +42,8 @@
           #+(and ecl unicode) '(:latin-1 :utf-8 :|windows-1251| :|koi8r|)
           #+(or (and clisp (not unicode))
                 (and ecl (not unicode))
-                gcl) nil))
+                gcl) nil
+          #+abcl '(:iso-8859-1 :utf-8)))
 
 (defun locale-match-p (test-tuple language territory)
   (if (null (cdr test-tuple))
