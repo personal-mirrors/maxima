@@ -62,6 +62,7 @@ bernstein/bernstein.lisp \
 bernstein/bernstein_utilities.mac \
 bernstein/rtest_bernstein.mac \
 builtins-list.txt \
+builtins-list.txt.orig \
 calculus/asympa.mac \
 calculus/cartan.dem \
 calculus/cartan.lisp \

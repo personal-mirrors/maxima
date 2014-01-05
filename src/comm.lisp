@@ -131,6 +131,20 @@
                            (let (($simp t)) (resimplify z)))
                         (setq z (maxima-substitute (cdar l) (caar l) z))))))))))
 
+(defun $subst_lambda (&rest args)
+  (simplify-lambda-application (apply #'$substitute args)))
+
+(defun $psubst_lambda (&rest args)
+  (simplify-lambda-application (apply #'$psubstitute args)))
+
+(defun simplify-lambda-application (e)
+  (if (consp e)
+    (let ((args (mapcar #'simplify-lambda-application (cdr e))))
+      (if (and (eq (caar e) 'mqapply) (consp (car args)) (eq (caar (car args)) 'lambda))
+        (mapply1 (car args) (cdr args) (car args) nil)
+        (cons (car e) args)))
+    e))
+
 (defmfun maxima-substitute (x y z) ; The args to SUBSTITUTE are assumed to be simplified.
   (let ((in-p t) (substp t))
     (if (and (mnump y) (= (signum1 y) 1))
@@ -159,6 +173,7 @@
 ;;Used in COMM2 (AT), limit, and below.
 (defvar dummy-variable-operators '(%product %sum %laplace %integrate %limit %at))
 
+;; MAXIMA-SUBSTITUTE calls SUBST1 if Y is an atom and Y != -1
 (defun subst1 (x y z)			; Y is an atom
   (cond ((atom z) (if (equal y z) x z))
 	((specrepp z) (subst1 x y (specdisrep z)))
@@ -171,6 +186,8 @@
 	       (cadddr z) (subst1 x y (car (cddddr z)))))
 	(t (let ((margs (mapcar #'(lambda (z1) (subst1 x y z1)) (cdr z)))
                  (oprx (getopr x)) (opry (getopr y)))
+	     ;; Following stuff could probably be expressed more clearly,
+	     ;; especially if the ban on non-atomic function operators is lifted.
 	     (if (and $opsubst
 		      (or (eq opry (caar z))
 			  (and (eq (caar z) 'rat) (eq opry 'mquotient))))
@@ -186,9 +203,13 @@
 			 (let ((substp 'mqapply))
 			   (subst0 (list* '(mqapply) x margs) z))
 			 (merror (intl:gettext "subst: cannot substitute ~M for operator ~M in expression ~M") x y z))
-		     (subst0 (cons (cons oprx nil) margs) z))
+		     ;; we arrive here if X is a lambda expression
+		     (if (and (not (atom x)) (eq (caar x) 'lambda))
+		       (subst0 (list* '(mqapply) x margs) z)
+		       (subst0 (cons (cons oprx nil) margs) z)))
 		 (subst0 (cons (cons (caar z) nil) margs) z))))))
 
+;; MAXIMA-SUBSTITUTE calls SUBST2 if Y = -1 or Y is not an atom
 (defun subst2 (x y z negxpty timesp)
   (let (newexpt)
     (cond ((atom z) z)
@@ -225,6 +246,10 @@
                (cdddr z))))
     (t z)))
 
+;; SUBST1 calls SUBST0 if $OPSUBST = false (with NEW and OLD having same operator and NEW having substituted arguments),
+;; or $OPSUBST = true and (X is a number, or X is a symbolic constant, or X is a non-lambda expression),
+;; or $OPSUBST = true and (X is not a number, and X is not a symbolic constant, and X is an atom or a lambda expression)
+;; (with NEW = operator of X applied to substituted arguments and OLD = Z)
 (defmfun subst0 (new old)
   (cond ((atom new) new)
 	((alike (cdr new) (cdr old))

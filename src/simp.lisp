@@ -543,10 +543,7 @@
 	       ((eq (caar x) 'mtimes) (simptimes x 1 y))
 	       (t (simpexpt x 1 y))))
 	((not (atom (caar x)))
-	 (cond ((or (eq (caaar x) 'lambda)
-		    (and (not (atom (caaar x))) (eq (caaaar x) 'lambda)))
-		(mapply1 (caar x) (cdr x) (caar x) x))
-	       (t (merror (intl:gettext "simplifya: operator is neither an atom nor a lambda expression: ~S") x))))
+	 (merror (intl:gettext "simplifya: operator is not an atom: ~S") x))
         ((and $distribute_over
               (get (caar x) 'distribute_over)
               ;; A function with the property 'distribute_over.
