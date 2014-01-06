@@ -1568,7 +1568,7 @@ dot_products, much the same as can be obtained by doing $dotsimp")
    (setq gen-sum ($general_sum a-list $aaaa))
    (setq eqns ($nc_coefficients (list  '(mlist simp) gen-sum)))
    (setq answers ($fast_linsolve eqns))
-   (setq repr($sublis answers ( $general_sum
+   (setq repr($psubst answers ( $general_sum
 			       (loop for i from 1 to ($length (cdr a-list))
 				     collecting ($concat '$term i) into temm
 				     finally (return (cons '(mlist) temm)))
@@ -2126,7 +2126,7 @@ dot_products, much the same as can be obtained by doing $dotsimp")
 ;   (loop for v in (cdr all-eqns) do (displa v))
 
   (setf answer ($fast_linsolve all-eqns (subseq $aaaa 0 (length terms))))
-  (setf answer ($sublis answer gen-sum)))
+  (setf answer ($psubst answer gen-sum)))
 ;  (break aft)
 ;  ($express_in_terms_of_basis variables answer relations))
 
@@ -2394,7 +2394,7 @@ dot_products, much the same as can be obtained by doing $dotsimp")
 		  collecting (list '(mequal) other-par 0) into subs
 		else collecting (cons '(mequal) (list other-par 1)) into subs
 		finally  (return ($ratsimp
-				   ($sublis (cons '(mlist simp)subs) answer))))
+				   ($psubst (cons '(mlist simp)subs) answer))))
 	  into tems
 	finally (return (cond ((null (cdr list-parameters))
 			       (format t "~%Special soln:")
@@ -2443,7 +2443,7 @@ dot_products, much the same as can be obtained by doing $dotsimp")
 
 	(setf all-eqns (cons '(mlist simp) eqns))
   (setf answer ($fast_linsolve all-eqns (subseq $aaaa 0 (length monoms))))
-  (setf answer ($sublis answer  gen-sum)))
+  (setf answer ($psubst answer  gen-sum)))
 (defvar *show-entry-type* t)
 
 (defun $determinant_of_equations (eqn &optional variables &aux answer )
@@ -2484,7 +2484,7 @@ dot_products, much the same as can be obtained by doing $dotsimp")
     (setq ncmonos ($list_nc_monomials comu))
     (setq eqns    ($extract_linear_equations `((mlist) ,comu)  ncmonos))
     (setq solus ($fast_linsolve eqns ($list_variables eqns "aa")))
-    (setq general (meval* ($sublis solus general)))
+    (setq general (meval* ($psubst solus general)))
     (displa general)
     (setq $vari_left ($list_variables general "aa" "par"))
     (loop for v in (cdr $vari_left)

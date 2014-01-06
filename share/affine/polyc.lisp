@@ -178,7 +178,7 @@
 (defun $sub_list (eqns expr)
   (check-arg eqns '$listp "macsyma list")
   (setq eqns ($list_equations eqns))
-  ($sublis eqns expr))
+  ($psubst eqns expr))
 
 ;  (setq eqns (loop for v in (cdr eqns)
 ;	appending (list-equations1 v) ))
@@ -251,7 +251,7 @@
 				  ($firstn n2 $aaaa))))) into tem
     finally (setq answer ($fast_linsolve (setq eqns (cons '(mlist) tem)) ($firstn n2 $aaaa))))
 
-  ($separate_parameters ($sublis answer ($firstn n2 $aaaa))))
+  ($separate_parameters ($psubst answer ($firstn n2 $aaaa))))
 (defun $matrix_from_list (a-list &aux tem)
   (let ((n (round (setq tem (expt ($length a-list) .5)))))
     (cond ((eq (expt  n 2) ($length a-list)) 'fine)
@@ -452,7 +452,7 @@
 			       ($general_sum basis (setq unknowns
 							 (subseq $aaaa 0 (length basis)))))))
 		  unknowns))
-    (setq gen-a ($sublis answer unknowns))
+    (setq gen-a ($psubst answer unknowns))
     (setq zero-b (loop for w in (cdr gen-b)
 		    collecting (cons w 0)))
 
@@ -472,7 +472,7 @@
 
   (setq eqns ($list_equations (list '(mlist) (list '(mequal) lhs rhs))))
   (setq answer ($fast_linsolve eqns unknowns))
-  (setq gen-a ($sublis answer unknowns))
+  (setq gen-a ($psubst answer unknowns))
   (setq zero-b (loop for w in (cdr gen-b) collecting (cons w 0)))
   (loop for v in (cdr gen-b)
 	collecting (meval* (sublis zero-b (subst 1 v  gen-a)))
@@ -526,7 +526,7 @@
 					 gen-vector)
 		       0))))
     (setq answer ($fast_linsolve eqns gen-vector))
-    ($separate_parameters ($sublis answer gen-vector))))
+    ($separate_parameters ($psubst answer gen-vector))))
 
 (defun $rank_of_representation (rep n1 list-of-generators &aux mat)
   (setq mat ($general_matrix n1 $cccc))

@@ -245,8 +245,8 @@ abs_int_extra(q,x) := block([q1,q2,k,xo,kk, cntx : gensym("cntx")],
         q2 : first(q2),
         xo : linsolve(k,x),
         /* make both q1 and q2 vanish at xo */
-        q1 : errcatch(q1 - sublis(xo, q1)),
-        q2 : errcatch(q2 - sublis(xo, q2)),
+        q1 : errcatch(q1 - ev (psubst (xo, q1), simp=false)),
+        q2 : errcatch(q2 - ev (psubst (xo, q2), simp=false)),
         xo : first(xo),
         xo : rhs(xo) - lhs(xo),
         if q1 = [] or q2 = [] then false else (
@@ -262,7 +262,7 @@ abs_integrate_use_if(q,x) := block([k,%x,xo],
   if k # [] and every(lambda([s], polynomialp(s,[x], 'numberp, lambda([k],is(k=0 or k=1)))), k) then (
     k : map(lambda([s], rhs(first(linsolve(s,x)))),k),
     %x : new_variable('general),
-    q : sublis([x = %x],q),
+    q : ev (psubst ([x = %x],q), simp=false),
     k : listify(setify(k)),
     k : partitions_interval_p(k),
     q : if k # false then errcatch(interval_integrate(q,%x,k)) else [],
@@ -281,7 +281,7 @@ interval_integrate(q,x,l) :=  block([xo,q1,q2,i1, cntx : gensym("cntx")],
     q2 : interval_integrate(q,x,rest(l)),
    
     if freeof(nounify('integrate), q2 - q1) then (
-      i1 : errcatch(sublis([x = xo], q2 - q1)))
+      i1 : errcatch(ev (psubst ([x = xo], q2 - q1), simp=false)))
     else i1 : [ ],
     if i1 = [ ] then false else %if(x < xo, q1 + first(i1), q2)));
 
@@ -331,7 +331,7 @@ if_int(q,x) := block([p,f,g,fi,gi,c],
       if freeof(x,p) then (
         %if(p,fi,gi))
       else if linear_in_p(lhs(p),x) and rhs(p) = 0 and freeof('integrate, 'limit, [fi,gi]) then (
-        c : sublis(linsolve(lhs(p),x), fi - gi),
+        c : (linsolve (lhs (p), x), ev (psubst (%%, fi - gi), simp=false)),
         if freeof(x,c) then %if(p,fi, gi + c) else false)
       else false)
     else false));

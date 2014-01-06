@@ -53,7 +53,7 @@
 	(setq answ ($totaldisrep ($numerator ($dotsimp tem))))
 	(setq eqns ($extract_linear_equations  (list '(mlist) answ)))
 	(setq solns ($fast_linsolve eqns (subseq $aaaa 0 (length $current_variables))))
-	collecting ($sublis solns oth) into final
+	collecting ($psubst solns oth) into final
 	do (mshow (cons '(mlist)final))
 	finally (return (cons '(mlist) final))))
 
@@ -382,7 +382,7 @@
 		 for w in subs
 		 collecting `((mequal) ,v ,w))))
   (mshow subs-for-sublis)
-  (setq image ($dotsimp ($expand ($sublis subs-for-sublis
+  (setq image ($dotsimp ($expand ($psubst subs-for-sublis
 		       relations))))
   (setq eqns ($extract_linear_equations ($totaldisrep ($numerator image))))
   ($maybe_ldata_solve eqns :inequality ($determinant mat)))
@@ -490,7 +490,7 @@
 						collecting (sub* v 1)
 						else collecting v)))
   (setq result ($fast_linsolve actual-conditions vari))
-  ($sublis result ($general_sum basis $aaaa)))
+  ($psubst result ($general_sum basis $aaaa)))
 
 (defun $linear_variables (eqns &optional constants &aux tem vari var-eqns)
   (cond (constants (setq constants (list-variables (st-rat constants)))))

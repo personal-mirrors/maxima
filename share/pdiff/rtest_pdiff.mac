@@ -168,7 +168,7 @@ ratdisrep(taylor(f(x+x^2),x,0,2));
 
 (tellsimpafter(pderivop(f,1,0)(0,0),a),
   tellsimpafter(pderivop(f,0,1)(0,0),b),
-  sublis([x = 0, y = 0], diff(f(x,y),x) + diff(f(x,y),y)));
+  psubst ([x = 0, y = 0], diff(f(x,y),x) + diff(f(x,y),y)));
 a+b$
 
 (clear_rules(),0);

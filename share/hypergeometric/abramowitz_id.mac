@@ -17,10 +17,10 @@ nonpositive_integer_p(x) := (x : rationalize(x), integerp(x) and (x < 1));
 
 not_one_p(x) := (x # 1) and (x # 1.0) and (x # 1.0b0);
 
-abramowitz_id(e, [l]) := block([sublis_apply_lambda : true, x, str],
+abramowitz_id(e, [l]) := block([x, str],
   for str in l do (
     x : function_identity[str],
-    if x # false then e : sublis([x], e)),
+    if x # false then e : psubst_lambda ([x], e)),
   e);
 
 function_identity[otherwise]:= false;
@@ -87,7 +87,7 @@ function_identity["15.3.7"] : 'hypergeometric = lambda([p,q,x], block([a,b,c,f,s
       a : first(p),
       b : second(p),
       c : first(q),
-      if b < a then [a,b] : sublis([a = b, b = a], [a,b]),
+      if b < a then [a,b] : psubst ([a = b, b = a], [a,b]),
       if some('nonpositive_integer_p, [c, b-a, a-b, b, c-a, c-b,1-c+a,1-c+b]) = true then (
         success : false)
       else (

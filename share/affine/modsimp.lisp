@@ -75,7 +75,7 @@
   (setq eqns ($extract_linear_equations `((mlist) ,simp)))
   (setq sols ($fast_Linsolve eqns ($list_variables eqns "aa")))
   (mshow eqns sols)
-  ($separate_parameters ($sublis sols general-term)))
+  ($separate_parameters ($psubst sols general-term)))
 
  
 (defun $find_sygy (degn matrix
@@ -108,7 +108,7 @@
   (setq eqns ($extract_linear_equations simp))
   (setq sols ($fast_Linsolve eqns ($list_variables eqns "aa")))
   (mshow eqns sols)
-  ($separate_parameters ($sublis sols general-from)))
+  ($separate_parameters ($psubst sols general-from)))
 
 (defmacro matrix-row (mat n)`(nth ,n ,mat))
 
@@ -149,7 +149,7 @@ multiplication A^m <--- A^n:B    Bv<----|v"
   (setq eqns ($extract_linear_equations simp))
   (setq sols ($fast_Linsolve eqns ($list_variables eqns "ff")))
   (mshow eqns sols)
-  ($separate_parameters ($sublis sols $general_from) "par" "ff"))
+  ($separate_parameters ($psubst sols $general_from) "par" "ff"))
 
 (defun $find_basis (list-vectors &aux sum eqns sols rk)
   (setq sum ($scalar_sum '$aa list-vectors))
@@ -157,7 +157,7 @@ multiplication A^m <--- A^n:B    Bv<----|v"
   (setq eqns ($extract_linear_equations eqns))
   (setq sols ($fast_Linsolve eqns ($list_variables eqns "aa")))
   (setq rk (sp-number-of-pivots (pv-the-sparse-matrix $poly_vector)))
-  ($separate_parameters ($sublis sols sum) "par" "aa"))
+  ($separate_parameters ($psubst sols sum) "par" "aa"))
 
 (defun $scalar_sum (prefix monoms &aux scal )
 ;  (declare (values general-sum scalars))
@@ -213,7 +213,7 @@ multiplication A^m <--- A^n:B    Bv<----|v"
 	(setq eqns ($extract_linear_equations (list '(mlist) condition)))
 	(setq vari ($list_variables eqns "bbb" "ccc" ))
 	(setq solns ($fast_linsolve eqns vari))
-	(setq newh ($ratsimp($sublis solns h)))
+	(setq newh ($ratsimp($psubst solns h)))
 	(cond (($zerop newh)
 	       (return '((mlist)))))
 	(setq h (replace-parameters-by newh '$bbb))
@@ -271,7 +271,7 @@ multiplication A^m <--- A^n:B    Bv<----|v"
 	 (mshow eqn)
 	 (setq $eqns (setq eqns ($extract_linear_equations eqn)))
 	 (setq solns ($fast_linsolve eqns ($list_variables eqns "gg")))
-	 (setq result ($sublis solns #$[g1,g2]$))
+	 (setq result ($psubst solns #$[g1,g2]$))
 	 (cons '($matrix) (cdr ($separate_parameters result "par" "gg")))
 	 )))
 
@@ -793,7 +793,7 @@ multiplication A^m <--- A^n:B    Bv<----|v"
 	  finally (return ans)))
 
 (defun $solve_sp (try eqns &aux  simp syst solns ld)
- (setq eqns  ($sublis try eqns))
+ (setq eqns  ($psubst try eqns))
  (setq ld  (make-ldata :eqns (mapcar 'function-numerator(st-rat  eqns))))
  (des ld)
  (setq simp (simplify-ldata ld))
@@ -823,7 +823,7 @@ multiplication A^m <--- A^n:B    Bv<----|v"
 	  (cond ((null (y-or-n-p "Try again?"))
 		 (setq general (list '(mlist) lin fac2))
 		 (return (cons '(mlist) (loop for v in (cdr solns)
-					      appending (cdr ($separate_parameters ($sublis v general) "bb" "cc" "par")))))))))
+					      appending (cdr ($separate_parameters ($psubst v general) "bb" "cc" "par")))))))))
   (cond((y-or-n-p "Verify factors:?")
 	(loop for v in (cdr answ)
 	      for i from 1

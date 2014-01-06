@@ -450,7 +450,7 @@ e : 'integrate(cos(m*x)*cos(2*m*x),x);
 e : sublis([x=%pi],e) - sublis([x=0],e);
 %if(m#0,(sin(3*%pi*m)+3*sin(%pi*m))/(6*m),%pi)$
 
-[sublis([m=1],e), sublis([m=0],e)];
+[psubst ([m=1],e), psubst ([m=0],e)], simp=false;
 [0,%pi]$
 
 'integrate(abs(a*x+b),x);

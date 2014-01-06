@@ -669,7 +669,7 @@ to eliminate.
     (push '(mlist) r-vars)
     (push '(mlist) c-vars)
     (push '(mlist) g-vars)
-    ($sublis g-vars ($sublis c-vars ($sublis r-vars ($sublis n-vars ($sublis z-vars e)))))))
+    ($psubstitute g-vars ($psubstitute c-vars ($psubstitute r-vars ($psubstitute n-vars ($psubstitute z-vars e)))))))
 
 (defun $complex_number_p (e)
   (complex-number-p e #'$numberp))

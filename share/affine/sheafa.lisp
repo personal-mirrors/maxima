@@ -1595,7 +1595,7 @@
 	(setq tem ($gcd tem (third w)))
 	finally (setq divisor tem)
 	(format t "~%The exceptional divisor is ~A" tem))
-  (setq transform  ($sublis chart variety))
+  (setq transform  ($psubst chart variety))
   ($cancel_factors_and_denominators transform (list '(mlist)
 						divisor)
 				    homogeneous))
@@ -1621,7 +1621,7 @@
 	finally (return (cons '($matrix) temm)))))
 
 (defun $sublis_and_add (eqns expr &rest  elimin &aux answer)
- (setq answer ($sublis eqns expr))
+ (setq answer ($psubst eqns expr))
  (show elimin)
  (setq answer (append answer (mapcar 'bring-to-left-side (cdr  eqns ))))
  (setq answer ($factor (apply '$eliminate_nonzero_factors
@@ -1681,7 +1681,7 @@
 						   (zl-UNION lin-vars))))
 		       (format t "~%Eliminating linear variables ~A" lin-vars)
 		       ))
-	(cond (subs  (setq eqns ($sublis subs eqns))
+	(cond (subs  (setq eqns ($psubst subs eqns))
 		     (setq eqns (append (delete 0 ($ratsimp eqns))
 					(loop for v in subs collecting
 					      ($numerator

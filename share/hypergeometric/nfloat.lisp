@@ -125,7 +125,7 @@
 
     (cond ((and (integerp lo) (integerp hi))
 	   (maxima::while (<= lo hi)
-	     (setq q (maxima::$sublis `((maxima::mlist) ((maxima::mequal) ,v ,lo)) sumand))
+	     (setq q (maxima::$psubstitute `((maxima::mlist) ((maxima::mequal) ,v ,lo)) sumand))
 	     (setq q (maxima::simplify q))
 	     (setq x (running-error-eval q subs bits))
 	     (incf lo)
@@ -143,7 +143,7 @@
 
     (cond ((and (integerp lo) (integerp hi))
 	   (maxima::while (<= lo hi)
-	     (setq x (maxima::$sublis `((maxima::mlist) ((maxima::mequal) ,v ,lo)) prodand))
+	     (setq x (maxima::$psubstitute `((maxima::mlist) ((maxima::mequal) ,v ,lo)) prodand))
 	     (setq x (maxima::simplify x))
 	     (setq x (running-error-eval x subs bits))
 	     (incf lo)
@@ -222,7 +222,7 @@
 	   (running-error-eval (maxima::$bfloat e) '((mlist)) bits))
 	    
 	  ((atom e) 
-	   (setq e (maxima::$sublis subs e))
+	   (setq e (maxima::$psubstitute subs e))
 	   (if (maxima::complex-number-p e 'maxima::bigfloat-or-number-p)
 	       (running-error-eval e nil bits)
 	     (throw 'maxima::nfloat-nounform-return 'return-nounform)))

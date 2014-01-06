@@ -853,7 +853,7 @@ and modulo-p not prime gives false answer"
   (cond ((null term-names)(setq term-names (loop for i from 1 to (length (cdr a-list))
 				       collecting ($concat '$term i) into tem
 				       finally (return (cons '(mlist) tem))))))
-  ($sublis answers ($general_sum term-names
+  ($psubst answers ($general_sum term-names
 				 $aaaa)))
 
 
@@ -1116,7 +1116,7 @@ and modulo-p not prime gives false answer"
 		collecting `((mequal) ,(nth j coeff-names) ,($coeff  relat u)))
 	  into tem
 	  finally (return (cons '(mlist) tem))))
-    (setq answer ($sublis coeff-values $skew3_conditions))
+    (setq answer ($psubst coeff-values $skew3_conditions))
     (loop for v in (cdr answer)
 	  when (not ($zerop (sub*  (nth 1 v) (nth 2 v))))
 	  do (format t "~%Inconsistent condition ")
@@ -1164,7 +1164,7 @@ and modulo-p not prime gives false answer"
 	  (setq eqns ($extract_linear_equations tem1 monoms-higher))
 	  (show unknowns)
 	  (setq answer ($fast_linsolve eqns unknowns))
-	  (setq f (meval* ($sublis answer f)))
+	  (setq f (meval* ($psubst answer f)))
 	  (displa f)
 	  finally (return f))))
 
@@ -1211,7 +1211,7 @@ and modulo-p not prime gives false answer"
   	  (setq eqns ($extract_linear_equations tem1 ($list_nc_monomials tem1)))
 	  (show unknowns)
 	  (setq answer ($fast_linsolve eqns unknowns))
-	  (setq f ($ratsimp ($sublis answer f)))
+	  (setq f ($ratsimp ($psubst answer f)))
   	  (setq $centralizers (append `((mlist) ,v ,f) (cdr $centralizers)))
 	  (displa f)
 	  finally (return ($separate_parameters f)))))
@@ -1244,7 +1244,7 @@ and modulo-p not prime gives false answer"
   	  (setq eqns ($extract_linear_equations tem1 ($list_nc_monomials tem1)))
 	  (show unknowns)
 	  (setq answer ($fast_linsolve eqns unknowns))
-	  (setq f ($ratsimp ($sublis answer f)))
+	  (setq f ($ratsimp ($psubst answer f)))
   	  (setq $centralizers (append `((mlist) ,v ,f) (cdr $centralizers)))
 	  (displa f)
 	  finally (return ($separate_parameters f)))))
