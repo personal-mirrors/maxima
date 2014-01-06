@@ -613,6 +613,14 @@
   (let (derivflag)
     (simplifya (cons '(%derivative) e) t)))
 
+;; Redefine 'sublis' to punt to 'psubst'.
+(let ((sublis-complaint-first-time t))
+  (defmfun $sublis (substitutions form)
+    (when sublis-complaint-first-time
+      (mtell (intl:gettext "note: 'sublis' is going away; I'll call 'psubst' instead."))
+      (setq sublis-complaint-first-time nil))
+    ($psubstitute substitutions form)))
+
 
 ;; grad properties
 

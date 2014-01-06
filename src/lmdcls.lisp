@@ -85,7 +85,7 @@
 	  $setcheckbreak $setval $showtime $signbfloat $simp $simpsum
 	  $solvedecomposes $solveexplicit $solvefactors $solvenullwarn
 	  $solveradcan $solvetrigwarn $sparse
-	  $sqrtdispflag $stardisp $sublis_apply_lambda
+	  $sqrtdispflag $stardisp
 	  $subnumsimp $sumexpand $sumsplitfact
 	  $suspend $taylor_logexpand
 	  $taylor_truncate_polynomials $timer $timer_devalue
