@@ -132,14 +132,14 @@
                         (setq z (maxima-substitute (cdar l) (caar l) z))))))))))
 
 (defun $subst_lambda (&rest args)
-  (simplify-lambda-application (apply #'$substitute args)))
+  (resimplify (lambda-application (apply #'$substitute args))))
 
 (defun $psubst_lambda (&rest args)
-  (simplify-lambda-application (apply #'$psubstitute args)))
+  (resimplify (lambda-application (apply #'$psubstitute args))))
 
-(defun simplify-lambda-application (e)
+(defun lambda-application (e)
   (if (consp e)
-    (let ((args (mapcar #'simplify-lambda-application (cdr e))))
+    (let ((args (mapcar #'lambda-application (cdr e))))
       (if (and (eq (caar e) 'mqapply) (consp (car args)) (eq (caar (car args)) 'lambda))
         (mapply1 (car args) (cdr args) (car args) nil)
         (cons (car e) args)))
