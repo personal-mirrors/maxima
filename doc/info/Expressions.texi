@@ -1649,8 +1649,6 @@ the function itself.
 In distinction from @code{subst} the function @code{psubst} makes parallel 
 substitutions, if the first argument @var{list} is a list of equations.
 
-See also @mref{sublis} for making parallel substitutions.
-
 Example:
 
 The first example shows parallel substitution with @code{psubst}.  The second
@@ -1848,49 +1846,6 @@ Example:
 @closecatbox
 @end deffn
 
-@c NEEDS EXPANSION, CLARIFICATION, MORE EXAMPLES
-
-@c -----------------------------------------------------------------------------
-@anchor{sublis}
-@deffn {Function} sublis (@var{list}, @var{expr})
-
-Makes multiple parallel substitutions into an expression.  @var{list} is a list
-of equations.  The left hand side of the equations must be an atom.
-
-The variable @mref{sublis_apply_lambda} controls simplification after
-@code{sublis}.
-
-See also @mref{psubst} for making parallel substitutions.
-
-Example:
-
-@c ===beg===
-@c sublis ([a=b, b=a], sin(a) + cos(b));
-@c ===end===
-@example
-(%i1) sublis ([a=b, b=a], sin(a) + cos(b));
-(%o1)                    sin(b) + cos(a)
-@end example
-
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
-
-@c -----------------------------------------------------------------------------
-@anchor{sublis_apply_lambda}
-@defvr {Option variable} sublis_apply_lambda
-Default value: @code{true}
-
-Controls whether @code{lambda}'s substituted are applied in simplification after
-@code{sublis} is used or whether you have to do an @mref{ev} to get things to
-apply.  @code{true} means do the application.
-
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
-
 @c -----------------------------------------------------------------------------
 @anchor{subnumsimp}
 @defvr {Option variable} subnumsimp
@@ -1946,7 +1901,7 @@ The commands @code{subst (@var{eq_1}, @var{expr})} or
 forms.  The @var{eq_i} are equations indicating substitutions to be made.
 For each equation, the right side will be substituted for the left in the 
 expression @var{expr}.  The equations are substituted in serial from left to
-right in @var{expr}.  See the functions @code{sublis} and @code{psubst} for 
+right in @var{expr}.  See @code{psubst} for 
 making parallel substitutions.
 
 @mref{exptsubst} if @code{true} permits substitutions
@@ -1976,12 +1931,12 @@ a parallel substitution:
 
 @c ===beg===
 @c subst([a=b, b=c], a+b);
-@c sublis([a=b, b=c], a+b);
+@c psubst([a=b, b=c], a+b);
 @c ===end===
 @example
 (%i3) subst([a=b, b=c], a+b);
 (%o3)                                 2 c
-(%i4) sublis([a=b, b=c], a+b);
+(%i4) psubst([a=b, b=c], a+b);
 (%o4)                                c + b
 @end example
 
