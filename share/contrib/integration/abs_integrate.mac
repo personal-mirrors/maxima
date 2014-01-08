@@ -31,7 +31,7 @@ extra_integration_methods : ['intfudu, 'intfugudu, 'signum_int, 'abs_integrate_u
 
 extra_integrate(q,x) := block([l, i, ii : funmake(nounify('integrate),[q,x])],
   l : extra_integration_methods,
-  q : subst_lambda ('mod = lambda([x,y], x - y * floor(x / y)),q),
+  q : subst('mod = lambda([x,y], x - y * floor(x / y)),q),
   while l # [ ] do (
     i : first(l)(q,x),
     l : rest(l),
@@ -64,10 +64,10 @@ real_linear_factors(e,x) := (
 /* Convert abs, max, min, and unit_step to signum expressions */
 convert_to_signum(e) := block([opsubst : true],
   e : unit_step_mult_simp(e),
-  e : subst_lambda ('unit_step = lambda([s], (signum(s)*(signum(s)+1))/2), e),
-  e : subst_lambda ('max = lambda([[x]], xreduce(lambda([a,b], (a + b +abs(a-b))/2),x)),e),
-  e : subst_lambda ('min = lambda([[x]], xreduce(lambda([a,b], (a + b -abs(a-b))/2),x)),e),
-  subst_lambda ('abs = lambda([s], s * signum(s)), e));
+  e : subst('unit_step = lambda([s], (signum(s)*(signum(s)+1))/2), e),
+  e : subst('max = lambda([[x]], xreduce(lambda([a,b], (a + b +abs(a-b))/2),x)),e),
+  e : subst('min = lambda([[x]], xreduce(lambda([a,b], (a + b -abs(a-b))/2),x)),e),
+  subst('abs = lambda([s], s * signum(s)), e));
 
 /* Do signum(a) * signum(b) --> signum(a * b). Maybe it should, but when n is a positive integer,
    apply_signum_mult doesn't do signum(a)^n --> signum(a^n).
@@ -80,7 +80,7 @@ convert_to_signum(e) := block([opsubst : true],
    This function isn't used--maybe it will eventually be removed. */
    
 apply_signum_mult_id (e) :=
-  subst_lambda (["*" = lambda([[x]], block([p : [], q : []],
+  subst(["*" = lambda([[x]], block([p : [], q : []],
         for xk in x do (
           if safe_op(xk) = 'signum then p : cons(first(xk),p) else q : cons(xk,q)),
 	p : xreduce("*",p),

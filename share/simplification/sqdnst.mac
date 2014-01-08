@@ -1,7 +1,7 @@
 /* -*- Mode: MACSYMA -*- */
 
 sqrtdenest(a):=
-  subst_lambda ("^" = lambda([a,b],
+  subst("^" = lambda([a,b],
      block([discr,max,min],
        if evenp(denom(b)) and not atom(a) and inpart(a,0) = "+"
 			  and (max:max(first(a),rest(a)),

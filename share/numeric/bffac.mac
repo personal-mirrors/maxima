@@ -73,11 +73,11 @@ azetb(s,fpp):=block([fpprec:15],
  * -------------------------------------------------------------------------- */
 
 vonschtoonk(p):=apply("*",
-	    subst_lambda (["*" = lambda([[l]],1),"^" = lambda([[l]],1)],
+	    subst(["*" = lambda([[l]],1),"^" = lambda([[l]],1)],
 		  factor(1+divrlst(p))));
 
 divrlst(p):=(block([temp:0],
-	temp: expand(ratsimp(subst_lambda ("^" = lambda([a,b],
+	temp: expand(ratsimp(subst("^" = lambda([a,b],
 					       (1-part(a)^(b/2+1))
 						/(1-part(a))),factor(p^2)))),
     if atom(temp) then cons(temp,[]) else args(temp),

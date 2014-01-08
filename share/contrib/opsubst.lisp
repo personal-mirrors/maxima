@@ -99,10 +99,13 @@ subscripted:
       `((mqapply) ,op ,@args)
       `((,op) ,@args))))
 
-(defun $opsubst_lambda (&rest args)
-  (resimplify (lambda-application (apply #'$opsubst args))))
-
-(defun $opsubst (&rest q)
+(defun $opsubst (&rest args)
+  (let ((result (apply #'do-$opsubst args)))
+    (if $substitution_applies_lambda
+      (resimplify (lambda-application result))
+      result)))
+  
+(defun do-$opsubst (&rest q)
   (let ((e))
     (cond ((= 3 (length q)) (apply 'op-subst q))
 	  ((= 2 (length q))
@@ -138,10 +141,13 @@ subscripted:
 ;; first argument should be an equation of the form symbol = symbol | lambda form
 ;; or a list of such equations.
 
-(defun $opsubstif_lambda (&rest args)
-  (resimplify (lambda-application (apply #'$opsubstif args))))
+(defun $opsubstif (&rest args)
+  (let ((result (apply #'do-$opsubstif args)))
+    (if $substitution_applies_lambda
+      (resimplify (lambda-application result))
+      result)))
 
-(defun $opsubstif (id prd e)
+(defun do-$opsubstif (id prd e)
   (setq id (if ($listp id) (margs id) (list id)))
   (dolist (qi id)
     (if (op-equalp qi 'mequal) (setq e (op-subst-if (verbify-string ($rhs qi))

@@ -72,7 +72,15 @@
   "If TRUE allows DIFF(X~Y,T) to work where ~ is defined in
 	  SHARE;VECT where VECT_CROSS is set to TRUE.")
 
-(defmfun $substitute (old new &optional (expr nil three-arg?))
+(defmvar $substitution_applies_lambda t "When true, substitution functions apply lambdas after substituting into expressions.")
+
+(defmfun $substitute (&rest args)
+  (let ((result (apply #'do-$substitute args)))
+    (if $substitution_applies_lambda
+      (resimplify (lambda-application result))
+      result)))
+
+(defun do-$substitute (old new &optional (expr nil three-arg?))
   (cond (three-arg? (maxima-substitute old new expr))
 	(t
 	 (let ((l old) (z new))
@@ -91,7 +99,14 @@
 ;; $psubstitute is similar to $substitute. In distinction from $substitute
 ;; the function $psubstitute does parallel substitution, if the first argument
 ;; is a list of equations.
-(defun $psubstitute (old new &optional (expr nil three-arg?))
+
+(defmfun $psubstitute (&rest args)
+  (let ((result (apply #'do-$psubstitute args)))
+    (if $substitution_applies_lambda
+      (resimplify (lambda-application result))
+      result)))
+
+(defun do-$psubstitute (old new &optional (expr nil three-arg?))
   (cond (three-arg? (maxima-substitute old new expr))
         (t
          (let ((l old) (z new))
@@ -130,12 +145,6 @@
                            ;; Resimplify the result.
                            (let (($simp t)) (resimplify z)))
                         (setq z (maxima-substitute (cdar l) (caar l) z))))))))))
-
-(defun $subst_lambda (&rest args)
-  (resimplify (lambda-application (apply #'$substitute args))))
-
-(defun $psubst_lambda (&rest args)
-  (resimplify (lambda-application (apply #'$psubstitute args))))
 
 (defun lambda-application (e)
   (if (consp e)

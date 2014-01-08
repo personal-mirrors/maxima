@@ -77,7 +77,7 @@ linopsum0(exp,opdum):=block(
   then (substflag:true,
 	exp:noopsubst(newdum:findasymbol(lvarsdum),opdum,exp)),
   setlist(getdum,'linposns,'linpreddum),
-    ansdum:linopprod1(subst_lambda (lambda([[sulist]],
+    ansdum:linopprod1(subst(lambda([[sulist]],
 			      if freeof(opdum,sulist)
 			      then apply("+",sulist)
 			      else linopsum1(sulist,opdum)),"+",exp),
@@ -156,7 +156,7 @@ linopprod0(exp,opdum):=block(
   else linopprod1(exp,opdum,linposns,linpreddum))$
 
 linopprod1(exp,opdum,linposns,linpreddum):=
-  subst_lambda (lambda([[arglist]],factorargs(arglist,opdum,linposns,linpreddum)),
+  subst(lambda([[arglist]],factorargs(arglist,opdum,linposns,linpreddum)),
 	       	opdum,exp)$
 
 findasymbol(lvarsdum):=block(
@@ -203,7 +203,7 @@ declare_symmetry(opdum,symfcn,symsortfcn,symtype):=block(
 applysymmetry(exp,opdum,symtype):=block(
   [getdum:get(opdum,symtype),piece,inflag:true,partswitch:true],
   if getdum=false then return(exp),
-  subst_lambda (lambda([[arglist]],
+  subst(lambda([[arglist]],
 	       apply('aplsym1,append(getdum,[arglist,opdum]))),
 	opdum,exp))$
 
@@ -225,7 +225,7 @@ declare_zero(opdum,preddum,zerotype):=block(
 applyzero(exp,opdum,zerotype):=block(
   [getdum:get(opdum,zerotype),piece,inflag:true,partswitch:true],
   if getdum=false then return(exp),
-  subst_lambda (lambda([[arglist]],if mode_identity(boolean,apply(getdum,[arglist]))
+  subst(lambda([[arglist]],if mode_identity(boolean,apply(getdum,[arglist]))
 			   then 0
 			   else apply(opdum,arglist)),
 	opdum,exp))$

@@ -185,13 +185,13 @@ conjugate_solver(esave,v,vc,funs,maxdepth) := block([e, ee, sub, nv, rv, sol, cn
 
 /* Convert log(constant) --> rectform(log(constant)). */
 rectform_log_if_constant(e) :=
-  subst_lambda (lambda([s], if constantp(s) then rectform(log(s)) else log(s)), 'log, e);
+  subst(lambda([s], if constantp(s) then rectform(log(s)) else log(s)), 'log, e);
 
 /* Convert realpart and imagpart to conjugates. The calls to nounify are required by
 noun / verb bugs, I think. */
   
 real_imagpart_to_conjugate(e) :=
-   subst_lambda ([nounify('realpart) = lambda([s], (s + conjugate(s))/2),
+   subst([nounify('realpart) = lambda([s], (s + conjugate(s))/2),
      nounify('imagpart) = lambda([s], (s - conjugate(s))/(2 * %i))], e);
 
 merge_solutions(sol1, sol2) := block([cnd1, cnd2, a1, a2, b1, b2],
@@ -226,7 +226,7 @@ non_symbol_subst (e, v) := block([vars, listconstvars : false],
       a - b - 2 * %pi * %i * new_variable('integer)));
   
 one_to_one_crunch(e) := block([inflag : true, f, nv : set(), %exp, q, opl, opr],
-  e : subst_lambda ("^" = lambda([a,b], if a = %e then funmake('%exp, [b]) else a^b),e),
+  e : subst("^" = lambda([a,b], if a = %e then funmake('%exp, [b]) else a^b),e),
   e : if opequal_p(e,"+") then first(e) = -rest(e) else e,
   if opequal_p(e, "=") then (
     e : block([inflag : false], if not mapatom(lhs(e)) and op(lhs(e)) = "-" then -e else e),
@@ -240,7 +240,7 @@ one_to_one_crunch(e) := block([inflag : true, f, nv : set(), %exp, q, opl, opr],
       nv : union(second(q), setdifference(setify(listofvars(e)), nv)))
     else (
       e : lhs(e) - rhs(e))),
-  e : subst_lambda (%exp = lambda([a], %e^a),e),
+  e : subst(%exp = lambda([a], %e^a),e),
   [e, nv]);
 
 
@@ -319,7 +319,7 @@ catch_easy_cases (e, vars) := block([inflag : true, ops, finv, fzero, p, q, a, b
     [e, cnds, nv]));
 
 standardize_inverse_trig(e) :=
- e : subst_lambda (['acot = lambda([s], atan(1/s)),
+ e : subst(['acot = lambda([s], atan(1/s)),
             'acsc = lambda([s], asin(1/s)),
             'asec = lambda([s], acos(1/s)),
             'acoth = lambda([s], atanh(1/s)),
@@ -505,7 +505,7 @@ to_poly_solve_h(e,v, simpfuncs, maxdepth, grob,use_algexact) := block([eqs : set
       ek : first(ek),
       ek : lhs(ek) - rhs(ek),
       ek :  trigexpand(logcontract(rationalize(ek))), 
-      ek :  subst_lambda (lambda([a,b], if numberp(a) and not(numberp(b)) then exp(log(a)*b) else a^b), "^", ek),
+      ek :  subst(lambda([a,b], if numberp(a) and not(numberp(b)) then exp(log(a)*b) else a^b), "^", ek),
       [ek, lambert_subs] : lambertify(ek, v), 
       nonalg : union(nonalg, lambert_subs),
       ek : errcatch(to_poly(ek,v)),

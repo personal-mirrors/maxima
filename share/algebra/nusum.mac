@@ -5,7 +5,7 @@ dva(%n); dva(%pw); dva(%f); dva(%f1); dva(l%); dva(solvep);
 dva(%r); dva(p); dva(%cf);
 
 algebraicp(%1):=catch(
-	   subst_lambda ("^" = lambda([%1,%2],if not integerp(%2) then throw(true)),%1),
+	   subst("^" = lambda([%1,%2],if not integerp(%2) then throw(true)),%1),
 	   false);
 hicoef(x,n):=(x:ratsimp(x,n),coeff(x,n,hipow(x,n)));
 genpol(n):=if n < 0 then 0 else concat('%,n)+%n*genpol(n-1);
@@ -16,11 +16,11 @@ unsum(%g,%n):=if atom(%g) or part(%g,0) # "+"
 		    -denom(%g)/subst(%n-1,%n,prodgunch(denom(%g),%n,1)))
 		    *(subst(%n-1,%n,num(%g))/denom(%g)))
        else map(lambda([x],unsum(x,%n)),%g);
-prodflip(%0):=subst_lambda (
+prodflip(%0):=subst(
 	 [nounify('product) = 'product,
 	  'product = lambda([%0,%1,%,%%],1/produ(1/%0,%1,%,%%))],%0);
 prodgunch(%0,%n,%2):=
-  subst_lambda ([nounify('sin) = 
+  subst([nounify('sin) = 
     lambda([%0],
 	   sin(subst(%n+%2,%n,%0))
 	  *lambda([trigexpand],
@@ -63,7 +63,7 @@ funcsolve(%a,%f):=block([mapprint:false,programmode:true,solvenullwarn:false],
 dimsum(%cl):=block([ratfac:false,%cd,%pt,%pw],
        %cd:map(lambda([x],hipow(ratsimp(x)+1/%n,%n)),
 	       [%cl[1]+%cl[2],%cl[1]-%cl[2],%cl[3]]),%cd[1]:max(%cd[1],%cd[2]-1),
-       inpart(subst(solvep:solve(clist(subst_lambda (
+       inpart(subst(solvep:solve(clist(subst(
 					%pt
 					 :funmake('lambda,
 						  [[%n],
@@ -88,9 +88,9 @@ dimsum(%cl):=block([ratfac:false,%cd,%pt,%pw],
 ratsolve(p,x):=apply('append,
 	 maplist(lambda([p],
 			if hipow(p,x) = 1 or subst(0,x,p) = 0
-			    then solve(subst_lambda (lambda([x,y],x),"^",p),x) else []),
+			    then solve(subst(lambda([x,y],x),"^",p),x) else []),
 		 2*factor(p)^2));
-prodshift(%0,%2):=subst_lambda (
+prodshift(%0,%2):=subst(
 	  [nounify('product) = 'product,
 	   'product = lambda([%0,%1,%,%3],produ(subst(%1-%2,%1,%0),%1,%+%2,%3+%2))],
 	  %0);
@@ -135,7 +135,7 @@ nusuml(%a,%n,%l,%h,l%):=
 	   and [] # solvep
 	     then cons((%f:prodgunch(num(%a),%n,1)/denom(%a),
 			%f1:ratsimp(radcan(%cf)),apply('ratvars,rv),
-			%f1:subst_lambda (lambda([%0,%1,%,%3],produ(%0,%1,%,%3)),
+			%f1:subst(lambda([%0,%1,%,%3],produ(%0,%1,%,%3)),
 				  nounify('product),
 				  factor(
 					subst(%h,%n,
