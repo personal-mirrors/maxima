@@ -45,4 +45,26 @@ block ([substitution_applies_lambda : false],
   subst (f = lambda ([x], 2*x), f (u)));
 lambda ([x], 2*x) (u);
 
+/* examples derived from mailing list 2013-06-08 */
+
+(x:a,a:b,b:c,c:d,d:e, 0);
+0;
+
+substitution_applies_lambda : false;
+false;
+
+substitute('cos = lambda([w],1-w^2/2), cos(x));
+lambda ([w], 1 - w^2/2) (a);
+
+f : substitute([li[2] = lambda([w],w+w^2/4)], li[2](x));
+lambda ([w], w + w^2/4) (a);
+
+substitution_applies_lambda : true;
+true;
+
+substitute('cos = lambda([w],1-w^2/2), cos(x));
+1 - a^2/2;
+
+f : substitute([li[2] = lambda([w],w+w^2/4)], li[2](x));
+a + a^2/4;
 
