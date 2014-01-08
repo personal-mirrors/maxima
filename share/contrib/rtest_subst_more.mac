@@ -1,0 +1,7 @@
+(kill (all), load ('opsubst), load (to_poly_solve), 0);
+0;
+
+ev (subst (x = 0, %if (x > 0, log (x), FOO)), simp=false);
+FOO;
+
+
