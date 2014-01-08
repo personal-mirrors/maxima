@@ -94,7 +94,10 @@ subscripted:
 ;; (Also the take macro special-cases a few operators for the simplification function. Yeech.)
 
 (defun my-take (op args)
-  (simplify (if (and (consp op) (member 'array (car op))) `((mqapply) ,op ,@args) `((,op) ,@args))))
+  (simplify
+    (if (and (consp op) (or (member 'array (car op)) (eq (caar op) 'lambda)))
+      `((mqapply) ,op ,@args)
+      `((,op) ,@args))))
 
 (defun $opsubst (&rest q)
   (let ((e))
