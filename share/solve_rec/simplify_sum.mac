@@ -867,7 +867,7 @@ split_integer_part(expr) :=
   else [expr, 0]$
 
 harmonic_to_psi(expr) :=
-  psubst_lambda ([
+  opsubst_lambda ([
     harmonic_number=lambda([x__], psi[0](x__+1)+%gamma),
     gen_harmonic_number=lambda([exp__, x__],
       (-1)^(exp__+1)/(exp__-1)!*(psi[exp__-1](x__+1)-psi[exp__-1](1)))],
@@ -908,7 +908,7 @@ sum_by_integral(expr, var, lo, hi) :=
     apply(supcontext, [concat('sum_by_integral, simplify_sum_depth)]),
     assume(x_>0, x_<1, var>=lo, var<=hi),
 
-    expr1 : subst_lambda (harmonic_number=lambda([u], (1-x_^u)/(1-x_)), expr),
+    expr1 : opsubst_lambda (harmonic_number=lambda([u], (1-x_^u)/(1-x_)), expr),
     if errcatch(
       expr1 : simplify_sum(split_sum(expand(apply('sum, [expr1, var, lo, hi]))))
       ) = [] then expr1 : false,

@@ -99,6 +99,9 @@ subscripted:
       `((mqapply) ,op ,@args)
       `((,op) ,@args))))
 
+(defun $opsubst_lambda (&rest args)
+  (resimplify (lambda-application (apply #'$opsubst args))))
+
 (defun $opsubst (&rest q)
   (let ((e))
     (cond ((= 3 (length q)) (apply 'op-subst q))
@@ -134,6 +137,9 @@ subscripted:
 ;; If prd(e) evaluates to true, do the substitution opsubst(id, e). The
 ;; first argument should be an equation of the form symbol = symbol | lambda form
 ;; or a list of such equations.
+
+(defun $opsubstif_lambda (&rest args)
+  (resimplify (lambda-application (apply #'$opsubstif args))))
 
 (defun $opsubstif (id prd e)
   (setq id (if ($listp id) (margs id) (list id)))
