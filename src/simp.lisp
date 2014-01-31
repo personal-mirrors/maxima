@@ -124,7 +124,7 @@
 (defmvar $%e_to_numlog nil)
 (defmvar $%emode t)
 (defmvar $lognegint nil)
-(defmvar $ratsimpexpons nil)
+(defmvar $ratsimpexpons t)
 (defmvar $logexpand t) ; Possible values are T, $ALL and $SUPER
 (defmvar $radexpand t)
 (defmvar $subnumsimp nil)
