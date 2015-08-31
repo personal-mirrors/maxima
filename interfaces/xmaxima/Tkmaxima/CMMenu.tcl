@@ -38,9 +38,10 @@ proc CMmenu { win } {
     $m add command -underline 0 -label {Maxima Homepage} \
 	-command [list $browse http://maxima.sourceforge.net]
     $m add command -underline 0 -label {Project Page} \
-	-command [list $browse http://sourceforge.net/projects/maxima/]
+	-command [list $browse http://sourceforge.net/projects/maxima]
     $m add command -underline 0 -label {Bug Reports} \
-	-command [list $browse http://sourceforge.net/p/maxima/bugs/]
+	-command [list $browse \
+		      {http://sourceforge.net/tracker/?group_id=4933&atid=104933}]
 
     $m add sep
     set dir $maxima_priv(pTestsDir)
