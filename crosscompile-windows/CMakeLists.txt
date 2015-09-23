@@ -25,7 +25,7 @@ option(USE_WXMAXIMA_GIT "Use wxMaxima development snapshot." OFF)
 
 # current program versions
 set(CLISPVERSION     2.49)
-set(WXMAXIMAVERSION  15.04.0)
+set(WXMAXIMAVERSION  15.08.2)
 set(WXWIDGETSVERSION 3.0.2)
 set(GNUPLOTVERSION   5.0.1)
 set(TCLVERSION       8.6.4)
@@ -34,7 +34,7 @@ set(TKVERSION        8.6.4)
 
 # MD5 checksums for the current program versions.
 set(CLISP_MD5     "8d58d64f83dd7ad01c054aecc16c1f52")
-set(WXMAXIMA_MD5  "eb425513c269918fbcc253a7dc9ad283")
+set(WXMAXIMA_MD5  "57f8ad6376bfc8ca92c69e613dcf0d99")
 set(WXWIDGETS_MD5 "ba4cd1f3853d0cd49134c5ae028ad080")
 set(GNUPLOT_MD5   "4da2089339d9dd2b834f68b39cc876e6")
 set(TCL_MD5       "d7cbb91f1ded1919370a30edd1534304")
@@ -159,6 +159,12 @@ externalproject_add(texfonts
   INSTALL_COMMAND ""
 )
 
+find_program(WINE_EXE NAMES wine)
+if(WINE_EXE)
+    message(STATUS "Found wine at ${WINE_EXE}")
+else()
+    message(FATAL_ERROR "Wine not found. It is required for crosscompiling Maxima.")
+endif()
 
 set(CLISPROOT "${CMAKE_BINARY_DIR}/clisp-prefix/src/clisp")
 configure_file("${CMAKE_SOURCE_DIR}/wine-clisp.sh.tmpl" "${CMAKE_BINARY_DIR}/wine-clisp.sh")
@@ -168,7 +174,7 @@ configure_file("${CMAKE_SOURCE_DIR}/wine-lisp.sh.tmpl" "${CMAKE_BINARY_DIR}/wine
 # Build Maxima
 externalproject_add(maxima
   # first copy the Maxima source to a build directory, since out-of-source-builds do not work
-  DOWNLOAD_COMMAND rsync -av --exclude=crosscompile-windows/ "${CMAKE_SOURCE_DIR}/../"  "${CMAKE_SOURCE_DIR}/build/maxima-prefix/src/maxima"
+  DOWNLOAD_COMMAND rsync -av --exclude=crosscompile-windows/build/ "${CMAKE_SOURCE_DIR}/../"  "${CMAKE_SOURCE_DIR}/build/maxima-prefix/src/maxima"
   DEPENDS clisp
   BUILD_IN_SOURCE 1
   CONFIGURE_COMMAND sh -c "test -x configure || ./bootstrap"
