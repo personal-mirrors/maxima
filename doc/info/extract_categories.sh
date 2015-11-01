@@ -17,21 +17,24 @@ for f in *.texi; do
   if [ $f = "maxima.texi" ]
     then echo SKIP OVER $f
     else
-      sed 's/^@deffn  *{[^}]*}  *\([^[:blank:]]*\).*/@anchor{Item: \1}\
-&/; s/^@defvr  *{[^}]*}  *\([^[:blank:]]*\).*/@anchor{Item: \1}\
-&/; s/^@node  *\([^,]*\).*/@anchor{Item: \1}\
+      sed 's/^@deffn  *{\([^}]*\)}  *\([^[:blank:]]*\).*/@anchor{Item: '$f'_fn_\2_\1}\
+&/; s/^@defvr  *{\([^}]*\)}  *\([^[:blank:]]*\).*/@anchor{Item: '$f'_vr_\2_\1}\
+&/; s/^@node  *\([^,]*\).*/@anchor{Item: '$f'_nd_\1}\
 &/' "$f" > tmp.texi
       mv tmp.texi "$f"
     fi
 done
 
-cat *.texi\
+rm -f tmp-make-categories.py
+for i in *.texi; do
+  cat $i \
   | awk '!/^@c / && !/^@c$/ && (/^@deffn/ || /^@defvr/ || /^@end deffn/ || /^@end defvr/ || /@category/ || /@node/)'\
   | sed 's/\$/---endofline---/'\
   | sed -f "$d/extract_categories1.sed" \
-  | awk -F'$' -f "$d/extract_categories1.awk" \
+  | sed -e 's,"fn_,"'$i'_fn_,g' -e 's,"vr_,"'$i'_vr_,g' -e 's,"nd_,"'$i'_nd_,g';
+done | awk -F'$' -f "$d/extract_categories1.awk" \
   | sed 's/---endofline---/$/'\
-  > tmp-make-categories.py
+  >> tmp-make-categories.py
 
 ${PYTHONBIN:-python} tmp-make-categories.py
 
@@ -42,8 +45,13 @@ for f in Category-*.texi; do echo '@include' $f; done >> tmp-target.texi
 echo '@bye' >> tmp-target.texi
 mv tmp-target.texi $TARGET_TEXI
 
-perl "$d/texi2html" -split_chapter --lang=en --output=. \
- --css-include="$d/manual.css" --init-file "$d/texi2html.init" $TARGET_TEXI
+cat include-maxima.texi \
+    | awk '/^@comment @detailmenu/ {printf("Documentation Categories\n* Documentation Categories::\tDocumentation categories.\n\n");} {print}' \
+    >tmp && mv tmp include-maxima.texi
+
+# perl "/usr/bin/texi2html" -split_chapter --lang=en --output=. \
+#  --css-include="$d/manual.css" --init-file "$d/texi2html.init" $TARGET_TEXI
+makeinfo --no-warn --html --output=. --css-include="$d/manual.css" --split=chapter --init-file="$d/texi2html.init" $TARGET_TEXI 
 
 # Now clean up the texi2html output. I'm going to burn in Hell for this (and much else).
 
