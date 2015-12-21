@@ -1289,17 +1289,33 @@
 	  (and (eq (car b) '%sin)
 	       (eq (car d) '%sin)))
         ;; We have a*sin(m*x)*sin(n*x).
-        ;; The integral is: a*(sin((m-n)*x)/(2*(m-n))-sin((m+n)*x)/(2*(m+n))
-        (return (subliss y
-                         '((mtimes) a
-                           ((mplus)
-                            ((mquotient)
-                             ((%sin) ((mtimes) ((mplus) m ((mtimes) -1 n)) x))
-                             ((mtimes) 2 ((mplus) m ((mtimes) -1 n))))
-                            ((mtimes) -1
-                             ((mquotient)
-                              ((%sin) ((mtimes) ((mplus) m n) x))
-                              ((mtimes) 2 ((mplus) m n)))))))))
+        ;; The integral is: if m = 0 or m = 0 then 0
+        ;;                  elseif m = n or m = -n then signum(m*n)*a*(x-sin(2*n*x)/(2*n))/2
+        ;;                  else a*(sin((m-n)*x)/(2*(m-n))-sin((m+n)*x)/(2*(m+n))
+        (let*
+          ((m (cdr (assoc 'm y)))
+           (n (cdr (assoc 'n y)))
+           (m=0-or-n=0 (mfuncall 'mor (meqp m 0) (meqp n 0)))
+           (m=n-or-m=-n (mfuncall 'mor (meqp m n) (meqp m (m- n))))
+           (eqn-1 '((mtimes)
+                    ((%signum) ((mtimes) m n))
+                    a
+                    ((mminus)
+                     x
+                     ((mquotient)
+                      ((%sin) ((mtimes) 2 n x))
+                      ((mtimes) 2 n)))
+                    ((rat) 1 2)))
+           (eqn-2 '((mtimes) a
+                    ((mplus)
+                     ((mquotient)
+                      ((%sin) ((mtimes) ((mplus) m ((mtimes) -1 n)) x))
+                      ((mtimes) 2 ((mplus) m ((mtimes) -1 n))))
+                     ((mtimes) -1
+                      ((mquotient)
+                       ((%sin) ((mtimes) ((mplus) m n) x))
+                       ((mtimes) 2 ((mplus) m n))))))))
+          (return (subliss y (construct-mcond-3 m=0-or-n=0 0 m=n-or-m=-n eqn-1 eqn-2)))))
        ((and (eq (car b) '%cos) (eq (car d) '%cos))
         ;; We have a*cos(m*x)*cos(n*x).
         ;; The integral is: a*(sin((m-n)*x)/(2*(m-n))+sin((m+n)*x)/(2*(m+n))
@@ -1373,6 +1389,30 @@
      (return (if (isinop a '%integrate)
                  (list '(%integrate) exp var)
                  a))))
+
+;; cond-1   cond-2 -> t           nil            other
+;; t                  ?            x1              ?
+;; nil                x2           x3           (c2, x2, t, x3)
+;; other              ?     (c1, x1, t, x3) (c1, x1, c2, x2, t, x3)
+;;
+;; Not sure what to think about the cases (c1, c2) = (T, T), (T, other),
+;; and (other, T). If both cases could be true at the same time, it's
+;; at least plausible that we could try to verify they are identical,
+;; and complain if they aren't. Well, let's be lazy and assume they are
+;; identical without verifying, so we can just return x1 or x2,
+;; as appropriate.
+
+(defun construct-mcond-3 (c1 x1 c2 x2 x3)
+  (cond
+    ((and (eq c1 t) (eq c2 t)) x1)
+    ((and (eq c1 t) (eq c2 nil)) x1)
+    ((eq c1 t) x1)
+    ((and (eq c1 nil) (eq c2 t)) x2)
+    ((and (eq c1 nil) (eq c2 nil)) x3)
+    ((eq c1 nil) (list '(mcond) c2 x2 t x3))
+    ((eq c2 t) x2)
+    ((eq c2 nil) (list '(mcond) c1 x1 t x3))
+    (t (list '(mcond) c1 x1 c2 x2 t x3))))
 
 (defun trig2 (x)
   (member (car x) '(%sin %cos %tan %cot %sec %csc) :test #'eq))
