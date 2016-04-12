@@ -212,6 +212,7 @@
 	 (*package* (find-package :maxima))
 	 ($load_pathname path)
 	 (*read-base* 10.)
+	 (*errset-verbose* t)
 	 (tem (errset #-sbcl (load (pathname file)) #+sbcl (with-compilation-unit nil (load (pathname file))))))
     (or tem (merror (intl:gettext "loadfile: failed to load ~A") (namestring path)))
     (namestring path)))

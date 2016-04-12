@@ -1,5 +1,10 @@
 (in-package :maxima)
 
+(defvar *errset-verbose* nil
+  "If non-NIL, print the error object from ERRSET to indicate better
+  the error.  This is primarily for debugging when ERRSET is used in
+  cases not directly related to maxima symbolic computations.")
+
 (defvar errset nil)
 
 ;;here is the  desired behavior of errset
@@ -10,7 +15,10 @@
 #-ecldebug
 (defmacro errset (&rest l)
   `(handler-case (list ,(car l))
-    (error (e) (when errset (error e)))))
+    (error (e)
+      (when *errset-verbose*
+	(format *error-output* "~A~%" e))
+      (when errset (error e)))))
 
 #+ecldebug
 (defmacro errset (&rest l)
