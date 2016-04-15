@@ -144,6 +144,7 @@
 				     (:file "intl")))
 	       (:module info :source-pathname ""
 			:components ((:file "nregex")
+                     (:file "deflate")
 				     (:file "cl-info")))
 	       (:module sloop :source-pathname ""
 			:components ((:file "sloop")))

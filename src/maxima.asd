@@ -60,6 +60,7 @@
               (:file "intl")))
 	       (:module info :pathname ""
 			:components ((:file "nregex")
+                     (:file "deflate")
 				     (:file "cl-info")))
 	       (:module sloop :pathname ""
 			:components ((:file "sloop")))
