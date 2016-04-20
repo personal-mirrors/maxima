@@ -27,9 +27,33 @@
 ;;; NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 ;;; SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+(defpackage :flexi-streams
+  (:use :cl)
+  (:export
+           :get-output-stream-sequence
+           :in-memory-stream
+           :in-memory-stream-closed-error
+           :in-memory-stream-error
+           :in-memory-stream-position-spec-error
+           :in-memory-stream-position-spec-error-position-spec
+           :in-memory-input-stream
+           :in-memory-output-stream
+           :list-stream
+           :make-in-memory-input-stream
+           :make-in-memory-output-stream
+           :octet
+           :output-stream-sequence-length
+           :vector-stream
+           :with-input-from-sequence
+           :with-output-to-sequence))
+
 (in-package :flexi-streams)
 
-(defclass in-memory-stream (trivial-gray-stream-mixin)
+(deftype octet ()
+  "A shortcut for \(UNSIGNED-BYTE 8)."
+  '(unsigned-byte 8))
+
+(defclass in-memory-stream nil
   ((transformer :initarg :transformer
                 :accessor in-memory-stream-transformer
                 :documentation "A function used to transform the
@@ -43,7 +67,7 @@ manually."))
   (:documentation "An IN-MEMORY-STREAM is a binary stream that reads
 octets from or writes octets to a sequence in RAM."))
 
-(defclass in-memory-input-stream (in-memory-stream fundamental-binary-input-stream)
+(defclass in-memory-input-stream (in-memory-stream)
   ()
   (:documentation "An IN-MEMORY-INPUT-STREAM is a binary stream that
 reads octets from a sequence in RAM."))
@@ -54,7 +78,7 @@ reads octets from a sequence in RAM."))
   (declare (optimize speed))
   nil)
 
-(defclass in-memory-output-stream (in-memory-stream fundamental-binary-output-stream)
+(defclass in-memory-output-stream (in-memory-stream)
   ()
   (:documentation "An IN-MEMORY-OUTPUT-STREAM is a binary stream that
 writes octets to a sequence in RAM."))
@@ -107,13 +131,13 @@ associated vector."))
 #+:cmu
 (defmethod open-stream-p ((stream in-memory-stream))
   "Returns a true value if STREAM is open.  See ANSI standard."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (in-memory-stream-open-p stream))
 
 #+:cmu
 (defmethod close ((stream in-memory-stream) &key abort)
   "Closes the stream STREAM.  See ANSI standard."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (declare (ignore abort))
   (prog1
       (in-memory-stream-open-p stream)
@@ -121,25 +145,25 @@ associated vector."))
 
 (defmethod check-if-open ((stream in-memory-stream))
   "Checks if STREAM is open and signals an error otherwise."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (unless (open-stream-p stream)
     (error 'in-memory-stream-closed-error
            :stream stream)))
 
 (defmethod stream-element-type ((stream in-memory-stream))
   "The element type is always OCTET by definition."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   'octet)
 
 (defmethod transform-octet ((stream in-memory-stream) octet)
   "Applies the transformer of STREAM to octet and returns the result."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (funcall (or (in-memory-stream-transformer stream)
                #'identity) octet))
 
 (defmethod stream-read-byte ((stream list-input-stream))
   "Reads one byte by simply popping it off of the top of the list."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (check-if-open stream)
   (with-accessors ((list list-stream-list))
       stream
@@ -147,7 +171,7 @@ associated vector."))
 
 (defmethod stream-listen ((stream list-input-stream))
   "Checks whether list is not empty."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (check-if-open stream)
   (with-accessors ((list list-stream-list))
       stream
@@ -155,7 +179,7 @@ associated vector."))
 
 (defmethod stream-read-sequence ((stream list-input-stream) sequence start end &key)
   "Repeatedly pops elements from the list until it's empty."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (declare (fixnum start end))
   (with-accessors ((list list-stream-list))
       stream
@@ -167,7 +191,7 @@ associated vector."))
 (defmethod stream-read-byte ((stream vector-input-stream))
   "Reads one byte and increments INDEX pointer unless we're beyond
 END pointer."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (check-if-open stream)
   (with-accessors ((index vector-stream-index)
                    (end vector-stream-end)
@@ -182,7 +206,7 @@ END pointer."
 
 (defmethod stream-listen ((stream vector-input-stream))
   "Checking whether INDEX is beyond END."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (check-if-open stream)
   (with-accessors ((index vector-stream-index)
                    (end vector-stream-end))
@@ -192,7 +216,7 @@ END pointer."
 (defmethod stream-read-sequence ((stream vector-input-stream) sequence start end &key)
   "Traverses both sequences in parallel until the end of one of them
 is reached."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (declare (fixnum start end))
   (loop with vector-end of-type fixnum = (vector-stream-end stream)
         with vector = (vector-stream-vector stream)
@@ -206,7 +230,7 @@ is reached."
 
 (defmethod stream-write-byte ((stream vector-output-stream) byte)
   "Writes a byte \(octet) by extending the underlying vector."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (check-if-open stream)
   (with-accessors ((vector vector-stream-vector))
       stream
@@ -214,7 +238,7 @@ is reached."
 
 (defmethod stream-write-sequence ((stream vector-output-stream) sequence start end &key)
   "Just calls VECTOR-PUSH-EXTEND repeatedly."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (declare (fixnum start end))
   (with-accessors ((vector vector-stream-vector))
       stream
@@ -224,14 +248,14 @@ is reached."
 
 (defmethod stream-file-position ((stream vector-input-stream))
   "Simply returns the index into the underlying vector."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (with-accessors ((index vector-stream-index))
       stream
     index))
 
 (defmethod (setf stream-file-position) (position-spec (stream vector-input-stream))
   "Sets the index into the underlying vector if POSITION-SPEC is acceptable."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (with-accessors ((index vector-stream-index)
                    (end vector-stream-end))
       stream
@@ -257,7 +281,7 @@ is reached."
 
 (defmethod stream-file-position ((stream vector-output-stream))
   "Simply returns the fill pointer of the underlying vector."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (with-accessors ((vector vector-stream-vector))
       stream
     (fill-pointer vector)))
@@ -265,7 +289,7 @@ is reached."
 (defmethod (setf stream-file-position) (position-spec (stream vector-output-stream))
   "Sets the fill pointer underlying vector if POSITION-SPEC is
 acceptable.  Adjusts the vector if necessary."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (with-accessors ((vector vector-stream-vector))
       stream
     (let* ((total-size (array-total-size vector))
@@ -302,7 +326,7 @@ acceptable.  Adjusts the vector if necessary."
 octets in the subsequence of VECTOR bounded by START and END.
 Each octet returned will be transformed in turn by the optional
 TRANSFORMER function."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (make-instance 'vector-input-stream
                  :vector vector
                  :index start
@@ -316,7 +340,7 @@ TRANSFORMER function."
 octets in the subsequence of LIST bounded by START and END.  Each
 octet returned will be transformed in turn by the optional
 TRANSFORMER function."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (make-instance 'list-input-stream
                  :list (subseq list start end)
                  :transformer transformer))
@@ -324,7 +348,7 @@ TRANSFORMER function."
 (defun make-output-vector (&key (element-type 'octet))
   "Creates and returns an array which can be used as the underlying
 vector for a VECTOR-OUTPUT-STREAM."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (make-array 0 :adjustable t
                 :fill-pointer 0
                 :element-type element-type))
@@ -335,7 +359,7 @@ ELEMENT-TYPE \(a subtype of OCTET) and makes available a sequence
 that contains the octes that were actually output.  The octets
 stored will each be transformed by the optional TRANSFORMER
 function."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (make-instance 'vector-output-stream
                  :vector (make-output-vector :element-type element-type)
                  :transformer transformer))
@@ -347,7 +371,7 @@ octets on STREAM, so the vector contains only those octets which have
 been output since the last call to GET-OUTPUT-STREAM-SEQUENCE or since
 the creation of the stream, whichever occurred most recently.  If
 AS-LIST is true the return value is coerced to a list."
-  (declare #.*standard-optimize-settings*)
+  ;; (declare #.*standard-optimize-settings*)
   (with-accessors ((vector vector-stream-vector))
       stream
     (prog1
