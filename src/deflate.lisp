@@ -776,3 +776,12 @@ match."
                "Checksum mismatch for decompressed stream: ~8,'0X != ~8,'0X!"
                :format-arguments (list checksum-old checksum-new)))
       (values checksum-old fname mtime fcomment))))
+
+(in-package :maxima)
+
+;; read content of compressed file and return it as a string
+(defun $read_compressed_file (filename.gz)
+  (let ((out (flexi-streams:make-in-memory-output-stream :element-type '(unsigned-byte 8))))
+    (with-open-file (in filename.gz :element-type '(unsigned-byte 8))
+      (deflate:inflate-gzip-stream in out))
+    (trivial-utf-8::utf-8-bytes-to-string (flexi-streams::get-output-stream-sequence out))))
