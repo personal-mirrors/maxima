@@ -218,8 +218,9 @@
   (let ((end (sliding-window-stream-buffer-end stream)))
     (declare (type fixnum end))
     (unless (< end +sliding-window-size+)
-      (write-sequence (sliding-window-stream-buffer stream)
-                      (sliding-window-stream-stream stream))
+      (flexi-streams::stream-write-sequence
+        (sliding-window-stream-stream stream)
+        (sliding-window-stream-buffer stream) 0 end)
       (case (sliding-window-stream-checksum stream)
         (:adler-32 (setf (sliding-window-stream-checksum-value stream)
                          (update-adler32-checksum
@@ -252,9 +253,9 @@
                         (sliding-window-stream-checksum-value stream)
                         (sliding-window-stream-buffer stream)
                         end))))
-      (write-sequence (sliding-window-stream-buffer stream)
-                      (sliding-window-stream-stream stream)
-                      :end end))))
+      (flexi-streams::stream-write-sequence
+        (sliding-window-stream-stream stream)
+        (sliding-window-stream-buffer stream) 0 end))))
 
 (defun sliding-window-stream-copy-bytes (stream distance length)
   (declare (type sliding-window-stream stream) (type fixnum distance length))
