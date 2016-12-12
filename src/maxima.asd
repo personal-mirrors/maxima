@@ -60,9 +60,6 @@
               (:file "intl")))
 	       (:module info :pathname ""
 			:components ((:file "nregex")
-                     (:file "trivial-utf-8")
-                     (:file "in-memory")
-                     (:file "deflate")
 				     (:file "cl-info")))
 	       (:module sloop :pathname ""
 			:components ((:file "sloop")))
