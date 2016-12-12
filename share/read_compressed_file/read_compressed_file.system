@@ -1,0 +1,10 @@
+;;; -*- Mode: lisp -*-
+
+(mk:defsystem read_compressed_file
+  :source-pathname (maxima::maxima-load-pathname-directory)
+  :binary-pathname (maxima::maxima-objdir "share" "read_compressed_file")
+  :source-extension "lisp"
+  :components
+  ((:file "trivial-utf-8")
+   (:file "in-memory")
+   (:file "deflate")))
