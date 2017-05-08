@@ -9,7 +9,7 @@
 ;; is the preferred way to build.
 (in-package :maxima)
 
-(defun share-subdirs-list ()
+(defun default-share-subdirs-list ()
   '#.(remove-if-not
       #'stringp
       ;; DO NOT EDIT THIS LIST.  It is automatically
@@ -17,3 +17,126 @@
       '(
 @default_sharedirs@
 	)))
+
+;; Return a list of all the subdirectories of the sharedir.  If
+;; sharedir has directories /foo/share/affine and
+;; /foo/share/contrib/bitwise, the we want to return the list
+;; ("affine" "contrib/bitwise").
+#+cmu
+(defun share-subdirs-list ()
+  (let* ((share-root (pathname (concatenate 'string *maxima-sharedir* "/")))
+	 (file-list
+	  (directory (merge-pathnames
+		      (make-pathname :directory '(:relative :wild-inferiors)
+				     :name :wild :type :wild)
+		      share-root)
+		     :truenamep nil)))
+    ;; Remove stuff we don't want like files and CVS directories.
+    ;; Anything else?
+    (setf file-list
+	  (delete-if #'(lambda (x)
+			 (or
+			  ;; Remove files (pathnames that have a name or type)
+			  (or (pathname-name x)
+			      (pathname-type x))
+			  ;; Remove CVS directories
+			  (equal "CVS" (car (last (pathname-directory x))))
+			  ))
+		     file-list))
+    ;; Now just want the part after the *maxima-sharedir*, and we want
+    ;; strings.  
+    (setf dir-list
+	  (mapcar #'(lambda (x)
+		      (let ((dir (make-pathname :directory (butlast (pathname-directory x))
+						:name (car (last (pathname-directory x))))))
+			(enough-namestring dir share-root)))
+		  file-list))
+    (sort dir-list #'string-lessp))))
+
+#+clisp
+(defun share-subdirs-list ()
+  ;; This doesn't work yet on windows.  Give up in that case and use
+  ;; the default list.
+  (if (string= *autoconf-win32* "true")
+      (default-share-subdirs-list)
+      (let* ((share-root (pathname (concatenate 'string *maxima-sharedir* "/")))
+	     (dir-list
+	      (directory (merge-pathnames
+			  (make-pathname :directory '(:relative :wild-inferiors))
+			  share-root))))
+	;; dir-list contains all of the directories.  Remove stuff we
+	;; don't want like CVS directories.  Anything else?
+	(setf dir-list
+	      (delete-if #'(lambda (x)
+			     ;; Remove CVS directories
+			     (or (equal x share-root)
+				 (equal "CVS" (car (last (pathname-directory x))))))
+			 dir-list))
+	;; Now just want the part after the *maxima-sharedir*, and we want
+	;; strings.
+	(setf dir-list
+	      (mapcar #'(lambda (x)
+			  (let ((dir (make-pathname :directory (butlast (pathname-directory x))
+						    :name (car (last (pathname-directory x))))))
+			    (enough-namestring dir share-root)))
+		      dir-list))
+	;; Sort in alphabetical order
+	(sort dir-list #'string-lessp))))
+
+#+(or ecl sbcl)
+(defun share-subdirs-list ()
+  ;; This doesn't work yet on windows.  Give up in that case and use
+  ;; the default list.
+  (if (string= *autoconf-win32* "true")
+      (default-share-subdirs-list)
+      ;; The call to DIRECTORY is to get ecl to follow any symlinks so
+      ;; that the subsequent call to directory all start with the same
+      ;; initial path.
+      (let* ((share-root (first (directory (pathname (concatenate 'string *maxima-sharedir* "/")))))
+	     (dir-list
+	      (directory (merge-pathnames
+			  (make-pathname :directory '(:relative :wild-inferiors))
+			  share-root))))
+	;; dir-list contains all of the directories.  Remove stuff we
+	;; don't want like CVS directories.  Anything else?
+	(setf dir-list
+	      (delete-if #'(lambda (x)
+			     ;; Remove CVS directories
+			     (or (equal x share-root)
+				 (equal "CVS" (car (last (pathname-directory x))))))
+			 dir-list))
+	;; Now just want the part after the *maxima-sharedir*, and we want
+	;; strings.
+	(setf dir-list
+	      (mapcar #'(lambda (x)
+			  (let ((dir (make-pathname :directory (butlast (pathname-directory x))
+						    :name (car (last (pathname-directory x))))))
+			    (enough-namestring dir share-root)))
+		      dir-list))
+	;; Sort in alphabetical order
+	(sort dir-list #'string-lessp))))
+
+#+ccl
+(defun share-subdirs-list ()
+  (let* ((share-root (pathname (concatenate 'string *maxima-sharedir* "/")))
+	 (dir-list (directory (merge-pathnames (make-pathname :directory '(:relative :wild-inferiors)
+							       :name :wild :type :wild)
+						share-root)
+			       :directories t :files nil)))
+    ;; Remove stuff we don't want want CVS directories.
+    ;; Anything else?
+    (setf dir-list (remove-if #'(lambda (x)
+				    ;; Remove CVS directories
+				    (equal "CVS" (car (last (pathname-directory x)))))
+			       dir-list))
+    ;; Now just want the part after the *maxima-sharedir*, and we want
+    ;; strings.  
+    (mapcar #'(lambda (x)
+		(let ((dir (make-pathname :directory (butlast (pathname-directory x))
+					  :name (car (last (pathname-directory x))))))
+		  (enough-namestring dir share-root)))
+	    dir-list)))
+
+#-(or cmu clisp ecl sbcl ccl)
+(defun share-subdirs-list ()
+  (default-share-subdirs-list))

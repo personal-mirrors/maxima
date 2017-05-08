@@ -9,7 +9,7 @@
 ;; is the preferred way to build.
 (in-package :maxima)
 
-(defun share-subdirs-list ()
+(defun default-share-subdirs-list ()
   '#.(remove-if-not
       #'stringp
       ;; DO NOT EDIT THIS LIST.  It is automatically
@@ -17,3 +17,190 @@
       '(
 "affine" "algebra" "algebra/charsets" "algebra/solver" "amatrix" "bernstein" "calculus" "cobyla" "cobyla/ex" "cobyla/lisp" "colnew" "colnew/ex1" "colnew/ex2" "colnew/ex3" "colnew/ex4" "colnew/lisp" "combinatorics" "contrib" "contrib/Eulix" "contrib/Grobner" "contrib/Zeilberger" "contrib/alt-display" "contrib/altsimp" "contrib/binsplit" "contrib/bitwise" "contrib/boolsimp" "contrib/coma" "contrib/diffequations" "contrib/diffequations/tests" "contrib/elliptic_curves" "contrib/elliptic_curves/figures" "contrib/format" "contrib/fresnel" "contrib/gentran" "contrib/gentran/man" "contrib/gentran/test" "contrib/gf" "contrib/integration" "contrib/levin" "contrib/lurkmathml" "contrib/maxima-odesolve" "contrib/maximaMathML" "contrib/mcclim" "contrib/namespaces" "contrib/noninteractive" "contrib/odes" "contrib/operatingsystem" "contrib/prim" "contrib/rand" "contrib/rkf45" "contrib/sarag" "contrib/smath" "contrib/state" "contrib/trigtools" "contrib/unicodedata" "contrib/unit" "contrib/vector3d" "descriptive" "diff_form" "diff_form/tests" "diffequations" "distrib" "draw" "dynamics" "ezunits" "finance" "fourier_elim" "fractals" "graphs" "hypergeometric" "integequations" "integer_sequence" "integration" "lapack" "lapack/blas" "lapack/lapack" "lbfgs" "linearalgebra" "logic" "lsquares" "macro" "matrix" "minpack" "minpack/lisp" "misc" "mnewton" "multiadditive" "numeric" "numericalio" "odepack" "odepack/src" "orthopoly" "pdiff" "physics" "simplex" "simplex/Tests" "simplification" "solve_rat_ineq" "solve_rec" "sound" "stats" "stringproc" "sym" "tensor" "to_poly_solve" "trigonometry" "utils" "vector" "z_transform" 
 	)))
+
+;; Return a list of all the subdirectories of the sharedir.  If
+;; sharedir has directories /foo/share/affine and
+;; /foo/share/contrib/bitwise, the we want to return the list
+;; ("affine" "contrib/bitwise").
+#+cmu
+(defun share-subdirs-list ()
+  (let* ((share-root (pathname (concatenate 'string *maxima-sharedir* "/")))
+	 (file-list (directory (merge-pathnames (make-pathname :directory '(:relative :wild-inferiors)
+							       :name :wild :type :wild)
+						share-root)
+			       :truenamep nil)))
+    ;; Remove stuff we don't want like files and CVS directories.
+    ;; Anything else?
+    (setf file-list (remove-if #'(lambda (x)
+				   (or
+				    ;; Remove files (pathnames that have a name or type)
+				    (or (pathname-name x)
+					(pathname-type x))
+				    ;; Remove CVS directories
+				    (equal "CVS" (car (last (pathname-directory x))))
+				    ))
+			       file-list))
+    ;; Now just want the part after the *maxima-sharedir*, and we want
+    ;; strings.  
+    (mapcar #'(lambda (x)
+		(let ((dir (make-pathname :directory (butlast (pathname-directory x))
+					  :name (car (last (pathname-directory x))))))
+		  (enough-namestring dir share-root)))
+	    file-list)))
+
+#+clisp
+(defun share-subdirs-list ()
+  ;; This doesn't work yet on windows.  Give up in that case and use
+  ;; the default list.
+  (if (string= *autoconf-win32* "true")
+      (default-share-subdirs-list)
+      (let* ((share-root (pathname (concatenate 'string *maxima-sharedir* "/")))
+	     (dir-list (directory (merge-pathnames (make-pathname :directory '(:relative :wild-inferiors))
+						   share-root))))
+	;; dir-list contains all of the directories.  Remove stuff we
+	;; don't want like CVS directories.  Anything else?
+	(setf dir-list (delete-if #'(lambda (x)
+				      ;; Remove CVS directories
+				      (or (equal x share-root)
+					  (equal "CVS" (car (last (pathname-directory x))))))
+				  dir-list))
+	;; Now just want the part after the *maxima-sharedir*, and we want
+	;; strings.
+	(setf dir-list
+	      (mapcar #'(lambda (x)
+			  (let ((dir (make-pathname :directory (butlast (pathname-directory x))
+						    :name (car (last (pathname-directory x))))))
+			    (enough-namestring dir share-root)))
+		      dir-list))
+	;; Sort in alphabetical order
+	(sort dir-list #'string-lessp))))
+
+#+(or ecl sbcl)
+(defun share-subdirs-list ()
+  ;; This doesn't work yet on windows.  Give up in that case and use
+  ;; the default list.
+  (if (string= *autoconf-win32* "true")
+      (default-share-subdirs-list)
+      ;; The call to DIRECTORY is to get ecl to follow any symlinks so
+      ;; that the subsequent call to directory all start with the same
+      ;; initial path.
+      (let* ((share-root (first (directory (pathname (concatenate 'string *maxima-sharedir* "/")))))
+	     (dir-list (directory (merge-pathnames (make-pathname :directory '(:relative :wild-inferiors))
+						   share-root))))
+	;; dir-list contains all of the directories.  Remove stuff we
+	;; don't want like CVS directories.  Anything else?
+	(setf dir-list (delete-if #'(lambda (x)
+				      ;; Remove CVS directories
+				      (or (equal x share-root)
+					  (equal "CVS" (car (last (pathname-directory x))))))
+				  dir-list))
+	;; Now just want the part after the *maxima-sharedir*, and we want
+	;; strings.
+	(setf dir-list
+	      (mapcar #'(lambda (x)
+			  (let ((dir (make-pathname :directory (butlast (pathname-directory x))
+						    :name (car (last (pathname-directory x))))))
+			    (enough-namestring dir share-root)))
+		      dir-list))
+	;; Sort in alphabetical order
+	(sort dir-list #'string-lessp))))
+
+#+ccl
+(defun share-subdirs-list ()
+  (let* ((share-root (pathname (concatenate 'string *maxima-sharedir* "/")))
+	 (dir-list (directory (merge-pathnames (make-pathname :directory '(:relative :wild-inferiors)
+							       :name :wild :type :wild)
+						share-root)
+			       :directories t :files nil)))
+    ;; Remove stuff we don't want want CVS directories.
+    ;; Anything else?
+    (setf dir-list (remove-if #'(lambda (x)
+				    ;; Remove CVS directories
+				    (equal "CVS" (car (last (pathname-directory x)))))
+			       dir-list))
+    ;; Now just want the part after the *maxima-sharedir*, and we want
+    ;; strings.  
+    (mapcar #'(lambda (x)
+		(let ((dir (make-pathname :directory (butlast (pathname-directory x))
+					  :name (car (last (pathname-directory x))))))
+		  (enough-namestring dir share-root)))
+	    dir-list)))
+
+(defun default-share-subdirs-list ()
+  ;; Default implementation.  Eventually this should go away.
+  '("affine"
+    "algebra"
+    "algebra/charsets"
+    "algebra/solver"
+    "calculus"
+    "combinatorics"
+    "contrib"
+    "contrib/amatrix"
+    "contrib/bitwise"
+    "contrib/boolsimp"
+    "contrib/descriptive"
+    "contrib/diffequations"
+    "contrib/diffequations/tests"
+    "contrib/distrib"
+    "contrib/ezunits"
+    "contrib/finance"
+    "contrib/format"
+    "contrib/fourier_elim"
+    "contrib/fractals"
+    "contrib/fresnel"
+    "contrib/gentran"
+    "contrib/gentran/test"
+    "contrib/gf"
+    "contrib/graphs"
+    "contrib/Grobner"
+    "contrib/integration"
+    "contrib/levin"
+    "contrib/lurkmathml"
+    "contrib/maximaMathML"
+    "contrib/mcclim"
+    "contrib/namespaces"
+    "contrib/noninteractive"
+    "contrib/numericalio"
+    "contrib/pdiff"
+    "contrib/prim"
+    "contrib/rand"
+    "contrib/sarag"
+    "contrib/simplex"
+    "contrib/simplex/Tests"
+    "contrib/solve_rec"
+    "contrib/state"
+    "contrib/stats"
+    "contrib/stringproc"
+    "contrib/vector3d"
+    "contrib/unit"
+    "contrib/Zeilberger"
+    "cobyla"
+    "colnew"
+    "diff_form"
+    "diffequations"
+    "dynamics"
+    "draw"
+    "lapack"
+    "lbfgs"
+    "linearalgebra"
+    "integequations"
+    "integration"
+    "macro"
+    "matrix"
+    "minpack"
+    "misc"
+    "numeric"
+    "orthopoly"
+    "hypergeometric"
+    "physics"
+    "simplification"
+    "sym"
+    "tensor"
+    "tensor/tests"
+    "trigonometry"
+    "utils"
+    "vector"))
+
+#-(or cmu clisp ecl sbcl ccl)
+(defun share-subdirs-list ()
+  (default-share-subdirs-list))
