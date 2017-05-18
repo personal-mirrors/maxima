@@ -1,0 +1,1728 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# orthopoly.texi
+msgid ""
+"@menu\n"
+"* Introduction to orthogonal polynomials::\n"
+"* Functions and Variables for orthogonal polynomials::\n"
+"@end menu\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@node Introduction to orthogonal polynomials, Functions and Variables for orthogonal polynomials, orthopoly-pkg, orthopoly-pkg\n"
+"@section Introduction to orthogonal polynomials\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@code{orthopoly} is a package for symbolic and numerical evaluation of\n"
+"several kinds of orthogonal polynomials, including Chebyshev,\n"
+"Laguerre, Hermite, Jacobi, Legendre, and ultraspherical (Gegenbauer) \n"
+"polynomials. Additionally, @code{orthopoly} includes support for the spherical Bessel, \n"
+"spherical Hankel, and spherical harmonic functions.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"For the most part, @code{orthopoly} follows the conventions of Abramowitz and Stegun\n"
+"@i{Handbook of Mathematical Functions}, Chapter 22 (10th printing, December 1972);\n"
+"additionally, we use Gradshteyn and Ryzhik, \n"
+"@i{Table of Integrals, Series, and Products} (1980 corrected and \n"
+"enlarged edition), and Eugen Merzbacher @i{Quantum Mechanics} (2nd edition, 1970).\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c INSTALLATION INSTRUCTIONS NO LONGER RELEVANT\n"
+"@c BUT MAYBE SOME OF THESE FILES SHOULD BE MENTIONED IN ANOTHER CONTEXT\n"
+"@c This will create a directory @code{orthopoly_x} (again x is the release \n"
+"@c identifier) that contains the source file @code{orthopoly.lisp}, user \n"
+"@c documentation in html and texi formats, a sample maxima initialization file \n"
+"@c @code{orthopoly-init.lisp}, a README file, a testing routine \n"
+"@c @code{test_orthopoly.mac}, and two demonstration files.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c Start Maxima and compile orthopoly. To do this, use the command\n"
+"@c \n"
+"@c (c1) compile_file(\"orthopoly.lisp\");\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Barton Willis of the University of Nebraska at Kearney (UNK) wrote\n"
+"the @code{orthopoly} package and its documentation. The package \n"
+"is released under the GNU General Public License (GPL).\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Orthogonal polynomials} @category{Share packages} @category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@subsection Getting Started with orthopoly\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@code{load (orthopoly)} loads the @code{orthopoly} package.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"To find the third-order Legendre polynomial,\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c legendre_p (3, x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) legendre_p (3, x);\n"
+"                      3             2\n"
+"             5 (1 - x)    15 (1 - x)\n"
+"(%o1)      - ---------- + ----------- - 6 (1 - x) + 1\n"
+"                 2             2\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"To express this as a sum of powers of @var{x}, apply @var{ratsimp} or @var{rat}\n"
+"to the result.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c CONTINUING PREVIOUS EXAMPLE HERE\n"
+"@c ===beg===\n"
+"@c [ratsimp (%), rat (%)];\n"
+"@c ===end===\n"
+"@example\n"
+"(%i2) [ratsimp (%), rat (%)];\n"
+"                        3           3\n"
+"                     5 x  - 3 x  5 x  - 3 x\n"
+"(%o2)/R/            [----------, ----------]\n"
+"                         2           2\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Alternatively, make the second argument to @code{legendre_p} (its ``main'' variable) \n"
+"a canonical rational expression (CRE).\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c legendre_p (3, rat (x));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) legendre_p (3, rat (x));\n"
+"                              3\n"
+"                           5 x  - 3 x\n"
+"(%o1)/R/                   ----------\n"
+"                               2\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"For floating point evaluation, @code{orthopoly} uses a running error analysis\n"
+"to estimate an upper bound for the error. For example,\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c jacobi_p (150, 2, 3, 0.2);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) jacobi_p (150, 2, 3, 0.2);\n"
+"(%o1) interval(- 0.062017037936715, 1.533267919277521E-11)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Intervals have the form @code{interval (@var{c}, @var{r})}, where @var{c} is the\n"
+"center and @var{r} is the radius of the interval. Since Maxima\n"
+"does not support arithmetic on intervals, in some situations, such\n"
+"as graphics, you want to suppress the error and output only the \n"
+"center of the interval. To do this, set the option\n"
+"variable @code{orthopoly_returns_intervals} to @code{false}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c orthopoly_returns_intervals : false;\n"
+"@c jacobi_p (150, 2, 3, 0.2);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) orthopoly_returns_intervals : false;\n"
+"(%o1)                         false\n"
+"(%i2) jacobi_p (150, 2, 3, 0.2);\n"
+"(%o2)                  - 0.062017037936715\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Refer to the section @pxref{Floating point Evaluation} for more information.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Most functions in @code{orthopoly} have a @code{gradef} property; thus\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c diff (hermite (n, x), x);\n"
+"@c diff (gen_laguerre (n, a, x), x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) diff (hermite (n, x), x);\n"
+"(%o1)                     2 n H     (x)\n"
+"                               n - 1\n"
+"(%i2) diff (gen_laguerre (n, a, x), x);\n"
+"              (a)               (a)\n"
+"           n L   (x) - (n + a) L     (x) unit_step(n)\n"
+"              n                 n - 1\n"
+"(%o2)      ------------------------------------------\n"
+"                               x\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The unit step function in the second example prevents an error that would\n"
+"otherwise arise by evaluating with @var{n} equal to 0.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c CONTINUING PREVIOUS EXAMPLE HERE\n"
+"@c ===beg===\n"
+"@c ev (%, n = 0);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i3) ev (%, n = 0);\n"
+"(%o3)                           0\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The @code{gradef} property only applies to the ``main'' variable; derivatives with \n"
+"respect other arguments usually result in an error message; for example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c diff (hermite (n, x), x);\n"
+"@c diff (hermite (n, x), n);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) diff (hermite (n, x), x);\n"
+"(%o1)                     2 n H     (x)\n"
+"                               n - 1\n"
+"(%i2) diff (hermite (n, x), n);\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Maxima doesn't know the derivative of hermite with respect the first\n"
+"argument\n"
+" -- an error.  Quitting.  To debug this try debugmode(true);\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Generally, functions in @code{orthopoly} map over lists and matrices. For\n"
+"the mapping to fully evaluate, the option variables \n"
+"@code{doallmxops} and @code{listarith} must both be @code{true} (the defaults).\n"
+"To illustrate the mapping over matrices, consider\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c hermite (2, x);\n"
+"@c m : matrix ([0, x], [y, 0]);\n"
+"@c hermite (2, m);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) hermite (2, x);\n"
+"                                     2\n"
+"(%o1)                    - 2 (1 - 2 x )\n"
+"(%i2) m : matrix ([0, x], [y, 0]);\n"
+"                            [ 0  x ]\n"
+"(%o2)                       [      ]\n"
+"                            [ y  0 ]\n"
+"(%i3) hermite (2, m);\n"
+"               [                             2  ]\n"
+"               [      - 2        - 2 (1 - 2 x ) ]\n"
+"(%o3)          [                                ]\n"
+"               [             2                  ]\n"
+"               [ - 2 (1 - 2 y )       - 2       ]\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"In the second example, the @code{i, j} element of the value\n"
+"is @code{hermite (2, m[i,j])}; this is not the same as computing\n"
+"@code{-2 + 4 m . m}, as seen in the next example.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c CONTINUING PREVIOUS EXAMPLE HERE\n"
+"@c ===beg===\n"
+"@c -2 * matrix ([1, 0], [0, 1]) + 4 * m . m;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i4) -2 * matrix ([1, 0], [0, 1]) + 4 * m . m;\n"
+"                    [ 4 x y - 2      0     ]\n"
+"(%o4)               [                      ]\n"
+"                    [     0      4 x y - 2 ]\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"If you evaluate a function at a point outside its domain, generally\n"
+"@code{orthopoly} returns the function unevaluated. For example,\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c legendre_p (2/3, x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) legendre_p (2/3, x);\n"
+"(%o1)                        P   (x)\n"
+"                              2/3\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@code{orthopoly} supports translation into TeX; it also does two-dimensional\n"
+"output on a terminal.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c spherical_harmonic (l, m, theta, phi);\n"
+"@c tex (%);\n"
+"@c jacobi_p (n, a, a - b, x/2);\n"
+"@c tex (%);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) spherical_harmonic (l, m, theta, phi);\n"
+"                          m\n"
+"(%o1)                    Y (theta, phi)\n"
+"                          l\n"
+"(%i2) tex (%);\n"
+"$$Y_@{l@}^@{m@}\left(\vartheta,\varphi\right)$$\n"
+"(%o2)                         false\n"
+"(%i3) jacobi_p (n, a, a - b, x/2);\n"
+"                          (a, a - b) x\n"
+"(%o3)                    P          (-)\n"
+"                          n          2\n"
+"(%i4) tex (%);\n"
+"$$P_@{n@}^@{\left(a,a-b\right)@}\left(@{@{x@}\over@{2@}@}\right)$$\n"
+"(%o4)                         false\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@subsection Limitations\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"When an expression involves several orthogonal polynomials with\n"
+"symbolic orders, it's possible that the expression actually\n"
+"vanishes, yet Maxima is unable to simplify it to zero. If you\n"
+"divide by such a quantity, you'll be in trouble. For example,\n"
+"the following expression vanishes for integers @var{n} greater than 1, yet Maxima\n"
+"is unable to simplify it to zero.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c (2*n - 1) * legendre_p (n - 1, x) * x - n * legendre_p (n, x) \n"
+"@c       + (1 - n) * legendre_p (n - 2, x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) (2*n - 1) * legendre_p (n - 1, x) * x - n * legendre_p (n, x)\n"
+"      + (1 - n) * legendre_p (n - 2, x);\n"
+"(%o1)  (2 n - 1) P     (x) x - n P (x) + (1 - n) P     (x)\n"
+"                  n - 1           n               n - 2\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"For a specific @var{n}, we can reduce the expression to zero.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c CONTINUING PREVIOUS EXAMPLE HERE\n"
+"@c ===beg===\n"
+"@c ev (% ,n = 10, ratsimp);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i2) ev (% ,n = 10, ratsimp);\n"
+"(%o2)                           0\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Generally, the polynomial form of an orthogonal polynomial is ill-suited\n"
+"for floating point evaluation. Here's an example.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ACTUALLY NEEDS load(orthopoly); BEFORE ANYTHING ELSE\n"
+"@c ===beg===\n"
+"@c p : jacobi_p (100, 2, 3, x)$\n"
+"@c subst (0.2, x, p);\n"
+"@c jacobi_p (100, 2, 3, 0.2);\n"
+"@c float(jacobi_p (100, 2, 3, 2/10));\n"
+"@c ===end===\n"
+"@example \n"
+"(%i1) p : jacobi_p (100, 2, 3, x)$\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"(%i2) subst (0.2, x, p);\n"
+"(%o2)                3.4442767023833592E+35\n"
+"(%i3) jacobi_p (100, 2, 3, 0.2);\n"
+"(%o3)  interval(0.18413609135169, 6.8990300925815987E-12)\n"
+"(%i4) float(jacobi_p (100, 2, 3, 2/10));\n"
+"(%o4)                   0.18413609135169\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The true value is about 0.184; this calculation suffers from extreme\n"
+"subtractive cancellation error. Expanding the polynomial and then\n"
+"evaluating, gives a better result.\n"
+"@c CONTINUING PREVIOUS EXAMPLE HERE\n"
+"@c ===beg===\n"
+"@c p : expand (p)$\n"
+"@c subst (0.2, x, p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i5) p : expand(p)$\n"
+"(%i6) subst (0.2, x, p);\n"
+"(%o6) 0.18413609766122982\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"This isn't a general rule; expanding the polynomial does not always\n"
+"result in an expression that is better suited for numerical evaluation.\n"
+"By far, the best way to do numerical evaluation is to make one or more\n"
+"of the function arguments floating point numbers. By doing that, \n"
+"specialized floating point algorithms are used for evaluation.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Maxima's @code{float} function is somewhat indiscriminate; if you apply \n"
+"@code{float} to an expression involving an orthogonal polynomial with a\n"
+"symbolic degree or order parameter, these parameters may be \n"
+"converted into floats; after that, the expression will not evaluate \n"
+"fully. Consider\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c assoc_legendre_p (n, 1, x);\n"
+"@c float (%);\n"
+"@c ev (%, n=2, x=0.9);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) assoc_legendre_p (n, 1, x);\n"
+"                               1\n"
+"(%o1)                         P (x)\n"
+"                               n\n"
+"(%i2) float (%);\n"
+"                              1.0\n"
+"(%o2)                        P   (x)\n"
+"                              n\n"
+"(%i3) ev (%, n=2, x=0.9);\n"
+"                             1.0\n"
+"(%o3)                       P   (0.9)\n"
+"                             2\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The expression in (%o3) will not evaluate to a float; @code{orthopoly} doesn't\n"
+"recognize floating point values where it requires an integer. Similarly, \n"
+"numerical evaluation of the @code{pochhammer} function for orders that\n"
+"exceed @code{pochhammer_max_index} can be troublesome; consider\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c x :  pochhammer (1, 10), pochhammer_max_index : 5;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) x :  pochhammer (1, 10), pochhammer_max_index : 5;\n"
+"(%o1)                         (1)\n"
+"                                 10\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Applying @code{float} doesn't evaluate @var{x} to a float\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c CONTINUING PREVIOUS EXAMPLE HERE\n"
+"@c ===beg===\n"
+"@c float (x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i2) float (x);\n"
+"(%o2)                       (1.0)\n"
+"                                 10.0\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"To evaluate @var{x} to a float, you'll need to bind\n"
+"@code{pochhammer_max_index} to 11 or greater and apply @code{float} to @var{x}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c CONTINUING PREVIOUS EXAMPLE HERE\n"
+"@c ===beg===\n"
+"@c float (x), pochhammer_max_index : 11;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i3) float (x), pochhammer_max_index : 11;\n"
+"(%o3)                       3628800.0\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The default value of @code{pochhammer_max_index} is 100;\n"
+"change its value after loading @code{orthopoly}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Finally, be aware that reference books vary on the definitions of the \n"
+"orthogonal polynomials; we've generally used the conventions \n"
+"of Abramowitz and Stegun.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Before you suspect a bug in orthopoly, check some special cases \n"
+"to determine if your definitions match those used by @code{orthopoly}. \n"
+"Definitions often differ by a normalization; occasionally, authors\n"
+"use ``shifted'' versions of the functions that makes the family\n"
+"orthogonal on an interval other than @math{(-1, 1)}. To define, for example,\n"
+"a Legendre polynomial that is orthogonal on @math{(0, 1)}, define\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c shifted_legendre_p (n, x) := legendre_p (n, 2*x - 1)$\n"
+"@c shifted_legendre_p (2, rat (x));\n"
+"@c legendre_p (2, rat (x));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) shifted_legendre_p (n, x) := legendre_p (n, 2*x - 1)$\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"(%i2) shifted_legendre_p (2, rat (x));\n"
+"                            2\n"
+"(%o2)/R/                 6 x  - 6 x + 1\n"
+"(%i3) legendre_p (2, rat (x));\n"
+"                               2\n"
+"                            3 x  - 1\n"
+"(%o3)/R/                    --------\n"
+"                               2\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@anchor{Floating point Evaluation}\n"
+"@subsection Floating point Evaluation\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Most functions in @code{orthopoly} use a running error analysis to \n"
+"estimate the error in floating point evaluation; the \n"
+"exceptions are the spherical Bessel functions and the associated Legendre \n"
+"polynomials of the second kind. For numerical evaluation, the spherical \n"
+"Bessel functions call SLATEC functions. No specialized method is used\n"
+"for numerical evaluation of the associated Legendre polynomials of the\n"
+"second kind.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The running error analysis ignores errors that are second or higher order\n"
+"in the machine epsilon (also known as unit roundoff). It also\n"
+"ignores a few other errors. It's possible (although unlikely) \n"
+"that the actual error exceeds the estimate.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Intervals have the form @code{interval (@var{c}, @var{r})}, where @var{c} is the \n"
+"center of the interval and @var{r} is its radius. The \n"
+"center of an interval can be a complex number, and the radius is always a positive real number.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Here is an example.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c fpprec : 50$\n"
+"@c y0 : jacobi_p (100, 2, 3, 0.2);\n"
+"@c y1 : bfloat (jacobi_p (100, 2, 3, 1/5));\n"
+"@c ===end==\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@example\n"
+"(%i1) fpprec : 50$\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"(%i2) y0 : jacobi_p (100, 2, 3, 0.2);\n"
+"(%o2) interval(0.1841360913516871, 6.8990300925815987E-12)\n"
+"(%i3) y1 : bfloat (jacobi_p (100, 2, 3, 1/5));\n"
+"(%o3) 1.8413609135168563091370224958913493690868904463668b-1\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Let's test that the actual error is smaller than the error estimate\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c CONTINUING PREVIOUS EXAMPLE HERE\n"
+"@c ===beg===\n"
+"@c is (abs (part (y0, 1) - y1) < part (y0, 2));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i4) is (abs (part (y0, 1) - y1) < part (y0, 2));\n"
+"(%o4)                         true\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Indeed, for this example the error estimate is an upper bound for the\n"
+"true error.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Maxima does not support arithmetic on intervals.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c legendre_p (7, 0.1) + legendre_p (8, 0.1);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) legendre_p (7, 0.1) + legendre_p (8, 0.1);\n"
+"(%o1) interval(0.18032072148437508, 3.1477135311021797E-15)\n"
+"        + interval(- 0.19949294375000004, 3.3769353084291579E-15)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"A user could define arithmetic operators that do interval math. To\n"
+"define interval addition, we can define\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c infix (\"@+\")$\n"
+"@c \"@+\"(x,y) := interval (part (x, 1) + part (y, 1), part (x, 2) \n"
+"@c       + part (y, 2))$\n"
+"@c legendre_p (7, 0.1) @+ legendre_p (8, 0.1);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) infix (\"@@+\")$\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"(%i2) \"@@+\"(x,y) := interval (part (x, 1) + part (y, 1), part (x, 2)\n"
+"      + part (y, 2))$\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"(%i3) legendre_p (7, 0.1) @@+ legendre_p (8, 0.1);\n"
+"(%o3) interval(- 0.019172222265624955, 6.5246488395313372E-15)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The special floating point routines get called when the arguments\n"
+"are complex.  For example,\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c legendre_p (10, 2 + 3.0*%i);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) legendre_p (10, 2 + 3.0*%i);\n"
+"(%o1) interval(- 3.876378825E+7 %i - 6.0787748E+7, \n"
+"                                           1.2089173052721777E-6)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Let's compare this to the true value.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c float (expand (legendre_p (10, 2 + 3*%i)));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) float (expand (legendre_p (10, 2 + 3*%i)));\n"
+"(%o1)          - 3.876378825E+7 %i - 6.0787748E+7\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Additionally, when the arguments are big floats, the special floating point\n"
+"routines get called; however, the big floats are converted into double floats\n"
+"and the final result is a double.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c ultraspherical (150, 0.5b0, 0.9b0);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) ultraspherical (150, 0.5b0, 0.9b0);\n"
+"(%o1) interval(- 0.043009481257265, 3.3750051301228864E-14)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@subsection Graphics and @code{orthopoly}\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"To plot expressions that involve the orthogonal polynomials, you \n"
+"must do two things:\n"
+"@enumerate\n"
+"@item \n"
+"Set the option variable @code{orthopoly_returns_intervals} to @code{false},\n"
+"@item\n"
+"Quote any calls to @code{orthopoly} functions.\n"
+"@end enumerate\n"
+"If function calls aren't quoted, Maxima evaluates them to polynomials before \n"
+"plotting; consequently, the specialized floating point code doesn't get called.\n"
+"Here is an example of how to plot an expression that involves\n"
+"a Legendre polynomial.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c plot2d ('(legendre_p (5, x)), [x, 0, 1]), \n"
+"@c                         orthopoly_returns_intervals : false;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) plot2d ('(legendre_p (5, x)), [x, 0, 1]),\n"
+"                        orthopoly_returns_intervals : false;\n"
+"(%o1)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@ifnotinfo\n"
+"@image{figures/orthopoly1,8cm}\n"
+"@end ifnotinfo\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The @i{entire} expression @code{legendre_p (5, x)} is quoted; this is \n"
+"different than just quoting the function name using @code{'legendre_p (5, @var{x})}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Plotting}\n"
+"@closecatbox\n"
+"@subsection Miscellaneous Functions\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The @code{orthopoly} package defines the\n"
+"Pochhammer symbol and a unit step function. @code{orthopoly} uses \n"
+"the Kronecker delta function and the unit step function in\n"
+"@code{gradef} statements.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"To convert Pochhammer symbols into quotients of gamma functions,\n"
+"use @code{makegamma}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c makegamma (pochhammer (x, n));\n"
+"@c makegamma (pochhammer (1/2, 1/2));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) makegamma (pochhammer (x, n));\n"
+"                          gamma(x + n)\n"
+"(%o1)                     ------------\n"
+"                            gamma(x)\n"
+"(%i2) makegamma (pochhammer (1/2, 1/2));\n"
+"                                1\n"
+"(%o2)                       ---------\n"
+"                            sqrt(%pi)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Derivatives of the Pochhammer symbol are given in terms of the @code{psi}\n"
+"function.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c diff (pochhammer (x, n), x);\n"
+"@c diff (pochhammer (x, n), n);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) diff (pochhammer (x, n), x);\n"
+"(%o1)             (x)  (psi (x + n) - psi (x))\n"
+"                     n     0             0\n"
+"(%i2) diff (pochhammer (x, n), n);\n"
+"(%o2)                   (x)  psi (x + n)\n"
+"                           n    0\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"You need to be careful with the expression in (%o1); the difference of the\n"
+"@code{psi} functions has polynomials when @code{@var{x} = -1, -2, .., -@var{n}}. These polynomials\n"
+"cancel with factors in @code{pochhammer (@var{x}, @var{n})} making the derivative a degree\n"
+"@code{@var{n} - 1} polynomial when @var{n} is a positive integer.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The Pochhammer symbol is defined for negative orders through its\n"
+"representation as a quotient of gamma functions. Consider\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c q : makegamma (pochhammer (x, n));\n"
+"@c sublis ([x=11/3, n= -6], q);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) q : makegamma (pochhammer (x, n));\n"
+"                          gamma(x + n)\n"
+"(%o1)                     ------------\n"
+"                            gamma(x)\n"
+"(%i2) sublis ([x=11/3, n= -6], q);\n"
+"                               729\n"
+"(%o2)                        - ----\n"
+"                               2240\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Alternatively, we can get this result directly.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c pochhammer (11/3, -6);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) pochhammer (11/3, -6);\n"
+"                               729\n"
+"(%o1)                        - ----\n"
+"                               2240\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The unit step function is left-continuous; thus\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c [unit_step (-1/10), unit_step (0), unit_step (1/10)];\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) [unit_step (-1/10), unit_step (0), unit_step (1/10)];\n"
+"(%o1)                       [0, 0, 1]\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"If you need a unit step function that is neither left or right continuous\n"
+"at zero, define your own using @code{signum}; for example,\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c xunit_step (x) := (1 + signum (x))/2$\n"
+"@c [xunit_step (-1/10), xunit_step (0), xunit_step (1/10)];\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) xunit_step (x) := (1 + signum (x))/2$\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"(%i2) [xunit_step (-1/10), xunit_step (0), xunit_step (1/10)];\n"
+"                                1\n"
+"(%o2)                       [0, -, 1]\n"
+"                                2\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Do not redefine @code{unit_step} itself; some code in @code{orthopoly}\n"
+"requires that the unit step function be left-continuous.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@subsection Algorithms\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Generally, @code{orthopoly} does symbolic evaluation by using a hypergeometic \n"
+"representation of the orthogonal polynomials. The hypergeometic \n"
+"functions are evaluated using the (undocumented) functions @code{hypergeo11} \n"
+"and @code{hypergeo21}. The exceptions are the half-integer Bessel functions \n"
+"and the associated Legendre function of the second kind. The half-integer Bessel functions are\n"
+"evaluated using an explicit representation, and the associated Legendre \n"
+"function of the second kind is evaluated using recursion.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"For floating point evaluation, we again convert most functions into\n"
+"a hypergeometic form; we evaluate the hypergeometic functions using \n"
+"forward recursion. Again, the exceptions are the half-integer Bessel functions \n"
+"and the associated Legendre function of the second kind. Numerically, \n"
+"the half-integer Bessel functions are evaluated using the SLATEC code.\n"
+"@node Functions and Variables for orthogonal polynomials,  , Introduction to orthogonal polynomials, orthopoly-pkg\n"
+"@section Functions and Variables for orthogonal polynomials\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} assoc_legendre_p (@var{n}, @var{m}, @var{x})\n"
+"The associated Legendre function of the first kind of degree @var{n} and\n"
+"order @var{m}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equations 22.5.37, page 779, 8.6.6\n"
+"(second equation), page 334, and 8.2.5, page 333.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} assoc_legendre_q (@var{n}, @var{m}, @var{x})\n"
+"The associated Legendre function of the second kind of degree @var{n}\n"
+"and order @var{m}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 8.5.3 and 8.1.8.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} chebyshev_t (@var{n}, @var{x})\n"
+"The Chebyshev polynomial of the first kind of degree @var{n}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 22.5.47, page 779.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} chebyshev_u (@var{n}, @var{x})\n"
+"The Chebyshev polynomial of the second kind of degree @var{n}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 22.5.48, page 779.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} gen_laguerre (@var{n}, @var{a}, @var{x})\n"
+"The generalized Laguerre polynomial of degree @var{n}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 22.5.54, page 780.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} hermite (@var{n}, @var{x})\n"
+"The Hermite polynomial of degree @var{n}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 22.5.55, page 780.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} intervalp (@var{e})\n"
+"Return @code{true} if the input is an interval and return false if it isn't. \n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly} @category{Predicate functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} jacobi_p (@var{n}, @var{a}, @var{b}, @var{x})\n"
+"The Jacobi polynomial.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The Jacobi polynomials are actually defined for all\n"
+"@var{a} and @var{b}; however, the Jacobi polynomial\n"
+"weight @code{(1 - @var{x})^@var{a} (1 + @var{x})^@var{b}} isn't integrable for @code{@var{a} <= -1} or\n"
+"@code{@var{b} <= -1}. \n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 22.5.42, page 779.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} laguerre (@var{n}, @var{x})\n"
+"The Laguerre polynomial of degree @var{n}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equations 22.5.16 and 22.5.54, page 780.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} legendre_p (@var{n}, @var{x})\n"
+"The Legendre polynomial of the first kind of degree @var{n}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equations 22.5.50 and 22.5.51, page 779.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} legendre_q (@var{n}, @var{x})\n"
+"The Legendre function of the second kind of degree @var{n}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equations 8.5.3 and 8.1.8.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} orthopoly_recur (@var{f}, @var{args})\n"
+"Returns a recursion relation for the orthogonal function family\n"
+"@var{f} with arguments @var{args}. The recursion is with \n"
+"respect to the polynomial degree.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c orthopoly_recur (legendre_p, [n, x]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) orthopoly_recur (legendre_p, [n, x]);\n"
+"                    (2 n + 1) P (x) x - n P     (x)\n"
+"                               n           n - 1\n"
+"(%o1)   P     (x) = -------------------------------\n"
+"         n + 1                   n + 1\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The second argument to @code{orthopoly_recur} must be a list with the \n"
+"correct number of arguments for the function @var{f}; if it isn't, \n"
+"Maxima signals an error.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c orthopoly_recur (jacobi_p, [n, x]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) orthopoly_recur (jacobi_p, [n, x]);\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Function jacobi_p needs 4 arguments, instead it received 2\n"
+" -- an error.  Quitting.  To debug this try debugmode(true);\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Additionally, when @var{f} isn't the name of one of the \n"
+"families of orthogonal polynomials, an error is signalled.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c orthopoly_recur (foo, [n, x]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) orthopoly_recur (foo, [n, x]);\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"A recursion relation for foo isn't known to Maxima\n"
+" -- an error.  Quitting.  To debug this try debugmode(true);\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@defvr {Variable} orthopoly_returns_intervals\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"When @code{orthopoly_returns_intervals} is @code{true}, floating point results are returned in\n"
+"the form @code{interval (@var{c}, @var{r})}, where @var{c} is the center of an interval\n"
+"and @var{r} is its radius. The center can be a complex number; in that\n"
+"case, the interval is a disk in the complex plane.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} orthopoly_weight (@var{f}, @var{args})\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Returns a three element list; the first element is \n"
+"the formula of the weight for the orthogonal polynomial family\n"
+"@var{f} with arguments given by the list @var{args}; the \n"
+"second and third elements give the lower and upper endpoints\n"
+"of the interval of orthogonality. For example,\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c w : orthopoly_weight (hermite, [n, x]);\n"
+"@c integrate (w[1] * hermite (3, x) * hermite (2, x), x, w[2], w[3]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) w : orthopoly_weight (hermite, [n, x]);\n"
+"                            2\n"
+"                         - x\n"
+"(%o1)                 [%e    , - inf, inf]\n"
+"(%i2) integrate(w[1]*hermite(3, x)*hermite(2, x), x, w[2], w[3]);\n"
+"(%o2)                           0\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"The main variable of @var{f} must be a symbol; if it isn't, Maxima\n"
+"signals an error. \n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} pochhammer (@var{x}, @var{n})\n"
+"The Pochhammer symbol. For nonnegative integers @var{n} with\n"
+"@code{@var{n} <= pochhammer_max_index}, the expression @code{pochhammer (@var{x}, @var{n})} \n"
+"evaluates to the product @code{@var{x} (@var{x} + 1) (@var{x} + 2) ... (@var{x} + n - 1)}\n"
+"when @code{@var{n} > 0} and\n"
+"to 1 when @code{@var{n} = 0}. For negative @var{n},\n"
+"@code{pochhammer (@var{x}, @var{n})} is defined as @code{(-1)^@var{n} / pochhammer (1 - @var{x}, -@var{n})}.\n"
+"Thus\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c pochhammer (x, 3);\n"
+"@c pochhammer (x, -3);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) pochhammer (x, 3);\n"
+"(%o1)                   x (x + 1) (x + 2)\n"
+"(%i2) pochhammer (x, -3);\n"
+"                                 1\n"
+"(%o2)               - -----------------------\n"
+"                      (1 - x) (2 - x) (3 - x)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"To convert a Pochhammer symbol into a quotient of gamma functions,\n"
+"(see Abramowitz and Stegun, equation 6.1.22) use @code{makegamma}; for example \n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c makegamma (pochhammer (x, n));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) makegamma (pochhammer (x, n));\n"
+"                          gamma(x + n)\n"
+"(%o1)                     ------------\n"
+"                            gamma(x)\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"When @var{n} exceeds @code{pochhammer_max_index} or when @var{n} \n"
+"is symbolic, @code{pochhammer} returns a noun form.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c pochhammer (x, n);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) pochhammer (x, n);\n"
+"(%o1)                         (x)\n"
+"                                 n\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly} @category{Gamma and factorial functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@defvr {Variable} pochhammer_max_index\n"
+"Default value: 100\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@code{pochhammer (@var{n}, @var{x})} expands to a product if and only if\n"
+"@code{@var{n} <= pochhammer_max_index}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@c ===beg===\n"
+"@c pochhammer (x, 3), pochhammer_max_index : 3;\n"
+"@c pochhammer (x, 4), pochhammer_max_index : 3;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) pochhammer (x, 3), pochhammer_max_index : 3;\n"
+"(%o1)                   x (x + 1) (x + 2)\n"
+"(%i2) pochhammer (x, 4), pochhammer_max_index : 3;\n"
+"(%o2)                         (x)\n"
+"                                 4\n"
+"@end example\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 6.1.16, page 256.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly} @category{Gamma and factorial functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} spherical_bessel_j (@var{n}, @var{x})\n"
+"The spherical Bessel function of the first kind.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equations 10.1.8, page 437 and 10.1.15, page 439.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly} @category{Bessel functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} spherical_bessel_y (@var{n}, @var{x})\n"
+"The spherical Bessel function of the second kind. \n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equations 10.1.9, page 437 and 10.1.15, page 439.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly} @category{Bessel functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} spherical_hankel1 (@var{n}, @var{x})\n"
+"The spherical Hankel function of the\n"
+"first kind.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 10.1.36, page 439.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly} @category{Bessel functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} spherical_hankel2 (@var{n}, @var{x})\n"
+"The spherical Hankel function of the second kind.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 10.1.17, page 439.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly} @category{Bessel functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} spherical_harmonic (@var{n}, @var{m}, @var{x}, @var{y})\n"
+"The spherical harmonic function.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Merzbacher 9.64.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} unit_step (@var{x})\n"
+"The left-continuous unit step function; thus\n"
+"@code{unit_step (@var{x})} vanishes for @code{@var{x} <= 0} and equals\n"
+"1 for @code{@var{x} > 0}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"If you want a unit step function that\n"
+"takes on the value 1/2 at zero, use @code{(1 + signum (@var{x}))/2}.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@deffn {Function} ultraspherical (@var{n}, @var{a}, @var{x})\n"
+"The ultraspherical polynomial (also known as the Gegenbauer polynomial).\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"Reference: Abramowitz and Stegun, equation 22.5.46, page 779.\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package orthopoly}\n"
+"@closecatbox\n"
+msgstr ""
+
+# orthopoly.texi
+msgid ""
+"@end deffn\n"
+msgstr ""

@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Introduction.texi
+msgid ""
+"Start Maxima with the command \"maxima\".  Maxima will display version\n"
+"information and a prompt.  End each Maxima command with a semicolon.\n"
+"End the session with the command \"quit();\".  Here's a sample session:\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@example\n"
+"[wfs@@chromium]$ maxima\n"
+"Maxima 5.9.1 http://maxima.sourceforge.net\n"
+"Using Lisp CMU Common Lisp 19a\n"
+"Distributed under the GNU Public License. See the file COPYING.\n"
+"Dedicated to the memory of William Schelter.\n"
+"This is a development version of Maxima. The function bug_report()\n"
+"provides bug reporting information.\n"
+"(%i1) factor(10!);\n"
+"                            8  4  2\n"
+"(%o1)                      2  3  5  7\n"
+"(%i2) expand ((x + y)^6);\n"
+"       6        5       2  4       3  3       4  2      5      6\n"
+"(%o2) y  + 6 x y  + 15 x  y  + 20 x  y  + 15 x  y  + 6 x  y + x\n"
+"(%i3) factor (x^6 - 1);\n"
+"                              2            2\n"
+"(%o3)       (x - 1) (x + 1) (x  - x + 1) (x  + x + 1)\n"
+"(%i4) quit();\n"
+"[wfs@@chromium]$\n"
+"@end example\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"Maxima can search the info pages.  Use the @mref{describe} command to show\n"
+"information about the command or all the commands and variables containing \n"
+"a string.\n"
+"The question mark @mref{?} (exact search) and double question mark @mref{??}@w{}\n"
+"(inexact search) are abbreviations for @code{describe}:\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@example\n"
+"(%i1) ?? integ\n"
+" 0: Functions and Variables for Elliptic Integrals\n"
+" 1: Functions and Variables for Integration\n"
+" 2: Introduction to Elliptic Functions and Integrals\n"
+" 3: Introduction to Integration\n"
+" 4: askinteger  (Functions and Variables for Simplification)\n"
+" 5: integerp  (Functions and Variables for Miscellaneous Options)\n"
+" 6: integer_partitions  (Functions and Variables for Sets)\n"
+" 7: integrate  (Functions and Variables for Integration)\n"
+" 8: integrate_use_rootsof  (Functions and Variables for Integration)\n"
+" 9: integration_constant_counter  (Functions and Variables for\n"
+"    Integration)\n"
+" 10: nonnegintegerp  (Functions and Variables for linearalgebra)\n"
+"Enter space-separated numbers, `all' or `none': 5 4\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+" -- Function: integerp (<expr>)\n"
+"     Returns `true' if <expr> is a literal numeric integer, otherwise\n"
+"     `false'.\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"     `integerp' returns false if its argument is a symbol, even if the\n"
+"     argument is declared integer.\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"     Examples:\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"          (%i1) integerp (0);\n"
+"          (%o1)                         true\n"
+"          (%i2) integerp (1);\n"
+"          (%o2)                         true\n"
+"          (%i3) integerp (-17);\n"
+"          (%o3)                         true\n"
+"          (%i4) integerp (0.0);\n"
+"          (%o4)                         false\n"
+"          (%i5) integerp (1.0);\n"
+"          (%o5)                         false\n"
+"          (%i6) integerp (%pi);\n"
+"          (%o6)                         false\n"
+"          (%i7) integerp (n);\n"
+"          (%o7)                         false\n"
+"          (%i8) declare (n, integer);\n"
+"          (%o8)                         done\n"
+"          (%i9) integerp (n);\n"
+"          (%o9)                         false\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+" -- Function: askinteger (<expr>, integer)\n"
+" -- Function: askinteger (<expr>)\n"
+" -- Function: askinteger (<expr>, even)\n"
+" -- Function: askinteger (<expr>, odd)\n"
+"     `askinteger (<expr>, integer)' attempts to determine from the\n"
+"     `assume' database whether <expr> is an integer.  `askinteger'\n"
+"     prompts the user if it cannot tell otherwise, and attempt to\n"
+"     install the information in the database if possible.  `askinteger\n"
+"     (<expr>)' is equivalent to `askinteger (<expr>, integer)'.\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"     `askinteger (<expr>, even)' and `askinteger (<expr>, odd)'\n"
+"     likewise attempt to determine if <expr> is an even integer or odd\n"
+"     integer, respectively.\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"(%o1)                                true\n"
+"@end example\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"To use a result in later calculations, you can assign it to a variable or\n"
+"refer to it by its automatically supplied label.  In addition, @mref{%}@w{}\n"
+"refers to the most recent calculated result:\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@example\n"
+"(%i1) u: expand ((x + y)^6);\n"
+"       6        5       2  4       3  3       4  2      5      6\n"
+"(%o1) y  + 6 x y  + 15 x  y  + 20 x  y  + 15 x  y  + 6 x  y + x\n"
+"(%i2) diff (u, x);\n"
+"         5         4       2  3       3  2       4        5\n"
+"(%o2) 6 y  + 30 x y  + 60 x  y  + 60 x  y  + 30 x  y + 6 x\n"
+"(%i3) factor (%o2);\n"
+"                                    5\n"
+"(%o3)                      6 (y + x)\n"
+"@end example\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"Maxima knows about complex numbers and numerical constants:\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@example\n"
+"(%i1) cos(%pi);\n"
+"(%o1)                          - 1\n"
+"(%i2) exp(%i*%pi);\n"
+"(%o2)                          - 1\n"
+"@end example\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"Maxima can do differential and integral calculus:\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@example\n"
+"(%i1) u: expand ((x + y)^6);\n"
+"       6        5       2  4       3  3       4  2      5      6\n"
+"(%o1) y  + 6 x y  + 15 x  y  + 20 x  y  + 15 x  y  + 6 x  y + x\n"
+"(%i2) diff (%, x);\n"
+"         5         4       2  3       3  2       4        5\n"
+"(%o2) 6 y  + 30 x y  + 60 x  y  + 60 x  y  + 30 x  y + 6 x\n"
+"(%i3) integrate (1/(1 + x^3), x);\n"
+"                                  2 x - 1\n"
+"                2            atan(-------)\n"
+"           log(x  - x + 1)        sqrt(3)    log(x + 1)\n"
+"(%o3)    - --------------- + ------------- + ----------\n"
+"                  6             sqrt(3)          3\n"
+"@end example\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"Maxima can solve linear systems and cubic equations:\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@example\n"
+"(%i1) linsolve ([3*x + 4*y = 7, 2*x + a*y = 13], [x, y]);\n"
+"                        7 a - 52        25\n"
+"(%o1)              [x = --------, y = -------]\n"
+"                        3 a - 8       3 a - 8\n"
+"(%i2) solve (x^3 - 3*x^2 + 5*x = 15, x);\n"
+"(%o2)       [x = - sqrt(5) %i, x = sqrt(5) %i, x = 3]\n"
+"@end example\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"Maxima can solve nonlinear sets of equations.  Note that if you don't\n"
+"want a result printed, you can finish your command with @kbd{$} instead\n"
+"of @kbd{;}.\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@example\n"
+"(%i1) eq_1: x^2 + 3*x*y + y^2 = 0$\n"
+"(%i2) eq_2: 3*x + y = 1$\n"
+"(%i3) solve ([eq_1, eq_2]);\n"
+"              3 sqrt(5) + 7      sqrt(5) + 3\n"
+"(%o3) [[y = - -------------, x = -----------], \n"
+"                    2                 2\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"                               3 sqrt(5) - 7        sqrt(5) - 3\n"
+"                          [y = -------------, x = - -----------]]\n"
+"                                     2                   2\n"
+"@end example\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"Maxima can generate plots of one or more functions:\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@example\n"
+"(%i1) plot2d (sin(x)/x, [x, -20, 20])$\n"
+"@end example\n"
+"@ifnotinfo\n"
+"@image{figures/introduction1, 10cm}\n"
+"@end ifnotinfo\n"
+"@example\n"
+"(%i2) plot2d ([atan(x), erf(x), tanh(x)], [x, -5, 5], [y, -1.5, 2])$\n"
+"@end example\n"
+"@ifnotinfo\n"
+"@image{figures/introduction2, 10cm}\n"
+"@end ifnotinfo\n"
+"@example\n"
+"@group\n"
+"(%i3) plot3d (sin(sqrt(x^2 + y^2))/sqrt(x^2 + y^2), \n"
+"         [x, -12, 12], [y, -12, 12])$\n"
+"@end group\n"
+"@end example\n"
+"@ifnotinfo\n"
+"@image{figures/introduction3, 12cm}\n"
+"@end ifnotinfo \n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@c FOLLOWING TEXT DESCRIBES THE TCL/TK PLOT WINDOW WHICH IS NO LONGER THE DEFAULT\n"
+"@c Moving the cursor to the top left corner of the plot window will pop up\n"
+"@c a menu that will, among other things, let you generate a PostScript file\n"
+"@c of the plot.  (By default, the file is placed in your home directory.)\n"
+"@c You can rotate a 3D plot.\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+"@opencatbox\n"
+"@category{Help}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Introduction.texi
+msgid ""
+msgstr ""

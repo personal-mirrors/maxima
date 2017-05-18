@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# cobyla.texi
+msgid ""
+"@menu\n"
+"* Introduction to cobyla::\n"
+"* Functions and Variables for cobyla::\n"
+"* Examples for cobyla::  \n"
+"@end menu\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@node Introduction to cobyla, Functions and Variables for cobyla, cobyla-pkg, cobyla-pkg\n"
+"@section Introduction to cobyla\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@code{fmin_cobyla} is a Common Lisp translation (via @code{f2cl}) of the\n"
+"Fortran constrained optimization routine COBYLA by Powell[1][2][3].  \n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"COBYLA minimizes an objective function F(X) subject to M inequality\n"
+"constraints of the form g(X) >= 0 on X, where X is a vector of\n"
+"variables that has N components.\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"Equality constraints g(X)=0 can often be implemented by a pair of inequality \n"
+"constraints g(X)>=0 and -g(X)>= 0.  Maxima's interface to COBYLA\n"
+"allows equality constraints and internally converts the equality\n"
+"constraints to a pair of inequality constraints.\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"The algorithm employs linear approximations to the\n"
+"objective and constraint functions, the approximations being formed by\n"
+"linear interpolation at N+1 points in the space of the variables.\n"
+"The interpolation points are regarded as vertices of a simplex. The\n"
+"parameter RHO controls the size of the simplex and it is reduced\n"
+"automatically from RHOBEG to RHOEND. For each RHO the subroutine tries\n"
+"to achieve a good vector of variables for the current size, and then\n"
+"RHO is reduced until the value RHOEND is reached. Therefore RHOBEG and\n"
+"RHOEND should be set to reasonable initial changes to and the required   \n"
+"accuracy in the variables respectively, but this accuracy should be\n"
+"viewed as a subject for experimentation because it is not guaranteed.\n"
+"The routine treats each constraint individually when calculating\n"
+"a change to the variables, rather than lumping the constraints together\n"
+"into a single penalty function. The name of the subroutine is derived\n"
+"from the phrase Constrained Optimization BY Linear Approximations.\n"
+"References:\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"[1] Fortran Code is from @url{http://plato.asu.edu/sub/nlores.html#general}\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"[2] M. J. D. Powell, \"A direct search optimization method that models the objective and constraint functions by linear interpolation,\" in Advances in Optimization and Numerical Analysis, eds. S. Gomez and J.-P. Hennart (Kluwer Academic: Dordrecht, 1994), p. 51-67. \n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"[3] M. J. D. Powell, \"Direct search algorithms for optimization calculations,\" Acta Numerica 7, 287-336 (1998).  Also available as University of Cambridge, Department of Applied Mathematics and Theoretical Physics,  Numerical Analysis Group, Report NA1998/04 from @url{http://www.damtp.cam.ac.uk/user/na/reports.html}\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@opencatbox\n"
+"@category{Numerical methods}  @category{Optimization} @category{Share packages} @category{Package cobyla}\n"
+"@closecatbox\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@node Functions and Variables for cobyla, Examples for cobyla, Introduction to cobyla, cobyla-pkg\n"
+"@section Functions and Variables for cobyla\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@anchor{fmin_cobyla}\n"
+"@deffn {Function} fmin_cobyla @\n"
+"@fname{fmin_cobyla} (@var{F}, @var{X}, @var{Y}) @\n"
+"@fname{fmin_cobyla} (@var{F}, @var{X}, @var{Y}, optional_args)\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"Returns an approximate minimum of the expression @var{F} with respect\n"
+"to the variables @var{X}, subject to an optional set of constraints.\n"
+"@var{Y} is a list of initial guesses for @var{X}.\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@var{F} must be an ordinary expressions, not names of functions or lambda expressions.\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@code{optional_args} represents additional arguments,\n"
+"specified as @code{@var{symbol} = @var{value}}.\n"
+"The optional arguments recognized are:\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@table @code\n"
+"@item constraints\n"
+"List of inequality and equality constraints that must be satisfied by\n"
+"@var{X}.  The inequality constraints must be actual inequalities of\n"
+"the form @code{g(@var{X}) >= h(@var{X})} or @code{g(@var{X}) <=\n"
+"h(@var{X})}.  The equality constraints must be of the form\n"
+"@code{g(@var{X}) = h(@var{X})}. \n"
+"@item rhobeg\n"
+"Initial value of the internal RHO variable which controls \n"
+"the size of simplex.  (Defaults to 1.0)\n"
+"@item rhoend \n"
+"The desired final value rho parameter.  It is approximately\n"
+" the accuracy in the variables. (Defaults to 1d-6.)\n"
+"@item iprint\n"
+" Verbose output level.  (Defaults to 0)\n"
+"@itemize\n"
+"@item\n"
+"0 - No output\n"
+"@item\n"
+"1 - Summary at the end of the calculation\n"
+"@item\n"
+"2 - Each new value of RHO and SIGMA is printed, including \n"
+" the vector of variables, some function information when RHO is reduced.\n"
+"@item\n"
+"3 - Like 2, but information is printed when F(X) is computed.\n"
+"@end itemize\n"
+"@item maxfun\n"
+"The maximum number of function evaluations.  (Defaults to 1000).\n"
+"@end table\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"On return, a vector is given:\n"
+"@enumerate\n"
+"@item\n"
+"The value of the variables giving the minimum.  This is a list of\n"
+"elements of the form @code{@var{var} = @var{value}} for each of the\n"
+"variables listed in @var{X}.\n"
+"@item\n"
+"The minimized function value\n"
+"@item\n"
+"The number of function evaluations.\n"
+"@item\n"
+"Return code with the following meanings\n"
+" @enumerate\n"
+" @item\n"
+" 0 - No errors.\n"
+" @item\n"
+" 1 - Limit on maximum number of function evaluations reached.\n"
+" @item\n"
+" 2 - Rounding errors inhibiting progress.\n"
+" @end enumerate\n"
+"@end enumerate\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@code{load(fmin_cobyla)} loads this function.\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@anchor{bf_fmin_cobyla}\n"
+"@deffn {Function} bf_fmin_cobyla @\n"
+"@fname{bf_fmin_cobyla} (@var{F}, @var{X}, @var{Y}) @\n"
+"@fname{bf_fmin_cobyla} (@var{F}, @var{X}, @var{Y}, optional_args)\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"This function is identical to @code{fmin_cobyla}, except that bigfloat\n"
+"operations are used, and the default value for @var{rhoend} is\n"
+"@code{10^(fpprec/2)}. \n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"See @mref{fmin_cobyla} for more information.\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@code{load(bf_fmin_cobyla)} loads this function.\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@node Examples for cobyla, , Functions and Variables for cobyla, cobyla-pkg\n"
+"@section Examples for cobyla\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"Minimize x1*x2 with 1-x1^2-x2^2 >= 0.  \n"
+"The theoretical solution is x1 = 1/sqrt(2), x2 = -1/sqrt(2).\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"@c ===beg===\n"
+"@c load(fmin_cobyla)$\n"
+"@c fmin_cobyla(x1*x2, [x1, x2], [1,1], \n"
+"@c             constraints = [x1^2+x2^2<=1], iprint=1);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(fmin_cobyla)$\n"
+"@group\n"
+"(%i2) fmin_cobyla(x1*x2, [x1, x2], [1,1], \n"
+"                  constraints = [x1^2+x2^2<=1], iprint=1);\n"
+"@end group\n"
+"   Normal return from subroutine COBYLA\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"   NFVALS =   66   F =-5.000000E-01    MAXCV = 1.999845E-12\n"
+"   X = 7.071058E-01  -7.071077E-01\n"
+"(%o2) [[x1 = 0.70710584934848, x2 = - 0.7071077130248], \n"
+"       - 0.49999999999926, [[-1.999955756559757e-12],[]], 66]\n"
+"@end example\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+"There are additional examples in the share/cobyla/ex directory.\n"
+msgstr ""
+
+# cobyla.texi
+msgid ""
+msgstr ""

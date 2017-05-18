@@ -1,0 +1,3361 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Matrices.texi
+msgid ""
+"@menu\n"
+"* Introduction to Matrices and Linear Algebra::  \n"
+"* Functions and Variables for Matrices and Linear Algebra::  \n"
+"@end menu\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to Matrices and Linear Algebra, Functions and Variables for Matrices and Linear Algebra, Matrices and Linear Algebra, Matrices and Linear Algebra\n"
+"@section Introduction to Matrices and Linear Algebra\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@menu\n"
+"* Dot::                         \n"
+"* Vectors::                     \n"
+"* eigen::\n"
+"@end menu\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Dot, Vectors, Introduction to Matrices and Linear Algebra, Introduction to Matrices and Linear Algebra\n"
+"@subsection Dot\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The operator @code{.} represents noncommutative multiplication and scalar\n"
+"product.  When the operands are 1-column or 1-row matrices @code{a} and\n"
+"@code{b}, the expression @code{a.b} is equivalent to\n"
+"@code{sum (a[i]*b[i], i, 1, length(a))}.  If @code{a} and @code{b} are not\n"
+"complex, this is the scalar product, also called the inner product or dot\n"
+"product, of @code{a} and @code{b}.  The scalar product is defined as\n"
+"@code{conjugate(a).b} when @code{a} and @code{b} are complex;\n"
+"@mref{innerproduct} in the @code{eigen} package provides the complex scalar\n"
+"product.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When the operands are more general matrices,\n"
+"the product is the matrix product @code{a} and @code{b}.\n"
+"The number of rows of @code{b} must equal the number of columns of @code{a},\n"
+"and the result has number of rows equal to the number of rows of @code{a}\n"
+"and number of columns equal to the number of columns of @code{b}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"To distinguish @code{.} as an arithmetic operator from the decimal point in a\n"
+"floating point number, it may be necessary to leave spaces on either side.\n"
+"For example, @code{5.e3} is @code{5000.0} but @code{5 . e3} is @code{5}\n"
+"times @code{e3}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"There are several flags which govern the simplification of expressions\n"
+"involving @code{.}, namely @mrefcomma{dot0nscsimp} @mrefcomma{dot0simp}@w{}\n"
+"@mrefcomma{dot1simp} @mrefcomma{dotassoc} @mrefcomma{dotconstrules}@w{}\n"
+"@mrefcomma{dotdistrib} @mrefcomma{dotexptsimp} @mrefcomma{dotident} and\n"
+"@mrefdot{dotscrules}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Vectors, eigen, Dot, Introduction to Matrices and Linear Algebra\n"
+"@subsection Vectors\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{vect} is a package of functions for vector analysis.  @code{load (\"vect\")}\n"
+"loads this package, and @code{demo (\"vect\")} displays a demonstration.\n"
+"@c find maxima -name \*orth\* YIELDS NOTHING; ARE THESE FUNCTIONS IN ANOTHER FILE NOW ??\n"
+"@c and SHARE;VECT ORTH contains definitions of various orthogonal curvilinear coordinate systems.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The vector analysis package can combine and simplify symbolic \n"
+"expressions including dot products and cross products, together with\n"
+"the gradient, divergence, curl, and Laplacian operators.  The\n"
+"distribution of these operators over sums or products is governed\n"
+"by several flags, as are various other expansions, including expansion\n"
+"into components in any specific orthogonal coordinate systems.\n"
+"There are also functions for deriving the scalar or vector potential\n"
+"of a field.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The @code{vect} package contains these functions:\n"
+"@mrefcomma{vectorsimp} @mrefcomma{scalefactors} @mrefcomma{express}@w{}\n"
+"@mrefcomma{potential} and @mrefdot{vectorpotential}\n"
+"@c REVIEW vect.usg TO ENSURE THAT TEXINFO HAS WHATEVER IS THERE\n"
+"@c PRINTFILE(VECT,USAGE,SHARE); for details.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"By default the @code{vect} package does not declare the dot operator to be a\n"
+"commutative operator.  To get a commutative dot operator @code{.}, the command\n"
+"@code{declare(\".\", commutative)} must be executed.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Vectors} @category{Share packages} @category{Package vect}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node eigen, , Vectors, Introduction to Matrices and Linear Algebra\n"
+"@subsection eigen\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The package @code{eigen} contains several functions devoted to the\n"
+"symbolic computation of eigenvalues and eigenvectors.\n"
+"Maxima loads the package automatically if one of the functions\n"
+"@code{eigenvalues} or @code{eigenvectors} is invoked.\n"
+"The package may be loaded explicitly as @code{load (\"eigen\")}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{demo (\"eigen\")} displays a demonstration of the capabilities\n"
+"of this package.\n"
+"@code{batch (\"eigen\")} executes the same demonstration,\n"
+"but without the user prompt between successive computations.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The functions in the @code{eigen} package are:@*\n"
+"@mrefcomma{innerproduct} @mrefcomma{unitvector} @mrefcomma{columnvector}@w{}\n"
+"@mrefcomma{gramschmidt} @mrefcomma{eigenvalues}@*\n"
+"@mrefcomma{eigenvectors} @mrefcomma{uniteigenvectors} and\n"
+"@mrefdot{similaritytransform}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Vectors} @category{Matrices} @category{Share packages} @category{Package eigen}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c end concepts Matrices and Linear Algebra\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Matrices and Linear Algebra,  , Introduction to Matrices and Linear Algebra, Matrices and Linear Algebra\n"
+"@section Functions and Variables for Matrices and Linear Algebra\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{addcol}\n"
+"@deffn {Function} addcol (@var{M}, @var{list_1}, @dots{}, @var{list_n})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Appends the column(s) given by the one\n"
+"or more lists (or matrices) onto the matrix @var{M}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @mref{addrow} and @mrefdot{append}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{addrow}\n"
+"@deffn {Function} addrow (@var{M}, @var{list_1}, @dots{}, @var{list_n})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Appends the row(s) given by the one or\n"
+"more lists (or matrices) onto the matrix @var{M}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @mref{addcol} and @mrefdot{append}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{adjoint}\n"
+"@deffn {Function} adjoint (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the adjoint of the matrix @var{M}.\n"
+"The adjoint matrix is the transpose of the matrix of cofactors of @var{M}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{augcoefmatrix}\n"
+"@deffn {Function} augcoefmatrix ([@var{eqn_1}, @dots{}, @var{eqn_m}], [@var{x_1}, @dots{}, @var{x_n}])\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the augmented coefficient\n"
+"matrix for the variables @var{x_1}, @dots{}, @var{x_n} of the system of linear\n"
+"equations @var{eqn_1}, @dots{}, @var{eqn_m}.  This is the coefficient matrix\n"
+"with a column adjoined for the constant terms in each equation (i.e., those\n"
+"terms not dependent upon @var{x_1}, @dots{}, @var{x_n}).\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) m: [2*x - (a - 1)*y = 5*b, c + b*y + a*x = 0]$\n"
+"(%i2) augcoefmatrix (m, [x, y]);\n"
+"                       [ 2  1 - a  - 5 b ]\n"
+"(%o2)                  [                 ]\n"
+"                       [ a    b      c   ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Linear equations} @category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c --- 04.10.2010 --------------------------------------------------------------\n"
+"@anchor{cauchy_matrix}\n"
+"@deffn {Function} cauchy_matrix @\n"
+"@fname{cauchy_matrix} ([@var{x_1}, @var{x_2}, @dots{}, @var{x_m}], [@var{y_1}, @var{y_2}, @dots{}, @var{y_n}]) @\n"
+"@fname{cauchy_matrix} ([@var{x_1}, @var{x_2}, @dots{}, @var{x_n}])\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a @code{n} by @var{m} Cauchy matrix with the elements @var{a[i,j]} \n"
+"= 1/(@var{x_i}+@var{y_i}).  The second argument of @code{cauchy_matrix} is \n"
+"optional.  For this case the elements of the Cauchy matrix are  \n"
+"@var{a[i,j]} = 1/(@var{x_i}+@var{x_j}).\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Remark: In the literature the Cauchy matrix can be found defined in two forms.\n"
+"A second definition is @var{a[i,j]} = 1/(@var{x_i}-@var{y_i}).\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c === beg ===\n"
+"@c cauchy_matrix([x1,x2],[y1,y2]);\n"
+"@c cauchy_matrix([x1,x2]);\n"
+"@c === end ===\n"
+"@example\n"
+"(%i1) cauchy_matrix([x1,x2],[y1,y2]);\n"
+"@group\n"
+"                      [    1        1    ]\n"
+"                      [ -------  ------- ]\n"
+"                      [ y1 + x1  y2 + x1 ]\n"
+"(%o1)                 [                  ]\n"
+"                      [    1        1    ]\n"
+"                      [ -------  ------- ]\n"
+"                      [ y1 + x2  y2 + x2 ]\n"
+"@end group\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"(%i2) cauchy_matrix([x1,x2]);\n"
+"                      [   1         1    ]\n"
+"                      [  ----    ------- ]\n"
+"                      [  2 x1    x2 + x1 ]\n"
+"(%o2)                 [                  ]\n"
+"                      [    1       1     ]\n"
+"                      [ -------   ----   ]\n"
+"                      [ x2 + x1   2 x2   ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{charpoly}\n"
+"@deffn {Function} charpoly (@var{M}, @var{x})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the characteristic polynomial for the matrix @var{M}\n"
+"with respect to variable @var{x}.  That is,\n"
+"@code{determinant (@var{M} - diagmatrix (length (@var{M}), @var{x}))}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) a: matrix ([3, 1], [2, 4]);\n"
+"                            [ 3  1 ]\n"
+"(%o1)                       [      ]\n"
+"                            [ 2  4 ]\n"
+"(%i2) expand (charpoly (a, lambda));\n"
+"                           2\n"
+"(%o2)                lambda  - 7 lambda + 10\n"
+"(%i3) (programmode: true, solve (%));\n"
+"(%o3)               [lambda = 5, lambda = 2]\n"
+"(%i4) matrix ([x1], [x2]);\n"
+"                             [ x1 ]\n"
+"(%o4)                        [    ]\n"
+"                             [ x2 ]\n"
+"(%i5) ev (a . % - lambda*%, %th(2)[1]);\n"
+"                          [ x2 - 2 x1 ]\n"
+"(%o5)                     [           ]\n"
+"                          [ 2 x1 - x2 ]\n"
+"(%i6) %[1, 1] = 0;\n"
+"(%o6)                     x2 - 2 x1 = 0\n"
+"(%i7) x2^2 + x1^2 = 1;\n"
+"                            2     2\n"
+"(%o7)                     x2  + x1  = 1\n"
+"(%i8) solve ([%th(2), %], [x1, x2]);\n"
+"@group\n"
+"                  1               2\n"
+"(%o8) [[x1 = - -------, x2 = - -------], \n"
+"               sqrt(5)         sqrt(5)\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                                             1             2\n"
+"                                    [x1 = -------, x2 = -------]]\n"
+"                                          sqrt(5)       sqrt(5)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{coefmatrix}\n"
+"@deffn {Function} coefmatrix ([@var{eqn_1}, @dots{}, @var{eqn_m}], [@var{x_1}, @dots{}, @var{x_n}])\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the coefficient matrix for the\n"
+"variables @var{x_1}, @dots{}, @var{x_n} of the system of linear equations\n"
+"@var{eqn_1}, @dots{}, @var{eqn_m}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) coefmatrix([2*x-(a-1)*y+5*b = 0, b*y+a*x = 3], [x,y]);\n"
+"                                 [ 2  1 - a ]\n"
+"(%o1)                            [          ]\n"
+"                                 [ a    b   ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Linear equations} @category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{col}\n"
+"@deffn {Function} col (@var{M}, @var{i})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the @var{i}'th column of the matrix @var{M}.\n"
+"The return value is a matrix.\n"
+"@c EXAMPLE HERE\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{columnvector}\n"
+"@anchor{covect}\n"
+"@deffn  {Function} columnvector (@var{L})\n"
+"@deffnx {Function} covect (@var{L})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a matrix of one column and @code{length (@var{L})} rows,\n"
+"containing the elements of the list @var{L}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{covect} is a synonym for @code{columnvector}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{load (\"eigen\")} loads this function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c FOLLOWING COMMENT PRESERVED. WHAT DOES THIS MEAN ??\n"
+"This is useful if you want to use parts of the outputs of\n"
+"the functions in this package in matrix calculations.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c HMM, SPURIOUS \"redefining the Macsyma function\".\n"
+"@c LEAVE IT HERE SINCE THAT'S WHAT A USER ACTUALLY SEES.\n"
+"@example\n"
+"(%i1) load (\"eigen\")$\n"
+"Warning - you are redefining the Macsyma function eigenvalues\n"
+"Warning - you are redefining the Macsyma function eigenvectors\n"
+"(%i2) columnvector ([aa, bb, cc, dd]);\n"
+"                             [ aa ]\n"
+"                             [    ]\n"
+"                             [ bb ]\n"
+"(%o2)                        [    ]\n"
+"                             [ cc ]\n"
+"                             [    ]\n"
+"                             [ dd ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{copymatrix}\n"
+"@deffn {Function} copymatrix (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a copy of the matrix @var{M}.  This is the only way\n"
+"to make a copy aside from copying @var{M} element by element.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Note that an assignment of one matrix to another, as in @code{m2: m1}, does not\n"
+"copy @code{m1}.  An assignment @code{m2 [i,j]: x} or @code{setelmx(x, i, j, m2)}\n"
+"also modifies @code{m1 [i,j]}.  Creating a copy with @code{copymatrix} and then\n"
+"using assignment creates a separate, modified copy.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{determinant}\n"
+"@deffn {Function} determinant (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Computes the determinant of @var{M} by a method similar to\n"
+"Gaussian elimination.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c JUST HOW DOES ratmx AFFECT THE RESULT ??\n"
+"The form of the result depends upon the setting of the switch @mrefdot{ratmx}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c IS A SPARSE DETERMINANT SOMETHING OTHER THAN THE DETERMINANT OF A SPARSE MATRIX ??\n"
+"There is a special routine for computing sparse determinants which is called\n"
+"when the switches @code{ratmx} and @mref{sparse} are both @code{true}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c EXAMPLES NEEDED HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{detout}\n"
+"@defvr {Option variable} detout\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{detout} is @code{true}, the determinant of a\n"
+"matrix whose inverse is computed is factored out of the inverse.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"For this switch to have an effect @mref{doallmxops} and @mref{doscmxops} should\n"
+"be @code{false} (see their descriptions).  Alternatively this switch can be\n"
+"given to @mref{ev} which causes the other two to be set correctly.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) m: matrix ([a, b], [c, d]);\n"
+"                            [ a  b ]\n"
+"(%o1)                       [      ]\n"
+"                            [ c  d ]\n"
+"(%i2) detout: true$\n"
+"(%i3) doallmxops: false$\n"
+"(%i4) doscmxops: false$\n"
+"(%i5) invert (m);\n"
+"                          [  d   - b ]\n"
+"                          [          ]\n"
+"                          [ - c   a  ]\n"
+"(%o5)                     ------------\n"
+"                           a d - b c\n"
+"@end example\n"
+"@c THERE'S MORE TO THIS STORY: detout: false$ invert (m); RETURNS THE SAME THING.\n"
+"@c IT APPEARS THAT doallmxops IS CRUCIAL HERE.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices} @category{Evaluation flags}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{diagmatrix}\n"
+"@deffn {Function} diagmatrix (@var{n}, @var{x})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a diagonal matrix of size @var{n} by @var{n} with the diagonal elements\n"
+"all equal to @var{x}.  @code{diagmatrix (@var{n}, 1)} returns an identity matrix\n"
+"(same as @code{ident (@var{n})}).\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@var{n} must evaluate to an integer, otherwise @code{diagmatrix} complains with\n"
+"an error message.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@var{x} can be any kind of expression, including another matrix.  If @var{x} is\n"
+"a matrix, it is not copied; all diagonal elements refer to the same instance,\n"
+"@var{x}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{doallmxops}\n"
+"@defvr {Option variable} doallmxops\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{doallmxops} is @code{true},\n"
+"@c UMM, WHAT DOES THIS MEAN EXACTLY ??\n"
+"all operations relating to matrices are carried out.\n"
+"When it is @code{false} then the setting of the\n"
+"individual @code{dot} switches govern which operations are performed.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLES HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{domxexpt}\n"
+"@defvr {Option variable} domxexpt\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{domxexpt} is @code{true},\n"
+"a matrix exponential, @code{exp (@var{M})} where @var{M} is a matrix, is\n"
+"interpreted as a matrix with element @code{[i,j]} equal to @code{exp (m[i,j])}.\n"
+"Otherwise @code{exp (@var{M})} evaluates to @code{exp (@var{ev(M)})}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{domxexpt} affects all expressions of the form\n"
+"@code{@var{base}^@var{power}} where @var{base} is an expression assumed scalar\n"
+"or constant, and @var{power} is a list or matrix.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) m: matrix ([1, %i], [a+b, %pi]);\n"
+"                         [   1    %i  ]\n"
+"(%o1)                    [            ]\n"
+"                         [ b + a  %pi ]\n"
+"(%i2) domxexpt: false$\n"
+"(%i3) (1 - c)^m;\n"
+"                             [   1    %i  ]\n"
+"                             [            ]\n"
+"                             [ b + a  %pi ]\n"
+"(%o3)                 (1 - c)\n"
+"(%i4) domxexpt: true$\n"
+"(%i5) (1 - c)^m;\n"
+"                  [                      %i  ]\n"
+"                  [    1 - c      (1 - c)    ]\n"
+"(%o5)             [                          ]\n"
+"                  [        b + a         %pi ]\n"
+"                  [ (1 - c)       (1 - c)    ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{domxmxops}\n"
+"@defvr {Option variable} domxmxops\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{domxmxops} is @code{true}, all matrix-matrix or\n"
+"matrix-list operations are carried out (but not scalar-matrix\n"
+"operations); if this switch is @code{false} such operations are not carried out.\n"
+"@c IS THIS AN EVALUATION OR A SIMPLIFICATION FLAG ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{domxnctimes}\n"
+"@defvr {Option variable} domxnctimes\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{domxnctimes} is @code{true}, non-commutative products of\n"
+"matrices are carried out.\n"
+"@c IS THIS AN EVALUATION OR A SIMPLIFICATION FLAG ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dontfactor}\n"
+"@defvr {Option variable} dontfactor\n"
+"Default value: @code{[]}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{dontfactor} may be set to a list of variables with respect to which\n"
+"factoring is not to occur.  (The list is initially empty.) Factoring also will\n"
+"not take place with respect to any variables which are less important, according\n"
+"the variable ordering assumed for canonical rational expression (CRE) form, than\n"
+"those on the @code{dontfactor} list.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{doscmxops}\n"
+"@defvr {Option variable} doscmxops\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{doscmxops} is @code{true}, scalar-matrix operations are\n"
+"carried out.\n"
+"@c IS THIS AN EVALUATION OR A SIMPLIFICATION FLAG ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{doscmxplus}\n"
+"@defvr {Option variable} doscmxplus\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{doscmxplus} is @code{true}, scalar-matrix operations yield\n"
+"a matrix result.  This switch is not subsumed under @mrefdot{doallmxops}\n"
+"@c IS THIS AN EVALUATION OR A SIMPLIFICATION FLAG ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dot0nscsimp}\n"
+"@defvr {Option variable} dot0nscsimp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c WHAT DOES THIS MEAN EXACTLY ??\n"
+"When @code{dot0nscsimp} is @code{true}, a non-commutative product of zero\n"
+"and a nonscalar term is simplified to a commutative product.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dot0simp}\n"
+"@defvr {Option variable} dot0simp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c WHAT DOES THIS MEAN EXACTLY ??\n"
+"When @code{dot0simp} is @code{true},\n"
+"a non-commutative product of zero and\n"
+"a scalar term is simplified to a commutative product.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dot1simp}\n"
+"@defvr {Option variable} dot1simp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c WHAT DOES THIS MEAN EXACTLY ??\n"
+"When @code{dot1simp} is @code{true},\n"
+"a non-commutative product of one and\n"
+"another term is simplified to a commutative product.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dotassoc}\n"
+"@defvr {Option variable} dotassoc\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{dotassoc} is @code{true}, an expression @code{(A.B).C} simplifies to\n"
+"@code{A.(B.C)}.\n"
+"@c \".\" MEANS NONCOMMUTATIVE MULTIPLICATION RIGHT ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dotconstrules}\n"
+"@defvr {Option variable} dotconstrules\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{dotconstrules} is @code{true}, a non-commutative product of a\n"
+"constant and another term is simplified to a commutative product.\n"
+"@c TERMINOLOGY: (1) SWITCH/FLAG/SOME OTHER TERM ??\n"
+"@c              (2) ASSIGN/SET/TURN ON/SOME OTHER TERM ??\n"
+"Turning on this flag effectively turns on @mrefcomma{dot0simp}@w{}\n"
+"@mrefcomma{dot0nscsimp} and @mref{dot1simp} as well.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dotdistrib}\n"
+"@defvr {Option variable} dotdistrib\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{dotdistrib} is @code{true}, an expression @code{A.(B + C)} simplifies\n"
+"to @code{A.B + A.C}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dotexptsimp}\n"
+"@defvr {Option variable} dotexptsimp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{dotexptsimp} is @code{true}, an expression @code{A.A} simplifies to\n"
+"@code{A^^2}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dotident}\n"
+"@defvr {Option variable} dotident\n"
+"Default value: 1\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{dotident} is the value returned by @code{X^^0}.\n"
+"@c \"RETURNED\" ?? IS THIS A SIMPLIFICATION OR AN EVALUATION ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dotscrules}\n"
+"@defvr {Option variable} dotscrules\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{dotscrules} is @code{true}, an expression @code{A.SC} or @code{SC.A}\n"
+"simplifies to @code{SC*A} and @code{A.(SC*B)} simplifies to @code{SC*(A.B)}.\n"
+"@c HMM, DOES \"SC\" MEAN \"SCALAR\" HERE ?? CLARIFY\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{echelon}\n"
+"@deffn {Function} echelon (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the echelon form of the matrix @var{M},\n"
+"as produced by Gaussian elimination.\n"
+"The echelon form is computed from @var{M}\n"
+"by elementary row operations such that the first\n"
+"non-zero element in each row in the resulting matrix is one and the\n"
+"column elements under the first one in each row are all zero.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@mref{triangularize} also carries out Gaussian elimination, but it does not\n"
+"normalize the leading non-zero element in each row.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@mref{lu_factor} and @mref{cholesky} are other functions which yield\n"
+"triangularized matrices.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c ===beg===\n"
+"@c M: matrix ([3, 7, aa, bb], [-1, 8, 5, 2], [9, 2, 11, 4]);\n"
+"@c echelon (M);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) M: matrix ([3, 7, aa, bb], [-1, 8, 5, 2], [9, 2, 11, 4]);\n"
+"                       [  3   7  aa  bb ]\n"
+"                       [                ]\n"
+"(%o1)                  [ - 1  8  5   2  ]\n"
+"                       [                ]\n"
+"                       [  9   2  11  4  ]\n"
+"(%i2) echelon (M);\n"
+"                  [ 1  - 8  - 5      - 2     ]\n"
+"                  [                          ]\n"
+"                  [         28       11      ]\n"
+"                  [ 0   1   --       --      ]\n"
+"(%o2)             [         37       37      ]\n"
+"                  [                          ]\n"
+"                  [              37 bb - 119 ]\n"
+"                  [ 0   0    1   ----------- ]\n"
+"                  [              37 aa - 313 ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Linear equations} @category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{eigenvalues}\n"
+"@anchor{eivals}\n"
+"@deffn  {Function} eigenvalues (@var{M})\n"
+"@deffnx {Function} eivals (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c eigen.mac IS AUTOLOADED IF eigenvalues OR eigenvectors IS REFERENCED; EXTEND THAT TO ALL FUNCTIONS ??\n"
+"@c EACH FUNCTION INTENDED FOR EXTERNAL USE SHOULD HAVE ITS OWN DOCUMENTATION ITEM\n"
+"Returns a list of two lists containing the eigenvalues of the matrix @var{M}.\n"
+"The first sublist of the return value is the list of eigenvalues of the\n"
+"matrix, and the second sublist is the list of the\n"
+"multiplicities of the eigenvalues in the corresponding order.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{eivals} is a synonym for @code{eigenvalues}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{eigenvalues} calls the function @mref{solve} to find the roots of the\n"
+"characteristic polynomial of the matrix.  Sometimes @code{solve} may not be able\n"
+"to find the roots of the polynomial; in that case some other functions in this\n"
+"package (except @mrefcomma{innerproduct} @mrefcomma{unitvector}@w{}\n"
+"@mref{columnvector} and @mref{gramschmidt}) will not work.\n"
+"@c WHICH ONES ARE THE FUNCTIONS WHICH DON'T WORK ??\n"
+"@c ACTUALLY IT'S MORE IMPORTANT TO LIST THE ONES WHICH DON'T WORK HERE\n"
+"@c WHAT DOES \"will not work\" MEAN, ANYWAY ??\n"
+"Sometimes @code{solve} may find only a subset of the roots of the polynomial.\n"
+"This may happen when the factoring of the polynomial contains polynomials\n"
+"of degree 5 or more. In such cases a warning message is displayed and the\n"
+"only the roots found and their corresponding multiplicities are returned.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"In some cases the eigenvalues found by @code{solve} may be complicated\n"
+"expressions.  (This may happen when @code{solve} returns a not-so-obviously real\n"
+"expression for an eigenvalue which is known to be real.)  It may be possible to\n"
+"simplify the eigenvalues using some other functions.\n"
+"@c WHAT ARE THOSE OTHER FUNCTIONS ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The package @code{eigen.mac} is loaded automatically when\n"
+"@code{eigenvalues} or @mref{eigenvectors} is referenced.\n"
+"If @code{eigen.mac} is not already loaded,\n"
+"@code{load (\"eigen\")} loads it.\n"
+"After loading, all functions and variables in the package are available.\n"
+"@c REFER TO OVERVIEW OF PACKAGE (INCLUDING LIST OF FUNCTIONS) HERE\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLES HERE\n"
+"@opencatbox\n"
+"@category{Package eigen}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{eigenvectors}\n"
+"@anchor{eivects}\n"
+"@deffn  {Function} eigenvectors (@var{M})\n"
+"@deffnx {Function} eivects (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Computes eigenvectors of the matrix @var{M}.\n"
+"The return value is a list of two elements.\n"
+"The first is a list of the eigenvalues of @var{M}\n"
+"and a list of the multiplicities of the eigenvalues.\n"
+"The second is a list of lists of eigenvectors.\n"
+"There is one list of eigenvectors for each eigenvalue.\n"
+"There may be one or more eigenvectors in each list.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{eivects} is a synonym for @code{eigenvectors}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The package @code{eigen.mac} is loaded automatically when\n"
+"@mref{eigenvalues} or @code{eigenvectors} is referenced.\n"
+"If @code{eigen.mac} is not already loaded,\n"
+"@code{load (\"eigen\")} loads it.\n"
+"After loading, all functions and variables in the package are available.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Note that @code{eigenvectors} internally calls @code{eigenvalues} to\n"
+"obtain eigenvalues. So, when @code{eigenvalues} returns a subset of\n"
+"all the eigenvalues, the @code{eigenvectors} returns the corresponding\n"
+"subset of the all the eigenvectors, with the same warning displayed as\n"
+"@code{eigenvalues}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The flags that affect this function are:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{nondiagonalizable} is set to @code{true} or @code{false} depending on\n"
+"whether the matrix is nondiagonalizable or diagonalizable after\n"
+"@code{eigenvectors} returns.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{hermitianmatrix} when @code{true}, causes the degenerate\n"
+"eigenvectors of the Hermitian matrix to be orthogonalized using the\n"
+"Gram-Schmidt algorithm.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{knowneigvals} when @code{true} causes the @code{eigen} package to assume\n"
+"the eigenvalues of the matrix are known to the user and stored under the global\n"
+"name @code{listeigvals}.  @code{listeigvals} should be set to a list similar\n"
+"to the output @code{eigenvalues}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The function @mref{algsys} is used here to solve for the eigenvectors.\n"
+"Sometimes if the eigenvalues are messy, @code{algsys} may not be able to find a\n"
+"solution.  In some cases, it may be possible to simplify the eigenvalues by\n"
+"first finding them using @code{eigenvalues} command and then using other\n"
+"functions to reduce them to something simpler.  Following simplification,\n"
+"@code{eigenvectors} can be called again with the @code{knowneigvals} flag set\n"
+"to @code{true}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @mrefdot{eigenvalues}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"A matrix which has just one eigenvector per eigenvalue.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c ===beg===\n"
+"@c M1 : matrix ([11, -1], [1, 7]);\n"
+"@c [vals, vecs] : eigenvectors (M1);\n"
+"@c for i thru length (vals[1]) do disp (val[i] = vals[1][i],\n"
+"@c   mult[i] = vals[2][i], vec[i] = vecs[i]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) M1 : matrix ([11, -1], [1, 7]);\n"
+"                           [ 11  - 1 ]\n"
+"(%o1)                      [         ]\n"
+"                           [ 1    7  ]\n"
+"(%i2) [vals, vecs] : eigenvectors (M1);\n"
+"(%o2) [[[9 - sqrt(3), sqrt(3) + 9], [1, 1]], \n"
+"                        [[[1, sqrt(3) + 2]], [[1, 2 - sqrt(3)]]]]\n"
+"(%i3) for i thru length (vals[1]) do disp (val[i] = vals[1][i],\n"
+"  mult[i] = vals[2][i], vec[i] = vecs[i]);\n"
+"                       val  = 9 - sqrt(3)\n"
+"                          1\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                            mult  = 1\n"
+"                                1\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                    vec  = [[1, sqrt(3) + 2]]\n"
+"                       1\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                       val  = sqrt(3) + 9\n"
+"                          2\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                            mult  = 1\n"
+"                                2\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                    vec  = [[1, 2 - sqrt(3)]]\n"
+"                       2\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"(%o3)                         done\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"A matrix which has two eigenvectors for one eigenvalue (namely 2).\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c ===beg===\n"
+"@c M1 : matrix ([0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 2, 0], [0, 0, 0, 2]);\n"
+"@c [vals, vecs] : eigenvectors (M1);\n"
+"@c for i thru length (vals[1]) do disp (val[i] = vals[1][i],\n"
+"@c   mult[i] = vals[2][i], vec[i] = vecs[i]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) M1 : matrix ([0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 2, 0], \n"
+"                   [0, 0, 0, 2]);\n"
+"                         [ 0  1  0  0 ]\n"
+"                         [            ]\n"
+"                         [ 0  0  0  0 ]\n"
+"(%o1)                    [            ]\n"
+"                         [ 0  0  2  0 ]\n"
+"                         [            ]\n"
+"                         [ 0  0  0  2 ]\n"
+"(%i2) [vals, vecs] : eigenvectors (M1);\n"
+"(%o2) [[[0, 2], [2, 2]], [[[1, 0, 0, 0]],\n"
+"                                   [[0, 0, 1, 0], [0, 0, 0, 1]]]]\n"
+"(%i3) for i thru length (vals[1]) do disp (val[i] = vals[1][i],\n"
+"  mult[i] = vals[2][i], vec[i] = vecs[i]);\n"
+"                            val  = 0\n"
+"                               1\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                            mult  = 2\n"
+"                                1\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                      vec  = [[1, 0, 0, 0]]\n"
+"                         1\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                            val  = 2\n"
+"                               2\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                            mult  = 2\n"
+"                                2\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"               vec  = [[0, 0, 1, 0], [0, 0, 0, 1]]\n"
+"                  2\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"(%o3)                         done\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package eigen}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ematrix}\n"
+"@deffn {Function} ematrix (@var{m}, @var{n}, @var{x}, @var{i}, @var{j})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns an @var{m} by @var{n} matrix, all elements of which\n"
+"are zero except for the @code{[@var{i}, @var{j}]} element which is @var{x}.\n"
+"@c WOW, THAT SEEMS PRETTY SPECIALIZED ...\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{entermatrix}\n"
+"@deffn {Function} entermatrix (@var{m}, @var{n})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns an @var{m} by @var{n} matrix, reading the elements interactively.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"If @var{n} is equal to @var{m}, Maxima prompts for the type of the matrix\n"
+"(diagonal, symmetric, antisymmetric, or general) and for each element.\n"
+"Each response is terminated by a semicolon @code{;} or dollar sign @code{$}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"If @var{n} is not equal to @var{m},\n"
+"Maxima prompts for each element.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The elements may be any expressions, which are evaluated.\n"
+"@code{entermatrix} evaluates its arguments.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) n: 3$\n"
+"(%i2) m: entermatrix (n, n)$\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Is the matrix  1. Diagonal  2. Symmetric  3. Antisymmetric \n"
+"4. General\n"
+"Answer 1, 2, 3 or 4 : \n"
+"1$\n"
+"Row 1 Column 1: \n"
+"(a+b)^n$\n"
+"Row 2 Column 2: \n"
+"(a+b)^(n+1)$\n"
+"Row 3 Column 3: \n"
+"(a+b)^(n+2)$\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Matrix entered.\n"
+"(%i3) m;\n"
+"                [        3                     ]\n"
+"                [ (b + a)      0         0     ]\n"
+"                [                              ]\n"
+"(%o3)           [                  4           ]\n"
+"                [    0      (b + a)      0     ]\n"
+"                [                              ]\n"
+"                [                            5 ]\n"
+"                [    0         0      (b + a)  ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction} @category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{genmatrix}\n"
+"@deffn  {Function} genmatrix @\n"
+"@fname{genmatrix} (@var{a}, @var{i_2}, @var{j_2}, @var{i_1}, @var{j_1}) @\n"
+"@fname{genmatrix} (@var{a}, @var{i_2}, @var{j_2}, @var{i_1}) @\n"
+"@fname{genmatrix} (@var{a}, @var{i_2}, @var{j_2})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a matrix generated from @var{a}, taking element\n"
+"@code{@var{a}[@var{i_1}, @var{j_1}]} as the upper-left element and\n"
+"@code{@var{a}[@var{i_2}, @var{j_2}]} as the lower-right element of the matrix.\n"
+"Here @var{a} is a declared array (created by @code{array} but not by\n"
+"@mref{make_array}) or an undeclared array, or an array function, or a lambda\n"
+"expression of two arguments.  (An array function is created like other functions\n"
+"with @mref{:=} or @mrefcomma{define} but arguments are enclosed in square\n"
+"brackets instead of parentheses.)\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"If @var{j_1} is omitted, it is assumed equal to @var{i_1}.\n"
+"If both @var{j_1} and @var{i_1} are omitted, both are assumed equal to 1.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"If a selected element @code{i,j} of the array is undefined,\n"
+"the matrix will contain a symbolic element @code{@var{a}[i,j]}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c ===beg===\n"
+"@c h [i, j] := 1 / (i + j - 1);\n"
+"@c genmatrix (h, 3, 3);\n"
+"@c array (a, fixnum, 2, 2);\n"
+"@c a [1, 1] : %e;\n"
+"@c a [2, 2] : %pi;\n"
+"@c genmatrix (a, 2, 2);\n"
+"@c genmatrix (lambda ([i, j], j - i), 3, 3);\n"
+"@c genmatrix (B, 2, 2);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) h [i, j] := 1 / (i + j - 1);\n"
+"                                    1\n"
+"(%o1)                  h     := ---------\n"
+"                        i, j    i + j - 1\n"
+"(%i2) genmatrix (h, 3, 3);\n"
+"                           [    1  1 ]\n"
+"                           [ 1  -  - ]\n"
+"                           [    2  3 ]\n"
+"                           [         ]\n"
+"                           [ 1  1  1 ]\n"
+"(%o2)                      [ -  -  - ]\n"
+"                           [ 2  3  4 ]\n"
+"                           [         ]\n"
+"                           [ 1  1  1 ]\n"
+"                           [ -  -  - ]\n"
+"                           [ 3  4  5 ]\n"
+"(%i3) array (a, fixnum, 2, 2);\n"
+"(%o3)                           a\n"
+"(%i4) a [1, 1] : %e;\n"
+"(%o4)                          %e\n"
+"(%i5) a [2, 2] : %pi;\n"
+"(%o5)                          %pi\n"
+"(%i6) genmatrix (a, 2, 2);\n"
+"                           [ %e   0  ]\n"
+"(%o6)                      [         ]\n"
+"                           [ 0   %pi ]\n"
+"(%i7) genmatrix (lambda ([i, j], j - i), 3, 3);\n"
+"                         [  0    1   2 ]\n"
+"                         [             ]\n"
+"(%o7)                    [ - 1   0   1 ]\n"
+"                         [             ]\n"
+"                         [ - 2  - 1  0 ]\n"
+"(%i8) genmatrix (B, 2, 2);\n"
+"                        [ B      B     ]\n"
+"                        [  1, 1   1, 2 ]\n"
+"(%o8)                   [              ]\n"
+"                        [ B      B     ]\n"
+"                        [  2, 1   2, 2 ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{gramschmidt}\n"
+"@deffn  {Function} gramschmidt @\n"
+"@fname{gramschmidt} (@var{x}) @\n"
+"@fname{gramschmidt} (@var{x}, @var{F})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Carries out the Gram-Schmidt orthogonalization algorithm on @var{x}, which is\n"
+"either a matrix or a list of lists.  @var{x} is not modified by\n"
+"@code{gramschmidt}.  The inner product employed by @code{gramschmidt} is\n"
+"@var{F}, if present, otherwise the inner product is the function\n"
+"@mrefdot{innerproduct}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"If @var{x} is a matrix, the algorithm is applied to the rows of @var{x}.  If\n"
+"@var{x} is a list of lists, the algorithm is applied to the sublists, which must\n"
+"have equal numbers of elements.  In either case, the return value is a list of\n"
+"lists, the sublists of which are orthogonal and span the same space as @var{x}.\n"
+"If the dimension of the span of @var{x} is less than the number of rows or\n"
+"sublists, some sublists of the return value are zero.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@mref{factor} is called at each stage of the algorithm to simplify intermediate\n"
+"results.  As a consequence, the return value may contain factored integers.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{load(eigen)} loads this function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Gram-Schmidt algorithm using default inner product function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (eigen)$\n"
+"@c x: matrix ([1, 2, 3], [9, 18, 30], [12, 48, 60]);\n"
+"@c y: gramschmidt (x);\n"
+"@c map (innerproduct, [y[1], y[2], y[3]], [y[2], y[3], y[1]]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (eigen)$\n"
+"(%i2) x: matrix ([1, 2, 3], [9, 18, 30], [12, 48, 60]);\n"
+"                         [ 1   2   3  ]\n"
+"                         [            ]\n"
+"(%o2)                    [ 9   18  30 ]\n"
+"                         [            ]\n"
+"                         [ 12  48  60 ]\n"
+"(%i3) y: gramschmidt (x);\n"
+"                       2      2            4     3\n"
+"                      3      3   3 5      2  3  2  3\n"
+"(%o3)  [[1, 2, 3], [- ---, - --, ---], [- ----, ----, 0]]\n"
+"                      2 7    7   2 7       5     5\n"
+"(%i4) map (innerproduct, [y[1], y[2], y[3]], [y[2], y[3], y[1]]);\n"
+"(%o4)                       [0, 0, 0]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Gram-Schmidt algorithm using a specified inner product function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (eigen)$\n"
+"@c ip (f, g) := integrate (f * g, u, a, b);\n"
+"@c y : gramschmidt ([1, sin(u), cos(u)], ip), a= -%pi/2, b=%pi/2;\n"
+"@c map (ip, [y[1], y[2], y[3]], [y[2], y[3], y[1]]), a= -%pi/2, b=%pi/2;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (eigen)$\n"
+"(%i2) ip (f, g) := integrate (f * g, u, a, b);\n"
+"(%o2)          ip(f, g) := integrate(f g, u, a, b)\n"
+"(%i3) y : gramschmidt([1, sin(u), cos(u)], ip), a= -%pi/2, b=%pi/2;\n"
+"                               %pi cos(u) - 2\n"
+"(%o3)              [1, sin(u), --------------]\n"
+"                                    %pi\n"
+"(%i4) map (ip, [y[1], y[2], y[3]], [y[2], y[3], y[1]]), \n"
+"                                                a= -%pi/2, b=%pi/2;\n"
+"(%o4)                       [0, 0, 0]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package eigen}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ident}\n"
+"@deffn {Function} ident (@var{n})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns an @var{n} by @var{n} identity matrix.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{innerproduct}\n"
+"@anchor{inprod}\n"
+"@deffn  {Function} innerproduct (@var{x}, @var{y})\n"
+"@deffnx {Function} inprod (@var{x}, @var{y})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the inner product (also called the scalar product or dot product) of\n"
+"@var{x} and @var{y}, which are lists of equal length, or both 1-column or 1-row\n"
+"matrices of equal length.  The return value is @code{conjugate (x) . y},\n"
+"where @code{.} is the noncommutative multiplication operator.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{load (\"eigen\")} loads this function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{inprod} is a synonym for @code{innerproduct}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Package eigen}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{invert_by_adjoint}\n"
+"@deffn {Function} invert_by_adjoint (@var{M})\n"
+"Returns the inverse of the matrix @var{M}.\n"
+"The inverse is computed by the adjoint method.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{invert_by_adjoint} honors the @mref{ratmx} and @mref{detout} flags,\n"
+"the same as @mrefdot{invert}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{invert}\n"
+"@deffn {Function} invert (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the inverse of the matrix @var{M}.\n"
+"The inverse is computed via the LU decomposition.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @mref{ratmx} is @code{true},\n"
+"elements of @var{M} are converted to canonical rational expressions (CRE),\n"
+"and the elements of the return value are also CRE.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @mref{ratmx} is @code{false},\n"
+"elements of @var{M} are not converted to a common representation.\n"
+"In particular, float and bigfloat elements are not converted to rationals.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @mref{detout} is @code{true}, the determinant is factored out of the inverse.\n"
+"The global flags @mref{doallmxops} and @mref{doscmxops} must be @code{false}\n"
+"to prevent the determinant from being absorbed into the inverse.\n"
+"@mref{xthru} can multiply the determinant into the inverse.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@mref{invert} does not apply any simplifications to the elements of the inverse\n"
+"apart from the default arithmetic simplifications.\n"
+"@mref{ratsimp} and @mref{expand} can apply additional simplifications.\n"
+"In particular, when @var{M} has polynomial elements,\n"
+"@code{expand(invert(@var{M}))} might be preferable.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{invert(@var{M})} is equivalent to @code{@var{M}^^-1}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLES HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{list_matrix_entries}\n"
+"@deffn {Function} list_matrix_entries (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a list containing the elements of the matrix @var{M}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c ===beg===\n"
+"@c list_matrix_entries(matrix([a,b],[c,d]));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) list_matrix_entries(matrix([a,b],[c,d]));\n"
+"(%o1)                     [a, b, c, d]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lmxchar}\n"
+"@defvr {Option variable} lmxchar\n"
+"Default value: @code{[}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{lmxchar} is the character displayed as the left delimiter of a matrix.\n"
+"See also @mrefdot{rmxchar}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) lmxchar: \"|\"$\n"
+"(%i2) matrix ([a, b, c], [d, e, f], [g, h, i]);\n"
+"                           | a  b  c ]\n"
+"                           |         ]\n"
+"(%o2)                      | d  e  f ]\n"
+"                           |         ]\n"
+"                           | g  h  i ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables} @category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{matrix}\n"
+"@deffn {Function} matrix (@var{row_1}, @dots{}, @var{row_n})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a rectangular matrix which has the rows @var{row_1}, @dots{},\n"
+"@var{row_n}.  Each row is a list of expressions.  All rows must be the same\n"
+"length.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The operations @code{+} (addition), @code{-} (subtraction), @code{*}\n"
+"(multiplication), and @code{/} (division), are carried out element by element\n"
+"when the operands are two matrices, a scalar and a matrix, or a matrix and a\n"
+"scalar.  The operation @code{^} (exponentiation, equivalently @code{**})\n"
+"is carried out element by element if the operands are a scalar and a matrix or\n"
+"a matrix and a scalar, but not if the operands are two matrices.\n"
+"@c WHAT DOES THIS NEXT PHRASE MEAN EXACTLY ??\n"
+"All operations are normally carried out in full,\n"
+"including @code{.} (noncommutative multiplication).\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Matrix multiplication is represented by the noncommutative multiplication\n"
+"operator @code{.}.  The corresponding noncommutative exponentiation operator\n"
+"is @code{^^}.  For a matrix @code{@var{A}}, @code{@var{A}.@var{A} = @var{A}^^2}\n"
+"and @code{@var{A}^^-1} is the inverse of @var{A}, if it exists.\n"
+"@code{@var{A}^^-1} is equivalent to @code{invert(@var{A})}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"There are switches for controlling simplification of expressions involving dot\n"
+"and matrix-list operations.  These are\n"
+"@mrefcomma{doallmxops} @mrefcomma{domxexpt} @mrefcomma{domxmxops}@w{}\n"
+"@mrefcomma{doscmxops} and @mrefdot{doscmxplus}\n"
+"@c CHECK -- WE PROBABLY WANT EXHAUSTIVE LIST HERE\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"There are additional options which are related to matrices.  These are:\n"
+"@mrefcomma{lmxchar} @mrefcomma{rmxchar} @mrefcomma{ratmx}@w{}\n"
+"@mrefcomma{listarith} @mrefcomma{detout} @code{scalarmatrix} and\n"
+"@mrefdot{sparse}\n"
+"@c CHECK -- WE PROBABLY WANT EXHAUSTIVE LIST HERE\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"There are a number of functions which take matrices as arguments or yield\n"
+"matrices as return values.\n"
+"See @mrefcomma{eigenvalues} @mrefcomma{eigenvectors} @mrefcomma{determinant}@w{}\n"
+"@mrefcomma{charpoly} @mrefcomma{genmatrix} @mrefcomma{addcol}@w{}\n"
+"@mrefcomma{addrow} @mrefcomma{copymatrix} @mrefcomma{transpose}@w{}\n"
+"@mrefcomma{echelon} and @mrefdot{rank}\n"
+"@c CHECK -- WE PROBABLY WANT EXHAUSTIVE LIST HERE\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"Construction of matrices from lists.\n"
+"@end itemize\n"
+"@example\n"
+"(%i1) x: matrix ([17, 3], [-8, 11]);\n"
+"                           [ 17   3  ]\n"
+"(%o1)                      [         ]\n"
+"                           [ - 8  11 ]\n"
+"(%i2) y: matrix ([%pi, %e], [a, b]);\n"
+"                           [ %pi  %e ]\n"
+"(%o2)                      [         ]\n"
+"                           [  a   b  ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Addition, element by element.\n"
+"@end itemize\n"
+"@example\n"
+"(%i3) x + y;\n"
+"                      [ %pi + 17  %e + 3 ]\n"
+"(%o3)                 [                  ]\n"
+"                      [  a - 8    b + 11 ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Subtraction, element by element.\n"
+"@end itemize\n"
+"@example\n"
+"(%i4) x - y;\n"
+"                      [ 17 - %pi  3 - %e ]\n"
+"(%o4)                 [                  ]\n"
+"                      [ - a - 8   11 - b ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Multiplication, element by element.\n"
+"@end itemize\n"
+"@example\n"
+"(%i5) x * y;\n"
+"                        [ 17 %pi  3 %e ]\n"
+"(%o5)                   [              ]\n"
+"                        [ - 8 a   11 b ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Division, element by element.\n"
+"@end itemize\n"
+"@example\n"
+"(%i6) x / y;\n"
+"                        [ 17       - 1 ]\n"
+"                        [ ---  3 %e    ]\n"
+"                        [ %pi          ]\n"
+"(%o6)                   [              ]\n"
+"                        [   8    11    ]\n"
+"                        [ - -    --    ]\n"
+"                        [   a    b     ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Matrix to a scalar exponent, element by element.\n"
+"@end itemize\n"
+"@example\n"
+"(%i7) x ^ 3;\n"
+"                         [ 4913    27  ]\n"
+"(%o7)                    [             ]\n"
+"                         [ - 512  1331 ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Scalar base to a matrix exponent, element by element.\n"
+"@end itemize\n"
+"@example\n"
+"(%i8) exp(y); \n"
+"                         [   %pi    %e ]\n"
+"                         [ %e     %e   ]\n"
+"(%o8)                    [             ]\n"
+"                         [    a     b  ]\n"
+"                         [  %e    %e   ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Matrix base to a matrix exponent.  This is not carried out element by element.\n"
+"See also @mrefdot{matrixexp}\n"
+"@c WHAT IS THIS ??\n"
+"@end itemize\n"
+"@example\n"
+"(%i9) x ^ y;\n"
+"                                [ %pi  %e ]\n"
+"                                [         ]\n"
+"                                [  a   b  ]\n"
+"                     [ 17   3  ]\n"
+"(%o9)                [         ]\n"
+"                     [ - 8  11 ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Noncommutative matrix multiplication.\n"
+"@end itemize\n"
+"@example\n"
+"(%i10) x . y;\n"
+"                  [ 3 a + 17 %pi  3 b + 17 %e ]\n"
+"(%o10)            [                           ]\n"
+"                  [ 11 a - 8 %pi  11 b - 8 %e ]\n"
+"(%i11) y . x;\n"
+"                [ 17 %pi - 8 %e  3 %pi + 11 %e ]\n"
+"(%o11)          [                              ]\n"
+"                [  17 a - 8 b     11 b + 3 a   ]\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"Noncommutative matrix exponentiation.\n"
+"A scalar base @var{b} to a matrix power @var{M}\n"
+"is carried out element by element and so @code{b^^m} is the same as @code{b^m}.\n"
+"@end itemize\n"
+"@example\n"
+"(%i12) x ^^ 3;\n"
+"                        [  3833   1719 ]\n"
+"(%o12)                  [              ]\n"
+"                        [ - 4584  395  ]\n"
+"(%i13) %e ^^ y;\n"
+"@group\n"
+"                         [   %pi    %e ]\n"
+"                         [ %e     %e   ]\n"
+"(%o13)                   [             ]\n"
+"                         [    a     b  ]\n"
+"                         [  %e    %e   ]\n"
+"@end group\n"
+"@end example\n"
+"@itemize @bullet\n"
+"@item\n"
+"A matrix raised to a -1 exponent with noncommutative exponentiation is the\n"
+"matrix inverse, if it exists.\n"
+"@end itemize\n"
+"@example\n"
+"(%i14) x ^^ -1;\n"
+"                         [ 11      3  ]\n"
+"                         [ ---  - --- ]\n"
+"                         [ 211    211 ]\n"
+"(%o14)                   [            ]\n"
+"                         [  8    17   ]\n"
+"                         [ ---   ---  ]\n"
+"                         [ 211   211  ]\n"
+"(%i15) x . (x ^^ -1);\n"
+"                            [ 1  0 ]\n"
+"(%o15)                      [      ]\n"
+"                            [ 0  1 ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{matrixexp}\n"
+"@deffn {Function} matrixexp @\n"
+"@fname{matrixexp} (@var{M}) @\n"
+"@fname{matrixexp} (@var{M}, @var{n}) @\n"
+"@fname{matrixexp} (@var{M}, @var{V})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Calculates the matrix exponential\n"
+"@ifnotinfo\n"
+"@tex\n"
+"@math{e^{MV}}\n"
+"@end tex\n"
+"@ifset mathjax\n"
+"@html\n"
+"$$e^{M\cdot V}$$\n"
+"@end html\n"
+"@end ifset\n"
+"@ifclear mathjax\n"
+"@math{e^(M*V)}\n"
+"@end ifclear\n"
+"@end ifnotinfo \n"
+"@ifinfo\n"
+"@math{e^(M*V)}\n"
+"@end ifinfo\n"
+". Instead of the vector @var{V} a number @var{n} can be specified as the second\n"
+"argument. If this argument is omitted @code{matrixexp} replaces it by @code{1}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The matrix exponential of a matrix @var{M} can be expressed as a power series:\n"
+"@ifnotinfo\n"
+"@tex\n"
+"@math{e^M=\sum_{k=0}^\infty{{M^k}\over{k!}}}\n"
+"@end tex\n"
+"@ifset mathjax\n"
+"@html\n"
+"$$e^M=\sum_{k=0}^\infty{\left(\frac{M^k}{k!}\right)}$$\n"
+"@end html\n"
+"@end ifset\n"
+"@ifclear mathjax\n"
+"@math{e^M=sum(M^k/k!,0,inf)}\n"
+"@end ifclear\n"
+"@end ifnotinfo \n"
+"@ifinfo\n"
+"@math{e^M=sum(M^k/k!,0,inf)}\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{matrixmap}\n"
+"@deffn {Function} matrixmap (@var{f}, @var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a matrix with element @code{i,j} equal to @code{@var{f}(@var{M}[i,j])}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @mrefcomma{map} @mrefcomma{fullmap} @mrefcomma{fullmapl} and\n"
+"@mrefdot{apply}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEED EXAMPLE HERE\n"
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{matrixp}\n"
+"@deffn {Function} matrixp (@var{expr})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns @code{true} if @var{expr} is a matrix, otherwise @code{false}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{matrix_element_add}\n"
+"@defvr {Option variable} matrix_element_add\n"
+"Default value: @code{+}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{matrix_element_add} is the operation \n"
+"invoked in place of addition in a matrix multiplication.\n"
+"@code{matrix_element_add} can be assigned any n-ary operator\n"
+"(that is, a function which handles any number of arguments).\n"
+"The assigned value may be the name of an operator enclosed in quote marks,\n"
+"the name of a function,\n"
+"or a lambda expression.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @mref{matrix_element_mult} and @mrefdot{matrix_element_transpose}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) matrix_element_add: \"*\"$\n"
+"(%i2) matrix_element_mult: \"^\"$\n"
+"(%i3) aa: matrix ([a, b, c], [d, e, f]);\n"
+"                           [ a  b  c ]\n"
+"(%o3)                      [         ]\n"
+"                           [ d  e  f ]\n"
+"(%i4) bb: matrix ([u, v, w], [x, y, z]);\n"
+"@group\n"
+"                           [ u  v  w ]\n"
+"(%o4)                      [         ]\n"
+"                           [ x  y  z ]\n"
+"@end group\n"
+"(%i5) aa . transpose (bb);\n"
+"                     [  u  v  w   x  y  z ]\n"
+"                     [ a  b  c   a  b  c  ]\n"
+"(%o5)                [                    ]\n"
+"                     [  u  v  w   x  y  z ]\n"
+"                     [ d  e  f   d  e  f  ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{matrix_element_mult}\n"
+"@defvr {Option variable} matrix_element_mult\n"
+"Default value: @code{*}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{matrix_element_mult} is the operation \n"
+"invoked in place of multiplication in a matrix multiplication.\n"
+"@code{matrix_element_mult} can be assigned any binary operator.\n"
+"The assigned value may be the name of an operator enclosed in quote marks,\n"
+"the name of a function,\n"
+"or a lambda expression.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The dot operator @code{.} is a useful choice in some contexts.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @mref{matrix_element_add} and @mrefdot{matrix_element_transpose}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) matrix_element_add: lambda ([[x]], sqrt (apply (\"+\", x)))$\n"
+"(%i2) matrix_element_mult: lambda ([x, y], (x - y)^2)$\n"
+"(%i3) [a, b, c] . [x, y, z];\n"
+"                          2          2          2\n"
+"(%o3)         sqrt((c - z)  + (b - y)  + (a - x) )\n"
+"(%i4) aa: matrix ([a, b, c], [d, e, f]);\n"
+"                           [ a  b  c ]\n"
+"(%o4)                      [         ]\n"
+"                           [ d  e  f ]\n"
+"(%i5) bb: matrix ([u, v, w], [x, y, z]);\n"
+"                           [ u  v  w ]\n"
+"(%o5)                      [         ]\n"
+"                           [ x  y  z ]\n"
+"(%i6) aa . transpose (bb);\n"
+"               [             2          2          2  ]\n"
+"               [ sqrt((c - w)  + (b - v)  + (a - u) ) ]\n"
+"(%o6)  Col 1 = [                                      ]\n"
+"               [             2          2          2  ]\n"
+"               [ sqrt((f - w)  + (e - v)  + (d - u) ) ]\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"                         [             2          2          2  ]\n"
+"                         [ sqrt((c - z)  + (b - y)  + (a - x) ) ]\n"
+"                 Col 2 = [                                      ]\n"
+"                         [             2          2          2  ]\n"
+"                         [ sqrt((f - z)  + (e - y)  + (d - x) ) ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{matrix_element_transpose}\n"
+"@defvr {Option variable} matrix_element_transpose\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{matrix_element_transpose} is the operation \n"
+"applied to each element of a matrix when it is transposed.\n"
+"@mref{matrix_element_mult} can be assigned any unary operator.\n"
+"The assigned value may be the name of an operator enclosed in quote marks,\n"
+"the name of a function, or a lambda expression.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{matrix_element_transpose} equals @mrefcomma{transpose}\n"
+"the @code{transpose} function is applied to every element.\n"
+"When @code{matrix_element_transpose} equals @code{nonscalars},\n"
+"the @code{transpose} function is applied to every nonscalar element.\n"
+"If some element is an atom, the @code{nonscalars} option applies\n"
+"@code{transpose} only if the atom is declared nonscalar,\n"
+"while the @code{transpose} option always applies @code{transpose}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"The default value, @code{false}, means no operation is applied.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @mref{matrix_element_add} and @mrefdot{matrix_element_mult}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@example\n"
+"(%i1) declare (a, nonscalar)$\n"
+"(%i2) transpose ([a, b]);\n"
+"                        [ transpose(a) ]\n"
+"(%o2)                   [              ]\n"
+"                        [      b       ]\n"
+"(%i3) matrix_element_transpose: nonscalars$\n"
+"(%i4) transpose ([a, b]);\n"
+"                        [ transpose(a) ]\n"
+"(%o4)                   [              ]\n"
+"                        [      b       ]\n"
+"(%i5) matrix_element_transpose: transpose$\n"
+"(%i6) transpose ([a, b]);\n"
+"                        [ transpose(a) ]\n"
+"(%o6)                   [              ]\n"
+"                        [ transpose(b) ]\n"
+"(%i7) matrix_element_transpose: lambda ([x], realpart(x)\n"
+"      - %i*imagpart(x))$\n"
+"(%i8) m: matrix ([1 + 5*%i, 3 - 2*%i], [7*%i, 11]);\n"
+"                     [ 5 %i + 1  3 - 2 %i ]\n"
+"(%o8)                [                    ]\n"
+"                     [   7 %i       11    ]\n"
+"(%i9) transpose (m);\n"
+"                      [ 1 - 5 %i  - 7 %i ]\n"
+"(%o9)                 [                  ]\n"
+"                      [ 2 %i + 3    11   ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c IS THIS THE ONLY MATRIX TRACE FUNCTION ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{mattrace}\n"
+"@deffn {Function} mattrace (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the trace (that is, the sum of the elements on the main diagonal) of\n"
+"the square matrix @var{M}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{mattrace} is called by @mrefcomma{ncharpoly} an alternative to Maxima's\n"
+"@mrefdot{charpoly}\n"
+"@c UMM, HOW IS THAT RELEVANT HERE ??\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{load (\"nchrpl\")} loads this function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices} @category{Package nchrpl}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{minor}\n"
+"@deffn {Function} minor (@var{M}, @var{i}, @var{j})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the @var{i}, @var{j} minor of the matrix @var{M}.  That is, @var{M}\n"
+"with row @var{i} and column @var{j} removed.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ncharpoly}\n"
+"@deffn {Function} ncharpoly (@var{M}, @var{x})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the characteristic polynomial of the matrix @var{M}\n"
+"with respect to @var{x}.  This is an alternative to Maxima's @mrefdot{charpoly}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{ncharpoly} works by computing traces of powers of the given matrix,\n"
+"which are known to be equal to sums of powers of the roots of the\n"
+"characteristic polynomial.  From these quantities the symmetric\n"
+"functions of the roots can be calculated, which are nothing more than\n"
+"the coefficients of the characteristic polynomial.  @code{charpoly} works by\n"
+"@c SHOULD THAT BE \"m\" INSTEAD OF \"a\" IN THE NEXT LINE ??\n"
+"forming the determinant of @code{@var{x} * ident [n] - a}.  Thus\n"
+"@code{ncharpoly} wins, for example, in the case of large dense matrices filled\n"
+"with integers, since it avoids polynomial arithmetic altogether.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{load (\"nchrpl\")} loads this file.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices} @category{Package nchrpl}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{newdet}\n"
+"@deffn {Function} newdet (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Computes the determinant of the matrix @var{M} by the Johnson-Gentleman tree \n"
+"minor algorithm.  @code{newdet} returns the result in CRE form.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{permanent}\n"
+"@deffn {Function} permanent (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Computes the permanent of the matrix @var{M} by the Johnson-Gentleman tree\n"
+"minor algorithm.  A permanent is like a determinant but with no sign changes.\n"
+"@code{permanent} returns the result in CRE form.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @code{newdet}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rank}\n"
+"@deffn {Function} rank (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Computes the rank of the matrix @var{M}.  That is, the order of the\n"
+"largest non-singular subdeterminant of @var{M}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c STATEMENT NEEDS CLARIFICATION\n"
+"@var{rank} may return the\n"
+"wrong answer if it cannot determine that a matrix element that is\n"
+"equivalent to zero is indeed so.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ratmx}\n"
+"@defvr {Option variable} ratmx\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{ratmx} is @code{false}, determinant and matrix\n"
+"addition, subtraction, and multiplication are performed in the\n"
+"representation of the matrix elements and cause the result of\n"
+"matrix inversion to be left in general representation.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{ratmx} is @code{true},\n"
+"the 4 operations mentioned above are performed in CRE form and the\n"
+"result of matrix inverse is in CRE form.  Note that this may\n"
+"cause the elements to be expanded (depending on the setting of @mref{ratfac})\n"
+"which might not always be desired.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices} @category{Rational expressions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{row}\n"
+"@deffn {Function} row (@var{M}, @var{i})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the @var{i}'th row of the matrix @var{M}.\n"
+"The return value is a matrix.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rmxchar}\n"
+"@defvr {Option variable} rmxchar\n"
+"Default value: @code{]}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{rmxchar} is the character drawn on the right-hand side of a matrix.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"See also @mrefdot{lmxchar}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{scalarmatrixp}\n"
+"@defvr {Option variable} scalarmatrixp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{scalarmatrixp} is @code{true}, then whenever a 1 x 1 matrix\n"
+"is produced as a result of computing the dot product of matrices it\n"
+"is simplified to a scalar, namely the sole element of the matrix.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{scalarmatrixp} is @code{all},\n"
+"then all 1 x 1 matrices are simplified to scalars.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{scalarmatrixp} is @code{false}, 1 x 1 matrices are not simplified\n"
+"to scalars.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices} @category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c I WONDER WHAT THIS IS ABOUT\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{scalefactors}\n"
+"@deffn {Function} scalefactors (@var{coordinatetransform})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Here the argument @var{coordinatetransform} evaluates to the form\n"
+"@code{[[expression1, expression2, ...], indeterminate1, indeterminat2, ...]},\n"
+"where the variables @var{indeterminate1}, @var{indeterminate2}, etc. are the\n"
+"curvilinear coordinate variables and where a set of rectangular Cartesian\n"
+"components is given in terms of the curvilinear coordinates by\n"
+"@code{[expression1, expression2, ...]}.  @code{coordinates} is set to the vector\n"
+"@code{[indeterminate1, indeterminate2,...]}, and @code{dimension} is set to the\n"
+"length of this vector.  SF[1], SF[2], @dots{}, SF[DIMENSION] are set to the\n"
+"coordinate scale factors, and @code{sfprod} is set to the product of these scale\n"
+"factors.  Initially, @code{coordinates} is @code{[X, Y, Z]}, @code{dimension}\n"
+"is 3, and SF[1]=SF[2]=SF[3]=SFPROD=1, corresponding to 3-dimensional rectangular\n"
+"Cartesian coordinates.  To expand an expression into physical components in the\n"
+"current coordinate system, there is a function with usage of the form\n"
+"@c SOME TEXT HAS GONE MISSING HERE\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package vect}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{setelmx}\n"
+"@deffn {Function} setelmx (@var{x}, @var{i}, @var{j}, @var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Assigns @var{x} to the (@var{i}, @var{j})'th element of the matrix @var{M},\n"
+"and returns the altered matrix.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{@var{M} [@var{i}, @var{j}]: @var{x}} has the same effect,\n"
+"but returns @var{x} instead of @var{M}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{similaritytransform}\n"
+"@anchor{simtran}\n"
+"@deffn  {Function} similaritytransform (@var{M})\n"
+"@deffnx {Function} simtran (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{similaritytransform} computes a similarity transform of the matrix\n"
+"@code{M}.  It returns a list which is the output of the @code{uniteigenvectors}\n"
+"command.  In addition if the flag @code{nondiagonalizable} is @code{false} two\n"
+"global matrices @code{leftmatrix} and @code{rightmatrix} are computed.  These\n"
+"matrices have the property that @code{leftmatrix . @var{M} . rightmatrix} is a\n"
+"diagonal matrix with the eigenvalues of @var{M} on the diagonal.  If\n"
+"@code{nondiagonalizable} is @code{true} the left and right matrices are not\n"
+"computed.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"If the flag @code{hermitianmatrix} is @code{true} then @code{leftmatrix} is the\n"
+"complex conjugate of the transpose of @code{rightmatrix}.  Otherwise\n"
+"@code{leftmatrix} is the inverse of @code{rightmatrix}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{rightmatrix} is the matrix the columns of which are the unit\n"
+"eigenvectors of @var{M}.  The other flags (see @code{eigenvalues} and\n"
+"@code{eigenvectors}) have the same effects since\n"
+"@code{similaritytransform} calls the other functions in the package in order\n"
+"to be able to form @code{rightmatrix}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{load (\"eigen\")} loads this function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{simtran} is a synonym for @code{similaritytransform}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package eigen}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sparse}\n"
+"@defvr {Option variable} sparse\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{sparse} is @code{true}, and if @code{ratmx} is @code{true}, then\n"
+"@code{determinant} will use special routines for computing sparse determinants.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{submatrix}\n"
+"@deffn {Function} submatrix @\n"
+"@fname{submatrix} (@var{i_1}, @dots{}, @var{i_m}, @var{M}, @var{j_1}, @dots{}, @var{j_n}) @\n"
+"@fname{submatrix} (@var{i_1}, @dots{}, @var{i_m}, @var{M}) @\n"
+"@fname{submatrix} (@var{M}, @var{j_1}, @dots{}, @var{j_n})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns a new matrix composed of the matrix @var{M} with rows @var{i_1},\n"
+"@dots{}, @var{i_m} deleted, and columns @var{j_1}, @dots{}, @var{j_n} deleted.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{transpose}\n"
+"@deffn {Function} transpose (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the transpose of @var{M}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"If @var{M} is a matrix, the return value is another matrix @var{N}\n"
+"such that @code{N[i,j] = M[j,i]}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"If @var{M} is a list, the return value is a matrix @var{N}\n"
+"of @code{length (m)} rows and 1 column, such that @code{N[i,1] = M[i]}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Otherwise @var{M} is a symbol,\n"
+"and the return value is a noun expression @code{'transpose (@var{M})}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{triangularize}\n"
+"@deffn {Function} triangularize (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the upper triangular form of the matrix @code{M},\n"
+"as produced by Gaussian elimination.\n"
+"The return value is the same as @code{echelon},\n"
+"except that the leading nonzero coefficient in each row is not normalized to 1.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{lu_factor} and @code{cholesky} are other functions which yield\n"
+"triangularized matrices.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c ===beg===\n"
+"@c M: matrix ([3, 7, aa, bb], [-1, 8, 5, 2], [9, 2, 11, 4]);\n"
+"@c triangularize (M);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) M: matrix ([3, 7, aa, bb], [-1, 8, 5, 2], [9, 2, 11, 4]);\n"
+"                       [  3   7  aa  bb ]\n"
+"                       [                ]\n"
+"(%o1)                  [ - 1  8  5   2  ]\n"
+"                       [                ]\n"
+"                       [  9   2  11  4  ]\n"
+"(%i2) triangularize (M);\n"
+"             [ - 1   8         5            2      ]\n"
+"             [                                     ]\n"
+"(%o2)        [  0   - 74     - 56         - 22     ]\n"
+"             [                                     ]\n"
+"             [  0    0    626 - 74 aa  238 - 74 bb ]\n"
+"@end example\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Linear equations} @category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{uniteigenvectors}\n"
+"@anchor{ueivects}\n"
+"@deffn  {Function} uniteigenvectors (@var{M})\n"
+"@deffnx {Function} ueivects (@var{M})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Computes unit eigenvectors of the matrix @var{M}.\n"
+"The return value is a list of lists, the first sublist of which is the\n"
+"output of the @code{eigenvalues} command, and the other sublists of which are\n"
+"the unit eigenvectors of the matrix corresponding to those eigenvalues\n"
+"respectively.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c COPY DESCRIPTIONS OF THOSE FLAGS HERE\n"
+"The flags mentioned in the description of the\n"
+"@code{eigenvectors} command have the same effects in this one as well.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"When @code{knowneigvects} is @code{true}, the @code{eigen} package assumes\n"
+"that the eigenvectors of the matrix are known to the user and are\n"
+"stored under the global name @code{listeigvects}.  @code{listeigvects} should\n"
+"be set to a list similar to the output of the @code{eigenvectors} command.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c FOLLOWING PARAGRAPH IS IN NEED OF SERIOUS CLARIFICATION\n"
+"If @code{knowneigvects} is set to @code{true} and the list of eigenvectors is\n"
+"given the setting of the flag @code{nondiagonalizable} may not be correct.  If\n"
+"that is the case please set it to the correct value.  The author assumes that\n"
+"the user knows what he is doing and will not try to diagonalize a matrix the\n"
+"eigenvectors of which do not span the vector space of the appropriate dimension.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{load (\"eigen\")} loads this function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{ueivects} is a synonym for @code{uniteigenvectors}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package eigen}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{unitvector}\n"
+"@anchor{uvect}\n"
+"@deffn  {Function} unitvector (@var{x})\n"
+"@deffnx {Function} uvect (@var{x})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns @math{@var{x}/norm(@var{x})};\n"
+"this is a unit vector in the same direction as @var{x}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{load (\"eigen\")} loads this function.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@code{uvect} is a synonym for @code{unitvector}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package eigen}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{vectorpotential}\n"
+"@deffn {Function} vectorpotential (@var{givencurl})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns the vector potential of a given curl vector, in the current coordinate\n"
+"system.  @code{potentialzeroloc} has a similar role as for @code{potential}, but\n"
+"the order of the left-hand sides of the equations must be a cyclic permutation\n"
+"of the coordinate variables.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package vect}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c NEEDS A LOT OF WORK: MAKE SURE THAT ALL VECTOR SIMPLIFICATION FLAGS HAVE A\n"
+"@c DESCRIPTION HERE\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{vectorsimp}\n"
+"@deffn {Function} vectorsimp (@var{expr})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Applies simplifications and expansions according to the following global flags:\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@flushleft\n"
+"@code{expandall}, @code{expanddot}, @code{expanddotplus}, @code{expandcross}, @code{expandcrossplus},\n"
+"@code{expandcrosscross}, @code{expandgrad}, @code{expandgradplus}, @code{expandgradprod},\n"
+"@code{expanddiv}, @code{expanddivplus}, @code{expanddivprod}, @code{expandcurl}, @code{expandcurlplus},\n"
+"@code{expandcurlcurl}, @code{expandlaplacian}, @code{expandlaplacianplus},\n"
+"and @code{expandlaplacianprod}.\n"
+"@end flushleft\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"All these flags have default value @code{false}.  The @code{plus} suffix refers\n"
+"to employing additivity or distributivity.  The @code{prod} suffix refers to the\n"
+"expansion for an operand that is any kind of product.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@table @code\n"
+"@item expandcrosscross\n"
+"Simplifies @math{p ~ (q ~ r)} to @math{(p . r)*q - (p . q)*r}.\n"
+"@item expandcurlcurl\n"
+"Simplifies @math{curl curl p} to @math{grad div p + div grad p}.\n"
+"@item expandlaplaciantodivgrad\n"
+"Simplifies @math{laplacian p} to @math{div grad p}.\n"
+"@item expandcross\n"
+"Enables @code{expandcrossplus} and @code{expandcrosscross}.\n"
+"@item expandplus\n"
+"@flushleft\n"
+"Enables @code{expanddotplus}, @code{expandcrossplus}, @code{expandgradplus},\n"
+"@code{expanddivplus}, @code{expandcurlplus}, and @code{expandlaplacianplus}.\n"
+"@end flushleft\n"
+"@item expandprod\n"
+"Enables @code{expandgradprod}, @code{expanddivprod}, and @code{expandlaplacianprod}.\n"
+"@end table\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c EXPLAIN THE IMPORT OF THIS STATEMENT\n"
+"These flags have all been declared @code{evflag}.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c SEEMS SOME TEXT HAS GONE MISSING HERE; COMMENT OUT FRAGMENT PENDING\n"
+"@c RECOVERY AND/OR RECONSTRUCTION OF THIS PARAGRAPH\n"
+"@c For orthogonal curvilinear coordinates, the global variables\n"
+"@c COORDINATES[[X,Y,Z]], DIMENSION[3], SF[[1,1,1]], and SFPROD[1] are set\n"
+"@c by the function invocation\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package vect} @category{Simplification functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{vect_cross}\n"
+"@defvr {Option variable} vect_cross\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c WHAT DOES THIS MEAN EXACTLY ??\n"
+"When @code{vect_cross} is @code{true}, it allows DIFF(X~Y,T) to work where\n"
+"~ is defined in SHARE;VECT (where VECT_CROSS is set to @code{true}, anyway.)\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package vect} @category{Differential calculus}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zeromatrix}\n"
+"@deffn {Function} zeromatrix (@var{m}, @var{n})\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"Returns an @var{m} by @var{n} matrix, all elements of which are zero.\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+"@opencatbox\n"
+"@category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Matrices.texi
+msgid ""
+msgstr ""

@@ -1,0 +1,3080 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@page\n"
+"@node Lists, Arrays, Constants, Data Types and Structures\n"
+"@section Lists\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@menu\n"
+"* Introduction to Lists::\n"
+"* Functions and Variables for Lists::\n"
+"* Performance considerations for Lists::\n"
+"@end menu\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to Lists, Functions and Variables for Lists, Lists, Lists\n"
+"@subsection Introduction to Lists\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Lists are the basic building block for Maxima and Lisp.  All data types\n"
+"other than arrays, hash tables and numbers are represented as Lisp lists,\n"
+"These Lisp lists have the form\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@example\n"
+"((MPLUS) $A 2)\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@noindent\n"
+"to indicate an expression @code{a+2}.  At Maxima level one would see\n"
+"the infix notation @code{a+2}.  Maxima also has lists which are printed\n"
+"as\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@example\n"
+"[1, 2, 7, x+y]\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@noindent\n"
+"for a list with 4 elements.  Internally this corresponds to a Lisp list\n"
+"of the form\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@example\n"
+"((MLIST) 1 2 7 ((MPLUS) $X $Y))\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@noindent\n"
+"The flag which denotes the type field of the Maxima expression is a list\n"
+"itself, since after it has been through the simplifier the list would become\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@example\n"
+"((MLIST SIMP) 1 2 7 ((MPLUS SIMP) $X $Y))\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Lists, Performance considerations for Lists ,Introduction to Lists, Lists\n"
+"@subsection Functions and Variables for Lists\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{[}\n"
+"@anchor{]}\n"
+"@fnindex List delimiters\n"
+"@fnindex Subscript operator\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@defvr  {Operator} [\n"
+"@defvrx {Operator} ]\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{[} and @code{]} mark the beginning and end, respectively, of a list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{[} and @code{]} also enclose the subscripts of\n"
+"a list, array, hash array, or array function. Note that\n"
+"other than for arrays accessing the @code{n}th element of a list\n"
+"may need an amount of time that is roughly proportional to  @code{n},\n"
+"@xref{Performance considerations for Lists}.\n"
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c x: [a, b, c];\n"
+"@c x[3];\n"
+"@c array (y, fixnum, 3);\n"
+"@c y[2]: %pi;\n"
+"@c y[2];\n"
+"@c z['foo]: 'bar;\n"
+"@c z['foo];\n"
+"@c g[k] := 1/(k^2+1);\n"
+"@c g[10];\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) x: [a, b, c];\n"
+"(%o1)                       [a, b, c]\n"
+"@end group\n"
+"@group\n"
+"(%i2) x[3];\n"
+"(%o2)                           c\n"
+"@end group\n"
+"@group\n"
+"(%i3) array (y, fixnum, 3);\n"
+"(%o3)                           y\n"
+"@end group\n"
+"@group\n"
+"(%i4) y[2]: %pi;\n"
+"(%o4)                          %pi\n"
+"@end group\n"
+"@group\n"
+"(%i5) y[2];\n"
+"(%o5)                          %pi\n"
+"@end group\n"
+"@group\n"
+"(%i6) z['foo]: 'bar;\n"
+"(%o6)                          bar\n"
+"@end group\n"
+"@group\n"
+"(%i7) z['foo];\n"
+"(%o7)                          bar\n"
+"@end group\n"
+"@group\n"
+"(%i8) g[k] := 1/(k^2+1);\n"
+"                                  1\n"
+"(%o8)                     g  := ------\n"
+"                           k     2\n"
+"                                k  + 1\n"
+"@end group\n"
+"@group\n"
+"(%i9) g[10];\n"
+"                                1\n"
+"(%o9)                          ---\n"
+"                               101\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Operators}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c NEED ANOTHER deffn FOR GENERAL EXPRESSIONS ARGUMENTS\n"
+"@c NEEDS CLARIFICATION AND EXAMPLES\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{append}\n"
+"@deffn {Function} append (@var{list_1}, @dots{}, @var{list_n})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns a single list of the elements of @var{list_1} followed\n"
+"by the elements of @var{list_2}, @dots{}  @code{append} also works on\n"
+"general expressions, e.g. @code{append (f(a,b), f(c,d,e));} yields\n"
+"@code{f(a,b,c,d,e)}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mrefcomma{addrow} @mref{addcol} and @mrefdot{join}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Do @code{example(append);} for an example.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c NEEDS CLARIFICATION AND EXAMPLES\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{assoc}\n"
+"@deffn {Function} assoc @\n"
+"@fname{assoc} (@var{key}, @var{list}, @var{default}) @\n"
+"@fname{assoc} (@var{key}, @var{list})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"This function searches for @var{key} in the left hand side of the\n"
+"input @var{list}. The @var{list} argument should be a list, each of\n"
+"whose elements is an expression with exactly two parts. Most usually,\n"
+"the elements of @var{list} are themselves lists, each with two\n"
+"elements.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The @code{assoc} function iterates along @var{list}, checking the\n"
+"first part of each element for equality with @var{key}. If an element\n"
+"is found where the comparison is true, @code{assoc} returns the second\n"
+"part of that element. If there is no such element in the list,\n"
+"@code{assoc} returns either @code{false} or @var{default}, if given.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"For example, in the expression @code{assoc (y, [[x,1], [y,2],\n"
+"[z,3]])}, the @code{assoc} function searches for @code{x} in the left\n"
+"hand side of the list @code{[[y,1],[x,2]]} and finds it at the second\n"
+"term, returning @code{2}. In @code{assoc (z, [[x,1], [z,2], [z,3]])},\n"
+"the search stops at the first term starting with @code{z} and returns\n"
+"@code{2}. In @code{assoc(x, [[y,1]])}, there is no matching element,\n"
+"so @code{assoc} returns @code{false}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c assoc (y, [[x,1], [y,2],[z,3]]);\n"
+"@c assoc (z, [[x,1], [z,2], [z,3]]);\n"
+"@c assoc (x, [[y,1]]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) assoc (y, [[x,1], [y,2],[z,3]]);\n"
+"(%o1)                           2\n"
+"@end group\n"
+"@group\n"
+"(%i2) assoc (z, [[x,1], [z,2], [z,3]]);\n"
+"(%o2)                           2\n"
+"@end group\n"
+"@group\n"
+"(%i3) assoc (x, [[y,1]]);\n"
+"(%o3)                         false\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cons}\n"
+"@deffn {Function} cons @\n"
+"@fname{cons} (@var{expr}, @var{list}) @\n"
+"@fname{cons} (@var{expr_1}, @var{expr_2})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{cons (@var{expr}, @var{list})} returns a new list constructed of the element \n"
+"@var{expr} as its first element, followed by the elements of @var{list}. This is \n"
+"analogous to the Lisp language construction operation \"cons\".\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The Maxima function @code{cons} can also be used where the second argument is other\n"
+"than a list and this might be useful. In this case, @code{cons (@var{expr_1}, @var{expr_2})}\n"
+"returns an expression with same operator as @var{expr_2} but with argument @code{cons(expr_1, args(expr_2))}.\n"
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c cons(a,[b,c,d]);\n"
+"@c cons(a,f(b,c,d));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) cons(a,[b,c,d]);\n"
+"(%o1)                     [a, b, c, d]\n"
+"@end group\n"
+"@group\n"
+"(%i2) cons(a,f(b,c,d));\n"
+"(%o2)                     f(a, b, c, d)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"In general, @code{cons} applied to a nonlist doesn't make sense. For instance, @code{cons(a,b^c)}\n"
+"results in an illegal expression, since '^' cannot take three arguments. \n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"When @code{inflag} is true, @code{cons} operates on the internal structure of an expression, otherwise\n"
+"@code{cons} operates on the displayed form. Especially when @code{inflag} is true, @code{cons} applied \n"
+"to a nonlist sometimes gives a surprising result; for example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c cons(a,-a), inflag : true;\n"
+"@c cons(a,-a), inflag : false;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) cons(a,-a), inflag : true;\n"
+"                                 2\n"
+"(%o1)                         - a\n"
+"@end group\n"
+"@group\n"
+"(%i2) cons(a,-a), inflag : false;\n"
+"(%o2)                           0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{copylist}\n"
+"@deffn {Function} copylist (@var{list})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns a copy of the list @var{list}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{create_list}\n"
+"@deffn {Function} create_list (@var{form}, @var{x_1}, @var{list_1}, @dots{}, @var{x_n}, @var{list_n})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Create a list by evaluating @var{form} with @var{x_1} bound to\n"
+"each element of @var{list_1}, and for each such binding bind @var{x_2}\n"
+"to each element of @var{list_2}, @dots{}\n"
+"The number of elements in the result will be\n"
+"the product of the number of elements in each list.\n"
+"Each variable @var{x_i} must actually be a symbol -- it will not be evaluated.\n"
+"The list arguments will be evaluated once at the beginning of the\n"
+"iteration.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c create_list (x^i, i, [1, 3, 7]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) create_list (x^i, i, [1, 3, 7]);\n"
+"                                3   7\n"
+"(%o1)                      [x, x , x ]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@noindent\n"
+"With a double iteration:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c create_list ([i, j], i, [a, b], j, [e, f, h]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) create_list ([i, j], i, [a, b], j, [e, f, h]);\n"
+"(%o1)   [[a, e], [a, f], [a, h], [b, e], [b, f], [b, h]]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Instead of @var{list_i} two args may be supplied each of which should\n"
+"evaluate to a number.  These will be the inclusive lower and\n"
+"upper bounds for the iteration.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c create_list ([i, j], i, [1, 2, 3], j, 1, i);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) create_list ([i, j], i, [1, 2, 3], j, 1, i);\n"
+"(%o1)   [[1, 1], [2, 1], [2, 2], [3, 1], [3, 2], [3, 3]]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Note that the limits or list for the @code{j} variable can\n"
+"depend on the current value of @code{i}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{delete}\n"
+"@deffn  {Function} delete @\n"
+"@fname{delete} (@var{expr_1}, @var{expr_2}) @\n"
+"@fname{delete} (@var{expr_1}, @var{expr_2}, @var{n})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{delete(@var{expr_1}, @var{expr_2})}\n"
+"removes from @var{expr_2} any arguments of its top-level operator\n"
+"which are the same (as determined by \"=\") as @var{expr_1}.\n"
+"Note that \"=\" tests for formal equality, not equivalence.\n"
+"Note also that arguments of subexpressions are not affected.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@var{expr_1} may be an atom or a non-atomic expression.\n"
+"@var{expr_2} may be any non-atomic expression.\n"
+"@code{delete} returns a new expression;\n"
+"it does not modify @var{expr_2}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{delete(@var{expr_1}, @var{expr_2}, @var{n})}\n"
+"removes from @var{expr_2} the first @var{n} arguments of the top-level operator\n"
+"which are the same as @var{expr_1}.\n"
+"If there are fewer than @var{n} such arguments,\n"
+"then all such arguments are removed.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Removing elements from a list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c delete (y, [w, x, y, z, z, y, x, w]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) delete (y, [w, x, y, z, z, y, x, w]);\n"
+"(%o1)                  [w, x, z, z, x, w]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Removing terms from a sum.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c delete (sin(x), x + sin(x) + y);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) delete (sin(x), x + sin(x) + y);\n"
+"(%o1)                         y + x\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Removing factors from a product.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c delete (u - x, (u - w)*(u - x)*(u - y)*(u - z));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) delete (u - x, (u - w)*(u - x)*(u - y)*(u - z));\n"
+"(%o1)                (u - w) (u - y) (u - z)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Removing arguments from an arbitrary expression.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c delete (a, foo (a, b, c, d, a));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) delete (a, foo (a, b, c, d, a));\n"
+"(%o1)                     foo(b, c, d)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Limit the number of removed arguments.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c delete (a, foo (a, b, a, c, d, a), 2);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) delete (a, foo (a, b, a, c, d, a), 2);\n"
+"(%o1)                    foo(b, c, d, a)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Whether arguments are the same as @var{expr_1} is determined by \"=\".\n"
+"Arguments which are @code{equal} but not \"=\" are not removed.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c [is (equal (0, 0)), is (equal (0, 0.0)), is (equal (0, 0b0))];\n"
+"@c [is (0 = 0), is (0 = 0.0), is (0 = 0b0)];\n"
+"@c delete (0, [0, 0.0, 0b0]);\n"
+"@c is (equal ((x + y)*(x - y), x^2 - y^2));\n"
+"@c is ((x + y)*(x - y) = x^2 - y^2);\n"
+"@c delete ((x + y)*(x - y), [(x + y)*(x - y), x^2 - y^2]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) [is (equal (0, 0)), is (equal (0, 0.0)), is (equal (0, 0b0))];\n"
+"(%o1)                  [true, true, true]\n"
+"@end group\n"
+"@group\n"
+"(%i2) [is (0 = 0), is (0 = 0.0), is (0 = 0b0)];\n"
+"(%o2)                 [true, false, false]\n"
+"@end group\n"
+"@group\n"
+"(%i3) delete (0, [0, 0.0, 0b0]);\n"
+"(%o3)                     [0.0, 0.0b0]\n"
+"@end group\n"
+"@group\n"
+"(%i4) is (equal ((x + y)*(x - y), x^2 - y^2));\n"
+"(%o4)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i5) is ((x + y)*(x - y) = x^2 - y^2);\n"
+"(%o5)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i6) delete ((x + y)*(x - y), [(x + y)*(x - y), x^2 - y^2]);\n"
+"                              2    2\n"
+"(%o6)                       [x  - y ]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{eighth}\n"
+"@deffn {Function} eighth (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 8'th item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{endcons}\n"
+"@deffn  {Function} endcons @\n"
+"@fname{endcons} (@var{expr}, @var{list}) @\n"
+"@fname{endcons} (@var{expr_1}, @var{expr_2})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{endcons (@var{expr}, @var{list})} returns a new list constructed of the elements of \n"
+"@var{list} followed by @var{expr}. The Maxima function @code{endcons} can also be used where \n"
+"the second argument is other than a list and this might be useful. In this case,\n"
+"@code{endcons (@var{expr_1}, @var{expr_2})} returns an expression with same operator as \n"
+"@var{expr_2} but with argument @code{endcons(expr_1, args(expr_2))}. Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c endcons(a,[b,c,d]);\n"
+"@c endcons(a,f(b,c,d));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) endcons(a,[b,c,d]);\n"
+"(%o1)                     [b, c, d, a]\n"
+"@end group\n"
+"@group\n"
+"(%i2) endcons(a,f(b,c,d));\n"
+"(%o2)                     f(b, c, d, a)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"In general, @code{endcons} applied to a nonlist doesn't make sense. For instance, @code{endcons(a,b^c)}\n"
+"results in an illegal expression, since '^' cannot take three arguments. \n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"When @code{inflag} is true, @code{endcons} operates on the internal structure of an expression, otherwise\n"
+"@code{endcons} operates on the displayed form. Especially when @code{inflag} is true, @code{endcons} applied \n"
+"to a nonlist sometimes gives a surprising result; for example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c endcons(a,-a), inflag : true;\n"
+"@c endcons(a,-a), inflag : false;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) endcons(a,-a), inflag : true;\n"
+"                                 2\n"
+"(%o1)                         - a\n"
+"@end group\n"
+"@group\n"
+"(%i2) endcons(a,-a), inflag : false;\n"
+"(%o2)                           0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fifth}\n"
+"@deffn {Function} fifth (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 5'th item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{first}\n"
+"@deffn {Function} first (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the first part of @var{expr} which may result in the first element of a\n"
+"list, the first row of a matrix, the first term of a sum, etc.:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@example\n"
+"@group\n"
+"(%i1) matrix([1,2],[3,4]);\n"
+"                                   [ 1  2 ]\n"
+"(%o1)                              [      ]\n"
+"                                   [ 3  4 ]\n"
+"(%i2) first(%);\n"
+"(%o2)                              [1,2]\n"
+"(%i3) first(%);\n"
+"(%o3)                              1\n"
+"(%i4) first(a*b/c+d+e/x);\n"
+"                                   a b\n"
+"(%o4)                              ---\n"
+"                                    c\n"
+"(%i5) first(a=b/c+d+e/x);\n"
+"(%o5)                              a\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Note that\n"
+"@code{first} and its related functions, @code{rest} and @code{last}, work\n"
+"on the form of @var{expr} which is displayed not the form which is typed on\n"
+"input.  If the variable @mref{inflag} is set to @code{true} however, these\n"
+"functions will look at the internal form of @var{expr}. One reason why this may\n"
+"make a difference is that the simplifier re-orders expressions:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@example\n"
+"@group\n"
+"(%i1) x+y;\n"
+"(%o1)                              y+1\n"
+"(%i2) first(x+y),inflag : true;\n"
+"(%o2)                              x\n"
+"(%i3) first(x+y),inflag : false;\n"
+"(%o3)                              y\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The functions @code{second} @dots{}\n"
+"@code{tenth} yield the second through the tenth part of their input argument.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mref{firstn} and @mrefdot{part}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{firstn}\n"
+"@deffn {Function} firstn (@var{expr}, @var{count})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the first @var{count} arguments of @var{expr}, if @var{expr} has at least @var{count} arguments.\n"
+"Returns @var{expr} if @var{expr} has less than @var{count} arguments.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@var{expr} may be any nonatomic expression. \n"
+"When @var{expr} is something other than a list,\n"
+"@code{firstn} returns an expression which has the same operator as @var{expr}.\n"
+"@var{count} must be a nonnegative integer.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{firstn} honors the global flag @code{inflag},\n"
+"which governs whether the internal form of an expression is processed (when @code{inflag} is true)\n"
+"or the displayed form (when @code{inflag} is false).\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Note that @code{firstn(@var{expr}, 1)},\n"
+"which returns a nonatomic expression containing the first argument,\n"
+"is not the same as @code{first(@var{expr})},\n"
+"which returns the first argument by itself.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mref{lastn} and @mrefdot{rest}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{firstn} returns the first @var{count} elements of @var{expr}, if @var{expr} has at least @var{count} elements.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
+"@c firstn (mylist, 0);\n"
+"@c firstn (mylist, 1);\n"
+"@c firstn (mylist, 2);\n"
+"@c firstn (mylist, 7);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
+"(%o1)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]\n"
+"@end group\n"
+"@group\n"
+"(%i2) firstn (mylist, 0);\n"
+"(%o2)                          []\n"
+"@end group\n"
+"@group\n"
+"(%i3) firstn (mylist, 1);\n"
+"(%o3)                          [1]\n"
+"@end group\n"
+"@group\n"
+"(%i4) firstn (mylist, 2);\n"
+"(%o4)                        [1, a]\n"
+"@end group\n"
+"@group\n"
+"(%i5) firstn (mylist, 7);\n"
+"(%o5)               [1, a, 2, b, 3, x, 4 - y]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{firstn} returns @var{expr} if @var{expr} has less than @var{count} elements.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
+"@c firstn (mylist, 100);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
+"(%o1)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]\n"
+"@end group\n"
+"@group\n"
+"(%i2) firstn (mylist, 100);\n"
+"(%o2)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@var{expr} may be any nonatomic expression. \n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c myfoo : foo(1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
+"@c firstn (myfoo, 4);\n"
+"@c mybar : bar[m, n](1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
+"@c firstn (mybar, 4);\n"
+"@c mymatrix : genmatrix (lambda ([i, j], 10*i + j), 10, 4) $\n"
+"@c firstn (mymatrix, 3);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) myfoo : foo(1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
+"(%o1)      foo(1, a, 2, b, 3, x, 4 - y, 2 z + sin(u))\n"
+"@end group\n"
+"@group\n"
+"(%i2) firstn (myfoo, 4);\n"
+"(%o2)                    foo(1, a, 2, b)\n"
+"@end group\n"
+"@group\n"
+"(%i3) mybar : bar[m, n](1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
+"(%o3)    bar    (1, a, 2, b, 3, x, 4 - y, 2 z + sin(u))\n"
+"            m, n\n"
+"@end group\n"
+"@group\n"
+"(%i4) firstn (mybar, 4);\n"
+"(%o4)                  bar    (1, a, 2, b)\n"
+"                          m, n\n"
+"@end group\n"
+"(%i5) mymatrix : genmatrix (lambda ([i, j], 10*i + j), 10, 4) $\n"
+"@group\n"
+"(%i6) firstn (mymatrix, 3);\n"
+"                       [ 11  12  13  14 ]\n"
+"                       [                ]\n"
+"(%o6)                  [ 21  22  23  24 ]\n"
+"                       [                ]\n"
+"                       [ 31  32  33  34 ]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{firstn} honors the global flag @code{inflag}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c myexpr : a + b + c + d + e;\n"
+"@c firstn (myexpr, 3), inflag=true;\n"
+"@c firstn (myexpr, 3), inflag=false;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) myexpr : a + b + c + d + e;\n"
+"(%o1)                   e + d + c + b + a\n"
+"@end group\n"
+"@group\n"
+"(%i2) firstn (myexpr, 3), inflag=true;\n"
+"(%o2)                       c + b + a\n"
+"@end group\n"
+"@group\n"
+"(%i3) firstn (myexpr, 3), inflag=false;\n"
+"(%o3)                       e + d + c\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Note that @code{firstn(@var{expr}, 1)} is not the same as @code{first(@var{expr})}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c firstn ([w, x, y, z], 1);\n"
+"@c first ([w, x, y, z]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) firstn ([w, x, y, z], 1);\n"
+"(%o1)                          [w]\n"
+"@end group\n"
+"@group\n"
+"(%i2) first ([w, x, y, z]);\n"
+"(%o2)                           w\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fourth}\n"
+"@deffn {Function} fourth (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 4'th item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{join}\n"
+"@deffn {Function} join (@var{l}, @var{m})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Creates a new list containing the elements of lists @var{l} and @var{m},\n"
+"interspersed.  The result has elements @code{[@var{l}[1], @var{m}[1],\n"
+"@var{l}[2], @var{m}[2], ...]}.  The lists @var{l} and @var{m} may contain any\n"
+"type of elements.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"If the lists are different lengths, @code{join} ignores elements of the longer\n"
+"list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Maxima complains if @var{l} or @var{m} is not a list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mrefdot{append}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c L1: [a, sin(b), c!, d - 1];\n"
+"@c join (L1, [1, 2, 3, 4]);\n"
+"@c join (L1, [aa, bb, cc, dd, ee, ff]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L1: [a, sin(b), c!, d - 1];\n"
+"(%o1)                [a, sin(b), c!, d - 1]\n"
+"@end group\n"
+"@group\n"
+"(%i2) join (L1, [1, 2, 3, 4]);\n"
+"(%o2)          [a, 1, sin(b), 2, c!, 3, d - 1, 4]\n"
+"@end group\n"
+"@group\n"
+"(%i3) join (L1, [aa, bb, cc, dd, ee, ff]);\n"
+"(%o3)        [a, aa, sin(b), bb, c!, cc, d - 1, dd]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@c HOW IS \"LAST\" PART DETERMINED ??\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{last}\n"
+"@deffn {Function} last (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the last part (term, row, element, etc.) of the @var{expr}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mrefdot{lastn}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c NEEDS CLARIFICATION AND EXAMPLES\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lastn}\n"
+"@deffn {Function} lastn (@var{expr}, @var{count})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the last @var{count} arguments of @var{expr}, if @var{expr} has at least @var{count} arguments.\n"
+"Returns @var{expr} if @var{expr} has less than @var{count} arguments.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@var{expr} may be any nonatomic expression. \n"
+"When @var{expr} is something other than a list,\n"
+"@code{lastn} returns an expression which has the same operator as @var{expr}.\n"
+"@var{count} must be a nonnegative integer.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{lastn} honors the global flag @code{inflag},\n"
+"which governs whether the internal form of an expression is processed (when @code{inflag} is true)\n"
+"or the displayed form (when @code{inflag} is false).\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Note that @code{lastn(@var{expr}, 1)},\n"
+"which returns a nonatomic expression containing the last argument,\n"
+"is not the same as @code{last(@var{expr})},\n"
+"which returns the last argument by itself.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mref{firstn} and @mrefdot{rest}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{lastn} returns the last @var{count} elements of @var{expr}, if @var{expr} has at least @var{count} elements.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
+"@c lastn (mylist, 0);\n"
+"@c lastn (mylist, 1);\n"
+"@c lastn (mylist, 2);\n"
+"@c lastn (mylist, 7);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
+"(%o1)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]\n"
+"@end group\n"
+"@group\n"
+"(%i2) lastn (mylist, 0);\n"
+"(%o2)                          []\n"
+"@end group\n"
+"@group\n"
+"(%i3) lastn (mylist, 1);\n"
+"(%o3)                    [2 z + sin(u)]\n"
+"@end group\n"
+"@group\n"
+"(%i4) lastn (mylist, 2);\n"
+"(%o4)                 [4 - y, 2 z + sin(u)]\n"
+"@end group\n"
+"@group\n"
+"(%i5) lastn (mylist, 7);\n"
+"(%o5)         [a, 2, b, 3, x, 4 - y, 2 z + sin(u)]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{lastn} returns @var{expr} if @var{expr} has less than @var{count} elements.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
+"@c lastn (mylist, 100);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
+"(%o1)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]\n"
+"@end group\n"
+"@group\n"
+"(%i2) lastn (mylist, 100);\n"
+"(%o2)        [1, a, 2, b, 3, x, 4 - y, 2 z + sin(u)]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@var{expr} may be any nonatomic expression. \n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c myfoo : foo(1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
+"@c lastn (myfoo, 4);\n"
+"@c mybar : bar[m, n](1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
+"@c lastn (mybar, 4);\n"
+"@c mymatrix : genmatrix (lambda ([i, j], 10*i + j), 10, 4) $\n"
+"@c lastn (mymatrix, 3);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) myfoo : foo(1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
+"(%o1)      foo(1, a, 2, b, 3, x, 4 - y, 2 z + sin(u))\n"
+"@end group\n"
+"@group\n"
+"(%i2) lastn (myfoo, 4);\n"
+"(%o2)            foo(3, x, 4 - y, 2 z + sin(u))\n"
+"@end group\n"
+"@group\n"
+"(%i3) mybar : bar[m, n](1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
+"(%o3)    bar    (1, a, 2, b, 3, x, 4 - y, 2 z + sin(u))\n"
+"            m, n\n"
+"@end group\n"
+"@group\n"
+"(%i4) lastn (mybar, 4);\n"
+"(%o4)          bar    (3, x, 4 - y, 2 z + sin(u))\n"
+"                  m, n\n"
+"@end group\n"
+"(%i5) mymatrix : genmatrix (lambda ([i, j], 10*i + j), 10, 4) $\n"
+"@group\n"
+"(%i6) lastn (mymatrix, 3);\n"
+"                     [ 81   82   83   84  ]\n"
+"                     [                    ]\n"
+"(%o6)                [ 91   92   93   94  ]\n"
+"                     [                    ]\n"
+"                     [ 101  102  103  104 ]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{lastn} honors the global flag @code{inflag}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c myexpr : a + b + c + d + e;\n"
+"@c lastn (myexpr, 3), inflag=true;\n"
+"@c lastn (myexpr, 3), inflag=false;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) myexpr : a + b + c + d + e;\n"
+"(%o1)                   e + d + c + b + a\n"
+"@end group\n"
+"@group\n"
+"(%i2) lastn (myexpr, 3), inflag=true;\n"
+"(%o2)                       e + d + c\n"
+"@end group\n"
+"@group\n"
+"(%i3) lastn (myexpr, 3), inflag=false;\n"
+"(%o3)                       c + b + a\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Note that @code{lastn(@var{expr}, 1)} is not the same as @code{last(@var{expr})}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c lastn ([w, x, y, z], 1);\n"
+"@c last ([w, x, y, z]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) lastn ([w, x, y, z], 1);\n"
+"(%o1)                          [z]\n"
+"@end group\n"
+"@group\n"
+"(%i2) last ([w, x, y, z]);\n"
+"(%o2)                           z\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{length}\n"
+"@deffn {Function} length (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns (by default) the number of parts in the external\n"
+"(displayed) form of @var{expr}.  For lists this is the number of elements,\n"
+"for matrices it is the number of rows, and for sums it is the number\n"
+"of terms (see @mref{dispform}).\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The @code{length} command is affected by the @mref{inflag} switch.  So, e.g.\n"
+"@code{length(a/(b*c));} gives 2 if @code{inflag} is @code{false} (Assuming\n"
+"@mref{exptdispflag} is @code{true}), but 3 if @code{inflag} is @code{true} (the\n"
+"internal representation is essentially @code{a*b^-1*c^-1}).\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Determining a list's length typically needs an amount of time proportional\n"
+"to the number of elements in the list. If the length of a list is used inside\n"
+"a loop it therefore might drastically increase the performance if the length\n"
+"is calculated outside the loop instead.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{listarith}\n"
+"@defvr {Option variable} listarith\n"
+"Default value: @code{true} \n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"If @code{false} causes any arithmetic operations with lists to be suppressed;\n"
+"when @code{true}, list-matrix operations are contagious causing lists to be\n"
+"converted to matrices yielding a result which is always a matrix.  However,\n"
+"list-list operations should return lists.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Global flags}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@deffn {Function} listp (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns @code{true} if @var{expr} is a list else @code{false}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Predicate functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lreduce}\n"
+"@deffn {Function} lreduce @\n"
+"@fname{lreduce} (@var{F}, @var{s}) @\n"
+"@fname{lreduce} (@var{F}, @var{s}, @var{s_0})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Extends the binary function @var{F} to an n-ary function by composition,\n"
+"where @var{s} is a list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{lreduce(@var{F}, @var{s})} returns @code{F(... F(F(s_1, s_2), s_3), ... s_n)}.\n"
+"When the optional argument @var{s_0} is present,\n"
+"the result is equivalent to @code{lreduce(@var{F}, cons(@var{s_0}, @var{s}))}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The function @var{F} is first applied to the\n"
+"@i{leftmost} list elements, thus the name \"lreduce\".\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mref{rreduce}, @mref{xreduce}, and @mref{tree_reduce}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{lreduce} without the optional argument.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c lreduce (f, [1, 2, 3]);\n"
+"@c lreduce (f, [1, 2, 3, 4]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) lreduce (f, [1, 2, 3]);\n"
+"(%o1)                     f(f(1, 2), 3)\n"
+"@end group\n"
+"@group\n"
+"(%i2) lreduce (f, [1, 2, 3, 4]);\n"
+"(%o2)                  f(f(f(1, 2), 3), 4)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{lreduce} with the optional argument.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c lreduce (f, [1, 2, 3], 4);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) lreduce (f, [1, 2, 3], 4);\n"
+"(%o1)                  f(f(f(4, 1), 2), 3)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{lreduce} applied to built-in binary operators.\n"
+"@code{/} is the division operator.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c lreduce (\"^\", args ({a, b, c, d}));\n"
+"@c lreduce (\"/\", args ({a, b, c, d}));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) lreduce (\"^\", args (@{a, b, c, d@}));\n"
+"                               b c d\n"
+"(%o1)                       ((a ) )\n"
+"@end group\n"
+"@group\n"
+"(%i2) lreduce (\"/\", args (@{a, b, c, d@}));\n"
+"                                a\n"
+"(%o2)                         -----\n"
+"                              b c d\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{makelist}\n"
+"@deffn  {Function} makelist @\n"
+"@fname{makelist} () @\n"
+"@fname{makelist} (@var{expr}, @var{n}) @\n"
+"@fname{makelist} (@var{expr}, @var{i}, @var{i_max}) @\n"
+"@fname{makelist} (@var{expr}, @var{i}, @var{i_0}, @var{i_max}) @\n"
+"@fname{makelist} (@var{expr}, @var{i}, @var{i_0}, @var{i_max}, @var{step}) @\n"
+"@fname{makelist} (@var{expr}, @var{x}, @var{list})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The first form, @code{makelist ()}, creates an empty list. The second form,\n"
+"@code{makelist (@var{expr})}, creates a list with @var{expr} as its single\n"
+"element. @code{makelist (@var{expr}, @var{n})} creates a list of @var{n}\n"
+"elements generated from @var{expr}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The most general form, @code{makelist (@var{expr}, @var{i}, @var{i_0},\n"
+"@var{i_max}, @var{step})}, returns the list of elements obtained when\n"
+"@code{ev (@var{expr}, @var{i}=@var{j})} is applied to the elements\n"
+"@var{j} of the sequence: @var{i_0}, @var{i_0} + @var{step}, @var{i_0} +\n"
+"2*@var{step}, ..., with @var{|j|} less than or equal to @var{|i_max|}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The increment @var{step} can be a number (positive or negative) or an\n"
+"expression. If it is omitted, the default value 1 will be used. If both\n"
+"@var{i_0} and @var{step} are omitted, they will both have a default\n"
+"value of 1.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{makelist (@var{expr}, @var{x}, @var{list})} returns a list, the\n"
+"@code{j}'th element of which is equal to\n"
+"@code{ev (@var{expr}, @var{x}=@var{list}[j])} for @code{j} equal to 1 through\n"
+"@code{length (@var{list})}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c makelist (concat (x,i), i, 6);\n"
+"@c makelist (x=y, y, [a, b, c]);\n"
+"@c makelist (x^2, x, 3, 2*%pi, 2);\n"
+"@c makelist (random(6), 4);\n"
+"@c flatten (makelist (makelist (i^2, 3), i, 4));\n"
+"@c flatten (makelist (makelist (i^2, i, 3), 4));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) makelist (concat (x,i), i, 6);\n"
+"(%o1)               [x1, x2, x3, x4, x5, x6]\n"
+"@end group\n"
+"@group\n"
+"(%i2) makelist (x=y, y, [a, b, c]);\n"
+"(%o2)                 [x = a, x = b, x = c]\n"
+"@end group\n"
+"@group\n"
+"(%i3) makelist (x^2, x, 3, 2*%pi, 2);\n"
+"(%o3)                        [9, 25]\n"
+"@end group\n"
+"@group\n"
+"(%i4) makelist (random(6), 4);\n"
+"(%o4)                     [2, 0, 2, 5]\n"
+"@end group\n"
+"@group\n"
+"(%i5) flatten (makelist (makelist (i^2, 3), i, 4));\n"
+"(%o5)        [1, 1, 1, 4, 4, 4, 9, 9, 9, 16, 16, 16]\n"
+"@end group\n"
+"@group\n"
+"(%i6) flatten (makelist (makelist (i^2, i, 3), 4));\n"
+"(%o6)         [1, 4, 9, 1, 4, 9, 1, 4, 9, 1, 4, 9]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{member}\n"
+"@deffn {Function} member (@var{expr_1}, @var{expr_2})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns @code{true} if @code{is(@var{expr_1} = @var{a})}\n"
+"for some element @var{a} in @code{args(@var{expr_2})},\n"
+"otherwise returns @code{false}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{expr_2} is typically a list, in which case\n"
+"@code{args(@var{expr_2}) = @var{expr_2}} and @code{is(@var{expr_1} = @var{a})}\n"
+"for some element @var{a} in @code{expr_2} is the test.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{member} does not inspect parts of the arguments of @code{expr_2}, so it\n"
+"may return @code{false} even if @code{expr_1} is a part of some argument of\n"
+"@code{expr_2}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mrefdot{elementp}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c member (8, [8, 8.0, 8b0]);\n"
+"@c member (8, [8.0, 8b0]);\n"
+"@c member (b, [a, b, c]);\n"
+"@c member (b, [[a, b], [b, c]]);\n"
+"@c member ([b, c], [[a, b], [b, c]]);\n"
+"@c F (1, 1/2, 1/4, 1/8);\n"
+"@c member (1/8, %);\n"
+"@c member (\"ab\", [\"aa\", \"ab\", sin(1), a + b]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) member (8, [8, 8.0, 8b0]);\n"
+"(%o1)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i2) member (8, [8.0, 8b0]);\n"
+"(%o2)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i3) member (b, [a, b, c]);\n"
+"(%o3)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i4) member (b, [[a, b], [b, c]]);\n"
+"(%o4)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i5) member ([b, c], [[a, b], [b, c]]);\n"
+"(%o5)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i6) F (1, 1/2, 1/4, 1/8);\n"
+"                               1  1  1\n"
+"(%o6)                     F(1, -, -, -)\n"
+"                               2  4  8\n"
+"@end group\n"
+"@group\n"
+"(%i7) member (1/8, %);\n"
+"(%o7)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i8) member (\"ab\", [\"aa\", \"ab\", sin(1), a + b]);\n"
+"(%o8)                         true\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions} @category{Predicate functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ninth}\n"
+"@deffn {Function} ninth (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 9'th item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{pop}\n"
+"@deffn {Function} pop (@var{list})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{pop} removes and returns the first element from the list @var{list}. The argument\n"
+"@var{list} must be a mapatom that is bound to a nonempty list. If the argument @var{list} is \n"
+"not bound to a nonempty list, Maxima signals an error. For examples, see @mrefdot{push}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{push}\n"
+"@deffn {Function} push (@var{item}, @var{list})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{push} prepends the item @var{item} to the list @var{list} and returns a copy of the new list. \n"
+"The second argument @var{list} must be a mapatom that is bound to a list. The first argument @var{item} \n"
+"can be any Maxima symbol or expression. If the argument @var{list} is not bound to a list, Maxima \n"
+"signals an error.\n"
+"To remove the first item from a list, see @mrefdot{pop}\n"
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c ll: [];\n"
+"@c push (x, ll);\n"
+"@c push (x^2+y, ll);\n"
+"@c a: push (\"string\", ll);\n"
+"@c pop (ll);\n"
+"@c pop (ll);\n"
+"@c pop (ll);\n"
+"@c ll;\n"
+"@c a;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) ll: [];\n"
+"(%o1)                          []\n"
+"@end group\n"
+"@group\n"
+"(%i2) push (x, ll);\n"
+"(%o2)                          [x]\n"
+"@end group\n"
+"@group\n"
+"(%i3) push (x^2+y, ll);\n"
+"                                 2\n"
+"(%o3)                      [y + x , x]\n"
+"@end group\n"
+"@group\n"
+"(%i4) a: push (\"string\", ll);\n"
+"                                     2\n"
+"(%o4)                  [string, y + x , x]\n"
+"@end group\n"
+"@group\n"
+"(%i5) pop (ll);\n"
+"(%o5)                        string\n"
+"@end group\n"
+"@group\n"
+"(%i6) pop (ll);\n"
+"                                  2\n"
+"(%o6)                        y + x\n"
+"@end group\n"
+"@group\n"
+"(%i7) pop (ll);\n"
+"(%o7)                           x\n"
+"@end group\n"
+"@group\n"
+"(%i8) ll;\n"
+"(%o8)                          []\n"
+"@end group\n"
+"@group\n"
+"(%i9) a;\n"
+"                                     2\n"
+"(%o9)                  [string, y + x , x]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rest}\n"
+"@deffn  {Function} rest @\n"
+"@fname{rest} (@var{expr}, @var{n}) @\n"
+"@fname{rest} (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns @var{expr} with its first @var{n} elements removed if @var{n}\n"
+"is positive and its last @code{- @var{n}} elements removed if @var{n}\n"
+"is negative. If @var{n} is 1 it may be omitted. The first argument\n"
+"@var{expr} may be a list, matrix, or other expression. When @var{expr}\n"
+"is an atom, @code{rest} signals an error; when @var{expr} is an empty\n"
+"list and @code{partswitch} is false, @code{rest} signals an error. When \n"
+"@var{expr} is an empty list and @code{partswitch} is true, @code{rest} \n"
+"returns @code{end}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Applying @code{rest} to expression such as @code{f(a,b,c)} returns\n"
+"@code{f(b,c)}. In general, applying @code{rest} to an nonlist doesn't\n"
+"make sense. For example, because '^' requires two arguments,\n"
+"@code{rest(a^b)} results in an error message. The functions\n"
+"@code{args} and @code{op} may be useful as well, since @code{args(a^b)}\n"
+"returns @code{[a,b]} and @code{op(a^b)} returns ^.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mref{firstn} and @mrefdot{lastn}\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@example\n"
+"@group\n"
+"(%i1) rest(a+b+c);\n"
+"(%o1) b+a\n"
+"(%i2) rest(a+b+c,2);\n"
+"(%o2) a\n"
+"(%i3) rest(a+b+c,-2);\n"
+"(%o3) c\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c NEED ANOTHER deffn FOR GENERAL EXPRESSIONS ARGUMENTS\n"
+"@c SPLIT OFF EXAMPLES INTO EXAMPLE SECTION\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{reverse}\n"
+"@deffn {Function} reverse (@var{list})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Reverses the order of the members of the @var{list} (not\n"
+"the members themselves).  @code{reverse} also works on general expressions,\n"
+"e.g.  @code{reverse(a=b);} gives @code{b=a}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rreduce}\n"
+"@deffn {Function} rreduce @\n"
+"@fname{rreduce} (@var{F}, @var{s}) @\n"
+"@fname{rreduce} (@var{F}, @var{s}, @var{s_@{n + 1@}})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Extends the binary function @var{F} to an n-ary function by composition,\n"
+"where @var{s} is a list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{rreduce(@var{F}, @var{s})} returns @code{F(s_1, ... F(s_@{n - 2@}, F(s_@{n - 1@}, s_n)))}.\n"
+"When the optional argument @var{s_@{n + 1@}} is present,\n"
+"the result is equivalent to @code{rreduce(@var{F}, endcons(@var{s_@{n + 1@}}, @var{s}))}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The function @var{F} is first applied to the\n"
+"@i{rightmost} list elements, thus the name \"rreduce\".\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"See also @mref{lreduce}, @mref{tree_reduce}, and @mref{xreduce}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{rreduce} without the optional argument.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c rreduce (f, [1, 2, 3]);\n"
+"@c rreduce (f, [1, 2, 3, 4]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) rreduce (f, [1, 2, 3]);\n"
+"(%o1)                     f(1, f(2, 3))\n"
+"@end group\n"
+"@group\n"
+"(%i2) rreduce (f, [1, 2, 3, 4]);\n"
+"(%o2)                  f(1, f(2, f(3, 4)))\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{rreduce} with the optional argument.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c rreduce (f, [1, 2, 3], 4);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) rreduce (f, [1, 2, 3], 4);\n"
+"(%o1)                  f(1, f(2, f(3, 4)))\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{rreduce} applied to built-in binary operators.\n"
+"@code{/} is the division operator.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c rreduce (\"^\", args ({a, b, c, d}));\n"
+"@c rreduce (\"/\", args ({a, b, c, d}));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) rreduce (\"^\", args (@{a, b, c, d@}));\n"
+"                                 d\n"
+"                                c\n"
+"                               b\n"
+"(%o1)                         a\n"
+"@end group\n"
+"@group\n"
+"(%i2) rreduce (\"/\", args (@{a, b, c, d@}));\n"
+"                               a c\n"
+"(%o2)                          ---\n"
+"                               b d\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{second}\n"
+"@deffn {Function} second (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 2'nd item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{seventh}\n"
+"@deffn {Function} seventh (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 7'th item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sixth}\n"
+"@deffn {Function} sixth (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 6'th item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sort}\n"
+"@deffn  {Function} sort @\n"
+"@fname{sort} (@var{L}, @var{P}) @\n"
+"@fname{sort} (@var{L})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{sort(@var{L}, @var{P})} sorts a list @var{L} according to a predicate @code{P} of two arguments\n"
+"which defines a strict weak order on the elements of @var{L}.\n"
+"If @code{@var{P}(a, b)} is @code{true}, then @code{a} appears before @code{b} in the result.\n"
+"If neither @code{@var{P}(a, b)} nor @code{@var{P}(b, a)} are @code{true},\n"
+"then @code{a} and @code{b} are equivalent, and appear in the result in the same order as in the input.\n"
+"That is, @code{sort} is a stable sort.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"If @code{@var{P}(a, b)} and @code{@var{P}(b, a)} are both @code{true} for some elements of @var{L},\n"
+"then @var{P} is not a valid sort predicate, and the result is undefined.\n"
+"If @code{@var{P}(a, b)} is something other than @code{true} or @code{false}, @code{sort} signals an error.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The predicate may be specified as the name of a function \n"
+"or binary infix operator, or as a @code{lambda} expression.  If specified as\n"
+"the name of an operator, the name must be enclosed in double quotes.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The sorted list is returned as a new object; the argument @var{L} is not modified.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{sort(@var{L})} is equivalent to @code{sort(@var{L}, orderlessp)}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The default sorting order is ascending, as determined by @mrefdot{orderlessp} The predicate @code{ordergreatp} sorts a list in descending order.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"All Maxima atoms and expressions are comparable under @code{orderlessp} and @code{ordergreatp}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Operators @code{<} and @code{>} order numbers, constants, and constant expressions by magnitude.\n"
+"Note that @code{orderlessp} and @code{ordergreatp} do not order numbers, constants, and constant expressions by magnitude.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{ordermagnitudep} orders numbers, constants, and constant expressions the same as @code{<},\n"
+"and all other elements the same as @code{orderlessp}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{sort} sorts a list according to a predicate of two arguments\n"
+"which defines a strict weak order on the elements of the list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c sort ([1, a, b, 2, 3, c], 'orderlessp);\n"
+"@c sort ([1, a, b, 2, 3, c], 'ordergreatp);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) sort ([1, a, b, 2, 3, c], 'orderlessp);\n"
+"(%o1)                  [1, 2, 3, a, b, c]\n"
+"@end group\n"
+"@group\n"
+"(%i2) sort ([1, a, b, 2, 3, c], 'ordergreatp);\n"
+"(%o2)                  [c, b, a, 3, 2, 1]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The predicate may be specified as the name of a function \n"
+"or binary infix operator, or as a @code{lambda} expression.  If specified as\n"
+"the name of an operator, the name must be enclosed in double quotes.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c L : [[1, x], [3, y], [4, w], [2, z]];\n"
+"@c foo (a, b) := a[1] > b[1];\n"
+"@c sort (L, 'foo);\n"
+"@c infix (\">>\");\n"
+"@c a >> b := a[1] > b[1];\n"
+"@c sort (L, \">>\");\n"
+"@c sort (L, lambda ([a, b], a[1] > b[1]));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L : [[1, x], [3, y], [4, w], [2, z]];\n"
+"(%o1)           [[1, x], [3, y], [4, w], [2, z]]\n"
+"@end group\n"
+"@group\n"
+"(%i2) foo (a, b) := a[1] > b[1];\n"
+"(%o2)                 foo(a, b) := a  > b\n"
+"                                    1    1\n"
+"@end group\n"
+"@group\n"
+"(%i3) sort (L, 'foo);\n"
+"(%o3)           [[4, w], [3, y], [2, z], [1, x]]\n"
+"@end group\n"
+"@group\n"
+"(%i4) infix (\">>\");\n"
+"(%o4)                          >>\n"
+"@end group\n"
+"@group\n"
+"(%i5) a >> b := a[1] > b[1];\n"
+"(%o5)                  (a >> b) := a  > b\n"
+"                                    1    1\n"
+"@end group\n"
+"@group\n"
+"(%i6) sort (L, \">>\");\n"
+"(%o6)           [[4, w], [3, y], [2, z], [1, x]]\n"
+"@end group\n"
+"@group\n"
+"(%i7) sort (L, lambda ([a, b], a[1] > b[1]));\n"
+"(%o7)           [[4, w], [3, y], [2, z], [1, x]]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{sort(@var{L})} is equivalent to @code{sort(@var{L}, orderlessp)}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c L : [a, 2*b, -5, 7, 1 + %e, %pi];\n"
+"@c sort (L);\n"
+"@c sort (L, 'orderlessp);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L : [a, 2*b, -5, 7, 1 + %e, %pi];\n"
+"(%o1)             [a, 2 b, - 5, 7, %e + 1, %pi]\n"
+"@end group\n"
+"@group\n"
+"(%i2) sort (L);\n"
+"(%o2)             [- 5, 7, %e + 1, %pi, a, 2 b]\n"
+"@end group\n"
+"@group\n"
+"(%i3) sort (L, 'orderlessp);\n"
+"(%o3)             [- 5, 7, %e + 1, %pi, a, 2 b]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The default sorting order is ascending, as determined by @mrefdot{orderlessp} The predicate @code{ordergreatp} sorts a list in descending order.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c L : [a, 2*b, -5, 7, 1 + %e, %pi];\n"
+"@c sort (L);\n"
+"@c sort (L, 'ordergreatp);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L : [a, 2*b, -5, 7, 1 + %e, %pi];\n"
+"(%o1)             [a, 2 b, - 5, 7, %e + 1, %pi]\n"
+"@end group\n"
+"@group\n"
+"(%i2) sort (L);\n"
+"(%o2)             [- 5, 7, %e + 1, %pi, a, 2 b]\n"
+"@end group\n"
+"@group\n"
+"(%i3) sort (L, 'ordergreatp);\n"
+"(%o3)             [2 b, a, %pi, %e + 1, 7, - 5]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"All Maxima atoms and expressions are comparable under @code{orderlessp} and @code{ordergreatp}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c L : [11, -17, 29b0, 9*c, 7.55, foo(x, y), -5/2, b + a];\n"
+"@c sort (L, orderlessp);\n"
+"@c sort (L, ordergreatp);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L : [11, -17, 29b0, 9*c, 7.55, foo(x, y), -5/2, b + a];\n"
+"                                                 5\n"
+"(%o1)  [11, - 17, 2.9b1, 9 c, 7.55, foo(x, y), - -, b + a]\n"
+"                                                 2\n"
+"@end group\n"
+"@group\n"
+"(%i2) sort (L, orderlessp);\n"
+"                5\n"
+"(%o2)  [- 17, - -, 7.55, 11, 2.9b1, b + a, 9 c, foo(x, y)]\n"
+"                2\n"
+"@end group\n"
+"@group\n"
+"(%i3) sort (L, ordergreatp);\n"
+"                                                  5\n"
+"(%o3)  [foo(x, y), 9 c, b + a, 2.9b1, 11, 7.55, - -, - 17]\n"
+"                                                  2\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Operators @code{<} and @code{>} order numbers, constants, and constant expressions by magnitude.\n"
+"Note that @code{orderlessp} and @code{ordergreatp} do not order numbers, constants, and constant expressions by magnitude.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c L : [%pi, 3, 4, %e, %gamma];\n"
+"@c sort (L, \">\");\n"
+"@c sort (L, ordergreatp);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L : [%pi, 3, 4, %e, %gamma];\n"
+"(%o1)                [%pi, 3, 4, %e, %gamma]\n"
+"@end group\n"
+"@group\n"
+"(%i2) sort (L, \">\");\n"
+"(%o2)                [4, %pi, 3, %e, %gamma]\n"
+"@end group\n"
+"@group\n"
+"(%i3) sort (L, ordergreatp);\n"
+"(%o3)                [%pi, %gamma, %e, 4, 3]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{ordermagnitudep} orders numbers, constants, and constant expressions the same as @code{<},\n"
+"and all other elements the same as @code{orderlessp}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c L : [%i, 1+%i, 2*x, minf, inf, %e, sin(1), 0, 1, 2, 3, 1.0, 1.0b0];\n"
+"@c sort (L, ordermagnitudep);\n"
+"@c sort (L, orderlessp);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L : [%i, 1+%i, 2*x, minf, inf, %e, sin(1), 0, 1, 2, 3, 1.0, 1.0b0];\n"
+"(%o1) [%i, %i + 1, 2 x, minf, inf, %e, sin(1), 0, 1, 2, 3, 1.0, \n"
+"                                                           1.0b0]\n"
+"@end group\n"
+"@group\n"
+"(%i2) sort (L, ordermagnitudep);\n"
+"(%o2) [minf, 0, sin(1), 1, 1.0, 1.0b0, 2, %e, 3, inf, %i, \n"
+"                                                     %i + 1, 2 x]\n"
+"@end group\n"
+"@group\n"
+"(%i3) sort (L, orderlessp);\n"
+"(%o3) [0, 1, 1.0, 2, 3, sin(1), 1.0b0, %e, %i, %i + 1, inf, \n"
+"                                                       minf, 2 x]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sublist}\n"
+"@deffn {Function} sublist (@var{list}, @var{p})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the list of elements of @var{list} for which the predicate @code{p}\n"
+"returns @code{true}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c L: [1, 2, 3, 4, 5, 6];\n"
+"@c sublist (L, evenp);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L: [1, 2, 3, 4, 5, 6];\n"
+"(%o1)                  [1, 2, 3, 4, 5, 6]\n"
+"@end group\n"
+"@group\n"
+"(%i2) sublist (L, evenp);\n"
+"(%o2)                       [2, 4, 6]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sublist_indices}\n"
+"@deffn {Function} sublist_indices (@var{L}, @var{P})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the indices of the elements @code{x} of the list @var{L} for which\n"
+"the predicate @code{maybe(@var{P}(x))} returns @code{true};\n"
+"this excludes @code{unknown} as well as @code{false}.\n"
+"@var{P} may be the name of a function or a lambda expression.\n"
+"@var{L} must be a literal list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c sublist_indices ('[a, b, b, c, 1, 2, b, 3, b], \n"
+"@c                        lambda ([x], x='b));\n"
+"@c sublist_indices ('[a, b, b, c, 1, 2, b, 3, b], symbolp);\n"
+"@c sublist_indices ([1 > 0, 1 < 0, 2 < 1, 2 > 1, 2 > 0], \n"
+"@c                        identity);\n"
+"@c assume (x < -1);\n"
+"@c map (maybe, [x > 0, x < 0, x < -2]);\n"
+"@c sublist_indices ([x > 0, x < 0, x < -2], identity);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) sublist_indices ('[a, b, b, c, 1, 2, b, 3, b],\n"
+"                       lambda ([x], x='b));\n"
+"(%o1)                     [2, 3, 7, 9]\n"
+"@end group\n"
+"@group\n"
+"(%i2) sublist_indices ('[a, b, b, c, 1, 2, b, 3, b], symbolp);\n"
+"(%o2)                  [1, 2, 3, 4, 7, 9]\n"
+"@end group\n"
+"@group\n"
+"(%i3) sublist_indices ([1 > 0, 1 < 0, 2 < 1, 2 > 1, 2 > 0],\n"
+"                       identity);\n"
+"(%o3)                       [1, 4, 5]\n"
+"@end group\n"
+"@group\n"
+"(%i4) assume (x < -1);\n"
+"(%o4)                       [x < - 1]\n"
+"@end group\n"
+"@group\n"
+"(%i5) map (maybe, [x > 0, x < 0, x < -2]);\n"
+"(%o5)                [false, true, unknown]\n"
+"@end group\n"
+"@group\n"
+"(%i6) sublist_indices ([x > 0, x < 0, x < -2], identity);\n"
+"(%o6)                          [2]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tenth}\n"
+"@deffn {Function} tenth (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 10'th item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{third}\n"
+"@deffn {Function} third (@var{expr})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the 3'rd item of expression or list @var{expr}.\n"
+"See @mref{first} for more details.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Lists} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@c TREE_REDUCE ACCEPTS A SET OR LIST AS AN ARGUMENT, BUT RREDUCE AND LREDUCE WANT ONLY LISTS; STRANGE\n"
+"@anchor{tree_reduce}\n"
+"@deffn {Function} tree_reduce @\n"
+"@fname{tree_reduce} (@var{F}, @var{s}) @\n"
+"@fname{tree_reduce} (@var{F}, @var{s}, @var{s_0})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Extends the binary function @var{F} to an n-ary function by composition,\n"
+"where @var{s} is a set or list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{tree_reduce} is equivalent to the following:\n"
+"Apply @var{F} to successive pairs of elements\n"
+"to form a new list @code{[@var{F}(@var{s_1}, @var{s_2}), @var{F}(@var{s_3}, @var{s_4}), ...]},\n"
+"carrying the final element unchanged if there are an odd number of elements.\n"
+"Then repeat until the list is reduced to a single element, which is the return value.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"When the optional argument @var{s_0} is present,\n"
+"the result is equivalent @code{tree_reduce(@var{F}, cons(@var{s_0}, @var{s}))}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"For addition of floating point numbers,\n"
+"@code{tree_reduce} may return a sum that has a smaller rounding error\n"
+"than either @code{rreduce} or @code{lreduce}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"The elements of @var{s} and the partial results may be arranged in a minimum-depth binary tree,\n"
+"thus the name \"tree_reduce\".\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{tree_reduce} applied to a list with an even number of elements.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c tree_reduce (f, [a, b, c, d]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) tree_reduce (f, [a, b, c, d]);\n"
+"(%o1)                  f(f(a, b), f(c, d))\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{tree_reduce} applied to a list with an odd number of elements.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c tree_reduce (f, [a, b, c, d, e]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) tree_reduce (f, [a, b, c, d, e]);\n"
+"(%o1)               f(f(f(a, b), f(c, d)), e)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sets} @category{Lists}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{unique}\n"
+"@deffn {Function} unique (@var{L})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Returns the unique elements of the list @var{L}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"When all the elements of @var{L} are unique,\n"
+"@code{unique} returns a shallow copy of @var{L},\n"
+"not @var{L} itself.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"If @var{L} is not a list, @code{unique} returns @var{L}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c unique ([1, %pi, a + b, 2, 1, %e, %pi, a + b, [1]]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) unique ([1, %pi, a + b, 2, 1, %e, %pi, a + b, [1]]);\n"
+"(%o1)              [1, 2, %e, %pi, [1], b + a]\n"
+"@end group\n"
+"@end example\n"
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@c XREDUCE ACCEPTS A SET OR LIST AS AN ARGUMENT, BUT RREDUCE AND LREDUCE WANT ONLY LISTS; STRANGE\n"
+"@anchor{xreduce}\n"
+"@deffn {Function} xreduce @\n"
+"@fname{xreduce} (@var{F}, @var{s}) @\n"
+"@fname{xreduce} (@var{F}, @var{s}, @var{s_0})\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Extends the function @var{F} to an n-ary function by composition,\n"
+"or, if @var{F} is already n-ary, applies @var{F} to @var{s}.\n"
+"When @var{F} is not n-ary, @code{xreduce} is the same as @code{lreduce}.\n"
+"The argument @var{s} is a list.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Functions known to be n-ary include\n"
+"addition @code{+}, multiplication @code{*}, @code{and}, @code{or}, @code{max},\n"
+"@code{min}, and @code{append}.\n"
+"Functions may also be declared n-ary by @code{declare(@var{F}, nary)}.\n"
+"For these functions,\n"
+"@code{xreduce} is expected to be faster than either @code{rreduce} or @code{lreduce}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"When the optional argument @var{s_0} is present,\n"
+"the result is equivalent to @code{xreduce(@var{s}, cons(@var{s_0}, @var{s}))}.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c NOT SURE WHAT IS THE RELEVANCE OF THE FOLLOWING COMMENT\n"
+"@c MAXIMA IS NEVER SO CAREFUL ABOUT FLOATING POINT ASSOCIATIVITY SO FAR AS I KNOW\n"
+"Floating point addition is not exactly associative; be that as it may,\n"
+"@code{xreduce} applies Maxima's n-ary addition when @var{s} contains floating point numbers.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{xreduce} applied to a function known to be n-ary.\n"
+"@code{F} is called once, with all arguments.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c declare (F, nary);\n"
+"@c F ([L]) := L;\n"
+"@c xreduce (F, [a, b, c, d, e]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) declare (F, nary);\n"
+"(%o1)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i2) F ([L]) := L;\n"
+"(%o2)                      F([L]) := L\n"
+"@end group\n"
+"@group\n"
+"(%i3) xreduce (F, [a, b, c, d, e]);\n"
+"(%o3)                    [a, b, c, d, e]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@code{xreduce} applied to a function not known to be n-ary.\n"
+"@code{G} is called several times, with two arguments each time.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c G ([L]) := L;\n"
+"@c xreduce (G, [a, b, c, d, e]);\n"
+"@c lreduce (G, [a, b, c, d, e]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) G ([L]) := L;\n"
+"(%o1)                      G([L]) := L\n"
+"@end group\n"
+"@group\n"
+"(%i2) xreduce (G, [a, b, c, d, e]);\n"
+"(%o2)                 [[[[a, b], c], d], e]\n"
+"@end group\n"
+"@group\n"
+"(%i3) lreduce (G, [a, b, c, d, e]);\n"
+"(%o3)                 [[[[a, b], c], d], e]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sets} @category{Lists}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c h-----------------------------------------------------------------------------\n"
+"@node Performance considerations for Lists, ,Functions and Variables for Lists, Lists\n"
+"@subsection Performance considerations for Lists\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Lists provide efficient ways of appending and removing elements.\n"
+"They can be created without knowing their final dimensions.\n"
+"Lisp provides efficient means of copying and handling lists.\n"
+"Also nested lists do not need to be strictly rectangular.\n"
+"These advantages over declared arrays come with the drawback that the amount of time\n"
+"needed for accessing a random element within a list may be roughly\n"
+"proportional to the element's distance from its beginning.\n"
+"Efficient traversal of lists is still possible, though, by using the list as a\n"
+"stack or a fifo:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c l:[Test,1,2,3,4];\n"
+"@c while l # [] do\n"
+"@c    disp(pop(l));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) l:[Test,1,2,3,4];\n"
+"(%o1)                  [Test, 1, 2, 3, 4]\n"
+"@end group\n"
+"(%i2) while l # [] do\n"
+"   disp(pop(l));\n"
+"                              Test\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"                                1\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"                                2\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"                                3\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"                                4\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"(%o2)                         done\n"
+"@end example\n"
+"Another even faster example would be:\n"
+"@c ===beg===\n"
+"@c l:[Test,1,2,3,4];\n"
+"@c for i in l do\n"
+"@c    disp(pop(l));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) l:[Test,1,2,3,4];\n"
+"(%o1)                  [Test, 1, 2, 3, 4]\n"
+"@end group\n"
+"(%i2) for i in l do\n"
+"   disp(pop(l));\n"
+"                              Test\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"                                1\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"                                2\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"                                3\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"                                4\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"(%o2)                         done\n"
+"@end example\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"Beginning traversal with the last element of a list is possible after\n"
+"reversing the list using @code{reverse ()}.\n"
+"If the elements of a long list need to be processed in a different\n"
+"order performance might be increased by converting the list into a\n"
+"declared array first.\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"It is also to note that the ending condition of @code{for} loops\n"
+"is tested for every iteration which means that the result of a\n"
+"@code{length} should be cached if it is used in the ending\n"
+"condition:\n"
+msgstr ""
+
+# Lists.texi
+msgid ""
+"@c ===beg===\n"
+"@c l:makelist(i,i,1,100000)$\n"
+"@c lngth:length(l);\n"
+"@c x:1;\n"
+"@c for i:1 thru lngth do\n"
+"@c     x:x+1$\n"
+"@c x;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) l:makelist(i,i,1,100000)$\n"
+"@group\n"
+"(%i2) lngth:length(l);\n"
+"(%o2)                        100000\n"
+"@end group\n"
+"@group\n"
+"(%i3) x:1;\n"
+"(%o3)                           1\n"
+"@end group\n"
+"@group\n"
+"(%i4) for i:1 thru lngth do\n"
+"    x:x+1$\n"
+"@end group\n"
+"@group\n"
+"(%i5) x;\n"
+"(%o5)                        100001\n"
+"@end group\n"
+"@end example\n"
+msgstr ""

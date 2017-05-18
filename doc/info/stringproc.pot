@@ -1,0 +1,3805 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# stringproc.texi
+msgid ""
+"@menu\n"
+"* Introduction to String Processing::\n"
+"* Input and Output::\n"
+"* Characters::\n"
+"* String Processing::\n"
+"* Octets and Utilities for Cryptography::\n"
+"@end menu\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to String Processing, Input and Output, stringproc-pkg, stringproc-pkg\n"
+"@section Introduction to String Processing\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The package @code{stringproc} contains functions for processing strings \n"
+"and characters including formatting, encoding and data streams. \n"
+"This package is completed by some tools for cryptography, e.g. base64 and hash \n"
+"functions.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"It can be directly loaded via @code{load(stringproc)} or automatically by \n"
+"using one of its functions.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"For questions and bug reports please contact the author. The following \n"
+"command prints his e-mail-address.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@code{printf(true, \"~@{~a~@}@@gmail.com\", split(sdowncase(\"Volker van Nek\")))$}\n"
+"A string is constructed by typing e.g. @code{\"Text\"}. \n"
+"When the option variable @code{stringdisp} is set to @code{false}, which is \n"
+"the default, the double quotes won't be printed. \n"
+"@ref{stringp} is a test, if an object is a string.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) str: \"Text\";\n"
+"(%o1)                         Text\n"
+"(%i2) stringp(str);\n"
+"(%o2)                         true\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Characters are represented by a string of length 1. \n"
+"@ref{charp} is the corresponding test.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) char: \"e\";\n"
+"(%o1)                           e\n"
+"(%i2) charp(char);\n"
+"(%o2)                         true\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"In Maxima position indices in strings are like in list 1-indexed \n"
+"which results to the following consistency.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) is(charat(\"Lisp\",1) = charlist(\"Lisp\")[1]);\n"
+"(%o1)                         true\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"A string may contain Maxima expressions. \n"
+"These can be parsed with @ref{parse_string}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) map(parse_string, [\"42\" ,\"sqrt(2)\", \"%pi\"]);\n"
+"(%o1)                   [42, sqrt(2), %pi]\n"
+"(%i2) map('float, %);\n"
+"(%o2)        [42.0, 1.414213562373095, 3.141592653589793]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Strings can be processed as characters or in binary form as octets. \n"
+"Functions for conversions are @ref{string_to_octets} and @ref{octets_to_string}.\n"
+"Usable encodings depend on the platform, the application and the \n"
+"underlying Lisp.\n"
+"(The following shows Maxima in GNU/Linux, compiled with SBCL.)\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) obase: 16.$\n"
+"(%i2) string_to_octets(\"$@pounds{}@euro{}\", \"cp1252\");\n"
+"(%o2)                     [24, 0A3, 80]\n"
+"(%i3) string_to_octets(\"$@pounds{}@euro{}\", \"utf-8\");\n"
+"(%o3)               [24, 0C2, 0A3, 0E2, 82, 0AC]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Strings may be written to character streams or as octets to binary streams. \n"
+"The following example demonstrates file in and output of characters.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@ref{openw} returns an output stream to a file, \n"
+"@ref{printf} writes formatted to that file and by e.g. \n"
+"@ref{close} all characters contained in the stream are written to the file.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) s: openw(\"file.txt\");\n"
+"(%o1)                #<output stream file.txt>\n"
+"(%i2) printf(s, \"~%~d ~f ~a ~a ~f ~e ~a~%\", \n"
+"42, 1.234, sqrt(2), %pi, 1.0e-2, 1.0e-2, 1.0b-2)$\n"
+"(%i3) close(s)$\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@ref{openr} then returns an input stream from the previously used file and \n"
+"@ref{readline} returns the line read as a string.\n"
+"The string may be tokenized by e.g. @ref{split} or @ref{tokens} and \n"
+"finally parsed by @ref{parse_string}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i4) s: openr(\"file.txt\");\n"
+"(%o4)                 #<input stream file.txt>\n"
+"(%i5) readline(s);\n"
+"(%o5)          42 1.234 sqrt(2) %pi 0.01 1.0E-2 1.0b-2\n"
+"(%i6) map(parse_string, split(%));\n"
+"(%o6)       [42, 1.234, sqrt(2), %pi, 0.01, 0.01, 1.0b-2]\n"
+"(%i7) close(s)$\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Strings} @category{Share packages} @category{Package stringproc}\n"
+"@closecatbox\n"
+"@c -----------------------------------------------------------------------------\n"
+"@c -----------------------------------------------------------------------------\n"
+"@node Input and Output, Characters, Introduction to String Processing, stringproc-pkg\n"
+"@section Input and Output\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: Formatted printing to a file.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) s: openw(\"file.txt\");\n"
+"(%o1)                      #<output stream file.txt>\n"
+"(%i2) control: \n"
+"\"~2tAn atom: ~20t~a~%~2tand a list: ~20t~@{~r ~@}~%~2t\\n"
+"and an integer: ~20t~d~%\"$\n"
+"(%i3) printf( s,control, 'true,[1,2,3],42 )$\n"
+"(%o3)                                false\n"
+"(%i4) close(s);\n"
+"(%o4)                                true\n"
+"(%i5) s: openr(\"file.txt\");\n"
+"(%o5)                      #<input stream file.txt>\n"
+"(%i6) while stringp( tmp:readline(s) ) do print(tmp)$\n"
+"  An atom:          true \n"
+"  and a list:       one two three  \n"
+"  and an integer:   42 \n"
+"(%i7) close(s)$\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{close}\n"
+"@deffn {Function} close (@var{stream}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Closes @var{stream} and returns @code{true} if @var{stream} had been open. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{flength}\n"
+"@deffn {Function} flength (@var{stream})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@var{stream} has to be an open stream from or to a file. \n"
+"@code{flength} then returns the number of bytes which are currently present in this file.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: See @ref{writebyte} .\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{flush_output}\n"
+"@deffn {Function} flush_output (@var{stream})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Flushes @var{stream} where @var{stream} has to be an output stream to a file. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: See @ref{writebyte} .\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fposition}\n"
+"@deffn {Function} fposition @\n"
+"@fname{fposition} (@var{stream}) @\n"
+"@fname{fposition} (@var{stream}, @var{pos})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the current position in @var{stream}, if @var{pos} is not used. \n"
+"If @var{pos} is used, @code{fposition} sets the position in @var{stream}.\n"
+"@var{stream} has to be a stream from or to a file and \n"
+"@var{pos} has to be a positive number.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Positions in data streams are like in strings or lists 1-indexed, \n"
+"i.e. the first element in @var{stream} is in position 1.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{freshline}\n"
+"@deffn {Function} freshline @\n"
+"@fname{freshline} ()  @\n"
+"@fname{freshline} (@var{stream}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Writes a new line to the standard output stream \n"
+"if the position is not at the beginning of a line und returns @code{true}.\n"
+"Using the optional argument @var{stream} the new line is written to that stream. \n"
+"There are some cases, where @code{freshline()} does not work as expected. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See also @ref{newline}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{get_output_stream_string}\n"
+"@deffn {Function} get_output_stream_string (@var{stream})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a string containing all the characters currently present in \n"
+"@var{stream} which must be an open string-output stream. \n"
+"The returned characters are removed from @var{stream}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: See @ref{make_string_output_stream} .\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{make_string_input_stream}\n"
+"@deffn {Function} make_string_input_stream @\n"
+"@fname{make_string_input_stream} (@var{string}) @\n"
+"@fname{make_string_input_stream} (@var{string}, @var{start}) @\n"
+"@fname{make_string_input_stream} (@var{string}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns an input stream which contains parts of @var{string} and an end of file. \n"
+"Without optional arguments the stream contains the entire string \n"
+"and is positioned in front of the first character. \n"
+"@var{start} and @var{end} define the substring contained in the stream. \n"
+"The first character is available at position 1.\n"
+" \n"
+"@example\n"
+"(%i1) istream : make_string_input_stream(\"text\", 1, 4);\n"
+"(%o1)              #<string-input stream from \"text\">\n"
+"(%i2) (while (c : readchar(istream)) # false do sprint(c), newline())$\n"
+"t e x \n"
+"(%i3) close(istream)$\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{make_string_output_stream}\n"
+"@deffn {Function} make_string_output_stream ()\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns an output stream that accepts characters. Characters currently present \n"
+"in this stream can be retrieved by @ref{get_output_stream_string}.\n"
+" \n"
+"@example\n"
+"(%i1) ostream : make_string_output_stream();\n"
+"(%o1)               #<string-output stream 09622ea0>\n"
+"(%i2) printf(ostream, \"foo\")$\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"(%i3) printf(ostream, \"bar\")$\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"(%i4) string : get_output_stream_string(ostream);\n"
+"(%o4)                            foobar\n"
+"(%i5) printf(ostream, \"baz\")$\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"(%i6) string : get_output_stream_string(ostream);\n"
+"(%o6)                              baz\n"
+"(%i7) close(ostream)$\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{newline}\n"
+"@deffn {Function} newline @\n"
+"@fname{newline} ()  @\n"
+"@fname{newline} (@var{stream}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Writes a new line to the standard output stream. \n"
+"Using the optional argument @var{stream} the new line is written to that stream. \n"
+"There are some cases, where @code{newline()} does not work as expected. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See @ref{sprint} for an example of using @code{newline()}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{opena}\n"
+"@deffn {Function} opena (@var{file}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a character output stream to @var{file}.\n"
+"If an existing file is opened, @code{opena} appends elements at the end of @var{file}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"For binary output see @ref{Functions and Variables for binary input and output, , opena_binary} .\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{openr}\n"
+"@deffn {Function} openr @\n"
+"@fname{openr} (@var{file}) @\n"
+"@fname{openr} (@var{file}, @var{encoding}) \n"
+"Returns a character input stream to @var{file}.\n"
+"@code{openr} assumes that @var{file} already exists.\n"
+"If reading the file results in a lisp error about its encoding\n"
+"passing the correct string as the argument @var{encoding} might help.\n"
+"The available encodings and their names depend on the lisp being used.\n"
+"For sbcl a list of suitable strings can be found at\n"
+"@url{http://www.sbcl.org/manual/#External-Formats}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"For binary input see @ref{Functions and Variables for binary input and output, , openr_binary} .\n"
+"See also @mref{close} and @mrefdot{openw}\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) istream : openr(\"data.txt\",\"EUC-JP\");\n"
+"(%o1)     #<FD-STREAM for \"file /home/gunter/data.txt\" @{10099A3AE3@}>\n"
+"(%i2) close(istream);\n"
+"(%o2)                                true\n"
+"@end example\n"
+"@opencatbox\n"
+"@category{File input} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{openw}\n"
+"@deffn {Function} openw (@var{file}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a character output stream to @var{file}.\n"
+"If @var{file} does not exist, it will be created.\n"
+"If an existing file is opened, @code{openw} destructively modifies @var{file}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"For binary output see @ref{Functions and Variables for binary input and output, , openw_binary} .\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See also @mref{close} and @mrefdot{openr}\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{printf}\n"
+"@deffn {Function} printf @\n"
+"@fname{printf} (@var{dest}, @var{string}) @\n"
+"@fname{printf} (@var{dest}, @var{string}, @var{expr_1}, ..., @var{expr_n})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Produces formatted output by outputting the characters of control-string \n"
+"@var{string} and observing that a tilde introduces a directive.\n"
+"The character after the tilde, possibly preceded by prefix parameters \n"
+"and modifiers, specifies what kind of formatting is desired.\n"
+"Most directives use one or more elements of the arguments \n"
+"@var{expr_1}, ..., @var{expr_n} to create their output.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"If @var{dest} is a stream or @code{true}, then @code{printf} returns @code{false}.\n"
+"Otherwise, @code{printf} returns a string containing the output.\n"
+"By default the streams @var{stdin}, @var{stdout} and @var{stderr} are defined.\n"
+"If maxima is running as a server (which is the normal case if maxima communicating\n"
+"with a graphical user interface) @code{setup-client} will define @var{old_stdout} and\n"
+"@var{old_stderr}, too.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@code{printf} provides the Common Lisp function @code{format} in Maxima. \n"
+"The following example illustrates the general relation between these two \n"
+"functions.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) printf(true, \"R~dD~d~%\", 2, 2);\n"
+"R2D2\n"
+"(%o1)                                false\n"
+"(%i2) :lisp (format t \"R~dD~d~%\" 2 2)\n"
+"R2D2\n"
+"NIL\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The following description is limited to a rough sketch of the possibilities of \n"
+"@code{printf}.\n"
+"The Lisp function @code{format} is described in detail in many reference books. \n"
+"Of good help is e.g. the free available online-manual \n"
+"\"Common Lisp the Language\" by Guy L. Steele. See chapter 22.3.3 there. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"   ~%       new line\n"
+"   ~&       fresh line\n"
+"   ~t       tab\n"
+"   ~$       monetary\n"
+"   ~d       decimal integer\n"
+"   ~b       binary integer\n"
+"   ~o       octal integer\n"
+"   ~x       hexadecimal integer\n"
+"   ~br      base-b integer\n"
+"   ~r       spell an integer\n"
+"   ~p       plural\n"
+"   ~f       floating point\n"
+"   ~e       scientific notation\n"
+"   ~g       ~f or ~e, depending upon magnitude\n"
+"   ~h       bigfloat\n"
+"   ~a       uses Maxima function string\n"
+"   ~s       like ~a, but output enclosed in \"double quotes\"\n"
+"   ~~       ~\n"
+"   ~<       justification, ~> terminates\n"
+"   ~(       case conversion, ~) terminates \n"
+"   ~[       selection, ~] terminates \n"
+"   ~@{       iteration, ~@} terminates\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The directive ~h for bigfloat is no Lisp-standard and is therefore illustrated below. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Note that the directive ~* is not supported.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"If @var{dest} is a stream or @code{true}, then @code{printf} returns @code{false}.\n"
+"Otherwise, @code{printf} returns a string containing the output.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) printf( false, \"~a ~a ~4f ~a ~@@r\", \n"
+"              \"String\",sym,bound,sqrt(12),144), bound = 1.234;\n"
+"(%o1)                 String sym 1.23 2*sqrt(3) CXLIV\n"
+"(%i2) printf( false,\"~@{~a ~@}\",[\"one\",2,\"THREE\"] );\n"
+"(%o2)                          one 2 THREE \n"
+"(%i3) printf(true,\"~@{~@{~9,1f ~@}~%~@}\",mat ),\n"
+"          mat = args(matrix([1.1,2,3.33],[4,5,6],[7,8.88,9]))$\n"
+"      1.1       2.0       3.3 \n"
+"      4.0       5.0       6.0 \n"
+"      7.0       8.9       9.0 \n"
+"(%i4) control: \"~:(~r~) bird~p ~[is~;are~] singing.\"$\n"
+"(%i5) printf( false,control, n,n,if n=1 then 1 else 2 ), n=2;\n"
+"(%o5)                    Two birds are singing.\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The directive ~h has been introduced to handle bigfloats. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"~w,d,e,x,o,p@@H\n"
+" w : width\n"
+" d : decimal digits behind floating point\n"
+" e : minimal exponent digits\n"
+" x : preferred exponent\n"
+" o : overflow character\n"
+" p : padding character\n"
+" @@ : display sign for positive numbers\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) fpprec : 1000$\n"
+"(%i2) printf(true, \"|~h|~%\", 2.b0^-64)$\n"
+"|0.0000000000000000000542101086242752217003726400434970855712890625|\n"
+"(%i3) fpprec : 26$\n"
+"(%i4) printf(true, \"|~h|~%\", sqrt(2))$\n"
+"|1.4142135623730950488016887|\n"
+"(%i5) fpprec : 24$\n"
+"(%i6) printf(true, \"|~h|~%\", sqrt(2))$\n"
+"|1.41421356237309504880169|\n"
+"(%i7) printf(true, \"|~28h|~%\", sqrt(2))$\n"
+"|   1.41421356237309504880169|\n"
+"(%i8) printf(true, \"|~28,,,,,'*h|~%\", sqrt(2))$\n"
+"|***1.41421356237309504880169|\n"
+"(%i9) printf(true, \"|~,18h|~%\", sqrt(2))$\n"
+"|1.414213562373095049|\n"
+"(%i10) printf(true, \"|~,,,-3h|~%\", sqrt(2))$\n"
+"|1414.21356237309504880169b-3|\n"
+"(%i11) printf(true, \"|~,,2,-3h|~%\", sqrt(2))$\n"
+"|1414.21356237309504880169b-03|\n"
+"(%i12) printf(true, \"|~20h|~%\", sqrt(2))$\n"
+"|1.41421356237309504880169|\n"
+"(%i13) printf(true, \"|~20,,,,'+h|~%\", sqrt(2))$\n"
+"|++++++++++++++++++++|\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{readbyte}\n"
+"@deffn {Function} readbyte (@var{stream})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Removes and returns the first byte in @var{stream} which must be a binary input stream. \n"
+"If the end of file is encountered @code{readbyte} returns @code{false}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: Read the first 16 bytes from a file encrypted with AES in OpenSSL. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase: obase: 16.$\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"(%i2) in: openr_binary(\"msg.bin\");\n"
+"(%o2)                       #<input stream msg.bin>\n"
+"(%i3) (L:[],  thru 16. do push(readbyte(in), L),  L:reverse(L));\n"
+"(%o3) [53, 61, 6C, 74, 65, 64, 5F, 5F, 88, 56, 0DE, 8A, 74, 0FD, 0AD, 0F0]\n"
+"(%i4) close(in);\n"
+"(%o4)                                true\n"
+"(%i5) map(ascii, rest(L,-8));\n"
+"(%o5)                      [S, a, l, t, e, d, _, _]\n"
+"(%i6) salt: octets_to_number(rest(L,8));\n"
+"(%o6)                          8856de8a74fdadf0\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{readchar}\n"
+"@deffn {Function} readchar (@var{stream})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Removes and returns the first character in @var{stream}. \n"
+"If the end of file is encountered @code{readchar} returns @code{false}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: See @ref{make_string_input_stream}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{readline}\n"
+"@deffn {Function} readline (@var{stream}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a string containing all characters starting at the current position \n"
+"in @var{stream} up to the end of the line or @code{false} \n"
+"if the end of the file is encountered.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sprint}\n"
+"@deffn {Function} sprint (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Evaluates and displays its arguments one after the other `on a line' starting at\n"
+"the leftmost position.  The expressions are printed with a space character right next \n"
+"to the number, and it disregards line length.  \n"
+"@code{newline()} might be used for line breaking.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: Sequential printing with @code{sprint}. \n"
+"Creating a new line with @code{newline()}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) for n:0 thru 19 do sprint(fib(n))$\n"
+"0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181\n"
+"(%i2) for n:0 thru 22 do ( \n"
+"         sprint(fib(n)), \n"
+"         if mod(n,10) = 9 then newline() )$\n"
+"0 1 1 2 3 5 8 13 21 34 \n"
+"55 89 144 233 377 610 987 1597 2584 4181 \n"
+"6765 10946 17711 \n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{writebyte}\n"
+"@deffn {Function} writebyte (@var{byte}, @var{stream})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Writes @var{byte} to @var{stream} which must be a binary output stream. \n"
+"@code{writebyte} returns @code{byte}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: Write some bytes to a binary file output stream. \n"
+"In this example all bytes correspond to printable characters and are printed \n"
+"by @code{printfile}. \n"
+"The bytes remain in the stream until @code{flush_output} or @code{close} have been called.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase: obase: 16.$\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"(%i2) bytes: map(cint, charlist(\"GNU/Linux\"));\n"
+"(%o2)                [47, 4E, 55, 2F, 4C, 69, 6E, 75, 78]\n"
+"(%i3) out: openw_binary(\"test.bin\");\n"
+"(%o3)                      #<output stream test.bin>\n"
+"(%i4) for i thru 3 do writebyte(bytes[i], out);\n"
+"(%o4)                                done\n"
+"(%i5) printfile(\"test.bin\")$\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"(%i6) flength(out);\n"
+"(%o6)                                  0\n"
+"(%i7) flush_output(out);\n"
+"(%o7)                                true\n"
+"(%i8) flength(out);\n"
+"(%o8)                                  3\n"
+"(%i9) printfile(\"test.bin\")$\n"
+"GNU\n"
+"(%i0A) for b in rest(bytes,3) do writebyte(b, out);\n"
+"(%o0A)                               done\n"
+"(%i0B) close(out);\n"
+"(%o0B)                               true\n"
+"(%i0C) printfile(\"test.bin\")$\n"
+"GNU/Linux\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@c -----------------------------------------------------------------------------\n"
+"@node Characters, String Processing, Input and Output, stringproc-pkg\n"
+"@section Characters\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Characters are strings of length 1.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{adjust_external_format}\n"
+"@deffn {Function} adjust_external_format () \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Prints information about the current external format of the Lisp reader \n"
+"and in case the external format encoding differs from the encoding of the \n"
+"application which runs Maxima @code{adjust_external_format} tries to adjust \n"
+"the encoding or prints some help or instruction.\n"
+"@code{adjust_external_format} returns @code{true} when the external format has \n"
+"been changed and @code{false} otherwise.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Functions like @ref{cint}, @ref{unicode}, @ref{octets_to_string} \n"
+"and @ref{string_to_octets} need UTF-8 as the external format of the \n"
+"Lisp reader to work properly over the full range of Unicode characters. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples (Maxima on Windows, March 2016): \n"
+"Using @code{adjust_external_format} when the default external format \n"
+"is not equal to the encoding provided by the application.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"1. Command line Maxima\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"In case a terminal session is preferred it is recommended to use Maxima compiled \n"
+"with SBCL. Here Unicode support is provided by default and calls to \n"
+"@code{adjust_external_format} are unnecessary. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"If Maxima is compiled with CLISP or GCL it is recommended to change \n"
+"the terminal encoding from CP850 to CP1252. \n"
+"@code{adjust_external_format} prints some help. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"CCL reads UTF-8 while the terminal input is CP850 by default. \n"
+"CP1252 is not supported by CCL. @code{adjust_external_format} \n"
+"prints instructions for changing the terminal encoding and external format \n"
+"both to iso-8859-1.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"2. wxMaxima\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"In wxMaxima SBCL reads CP1252 by default but the input from the application \n"
+"is UTF-8 encoded. Adjustment is needed. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Calling @code{adjust_external_format} and restarting Maxima \n"
+"permanently changes the default external format to UTF-8.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1)adjust_external_format();\n"
+"The line\n"
+"(setf sb-impl::*default-external-format* :utf-8)\n"
+"has been appended to the init file\n"
+"C:/Users/Username/.sbclrc\n"
+"Please restart Maxima to set the external format to UTF-8.\n"
+"(%i1) false\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Restarting Maxima.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) adjust_external_format();\n"
+"The external format is currently UTF-8\n"
+"and has not been changed.\n"
+"(%i1) false\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{alphacharp}\n"
+"@deffn {Function} alphacharp (@var{char})  \n"
+"  \n"
+"Returns @code{true} if @var{char} is an alphabetic character. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"To identify a non-US-ASCII character as an alphabetic character \n"
+"the underlying Lisp must provide full Unicode support. \n"
+"E.g. a German umlaut is detected as an alphabetic character with SBCL in GNU/Linux \n"
+"but not with GCL. \n"
+"(In Windows Maxima, when compiled with SBCL, must be set to UTF-8. \n"
+"See @ref{adjust_external_format} for more.) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: Examination of non-US-ASCII characters.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The underlying Lisp (SBCL, GNU/Linux) is able to convert the typed character \n"
+"into a Lisp character and to examine.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) alphacharp(\"@\"u\");\n"
+"(%o1)                          true\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"In GCL this is not possible. An error break occurs.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) alphacharp(\"u\");\n"
+"(%o1)                          true\n"
+"(%i2) alphacharp(\"@\"u\");\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"package stringproc: @\"u cannot be converted into a Lisp character.\n"
+" -- an error.\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{alphanumericp}\n"
+"@deffn {Function} alphanumericp (@var{char}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns @code{true} if @var{char} is an alphabetic character or a digit \n"
+"(only corresponding US-ASCII characters are regarded as digits). \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Note: See remarks on @ref{alphacharp}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ascii}\n"
+"@deffn {Function} ascii (@var{int}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the US-ASCII character corresponding to the integer @var{int}\n"
+"which has to be less than @code{128}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See @ref{unicode} for converting code points larger than @code{127}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) for n from 0 thru 127 do ( \n"
+"        ch: ascii(n), \n"
+"        if alphacharp(ch) then sprint(ch),\n"
+"        if n = 96 then newline() )$\n"
+"A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \n"
+"a b c d e f g h i j k l m n o p q r s t u v w x y z\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cequal}\n"
+"@deffn {Function} cequal (@var{char_1}, @var{char_2}) \n"
+"         \n"
+"Returns @code{true} if @var{char_1} and @var{char_2} are the same character. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cequalignore}\n"
+"@deffn {Function} cequalignore (@var{char_1}, @var{char_2}) \n"
+"  \n"
+"Like @code{cequal} but ignores case which is only possible for non-US-ASCII \n"
+"characters when the underlying Lisp is able to recognize a character as an \n"
+"alphabetic character. See remarks on @ref{alphacharp}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cgreaterp}\n"
+"@deffn {Function} cgreaterp (@var{char_1}, @var{char_2}) \n"
+"  \n"
+"Returns @code{true} if the code point of @var{char_1} is greater than the \n"
+"code point of @var{char_2}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cgreaterpignore}\n"
+"@deffn {Function} cgreaterpignore (@var{char_1}, @var{char_2}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Like @code{cgreaterp} but ignores case which is only possible for non-US-ASCII \n"
+"characters when the underlying Lisp is able to recognize a character as an \n"
+"alphabetic character. See remarks on @ref{alphacharp}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{charp}\n"
+"@deffn {Function} charp (@var{obj}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns @code{true} if @var{obj} is a Maxima-character.\n"
+"See introduction for example.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cint}\n"
+"@deffn {Function} cint (@var{char}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the Unicode code point of @var{char} which must be a \n"
+"Maxima character, i.e. a string of length @code{1}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples: The hexadecimal code point of some characters \n"
+"(Maxima with SBCL on GNU/Linux). \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) obase: 16.$\n"
+"(%i2) map(cint, [\"$\",\"@pounds{}\",\"@euro{}\"]);\n"
+"(%o2)                           [24, 0A3, 20AC]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Warning: It is not possible to enter characters corresponding to code points \n"
+"larger than 16 bit in wxMaxima with SBCL on Windows when the external format \n"
+"has not been set to UTF-8. See @ref{adjust_external_format}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c Command @U not supported by texinfo 5.\n"
+"@c @example\n"
+"@c (%i3) cint(\"@U{1d538}\");\n"
+"@c (%o3)                                1D538\n"
+"@c @end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"CMUCL doesn't process these characters as one character. \n"
+"@code{cint} then returns @code{false}. \n"
+"@c Converting to UTF-8-octets and finally to Unicode serves as a workaround.\n"
+"Converting a character to a code point via UTF-8-octets may serve as a workaround: \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@code{utf8_to_unicode(string_to_octets(character));}\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c Command @U not supported by texinfo 5.\n"
+"@c @example\n"
+"@c (%i4) utf8_to_unicode(string_to_octets(\"@U{1d538}\"));\n"
+"@c (%o4)                                1D538\n"
+"@c @end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See @ref{utf8_to_unicode}, @ref{string_to_octets}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{clessp}\n"
+"@deffn {Function} clessp (@var{char_1}, @var{char_2})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns @code{true} if the code point of @var{char_1} is less than the \n"
+"code point of @var{char_2}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{clesspignore}\n"
+"@deffn {Function} clesspignore (@var{char_1}, @var{char_2})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Like @code{clessp} but ignores case which is only possible for non-US-ASCII \n"
+"characters when the underlying Lisp is able to recognize a character as an \n"
+"alphabetic character. See remarks on @ref{alphacharp}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{constituent}\n"
+"@deffn {Function} constituent (@var{char}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns @code{true} if @var{char} is a graphic character but not a space character.\n"
+"A graphic character is a character one can see, plus the space character.\n"
+"(@code{constituent} is defined by Paul Graham. \n"
+"See Paul Graham, ANSI Common Lisp, 1996, page 67.)\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) for n from 0 thru 255 do ( \n"
+"tmp: ascii(n), if constituent(tmp) then sprint(tmp) )$\n"
+"! \" #  %  ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @@ A B\n"
+"C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c\n"
+"d e f g h i j k l m n o p q r s t u v w x y z @{ | @} ~\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@c @deffn {Function} cunlisp (@var{lisp_char}) \n"
+"@c Converts a Lisp-character into a Maxima-character.\n"
+"@c (You won't need it.)\n"
+"@c \n"
+"@c @opencatbox\n"
+"@c @category{Package stringproc}\n"
+"@c @closecatbox\n"
+"@c \n"
+"@c @end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{digitcharp}\n"
+"@deffn {Function} digitcharp (@var{char}) \n"
+"  \n"
+"Returns @code{true} if @var{char} is a digit where only the corresponding \n"
+"US-ASCII-character is regarded as a digit.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@c @deffn {Function} lcharp (@var{obj}) \n"
+"@c Returns @code{true} if @var{obj} is a Lisp-character.\n"
+"@c (You won't need it.)\n"
+"@c \n"
+"@c @opencatbox\n"
+"@c @category{Predicate functions} @category{Package stringproc}\n"
+"@c @closecatbox\n"
+"@c \n"
+"@c @end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lowercasep}\n"
+"@deffn {Function} lowercasep (@var{char}) \n"
+"   \n"
+"Returns @code{true} if @var{char} is a lowercase character. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Note: See remarks on @ref{alphacharp}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{newline_variable}\n"
+"@defvr {Variable} newline \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The newline character (ASCII-character 10). \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{space_variable}\n"
+"@defvr {Variable} space   \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The space character.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tab_variable}\n"
+"@defvr {Variable} tab     \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The tab character.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{unicode}\n"
+"@deffn {Function} unicode (@var{arg}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the character defined by @var{arg} which might be a Unicode code point \n"
+"or a name string if the underlying Lisp provides full Unicode support. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: Characters defined by hexadecimal code points\n"
+"(Maxima with SBCL on GNU/Linux). \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase: 16.$\n"
+"(%i2) map(unicode, [24, 0A3, 20AC]);\n"
+"(%o2)                            [$, @pounds{}, @euro{}]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Warning: In wxMaxima with SBCL on Windows it is not possible to convert \n"
+"code points larger than 16 bit to characters when the external format \n"
+"has not been set to UTF-8. See @ref{adjust_external_format} for more information.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c Command @U not supported by texinfo 5.\n"
+"@c @example\n"
+"@c (%i3) unicode(1D538);\n"
+"@c (%o3)                                  @U{1d538}\n"
+"@c @end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"CMUCL doesn't process code points larger than 16 bit. \n"
+"In these cases @code{unicode} returns @code{false}. \n"
+"@c Converting characters to UTF-8 octets and finally to Unicode serves as a workaround.\n"
+"Converting a code point to a character via UTF-8 octets may serve as a workaround: \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@code{octets_to_string(unicode_to_utf8(code_point));}\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c Command @U not supported by texinfo 5.\n"
+"@c @example\n"
+"@c (%i4) octets_to_string(unicode_to_utf8(1D538));\n"
+"@c (%o4)                                  @U{1d538}\n"
+"@c @end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See @ref{octets_to_string}, @ref{unicode_to_utf8}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"In case the underlying Lisp provides full Unicode support the character might be \n"
+"specified by its name. The following is possible in ECL, CLISP and SBCL, \n"
+"where in SBCL on Windows the external format has to be set to UTF-8.\n"
+"@code{unicode(name)} is supported by CMUCL too but again limited to 16 bit \n"
+"characters. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The string argument to @code{unicode} is basically the same string returned by \n"
+"@code{printf} using the \"~@@c\" specifier. \n"
+"But as shown below the prefix \"#\\" must be omitted. \n"
+"Underlines might be replaced by spaces and uppercase letters by lowercase ones.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example (continued): Characters defined by names \n"
+"(Maxima with SBCL on GNU/Linux). \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i3) printf(false, \"~@@c\", unicode(0DF));\n"
+"(%o3)                    #\LATIN_SMALL_LETTER_SHARP_S\n"
+"(%i4) unicode(\"LATIN_SMALL_LETTER_SHARP_S\");\n"
+"(%o4)                                  @ss{}\n"
+"(%i5) unicode(\"Latin small letter sharp s\");\n"
+"(%o5)                                  @ss{}\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{unicode_to_utf8}\n"
+"@deffn {Function} unicode_to_utf8 (@var{code_point}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a list containing the UTF-8 code corresponding to the Unicode @var{code_point}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples: Converting Unicode code points to UTF-8 and vice versa. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase: obase: 16.$\n"
+"(%i2) map(cint, [\"$\",\"@pounds{}\",\"@euro{}\"]);\n"
+"(%o2)                           [24, 0A3, 20AC]\n"
+"(%i3) map(unicode_to_utf8, %);\n"
+"(%o3)                 [[24], [0C2, 0A3], [0E2, 82, 0AC]]\n"
+"(%i4) map(utf8_to_unicode, %);\n"
+"(%o4)                           [24, 0A3, 20AC]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{uppercasep}\n"
+"@deffn {Function} uppercasep (@var{char})  \n"
+"  \n"
+"Returns @code{true} if @var{char} is an uppercase character. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Note: See remarks on @ref{alphacharp}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{us_ascii_only}\n"
+"@defvr {Variable} us_ascii_only\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"This option variable affects Maxima when the character encoding \n"
+"provided by the application which runs Maxima is UTF-8 but the \n"
+"external format of the Lisp reader is not equal to UTF-8. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"On GNU/Linux this is true when Maxima is built with GCL \n"
+"and on Windows in wxMaxima with GCL- and SBCL-builds. \n"
+"With SBCL it is recommended to change the external format to UTF-8. \n"
+"Setting @code{us_ascii_only} is unnecessary then. \n"
+"See @ref{adjust_external_format} for details. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@code{us_ascii_only} is @code{false} by default. \n"
+"Maxima itself then (i.e. in the above described situation) parses the UTF-8 encoding.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"When @code{us_ascii_only} is set to @code{true} it is assumed that all strings \n"
+"used as arguments to string processing functions do not contain Non-US-ASCII characters. \n"
+"Given that promise, Maxima avoids parsing UTF-8 and strings can be processed more efficiently.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{utf8_to_unicode}\n"
+"@deffn {Function} utf8_to_unicode (@var{list}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a Unicode code point corresponding to the @var{list} which must contain \n"
+"the UTF-8 encoding of a single character.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples: See @ref{unicode_to_utf8}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@c -----------------------------------------------------------------------------\n"
+"@node String Processing, Octets and Utilities for Cryptography, Characters, stringproc-pkg\n"
+"@section String Processing\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Position indices in strings are 1-indexed like in Maxima lists. \n"
+"See example in @ref{charat}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{charat}\n"
+"@deffn {Function} charat (@var{string}, @var{n}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the @var{n}-th character of @var{string}.\n"
+"The first character in @var{string} is returned with @var{n} = 1. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) charat(\"Lisp\",1);\n"
+"(%o1)                           L\n"
+"(%i2) charlist(\"Lisp\")[1];\n"
+"(%o2)                           L\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{charlist}\n"
+"@deffn {Function} charlist (@var{string}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the list of all characters in @var{string}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) charlist(\"Lisp\");\n"
+"(%o1)                     [L, i, s, p]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{eval_string}\n"
+"@deffn {Function} eval_string (@var{str})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Parse the string @var{str} as a Maxima expression and evaluate it.\n"
+"The string @var{str} may or may not have a terminator (dollar sign @code{$} or semicolon @code{;}).\n"
+"Only the first expression is parsed and evaluated, if there is more than one.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Complain if @var{str} is not a string.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) eval_string (\"foo: 42; bar: foo^2 + baz\");\n"
+"(%o1)                       42\n"
+"(%i2) eval_string (\"(foo: 42, bar: foo^2 + baz)\");\n"
+"(%o2)                   baz + 1764\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See also @ref{parse_string}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{parse_string}\n"
+"@deffn {Function} parse_string (@var{str})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Parse the string @var{str} as a Maxima expression (do not evaluate it).\n"
+"The string @var{str} may or may not have a terminator (dollar sign @code{$} or semicolon @code{;}).\n"
+"Only the first expression is parsed, if there is more than one.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Complain if @var{str} is not a string.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) parse_string (\"foo: 42; bar: foo^2 + baz\");\n"
+"(%o1)                    foo : 42\n"
+"(%i2) parse_string (\"(foo: 42, bar: foo^2 + baz)\");\n"
+"                                   2\n"
+"(%o2)          (foo : 42, bar : foo  + baz)\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See also @ref{eval_string}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{scopy}\n"
+"@deffn {Function} scopy (@var{string}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a copy of @var{string} as a new string. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sdowncase}\n"
+"@deffn {Function} sdowncase @\n"
+"@fname{sdowncase} (@var{string}) @\n"
+"@fname{sdowncase} (@var{string}, @var{start})  @\n"
+"@fname{sdowncase} (@var{string}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Like @ref{supcase} but uppercase characters are converted to lowercase. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sequal}\n"
+"@deffn {Function} sequal (@var{string_1}, @var{string_2}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns @code{true} if @var{string_1} and @var{string_2} contain the same \n"
+"sequence of characters. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sequalignore}\n"
+"@deffn {Function} sequalignore (@var{string_1}, @var{string_2})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Like @code{sequal} but ignores case which is only possible for non-US-ASCII \n"
+"characters when the underlying Lisp is able to recognize a character as an \n"
+"alphabetic character. See remarks on @ref{alphacharp}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sexplode}\n"
+"@deffn {Function} sexplode (@var{string})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@code{sexplode} is an alias for function @code{charlist}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{simplode}\n"
+"@deffn {Function} simplode @\n"
+"@fname{simplode} (@var{list})   @\n"
+"@fname{simplode} (@var{list}, @var{delim})  \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@code{simplode} takes a list of expressions and concatenates them into a string.\n"
+"If no delimiter @var{delim} is specified, @code{simplode} uses no delimiter.\n"
+"@var{delim} can be any string.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) simplode([\"xx[\",3,\"]:\",expand((x+y)^3)]);\n"
+"(%o1)             xx[3]:y^3+3*x*y^2+3*x^2*y+x^3\n"
+"(%i2) simplode( sexplode(\"stars\"),\" * \" );\n"
+"(%o2)                   s * t * a * r * s\n"
+"(%i3) simplode( [\"One\",\"more\",\"coffee.\"],\" \" );\n"
+"(%o3)                   One more coffee.\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sinsert}\n"
+"@deffn {Function} sinsert (@var{seq}, @var{string}, @var{pos})  \n"
+"Returns a string that is a concatenation of @code{substring(@var{string}, 1, @var{pos}-1)},\n"
+"the string @var{seq} and @code{substring (@var{string}, @var{pos})}.\n"
+"Note that the first character in @var{string} is in position 1.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) s: \"A submarine.\"$\n"
+"(%i2) concat( substring(s,1,3),\"yellow \",substring(s,3) );\n"
+"(%o2)                  A yellow submarine.\n"
+"(%i3) sinsert(\"hollow \",s,3);\n"
+"(%o3)                  A hollow submarine.\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sinvertcase}\n"
+"@deffn {Function} sinvertcase @\n"
+"@fname{sinvertcase} (@var{string}) @\n"
+"@fname{sinvertcase} (@var{string}, @var{start}) @\n"
+"@fname{sinvertcase} (@var{string}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns @var{string} except that each character from position @var{start} to @var{end} is inverted.\n"
+"If @var{end} is not given,\n"
+"all characters from @var{start} to the end of @var{string} are replaced.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) sinvertcase(\"sInvertCase\");\n"
+"(%o1)                      SiNVERTcASE\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{slength}\n"
+"@deffn {Function} slength (@var{string}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the number of characters in @var{string}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{smake}\n"
+"@deffn {Function} smake (@var{num}, @var{char}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a new string with a number of @var{num} characters @var{char}. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) smake(3,\"w\");\n"
+"(%o1)                          www\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{smismatch}\n"
+"@deffn {Function} smismatch @\n"
+"@fname{smismatch} (@var{string_1}, @var{string_2}) @\n"
+"@fname{smismatch} (@var{string_1}, @var{string_2}, @var{test})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the position of the first character of @var{string_1} at which @var{string_1} and @var{string_2} differ or @code{false}.\n"
+"Default test function for matching is @code{sequal}.\n"
+"If @code{smismatch} should ignore case, use @code{sequalignore} as test.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) smismatch(\"seven\",\"seventh\");\n"
+"(%o1)                           6\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{split}\n"
+"@deffn {Function} split @\n"
+"@fname{split} (@var{string}) @\n"
+"@fname{split} (@var{string}, @var{delim}) @\n"
+"@fname{split} (@var{string}, @var{delim}, @var{multiple})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the list of all tokens in @var{string}.\n"
+"Each token is an unparsed string.\n"
+"@code{split} uses @var{delim} as delimiter.\n"
+"If @var{delim} is not given, the space character is the default delimiter.\n"
+"@var{multiple} is a boolean variable with @code{true} by default.\n"
+"Multiple delimiters are read as one.\n"
+"This is useful if tabs are saved as multiple space characters.\n"
+"If @var{multiple} is set to @code{false}, each delimiter is noted.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) split(\"1.2   2.3   3.4   4.5\");\n"
+"(%o1)                 [1.2, 2.3, 3.4, 4.5]\n"
+"(%i2) split(\"first;;third;fourth\",\";\",false);\n"
+"(%o2)               [first, , third, fourth]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sposition}\n"
+"@deffn {Function} sposition (@var{char}, @var{string}) \n"
+"Returns the position of the first character in @var{string} which matches @var{char}.\n"
+"The first character in @var{string} is in position 1.\n"
+"For matching characters ignoring case see @ref{ssearch}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sremove}\n"
+"@deffn {Function} sremove @\n"
+"@fname{sremove} (@var{seq}, @var{string}) @\n"
+"@fname{sremove} (@var{seq}, @var{string}, @var{test}) @\n"
+"@fname{sremove} (@var{seq}, @var{string}, @var{test}, @var{start}) @\n"
+"@fname{sremove} (@var{seq}, @var{string}, @var{test}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a string like @var{string} but without all substrings matching @var{seq}.\n"
+"Default test function for matching is @code{sequal}.\n"
+"If @code{sremove} should ignore case while searching for @var{seq}, use @code{sequalignore} as test.\n"
+"Use @var{start} and @var{end} to limit searching.\n"
+"Note that the first character in @var{string} is in position 1.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) sremove(\"n't\",\"I don't like coffee.\");\n"
+"(%o1)                   I do like coffee.\n"
+"(%i2) sremove (\"DO \",%,'sequalignore);\n"
+"(%o2)                    I like coffee.\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sremovefirst}\n"
+"@deffn {Function} sremovefirst @\n"
+"@fname{sremovefirst} (@var{seq}, @var{string}) @\n"
+"@fname{sremovefirst} (@var{seq}, @var{string}, @var{test}) @\n"
+"@fname{sremovefirst} (@var{seq}, @var{string}, @var{test}, @var{start}) @\n"
+"@fname{sremovefirst} (@var{seq}, @var{string}, @var{test}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Like @code{sremove} except that only the first substring that matches @var{seq} is removed.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sreverse}\n"
+"@deffn {Function} sreverse (@var{string}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a string with all the characters of @var{string} in reverse order. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ssearch}\n"
+"@deffn {Function} ssearch @\n"
+"@fname{ssearch} (@var{seq}, @var{string}) @\n"
+"@fname{ssearch} (@var{seq}, @var{string}, @var{test}) @\n"
+"@fname{ssearch} (@var{seq}, @var{string}, @var{test}, @var{start}) @\n"
+"@fname{ssearch} (@var{seq}, @var{string}, @var{test}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the position of the first substring of @var{string} that matches the string @var{seq}.\n"
+"Default test function for matching is @code{sequal}.\n"
+"If @code{ssearch} should ignore case, use @code{sequalignore} as test.\n"
+"Use @var{start} and @var{end} to limit searching.\n"
+"Note that the first character in @var{string} is in position 1.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ssearch(\"~s\",\"~@{~S ~@}~%\",'sequalignore);\n"
+"(%o1)                                  4\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ssort}\n"
+"@deffn {Function} ssort @\n"
+"@fname{ssort} (@var{string}) @\n"
+"@fname{ssort} (@var{string}, @var{test})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a string that contains all characters from @var{string} in an order such there are no two successive characters @var{c} and @var{d} such that @code{test (@var{c}, @var{d})} is @code{false} and @code{test (@var{d}, @var{c})} is @code{true}.\n"
+"Default test function for sorting is @var{clessp}.\n"
+"The set of test functions is @code{@{clessp, clesspignore, cgreaterp, cgreaterpignore, cequal, cequalignore@}}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ssort(\"I don't like Mondays.\");\n"
+"(%o1)                    '.IMaddeiklnnoosty\n"
+"(%i2) ssort(\"I don't like Mondays.\",'cgreaterpignore);\n"
+"(%o2)                 ytsoonnMlkIiedda.'   \n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ssubst}\n"
+"@deffn {Function} ssubst @\n"
+"@fname{ssubst} (@var{new}, @var{old}, @var{string}) @\n"
+"@fname{ssubst} (@var{new}, @var{old}, @var{string}, @var{test}) @\n"
+"@fname{ssubst} (@var{new}, @var{old}, @var{string}, @var{test}, @var{start}) @\n"
+"@fname{ssubst} (@var{new}, @var{old}, @var{string}, @var{test}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a string like @var{string} except that all substrings matching @var{old} are replaced by @var{new}.\n"
+"@var{old} and @var{new} need not to be of the same length.\n"
+"Default test function for matching is @code{sequal}.\n"
+"If @code{ssubst} should ignore case while searching for old, use @code{sequalignore} as test.\n"
+"Use @var{start} and @var{end} to limit searching.\n"
+"Note that the first character in @var{string} is in position 1.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ssubst(\"like\",\"hate\",\"I hate Thai food. I hate green tea.\");\n"
+"(%o1)          I like Thai food. I like green tea.\n"
+"(%i2) ssubst(\"Indian\",\"thai\",%,'sequalignore,8,12);\n"
+"(%o2)         I like Indian food. I like green tea.\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ssubstfirst}\n"
+"@deffn {Function} ssubstfirst @\n"
+"@fname{ssubstfirst} (@var{new}, @var{old}, @var{string}) @\n"
+"@fname{ssubstfirst} (@var{new}, @var{old}, @var{string}, @var{test}) @\n"
+"@fname{ssubstfirst} (@var{new}, @var{old}, @var{string}, @var{test}, @var{start}) @\n"
+"@fname{ssubstfirst} (@var{new}, @var{old}, @var{string}, @var{test}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Like @code{subst} except that only the first substring that matches @var{old} is replaced.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{strim}\n"
+"@deffn {Function} strim (@var{seq},@var{string}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a string like @var{string},\n"
+"but with all characters that appear in @var{seq} removed from both ends. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) \"/* comment */\"$\n"
+"(%i2) strim(\" /*\",%);\n"
+"(%o2)                        comment\n"
+"(%i3) slength(%);\n"
+"(%o3)                           7\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{striml}\n"
+"@deffn {Function} striml (@var{seq}, @var{string}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Like @code{strim} except that only the left end of @var{string} is trimmed. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{strimr}\n"
+"@deffn {Function} strimr (@var{seq}, @var{string}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Like @code{strim} except that only the right end of @var{string} is trimmed.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{stringp}\n"
+"@deffn {Function} stringp (@var{obj}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns @code{true} if @var{obj} is a string.\n"
+"See introduction for example.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{substring}\n"
+"@deffn {Function} substring @\n"
+"@fname{substring} (@var{string}, @var{start}) @\n"
+"@fname{substring} (@var{string}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the substring of @var{string} beginning at position @var{start} and ending at position @var{end}.\n"
+"The character at position @var{end} is not included.\n"
+"If @var{end} is not given, the substring contains the rest of the string.\n"
+"Note that the first character in @var{string} is in position 1.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) substring(\"substring\",4);\n"
+"(%o1)                        string\n"
+"(%i2) substring(%,4,6);\n"
+"(%o2)                          in\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{supcase}\n"
+"@deffn {Function} supcase @\n"
+"@fname{supcase} (@var{string}) @\n"
+"@fname{supcase} (@var{string}, @var{start}) @\n"
+"@fname{supcase} (@var{string}, @var{start}, @var{end})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns @var{string} except that lowercase characters from position @var{start} to @var{end} are replaced by the corresponding uppercase ones.\n"
+"If @var{end} is not given,\n"
+"all lowercase characters from @var{start} to the end of @var{string} are replaced.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) supcase(\"english\",1,2);\n"
+"(%o1)                        English\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tokens}\n"
+"@deffn {Function} tokens @\n"
+"@fname{tokens} (@var{string}) @\n"
+"@fname{tokens} (@var{string}, @var{test})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a list of tokens, which have been extracted from @var{string}.\n"
+"The tokens are substrings whose characters satisfy a certain test function.\n"
+"If test is not given, @var{constituent} is used as the default test.\n"
+"@code{@{constituent, alphacharp, digitcharp, lowercasep, uppercasep, charp, characterp, alphanumericp@}} is the set of test functions. \n"
+"(The Lisp-version of @code{tokens} is written by Paul Graham. ANSI Common Lisp, 1996, page 67.)\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) tokens(\"24 October 2005\");\n"
+"(%o1)                  [24, October, 2005]\n"
+"(%i2) tokens(\"05-10-24\",'digitcharp);\n"
+"(%o2)                     [05, 10, 24]\n"
+"(%i3) map(parse_string,%);\n"
+"(%o3)                      [5, 10, 24]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@c -----------------------------------------------------------------------------\n"
+"@node Octets and Utilities for Cryptography,  , String Processing, stringproc-pkg\n"
+"@section Octets and Utilities for Cryptography\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{base64}\n"
+"@deffn {Function} base64 (@var{arg})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the base64-representation of @var{arg} as a string. \n"
+"The argument @var{arg} may be a string, a non-negative integer or a list of octets.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) base64: base64(\"foo bar baz\");\n"
+"(%o1)                          Zm9vIGJhciBiYXo=\n"
+"(%i2) string: base64_decode(base64);\n"
+"(%o2)                            foo bar baz\n"
+"(%i3) obase: 16.$\n"
+"(%i4) integer: base64_decode(base64, 'number);\n"
+"(%o4)                       666f6f206261722062617a\n"
+"(%i5) octets: base64_decode(base64, 'list);\n"
+"(%o5)            [66, 6F, 6F, 20, 62, 61, 72, 20, 62, 61, 7A]\n"
+"(%i6) ibase: 16.$\n"
+"(%i7) base64(octets);\n"
+"(%o7)                          Zm9vIGJhciBiYXo=\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Note that if @var{arg} contains umlauts (resp. octets larger than 127) \n"
+"the resulting base64-string is platform dependend. \n"
+"However the decoded string will be equal to the original.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{base64_decode}\n"
+"@deffn {Function} base64_decode @\n"
+"@fname{base64_decode} (@var{base64-string}) @\n"
+"@fname{base64_decode} (@var{base64-string}, @var{return-type})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"By default @code{base64_decode} decodes the @var{base64-string} back to the original string. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The optional argument @var{return-type} allows @code{base64_decode} to \n"
+"alternatively return the corresponding number or list of octets.\n"
+"@var{return-type} may be @code{string}, @code{number} or @code{list}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: See @ref{base64}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{crc24sum}\n"
+"@deffn {Function} crc24sum @\n"
+"@fname{crc24sum} (@var{octets}) @\n"
+"@fname{crc24sum} (@var{octets}, @var{return-type})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"By default @code{crc24sum} returns the @code{CRC24} checksum of an octet-list \n"
+"as a string.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The optional argument @var{return-type} allows @code{crc24sum} to \n"
+"alternatively return the corresponding number or list of octets.\n"
+"@var{return-type} may be @code{string}, @code{number} or @code{list}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"-----BEGIN PGP SIGNATURE-----\n"
+"Version: GnuPG v2.0.22 (GNU/Linux)\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"iQEcBAEBAgAGBQJVdCTzAAoJEG/1Mgf2DWAqCSYH/AhVFwhu1D89C3/QFcgVvZTM\n"
+"wnOYzBUURJAL/cT+IngkLEpp3hEbREcugWp+Tm6aw3R4CdJ7G3FLxExBH/5KnDHi\n"
+"rBQu+I7+3ySK2hpryQ6Wx5J9uZSa4YmfsNteR8up0zGkaulJeWkS4pjiRM+auWVe\n"
+"vajlKZCIK52P080DG7Q2dpshh4fgTeNwqCuCiBhQ73t8g1IaLdhDN6EzJVjGIzam\n"
+"/spqT/sTo6sw8yDOJjvU+Qvn6/mSMjC/YxjhRMaQt9EMrR1AZ4ukBF5uG1S7mXOH\n"
+"WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=\n"
+"=WmeC\n"
+"-----END PGP SIGNATURE-----\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase : obase : 16.$\n"
+"(%i2) sig64 : sconcat(\n"
+" \"iQEcBAEBAgAGBQJVdCTzAAoJEG/1Mgf2DWAqCSYH/AhVFwhu1D89C3/QFcgVvZTM\",\n"
+" \"wnOYzBUURJAL/cT+IngkLEpp3hEbREcugWp+Tm6aw3R4CdJ7G3FLxExBH/5KnDHi\",\n"
+" \"rBQu+I7+3ySK2hpryQ6Wx5J9uZSa4YmfsNteR8up0zGkaulJeWkS4pjiRM+auWVe\",\n"
+" \"vajlKZCIK52P080DG7Q2dpshh4fgTeNwqCuCiBhQ73t8g1IaLdhDN6EzJVjGIzam\",\n"
+" \"/spqT/sTo6sw8yDOJjvU+Qvn6/mSMjC/YxjhRMaQt9EMrR1AZ4ukBF5uG1S7mXOH\",\n"
+" \"WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=\" )$\n"
+"(%i3) octets: base64_decode(sig64, 'list)$\n"
+"(%i4) crc24: crc24sum(octets, 'list);\n"
+"(%o4)                          [5A, 67, 82]\n"
+"(%i5) base64(crc24);\n"
+"(%o5)                              WmeC\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{md5sum}\n"
+"@deffn {Function} md5sum @\n"
+"@fname{md5sum} (@var{arg}) @\n"
+"@fname{md5sum} (@var{arg}, @var{return-type})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the @code{MD5} checksum of a string, a non-negative integer or \n"
+"a list of octets. The default return value is a string containing 32 hex characters.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The optional argument @var{return-type} allows @code{md5sum} to alternatively \n"
+"return the corresponding number or list of octets.\n"
+"@var{return-type} may be @code{string}, @code{number} or @code{list}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase: obase: 16.$\n"
+"(%i2) msg: \"foo bar baz\"$\n"
+"(%i3) string: md5sum(msg);\n"
+"(%o3)                  ab07acbb1e496801937adfa772424bf7\n"
+"(%i4) integer: md5sum(msg, 'number);\n"
+"(%o4)                 0ab07acbb1e496801937adfa772424bf7\n"
+"(%i5) octets: md5sum(msg, 'list);\n"
+"(%o5)        [0AB,7,0AC,0BB,1E,49,68,1,93,7A,0DF,0A7,72,42,4B,0F7]\n"
+"(%i6) sdowncase( printf(false, \"~@{~2,'0x~^:~@}\", octets) );\n"
+"(%o6)           ab:07:ac:bb:1e:49:68:01:93:7a:df:a7:72:42:4b:f7\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Note that in case @var{arg} contains German umlauts or other non-ASCII \n"
+"characters (resp. octets larger than 127) the @code{MD5} checksum is platform dependend.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{mgf1_sha1}\n"
+"@deffn {Function} mgf1_sha1 @\n"
+"@fname{mgf1_sha1} (@var{seed}, @var{len}) @\n"
+"@fname{mgf1_sha1} (@var{seed}, @var{len}, @var{return-type})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a pseudo random number of variable length. \n"
+"By default the returned value is a number with a length of @var{len} octets.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The optional argument @var{return-type} allows @code{mgf1_sha1} to alternatively \n"
+"return the corresponding list of @var{len} octets.\n"
+"@var{return-type} may be @code{number} or @code{list}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The computation of the returned value is described in @code{RFC 3447}, \n"
+"appendix @code{B.2.1 MGF1}. \n"
+"@code{SHA1} ist used as hash function, i.e. the randomness of the computed number \n"
+"relies on the randomness of @code{SHA1} hashes.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase: obase: 16.$\n"
+"(%i2) number: mgf1_sha1(4711., 8);\n"
+"(%o2)                        0e0252e5a2a42fea1\n"
+"(%i3) octets: mgf1_sha1(4711., 8, 'list);\n"
+"(%o3)                  [0E0,25,2E,5A,2A,42,0FE,0A1]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{number_to_octets}\n"
+"@deffn {Function} number_to_octets (@var{number})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns an octet-representation of @var{number} as a list of octets.\n"
+"The @var{number} must be a non-negative integer.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase : obase : 16.$\n"
+"(%i2) octets: [0ca,0fe,0ba,0be]$\n"
+"(%i3) number: octets_to_number(octets);\n"
+"(%o3)                            0cafebabe\n"
+"(%i4) number_to_octets(number);\n"
+"(%o4)                      [0CA, 0FE, 0BA, 0BE]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{octets_to_number}\n"
+"@deffn {Function} octets_to_number (@var{octets})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns a number by concatenating the octets in the list of @var{octets}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: See @ref{number_to_octets}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{octets_to_oid}\n"
+"@deffn {Function} octets_to_oid (@var{octets})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Computes an object identifier (OID) from the list of @var{octets}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: RSA encryption OID\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase : obase : 16.$\n"
+"(%i2) oid: octets_to_oid([2A,86,48,86,0F7,0D,1,1,1]);\n"
+"(%o2)                      1.2.840.113549.1.1.1\n"
+"(%i3) oid_to_octets(oid);\n"
+"(%o3)               [2A, 86, 48, 86, 0F7, 0D, 1, 1, 1]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{octets_to_string}\n"
+"@deffn {Function} octets_to_string @\n"
+"@fname{octets_to_string} (@var{octets})  @\n"
+"@fname{octets_to_string} (@var{octets}, @var{encoding}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Decodes the list of @var{octets} into a string according to current system defaults. \n"
+"When decoding octets corresponding to Non-US-ASCII characters \n"
+"the result depends on the platform, application and underlying Lisp.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: Using system defaults \n"
+"(Maxima compiled with GCL, which uses no format definition and \n"
+"simply passes through the UTF-8-octets encoded by the GNU/Linux terminal).\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) octets: string_to_octets(\"abc\");\n"
+"(%o1)                            [61, 62, 63]\n"
+"(%i2) octets_to_string(octets);\n"
+"(%o2)                                 abc\n"
+"(%i3) ibase: obase: 16.$\n"
+"(%i4) unicode(20AC);\n"
+"(%o4)                                  @euro{}\n"
+"(%i5) octets: string_to_octets(%);\n"
+"(%o5)                           [0E2, 82, 0AC]\n"
+"(%i6) octets_to_string(octets);\n"
+"(%o6)                                  @euro{}\n"
+"(%i7) utf8_to_unicode(octets);\n"
+"(%o7)                                20AC\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"In case the external format of the Lisp reader is equal to UTF-8 the optional \n"
+"argument @var{encoding} allows to set the encoding for the octet to string conversion. \n"
+"If necessary see @ref{adjust_external_format} for changing the external format. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Some names of supported encodings (see corresponding Lisp manual for more): @*\n"
+"CCL, CLISP, SBCL: @code{utf-8, ucs-2be, ucs-4be, iso-8859-1, cp1252, cp850} @*\n"
+"CMUCL: @code{utf-8, utf-16-be, utf-32-be, iso8859-1, cp1252} @*\n"
+"ECL: @code{utf-8, ucs-2be, ucs-4be, iso-8859-1, windows-cp1252, dos-cp850} \n"
+"   \n"
+"Example (continued): Using the optional encoding argument \n"
+"(Maxima compiled with SBCL, GNU/Linux terminal).\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i8) string_to_octets(\"@euro{}\", \"ucs-2be\");\n"
+"(%o8)                              [20, 0AC]\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{oid_to_octets}\n"
+"@deffn {Function} oid_to_octets (@var{oid-string})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Convertes an object identifier (OID) to a list of @var{octets}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example: See @ref{octets_to_oid}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sha1sum}\n"
+"@deffn {Function} sha1sum @\n"
+"@fname{sha1sum} (@var{arg}) @\n"
+"@fname{sha1sum} (@var{arg}, @var{return-type})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the @code{SHA1} fingerprint of a string, a non-negative integer or \n"
+"a list of octets. The default return value is a string containing 40 hex characters.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The optional argument @var{return-type} allows @code{sha1sum} to alternatively \n"
+"return the corresponding number or list of octets.\n"
+"@var{return-type} may be @code{string}, @code{number} or @code{list}.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) ibase: obase: 16.$\n"
+"(%i2) msg: \"foo bar baz\"$\n"
+"(%i3) string: sha1sum(msg);\n"
+"(%o3)              c7567e8b39e2428e38bf9c9226ac68de4c67dc39\n"
+"(%i4) integer: sha1sum(msg, 'number);\n"
+"(%o4)             0c7567e8b39e2428e38bf9c9226ac68de4c67dc39\n"
+"(%i5) octets: sha1sum(msg, 'list);\n"
+"(%o5)  [0C7,56,7E,8B,39,0E2,42,8E,38,0BF,9C,92,26,0AC,68,0DE,4C,67,0DC,39]\n"
+"(%i6) sdowncase( printf(false, \"~@{~2,'0x~^:~@}\", octets) );\n"
+"(%o6)     c7:56:7e:8b:39:e2:42:8e:38:bf:9c:92:26:ac:68:de:4c:67:dc:39\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Note that in case @var{arg} contains German umlauts or other non-ASCII \n"
+"characters (resp. octets larger than 127) the @code{SHA1} fingerprint is platform dependend.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sha256sum}\n"
+"@deffn {Function} sha256sum @\n"
+"@fname{sha256sum} (@var{arg}) @\n"
+"@fname{sha256sum} (@var{arg}, @var{return-type})\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Returns the @code{SHA256} fingerprint of a string, a non-negative integer or \n"
+"a list of octets. The default return value is a string containing 64 hex characters.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"The optional argument @var{return-type} allows @code{sha256sum} to alternatively \n"
+"return the corresponding number or list of octets (see @ref{sha1sum}).\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@example\n"
+"(%i1) string: sha256sum(\"foo bar baz\");\n"
+"(%o1)  dbd318c1c462aee872f41109a4dfd3048871a03dedd0fe0e757ced57dad6f2d7\n"
+"@end example\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Note that in case @var{arg} contains German umlauts or other non-ASCII \n"
+"characters (resp. octets larger than 127) the @code{SHA256} fingerprint is platform dependend.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{string_to_octets}\n"
+"@deffn {Function} string_to_octets @\n"
+"@fname{string_to_octets} (@var{string})  @\n"
+"@fname{string_to_octets} (@var{string}, @var{encoding}) \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"Encodes a @var{string} into a list of octets according to current system defaults. \n"
+"When encoding strings containing Non-US-ASCII characters \n"
+"the result depends on the platform, application and underlying Lisp.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"In case the external format of the Lisp reader is equal to UTF-8 the optional \n"
+"argument @var{encoding} allows to set the encoding for the string to octet conversion. \n"
+"If necessary see @ref{adjust_external_format} for changing the external format. \n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"See @ref{octets_to_string} for examples and some more information.\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package stringproc}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# stringproc.texi
+msgid ""
+msgstr ""

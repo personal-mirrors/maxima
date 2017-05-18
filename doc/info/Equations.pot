@@ -1,0 +1,2281 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Equations.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for Equations::   \n"
+"@end menu\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Equations,  , Equations, Equations\n"
+"@section Functions and Variables for Equations\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@anchor{%rnum}\n"
+"@defvr {System variable} %rnum\n"
+"Default value: @code{0}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{%rnum} is the counter for the @code{%r} variables introduced in solutions by\n"
+"@mref{solve} and @mrefdot{algsys}.  The next @code{%r} variable is numbered\n"
+"@code{%rnum+1}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"See also @mref{%rnum_list}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%rnum_list}\n"
+"@defvr {System variable} %rnum_list\n"
+"Default value: @code{[]}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{%rnum_list} is the list of variables introduced in solutions by\n"
+"@mref{solve} and @mrefdot{algsys}  @code{%r} variables are added to\n"
+"@code{%rnum_list} in the order they are created.  This is convenient for doing\n"
+"substitutions into the solution later on.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"See also @mref{%rnum}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c WHAT DOES THIS STATEMENT MEAN ??\n"
+"It's recommended to use this list rather than doing @code{concat ('%r, j)}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c solve ([x + y = 3], [x,y]);\n"
+"@c %rnum_list;\n"
+"@c sol : solve ([x + 2*y + 3*z = 4], [x,y,z]);\n"
+"@c %rnum_list;\n"
+"@c for i : 1 thru length (%rnum_list) do\n"
+"@c   sol : subst (t[i], %rnum_list[i], sol)$\n"
+"@c sol;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) solve ([x + y = 3], [x,y]);\n"
+"(%o1)              [[x = 3 - %r1, y = %r1]]\n"
+"@end group\n"
+"@group\n"
+"(%i2) %rnum_list;\n"
+"(%o2)                       [%r1]\n"
+"@end group\n"
+"@group\n"
+"(%i3) sol : solve ([x + 2*y + 3*z = 4], [x,y,z]);\n"
+"(%o3)   [[x = - 2 %r3 - 3 %r2 + 4, y = %r3, z = %r2]]\n"
+"@end group\n"
+"@group\n"
+"(%i4) %rnum_list;\n"
+"(%o4)                     [%r2, %r3]\n"
+"@end group\n"
+"@group\n"
+"(%i5) for i : 1 thru length (%rnum_list) do\n"
+"        sol : subst (t[i], %rnum_list[i], sol)$\n"
+"@end group\n"
+"@group\n"
+"(%i6) sol;\n"
+"(%o6)     [[x = - 2 t  - 3 t  + 4, y = t , z = t ]]\n"
+"                     2      1           2       1\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{algepsilon}\n"
+"@defvr {Option variable} algepsilon\n"
+"Default value: 10^8\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c WHAT IS algepsilon, EXACTLY ??? describe (\"algsys\") IS NOT VERY INFORMATIVE !!!\n"
+"@code{algepsilon} is used by @mrefdot{algsys}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{algexact}\n"
+"@defvr {Option variable} algexact\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{algexact} affects the behavior of @mref{algsys} as follows:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"If @code{algexact} is @code{true}, @code{algsys} always calls @mref{solve} and\n"
+"then uses @mref{realroots} on @code{solve}'s failures.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"If @code{algexact} is @code{false}, @code{solve} is called only if the\n"
+"eliminant was not univariate, or if it was a quadratic or biquadratic.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Thus @code{algexact: true} does not guarantee only exact solutions, just that\n"
+"@code{algsys} will first try as hard as it can to give exact solutions, and\n"
+"only yield approximations when all else fails.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ABOVE DESCRIPTION NOT TOO CLEAR -- MAYBE EXAMPLES WILL HELP\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{algsys}\n"
+"@deffn  {Function} algsys @\n"
+"@fname{algsys} ([@var{expr_1}, @dots{}, @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}]) @\n"
+"@fname{algsys} ([@var{eqn_1}, @dots{}, @var{eqn_m}], [@var{x_1}, @dots{}, @var{x_n}])\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Solves the simultaneous polynomials @var{expr_1}, @dots{}, @var{expr_m} or\n"
+"polynomial equations @var{eqn_1}, @dots{}, @var{eqn_m} for the variables\n"
+"@var{x_1}, @dots{}, @var{x_n}.  An expression @var{expr} is equivalent to an\n"
+"equation @code{@var{expr} = 0}.  There may be more equations than variables or\n"
+"vice versa.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{algsys} returns a list of solutions, with each solution given as a list\n"
+"of equations stating values of the variables @var{x_1}, @dots{}, @var{x_n}\n"
+"which satisfy the system of equations.  If @code{algsys} cannot find a solution,\n"
+"an empty list @code{[]} is returned.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"The symbols @code{%r1}, @code{%r2}, @dots{}, are introduced as needed to\n"
+"represent arbitrary parameters in the solution; these variables are also\n"
+"appended to the list @mrefdot{%rnum_list}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"The method is as follows:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@enumerate\n"
+"@item\n"
+"First the equations are factored and split into subsystems.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@item\n"
+"For each subsystem @var{S_i}, an equation @var{E} and a variable @var{x} are\n"
+"selected.  The variable is chosen to have lowest nonzero degree.  Then the\n"
+"resultant of @var{E} and @var{E_j} with respect to @var{x} is computed for each\n"
+"of the remaining equations @var{E_j} in the subsystem @var{S_i}.  This yields a\n"
+"new subsystem @var{S_i'} in one fewer variables, as @var{x} has been eliminated.\n"
+"The process now returns to (1).\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@item\n"
+"Eventually, a subsystem consisting of a single equation is obtained.  If the\n"
+"equation is multivariate and no approximations in the form of floating point\n"
+"numbers have been introduced, then @mref{solve} is called to find an exact\n"
+"solution.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"In some cases, @code{solve} is not be able to find a solution, or if it does\n"
+"the solution may be a very large expression.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c REMAINDER OF (3) IS PRETTY COMPLEX. HOW CAN IT BE CLARIFIED ??\n"
+"If the equation is univariate and is either linear, quadratic, or biquadratic,\n"
+"then again @code{solve} is called if no approximations have been introduced.\n"
+"If approximations have been introduced or the equation is not univariate and\n"
+"neither linear, quadratic, or biquadratic, then if the switch\n"
+"@mref{realonly} is @code{true}, the function @mref{realroots} is called to find\n"
+"the real-valued solutions.  If @code{realonly} is @code{false}, then\n"
+"@mref{allroots} is called which looks for real and complex-valued solutions.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"If @code{algsys} produces a solution which has fewer significant digits than\n"
+"required, the user can change the value of @mref{algepsilon} to a higher value.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"If @code{algexact} is set to @code{true}, @code{solve} will always be called.\n"
+"@c algepsilon IS IN Floating.texi -- MAY WANT TO BRING IT INTO THIS FILE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@item\n"
+"Finally, the solutions obtained in step (3) are substituted into\n"
+"previous levels and the solution process returns to (1).\n"
+"@c \"PREVIOUS LEVELS\" -- WHAT ARE THOSE ??\n"
+"@end enumerate\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{algsys} encounters a multivariate equation which contains floating\n"
+"point approximations (usually due to its failing to find exact solutions at an\n"
+"earlier stage), then it does not attempt to apply exact methods to such\n"
+"equations and instead prints the message:\n"
+"\"@code{algsys} cannot solve - system too complicated.\"\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Interactions with @mref{radcan} can produce large or complicated expressions.\n"
+"In that case, it may be possible to isolate parts of the result with\n"
+"@mref{pickapart} or @mrefdot{reveal}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Occasionally, @code{radcan} may introduce an imaginary unit @code{%i} into a\n"
+"solution which is actually real-valued.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c e1: 2*x*(1 - a1) - 2*(x - 1)*a2;\n"
+"@c e2: a2 - a1;\n"
+"@c e3: a1*(-y - x^2 + 1);\n"
+"@c e4: a2*(y - (x - 1)^2);\n"
+"@c algsys ([e1, e2, e3, e4], [x, y, a1, a2]);\n"
+"@c e1: x^2 - y^2;\n"
+"@c e2: -1 - y + 2*y^2 - x + x^2;\n"
+"@c algsys ([e1, e2], [x, y]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) e1: 2*x*(1 - a1) - 2*(x - 1)*a2;\n"
+"(%o1)              2 (1 - a1) x - 2 a2 (x - 1)\n"
+"(%i2) e2: a2 - a1; \n"
+"(%o2)                        a2 - a1\n"
+"(%i3) e3: a1*(-y - x^2 + 1); \n"
+"                                   2\n"
+"(%o3)                   a1 (- y - x  + 1)\n"
+"(%i4) e4: a2*(y - (x - 1)^2);\n"
+"                                       2\n"
+"(%o4)                   a2 (y - (x - 1) )\n"
+"(%i5) algsys ([e1, e2, e3, e4], [x, y, a1, a2]);\n"
+"(%o5) [[x = 0, y = %r1, a1 = 0, a2 = 0], \n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                  [x = 1, y = 0, a1 = 1, a2 = 1]]\n"
+"(%i6) e1: x^2 - y^2;\n"
+"                              2    2\n"
+"(%o6)                        x  - y\n"
+"(%i7) e2: -1 - y + 2*y^2 - x + x^2;\n"
+"                         2        2\n"
+"(%o7)                 2 y  - y + x  - x - 1\n"
+"(%i8) algsys ([e1, e2], [x, y]);\n"
+"                 1            1\n"
+"(%o8) [[x = - -------, y = -------], \n"
+"              sqrt(3)      sqrt(3)\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"        1              1             1        1\n"
+"[x = -------, y = - -------], [x = - -, y = - -], [x = 1, y = 1]]\n"
+"     sqrt(3)        sqrt(3)          3        3\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{allroots}\n"
+"@deffn  {Function} allroots @\n"
+"@fname{allroots} (@var{expr}) @\n"
+"@fname{allroots} (@var{eqn})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Computes numerical approximations of the real and complex roots of the\n"
+"polynomial @var{expr} or polynomial equation @var{eqn} of one variable.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"The flag @mref{polyfactor} when @code{true} causes @code{allroots} to factor\n"
+"the polynomial over the real numbers if the polynomial is real, or over the\n"
+"complex numbers, if the polynomial is complex.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{allroots} may give inaccurate results in case of multiple roots.\n"
+"If the polynomial is real, @code{allroots (%i*@var{p})} may yield\n"
+"more accurate approximations than @code{allroots (@var{p})}, as @code{allroots}\n"
+"invokes a different algorithm in that case.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{allroots} rejects non-polynomials.  It requires that the numerator\n"
+"after @code{rat}'ing should be a polynomial, and it requires that the\n"
+"denominator be at most a complex number.  As a result of this @code{allroots}\n"
+"will always return an equivalent (but factored) expression, if\n"
+"@code{polyfactor} is @code{true}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"For complex polynomials an algorithm by Jenkins and Traub is used\n"
+"(Algorithm 419, @i{Comm. ACM}, vol. 15, (1972), p. 97).  For real polynomials\n"
+"the algorithm used is due to Jenkins (Algorithm 493, @i{ACM TOMS}, vol. 1,\n"
+"(1975), p.178).\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c eqn: (1 + 2*x)^3 = 13.5*(1 + x^5);\n"
+"@c soln: allroots (eqn);\n"
+"@c for e in soln\n"
+"@c         do (e2: subst (e, eqn), disp (expand (lhs(e2) - rhs(e2))));\n"
+"@c polyfactor: true$\n"
+"@c allroots (eqn);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) eqn: (1 + 2*x)^3 = 13.5*(1 + x^5);\n"
+"                            3          5\n"
+"(%o1)              (2 x + 1)  = 13.5 (x  + 1)\n"
+"(%i2) soln: allroots (eqn);\n"
+"(%o2) [x = .8296749902129361, x = - 1.015755543828121, \n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"x = .9659625152196369 %i - .4069597231924075, \n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"x = - .9659625152196369 %i - .4069597231924075, x = 1.0]\n"
+"(%i3) for e in soln\n"
+"        do (e2: subst (e, eqn), disp (expand (lhs(e2) - rhs(e2))));\n"
+"                      - 3.5527136788005E-15\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                     - 5.32907051820075E-15\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"         4.44089209850063E-15 %i - 4.88498130835069E-15\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"        - 4.44089209850063E-15 %i - 4.88498130835069E-15\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                       3.5527136788005E-15\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%o3)                         done\n"
+"(%i4) polyfactor: true$\n"
+"(%i5) allroots (eqn);\n"
+"(%o5) - 13.5 (x - 1.0) (x - .8296749902129361)\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                           2\n"
+" (x + 1.015755543828121) (x  + .8139194463848151 x\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+" + 1.098699797110288)\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Polynomials} @category{Numerical methods}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{bfallroots}\n"
+"@deffn  {Function} bfallroots @\n"
+"@fname{bfallroots} (@var{expr}) @\n"
+"@fname{bfallroots} (@var{eqn})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Computes numerical approximations of the real and complex roots of the\n"
+"polynomial @var{expr} or polynomial equation @var{eqn} of one variable.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"In all respects, @code{bfallroots} is identical to @code{allroots} except\n"
+"that @code{bfallroots} computes the roots using bigfloats.  See \n"
+"@mref{allroots} for more information.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Polynomials} @category{Numerical methods}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{backsubst}\n"
+"@defvr {Option variable} backsubst\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c WHAT IS THE CONTEXT HERE ?? (TO WHICH OTHER FUNCTION DOES THIS APPLY ??)\n"
+"@c --- According to the documentation, to linsolve\n"
+"When @code{backsubst} is @code{false}, prevents back substitution in\n"
+"@mref{linsolve} after the equations have been triangularized.  This may\n"
+"be helpful in very big problems where back substitution would cause\n"
+"the generation of extremely large expressions.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"(%i1) eq1 : x + y + z = 6$\n"
+"(%i2) eq2 : x - y + z = 2$\n"
+"(%i3) eq3 : x + y - z = 0$\n"
+"(%i4) backsubst : false$\n"
+"@group\n"
+"(%i5) linsolve ([eq1, eq2, eq3], [x,y,z]);\n"
+"(%o5)             [x = z - y, y = 2, z = 3]\n"
+"@end group\n"
+"(%i6) backsubst : true$\n"
+"@group\n"
+"(%i7) linsolve ([eq1, eq2, eq3], [x,y,z]);\n"
+"(%o7)               [x = 1, y = 2, z = 3]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{breakup}\n"
+"@defvr {Option variable} breakup\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{breakup} is @code{true}, @mref{solve} expresses solutions of cubic\n"
+"and quartic equations in terms of common subexpressions, which are assigned to\n"
+"intermediate expression labels (@code{%t1}, @code{%t2}, etc.).\n"
+"Otherwise, common subexpressions are not identified.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{breakup: true} has an effect only when @mref{programmode} is @code{false}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"(%i1) programmode: false$\n"
+"(%i2) breakup: true$\n"
+"(%i3) solve (x^3 + x^2 - 1);\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                        sqrt(23)    25 1/3\n"
+"(%t3)                  (--------- + --)\n"
+"                        6 sqrt(3)   54\n"
+"Solution:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                      sqrt(3) %i   1\n"
+"                                      ---------- - -\n"
+"                sqrt(3) %i   1            2        2   1\n"
+"(%t4)    x = (- ---------- - -) %t3 + -------------- - -\n"
+"                    2        2            9 %t3        3\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                      sqrt(3) %i   1\n"
+"                                    - ---------- - -\n"
+"              sqrt(3) %i   1              2        2   1\n"
+"(%t5)    x = (---------- - -) %t3 + ---------------- - -\n"
+"                  2        2             9 %t3         3\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                   1     1\n"
+"(%t6)                  x = %t3 + ----- - -\n"
+"                                 9 %t3   3\n"
+"(%o6)                    [%t4, %t5, %t6]\n"
+"(%i6) breakup: false$\n"
+"(%i7) solve (x^3 + x^2 - 1);\n"
+"Solution:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"             sqrt(3) %i   1\n"
+"             ---------- - -\n"
+"                 2        2        sqrt(23)    25 1/3\n"
+"(%t7) x = --------------------- + (--------- + --)\n"
+"             sqrt(23)    25 1/3    6 sqrt(3)   54\n"
+"          9 (--------- + --)\n"
+"             6 sqrt(3)   54\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                              sqrt(3) %i   1    1\n"
+"                                           (- ---------- - -) - -\n"
+"                                                  2        2    3\n"
+"@group\n"
+"           sqrt(23)    25 1/3  sqrt(3) %i   1\n"
+"(%t8) x = (--------- + --)    (---------- - -)\n"
+"           6 sqrt(3)   54          2        2\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                            sqrt(3) %i   1\n"
+"                                          - ---------- - -\n"
+"                                                2        2      1\n"
+"                                      + --------------------- - -\n"
+"                                           sqrt(23)    25 1/3   3\n"
+"                                        9 (--------- + --)\n"
+"                                           6 sqrt(3)   54\n"
+"@end group\n"
+"            sqrt(23)    25 1/3             1             1\n"
+"(%t9)  x = (--------- + --)    + --------------------- - -\n"
+"            6 sqrt(3)   54          sqrt(23)    25 1/3   3\n"
+"                                 9 (--------- + --)\n"
+"                                    6 sqrt(3)   54\n"
+"(%o9)                    [%t7, %t8, %t9]\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dimension}\n"
+"@deffn  {Function} dimension @\n"
+"@fname{dimension} (@var{eqn}) @\n"
+"@fname{dimension} (@var{eqn_1}, @dots{}, @var{eqn_n})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{dimen} is a package for dimensional analysis.\n"
+"@code{load (\"dimen\")} loads this package.\n"
+"@code{demo (\"dimen\")} displays a short demonstration.\n"
+"@c I GUESS THIS SHOULD BE EXPANDED TO COVER EACH FUNCTION IN THE PACKAGE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Share packages}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dispflag}\n"
+"@defvr {Option variable} dispflag\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c WHAT DOES THIS MEAN ??\n"
+"If set to @code{false} within a @code{block} will inhibit the display of output\n"
+"generated by the solve functions called from within the @code{block}.\n"
+"Termination of the @code{block} with a dollar sign, $, sets @code{dispflag} to\n"
+"@code{false}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations} @category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c THIS COULD BENEFIT FROM REPHRASING\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{funcsolve}\n"
+"@deffn {Function} funcsolve (@var{eqn}, @var{g}(@var{t}))\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Returns @code{[@var{g}(@var{t}) = ...]}  or @code{[]}, depending on whether\n"
+"or not there exists a rational function @code{@var{g}(@var{t})} satisfying\n"
+"@var{eqn}, which must be a first order, linear polynomial in (for this case)\n"
+"@code{@var{g}(@var{t})} and @code{@var{g}(@var{t}+1)}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"(%i1) eqn: (n + 1)*f(n) - (n + 3)*f(n + 1)/(n + 1) =\n"
+"      (n - 1)/(n + 2);\n"
+"                            (n + 3) f(n + 1)   n - 1\n"
+"(%o1)        (n + 1) f(n) - ---------------- = -----\n"
+"                                 n + 1         n + 2\n"
+"(%i2) funcsolve (eqn, f(n));\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Dependent equations eliminated:  (4 3)\n"
+"                                   n\n"
+"(%o2)                f(n) = ---------------\n"
+"                            (n + 1) (n + 2)\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Warning: this is a very rudimentary implementation -- many safety checks\n"
+"and obvious generalizations are missing.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{globalsolve}\n"
+"@defvr {Option variable} globalsolve\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{globalsolve} is @code{true}, solved-for variables are assigned the\n"
+"solution values found by @code{linsolve}, and by @mref{solve} when solving two\n"
+"or more linear equations.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{globalsolve} is @code{false}, solutions found by @mref{linsolve} and\n"
+"by @code{solve} when solving two or more linear equations are expressed as\n"
+"equations, and the solved-for variables are not assigned.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When solving anything other than two or more linear equations, @code{solve}\n"
+"ignores @code{globalsolve}.  Other functions which solve equations (e.g.,\n"
+"@mref{algsys}) always ignore @code{globalsolve}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"(%i1) globalsolve: true$\n"
+"(%i2) solve ([x + 3*y = 2, 2*x - y = 5], [x, y]);\n"
+"Solution\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                 17\n"
+"(%t2)                        x : --\n"
+"                                 7\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                   1\n"
+"(%t3)                        y : - -\n"
+"                                   7\n"
+"(%o3)                     [[%t2, %t3]]\n"
+"(%i3) x;\n"
+"                               17\n"
+"(%o3)                          --\n"
+"                               7\n"
+"(%i4) y;\n"
+"                                 1\n"
+"(%o4)                          - -\n"
+"                                 7\n"
+"(%i5) globalsolve: false$\n"
+"(%i6) kill (x, y)$\n"
+"(%i7) solve ([x + 3*y = 2, 2*x - y = 5], [x, y]);\n"
+"Solution\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                 17\n"
+"(%t7)                        x = --\n"
+"                                 7\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                   1\n"
+"(%t8)                        y = - -\n"
+"                                   7\n"
+"(%o8)                     [[%t7, %t8]]\n"
+"(%i8) x;\n"
+"(%o8)                           x\n"
+"(%i9) y;\n"
+"(%o9)                           y\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Linear equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c THIS DESCRIPTION NEEDS WORK AND EXAMPLES\n"
+"@c MERGE IN TEXT FROM share/integequations/inteqn.usg\n"
+"@c AND EXAMPLES FROM .../intexs.mac\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c --- I'm not sure that all examples from share/integequations/intexs.mac\n"
+"@c are handled correctly by ieqn.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ieqn}\n"
+"@deffn {Function} ieqn (@var{ie}, @var{unk}, @var{tech}, @var{n}, @var{guess})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{inteqn} is a package for solving integral equations.\n"
+"@code{load (\"inteqn\")} loads this package.\n"
+" \n"
+"@var{ie} is the integral equation; @var{unk} is the unknown function; @var{tech}\n"
+"is the technique to be tried from those given above (@var{tech} = @code{first}\n"
+"means: try the first technique which finds a solution; @var{tech} = @code{all}\n"
+"means: try all applicable techniques); @var{n} is the maximum number of terms\n"
+"to take for @code{taylor}, @code{neumann}, @code{firstkindseries}, or\n"
+"@code{fredseries} (it is also the maximum depth of recursion for the\n"
+"differentiation method); @var{guess} is the initial guess for @code{neumann} or\n"
+"@code{firstkindseries}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Default values for the 2nd thru 5th parameters are:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@var{unk}: @code{@var{p}(@var{x})}, where @var{p} is the first function\n"
+"encountered in an integrand which is unknown to Maxima and @var{x} is the\n"
+"variable which occurs as an argument to the first occurrence of @var{p} found\n"
+"outside of an integral in the case of @code{secondkind} equations, or is the\n"
+"only other variable besides the variable of integration in @code{firstkind}\n"
+"equations.  If the attempt to search for @var{x} fails, the user will be asked\n"
+"to supply the independent variable.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"tech: @code{first}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"n: 1\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"guess: @code{none} which will cause @code{neumann} and @code{firstkindseries}\n"
+"to use @code{@var{f}(@var{x})} as an initial guess.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Integral equations}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ieqnprint}\n"
+"@defvr {Option variable} ieqnprint\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{ieqnprint} governs the behavior of the result returned by the\n"
+"@mref{ieqn} command.  When @code{ieqnprint} is @code{false}, the lists returned\n"
+"by the @code{ieqn} function are of the form\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"   [@var{solution}, @var{technique used}, @var{nterms}, @var{flag}]\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"where @var{flag} is absent if the solution is exact.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Otherwise, it is the word @code{approximate} or @code{incomplete} corresponding\n"
+"to an inexact or non-closed form solution, respectively.  If a series method was\n"
+"used, @var{nterms} gives the number of terms taken (which could be less than\n"
+"the n given to @code{ieqn} if an error prevented generation of further terms).\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Integral equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lhs}\n"
+"@deffn {Function} lhs (@var{expr})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Returns the left-hand side (that is, the first argument) of the expression\n"
+"@var{expr}, when the operator of @var{expr} is one of the relational operators\n"
+"@code{< <= = # equal notequal >= >},\n"
+"@c MENTION -> (MARROW) IN THIS LIST IF/WHEN THE PARSER RECOGNIZES IT\n"
+"one of the assignment operators @code{:= ::= : ::}, or a user-defined binary\n"
+"infix operator, as declared by @mrefdot{infix}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @var{expr} is an atom or its operator is something other than the ones\n"
+"listed above, @code{lhs} returns @var{expr}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"See also @mrefdot{rhs}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c e: aa + bb = cc;\n"
+"@c lhs (e);\n"
+"@c rhs (e);\n"
+"@c [lhs (aa < bb), lhs (aa <= bb), lhs (aa >= bb), \n"
+"@c        lhs (aa > bb)];\n"
+"@c [lhs (aa = bb), lhs (aa # bb), lhs (equal (aa, bb)), \n"
+"@c        lhs (notequal (aa, bb))];\n"
+"@c e1: '(foo(x) := 2*x);\n"
+"@c e2: '(bar(y) ::= 3*y);\n"
+"@c e3: '(x : y);\n"
+"@c e4: '(x :: y);\n"
+"@c [lhs (e1), lhs (e2), lhs (e3), lhs (e4)];\n"
+"@c infix (\"][\");\n"
+"@c lhs (aa ][ bb);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) e: aa + bb = cc;\n"
+"(%o1)                     bb + aa = cc\n"
+"(%i2) lhs (e);\n"
+"(%o2)                        bb + aa\n"
+"(%i3) rhs (e);\n"
+"(%o3)                          cc\n"
+"(%i4) [lhs (aa < bb), lhs (aa <= bb), lhs (aa >= bb),\n"
+"       lhs (aa > bb)];\n"
+"(%o4)                   [aa, aa, aa, aa]\n"
+"(%i5) [lhs (aa = bb), lhs (aa # bb), lhs (equal (aa, bb)),\n"
+"       lhs (notequal (aa, bb))];\n"
+"(%o5)                   [aa, aa, aa, aa]\n"
+"(%i6) e1: '(foo(x) := 2*x);\n"
+"(%o6)                     foo(x) := 2 x\n"
+"(%i7) e2: '(bar(y) ::= 3*y);\n"
+"(%o7)                    bar(y) ::= 3 y\n"
+"(%i8) e3: '(x : y);\n"
+"(%o8)                         x : y\n"
+"(%i9) e4: '(x :: y);\n"
+"(%o9)                        x :: y\n"
+"(%i10) [lhs (e1), lhs (e2), lhs (e3), lhs (e4)];\n"
+"(%o10)               [foo(x), bar(y), x, x]\n"
+"(%i11) infix (\"][\");\n"
+"(%o11)                         ][\n"
+"(%i12) lhs (aa ][ bb);\n"
+"(%o12)                         aa\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c REVISIT -- THERE'S PROBABLY MORE TO SAY HERE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{linsolve}\n"
+"@deffn {Function} linsolve ([@var{expr_1}, @dots{}, @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}])\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Solves the list of simultaneous linear equations for the list of variables.\n"
+"The expressions must each be polynomials in the variables and may be equations.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @mref{globalsolve} is @code{true}, each solved-for variable is bound to\n"
+"its value in the solution of the equations.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @mref{backsubst} is @code{false}, @code{linsolve} does not carry out back\n"
+"substitution after the equations have been triangularized.  This may be\n"
+"necessary in very big problems where back substitution would cause the\n"
+"generation of extremely large expressions.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @mref{linsolve_params} is @code{true}, @code{linsolve} also generates the\n"
+"@code{%r} symbols used to represent arbitrary parameters described in the manual\n"
+"under @mrefdot{algsys}  Otherwise, @code{linsolve} solves an under-determined\n"
+"system of equations with some variables expressed in terms of others.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @mref{programmode} is @code{false}, @code{linsolve} displays the solution\n"
+"with intermediate expression (@code{%t}) labels, and returns the list of labels.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c e1: x + z = y;\n"
+"@c e2: 2*a*x - y = 2*a^2;\n"
+"@c e3: y - 2*z = 2;\n"
+"@c [globalsolve: false, programmode: true];\n"
+"@c linsolve ([e1, e2, e3], [x, y, z]);\n"
+"@c [globalsolve: false, programmode: false];\n"
+"@c linsolve ([e1, e2, e3], [x, y, z]);\n"
+"@c ''%;\n"
+"@c [globalsolve: true, programmode: false];\n"
+"@c linsolve ([e1, e2, e3], [x, y, z]);\n"
+"@c ''%;\n"
+"@c [x, y, z];\n"
+"@c [globalsolve: true, programmode: true];\n"
+"@c linsolve ([e1, e2, e3], '[x, y, z]);\n"
+"@c [x, y, z];\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) e1: x + z = y;\n"
+"(%o1)                       z + x = y\n"
+"(%i2) e2: 2*a*x - y = 2*a^2;\n"
+"                                       2\n"
+"(%o2)                   2 a x - y = 2 a\n"
+"(%i3) e3: y - 2*z = 2;\n"
+"(%o3)                      y - 2 z = 2\n"
+"(%i4) [globalsolve: false, programmode: true];\n"
+"(%o4)                     [false, true]\n"
+"(%i5) linsolve ([e1, e2, e3], [x, y, z]);\n"
+"(%o5)            [x = a + 1, y = 2 a, z = a - 1]\n"
+"(%i6) [globalsolve: false, programmode: false];\n"
+"(%o6)                    [false, false]\n"
+"(%i7) linsolve ([e1, e2, e3], [x, y, z]);\n"
+"Solution\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%t7)                       z = a - 1\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%t8)                        y = 2 a\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%t9)                       x = a + 1\n"
+"(%o9)                    [%t7, %t8, %t9]\n"
+"(%i9) ''%;\n"
+"(%o9)            [z = a - 1, y = 2 a, x = a + 1]\n"
+"(%i10) [globalsolve: true, programmode: false];\n"
+"(%o10)                    [true, false]\n"
+"(%i11) linsolve ([e1, e2, e3], [x, y, z]);\n"
+"Solution\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%t11)                      z : a - 1\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%t12)                       y : 2 a\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%t13)                      x : a + 1\n"
+"(%o13)                 [%t11, %t12, %t13]\n"
+"(%i13) ''%;\n"
+"(%o13)           [z : a - 1, y : 2 a, x : a + 1]\n"
+"(%i14) [x, y, z];\n"
+"(%o14)                 [a + 1, 2 a, a - 1]\n"
+"(%i15) [globalsolve: true, programmode: true];\n"
+"(%o15)                    [true, true]\n"
+"(%i16) linsolve ([e1, e2, e3], '[x, y, z]);\n"
+"(%o16)           [x : a + 1, y : 2 a, z : a - 1]\n"
+"(%i17) [x, y, z];\n"
+"(%o17)                 [a + 1, 2 a, a - 1]\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Linear equations}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c DO ANY FUNCTIONS OTHER THAN linsolve RESPECT linsolvewarn ??\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{linsolvewarn}\n"
+"@defvr {Option variable} linsolvewarn\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{linsolvewarn} is @code{true}, @mref{linsolve} prints a message\n"
+"\"Dependent equations eliminated\".\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Linear equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{linsolve_params}\n"
+"@defvr {Option variable} linsolve_params\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{linsolve_params} is @code{true}, @mref{linsolve} also generates\n"
+"the @code{%r} symbols used to represent arbitrary parameters described in\n"
+"the manual under @mrefdot{algsys}  Otherwise, @code{linsolve} solves an\n"
+"under-determined system of equations with some variables expressed in terms of\n"
+"others.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Linear equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{multiplicities}\n"
+"@defvr {System variable} multiplicities\n"
+"Default value: @code{not_set_yet}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{multiplicities} is set to a list of the multiplicities of the individual\n"
+"solutions returned by @mref{solve} or @mrefdot{realroots}\n"
+"@c NEED AN EXAMPLE HERE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations} @category{Polynomials}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{nroots}\n"
+"@deffn {Function} nroots (@var{p}, @var{low}, @var{high})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Returns the number of real roots of the real univariate polynomial @var{p} in\n"
+"the half-open interval @code{(@var{low}, @var{high}]}.  The endpoints of the\n"
+"interval may be @code{minf} or @code{inf}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{nroots} uses the method of Sturm sequences.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"(%i1) p: x^10 - 2*x^4 + 1/2$\n"
+"(%i2) nroots (p, -6, 9.1);\n"
+"(%o2)                           4\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Polynomials} @category{Numerical methods}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c NEEDS WORK\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{nthroot}\n"
+"@deffn {Function} nthroot (@var{p}, @var{n})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"where @var{p} is a polynomial with integer coefficients and @var{n} is a\n"
+"positive integer returns @code{q}, a polynomial over the integers, such that\n"
+"@code{q^n = p} or prints an error message indicating that @var{p} is not a\n"
+"perfect nth power.  This routine is much faster than @mref{factor} or even\n"
+"@mrefdot{sqfr}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Polynomials}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{polyfactor}\n"
+"@defvr {Option variable} polyfactor\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"The option variable @code{polyfactor} when @code{true} causes\n"
+"@mref{allroots} and @mref{bfallroots} to factor the polynomial over the real\n"
+"numbers if the polynomial is real, or over the complex numbers, if the\n"
+"polynomial is complex.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"See @code{allroots} for an example.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Polynomials} @category{Numerical methods}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{programmode}\n"
+"@defvr {Option variable} programmode\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{programmode} is @code{true}, @mrefcomma{solve}@w{}\n"
+"@mrefcomma{realroots} @mrefcomma{allroots} and @mref{linsolve} return solutions\n"
+"as elements in a list.\n"
+"@c WHAT DOES BACKSUBSTITUTION HAVE TO DO WITH RETURN VALUES ??\n"
+"(Except when @mref{backsubst} is set to @code{false}, in which case\n"
+"@code{programmode: false} is assumed.)\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{programmode} is @code{false}, @code{solve}, etc. create intermediate\n"
+"expression labels @code{%t1}, @code{%t2}, etc., and assign the solutions to them.\n"
+"@c NEED AN EXAMPLE HERE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations} @category{Polynomials}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{realonly}\n"
+"@defvr {Option variable} realonly\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{realonly} is @code{true}, @mref{algsys} returns only those solutions\n"
+"which are free of @code{%i}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{realroots}\n"
+"@deffn  {Function} realroots @\n"
+"@fname{realroots} (@var{expr}, @var{bound}) @\n"
+"@fname{realroots} (@var{eqn}, @var{bound}) @\n"
+"@fname{realroots} (@var{expr}) @\n"
+"@fname{realroots} (@var{eqn})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Computes rational approximations of the real roots of the polynomial @var{expr}\n"
+"or polynomial equation @var{eqn} of one variable, to within a tolerance of\n"
+"@var{bound}.  Coefficients of @var{expr} or @var{eqn} must be literal numbers;\n"
+"symbol constants such as @code{%pi} are rejected.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{realroots} assigns the multiplicities of the roots it finds\n"
+"to the global variable @mrefdot{multiplicities}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{realroots} constructs a Sturm sequence to bracket each root, and then\n"
+"applies bisection to refine the approximations.  All coefficients are converted\n"
+"to rational equivalents before searching for roots, and computations are carried\n"
+"out by exact rational arithmetic.  Even if some coefficients are floating-point\n"
+"numbers, the results are rational (unless coerced to floats by the\n"
+"@mref{float} or @mref{numer} flags).\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @var{bound} is less than 1, all integer roots are found exactly.\n"
+"When @var{bound} is unspecified, it is assumed equal to the global variable\n"
+"@mrefdot{rootsepsilon}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When the global variable @mref{programmode} is @code{true}, @code{realroots}\n"
+"returns a list of the form @code{[x = @var{x_1}, x = @var{x_2}, ...]}.\n"
+"When @code{programmode} is @code{false}, @code{realroots} creates intermediate\n"
+"expression labels @code{%t1}, @code{%t2}, @dots{},\n"
+"assigns the results to them, and returns the list of labels.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c realroots (-1 - x + x^5, 5e-6);\n"
+"@c ev (%[1], float);\n"
+"@c ev (-1 - x + x^5, %);\n"
+"@c ===end===\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"(%i1) realroots (-1 - x + x^5, 5e-6);\n"
+"                               612003\n"
+"(%o1)                     [x = ------]\n"
+"                               524288\n"
+"(%i2) ev (%[1], float);\n"
+"(%o2)                 x = 1.167303085327148\n"
+"(%i3) ev (-1 - x + x^5, %);\n"
+"(%o3)                - 7.396496210176905E-6\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c realroots (expand ((1 - x)^5 * (2 - x)^3 * (3 - x)), 1e-20);\n"
+"@c multiplicities;\n"
+"@c ===end===\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"(%i1) realroots (expand ((1 - x)^5 * (2 - x)^3 * (3 - x)), 1e-20);\n"
+"(%o1)                 [x = 1, x = 2, x = 3]\n"
+"(%i2) multiplicities;\n"
+"(%o2)                       [5, 3, 1]\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Polynomials} @category{Numerical methods}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rhs}\n"
+"@deffn {Function} rhs (@var{expr})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Returns the right-hand side (that is, the second argument) of the expression\n"
+"@var{expr}, when the operator of @var{expr} is one of the relational operators\n"
+"@code{< <= = # equal notequal >= >},\n"
+"@c MENTION -> (MARROW) IN THIS LIST IF/WHEN THE PARSER RECOGNIZES IT\n"
+"one of the assignment operators @code{:= ::= : ::}, or a user-defined binary\n"
+"infix operator, as declared by @mrefdot{infix}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @var{expr} is an atom or its operator is something other than the ones\n"
+"listed above, @code{rhs} returns 0.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"See also @mrefdot{lhs}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c e: aa + bb = cc;\n"
+"@c lhs (e);\n"
+"@c rhs (e);\n"
+"@c [rhs (aa < bb), rhs (aa <= bb), rhs (aa >= bb), \n"
+"@c        rhs (aa > bb)];\n"
+"@c [rhs (aa = bb), rhs (aa # bb), rhs (equal (aa, bb)), \n"
+"@c        rhs (notequal (aa, bb))];\n"
+"@c e1: '(foo(x) := 2*x);\n"
+"@c e2: '(bar(y) ::= 3*y);\n"
+"@c e3: '(x : y);\n"
+"@c e4: '(x :: y);\n"
+"@c [rhs (e1), rhs (e2), rhs (e3), rhs (e4)];\n"
+"@c infix (\"][\");\n"
+"@c rhs (aa ][ bb);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) e: aa + bb = cc;\n"
+"(%o1)                     bb + aa = cc\n"
+"(%i2) lhs (e);\n"
+"(%o2)                        bb + aa\n"
+"(%i3) rhs (e);\n"
+"(%o3)                          cc\n"
+"(%i4) [rhs (aa < bb), rhs (aa <= bb), rhs (aa >= bb),\n"
+"       rhs (aa > bb)];\n"
+"(%o4)                   [bb, bb, bb, bb]\n"
+"@group\n"
+"(%i5) [rhs (aa = bb), rhs (aa # bb), rhs (equal (aa, bb)),\n"
+"       rhs (notequal (aa, bb))];\n"
+"@end group\n"
+"(%o5)                   [bb, bb, bb, bb]\n"
+"(%i6) e1: '(foo(x) := 2*x);\n"
+"(%o6)                     foo(x) := 2 x\n"
+"(%i7) e2: '(bar(y) ::= 3*y);\n"
+"(%o7)                    bar(y) ::= 3 y\n"
+"(%i8) e3: '(x : y);\n"
+"(%o8)                         x : y\n"
+"(%i9) e4: '(x :: y);\n"
+"(%o9)                        x :: y\n"
+"(%i10) [rhs (e1), rhs (e2), rhs (e3), rhs (e4)];\n"
+"(%o10)                  [2 x, 3 y, y, y]\n"
+"(%i11) infix (\"][\");\n"
+"(%o11)                         ][\n"
+"(%i12) rhs (aa ][ bb);\n"
+"(%o12)                         bb\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rootsconmode}\n"
+"@defvr {Option variable} rootsconmode\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{rootsconmode} governs the behavior of the @code{rootscontract} command.\n"
+"See @mref{rootscontract} for details.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions} @category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c NEEDS WORK\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rootscontract}\n"
+"@deffn {Function} rootscontract (@var{expr})\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Converts products of roots into roots of products.  For example,\n"
+"@code{rootscontract (sqrt(x)*y^(3/2))} yields @code{sqrt(x*y^3)}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @mref{radexpand} is @code{true} and @mref{domain} is @code{real},\n"
+"@code{rootscontract} converts @mref{abs} into @mrefcomma{sqrt}  e.g.,\n"
+"@code{rootscontract (abs(x)*sqrt(y))} yields @code{sqrt(x^2*y)}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"There is an option @mref{rootsconmode} affecting @code{rootscontract} as\n"
+"follows:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"Problem            Value of        Result of applying\n"
+"                  rootsconmode        rootscontract\n"
+"      \n"
+"x^(1/2)*y^(3/2)      false          (x*y^3)^(1/2)\n"
+"x^(1/2)*y^(1/4)      false          x^(1/2)*y^(1/4)\n"
+"x^(1/2)*y^(1/4)      true           (x*y^(1/2))^(1/2)\n"
+"x^(1/2)*y^(1/3)      true           x^(1/2)*y^(1/3)\n"
+"x^(1/2)*y^(1/4)      all            (x^2*y)^(1/4)\n"
+"x^(1/2)*y^(1/3)      all            (x^3*y^2)^(1/6)\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{rootsconmode} is @code{false}, @code{rootscontract} contracts only\n"
+"with respect to rational number exponents whose denominators are the same.  The\n"
+"key to the @code{rootsconmode: true} examples is simply that 2 divides into 4\n"
+"but not into 3.  @code{rootsconmode: all} involves taking the least common\n"
+"multiple of the denominators of the exponents.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{rootscontract} uses @mref{ratsimp} in a manner similar to\n"
+"@mrefdot{logcontract}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c ===beg===\n"
+"@c rootsconmode: false$\n"
+"@c rootscontract (x^(1/2)*y^(3/2));\n"
+"@c rootscontract (x^(1/2)*y^(1/4));\n"
+"@c rootsconmode: true$\n"
+"@c rootscontract (x^(1/2)*y^(1/4));\n"
+"@c rootscontract (x^(1/2)*y^(1/3));\n"
+"@c rootsconmode: all$\n"
+"@c rootscontract (x^(1/2)*y^(1/4));\n"
+"@c rootscontract (x^(1/2)*y^(1/3));\n"
+"@c rootsconmode: false$\n"
+"@c rootscontract (sqrt(sqrt(x) + sqrt(1 + x))\n"
+"@c                     *sqrt(sqrt(1 + x) - sqrt(x)));\n"
+"@c rootsconmode: true$\n"
+"@c rootscontract (sqrt(5 + sqrt(5)) - 5^(1/4)*sqrt(1 + sqrt(5)));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) rootsconmode: false$\n"
+"(%i2) rootscontract (x^(1/2)*y^(3/2));\n"
+"                                   3\n"
+"(%o2)                      sqrt(x y )\n"
+"(%i3) rootscontract (x^(1/2)*y^(1/4));\n"
+"                                   1/4\n"
+"(%o3)                     sqrt(x) y\n"
+"(%i4) rootsconmode: true$\n"
+"(%i5) rootscontract (x^(1/2)*y^(1/4));\n"
+"(%o5)                    sqrt(x sqrt(y))\n"
+"(%i6) rootscontract (x^(1/2)*y^(1/3));\n"
+"                                   1/3\n"
+"(%o6)                     sqrt(x) y\n"
+"(%i7) rootsconmode: all$\n"
+"(%i8) rootscontract (x^(1/2)*y^(1/4));\n"
+"                              2   1/4\n"
+"(%o8)                       (x  y)\n"
+"(%i9) rootscontract (x^(1/2)*y^(1/3));\n"
+"                             3  2 1/6\n"
+"(%o9)                      (x  y )\n"
+"(%i10) rootsconmode: false$\n"
+"(%i11) rootscontract (sqrt(sqrt(x) + sqrt(1 + x))\n"
+"                    *sqrt(sqrt(1 + x) - sqrt(x)));\n"
+"(%o11)                          1\n"
+"(%i12) rootsconmode: true$\n"
+"(%i13) rootscontract (sqrt(5+sqrt(5)) - 5^(1/4)*sqrt(1+sqrt(5)));\n"
+"(%o13)                          0\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rootsepsilon}\n"
+"@defvr {Option variable} rootsepsilon\n"
+"Default value: 1.0e-7\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{rootsepsilon} is the tolerance which establishes the confidence interval\n"
+"for the roots found by the @mref{realroots} function.\n"
+"@c IS IT GUARANTEED THAT |ACTUAL - ESTIMATE| < rootepsilon OR IS IT SOME OTHER\n"
+"@c NOTION ?? NEED EXAMPLE HERE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Polynomials} @category{Numerical methods}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c NEEDS WORK\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{solve}\n"
+"@deffn  {Function} solve @\n"
+"@fname{solve} (@var{expr}, @var{x}) @\n"
+"@fname{solve} (@var{expr}) @\n"
+"@fname{solve} ([@var{eqn_1}, @dots{}, @var{eqn_n}], [@var{x_1}, @dots{}, @var{x_n}])\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Solves the algebraic equation @var{expr} for the variable @var{x} and returns a\n"
+"list of solution equations in @var{x}.  If @var{expr} is not an equation, the\n"
+"equation @code{@var{expr} = 0} is assumed in its place.\n"
+"@var{x} may be a function (e.g. @code{f(x)}), or other non-atomic expression\n"
+"except a sum or product.  @var{x} may be omitted if @var{expr} contains only one\n"
+"variable.  @var{expr} may be a rational expression, and may contain\n"
+"trigonometric functions, exponentials, etc.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"The following method is used:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Let @var{E} be the expression and @var{X} be the variable.  If @var{E} is linear\n"
+"in @var{X} then it is trivially solved for @var{X}.  Otherwise if @var{E} is of\n"
+"the form @code{A*X^N + B} then the result is @code{(-B/A)^1/N)} times the\n"
+"@code{N}'th roots of unity.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"If @var{E} is not linear in @var{X} then the gcd of the exponents of @var{X} in\n"
+"@var{E} (say @var{N}) is divided into the exponents and the multiplicity of the\n"
+"roots is multiplied by @var{N}.  Then @code{solve} is called again on the\n"
+"result.  If @var{E} factors then @code{solve} is called on each of the factors.\n"
+"Finally @code{solve} will use the quadratic, cubic, or quartic formulas where\n"
+"necessary.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"In the case where @var{E} is a polynomial in some function of the variable to be\n"
+"solved for, say @code{F(X)}, then it is first solved for @code{F(X)} (call the\n"
+"result @var{C}), then the equation @code{F(X)=C} can be solved for @var{X}\n"
+"provided the inverse of the function @var{F} is known.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@mref{breakup} if @code{false} will cause @code{solve} to express the solutions\n"
+"of cubic or quartic equations as single expressions rather than as made\n"
+"up of several common subexpressions which is the default.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@mref{multiplicities} - will be set to a list of the multiplicities of the\n"
+"individual solutions returned by @code{solve}, @mrefcomma{realroots} or\n"
+"@mrefdot{allroots}  Try @code{apropos (solve)} for the switches which affect\n"
+"@code{solve}.  @mref{describe} may then by used on the individual switch names\n"
+"if their purpose is not clear.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@code{solve ([@var{eqn_1}, ..., @var{eqn_n}], [@var{x_1}, ..., @var{x_n}])}\n"
+"solves a system of simultaneous (linear or non-linear) polynomial equations by\n"
+"calling @mref{linsolve} or @mref{algsys} and returns a list of the solution\n"
+"lists in the variables.  In the case of @code{linsolve} this list would contain\n"
+"a single list of solutions.  It takes two lists as arguments.  The first list\n"
+"represents the equations to be solved; the second list is a\n"
+"list of the unknowns to be determined.  If the total number of\n"
+"variables in the equations is equal to the number of equations, the\n"
+"second argument-list may be omitted.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c I think this is not true --hgeyer\n"
+"@c \n"
+"@c if no unique\n"
+"@c solution exists, then @code{singular} will be displayed.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @mref{programmode} is @code{false}, @code{solve} displays solutions with\n"
+"intermediate expression (@code{%t}) labels, and returns the list of labels.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @mref{globalsolve} is @code{true} and the problem is to solve two or more\n"
+"linear equations, each solved-for variable is bound to its value in the solution\n"
+"of the equations.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c FOLLOWING ADAPTED FROM example (solve)\n"
+"@c ===beg===\n"
+"@c solve (asin (cos (3*x))*(f(x) - 1), x);\n"
+"@c ev (solve (5^f(x) = 125, f(x)), solveradcan);\n"
+"@c [4*x^2 - y^2 = 12, x*y - x = 2];\n"
+"@c solve (%, [x, y]);\n"
+"@c solve (1 + a*x + x^3, x);\n"
+"@c solve (x^3 - 1);\n"
+"@c solve (x^6 - 1);\n"
+"@c ev (x^6 - 1, %[1]);\n"
+"@c expand (%);\n"
+"@c x^2 - 1;\n"
+"@c solve (%, x);\n"
+"@c ev (%th(2), %[1]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) solve (asin (cos (3*x))*(f(x) - 1), x);\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"solve: using arc-trig functions to get a solution.\n"
+"Some solutions will be lost.\n"
+"                            %pi\n"
+"(%o1)                  [x = ---, f(x) = 1]\n"
+"                             6\n"
+"(%i2) ev (solve (5^f(x) = 125, f(x)), solveradcan);\n"
+"                                log(125)\n"
+"(%o2)                   [f(x) = --------]\n"
+"                                 log(5)\n"
+"(%i3) [4*x^2 - y^2 = 12, x*y - x = 2];\n"
+"                      2    2\n"
+"(%o3)             [4 x  - y  = 12, x y - x = 2]\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%i4) solve (%, [x, y]);\n"
+"(%o4) [[x = 2, y = 2], [x = .5202594388652008 %i\n"
+" - .1331240357358706, y = .07678378523787788\n"
+" - 3.608003221870287 %i], [x = - .5202594388652008 %i\n"
+" - .1331240357358706, y = 3.608003221870287 %i\n"
+" + .07678378523787788], [x = - 1.733751846381093, \n"
+"y = - .1535675710019696]]\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"(%i5) solve (1 + a*x + x^3, x);\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                                       3\n"
+"              sqrt(3) %i   1   sqrt(4 a  + 27)   1 1/3\n"
+"(%o5) [x = (- ---------- - -) (--------------- - -)\n"
+"                  2        2      6 sqrt(3)      2\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"        sqrt(3) %i   1\n"
+"       (---------- - -) a\n"
+"            2        2\n"
+" - --------------------------, x = \n"
+"              3\n"
+"      sqrt(4 a  + 27)   1 1/3\n"
+"   3 (--------------- - -)\n"
+"         6 sqrt(3)      2\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                          3\n"
+" sqrt(3) %i   1   sqrt(4 a  + 27)   1 1/3\n"
+"(---------- - -) (--------------- - -)\n"
+"     2        2      6 sqrt(3)      2\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"         sqrt(3) %i   1\n"
+"      (- ---------- - -) a\n"
+"             2        2\n"
+" - --------------------------, x = \n"
+"              3\n"
+"      sqrt(4 a  + 27)   1 1/3\n"
+"   3 (--------------- - -)\n"
+"         6 sqrt(3)      2\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"         3\n"
+" sqrt(4 a  + 27)   1 1/3               a\n"
+"(--------------- - -)    - --------------------------]\n"
+"    6 sqrt(3)      2                  3\n"
+"                              sqrt(4 a  + 27)   1 1/3\n"
+"                           3 (--------------- - -)\n"
+"                                 6 sqrt(3)      2\n"
+"(%i6) solve (x^3 - 1);\n"
+"             sqrt(3) %i - 1        sqrt(3) %i + 1\n"
+"(%o6)   [x = --------------, x = - --------------, x = 1]\n"
+"                   2                     2\n"
+"(%i7) solve (x^6 - 1);\n"
+"           sqrt(3) %i + 1      sqrt(3) %i - 1\n"
+"(%o7) [x = --------------, x = --------------, x = - 1, \n"
+"                 2                   2\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"                     sqrt(3) %i + 1        sqrt(3) %i - 1\n"
+"               x = - --------------, x = - --------------, x = 1]\n"
+"                           2                     2\n"
+"(%i8) ev (x^6 - 1, %[1]);\n"
+"@group\n"
+"                                      6\n"
+"                      (sqrt(3) %i + 1)\n"
+"(%o8)                 ----------------- - 1\n"
+"                             64\n"
+"@end group\n"
+"(%i9) expand (%);\n"
+"(%o9)                           0\n"
+"(%i10) x^2 - 1;\n"
+"                              2\n"
+"(%o10)                       x  - 1\n"
+"(%i11) solve (%, x);\n"
+"(%o11)                  [x = - 1, x = 1]\n"
+"(%i12) ev (%th(2), %[1]);\n"
+"(%o12)                          0\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"The symbols @code{%r} are used to denote arbitrary constants in a solution.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@example\n"
+"(%i1) solve([x+y=1,2*x+2*y=2],[x,y]);\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"solve: dependent equations eliminated: (2)\n"
+"(%o1)                      [[x = 1 - %r1, y = %r1]]\n"
+"@end example\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"See @mref{algsys} and @mref{%rnum_list} for more information.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{solvedecomposes}\n"
+"@defvr {Option variable} solvedecomposes\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{solvedecomposes} is @code{true}, @code{solve} calls\n"
+"@mref{polydecomp} if asked to solve polynomials.\n"
+"@c OTHERWISE WHAT HAPPENS -- CAN'T SOLVE POLYNOMIALS, OR SOME OTHER METHOD IS USED ??\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{solveexplicit}\n"
+"@defvr {Option variable} solveexplicit\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{solveexplicit} is @code{true}, inhibits @mref{solve} from returning\n"
+"implicit solutions, that is, solutions of the form @code{F(x) = 0} where\n"
+"@code{F} is some function.\n"
+"@c NEED AN EXAMPLE HERE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{solvefactors}\n"
+"@defvr {Option variable} solvefactors\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c WHAT IS THIS ABOUT EXACTLY ??\n"
+"When @code{solvefactors} is @code{false}, @mref{solve} does not try to factor\n"
+"the expression.  The @code{false} setting may be desired in some cases where\n"
+"factoring is not necessary.\n"
+"@c NEED AN EXAMPLE HERE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{solvenullwarn}\n"
+"@defvr {Option variable} solvenullwarn\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{solvenullwarn} is @code{true}, @mref{solve} prints a warning message\n"
+"if called with either a null equation list or a null variable list.  For\n"
+"example, @code{solve ([], [])} would print two warning messages and return\n"
+"@code{[]}.\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{solveradcan}\n"
+"@defvr {Option variable} solveradcan\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"When @code{solveradcan} is @code{true}, @mref{solve} calls @mref{radcan}@w{}\n"
+"which makes @code{solve} slower but will allow certain problems containing\n"
+"exponentials and logarithms to be solved.\n"
+"@c NEED AN EXAMPLE HERE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{solvetrigwarn}\n"
+"@defvr {Option variable} solvetrigwarn\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@c MAYBE THIS CAN BE CLARIFIED\n"
+"When @code{solvetrigwarn} is @code{true}, @mref{solve} may print a message\n"
+"saying that it is using inverse trigonometric functions to solve the equation,\n"
+"and thereby losing solutions.\n"
+"@c NEED AN EXAMPLE HERE\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+"@opencatbox\n"
+"@category{Algebraic equations}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Equations.texi
+msgid ""
+msgstr ""

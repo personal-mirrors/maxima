@@ -1,0 +1,4186 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Function.texi
+msgid ""
+"@menu\n"
+"* Introduction to Function Definition::  \n"
+"* Function::                    \n"
+"* Macros::                      \n"
+"* Functions and Variables for Function Definition::  \n"
+"@end menu\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to Function Definition, Function, Function Definition, Function Definition\n"
+"@section Introduction to Function Definition\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Function, Macros, Introduction to Function Definition, Function Definition\n"
+"@c NEEDS WORK, THIS TOPIC IS IMPORTANT\n"
+"@c MENTION DYNAMIC SCOPE (VS LEXICAL SCOPE)\n"
+"@section Function\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition} @category{Programming}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Ordinary functions\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"To define a function in Maxima you use the @code{:=} operator.\n"
+"E.g.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"f(x) := sin(x)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@noindent\n"
+"defines a function @code{f}.\n"
+"Anonymous functions may also be created using @code{lambda}.\n"
+"For example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"lambda ([i, j], ...)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@noindent\n"
+"can be used instead of @code{f}\n"
+"where\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"f(i,j) := block ([], ...);\n"
+"map (lambda ([i], i+1), l)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@noindent\n"
+"would return a list with 1 added to each term.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"You may also define a function with a variable number of arguments,\n"
+"by having a final argument which is assigned to a list of the extra\n"
+"arguments:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"(%i1) f ([u]) := u;\n"
+"(%o1)                      f([u]) := u\n"
+"(%i2) f (1, 2, 3, 4);\n"
+"(%o2)                     [1, 2, 3, 4]\n"
+"(%i3) f (a, b, [u]) := [a, b, u];\n"
+"(%o3)               f(a, b, [u]) := [a, b, u]\n"
+"(%i4) f (1, 2, 3, 4, 5, 6);\n"
+"(%o4)                 [1, 2, [3, 4, 5, 6]]\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The right hand side of a function is an expression.  Thus\n"
+"if you want a sequence of expressions, you do\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"f(x) := (expr1, expr2, ...., exprn);\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"and the value of @var{exprn} is what is returned by the function.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"If you wish to make a @code{return} from some expression inside the\n"
+"function then you must use @code{block} and @code{return}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"block ([], expr1, ..., if (a > 10) then return(a), ..., exprn)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"is itself an expression, and so could take the place of the\n"
+"right hand side of a function definition.  Here it may happen\n"
+"that the return happens earlier than the last expression.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c COPY THIS STUFF TO @defun block AS NEEDED\n"
+"@c ESPECIALLY STUFF ABOUT LOCAL VARIABLES\n"
+"The first @code{[]} in the block, may contain a list of variables and\n"
+"variable assignments, such as @code{[a: 3, b, c: []]}, which would cause the\n"
+"three variables @code{a},@code{b},and @code{c} to not refer to their\n"
+"global values, but rather have these special values for as long as the\n"
+"code executes inside the @code{block}, or inside functions called from\n"
+"inside the @code{block}.  This is called @i{dynamic} binding, since the\n"
+"variables last from the start of the block to the time it exits.  Once\n"
+"you return from the @code{block}, or throw out of it, the old values (if\n"
+"any) of the variables will be restored.  It is certainly a good idea\n"
+"to protect your variables in this way.  Note that the assignments\n"
+"in the block variables, are done in parallel.  This means, that if\n"
+"you had used @code{c: a} in the above, the value of @code{c} would\n"
+"have been the value of @code{a} at the time you just entered the block,\n"
+"but before @code{a} was bound.  Thus doing something like\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"block ([a: a], expr1, ... a: a+3, ..., exprn)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"will protect the external value of @code{a} from being altered, but\n"
+"would let you access what that value was.  Thus the right hand\n"
+"side of the assignments, is evaluated in the entering context, before\n"
+"any binding occurs.\n"
+"Using just @code{block ([x], ...)} would cause the @code{x} to have itself\n"
+"as value, just as if it would have if you entered a fresh Maxima\n"
+"session.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The actual arguments to a function are treated in exactly same way as\n"
+"the variables in a block.  Thus in\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"f(x) := (expr1, ..., exprn);\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"and\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"f(1);\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"we would have a similar context for evaluation of the expressions\n"
+"as if we had done\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"block ([x: 1], expr1, ..., exprn)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Inside functions, when the right hand side of a definition,\n"
+"may be computed at runtime, it is useful to use @code{define} and\n"
+"possibly @code{buildq}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Array functions\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"An array function stores the function value the first time it is called with a\n"
+"given argument, and returns the stored value, without recomputing it, when that\n"
+"same argument is given.  Such a function is often called a\n"
+"@i{memoizing function}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Array function names are appended to the global list @code{arrays}\n"
+"(not the global list @code{functions}).  @code{arrayinfo} returns the list of\n"
+"arguments for which there are stored values, and @code{listarray} returns the\n"
+"stored values.  @code{dispfun} and @code{fundef} return the array function\n"
+"definition.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{arraymake} constructs an array function call,\n"
+"analogous to @code{funmake} for ordinary functions.\n"
+"@code{arrayapply} applies an array function to its arguments,\n"
+"analogous to @code{apply} for ordinary functions.\n"
+"There is nothing exactly analogous to @code{map} for array functions,\n"
+"although @code{map(lambda([@var{x}], @var{a}[@var{x}]), @var{L})} or\n"
+"@code{makelist(@var{a}[@var{x}], @var{x}, @var{L})}, where @var{L} is a list,\n"
+"are not too far off the mark.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{remarray} removes an array function definition (including any stored\n"
+"function values), analogous to @code{remfunction} for ordinary functions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{kill(@var{a}[@var{x}])} removes the value of the array function @var{a}\n"
+"stored for the argument @var{x};\n"
+"the next time @var{a} is called with argument @var{x},\n"
+"the function value is recomputed.\n"
+"However, there is no way to remove all of the stored values at once,\n"
+"except for @code{kill(@var{a})} or @code{remarray(@var{a})},\n"
+"which also remove the function definition.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Macros, Functions and Variables for Function Definition, Function, Function Definition\n"
+"@section Macros\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{buildq}\n"
+"@deffn {Function} buildq (@var{L}, @var{expr})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Substitutes variables named by the list @var{L} into the expression @var{expr},\n"
+"in parallel, without evaluating @var{expr}.  The resulting expression is\n"
+"simplified, but not evaluated, after @code{buildq} carries out the substitution.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The elements of @var{L} are symbols or assignment expressions\n"
+"@code{@var{symbol}: @var{value}}, evaluated in parallel.  That is, the binding\n"
+"of a variable on the right-hand side of an assignment is the binding of that\n"
+"variable in the context from which @code{buildq} was called, not the binding of\n"
+"that variable in the variable list @var{L}.  If some variable in @var{L} is not\n"
+"given an explicit assignment, its binding in @code{buildq} is the same as in\n"
+"the context from which @code{buildq} was called.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Then the variables named by @var{L} are substituted into @var{expr} in parallel.\n"
+"That is, the substitution for every variable is determined before any\n"
+"substitution is made, so the substitution for one variable has no effect on any\n"
+"other.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"If any variable @var{x} appears as @code{splice (@var{x})} in @var{expr},\n"
+"then @var{x} must be bound to a list,\n"
+"and the list is spliced (interpolated) into @var{expr} instead of substituted.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Any variables in @var{expr} not appearing in @var{L} are carried into the result\n"
+"verbatim, even if they have bindings in the context from which @code{buildq}\n"
+"was called.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{a} is explicitly bound to @code{x}, while @code{b} has the same binding\n"
+"(namely 29) as in the calling context, and @code{c} is carried through verbatim.\n"
+"The resulting expression is not evaluated until the explicit evaluation\n"
+"@code{''%}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c (a: 17, b: 29, c: 1729)$\n"
+"@c buildq ([a: x, b], a + b + c);\n"
+"@c ''%;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) (a: 17, b: 29, c: 1729)$\n"
+"@group\n"
+"(%i2) buildq ([a: x, b], a + b + c);\n"
+"(%o2)                      x + c + 29\n"
+"@end group\n"
+"@group\n"
+"(%i3) ''%;\n"
+"(%o3)                       x + 1758\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{e} is bound to a list, which appears as such in the arguments of\n"
+"@code{foo}, and interpolated into the arguments of @code{bar}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c buildq ([e: [a, b, c]], foo (x, e, y));\n"
+"@c buildq ([e: [a, b, c]], bar (x, splice (e), y));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) buildq ([e: [a, b, c]], foo (x, e, y));\n"
+"(%o1)                 foo(x, [a, b, c], y)\n"
+"@end group\n"
+"@group\n"
+"(%i2) buildq ([e: [a, b, c]], bar (x, splice (e), y));\n"
+"(%o2)                  bar(x, a, b, c, y)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The result is simplified after substitution.  If simplification were applied\n"
+"before substitution, these two results would be the same.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c buildq ([e: [a, b, c]], splice (e) + splice (e));\n"
+"@c buildq ([e: [a, b, c]], 2 * splice (e));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) buildq ([e: [a, b, c]], splice (e) + splice (e));\n"
+"(%o1)                    2 c + 2 b + 2 a\n"
+"@end group\n"
+"@group\n"
+"(%i2) buildq ([e: [a, b, c]], 2 * splice (e));\n"
+"(%o2)                        2 a b c\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The variables in @var{L} are bound in parallel; if bound sequentially,\n"
+"the first result would be @code{foo (b, b)}.\n"
+"Substitutions are carried out in parallel;\n"
+"compare the second result with the result of @code{subst},\n"
+"which carries out substitutions sequentially.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c buildq ([a: b, b: a], foo (a, b));\n"
+"@c buildq ([u: v, v: w, w: x, x: y, y: z, z: u], \n"
+"@c               bar (u, v, w, x, y, z));\n"
+"@c subst ([u=v, v=w, w=x, x=y, y=z, z=u], \n"
+"@c              bar (u, v, w, x, y, z));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) buildq ([a: b, b: a], foo (a, b));\n"
+"(%o1)                       foo(b, a)\n"
+"@end group\n"
+"@group\n"
+"(%i2) buildq ([u: v, v: w, w: x, x: y, y: z, z: u],\n"
+"              bar (u, v, w, x, y, z));\n"
+"(%o2)                 bar(v, w, x, y, z, u)\n"
+"@end group\n"
+"@group\n"
+"(%i3) subst ([u=v, v=w, w=x, x=y, y=z, z=u],\n"
+"             bar (u, v, w, x, y, z));\n"
+"(%o3)                 bar(u, u, u, u, u, u)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Construct a list of equations with some variables or expressions on the\n"
+"left-hand side and their values on the right-hand side.  @code{macroexpand}\n"
+"shows the expression returned by @code{show_values}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c show_values ([L]) ::= buildq ([L], map (\"=\", 'L, L));\n"
+"@c (a: 17, b: 29, c: 1729)$\n"
+"@c show_values (a, b, c - a - b);\n"
+"@c macroexpand (show_values (a, b, c - a - b));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) show_values ([L]) ::= buildq ([L], map (\"=\", 'L, L));\n"
+"(%o1)   show_values([L]) ::= buildq([L], map(\"=\", 'L, L))\n"
+"@end group\n"
+"(%i2) (a: 17, b: 29, c: 1729)$\n"
+"@group\n"
+"(%i3) show_values (a, b, c - a - b);\n"
+"(%o3)          [a = 17, b = 29, c - b - a = 1683]\n"
+"@end group\n"
+"@group\n"
+"(%i4) macroexpand (show_values (a, b, c - a - b));\n"
+"(%o4)    map(=, '([a, b, c - b - a]), [a, b, c - b - a])\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Given a function of several arguments,\n"
+"create another function for which some of the arguments are fixed.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c curry (f, [a]) :=\n"
+"@c         buildq ([f, a], lambda ([[x]], apply (f, append (a, x))))$\n"
+"@c by3 : curry (\"*\", 3);\n"
+"@c by3 (a + b);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) curry (f, [a]) :=\n"
+"        buildq ([f, a], lambda ([[x]], apply (f, append (a, x))))$\n"
+"@end group\n"
+"@group\n"
+"(%i2) by3 : curry (\"*\", 3);\n"
+"(%o2)        lambda([[x]], apply(*, append([3], x)))\n"
+"@end group\n"
+"@group\n"
+"(%i3) by3 (a + b);\n"
+"(%o3)                       3 (b + a)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{macroexpand}\n"
+"@deffn {Function} macroexpand (@var{expr})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Returns the macro expansion of @var{expr} without evaluating it,\n"
+"when @code{expr} is a macro function call.\n"
+"Otherwise, @code{macroexpand} returns @var{expr}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"If the expansion of @var{expr} yields another macro function call,\n"
+"that macro function call is also expanded.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{macroexpand} quotes its argument.\n"
+"However, if the expansion of a macro function call has side effects,\n"
+"those side effects are executed.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"See also @mrefcomma{::=} @mrefcomma{macros} and @mrefdot{macroexpand1}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c g (x) ::= x / 99;\n"
+"@c h (x) ::= buildq ([x], g (x - a));\n"
+"@c a: 1234;\n"
+"@c macroexpand (h (y));\n"
+"@c h (y);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) g (x) ::= x / 99;\n"
+"                                    x\n"
+"(%o1)                      g(x) ::= --\n"
+"                                    99\n"
+"@end group\n"
+"@group\n"
+"(%i2) h (x) ::= buildq ([x], g (x - a));\n"
+"(%o2)            h(x) ::= buildq([x], g(x - a))\n"
+"@end group\n"
+"@group\n"
+"(%i3) a: 1234;\n"
+"(%o3)                         1234\n"
+"@end group\n"
+"@group\n"
+"(%i4) macroexpand (h (y));\n"
+"                              y - a\n"
+"(%o4)                         -----\n"
+"                               99\n"
+"@end group\n"
+"@group\n"
+"(%i5) h (y);\n"
+"                            y - 1234\n"
+"(%o5)                       --------\n"
+"                               99\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function application}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{macroexpand1}\n"
+"@deffn {Function} macroexpand1 (@var{expr})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Returns the macro expansion of @var{expr} without evaluating it,\n"
+"when @code{expr} is a macro function call.\n"
+"Otherwise, @code{macroexpand1} returns @var{expr}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{macroexpand1} quotes its argument.\n"
+"However, if the expansion of a macro function call has side effects,\n"
+"those side effects are executed.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"If the expansion of @var{expr} yields another macro function call,\n"
+"that macro function call is not expanded.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"See also @mrefcomma{::=} @mrefcomma{macros} and @mrefdot{macroexpand}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c g (x) ::= x / 99;\n"
+"@c h (x) ::= buildq ([x], g (x - a));\n"
+"@c a: 1234;\n"
+"@c macroexpand1 (h (y));\n"
+"@c h (y);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) g (x) ::= x / 99;\n"
+"                                    x\n"
+"(%o1)                      g(x) ::= --\n"
+"                                    99\n"
+"@end group\n"
+"@group\n"
+"(%i2) h (x) ::= buildq ([x], g (x - a));\n"
+"(%o2)            h(x) ::= buildq([x], g(x - a))\n"
+"@end group\n"
+"@group\n"
+"(%i3) a: 1234;\n"
+"(%o3)                         1234\n"
+"@end group\n"
+"@group\n"
+"(%i4) macroexpand1 (h (y));\n"
+"(%o4)                       g(y - a)\n"
+"@end group\n"
+"@group\n"
+"(%i5) h (y);\n"
+"                            y - 1234\n"
+"(%o5)                       --------\n"
+"                               99\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function application}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{macros}\n"
+"@defvr {Global variable} macros\n"
+"Default value: @code{[]}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{macros} is the list of user-defined macro functions.\n"
+"The macro function definition operator @code{::=} puts a new macro function\n"
+"onto this list, and @code{kill}, @code{remove}, and @code{remfunction} remove\n"
+"macro functions from the list.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"See also @mrefdot{infolists}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{splice}\n"
+"@deffn {Function} splice (@var{a})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Splices (interpolates) the list named by the atom @var{a} into an expression,\n"
+"but only if @code{splice} appears within @code{buildq};\n"
+"otherwise, @code{splice} is treated as an undefined function.\n"
+"If appearing within @code{buildq} as @var{a} alone (without @code{splice}),\n"
+"@var{a} is substituted (not interpolated) as a list into the result.\n"
+"The argument of @code{splice} can only be an atom;\n"
+"it cannot be a literal list or an expression which yields a list.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Typically @code{splice} supplies the arguments for a function or operator.\n"
+"For a function @code{f}, the expression @code{f (splice (@var{a}))} within\n"
+"@code{buildq} expands to @code{f (@var{a}[1], @var{a}[2], @var{a}[3], ...)}.\n"
+"For an operator @code{o}, the expression @code{\"o\" (splice (@var{a}))} within\n"
+"@code{buildq} expands to @code{\"o\" (@var{a}[1], @var{a}[2], @var{a}[3], ...)},\n"
+"where @code{o} may be any type of operator (typically one which takes multiple\n"
+"arguments).  Note that the operator must be enclosed in double quotes @code{\"}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c buildq ([x: [1, %pi, z - y]], foo (splice (x)) / length (x));\n"
+"@c buildq ([x: [1, %pi]], \"/\" (splice (x)));\n"
+"@c matchfix (\"<>\", \"<>\");\n"
+"@c buildq ([x: [1, %pi, z - y]], \"<>\" (splice (x)));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) buildq ([x: [1, %pi, z - y]], foo (splice (x)) / length (x));\n"
+"                       foo(1, %pi, z - y)\n"
+"(%o1)                -----------------------\n"
+"                     length([1, %pi, z - y])\n"
+"@end group\n"
+"@group\n"
+"(%i2) buildq ([x: [1, %pi]], \"/\" (splice (x)));\n"
+"                                1\n"
+"(%o2)                          ---\n"
+"                               %pi\n"
+"@end group\n"
+"@group\n"
+"(%i3) matchfix (\"<>\", \"<>\");\n"
+"(%o3)                          <>\n"
+"@end group\n"
+"@group\n"
+"(%i4) buildq ([x: [1, %pi, z - y]], \"<>\" (splice (x)));\n"
+"(%o4)                   <>1, %pi, z - y<>\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c end concepts Function Definition\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Function Definition,  , Macros, Function Definition\n"
+"@section Functions and Variables for Function Definition\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{apply}\n"
+"@deffn {Function} apply (@var{F}, [@var{x_1}, @dots{}, @var{x_n}])\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Constructs and evaluates an expression @code{@var{F}(@var{arg_1}, ...,\n"
+"@var{arg_n})}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{apply} does not attempt to distinguish array functions from ordinary\n"
+"functions; when @var{F} is the name of an array function, @code{apply} evaluates\n"
+"@code{@var{F}(...)} (that is, a function call with parentheses instead of square\n"
+"brackets).  @code{arrayapply} evaluates a function call with square brackets in\n"
+"this case.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"See also @mref{funmake} and @mrefdot{args}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{apply} evaluates its arguments.\n"
+"In this example, @code{min} is applied to the value of @code{L}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c L : [1, 5, -10.2, 4, 3];\n"
+"@c apply (min, L);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) L : [1, 5, -10.2, 4, 3];\n"
+"(%o1)                 [1, 5, - 10.2, 4, 3]\n"
+"@end group\n"
+"@group\n"
+"(%i2) apply (min, L);\n"
+"(%o2)                        - 10.2\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{apply} evaluates arguments, even if the function @var{F} quotes them.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c F (x) := x / 1729;\n"
+"@c fname : F;\n"
+"@c dispfun (F);\n"
+"@c dispfun (fname);\n"
+"@c apply (dispfun, [fname]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) F (x) := x / 1729;\n"
+"                                   x\n"
+"(%o1)                     F(x) := ----\n"
+"                                  1729\n"
+"@end group\n"
+"@group\n"
+"(%i2) fname : F;\n"
+"(%o2)                           F\n"
+"@end group\n"
+"@group\n"
+"(%i3) dispfun (F);\n"
+"                                   x\n"
+"(%t3)                     F(x) := ----\n"
+"                                  1729\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"(%o3)                         [%t3]\n"
+"@end group\n"
+"@group\n"
+"(%i4) dispfun (fname);\n"
+"fundef: no such function: fname\n"
+" -- an error. To debug this try: debugmode(true);\n"
+"@end group\n"
+"@group\n"
+"(%i5) apply (dispfun, [fname]);\n"
+"                                   x\n"
+"(%t5)                     F(x) := ----\n"
+"                                  1729\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"(%o5)                         [%t5]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{apply} evaluates the function name @var{F}.\n"
+"Single quote @code{'} defeats evaluation.\n"
+"@code{demoivre} is the name of a global variable and also a function.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c demoivre;\n"
+"@c demoivre (exp (%i * x));\n"
+"@c apply (demoivre, [exp (%i * x)]);\n"
+"@c apply ('demoivre, [exp (%i * x)]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) demoivre;\n"
+"(%o1)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i2) demoivre (exp (%i * x));\n"
+"(%o2)                  %i sin(x) + cos(x)\n"
+"@end group\n"
+"@group\n"
+"(%i3) apply (demoivre, [exp (%i * x)]);\n"
+"apply: found false where a function was expected.\n"
+" -- an error. To debug this try: debugmode(true);\n"
+"@end group\n"
+"@group\n"
+"(%i4) apply ('demoivre, [exp (%i * x)]);\n"
+"(%o4)                  %i sin(x) + cos(x)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"How to convert a nested list into a matrix:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c a:[[1,2],[3,4]];\n"
+"@c apply(matrix,a);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) a:[[1,2],[3,4]];\n"
+"(%o1)                   [[1, 2], [3, 4]]\n"
+"@end group\n"
+"@group\n"
+"(%i2) apply(matrix,a);\n"
+"                            [ 1  2 ]\n"
+"(%o2)                       [      ]\n"
+"                            [ 3  4 ]\n"
+"@end group\n"
+"@end example\n"
+"@opencatbox\n"
+"@category{Function application}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{block}\n"
+"@deffn  {Function} block @\n"
+"@fname{block} ([@var{v_1}, @dots{}, @var{v_m}], @var{expr_1}, @dots{}, @var{expr_n}) @\n"
+"@fname{block} (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The function @code{block} allows to make the variables @var{v_1}, @dots{},\n"
+"@var{v_m} to be local for a sequence of commands. If these variables\n"
+"are already bound @code{block} saves the current values of the\n"
+"variables @var{v_1}, @dots{}, @var{v_m} (if any) upon entry to the\n"
+"block, then unbinds the variables so that they evaluate to themselves;\n"
+"The local variables may be bound to arbitrary values within the block\n"
+"but when the block is exited the saved values are restored, and the\n"
+"values assigned within the block are lost.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"If there is no need to define local variables then the list at the\n"
+"beginning of the @code{block} command may be omitted.\n"
+"In this case if neither @mref{return} nor @mref{go} are used\n"
+"@code{block} behaves similar to the following construct:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"( expr_1, expr_2,... , expr_n );\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@var{expr_1}, @dots{}, @var{expr_n} will be evaluated in sequence and\n"
+"the value of the last expression will be returned. The sequence can be \n"
+"modified by the @code{go}, @code{throw}, and @code{return} functions.  The last\n"
+"expression is @var{expr_n} unless @code{return} or an expression containing\n"
+"@code{throw} is evaluated.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The declaration @code{local(@var{v_1}, ..., @var{v_m})} within @code{block}\n"
+"saves the properties associated with the symbols @var{v_1}, @dots{}, @var{v_m},\n"
+"removes any properties before evaluating other expressions, and restores any\n"
+"saved properties on exit from the block.  Some declarations are implemented as\n"
+"properties of a symbol, including @code{:=}, @code{array}, @code{dependencies},\n"
+"@code{atvalue}, @code{matchdeclare}, @code{atomgrad}, @code{constant},\n"
+"@code{nonscalar}, @code{assume}, and some others.  The effect of @code{local}\n"
+"is to make such declarations effective only within the block; otherwise\n"
+"declarations within a block are actually global declarations.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{block} may appear within another @code{block}.\n"
+"Local variables are established each time a new @code{block} is evaluated.\n"
+"Local variables appear to be global to any enclosed blocks.\n"
+"If a variable is non-local in a block,\n"
+"its value is the value most recently assigned by an enclosing block, if any,\n"
+"otherwise, it is the value of the variable in the global environment.\n"
+"This policy may coincide with the usual understanding of \"dynamic scope\".\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The value of the block is the value of the last statement or the\n"
+"value of the argument to the function @code{return} which may be used to exit\n"
+"explicitly from the block. The function @code{go} may be used to transfer\n"
+"control to the statement of the block that is tagged with the argument\n"
+"to @code{go}.  To tag a statement, precede it by an atomic argument as\n"
+"another statement in the block.  For example:\n"
+"@code{block ([x], x:1, loop, x: x+1, ..., go(loop), ...)}.  The argument to\n"
+"@code{go} must be the name of a tag appearing within the block.  One cannot use\n"
+"@code{go} to transfer to a tag in a block other than the one containing the\n"
+"@code{go}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Blocks typically appear on the right side of a function definition\n"
+"but can be used in other places as well.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"See also @mref{return} and @mrefdot{go}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c Needs some examples.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions} @category{Programming}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c REPHRASE, NEEDS EXAMPLE\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{break}\n"
+"@deffn {Function} break (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Evaluates and prints @var{expr_1}, @dots{}, @var{expr_n} and then\n"
+"causes a Maxima break at which point the user can examine and change\n"
+"his environment.  Upon typing @code{exit;} the computation resumes.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Debugging}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c FOR SOME REASON throw IS IN SOME OTHER FILE. MOVE throw INTO THIS FILE.\n"
+"@c NEEDS CLARIFICATION\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{catch}\n"
+"@deffn {Function} catch (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Evaluates @var{expr_1}, @dots{}, @var{expr_n} one by one; if any\n"
+"leads to the evaluation of an expression of the\n"
+"form @code{throw (arg)}, then the value of the @code{catch} is the value of\n"
+"@code{throw (arg)}, and no further expressions are evaluated.\n"
+"This \"non-local return\" thus goes through any depth of\n"
+"nesting to the nearest enclosing @code{catch}.  If there is no @code{catch}\n"
+"enclosing a @code{throw}, an error message is printed.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"If the evaluation of the arguments does not lead to the evaluation of any\n"
+"@code{throw} then the value of @code{catch} is the value of @var{expr_n}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"(%i1) lambda ([x], if x < 0 then throw(x) else f(x))$\n"
+"(%i2) g(l) := catch (map (''%, l))$\n"
+"(%i3) g ([1, 2, 3, 7]);\n"
+"(%o3)               [f(1), f(2), f(3), f(7)]\n"
+"(%i4) g ([1, 2, -3, 7]);\n"
+"(%o4)                          - 3\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c REWORD THIS PART.\n"
+"The function @code{g} returns a list of @code{f} of each element of @code{l} if\n"
+"@code{l} consists only of non-negative numbers; otherwise, @code{g} \"catches\"\n"
+"the first negative element of @code{l} and \"throws\" it up.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Programming}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{compfile}\n"
+"@deffn  {Function} compfile @\n"
+"@fname{compfile} (@var{filename}, @var{f_1}, @dots{}, @var{f_n}) @\n"
+"@fname{compfile} (@var{filename}, functions) @\n"
+"@fname{compfile} (@var{filename}, all)\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Translates Maxima functions into Lisp and writes the translated code into the\n"
+"file @var{filename}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{compfile(@var{filename}, @var{f_1}, ..., @var{f_n})} translates the\n"
+"specified functions.  @code{compfile (@var{filename}, functions)} and\n"
+"@code{compfile (@var{filename}, all)} translate all user-defined functions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The Lisp translations are not evaluated, nor is the output file processed by\n"
+"the Lisp compiler.\n"
+"@c SO LET'S CONSIDER GIVING THIS FUNCTION A MORE ACCURATE NAME.\n"
+"@code{translate} creates and evaluates Lisp translations.  @code{compile_file}\n"
+"translates Maxima into Lisp, and then executes the Lisp compiler.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"See also @mrefcomma{translate} @mrefcomma{translate_file} and @mrefdot{compile_file}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c THIS VARIABLE IS OBSOLETE: ASSIGNING compgrind: true CAUSES compfile\n"
+"@c TO EVENTUALLY CALL AN OBSOLETE FUNCTION SPRIN1.\n"
+"@c RECOMMENDATION IS TO CUT THIS ITEM, AND CUT $compgrind FROM src/transs.lisp\n"
+"@c @defvar compgrind\n"
+"@c Default value: @code{false}\n"
+"@c \n"
+"@c When @code{compgrind} is @code{true}, function definitions printed by\n"
+"@c @code{compfile} are pretty-printed.\n"
+"@c \n"
+"@c @end defvar\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{compile}\n"
+"@deffn  {Function} compile @\n"
+"@fname{compile} (@var{f_1}, @dots{}, @var{f_n}) @\n"
+"@fname{compile} (functions) @\n"
+"@fname{compile} (all)\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Translates Maxima functions @var{f_1}, @dots{}, @var{f_n} into Lisp, evaluates\n"
+"the Lisp translations, and calls the Lisp function @code{COMPILE} on each\n"
+"translated function.  @code{compile} returns a list of the names of the\n"
+"compiled functions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{compile (all)} or @code{compile (functions)} compiles all user-defined\n"
+"functions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{compile} quotes its arguments; \n"
+"the quote-quote operator @code{'@w{}'} defeats quotation.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Compiling a function to native code can mean a big increase in speed and might \n"
+"cause the memory footprint to reduce drastically.\n"
+"Code tends to be especially effective when the flexibility it needs to provide\n"
+"is limited. If compilation doesn't provide the speed that is needed a few ways\n"
+"to limit the code's functionality are the following:\n"
+"@itemize @bullet\n"
+"@item If the function accesses global variables the complexity of the function\n"
+"      can be drastically be reduced by limiting these variables to one data type,\n"
+"      for example using @mref{mode_declare} or a statement like the following one:\n"
+"      @code{put(x_1, bigfloat, numerical_type)}\n"
+"@item The compiler might warn about undeclared variables if text could either be\n"
+"      a named option to a command or (if they are assigned a value to) the name\n"
+"      of a variable. Prepending the option with a single quote @code{'}\n"
+"      tells the compiler that the text is meant as an option.\n"
+"@end itemize\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{define}\n"
+"@deffn  {Function} define @\n"
+"@fname{define} (@var{f}(@var{x_1}, @dots{}, @var{x_n}), @var{expr}) @\n"
+"@fname{define} (@var{f}[@var{x_1}, @dots{}, @var{x_n}], @var{expr}) @\n"
+"@fname{define} (@var{f}[@var{x_1}, @dots{}, @var{x_n}](@var{y_1}, @dots{}, @var{y_m}), @var{expr}) @\n"
+"@fname{define} (funmake (@var{f}, [@var{x_1}, @dots{}, @var{x_n}]), @var{expr}) @\n"
+"@fname{define} (arraymake (@var{f}, [@var{x_1}, @dots{}, @var{x_n}]), @var{expr}) @\n"
+"@fname{define} (ev (@var{expr_1}), @var{expr_2})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Defines a function named @var{f} with arguments @var{x_1}, @dots{}, @var{x_n}\n"
+"and function body @var{expr}.  @code{define} always evaluates its second\n"
+"argument (unless explicitly quoted).  The function so defined may be an ordinary\n"
+"Maxima function (with arguments enclosed in parentheses) or an array function\n"
+"(with arguments enclosed in square brackets).\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When the last or only function argument @var{x_n} is a list of one element,\n"
+"the function defined by @code{define} accepts a variable number of arguments.\n"
+"Actual arguments are assigned one-to-one to formal arguments @var{x_1}, @dots{},\n"
+"@var{x_(n - 1)}, and any further actual arguments, if present, are assigned to\n"
+"@var{x_n} as a list.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When the first argument of @code{define} is an expression of the form\n"
+"@code{@var{f}(@var{x_1}, ..., @var{x_n})} or @code{@var{f}[@var{x_1}, ...,\n"
+"@var{x_n}]}, the function arguments are evaluated but @var{f} is not evaluated,\n"
+"even if there is already a function or variable by that name.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When the first argument is an expression with operator @code{funmake},\n"
+"@code{arraymake}, or @code{ev}, the first argument is evaluated;\n"
+"this allows for the function name to be computed, as well as the body.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"All function definitions appear in the same namespace; defining a function\n"
+"@code{f} within another function @code{g} does not automatically limit the scope\n"
+"of @code{f} to @code{g}.  However, @code{local(f)} makes the definition of\n"
+"function @code{f} effective only within the block or other compound expression\n"
+"in which @code{local} appears.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"If some formal argument @var{x_k} is a quoted symbol (after evaluation), the\n"
+"function defined by @code{define} does not evaluate the corresponding actual\n"
+"argument.  Otherwise all actual arguments are evaluated.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"See also @mref{:=} and @mrefdot{::=}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{define} always evaluates its second argument (unless explicitly quoted).\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c expr : cos(y) - sin(x);\n"
+"@c define (F1 (x, y), expr);\n"
+"@c F1 (a, b);\n"
+"@c F2 (x, y) := expr;\n"
+"@c F2 (a, b);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) expr : cos(y) - sin(x);\n"
+"(%o1)                    cos(y) - sin(x)\n"
+"@end group\n"
+"@group\n"
+"(%i2) define (F1 (x, y), expr);\n"
+"(%o2)              F1(x, y) := cos(y) - sin(x)\n"
+"@end group\n"
+"@group\n"
+"(%i3) F1 (a, b);\n"
+"(%o3)                    cos(b) - sin(a)\n"
+"@end group\n"
+"@group\n"
+"(%i4) F2 (x, y) := expr;\n"
+"(%o4)                   F2(x, y) := expr\n"
+"@end group\n"
+"@group\n"
+"(%i5) F2 (a, b);\n"
+"(%o5)                    cos(y) - sin(x)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The function defined by @code{define} may be an ordinary Maxima function or an\n"
+"array function.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c define (G1 (x, y), x.y - y.x);\n"
+"@c define (G2 [x, y], x.y - y.x);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) define (G1 (x, y), x.y - y.x);\n"
+"(%o1)               G1(x, y) := x . y - y . x\n"
+"@end group\n"
+"@group\n"
+"(%i2) define (G2 [x, y], x.y - y.x);\n"
+"(%o2)                G2     := x . y - y . x\n"
+"                       x, y\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When the last or only function argument @var{x_n} is a list of one element,\n"
+"the function defined by @code{define} accepts a variable number of arguments.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c define (H ([L]), '(apply (\"+\", L)));\n"
+"@c H (a, b, c);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) define (H ([L]), '(apply (\"+\", L)));\n"
+"(%o1)                H([L]) := apply(\"+\", L)\n"
+"@end group\n"
+"@group\n"
+"(%i2) H (a, b, c);\n"
+"(%o2)                       c + b + a\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When the first argument is an expression with operator @code{funmake},\n"
+"@code{arraymake}, or @code{ev}, the first argument is evaluated.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c [F : I, u : x];\n"
+"@c funmake (F, [u]);\n"
+"@c define (funmake (F, [u]), cos(u) + 1);\n"
+"@c define (arraymake (F, [u]), cos(u) + 1);\n"
+"@c define (foo (x, y), bar (y, x));\n"
+"@c define (ev (foo (x, y)), sin(x) - cos(y));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) [F : I, u : x];\n"
+"(%o1)                        [I, x]\n"
+"@end group\n"
+"@group\n"
+"(%i2) funmake (F, [u]);\n"
+"(%o2)                         I(x)\n"
+"@end group\n"
+"@group\n"
+"(%i3) define (funmake (F, [u]), cos(u) + 1);\n"
+"(%o3)                  I(x) := cos(x) + 1\n"
+"@end group\n"
+"@group\n"
+"(%i4) define (arraymake (F, [u]), cos(u) + 1);\n"
+"(%o4)                   I  := cos(x) + 1\n"
+"                         x\n"
+"@end group\n"
+"@group\n"
+"(%i5) define (foo (x, y), bar (y, x));\n"
+"(%o5)                foo(x, y) := bar(y, x)\n"
+"@end group\n"
+"@group\n"
+"(%i6) define (ev (foo (x, y)), sin(x) - cos(y));\n"
+"(%o6)             bar(y, x) := sin(x) - cos(y)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c SEE NOTE BELOW ABOUT THE DOCUMENTATION STRING\n"
+"@c @deffn {Function} define_variable (@var{name}, @var{default_value}, @var{mode}, @var{documentation})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{define_variable}\n"
+"@deffn {Function} define_variable (@var{name}, @var{default_value}, @var{mode})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Introduces a global variable into the Maxima environment.\n"
+"@c IMPORT OF FOLLOWING STATEMENT UNCLEAR: IN WHAT WAY IS define_variable\n"
+"@c MORE USEFUL IN TRANSLATED CODE ??\n"
+"@code{define_variable} is useful in user-written packages, which are often\n"
+"translated or compiled.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{define_variable} carries out the following steps:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@enumerate\n"
+"@item\n"
+"@code{mode_declare (@var{name}, @var{mode})} declares the mode of @var{name} to\n"
+"the translator.  See @code{mode_declare} for a list of the possible modes.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@item\n"
+"If the variable is unbound, @var{default_value} is assigned to @var{name}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@item\n"
+"Associates @var{name} with a test function\n"
+"to ensure that @var{name} is only assigned values of the declared mode.\n"
+"@end enumerate\n"
+"@c FOLLOWING STATEMENT APPEARS TO BE OUT OF DATE.\n"
+"@c EXAMINING DEFMSPEC $DEFINE_VARIABLE AND DEF%TR $DEFINE_VARIABLE IN src/trmode.lisp,\n"
+"@c IT APPEARS THAT THE 4TH ARGUMENT IS NEVER REFERRED TO.\n"
+"@c EXECUTING translate_file ON A MAXIMA BATCH FILE WHICH CONTAINS\n"
+"@c define_variable (foo, 2222, integer, \"THIS IS FOO\");\n"
+"@c DOES NOT PUT \"THIS IS FOO\" INTO THE LISP FILE NOR THE UNLISP FILE.\n"
+"@c The optional 4th argument is a documentation string.  When\n"
+"@c @code{translate_file} is used on a package which includes documentation\n"
+"@c strings, a second file is output in addition to the Lisp file which\n"
+"@c will contain the documentation strings, formatted suitably for use in\n"
+"@c manuals, usage files, or (for instance) @code{describe}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The @code{value_check} property can be assigned to any variable which has been\n"
+"defined via @code{define_variable} with a mode other than @code{any}.\n"
+"The @code{value_check} property is a lambda expression or the name of a function\n"
+"of one variable, which is called when an attempt is made to assign a value to\n"
+"the variable.  The argument of the @code{value_check} function is the would-be\n"
+"assigned value.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{define_variable} evaluates @code{default_value}, and quotes @code{name}\n"
+"and @code{mode}.  @code{define_variable} returns the current value of\n"
+"@code{name}, which is @code{default_value} if @code{name} was unbound before,\n"
+"and otherwise it is the previous value of @code{name}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{foo} is a Boolean variable, with the initial value @code{true}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c define_variable (foo, true, boolean);\n"
+"@c foo;\n"
+"@c foo: false;\n"
+"@c foo: %pi;\n"
+"@c foo;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) define_variable (foo, true, boolean);\n"
+"(%o1)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i2) foo;\n"
+"(%o2)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i3) foo: false;\n"
+"(%o3)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i4) foo: %pi;\n"
+"translator: foo was declared with mode boolean\n"
+"                                          , but it has value: %pi\n"
+" -- an error. To debug this try: debugmode(true);\n"
+"@end group\n"
+"@group\n"
+"(%i5) foo;\n"
+"(%o5)                         false\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{bar} is an integer variable, which must be prime.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c define_variable (bar, 2, integer);\n"
+"@c qput (bar, prime_test, value_check);\n"
+"@c prime_test (y) := if not primep(y) then \n"
+"@c                            error (y, \"is not prime.\");\n"
+"@c bar: 1439;\n"
+"@c bar: 1440;\n"
+"@c bar;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) define_variable (bar, 2, integer);\n"
+"(%o1)                           2\n"
+"@end group\n"
+"@group\n"
+"(%i2) qput (bar, prime_test, value_check);\n"
+"(%o2)                      prime_test\n"
+"@end group\n"
+"@group\n"
+"(%i3) prime_test (y) := if not primep(y) then\n"
+"                           error (y, \"is not prime.\");\n"
+"(%o3) prime_test(y) := if not primep(y)\n"
+"                                   then error(y, \"is not prime.\")\n"
+"@end group\n"
+"@group\n"
+"(%i4) bar: 1439;\n"
+"(%o4)                         1439\n"
+"@end group\n"
+"@group\n"
+"(%i5) bar: 1440;\n"
+"1440 is not prime.\n"
+" -- an error. To debug this try: debugmode(true);\n"
+"@end group\n"
+"@group\n"
+"(%i6) bar;\n"
+"(%o6)                         1439\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{baz_quux} is a variable which cannot be assigned a value.\n"
+"The mode @code{any_check} is like @code{any}, but @code{any_check} enables the\n"
+"@code{value_check} mechanism, and @code{any} does not.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c define_variable (baz_quux, 'baz_quux, any_check);\n"
+"@c F: lambda ([y], if y # 'baz_quux then \n"
+"@c                  error (\"Cannot assign to `baz_quux'.\"));\n"
+"@c qput (baz_quux, ''F, value_check);\n"
+"@c baz_quux: 'baz_quux;\n"
+"@c baz_quux: sqrt(2);\n"
+"@c baz_quux;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) define_variable (baz_quux, 'baz_quux, any_check);\n"
+"(%o1)                       baz_quux\n"
+"@end group\n"
+"@group\n"
+"(%i2) F: lambda ([y], if y # 'baz_quux then\n"
+"                 error (\"Cannot assign to `baz_quux'.\"));\n"
+"(%o2) lambda([y], if y # 'baz_quux\n"
+"                        then error(Cannot assign to `baz_quux'.))\n"
+"@end group\n"
+"@group\n"
+"(%i3) qput (baz_quux, ''F, value_check);\n"
+"(%o3) lambda([y], if y # 'baz_quux\n"
+"                        then error(Cannot assign to `baz_quux'.))\n"
+"@end group\n"
+"@group\n"
+"(%i4) baz_quux: 'baz_quux;\n"
+"(%o4)                       baz_quux\n"
+"@end group\n"
+"@group\n"
+"(%i5) baz_quux: sqrt(2);\n"
+"Cannot assign to `baz_quux'.\n"
+" -- an error. To debug this try: debugmode(true);\n"
+"@end group\n"
+"@group\n"
+"(%i6) baz_quux;\n"
+"(%o6)                       baz_quux\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dispfun}\n"
+"@deffn  {Function} dispfun @\n"
+"@fname{dispfun} (@var{f_1}, @dots{}, @var{f_n}) @\n"
+"@fname{dispfun} (all)\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Displays the definition of the user-defined functions @var{f_1}, @dots{},\n"
+"@var{f_n}.  Each argument may be the name of a macro (defined with @code{::=}),\n"
+"an ordinary function (defined with @code{:=} or @code{define}), an array\n"
+"function (defined with @code{:=} or @code{define}, but enclosing arguments in\n"
+"square brackets @code{[ ]}), a subscripted function (defined with @code{:=} or\n"
+"@code{define}, but enclosing some arguments in square brackets and others in\n"
+"parentheses @code{( )}), one of a family of subscripted functions selected by a\n"
+"particular subscript value, or a subscripted function defined with a constant\n"
+"subscript.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{dispfun (all)} displays all user-defined functions as\n"
+"given by the @code{functions}, @code{arrays}, and @code{macros} lists,\n"
+"omitting subscripted functions defined with constant subscripts.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{dispfun} creates an intermediate expression label\n"
+"(@code{%t1}, @code{%t2}, etc.)\n"
+"for each displayed function, and assigns the function definition to the label.\n"
+"In contrast, @code{fundef} returns the function definition.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{dispfun} quotes its arguments; the quote-quote operator @code{'@w{}'}\n"
+"defeats quotation.  @code{dispfun} returns the list of intermediate expression\n"
+"labels corresponding to the displayed functions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c m(x, y) ::= x^(-y);\n"
+"@c f(x, y) :=  x^(-y);\n"
+"@c g[x, y] :=  x^(-y);\n"
+"@c h[x](y) :=  x^(-y);\n"
+"@c i[8](y) :=  8^(-y);\n"
+"@c dispfun (m, f, g, h, h[5], h[10], i[8]);\n"
+"@c ''%;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) m(x, y) ::= x^(-y);\n"
+"                                     - y\n"
+"(%o1)                   m(x, y) ::= x\n"
+"@end group\n"
+"@group\n"
+"(%i2) f(x, y) :=  x^(-y);\n"
+"                                     - y\n"
+"(%o2)                    f(x, y) := x\n"
+"@end group\n"
+"@group\n"
+"(%i3) g[x, y] :=  x^(-y);\n"
+"                                    - y\n"
+"(%o3)                     g     := x\n"
+"                           x, y\n"
+"@end group\n"
+"@group\n"
+"(%i4) h[x](y) :=  x^(-y);\n"
+"                                    - y\n"
+"(%o4)                     h (y) := x\n"
+"                           x\n"
+"@end group\n"
+"@group\n"
+"(%i5) i[8](y) :=  8^(-y);\n"
+"                                    - y\n"
+"(%o5)                     i (y) := 8\n"
+"                           8\n"
+"@end group\n"
+"@group\n"
+"(%i6) dispfun (m, f, g, h, h[5], h[10], i[8]);\n"
+"                                     - y\n"
+"(%t6)                   m(x, y) ::= x\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"                                     - y\n"
+"(%t7)                    f(x, y) := x\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"                                    - y\n"
+"(%t8)                     g     := x\n"
+"                           x, y\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"                                    - y\n"
+"(%t9)                     h (y) := x\n"
+"                           x\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"                                    1\n"
+"(%t10)                     h (y) := --\n"
+"                            5        y\n"
+"                                    5\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"                                     1\n"
+"(%t11)                    h  (y) := ---\n"
+"                           10         y\n"
+"                                    10\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"                                    - y\n"
+"(%t12)                    i (y) := 8\n"
+"                           8\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"(%o12)       [%t6, %t7, %t8, %t9, %t10, %t11, %t12]\n"
+"@end group\n"
+"@group\n"
+"(%i13) ''%;\n"
+"                     - y              - y            - y\n"
+"(%o13) [m(x, y) ::= x   , f(x, y) := x   , g     := x   , \n"
+"                                            x, y\n"
+"                  - y           1              1             - y\n"
+"        h (y) := x   , h (y) := --, h  (y) := ---, i (y) := 8   ]\n"
+"         x              5        y   10         y   8\n"
+"                                5             10\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition} @category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fullmap}\n"
+"@deffn {Function} fullmap (@var{f}, @var{expr_1}, @dots{})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Similar to @code{map}, but @code{fullmap} keeps mapping down all subexpressions\n"
+"until the main operators are no longer the same.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{fullmap} is used by the Maxima simplifier for certain matrix\n"
+"manipulations; thus, Maxima sometimes generates an error message concerning\n"
+"@code{fullmap} even though @code{fullmap} was not explicitly called by the user.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c a + b * c;\n"
+"@c fullmap (g, %);\n"
+"@c map (g, %th(2));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) a + b * c;\n"
+"(%o1)                        b c + a\n"
+"@end group\n"
+"@group\n"
+"(%i2) fullmap (g, %);\n"
+"(%o2)                   g(b) g(c) + g(a)\n"
+"@end group\n"
+"@group\n"
+"(%i3) map (g, %th(2));\n"
+"(%o3)                     g(b c) + g(a)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function application} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fullmapl}\n"
+"@deffn {Function} fullmapl (@var{f}, @var{list_1}, @dots{})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Similar to @code{fullmap}, but @code{fullmapl} only maps onto lists and\n"
+"matrices.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c fullmapl (\"+\", [3, [4, 5]], [[a, 1], [0, -1.5]]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) fullmapl (\"+\", [3, [4, 5]], [[a, 1], [0, -1.5]]);\n"
+"(%o1)                [[a + 3, 4], [4, 3.5]]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function application} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{functions}\n"
+"@defvr {System variable} functions\n"
+"Default value: @code{[]}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{functions} is the list of ordinary Maxima functions\n"
+"in the current session.\n"
+"An ordinary function is a function constructed by\n"
+"@code{define} or @code{:=} and called with parentheses @code{()}.\n"
+"A function may be defined at the Maxima prompt\n"
+"or in a Maxima file loaded by @code{load} or @code{batch}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Array functions (called with square brackets, e.g., @code{F[x]}) and subscripted\n"
+"functions (called with square brackets and parentheses, e.g., @code{F[x](y)})\n"
+"are listed by the global variable @code{arrays}, and not by @code{functions}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Lisp functions are not kept on any list.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c F_1 (x) := x - 100;\n"
+"@c F_2 (x, y) := x / y;\n"
+"@c define (F_3 (x), sqrt (x));\n"
+"@c G_1 [x] := x - 100;\n"
+"@c G_2 [x, y] := x / y;\n"
+"@c define (G_3 [x], sqrt (x));\n"
+"@c H_1 [x] (y) := x^y;\n"
+"@c functions;\n"
+"@c arrays;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) F_1 (x) := x - 100;\n"
+"(%o1)                   F_1(x) := x - 100\n"
+"@end group\n"
+"@group\n"
+"(%i2) F_2 (x, y) := x / y;\n"
+"                                      x\n"
+"(%o2)                    F_2(x, y) := -\n"
+"                                      y\n"
+"@end group\n"
+"@group\n"
+"(%i3) define (F_3 (x), sqrt (x));\n"
+"(%o3)                   F_3(x) := sqrt(x)\n"
+"@end group\n"
+"@group\n"
+"(%i4) G_1 [x] := x - 100;\n"
+"(%o4)                    G_1  := x - 100\n"
+"                            x\n"
+"@end group\n"
+"@group\n"
+"(%i5) G_2 [x, y] := x / y;\n"
+"                                     x\n"
+"(%o5)                     G_2     := -\n"
+"                             x, y    y\n"
+"@end group\n"
+"@group\n"
+"(%i6) define (G_3 [x], sqrt (x));\n"
+"(%o6)                    G_3  := sqrt(x)\n"
+"                            x\n"
+"@end group\n"
+"@group\n"
+"(%i7) H_1 [x] (y) := x^y;\n"
+"                                      y\n"
+"(%o7)                     H_1 (y) := x\n"
+"                             x\n"
+"@end group\n"
+"@group\n"
+"(%i8) functions;\n"
+"(%o8)              [F_1(x), F_2(x, y), F_3(x)]\n"
+"@end group\n"
+"@group\n"
+"(%i9) arrays;\n"
+"(%o9)                 [G_1, G_2, G_3, H_1]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fundef}\n"
+"@deffn {Function} fundef (@var{f})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Returns the definition of the function @var{f}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The argument may be\n"
+"@itemize @bullet\n"
+"@item the name of a macro (defined with @code{::=}),\n"
+"@item an ordinary function (defined with @code{:=} or @code{define}),\n"
+"@item an array function (defined with @code{:=} or @code{define}, but enclosing arguments in square brackets @code{[ ]}),\n"
+"@item a subscripted function (defined with @code{:=} or @code{define},\n"
+"but enclosing some arguments in square brackets and others in parentheses\n"
+"@code{( )}),\n"
+"@item one of a family of subscripted functions selected by a particular\n"
+"subscript value,\n"
+"@item or a subscripted function defined with a constant subscript.\n"
+"@end itemize\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{fundef} quotes its argument;\n"
+"the quote-quote operator @code{'@w{}'} defeats quotation.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{fundef (@var{f})} returns the definition of @var{f}.\n"
+"In contrast, @code{dispfun (@var{f})} creates an intermediate expression label\n"
+"and assigns the definition to the label.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c PROBABLY NEED SOME EXAMPLES HERE\n"
+"@opencatbox\n"
+"@category{Function definition}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{funmake}\n"
+"@deffn {Function} funmake (@var{F}, [@var{arg_1}, @dots{}, @var{arg_n}])\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Returns an expression @code{@var{F}(@var{arg_1}, ..., @var{arg_n})}.\n"
+"The return value is simplified, but not evaluated,\n"
+"so the function @var{F} is not called, even if it exists.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{funmake} does not attempt to distinguish array functions from ordinary\n"
+"functions; when @var{F} is the name of an array function,\n"
+"@code{funmake} returns @code{@var{F}(...)}\n"
+"(that is, a function call with parentheses instead of square brackets).\n"
+"@code{arraymake} returns a function call with square brackets in this case.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{funmake} evaluates its arguments.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"See also @mref{apply} and @mrefdot{args}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{funmake} applied to an ordinary Maxima function.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c F (x, y) := y^2 - x^2;\n"
+"@c funmake (F, [a + 1, b + 1]);\n"
+"@c ''%;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) F (x, y) := y^2 - x^2;\n"
+"                                   2    2\n"
+"(%o1)                  F(x, y) := y  - x\n"
+"@end group\n"
+"@group\n"
+"(%i2) funmake (F, [a + 1, b + 1]);\n"
+"(%o2)                    F(a + 1, b + 1)\n"
+"@end group\n"
+"@group\n"
+"(%i3) ''%;\n"
+"                              2          2\n"
+"(%o3)                  (b + 1)  - (a + 1)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{funmake} applied to a macro.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c G (x) ::= (x - 1)/2;\n"
+"@c funmake (G, [u]);\n"
+"@c ''%;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) G (x) ::= (x - 1)/2;\n"
+"                                  x - 1\n"
+"(%o1)                    G(x) ::= -----\n"
+"                                    2\n"
+"@end group\n"
+"@group\n"
+"(%i2) funmake (G, [u]);\n"
+"(%o2)                         G(u)\n"
+"@end group\n"
+"@group\n"
+"(%i3) ''%;\n"
+"                              u - 1\n"
+"(%o3)                         -----\n"
+"                                2\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{funmake} applied to a subscripted function.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c H [a] (x) := (x - 1)^a;\n"
+"@c funmake (H [n], [%e]);\n"
+"@c ''%;\n"
+"@c funmake ('(H [n]), [%e]);\n"
+"@c ''%;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) H [a] (x) := (x - 1)^a;\n"
+"                                        a\n"
+"(%o1)                   H (x) := (x - 1)\n"
+"                         a\n"
+"@end group\n"
+"@group\n"
+"(%i2) funmake (H [n], [%e]);\n"
+"                                       n\n"
+"(%o2)               lambda([x], (x - 1) )(%e)\n"
+"@end group\n"
+"@group\n"
+"(%i3) ''%;\n"
+"                                    n\n"
+"(%o3)                       (%e - 1)\n"
+"@end group\n"
+"@group\n"
+"(%i4) funmake ('(H [n]), [%e]);\n"
+"(%o4)                        H (%e)\n"
+"                              n\n"
+"@end group\n"
+"@group\n"
+"(%i5) ''%;\n"
+"                                    n\n"
+"(%o5)                       (%e - 1)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{funmake} applied to a symbol which is not a defined function of any kind.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c funmake (A, [u]);\n"
+"@c ''%;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) funmake (A, [u]);\n"
+"(%o1)                         A(u)\n"
+"@end group\n"
+"@group\n"
+"(%i2) ''%;\n"
+"(%o2)                         A(u)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{funmake} evaluates its arguments, but not the return value.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c det(a,b,c) := b^2 -4*a*c;\n"
+"@c (x : 8, y : 10, z : 12);\n"
+"@c f : det;\n"
+"@c funmake (f, [x, y, z]);\n"
+"@c ''%;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) det(a,b,c) := b^2 -4*a*c;\n"
+"                                    2\n"
+"(%o1)              det(a, b, c) := b  - 4 a c\n"
+"@end group\n"
+"@group\n"
+"(%i2) (x : 8, y : 10, z : 12);\n"
+"(%o2)                          12\n"
+"@end group\n"
+"@group\n"
+"(%i3) f : det;\n"
+"(%o3)                          det\n"
+"@end group\n"
+"@group\n"
+"(%i4) funmake (f, [x, y, z]);\n"
+"(%o4)                    det(8, 10, 12)\n"
+"@end group\n"
+"@group\n"
+"(%i5) ''%;\n"
+"(%o5)                         - 284\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Maxima simplifies @code{funmake}'s return value.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c funmake (sin, [%pi / 2]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) funmake (sin, [%pi / 2]);\n"
+"(%o1)                           1\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function application} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lambda}\n"
+"@deffn  {Function} lambda @\n"
+"@fname{lambda} ([@var{x_1}, @dots{}, @var{x_m}], @var{expr_1}, @dots{}, @var{expr_n}) @\n"
+"@fname{lambda} ([[@var{L}]], @var{expr_1}, @dots{}, @var{expr_n}) @\n"
+"@fname{lambda} ([@var{x_1}, @dots{}, @var{x_m}, [@var{L}]], @var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Defines and returns a lambda expression (that is, an anonymous function).\n"
+"The function may have required arguments @var{x_1}, @dots{}, @var{x_m} and/or\n"
+"optional arguments @var{L}, which appear within the function body as a list.\n"
+"The return value of the function is @var{expr_n}.  A lambda expression can be\n"
+"assigned to a variable and evaluated like an ordinary function.  A lambda\n"
+"expression may appear in some contexts in which a function name is expected.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When the function is evaluated, unbound local variables @var{x_1}, @dots{},\n"
+"@var{x_m} are created.  @code{lambda} may appear within @code{block} or another\n"
+"@code{lambda}; local variables are established each time another @code{block} or\n"
+"@code{lambda} is evaluated.  Local variables appear to be global to any enclosed\n"
+"@code{block} or @code{lambda}.  If a variable is not local, its value is the\n"
+"value most recently assigned in an enclosing @code{block} or @code{lambda}, if\n"
+"any, otherwise, it is the value of the variable in the global environment.\n"
+"This policy may coincide with the usual understanding of \"dynamic scope\".\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"After local variables are established, @var{expr_1} through @var{expr_n} are\n"
+"evaluated in turn.  The special variable @code{%%}, representing the value of\n"
+"the preceding expression, is recognized.  @code{throw} and @code{catch} may also\n"
+"appear in the list of expressions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{return} cannot appear in a lambda expression unless enclosed by\n"
+"@code{block}, in which case @code{return} defines the return value of the block\n"
+"and not of the lambda expression, unless the block happens to be @var{expr_n}.\n"
+"Likewise, @code{go} cannot appear in a lambda expression unless enclosed by\n"
+"@code{block}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{lambda} quotes its arguments; \n"
+"the quote-quote operator @code{'@w{}'} defeats quotation.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"A lambda expression can be assigned to a variable and evaluated like an ordinary\n"
+"function.\n"
+"@end itemize\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c f: lambda ([x], x^2);\n"
+"@c f(a);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) f: lambda ([x], x^2);\n"
+"                                      2\n"
+"(%o1)                    lambda([x], x )\n"
+"@end group\n"
+"@group\n"
+"(%i2) f(a);\n"
+"                                2\n"
+"(%o2)                          a\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"A lambda expression may appear in contexts in which a function evaluation is expected.\n"
+"@end itemize\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c lambda ([x], x^2) (a);\n"
+"@c apply (lambda ([x], x^2), [a]);\n"
+"@c map (lambda ([x], x^2), [a, b, c, d, e]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) lambda ([x], x^2) (a);\n"
+"                                2\n"
+"(%o1)                          a\n"
+"@end group\n"
+"@group\n"
+"(%i2) apply (lambda ([x], x^2), [a]);\n"
+"                                2\n"
+"(%o2)                          a\n"
+"@end group\n"
+"@group\n"
+"(%i3) map (lambda ([x], x^2), [a, b, c, d, e]);\n"
+"                        2   2   2   2   2\n"
+"(%o3)                 [a , b , c , d , e ]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"Argument variables are local variables.\n"
+"Other variables appear to be global variables.\n"
+"Global variables are evaluated at the time the lambda expression is evaluated,\n"
+"unless some special evaluation is forced by some means, such as @code{'@w{}'}.\n"
+"@end itemize\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c a: %pi$\n"
+"@c b: %e$\n"
+"@c g: lambda ([a], a*b);\n"
+"@c b: %gamma$\n"
+"@c g(1/2);\n"
+"@c g2: lambda ([a], a*''b);\n"
+"@c b: %e$\n"
+"@c g2(1/2);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) a: %pi$\n"
+"(%i2) b: %e$\n"
+"@group\n"
+"(%i3) g: lambda ([a], a*b);\n"
+"(%o3)                   lambda([a], a b)\n"
+"@end group\n"
+"(%i4) b: %gamma$\n"
+"@group\n"
+"(%i5) g(1/2);\n"
+"                             %gamma\n"
+"(%o5)                        ------\n"
+"                               2\n"
+"@end group\n"
+"@group\n"
+"(%i6) g2: lambda ([a], a*''b);\n"
+"(%o6)                 lambda([a], a %gamma)\n"
+"@end group\n"
+"(%i7) b: %e$\n"
+"@group\n"
+"(%i8) g2(1/2);\n"
+"                             %gamma\n"
+"(%o8)                        ------\n"
+"                               2\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"Lambda expressions may be nested.  Local variables within the outer lambda\n"
+"expression appear to be global to the inner expression unless masked by local\n"
+"variables of the same names.\n"
+"@end itemize\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c h: lambda ([a, b], h2: lambda ([a], a*b), h2(1/2));\n"
+"@c h(%pi, %gamma);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) h: lambda ([a, b], h2: lambda ([a], a*b), h2(1/2));\n"
+"                                                   1\n"
+"(%o1)     lambda([a, b], h2 : lambda([a], a b), h2(-))\n"
+"                                                   2\n"
+"@end group\n"
+"@group\n"
+"(%i2) h(%pi, %gamma);\n"
+"                             %gamma\n"
+"(%o2)                        ------\n"
+"                               2\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"Since @code{lambda} quotes its arguments, lambda expression @code{i} below does\n"
+"not define a \"multiply by @code{a}\" function.  Such a function can be defined\n"
+"via @code{buildq}, as in lambda expression @code{i2} below.\n"
+"@end itemize\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c i: lambda ([a], lambda ([x], a*x));\n"
+"@c i(1/2);\n"
+"@c i2: lambda([a], buildq([a: a], lambda([x], a*x)));\n"
+"@c i2(1/2);\n"
+"@c i2(1/2)(%pi);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) i: lambda ([a], lambda ([x], a*x));\n"
+"(%o1)             lambda([a], lambda([x], a x))\n"
+"@end group\n"
+"@group\n"
+"(%i2) i(1/2);\n"
+"(%o2)                   lambda([x], a x)\n"
+"@end group\n"
+"@group\n"
+"(%i3) i2: lambda([a], buildq([a: a], lambda([x], a*x)));\n"
+"(%o3)    lambda([a], buildq([a : a], lambda([x], a x)))\n"
+"@end group\n"
+"@group\n"
+"(%i4) i2(1/2);\n"
+"                                    1\n"
+"(%o4)                  lambda([x], (-) x)\n"
+"                                    2\n"
+"@end group\n"
+"@group\n"
+"(%i5) i2(1/2)(%pi);\n"
+"                               %pi\n"
+"(%o5)                          ---\n"
+"                                2\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"A lambda expression may take a variable number of arguments,\n"
+"which are indicated by @code{[@var{L}]} as the sole or final argument.\n"
+"The arguments appear within the function body as a list.\n"
+"@end itemize\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c f : lambda ([aa, bb, [cc]], aa * cc + bb);\n"
+"@c f (foo, %i, 17, 29, 256);\n"
+"@c g : lambda ([[aa]], apply (\"+\", aa));\n"
+"@c g (17, 29, x, y, z, %e);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) f : lambda ([aa, bb, [cc]], aa * cc + bb);\n"
+"(%o1)          lambda([aa, bb, [cc]], aa cc + bb)\n"
+"@end group\n"
+"@group\n"
+"(%i2) f (foo, %i, 17, 29, 256);\n"
+"(%o2)       [17 foo + %i, 29 foo + %i, 256 foo + %i]\n"
+"@end group\n"
+"@group\n"
+"(%i3) g : lambda ([[aa]], apply (\"+\", aa));\n"
+"(%o3)             lambda([[aa]], apply(+, aa))\n"
+"@end group\n"
+"@group\n"
+"(%i4) g (17, 29, x, y, z, %e);\n"
+"(%o4)                  z + y + x + %e + 46\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c NEEDS CLARIFICATION AND EXAMPLES\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{local}\n"
+"@deffn {Function} local (@var{v_1}, @dots{}, @var{v_n})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Saves the properties associated with the symbols @var{v_1}, @dots{}, @var{v_n},\n"
+"removes any properties before evaluating other expressions,\n"
+"and restores any saved properties on exit\n"
+"from the block or other compound expression in which @code{local} appears.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Some declarations are implemented as properties of a symbol, including\n"
+"@code{:=}, @code{array}, @code{dependencies}, @code{atvalue},\n"
+"@code{matchdeclare}, @code{atomgrad}, @code{constant}, @code{nonscalar},\n"
+"@code{assume}, and some others.  The effect of @code{local} is to make such\n"
+"declarations effective only within the block or other compound expression in\n"
+"which @code{local} appears; otherwise such declarations are global declarations.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{local} can only appear in @code{block}\n"
+"or in the body of a function definition or @code{lambda} expression,\n"
+"and only one occurrence is permitted in each.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{local} quotes its arguments.\n"
+"@code{local} returns @code{done}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"A local function definition.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c foo (x) := 1 - x;\n"
+"@c foo (100);\n"
+"@c block (local (foo), foo (x) := 2 * x, foo (100));\n"
+"@c foo (100);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) foo (x) := 1 - x;\n"
+"(%o1)                    foo(x) := 1 - x\n"
+"@end group\n"
+"@group\n"
+"(%i2) foo (100);\n"
+"(%o2)                         - 99\n"
+"@end group\n"
+"@group\n"
+"(%i3) block (local (foo), foo (x) := 2 * x, foo (100));\n"
+"(%o3)                          200\n"
+"@end group\n"
+"@group\n"
+"(%i4) foo (100);\n"
+"(%o4)                         - 99\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition} @category{Programming}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{macroexpansion}\n"
+"@defvr {Option variable} macroexpansion\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{macroexpansion} controls whether the expansion (that is, the return value)\n"
+"of a macro function is substituted for the macro function call.\n"
+"A substitution may speed up subsequent expression evaluations,\n"
+"at the cost of storing the expansion.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@table @code\n"
+"@item false\n"
+"The expansion of a macro function is not substituted for the macro function call.\n"
+"@item expand\n"
+"The first time a macro function call is evaluated,\n"
+"the expansion is stored.\n"
+"The expansion is not recomputed on subsequent calls;\n"
+"any side effects (such as @code{print} or assignment to global variables) happen\n"
+"only when the macro function call is first evaluated.\n"
+"Expansion in an expression does not affect other expressions\n"
+"which have the same macro function call.\n"
+"@item displace\n"
+"The first time a macro function call is evaluated,\n"
+"the expansion is substituted for the call,\n"
+"thus modifying the expression from which the macro function was called.\n"
+"The expansion is not recomputed on subsequent calls;\n"
+"any side effects happen only when the macro function call is first evaluated.\n"
+"Expansion in an expression does not affect other expressions\n"
+"which have the same macro function call.\n"
+"@end table\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Examples\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{macroexpansion} is @code{false},\n"
+"a macro function is called every time the calling expression is evaluated,\n"
+"and the calling expression is not modified.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c f (x) := h (x) / g (x);\n"
+"@c g (x) ::= block (print (\"x + 99 is equal to\", x), \n"
+"@c                        return (x + 99));\n"
+"@c h (x) ::= block (print (\"x - 99 is equal to\", x), \n"
+"@c                        return (x - 99));\n"
+"@c macroexpansion: false;\n"
+"@c f (a * b);\n"
+"@c dispfun (f);\n"
+"@c f (a * b);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) f (x) := h (x) / g (x);\n"
+"                                  h(x)\n"
+"(%o1)                     f(x) := ----\n"
+"                                  g(x)\n"
+"@end group\n"
+"@group\n"
+"(%i2) g (x) ::= block (print (\"x + 99 is equal to\", x),\n"
+"                       return (x + 99));\n"
+"(%o2) g(x) ::= block(print(\"x + 99 is equal to\", x), \n"
+"                                                  return(x + 99))\n"
+"@end group\n"
+"@group\n"
+"(%i3) h (x) ::= block (print (\"x - 99 is equal to\", x),\n"
+"                       return (x - 99));\n"
+"(%o3) h(x) ::= block(print(\"x - 99 is equal to\", x), \n"
+"                                                  return(x - 99))\n"
+"@end group\n"
+"@group\n"
+"(%i4) macroexpansion: false;\n"
+"(%o4)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i5) f (a * b);\n"
+"x - 99 is equal to x \n"
+"x + 99 is equal to x \n"
+"                            a b - 99\n"
+"(%o5)                       --------\n"
+"                            a b + 99\n"
+"@end group\n"
+"@group\n"
+"(%i6) dispfun (f);\n"
+"                                  h(x)\n"
+"(%t6)                     f(x) := ----\n"
+"                                  g(x)\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"(%o6)                         [%t6]\n"
+"@end group\n"
+"@group\n"
+"(%i7) f (a * b);\n"
+"x - 99 is equal to x \n"
+"x + 99 is equal to x \n"
+"                            a b - 99\n"
+"(%o7)                       --------\n"
+"                            a b + 99\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{macroexpansion} is @code{expand},\n"
+"a macro function is called once,\n"
+"and the calling expression is not modified.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c f (x) := h (x) / g (x);\n"
+"@c g (x) ::= block (print (\"x + 99 is equal to\", x), \n"
+"@c                        return (x + 99));\n"
+"@c h (x) ::= block (print (\"x - 99 is equal to\", x), \n"
+"@c                        return (x - 99));\n"
+"@c macroexpansion: expand;\n"
+"@c f (a * b);\n"
+"@c dispfun (f);\n"
+"@c f (a * b);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) f (x) := h (x) / g (x);\n"
+"                                  h(x)\n"
+"(%o1)                     f(x) := ----\n"
+"                                  g(x)\n"
+"@end group\n"
+"@group\n"
+"(%i2) g (x) ::= block (print (\"x + 99 is equal to\", x),\n"
+"                       return (x + 99));\n"
+"(%o2) g(x) ::= block(print(\"x + 99 is equal to\", x), \n"
+"                                                  return(x + 99))\n"
+"@end group\n"
+"@group\n"
+"(%i3) h (x) ::= block (print (\"x - 99 is equal to\", x),\n"
+"                       return (x - 99));\n"
+"(%o3) h(x) ::= block(print(\"x - 99 is equal to\", x), \n"
+"                                                  return(x - 99))\n"
+"@end group\n"
+"@group\n"
+"(%i4) macroexpansion: expand;\n"
+"(%o4)                        expand\n"
+"@end group\n"
+"@group\n"
+"(%i5) f (a * b);\n"
+"x - 99 is equal to x \n"
+"x + 99 is equal to x \n"
+"                            a b - 99\n"
+"(%o5)                       --------\n"
+"                            a b + 99\n"
+"@end group\n"
+"@group\n"
+"(%i6) dispfun (f);\n"
+"                      mmacroexpanded(x - 99, h(x))\n"
+"(%t6)         f(x) := ----------------------------\n"
+"                      mmacroexpanded(x + 99, g(x))\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"(%o6)                         [%t6]\n"
+"@end group\n"
+"@group\n"
+"(%i7) f (a * b);\n"
+"                            a b - 99\n"
+"(%o7)                       --------\n"
+"                            a b + 99\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{macroexpansion} is @code{displace},\n"
+"a macro function is called once,\n"
+"and the calling expression is modified.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ===beg===\n"
+"@c f (x) := h (x) / g (x);\n"
+"@c g (x) ::= block (print (\"x + 99 is equal to\", x), \n"
+"@c                        return (x + 99));\n"
+"@c h (x) ::= block (print (\"x - 99 is equal to\", x), \n"
+"@c                        return (x - 99));\n"
+"@c macroexpansion: displace;\n"
+"@c f (a * b);\n"
+"@c dispfun (f);\n"
+"@c f (a * b);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) f (x) := h (x) / g (x);\n"
+"                                  h(x)\n"
+"(%o1)                     f(x) := ----\n"
+"                                  g(x)\n"
+"@end group\n"
+"@group\n"
+"(%i2) g (x) ::= block (print (\"x + 99 is equal to\", x),\n"
+"                       return (x + 99));\n"
+"(%o2) g(x) ::= block(print(\"x + 99 is equal to\", x), \n"
+"                                                  return(x + 99))\n"
+"@end group\n"
+"@group\n"
+"(%i3) h (x) ::= block (print (\"x - 99 is equal to\", x),\n"
+"                       return (x - 99));\n"
+"(%o3) h(x) ::= block(print(\"x - 99 is equal to\", x), \n"
+"                                                  return(x - 99))\n"
+"@end group\n"
+"@group\n"
+"(%i4) macroexpansion: displace;\n"
+"(%o4)                       displace\n"
+"@end group\n"
+"@group\n"
+"(%i5) f (a * b);\n"
+"x - 99 is equal to x \n"
+"x + 99 is equal to x \n"
+"                            a b - 99\n"
+"(%o5)                       --------\n"
+"                            a b + 99\n"
+"@end group\n"
+"@group\n"
+"(%i6) dispfun (f);\n"
+"                                 x - 99\n"
+"(%t6)                    f(x) := ------\n"
+"                                 x + 99\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"(%o6)                         [%t6]\n"
+"@end group\n"
+"@group\n"
+"(%i7) f (a * b);\n"
+"                            a b - 99\n"
+"(%o7)                       --------\n"
+"                            a b + 99\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function application} @category{Global flags}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{mode_checkp}\n"
+"@defvr {Option variable} mode_checkp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c WHAT DOES THIS MEAN ??\n"
+"When @code{mode_checkp} is @code{true}, @code{mode_declare} checks the modes\n"
+"of bound variables.\n"
+"@c NEED SOME EXAMPLES HERE.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{mode_check_errorp}\n"
+"@defvr {Option variable} mode_check_errorp\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c WHAT DOES THIS MEAN ??\n"
+"When @code{mode_check_errorp} is @code{true}, @code{mode_declare} calls\n"
+"error.\n"
+"@c NEED SOME EXAMPLES HERE.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{mode_check_warnp}\n"
+"@defvr {Option variable} mode_check_warnp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c WHAT DOES THIS MEAN ??\n"
+"When @code{mode_check_warnp} is @code{true}, mode errors are\n"
+"described.\n"
+"@c NEED SOME EXAMPLES HERE.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c NEEDS CLARIFICATION AND EXAMPLES\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{mode_declare}\n"
+"@deffn {Function} mode_declare (@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{mode_declare} is used to declare the modes of variables and functions for\n"
+"subsequent translation or compilation of functions.  @code{mode_declare} is\n"
+"typically placed at the beginning of a function definition, at the beginning of\n"
+"a Maxima script, or executed at the interactive prompt.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The arguments of @code{mode_declare} are pairs consisting of a variable and a\n"
+"mode which is one of @code{boolean}, @code{fixnum}, @code{number},\n"
+"@code{rational}, or @code{float}.  Each variable may also be a list of variables\n"
+"all of which are declared to have the same mode.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c WHAT DOES THE FOLLOWING STATEMENT MEAN ???\n"
+"If a variable is an array, and if every element of the array which is\n"
+"referenced has a value then @code{array (yi, complete, dim1, dim2, ...)}\n"
+"rather than\n"
+"@example\n"
+"array(yi, dim1, dim2, ...)\n"
+"@end example\n"
+"should be used when first declaring the bounds of the array.\n"
+"@c WHAT DOES THE FOLLOWING STATEMENT MEAN ???\n"
+"If all the elements of the array are of mode @code{fixnum} (@code{float}), use\n"
+"@code{fixnum} (@code{float}) instead of @code{complete}.\n"
+"@c WHAT DOES THE FOLLOWING STATEMENT MEAN ???\n"
+"Also if every element of the array is of the same mode, say @code{m}, then\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"mode_declare (completearray (yi), m))\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"should be used for efficient translation.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Numeric code using arrays might run faster\n"
+"by declaring the expected size of the array, as in:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"mode_declare (completearray (a [10, 10]), float)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"for a floating point number array which is 10 x 10.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"One may declare the mode of the result of a function by using\n"
+"@code{function (f_1, f_2, ...)} as an argument; here @code{f_1}, @code{f_2},\n"
+"@dots{} are the names of functions.  For example the expression,\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"mode_declare ([function (f_1, f_2, ...)], fixnum)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"declares that the values returned by @code{f_1}, @code{f_2}, @dots{} are\n"
+"single-word integers.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{modedeclare} is a synonym for @code{mode_declare}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c WHAT IS THIS ABOUT ??\n"
+"@c NEEDS CLARIFICATION AND EXAMPLES\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{mode_identity}\n"
+"@deffn {Function} mode_identity (@var{arg_1}, @var{arg_2})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"A special form used with @code{mode_declare} and @code{macros} to declare, e.g.,\n"
+"a list of lists of flonums, or other compound data object.  The first argument\n"
+"to @code{mode_identity} is a primitive value mode name as given to\n"
+"@code{mode_declare} (i.e., one of @code{float}, @code{fixnum}, @code{number},\n"
+"@code{list}, or @code{any}), and the second argument is an expression which is\n"
+"evaluated and returned as the value of @code{mode_identity}.  However, if the\n"
+"return value is not allowed by the mode declared in the first\n"
+"argument, an error or warning is signalled.  The important thing is\n"
+"that the mode of the expression as determined by the Maxima to Lisp\n"
+"translator, will be that given as the first argument, independent of\n"
+"anything that goes on in the second argument.\n"
+"E.g., @code{x: 3.3; mode_identity (fixnum, x);} yields an error.\n"
+"@code{mode_identity (flonum, x)} returns 3.3 .\n"
+"This has a number of uses, e.g., if you knew that @code{first (l)} returned a\n"
+"number then you might write @code{mode_identity (number, first (l))}.  However,\n"
+"a more efficient way to do it would be to define a new primitive,\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"firstnumb (x) ::= buildq ([x], mode_identity (number, first(x)));\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"and use @code{firstnumb}\n"
+"every time you take the first of a list of numbers.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{remfunction}\n"
+"@deffn  {Function} remfunction @\n"
+"@fname{remfunction} (@var{f_1}, @dots{}, @var{f_n}) @\n"
+"@fname{remfunction} (all)\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Unbinds the function definitions of the symbols @var{f_1}, @dots{}, @var{f_n}.\n"
+"The arguments may be the names of ordinary functions (created by @mref{:=} or\n"
+"@mref{define}) or macro functions (created by @mref{::=}).\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{remfunction (all)} unbinds all function definitions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{remfunction} quotes its arguments.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{remfunction} returns a list of the symbols for which the function\n"
+"definition was unbound.  @code{false} is returned in place of any symbol for\n"
+"which there is no function definition.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{remfunction} does not apply to array functions or subscripted functions.\n"
+"@mref{remarray} applies to those types of functions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Function definition}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c NEEDS MORE WORK !!!\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{savedef}\n"
+"@defvr {Option variable} savedef\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{savedef} is @code{true}, the Maxima version of a user function is\n"
+"preserved when the function is translated.  This permits the definition to be\n"
+"displayed by @code{dispfun} and allows the function to be edited.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{savedef} is @code{false}, the names of translated functions are\n"
+"removed from the @code{functions} list.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c IS THERE ANY REASON TO SET transcompile: false ??\n"
+"@c MAYBE THIS VARIABLE COULD BE PERMANENTLY SET TO true AND STRUCK FROM THE DOCUMENTATION.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{transcompile}\n"
+"@defvr {Option variable} transcompile\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{transcompile} is @code{true}, @code{translate} and\n"
+"@code{translate_file} generate declarations to make the translated code more\n"
+"suitable for compilation.\n"
+"@c BUT THE DECLARATIONS DON'T SEEM TO BE NECESSARY, SO WHAT'S THE POINT AGAIN ??\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{compfile} sets @code{transcompile: true} for the duration.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{translate}\n"
+"@deffn  {Function} translate @\n"
+"@fname{translate} (@var{f_1}, @dots{}, @var{f_n}) @\n"
+"@fname{translate} (functions) @\n"
+"@fname{translate} (all)\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Translates the user-defined functions @var{f_1}, @dots{}, @var{f_n} from the\n"
+"Maxima language into Lisp and evaluates the Lisp translations.\n"
+"Typically the translated functions run faster than the originals.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{translate (all)} or @code{translate (functions)} translates all\n"
+"user-defined functions.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Functions to be translated should include a call to @code{mode_declare} at the\n"
+"beginning when possible in order to produce more efficient code.  For example:\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@example\n"
+"f (x_1, x_2, ...) := block ([v_1, v_2, ...],\n"
+"    mode_declare (v_1, mode_1, v_2, mode_2, ...), ...)\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@noindent\n"
+"where the @var{x_1}, @var{x_2}, @dots{}  are the parameters to the function and\n"
+"the @var{v_1}, @var{v_2}, @dots{} are the local variables.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The names of translated functions are removed from the @code{functions} list\n"
+"if @code{savedef} is @code{false} (see below) and are added to the @code{props}\n"
+"lists.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Functions should not be translated unless they are fully debugged.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Expressions are assumed simplified; if they are not, correct but non-optimal\n"
+"code gets generated.  Thus, the user should not set the @code{simp} switch to\n"
+"@code{false} which inhibits simplification of the expressions to be translated.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The switch @code{translate}, if @code{true}, causes automatic\n"
+"translation of a user's function to Lisp.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Note that translated\n"
+"functions may not run identically to the way they did before\n"
+"translation as certain incompatibilities may exist between the Lisp\n"
+"and Maxima versions.  Principally, the @code{rat} function with more than\n"
+"one argument and the @code{ratvars} function should not be used if any\n"
+"variables are @code{mode_declare}'d canonical rational expressions (CRE).\n"
+"Also the @code{prederror: false} setting\n"
+"will not translate.\n"
+"@c WHAT ABOUT % AND %% ???\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{savedef} - if @code{true} will cause the Maxima version of a user\n"
+"function to remain when the function is @code{translate}'d.  This permits the\n"
+"definition to be displayed by @code{dispfun} and allows the function to be\n"
+"edited.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{transrun} - if @code{false} will cause the interpreted version of all\n"
+"functions to be run (provided they are still around) rather than the\n"
+"translated version.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The result returned by @code{translate} is a list of the names of the\n"
+"functions translated.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{translate_file}\n"
+"@deffn  {Function} translate_file @\n"
+"@fname{translate_file} (@var{maxima_filename}) @\n"
+"@fname{translate_file} (@var{maxima_filename}, @var{lisp_filename})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Translates a file of Maxima code into a file of Lisp code.\n"
+"@code{translate_file} returns a list of three filenames:\n"
+"the name of the Maxima file, the name of the Lisp file, and the name of file\n"
+"containing additional information about the translation.\n"
+"@code{translate_file} evaluates its arguments.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{translate_file (\"foo.mac\"); load(\"foo.LISP\")} is the same as the command\n"
+"@code{batch (\"foo.mac\")} except for certain restrictions, the use of\n"
+"@code{'@w{}'} and @code{%}, for example.\n"
+"@c FIGURE OUT WHAT THE RESTRICTIONS ARE AND STATE THEM\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{translate_file (@var{maxima_filename})} translates a Maxima file\n"
+"@var{maxima_filename} into a similarly-named Lisp file.\n"
+"For example, @code{foo.mac} is translated into @code{foo.LISP}.\n"
+"The Maxima filename may include a directory name or names,\n"
+"in which case the Lisp output file is written\n"
+"to the same directory from which the Maxima input comes.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{translate_file (@var{maxima_filename}, @var{lisp_filename})} translates\n"
+"a Maxima file @var{maxima_filename} into a Lisp file @var{lisp_filename}.\n"
+"@code{translate_file} ignores the filename extension, if any, of\n"
+"@code{lisp_filename}; the filename extension of the Lisp output file is always\n"
+"@code{LISP}.  The Lisp filename may include a directory name or names,\n"
+"in which case the Lisp output file is written to the specified directory.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{translate_file} also writes a file of translator warning\n"
+"messages of various degrees of severity.\n"
+"The filename extension of this file is @code{UNLISP}.\n"
+"This file may contain valuable information, though possibly obscure,\n"
+"for tracking down bugs in translated code.\n"
+"The @code{UNLISP} file is always written\n"
+"to the same directory from which the Maxima input comes.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{translate_file} emits Lisp code which causes\n"
+"some declarations and definitions to take effect as soon\n"
+"as the Lisp code is compiled.\n"
+"See @code{compile_file} for more on this topic.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c CHECK ALL THESE AND SEE WHICH ONES ARE OBSOLETE\n"
+"See also \n"
+"@flushleft\n"
+"@code{tr_array_as_ref}\n"
+"@c tr_bind_mode_hook EXISTS BUT IT APPEARS TO BE A GROTESQUE UNDOCUMENTED HACK\n"
+"@c WE DON'T WANT TO MENTION IT\n"
+"@c @code{tr_bind_mode_hook}, \n"
+"@mrefcomma{tr_bound_function_applyp}\n"
+"@c tr_exponent EXISTS AND WORKS AS ADVERTISED IN src/troper.lisp\n"
+"@c NOT OTHERWISE DOCUMENTED; ITS EFFECT SEEMS TOO WEAK TO MENTION\n"
+"@code{tr_exponent}\n"
+"@mrefcomma{tr_file_tty_messagesp}\n"
+"@mrefcomma{tr_float_can_branch_complex}\n"
+"@mrefcomma{tr_function_call_default}\n"
+"@mrefcomma{tr_numer}\n"
+"@mrefcomma{tr_optimize_max_loop}\n"
+"@mrefcomma{tr_semicompile}\n"
+"@mrefcomma{tr_state_vars}\n"
+"@mrefcomma{tr_warnings_get}\n"
+"@c Not documented\n"
+"@code{tr_warn_bad_function_calls}\n"
+"@mrefcomma{tr_warn_fexpr} \n"
+"@mrefcomma{tr_warn_meval}\n"
+"@mrefcomma{tr_warn_mode}\n"
+"@mrefcomma{tr_warn_undeclared}\n"
+"and @mrefdot{tr_warn_undefined_variable}\n"
+"@end flushleft\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{transrun}\n"
+"@defvr {Option variable} transrun\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{transrun} is @code{false} will cause the interpreted\n"
+"version of all functions to be run (provided they are still around)\n"
+"rather than the translated version.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c IN WHAT CONTEXT IS tr_array_as_ref: false APPROPRIATE ??? NOT SEEING THE USEFULNESS HERE.\n"
+"@c ALSO, I GUESS WE SHOULD HAVE AN ITEM FOR translate_fast_arrays, ANOTHER CONFUSING FLAG ...\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_array_as_ref}\n"
+"@defvr {Option variable} tr_array_as_ref\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"If @code{translate_fast_arrays} is @code{false}, array references in Lisp code\n"
+"emitted by @code{translate_file} are affected by @code{tr_array_as_ref}.\n"
+"When @code{tr_array_as_ref} is @code{true},\n"
+"array names are evaluated,\n"
+"otherwise array names appear as literal symbols in translated code.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{tr_array_as_ref} has no effect if @code{translate_fast_arrays} is\n"
+"@code{true}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c WHY IS THIS FLAG NEEDED ??? UNDER WHAT CIRCUMSTANCES CAN TRANSLATION\n"
+"@c OF A BOUND VARIABLE USED AS A FUNCTION GO WRONG ???\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_bound_function_applyp}\n"
+"@defvr {Option variable} tr_bound_function_applyp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{tr_bound_function_applyp} is @code{true}, Maxima gives a warning if a\n"
+"bound variable (such as a function argument) is found being used as a function.\n"
+"@c WHAT DOES THIS MEAN ??\n"
+"@code{tr_bound_function_applyp} does not affect the code generated in such\n"
+"cases.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"For example, an expression such as @code{g (f, x) := f (x+1)} will trigger\n"
+"the warning message.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_file_tty_messagesp}\n"
+"@defvr {Option variable} tr_file_tty_messagesp\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{tr_file_tty_messagesp} is @code{true}, messages generated by\n"
+"@code{translate_file} during translation of a file are displayed on the console\n"
+"and inserted into the UNLISP file.  When @code{false}, messages about\n"
+"translation of the file are only inserted into the UNLISP file.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c THIS FLAG APPEARS TO HAVE NO EFFECT. SHOULD CUT OUT THIS ITEM AND RELATED CODE.\n"
+"@c NOTE THAT THERE IS CODE IN src/transf.lisp WHICH USES THIS FLAG BUT THE MODE\n"
+"@c FLAG IS LOST SOMEWHERE ALONG THE WAY TO THE LISP OUTPUT FILE.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_float_can_branch_complex}\n"
+"@defvr {Option variable} tr_float_can_branch_complex\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Tells the Maxima-to-Lisp translator to assume that the functions \n"
+"@code{acos}, @code{asin}, @code{asec}, and @code{acsc} can return complex results.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The ostensible effect of @code{tr_float_can_branch_complex} is the following.\n"
+"However, it appears that this flag has no effect on the translator output.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When it is @code{true} then @code{acos(x)} is of mode @code{any}\n"
+"even if @code{x} is of mode @code{float} (as set by @code{mode_declare}).\n"
+"When @code{false} then @code{acos(x)} is of mode\n"
+"@code{float} if and only if @code{x} is of mode @code{float}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_function_call_default}\n"
+"@defvr {Option variable} tr_function_call_default\n"
+"Default value: @code{general}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{false} means give up and call @code{meval}, @code{expr} means assume Lisp\n"
+"fixed arg function.  @code{general}, the default gives code good for\n"
+"@code{mexprs} and @code{mlexprs} but not @code{macros}.  @code{general} assures\n"
+"variable bindings are correct in compiled code.  In @code{general} mode, when\n"
+"translating F(X), if F is a bound variable, then it assumes that\n"
+"@code{apply (f, [x])} is meant, and translates a such, with appropriate warning.\n"
+"There is no need to turn this off.  With the default settings, no warning\n"
+"messages implies full compatibility of translated and compiled code with the\n"
+"Maxima interpreter.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_numer}\n"
+"@defvr {Option variable} tr_numer\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{tr_numer} is @code{true}, @code{numer} properties are used for\n"
+"atoms which have them, e.g. @code{%pi}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_optimize_max_loop}\n"
+"@defvr {Option variable} tr_optimize_max_loop\n"
+"Default value: 100\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{tr_optimize_max_loop} is the maximum number of times the\n"
+"macro-expansion and optimization pass of the translator will loop in\n"
+"considering a form.  This is to catch macro expansion errors, and\n"
+"non-terminating optimization properties.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_semicompile}\n"
+"@defvr {Option variable} tr_semicompile\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When @code{tr_semicompile} is @code{true}, @code{translate_file} and\n"
+"@code{compfile} output forms which will be macroexpanded but not compiled into\n"
+"machine code by the Lisp compiler.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c ARE ANY OF THESE OBSOLETE ??\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_state_vars}\n"
+"@defvr {System variable} tr_state_vars\n"
+"Default value:\n"
+"@example\n"
+"[transcompile, tr_semicompile, tr_warn_undeclared, tr_warn_meval,\n"
+"tr_warn_fexpr, tr_warn_mode, tr_warn_undefined_variable,\n"
+"tr_function_call_default, tr_array_as_ref,tr_numer]\n"
+"@end example\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"The list of the switches that affect the form of the\n"
+"translated output.\n"
+"@c DOES THE GENERAL USER REALLY CARE ABOUT DEBUGGING THE TRANSLATOR ???\n"
+"This information is useful to system people when\n"
+"trying to debug the translator.  By comparing the translated product\n"
+"to what should have been produced for a given state, it is possible to\n"
+"track down bugs.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c tr_warnings_get EXISTS AND FUNCTIONS AS ADVERTISED (SORT OF) -- RETURNS *tr-runtime-warned*\n"
+"@c WHICH HAS ONLY A FEW KINDS OF WARNINGS PUSHED ONTO IT; IT'S CERTAINLY NOT COMPREHENSIVE\n"
+"@c DO WE REALLY NEED THIS SLIGHTLY WORKING FUNCTION ??\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_warnings_get}\n"
+"@deffn {Function} tr_warnings_get ()\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Prints a list of warnings which have been given by\n"
+"the translator during the current translation.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@defvr {Option variable} tr_warn_bad_function_calls\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"- Gives a warning when\n"
+"when function calls are being made which may not be correct due to\n"
+"improper declarations that were made at translate time.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_warn_fexpr}\n"
+"@defvr {Option variable} tr_warn_fexpr\n"
+"Default value: @code{compfile}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"- Gives a warning if any FEXPRs are\n"
+"encountered.  FEXPRs should not normally be output in translated code,\n"
+"all legitimate special program forms are translated.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_warn_meval}\n"
+"@defvr {Option variable} tr_warn_meval\n"
+"Default value: @code{compfile}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"- Gives a warning if the function @code{meval} gets called.  If @code{meval} is\n"
+"called that indicates problems in the translation.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_warn_mode}\n"
+"@defvr {Option variable} tr_warn_mode\n"
+"Default value: @code{all}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"- Gives a warning when variables are\n"
+"assigned values inappropriate for their mode.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_warn_undeclared}\n"
+"@defvr {Option variable} tr_warn_undeclared\n"
+"Default value: @code{compile}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"- Determines when to send\n"
+"warnings about undeclared variables to the TTY.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tr_warn_undefined_variable}\n"
+"@defvr {Option variable} tr_warn_undefined_variable\n"
+"Default value: @code{all}\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"- Gives a warning when\n"
+"undefined global variables are seen.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{compile_file}\n"
+"@deffn  {Function} compile_file @\n"
+"@fname{compile_file} (@var{filename}) @\n"
+"@fname{compile_file} (@var{filename}, @var{compiled_filename}) @\n"
+"@fname{compile_file} (@var{filename}, @var{compiled_filename}, @var{lisp_filename})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Translates the Maxima file @var{filename} into Lisp, executes the Lisp compiler,\n"
+"and, if the translation and compilation succeed, loads the compiled code into\n"
+"Maxima.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{compile_file} returns a list of the names of four files: the original\n"
+"Maxima file, the Lisp translation, notes on translation, and the compiled code.\n"
+"If the compilation fails, the fourth item is @code{false}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Some declarations and definitions take effect as soon\n"
+"as the Lisp code is compiled (without loading the compiled code).\n"
+"These include functions defined with the @code{:=} operator,\n"
+"macros define with the @code{::=} operator,\n"
+"@c HEDGE -- DON'T KNOW IF THERE IS ANOTHER WAY\n"
+"@code{alias}, @code{declare},\n"
+"@code{define_variable},  @code{mode_declare},\n"
+"and \n"
+"@code{infix}, @code{matchfix},\n"
+"@code{nofix}, @code{postfix}, @code{prefix},\n"
+"and @code{compfile}.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"Assignments and function calls are not evaluated until the compiled code is\n"
+"loaded.  In particular, within the Maxima file, assignments to the translation\n"
+"flags (@code{tr_numer}, etc.) have no effect on the translation.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c @code{compile_file} may mistake warnings for errors and\n"
+"@c return @code{false} as the name of the compiled code when, in fact,\n"
+"@c the compilation succeeded. This is a bug. \n"
+"@c REPORTED AS SOURCEFORGE BUG # 1103722.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@var{filename} may not contain @code{:lisp} statements.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@code{compile_file} evaluates its arguments.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c NEEDS CLARIFICATION\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{declare_translated}\n"
+"@deffn {Function} declare_translated (@var{f_1}, @var{f_2}, @dots{})\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"When translating a file of Maxima code\n"
+"to Lisp, it is important for the translator to know which functions it\n"
+"sees in the file are to be called as translated or compiled functions,\n"
+"and which ones are just Maxima functions or undefined.  Putting this\n"
+"declaration at the top of the file, lets it know that although a symbol\n"
+"does which does not yet have a Lisp function value, will have one at\n"
+"call time.  @code{(MFUNCTION-CALL fn arg1 arg2 ...)} is generated when\n"
+"the translator does not know @code{fn} is going to be a Lisp function.\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Function.texi
+msgid ""
+msgstr ""

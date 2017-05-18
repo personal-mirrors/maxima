@@ -56,6 +56,37 @@ maxima_TEXINFOS = include-maxima.texi category-macros.texi Introduction.texi \
  stats.texi stirling.texi stringproc.texi to_poly_solve.texi unit.texi \
  zeilberger.texi errormessages.texi
 
+maxima_pofiles = include-maxima.pot category-macros.pot Introduction.pot \
+ Bugs.pot Help.pot Command.pot DataTypes.pot Constants.pot Lists.pot \
+ Arrays.pot defstruct.pot Expressions.pot Operators.pot Evaluation.pot \
+ Simplification.pot MathFunctions.pot Database.pot Plotting.pot \
+ Input.pot Polynomials.pot Special.pot Elliptic.pot Limits.pot \
+ Differentiation.pot Integration.pot Equations.pot Differential.pot \
+ Numerical.pot Matrices.pot Affine.pot Itensor.pot Ctensor.pot \
+ Atensor.pot Series.pot Number.pot Symmetries.pot Groups.pot \
+ Runtime.pot Miscellaneous.pot Rules.pot nset.pot Function.pot \
+ Program.pot Debugging.pot alt-display.pot asympa.pot \
+ augmented_lagrangian.pot bitwise.pot bernstein.pot bode.pot celine.pot \
+ clebsch_gordan.pot \
+ cobyla.pot contrib_ode.pot descriptive.pot diag.pot distrib.pot \
+ draw.pot drawdf.pot dynamics.pot engineering-format.pot \
+ ezunits.pot f90.pot finance.pot \
+ fractals.pot ggf.pot graphs.pot grobner.pot impdiff.pot interpol.pot \
+ lapack.pot lbfgs.pot lindstedt.pot linearalgebra.pot lsquares.pot \
+ minpack.pot makeOrders.pot mnewton.pot numericalio.pot opsubst.pot \
+ operatingsystem.pot \
+ orthopoly.pot ratpow.pot romberg.pot simplex.pot simplifications.pot solve_rec.pot \
+ stats.pot stirling.pot stringproc.pot to_poly_solve.pot unit.pot \
+ zeilberger.pot errormessages.pot
+
+SUFFIXES=.pot
+
+.texi.pot:
+	sh $(top_srcdir)/doc/info/texi2pot.sh $< $@
+
+allpo: $(maxima_pofiles)
+
+
 figurefiles = \
 figures/introduction1.gif\
 figures/introduction2.gif\

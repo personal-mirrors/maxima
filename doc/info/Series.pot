@@ -1,0 +1,2725 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Series.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for Sums and Products::\n"
+"* Introduction to Series::\n"
+"* Functions and Variables for Series::\n"
+"* Introduction to Fourier series::\n"
+"* Functions and Variables for Fourier series::\n"
+"* Functions and Variables for Poisson series::\n"
+"@end menu\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Sums and Products, Introduction to Series, Sums Products and Series, Sums Products and Series\n"
+"@section Functions and Variables for Sums and Products\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{bashindices}\n"
+"@deffn {Function} bashindices (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Transforms the expression @var{expr} by giving each summation and product a\n"
+"unique index.  This gives @code{changevar} greater precision when it is working\n"
+"with summations or products.  The form of the unique index is\n"
+"@code{j@var{number}}. The quantity @var{number} is determined by referring to\n"
+"@code{gensumnum}, which can be changed by the user.  For example,\n"
+"@code{gensumnum:0$} resets it.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lsum}\n"
+"@deffn {Function} lsum (@var{expr}, @var{x}, @var{L})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Represents the sum of @var{expr} for each element @var{x} in @var{L}.\n"
+"A noun form @code{'lsum} is returned if the argument @var{L} does not evaluate\n"
+"to a list.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c ===beg===\n"
+"@c lsum (x^i, i, [1, 2, 7]);\n"
+"@c lsum (i^2, i, rootsof (x^3 - 1, x));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) lsum (x^i, i, [1, 2, 7]);\n"
+"                            7    2\n"
+"(%o1)                      x  + x  + x\n"
+"(%i2) lsum (i^2, i, rootsof (x^3 - 1, x));\n"
+"@group\n"
+"                     ====\n"
+"                     \      2\n"
+"(%o2)                 >    i\n"
+"                     /\n"
+"                     ====\n"
+"                                   3\n"
+"                     i in rootsof(x  - 1, x)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{intosum}\n"
+"@deffn {Function} intosum (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Moves multiplicative factors outside a summation to inside.\n"
+"If the index is used in the\n"
+"outside expression, then the function tries to find a reasonable\n"
+"index, the same as it does for @code{sumcontract}.  This is essentially the\n"
+"reverse idea of the @code{outative} property of summations, but note that it\n"
+"does not remove this property, it only bypasses it.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c WHAT ARE THESE CASES ??\n"
+"In some cases, a @code{scanmap (multthru, @var{expr})} may be necessary before\n"
+"the @code{intosum}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{simpproduct}\n"
+"@defvr {Option variable} simpproduct\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{simpproduct} is @code{true}, the result of a @code{product} is simplified.\n"
+"This simplification may sometimes be able to produce a closed form.  If\n"
+"@code{simpproduct} is @code{false} or if the quoted form @code{'product} is used, the\n"
+"value is a product noun form which is a representation of the pi notation used\n"
+"in mathematics.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products} @category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{product}\n"
+"@deffn {Function} product (@var{expr}, @var{i}, @var{i_0}, @var{i_1})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Represents a product of the values of @var{expr} as\n"
+"the index @var{i} varies from @var{i_0} to @var{i_1}.\n"
+"The noun form @code{'product} is displayed as an uppercase letter pi.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{product} evaluates @var{expr} and lower and upper limits @var{i_0} and\n"
+"@var{i_1}, @code{product} quotes (does not evaluate) the index @var{i}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"If the upper and lower limits differ by an integer,\n"
+"@var{expr} is evaluated for each value of the index @var{i},\n"
+"and the result is an explicit product.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Otherwise, the range of the index is indefinite.\n"
+"Some rules are applied to simplify the product.\n"
+"When the global variable @code{simpproduct} is @code{true}, additional rules\n"
+"are applied.  In some cases, simplification yields a result which is not a\n"
+"product; otherwise, the result is a noun form @code{'product}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"See also @mref{nouns} and @mrefdot{evflag}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c ===beg===\n"
+"@c product (x + i*(i+1)/2, i, 1, 4);\n"
+"@c product (i^2, i, 1, 7);\n"
+"@c product (a[i], i, 1, 7);\n"
+"@c product (a(i), i, 1, 7);\n"
+"@c product (a(i), i, 1, n);\n"
+"@c product (k, k, 1, n);\n"
+"@c product (k, k, 1, n), simpproduct;\n"
+"@c product (integrate (x^k, x, 0, 1), k, 1, n);\n"
+"@c product (if k <= 5 then a^k else b^k, k, 1, 10);\n"
+"@c ===end===\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) product (x + i*(i+1)/2, i, 1, 4);\n"
+"(%o1)           (x + 1) (x + 3) (x + 6) (x + 10)\n"
+"(%i2) product (i^2, i, 1, 7);\n"
+"(%o2)                       25401600\n"
+"(%i3) product (a[i], i, 1, 7);\n"
+"(%o3)                 a  a  a  a  a  a  a\n"
+"                       1  2  3  4  5  6  7\n"
+"(%i4) product (a(i), i, 1, 7);\n"
+"(%o4)          a(1) a(2) a(3) a(4) a(5) a(6) a(7)\n"
+"(%i5) product (a(i), i, 1, n);\n"
+"                             n\n"
+"                           /===\\n"
+"                            ! !\n"
+"(%o5)                       ! !  a(i)\n"
+"                            ! !\n"
+"                           i = 1\n"
+"(%i6) product (k, k, 1, n);\n"
+"                               n\n"
+"                             /===\\n"
+"                              ! !\n"
+"(%o6)                         ! !  k\n"
+"                              ! !\n"
+"                             k = 1\n"
+"(%i7) product (k, k, 1, n), simpproduct;\n"
+"(%o7)                          n!\n"
+"(%i8) product (integrate (x^k, x, 0, 1), k, 1, n);\n"
+"                             n\n"
+"                           /===\\n"
+"                            ! !    1\n"
+"(%o8)                       ! !  -----\n"
+"                            ! !  k + 1\n"
+"                           k = 1\n"
+"(%i9) product (if k <= 5 then a^k else b^k, k, 1, 10);\n"
+"                              15  40\n"
+"(%o9)                        a   b\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{simpsum}\n"
+"@defvr {Option variable} simpsum\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{simpsum} is @code{true}, the result of a @code{sum} is simplified.\n"
+"This simplification may sometimes be able to produce a closed form.  If\n"
+"@code{simpsum} is @code{false} or if the quoted form @code{'sum} is used, the\n"
+"value is a sum noun form which is a representation of the sigma notation used\n"
+"in mathematics.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products} @category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sum}\n"
+"@deffn {Function} sum (@var{expr}, @var{i}, @var{i_0}, @var{i_1})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Represents a summation of the values of @var{expr} as\n"
+"the index @var{i} varies from @var{i_0} to @var{i_1}.\n"
+"The noun form @code{'sum} is displayed as an uppercase letter sigma.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{sum} evaluates its summand @var{expr} and lower and upper limits @var{i_0}\n"
+"and @var{i_1}, @code{sum} quotes (does not evaluate) the index @var{i}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"If the upper and lower limits differ by an integer, the summand @var{expr} is\n"
+"evaluated for each value of the summation index @var{i}, and the result is an\n"
+"explicit sum.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Otherwise, the range of the index is indefinite.\n"
+"Some rules are applied to simplify the summation.\n"
+"When the global variable @code{simpsum} is @code{true}, additional rules are\n"
+"applied.  In some cases, simplification yields a result which is not a\n"
+"summation; otherwise, the result is a noun form @code{'sum}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When the @code{evflag} (evaluation flag) @code{cauchysum} is @code{true},\n"
+"a product of summations is expressed as a Cauchy product,\n"
+"in which the index of the inner summation is a function of the\n"
+"index of the outer one, rather than varying independently.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"The global variable @code{genindex} is the alphabetic prefix used to generate\n"
+"the next index of summation, when an automatically generated index is needed.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{gensumnum} is the numeric suffix used to generate the next index of\n"
+"summation, when an automatically generated index is needed.\n"
+"When @code{gensumnum} is @code{false}, an automatically-generated index is only\n"
+"@code{genindex} with no numeric suffix.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"See also @mrefcomma{lsum} @mrefcomma{sumcontract} @mrefcomma{intosum}\n"
+"@mrefcomma{bashindices} @mrefcomma{niceindices}\n"
+"@mrefcomma{nouns} @mrefcomma{evflag} and @ref{zeilberger-pkg}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c ===beg===\n"
+"@c sum (i^2, i, 1, 7);\n"
+"@c sum (a[i], i, 1, 7);\n"
+"@c sum (a(i), i, 1, 7);\n"
+"@c sum (a(i), i, 1, n);\n"
+"@c sum (2^i + i^2, i, 0, n);\n"
+"@c sum (2^i + i^2, i, 0, n), simpsum;\n"
+"@c sum (1/3^i, i, 1, inf);\n"
+"@c sum (1/3^i, i, 1, inf), simpsum;\n"
+"@c sum (i^2, i, 1, 4) * sum (1/i^2, i, 1, inf);\n"
+"@c sum (i^2, i, 1, 4) * sum (1/i^2, i, 1, inf), simpsum;\n"
+"@c sum (integrate (x^k, x, 0, 1), k, 1, n);\n"
+"@c sum (if k <= 5 then a^k else b^k, k, 1, 10);\n"
+"@c ===end===\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) sum (i^2, i, 1, 7);\n"
+"(%o1)                          140\n"
+"(%i2) sum (a[i], i, 1, 7);\n"
+"(%o2)           a  + a  + a  + a  + a  + a  + a\n"
+"                 7    6    5    4    3    2    1\n"
+"(%i3) sum (a(i), i, 1, 7);\n"
+"(%o3)    a(7) + a(6) + a(5) + a(4) + a(3) + a(2) + a(1)\n"
+"(%i4) sum (a(i), i, 1, n);\n"
+"                            n\n"
+"                           ====\n"
+"                           \\n"
+"(%o4)                       >    a(i)\n"
+"                           /\n"
+"                           ====\n"
+"                           i = 1\n"
+"(%i5) sum (2^i + i^2, i, 0, n);\n"
+"                          n\n"
+"                         ====\n"
+"                         \       i    2\n"
+"(%o5)                     >    (2  + i )\n"
+"                         /\n"
+"                         ====\n"
+"                         i = 0\n"
+"(%i6) sum (2^i + i^2, i, 0, n), simpsum;\n"
+"                              3      2\n"
+"                   n + 1   2 n  + 3 n  + n\n"
+"(%o6)             2      + --------------- - 1\n"
+"                                  6\n"
+"(%i7) sum (1/3^i, i, 1, inf);\n"
+"                            inf\n"
+"                            ====\n"
+"                            \     1\n"
+"(%o7)                        >    --\n"
+"                            /      i\n"
+"                            ====  3\n"
+"                            i = 1\n"
+"(%i8) sum (1/3^i, i, 1, inf), simpsum;\n"
+"                                1\n"
+"(%o8)                           -\n"
+"                                2\n"
+"(%i9) sum (i^2, i, 1, 4) * sum (1/i^2, i, 1, inf);\n"
+"                              inf\n"
+"                              ====\n"
+"                              \     1\n"
+"(%o9)                      30  >    --\n"
+"                              /      2\n"
+"                              ====  i\n"
+"                              i = 1\n"
+"(%i10) sum (i^2, i, 1, 4) * sum (1/i^2, i, 1, inf), simpsum;\n"
+"                                  2\n"
+"(%o10)                       5 %pi\n"
+"(%i11) sum (integrate (x^k, x, 0, 1), k, 1, n);\n"
+"                            n\n"
+"                           ====\n"
+"                           \       1\n"
+"(%o11)                      >    -----\n"
+"                           /     k + 1\n"
+"                           ====\n"
+"                           k = 1\n"
+"(%i12) sum (if k <= 5 then a^k else b^k, k, 1, 10);\n"
+"          10    9    8    7    6    5    4    3    2\n"
+"(%o12)   b   + b  + b  + b  + b  + a  + a  + a  + a  + a\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sumcontract}\n"
+"@deffn {Function} sumcontract (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Combines all sums of an addition that have\n"
+"upper and lower bounds that differ by constants.  The result is an\n"
+"expression containing one summation for each set of such summations\n"
+"added to all appropriate extra terms that had to be extracted to form\n"
+"this sum.  @code{sumcontract} combines all compatible sums and uses one of\n"
+"the indices from one of the sums if it can, and then try to form a\n"
+"reasonable index if it cannot use any supplied.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c WHEN IS intosum NECESSARY BEFORE sumcontract ??\n"
+"It may be necessary to do an @code{intosum (@var{expr})} before the\n"
+"@code{sumcontract}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sumexpand}\n"
+"@defvr {Option variable} sumexpand\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{sumexpand} is @code{true}, products of sums and\n"
+"exponentiated sums simplify to nested sums.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"See also @mrefdot{cauchysum}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) sumexpand: true$\n"
+"(%i2) sum (f (i), i, 0, m) * sum (g (j), j, 0, n);\n"
+"@group\n"
+"                     m      n\n"
+"                    ====   ====\n"
+"                    \      \\n"
+"(%o2)                >      >     f(i1) g(i2)\n"
+"                    /      /\n"
+"                    ====   ====\n"
+"                    i1 = 0 i2 = 0\n"
+"@end group\n"
+"(%i3) sum (f (i), i, 0, m)^2;\n"
+"                     m      m\n"
+"                    ====   ====\n"
+"                    \      \\n"
+"(%o3)                >      >     f(i3) f(i4)\n"
+"                    /      /\n"
+"                    ====   ====\n"
+"                    i3 = 0 i4 = 0\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products} @category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to Series, Functions and Variables for Series, Functions and Variables for Sums and Products, Sums Products and Series\n"
+"@section Introduction to Series\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Maxima contains functions @code{taylor} and @code{powerseries} for finding the \n"
+"series of differentiable functions.  It also has tools such as @code{nusum}\n"
+"capable of finding the closed form of some series.  Operations such as addition\n"
+"and multiplication work as usual on series.  This section presents the global\n"
+"variables which control the expansion.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c end concepts Series\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Series, Introduction to Fourier series, Introduction to Series, Sums Products and Series\n"
+"@section Functions and Variables for Series\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cauchysum}\n"
+"@defvr {Option variable} cauchysum\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c REPHRASE\n"
+"When multiplying together sums with @code{inf} as their upper limit,\n"
+"if @code{sumexpand} is @code{true} and @code{cauchysum} is @code{true}\n"
+"then the Cauchy product will be used rather than the usual\n"
+"product.\n"
+"In the Cauchy product the index of the inner summation is a\n"
+"function of the index of the outer one rather than varying\n"
+"independently.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c ===beg===\n"
+"@c sumexpand: false$\n"
+"@c cauchysum: false$\n"
+"@c s: sum (f(i), i, 0, inf) * sum (g(j), j, 0, inf);\n"
+"@c sumexpand: true$\n"
+"@c cauchysum: true$\n"
+"@c expand(s,0,0);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) sumexpand: false$\n"
+"(%i2) cauchysum: false$\n"
+"@group\n"
+"(%i3) s: sum (f(i), i, 0, inf) * sum (g(j), j, 0, inf);\n"
+"                      inf         inf\n"
+"                      ====        ====\n"
+"                      \           \\n"
+"(%o3)                ( >    f(i))  >    g(j)\n"
+"                      /           /\n"
+"                      ====        ====\n"
+"                      i = 0       j = 0\n"
+"@end group\n"
+"(%i4) sumexpand: true$\n"
+"(%i5) cauchysum: true$\n"
+"@group\n"
+"(%i6) expand(s,0,0);\n"
+"                 inf     i1\n"
+"                 ====   ====\n"
+"                 \      \\n"
+"(%o6)             >      >     g(i1 - i2) f(i2)\n"
+"                 /      /\n"
+"                 ====   ====\n"
+"                 i1 = 0 i2 = 0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{deftaylor}\n"
+"@deffn {Function} deftaylor (@var{f_1}(@var{x_1}), @var{expr_1}, @dots{}, @var{f_n}(@var{x_n}), @var{expr_n})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"For each function @var{f_i} of one variable @var{x_i}, \n"
+"@code{deftaylor} defines @var{expr_i} as the Taylor series about zero.\n"
+"@var{expr_i} is typically a polynomial in @var{x_i} or a summation;\n"
+"more general expressions are accepted by @code{deftaylor} without complaint.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{powerseries (@var{f_i}(@var{x_i}), @var{x_i}, 0)}\n"
+"returns the series defined by @code{deftaylor}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{deftaylor} returns a list of the functions @var{f_1}, @dots{}, @var{f_n}.\n"
+"@code{deftaylor} evaluates its arguments.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) deftaylor (f(x), x^2 + sum(x^i/(2^i*i!^2), i, 4, inf));\n"
+"(%o1)                          [f]\n"
+"(%i2) powerseries (f(x), x, 0);\n"
+"                      inf\n"
+"                      ====      i1\n"
+"                      \        x         2\n"
+"(%o2)                  >     -------- + x\n"
+"                      /       i1    2\n"
+"                      ====   2   i1!\n"
+"                      i1 = 4\n"
+"(%i3) taylor (exp (sqrt (f(x))), x, 0, 4);\n"
+"                      2         3          4\n"
+"                     x    3073 x    12817 x\n"
+"(%o3)/T/     1 + x + -- + ------- + -------- + . . .\n"
+"                     2     18432     307200\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{maxtayorder}\n"
+"@defvr {Option variable} maxtayorder\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c REPHRASE\n"
+"When @code{maxtayorder} is @code{true}, then during algebraic\n"
+"manipulation of (truncated) Taylor series, @code{taylor} tries to retain\n"
+"as many terms as are known to be correct.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{niceindices}\n"
+"@deffn {Function} niceindices (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Renames the indices of sums and products in @var{expr}.  @code{niceindices}\n"
+"attempts to rename each index to the value of @code{niceindicespref[1]}, unless\n"
+"that name appears in the summand or multiplicand, in which case\n"
+"@code{niceindices} tries the succeeding elements of @code{niceindicespref} in\n"
+"turn, until an unused variable is found.  If the entire list is exhausted,\n"
+"additional indices are constructed by appending integers to the value of\n"
+"@code{niceindicespref[1]}, e.g., @code{i0}, @code{i1}, @code{i2}, @dots{}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{niceindices} returns an expression.\n"
+"@code{niceindices} evaluates its argument.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) niceindicespref;\n"
+"(%o1)                  [i, j, k, l, m, n]\n"
+"(%i2) product (sum (f (foo + i*j*bar), foo, 1, inf), bar, 1, inf);\n"
+"                 inf    inf\n"
+"                /===\   ====\n"
+"                 ! !    \\n"
+"(%o2)            ! !     >      f(bar i j + foo)\n"
+"                 ! !    /\n"
+"                bar = 1 ====\n"
+"                        foo = 1\n"
+"(%i3) niceindices (%);\n"
+"@group\n"
+"                     inf  inf\n"
+"                    /===\ ====\n"
+"                     ! !  \\n"
+"(%o3)                ! !   >    f(i j l + k)\n"
+"                     ! !  /\n"
+"                    l = 1 ====\n"
+"                          k = 1\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{niceindicespref}\n"
+"@defvr {Option variable} niceindicespref\n"
+"Default value: @code{[i, j, k, l, m, n]}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{niceindicespref} is the list from which @code{niceindices}\n"
+"takes the names of indices for sums and products.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"The elements of @code{niceindicespref} are typically names of variables,\n"
+"although that is not enforced by @code{niceindices}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) niceindicespref: [p, q, r, s, t, u]$\n"
+"(%i2) product (sum (f (foo + i*j*bar), foo, 1, inf), bar, 1, inf);\n"
+"                 inf    inf\n"
+"                /===\   ====\n"
+"                 ! !    \\n"
+"(%o2)            ! !     >      f(bar i j + foo)\n"
+"                 ! !    /\n"
+"                bar = 1 ====\n"
+"                        foo = 1\n"
+"(%i3) niceindices (%);\n"
+"                     inf  inf\n"
+"                    /===\ ====\n"
+"                     ! !  \\n"
+"(%o3)                ! !   >    f(i j q + p)\n"
+"                     ! !  /\n"
+"                    q = 1 ====\n"
+"                          p = 1\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{nusum}\n"
+"@deffn {Function} nusum (@var{expr}, @var{x}, @var{i_0}, @var{i_1})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Carries out indefinite hypergeometric summation of @var{expr} with\n"
+"respect to @var{x} using a decision procedure due to R.W. Gosper.\n"
+"@var{expr} and the result must be expressible as products of integer powers,\n"
+"factorials, binomials, and rational functions.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c UMM, DO WE REALLY NEED TO DEFINE \"DEFINITE\" AND \"INDEFINITE\" SUMMATION HERE ??\n"
+"@c (CAN'T WE MAKE THE POINT WITHOUT DRAGGING IN SOME NONSTANDARD TERMINOLOGY ??)\n"
+"The terms \"definite\"\n"
+"and \"indefinite summation\" are used analogously to \"definite\" and\n"
+"\"indefinite integration\".\n"
+"To sum indefinitely means to give a symbolic result\n"
+"for the sum over intervals of variable length, not just e.g. 0 to\n"
+"inf.  Thus, since there is no formula for the general partial sum of\n"
+"the binomial series, @code{nusum} can't do it.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{nusum} and @code{unsum} know a little about sums and differences of\n"
+"finite products.  See also @mrefdot{unsum}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) nusum (n*n!, n, 0, n);\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Dependent equations eliminated:  (1)\n"
+"(%o1)                     (n + 1)! - 1\n"
+"(%i2) nusum (n^4*4^n/binomial(2*n,n), n, 0, n);\n"
+"                     4        3       2              n\n"
+"      2 (n + 1) (63 n  + 112 n  + 18 n  - 22 n + 3) 4      2\n"
+"(%o2) ------------------------------------------------ - ------\n"
+"                    693 binomial(2 n, n)                 3 11 7\n"
+"(%i3) unsum (%, n);\n"
+"                              4  n\n"
+"                             n  4\n"
+"(%o3)                   ----------------\n"
+"                        binomial(2 n, n)\n"
+"(%i4) unsum (prod (i^2, i, 1, n), n);\n"
+"                    n - 1\n"
+"                    /===\\n"
+"                     ! !   2\n"
+"(%o4)              ( ! !  i ) (n - 1) (n + 1)\n"
+"                     ! !\n"
+"                    i = 1\n"
+"(%i5) nusum (%, n, 1, n);\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Dependent equations eliminated:  (2 3)\n"
+"                            n\n"
+"                          /===\\n"
+"                           ! !   2\n"
+"(%o5)                      ! !  i  - 1\n"
+"                           ! !\n"
+"                          i = 1\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c THIS ITEM NEEDS SERIOUS WORK\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{pade}\n"
+"@deffn {Function} pade (@var{taylor_series}, @var{numer_deg_bound}, @var{denom_deg_bound})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns a list of\n"
+"all rational functions which have the given Taylor series expansion\n"
+"where the sum of the degrees of the numerator and the denominator is\n"
+"less than or equal to the truncation level of the power series, i.e.\n"
+"are \"best\" approximants, and which additionally satisfy the specified\n"
+"degree bounds.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@var{taylor_series} is a univariate Taylor series.\n"
+"@var{numer_deg_bound} and @var{denom_deg_bound}\n"
+"are positive integers specifying degree bounds on\n"
+"the numerator and denominator.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@var{taylor_series} can also be a Laurent series, and the degree\n"
+"bounds can be @code{inf} which causes all rational functions whose total\n"
+"degree is less than or equal to the length of the power series to be\n"
+"returned.  Total degree is defined as @code{@var{numer_deg_bound} +\n"
+"@var{denom_deg_bound}}.\n"
+"Length of a power series is defined as\n"
+"@code{\"truncation level\" + 1 - min(0, \"order of series\")}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) taylor (1 + x + x^2 + x^3, x, 0, 3);\n"
+"                              2    3\n"
+"(%o1)/T/             1 + x + x  + x  + . . .\n"
+"(%i2) pade (%, 1, 1);\n"
+"                                 1\n"
+"(%o2)                       [- -----]\n"
+"                               x - 1\n"
+"(%i3) t: taylor(-(83787*x^10 - 45552*x^9 - 187296*x^8\n"
+"                   + 387072*x^7 + 86016*x^6 - 1507328*x^5\n"
+"                   + 1966080*x^4 + 4194304*x^3 - 25165824*x^2\n"
+"                   + 67108864*x - 134217728)\n"
+"       /134217728, x, 0, 10);\n"
+"                    2    3       4       5       6        7\n"
+"             x   3 x    x    15 x    23 x    21 x    189 x\n"
+"(%o3)/T/ 1 - - + ---- - -- - ----- + ----- - ----- - ------\n"
+"             2    16    32   1024    2048    32768   65536\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                                  8         9          10\n"
+"                            5853 x    2847 x    83787 x\n"
+"                          + ------- + ------- - --------- + . . .\n"
+"                            4194304   8388608   134217728\n"
+"(%i4) pade (t, 4, 4);\n"
+"(%o4)                          []\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"There is no rational function of degree 4 numerator/denominator, with this\n"
+"power series expansion.  You must in general have degree of the numerator and\n"
+"degree of the denominator adding up to at least the degree of the power series,\n"
+"in order to have enough unknown coefficients to solve.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i5) pade (t, 5, 5);\n"
+"                     5                4                 3\n"
+"(%o5) [- (520256329 x  - 96719020632 x  - 489651410240 x\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                  2\n"
+" - 1619100813312 x  - 2176885157888 x - 2386516803584)\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"               5                 4                  3\n"
+"/(47041365435 x  + 381702613848 x  + 1360678489152 x\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                  2\n"
+" + 2856700692480 x  + 3370143559680 x + 2386516803584)]\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{powerseries}\n"
+"@deffn {Function} powerseries (@var{expr}, @var{x}, @var{a})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns the general form of the power series expansion for @var{expr} in the \n"
+"variable @var{x} about the point @var{a} (which may be @code{inf} for infinity):\n"
+"@example\n"
+"@group\n"
+"           inf\n"
+"           ====\n"
+"           \               n\n"
+"            >    b  (x - a)\n"
+"           /      n\n"
+"           ====\n"
+"           n = 0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"If @code{powerseries} is unable to expand @var{expr},\n"
+"@code{taylor} may give the first several terms of the series.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{verbose} is @code{true},\n"
+"@code{powerseries} prints progress messages.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) verbose: true$\n"
+"(%i2) powerseries (log(sin(x)/x), x, 0);\n"
+"can't expand \n"
+"                                 log(sin(x))\n"
+"so we'll try again after applying the rule:\n"
+"                                        d\n"
+"                                      / -- (sin(x))\n"
+"                                      [ dx\n"
+"                        log(sin(x)) = i ----------- dx\n"
+"                                      ]   sin(x)\n"
+"                                      /\n"
+"in the first simplification we have returned:\n"
+"                             /\n"
+"                             [\n"
+"                             i cot(x) dx - log(x)\n"
+"                             ]\n"
+"                             /\n"
+"                    inf\n"
+"                    ====        i1  2 i1             2 i1\n"
+"                    \      (- 1)   2     bern(2 i1) x\n"
+"                     >     ------------------------------\n"
+"                    /                i1 (2 i1)!\n"
+"                    ====\n"
+"                    i1 = 1\n"
+"(%o2)                -------------------------------------\n"
+"                                      2\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{psexpand}\n"
+"@defvr {Option variable} psexpand\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{psexpand} is @code{true},\n"
+"an extended rational function expression is displayed fully expanded.\n"
+"The switch @code{ratexpand} has the same effect.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c WE NEED TO BE EXPLICIT HERE\n"
+"When @code{psexpand} is @code{false},\n"
+"a multivariate expression is displayed just as in the rational function package.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c TERMS OF WHAT ??\n"
+"When @code{psexpand} is  @code{multi},\n"
+"then terms with the same total degree in the variables are grouped together.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{revert}\n"
+"@deffn  {Function} revert (@var{expr}, @var{x})\n"
+"@deffnx {Function} revert2 (@var{expr}, @var{x}, @var{n})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"These functions return the reversion of @var{expr}, a Taylor series about zero\n"
+"in the variable @var{x}.  @code{revert} returns a polynomial of degree equal to\n"
+"the highest power in @var{expr}.  @code{revert2} returns a polynomial of degree\n"
+"@var{n}, which may be greater than, equal to, or less than the degree of\n"
+"@var{expr}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{load (\"revert\")} loads these functions.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) load (\"revert\")$\n"
+"(%i2) t: taylor (exp(x) - 1, x, 0, 6);\n"
+"                   2    3    4    5     6\n"
+"                  x    x    x    x     x\n"
+"(%o2)/T/      x + -- + -- + -- + --- + --- + . . .\n"
+"                  2    6    24   120   720\n"
+"(%i3) revert (t, x);\n"
+"               6       5       4       3       2\n"
+"           10 x  - 12 x  + 15 x  - 20 x  + 30 x  - 60 x\n"
+"(%o3)/R/ - --------------------------------------------\n"
+"                                60\n"
+"(%i4) ratexpand (%);\n"
+"                     6    5    4    3    2\n"
+"                    x    x    x    x    x\n"
+"(%o4)             - -- + -- - -- + -- - -- + x\n"
+"                    6    5    4    3    2\n"
+"(%i5) taylor (log(x+1), x, 0, 6);\n"
+"                    2    3    4    5    6\n"
+"                   x    x    x    x    x\n"
+"(%o5)/T/       x - -- + -- - -- + -- - -- + . . .\n"
+"                   2    3    4    5    6\n"
+"(%i6) ratsimp (revert (t, x) - taylor (log(x+1), x, 0, 6));\n"
+"(%o6)                           0\n"
+"(%i7) revert2 (t, x, 4);\n"
+"                          4    3    2\n"
+"                         x    x    x\n"
+"(%o7)                  - -- + -- - -- + x\n"
+"                         4    3    2\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taylor}\n"
+"@deffn  {Function} taylor @\n"
+"@fname{taylor} (@var{expr}, @var{x}, @var{a}, @var{n}) @\n"
+"@fname{taylor} (@var{expr}, [@var{x_1}, @var{x_2}, @dots{}], @var{a}, @var{n}) @\n"
+"@fname{taylor} (@var{expr}, [@var{x}, @var{a}, @var{n}, 'asymp]) @\n"
+"@fname{taylor} (@var{expr}, [@var{x_1}, @var{x_2}, @dots{}], [@var{a_1}, @var{a_2}, @dots{}], [@var{n_1}, @var{n_2}, @dots{}]) @\n"
+"@fname{taylor} (@var{expr}, [@var{x_1}, @var{a_1}, @var{n_1}], [@var{x_2}, @var{a_2}, @var{n_2}], @dots{})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{taylor (@var{expr}, @var{x}, @var{a}, @var{n})} expands the expression\n"
+"@var{expr} in a truncated Taylor or Laurent series in the variable @var{x}\n"
+"around the point @var{a},\n"
+"containing terms through @code{(@var{x} - @var{a})^@var{n}}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"If @var{expr} is of the form @code{@var{f}(@var{x})/@var{g}(@var{x})} and\n"
+"@code{@var{g}(@var{x})} has no terms up to degree @var{n} then @code{taylor}\n"
+"attempts to expand @code{@var{g}(@var{x})} up to degree @code{2 @var{n}}.\n"
+"If there are still no nonzero terms, @code{taylor} doubles the degree of the\n"
+"expansion of @code{@var{g}(@var{x})} so long as the degree of the expansion is\n"
+"less than or equal to @code{@var{n} 2^taylordepth}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{taylor (@var{expr}, [@var{x_1}, @var{x_2}, ...], @var{a}, @var{n})}\n"
+"returns a truncated power series \n"
+"of degree @var{n} in all variables @var{x_1}, @var{x_2}, @dots{}\n"
+"about the point @code{(@var{a}, @var{a}, ...)}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{taylor (@var{expr}, [@var{x_1}, @var{a_1}, @var{n_1}], [@var{x_2},\n"
+"@var{a_2}, @var{n_2}], ...)} returns a truncated power series in the variables\n"
+"@var{x_1}, @var{x_2}, @dots{} about the point\n"
+"@code{(@var{a_1}, @var{a_2}, ...)}, truncated at @var{n_1}, @var{n_2}, @dots{}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{taylor (@var{expr}, [@var{x_1}, @var{x_2}, ...], [@var{a_1},\n"
+"@var{a_2}, ...], [@var{n_1}, @var{n_2}, ...])} returns a truncated power series\n"
+"in the variables @var{x_1}, @var{x_2}, @dots{} about the point\n"
+"@code{(@var{a_1}, @var{a_2}, ...)}, truncated at @var{n_1}, @var{n_2}, @dots{}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{taylor (@var{expr}, [@var{x}, @var{a}, @var{n}, 'asymp])} returns an\n"
+"expansion of @var{expr} in negative powers of @code{@var{x} - @var{a}}.\n"
+"The highest order term is @code{(@var{x} - @var{a})^@var{-n}}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{maxtayorder} is @code{true}, then during algebraic\n"
+"manipulation of (truncated) Taylor series, @code{taylor} tries to retain\n"
+"as many terms as are known to be correct.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{psexpand} is @code{true},\n"
+"an extended rational function expression is displayed fully expanded.\n"
+"The switch @code{ratexpand} has the same effect.\n"
+"When @code{psexpand} is @code{false},\n"
+"a multivariate expression is displayed just as in the rational function package.\n"
+"When @code{psexpand} is  @code{multi},\n"
+"then terms with the same total degree in the variables are grouped together.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"See also the @mref{taylor_logexpand} switch for controlling expansion.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c EXAMPLES ADAPTED FROM example (taylor)\n"
+"@c taylor (sqrt (sin(x) + a*x + 1), x, 0, 3);\n"
+"@c %^2;\n"
+"@c taylor (sqrt (x + 1), x, 0, 5);\n"
+"@c %^2;\n"
+"@c product ((1 + x^i)^2.5, i, 1, inf)/(1 + x^2);\n"
+"@c ev (taylor(%, x,  0, 3), keepfloat);\n"
+"@c taylor (1/log (x + 1), x, 0, 3);\n"
+"@c taylor (cos(x) - sec(x), x, 0, 5);\n"
+"@c taylor ((cos(x) - sec(x))^3, x, 0, 5);\n"
+"@c taylor (1/(cos(x) - sec(x))^3, x, 0, 5);\n"
+"@c taylor (sqrt (1 - k^2*sin(x)^2), x, 0, 6);\n"
+"@c taylor ((x + 1)^n, x, 0, 4);\n"
+"@c taylor (sin (y + x), x, 0, 3, y, 0, 3);\n"
+"@c taylor (sin (y + x), [x, y], 0, 3);\n"
+"@c taylor (1/sin (y + x), x, 0, 3, y, 0, 3);\n"
+"@c taylor (1/sin (y + x), [x, y], 0, 3);\n"
+"@example\n"
+"(%i1) taylor (sqrt (sin(x) + a*x + 1), x, 0, 3);\n"
+"                           2             2\n"
+"             (a + 1) x   (a  + 2 a + 1) x\n"
+"(%o1)/T/ 1 + --------- - -----------------\n"
+"                 2               8\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                                   3      2             3\n"
+"                               (3 a  + 9 a  + 9 a - 1) x\n"
+"                             + -------------------------- + . . .\n"
+"                                           48\n"
+"(%i2) %^2;\n"
+"                                    3\n"
+"                                   x\n"
+"(%o2)/T/           1 + (a + 1) x - -- + . . .\n"
+"                                   6\n"
+"(%i3) taylor (sqrt (x + 1), x, 0, 5);\n"
+"                       2    3      4      5\n"
+"                  x   x    x    5 x    7 x\n"
+"(%o3)/T/      1 + - - -- + -- - ---- + ---- + . . .\n"
+"                  2   8    16   128    256\n"
+"(%i4) %^2;\n"
+"(%o4)/T/                  1 + x + . . .\n"
+"(%i5) product ((1 + x^i)^2.5, i, 1, inf)/(1 + x^2);\n"
+"@group\n"
+"                         inf\n"
+"                        /===\\n"
+"                         ! !    i     2.5\n"
+"                         ! !  (x  + 1)\n"
+"                         ! !\n"
+"                        i = 1\n"
+"(%o5)                   -----------------\n"
+"                              2\n"
+"                             x  + 1\n"
+"@end group\n"
+"(%i6) ev (taylor(%, x,  0, 3), keepfloat);\n"
+"                               2           3\n"
+"(%o6)/T/    1 + 2.5 x + 3.375 x  + 6.5625 x  + . . .\n"
+"(%i7) taylor (1/log (x + 1), x, 0, 3);\n"
+"                               2       3\n"
+"                 1   1   x    x    19 x\n"
+"(%o7)/T/         - + - - -- + -- - ----- + . . .\n"
+"                 x   2   12   24    720\n"
+"(%i8) taylor (cos(x) - sec(x), x, 0, 5);\n"
+"                                4\n"
+"                           2   x\n"
+"(%o8)/T/                - x  - -- + . . .\n"
+"                               6\n"
+"(%i9) taylor ((cos(x) - sec(x))^3, x, 0, 5);\n"
+"(%o9)/T/                    0 + . . .\n"
+"(%i10) taylor (1/(cos(x) - sec(x))^3, x, 0, 5);\n"
+"                                               2          4\n"
+"            1     1       11      347    6767 x    15377 x\n"
+"(%o10)/T/ - -- + ---- + ------ - ----- - ------- - --------\n"
+"             6      4        2   15120   604800    7983360\n"
+"            x    2 x    120 x\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                                                          + . . .\n"
+"(%i11) taylor (sqrt (1 - k^2*sin(x)^2), x, 0, 6);\n"
+"               2  2       4      2   4\n"
+"              k  x    (3 k  - 4 k ) x\n"
+"(%o11)/T/ 1 - ----- - ----------------\n"
+"                2            24\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                                    6       4       2   6\n"
+"                               (45 k  - 60 k  + 16 k ) x\n"
+"                             - -------------------------- + . . .\n"
+"                                          720\n"
+"(%i12) taylor ((x + 1)^n, x, 0, 4);\n"
+"@group\n"
+"                      2       2     3      2         3\n"
+"                    (n  - n) x    (n  - 3 n  + 2 n) x\n"
+"(%o12)/T/ 1 + n x + ----------- + --------------------\n"
+"                         2                 6\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                               4      3       2         4\n"
+"                             (n  - 6 n  + 11 n  - 6 n) x\n"
+"                           + ---------------------------- + . . .\n"
+"                                          24\n"
+"@end group\n"
+"(%i13) taylor (sin (y + x), x, 0, 3, y, 0, 3);\n"
+"               3                 2\n"
+"              y                 y\n"
+"(%o13)/T/ y - -- + . . . + (1 - -- + . . .) x\n"
+"              6                 2\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                    3                       2\n"
+"               y   y            2      1   y            3\n"
+"          + (- - + -- + . . .) x  + (- - + -- + . . .) x  + . . .\n"
+"               2   12                  6   12\n"
+"(%i14) taylor (sin (y + x), [x, y], 0, 3);\n"
+"                     3        2      2      3\n"
+"                    x  + 3 y x  + 3 y  x + y\n"
+"(%o14)/T/   y + x - ------------------------- + . . .\n"
+"                                6\n"
+"(%i15) taylor (1/sin (y + x), x, 0, 3, y, 0, 3);\n"
+"          1   y              1    1               1            2\n"
+"(%o15)/T/ - + - + . . . + (- -- + - + . . .) x + (-- + . . .) x\n"
+"          y   6               2   6                3\n"
+"                             y                    y\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"                                           1            3\n"
+"                                      + (- -- + . . .) x  + . . .\n"
+"                                            4\n"
+"                                           y\n"
+"(%i16) taylor (1/sin (y + x), [x, y], 0, 3);\n"
+"                             3         2       2        3\n"
+"            1     x + y   7 x  + 21 y x  + 21 y  x + 7 y\n"
+"(%o16)/T/ ----- + ----- + ------------------------------- + . . .\n"
+"          x + y     6                   360\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taylordepth}\n"
+"@defvr {Option variable} taylordepth\n"
+"Default value: 3\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c UM, THE CONTEXT FOR THIS REMARK NEEDS TO BE ESTABLISHED\n"
+"If there are still no nonzero terms, @code{taylor} doubles the degree of the\n"
+"expansion of @code{@var{g}(@var{x})} so long as the degree of the expansion is\n"
+"less than or equal to @code{@var{n} 2^taylordepth}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taylorinfo}\n"
+"@deffn {Function} taylorinfo (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns information about the Taylor series @var{expr}.\n"
+"The return value is a list of lists.\n"
+"Each list comprises the name of a variable,\n"
+"the point of expansion, and the degree of the expansion.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{taylorinfo} returns @code{false} if @var{expr} is not a Taylor series.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) taylor ((1 - y^2)/(1 - x), x, 0, 3, [y, a, inf]);\n"
+"                  2                       2\n"
+"(%o1)/T/ - (y - a)  - 2 a (y - a) + (1 - a )\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"         2                        2\n"
+" + (1 - a  - 2 a (y - a) - (y - a) ) x\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"         2                        2   2\n"
+" + (1 - a  - 2 a (y - a) - (y - a) ) x\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"         2                        2   3\n"
+" + (1 - a  - 2 a (y - a) - (y - a) ) x  + . . .\n"
+"(%i2) taylorinfo(%);\n"
+"(%o2)               [[y, a, inf], [x, 0, 3]]\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taylorp}\n"
+"@deffn {Function} taylorp (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns @code{true} if @var{expr} is a Taylor series,\n"
+"and @code{false} otherwise.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c WHAT IS THIS ABOUT EXACTLY ??\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taylor_logexpand}\n"
+"@defvr {Option variable} taylor_logexpand\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{taylor_logexpand} controls expansions of logarithms in\n"
+"@code{taylor} series.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{taylor_logexpand} is @code{true}, all logarithms are expanded fully\n"
+"so that zero-recognition problems involving logarithmic identities do not\n"
+"disturb the expansion process.  However, this scheme is not always\n"
+"mathematically correct since it ignores branch information.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{taylor_logexpand} is set to @code{false}, then the only expansion of\n"
+"logarithms that occur is that necessary to obtain a formal power series.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEED EXAMPLES HERE\n"
+"@opencatbox\n"
+"@category{Power series} @category{Exponential and logarithm functions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taylor_order_coefficients}\n"
+"@defvr {Option variable} taylor_order_coefficients\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{taylor_order_coefficients} controls the ordering of\n"
+"coefficients in a Taylor series.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{taylor_order_coefficients} is @code{true},\n"
+"coefficients of taylor series are ordered canonically.\n"
+"@c IS MAXIMA'S NOTION OF \"CANONICALLY\" DESCRIBED ELSEWHERE ??\n"
+"@c AND WHAT HAPPENS WHEN IT IS FALSE ??\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEED EXAMPLES HERE\n"
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taylor_simplifier}\n"
+"@deffn {Function} taylor_simplifier (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Simplifies coefficients of the power series @var{expr}.\n"
+"@code{taylor} calls this function.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taylor_truncate_polynomials}\n"
+"@defvr {Option variable} taylor_truncate_polynomials\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c WHAT IS THE \"INPUT TRUNCATION LEVEL\" ?? THE ARGUMENT n OF taylor ??\n"
+"When @code{taylor_truncate_polynomials} is @code{true},\n"
+"polynomials are truncated based upon the input truncation levels.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Otherwise,\n"
+"polynomials input to @code{taylor} are considered to have infinite precison.\n"
+"@c WHAT IS \"INFINITE PRECISION\" IN THIS CONTEXT ??\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{taytorat}\n"
+"@deffn {Function} taytorat (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Converts @var{expr} from @code{taylor} form to canonical rational expression\n"
+"(CRE) form.  The effect is the same as @code{rat (ratdisrep (@var{expr}))}, but\n"
+"faster.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series} @category{Rational expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{trunc}\n"
+"@deffn {Function} trunc (@var{expr})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Annotates the internal representation of the general expression @var{expr}\n"
+"so that it is displayed as if its sums were truncated Taylor series.\n"
+"@var{expr} is not otherwise modified.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) expr: x^2 + x + 1;\n"
+"                            2\n"
+"(%o1)                      x  + x + 1\n"
+"(%i2) trunc (expr);\n"
+"                                2\n"
+"(%o2)                  1 + x + x  + . . .\n"
+"(%i3) is (expr = trunc (expr));\n"
+"(%o3)                         true\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{unsum}\n"
+"@deffn {Function} unsum (@var{f}, @var{n})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns the first backward difference\n"
+"@code{@var{f}(@var{n}) - @var{f}(@var{n} - 1)}.\n"
+"Thus @code{unsum} in a sense is the inverse of @code{sum}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"See also @mrefdot{nusum}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Examples:\n"
+"@c GENERATED FROM THE FOLLOWING INPUTS\n"
+"@c g(p) := p*4^n/binomial(2*n,n);\n"
+"@c g(n^4);\n"
+"@c nusum (%, n, 0, n);\n"
+"@c unsum (%, n);\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@example\n"
+"(%i1) g(p) := p*4^n/binomial(2*n,n);\n"
+"                                     n\n"
+"                                  p 4\n"
+"(%o1)               g(p) := ----------------\n"
+"                            binomial(2 n, n)\n"
+"(%i2) g(n^4);\n"
+"                              4  n\n"
+"                             n  4\n"
+"(%o2)                   ----------------\n"
+"                        binomial(2 n, n)\n"
+"(%i3) nusum (%, n, 0, n);\n"
+"                     4        3       2              n\n"
+"      2 (n + 1) (63 n  + 112 n  + 18 n  - 22 n + 3) 4      2\n"
+"(%o3) ------------------------------------------------ - ------\n"
+"                    693 binomial(2 n, n)                 3 11 7\n"
+"(%i4) unsum (%, n);\n"
+"                              4  n\n"
+"                             n  4\n"
+"(%o4)                   ----------------\n"
+"                        binomial(2 n, n)\n"
+"@end example\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Sums and products}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{verbose}\n"
+"@defvr {Option variable} verbose\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"When @code{verbose} is @code{true},\n"
+"@code{powerseries} prints progress messages.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Power series}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to Fourier series, Functions and Variables for Fourier series, Functions and Variables for Series, Sums Products and Series\n"
+"@section Introduction to Fourier series\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"The @code{fourie} package comprises functions for the symbolic computation\n"
+"of Fourier series.\n"
+"There are functions in the @code{fourie} package to calculate Fourier integral\n"
+"coefficients and some functions for manipulation of expressions.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Fourier transform} @category{Share packages} @category{Package fourie}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Fourier series, Functions and Variables for Poisson series, Introduction to Fourier series, Sums Products and Series\n"
+"@section Functions and Variables for Fourier series\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c REPHRASE\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{equalp}\n"
+"@deffn {Function} equalp (@var{x}, @var{y})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns @code{true} if @code{equal (@var{x}, @var{y})} otherwise @code{false}\n"
+"(doesn't give an error message like @code{equal (x, y)} would do in this case).\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{remfun}\n"
+"@deffn  {Function} remfun @\n"
+"@fname{remfun} (@var{f}, @var{expr}) @\n"
+"@fname{remfun} (@var{f}, @var{expr}, @var{x})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{remfun (@var{f}, @var{expr})} replaces all occurrences of @code{@var{f}\n"
+"(@var{arg})} by @var{arg} in @var{expr}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{remfun (@var{f}, @var{expr}, @var{x})} replaces all occurrences of\n"
+"@code{@var{f} (@var{arg})} by @var{arg} in @var{expr} only if @var{arg} contains\n"
+"the variable @var{x}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{funp}\n"
+"@deffn  {Function} funp @\n"
+"@fname{funp} (@var{f}, @var{expr}) @\n"
+"@fname{funp} (@var{f}, @var{expr}, @var{x})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{funp (@var{f}, @var{expr})}\n"
+"returns @code{true} if @var{expr} contains the function @var{f}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{funp (@var{f}, @var{expr}, @var{x})}\n"
+"returns @code{true} if @var{expr} contains the function @var{f} and the variable\n"
+"@var{x} is somewhere in the argument of one of the instances of @var{f}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{absint}\n"
+"@deffn  {Function} absint @\n"
+"@fname{absint} (@var{f}, @var{x}, @var{halfplane}) @\n"
+"@fname{absint} (@var{f}, @var{x}) @\n"
+"@fname{absint} (@var{f}, @var{x}, @var{a}, @var{b})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{absint (@var{f}, @var{x}, @var{halfplane})}\n"
+"returns the indefinite integral of @var{f} with respect to\n"
+"@var{x} in the given halfplane (@code{pos}, @code{neg}, or @code{both}).\n"
+"@var{f} may contain expressions of the form\n"
+"@code{abs (x)}, @code{abs (sin (x))}, @code{abs (a) * exp (-abs (b) * abs (x))}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{absint (@var{f}, @var{x})} is equivalent to\n"
+"@code{absint (@var{f}, @var{x}, pos)}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{absint (@var{f}, @var{x}, @var{a}, @var{b})} returns the definite integral\n"
+"of @var{f} with respect to @var{x} from @var{a} to @var{b}.\n"
+"@c SAME LIST AS ABOVE ??\n"
+"@var{f} may include absolute values.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie} @category{Integral calculus}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXPANSION\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fourier}\n"
+"@deffn {Function} fourier (@var{f}, @var{x}, @var{p})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns a list of the Fourier coefficients of @code{@var{f}(@var{x})} defined\n"
+"on the interval @code{[-p, p]}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEES EXPANSION. WHAT IS THE ARGUMENT l ??\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{foursimp}\n"
+"@deffn {Function} foursimp (@var{l})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Simplifies @code{sin (n %pi)} to 0 if @code{sinnpiflag} is @code{true} and\n"
+"@code{cos (n %pi)} to @code{(-1)^n} if @code{cosnpiflag} is @code{true}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie} @category{Trigonometric functions} @category{Simplification functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sinnpiflag}\n"
+"@defvr {Option variable} sinnpiflag\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"See @code{foursimp}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cosnpiflag}\n"
+"@defvr {Option variable} cosnpiflag\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"See @code{foursimp}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXPANSION. EXPLAIN x AND p HERE (DO NOT REFER SOMEWHERE ELSE)\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fourexpand}\n"
+"@deffn {Function} fourexpand (@var{l}, @var{x}, @var{p}, @var{limit})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Constructs and returns the Fourier series from the list of Fourier coefficients\n"
+"@var{l} up through @var{limit} terms (@var{limit} may be @code{inf}).  @var{x}\n"
+"and @var{p} have same meaning as in @code{fourier}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXPANSION\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fourcos}\n"
+"@deffn {Function} fourcos (@var{f}, @var{x}, @var{p})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns the Fourier cosine coefficients for @code{@var{f}(@var{x})} defined on\n"
+"@code{[0, @var{p}]}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXPANSION\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{foursin}\n"
+"@deffn {Function} foursin (@var{f}, @var{x}, @var{p})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns the Fourier sine coefficients for @code{@var{f}(@var{x})} defined on\n"
+"@code{[0, @var{p}]}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXPANSION\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{totalfourier}\n"
+"@deffn {Function} totalfourier (@var{f}, @var{x}, @var{p})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns @code{fourexpand (foursimp (fourier (@var{f}, @var{x}, @var{p})),\n"
+"@var{x}, @var{p}, 'inf)}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXPANSION\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fourint}\n"
+"@deffn {Function} fourint (@var{f}, @var{x})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Constructs and returns a list of the Fourier integral coefficients of\n"
+"@code{@var{f}(@var{x})} defined on @code{[minf, inf]}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXPANSION\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fourintcos}\n"
+"@deffn {Function} fourintcos (@var{f}, @var{x})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns the Fourier cosine integral coefficients for @code{@var{f}(@var{x})}\n"
+"on @code{[0, inf]}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXPANSION\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{forintsin}\n"
+"@deffn {Function} fourintsin (@var{f}, @var{x})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Returns the Fourier sine integral coefficients for @code{@var{f}(@var{x})} on\n"
+"@code{[0, inf]}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+"@opencatbox\n"
+"@category{Package fourie}\n"
+"@closecatbox\n"
+"@end deffn\n"
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Poisson series, , Functions and Variables for Fourier series, Sums Products and Series\n"
+"@section Functions and Variables for Poisson series\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEED EXAMPLES HERE\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{intopois}\n"
+"@deffn {Function} intopois (@var{a})\n"
+"Converts @var{a} into a Poisson encoding.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEED EXAMPLES HERE\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{outopois}\n"
+"@deffn {Function} outofpois (@var{a})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Converts @var{a} from Poisson encoding to general representation.  If @var{a} is\n"
+"not in Poisson form, @code{outofpois} carries out the conversion,\n"
+"i.e., the return value is @code{outofpois (intopois (@var{a}))}.\n"
+"This function is thus a canonical simplifier\n"
+"for sums of powers of sine and cosine terms of a particular type.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c NEED MORE INFO HERE\n"
+"@c NEED EXAMPLES HERE\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poisdiff}\n"
+"@deffn {Function} poisdiff (@var{a}, @var{b})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Differentiates @var{a} with respect to @var{b}. @var{b} must occur only\n"
+"in the trig arguments or only in the coefficients.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c LOOKING AT THE CODE IN src/pois3.lisp, THIS FCN SEEMS TO COMPUTE THE EXPONENT\n"
+"@c BY MULTIPLYING IN A LOOP DUNNO HOW WE WANT TO EXPLAIN THAT\n"
+"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poisexpt}\n"
+"@deffn {Function} poisexpt (@var{a}, @var{b})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Functionally identical to @code{intopois (@var{a}^@var{b})}.\n"
+"@var{b} must be a positive integer.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c WHAT IS THIS ABOUT ??\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poisint}\n"
+"@deffn {Function} poisint (@var{a}, @var{b})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Integrates in a similarly restricted sense (to @code{poisdiff}).  Non-periodic\n"
+"terms in @var{b} are dropped if @var{b} is in the trig arguments.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poislim}\n"
+"@defvr {Option variable} poislim\n"
+"Default value: 5\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{poislim} determines the domain of the coefficients in\n"
+"the arguments of the trig functions.  The initial value of 5\n"
+"corresponds to the interval [-2^(5-1)+1,2^(5-1)], or [-15,16], but it\n"
+"can be set to [-2^(n-1)+1, 2^(n-1)].\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c UMM, WHAT IS THIS ABOUT EXACTLY ?? EXAMPLES NEEDED\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poismap}\n"
+"@deffn {Function} poismap (@var{series}, @var{sinfn}, @var{cosfn})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"will map the functions @var{sinfn} on the sine terms and @var{cosfn} on the\n"
+"cosine terms of the Poisson series given.  @var{sinfn} and @var{cosfn} are\n"
+"functions of two arguments which are a coefficient and a trigonometric part of\n"
+"a term in series respectively.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poisplus}\n"
+"@deffn {Function} poisplus (@var{a}, @var{b})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Is functionally identical to @code{intopois (a + b)}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poissimp}\n"
+"@deffn {Function} poissimp (@var{a})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Converts @var{a} into a Poisson series for @var{a} in general\n"
+"representation.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c MORE INFO NEEDED HERE\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poisson}\n"
+"@defvr {Special symbol} poisson\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"The symbol @code{/P/} follows the line label of Poisson series\n"
+"expressions.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poissubst}\n"
+"@deffn {Function} poissubst (@var{a}, @var{b}, @var{c})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Substitutes @var{a} for @var{b} in @var{c}.  @var{c} is a Poisson series.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"(1) Where @var{B} is a variable @var{u}, @var{v}, @var{w}, @var{x}, @var{y},\n"
+"or @var{z}, then @var{a} must be an expression linear in those variables (e.g.,\n"
+"@code{6*u + 4*v}).\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"(2) Where @var{b} is other than those variables, then @var{a} must also be\n"
+"free of those variables, and furthermore, free of sines or cosines.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@code{poissubst (@var{a}, @var{b}, @var{c}, @var{d}, @var{n})} is a special type\n"
+"of substitution which operates on @var{a} and @var{b} as in type (1) above, but\n"
+"where @var{d} is a Poisson series, expands @code{cos(@var{d})} and\n"
+"@code{sin(@var{d})} to order @var{n} so as to provide the result of substituting\n"
+"@code{@var{a} + @var{d}} for @var{b} in @var{c}.  The idea is that @var{d} is an\n"
+"expansion in terms of a small parameter.  For example,\n"
+"@code{poissubst (u, v, cos(v), %e, 3)} yields\n"
+"@code{cos(u)*(1 - %e^2/2) - sin(u)*(%e - %e^3/6)}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poistimes}\n"
+"@deffn {Function} poistimes (@var{a}, @var{b})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Is functionally identical to @code{intopois (@var{a}*@var{b})}.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c HOW DOES THIS WORK ?? NEED MORE INFO AND EXAMPLES\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poistrim}\n"
+"@deffn {Function} poistrim ()\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"is a reserved function name which (if the user has defined\n"
+"it) gets applied during Poisson multiplication.  It is a predicate\n"
+"function of 6 arguments which are the coefficients of the @var{u}, @var{v}, ..., @var{z}\n"
+"in a term.  Terms for which @code{poistrim} is @code{true} (for the coefficients of\n"
+"that term) are eliminated during multiplication.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{printpois}\n"
+"@deffn {Function} printpois (@var{a})\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"Prints a Poisson series in a readable format.  In common\n"
+"with @code{outofpois}, it will convert @var{a} into a Poisson encoding first, if\n"
+"necessary.\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+"@opencatbox\n"
+"@category{Poisson series} @category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Series.texi
+msgid ""
+msgstr ""

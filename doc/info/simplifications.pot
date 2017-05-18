@@ -1,0 +1,1475 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# simplifications.texi
+msgid ""
+"@menu\n"
+"* Introduction to simplification::\n"
+"* Package absimp::\n"
+"* Package facexp::\n"
+"* Package functs::\n"
+"* Package ineq::\n"
+"* Package rducon::\n"
+"* Package scifac::\n"
+"* Package sqdnst::\n"
+"@end menu\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@node Introduction to simplification, Package absimp, simplification-pkg, simplification-pkg\n"
+"@section Introduction to simplification\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"The directory @code{maxima/share/simplification} contains several scripts\n"
+"which implement simplification rules and functions,\n"
+"and also some functions not related to simplification.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c Adapted from absimp.usg ----------------------\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@node Package absimp, Package facexp, Introduction to simplification, simplification-pkg\n"
+"@section Package absimp\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"The @code{absimp} package contains pattern-matching rules that\n"
+"extend the built-in simplification rules for the @code{abs} and @code{signum}\n"
+"functions.\n"
+"@code{absimp} respects relations\n"
+"established with the built-in @code{assume} function and by declarations such\n"
+"as  @code{modedeclare (m, even, n, odd)}  for even or odd integers.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{absimp} defines @code{unitramp} and @code{unitstep} functions\n"
+"in terms of @code{abs} and @code{signum}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{load (absimp)} loads this package.\n"
+"@code{demo (absimp)} shows a demonstration of this package.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (absimp)$\n"
+"@c (abs (x))^2;\n"
+"@c diff (abs (x), x);\n"
+"@c cosh (abs (x));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (absimp)$\n"
+"@group\n"
+"(%i2) (abs (x))^2;\n"
+"                                2\n"
+"(%o2)                          x\n"
+"@end group\n"
+"@group\n"
+"(%i3) diff (abs (x), x);\n"
+"                               x\n"
+"(%o3)                        ------\n"
+"                             abs(x)\n"
+"@end group\n"
+"@group\n"
+"(%i4) cosh (abs (x));\n"
+"(%o4)                        cosh(x)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c disol.usg: \"disolate\" already in doc/info/Expressions.texi\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c elim.usg: \"eliminate\" already in doc/info/Polynomials.texi\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification functions} @category{Rules and patterns} @category{Share packages} @category{Package absimp}\n"
+"@closecatbox\n"
+"@c Adapted from facexp.usg ----------------------\n"
+"@c ALL OF THE TEXT IN FACEXP.USG IS VERY VAGUE.\n"
+"@c I HAVE NO IDEA WHAT THESE FUNCTIONS DO.\n"
+"@c ALL OF THESE ITEMS NEED TO BE HEAVILY REVISED\n"
+"@c (ASSUMING THIS PACKAGE IS SOMETHING WE WANT TO INVEST TIME IN)\n"
+"@node Package facexp, Package functs, Package absimp, simplification-pkg\n"
+"@section Package facexp\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c THIS IS VERY VAGUE. JUST WHAT DOES THIS DO?\n"
+"The @code{facexp} package contains several related  functions that\n"
+"provide the user with the ability to structure expressions by controlled\n"
+"expansion.   This capability  is especially  useful when  the expression\n"
+"contains variables that have physical meaning, because it is  often true\n"
+"that the most economical form  of such an expression can be  obtained by\n"
+"fully expanding the expression with respect to those variables, and then\n"
+"factoring their coefficients.  While it is  true that this  procedure is\n"
+"not difficult to carry out using standard Maxima  functions, additional\n"
+"fine-tuning may also  be desirable, and  these finishing touches  can be\n"
+"more  difficult to  apply.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"The  function @code{facsum}  and its  related forms\n"
+"provide a convenient means for controlling the structure  of expressions\n"
+"in this way.  Another function, @code{collectterms}, can be used to add  two or\n"
+"more expressions that have already been simplified to this form, without\n"
+"resimplifying the whole expression again.  This function may be\n"
+"useful when the expressions are very large.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c CAN'T FIND ANY SUCH FILE \"DIAGEVAL\".\n"
+"@c THERE ARE COMMENTED-OUT DEFNS OF FACTENEXPAND, FACEXPTEN, AND FACTORFACEXPTEN\n"
+"@c IN FACEXP (AND NOWHERE ELSE).\n"
+"@c COMMENTING OUT THIS TEXT FOR NOW.\n"
+"@c Note:  @code{factenexpand}, @code{facexpten}, and @code{factorfacexpten}  are available  only\n"
+"@c after loading @code{diageval}. They are special functions used for  tensor\n"
+"@c manipulation.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{load (facexp)} loads this package.\n"
+"@code{demo (facexp)} shows a demonstration of this package.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions} @category{Share packages} @category{Package facexp}\n"
+"@closecatbox\n"
+"@c THIS IS VERY VAGUE. JUST WHAT DOES THIS DO?\n"
+"@c SOME EXAMPLES WOULD HELP HERE\n"
+"@anchor{facsum}\n"
+"@deffn {Function} facsum (@var{expr}, @var{arg_1}, ..., @var{arg_n})\n"
+"Returns  a form  of @var{expr}  which depends  on the\n"
+"arguments @var{arg_1}, ..., @var{arg_n}.\n"
+"The arguments can be any form suitable for @code{ratvars}, or they can be\n"
+"lists  of such  forms.  If  the arguments  are not  lists, then  the form\n"
+"returned is  fully expanded with respect  to the arguments,  and the\n"
+"coefficients of the arguments are factored.  These  coefficients are\n"
+"free of the arguments, except perhaps in a non-rational sense.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"If any of the arguments are  lists, then all such lists are combined\n"
+"into  a  single  list,   and  instead  of  calling  @code{factor}   on  the\n"
+"coefficients  of  the  arguments,  @code{facsum}  calls  itself   on  these\n"
+"coefficients, using  this newly constructed  single list as  the new\n"
+"argument list  for this  recursive  call.  This  process can  be  repeated to\n"
+"arbitrary depth by nesting the desired elements in lists.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"It is possible that one may wish to @code{facsum} with respect  to more\n"
+"complicated subexpressions,  such as  @code{log (x + y)}.  Such  arguments are\n"
+"also  permissible.   \n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c CUTTING THIS OUT, BECAUSE IT IS OBVIOUSLY NOT CORRECT\n"
+"@c SEE EXAMPLE IN BUG REPORT ID: 2834336 - ratsimp vs facsum\n"
+"@c With no variable specification, for example @code{facsum (@var{expr})}, the \n"
+"@c result returned is the same as that returned by @code{ratsimp (@var{expr})}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Occasionally the user may wish to obtain any of the  above forms\n"
+"for expressions which are specified only by their leading operators.\n"
+"For example, one may wish  to @code{facsum} with respect to all  @code{log}'s.  In\n"
+"this situation, one may  include among the arguments either  the specific\n"
+"@code{log}'s which are to be treated in this way, or  alternatively, either\n"
+"the expression  @code{operator (log)} or @code{'operator (log)}.   If one  wished to\n"
+"@code{facsum} the expression @var{expr} with respect to the operators @var{op_1}, ..., @var{op_n},\n"
+"one   would  evaluate  @code{facsum (@var{expr}, operator (@var{op_1}, ..., @var{op_n}))}.\n"
+"The @code{operator} form may also appear inside list arguments.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"In  addition,  the  setting  of  the  switches   @code{facsum_combine}  and\n"
+"@code{nextlayerfactor} may affect the result of @code{facsum}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package facexp} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{nextlayerfactor}\n"
+"@defvr {Global variable} nextlayerfactor\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"When @code{nextlayerfactor} is @code{true}, recursive calls  of @code{facsum}\n"
+"are applied  to  the  factors  of  the  factored  form   of  the\n"
+"coefficients of the arguments.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"When  @code{false}, @code{facsum} is applied to\n"
+"each coefficient as a whole whenever recusive calls to  @code{facsum} occur.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Inclusion   of   the  atom\n"
+"@code{nextlayerfactor} in  the argument  list of @code{facsum}  has the  effect of\n"
+"@code{nextlayerfactor: true}, but for the next level of the expression @i{only}.\n"
+"Since @code{nextlayerfactor} is  always bound to  either @code{true} or  @code{false}, it\n"
+"must be presented single-quoted whenever it appears in the argument list of @code{facsum}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package facexp} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{facsum_combine}\n"
+"@defvr {Global variable} facsum_combine\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{facsum_combine} controls the form  of the final result  returned by\n"
+"@code{facsum}  when  its  argument  is  a  quotient  of   polynomials.   If\n"
+"@code{facsum_combine} is @code{false}  then the form will  be returned as  a fully\n"
+"expanded  sum  as described  above,  but if  @code{true},  then  the expression\n"
+"returned is a ratio of polynomials, with each polynomial in the form\n"
+"described above.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"The @code{true} setting of this switch is useful when one\n"
+"wants to  @code{facsum} both  the numerator and  denominator of  a rational\n"
+"expression,  but  does not  want  the denominator  to  be multiplied\n"
+"through the terms of the numerator.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package facexp} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{factorfacsum}\n"
+"@deffn {Function} factorfacsum (@var{expr}, @var{arg_1}, ... @var{arg_n})\n"
+"Returns a  form of @var{expr}  which is\n"
+"obtained by calling  @code{facsum} on the factors  of @var{expr} with @var{arg_1}, ... @var{arg_n} as\n"
+"arguments.  If any of the factors of @var{expr} is raised to a  power, both\n"
+"the factor and the exponent will be processed in this way.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package facexp} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{collectterms}\n"
+"@deffn {Function} collectterms (@var{expr}, @var{arg_1}, @dots{}, @var{arg_n})\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Collects all terms that contain @var{arg_1} ... @var{arg_n}.\n"
+"If several expressions have been simplified  with the following functions\n"
+"@code{facsum}, @code{factorfacsum}, @code{factenexpand}, @code{facexpten} or\n"
+"@code{factorfacexpten}, and they are to be added together, it may be desirable\n"
+"to combine them using the function  @code{collecterms}.  @code{collecterms} can\n"
+"take as arguments all of the arguments that can be given to these other\n"
+"associated functions with the exception of @code{nextlayerfactor}, which has no\n"
+"effect on @code{collectterms}.  The advantage of @code{collectterms} is that it\n"
+"returns a form  similar to @code{facsum}, but since it is adding forms that have\n"
+"already been processed by @code{facsum}, it does not need to repeat that effort.\n"
+"This capability is especially useful when the expressions to be summed are very\n"
+"large.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"See also @mrefdot{factor}\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c ===beg===\n"
+"@c (exp(x)+2)*x+exp(x);\n"
+"@c collectterms(expand(%),exp(x));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) (exp(x)+2)*x+exp(x);\n"
+"                             x          x\n"
+"(%o1)                   x (%e  + 2) + %e\n"
+"@end group\n"
+"@group\n"
+"(%i2) collectterms(expand(%),exp(x));\n"
+"                                  x\n"
+"(%o2)                   (x + 1) %e  + 2 x\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package facexp} @category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c Adapted from functs.usg ----------------------\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c conjugate already described in doc/info/Matrices.texi\n"
+"@node Package functs, Package ineq, Package facexp, simplification-pkg\n"
+"@section Package functs\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Share packages} @category{Package functs}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@deffn {Function} rempart (@var{expr}, @var{n})\n"
+"Removes part @var{n} from the expression @var{expr}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"If @var{n} is a list of the form @code{[@var{l}, @var{m}]}\n"
+"then parts @var{l} thru @var{m} are removed.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@deffn {Function} wronskian ([@var{f_1}, ..., @var{f_n}], @var{x})\n"
+"Returns the Wronskian matrix of the list of expressions [@var{f_1}, ..., @var{f_n}] in the variable @var{x}.\n"
+"The determinant of the Wronskian matrix is the Wronskian determinant of the list of expressions.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use @code{wronskian}, first @code{load(functs)}. Example:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (functs)$\n"
+"@c wronskian([f(x), g(x)],x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (functs)$\n"
+"@group\n"
+"(%i2) wronskian([f(x), g(x)],x);\n"
+"                    [   f(x)       g(x)    ]\n"
+"                    [                      ]\n"
+"(%o2)               [ d          d         ]\n"
+"                    [ -- (f(x))  -- (g(x)) ]\n"
+"                    [ dx         dx        ]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Differential calculus}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c adjoint already described in doc/info/Matrices.texi\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@deffn {Function} tracematrix (@var{M})\n"
+"Returns the trace (sum of the diagonal elements) of matrix @var{M}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Matrices}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@deffn {Function} rational (@var{z})\n"
+"Multiplies numerator and denominator of @var{z} by the complex conjugate of denominator,\n"
+"thus rationalizing the denominator.\n"
+"Returns canonical rational expression (CRE) form if given one, else returns general form.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c uprobe calls ?uprobe and assumes file is a list => obsolete, not common lisp\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c kronecker superseded by kron_delta in src/nset.lisp\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@deffn {Function} nonzeroandfreeof (@var{x}, @var{expr})\n"
+"Returns @code{true} if @var{expr} is nonzero and @code{freeof (@var{x}, @var{expr})} returns @code{true}.\n"
+"Returns @code{false} otherwise.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@deffn {Function} linear (@var{expr}, @var{x})\n"
+"When @var{expr} is an expression of the form @code{@var{a}*@var{x} + @var{b}}\n"
+"where @var{a} is nonzero, and @var{a} and @var{b} are free of @var{x},\n"
+"@code{linear} returns a list of three equations, one for each of the three formal\n"
+"variables @var{b}, @var{a}, and @var{x}. Otherwise, @code{linear} returns @code{false}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{load(antid)} loads this function.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (antid);\n"
+"@c linear ((1 - w)*(1 - x)*z, z);\n"
+"@c linear (cos(u - v) + cos(u + v), u);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) load (antid);\n"
+"(%o1)  /maxima/share/integration/antid.mac\n"
+"@end group\n"
+"@group\n"
+"(%i2) linear ((1 - w)*(1 - x)*z, z);\n"
+"(%o2) [bargumentb = 0, aargumenta = (w - 1) x - w + 1, \n"
+"                                                  xargumentx = z]\n"
+"@end group\n"
+"@group\n"
+"(%i3) linear (cos(u - v) + cos(u + v), u);\n"
+"(%o3)                         false\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package antid} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{gcdivide}\n"
+"@deffn {Function} gcdivide (@var{p}, @var{q})\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"When the option variable @code{takegcd} is @code{true} which is the default,\n"
+"@code{gcdivide} divides the polynomials @var{p} and @var{q} by their greatest\n"
+"common divisor and returns the ratio of the results.  @code{gcdivde} calls the\n"
+"function @mref{ezgcd} to divide the polynomials by the greatest common divisor.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"When @code{takegcd} is @code{false}, @code{gcdivide} returns the ratio\n"
+"@code{@var{p}/@var{q}}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"See also @mrefcomma{ezgcd} @mrefcomma{gcd} @mrefcomma{gcdex} and\n"
+"@mrefdot{poly_gcd}\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@example\n"
+"(%i1) load(functs)$\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"(%i2) p1:6*x^3+19*x^2+19*x+6; \n"
+"                        3       2\n"
+"(%o2)                6 x  + 19 x  + 19 x + 6\n"
+"(%i3) p2:6*x^5+13*x^4+12*x^3+13*x^2+6*x;\n"
+"                  5       4       3       2\n"
+"(%o3)          6 x  + 13 x  + 12 x  + 13 x  + 6 x\n"
+"(%i4) gcdivide(p1, p2);\n"
+"                             x + 1\n"
+"(%o4)                        ------\n"
+"                              3\n"
+"                             x  + x\n"
+"(%i5) takegcd:false;\n"
+"(%o5)                         false\n"
+"(%i6) gcdivide(p1, p2);\n"
+"                       3       2\n"
+"                    6 x  + 19 x  + 19 x + 6\n"
+"(%o6)          ----------------------------------\n"
+"                  5       4       3       2\n"
+"               6 x  + 13 x  + 12 x  + 13 x  + 6 x\n"
+"(%i7) ratsimp(%);\n"
+"                             x + 1\n"
+"(%o7)                        ------\n"
+"                              3\n"
+"                             x  + x\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Polynomials}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c lcm already described in doc/info/Number.texi\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{arithmetic}\n"
+"@deffn {Function} arithmetic (@var{a}, @var{d}, @var{n})\n"
+"Returns the @var{n}-th term of the arithmetic series\n"
+"@code{@var{a}, @var{a} + @var{d}, @var{a} + 2*@var{d}, ..., @var{a} + (@var{n} - 1)*@var{d}}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Sums and products}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{geometric}\n"
+"@deffn {Function} geometric (@var{a}, @var{r}, @var{n})\n"
+"Returns the @var{n}-th term of the geometric series\n"
+"@code{@var{a}, @var{a}*@var{r}, @var{a}*@var{r}^2, ..., @var{a}*@var{r}^(@var{n} - 1)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Sums and products}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{harmonic}\n"
+"@deffn {Function} harmonic (@var{a}, @var{b}, @var{c}, @var{n})\n"
+"Returns the @var{n}-th term of the harmonic series\n"
+"@code{@var{a}/@var{b}, @var{a}/(@var{b} + @var{c}), @var{a}/(@var{b} + 2*@var{c}), ..., @var{a}/(@var{b} + (@var{n} - 1)*@var{c})}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Sums and products}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{arithsum}\n"
+"@deffn {Function} arithsum (@var{a}, @var{d}, @var{n})\n"
+"Returns the sum of the arithmetic series from 1 to @var{n}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Sums and products}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{geosum}\n"
+"@deffn {Function} geosum (@var{a}, @var{r}, @var{n})\n"
+"Returns the sum of the geometric series from 1 to @var{n}.  If @var{n} is\n"
+"infinity (@code{inf}) then a sum is finite only if the absolute value\n"
+"of @var{r} is less than 1.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Sums and products}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{gaussprob}\n"
+"@deffn {Function} gaussprob (@var{x})\n"
+"Returns the Gaussian probability function\n"
+"@code{%e^(-@var{x}^2/2) / sqrt(2*%pi)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{gd}\n"
+"@deffn {Function} gd (@var{x})\n"
+"Returns the Gudermannian function\n"
+"@code{2*atan(%e^x)-%pi/2}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{agd}\n"
+"@deffn {Function} agd (@var{x})\n"
+"Returns the inverse Gudermannian function\n"
+"@code{log (tan (%pi/4 + x/2))}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{vers}\n"
+"@deffn {Function} vers (@var{x})\n"
+"Returns the versed sine @code{1 - cos (x)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{covers}\n"
+"@deffn {Function} covers (@var{x})\n"
+"Returns the coversed sine @code{1 - sin (@var{x})}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{exsec}\n"
+"@deffn {Function} exsec (@var{x})\n"
+"Returns the exsecant @code{sec (@var{x}) - 1}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{hav}\n"
+"@deffn {Function} hav (@var{x})\n"
+"Returns the haversine @code{(1 - cos(x))/2}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c REDUNDANT WITH BINOMIAL COEFFICIENT; CUT IT ??\n"
+"@anchor{combination}\n"
+"@deffn {Function} combination (@var{n}, @var{r})\n"
+"Returns the number of combinations of @var{n} objects\n"
+"taken @var{r} at a time.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c REDUNDANT WITH PERMUTATIONS FUNCTION IN NSET; CUT IT ??\n"
+"@anchor{permutation}\n"
+"@deffn {Function} permutation (@var{n}, @var{r})\n"
+"Returns the number of permutations of @var{r} objects\n"
+"selected from a set of @var{n} objects.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"To use this function write first @code{load(functs)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package functs} @category{Mathematical functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c Adapted from ineq.usg ----------------------\n"
+"@c THIS PACKAGE IS INTERESTING BUT THIS TEXT NEEDS WORK AND EXAMPLES\n"
+"@node Package ineq, Package rducon, Package functs, simplification-pkg\n"
+"@section Package ineq\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"The @code{ineq} package contains simplification rules\n"
+"for inequalities.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Example session:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c ===beg===\n"
+"@c load(ineq)$\n"
+"@c a>=4;  /* a sample inequality */\n"
+"@c (b>c)+%; /* add a second, strict inequality */\n"
+"@c 7*(x<y); /* multiply by a positive number */\n"
+"@c -2*(x>=3*z); /* multiply by a negative number */\n"
+"@c (1+a^2)*(1/(1+a^2)<=1); /* Maxima knows that 1+a^2 > 0 */\n"
+"@c assume(x>0)$ x*(2<3); /* assuming x>0 */\n"
+"@c a>=b; /* another inequality */\n"
+"@c 3+%; /* add something */\n"
+"@c %-3; /* subtract it out */\n"
+"@c a>=c-b; /* yet another inequality */\n"
+"@c b+%; /* add b to both sides */\n"
+"@c %-c; /* subtract c from both sides */\n"
+"@c -%;  /* multiply by -1 */\n"
+"@c (z-1)^2>-2*z; /* determining truth of assertion */\n"
+"@c expand(%)+2*z; /* expand this and add 2*z to both sides */\n"
+"@c %,pred;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(ineq)$\n"
+"tellsimp: warning: rule will treat '+\n"
+"                          ' as noncommutative and nonassociative.\n"
+"tellsimp: warning: rule will treat '+\n"
+"                          ' as noncommutative and nonassociative.\n"
+"tellsimp: warning: rule will treat '+\n"
+"                          ' as noncommutative and nonassociative.\n"
+"tellsimp: warning: rule will treat '+\n"
+"                          ' as noncommutative and nonassociative.\n"
+"tellsimp: warning: rule will treat '+\n"
+"                          ' as noncommutative and nonassociative.\n"
+"tellsimp: warning: rule will treat '+\n"
+"                          ' as noncommutative and nonassociative.\n"
+"tellsimp: warning: rule will treat '+\n"
+"                          ' as noncommutative and nonassociative.\n"
+"tellsimp: warning: rule will treat '+\n"
+"                          ' as noncommutative and nonassociative.\n"
+"@group\n"
+"(%i2) a>=4;  /* a sample inequality */\n"
+"(%o2)                        a >= 4\n"
+"(%o3)                     b + a > c + 4\n"
+"(%o4)                       7 x < 7 y\n"
+"(%o5)                    - 2 x <= - 6 z\n"
+"                                 2\n"
+"(%o6)                      1 <= a  + 1\n"
+"(%o8)                       2 x < 3 x\n"
+"(%o9)                        a >= b\n"
+"(%o10)                   a + 3 >= b + 3\n"
+"(%o11)                       a >= b\n"
+"(%o12)                     a >= c - b\n"
+"(%o13)                     b + a >= c\n"
+"(%o14)                 (- c) + b + a >= 0\n"
+"(%o15)                   c - b - a <= 0\n"
+"                               2\n"
+"(%o16)                  (z - 1)  > - 2 z\n"
+"                            2\n"
+"(%o17)                     z  + 1 > 0\n"
+"(%o18)                        true\n"
+"@end group\n"
+"(%i19) (b>c)+%; /* add a second, strict inequality */\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Be careful about using parentheses\n"
+"around the inequalities: when the user types in @code{(A > B) + (C = 5)} the\n"
+"result is @code{A + C > B + 5}, but @code{A > B + C = 5} is a syntax error,\n"
+"and @code{(A > B + C) = 5} is something else entirely.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Do @code{disprule (all)} to see a complete listing\n"
+"of the rule definitions.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"The user will be queried if Maxima is\n"
+"unable to decide the sign of a quantity multiplying an inequality.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"The most common mis-feature is illustrated by:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c ===beg===\n"
+"@c eq: a > b;\n"
+"@c 2*eq;\n"
+"@c % - eq;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) eq: a > b;\n"
+"(%o1)                         a > b\n"
+"@end group\n"
+"@group\n"
+"(%i2) 2*eq;\n"
+"(%o2)                       2 (a > b)\n"
+"@end group\n"
+"@group\n"
+"(%i3) % - eq;\n"
+"(%o3)                         a > b\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Another problem is 0 times an inequality; the default to have this\n"
+"turn into 0 has been left alone. However, if you type \n"
+"@code{X*@var{some_inequality}} and Maxima asks about the sign of @code{X} and you\n"
+"respond @code{zero} (or @code{z}), the program returns @code{X*@var{some_inequality}}\n"
+"and not use the information that @code{X} is 0. You should do @code{ev (%, x: 0)} in such\n"
+"a case, as the database will only be used for comparison purposes\n"
+"in decisions, and not for the purpose of evaluating @code{X}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"The user may note a slower response when this package is loaded, as\n"
+"the simplifier is forced to examine more rules than without the\n"
+"package, so you might wish to remove the rules after making use of\n"
+"them. Do @code{kill (rules)} to eliminate all of the rules (including any\n"
+"that you might have defined); or you may be more selective by\n"
+"killing only some of them; or use @code{remrule} on a specific rule.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Note that if you load this package after defining your own\n"
+"rules you will clobber your rules that have the same name. The\n"
+"rules in this package are:\n"
+"@code{*rule1}, ..., @code{*rule8},\n"
+"@code{+rule1}, ..., @code{+rule18},\n"
+"and you must enclose the rulename in quotes to refer to it, as\n"
+"in @code{remrule (\"+\", \"+rule1\")} to specifically remove the first rule on @code{\"+\"}\n"
+"or @code{disprule (\"*rule2\")} to display the definition of the second multiplicative rule.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification functions} @category{Rules and patterns} @category{Share packages} @category{Package ineq}\n"
+"@closecatbox\n"
+"@c lrats.usg: \"lratsubst\" and \"fullratsubst\" already in doc/info/Polynomials.texi\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c Adapted from rducon.usg ----------------------\n"
+"@c THIS IS AN INTERESTING FUNCTION BUT THIS TEXT NEEDS WORK AND EXAMPLES\n"
+"@node Package rducon, Package scifac, Package ineq, simplification-pkg\n"
+"@section Package rducon\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions} @category{Share packages} @category{Package rducon}\n"
+"@closecatbox\n"
+"@anchor{reduce_consts}\n"
+"@deffn {Function} reduce_consts (@var{expr})\n"
+"Replaces constant subexpressions of @var{expr} with\n"
+"constructed constant atoms, saving the definition of all these\n"
+"constructed constants in the list of equations @code{const_eqns}, and\n"
+"returning the modified @var{expr}.  Those parts of @var{expr} are constant which\n"
+"return @code{true} when operated on by the function @code{constantp}.  Hence,\n"
+"before invoking @code{reduce_consts}, one should do\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@example\n"
+"declare ([@var{objects to be given the constant property}], constant)$\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"to set up a database of the constant quantities occurring in your\n"
+"expressions.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"If you are planning to generate Fortran output after these symbolic\n"
+"calculations, one of the first code sections should be the calculation\n"
+"of all constants.  To generate this code segment, do\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@example\n"
+"map ('fortran, const_eqns)$\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Variables besides @code{const_eqns} which affect @code{reduce_consts} are:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{const_prefix} (default value: @code{xx}) is the string of characters used to prefix all\n"
+"symbols generated by @code{reduce_consts} to represent constant subexpressions.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{const_counter} (default value: 1) is the integer index used to generate unique\n"
+"symbols to represent each constant subexpression found by @code{reduce_consts}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{load (rducon)} loads this function.\n"
+"@code{demo (rducon)} shows a demonstration of this function.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package rducon} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c rncomb.usg: \"rncombine\" already in doc/info/Miscellaneous.texi\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c Adapted from scifac.usg ----------------------\n"
+"@node Package scifac, Package sqdnst, Package rducon, simplification-pkg\n"
+"@section Package scifac\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions} @category{Share packages} @category{Package scifac}\n"
+"@closecatbox\n"
+"@anchor{gcfac}\n"
+"@deffn {Function} gcfac (@var{expr})\n"
+"@code{gcfac} is a factoring function that attempts to apply the same heuristics which\n"
+"scientists apply in trying to make expressions simpler.  @code{gcfac} is limited\n"
+"to monomial-type factoring.  For a sum, @code{gcfac} does the following:\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@enumerate\n"
+"@item\n"
+"Factors over the integers.\n"
+"@item\n"
+"Factors out the largest powers of terms occurring as\n"
+"coefficients, regardless of the complexity of the terms.\n"
+"@item\n"
+"Uses (1) and (2) in factoring adjacent pairs of terms.\n"
+"@item\n"
+"Repeatedly and recursively applies these techniques until\n"
+"the expression no longer changes.\n"
+"@end enumerate\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Item (3) does not necessarily do an optimal job of pairwise\n"
+"factoring because of the combinatorially-difficult nature of finding\n"
+"which of all possible rearrangements of the pairs yields the most\n"
+"compact pair-factored result.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{load (scifac)} loads this function.\n"
+"@code{demo (scifac)} shows a demonstration of this function.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package scifac} @category{Expressions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c Adapted from sqdnst.usg ----------------------\n"
+"@c THIS FUNCTION IS INTERESTING BUT THIS TEXT NEEDS WORK. HOW DEEPLY CAN SQRT BE NESTED ??\n"
+"@node Package sqdnst,  , Package scifac, simplification-pkg\n"
+"@section Package sqdnst\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@anchor{sqrtdenest}\n"
+"@deffn {Function} sqrtdenest (@var{expr})\n"
+"Denests @code{sqrt} of simple, numerical, binomial surds, where possible.  E.g.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (sqdnst)$\n"
+"@c sqrt(sqrt(3)/2+1)/sqrt(11*sqrt(2)-12);\n"
+"@c sqrtdenest(%);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (sqdnst)$\n"
+"@group\n"
+"(%i2) sqrt(sqrt(3)/2+1)/sqrt(11*sqrt(2)-12);\n"
+"                             sqrt(3)\n"
+"                        sqrt(------- + 1)\n"
+"                                2\n"
+"(%o2)                 ---------------------\n"
+"                      sqrt(11 sqrt(2) - 12)\n"
+"@end group\n"
+"@group\n"
+"(%i3) sqrtdenest(%);\n"
+"                           sqrt(3)   1\n"
+"                           ------- + -\n"
+"                              2      2\n"
+"(%o3)                     -------------\n"
+"                             1/4    3/4\n"
+"                          3 2    - 2\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"Sometimes it helps to apply @code{sqrtdenest} more than once, on such as\n"
+"@code{(19601-13860 sqrt(2))^(7/4)}.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@code{load (sqdnst)} loads this function.\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions} @category{Share packages} @category{Package sqdnst}\n"
+"@closecatbox\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# simplifications.texi
+msgid ""
+"@c stopex.usg: \"expandwrt\", \"expandwrt_denom\", and \"expandwrt_factored\" already in doc/info/Simplification.texi\n"
+msgstr ""

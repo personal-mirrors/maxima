@@ -1,0 +1,2060 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Input.texi
+msgid ""
+"@menu\n"
+"* Comments::\n"
+"* Files::\n"
+"* Functions and Variables for File Input and Output::\n"
+"* Functions and Variables for TeX Output::\n"
+"* Functions and Variables for Fortran Output::\n"
+"@end menu\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Comments, Files, File Input and Output, File Input and Output\n"
+"@section Comments\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"A comment in Maxima input is any text between @code{/*} and @code{*/}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The Maxima parser treats a comment as whitespace for the purpose of finding\n"
+"tokens in the input stream; a token always ends at a comment.  An input such as\n"
+"@code{a/* foo */b} contains two tokens, @code{a} and @code{b},\n"
+"and not a single token @code{ab}.  Comments are otherwise ignored by Maxima;\n"
+"neither the content nor the location of comments is stored in parsed input\n"
+"expressions.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Comments can be nested to arbitrary depth.  The @code{/*} and @code{*/}\n"
+"delimiters form matching pairs.  There must be the same number of @code{/*}\n"
+"as there are @code{*/}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c /* aa is a variable of interest */  aa : 1234;\n"
+"@c /* Value of bb depends on aa */  bb : aa^2;\n"
+"@c /* User-defined infix operator */  infix (\"b\");\n"
+"@c /* Parses same as a b c, not abc */  a/* foo */b/* bar */c;\n"
+"@c /* Comments /* can be nested /* to any depth */ */ */  1 + xyz;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) /* aa is a variable of interest */  aa : 1234;\n"
+"(%o1)                         1234\n"
+"(%i2) /* Value of bb depends on aa */  bb : aa^2;\n"
+"(%o2)                        1522756\n"
+"(%i3) /* User-defined infix operator */  infix (\"b\");\n"
+"(%o3)                           b\n"
+"(%i4) /* Parses same as a b c, not abc */  a/* foo */b/* bar */c;\n"
+"(%o4)                         a b c\n"
+"(%i5) /* Comments /* can be nested /* to any depth */ */ */  1 + xyz;\n"
+"(%o5)                        xyz + 1\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Syntax}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Files, Functions and Variables for File Input and Output, Comments, File Input and Output\n"
+"@section Files\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"A file is simply an area on a particular storage device which contains data \n"
+"or text.  Files on the disks are figuratively grouped into \"directories\".\n"
+"A directory is just a list of files.  Commands which deal with files are:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@verbatim\n"
+"   appendfile           batch                 batchload\n"
+"   closefile            file_output_append    filename_merge\n"
+"   file_search          file_search_maxima    file_search_lisp\n"
+"   file_search_demo     file_search_usage     file_search_tests\n"
+"   file_type            file_type_lisp        file_type_maxima\n"
+"   load                 load_pathname         loadfile\n"
+"   loadprint            pathname_directory    pathname_name\n"
+"   pathname_type        printfile             save\n"
+"   stringout            with_stdout           writefile\n"
+"@end verbatim\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"When a file name is passed to functions like @mrefcomma{plot2d}@w{}\n"
+"@mrefcomma{save} or @mref{writefile} and the file name does not include a path,\n"
+"Maxima stores the file in the current working directory.  The current working\n"
+"directory depends on the system like Windows or Linux and on the installation.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for File Input and Output, Functions and Variables for TeX Output, Files, File Input and Output\n"
+"@section Functions and Variables for File Input and Output\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{appendfile}\n"
+"@deffn {Function} appendfile (@var{filename})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Appends a console transcript to @var{filename}.  @code{appendfile} is the same\n"
+"as @mrefcomma{writefile} except that the transcript file, if it exists, is\n"
+"always appended.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@mref{closefile} closes the transcript file opened by @code{appendfile} or\n"
+"@code{writefile}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{batch}\n"
+"@deffn  {Function} batch @\n"
+"@fname{batch} (@var{filename}) @\n"
+"@fname{batch} (@var{filename}, @code{option})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{batch(@var{filename})} reads Maxima expressions from @var{filename} and \n"
+"evaluates them.  @code{batch} searches for @var{filename} in the list \n"
+"@mrefdot{file_search_maxima}  See also @mrefdot{file_search}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{batch(@var{filename}, @code{demo})} is like @code{demo(@var{filename})}.\n"
+"In this case @code{batch} searches for @var{filename} in the list\n"
+"@mrefdot{file_search_demo}  See @mrefdot{demo}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{batch(@var{filename}, @code{test})} is like @mref{run_testsuite} with the\n"
+"option @code{display_all=true}.  For this case @code{batch} searches \n"
+"@var{filename} in the list @code{file_search_maxima} and not in the list\n"
+"@mref{file_search_tests} like @code{run_testsuite}.  Furthermore,\n"
+"@code{run_testsuite} runs tests which are in the list\n"
+"@mrefdot{testsuite_files}  With @code{batch} it is possible to run any file in\n"
+"a test mode, which can be found in the list @code{file_search_maxima}.  This is\n"
+"useful, when writing a test file.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@var{filename} comprises a sequence of Maxima expressions, each terminated with\n"
+"@code{;} or @code{$}.  The special variable @mref{%} and the function\n"
+"@mref{%th} refer to previous results within the file.  The file may include\n"
+"@code{:lisp} constructs.  Spaces, tabs, and newlines in the file are ignored.\n"
+"A suitable input file may be created by a text editor or by the\n"
+"@mref{stringout} function.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{batch} reads each input expression from @var{filename}, displays the input\n"
+"to the console, computes the corresponding output expression, and displays the\n"
+"output expression.  Input labels are assigned to the input expressions and\n"
+"output labels are assigned to the output expressions.  @code{batch} evaluates\n"
+"every input expression in the file unless there is an error.  If user input is\n"
+"requested (by @mref{asksign} or @mrefcomma{askinteger} for example) @code{batch}\n"
+"pauses to collect the requisite input and then continue.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c CTRL-C BREAKS batch IN CMUCL, BUT CLISP (ALTHOUGH IT SHOWS \"User break\") \n"
+"@c KEEPS GOING !!! DON'T KNOW ABOUT GCL !!!\n"
+"It may be possible to halt @code{batch} by typing @code{control-C} at the\n"
+"console.  The effect of @code{control-C} depends on the underlying Lisp\n"
+"implementation.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{batch} has several uses, such as to provide a reservoir for working\n"
+"command lines, to give error-free demonstrations, or to help organize one's\n"
+"thinking in solving complex problems.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{batch} evaluates its argument.  @code{batch} returns the path of\n"
+"@var{filename} as a string, when called with no second argument or with the \n"
+"option @code{demo}.  When called with the option @code{test}, the return value\n"
+"is a an empty list @code{[]} or a list with @var{filename} and the numbers of\n"
+"the tests which have failed.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also @mrefcomma{load} @mrefcomma{batchload} and @mrefdot{demo}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Session management} @category{File input}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c RECOMMEND CUTTING THIS ITEM, AS THE load SUBSUMES FUNCTIONALITY OF batchload\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{batchload}\n"
+"@deffn {Function} batchload (@var{filename})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Reads Maxima expressions from @var{filename} and evaluates them, without\n"
+"displaying the input or output expressions and without assigning labels to\n"
+"output expressions.  Printed output (such as produced by @mref{print} or\n"
+"@mrefparen{describe}) is displayed, however.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special variable @mref{%} and the function @mref{%th} refer to previous\n"
+"results from the interactive interpreter, not results within the file.\n"
+"The file cannot include @code{:lisp} constructs.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{batchload} returns the path of @var{filename}, as a string.\n"
+"@code{batchload} evaluates its argument.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also @mrefcomma{batch} and @mrefdot{load}\n"
+"@c batchload APPEARS TO HAVE THE SAME EFFECT AS load.\n"
+"@c WHY NOT GET RID OF batchload ???\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Session management} @category{File input}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{closefile}\n"
+"@deffn {Function} closefile ()\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Closes the transcript file opened by @mref{writefile} or @mrefdot{appendfile}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{file_output_append}\n"
+"@defvr {Option variable} file_output_append\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{file_output_append} governs whether file output functions append or\n"
+"truncate their output file.  When @code{file_output_append} is @code{true}, such\n"
+"functions append to their output file.  Otherwise, the output file is truncated.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@mrefcomma{save} @mrefcomma{stringout} and @mref{with_stdout} respect\n"
+"@code{file_output_append}.  Other functions which write output files do not\n"
+"respect @code{file_output_append}.  In particular, plotting and translation\n"
+"functions always truncate their output file, and @mref{tex} and\n"
+"@mref{appendfile} always append.\n"
+"@c WHAT ABOUT WRITEFILE ??\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Global flags}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{filename_merge}\n"
+"@deffn {Function} filename_merge (@var{path}, @var{filename})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Constructs a modified path from @var{path} and @var{filename}.  If the final\n"
+"component of @var{path} is of the form @code{###.@var{something}}, the component\n"
+"is replaced with @code{@var{filename}.@var{something}}.  Otherwise, the final\n"
+"component is simply replaced by @var{filename}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The result is a Lisp pathname object.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{File output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{file_search}\n"
+"@deffn  {Function} file_search @\n"
+"@fname{file_search} (@var{filename}) @\n"
+"@fname{file_search} (@var{filename}, @var{pathlist})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{file_search} searches for the file @var{filename} and returns the path to\n"
+"the file (as a string) if it can be found; otherwise @code{file_search} returns\n"
+"@code{false}.  @code{file_search (@var{filename})} searches in the default\n"
+"search directories, which are specified by the\n"
+"@mrefcomma{file_search_maxima} @mrefcomma{file_search_lisp} and\n"
+"@mref{file_search_demo} variables.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{file_search} first checks if the actual name passed exists,\n"
+"before attempting to match it to ``wildcard'' file search patterns.\n"
+"See @mref{file_search_maxima} concerning file search patterns.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The argument @var{filename} can be a path and file name, or just a file name,\n"
+"or, if a file search directory includes a file search pattern, just the base of\n"
+"the file name (without an extension).  For example,\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@example\n"
+"file_search (\"/home/wfs/special/zeta.mac\");\n"
+"file_search (\"zeta.mac\");\n"
+"file_search (\"zeta\");\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"all find the same file, assuming the file exists and \n"
+"@code{/home/wfs/special/###.mac} is in @code{file_search_maxima}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{file_search (@var{filename}, @var{pathlist})} searches only in the\n"
+"directories specified by @var{pathlist}, which is a list of strings.  The\n"
+"argument @var{pathlist} supersedes the default search directories, so if the\n"
+"path list is given, @code{file_search} searches only the ones specified, and not\n"
+"any of the default search directories.  Even if there is only one directory in\n"
+"@var{pathlist}, it must still be given as a one-element list.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The user may modify the default search directories.\n"
+"See @mrefdot{file_search_maxima}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{file_search} is invoked by @mref{load} with @code{file_search_maxima} and\n"
+"@mref{file_search_lisp} as the search directories.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{file_search_maxima}\n"
+"@anchor{file_search_lisp}\n"
+"@anchor{file_search_demo}\n"
+"@anchor{file_search_usage}\n"
+"@anchor{file_search_tests}\n"
+"@defvr  {Option variable} file_search_maxima\n"
+"@defvrx {Option variable} file_search_lisp\n"
+"@defvrx {Option variable} file_search_demo\n"
+"@defvrx {Option variable} file_search_usage\n"
+"@defvrx {Option variable} file_search_tests\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"These variables specify lists of directories to be searched by\n"
+"@mrefcomma{load} @mrefcomma{demo} and some other Maxima functions.  The default\n"
+"values of these variables name various directories in the Maxima installation.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The user can modify these variables, either to replace the default values or to\n"
+"append additional directories.  For example,\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@example\n"
+"file_search_maxima: [\"/usr/local/foo/###.mac\",\n"
+"    \"/usr/local/bar/###.mac\"]$\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"replaces the default value of @code{file_search_maxima}, while\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@example\n"
+"file_search_maxima: append (file_search_maxima,\n"
+"    [\"/usr/local/foo/###.mac\", \"/usr/local/bar/###.mac\"])$\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"appends two additional directories.  It may be convenient to put such an\n"
+"expression in the file @code{maxima-init.mac} so that the file search path is\n"
+"assigned automatically when Maxima starts.\n"
+"See also @ref{Introduction for Runtime Environment}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Multiple filename extensions and multiple paths can be specified by special \n"
+"``wildcard'' constructions.  The string @code{###} expands into the sought-after\n"
+"name, while a comma-separated list enclosed in curly braces\n"
+"@code{@{foo,bar,baz@}} expands into multiple strings.  For example, supposing\n"
+"the sought-after name is @code{neumann},\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@example\n"
+"\"/home/@{wfs,gcj@}/###.@{lisp,mac@}\"\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@flushleft\n"
+"expands into @code{/home/wfs/neumann.lisp}, @code{/home/gcj/neumann.lisp},\n"
+"@code{/home/wfs/neumann.mac}, and @code{/home/gcj/neumann.mac}.\n"
+"@end flushleft\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{file_type}\n"
+"@deffn {Function} file_type (@var{filename})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Returns a guess about the content of @var{filename}, based on the filename \n"
+"extension.  @var{filename} need not refer to an actual file; no attempt is made \n"
+"to open the file and inspect the content.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The return value is a symbol, either @code{object}, @code{lisp}, or\n"
+"@code{maxima}.  If the extension is matches one of the values in\n"
+"@code{file_type_maxima}, @code{file_type} returns @code{maxima}.  If the\n"
+"extension matches one of the values in @code{file_type_lisp}, @code{file_type}\n"
+"returns @code{lisp}.  If none of the above, @code{file_type} returns\n"
+"@code{object}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also @mrefdot{pathname_type}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See @mref{file_type_maxima} and @mref{file_type_lisp} for the default values.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c === beg ===\n"
+"@c map('file_type,\n"
+"@c     [\"test.lisp\", \"test.mac\", \"test.dem\", \"test.txt\"]);\n"
+"@c === end ===\n"
+"@example\n"
+"(%i2) map('file_type,\n"
+"          [\"test.lisp\", \"test.mac\", \"test.dem\", \"test.txt\"]);\n"
+"(%o2)            [lisp, maxima, maxima, object]\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{file_type_lisp}\n"
+"@defvr {Option variable} file_type_lisp\n"
+"Default value:  @code{[l, lsp, lisp]}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{file_type_lisp} is a list of file extensions that maxima recognizes\n"
+"as denoting a Lisp source file.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also @mrefdot{file_type}\n"
+"@end defvr\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{file_type_maxima}\n"
+"@defvr {Option variable} file_type_maxima\n"
+"Default value:  @code{[mac, mc, demo, dem, dm1, dm2, dm3, dmt, wxm]}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{file_type_maxima} is a list of file extensions that maxima recognizes\n"
+"as denoting a Maxima source file.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also @mrefdot{file_type}\n"
+"@end defvr\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{load}\n"
+"@deffn {Function} load (@var{filename})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Evaluates expressions in @var{filename}, thus bringing variables, functions, and\n"
+"other objects into Maxima.  The binding of any existing object is clobbered by\n"
+"the binding recovered from @var{filename}.  To find the file, @code{load} calls\n"
+"@mref{file_search} with @mref{file_search_maxima} and\n"
+"@mref{file_search_lisp} as the search directories.  If @code{load} succeeds, it\n"
+"returns the name of the file.  Otherwise @code{load} prints an error message.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{load} works equally well for Lisp code and Maxima code.  Files created by\n"
+"@mrefcomma{save} @mrefcomma{translate_file} and @mrefcomma{compile_file} which\n"
+"create Lisp code, and @mrefcomma{stringout} which creates Maxima code, can all\n"
+"be processed by @code{load}.  @code{load} calls @mref{loadfile} to load Lisp\n"
+"files and @mref{batchload} to load Maxima files.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{load} does not recognize @code{:lisp} constructs in Maxima files, and\n"
+"while processing @var{filename}, the global variables @code{_}, @code{__},\n"
+"@code{%}, and @code{%th} have whatever bindings they had when @code{load} was\n"
+"called.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"It is also to note that structures will only be read back as structures if\n"
+"they have been defined by @code{defstruct} before the @code{load} command\n"
+"is called.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also @mrefcomma{loadfile} @mrefcomma{batch} @mrefcomma{batchload} and\n"
+"@mrefdot{demo}  @code{loadfile} processes Lisp files; @code{batch},\n"
+"@code{batchload}, and @code{demo} process Maxima files.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See @mref{file_search} for more detail about the file search mechanism.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{load} evaluates its argument.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Session management} @category{File input}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{load_pathname}\n"
+"@defvr {System variable} load_pathname\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"When a file is loaded with the functions @mrefcomma{load} @mref{loadfile} or\n"
+"@mref{batchload} the system variable @code{load_pathname} is bound to the\n"
+"pathname of the file which is processed.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The variable @code{load_pathname} can be accessed from the file during the\n"
+"loading.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Suppose we have a batchfile @code{test.mac} in the directory\n"
+"@flushleft\n"
+"@code{\"/home/dieter/workspace/mymaxima/temp/\"} with the following commands\n"
+"@end flushleft\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@example\n"
+"print(\"The value of load_pathname is: \", load_pathname)$\n"
+"print(\"End of batchfile\")$\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"then we get the following output\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@example\n"
+"(%i1) load(\"/home/dieter/workspace/mymaxima/temp/test.mac\")$\n"
+"The value of load_pathname is:  \n"
+"                   /home/dieter/workspace/mymaxima/temp/test.mac \n"
+"End of batchfile\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c RECOMMEND CUTTING THIS ITEM, AS THE load SUBSUMES FUNCTIONALITY OF loadfile\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{loadfile}\n"
+"@deffn {Function} loadfile (@var{filename})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Evaluates Lisp expressions in @var{filename}.  @code{loadfile} does not invoke\n"
+"@mrefcomma{file_search} so @code{filename} must include the file extension and\n"
+"as much of the path as needed to find the file.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{loadfile} can process files created by @mrefcomma{save}@w{}\n"
+"@mrefcomma{translate_file} and @mrefdot{compile_file}  The user may find it\n"
+"more convenient to use @mref{load} instead of @code{loadfile}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Session management} @category{File input}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c loadprint DOESN'T EXACTLY WORK LIKE THIS, BUT IT HARDLY SEEMS WORTH FIXING\n"
+"@c I GUESS THIS COULD BE UPDATED TO DESCRIBE THE WAY IT ACTUALLY WORKS\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{loadprint}\n"
+"@defvr {Option variable} loadprint\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{loadprint} tells whether to print a message when a file is loaded.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"When @code{loadprint} is @code{true}, always print a message.\n"
+"@item\n"
+"When @code{loadprint} is @code{'loadfile}, print a message only if\n"
+"a file is loaded by the function @code{loadfile}.\n"
+"@item\n"
+"When @code{loadprint} is @code{'autoload},\n"
+"print a message only if a file is automatically loaded.\n"
+"See @mrefdot{setup_autoload}\n"
+"@item\n"
+"When @code{loadprint} is @code{false}, never print a message.\n"
+"@end itemize\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{Global flags}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{directory}\n"
+"@deffn {Function} directory (@var{path})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Returns a list of the files and directories found in @var{path}\n"
+"in the file system.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@var{path} may contain wildcard characters (i.e., characters which represent\n"
+"unspecified parts of the path),\n"
+"which include at least the asterisk on most systems,\n"
+"and possibly other characters, depending on the system.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{directory} relies on the Lisp function DIRECTORY,\n"
+"which may have implementation-specific behavior.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{pathname_directory}\n"
+"@anchor{pathname_name}\n"
+"@anchor{pathname_type}\n"
+"@deffn  {Function} pathname_directory (@var{pathname})\n"
+"@deffnx {Function} pathname_name (@var{pathname})\n"
+"@deffnx {Function} pathname_type (@var{pathname})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"These functions return the components of @var{pathname}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c === beg ===\n"
+"@c pathname_directory(\"/home/dieter/maxima/changelog.txt\");\n"
+"@c pathname_name(\"/home/dieter/maxima/changelog.txt\");\n"
+"@c pathname_type(\"/home/dieter/maxima/changelog.txt\");\n"
+"@c === end ===\n"
+"@example \n"
+"(%i1) pathname_directory(\"/home/dieter/maxima/changelog.txt\");\n"
+"(%o1)                 /home/dieter/maxima/\n"
+"(%i2) pathname_name(\"/home/dieter/maxima/changelog.txt\");\n"
+"(%o2)                       changelog\n"
+"(%i3) pathname_type(\"/home/dieter/maxima/changelog.txt\");\n"
+"(%o3)                          txt\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{printfile}\n"
+"@deffn {Function} printfile (@var{path})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Prints the file named by @var{path} to the console.  @var{path} may be a string\n"
+"or a symbol; if it is a symbol, it is converted to a string.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"If @var{path} names a file which is accessible from the current working\n"
+"directory, that file is printed to the console.  Otherwise, @code{printfile}\n"
+"attempts to locate the file by appending @var{path} to each of the elements of\n"
+"@mref{file_search_usage} via @mrefdot{filename_merge}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{printfile} returns @var{path} if it names an existing file,\n"
+"or otherwise the result of a successful filename merge.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File input} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{save}\n"
+"@deffn  {Function} save @\n"
+"@fname{save} (@var{filename}, @var{name_1}, @var{name_2}, @var{name_3}, @dots{}) @\n"
+"@fname{save} (@var{filename}, values, functions, labels, @dots{}) @\n"
+"@fname{save} (@var{filename}, [@var{m}, @var{n}]) @\n"
+"@fname{save} (@var{filename}, @var{name_1}=@var{expr_1}, @dots{}) @\n"
+"@fname{save} (@var{filename}, all) @\n"
+"@fname{save} (@var{filename}, @var{name_1}=@var{expr_1}, @var{name_2}=@var{expr_2}, @dots{})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Stores the current values of @var{name_1}, @var{name_2}, @var{name_3}, @dots{},\n"
+"in @var{filename}.  The arguments are the names of variables, functions, or\n"
+"other objects.  If a name has no value or function associated with it, it is\n"
+"ignored.  @code{save} returns @var{filename}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{save} stores data in the form of Lisp expressions.\n"
+"If @var{filename} ends in @code{.lisp} the\n"
+"data stored by @code{save} may be recovered by @code{load (@var{filename})}.\n"
+"See @mrefdot{load}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The global flag @mref{file_output_append} governs whether @code{save} appends or\n"
+"truncates the output file.  When @code{file_output_append} is @code{true},\n"
+"@code{save} appends to the output file.  Otherwise, @code{save} truncates the\n"
+"output file.  In either case, @code{save} creates the file if it does not yet\n"
+"exist.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special form @code{save (@var{filename}, values, functions, labels, ...)}\n"
+"stores the items named by @mrefcomma{values} @mrefcomma{functions}@w{}\n"
+"@mrefcomma{labels} etc.  The names may be any specified by the variable\n"
+"@mrefdot{infolists}  @code{values} comprises all user-defined variables.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special form @code{save (@var{filename}, [@var{m}, @var{n}])} stores the\n"
+"values of input and output labels @var{m} through @var{n}.  Note that @var{m}\n"
+"and @var{n} must be literal integers.  Input and output labels may also be\n"
+"stored one by one, e.g., @code{save (\"foo.1\", %i42, %o42)}.\n"
+"@code{save (@var{filename}, labels)} stores all input and output labels.\n"
+"When the stored labels are recovered, they clobber existing labels.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special form @code{save (@var{filename}, @var{name_1}=@var{expr_1},\n"
+"@var{name_2}=@var{expr_2}, ...)} stores the values of @var{expr_1},\n"
+"@var{expr_2}, @dots{}, with names @var{name_1}, @var{name_2}, @dots{}\n"
+"It is useful to apply this form to input and output labels, e.g.,\n"
+"@code{save (\"foo.1\", aa=%o88)}.  The right-hand side of the equality in this\n"
+"form may be any expression, which is evaluated.  This form does not introduce\n"
+"the new names into the current Maxima environment, but only stores them in\n"
+"@var{filename}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"These special forms and the general form of @code{save} may be mixed at will.\n"
+"For example, @code{save (@var{filename}, aa, bb, cc=42, functions, [11, 17])}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special form @code{save (@var{filename}, all)} stores the current state of\n"
+"Maxima.  This includes all user-defined variables, functions, arrays, etc., as\n"
+"well as some automatically defined items.  The saved items include system\n"
+"variables, such as @mref{file_search_maxima} or @mrefcomma{showtime} if they\n"
+"have been assigned new values by the user; see @mrefdot{myoptions}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{save} evaluates @var{filename} and quotes all other arguments.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Session management} @category{File output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{stringout}\n"
+"@deffn  {Function} stringout @\n"
+"@fname{stringout} (@var{filename}, @var{expr_1}, @var{expr_2}, @var{expr_3}, @dots{}) @\n"
+"@fname{stringout} (@var{filename}, [@var{m}, @var{n}]) @\n"
+"@fname{stringout} (@var{filename}, input) @\n"
+"@fname{stringout} (@var{filename}, functions) @\n"
+"@fname{stringout} (@var{filename}, values)\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{stringout} writes expressions to a file in the same form the expressions\n"
+"would be typed for input.  The file can then be used as input for the\n"
+"@mref{batch} or @mref{demo} commands, and it may be edited for any purpose.\n"
+"@code{stringout} can be executed while @mref{writefile} is in progress.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The global flag @mref{file_output_append} governs whether @code{stringout}\n"
+"appends or truncates the output file.  When @code{file_output_append} is\n"
+"@code{true}, @code{stringout} appends to the output file.  Otherwise,\n"
+"@code{stringout} truncates the output file.  In either case, @code{stringout}\n"
+"creates the file if it does not yet exist.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The general form of @code{stringout} writes the values of one or more \n"
+"expressions to the output file.  Note that if an expression is a\n"
+"variable, only the value of the variable is written and not the name\n"
+"of the variable.  As a useful special case, the expressions may be\n"
+"input labels (@code{%i1}, @code{%i2}, @code{%i3}, @dots{}) or output labels\n"
+"(@code{%o1}, @code{%o2}, @code{%o3}, @dots{}).\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"If @mref{grind} is @code{true}, @code{stringout} formats the output using the\n"
+"@code{grind} format.  Otherwise the @code{string} format is used.  See\n"
+"@code{grind} and @code{string}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special form @code{stringout (@var{filename}, [@var{m}, @var{n}])} writes\n"
+"the values of input labels m through n, inclusive.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special form @code{stringout (@var{filename}, input)} writes all\n"
+"input labels to the file.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special form @code{stringout (@var{filename}, functions)} writes all\n"
+"user-defined functions (named by the global list @mrefparen{functions}) to the\n"
+"file.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The special form @code{stringout (@var{filename}, values)} writes all\n"
+"user-assigned variables (named by the global list @mrefparen{values}) to the file.\n"
+"Each variable is printed as an assignment statement, with the name of the\n"
+"variable, a colon, and its value.  Note that the general form of\n"
+"@code{stringout} does not print variables as assignment statements.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Session management} @category{File output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{with_stdout}\n"
+"@deffn  {Function} with_stdout @\n"
+"@fname{with_stdout} (@var{f}, @var{expr_1}, @var{expr_2}, @var{expr_3}, @dots{}) @\n"
+"@fname{with_stdout} (@var{s}, @var{expr_1}, @var{expr_2}, @var{expr_3}, @dots{})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Evaluates @var{expr_1}, @var{expr_2}, @var{expr_3}, @dots{} and writes any\n"
+"output thus generated to a file @var{f} or output stream @var{s}.  The evaluated\n"
+"expressions are not written to the output.  Output may be generated by\n"
+"@mrefcomma{print} @mrefcomma{display} @mrefcomma{grind} among other functions.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The global flag @mref{file_output_append} governs whether @code{with_stdout}\n"
+"appends or truncates the output file @var{f}.  When @code{file_output_append}\n"
+"is @code{true}, @code{with_stdout} appends to the output file.  Otherwise,\n"
+"@code{with_stdout} truncates the output file.  In either case,\n"
+"@code{with_stdout} creates the file if it does not yet exist.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{with_stdout} returns the value of its final argument.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also @mrefdot{writefile}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c THIS DOESN'T SEEM VERY IMPORTANT TO MENTION ...\n"
+"@c Note the binding of display2d to be\n"
+"@c false, otherwise the printing will have things like \"- 3\" instead\n"
+"@c of \"-3\".\n"
+"@c\n"
+"@example\n"
+"@c THIS EXAMPLE USES SOME UNIX-ISH CONSTRUCTS -- WILL IT WORK IN WINDOWS ???\n"
+"@c ALSO IT'S SORT OF COMPLICATED AND THE SIMPLER SECOND EXAMPLE ILLUSTRATES with_stdout BETTER !!!\n"
+"@c mygnuplot (f, var, range, number_ticks) :=\n"
+"@c  block ([numer:true, display2d:false],\n"
+"@c  with_stdout(\"tmp.out\",\n"
+"@c    dx: (range[2]-range[1])/number_ticks,\n"
+"@c    for x: range[1] thru range[2] step dx\n"
+"@c       do print (x, at (f, var=x))),\n"
+"@c  system (\"echo \\"set data style lines; set title '\", f,\"' ;plot '/tmp/gnu'\n"
+"@c ;pause 10 \\" | gnuplot\"))$\n"
+"(%i1) with_stdout (\"tmp.out\", for i:5 thru 10 do\n"
+"      print (i, \"! yields\", i!))$\n"
+"(%i2) printfile (\"tmp.out\")$\n"
+"5 ! yields 120 \n"
+"6 ! yields 720 \n"
+"7 ! yields 5040 \n"
+"8 ! yields 40320 \n"
+"9 ! yields 362880 \n"
+"10 ! yields 3628800\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{writefile}\n"
+"@deffn {Function} writefile (@var{filename})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Begins writing a transcript of the Maxima session to @var{filename}.\n"
+"All interaction between the user and Maxima is then recorded in this file,\n"
+"@c FOLLOWING CLAIM PROBABLY NEEDS TO BE QUALIFIED\n"
+"just as it appears on the console.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"As the transcript is printed in the console output format, it cannot be reloaded\n"
+"into Maxima.  To make a file containing expressions which can be reloaded,\n"
+"see @mref{save} and @mrefdot{stringout}  @code{save} stores expressions in Lisp\n"
+"form, while @code{stringout} stores expressions in Maxima form.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"The effect of executing @code{writefile} when @var{filename} already exists\n"
+"depends on the underlying Lisp implementation; the transcript file may be\n"
+"clobbered, or the file may be appended.  @mref{appendfile} always appends to\n"
+"the transcript file.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"It may be convenient to execute @mref{playback} after @code{writefile} to save\n"
+"the display of previous interactions.  As @code{playback} displays only the\n"
+"input and output variables (@code{%i1}, @code{%o1}, etc.), any output generated\n"
+"by a print statement in a function (as opposed to a return value) is not\n"
+"displayed by @code{playback}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@mref{closefile} closes the transcript file opened by @code{writefile} or\n"
+"@code{appendfile}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{File output} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for TeX Output, Functions and Variables for Fortran Output, Functions and Variables for File Input and Output, File Input and Output\n"
+"@section Functions and Variables for TeX Output\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Note that the built-in TeX output functionality of wxMaxima makes no use of\n"
+"the functions described here but uses its own implementation instead.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@anchor{tex}\n"
+"@deffn  {Function} tex @\n"
+"@fname{tex} (@var{expr}) @\n"
+"@fname{tex} (@var{expr}, @var{destination}) @\n"
+"@fname{tex} (@var{expr}, false) @\n"
+"@fname{tex} (@var{label}) @\n"
+"@fname{tex} (@var{label}, @var{destination}) @\n"
+"@fname{tex} (@var{label}, false)\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Prints a representation of an expression suitable for the TeX document\n"
+"preparation system.  The result is a fragment of a document, which can be copied\n"
+"into a larger document but not processed by itself.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{tex (@var{expr})} prints a TeX representation of @var{expr} on the\n"
+"console.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{tex (@var{label})} prints a TeX representation of the expression named by\n"
+"@var{label} and assigns it an equation label (to be displayed to the left of the\n"
+"expression).  The TeX equation label is the same as the Maxima label.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@var{destination} may be an output stream or file name.  When @var{destination}\n"
+"is a file name, @code{tex} appends its output to the file.  The functions\n"
+"@code{openw} and @code{opena} create output streams.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{tex (@var{expr}, false)} and @code{tex (@var{label}, false)}\n"
+"return their TeX output as a string.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{tex} evaluates its first argument after testing it to see if it is a\n"
+"label.  Quote-quote @code{''} forces evaluation of the argument, thereby\n"
+"defeating the test and preventing the label.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also @mrefdot{texput}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@example\n"
+"(%i1) integrate (1/(1+x^3), x);\n"
+"                                    2 x - 1\n"
+"                  2            atan(-------)\n"
+"             log(x  - x + 1)        sqrt(3)    log(x + 1)\n"
+"(%o1)      - --------------- + ------------- + ----------\n"
+"                    6             sqrt(3)          3\n"
+"(%i2) tex (%o1);\n"
+"$$-@{@{\log \left(x^2-x+1\right)@}\over@{6@}@}+@{@{\arctan \left(@{@{2\,x-1\n"
+" @}\over@{\sqrt@{3@}@}@}\right)@}\over@{\sqrt@{3@}@}@}+@{@{\log \left(x+1\right)\n"
+" @}\over@{3@}@}\leqno@{\tt (\%o1)@}$$\n"
+"(%o2)                          (\%o1)\n"
+"(%i3) tex (integrate (sin(x), x));\n"
+"$$-\cos x$$\n"
+"(%o3)                           false\n"
+"(%i4) tex (%o1, \"foo.tex\");\n"
+"(%o4)                          (\%o1)\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{tex (@var{expr}, false)} returns its TeX output as a string.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c S : tex (x * y * z, false);\n"
+"@c S;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) S : tex (x * y * z, false);\n"
+"(%o1) $$x\,y\,z$$\n"
+"(%i2) S;\n"
+"(%o2) $$x\,y\,z$$\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{TeX output} @category{File output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tex1}\n"
+"@deffn {Function} tex1 (@var{e})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Returns a string which represents the TeX output for the expressions @var{e}.\n"
+"The TeX output is not enclosed in delimiters for an equation or any other\n"
+"environment.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c tex1 (sin(x) + cos(x));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) tex1 (sin(x) + cos(x));\n"
+"(%o1)                     \sin x+\cos x\n"
+"@end example\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{texput}\n"
+"@deffn  {Function} texput @\n"
+"@fname{texput} (@var{a}, @var{s}) @\n"
+"@fname{texput} (@var{a}, @var{f}) @\n"
+"@fname{texput} (@var{a}, @var{s}, @var{operator_type}) @\n"
+"@fname{texput} (@var{a}, [@var{s_1}, @var{s_2}], matchfix) @\n"
+"@fname{texput} (@var{a}, [@var{s_1}, @var{s_2}, @var{s_3}], matchfix)\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign the TeX output for the atom @var{a}, which can be a symbol or the name\n"
+"of an operator.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{texput (@var{a}, @var{s})} causes the @code{tex} function to interpolate\n"
+"the string @var{s} into the TeX output in place of @var{a}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{texput (@var{a}, @var{f})} causes the @code{tex} function to call the\n"
+"function @var{f} to generate TeX output.  @var{f} must accept one argument,\n"
+"which is an expression which has operator @var{a}, and must return a string\n"
+"(the TeX output).  @var{f} may call @code{tex1} to generate TeX output for the\n"
+"arguments of the input expression.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{texput (@var{a}, @var{s}, @var{operator_type})}, where @var{operator_type}\n"
+"is @code{prefix}, @code{infix}, @code{postfix}, @code{nary}, or @code{nofix},\n"
+"causes the @code{tex} function to interpolate @var{s} into the TeX output in\n"
+"place of @var{a}, and to place the interpolated text in the appropriate\n"
+"position.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{texput (@var{a}, [@var{s_1}, @var{s_2}], matchfix)} causes the @code{tex}\n"
+"function to interpolate @var{s_1} and @var{s_2} into the TeX output on either\n"
+"side of the arguments of @var{a}.  The arguments (if more than one) are\n"
+"separated by commas.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{texput (@var{a}, [@var{s_1}, @var{s_2}, @var{s_3}], matchfix)} causes the\n"
+"@code{tex} function to interpolate @var{s_1} and @var{s_2} into the TeX output\n"
+"on either side of the arguments of @var{a}, with @var{s_3} separating the\n"
+"arguments.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign TeX output for a variable.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c texput (me,\"\\mu_e\");\n"
+"@c tex (me);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) texput (me,\"\\mu_e\");\n"
+"(%o1)                         \mu_e\n"
+"(%i2) tex (me);\n"
+"$$\mu_e$$\n"
+"(%o2)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign TeX output for an ordinary function (not an operator).\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c texput (lcm, \"\\mathrm{lcm}\");\n"
+"@c tex (lcm (a, b));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) texput (lcm, \"\\mathrm@{lcm@}\");\n"
+"(%o1)                     \mathrm@{lcm@}\n"
+"(%i2) tex (lcm (a, b));\n"
+"$$\mathrm@{lcm@}\left(a , b\right)$$\n"
+"(%o2)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Call a function to generate TeX output.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c texfoo (e) := block ([a, b], [a, b] : args (e),\n"
+"@c   concat (\"\\left[\\stackrel{\",tex1(b),\"}{\",tex1(a),\"}\\right]\"))$\n"
+"@c texput (foo, texfoo);\n"
+"@c tex (foo (2^x, %pi));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) texfoo (e) := block ([a, b], [a, b] : args (e),\n"
+"  concat(\"\\left[\\stackrel@{\",tex1(b),\"@}@{\",tex1(a),\"@}\\right]\"))$\n"
+"(%i2) texput (foo, texfoo);\n"
+"(%o2)                        texfoo\n"
+"(%i3) tex (foo (2^x, %pi));\n"
+"$$\left[\stackrel@{\pi@}@{2^@{x@}@}\right]$$\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign TeX output for a prefix operator.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c prefix (\"grad\");\n"
+"@c texput (\"grad\", \" \\nabla \", prefix);\n"
+"@c tex (grad f);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) prefix (\"grad\");\n"
+"(%o1)                         grad\n"
+"(%i2) texput (\"grad\", \" \\nabla \", prefix);\n"
+"(%o2)                        \nabla \n"
+"(%i3) tex (grad f);\n"
+"$$ \nabla f$$\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign TeX output for an infix operator.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c infix (\"~\");\n"
+"@c texput (\"~\", \" \\times \", infix);\n"
+"@c tex (a ~ b);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) infix (\"~\");\n"
+"(%o1)                           ~\n"
+"(%i2) texput (\"~\", \" \\times \", infix);\n"
+"(%o2)                        \times \n"
+"(%i3) tex (a ~ b);\n"
+"$$a \times b$$\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign TeX output for a postfix operator.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c postfix (\"##\");\n"
+"@c texput (\"##\", \"!!\", postfix);\n"
+"@c tex (x ##);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) postfix (\"##\");\n"
+"(%o1)                          ##\n"
+"(%i2) texput (\"##\", \"!!\", postfix);\n"
+"(%o2)                          !!\n"
+"(%i3) tex (x ##);\n"
+"$$x!!$$\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign TeX output for a nary operator.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c nary (\"@@\");\n"
+"@c texput (\"@@\", \" \\circ \", nary);\n"
+"@c tex (a @@ b @@ c @@ d);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) nary (\"@@@@\");\n"
+"(%o1)                          @@@@\n"
+"(%i2) texput (\"@@@@\", \" \\circ \", nary);\n"
+"(%o2)                         \circ \n"
+"(%i3) tex (a @@@@ b @@@@ c @@@@ d);\n"
+"$$a \circ b \circ c \circ d$$\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign TeX output for a nofix operator.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c nofix (\"foo\");\n"
+"@c texput (\"foo\", \"\\mathsc{foo}\", nofix);\n"
+"@c tex (foo);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) nofix (\"foo\");\n"
+"(%o1)                          foo\n"
+"(%i2) texput (\"foo\", \"\\mathsc@{foo@}\", nofix);\n"
+"(%o2)                     \mathsc@{foo@}\n"
+"(%i3) tex (foo);\n"
+"$$\mathsc@{foo@}$$\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Assign TeX output for a matchfix operator.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c matchfix (\"<<\", \">>\");\n"
+"@c texput (\"<<\", [\" \\langle \", \" \\rangle \"], matchfix);\n"
+"@c tex (<<a>>);\n"
+"@c tex (<<a, b>>);\n"
+"@c texput (\"<<\", [\" \\langle \", \" \\rangle \", \" \\, | \\,\"], \n"
+"@c       matchfix);\n"
+"@c tex (<<a>>);\n"
+"@c tex (<<a, b>>);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) matchfix (\"<<\", \">>\");\n"
+"(%o1)                          <<\n"
+"(%i2) texput (\"<<\", [\" \\langle \", \" \\rangle \"], matchfix);\n"
+"(%o2)                [ \langle ,  \rangle ]\n"
+"(%i3) tex (<<a>>);\n"
+"$$ \langle a \rangle $$\n"
+"(%o3)                         false\n"
+"(%i4) tex (<<a, b>>);\n"
+"$$ \langle a , b \rangle $$\n"
+"(%o4)                         false\n"
+"(%i5) texput (\"<<\", [\" \\langle \", \" \\rangle \", \" \\, | \\,\"],\n"
+"      matchfix);\n"
+"(%o5)           [ \langle ,  \rangle ,  \, | \,]\n"
+"(%i6) tex (<<a>>);\n"
+"$$ \langle a \rangle $$\n"
+"(%o6)                         false\n"
+"(%i7) tex (<<a, b>>);\n"
+"$$ \langle a \, | \,b \rangle $$\n"
+"(%o7)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{TeX output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{get_tex_environment}\n"
+"@deffn  {Function} get_tex_environment (@var{op})\n"
+"@deffnx {Function} set_tex_environment (@var{op}, @var{before}, @var{after})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Customize the TeX environment output by @code{tex}.\n"
+"As maintained by these functions, the TeX environment comprises two strings:\n"
+"one is printed before any other TeX output, and the other is printed after.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Only the TeX environment of the top-level operator in an expression\n"
+"is output; TeX environments associated with other operators are ignored.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{get_tex_environment} returns the TeX environment which is applied\n"
+"to the operator @var{op}; returns the default if no other environment\n"
+"has been assigned.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{set_tex_environment} assigns the TeX environment for the operator\n"
+"@var{op}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c get_tex_environment (\":=\");\n"
+"@c tex (f (x) := 1 - x);\n"
+"@c set_tex_environment (\":=\", \"$$\", \"$$\");\n"
+"@c tex (f (x) := 1 - x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) get_tex_environment (\":=\");\n"
+"(%o1) [\n"
+"\begin@{verbatim@}\n"
+", ;\n"
+"\end@{verbatim@}\n"
+"]\n"
+"(%i2) tex (f (x) := 1 - x);\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"\begin@{verbatim@}\n"
+"f(x):=1-x;\n"
+"\end@{verbatim@}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"(%o2)                         false\n"
+"(%i3) set_tex_environment (\":=\", \"$$\", \"$$\");\n"
+"(%o3)                       [$$, $$]\n"
+"(%i4) tex (f (x) := 1 - x);\n"
+"$$f(x):=1-x$$\n"
+"(%o4)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{TeX output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{get_tex_enviroment_default}\n"
+"@deffn  {Function} get_tex_environment_default ()\n"
+"@deffnx {Function} set_tex_environment_default (@var{before}, @var{after})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Customize the TeX environment output by @code{tex}.\n"
+"As maintained by these functions, the TeX environment comprises two strings:\n"
+"one is printed before any other TeX output, and the other is printed after.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{get_tex_environment_default} returns the TeX environment which is\n"
+"applied to expressions for which the top-level operator has no\n"
+"specific TeX environment (as assigned by @code{set_tex_environment}).\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{set_tex_environment_default} assigns the default TeX environment.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c ===beg===\n"
+"@c get_tex_environment_default ();\n"
+"@c tex (f(x) + g(x));\n"
+"@c set_tex_environment_default (\"\\begin{equation}\n"
+"@c \", \"\n"
+"@c \\end{equation}\");\n"
+"@c tex (f(x) + g(x));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) get_tex_environment_default ();\n"
+"(%o1)                       [$$, $$]\n"
+"(%i2) tex (f(x) + g(x));\n"
+"$$g\left(x\right)+f\left(x\right)$$\n"
+"(%o2)                         false\n"
+"(%i3) set_tex_environment_default (\"\\begin@{equation@}\n"
+"\", \"\n"
+"\\end@{equation@}\");\n"
+"(%o3) [\begin@{equation@}\n"
+", \n"
+"\end@{equation@}]\n"
+"(%i4) tex (f(x) + g(x));\n"
+"\begin@{equation@}\n"
+"g\left(x\right)+f\left(x\right)\n"
+"\end@{equation@}\n"
+"(%o4)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{TeX output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Fortran Output, , Functions and Variables for TeX Output, File Input and Output\n"
+"@section Functions and Variables for Fortran Output\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fortindent}\n"
+"@defvr {Option variable} fortindent\n"
+"Default value: @code{0}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{fortindent} controls the left margin indentation of\n"
+"expressions printed out by the @mref{fortran} command.  @code{0} gives normal\n"
+"printout (i.e., 6 spaces), and positive values will causes the\n"
+"expressions to be printed farther to the right.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fortran}\n"
+"@deffn {Function} fortran (@var{expr})\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Prints @var{expr} as a Fortran statement.\n"
+"The output line is indented with spaces.\n"
+"If the line is too long, @code{fortran} prints continuation lines.\n"
+"@code{fortran} prints the exponentiation operator @code{^} as @code{**},\n"
+"and prints a complex number @code{a + b %i} in the form @code{(a,b)}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@var{expr} may be an equation.  If so, @code{fortran} prints an assignment\n"
+"statement, assigning the right-hand side of the equation to the left-hand side.\n"
+"In particular, if the right-hand side of @var{expr} is the name of a matrix,\n"
+"then @code{fortran} prints an assignment statement for each element of the\n"
+"matrix.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"If @var{expr} is not something recognized by @code{fortran},\n"
+"the expression is printed in @mref{grind} format without complaint.\n"
+"@code{fortran} does not know about lists, arrays, or functions.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@mref{fortindent} controls the left margin of the printed lines.\n"
+"@code{0} is the normal margin (i.e., indented 6 spaces).  Increasing\n"
+"@code{fortindent} causes expressions to be printed further to the right.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"When @mref{fortspaces} is @code{true}, @code{fortran} fills out\n"
+"each printed line with spaces to 80 columns.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@code{fortran} evaluates its arguments; quoting an argument defeats evaluation.\n"
+"@code{fortran} always returns @code{done}.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"See also the function @mxref{function_f90, f90} for printing one or more\n"
+"expressions as a Fortran 90 program.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@verbatim\n"
+"(%i1) expr: (a + b)^12$\n"
+"(%i2) fortran (expr);\n"
+"      (b+a)**12                                                                 \n"
+"(%o2)                         done\n"
+"(%i3) fortran ('x=expr);\n"
+"      x = (b+a)**12                                                             \n"
+"(%o3)                         done\n"
+"(%i4) fortran ('x=expand (expr));\n"
+"      x = b**12+12*a*b**11+66*a**2*b**10+220*a**3*b**9+495*a**4*b**8+792\n"
+"     1   *a**5*b**7+924*a**6*b**6+792*a**7*b**5+495*a**8*b**4+220*a**9*b\n"
+"     2   **3+66*a**10*b**2+12*a**11*b+a**12\n"
+"(%o4)                         done\n"
+"(%i5) fortran ('x=7+5*%i);\n"
+"      x = (7,5)                                                                 \n"
+"(%o5)                         done\n"
+"(%i6) fortran ('x=[1,2,3,4]);\n"
+"      x = [1,2,3,4]                                                             \n"
+"(%o6)                         done\n"
+"(%i7) f(x) := x^2$\n"
+"(%i8) fortran (f);\n"
+"      f                                                                         \n"
+"(%o8)                         done\n"
+"@end verbatim\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fortspaces}\n"
+"@defvr {Option variable} fortspaces\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"When @code{fortspaces} is @code{true}, @code{fortran} fills out\n"
+"each printed line with spaces to 80 columns.\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Input.texi
+msgid ""
+msgstr ""

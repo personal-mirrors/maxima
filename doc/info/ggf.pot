@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# ggf.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for ggf::\n"
+"@end menu\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@node Functions and Variables for ggf,  , ggf-pkg, ggf-pkg\n"
+"@section Functions and Variables for ggf\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@defvr {Option variable} GGFINFINITY\n"
+"Default value: 3\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"This is an option variable for function @code{ggf}.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"When computing the continued fraction of the\n"
+"generating function, a partial quotient having a degree\n"
+"(strictly) greater than @var{GGFINFINITY} will be discarded and\n"
+"the current convergent will be considered as the exact value\n"
+"of the generating function; most often the degree of all\n"
+"partial quotients will be 0 or 1; if you use a greater value,\n"
+"then you should give enough terms in order to make the\n"
+"computation accurate enough.\n"
+"See also @mref{ggf}.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package ggf}\n"
+"@closecatbox\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@end defvr\n"
+"@defvr {Option variable} GGFCFMAX\n"
+"Default value: 3\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"This is an option variable for function @code{ggf}.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"When computing the continued fraction of the\n"
+"generating function, if no good result has been found (see\n"
+"the @var{GGFINFINITY} flag) after having computed @var{GGFCFMAX} partial\n"
+"quotients, the generating function will be considered as\n"
+"not being a fraction of two polynomials and the function will\n"
+"exit. Put freely a greater value for more complicated\n"
+"generating functions.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"See also @mref{ggf}.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package ggf}\n"
+"@closecatbox\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@anchor{ggf}\n"
+"@deffn {Function} ggf (@var{l})\n"
+"Compute the generating function (if it is a fraction of two\n"
+"polynomials) of a sequence, its first terms being given. @var{l}\n"
+"is a list of numbers.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"The solution is returned as a fraction of two polynomials.\n"
+"If no solution has been found, it returns with @code{done}.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"This function is controlled by global variables @var{GGFINFINITY} and @var{GGFCFMAX}. See also @var{GGFINFINITY} and @var{GGFCFMAX}.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"To use this function write first @code{load(\"ggf\")}.\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@opencatbox\n"
+"@category{Generating functions} @category{Share packages} @category{Package ggf}\n"
+"@closecatbox\n"
+msgstr ""
+
+# ggf.texi
+msgid ""
+"@end deffn\n"
+msgstr ""

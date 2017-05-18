@@ -1,0 +1,537 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@page\n"
+"@node Constants, Lists, Strings, Data Types and Structures\n"
+"@section Constants\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for Constants::\n"
+"@end menu\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Constants,  , Constants, Constants\n"
+"@subsection Functions and Variables for Constants\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%e}\n"
+"@defvr {Constant} %e\n"
+"@ifinfo\n"
+"@vrindex e\n"
+"@vrindex Euler's number\n"
+"@vrindex Base of natural logarithm\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{%e} represents the base of the natural logarithm, also known as Euler's\n"
+"number.  The numeric value of @code{%e} is the double-precision floating-point\n"
+"value 2.718281828459045d0.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%i}\n"
+"@defvr {Constant} %i\n"
+"@ifinfo\n"
+"@vrindex i\n"
+"@vrindex Imaginary unit\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{%i} represents the imaginary unit, @math{sqrt(- 1)}.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{false}\n"
+"@defvr {Constant} false\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{false} represents the Boolean constant of the same name.\n"
+"Maxima implements @code{false} by the value @code{NIL} in Lisp.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%gamma}\n"
+"@defvr {Constant} %gamma\n"
+"@ifinfo\n"
+"@vrindex Euler-Mascheroni constant\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"The Euler-Mascheroni constant, 0.5772156649015329 ....\n"
+"@c DOUBTLESS THERE IS MORE TO SAY HERE.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ind}\n"
+"@defvr {Constant} ind\n"
+"@ifinfo\n"
+"@vrindex Indeterminate\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{ind} represents a bounded, indefinite result.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"See also @mrefdot{limit}\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c ===beg===\n"
+"@c limit (sin(1/x), x, 0);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) limit (sin(1/x), x, 0);\n"
+"(%o1)                          ind\n"
+"@end example\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{inf}\n"
+"@defvr {Constant} inf\n"
+"@ifinfo\n"
+"@vrindex Real infinity\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{inf} represents real positive infinity.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{infinity}\n"
+"@defvr {Constant}  infinity\n"
+"@ifinfo\n"
+"@vrindex Complex infinity\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{infinity} represents complex infinity.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{minf}\n"
+"@defvr {Constant} minf\n"
+"@ifinfo\n"
+"@vrindex Minus infinity\n"
+"@vrindex Negative infinity\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{minf} represents real minus (i.e., negative) infinity.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%phi}\n"
+"@defvr {Constant} %phi\n"
+"@ifinfo\n"
+"@vrindex phi\n"
+"@vrindex Golden mean\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{%phi} represents the so-called @i{golden mean}, @math{(1 + sqrt(5))/2}.\n"
+"The numeric value of @code{%phi} is the double-precision floating-point value\n"
+"1.618033988749895d0.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@mref{fibtophi} expresses Fibonacci numbers @code{fib(n)} in terms of\n"
+"@code{%phi}.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"By default, Maxima does not know the algebraic properties of @code{%phi}.\n"
+"After evaluating @code{tellrat(%phi^2 - %phi - 1)} and @code{algebraic: true},\n"
+"@mref{ratsimp} can simplify some expressions containing @code{%phi}.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{fibtophi} expresses Fibonacci numbers @code{fib(n)} in terms of @code{%phi}.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c ===beg===\n"
+"@c fibtophi (fib (n));\n"
+"@c fib (n-1) + fib (n) - fib (n+1);\n"
+"@c fibtophi (%);\n"
+"@c ratsimp (%);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) fibtophi (fib (n));\n"
+"                           n             n\n"
+"                       %phi  - (1 - %phi)\n"
+"(%o1)                  -------------------\n"
+"                           2 %phi - 1\n"
+"(%i2) fib (n-1) + fib (n) - fib (n+1);\n"
+"(%o2)          - fib(n + 1) + fib(n) + fib(n - 1)\n"
+"(%i3) fibtophi (%);\n"
+"            n + 1             n + 1       n             n\n"
+"        %phi      - (1 - %phi)        %phi  - (1 - %phi)\n"
+"(%o3) - --------------------------- + -------------------\n"
+"                2 %phi - 1                2 %phi - 1\n"
+"                                          n - 1             n - 1\n"
+"                                      %phi      - (1 - %phi)\n"
+"                                    + ---------------------------\n"
+"                                              2 %phi - 1\n"
+"(%i4) ratsimp (%);\n"
+"(%o4)                           0\n"
+"@end example\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"By default, Maxima does not know the algebraic properties of @code{%phi}.\n"
+"After evaluating @code{tellrat (%phi^2 - %phi - 1)} and @code{algebraic: true},\n"
+"@code{ratsimp} can simplify some expressions containing @code{%phi}.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c ===beg===\n"
+"@c e : expand ((%phi^2 - %phi - 1) * (A + 1));\n"
+"@c ratsimp (e);\n"
+"@c tellrat (%phi^2 - %phi - 1);\n"
+"@c algebraic : true;\n"
+"@c ratsimp (e);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) e : expand ((%phi^2 - %phi - 1) * (A + 1));\n"
+"                 2                      2\n"
+"(%o1)        %phi  A - %phi A - A + %phi  - %phi - 1\n"
+"(%i2) ratsimp (e);\n"
+"                  2                     2\n"
+"(%o2)        (%phi  - %phi - 1) A + %phi  - %phi - 1\n"
+"(%i3) tellrat (%phi^2 - %phi - 1);\n"
+"                            2\n"
+"(%o3)                  [%phi  - %phi - 1]\n"
+"(%i4) algebraic : true;\n"
+"(%o4)                         true\n"
+"(%i5) ratsimp (e);\n"
+"(%o5)                           0\n"
+"@end example\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%pi}\n"
+"@defvr {Constant} %pi\n"
+"@ifinfo\n"
+"@vrindex pi\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{%pi} represents the ratio of the perimeter of a circle to its diameter.\n"
+"The numeric value of @code{%pi} is the double-precision floating-point value\n"
+"3.141592653589793d0.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{true}\n"
+"@defvr {Constant} true\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{true} represents the Boolean constant of the same name.\n"
+"Maxima implements @code{true} by the value @code{T} in Lisp.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{und}\n"
+"@defvr {Constant} und\n"
+"@ifinfo\n"
+"@vrindex Undefined\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{und} represents an undefined result.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"See also @mrefdot{limit}\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c ===beg===\n"
+"@c limit (x*sin(x), x, inf);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) limit (x*sin(x), x, inf);\n"
+"(%o1)                          und\n"
+"@end example\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zeroa}\n"
+"@defvr {Constant} zeroa\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{zeroa} represents an infinitesimal above zero.  @code{zeroa} can be used\n"
+"in expressions.  @code{limit} simplifies expressions which contain\n"
+"infinitesimals.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"See also @mref{zerob} and @mrefdot{limit}\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{limit} simplifies expressions which contain infinitesimals:\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c ===beg===\n"
+"@c limit(zeroa);\n"
+"@c limit(zeroa+x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) limit(zeroa);\n"
+"(%o1)                           0\n"
+"(%i2) limit(x+zeroa);\n"
+"(%o2)                           x\n"
+"@end example\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zerob}\n"
+"@defvr {Constant} zerob\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@code{zerob} represents an infinitesimal below zero.  @code{zerob} can be used\n"
+"in expressions.  @code{limit} simplifies expressions which contain\n"
+"infinitesimals.\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"See also @mref{zeroa} and @mrefdot{limit}\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+"@opencatbox\n"
+"@category{Constants}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Constants.texi
+msgid ""
+msgstr ""

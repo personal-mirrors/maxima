@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# operatingsystem.texi
+msgid ""
+"@menu\n"
+"* Introduction to operatingsystem::\n"
+"* Directory operations::\n"
+"* File operations::\n"
+"* Environment operations::\n"
+"@end menu\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@node Introduction to operatingsystem, Directory operations, operatingsystem-pkg, operatingsystem-pkg\n"
+"@section Introduction to operatingsystem\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"Package @code{operatingsystem} contains functions for operatingsystem-tasks, like file system operations.\n"
+"@node Directory operations, File operations, Introduction to operatingsystem, operatingsystem-pkg\n"
+"@section Directory operations\n"
+"@anchor{chdir}\n"
+"@deffn {Function} chdir (@var{dir})\n"
+"Change to directory @var{dir}\n"
+"@end deffn\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@anchor{mkdir}\n"
+"@deffn {Function} mkdir (@var{dir})\n"
+"Create directory @var{dir}\n"
+"@end deffn\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@anchor{rmdir}\n"
+"@deffn {Function} rmdir (@var{dir})\n"
+"remove directory @var{dir}\n"
+"@end deffn\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@anchor{getcurrentdirectory}\n"
+"@deffn {Function} getcurrentdirectory ()\n"
+"returns the current working directory.\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"See also @mrefdot{directory}\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@example\n"
+"(%i1) load(\"operatingsystem\")$\n"
+"(%i2) mkdir(\"testdirectory\")$\n"
+"(%i3) chdir(\"testdirectory\")$\n"
+"(%i4) chdir(\"..\")$\n"
+"(%i5) rmdir(\"testdirectory\")$\n"
+"@end example\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@node File operations, Environment operations, Directory operations, operatingsystem-pkg\n"
+"@section File operations\n"
+"@anchor{copy_file}\n"
+"@deffn {Function} copy_file (@var{file1}, @var{file2})\n"
+"copies file @var{file1} to @var{file2}\n"
+"@end deffn\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@anchor{rename_file}\n"
+"@deffn {Function} rename_file (@var{file1}, @var{file2})\n"
+"renames file @var{file1} to @var{file2}\n"
+"@end deffn\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@anchor{delete_file}\n"
+"@deffn {Function} delete_file (@var{file1})\n"
+"deletes file @var{file1}\n"
+"@end deffn\n"
+"@node Environment operations, , File operations, operatingsystem-pkg\n"
+"@section Environment operations\n"
+"@anchor{getenv}\n"
+"@deffn {Function} getenv (@var{env})\n"
+"Get the value of the environmentvariable @var{env}\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@example\n"
+"(%i1) load(\"operatingsystem\")$\n"
+"(%i2) getenv(\"PATH\");\n"
+"(%o2) /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\n"
+"@end example\n"
+msgstr ""
+
+# operatingsystem.texi
+msgid ""
+"@end deffn\n"
+msgstr ""

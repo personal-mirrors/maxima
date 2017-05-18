@@ -1,0 +1,3117 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Database.texi
+msgid ""
+"@menu\n"
+"* Introduction to Maximas Database::\n"
+"* Functions and Variables for Properties::\n"
+"* Functions and Variables for Facts::\n"
+"* Functions and Variables for Predicates::\n"
+"@end menu\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to Maximas Database, Functions and Variables for Properties, Maximas Database, Maximas Database\n"
+"@section Introduction to Maximas Database\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Properties, Functions and Variables for Facts, Introduction to Maximas Database, Maximas Database\n"
+"@section Functions and Variables for Properties\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{alphabetic}\n"
+"@defvr {Property} alphabetic\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{alphabetic} is a property type recognized by @mrefdot{declare}@w{}\n"
+"The expression @code{declare(@var{s}, alphabetic)} tells Maxima to recognize\n"
+"as alphabetic all of the characters in @var{s}, which must be a string.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @ref{Identifiers}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c xx\~yy\`\@ : 1729;\n"
+"@c declare (\"~`@\", alphabetic);\n"
+"@c xx~yy`@ + @yy`xx + `xx@@yy~;\n"
+"@c listofvars (%);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) xx\~yy\`\@@ : 1729;\n"
+"(%o1)                         1729\n"
+"(%i2) declare (\"~`@@\", alphabetic);\n"
+"(%o2)                         done\n"
+"(%i3) xx~yy`@@ + @@yy`xx + `xx@@@@yy~;\n"
+"(%o3)               `xx@@@@yy~ + @@yy`xx + 1729\n"
+"(%i4) listofvars (%);\n"
+"(%o4)                  [@@yy`xx, `xx@@@@yy~]\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{bindtest}\n"
+"@defvr {Property} bindtest\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The command @code{declare(@var{x}, bindtest)} tells Maxima to trigger an error\n"
+"when the symbol @var{x} is evaluated unbound.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c aa + bb;\n"
+"@c declare (aa, bindtest);\n"
+"@c aa + bb;\n"
+"@c aa : 1234;\n"
+"@c aa + bb;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) aa + bb;\n"
+"(%o1)                        bb + aa\n"
+"(%i2) declare (aa, bindtest);\n"
+"(%o2)                         done\n"
+"(%i3) aa + bb;\n"
+"aa unbound variable\n"
+" -- an error.  Quitting.  To debug this try debugmode(true);\n"
+"(%i4) aa : 1234;\n"
+"(%o4)                         1234\n"
+"(%i5) aa + bb;\n"
+"(%o5)                       bb + 1234\n"
+"@end example\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
+"@c CROSS REF declare, properties, ETC\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{constant}\n"
+"@deffn {Property} constant\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare(@var{a}, constant)} declares @var{a} to be a constant.  The\n"
+"declaration of a symbol to be constant does not prevent the assignment of a\n"
+"nonconstant value to the symbol.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See @mref{constantp} and @mrefdot{declare}\n"
+"@c WHAT EXACTLY ARE THE CONSEQUENCES OF DECLARING AN ATOM TO BE CONSTANT ??\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@example\n"
+"(%i1) declare(c, constant);\n"
+"(%o1)                         done\n"
+"(%i2) constantp(c);\n"
+"(%o2)                         true\n"
+"(%i3) c : x;\n"
+"(%o3)                           x\n"
+"(%i4) constantp(c);\n"
+"(%o4)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Constants}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{constantp}\n"
+"@deffn {Function} constantp (@var{expr})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Returns @code{true} if @var{expr} is a constant expression, otherwise returns\n"
+"@code{false}.\n"
+"@c WHAT DOES MAXIMA KNOW ABOUT CONSTANT EXPRESSIONS ??\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"An expression is considered a constant expression if its arguments are\n"
+"numbers (including rational numbers, as displayed with @code{/R/}),\n"
+"symbolic constants such as @mrefcomma{%pi} @mrefcomma{%e} and @mrefcomma{%i}@w{}\n"
+"variables bound to a constant or declared constant by @mrefcomma{declare}@w{}\n"
+"or functions whose arguments are constant.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{constantp} evaluates its arguments.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See the property @mref{constant} which declares a symbol to be constant.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c constantp (7 * sin(2));\n"
+"@c constantp (rat (17/29));\n"
+"@c constantp (%pi * sin(%e));\n"
+"@c constantp (exp (x));\n"
+"@c declare (x, constant);\n"
+"@c constantp (exp (x));\n"
+"@c constantp (foo (x) + bar (%e) + baz (2));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) constantp (7 * sin(2));\n"
+"(%o1)                                true\n"
+"(%i2) constantp (rat (17/29));\n"
+"(%o2)                                true\n"
+"(%i3) constantp (%pi * sin(%e));\n"
+"(%o3)                                true\n"
+"(%i4) constantp (exp (x));\n"
+"(%o4)                                false\n"
+"(%i5) declare (x, constant);\n"
+"(%o5)                                done\n"
+"(%i6) constantp (exp (x));\n"
+"(%o6)                                true\n"
+"(%i7) constantp (foo (x) + bar (%e) + baz (2));\n"
+"(%o7)                                false\n"
+"(%i8) \n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Constants}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
+"@c THIS ITEM IS EXTREMELY IMPORTANT\n"
+"@c ENSURE THAT ALL KEYWORDS RECOGNIZED BY declare HAVE THEIR OWN DOCUMENTATION ITEMS !!\n"
+"@c ALSO: HOW TO FIND THE LIST OF ALL SYMBOLS WHICH HAVE A GIVEN PROPERTY ??\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{declare}\n"
+"@deffn {Function} declare (@var{a_1}, @var{p_1}, @var{a_2}, @var{p_2}, @dots{})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Assigns the atom or list of atoms @var{a_i} the property or list of properties\n"
+"@var{p_i}.  When @var{a_i} and/or @var{p_i} are lists, each of the atoms gets\n"
+"all of the properties.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare} quotes its arguments.  @code{declare} always returns @code{done}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"As noted in the description for each declaration flag, for some flags\n"
+"@code{featurep(@var{object}, @var{feature})} returns @code{true} if @var{object}\n"
+"has been declared to have @var{feature}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"For more information about the features system, see @mrefdot{features} To\n"
+"remove a property from an atom, use @mrefdot{remove}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare} recognizes the following properties:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@table @code\n"
+"@item additive\n"
+"Tells Maxima to simplify @var{a_i} expressions by the substitution\n"
+"@code{@var{a_i}(x + y + z + ...)} @code{-->}\n"
+"@code{@var{a_i}(x) + @var{a_i}(y) + @var{a_i}(z) + ...}.\n"
+"The substitution is carried out on the first argument only.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item alphabetic\n"
+"Tells Maxima to recognize all characters in @var{a_i} (which must be a\n"
+"string) as alphabetic characters.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item antisymmetric, commutative, symmetric\n"
+"Tells Maxima to recognize @var{a_i} as a symmetric or antisymmetric\n"
+"function.  @mref{commutative} is the same as @code{symmetric}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item bindtest\n"
+"Tells Maxima to trigger an error when @var{a_i} is evaluated unbound.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item constant\n"
+"Tells Maxima to consider @var{a_i} a symbolic constant.\n"
+"@c WHAT MAXIMA KNOWS ABOUT SYMBOLIC CONSTANTS IS PRETTY LIMITED\n"
+"@c DUNNO IF WE WANT TO GET INTO DETAILS HERE.\n"
+"@c MAYBE IN THE DOCUMENTATION FOR CONSTANT (IF THERE IS SUCH)\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item even, odd\n"
+"Tells Maxima to recognize @var{a_i} as an even or odd integer variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item evenfun, oddfun\n"
+"Tells Maxima to recognize @var{a_i} as an odd or even function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item evflag\n"
+"Makes @var{a_i} known to the @code{ev} function so that @var{a_i} is bound\n"
+"to @code{true} during the execution of @code{ev} when @var{a_i} appears as\n"
+"a flag argument of @code{ev}.  See @mrefdot{evflag}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item evfun\n"
+"Makes @var{a_i} known to @code{ev} so that the function named by @var{a_i}\n"
+"is applied when @var{a_i} appears as a flag argument of @code{ev}.\n"
+"See @mrefdot{evfun}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item feature\n"
+"Tells Maxima to recognize @var{a_i} as the name of a feature.\n"
+"Other atoms may then be declared to have the @var{a_i} property.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item increasing, decreasing\n"
+"Tells Maxima to recognize @var{a_i} as an increasing or decreasing\n"
+"function.\n"
+"@c MAXIMA FAILS TO DEDUCE F(2) > F(1) FOR INCREASING FUNCTION F\n"
+"@c AND FAILS TO DEDUCE ANYTHING AT ALL ABOUT DECREASING FUNCTIONS\n"
+"@c REPORTED AS SF BUG # 1483194\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item integer, noninteger\n"
+"Tells Maxima to recognize @var{a_i} as an integer or noninteger variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item integervalued\n"
+"Tells Maxima to recognize @var{a_i} as an integer-valued function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item lassociative, rassociative\n"
+"Tells Maxima to recognize @var{a_i} as a right-associative or\n"
+"left-associative function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item linear\n"
+"Equivalent to declaring @var{a_i} both @code{outative} and\n"
+"@code{additive}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item mainvar\n"
+"Tells Maxima to consider @var{a_i} a \"main variable\".  A main variable\n"
+"succeeds all other constants and variables in the canonical ordering of\n"
+"Maxima expressions, as determined by @code{ordergreatp}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item multiplicative\n"
+"Tells Maxima to simplify @var{a_i} expressions by the substitution\n"
+"@code{@var{a_i}(x * y * z * ...)} @code{-->} \n"
+"@code{@var{a_i}(x) * @var{a_i}(y) * @var{a_i}(z) * ...}.\n"
+"The substitution is carried out on the first argument only.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@anchor{nary}\n"
+"@item nary\n"
+"Tells Maxima to recognize @var{a_i} as an n-ary function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The @code{nary} declaration is not the same as calling the @code{nary}\n"
+"function.  The sole effect of @code{declare(foo, nary)} is to instruct the\n"
+"Maxima simplifier to flatten nested expressions, for example, to simplify\n"
+"@code{foo(x, foo(y, z))} to @code{foo(x, y, z)}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item nonarray\n"
+"Tells Maxima to consider @var{a_i} not an array.  This declaration\n"
+"prevents multiple evaluation of a subscripted variable name.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item nonscalar\n"
+"Tells Maxima to consider @var{a_i} a nonscalar variable.  The usual\n"
+"application is to declare a variable as a symbolic vector or matrix.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item noun\n"
+"Tells Maxima to parse @var{a_i} as a noun.  The effect of this is to\n"
+"replace instances of @var{a_i} with @code{'@var{a_i}} or\n"
+"@code{nounify(@var{a_i})}, depending on the context.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item outative\n"
+"Tells Maxima to simplify @var{a_i} expressions by pulling constant factors\n"
+"out of the first argument.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When @var{a_i} has one argument, a factor is considered constant if it is\n"
+"a literal or declared constant.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When @var{a_i} has two or more arguments, a factor is considered constant\n"
+"if the second argument is a symbol and the factor is free of the second\n"
+"argument.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item posfun\n"
+"Tells Maxima to recognize @var{a_i} as a positive function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item rational, irrational\n"
+"Tells Maxima to recognize @var{a_i} as a rational or irrational real\n"
+"variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item real, imaginary, complex\n"
+"Tells Maxima to recognize @var{a_i} as a real, pure imaginary, or complex\n"
+"variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@item scalar\n"
+"Tells Maxima to consider @var{a_i} a scalar variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c OBSOLETE @code{special} (RECOGNIZED BY DECLARE BUT NEVER USED ANYWHERE)\n"
+"@c OBSOLETE @code{analytic} (RECOGNIZED BY DECLARE BUT NEVER USED ANYWHERE)\n"
+"@end table\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples of the usage of the properties are available in the documentation\n"
+"for each separate description of a property.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{decreasing}\n"
+"@anchor{increasing}\n"
+"@defvr  {Property} decreasing\n"
+"@defvrx {Property} increasing\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The commands @code{declare(@var{f}, decreasing)} or\n"
+"@code{declare(@var{f}, increasing)} tell Maxima to recognize the function\n"
+"@var{f} as an decreasing or increasing function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mref{declare} for more properties.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@example\n"
+"(%i1) assume(a > b);\n"
+"(%o1)                        [a > b]\n"
+"(%i2) is(f(a) > f(b));\n"
+"(%o2)                        unknown\n"
+"(%i3) declare(f, increasing);\n"
+"(%o3)                         done\n"
+"(%i4) is(f(a) > f(b));\n"
+"(%o4)                         true\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{even}\n"
+"@anchor{odd}\n"
+"@defvr  {Property} even\n"
+"@defvrx {Property} odd\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare(@var{a}, even)} or @code{declare(@var{a}, odd)} tells Maxima to\n"
+"recognize the symbol @var{a} as an even or odd integer variable.  The\n"
+"properties @code{even} and @code{odd} are not recognized by the functions\n"
+"@mrefcomma{evenp} @mrefcomma{oddp} and @mrefdot{integerp}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mref{declare} and @mrefdot{askinteger}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@example\n"
+"(%i1) declare(n, even);\n"
+"(%o1)                         done\n"
+"(%i2) askinteger(n, even);\n"
+"(%o2)                          yes\n"
+"(%i3) askinteger(n);\n"
+"(%o3)                          yes\n"
+"(%i4) evenp(n);\n"
+"(%o4)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEEDS EXPANSION AND CLARIFICATION\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{feature}\n"
+"@defvr {Property} feature\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Maxima understands two distinct types of features, system features and features\n"
+"which apply to mathematical expressions.  See also @mref{status} for information\n"
+"about system features.  See also @mref{features} and @mref{featurep} for\n"
+"information about mathematical features.\n"
+"@c PROPERTIES, DECLARATIONS FALL UNDER THIS HEADING AS WELL\n"
+"@c OTHER STUFF ??\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{feature} itself is not the name of a function or variable.\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEEDS CLARIFICATION, ESPECIALLY WRT THE EXTENT OF THE FEATURE SYSTEM\n"
+"@c (I.E. WHAT KINDS OF THINGS ARE FEATURES ACCORDING TO featurep)\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{featurep}\n"
+"@deffn {Function} featurep (@var{a}, @var{f})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Attempts to determine whether the object @var{a} has the feature @var{f} on the\n"
+"basis of the facts in the current database.  If so, it returns @code{true},\n"
+"else @code{false}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Note that @code{featurep} returns @code{false} when neither @var{f}\n"
+"nor the negation of @var{f} can be established.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{featurep} evaluates its argument.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mref{declare} and @mrefdot{features}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@example\n"
+"(%i1) declare (j, even)$\n"
+"(%i2) featurep (j, integer);\n"
+"(%o2)                           true\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{features}\n"
+"@defvr {Declaration} features\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Maxima recognizes certain mathematical properties of functions and variables.\n"
+"These are called \"features\".\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare (@var{x}, @var{foo})} gives the property @var{foo}\n"
+"to the function or variable @var{x}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare (@var{foo}, feature)} declares a new feature @var{foo}.\n"
+"For example,\n"
+"@code{declare ([red, green, blue], feature)}\n"
+"declares three new features, @code{red}, @code{green}, and @code{blue}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The predicate @code{featurep (@var{x}, @var{foo})}\n"
+"returns @code{true} if @var{x} has the @var{foo} property,\n"
+"and @code{false} otherwise.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The infolist @code{features} is a list of known features.  These are\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@verbatim\n"
+"   integer        noninteger      even\n"
+"   odd            rational        irrational\n"
+"   real           imaginary       complex\n"
+"   analytic       increasing      decreasing\n"
+"   oddfun         evenfun         posfun\n"
+"   constant       commutative     lassociative\n"
+"   rassociative   symmetric       antisymmetric\n"
+"   integervalued\n"
+"@end verbatim\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"plus any user-defined features.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{features} is a list of mathematical features.  There is also a list of\n"
+"non-mathematical, system-dependent features.  See @mrefdot{status}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c declare (FOO, feature);\n"
+"@c declare (x, FOO);\n"
+"@c featurep (x, FOO);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) declare (FOO, feature);\n"
+"(%o1)                         done\n"
+"(%i2) declare (x, FOO);\n"
+"(%o2)                         done\n"
+"(%i3) featurep (x, FOO);\n"
+"(%o3)                         true\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{get}\n"
+"@deffn {Function} get (@var{a}, @var{i})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Retrieves the user property indicated by @var{i} associated with\n"
+"atom @var{a} or returns @code{false} if @var{a} doesn't have property @var{i}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{get} evaluates its arguments.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mref{put} and @mrefdot{qput}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c put (%e, 'transcendental, 'type);\n"
+"@c put (%pi, 'transcendental, 'type)$\n"
+"@c put (%i, 'algebraic, 'type)$\n"
+"@c typeof (expr) := block ([q],\n"
+"@c         if numberp (expr)\n"
+"@c         then return ('algebraic),\n"
+"@c         if not atom (expr)\n"
+"@c         then return (maplist ('typeof, expr)),\n"
+"@c         q: get (expr, 'type),\n"
+"@c         if q=false\n"
+"@c         then errcatch (error(expr,\"is not numeric.\")) else q)$\n"
+"@c typeof (2*%e + x*%pi);\n"
+"@c typeof (2*%e + %pi);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) put (%e, 'transcendental, 'type);\n"
+"(%o1)                    transcendental\n"
+"(%i2) put (%pi, 'transcendental, 'type)$\n"
+"(%i3) put (%i, 'algebraic, 'type)$\n"
+"(%i4) typeof (expr) := block ([q],\n"
+"        if numberp (expr)\n"
+"        then return ('algebraic),\n"
+"        if not atom (expr)\n"
+"        then return (maplist ('typeof, expr)),\n"
+"        q: get (expr, 'type),\n"
+"        if q=false\n"
+"        then errcatch (error(expr,\"is not numeric.\")) else q)$\n"
+"(%i5) typeof (2*%e + x*%pi);\n"
+"x is not numeric.\n"
+"(%o5)  [[transcendental, []], [algebraic, transcendental]]\n"
+"(%i6) typeof (2*%e + %pi);\n"
+"(%o6)     [transcendental, [algebraic, transcendental]]\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{integer}\n"
+"@anchor{noninteger}\n"
+"@defvr  {Property} integer\n"
+"@defvrx {Property} noninteger\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare(@var{a}, integer)} or @code{declare(@var{a}, noninteger)} tells\n"
+"Maxima to recognize @var{a} as an integer or noninteger variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@example\n"
+"(%i1) declare(n, integer, x, noninteger);\n"
+"(%o1)                         done\n"
+"(%i2) askinteger(n);\n"
+"(%o2)                          yes\n"
+"(%i3) askinteger(x);\n"
+"(%o3)                          no\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{integervalued}\n"
+"@defvr {Property} integervalued\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare(@var{f}, integervalued)} tells Maxima to recognize @var{f} as an\n"
+"integer-valued function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@example\n"
+"(%i1) exp(%i)^f(x);\n"
+"                              %i f(x)\n"
+"(%o1)                      (%e  )\n"
+"(%i2) declare(f, integervalued);\n"
+"(%o2)                         done\n"
+"(%i3) exp(%i)^f(x);\n"
+"                              %i f(x)\n"
+"(%o3)                       %e\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{nonarray}\n"
+"@deffn {Property} nonarray\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The command @code{declare(a, nonarray)} tells Maxima to consider @var{a} not\n"
+"an array.  This declaration prevents multiple evaluation, if @var{a} is a\n"
+"subscripted variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c a:'b$ b:'c$ c:'d$\n"
+"@c a[x];\n"
+"@c declare(a, nonarray);\n"
+"@c a[x];\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) a:'b$ b:'c$ c:'d$\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"(%i4) a[x];\n"
+"(%o4)                          d\n"
+"                                x\n"
+"(%i5) declare(a, nonarray);\n"
+"(%o5)                         done\n"
+"(%i6) a[x];\n"
+"(%o6)                          a\n"
+"                                x\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEEDS CLARIFICATION AND EXAMPLES\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{nonscalar}\n"
+"@defvr {Property} nonscalar\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Makes atoms behave as does a list or matrix with respect to the dot operator.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Vectors} @category{Matrices}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{nonscalarp}\n"
+"@deffn {Function} nonscalarp (@var{expr})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Returns @code{true} if @var{expr} is a non-scalar, i.e., it contains\n"
+"atoms declared as non-scalars, lists, or matrices.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also the predicate function @mref{scalarp} and @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Vectors} @category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{posfun}\n"
+"@defvr {Property} posfun\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare (f, posfun)} declares @code{f} to be a positive function.\n"
+"@code{is (f(x) > 0)} yields @code{true}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Operators}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEEDS WORK ESPECIALLY EXAMPLES\n"
+"@c WHOLE BUSINESS WITH PROPERTIES IS PRETTY CONFUSING, TRY TO CLEAR IT UP\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{printprops}\n"
+"@deffn  {Function} printprops @\n"
+"@fname{printprops} (@var{a}, @var{i}) @\n"
+"@fname{printprops} ([@var{a_1}, @dots{}, @var{a_n}], @var{i}) @\n"
+"@fname{printprops} (all, @var{i})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Displays the property with the indicator @var{i} associated with the atom\n"
+"@var{a}.  @var{a} may also be a list of atoms or the atom @code{all} in which\n"
+"case all of the atoms with the given property will be used.  For example,\n"
+"@code{printprops ([f, g], atvalue)}.  @code{printprops} is for properties that\n"
+"cannot otherwise be displayed, i.e.  for @mrefcomma{atvalue}@w{}\n"
+"@mrefcomma{atomgrad} @mrefcomma{gradef} and @mrefdot{matchdeclare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c CROSS REF TO WHICH FUNCTION OR FUNCTIONS ESTABLISH PROPERTIES !! (VERY IMPORTANT)\n"
+"@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{properties}\n"
+"@deffn {Function} properties (@var{a})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Returns a list of the names of all the properties associated with the atom\n"
+"@var{a}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c CROSS REF TO WHICH FUNCTION OR FUNCTIONS ESTABLISH PROPERTIES !! (VERY IMPORTANT)\n"
+"@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
+"@c WHAT IS HIDDEN IN THE \"etc\" HERE ??\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{props}\n"
+"@defvr {System variable} props\n"
+"Default value: @code{[]}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{props} are atoms which have any property other than those explicitly\n"
+"mentioned in @mrefcomma{infolists} such as specified by @mrefcomma{atvalue}@w{}\n"
+"@mrefcomma{matchdeclare} etc., as well as properties specified in the\n"
+"@mref{declare} function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c CROSS REF TO WHICH FUNCTION OR FUNCTIONS ESTABLISH PROPERTIES !! (VERY IMPORTANT)\n"
+"@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{propvars}\n"
+"@deffn {Function} propvars (@var{prop})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Returns a list of those atoms on the @mref{props} list which\n"
+"have the property indicated by @var{prop}.  Thus @code{propvars (atvalue)}\n"
+"returns a list of atoms which have atvalues.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c CROSS REF TO OTHER FUNCTIONS WHICH PUT/GET PROPERTIES !! (VERY IMPORTANT)\n"
+"@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
+"@c ARE PROPERTIES ESTABLISHED BY put THE SAME AS PROPERTIES ESTABLISHED BY declare OR OTHER FUNCTIONS ??\n"
+"@c IS put (foo, true, integer) EQUIVALENT TO declare (foo, integer) FOR EXAMPLE ??\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{put}\n"
+"@deffn {Function} put (@var{atom}, @var{value}, @var{indicator})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Assigns @var{value} to the property (specified by @var{indicator}) of\n"
+"@var{atom}.  @var{indicator} may be the name of any property, not just a\n"
+"system-defined property.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@mref{rem} reverses the effect of @code{put}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{put} evaluates its arguments.\n"
+"@code{put} returns @var{value}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mref{qput} and @mrefdot{get}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@example\n"
+"(%i1) put (foo, (a+b)^5, expr);\n"
+"                                   5\n"
+"(%o1)                       (b + a)\n"
+"(%i2) put (foo, \"Hello\", str);\n"
+"(%o2)                         Hello\n"
+"(%i3) properties (foo);\n"
+"(%o3)            [[user properties, str, expr]]\n"
+"(%i4) get (foo, expr);\n"
+"                                   5\n"
+"(%o4)                       (b + a)\n"
+"(%i5) get (foo, str);\n"
+"(%o5)                         Hello\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{qput}\n"
+"@deffn {Function} qput (@var{atom}, @var{value}, @var{indicator})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Assigns @var{value} to the property (specified by @var{indicator}) of\n"
+"@var{atom}.  This is the same as @mrefcomma{put} except that the arguments are\n"
+"quoted.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{get}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@example\n"
+"(%i1) foo: aa$ \n"
+"(%i2) bar: bb$\n"
+"(%i3) baz: cc$\n"
+"(%i4) put (foo, bar, baz);\n"
+"(%o4)                          bb\n"
+"(%i5) properties (aa);\n"
+"(%o5)                [[user properties, cc]]\n"
+"(%i6) get (aa, cc);\n"
+"(%o6)                          bb\n"
+"(%i7) qput (foo, bar, baz);\n"
+"(%o7)                          bar\n"
+"(%i8) properties (foo);\n"
+"(%o8)            [value, [user properties, baz]]\n"
+"(%i9) get ('foo, 'baz);\n"
+"(%o9)                          bar\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rational}\n"
+"@anchor{irrational}\n"
+"@defvr  {Property} rational\n"
+"@defvrx {Property} irrational\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare(@var{a}, rational)} or @code{declare(@var{a}, irrational)} tells\n"
+"Maxima to recognize @var{a} as a rational or irrational real variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{real}\n"
+"@anchor{imaginary}\n"
+"@anchor{complex}\n"
+"@defvr  {Property} real\n"
+"@defvrx {Property} imaginary\n"
+"@defvrx {Property} complex\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare(@var{a}, real)}, @code{declare(@var{a}, imaginary)}, or\n"
+"@code{declare(@var{a}, complex)} tells Maxima to recognize @var{a} as a real,\n"
+"pure imaginary, or complex variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c CROSS REF TO OTHER FUNCTIONS WHICH PUT/GET PROPERTIES !! (VERY IMPORTANT)\n"
+"@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
+"@c HOW DOES THIS INTERACT WITH declare OR OTHER PROPERTY-ESTABLISHING FUNCTIONS ??\n"
+"@c HOW IS THIS DIFFERENT FROM remove ??\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rem}\n"
+"@deffn {Function} rem (@var{atom}, @var{indicator})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Removes the property indicated by @var{indicator} from @var{atom}.\n"
+"@code{rem} reverses the effect of @mrefdot{put}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{rem} returns @code{done} if @var{atom} had an @var{indicator} property\n"
+"when @code{rem} was called, or @code{false} if it had no such property.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c CROSS REF TO OTHER FUNCTIONS WHICH PUT/GET PROPERTIES !! (VERY IMPORTANT)\n"
+"@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
+"@c HOW DOES THIS INTERACT WITH declare OR OTHER PROPERTY-ESTABLISHING FUNCTIONS ??\n"
+"@c HOW IS THIS DIFFERENT FROM rem ??\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{remove}\n"
+"@deffn  {Function} remove @\n"
+"@fname{remove} (@var{a_1}, @var{p_1}, @dots{}, @var{a_n}, @var{p_n}) @\n"
+"@fname{remove} ([@var{a_1}, @dots{}, @var{a_m}], [@var{p_1}, @dots{}, @var{p_n}], @dots{}) @\n"
+"@fname{remove} (\"@var{a}\", operator) @\n"
+"@fname{remove} (@var{a}, transfun) @\n"
+"@fname{remove} (all, @var{p})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Removes properties associated with atoms.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{remove (@var{a_1}, @var{p_1}, ..., @var{a_n}, @var{p_n})}\n"
+"removes property @code{p_k} from atom @code{a_k}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{remove ([@var{a_1}, ..., @var{a_m}], [@var{p_1}, ..., @var{p_n}], ...)}\n"
+"removes properties @code{@var{p_1}, ..., @var{p_n}}\n"
+"from atoms @var{a_1}, @dots{}, @var{a_m}.\n"
+"There may be more than one pair of lists.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c VERIFY THAT THIS WORKS AS ADVERTISED\n"
+"@code{remove (all, @var{p})} removes the property @var{p} from all atoms which\n"
+"have it.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c SHOULD REFER TO A LIST OF ALL SYSTEM-DEFINED PROPERTIES HERE.\n"
+"The removed properties may be system-defined properties such as\n"
+"@code{function}, @code{macro}, or @code{mode_declare}.\n"
+"@code{remove} does not remove properties defined by @mrefdot{put}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c VERIFY THAT THIS WORKS AS ADVERTISED\n"
+"@c IS transfun PECULIAR TO remove ?? IF SO, SHOW SPECIAL CASE AS @defunx\n"
+"A property may be @code{transfun} to remove\n"
+"the translated Lisp version of a function.\n"
+"After executing this, the Maxima version of the function is executed\n"
+"rather than the translated version.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{remove (\"@var{a}\", operator)} or, equivalently,\n"
+"@code{remove (\"@var{a}\", op)} removes from @var{a} the operator properties\n"
+"declared by @mrefcomma{prefix} @mrefcomma{infix}@w{}\n"
+"@mxrefcomma{function_nary, nary} @mrefcomma{postfix} @mrefcomma{matchfix} or\n"
+"@mrefdot{nofix}  Note that the name of the operator must be written as a quoted\n"
+"string.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{remove} always returns @code{done} whether or not an atom has a specified\n"
+"property.  This behavior is unlike the more specific remove functions\n"
+"@mrefcomma{remvalue} @mrefcomma{remarray} @mrefcomma{remfunction} and\n"
+"@mrefdot{remrule}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{remove} quotes its arguments.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c IN SERIOUS NEED OF EXAMPLES HERE\n"
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{scalar}\n"
+"@defvr {Property} scalar\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{declare(@var{a}, scalar)} tells Maxima to consider @var{a} a scalar\n"
+"variable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEEDS CLARIFICATION AND EXAMPLES\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{scalarp}\n"
+"@deffn {Function} scalarp (@var{expr})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Returns @code{true} if @var{expr} is a number, constant, or variable declared\n"
+"@mref{scalar} with @mrefcomma{declare} or composed entirely of numbers,\n"
+"constants, and such variables, but not containing matrices or lists.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also the predicate function @mrefdot{nonscalarp}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Vectors} @category{Matrices}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Facts, Functions and Variables for Predicates, Functions and Variables for Properties, Maximas Database\n"
+"@section Functions and Variables for Facts\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{activate}\n"
+"@deffn {Function} activate (@var{context_1}, @dots{}, @var{context_n})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Activates the contexts @var{context_1}, @dots{}, @var{context_n}.\n"
+"The facts in these contexts are then available to\n"
+"make deductions and retrieve information.\n"
+"The facts in these contexts are not listed by @code{facts ()}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The variable @mref{activecontexts} is the list\n"
+"of contexts which are active by way of the @code{activate} function.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{activecontexts}\n"
+"@defvr {System variable} activecontexts\n"
+"Default value: @code{[]}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{activecontexts} is a list of the contexts which are active\n"
+"by way of the @mref{activate} function, as opposed to being active because\n"
+"they are subcontexts of the current context.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c THERE IS PROBABLY MORE TO THE STORY THAN WHAT IS INDICATED HERE ...\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{askinteger}\n"
+"@deffn  {Function} askinteger @\n"
+"@fname{askinteger} (@var{expr}, integer) @\n"
+"@fname{askinteger} (@var{expr}) @\n"
+"@fname{askinteger} (@var{expr}, even) @\n"
+"@fname{askinteger} (@var{expr}, odd)\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{askinteger (@var{expr}, integer)} attempts to determine from the\n"
+"@code{assume} database whether @var{expr} is an integer.\n"
+"@code{askinteger} prompts the user if it cannot tell otherwise,\n"
+"@c UMM, askinteger AND asksign DO NOT APPEAR TO HAVE ANY EFFECT ON THE assume\n"
+"@c DATABASE !!!\n"
+"and attempt to install the information in the database if possible.\n"
+"@code{askinteger (@var{expr})} is equivalent to\n"
+"@code{askinteger (@var{expr}, integer)}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{askinteger (@var{expr}, even)} and @code{askinteger (@var{expr}, odd)}\n"
+"likewise attempt to determine if @var{expr} is an even integer or odd integer,\n"
+"respectively.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c THERE IS PROBABLY MORE TO THE STORY THAN WHAT IS INDICATED HERE ...\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{asksign}\n"
+"@deffn {Function} asksign (@var{expr})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"First attempts to determine whether the specified\n"
+"expression is positive, negative, or zero.  If it cannot, it asks the\n"
+"user the necessary questions to complete its deduction.  The user's\n"
+"answer is recorded in the data base for the duration of the current\n"
+"computation.  The return value of @code{asksign} is one of @code{pos},\n"
+"@code{neg}, or @code{zero}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{assume}\n"
+"@deffn {Function} assume (@var{pred_1}, @dots{}, @var{pred_n})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Adds predicates @var{pred_1}, @dots{}, @var{pred_n} to the current context.\n"
+"If a predicate is inconsistent or redundant with the predicates in the current\n"
+"context, it is not added to the context.  The context accumulates predicates\n"
+"from each call to @code{assume}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{assume} returns a list whose elements are the predicates added to the\n"
+"context or the atoms @code{redundant} or @code{inconsistent} where applicable.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The predicates @var{pred_1}, @dots{}, @var{pred_n} can only be expressions\n"
+"with the relational operators @code{< <= equal notequal >=} and @code{>}.\n"
+"Predicates cannot be literal equality @code{=} or literal inequality @code{#}\n"
+"expressions, nor can they be predicate functions such as @code{integerp}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Compound predicates of the form @code{@var{pred_1} and ... and @var{pred_n}}\n"
+"are recognized, but not @code{@var{pred_1} or ... or @var{pred_n}}.\n"
+"@code{not @var{pred_k}} is recognized if @var{pred_k} is a relational predicate.\n"
+"Expressions of the form @code{not (@var{pred_1} and @var{pred_2})}\n"
+"and @code{not (@var{pred_1} or @var{pred_2})} are not recognized.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Maxima's deduction mechanism is not very strong;\n"
+"there are many obvious consequences which cannot be determined by @mrefdot{is}\n"
+"This is a known weakness.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{assume} does not handle predicates with complex numbers.  If a predicate\n"
+"contains a complex number @code{assume} returns @code{inconsistent} or \n"
+"@code{redunant}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{assume} evaluates its arguments.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefcomma{is} @mrefcomma{facts} @mrefcomma{forget}@w{}\n"
+"@mrefcomma{context} and @mrefdot{declare}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c assume (xx > 0, yy < -1, zz >= 0);\n"
+"@c assume (aa < bb and bb < cc);\n"
+"@c facts ();\n"
+"@c is (xx > yy);\n"
+"@c is (yy < -yy);\n"
+"@c is (sinh (bb - aa) > 0);\n"
+"@c forget (bb > aa);\n"
+"@c prederror : false;\n"
+"@c is (sinh (bb - aa) > 0);\n"
+"@c is (bb^2 < cc^2);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) assume (xx > 0, yy < -1, zz >= 0);\n"
+"(%o1)              [xx > 0, yy < - 1, zz >= 0]\n"
+"(%i2) assume (aa < bb and bb < cc);\n"
+"(%o2)                  [bb > aa, cc > bb]\n"
+"(%i3) facts ();\n"
+"(%o3)     [xx > 0, - 1 > yy, zz >= 0, bb > aa, cc > bb]\n"
+"(%i4) is (xx > yy);\n"
+"(%o4)                         true\n"
+"(%i5) is (yy < -yy);\n"
+"(%o5)                         true\n"
+"(%i6) is (sinh (bb - aa) > 0);\n"
+"(%o6)                         true\n"
+"(%i7) forget (bb > aa);\n"
+"(%o7)                       [bb > aa]\n"
+"(%i8) prederror : false;\n"
+"(%o8)                         false\n"
+"(%i9) is (sinh (bb - aa) > 0);\n"
+"(%o9)                        unknown\n"
+"(%i10) is (bb^2 < cc^2);\n"
+"(%o10)                       unknown\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{assumescalar}\n"
+"@defvr {Option variable} assumescalar\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{assumescalar} helps govern whether expressions @code{expr}\n"
+"for which @code{nonscalarp (expr)} is @code{false}\n"
+"are assumed to behave like scalars for certain transformations.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Let @code{expr} represent any expression other than a list or a matrix,\n"
+"and let @code{[1, 2, 3]} represent any list or matrix.\n"
+"Then @code{expr . [1, 2, 3]} yields @code{[expr, 2 expr, 3 expr]}\n"
+"if @code{assumescalar} is @code{true}, or @code{scalarp (expr)} is\n"
+"@code{true}, or @code{constantp (expr)} is @code{true}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If @code{assumescalar} is @code{true}, such\n"
+"expressions will behave like scalars only for commutative\n"
+"operators, but not for noncommutative multiplication @code{.}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When @code{assumescalar} is @code{false}, such\n"
+"expressions will behave like non-scalars.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When @code{assumescalar} is @code{all}, such expressions will behave like\n"
+"scalars for all the operators listed above.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@need 800\n"
+"@anchor{assume_pos}\n"
+"@defvr {Option variable} assume_pos\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When @code{assume_pos} is @code{true} and the sign of a parameter @var{x}\n"
+"cannot be determined from the current context\n"
+"@c WHAT ARE THOSE OTHER CONSIDERATIONS ??\n"
+"or other considerations,\n"
+"@code{sign} and @code{asksign (@var{x})} return @code{true}.\n"
+"This may forestall some automatically-generated @code{asksign} queries,\n"
+"such as may arise from @code{integrate} or other computations.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"By default, a parameter is @var{x} such that @code{symbolp (@var{x})}\n"
+"or @code{subvarp (@var{x})}.\n"
+"The class of expressions considered parameters can be modified to some extent\n"
+"via the variable @code{assume_pos_pred}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{sign} and @code{asksign} attempt to deduce the sign of expressions\n"
+"from the sign of operands within the expression.\n"
+"For example, if @code{a} and @code{b} are both positive,\n"
+"then @code{a + b} is also positive.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"However, there is no way to bypass all @code{asksign} queries.\n"
+"In particular, when the @code{asksign} argument is a\n"
+"difference @code{@var{x} - @var{y}} or a logarithm @code{log(@var{x})},\n"
+"@code{asksign} always requests an input from the user,\n"
+"even when @code{assume_pos} is @code{true} and @code{assume_pos_pred} is\n"
+"a function which returns @code{true} for all arguments.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c NEED EXAMPLES HERE\n"
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{assume_pos_pred}\n"
+"@defvr {Option variable} assume_pos_pred\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When @code{assume_pos_pred} is assigned the name of a function\n"
+"or a lambda expression of one argument @var{x},\n"
+"that function is called to determine\n"
+"whether @var{x} is considered a parameter for the purpose of @code{assume_pos}.\n"
+"@code{assume_pos_pred} is ignored when @code{assume_pos} is @code{false}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The @code{assume_pos_pred} function is called by @code{sign} and @code{asksign}\n"
+"with an argument @var{x}\n"
+"which is either an atom, a subscripted variable, or a function call expression.\n"
+"If the @code{assume_pos_pred} function returns @code{true},\n"
+"@var{x} is considered a parameter for the purpose of @code{assume_pos}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"By default, a parameter is @var{x} such that @code{symbolp (@var{x})}\n"
+"or @code{subvarp (@var{x})}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mref{assume} and @mrefdot{assume_pos}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c assume_pos: true$\n"
+"@c assume_pos_pred: symbolp$\n"
+"@c sign (a);\n"
+"@c sign (a[1]);\n"
+"@c assume_pos_pred: lambda ([x], display (x), true)$\n"
+"@c asksign (a);\n"
+"@c asksign (a[1]);\n"
+"@c asksign (foo (a));\n"
+"@c asksign (foo (a) + bar (b));\n"
+"@c asksign (log (a));\n"
+"@c asksign (a - b);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) assume_pos: true$\n"
+"(%i2) assume_pos_pred: symbolp$\n"
+"(%i3) sign (a);\n"
+"(%o3)                          pos\n"
+"(%i4) sign (a[1]);\n"
+"(%o4)                          pnz\n"
+"(%i5) assume_pos_pred: lambda ([x], display (x), true)$\n"
+"(%i6) asksign (a);\n"
+"                              x = a\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"(%o6)                          pos\n"
+"(%i7) asksign (a[1]);\n"
+"                             x = a\n"
+"                                  1\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"(%o7)                          pos\n"
+"(%i8) asksign (foo (a));\n"
+"                           x = foo(a)\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"(%o8)                          pos\n"
+"(%i9) asksign (foo (a) + bar (b));\n"
+"                           x = foo(a)\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"                           x = bar(b)\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"(%o9)                          pos\n"
+"(%i10) asksign (log (a));\n"
+"                              x = a\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Is  a - 1  positive, negative, or zero?\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"p;\n"
+"(%o10)                         pos\n"
+"(%i11) asksign (a - b);\n"
+"                              x = a\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"                              x = b\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"                              x = a\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"                              x = b\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Is  b - a  positive, negative, or zero?\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"p;\n"
+"(%o11)                         neg\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{context}\n"
+"@defvr {Option variable} context\n"
+"Default value: @code{initial}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{context} names the collection of facts maintained by @mref{assume} and\n"
+"@mrefdot{forget}  @code{assume} adds facts to the collection named by\n"
+"@code{context}, while @code{forget} removes facts.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Binding @code{context} to a name @var{foo} changes the current context to\n"
+"@var{foo}.  If the specified context @var{foo} does not yet exist,\n"
+"it is created automatically by a call to @mrefdot{newcontext}\n"
+"@c ISN'T THIS NEXT BIT EQUIVALENT TO THE FIRST ??\n"
+"The specified context is activated automatically.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See @mref{contexts} for a general description of the context mechanism.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c UMM, I'M HAVING TROUBLE GETTING THE CONTEXT-SWITCHING STUFF TO BEHAVE AS EXPECTED\n"
+"@c SOME EXAMPLES WILL HELP A LOT HERE\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{contexts}\n"
+"@defvr {Option variable} contexts\n"
+"Default value: @code{[initial, global]}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{contexts} is a list of the contexts which\n"
+"currently exist, including the currently active context.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The context mechanism makes it possible for a user to bind together\n"
+"and name a collection of facts, called a context.\n"
+"Once this is done, the user can have Maxima assume or forget large numbers\n"
+"of facts merely by activating or deactivating their context.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Any symbolic atom can be a context, and the facts contained in that\n"
+"context will be retained in storage until destroyed one by one\n"
+"by calling @mref{forget} or destroyed as a whole by calling @mref{kill}@w{}\n"
+"to destroy the context to which they belong.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Contexts exist in a hierarchy, with the root always being\n"
+"the context @code{global}, which contains information about Maxima that some\n"
+"functions need.  When in a given context, all the facts in that\n"
+"context are \"active\" (meaning that they are used in deductions and\n"
+"retrievals) as are all the facts in any context which is a subcontext\n"
+"of the active context.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When a fresh Maxima is started up, the user is in a\n"
+"context called @code{initial}, which has @code{global} as a subcontext.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefcomma{facts} @mrefcomma{newcontext} @mrefcomma{supcontext}@w{}\n"
+"@mrefcomma{killcontext} @mrefcomma{activate} @mrefcomma{deactivate}@w{}\n"
+"@mrefcomma{assume} and @mrefdot{forget}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{deactivate}\n"
+"@deffn {Function} deactivate (@var{context_1}, @dots{}, @var{context_n})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Deactivates the specified contexts @var{context_1}, @dots{}, @var{context_n}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{facts}\n"
+"@deffn  {Function} facts @\n"
+"@fname{facts} (@var{item}) @\n"
+"@fname{facts} ()\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If @var{item} is the name of a context, @code{facts (@var{item})} returns a\n"
+"list of the facts in the specified context.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If @var{item} is not the name of a context, @code{facts (@var{item})} returns a\n"
+"list of the facts known about @var{item} in the current context.  Facts that\n"
+"are active, but in a different context, are not listed.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{facts ()} (i.e., without an argument) lists the current context.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{forget}\n"
+"@deffn  {Function} forget @\n"
+"@fname{forget} (@var{pred_1}, @dots{}, @var{pred_n}) @\n"
+"@fname{forget} (@var{L})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Removes predicates established by @mrefdot{assume}\n"
+"The predicates may be expressions equivalent to (but not necessarily identical\n"
+"to) those previously assumed.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{forget (@var{L})}, where @var{L} is a list of predicates,\n"
+"forgets each item on the list.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{is}\n"
+"@deffn {Function} is (@var{expr})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Attempts to determine whether the predicate @var{expr} is provable from the\n"
+"facts in the @code{assume} database.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If the predicate is provably @code{true} or @code{false}, @code{is} returns\n"
+"@code{true} or @code{false}, respectively.  Otherwise, the return value is\n"
+"governed by the global flag @mrefdot{prederror}  When @code{prederror} is\n"
+"@code{true}, @code{is} complains with an error message.  Otherwise, @code{is}\n"
+"returns @code{unknown}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{ev(@var{expr}, pred)} (which can be written  @code{@var{expr}, pred} at\n"
+"the interactive prompt) is equivalent to @code{is(@var{expr})}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefcomma{assume} @mrefcomma{facts} and @mrefdot{maybe}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{is} causes evaluation of predicates.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c %pi > %e;\n"
+"@c is (%pi > %e);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) %pi > %e;\n"
+"(%o1)                       %pi > %e\n"
+"(%i2) is (%pi > %e);\n"
+"(%o2)                         true\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{is} attempts to derive predicates from the @code{assume} database.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c assume (a > b);\n"
+"@c assume (b > c);\n"
+"@c is (a < b);\n"
+"@c is (a > c);\n"
+"@c is (equal (a, c));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) assume (a > b);\n"
+"(%o1)                        [a > b]\n"
+"(%i2) assume (b > c);\n"
+"(%o2)                        [b > c]\n"
+"(%i3) is (a < b);\n"
+"(%o3)                         false\n"
+"(%i4) is (a > c);\n"
+"(%o4)                         true\n"
+"(%i5) is (equal (a, c));\n"
+"(%o5)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If @code{is} can neither prove nor disprove a predicate from the @code{assume}\n"
+"database, the global flag @code{prederror} governs the behavior of @code{is}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c assume (a > b);\n"
+"@c prederror: true$\n"
+"@c is (a > 0);\n"
+"@c prederror: false$\n"
+"@c is (a > 0);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) assume (a > b);\n"
+"(%o1)                        [a > b]\n"
+"(%i2) prederror: true$\n"
+"(%i3) is (a > 0);\n"
+"Maxima was unable to evaluate the predicate:\n"
+"a > 0\n"
+" -- an error.  Quitting.  To debug this try debugmode(true);\n"
+"(%i4) prederror: false$\n"
+"(%i5) is (a > 0);\n"
+"(%o5)                        unknown\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{killcontext}\n"
+"@deffn {Function} killcontext (@var{context_1}, @dots{}, @var{context_n})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Kills the contexts @var{context_1}, @dots{}, @var{context_n}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If one of the contexts is the current context, the new current context will\n"
+"become the first available subcontext of the current context which has not been\n"
+"killed.  If the first available unkilled context is @code{global} then\n"
+"@code{initial} is used instead.  If the @code{initial} context is killed, a\n"
+"new, empty @code{initial} context is created.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{killcontext} refuses to kill a context which is\n"
+"currently active, either because it is a subcontext of the current\n"
+"context, or by use of the function @mrefdot{activate}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{killcontext} evaluates its arguments.\n"
+"@code{killcontext} returns @code{done}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{maybe}\n"
+"@deffn {Function} maybe (@var{expr})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Attempts to determine whether the predicate @var{expr} is provable from the\n"
+"facts in the @code{assume} database.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If the predicate is provably @code{true} or @code{false}, @code{maybe} returns\n"
+"@code{true} or @code{false}, respectively.  Otherwise, @code{maybe} returns\n"
+"@code{unknown}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{maybe} is functionally equivalent to @code{is} with\n"
+"@code{prederror: false}, but the result is computed without actually assigning\n"
+"a value to @code{prederror}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"See also @mrefcomma{assume} @mrefcomma{facts} and @mrefdot{is}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c maybe (x > 0);\n"
+"@c assume (x > 1);\n"
+"@c maybe (x > 0);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) maybe (x > 0);\n"
+"(%o1)                        unknown\n"
+"(%i2) assume (x > 1);\n"
+"(%o2)                        [x > 1]\n"
+"(%i3) maybe (x > 0);\n"
+"(%o3)                         true\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{newcontext}\n"
+"@deffn {Function} newcontext @\n"
+"@fname{newcontext} (@var{name}) @\n"
+"@fname{newcontext} ()\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Creates a new, empty context, called @var{name}, which\n"
+"has @code{global} as its only subcontext.  The newly-created context\n"
+"becomes the currently active context.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If @var{name} is not specified, a new name is created (via @code{gensym}) and returned.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{newcontext} evaluates its argument.\n"
+"@code{newcontext} returns @var{name} (if specified) or the new context name.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sign}\n"
+"@deffn {Function} sign (@var{expr})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Attempts to determine the sign of @var{expr} on the basis of the facts in the\n"
+"current data base.  It returns one of the following answers: @code{pos}\n"
+"(positive), @code{neg} (negative), @code{zero}, @code{pz} (positive or zero),\n"
+"@code{nz} (negative or zero), @code{pn} (positive or negative), or @code{pnz}\n"
+"(positive, negative, or zero, i.e. nothing known).\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{supcontext}\n"
+"@deffn {Function} supcontext @\n"
+"@fname{supcontext} (@var{name}, @var{context}) @\n"
+"@fname{supcontext} (@var{name}) @\n"
+"@fname{supcontext} ()\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Creates a new context, called @var{name}, which has @var{context} as a\n"
+"subcontext.  @var{context} must exist.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If @var{context} is not specified, the current context is assumed.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"If @var{name} is not specified, a new name is created (via @code{gensym}) and returned.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{supcontext} evaluates its argument.\n"
+"@code{supcontext} returns @var{name} (if specified) or the new context name.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Predicates, , Functions and Variables for Facts, Maximas Database\n"
+"@section Functions and Variables for Predicates\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{charfun}\n"
+"@deffn {Function} charfun (@var{p})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Return 0 when the predicate @var{p} evaluates to @code{false}; return 1 when\n"
+"the predicate evaluates to @code{true}.  When the predicate evaluates to\n"
+"something other than @code{true} or @code{false} (unknown),  return a noun form.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c charfun (x < 1);\n"
+"@c subst (x = -1, %);\n"
+"@c e : charfun ('\"and\" (-1 < x, x < 1))$\n"
+"@c [subst (x = -1, e), subst (x = 0, e), subst (x = 1, e)];\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) charfun (x < 1);\n"
+"(%o1)                    charfun(x < 1)\n"
+"(%i2) subst (x = -1, %);\n"
+"(%o2)                           1\n"
+"(%i3) e : charfun ('\"and\" (-1 < x, x < 1))$\n"
+"(%i4) [subst (x = -1, e), subst (x = 0, e), subst (x = 1, e)];\n"
+"(%o4)                       [0, 1, 0]\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Mathematical functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{compare}\n"
+"@deffn {Function} compare (@var{x}, @var{y})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Return a comparison operator @var{op} (@code{<}, @code{<=}, @code{>}, @code{>=},\n"
+"@code{=}, or @code{#}) such that @code{is (@var{x} @var{op} @var{y})} evaluates\n"
+"to @code{true}; when either @var{x} or @var{y} depends on @code{%i} and\n"
+"@code{@var{x} # @var{y}}, return @code{notcomparable}; when there is no such\n"
+"operator or Maxima isn't able to determine the operator, return @code{unknown}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c compare (1, 2);\n"
+"@c compare (1, x);\n"
+"@c compare (%i, %i);\n"
+"@c compare (%i, %i + 1);\n"
+"@c compare (1/x, 0);\n"
+"@c compare (x, abs(x));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) compare (1, 2);\n"
+"(%o1)                           <\n"
+"(%i2) compare (1, x);\n"
+"(%o2)                        unknown\n"
+"(%i3) compare (%i, %i);\n"
+"(%o3)                           =\n"
+"(%i4) compare (%i, %i + 1);\n"
+"(%o4)                     notcomparable\n"
+"(%i5) compare (1/x, 0);\n"
+"(%o5)                           #\n"
+"(%i6) compare (x, abs(x));\n"
+"(%o6)                          <=\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The function @code{compare} doesn't try to determine whether the real domains of\n"
+"its arguments are nonempty; thus\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c compare (acos (x^2 + 1), acos (x^2 + 1) + 1);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) compare (acos (x^2 + 1), acos (x^2 + 1) + 1);\n"
+"(%o1)                           <\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c IT IS NOT QUITE TRUE, WHAT ABOUT x=0 ?\n"
+"The real domain of @code{acos (x^2 + 1)} is empty.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{equal}\n"
+"@deffn {Function} equal (@var{a}, @var{b})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Represents equivalence, that is, equal value.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"By itself, @code{equal} does not evaluate or simplify.\n"
+"The function @mref{is} attempts to evaluate @code{equal} to a Boolean value.\n"
+"@code{is(equal(@var{a}, @var{b}))} returns @code{true} (or @code{false}) if\n"
+"and only if @var{a} and @var{b} are equal (or not equal) for all possible\n"
+"values of their variables, as determined by evaluating\n"
+"@code{ratsimp(@var{a} - @var{b})}; if @mref{ratsimp} returns 0, the two\n"
+"expressions are considered equivalent.  Two expressions may be equivalent even\n"
+"if they are not syntactically equal (i.e., identical).\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When @code{is} fails to reduce @code{equal} to @code{true} or @code{false}, the\n"
+"result is governed by the global flag @mrefdot{prederror}  When @code{prederror}\n"
+"is @code{true}, @code{is} complains with an error message.  Otherwise, @code{is}\n"
+"returns @code{unknown}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"In addition to @code{is}, some other operators evaluate @code{equal} and\n"
+"@code{notequal} to @code{true} or @code{false}, namely @mrefcomma{if}@w{}\n"
+"@mrefcomma{and} @mrefcomma{or} and @mrefdot{not}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c FOLLOWING STATEMENT IS MORE OR LESS TRUE BUT I DON'T THINK THE DETAILS ARE CORRECT\n"
+"@c Declarations (integer, complex, etc)\n"
+"@c for variables appearing in @var{a} and @var{b} are ignored by @code{equal}.\n"
+"@c All variables are effectively assumed to be real-valued.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The negation of @code{equal} is @mrefdot{notequal}\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"By itself, @code{equal} does not evaluate or simplify.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c equal (x^2 - 1, (x + 1) * (x - 1));\n"
+"@c equal (x, x + 1);\n"
+"@c equal (x, y);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) equal (x^2 - 1, (x + 1) * (x - 1));\n"
+"                        2\n"
+"(%o1)            equal(x  - 1, (x - 1) (x + 1))\n"
+"(%i2) equal (x, x + 1);\n"
+"(%o2)                    equal(x, x + 1)\n"
+"(%i3) equal (x, y);\n"
+"(%o3)                      equal(x, y)\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"The function @code{is} attempts to evaluate @code{equal} to a Boolean value.\n"
+"@code{is(equal(@var{a}, @var{b}))} returns @code{true} when\n"
+"@code{ratsimp(@var{a} - @var{b})} returns 0.  Two expressions may be equivalent\n"
+"even if they are not syntactically equal (i.e., identical).\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c ratsimp (x^2 - 1 - (x + 1) * (x - 1));\n"
+"@c is (equal (x^2 - 1, (x + 1) * (x - 1)));\n"
+"@c is (x^2 - 1 = (x + 1) * (x - 1));\n"
+"@c ratsimp (x - (x + 1));\n"
+"@c is (equal (x, x + 1));\n"
+"@c is (x = x + 1);\n"
+"@c ratsimp (x - y);\n"
+"@c is (equal (x, y));\n"
+"@c is (x = y);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) ratsimp (x^2 - 1 - (x + 1) * (x - 1));\n"
+"(%o1)                           0\n"
+"(%i2) is (equal (x^2 - 1, (x + 1) * (x - 1)));\n"
+"(%o2)                         true\n"
+"(%i3) is (x^2 - 1 = (x + 1) * (x - 1));\n"
+"(%o3)                         false\n"
+"(%i4) ratsimp (x - (x + 1));\n"
+"(%o4)                          - 1\n"
+"(%i5) is (equal (x, x + 1));\n"
+"(%o5)                         false\n"
+"(%i6) is (x = x + 1);\n"
+"(%o6)                         false\n"
+"(%i7) ratsimp (x - y);\n"
+"(%o7)                         x - y\n"
+"(%i8) is (equal (x, y));\n"
+"(%o8)                        unknown\n"
+"(%i9) is (x = y);\n"
+"(%o9)                         false\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"When @code{is} fails to reduce @code{equal} to @code{true} or @code{false},\n"
+"the result is governed by the global flag @code{prederror}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c [aa : x^2 + 2*x + 1, bb : x^2 - 2*x - 1];\n"
+"@c ratsimp (aa - bb);\n"
+"@c prederror : true;\n"
+"@c is (equal (aa, bb));\n"
+"@c prederror : false;\n"
+"@c is (equal (aa, bb));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) [aa : x^2 + 2*x + 1, bb : x^2 - 2*x - 1];\n"
+"                    2             2\n"
+"(%o1)             [x  + 2 x + 1, x  - 2 x - 1]\n"
+"(%i2) ratsimp (aa - bb);\n"
+"(%o2)                        4 x + 2\n"
+"(%i3) prederror : true;\n"
+"(%o3)                         true\n"
+"(%i4) is (equal (aa, bb));\n"
+"Maxima was unable to evaluate the predicate:\n"
+"       2             2\n"
+"equal(x  + 2 x + 1, x  - 2 x - 1)\n"
+" -- an error.  Quitting.  To debug this try debugmode(true);\n"
+"(%i5) prederror : false;\n"
+"(%o5)                         false\n"
+"(%i6) is (equal (aa, bb));\n"
+"(%o6)                        unknown\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Some operators evaluate @code{equal} and @code{notequal} to @code{true} or\n"
+"@code{false}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c if equal (y, y - 1) then FOO else BAR;\n"
+"@c eq_1 : equal (x, x + 1);\n"
+"@c eq_2 : equal (y^2 + 2*y + 1, (y + 1)^2);\n"
+"@c [eq_1 and eq_2, eq_1 or eq_2, not eq_1];\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) if equal (y, y - 1) then FOO else BAR;\n"
+"(%o1)                          BAR\n"
+"(%i2) eq_1 : equal (x, x + 1);\n"
+"(%o2)                    equal(x, x + 1)\n"
+"(%i3) eq_2 : equal (y^2 + 2*y + 1, (y + 1)^2);\n"
+"                         2                   2\n"
+"(%o3)             equal(y  + 2 y + 1, (y + 1) )\n"
+"(%i4) [eq_1 and eq_2, eq_1 or eq_2, not eq_1];\n"
+"(%o4)                  [false, true, true]\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Because @code{not @var{expr}} causes evaluation of @var{expr},\n"
+"@code{not equal(@var{a}, @var{b})} is equivalent to\n"
+"@code{is(notequal(@var{a}, @var{b}))}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c [notequal (2*z, 2*z - 1), not equal (2*z, 2*z - 1)];\n"
+"@c is (notequal (2*z, 2*z - 1));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) [notequal (2*z, 2*z - 1), not equal (2*z, 2*z - 1)];\n"
+"(%o1)            [notequal(2 z, 2 z - 1), true]\n"
+"(%i2) is (notequal (2*z, 2*z - 1));\n"
+"(%o2)                         true\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Operators}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{notequal}\n"
+"@deffn {Function} notequal (@var{a}, @var{b})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Represents the negation of @code{equal(@var{a}, @var{b})}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c ===beg===\n"
+"@c equal (a, b);\n"
+"@c maybe (equal (a, b));\n"
+"@c notequal (a, b);\n"
+"@c not equal (a, b);\n"
+"@c maybe (notequal (a, b));\n"
+"@c assume (a > b);\n"
+"@c equal (a, b);\n"
+"@c maybe (equal (a, b));\n"
+"@c notequal (a, b);\n"
+"@c maybe (notequal (a, b));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) equal (a, b);\n"
+"(%o1)                      equal(a, b)\n"
+"(%i2) maybe (equal (a, b));\n"
+"(%o2)                        unknown\n"
+"(%i3) notequal (a, b);\n"
+"(%o3)                    notequal(a, b)\n"
+"(%i4) not equal (a, b);\n"
+"(%o4)                    notequal(a, b)\n"
+"(%i5) maybe (notequal (a, b));\n"
+"(%o5)                        unknown\n"
+"(%i6) assume (a > b);\n"
+"(%o6)                        [a > b]\n"
+"(%i7) equal (a, b);\n"
+"(%o7)                      equal(a, b)\n"
+"(%i8) maybe (equal (a, b));\n"
+"(%o8)                         false\n"
+"(%i9) notequal (a, b);\n"
+"(%o9)                    notequal(a, b)\n"
+"(%i10) maybe (notequal (a, b));\n"
+"(%o10)                        true\n"
+"@end example\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Operators}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{unknown}\n"
+"@deffn {Function} unknown (@var{expr})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Returns @code{true} if and only if @var{expr} contains an operator or function\n"
+"not recognized by the Maxima simplifier.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Simplification functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c THIS FUNCTION APPEARS TO BE A HACK; SEE 4'TH ITEM BELOW\n"
+"@c DUNNO WHETHER WE CAN CLEAR THIS UP\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zeroequiv}\n"
+"@deffn {Function} zeroequiv (@var{expr}, @var{v})\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"Tests whether the expression @var{expr} in the variable @var{v} is equivalent\n"
+"to zero, returning @code{true}, @code{false}, or @code{dontknow}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@code{zeroequiv} has these restrictions:\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@enumerate\n"
+"@item\n"
+"Do not use functions that Maxima does not know how to\n"
+"differentiate and evaluate.\n"
+"@item\n"
+"If the expression has poles on the real line, there may be errors\n"
+"in the result (but this is unlikely to occur).\n"
+"@item\n"
+"If the expression contains functions which are not solutions to first order\n"
+"differential equations (e.g. Bessel functions) there may be incorrect results.\n"
+"@item\n"
+"The algorithm uses evaluation at randomly chosen points for carefully selected\n"
+"subexpressions.  This is always a somewhat hazardous business, although the\n"
+"algorithm tries to minimize the potential for error.\n"
+"@end enumerate\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"For example @code{zeroequiv (sin(2 * x) - 2 * sin(x) * cos(x), x)} returns\n"
+"@code{true} and @code{zeroequiv (%e^x + x, x)} returns @code{false}.\n"
+"On the other hand @code{zeroequiv (log(a * b) - log(a) - log(b), a)} returns \n"
+"@code{dontknow} because of the presence of an extra parameter @code{b}.\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Database.texi
+msgid ""
+msgstr ""

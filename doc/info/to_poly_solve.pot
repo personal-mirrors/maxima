@@ -1,0 +1,2463 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# to_poly_solve.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for to_poly_solve::\n"
+"@end menu\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@node Functions and Variables for to_poly_solve,  , to_poly_solve-pkg, to_poly_solve-pkg\n"
+"@section Functions and Variables for to_poly_solve\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The packages @code{to_poly} and @code{to_poly_solve} are experimental;\n"
+"the specifications of the functions in these packages might change or\n"
+"the some of the functions in these packages might be merged into other\n"
+"Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Barton Willis (Professor of Mathematics, University of Nebraska at\n"
+"Kearney) wrote the @code{to_poly} and @code{to_poly_solve} packages and the\n"
+"English language user documentation for these packages.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@deffn {Operator} %and\n"
+"@ifinfo\n"
+"@fnindex Logical conjunction\n"
+"@end ifinfo\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The operator @code{%and} is a simplifying nonshort-circuited logical\n"
+"conjunction.  Maxima simplifies an @code{%and} expression to either true,\n"
+"false, or a logically equivalent, but simplified, expression.  The\n"
+"operator @code{%and} is associative, commutative, and idempotent.  Thus\n"
+"when @code{%and} returns a noun form, the arguments of @code{%and} form\n"
+"a non-redundant sorted list; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) a %and (a %and b);\n"
+"(%o1)                       a %and b\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"If one argument to a conjunction is the @i{explicit} the negation of another\n"
+"argument, @code{%and} returns false:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i2) a %and (not a);\n"
+"(%o2)                         false\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"If any member of the conjunction is false, the conjunction simplifies\n"
+"to false even if other members are manifestly non-boolean; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) 42 %and false;\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Any argument of an @code{%and} expression that is an inequation (that\n"
+"is, an inequality or equation), is simplified using the Fourier\n"
+"elimination package.  The Fourier elimination simplifier has a\n"
+"pre-processor that converts some, but not all, nonlinear inequations\n"
+"into linear inequations; for example the Fourier elimination code\n"
+"simplifies @code{abs(x) + 1 > 0} to true, so\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i4) (x < 1) %and (abs(x) + 1 > 0);\n"
+"(%o4)                         x < 1\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Notes}  \n"
+"@itemize @bullet\n"
+"@item The option variable @code{prederror} does @i{not} alter the\n"
+"simplification @code{%and} expressions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item To avoid operator precedence errors, compound expressions\n"
+"involving the operators @code{%and, %or}, and @code{not} should be\n"
+"fully parenthesized.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item The Maxima operators @code{and} and @code{or} are both\n"
+"short-circuited.  Thus @code{and} isn't associative or commutative.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Limitations} The conjunction @code{%and} simplifies inequations\n"
+"@i{locally, not globally}.  This means that conjunctions such as\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i5) (x < 1) %and (x > 1);\n"
+"(%o5)                 (x > 1) %and (x < 1)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"do @i{not} simplify to false.  Also, the Fourier elimination code @i{ignores}\n"
+"the fact database;\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i6) assume(x > 5);\n"
+"(%o6)                        [x > 5]\n"
+"(%i7) (x > 1) %and (x > 2);\n"
+"(%o7)                 (x > 1) %and (x > 2)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Finally, nonlinear inequations that aren't easily converted into an\n"
+"equivalent linear inequation aren't simplified.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"There is no support for distributing @code{%and} over @code{%or};\n"
+"neither is there support for distributing a logical negation over\n"
+"@code{%and}.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @code{%or, %if, and, or, not}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The operator @code{%and} is experimental; the\n"
+"specifications of this function might change and its functionality\n"
+"might be merged into other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@deffn {Operator} %if (@var{bool}, @var{a}, @var{b})\n"
+"@ifinfo\n"
+"@fnindex conditional evaluation\n"
+"@end ifinfo\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The operator @code{%if} is a simplifying conditional.  The\n"
+"@i{conditional} @var{bool} should be boolean-valued.  When the\n"
+"conditional is true, return the second argument; when the conditional is\n"
+"false, return the third; in all other cases, return a noun form.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Maxima inequations (either an inequality or an equality) are @i{not}\n"
+"boolean-valued; for example, Maxima does @i{not} simplify @math{5 < 6}\n"
+"to true, and it does not simplify @math{5 = 6} to false; however, in\n"
+"the context of a conditional to an @code{%if} statement, Maxima\n"
+"@i{automatically} attempts to determine the truth value of an\n"
+"inequation.  Examples:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) f : %if(x # 1, 2, 8);\n"
+"(%o1)                 %if(x - 1 # 0, 2, 8)\n"
+"(%i2) [subst(x = -1,f), subst(x=1,f)];\n"
+"(%o2)                        [2, 8]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"If the conditional involves an inequation, Maxima simplifies it using\n"
+"the Fourier elimination package.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Notes} \n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize @bullet\n"
+"@item If the conditional is manifestly non-boolean, Maxima returns a noun form:\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) %if(42,1,2);\n"
+"(%o3)                     %if(42, 1, 2)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize @bullet\n"
+"@item The Maxima operator @code{if} is nary, the operator @code{%if} @i{isn't}\n"
+"nary.\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Limitations} The Fourier elimination code only simplifies nonlinear\n"
+"inequations that are readily convertible to an equivalent linear\n"
+"inequation.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use:} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status:} The operator @code{%if} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+"  \n"
+"@deffn {Operator} %or\n"
+"@ifinfo\n"
+"@fnindex Logical disjunction\n"
+"@end ifinfo\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The operator @code{%or} is a simplifying nonshort-circuited logical\n"
+"disjunction.  Maxima simplifies an @code{%or} expression to either\n"
+"true, false, or a logically equivalent, but simplified,\n"
+"expression.  The operator @code{%or} is associative, commutative, and\n"
+"idempotent.  Thus when @code{%or} returns a noun form, the arguments\n"
+"of @code{%or} form a non-redundant sorted list; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) a %or (a %or b);\n"
+"(%o1)                        a %or b\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"If one member of the disjunction is the @i{explicit} the negation of another\n"
+"member, @code{%or} returns true:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i2) a %or (not a);\n"
+"(%o2)                         true\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"If any member of the disjunction is true, the disjunction simplifies\n"
+"to true even if other members of the disjunction are manifestly non-boolean;\n"
+"for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) 42 %or true;\n"
+"(%o3)                         true\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Any argument of an @code{%or} expression that is an inequation (that\n"
+"is, an inequality or equation), is simplified using the Fourier\n"
+"elimination package.  The Fourier elimination code simplifies\n"
+"@code{abs(x) + 1 > 0} to true, so we have\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i4) (x < 1) %or (abs(x) + 1 > 0);\n"
+"(%o4)                         true\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Notes}  \n"
+"@itemize @bullet\n"
+"@item The option variable @code{prederror} does @i{not} alter the \n"
+"simplification of @code{%or} expressions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item You should parenthesize compound expressions involving the\n"
+"operators @code{%and, %or}, and @code{not}; the binding powers of these\n"
+"operators might not match your expectations.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item The Maxima operators @code{and} and @code{or} are both short-circuited.\n"
+"Thus @code{or} isn't associative or commutative.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Limitations} The conjunction @code{%or} simplifies inequations\n"
+"@i{locally, not globally}.  This means that conjunctions such as\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@c TODO: IN MAXIMA 5.24POST THIS SIMPLIFIES TO TRUE.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) (x < 1) %or (x >= 1);\n"
+"(%o1) (x > 1) %or (x >= 1)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"do @i{not} simplify to true.  Further, the Fourier elimination code ignores\n"
+"the fact database;\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i2) assume(x > 5);\n"
+"(%o2)                        [x > 5]\n"
+"(%i3) (x > 1) %and (x > 2);\n"
+"(%o3)                 (x > 1) %and (x > 2)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Finally, nonlinear inequations that aren't easily converted into an\n"
+"equivalent linear inequation aren't simplified.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The algorithm that looks for terms that cannot both be false is weak;\n"
+"also there is no support for distributing @code{%or} over @code{%and};\n"
+"neither is there support for distributing a logical negation over\n"
+"@code{%or}.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @code{%or, %if, and, or, not}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The operator @code{%or} is experimental; the\n"
+"specifications of this function might change and its functionality\n"
+"might be merged into other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{complex_number_p}\n"
+"@deffn {Function} complex_number_p (@var{x})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The predicate @code{complex_number_p} returns true if its argument is\n"
+"either @code{a + %i * b}, @code{a}, @code{%i b}, or @code{%i},\n"
+"where @code{a} and @code{b} are either rational or floating point\n"
+"numbers (including big floating point); for all other inputs,\n"
+"@code{complex_number_p} returns false; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) map('complex_number_p,[2/3, 2 + 1.5 * %i, %i]);\n"
+"(%o1)                  [true, true, true]\n"
+"(%i2) complex_number_p((2+%i)/(5-%i));\n"
+"(%o2)                         false\n"
+"(%i3) complex_number_p(cos(5 - 2 * %i));\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @code{isreal_p}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The operator @code{complex_number_p} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{compose_functions}\n"
+"@deffn {Function} compose_functions (@var{l})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function call @code{compose_functions(l)} returns a lambda form that is\n"
+"the @i{composition} of the functions in the list @var{l}.  The functions are\n"
+"applied from @i{right} to @i{left}; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) compose_functions([cos, exp]);\n"
+"                                        %g151\n"
+"(%o1)             lambda([%g151], cos(%e     ))\n"
+"(%i2) %(x);\n"
+"                                  x\n"
+"(%o2)                       cos(%e )\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"When the function list is empty, return the identity function:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) compose_functions([]);\n"
+"(%o3)                lambda([%g152], %g152)\n"
+"(%i4)  %(x);\n"
+"(%o4)                           x\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Notes} \n"
+"@itemize @bullet\n"
+"@item When Maxima determines that a list member isn't a symbol or\n"
+"a lambda form, @code{funmake} (@i{not} @code{compose_functions})\n"
+"signals an error:\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i5) compose_functions([a < b]);\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"funmake: first argument must be a symbol, subscripted symbol,\n"
+"string, or lambda expression; found: a < b\n"
+"#0: compose_functions(l=[a < b])(to_poly_solve.mac line 40)\n"
+" -- an error. To debug this try: debugmode(true);\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize @bullet\n"
+"@item To avoid name conflicts, the independent variable is determined by the\n"
+"function @code{new_variable}.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i6) compose_functions([%g0]);\n"
+"(%o6)              lambda([%g154], %g0(%g154))\n"
+"(%i7) compose_functions([%g0]);\n"
+"(%o7)              lambda([%g155], %g0(%g155))\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Although the independent variables are different, Maxima is able to to\n"
+"deduce that these lambda forms are semantically equal:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i8) is(equal(%o6,%o7));\n"
+"(%o8)                         true\n"
+"@end example\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status}  The function @code{compose_functions} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{dfloat}\n"
+"@deffn {Function} dfloat (@var{x})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{dfloat} is a similar to @code{float}, but the function\n"
+"@code{dfloat} applies @code{rectform} when @code{float} fails to evaluate\n"
+"to an IEEE double floating point number; thus\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) float(4.5^(1 + %i));\n"
+"                               %i + 1\n"
+"(%o1)                       4.5\n"
+"(%i2) dfloat(4.5^(1 + %i));\n"
+"(%o2)        4.48998802962884 %i + .3000124893895671\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Notes} \n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize @bullet\n"
+"@item The rectangular form of an expression might be poorly suited for\n"
+"numerical evaluation--for example, the rectangular form might\n"
+"needlessly involve the difference of floating point numbers\n"
+"(subtractive cancellation).\n"
+"@item The identifier @code{float} is both an option variable (default\n"
+"value false) and a function name.\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @code{float, bfloat}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{dfloat} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{elim}\n"
+"@deffn {Function} elim (@var{l}, @var{x})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{elim} eliminates the variables in the set or list\n"
+"@code{x} from the equations in the set or list @code{l}.  Each member\n"
+"of @code{x} must be a symbol; the members of @code{l} can either be\n"
+"equations, or expressions that are assumed to equal zero.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{elim} returns a list of two lists; the first is\n"
+"the list of expressions with the variables eliminated; the second\n"
+"is the list of pivots; thus, the second list is a list of\n"
+"expressions that @code{elim} used to eliminate the variables.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Here is a example of eliminating between linear equations:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) elim(set(x + y + z = 1, x - y  - z = 8, x - z = 1), \n"
+"           set(x,y));\n"
+"(%o1)            [[2 z - 7], [y + 7, z - x + 1]]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Eliminating @code{x} and @code{y} yields the single equation @code{2 z - 7 = 0};\n"
+"the equations @code{y + 7 = 0} and @code{z - z + 1 = 1} were used as pivots.\n"
+"Eliminating all three variables from these equations, triangularizes the linear\n"
+"system:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i2) elim(set(x + y + z = 1, x - y  - z = 8, x - z = 1),\n"
+"           set(x,y,z));\n"
+"(%o2)           [[], [2 z - 7, y + 7, z - x + 1]]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Of course, the equations needn't be linear:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) elim(set(x^2 - 2 * y^3 = 1,  x - y = 5), [x,y]);\n"
+"                     3    2\n"
+"(%o3)       [[], [2 y  - y  - 10 y - 24, y - x + 5]]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The user doesn't control the order the variables are\n"
+"eliminated.  Instead, the algorithm uses a heuristic to @i{attempt} to\n"
+"choose the best pivot and the best elimination order.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Notes} \n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize @bullet\n"
+"@item Unlike the related function @code{eliminate}, the function\n"
+"@code{elim} does @i{not} invoke @code{solve} when the number of equations\n"
+"equals the number of variables.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item The function @code{elim} works by applying resultants; the option\n"
+"variable @code{resultant} determines which algorithm Maxima\n"
+"uses.  Using @code{sqfr}, Maxima factors each resultant and suppresses\n"
+"multiple zeros.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item The @code{elim} will triangularize a nonlinear set of polynomial\n"
+"equations; the solution set of the triangularized set @i{can} be larger\n"
+"than that solution set of the untriangularized set.  Thus, the triangularized\n"
+"equations can have @i{spurious} solutions.\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{elim_allbut, eliminate_using, eliminate}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Option variables} @i{resultant}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{elim} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+" \n"
+"@anchor{elim_allbut}\n"
+"@deffn {Function} elim_allbut (@var{l}, @var{x})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"This function is similar to @code{elim}, except that it eliminates all the\n"
+"variables in the list of equations @code{l} @i{except} for those variables that\n"
+"in in the list @code{x}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) elim_allbut([x+y = 1, x - 5*y = 1],[]);\n"
+"(%o1)                 [[], [y, y + x - 1]]\n"
+"(%i2) elim_allbut([x+y = 1, x - 5*y = 1],[x]);\n"
+"(%o2)                [[x - 1], [y + x - 1]]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Option variables} @i{resultant}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{elim, eliminate_using, eliminate}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{elim_allbut} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{eliminate_using}\n"
+"@deffn {Function} eliminate_using (@var{l}, @var{e}, @var{x})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Using @code{e} as the pivot, eliminate the symbol @code{x} from the\n"
+"list or set of equations in @code{l}.  The function @code{eliminate_using}\n"
+"returns a set.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) eq : [x^2 - y^2 - z^3 , x*y - z^2 - 5, x - y + z];\n"
+"               3    2    2     2\n"
+"(%o1)      [- z  - y  + x , - z  + x y - 5, z - y + x]\n"
+"(%i2) eliminate_using(eq,first(eq),z);\n"
+"        3              2      2      3    2\n"
+"(%o2) @{y  + (1 - 3 x) y  + 3 x  y - x  - x , \n"
+"                        4    3  3       2  2             4\n"
+"                       y  - x  y  + 13 x  y  - 75 x y + x  + 125@}\n"
+"(%i3) eliminate_using(eq,second(eq),z);\n"
+"        2            2       4    3  3       2  2             4\n"
+"(%o3) @{y  - 3 x y + x  + 5, y  - x  y  + 13 x  y  - 75 x y + x\n"
+"                                                           + 125@}\n"
+"(%i4) eliminate_using(eq, third(eq),z);\n"
+"        2            2       3              2      2      3    2\n"
+"(%o4) @{y  - 3 x y + x  + 5, y  + (1 - 3 x) y  + 3 x  y - x  - x @}\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Option variables} @i{resultant}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{elim, eliminate, elim_allbut}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{eliminate_using} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{fourier_elim}\n"
+"@deffn {Function} fourier_elim ([@var{eq1}, @var{eq2}, @dots{}], [@var{var1}, @var{var}, @dots{}])\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Fourier elimination is the analog of Gauss elimination for linear inequations\n"
+"(equations or inequalities).  The function call @code{fourier_elim([eq1, eq2,\n"
+"...], [var1, var2, ...])} does Fourier elimination on a list of linear\n"
+"inequations @code{[eq1, eq2, ...]} with respect to the variables\n"
+"@code{[var1, var2, ...]}; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) fourier_elim([y-x < 5, x - y < 7, 10 < y],[x,y]);\n"
+"(%o1)            [y - 5 < x, x < y + 7, 10 < y]\n"
+"(%i2) fourier_elim([y-x < 5, x - y < 7, 10 < y],[y,x]);\n"
+"(%o2)        [max(10, x - 7) < y, y < x + 5, 5 < x]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Eliminating first with respect to @math{x} and second with respect to\n"
+"@math{y} yields lower and upper bounds for @math{x} that depend on\n"
+"@math{y}, and lower and upper bounds for @math{y} that are numbers.\n"
+"Eliminating in the other order gives @math{x} dependent lower and\n"
+"upper bounds for @math{y}, and numerical lower and upper bounds for\n"
+"@math{x}.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"When necessary, @code{fourier_elim} returns a @emph{disjunction} of lists of\n"
+"inequations:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) fourier_elim([x # 6],[x]);\n"
+"(%o3)                  [x < 6] or [6 < x]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"When the solution set is empty,  @code{fourier_elim} returns @code{emptyset},\n"
+"and when the solution set is all reals, @code{fourier_elim} returns @code{universalset};\n"
+"for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i4) fourier_elim([x < 1, x > 1],[x]);\n"
+"(%o4)                       emptyset\n"
+"(%i5) fourier_elim([minf < x, x < inf],[x]);\n"
+"(%o5)                     universalset\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"For nonlinear inequations, @code{fourier_elim} returns a (somewhat) \n"
+"simplified list of inequations:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i6) fourier_elim([x^3 - 1 > 0],[x]);\n"
+"@group\n"
+"               2                             2\n"
+"(%o6) [1 < x, x  + x + 1 > 0] or [x < 1, - (x  + x + 1) > 0]\n"
+"@end group\n"
+"(%i7) fourier_elim([cos(x) < 1/2],[x]);\n"
+"(%o7)                  [1 - 2 cos(x) > 0]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Instead of a list of inequations, the first argument to @code{fourier_elim}\n"
+"may be a logical disjunction or conjunction:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i8) fourier_elim((x + y < 5) and (x - y >8),[x,y]);\n"
+"                                              3\n"
+"(%o8)            [y + 8 < x, x < 5 - y, y < - -]\n"
+"                                              2\n"
+"(%i9) fourier_elim(((x + y < 5) and x < 1) or  (x - y >8),[x,y]);\n"
+"(%o9)          [y + 8 < x] or [x < min(1, 5 - y)]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{fourier_elim} supports the inequation operators \n"
+"@code{<, <=, >, >=, #}, and @code{=}.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The Fourier elimination code has a preprocessor that converts some\n"
+"nonlinear inequations that involve the absolute value, minimum, and\n"
+"maximum functions into linear in equations.  Additionally, the preprocessor\n"
+"handles some expressions that are the product or quotient of linear terms:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i10) fourier_elim([max(x,y) > 6, x # 8, abs(y-1) > 12],[x,y]);\n"
+"(%o10) [6 < x, x < 8, y < - 11] or [8 < x, y < - 11]\n"
+" or [x < 8, 13 < y] or [x = y, 13 < y] or [8 < x, x < y, 13 < y]\n"
+" or [y < x, 13 < y]\n"
+"(%i11) fourier_elim([(x+6)/(x-9) <= 6],[x]);\n"
+"(%o11)           [x = 12] or [12 < x] or [x < 9]\n"
+"(%i12) fourier_elim([x^2 - 1 # 0],[x]);\n"
+"(%o12)      [- 1 < x, x < 1] or [1 < x] or [x < - 1]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(fourier_elim)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{isreal_p}\n"
+"@deffn {Function} isreal_p (@var{e})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The predicate @code{isreal_p} returns true when Maxima is able to\n"
+"determine that @code{e} is real-valued on the @i{entire} real line; it\n"
+"returns false when Maxima is able to determine that @code{e} @i{isn't}\n"
+"real-valued on some nonempty subset of the real line; and it returns a\n"
+"noun form for all other cases.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) map('isreal_p, [-1, 0, %i, %pi]);\n"
+"(%o1)               [true, true, false, true]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Maxima variables are assumed to be real; thus\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i2) isreal_p(x);\n"
+"(%o2)                         true\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{isreal_p} examines the fact database:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) declare(z,complex)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i4) isreal_p(z);\n"
+"(%o4)                      isreal_p(z)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Limitations}\n"
+"Too often, @code{isreal_p} returns a noun form when it should be able\n"
+"to return false; a simple example: the logarithm function isn't\n"
+"real-valued on the entire real line, so @code{isreal_p(log(x))} should\n"
+"return false; however\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i5) isreal_p(log(x));\n"
+"(%o5)                   isreal_p(log(x))\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{complex_number_p}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{isreal_p} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+"@end deffn\n"
+"@anchor{new_variable}\n"
+"@deffn {Function} new_variable (type)\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Return a unique symbol of the form @code{%[z,n,r,c,g]k}, where\n"
+"@code{k} is an integer.  The allowed values for @math{type} are\n"
+"@i{integer, natural_number, real, natural_number,} and @i{general}.\n"
+"(By natural number, we mean the @i{nonnegative integers}; thus zero is\n"
+"a natural number.  Some, but not all,definitions of natural number\n"
+"@i{exclude} zero.)\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"When @math{type} isn't one of the allowed values, @math{type} defaults\n"
+"to @math{general}.  For integers, natural numbers, and complex numbers,\n"
+"Maxima automatically appends this information to the fact database.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) map('new_variable,\n"
+"          ['integer, 'natural_number, 'real, 'complex, 'general]);\n"
+"(%o1)          [%z144, %n145, %r146, %c147, %g148]\n"
+"(%i2) nicedummies(%);\n"
+"(%o2)               [%z0, %n0, %r0, %c0, %g0]\n"
+"(%i3) featurep(%z0, 'integer);\n"
+"(%o3)                         true\n"
+"(%i4) featurep(%n0, 'integer);\n"
+"(%o4)                         true\n"
+"(%i5) is(%n0 >= 0);\n"
+"(%o5)                         true\n"
+"(%i6) featurep(%c0, 'complex);\n"
+"(%o6)                         true\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Note} Generally, the argument to @code{new_variable} should be quoted.  The quote\n"
+"will protect against errors similar to\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i7) integer : 12$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i8) new_variable(integer);\n"
+"(%o8)                         %g149\n"
+"(%i9) new_variable('integer);\n"
+"(%o9)                         %z150\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{nicedummies}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{new_variable} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{nicedummies}\n"
+"@deffn {Function} nicedummies\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Starting with zero, the function @code{nicedummies} re-indexes the variables \n"
+"in an expression that were introduced by @code{new_variable};\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) new_variable('integer) + 52 * new_variable('integer);\n"
+"(%o1)                   52 %z136 + %z135\n"
+"(%i2) new_variable('integer) - new_variable('integer);\n"
+"(%o2)                     %z137 - %z138\n"
+"(%i3) nicedummies(%);\n"
+"(%o3)                       %z0 - %z1\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{new_variable}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{nicedummies} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@deffn {Function} parg (@var{x})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{parg} is a simplifying version of the complex argument function \n"
+"@code{carg}; thus\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) map('parg,[1,1+%i,%i, -1 + %i, -1]);\n"
+"                        %pi  %pi  3 %pi\n"
+"(%o1)               [0, ---, ---, -----, %pi]\n"
+"                         4    2     4\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Generally, for a non-constant input, @code{parg} returns a noun form; thus\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i2) parg(x + %i * sqrt(x));\n"
+"(%o2)                 parg(x + %i sqrt(x))\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"When @code{sign} can determine that the input is a positive or negative real\n"
+"number, @code{parg} will return a non-noun form for a non-constant input.\n"
+"Here are two examples:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@c TODO: THE FIRST RESULT IS A NOUNFORM IN MAXIMA 5.24POST\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) parg(abs(x));\n"
+"(%o3) 0\n"
+"(%i4) parg(-x^2-1);\n"
+"(%o4)                          %pi\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Note} The @code{sign} function mostly ignores the variables that are declared\n"
+"to be complex (@code{declare(x,complex)}); for variables that are declared\n"
+"to be complex, the @code{parg} can return incorrect values; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@c TODO: IN MAXIMA 5.24POST THE RESULT IS A NOUNFORM.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) declare(x,complex)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i2) parg(x^2 + 1);\n"
+"(%o2) 0\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related function} @i{carg, isreal_p}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{parg} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{real_imagpart_to_conjugate}\n"
+"@deffn {Function} real_imagpart_to_conjugate (@var{e})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{real_imagpart_to_conjugate} replaces all occurrences\n"
+"of @code{realpart} and @code{imagpart} to algebraically equivalent expressions\n"
+"involving the @code{conjugate}.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) declare(x, complex)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i2) real_imagpart_to_conjugate(realpart(x) +  imagpart(x) = 3);\n"
+"          conjugate(x) + x   %i (x - conjugate(x))\n"
+"(%o2)     ---------------- - --------------------- = 3\n"
+"                 2                     2\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{real_imagpart_to_conjugate} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{rectform_log_if_constant}\n"
+"@deffn {Function} rectform_log_if_constant (@var{e})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{rectform_log_if_constant} converts all terms of the form\n"
+"@code{ log(c)} to  @code{rectform(log(c))}, where @code{c} is\n"
+"either a declared constant expression or explicitly declared constant\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) rectform_log_if_constant(log(1-%i) - log(x - %i));\n"
+"                                 log(2)   %i %pi\n"
+"(%o1)            - log(x - %i) + ------ - ------\n"
+"                                   2        4\n"
+"(%i2) declare(a,constant, b,constant)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i3) rectform_log_if_constant(log(a + %i*b));\n"
+"                       2    2\n"
+"                  log(b  + a )\n"
+"(%o3)             ------------ + %i atan2(b, a)\n"
+"                       2\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{rectform_log_if_constant} is\n"
+"experimental; the specifications of this function might change might change and its functionality\n"
+"might be merged into other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{simp_inequality}\n"
+"@deffn {Function} simp_inequality (@var{e})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{simp_inequality} applies some simplifications to\n"
+"conjunctions and disjunctions of inequations.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Limitations} The function @code{simp_inequality} is limited in at least two ways;\n"
+"first, the simplifications are local; thus\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@c TODO: IN MAXIMA 5.24POST THE RESULT IS SIMPLIFIED.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) simp_inequality((x > minf) %and (x < 0));\n"
+"(%o1) (x>1) %and (x<1)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"And second, @code{simp_inequality} doesn't consult the fact database:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i2) assume(x > 0)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i3) simp_inequality(x > 0);\n"
+"(%o3)                         x > 0\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(fourier_elim)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{simp_inequality} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{standardize_inverse_trig}\n"
+"@deffn {Function} standardize_inverse_trig (@var{e})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"This function applies the identities @code{cot(x) = atan(1/x),\n"
+"acsc(x) = asin(1/x),} and similarly for @code{asec, acoth, acsch}\n"
+"and @code{asech} to an expression.  See Abramowitz and Stegun, \n"
+"Eqs. 4.4.6 through 4.4.8 and 4.6.4 through 4.6.6.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{standardize_inverse_trig} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{subst_parallel}\n"
+"@deffn {Function} subst_parallel (@var{l}, @var{e})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"When @code{l} is a single equation or a list of equations, substitute\n"
+"the right hand side of each equation for the left hand side.  The\n"
+"substitutions are made in parallel; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) load(to_poly_solve)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i2) subst_parallel([x=y,y=x], [x,y]);\n"
+"(%o2)                        [y, x]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Compare this to substitutions made serially:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) subst([x=y,y=x],[x,y]);\n"
+"(%o3)                        [x, x]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{subst_parallel} is similar to @code{sublis} except that\n"
+"@code{subst_parallel} allows for substitution of nonatoms; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i4) subst_parallel([x^2 = a, y = b], x^2 * y);\n"
+"(%o4)                          a b\n"
+"(%i5) sublis([x^2 = a, y = b], x^2 * y);\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"                                                             2\n"
+"sublis: left-hand side of equation must be a symbol; found: x\n"
+" -- an error. To debug this try: debugmode(true);\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The substitutions made by @code{subst_parallel} are literal, not semantic; thus \n"
+"@code{subst_parallel} @i{does not} recognize that @math{x * y} is a subexpression \n"
+"of @math{x^2 * y}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i6) subst_parallel([x * y = a], x^2 * y);\n"
+"                               2\n"
+"(%o6)                         x  y\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{subst_parallel} completes all substitutions\n"
+"@i{before} simplifications.  This allows for substitutions into\n"
+"conditional expressions where errors might occur if the\n"
+"simplifications were made earlier:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i7) subst_parallel([x = 0], %if(x < 1, 5, log(x)));\n"
+"(%o7)                           5\n"
+"(%i8) subst([x = 0], %if(x < 1, 5, log(x)));\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"log: encountered log(0).\n"
+" -- an error. To debug this try: debugmode(true);\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{subst, sublis, ratsubst}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve_extra.lisp)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status} The function @code{subst_parallel} is experimental; the\n"
+"specifications of this function might change might change and its\n"
+"functionality might be merged into other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{to_poly}\n"
+"@deffn {Function} to_poly (@var{e}, @var{l})\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{to_poly} attempts to convert the equation @code{e}\n"
+"into a polynomial system along with inequality constraints; the\n"
+"solutions to the polynomial system that satisfy the constraints are\n"
+"solutions to the equation @code{e}.  Informally, @code{to_poly}\n"
+"attempts to polynomialize the equation @var{e}; an example might\n"
+"clarify:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) load(to_poly_solve)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i2) to_poly(sqrt(x) = 3, [x]);\n"
+"                            2\n"
+"(%o2) [[%g130 - 3, x = %g130 ], \n"
+"                      %pi                               %pi\n"
+"                   [- --- < parg(%g130), parg(%g130) <= ---], []]\n"
+"                       2                                 2\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The conditions @code{-%pi/2<parg(%g130),parg(%g130)<=%pi/2} tell us that\n"
+"@code{%g130} is in the range of the square root function.  When this is\n"
+"true, the solution set to @code{sqrt(x) = 3} is the same as the\n"
+"solution set to @code{%g130-3,x=%g130^2}.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"To polynomialize trigonometric expressions, it is necessary to\n"
+"introduce a non algebraic substitution; these non algebraic substitutions\n"
+"are returned in the third list returned by @code{to_poly}; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) to_poly(cos(x),[x]);\n"
+"                2                                 %i x\n"
+"(%o3)    [[%g131  + 1], [2 %g131 # 0], [%g131 = %e    ]]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Constant terms aren't polynomializied unless the number one is a member of\n"
+"the variable list; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i4) to_poly(x = sqrt(5),[x]);\n"
+"(%o4)                [[x - sqrt(5)], [], []]\n"
+"(%i5) to_poly(x = sqrt(5),[1,x]);\n"
+"                            2\n"
+"(%o5) [[x - %g132, 5 = %g132 ], \n"
+"                      %pi                               %pi\n"
+"                   [- --- < parg(%g132), parg(%g132) <= ---], []]\n"
+"                       2                                 2\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"To generate a polynomial with @math{sqrt(5) + sqrt(7)} as\n"
+"one of its roots, use the commands\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i6) first(elim_allbut(first(to_poly(x = sqrt(5) + sqrt(7),\n"
+"                                      [1,x])), [x]));\n"
+"                          4       2\n"
+"(%o6)                   [x  - 24 x  + 4]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{to_poly_solve}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status:} The function @code{to_poly} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@deffn {Function} to_poly_solve (@var{e}, @var{l}, [options])\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{to_poly_solve} tries to solve the equations @math{e}\n"
+"for the variables @math{l}.  The equation(s) @math{e} can either be a\n"
+"single expression or a set or list of expressions; similarly, @math{l}\n"
+"can either be a single symbol or a list of set of symbols.  When\n"
+"a member of @math{e} isn't explicitly an equation, for example @math{x^2 -1},\n"
+"the solver asummes that the expression vanishes.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The basic strategy of @code{to_poly_solve} is to convert the input into a polynomial form and to \n"
+"call @code{algsys} on the polynomial system. Internally  @code{to_poly_solve} defaults @code{algexact} \n"
+"to true. To change the default for @code{algexact}, append 'algexact=false to the @code{to_poly_solve} \n"
+"argument list.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"When @code{to_poly_solve} is able to determine the solution set, each\n"
+"member of the solution set is a list in a @code{%union} object:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) load(to_poly_solve)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i2) to_poly_solve(x*(x-1) = 0, x);\n"
+"(%o2)               %union([x = 0], [x = 1])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"When  @code{to_poly_solve} is @i{unable} to determine the solution set, a\n"
+"@code{%solve} nounform is returned (in this case, a warning is printed)\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) to_poly_solve(x^k + 2* x + 1 = 0, x);\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Nonalgebraic argument given to 'to_poly'\n"
+"unable to solve\n"
+"                          k\n"
+"(%o3)            %solve([x  + 2 x + 1 = 0], [x])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Subsitution into a @code{%solve} nounform can sometimes result in the solution\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i4) subst(k = 2, %);\n"
+"(%o4)                   %union([x = - 1])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Especially for trigonometric equations, the solver sometimes needs\n"
+"to introduce an arbitrary integer.  These arbitrary integers have the \n"
+"form @code{%zXXX}, where @code{XXX} is an integer; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i5) to_poly_solve(sin(x) = 0, x);\n"
+"(%o5)   %union([x = 2 %pi %z33 + %pi], [x = 2 %pi %z35])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"To re-index these variables to zero, use @code{nicedummies}:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i6) nicedummies(%);\n"
+"(%o6)    %union([x = 2 %pi %z0 + %pi], [x = 2 %pi %z1])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Occasionally, the solver introduces an arbitrary complex number of the\n"
+"form @code{%cXXX} or an  arbitrary real number of the form @code{%rXXX}.\n"
+"The function @code{nicedummies} will re-index these identifiers to zero.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The solution set sometimes involves simplifing versions of various\n"
+"of logical operators including @code{%and}, @code{%or}, or @code{%if}\n"
+"for conjunction, disjuntion, and implication, respectively; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i7) sol : to_poly_solve(abs(x) = a, x);\n"
+"(%o7) %union(%if(isnonnegative_p(a), [x = - a], %union()), \n"
+"                      %if(isnonnegative_p(a), [x = a], %union()))\n"
+"(%i8) subst(a = 42, sol);\n"
+"(%o8)             %union([x = - 42], [x = 42])\n"
+"(%i9) subst(a = -42, sol);\n"
+"(%o9)                       %union()\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The empty set is represented by @code{%union()}.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The function @code{to_poly_solve} is able to solve some, but not all,\n"
+"equations involving rational powers, some nonrational powers, absolute\n"
+"values, trigonometric functions, and minimum and maximum.  Also, some it\n"
+"can solve some equations that are solvable in in terms of the Lambert W\n"
+"function; some examples:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) load(to_poly_solve)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i2) to_poly_solve(set(max(x,y) = 5, x+y = 2), set(x,y));\n"
+"(%o2)      %union([x = - 3, y = 5], [x = 5, y = - 3])\n"
+"(%i3) to_poly_solve(abs(1-abs(1-x)) = 10,x);\n"
+"(%o3)             %union([x = - 10], [x = 12])\n"
+"(%i4) to_poly_solve(set(sqrt(x) + sqrt(y) = 5, x + y = 10),\n"
+"                    set(x,y));\n"
+"                     3/2               3/2\n"
+"                    5    %i - 10      5    %i + 10\n"
+"(%o4) %union([x = - ------------, y = ------------], \n"
+"                         2                 2\n"
+"                                3/2                 3/2\n"
+"                               5    %i + 10        5    %i - 10\n"
+"                          [x = ------------, y = - ------------])\n"
+"                                    2                   2\n"
+"(%i5) to_poly_solve(cos(x) * sin(x) = 1/2,x,\n"
+"                    'simpfuncs = ['expand, 'nicedummies]);\n"
+"                                         %pi\n"
+"(%o5)              %union([x = %pi %z0 + ---])\n"
+"                                          4\n"
+"(%i6) to_poly_solve(x^(2*a) + x^a + 1,x);\n"
+"                                        2 %i %pi %z81\n"
+"                                        -------------\n"
+"                                  1/a         a\n"
+"                  (sqrt(3) %i - 1)    %e\n"
+"(%o6) %union([x = -----------------------------------], \n"
+"                                  1/a\n"
+"                                 2\n"
+"@group\n"
+"                                                  2 %i %pi %z83\n"
+"                                                  -------------\n"
+"                                            1/a         a\n"
+"                          (- sqrt(3) %i - 1)    %e\n"
+"                     [x = -------------------------------------])\n"
+"                                           1/a\n"
+"                                          2\n"
+"@end group\n"
+"(%i7) to_poly_solve(x * exp(x) = a, x);\n"
+"(%o7)              %union([x = lambert_w(a)])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"For @i{linear} inequalities, @code{to_poly_solve} automatically does Fourier\n"
+"elimination:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i8) to_poly_solve([x + y < 1, x - y >= 8], [x,y]);\n"
+"                               7\n"
+"(%o8) %union([x = y + 8, y < - -], \n"
+"                               2\n"
+"                                                              7\n"
+"                                 [y + 8 < x, x < 1 - y, y < - -])\n"
+"                                                              2\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Each optional argument to @code{to_poly_solve} must be an equation;\n"
+"generally, the order of these options does not matter.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize @bullet\n"
+"@item @code{simpfuncs = l}, where @code{l} is a list of functions.\n"
+"Apply the composition of the members of l to each solution.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) to_poly_solve(x^2=%i,x);\n"
+"                               1/4             1/4\n"
+"(%o1)       %union([x = - (- 1)   ], [x = (- 1)   ])\n"
+"(%i2) to_poly_solve(x^2= %i,x, 'simpfuncs = ['rectform]);\n"
+"                      %i         1             %i         1\n"
+"(%o2) %union([x = - ------- - -------], [x = ------- + -------])\n"
+"                    sqrt(2)   sqrt(2)        sqrt(2)   sqrt(2)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Sometimes additional simplification can revert a simplification; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i3) to_poly_solve(x^2=1,x);\n"
+"(%o3)              %union([x = - 1], [x = 1])\n"
+"(%i4) to_poly_solve(x^2= 1,x, 'simpfuncs = [polarform]);\n"
+"                                        %i %pi\n"
+"(%o4)            %union([x = 1], [x = %e      ]\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Maxima doesn't try to check that each member of the function list @code{l} is\n"
+"purely a simplification; thus\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i5) to_poly_solve(x^2 = %i,x, 'simpfuncs = [lambda([s],s^2)]);\n"
+"(%o5)                   %union([x = %i])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"To convert each solution to a double float, use @code{simpfunc = ['dfloat]}:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i6) to_poly_solve(x^3 +x + 1 = 0,x, \n"
+"                    'simpfuncs = ['dfloat]), algexact : true;\n"
+"(%o6) %union([x = - .6823278038280178], \n"
+"[x = .3411639019140089 - 1.161541399997251 %i], \n"
+"[x = 1.161541399997251 %i + .3411639019140089])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item @code{use_grobner = true} With this option, the function\n"
+"@code{poly_reduced_grobner} is applied to the equations before\n"
+"attempting their solution.  Primarily, this option provides a workaround\n"
+"for weakness in the function @code{algsys}.  Here is an example of\n"
+"such a workaround:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i7) to_poly_solve([x^2+y^2=2^2,(x-1)^2+(y-1)^2=2^2],[x,y],\n"
+"                    'use_grobner = true);\n"
+"@group\n"
+"                    sqrt(7) - 1      sqrt(7) + 1\n"
+"(%o7) %union([x = - -----------, y = -----------], \n"
+"                         2                2\n"
+"@end group\n"
+"                                 sqrt(7) + 1        sqrt(7) - 1\n"
+"                            [x = -----------, y = - -----------])\n"
+"                                      2                  2\n"
+"(%i8) to_poly_solve([x^2+y^2=2^2,(x-1)^2+(y-1)^2=2^2],[x,y]);\n"
+"(%o8)                       %union()\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item @code{maxdepth = k}, where @code{k} is a positive integer.  This\n"
+"function controls the maximum recursion depth for the solver.  The\n"
+"default value for @code{maxdepth} is five.  When the recursions depth is\n"
+"exceeded, the solver signals an error:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i9) to_poly_solve(cos(x) = x,x, 'maxdepth = 2);\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Unable to solve\n"
+"Unable to solve\n"
+"(%o9)        %solve([cos(x) = x], [x], maxdepth = 2)\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@item @code{parameters = l}, where @code{l} is a list of symbols.  The solver\n"
+"attempts to return a solution that is valid for all members of the list\n"
+"@code{l}; for example:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i10) to_poly_solve(a * x = x, x);\n"
+"(%o10)                   %union([x = 0])\n"
+"(%i11) to_poly_solve(a * x = x, x, 'parameters = [a]);\n"
+"(%o11) %union(%if(a - 1 = 0, [x = %c111], %union()), \n"
+"                               %if(a - 1 # 0, [x = 0], %union()))\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"In @code{(%o2)}, the solver introduced a dummy variable; to re-index the\n"
+"these dummy variables, use the function @code{nicedummies}:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i12) nicedummies(%);\n"
+"(%o12) %union(%if(a - 1 = 0, [x = %c0], %union()), \n"
+"                               %if(a - 1 # 0, [x = 0], %union()))\n"
+"@end example\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The @code{to_poly_solve} uses data stored in the hashed array\n"
+"@code{one_to_one_reduce} to solve equations of the form @math{f(a) =\n"
+"f(b)}.  The assignment @code{one_to_one_reduce['f,'f] : lambda([a,b],\n"
+"a=b)} tells @code{to_poly_solve} that the solution set of @math{f(a)\n"
+"= f(b)} equals the solution set of @math{a=b}; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i13) one_to_one_reduce['f,'f] : lambda([a,b], a=b)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i14) to_poly_solve(f(x^2-1) = f(0),x);\n"
+"(%o14)             %union([x = - 1], [x = 1])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"More generally, the assignment @code{one_to_one_reduce['f,'g] : lambda([a,b],\n"
+"w(a, b) = 0} tells @code{to_poly_solve} that the solution set of @math{f(a)\n"
+"= f(b)} equals the solution set of @math{w(a,b) = 0}; for example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i15) one_to_one_reduce['f,'g] : lambda([a,b], a = 1 + b/2)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i16) to_poly_solve(f(x) - g(x),x);\n"
+"(%o16)                   %union([x = 2])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Additionally, the function @code{to_poly_solve} uses data stored in the hashed array \n"
+"@code{function_inverse} to solve equations of the form @math{f(a) = b}.\n"
+"The assignment @code{function_inverse['f] : lambda([s], g(s))} \n"
+"informs  @code{to_poly_solve} that the solution set to @code{f(x) = b} equals\n"
+"the solution set to @code{x = g(b)}; two examples:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i17) function_inverse['Q] : lambda([s], P(s))$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i18) to_poly_solve(Q(x-1) = 2009,x);\n"
+"(%o18)              %union([x = P(2009) + 1])\n"
+"(%i19) function_inverse['G] : lambda([s], s+new_variable(integer));\n"
+"(%o19)       lambda([s], s + new_variable(integer))\n"
+"(%i20) to_poly_solve(G(x - a) = b,x);\n"
+"(%o20)             %union([x = b + a + %z125])\n"
+"@end example\n"
+"@b{Notes}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize\n"
+"@item The solve variables needn't be symbols; when @code{fullratsubst} is \n"
+"able to appropriately make substitutions, the solve variables can be nonsymbols:\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) to_poly_solve([x^2 + y^2 + x * y = 5, x * y = 8],\n"
+"                    [x^2 + y^2, x * y]);\n"
+"                                  2    2\n"
+"(%o1)           %union([x y = 8, y  + x  = - 3])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize\n"
+"@item For equations that involve complex conjugates, the solver automatically\n"
+"appends the conjugate equations; for example\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) declare(x,complex)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i2) to_poly_solve(x + (5 + %i) * conjugate(x) = 1, x);\n"
+"                                   %i + 21\n"
+"(%o2)              %union([x = - -----------])\n"
+"                                 25 %i - 125\n"
+"(%i3) declare(y,complex)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i4) to_poly_solve(set(conjugate(x) - y = 42 + %i,\n"
+"                        x + conjugate(y) = 0), set(x,y));\n"
+"                           %i - 42        %i + 42\n"
+"(%o4)        %union([x = - -------, y = - -------])\n"
+"                              2              2\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@itemize\n"
+"@item For an equation that involves the absolute value function, the\n"
+"@code{to_poly_solve} consults the fact database to decide if the\n"
+"argument to the absolute value is complex valued.  When\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@example\n"
+"(%i1) to_poly_solve(abs(x) = 6, x);\n"
+"(%o1)              %union([x = - 6], [x = 6])\n"
+"(%i2) declare(z,complex)$\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"(%i3) to_poly_solve(abs(z) = 6, z);\n"
+"(%o3) %union(%if((%c11 # 0) %and (%c11 conjugate(%c11) - 36 = \n"
+"                                       0), [z = %c11], %union()))\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@i{This is the only situation that the solver consults the fact database.  If\n"
+"a solve variable is declared to be an integer, for example, @code{to_poly_solve}\n"
+"ignores this declaration}.\n"
+"@end itemize\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Relevant option variables} @i{algexact, resultant, algebraic}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Related functions} @i{to_poly}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{To use} @file{load(to_poly_solve)}\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@b{Status:} The function @code{to_poly_solve} is experimental; its\n"
+"specifications might change and its functionality might be merged into\n"
+"other Maxima functions.\n"
+"@end deffn\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@anchor{%union}\n"
+"@deffn {Operator} %union (@var{soln_1}, @var{soln_2}, @var{soln_3}, ...)\n"
+"@deffnx {Operator} %union ()\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@code{%union(@var{soln_1}, @var{soln_2}, @var{soln_3}, ...)} represents the union of its arguments,\n"
+"each of which represents a solution set,\n"
+"as determined by @code{to_poly_solve}.\n"
+"@code{%union()} represents the empty set.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"In many cases, a solution is a list of equations @code{[@var{x} = ..., @var{y} = ..., @var{z} = ...]}\n"
+"where @var{x}, @var{y}, and @var{z} are one or more unknowns.\n"
+"In such cases, @code{to_poly_solve} returns a @code{%union} expression\n"
+"containing one or more such lists.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The solution set sometimes involves simplifing versions of various\n"
+"of logical operators including @code{%and}, @code{%or}, or @code{%if}\n"
+"for conjunction, disjuntion, and implication, respectively.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@code{%union(...)} represents the union of its arguments,\n"
+"each of which represents a solution set,\n"
+"as determined by @code{to_poly_solve}.\n"
+"In many cases, a solution is a list of equations.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (to_poly_solve) $\n"
+"@c to_poly_solve ([sqrt(x^2 - y^2), x + y], [x, y]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (to_poly_solve) $\n"
+"(%i2) to_poly_solve ([sqrt(x^2 - y^2), x + y], [x, y]);\n"
+"(%o2)    %union([x = 0, y = 0], [x = %c13, y = - %c13])\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@code{%union()} represents the empty set.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (to_poly_solve) $\n"
+"@c to_poly_solve (abs(x) = -1, x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (to_poly_solve) $\n"
+"(%i2) to_poly_solve (abs(x) = -1, x);\n"
+"(%o2)                       %union()\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"The solution set sometimes involves simplifing versions of various\n"
+"of logical operators.\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (to_poly_solve) $\n"
+"@c sol : to_poly_solve (abs(x) = a, x);\n"
+"@c subst (a = 42, sol);\n"
+"@c subst (a = -42, sol);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (to_poly_solve) $\n"
+"(%i2) sol : to_poly_solve (abs(x) = a, x);\n"
+"(%o2) %union(%if(isnonnegative_p(a), [x = - a], %union()), \n"
+"                      %if(isnonnegative_p(a), [x = a], %union()))\n"
+"(%i3) subst (a = 42, sol);\n"
+"(%o3)             %union([x = - 42], [x = 42])\n"
+"(%i4) subst (a = -42, sol);\n"
+"(%o4)                       %union()\n"
+"@end example\n"
+msgstr ""
+
+# to_poly_solve.texi
+msgid ""
+"@end deffn\n"
+msgstr ""

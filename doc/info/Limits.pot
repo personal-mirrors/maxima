@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Limits.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for Limits::\n"
+"@end menu\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Limits,  , Limits, Limits\n"
+"@section Functions and Variables for Limits\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lhospitallim}\n"
+"@defvr {Option variable} lhospitallim\n"
+"Default value: 4\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@code{lhospitallim} is the maximum number of times L'Hospital's\n"
+"rule is used in @code{limit}.  This prevents infinite looping in cases like\n"
+"@code{limit (cot(x)/csc(x), x, 0)}.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@opencatbox\n"
+"@category{Limits}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{limit}\n"
+"@deffn  {Function} limit @\n"
+"@fname{limit} (@var{expr}, @var{x}, @var{val}, @var{dir}) @\n"
+"@fname{limit} (@var{expr}, @var{x}, @var{val}) @\n"
+"@fname{limit} (@var{expr})\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"Computes the limit of @var{expr} as the real variable @var{x} approaches the\n"
+"value @var{val} from the direction @var{dir}.  @var{dir} may have the value\n"
+"@code{plus} for a limit from above, @code{minus} for a limit from below, or\n"
+"may be omitted (implying a two-sided limit is to be computed).\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@code{limit} uses the following special symbols: @code{inf} (positive infinity)\n"
+"and @code{minf} (negative infinity).  On output it may also use @code{und}\n"
+"(undefined), @code{ind} (indefinite but bounded) and @code{infinity} (complex\n"
+"infinity).\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@code{infinity} (complex infinity) is returned when the limit of\n"
+"the absolute value of the expression is positive infinity, but\n"
+"the limit of the expression itself is not positive infinity or\n"
+"negative infinity.  This includes cases where the limit of the\n"
+"complex argument is a constant, as in @code{limit(log(x), x, minf)}, \n"
+"cases where the complex argument oscillates, as in\n"
+"@code{limit((-2)^x, x, inf)}, and cases where the complex\n"
+"argument is different for either side of a two-sided limit, as in\n"
+"@code{limit(1/x, x, 0)} and @code{limit(log(x), x, 0)}.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@code{lhospitallim} is the maximum number of times L'Hospital's rule\n"
+"is used in @code{limit}.  This prevents infinite looping in cases like\n"
+"@code{limit (cot(x)/csc(x), x, 0)}.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@code{tlimswitch} when true will allow the @code{limit} command to use\n"
+"Taylor series expansion when necessary.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@code{limsubst} prevents @code{limit} from attempting substitutions on\n"
+"unknown forms.  This is to avoid bugs like @code{limit (f(n)/f(n+1), n, inf)}\n"
+"giving 1.  Setting @code{limsubst} to @code{true} will allow such\n"
+"substitutions.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@code{limit} with one argument is often called upon to simplify constant\n"
+"expressions, for example, @code{limit (inf-1)}.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@c MERGE EXAMPLES INTO THIS FILE\n"
+"@code{example (limit)} displays some examples.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"For the method see Wang, P., \"Evaluation of Definite Integrals by Symbolic\n"
+"Manipulation\", Ph.D. thesis, MAC TR-92, October 1971.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@opencatbox\n"
+"@category{Limits}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{limsubst}\n"
+"@defvr {Option variable} limsubst\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"prevents @code{limit} from attempting substitutions on unknown forms.  This is\n"
+"to avoid bugs like @code{limit (f(n)/f(n+1), n, inf)} giving 1.  Setting\n"
+"@code{limsubst} to @code{true} will allow such substitutions.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@opencatbox\n"
+"@category{Limits}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tlimit}\n"
+"@deffn  {Function} tlimit @\n"
+"@fname{tlimit} (@var{expr}, @var{x}, @var{val}, @var{dir}) @\n"
+"@fname{tlimit} (@var{expr}, @var{x}, @var{val}) @\n"
+"@fname{tlimit} (@var{expr})\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"Take the limit of the Taylor series expansion of @code{expr} in @code{x}\n"
+"at @code{val} from direction @code{dir}.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@opencatbox\n"
+"@category{Limits}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tlimswitch}\n"
+"@defvr {Option variable} tlimswitch\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"When @code{tlimswitch} is @code{true}, the @code{limit} command will use a\n"
+"Taylor series expansion if the limit of the input expression cannot be computed\n"
+"directly.  This allows evaluation of limits such as\n"
+"@code{limit(x/(x-1)-1/log(x),x,1,plus)}.  When @code{tlimswitch} is @code{false}\n"
+"and the limit of input expression cannot be computed directly, @code{limit} will\n"
+"return an unevaluated limit expression.\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+"@opencatbox\n"
+"@category{Limits}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Limits.texi
+msgid ""
+msgstr ""

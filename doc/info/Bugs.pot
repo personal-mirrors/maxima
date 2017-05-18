@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Bugs.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for Bug Detection and Reporting::\n"
+"@end menu\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Bug Detection and Reporting\n"
+"@section Functions and Variables for Bug Detection and Reporting\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{run_testsuite}\n"
+"@deffn {Function} run_testsuite ([@var{options}])\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"Run the Maxima test suite.  Tests producing the desired answer are\n"
+"considered ``passes,'' as are tests that do not produce the desired\n"
+"answer, but are marked as known bugs.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@code{run_testsuite} takes the following optional keyword arguments\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@table @code\n"
+"@item display_all\n"
+"Display all tests.  Normally, the tests are not displayed, unless the test\n"
+"fails.  (Defaults to @code{false}).\n"
+"@item display_known_bugs\n"
+"Displays tests that are marked as known bugs.  (Default is @code{false}).\n"
+"@item tests\n"
+"This is a single test or a list of tests that should be run.  Each test can be specified by\n"
+"either a string or a symbol.  By default, all tests are run.  The complete set\n"
+"of tests is specified by @mrefdot{testsuite_files}\n"
+"@item time\n"
+"Display time information.  If @code{true}, the time taken for each\n"
+"test file is displayed.  If @code{all}, the time for each individual\n"
+"test is shown if @code{display_all} is @code{true}.  The default is\n"
+"@code{false}, so no timing information is shown.\n"
+"@item share_tests\n"
+"Load additional tests for the @code{share} directory.  If @code{true},\n"
+"these additional tests are run as a part of the testsuite.  If\n"
+"@code{false}, no tests from the @code{share} directory are run.  If\n"
+"@code{only}, only the tests from the @code{share} directory are run.\n"
+"Of course, the actual set of test that are run can be controlled by\n"
+"the @code{tests} option. The default is @code{false}.\n"
+"@end table\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"For example @code{run_testsuite(display_known_bugs = true, tests=[rtest5])}\n"
+"runs just test @code{rtest5} and displays the test that are marked as\n"
+"known bugs.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@code{run_testsuite(display_all = true, tests=[\"rtest1\", rtest1a])} will\n"
+"run tests @code{rtest1} and @code{rtest2}, and displays each test.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@code{run_testsuite} changes the Maxima environment.\n"
+"Typically a test script executes @mref{kill} to establish a known environment\n"
+"(namely one without user-defined functions and variables)\n"
+"and then defines functions and variables appropriate to the test.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@code{run_testsuite} returns @code{done}.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Debugging}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{testsuite_files}\n"
+"@defvr {Option variable} testsuite_files\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@code{testsuite_files} is the set of tests to be run by\n"
+"@mrefdot{run_testsuite}  It is a list of names of the files containing\n"
+"the tests to run.  If some of the tests in a file are known to fail,\n"
+"then instead of listing the name of the file, a list containing the\n"
+"file name and the test numbers that fail is used.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"For example, this is a part of the default set of tests:\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@example\n"
+" [\"rtest13s\", [\"rtest14\", 57, 63]]\n"
+"@end example\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"This specifies the testsuite consists of the files \"rtest13s\" and\n"
+"\"rtest14\", but \"rtest14\" contains two tests that are known to fail: 57\n"
+"and 63.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Debugging} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@defvr {Option variable} share_testsuite_files\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@code{share_testsuite_files} is the set of tests from the @code{share}\n"
+"directory that is run as a part of the test suite by\n"
+"@mrefdot{run_testsuite}.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Debugging} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{bug_report}\n"
+"@deffn {Function} bug_report ()\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"Prints out Maxima and Lisp version numbers, and gives a link\n"
+"to the Maxima project bug report web page.\n"
+"The version information is the same as reported by @mrefdot{build_info}\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"When a bug is reported, it is helpful to copy the Maxima\n"
+"and Lisp version information into the bug report.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@code{bug_report} returns an empty string @code{\"\"}.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Debugging}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{build_info}\n"
+"@deffn {Function} build_info ()\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"Returns a summary of the parameters of the Maxima build,\n"
+"as a Maxima structure (defined by @code{defstruct}).\n"
+"The fields of the structure are:\n"
+"@code{version}, @code{timestamp}, @code{host}, @code{lisp_name}, and @code{lisp_version}.\n"
+"When the pretty-printer is enabled (via @code{display2d}),\n"
+"the structure is displayed as a short table.\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"See also @mrefdot{bug_report}\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@c ===beg===\n"
+"@c build_info ();\n"
+"@c x : build_info ()$\n"
+"@c x@version;\n"
+"@c x@timestamp;\n"
+"@c x@host;\n"
+"@c x@lisp_name;\n"
+"@c x@lisp_version;\n"
+"@c x;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) build_info ();\n"
+"(%o1) \n"
+"Maxima version: \"5.36.1\"\n"
+"Maxima build date: \"2015-06-02 11:26:48\"\n"
+"Host type: \"x86_64-unknown-linux-gnu\"\n"
+"Lisp implementation type: \"GNU Common Lisp (GCL)\"\n"
+"Lisp implementation version: \"GCL 2.6.12\"\n"
+"@end group\n"
+"(%i2) x : build_info ()$\n"
+"@group\n"
+"(%i3) x@@version;\n"
+"(%o3)                               5.36.1\n"
+"@end group\n"
+"@group\n"
+"(%i4) x@@timestamp;\n"
+"(%o4)                         2015-06-02 11:26:48\n"
+"@end group\n"
+"@group\n"
+"(%i5) x@@host;\n"
+"(%o5)                      x86_64-unknown-linux-gnu\n"
+"@end group\n"
+"@group\n"
+"(%i6) x@@lisp_name;\n"
+"(%o6)                        GNU Common Lisp (GCL)\n"
+"@end group\n"
+"@group\n"
+"(%i7) x@@lisp_version;\n"
+"(%o7)                             GCL 2.6.12\n"
+"@end group\n"
+"@group\n"
+"(%i8) x;\n"
+"(%o8) \n"
+"Maxima version: \"5.36.1\"\n"
+"Maxima build date: \"2015-06-02 11:26:48\"\n"
+"Host type: \"x86_64-unknown-linux-gnu\"\n"
+"Lisp implementation type: \"GNU Common Lisp (GCL)\"\n"
+"Lisp implementation version: \"GCL 2.6.12\"\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"The Maxima version string can (here 5.36.1) can look very different:\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@example\n"
+"(%i1) build_info();\n"
+"(%o1) \n"
+"Maxima version: \"branch_5_37_base_331_g8322940_dirty\"\n"
+"Maxima build date: \"2016-01-01 15:37:35\"\n"
+"Host type: \"x86_64-unknown-linux-gnu\"\n"
+"Lisp implementation type: \"CLISP\"\n"
+"Lisp implementation version: \"2.49 (2010-07-07) (built 3605577779) (memory 3660647857)\"\n"
+"@end example\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@c The version number comes from \"git describe\", and is (in that example)\n"
+"@c 331 commits after the latest tag, that is reachable from that commit\n"
+"@c don't know how to describe it better...\n"
+"In that case, Maxima was not build from a released sourcecode, \n"
+"but directly from the GIT-checkout of the sourcecode.\n"
+"In the example, the checkout is 331 commits after the latest GIT tag\n"
+"(usually a Maxima (major) release (5.37 in our example)) and the \n"
+"abbreviated commit hash of the last commit was \"8322940\".\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Debugging}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Bugs.texi
+msgid ""
+msgstr ""

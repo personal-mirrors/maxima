@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# opsubst.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for opsubst::\n"
+"@end menu\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"@node Functions and Variables for opsubst,  , opsubst-pkg, opsubst-pkg\n"
+"@section Functions and Variables for opsubst\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"@anchor{opsubst_func}\n"
+"@deffn {Function} opsubst @\n"
+"@fname{opsubst} (@var{f},@var{g},@var{e}) @\n"
+"@fname{opsubst} (@var{g}=@var{f},@var{e}) @\n"
+"@fname{opsubst} ([@var{g1}=@var{f1},@var{g2}=@var{f2},..., @var{gn}=@var{fn}],@var{e})\n"
+"The function @code{opsubst} is similar to the function @code{subst}, except that\n"
+"@code{opsubst} only makes substitutions for the operators in an expression. In general, \n"
+"When @var{f} is an operator in the expression @var{e}, substitute @var{g} \n"
+"for @var{f} in the expression @var{e}.\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"To determine the operator, @code{opsubst} sets @code{inflag} to true. This means \n"
+"@code{opsubst} substitutes for the internal, not the displayed, operator\n"
+"in the expression.\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"Examples:\n"
+"@example\n"
+"(%i1) load (\"opsubst\")$\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"(%i2) opsubst(f,g,g(g(x)));\n"
+"(%o2)                     f(f(x))\n"
+"(%i3) opsubst(f,g,g(g));\n"
+"(%o3)                       f(g)\n"
+"(%i4) opsubst(f,g[x],g[x](z));\n"
+"(%o4)                       f(z)\n"
+"(%i5) opsubst(g[x],f, f(z));\n"
+"(%o5)                      g (z)\n"
+"                            x\n"
+"(%i6) opsubst(tan, sin, sin(sin));\n"
+"(%o6)                     tan(sin)\n"
+"(%i7) opsubst([f=g,g=h],f(x));\n"
+"(%o7)                       h(x)\n"
+"@end example\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"Internally, Maxima does not use the unary negation,\n"
+"division, or the subtraction operators; thus:\n"
+"@example\n"
+"(%i8) opsubst(\"+\",\"-\",a-b);\n"
+"(%o8)                     a - b\n"
+"(%i9) opsubst(\"f\",\"-\",-a);\n"
+"(%o9)                      - a\n"
+"(%i10) opsubst(\"^^\",\"/\",a/b);\n"
+"                             a\n"
+"(%o10)                       -\n"
+"                             b\n"
+"@end example\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"The internal representation of -a*b is *(-1,a,b); thus\n"
+"@example\n"
+"(%i11) opsubst(\"[\",\"*\", -a*b);\n"
+"(%o11)                  [- 1, a, b]\n"
+"@end example\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"When either operator isn't a Maxima symbol, generally some other function\n"
+"will signal an error:\n"
+"@example\n"
+"(%i12) opsubst(a+b,f, f(x));\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"Improper name or value in functional position:\n"
+"b + a\n"
+" -- an error.  Quitting.  To debug this try debugmode(true);\n"
+"@end example\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"However, subscripted operators are allowed:\n"
+"@example\n"
+"(%i13) opsubst(g[5],f, f(x));\n"
+"(%o13)                     g (x)\n"
+"                            5\n"
+"@end example\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"To use this function write first @code{load(\"opsubst\")}.\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions} @category{Share packages} @category{Package opsubst}\n"
+"@closecatbox\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# opsubst.texi
+msgid ""
+msgstr ""

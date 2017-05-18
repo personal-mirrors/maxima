@@ -1,0 +1,3085 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Command.texi
+msgid ""
+"@menu\n"
+"* Introduction to Command Line::\n"
+"* Functions and Variables for Command Line::\n"
+"* Functions and Variables for Display::\n"
+"@end menu\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to Command Line, Functions and Variables for Command Line, Command Line, Command Line\n"
+"@section Introduction to Command Line\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c end concepts Command Line\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Command Line, Functions and Variables for Display, Introduction to Command Line, Command Line\n"
+"@section Functions and Variables for Command Line\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{__}\n"
+"@defvr {System variable} __\n"
+"@ifinfo\n"
+"@vrindex Current input expression\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{__} is the input expression currently being evaluated.  That is, while an\n"
+"input expression @var{expr} is being evaluated, @code{__} is @var{expr}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{__} is assigned the input expression before the input is simplified or\n"
+"evaluated.  However, the value of @code{__} is simplified (but not evaluated)\n"
+"when it is displayed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{__} is recognized by @mref{batch} and @mrefdot{load}  In a file processed\n"
+"by @code{batch}, @code{__} has the same meaning as at the interactive prompt.\n"
+"In a file processed by @code{load}, @code{__} is bound to the input expression\n"
+"most recently entered at the interactive prompt or in a batch file; @code{__}\n"
+"is not bound to the input expressions in the file being processed.  In\n"
+"particular, when @code{load (@var{filename})} is called from the interactive\n"
+"prompt, @code{__} is bound to @code{load (@var{filename})} while the file is\n"
+"being processed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mref{_} and @mrefdot{%}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c print (\"I was called as\", __);\n"
+"@c foo (__);\n"
+"@c g (x) := (print (\"Current input expression =\", __), 0);\n"
+"@c [aa : 1, bb : 2, cc : 3];\n"
+"@c (aa + bb + cc)/(dd + ee + g(x));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) print (\"I was called as\", __);\n"
+"I was called as print(I was called as, __) \n"
+"(%o1)              print(I was called as, __)\n"
+"@end group\n"
+"@group\n"
+"(%i2) foo (__);\n"
+"(%o2)                     foo(foo(__))\n"
+"@end group\n"
+"@group\n"
+"(%i3) g (x) := (print (\"Current input expression =\", __), 0);\n"
+"(%o3) g(x) := (print(\"Current input expression =\", __), 0)\n"
+"@end group\n"
+"@group\n"
+"(%i4) [aa : 1, bb : 2, cc : 3];\n"
+"(%o4)                       [1, 2, 3]\n"
+"@end group\n"
+"@group\n"
+"(%i5) (aa + bb + cc)/(dd + ee + g(x));\n"
+"                            cc + bb + aa\n"
+"Current input expression = -------------- \n"
+"                           g(x) + ee + dd\n"
+"                                6\n"
+"(%o5)                        -------\n"
+"                             ee + dd\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{_}\n"
+"@defvr {System variable} _\n"
+"@ifinfo\n"
+"@vrindex Previous input\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{_} is the most recent input expression (e.g., @code{%i1}, @code{%i2},\n"
+"@code{%i3}, @dots{}).\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{_} is assigned the input expression before the input is simplified or\n"
+"evaluated.  However, the value of @code{_} is simplified (but not evaluated)\n"
+"when it is displayed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{_} is recognized by @mref{batch} and @mrefdot{load}  In a file processed\n"
+"by @code{batch}, @code{_} has the same meaning as at the interactive prompt.\n"
+"In a file processed by @code{load}, @code{_} is bound to the input expression\n"
+"most recently evaluated at the interactive prompt or in a batch file; @code{_}\n"
+"is not bound to the input expressions in the file being processed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mref{__} and @mrefdot{%}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c 13 + 29;\n"
+"@c :lisp $_\n"
+"@c _;\n"
+"@c sin (%pi/2);\n"
+"@c :lisp $_\n"
+"@c _;\n"
+"@c a: 13$\n"
+"@c b: 29$\n"
+"@c a + b;\n"
+"@c :lisp $_\n"
+"@c _;\n"
+"@c a + b;\n"
+"@c ev (_);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) 13 + 29;\n"
+"(%o1)                          42\n"
+"@end group\n"
+"@group\n"
+"(%i2) :lisp $_\n"
+"((MPLUS) 13 29)\n"
+"@end group\n"
+"@group\n"
+"(%i2) _;\n"
+"(%o2)                          42\n"
+"@end group\n"
+"@group\n"
+"(%i3) sin (%pi/2);\n"
+"(%o3)                           1\n"
+"@end group\n"
+"@group\n"
+"(%i4) :lisp $_\n"
+"((%SIN) ((MQUOTIENT) $%PI 2))\n"
+"@end group\n"
+"@group\n"
+"(%i4) _;\n"
+"(%o4)                           1\n"
+"@end group\n"
+"(%i5) a: 13$\n"
+"(%i6) b: 29$\n"
+"@group\n"
+"(%i7) a + b;\n"
+"(%o7)                          42\n"
+"@end group\n"
+"@group\n"
+"(%i8) :lisp $_\n"
+"((MPLUS) $A $B)\n"
+"@end group\n"
+"@group\n"
+"(%i8) _;\n"
+"(%o8)                         b + a\n"
+"@end group\n"
+"@group\n"
+"(%i9) a + b;\n"
+"(%o9)                          42\n"
+"@end group\n"
+"@group\n"
+"(%i10) ev (_);\n"
+"(%o10)                         42\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%}\n"
+"@defvr {System variable} %\n"
+"@ifinfo\n"
+"@vrindex Previous output\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{%} is the output expression (e.g., @code{%o1}, @code{%o2}, @code{%o3},\n"
+"@dots{}) most recently computed by Maxima, whether or not it was displayed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{%} is recognized by @mref{batch} and @mrefdot{load}  In a file processed\n"
+"by @code{batch}, @code{%} has the same meaning as at the interactive prompt.\n"
+"In a file processed by @code{load}, @code{%} is bound to the output expression\n"
+"most recently computed at the interactive prompt or in a batch file; @code{%}\n"
+"is not bound to output expressions in the file being processed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefcomma{_} @mrefcomma{%%} and @mrefdot{%th}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%%}\n"
+"@defvr {System variable} %%\n"
+"@ifinfo\n"
+"@vrindex Previous result in compound expression\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"In compound statements, namely @mrefcomma{block} @mrefcomma{lambda} or\n"
+"@code{(@var{s_1}, ..., @var{s_n})}, @code{%%} is the value of the previous\n"
+"statement.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"At the first statement in a compound statement, or outside of a compound\n"
+"statement, @code{%%} is undefined.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{%%} is recognized by @mref{batch} and @mrefcomma{load} and it has the\n"
+"same meaning as at the interactive prompt.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefdot{%}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The following two examples yield the same result.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) block (integrate (x^5, x), ev (%%, x=2) - ev (%%, x=1));\n"
+"                               21\n"
+"(%o1)                          --\n"
+"                               2\n"
+"(%i2) block ([prev], prev: integrate (x^5, x),\n"
+"               ev (prev, x=2) - ev (prev, x=1));\n"
+"                               21\n"
+"(%o2)                          --\n"
+"                               2\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"A compound statement may comprise other compound statements.  Whether a\n"
+"statement be simple or compound, @code{%%} is the value of the previous\n"
+"statement.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i3) block (block (a^n, %%*42), %%/6);\n"
+"                                 n\n"
+"(%o3)                         7 a\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Within a compound statement, the value of @code{%%} may be inspected at a break\n"
+"prompt, which is opened by executing the @mref{break} function.  For example,\n"
+"entering @code{%%;} in the following example yields @code{42}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i4) block (a: 42, break ())$\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Entering a Maxima break point. Type 'exit;' to resume.\n"
+"_%%;\n"
+"42\n"
+"_\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%th}\n"
+"@deffn {Function} %th (@var{i})\n"
+"@ifinfo\n"
+"@fnindex N'th previous output\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The value of the @var{i}'th previous output expression.  That is, if the next\n"
+"expression to be computed is the @var{n}'th output, @code{%th (@var{m})} is the\n"
+"(@var{n} - @var{m})'th output.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{%th} is recognized by @mref{batch} and @mrefdot{load}  In a file processed\n"
+"by @code{batch}, @code{%th} has the same meaning as at the interactive prompt.\n"
+"In a file processed by @code{load}, @code{%th} refers to output expressions most\n"
+"recently computed at the interactive prompt or in a batch file; @code{%th} does\n"
+"not refer to output expressions in the file being processed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mref{%} and @mrefdot{%%}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{%th} is useful in @code{batch} files or for referring to a group of\n"
+"output expressions.  This example sets @code{s} to the sum of the last five\n"
+"output expressions.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) 1;2;3;4;5;\n"
+"(%o1)                           1\n"
+"(%o2)                           2\n"
+"(%o3)                           3\n"
+"(%o4)                           4\n"
+"(%o5)                           5\n"
+"(%i6) block (s: 0, for i:1 thru 5 do s: s + %th(i), s);\n"
+"(%o6)                          15\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{?}\n"
+"@deffn {Special symbol} ?\n"
+"@ifinfo\n"
+"@fnindex Fetch documentation\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"As prefix to a function or variable name, @code{?} signifies that the name is a\n"
+"Lisp name, not a Maxima name.  For example, @code{?round} signifies the Lisp\n"
+"function @code{ROUND}.  See @ref{Lisp and Maxima} for more on this point.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The notation @code{? word} (a question mark followed a word, separated by\n"
+"whitespace) is equivalent to @code{describe(\"word\")}.  The question mark must\n"
+"occur at the beginning of an input line; otherwise it is not recognized as a\n"
+"request for documentation.  See also @mrefdot{describe}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Help} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{??}\n"
+"@deffn {Special symbol} ??\n"
+"@ifinfo\n"
+"@fnindex Fetch documentation (inexact search)\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The notation @code{?? word} (@code{??} followed a word, separated by whitespace)\n"
+"is equivalent to @code{describe(\"word\", inexact)}.  The question mark must occur\n"
+"at the beginning of an input line; otherwise it is not recognized as a request\n"
+"for documentation.  See also @mrefdot{describe}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Help} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{$}\n"
+"@deffn {Input terminator} $\n"
+"@ifinfo\n"
+"@fnindex Input terminator (without display)\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The dollar sign @code{$} terminates an input expression,\n"
+"and the most recent output @code{%} and an output label, e.g. @code{%o1},\n"
+"are assigned the result, but the result is not displayed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @code{;}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c 1 + 2 + 3 $\n"
+"@c %;\n"
+"@c %o1;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) 1 + 2 + 3 $\n"
+"@group\n"
+"(%i2) %;\n"
+"(%o2)                           6\n"
+"@end group\n"
+"@group\n"
+"(%i3) %o1;\n"
+"(%o3)                           6\n"
+"@end group\n"
+"@end example\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{;}\n"
+"@deffn {Input terminator} ;\n"
+"@ifinfo\n"
+"@fnindex Input terminator (with display)\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The semicolon @code{;} terminates an input expression,\n"
+"and the resulting output is displayed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @code{$}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c 1 + 2 + 3;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) 1 + 2 + 3;\n"
+"(%o1)                           6\n"
+"@end group\n"
+"@end example\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{inchar}\n"
+"@defvr {Option variable} inchar\n"
+"Default value: @code{%i}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{inchar} is the prefix of the labels of expressions entered by the user.\n"
+"Maxima automatically constructs a label for each input expression by \n"
+"concatenating @code{inchar} and @mrefdot{linenum}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{inchar} may be assigned any string or symbol, not necessarily a single \n"
+"character.  Because Maxima internally takes into account only the first char of\n"
+"the prefix, the prefixes @code{inchar}, @mrefcomma{outchar} and\n"
+"@mref{linechar} should have a different first char.  Otherwise some commands\n"
+"like @code{kill(inlabels)} do not work as expected.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @code{labels}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c inchar: \"input\";\n"
+"@c expand((a+b)^3);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) inchar: \"input\";\n"
+"(%o1)                         input\n"
+"@end group\n"
+"@group\n"
+"(input2) expand((a+b)^3);\n"
+"                     3        2      2      3\n"
+"(%o2)               b  + 3 a b  + 3 a  b + a\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{infolists}\n"
+"@defvr {System variable} infolists\n"
+"Default value: @code{[]}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{infolists} is a list of the names of all of the information\n"
+"lists in Maxima.  These are:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@table @code\n"
+"@item labels\n"
+"All bound @code{%i}, @code{%o}, and @code{%t} labels.\n"
+"@item values\n"
+"All bound atoms which are user variables, not Maxima options or switches,\n"
+"created by @mref{:} or @mref{::} or functional binding.\n"
+"@c WHAT IS INTENDED BY \"FUNCTIONAL BINDING\" HERE ??\n"
+"@item functions\n"
+"All user-defined functions, created by @mref{:=} or @mrefdot{define}\n"
+"@item arrays\n"
+"All declared and undeclared arrays, created by @code{:}, @code{::}, or\n"
+"@code{:=}.\n"
+"@c AREN'T THERE OTHER MEANS OF CREATING ARRAYS ??\n"
+"@item macros\n"
+"All user-defined macro functions, created by @mrefdot{::=}\n"
+"@item myoptions\n"
+"All options ever reset by the user (whether or not they\n"
+"are later reset to their default values).\n"
+"@item rules\n"
+"All user-defined pattern matching and simplification rules, created\n"
+"by @mrefcomma{tellsimp} @mrefcomma{tellsimpafter} @mrefcomma{defmatch} or\n"
+"@mrefdot{defrule}\n"
+"@item aliases\n"
+"All atoms which have a user-defined alias, created by the @mrefcomma{alias}@w{}\n"
+"@mrefcomma{ordergreat} @mref{orderless} functions or by declaring the atom as a\n"
+"@mref{noun} with @mrefdot{declare}\n"
+"@item dependencies\n"
+"All atoms which have functional dependencies, created by the\n"
+"@mref{depends}, @mref{dependencies}, or @mref{gradef} functions.\n"
+"@item gradefs\n"
+"All functions which have user-defined derivatives, created by the\n"
+"@mref{gradef} function.\n"
+"@c UMM, WE REALLY NEED TO BE SPECIFIC -- WHAT DOES \"ETC\" CONTAIN HERE ??\n"
+"@item props\n"
+"All atoms which have any property other than those mentioned above, such as\n"
+"properties established by @mref{atvalue} or @mref{matchdeclare}, etc.,\n"
+"as well as properties established in the @mref{declare} function.\n"
+"@item let_rule_packages\n"
+"All user-defined @mref{let} rule packages\n"
+"plus the special package @mrefdot{default_let_rule_package}\n"
+"(@code{default_let_rule_package} is the name of the rule package used when\n"
+"one is not explicitly set by the user.)\n"
+"@end table\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c REVIEW FOR ACCURACY AND COMPLETENESS\n"
+"@c THIS ITEM IS VERY IMPORTANT !!\n"
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{kill}\n"
+"@deffn  {Function} kill @\n"
+"@fname{kill} (@var{a_1}, @dots{}, @var{a_n}) @\n"
+"@fname{kill} (labels) @\n"
+"@fname{kill} (inlabels, outlabels, linelabels) @\n"
+"@fname{kill} (@var{n}) @\n"
+"@fname{kill} ([@var{m}, @var{n}]) @\n"
+"@fname{kill} (values, functions, arrays, @dots{}) @\n"
+"@fname{kill} (all) @\n"
+"@fname{kill} (allbut (@var{a_1}, @dots{}, @var{a_n}))\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Removes all bindings (value, function, array, or rule) from the arguments\n"
+"@var{a_1}, @dots{}, @var{a_n}.  An argument @var{a_k} may be a symbol or a\n"
+"single array element.  When @var{a_k} is a single array element, @code{kill}\n"
+"unbinds that element without affecting any other elements of the array.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Several special arguments are recognized.  Different kinds of arguments\n"
+"may be combined, e.g., @code{kill (inlabels, functions, allbut (foo, bar))}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill (labels)} unbinds all input, output, and intermediate expression\n"
+"labels created so far.  @code{kill (inlabels)} unbinds only input labels which\n"
+"begin with the current value of @mrefdot{inchar}  Likewise,\n"
+"@code{kill (outlabels)} unbinds only output labels which begin with the current\n"
+"value of @mrefcomma{outchar} and @code{kill (linelabels)} unbinds only\n"
+"intermediate expression labels which begin with the current value of\n"
+"@mrefdot{linechar}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill (@var{n})}, where @var{n} is an integer,\n"
+"unbinds the @var{n} most recent input and output labels.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill ([@var{m}, @var{n}])} unbinds input and output labels @var{m} through\n"
+"@var{n}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill (@var{infolist})}, where @var{infolist} is any item in\n"
+"@code{infolists} (such as @mrefcomma{values} @mrefcomma{functions} or\n"
+"@mref{arrays}) unbinds all items in @var{infolist}.\n"
+"See also @mrefdot{infolists}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill (all)} unbinds all items on all infolists.  @code{kill (all)} does\n"
+"not reset global variables to their default values; see @mref{reset} on this\n"
+"point.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill (allbut (@var{a_1}, ..., @var{a_n}))} unbinds all items on all\n"
+"infolists except for @var{a_1}, @dots{}, @var{a_n}.\n"
+"@code{kill (allbut (@var{infolist}))} unbinds all items except for the ones on\n"
+"@var{infolist}, where @var{infolist} is @mrefcomma{values}@w{}\n"
+"@mrefcomma{functions} @mrefcomma{arrays} etc.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The memory taken up by a bound property is not released until all symbols are\n"
+"unbound from it.  In particular, to release the memory taken up by the value of\n"
+"a symbol, one unbinds the output label which shows the bound value, as well as\n"
+"unbinding the symbol itself.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill} quotes its arguments.  The quote-quote operator @code{'@w{}'}\n"
+"defeats quotation.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill (@var{symbol})} unbinds all properties of @var{symbol}.  In contrast,\n"
+"the functions @mrefcomma{remvalue} @mrefcomma{remfunction}@w{}\n"
+"@mrefcomma{remarray} and @mref{remrule} unbind a specific property.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{kill} always returns @code{done}, even if an argument has no binding.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Evaluation} @category{Console interaction} @category{Session management}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{labels}\n"
+"@deffn  {Function} labels (@var{symbol}) @\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Returns the list of input, output, or intermediate expression labels which begin\n"
+"with @var{symbol}.  Typically @var{symbol} is the value of\n"
+"@mrefcomma{inchar} @mrefcomma{outchar} or @mrefdot{linechar}\n"
+"If no labels begin with @var{symbol}, @code{labels} returns an empty list.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"By default, Maxima displays the result of each user input expression, giving the\n"
+"result an output label.  The output display is suppressed by terminating the\n"
+"input with @code{$} (dollar sign) instead of @code{;} (semicolon).  An output\n"
+"label is constructed and bound to the result, but not displayed, and the label\n"
+"may be referenced in the same way as displayed output labels.  See also\n"
+"@mrefcomma{%} @mrefcomma{%%} and @mrefdot{%th}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Intermediate expression labels can be generated by some functions.  The option\n"
+"variable @mref{programmode} controls whether @mref{solve} and some other\n"
+"functions generate intermediate expression labels instead of returning a list of\n"
+"expressions.  Some other functions, such as @mrefcomma{ldisplay} always generate\n"
+"intermediate expression labels.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefcomma{inchar} @mrefcomma{outchar} @mrefcomma{linechar} and\n"
+"@mrefdot{infolists}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@defvr {System variable} labels\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The variable @code{labels} is the list of input, output, and intermediate\n"
+"expression labels, including all previous labels if @code{inchar},\n"
+"@code{outchar}, or @code{linechar} were redefined.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{linechar}\n"
+"@defvr {Option variable} linechar\n"
+"Default value: @code{%t}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{linechar} is the prefix of the labels of intermediate expressions \n"
+"generated by Maxima.  Maxima constructs a label for each intermediate expression \n"
+"(if displayed) by concatenating @code{linechar} and @mrefdot{linenum}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{linechar} may be assigned any string or symbol, not necessarily a single \n"
+"character.  Because Maxima internally takes into account only the first char of\n"
+"the prefix, the prefixes @mrefcomma{inchar} @mrefcomma{outchar} and\n"
+"@code{linechar} should have a different first char.  Otherwise some commands\n"
+"like @code{kill(inlabels)} do not work as expected.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Intermediate expressions might or might not be displayed.\n"
+"See @mref{programmode} and @mrefdot{labels}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c EXPAND; SHOW WHAT HAPPENS WHEN linenum IS ASSIGNED A VALUE\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{linenum}\n"
+"@defvr {System variable} linenum\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The line number of the current pair of input and output expressions.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c NEEDS WORK\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{myoptions}\n"
+"@defvr {System variable} myoptions\n"
+"Default value: @code{[]}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{myoptions} is the list of all options ever reset by the user,\n"
+"whether or not they get reset to their default value.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables} @category{Session management} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{nolabels}\n"
+"@defvr {Option variable} nolabels\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{nolabels} is @code{true}, input and output result labels (@code{%i}\n"
+"and @code{%o}, respectively) are displayed, but the labels are not bound to\n"
+"results, and the labels are not appended to the @mref{labels} list.  Since\n"
+"labels are not bound to results, garbage collection can recover the memory taken\n"
+"up by the results.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Otherwise input and output result labels are bound to results, and the labels\n"
+"are appended to the @code{labels} list.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Intermediate expression labels (@code{%t}) are not affected by @code{nolabels};\n"
+"whether @code{nolabels} is @code{true} or @code{false}, intermediate expression\n"
+"labels are bound and appended to the @code{labels} list.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefcomma{batch} @mrefcomma{load} and @mrefdot{labels}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global flags} @category{Session management}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c NEEDS WORK\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{optionset}\n"
+"@defvr {Option variable} optionset\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{optionset} is @code{true}, Maxima prints out a message whenever a\n"
+"Maxima option is reset.  This is useful if the user is doubtful of the spelling\n"
+"of some option and wants to make sure that the variable he assigned a value to\n"
+"was truly an option variable.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) optionset:true;\n"
+"assignment: assigning to option optionset\n"
+"(%o1)                         true\n"
+"(%i2) gamma_expand:true;\n"
+"assignment: assigning to option gamma_expand\n"
+"(%o2)                         true\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global flags} @category{Session management} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@need 800\n"
+"@anchor{outchar}\n"
+"@defvr {Option variable} outchar\n"
+"Default value: @code{%o}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{outchar} is the prefix of the labels of expressions computed by Maxima.\n"
+"Maxima automatically constructs a label for each computed expression by \n"
+"concatenating @code{outchar} and @mrefdot{linenum}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{outchar} may be assigned any string or symbol, not necessarily a single \n"
+"character.  Because Maxima internally takes into account only the first char of\n"
+"the prefix, the prefixes @mrefcomma{inchar} @code{outchar} and\n"
+"@mref{linechar} should have a different first char.  Otherwise some commands\n"
+"like @code{kill(inlabels)} do not work as expected.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mref{labels}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c outchar: \"output\";\n"
+"@c expand((a+b)^3);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) outchar: \"output\";\n"
+"(output1)                    output\n"
+"@end group\n"
+"@group\n"
+"(%i2) expand((a+b)^3);\n"
+"                     3        2      2      3\n"
+"(output2)           b  + 3 a b  + 3 a  b + a\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{playback}\n"
+"@deffn {Function} playback @\n"
+"@fname{playback} () @\n"
+"@fname{playback} (@var{n}) @\n"
+"@fname{playback} ([@var{m}, @var{n}]) @\n"
+"@fname{playback} ([@var{m}]) @\n"
+"@fname{playback} (input) @\n"
+"@fname{playback} (slow) @\n"
+"@fname{playback} (time) @\n"
+"@fname{playback} (grind)\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Displays input, output, and intermediate expressions, without recomputing them.\n"
+"@code{playback} only displays the expressions bound to labels; any other output\n"
+"(such as text printed by @mref{print} or @mrefcomma{describe} or error messages)\n"
+"is not displayed.  See also @mrefdot{labels}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback} quotes its arguments.  The quote-quote operator @code{'@w{}'}\n"
+"defeats quotation.  @code{playback} always returns @code{done}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback ()} (with no arguments) displays all input, output, and\n"
+"intermediate expressions generated so far.  An output expression is displayed\n"
+"even if it was suppressed by the @code{$} terminator when it was originally\n"
+"computed.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback (@var{n})} displays the most recent @var{n} expressions.\n"
+"Each input, output, and intermediate expression counts as one.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback ([@var{m}, @var{n}])} displays input, output, and intermediate\n"
+"expressions with numbers from @var{m} through @var{n}, inclusive.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback ([@var{m}])} is equivalent to\n"
+"@code{playback ([@var{m}, @var{m}])}; this usually prints one pair of input and\n"
+"output expressions.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback (input)} displays all input expressions generated so far.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback (slow)} pauses between expressions and waits for the user to\n"
+"press @code{enter}.  This behavior is similar to @mrefdot{demo}\n"
+"@c WHAT DOES THE FOLLOWING MEAN ???\n"
+"@code{playback (slow)} is useful in conjunction with @code{save} or\n"
+"@mref{stringout} when creating a secondary-storage file in order to pick out\n"
+"useful expressions.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback (time)} displays the computation time for each expression.\n"
+"@c DON'T BOTHER TO MENTION OBSOLETE OPTIONS !!!\n"
+"@c The arguments @code{gctime} and @code{totaltime} have the same effect as @code{time}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{playback (grind)} displays input expressions in the same format as the\n"
+"@code{grind} function.  Output expressions are not affected by the @code{grind}\n"
+"option.  See @mrefdot{grind}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Arguments may be combined, e.g., @code{playback ([5, 10], grind, time, slow)}.\n"
+"@c APPEARS TO BE input INTERSECT (UNION OF ALL OTHER ARGUMENTS). CORRECT ???\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@need 800\n"
+"@anchor{prompt}\n"
+"@defvr {Option variable} prompt\n"
+"Default value: @code{_}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{prompt} is the prompt symbol of the @mref{demo} function,\n"
+"@code{playback (slow)} mode, and the Maxima break loop (as invoked by\n"
+"@mref{break}).\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{quit}\n"
+"@deffn {Function} quit ()\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Terminates the Maxima session.  Note that the function must be invoked as\n"
+"@code{quit();} or @code{quit()$}, not @code{quit} by itself.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"To stop a lengthy computation, type @code{control-C}.  The default action is to\n"
+"return to the Maxima prompt.  If @code{*debugger-hook*} is @code{nil},\n"
+"@code{control-C} opens the Lisp debugger.  See also @ref{Debugging}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{read}\n"
+"@deffn {Function} read (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Prints @var{expr_1}, @dots{}, @var{expr_n}, then reads one expression from the\n"
+"console and returns the evaluated expression.  The expression is terminated with\n"
+"a semicolon @code{;} or dollar sign @code{$}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mref{readonly}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) foo: 42$ \n"
+"(%i2) foo: read (\"foo is\", foo, \" -- enter new value.\")$\n"
+"foo is 42  -- enter new value. \n"
+"(a+b)^3;\n"
+"(%i3) foo;\n"
+"                                     3\n"
+"(%o3)                         (b + a)\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{readonly}\n"
+"@deffn {Function} readonly (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Prints @var{expr_1}, @dots{}, @var{expr_n}, then reads one expression from the\n"
+"console and returns the expression (without evaluation).  The expression is\n"
+"terminated with a @code{;} (semicolon) or @code{$} (dollar sign).\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefdot{read}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) aa: 7$\n"
+"(%i2) foo: readonly (\"Enter an expression:\");\n"
+"Enter an expression: \n"
+"2^aa;\n"
+"                                  aa\n"
+"(%o2)                            2\n"
+"(%i3) foo: read (\"Enter an expression:\");\n"
+"Enter an expression: \n"
+"2^aa;\n"
+"(%o3)                            128\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{reset}\n"
+"@deffn {Function} reset ()\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Resets many global variables and options, and some other variables, to their\n"
+"default values.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{reset} processes the variables on the Lisp list\n"
+"@code{*variable-initial-values*}.  The Lisp macro @code{defmvar} puts variables\n"
+"on this list (among other actions).  Many, but not all, global variables and\n"
+"options are defined by @code{defmvar}, and some variables defined by\n"
+"@code{defmvar} are not global variables or options.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Session management}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{showtime}\n"
+"@defvr {Option variable} showtime\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{showtime} is @code{true}, the computation time and elapsed time is\n"
+"printed with each output expression.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The computation time is always recorded, so @mref{time} and @mref{playback} can\n"
+"display the computation time even when @code{showtime} is @code{false}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefdot{timer}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables} @category{Debugging}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{to_lisp}\n"
+"@deffn {Function} to_lisp ()\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Enters the Lisp system under Maxima.  @code{(to-maxima)} returns to Maxima.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Define a function and enter the Lisp system under Maxima.  The definition is\n"
+"inspected on the property list, then the function definition is extracted,\n"
+"factored and stored in the variable $result.  The variable can be used in Maxima\n"
+"after returning to Maxima.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) f(x):=x^2+x;\n"
+"                                  2\n"
+"(%o1)                    f(x) := x  + x\n"
+"(%i2) to_lisp();\n"
+"Type (to-maxima) to restart, ($quit) to quit Maxima.\n"
+"MAXIMA> (symbol-plist '$f)\n"
+"(MPROPS (NIL MEXPR ((LAMBDA) ((MLIST) $X) \n"
+"                             ((MPLUS) ((MEXPT) $X 2) $X))))\n"
+"MAXIMA> (setq $result ($factor (caddr (mget '$f 'mexpr))))\n"
+"((MTIMES SIMP FACTORED) $X ((MPLUS SIMP IRREDUCIBLE) 1 $X))\n"
+"MAXIMA> (to-maxima)\n"
+"Returning to Maxima\n"
+"(%o2)                         true\n"
+"(%i3) result;\n"
+"(%o3)                       x (x + 1)\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{values}\n"
+"@defvr {System variable} values\n"
+"Initial value: @code{[]}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{values} is a list of all bound user variables (not Maxima options or\n"
+"switches).  The list comprises symbols bound by @mrefcomma{:} or @mrefdot{::}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"If the value of a variable is removed with the commands @code{kill}, \n"
+"@mrefcomma{remove} or @mref{remvalue} the variable is deleted from\n"
+"@code{values}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See @mref{functions} for a list of user defined functions.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"First, @code{values} shows the symbols @code{a}, @code{b}, and @code{c}, but \n"
+"not @code{d}, it is not bound to a value, and not the user function @code{f}.\n"
+"The values are removed from the variables.  @code{values} is the empty list.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c [a:99, b:: a-90, c:a-b, d, f(x):=x^2];\n"
+"@c values;\n"
+"@c [kill(a), remove(b,value), remvalue(c)];\n"
+"@c values;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) [a:99, b:: a-90, c:a-b, d, f(x):=x^2];\n"
+"                                           2\n"
+"(%o1)              [99, 9, 90, d, f(x) := x ]\n"
+"@end group\n"
+"@group\n"
+"(%i2) values;\n"
+"(%o2)                       [a, b, c]\n"
+"@end group\n"
+"@group\n"
+"(%i3) [kill(a), remove(b,value), remvalue(c)];\n"
+"(%o3)                   [done, done, [c]]\n"
+"@end group\n"
+"@group\n"
+"(%i4) values;\n"
+"(%o4)                          []\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Evaluation} @category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Display, , Functions and Variables for Command Line, Command Line\n"
+"@section Functions and Variables for Display\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{%edispflag}\n"
+"@defvr {Option variable} %edispflag\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{%edispflag} is @code{true}, Maxima displays @code{%e} to a negative\n"
+"exponent as a quotient.  For example, @code{%e^-x} is displayed as\n"
+"@code{1/%e^x}.  See also @mrefdot{exptdispflag}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c %e^-10;\n"
+"@c %edispflag:true$\n"
+"@c %e^-10;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) %e^-10;\n"
+"                               - 10\n"
+"(%o1)                        %e\n"
+"@end group\n"
+"(%i2) %edispflag:true$\n"
+"@group\n"
+"(%i3) %e^-10;\n"
+"                               1\n"
+"(%o3)                         ----\n"
+"                                10\n"
+"                              %e\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Exponential and logarithm functions} @category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{absboxchar}\n"
+"@defvr {Option variable} absboxchar\n"
+"Default value: @code{!}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{absboxchar} is the character used to draw absolute value\n"
+"signs around expressions which are more than one line tall.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) abs((x^3+1));\n"
+"                            ! 3    !\n"
+"(%o1)                       !x  + 1!\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c AFTER REVIEWING src/displa.lisp, IT LOOKS LIKE THIS VARIABLE HAS NO EFFECT\n"
+"@c CUT IT ON THE NEXT PASS\n"
+"@c @defvar cursordisp\n"
+"@c Default value: @code{true}\n"
+"@c \n"
+"@c When @code{cursordisp} is @code{true}, expressions are drawn by\n"
+"@c the displayer in logical sequence.  This only works with a console\n"
+"@c which can do cursor movement.  If @code{false}, expressions are\n"
+"@c printed line by line.\n"
+"@c \n"
+"@c @code{cursordisp} is always @code{false} when a @code{writefile} is in\n"
+"@c effect.\n"
+"@c \n"
+"@c @end defvar\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{disp}\n"
+"@deffn {Function} disp (@var{expr_1}, @var{expr_2}, @dots{})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"is like @mref{display} but only the value of the arguments are displayed rather\n"
+"than equations.  This is useful for complicated arguments which don't have names \n"
+"or where only the value of the argument is of interest and not the name.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mref{ldisp} and @mrefdot{print}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c b[1,2]:x-x^2$\n"
+"@c x:123$\n"
+"@c disp(x, b[1,2], sin(1.0));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) b[1,2]:x-x^2$\n"
+"(%i2) x:123$\n"
+"@group\n"
+"(%i3) disp(x, b[1,2], sin(1.0));\n"
+"                               123\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                                  2\n"
+"                             x - x\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                       0.8414709848078965\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"(%o3)                         done\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{display}\n"
+"@deffn {Function} display (@var{expr_1}, @var{expr_2}, @dots{})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Displays equations whose left side is @var{expr_i} unevaluated, and whose right\n"
+"side is the value of the expression centered on the line.  This function is \n"
+"useful in blocks and @mref{for} statements in order to have intermediate results\n"
+"displayed.  The arguments to @code{display} are usually atoms, subscripted \n"
+"variables, or function calls.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefcomma{ldisplay} @mrefcomma{disp} and @mrefdot{ldisp}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c b[1,2]:x-x^2$\n"
+"@c x:123$\n"
+"@c display(x, b[1,2], sin(1.0));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) b[1,2]:x-x^2$\n"
+"(%i2) x:123$\n"
+"(%i3) display(x, b[1,2], sin(1.0));\n"
+"                             x = 123\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                                      2\n"
+"                         b     = x - x\n"
+"                          1, 2\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                  sin(1.0) = 0.8414709848078965\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"(%o3)                         done\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{display2d}\n"
+"@defvr {Option variable} display2d\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{display2d} is @code{false}, the console display is a string \n"
+"(1-dimensional) form rather than a display (2-dimensional) form.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mref{leftjust} to switch between a left justified and a centered\n"
+"display of equations.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c x/(x^2+1);\n"
+"@c display2d:false$\n"
+"@c x/(x^2+1);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) x/(x^2+1);\n"
+"                               x\n"
+"(%o1)                        ------\n"
+"                              2\n"
+"                             x  + 1\n"
+"@end group\n"
+"(%i2) display2d:false$\n"
+"@group\n"
+"(%i3) x/(x^2+1);\n"
+"(%o3) x/(x^2+1)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{display_format_internal}\n"
+"@defvr {Option variable} display_format_internal\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{display_format_internal} is @code{true}, expressions are displayed\n"
+"without being transformed in ways that hide the internal mathematical\n"
+"representation.  The display then corresponds to what @mref{inpart} returns\n"
+"rather than @mrefdot{part}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"User     part       inpart\n"
+"a-b;      a - b     a + (- 1) b\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"           a            - 1\n"
+"a/b;       -         a b\n"
+"           b\n"
+"                       1/2\n"
+"sqrt(x);   sqrt(x)    x\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"          4 X        4\n"
+"X*4/3;    ---        - X\n"
+"           3         3\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c IS THIS FUNCTION STILL USEFUL ???\n"
+"@c REPHRASE, NEEDS EXAMPLES\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dispterms}\n"
+"@deffn {Function} dispterms (@var{expr})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Displays @var{expr} in parts one below the other.  That is, first the operator\n"
+"of @var{expr} is displayed, then each term in a sum, or factor in a product, or\n"
+"part of a more general expression is displayed separately.  This is useful if\n"
+"@var{expr} is too large to be otherwise displayed.  For example if @code{P1},\n"
+"@code{P2}, @dots{}  are very large expressions then the display program may run\n"
+"out of storage space in trying to display @code{P1 + P2 + ...}  all at once.\n"
+"However, @code{dispterms (P1 + P2 + ...)} displays @code{P1}, then below it\n"
+"@code{P2}, etc.  When not using @code{dispterms}, if an exponential expression\n"
+"is too wide to be displayed as @code{A^B} it appears as @code{expt (A, B)} (or\n"
+"as @code{ncexpt (A, B)} in the case of @code{A^^B}).\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) dispterms(2*a*sin(x)+%e^x);\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"+\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"2 a sin(x)\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"  x\n"
+"%e\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"(%o1)                         done\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{expt}\n"
+"@anchor{ncexpt}\n"
+"@deffn  {Special symbol} expt (@var{a}, @var{b})\n"
+"@deffnx {Special symbol} ncexpt (@var{a}, @var{b})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"If an exponential expression is too wide to be displayed as\n"
+"@code{@var{a}^@var{b}} it appears as @code{expt (@var{a}, @var{b})} (or as\n"
+"@code{ncexpt (@var{a}, @var{b})} in the case of @code{@var{a}^^@var{b}}).\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c THIS SEEMS LIKE A BUG TO ME.  expt, ncexpt SHOULD BE RECOGNIZED SINCE MAXIMA\n"
+"@c ITSELF PRINTS THEM SOMETIMES.  THESE SHOULD JUST SIMPLIFY TO ^ AND ^^,\n"
+"@c RESPECTIVELY.\n"
+"@code{expt} and @code{ncexpt} are not recognized in input.\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{exptdispflag}\n"
+"@defvr {Option variable} exptdispflag\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{exptdispflag} is @code{true}, Maxima displays expressions\n"
+"with negative exponents using quotients.  See also @mrefdot{%edispflag}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) exptdispflag:true;\n"
+"(%o1)                         true\n"
+"(%i2) 10^-x;\n"
+"                                1\n"
+"(%o2)                          ---\n"
+"                                 x\n"
+"                               10\n"
+"(%i3) exptdispflag:false;\n"
+"(%o3)                         false\n"
+"(%i4) 10^-x;\n"
+"                                - x\n"
+"(%o4)                         10\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions} @category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{grind}\n"
+"@deffn  {Function} grind (@var{expr})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The function @code{grind} prints @var{expr} to the console in a form suitable\n"
+"for input to Maxima.  @code{grind} always returns @code{done}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @var{expr} is the name of a function or macro, @code{grind} prints the\n"
+"function or macro definition instead of just the name.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefcomma{string} which returns a string instead of printing its\n"
+"output.  @code{grind} attempts to print the expression in a manner which makes\n"
+"it slightly easier to read than the output of @code{string}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{grind} evaluates its argument.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c aa + 1729;\n"
+"@c grind (%);\n"
+"@c [aa, 1729, aa + 1729];\n"
+"@c grind (%);\n"
+"@c matrix ([aa, 17], [29, bb]);\n"
+"@c grind (%);\n"
+"@c set (aa, 17, 29, bb);\n"
+"@c grind (%);\n"
+"@c exp (aa / (bb + 17)^29);\n"
+"@c grind (%);\n"
+"@c expr: expand ((aa + bb)^10);\n"
+"@c grind (expr);\n"
+"@c string (expr);\n"
+"@c cholesky (A):= block ([n : length (A), L : copymatrix (A),\n"
+"@c   p : makelist (0, i, 1, length (A))], \n"
+"@c   for i thru n do for j : i thru n do\n"
+"@c   (x : L[i, j], x : x - sum (L[j, k] * L[i, k], k, 1, i - 1), \n"
+"@c   if i = j then p[i] : 1 / sqrt(x) else L[j, i] : x * p[i]), \n"
+"@c   for i thru n do L[i, i] : 1 / p[i],\n"
+"@c   for i thru n do for j : i + 1 thru n do L[i, j] : 0, L)$\n"
+"@c grind (cholesky);\n"
+"@c string (fundef (cholesky));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) aa + 1729;\n"
+"(%o1)                       aa + 1729\n"
+"@end group\n"
+"@group\n"
+"(%i2) grind (%);\n"
+"aa+1729$\n"
+"(%o2)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i3) [aa, 1729, aa + 1729];\n"
+"(%o3)                 [aa, 1729, aa + 1729]\n"
+"@end group\n"
+"@group\n"
+"(%i4) grind (%);\n"
+"[aa,1729,aa+1729]$\n"
+"(%o4)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i5) matrix ([aa, 17], [29, bb]);\n"
+"                           [ aa  17 ]\n"
+"(%o5)                      [        ]\n"
+"                           [ 29  bb ]\n"
+"@end group\n"
+"@group\n"
+"(%i6) grind (%);\n"
+"matrix([aa,17],[29,bb])$\n"
+"(%o6)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i7) set (aa, 17, 29, bb);\n"
+"(%o7)                   @{17, 29, aa, bb@}\n"
+"@end group\n"
+"@group\n"
+"(%i8) grind (%);\n"
+"@{17,29,aa,bb@}$\n"
+"(%o8)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i9) exp (aa / (bb + 17)^29);\n"
+"                                aa\n"
+"                            -----------\n"
+"                                     29\n"
+"                            (bb + 17)\n"
+"(%o9)                     %e\n"
+"@end group\n"
+"@group\n"
+"(%i10) grind (%);\n"
+"%e^(aa/(bb+17)^29)$\n"
+"(%o10)                        done\n"
+"@end group\n"
+"@group\n"
+"(%i11) expr: expand ((aa + bb)^10);\n"
+"         10           9        2   8         3   7         4   6\n"
+"(%o11) bb   + 10 aa bb  + 45 aa  bb  + 120 aa  bb  + 210 aa  bb\n"
+"         5   5         6   4         7   3        8   2\n"
+" + 252 aa  bb  + 210 aa  bb  + 120 aa  bb  + 45 aa  bb\n"
+"        9        10\n"
+" + 10 aa  bb + aa\n"
+"@end group\n"
+"@group\n"
+"(%i12) grind (expr);\n"
+"bb^10+10*aa*bb^9+45*aa^2*bb^8+120*aa^3*bb^7+210*aa^4*bb^6\n"
+"     +252*aa^5*bb^5+210*aa^6*bb^4+120*aa^7*bb^3+45*aa^8*bb^2\n"
+"     +10*aa^9*bb+aa^10$\n"
+"(%o12)                        done\n"
+"@end group\n"
+"@group\n"
+"(%i13) string (expr);\n"
+"(%o13) bb^10+10*aa*bb^9+45*aa^2*bb^8+120*aa^3*bb^7+210*aa^4*bb^6\\n"
+"+252*aa^5*bb^5+210*aa^6*bb^4+120*aa^7*bb^3+45*aa^8*bb^2+10*aa^9*\\n"
+"bb+aa^10\n"
+"@end group\n"
+"@group\n"
+"(%i14) cholesky (A):= block ([n : length (A), L : copymatrix (A),\n"
+"  p : makelist (0, i, 1, length (A))],\n"
+"  for i thru n do for j : i thru n do\n"
+"  (x : L[i, j], x : x - sum (L[j, k] * L[i, k], k, 1, i - 1),\n"
+"  if i = j then p[i] : 1 / sqrt(x) else L[j, i] : x * p[i]),\n"
+"  for i thru n do L[i, i] : 1 / p[i],\n"
+"  for i thru n do for j : i + 1 thru n do L[i, j] : 0, L)$\n"
+"define: warning: redefining the built-in function cholesky\n"
+"@end group\n"
+"(%i15) grind (cholesky);\n"
+"cholesky(A):=block(\n"
+"         [n:length(A),L:copymatrix(A),\n"
+"          p:makelist(0,i,1,length(A))],\n"
+"         for i thru n do\n"
+"             (for j from i thru n do\n"
+"                  (x:L[i,j],x:x-sum(L[j,k]*L[i,k],k,1,i-1),\n"
+"                   if i = j then p[i]:1/sqrt(x)\n"
+"                       else L[j,i]:x*p[i])),\n"
+"         for i thru n do L[i,i]:1/p[i],\n"
+"         for i thru n do (for j from i+1 thru n do L[i,j]:0),L)$\n"
+"(%o15)                        done\n"
+"@group\n"
+"(%i16) string (fundef (cholesky));\n"
+"(%o16) cholesky(A):=block([n:length(A),L:copymatrix(A),p:makelis\\n"
+"t(0,i,1,length(A))],for i thru n do (for j from i thru n do (x:L\\n"
+"[i,j],x:x-sum(L[j,k]*L[i,k],k,1,i-1),if i = j then p[i]:1/sqrt(x\\n"
+") else L[j,i]:x*p[i])),for i thru n do L[i,i]:1/p[i],for i thru \\n"
+"n do (for j from i+1 thru n do L[i,j]:0),L)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@defvr {Option variable} grind\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When the variable @code{grind} is @code{true}, the output of @code{string} and\n"
+"@mref{stringout} has the same format as that of @code{grind}; otherwise no\n"
+"attempt is made to specially format the output of those functions.  The default\n"
+"value of the variable @code{grind} is @code{false}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{grind} can also be specified as an argument of @mrefdot{playback}  When\n"
+"@code{grind} is present, @code{playback} prints input expressions in the same\n"
+"format as the @code{grind} function.  Otherwise, no attempt is made to specially\n"
+"format input expressions.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ibase}\n"
+"@defvr {Option variable} ibase\n"
+"Default value: @code{10}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{ibase} is the base for integers read by Maxima.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{ibase} may be assigned any integer between 2 and 36 (decimal), inclusive.\n"
+"When @code{ibase} is greater than 10,\n"
+"the numerals comprise the decimal numerals 0 through 9\n"
+"plus letters of the alphabet @code{A}, @code{B}, @code{C}, @dots{},\n"
+"as needed to make @code{ibase} digits in all.\n"
+"Letters are interpreted as digits only if the first digit is 0 through 9.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Uppercase and lowercase letters are not distinguished.\n"
+"The numerals for base 36, the largest acceptable base,\n"
+"comprise 0 through 9 and @code{A} through @code{Z}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Whatever the value of @code{ibase},\n"
+"when an integer is terminated by a decimal point,\n"
+"it is interpreted in base 10.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefdot{obase}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{ibase} less than 10 (for example binary numbers).\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c ibase : 2 $\n"
+"@c obase;\n"
+"@c 1111111111111111;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) ibase : 2 $\n"
+"@group\n"
+"(%i2) obase;\n"
+"(%o2)                          10\n"
+"@end group\n"
+"@group\n"
+"(%i3) 1111111111111111;\n"
+"(%o3)                         65535\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{ibase} greater than 10.\n"
+"Letters are interpreted as digits only if the first digit is 0\n"
+"through 9 which means that hexadecimal numbers might need to\n"
+"be prepended by a 0.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c ibase : 16 $\n"
+"@c obase;\n"
+"@c 1000;\n"
+"@c abcd;\n"
+"@c symbolp (abcd);\n"
+"@c 0abcd;\n"
+"@c symbolp (0abcd);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) ibase : 16 $\n"
+"@group\n"
+"(%i2) obase;\n"
+"(%o2)                          10\n"
+"@end group\n"
+"@group\n"
+"(%i3) 1000;\n"
+"(%o3)                         4096\n"
+"@end group\n"
+"@group\n"
+"(%i4) abcd;\n"
+"(%o4)                         abcd\n"
+"@end group\n"
+"@group\n"
+"(%i5) symbolp (abcd);\n"
+"(%o5)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i6) 0abcd;\n"
+"(%o6)                         43981\n"
+"@end group\n"
+"@group\n"
+"(%i7) symbolp (0abcd);\n"
+"(%o7)                         false\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When an integer is terminated by a decimal point,\n"
+"it is interpreted in base 10.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c ibase : 36 $\n"
+"@c obase;\n"
+"@c 1234;\n"
+"@c 1234.;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) ibase : 36 $\n"
+"@group\n"
+"(%i2) obase;\n"
+"(%o2)                          10\n"
+"@end group\n"
+"@group\n"
+"(%i3) 1234;\n"
+"(%o3)                         49360\n"
+"@end group\n"
+"@group\n"
+"(%i4) 1234.;\n"
+"(%o4)                         1234\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ldisp}\n"
+"@deffn {Function} ldisp (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Displays expressions @var{expr_1}, @dots{}, @var{expr_n} to the console as\n"
+"printed output.  @code{ldisp} assigns an intermediate expression label to each\n"
+"argument and returns the list of labels.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefcomma{disp} @mrefcomma{display} and @mrefdot{ldisplay}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) e: (a+b)^3;\n"
+"                                   3\n"
+"(%o1)                       (b + a)\n"
+"(%i2) f: expand (e);\n"
+"                     3        2      2      3\n"
+"(%o2)               b  + 3 a b  + 3 a  b + a\n"
+"(%i3) ldisp (e, f);\n"
+"                                   3\n"
+"(%t3)                       (b + a)\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                     3        2      2      3\n"
+"(%t4)               b  + 3 a b  + 3 a  b + a\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"(%o4)                      [%t3, %t4]\n"
+"(%i4) %t3;\n"
+"                                   3\n"
+"(%o4)                       (b + a)\n"
+"(%i5) %t4;\n"
+"                     3        2      2      3\n"
+"(%o5)               b  + 3 a b  + 3 a  b + a\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ldisplay}\n"
+"@deffn {Function} ldisplay (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Displays expressions @var{expr_1}, @dots{}, @var{expr_n} to the console as\n"
+"printed output.  Each expression is printed as an equation of the form\n"
+"@code{lhs = rhs} in which @code{lhs} is one of the arguments of @code{ldisplay}\n"
+"and @code{rhs} is its value.  Typically each argument is a variable.\n"
+"@mref{ldisp} assigns an intermediate expression label to each equation and\n"
+"returns the list of labels.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefcomma{display} @mrefcomma{disp} and @mrefdot{ldisp}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) e: (a+b)^3;\n"
+"                                   3\n"
+"(%o1)                       (b + a)\n"
+"(%i2) f: expand (e);\n"
+"                     3        2      2      3\n"
+"(%o2)               b  + 3 a b  + 3 a  b + a\n"
+"(%i3) ldisplay (e, f);\n"
+"                                     3\n"
+"(%t3)                     e = (b + a)\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                       3        2      2      3\n"
+"(%t4)             f = b  + 3 a b  + 3 a  b + a\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"(%o4)                      [%t3, %t4]\n"
+"(%i4) %t3;\n"
+"                                     3\n"
+"(%o4)                     e = (b + a)\n"
+"(%i5) %t4;\n"
+"                       3        2      2      3\n"
+"(%o5)             f = b  + 3 a b  + 3 a  b + a\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{leftjust}\n"
+"@defvr {Option variable} leftjust\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{leftjust} is @code{true}, equations in 2D-display are drawn left\n"
+"justified rather than centered.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mref{display2d} to switch between 1D- and 2D-display.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) expand((x+1)^3);\n"
+"                        3      2\n"
+"(%o1)                  x  + 3 x  + 3 x + 1\n"
+"(%i2) leftjust:true$\n"
+"(%i3) expand((x+1)^3);\n"
+"       3      2\n"
+"(%o3) x  + 3 x  + 3 x + 1\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{linel}\n"
+"@defvr {Option variable} linel\n"
+"Default value: @code{79}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{linel} is the assumed width (in characters) of the console display for the\n"
+"purpose of displaying expressions.  @code{linel} may be assigned any value by\n"
+"the user, although very small or very large values may be impractical.  Text\n"
+"printed by built-in Maxima functions, such as error messages and the output of\n"
+"@mrefcomma{describe} is not affected by @code{linel}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@need 800\n"
+"@anchor{lispdisp}\n"
+"@defvr {Option variable} lispdisp\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{lispdisp} is @code{true}, Lisp symbols are displayed with a leading\n"
+"question mark @code{?}.  Otherwise, Lisp symbols are displayed with no leading\n"
+"mark. This has the same effect for 1-d and 2-d display.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c lispdisp: false$\n"
+"@c ?foo + ?bar;\n"
+"@c lispdisp: true$\n"
+"@c ?foo + ?bar;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) lispdisp: false$\n"
+"@group\n"
+"(%i2) ?foo + ?bar;\n"
+"(%o2)                       foo + bar\n"
+"@end group\n"
+"(%i3) lispdisp: true$\n"
+"@group\n"
+"(%i4) ?foo + ?bar;\n"
+"(%o4)                      ?foo + ?bar\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{negsumdispflag}\n"
+"@defvr {Option variable} negsumdispflag\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{negsumdispflag} is @code{true}, @code{x - y} displays as @code{x - y}\n"
+"instead of as @code{- y + x}.  Setting it to @code{false} causes the special\n"
+"check in display for the difference of two expressions to not be done.  One\n"
+"application is that thus @code{a + %i*b} and @code{a - %i*b} may both be\n"
+"displayed the same way.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{obase}\n"
+"@defvr {Option variable} obase\n"
+"Default value: @code{10}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{obase} is the base for integers displayed by Maxima.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@code{obase} may be assigned any integer between 2 and 36 (decimal), inclusive.\n"
+"When @code{obase} is greater than 10,\n"
+"the numerals comprise the decimal numerals 0 through 9\n"
+"plus capital letters of the alphabet A, B, C, @dots{}, as needed.\n"
+"A leading 0 digit is displayed if the leading digit is otherwise a letter.\n"
+"The numerals for base 36, the largest acceptable base,\n"
+"comprise 0 through 9, and A through Z.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefdot{ibase}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c ===beg===\n"
+"@c obase : 2;\n"
+"@c 2^8 - 1;\n"
+"@c obase : 8;\n"
+"@c 8^8 - 1;\n"
+"@c obase : 16;\n"
+"@c 16^8 - 1;\n"
+"@c obase : 36;\n"
+"@c 36^8 - 1;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) obase : 2;\n"
+"(%o1)                          10\n"
+"@end group\n"
+"@group\n"
+"(%i10) 2^8 - 1;\n"
+"(%o10)                      11111111\n"
+"@end group\n"
+"@group\n"
+"(%i11) obase : 8;\n"
+"(%o3)                          10\n"
+"@end group\n"
+"@group\n"
+"(%i4) 8^8 - 1;\n"
+"(%o4)                       77777777\n"
+"@end group\n"
+"@group\n"
+"(%i5) obase : 16;\n"
+"(%o5)                          10\n"
+"@end group\n"
+"@group\n"
+"(%i6) 16^8 - 1;\n"
+"(%o6)                       0FFFFFFFF\n"
+"@end group\n"
+"@group\n"
+"(%i7) obase : 36;\n"
+"(%o7)                          10\n"
+"@end group\n"
+"@group\n"
+"(%i8) 36^8 - 1;\n"
+"(%o8)                       0ZZZZZZZZ\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables} @category{Console interaction}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{pfeformat}\n"
+"@defvr {Option variable} pfeformat\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{pfeformat} is @code{true}, a ratio of integers is displayed with the\n"
+"solidus (forward slash) character, and an integer denominator @code{n} is\n"
+"displayed as a leading multiplicative term @code{1/n}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) pfeformat: false$\n"
+"(%i2) 2^16/7^3;\n"
+"                              65536\n"
+"(%o2)                         -----\n"
+"                               343\n"
+"(%i3) (a+b)/8;\n"
+"                              b + a\n"
+"(%o3)                         -----\n"
+"                                8\n"
+"(%i4) pfeformat: true$ \n"
+"(%i5) 2^16/7^3;\n"
+"(%o5)                       65536/343\n"
+"(%i6) (a+b)/8;\n"
+"(%o6)                      1/8 (b + a)\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{powerdisp}\n"
+"@defvr {Option variable} powerdisp\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{powerdisp} is @code{true},\n"
+"a sum is displayed with its terms in order of increasing power.\n"
+"Thus a polynomial is displayed as a truncated power series,\n"
+"with the constant term first and the highest power last.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"By default, terms of a sum are displayed in order of decreasing power.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) powerdisp:true;\n"
+"(%o1)                         true\n"
+"(%i2) x^2+x^3+x^4;\n"
+"                           2    3    4\n"
+"(%o2)                     x  + x  + x\n"
+"(%i3) powerdisp:false;\n"
+"(%o3)                         false\n"
+"(%i4) x^2+x^3+x^4;\n"
+"                           4    3    2\n"
+"(%o4)                     x  + x  + x\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{print}\n"
+"@deffn {Function} print (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Evaluates and displays @var{expr_1}, @dots{}, @var{expr_n} one after another,\n"
+"from left to right, starting at the left edge of the console display.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"The value returned by @code{print} is the value of its last argument.\n"
+"@code{print} does not generate intermediate expression labels.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"See also @mrefcomma{display} @mrefcomma{disp} @mrefcomma{ldisplay} and\n"
+"@mrefdot{ldisp}  Those functions display one expression per line, while\n"
+"@code{print} attempts to display two or more expressions per line.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"To display the contents of a file, see @mrefdot{printfile}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@example\n"
+"(%i1) r: print (\"(a+b)^3 is\", expand ((a+b)^3), \"log (a^10/b) is\",\n"
+"      radcan (log (a^10/b)))$\n"
+"            3        2      2      3\n"
+"(a+b)^3 is b  + 3 a b  + 3 a  b + a  log (a^10/b) is \n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                                              10 log(a) - log(b) \n"
+"(%i2) r;\n"
+"(%o2)                  10 log(a) - log(b)\n"
+"(%i3) disp (\"(a+b)^3 is\", expand ((a+b)^3), \"log (a^10/b) is\",\n"
+"      radcan (log (a^10/b)))$\n"
+"                           (a+b)^3 is\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                     3        2      2      3\n"
+"                    b  + 3 a b  + 3 a  b + a\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                         log (a^10/b) is\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"                       10 log(a) - log(b)\n"
+"@end example\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sqrtdispflag}\n"
+"@defvr {Option variable} sqrtdispflag\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{sqrtdispflag} is @code{false}, causes @code{sqrt} to display with\n"
+"exponent 1/2.\n"
+"@c AND OTHERWISE ... ??\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Mathematical functions} @category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{stardisp}\n"
+"@defvr {Option variable} stardisp\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{stardisp} is @code{true}, multiplication is\n"
+"displayed with an asterisk @code{*} between operands.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ttyoff}\n"
+"@defvr {Option variable} ttyoff\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"When @code{ttyoff} is @code{true}, output expressions are not displayed.\n"
+"Output expressions are still computed and assigned labels.  See @mrefdot{labels}\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"Text printed by built-in Maxima functions, such as error messages and the output\n"
+"of @mrefcomma{describe} is not affected by @code{ttyoff}.\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Command.texi
+msgid ""
+msgstr ""

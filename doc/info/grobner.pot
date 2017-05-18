@@ -1,0 +1,1356 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# grobner.texi
+msgid ""
+"@menu\n"
+"* Introduction to grobner ::\n"
+"* Functions and Variables for grobner ::\n"
+"@end menu\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@node Introduction to grobner, Functions and Variables for grobner, Top, Top\n"
+"@section Introduction to grobner\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@code{grobner} is a package for working with Groebner bases in Maxima.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"To use the following functions you must load the @file{grobner.lisp} package.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@example\n"
+"load(grobner);\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"A demo can be started by \n"
+"@example\n"
+"demo(\"grobner.demo\");\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"or\n"
+"@example\n"
+"batch(\"grobner.demo\")\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"Some of the calculation in the demo will take a lot of time \n"
+"therefore the output @file{grobner-demo.output} of the demo can \n"
+"be found in the same directory as the demo file.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@subsection Notes on the grobner package\n"
+"The package was written by \n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"Marek Rychlik \n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"@url{http://alamos.math.arizona.edu}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"and is released 2002-05-24 under the terms of the General Public License(GPL) (see file @file{grobner.lisp}).\n"
+"This documentation was extracted from the files\n"
+"@flushleft\n"
+"@file{README}, @file{grobner.lisp}, @file{grobner.demo}, @file{grobner-demo.output}\n"
+"@end flushleft\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"by G@\"unter Nowak. Suggestions for improvement of the documentation can \n"
+"be discussed at the @emph{maxima}-mailing-list @email{maxima@@math.utexas.edu}.\n"
+"The code is a little bit out of date now. Modern implementation use the fast @emph{F4} algorithm described in \n"
+"@smallformat\n"
+"A new efficient algorithm for computing Gr@\"obner bases (F4) \n"
+"Jean-Charles Faug@`ere\n"
+"LIP6/CNRS Universit@'e Paris VI \n"
+"January 20, 1999\n"
+"@end smallformat\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Groebner bases} @category{Share packages} @category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@subsection Implementations of admissible monomial orders in grobner\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@itemize @bullet\n"
+"@item @code{lex}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"pure lexicographic,\n"
+"default order for monomial comparisons\n"
+"@item @code{grlex}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"total degree order, ties broken by lexicographic\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@item @code{grevlex}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"total degree, ties broken by reverse lexicographic\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@item @code{invlex}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"inverse lexicographic order\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end itemize\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@node Functions and Variables for grobner, , Introduction to grobner, Top\n"
+"@section Functions and Variables for grobner \n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@subsection Global switches for grobner\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@defvr {Option variable} poly_monomial_order\n"
+"Default value: @code{lex}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"This global switch controls which monomial order is used in polynomial and Groebner Bases calculations. If not set, @code{lex} will be used.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+"@defvr {Option variable} poly_coefficient_ring\n"
+"Default value: @code{expression_ring}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"This switch indicates the coefficient ring of the polynomials that\n"
+"will be used in grobner calculations. If not set, @emph{maxima's} general\n"
+"expression ring will be used. This variable may be set to\n"
+"@code{ring_of_integers} if desired.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@defvr {Option variable} poly_primary_elimination_order\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"Name of the default order for eliminated variables in\n"
+"elimination-based functions. If not set, @code{lex} will be used.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@defvr {Option variable} poly_secondary_elimination_order\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"Name of the default order for kept variables in elimination-based functions. If not set, @code{lex} will be used.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@defvr {Option variable} poly_elimination_order\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"Name of the default elimination order used in elimination\n"
+"calculations. If set, it overrides the settings in variables\n"
+"@code{poly_primary_elimination_order} and @code{poly_secondary_elimination_order}.\n"
+"The user must ensure that this is a true elimination order valid\n"
+"for the number of eliminated variables. \n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@defvr {Option variable} poly_return_term_list\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"If set to @code{true}, all functions in this package will return each\n"
+"polynomial as a list of terms in the current monomial order rather\n"
+"than a @emph{maxima} general expression.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@defvr {Option variable} poly_grobner_debug\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"If set to @code{true}, produce debugging and tracing output.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@defvr {Option variable} poly_grobner_algorithm\n"
+"Default value: @code{buchberger}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"Possible values: \n"
+"@itemize\n"
+"@item @code{buchberger}\n"
+"@item @code{parallel_buchberger}\n"
+"@item @code{gebauer_moeller}\n"
+"@end itemize\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"The name of the algorithm used to find the Groebner Bases.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@defvr {Option variable} poly_top_reduction_only\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"If not @code{false}, use top reduction only whenever possible. Top\n"
+"reduction means that division algorithm stops after the first\n"
+"reduction.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@subsection Simple operators in grobner\n"
+"@code{poly_add}, @code{poly_subtract}, @code{poly_multiply} and @code{poly_expt}\n"
+"are the arithmetical operations on polynomials.\n"
+"These are performed using the internal representation, but the results are converted back to the\n"
+"@emph{maxima} general form.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_add (@var{poly1}, @var{poly2}, @var{varlist})\n"
+"Adds two polynomials @var{poly1} and @var{poly2}.\n"
+"@example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"(%i1) poly_add(z+x^2*y,x-z,[x,y,z]);\n"
+"                                    2\n"
+"(%o1)                              x  y + x\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_subtract (@var{poly1}, @var{poly2}, @var{varlist})\n"
+"Subtracts a polynomial @var{poly2} from @var{poly1}.\n"
+"@example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"(%i1) poly_subtract(z+x^2*y,x-z,[x,y,z]);\n"
+"                                      2\n"
+"(%o1)                          2 z + x  y - x\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_multiply (@var{poly1}, @var{poly2}, @var{varlist})\n"
+"Returns the product of polynomials @var{poly1} and @var{poly2}.\n"
+"@example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"(%i2) poly_multiply(z+x^2*y,x-z,[x,y,z])-(z+x^2*y)*(x-z),expand;\n"
+"(%o1)                                  0\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_s_polynomial (@var{poly1}, @var{poly2}, @var{varlist})\n"
+"Returns the @emph{syzygy polynomial} (@emph{S-polynomial}) of two polynomials @var{poly1} and @var{poly2}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_primitive_part (@var{poly1}, @var{varlist})\n"
+"Returns the polynomial @var{poly} divided by the GCD of its coefficients. \n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@example\n"
+"(%i1) poly_primitive_part(35*y+21*x,[x,y]);\n"
+"(%o1)                              5 y + 3 x\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_normalize (@var{poly}, @var{varlist})\n"
+"Returns the polynomial @var{poly} divided by the leading coefficient.\n"
+"It assumes that the division is possible, which may not always be the\n"
+"case in rings which are not fields.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@subsection Other functions in grobner\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_expand (@var{poly}, @var{varlist})\n"
+"This function parses polynomials to internal form and back. It\n"
+"is equivalent to @code{expand(@var{poly})} if @var{poly} parses correctly to\n"
+"a polynomial. If the representation is not compatible with a\n"
+"polynomial in variables @var{varlist}, the result is an error.\n"
+"It can be used to test whether an expression correctly parses to the\n"
+"internal representation. The following examples illustrate that\n"
+"indexed and transcendental function variables are allowed.\n"
+"@example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"(%i1) poly_expand((x-y)*(y+x),[x,y]);\n"
+"                                     2    2\n"
+"(%o1)                               x  - y\n"
+"(%i2) poly_expand((y+x)^2,[x,y]);\n"
+"                                2            2\n"
+"(%o2)                          y  + 2 x y + x\n"
+"(%i3) poly_expand((y+x)^5,[x,y]);\n"
+"                  5      4         2  3       3  2      4      5\n"
+"(%o3)            y  + 5 x y  + 10 x  y  + 10 x  y  + 5 x  y + x\n"
+"(%i4) poly_expand(-1-x*exp(y)+x^2/sqrt(y),[x]);\n"
+"                                          2\n"
+"                                  y      x\n"
+"(%o4)                       - x %e  + ------- - 1\n"
+"                                       sqrt(y)\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"(%i5) poly_expand(-1-sin(x)^2+sin(x),[sin(x)]);\n"
+"                                2\n"
+"(%o5)                      - sin (x) + sin(x) - 1\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_expt (@var{poly}, @var{number}, @var{varlist})\n"
+"exponentitates @var{poly} by a positive integer @var{number}. If @var{number} is not a positive integer number an error will be raised.\n"
+"@example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"(%i1) poly_expt(x-y,3,[x,y])-(x-y)^3,expand;\n"
+"(%o1)                                  0\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_content (@var{poly}. @var{varlist})\n"
+"@code{poly_content} extracts the GCD of its coefficients\n"
+"@example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"(%i1) poly_content(35*y+21*x,[x,y]);\n"
+"(%o1)                                  7\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_pseudo_divide (@var{poly}, @var{polylist}, @var{varlist})\n"
+"Pseudo-divide a polynomial @var{poly} by the list of @math{n} polynomials @var{polylist}. Return\n"
+"multiple values. The first value is a list of quotients @math{a}. The\n"
+"second value is the remainder @math{r}. The third argument is a scalar\n"
+"coefficient @math{c}, such that @math{c*poly} can be divided by @var{polylist} within the ring\n"
+"of coefficients, which is not necessarily a field. Finally, the\n"
+"fourth value is an integer count of the number of reductions\n"
+"performed. The resulting objects satisfy the equation:\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@iftex\n"
+"@tex\n"
+"$$c*poly=\sum_{i=1}^{n}({a}_{i}*{polylist}_{i})+r$$\n"
+"@end tex\n"
+"@end iftex\n"
+"@ifnottex\n"
+"@math{c*poly=sum(a[i]*polylist[i],i=1...n)+r}.\n"
+"@end ifnottex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_exact_divide (@var{poly1}, @var{poly2}, @var{varlist})\n"
+"Divide a polynomial @var{poly1} by another polynomial @var{poly2}. Assumes that exact\n"
+"division with no remainder is possible. Returns the quotient.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_normal_form (@var{poly}, @var{polylist}, @var{varlist})\n"
+"@code{poly_normal_form} finds the normal form of a polynomial @var{poly} with respect\n"
+"to a set of polynomials @var{polylist}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_buchberger_criterion (@var{polylist}, @var{varlist})\n"
+"Returns @code{true} if @var{polylist} is a Groebner basis with respect to the current term\n"
+"order, by using the Buchberger\n"
+"criterion: for every two polynomials @math{h1} and @math{h2} in @var{polylist} the\n"
+"S-polynomial @math{S(h1,h2)} reduces to 0 @math{modulo} @var{polylist}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_buchberger (@var{polylist_fl} @var{varlist})\n"
+"@code{poly_buchberger} performs the Buchberger algorithm on a list of\n"
+"polynomials and returns the resulting Groebner basis.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+"@subsection Standard postprocessing of Groebner Bases\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@iftex\n"
+"@tex\n"
+"The \emph{k-th elimination ideal} $I_k$ of an ideal $I$ over \n"
+"$K [ x_1, ...,x_1 ]$ is $I \cap K [ x_{k + 1}, ..., x_n ]$.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"\noindent\n"
+"The \emph{colon ideal} $I : J$ is the ideal $\{ h|\forall w \in J : wh \in\n"
+"I \}$.@*\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"\noindent\n"
+"The ideal $I : p^{\infty}$ is the ideal $\{ h|\exists n \in N : p^n h \in I \}$.@*\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"\noindent\n"
+"The ideal $I : J^{\infty}$ is the ideal $\{ h|\exists n \in N, \exists p \in J: p^n h \in I \}$.@*\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"\noindent\n"
+"The \emph{radical ideal} $\sqrt{I}$ is the ideal $\{ h| \exists n \in N :\n"
+"h^n \in I \}$.@*\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end tex\n"
+"@end iftex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@ifnottex\n"
+"The @emph{k-th elimination Ideal} @math{I_k} of an Ideal @math{I} over @math{K[ x[1],...,x[n] ]} is the ideal @math{intersect(I, K[ x[k+1],...,x[n] ])}.@*\n"
+"@noindent\n"
+"The @emph{colon ideal} @math{I:J} is the ideal @math{@{h|for all w in J: w*h in I@}}.@*\n"
+"@noindent\n"
+"The ideal @math{I:p^inf} is the ideal @math{@{h| there is a n in N: p^n*h in I@}}.@*\n"
+"@noindent\n"
+"The ideal @math{I:J^inf} is the ideal @math{@{h| there is a n in N and a p in J: p^n*h in I@}}.@*\n"
+"@noindent\n"
+"The @emph{radical ideal} @math{sqrt(I)} is the ideal \n"
+"@math{@{h| there is a n in N : h^n in I @}}.\n"
+"@end ifnottex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"@deffn {Function} poly_reduction (@var{polylist}, @var{varlist})\n"
+"@code{poly_reduction} reduces a list of polynomials @var{polylist}, so that\n"
+"each polynomial is fully reduced with respect to the other polynomials.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_minimization (@var{polylist}, @var{varlist})\n"
+"Returns a sublist of the polynomial list @var{polylist} spanning the same\n"
+"monomial ideal as @var{polylist} but minimal, i.e. no leading monomial\n"
+"of a polynomial in the sublist divides the leading monomial\n"
+"of another polynomial.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+"@deffn {Function} poly_normalize_list (@var{polylist}, @var{varlist})\n"
+"@code{poly_normalize_list} applies @code{poly_normalize} to each polynomial in the list.\n"
+"That means it divides every polynomial in a list @var{polylist} by its leading coefficient.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_grobner (@var{polylist}, @var{varlist})\n"
+"Returns a Groebner basis of the ideal span by the polynomials @var{polylist}. Affected by the global flags.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_reduced_grobner (@var{polylist}, @var{varlist})\n"
+"Returns a reduced Groebner basis of the ideal span by the polynomials @var{polylist}. Affected by the global flags.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+"@deffn {Function} poly_depends_p (@var{poly}, @var{var}, @var{varlist})\n"
+"@code{poly_depends} tests whether a polynomial depends on a variable @var{var}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner} @category{Predicate functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+"@deffn {Function} poly_elimination_ideal (@var{polylist}, @var{number}, @var{varlist})\n"
+"@code{poly_elimination_ideal} returns the grobner basis of the @math{number}-th elimination ideal of an\n"
+"ideal specified as a list of generating polynomials (not necessarily Groebner basis).\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_colon_ideal (@var{polylist1}, @var{polylist2}, @var{varlist})\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"Returns the reduced Groebner basis of the colon ideal \n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@math{I(polylist1):I(polylist2)}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"where @math{polylist1} and @math{polylist2} are two lists of polynomials.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_ideal_intersection (@var{polylist1}, @var{polylist2}, @var{varlist})\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@code{poly_ideal_intersection} returns the intersection of two ideals.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+"@deffn {Function} poly_lcm (@var{poly1}, @var{poly2}, @var{varlist})\n"
+"Returns the lowest common multiple of @var{poly1} and @var{poly2}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{poly_gcd}\n"
+"@deffn {Function} poly_gcd (@var{poly1}, @var{poly2}, @var{varlist})\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"Returns the greatest common divisor of @var{poly1} and @var{poly2}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"See also @mrefcomma{ezgcd} @mrefcomma{gcd} @mrefcomma{gcdex} and\n"
+"@mrefdot{gcdivide}\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@example\n"
+"(%i1) p1:6*x^3+19*x^2+19*x+6; \n"
+"                        3       2\n"
+"(%o1)                6 x  + 19 x  + 19 x + 6\n"
+"(%i2) p2:6*x^5+13*x^4+12*x^3+13*x^2+6*x;\n"
+"                  5       4       3       2\n"
+"(%o2)          6 x  + 13 x  + 12 x  + 13 x  + 6 x\n"
+"(%i3) poly_gcd(p1, p2, [x]);\n"
+"                            2\n"
+"(%o3)                    6 x  + 13 x + 6\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_grobner_equal (@var{polylist1}, @var{polylist2}, @var{varlist})\n"
+"@code{poly_grobner_equal} tests whether two Groebner Bases generate the same ideal.\n"
+"Returns @code{true} if two lists of polynomials @var{polylist1} and @var{polylist2}, assumed to be Groebner Bases,\n"
+"generate the same ideal, and @code{false} otherwise.\n"
+"This is equivalent to checking that every polynomial of the first basis reduces to 0\n"
+"modulo the second basis and vice versa. Note that in the example below the\n"
+"first list is not a Groebner basis, and thus the result is @code{false}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@example\n"
+"(%i1) poly_grobner_equal([y+x,x-y],[x,y],[x,y]);\n"
+"(%o1)                         false\n"
+"@end example\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_grobner_subsetp (@var{polylist1}, @var{polylist2}, @var{varlist})\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@code{poly_grobner_subsetp} tests whether an ideal generated by @var{polylist1}\n"
+"is contained in the ideal generated by @var{polylist2}. For this test to always succeed,\n"
+"@var{polylist2} must be a Groebner basis.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner} @category{Predicate functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_grobner_member (@var{poly}, @var{polylist}, @var{varlist})\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"Returns @code{true} if a polynomial @var{poly} belongs to the ideal generated by the\n"
+"polynomial list @var{polylist}, which is assumed to be a Groebner basis. Returns @code{false} otherwise.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@code{poly_grobner_member} tests whether a polynomial belongs to an ideal generated by a list of polynomials,\n"
+"which is assumed to be a Groebner basis. Equivalent to @code{normal_form} being 0. \n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_ideal_saturation1 (@var{polylist}, @var{poly}, @var{varlist})\n"
+"Returns the reduced Groebner basis of the saturation of the ideal\n"
+"@iftex\n"
+"@tex\n"
+"$$I(polylist):poly^\infty$$\n"
+"@end tex\n"
+"@end iftex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@ifnottex\n"
+"I(polylist):poly^inf\n"
+"@end ifnottex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"Geometrically, over an algebraically closed field, this is the set\n"
+"of polynomials in the ideal generated by @var{polylist} which do not identically\n"
+"vanish on the variety of @var{poly}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_ideal_saturation (@var{polylist1}, @var{polylist2}, @var{varlist})\n"
+"Returns the reduced Groebner basis of the saturation of the ideal\n"
+"@iftex\n"
+"@tex\n"
+"$$I(polylist1):I(polylist2)^\infty$$\n"
+"@end tex\n"
+"@end iftex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@ifnottex\n"
+"I(polylist1):I(polylist2)^inf\n"
+"@end ifnottex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"Geometrically, over an algebraically closed field, this is the set of polynomials in\n"
+"the ideal generated by @var{polylist1} which do not identically vanish on the\n"
+"variety of @var{polylist2}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_ideal_polysaturation1 (@var{polylist1}, @var{polylist2}, @var{varlist})\n"
+"@var{polylist2} ist a list of n polynomials @code{[poly1,...,polyn]}.\n"
+"Returns the reduced Groebner basis of the ideal\n"
+"@iftex\n"
+"@tex\n"
+"$$I(polylist):poly1^\infty:...:polyn^\infty$$\n"
+"@end tex\n"
+"@end iftex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@ifnottex\n"
+"I(polylist):poly1^inf:...:polyn^inf\n"
+"@end ifnottex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@noindent\n"
+"obtained by a\n"
+"sequence of successive saturations in the polynomials\n"
+"of the polynomial list @var{polylist2} of the ideal generated by the\n"
+"polynomial list @var{polylist1}.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_ideal_polysaturation (@var{polylist}, @var{polylistlist}, @var{varlist})\n"
+"@var{polylistlist} is a list of n list of polynomials @code{[polylist1,...,polylistn]}.\n"
+"Returns the reduced Groebner basis of the saturation of the ideal\n"
+"@iftex\n"
+"@tex\n"
+"$$I(polylist):I(polylist_1)^\infty:...:I(polylist_n)^\infty$$\n"
+"@end tex\n"
+"@end iftex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@ifnottex\n"
+"I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf\n"
+"@end ifnottex\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_saturation_extension (@var{poly}, @var{polylist}, @var{varlist1}, @var{varlist2})\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@code{poly_saturation_extension} implements the famous Rabinowitz trick.\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@deffn {Function} poly_polysaturation_extension (@var{poly}, @var{polylist}, @var{varlist1}, @var{varlist2})\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package grobner}\n"
+"@closecatbox\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# grobner.texi
+msgid ""
+msgstr ""

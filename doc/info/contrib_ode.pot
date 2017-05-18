@@ -1,0 +1,1017 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# contrib_ode.texi
+msgid ""
+"@menu\n"
+"* Introduction to contrib_ode::\n"
+"* Functions and Variables for contrib_ode::\n"
+"* Possible improvements to contrib_ode::\n"
+"* Test cases for contrib_ode::\n"
+"* References for contrib_ode::\n"
+"@end menu\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@node Introduction to contrib_ode, Functions and Variables for contrib_ode, contrib_ode-pkg, contrib_ode-pkg\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@section Introduction to contrib_ode \n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"Maxima's ordinary differential equation (ODE) solver @code{ode2} solves\n"
+"elementary linear ODEs of first and second order.  The function\n"
+"@code{contrib_ode} extends @code{ode2} with additional methods for linear\n"
+"and non-linear first order ODEs and linear homogeneous second order ODEs.  \n"
+"The code is still under development and the calling sequence may change\n"
+"in future releases.  Once the code has stabilized it may be\n"
+"moved from the contrib directory and integrated into Maxima.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"This package must be loaded with the command @code{load('contrib_ode)}\n"
+"before use.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"The calling convention for @code{contrib_ode} is identical to @code{ode2}.  \n"
+"It takes\n"
+"three arguments: an ODE (only the left hand side need be given if the\n"
+"right hand side is 0), the dependent variable, and the independent\n"
+"variable.  When successful, it returns a list of solutions.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"The form of the solution differs from @code{ode2}.\n"
+"As non-linear equations can have multiple solutions, \n"
+"@code{contrib_ode} returns a list of solutions.  Each  solution can \n"
+"have a number of forms:\n"
+"@itemize @bullet\n"
+"@item\n"
+"an explicit solution for the dependent variable,\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"an implicit solution for the dependent variable,\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"a parametric solution in terms of variable @code{%t}, or\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"a tranformation into another ODE in variable @code{%u}.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end itemize\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@code{%c} is used to represent the constant of integration for first order equations.\n"
+"@code{%k1} and @code{%k2} are the constants for second order equations.  \n"
+"If @code{contrib_ode}\n"
+"cannot obtain a solution for whatever reason, it returns @code{false}, after\n"
+"perhaps printing out an error message.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"It is necessary to return a list of solutions, as even first order\n"
+"non-linear ODEs can have multiple solutions.  For example:\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@c ===beg===\n"
+"@c load('contrib_ode)$\n"
+"@c eqn:x*'diff(y,x)^2-(1+x*y)*'diff(y,x)+y=0;\n"
+"@c contrib_ode(eqn,y,x);\n"
+"@c method;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load('contrib_ode)$\n"
+"@group\n"
+"(%i2) eqn:x*'diff(y,x)^2-(1+x*y)*'diff(y,x)+y=0;\n"
+"                    dy 2             dy\n"
+"(%o2)            x (--)  - (1 + x y) -- + y = 0\n"
+"                    dx               dx\n"
+"@end group\n"
+"@group\n"
+"(%i3) contrib_ode(eqn,y,x);\n"
+"                    dy 2             dy\n"
+"(%t3)            x (--)  - (1 + x y) -- + y = 0\n"
+"                    dx               dx\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"              first order equation not linear in y'\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"                                             x\n"
+"(%o3)             [y = log(x) + %c, y = %c %e ]\n"
+"@end group\n"
+"@group\n"
+"(%i4) method;\n"
+"(%o4)                        factor\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"Nonlinear ODEs can have singular solutions without constants of\n"
+"integration, as in the second solution of the following example:\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@c ===beg===\n"
+"@c load('contrib_ode)$\n"
+"@c eqn:'diff(y,x)^2+x*'diff(y,x)-y=0;\n"
+"@c contrib_ode(eqn,y,x);\n"
+"@c method;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load('contrib_ode)$\n"
+"@group\n"
+"(%i2) eqn:'diff(y,x)^2+x*'diff(y,x)-y=0;\n"
+"                       dy 2     dy\n"
+"(%o2)                 (--)  + x -- - y = 0\n"
+"                       dx       dx\n"
+"@end group\n"
+"(%i3) contrib_ode(eqn,y,x);\n"
+"                       dy 2     dy\n"
+"(%t3)                 (--)  + x -- - y = 0\n"
+"                       dx       dx\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"              first order equation not linear in y'\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"                                           2\n"
+"                                 2        x\n"
+"(%o3)              [y = %c x + %c , y = - --]\n"
+"                                          4\n"
+"@group\n"
+"(%i4) method;\n"
+"(%o4)                       clairault\n"
+"@end group\n"
+"@end example\n"
+"The following ODE has two parametric solutions in terms of the dummy\n"
+"variable @code{%t}.  In this case the parametric solutions can be manipulated\n"
+"to give explicit solutions.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@c ===beg===\n"
+"@c load('contrib_ode)$\n"
+"@c eqn:'diff(y,x)=(x+y)^2;\n"
+"@c contrib_ode(eqn,y,x);\n"
+"@c method;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load('contrib_ode)$\n"
+"@group\n"
+"(%i2) eqn:'diff(y,x)=(x+y)^2;\n"
+"                          dy          2\n"
+"(%o2)                     -- = (x + y)\n"
+"                          dx\n"
+"@end group\n"
+"@group\n"
+"(%i3) contrib_ode(eqn,y,x);\n"
+"(%o3) [[x = %c - atan(sqrt(%t)), y = (- x) - sqrt(%t)], \n"
+"                     [x = atan(sqrt(%t)) + %c, y = sqrt(%t) - x]]\n"
+"@end group\n"
+"@group\n"
+"(%i4) method;\n"
+"(%o4)                       lagrange\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"The following example (Kamke 1.112) demonstrates an implicit solution.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@c ===beg===\n"
+"@c load('contrib_ode)$\n"
+"@c assume(x>0,y>0);\n"
+"@c eqn:x*'diff(y,x)-x*sqrt(y^2+x^2)-y;\n"
+"@c contrib_ode(eqn,y,x);\n"
+"@c method;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load('contrib_ode)$\n"
+"@group\n"
+"(%i2) assume(x>0,y>0);\n"
+"(%o2)                    [x > 0, y > 0]\n"
+"@end group\n"
+"@group\n"
+"(%i3) eqn:x*'diff(y,x)-x*sqrt(y^2+x^2)-y;\n"
+"                     dy           2    2\n"
+"(%o3)              x -- - x sqrt(y  + x ) - y\n"
+"                     dx\n"
+"@end group\n"
+"@group\n"
+"(%i4) contrib_ode(eqn,y,x);\n"
+"                                  y\n"
+"(%o4)                  [x - asinh(-) = %c]\n"
+"                                  x\n"
+"@end group\n"
+"@group\n"
+"(%i5) method;\n"
+"(%o5)                          lie\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+" \n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"The following Riccati equation is transformed into a linear\n"
+"second order ODE in the variable @code{%u}.  Maxima is unable to\n"
+"solve the new ODE, so it is returned unevaluated.\n"
+"@c ===beg===\n"
+"@c load('contrib_ode)$\n"
+"@c eqn:x^2*'diff(y,x)=a+b*x^n+c*x^2*y^2;\n"
+"@c contrib_ode(eqn,y,x);\n"
+"@c method;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load('contrib_ode)$\n"
+"@group\n"
+"(%i2) eqn:x^2*'diff(y,x)=a+b*x^n+c*x^2*y^2;\n"
+"                    2 dy      2  2      n\n"
+"(%o2)              x  -- = c x  y  + b x  + a\n"
+"                      dx\n"
+"@end group\n"
+"@group\n"
+"(%i3) contrib_ode(eqn,y,x);\n"
+"               d%u\n"
+"               ---                            2\n"
+"               dx        2  a       n - 2    d %u\n"
+"(%o3)  [[y = - ----, %u c  (-- + b x     ) + ---- c = 0]]\n"
+"               %u c          2                 2\n"
+"                            x                dx\n"
+"@end group\n"
+"@group\n"
+"(%i4) method;\n"
+"(%o4)                        riccati\n"
+"@end group\n"
+"@end example\n"
+"For first order ODEs @code{contrib_ode} calls @code{ode2}.  It then tries the\n"
+"following methods: factorization, Clairault, Lagrange, Riccati,\n"
+"Abel and Lie symmetry methods.  The Lie method is not attempted\n"
+"on Abel equations if the Abel method fails, but it is tried\n"
+"if the Riccati method returns an unsolved second order ODE.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"For second order ODEs @code{contrib_ode} calls @code{ode2} then @code{odelin}.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"Extensive debugging traces and messages are displayed if the command\n"
+"@code{put('contrib_ode,true,'verbose)} is executed.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Differential equations} @category{Share packages} @category{Package contrib_ode}\n"
+"@closecatbox\n"
+"@node Functions and Variables for contrib_ode, Possible improvements to contrib_ode, Introduction to contrib_ode, contrib_ode-pkg\n"
+"@section Functions and Variables for contrib_ode\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@deffn {Function} contrib_ode (@var{eqn}, @var{y}, @var{x})\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"Returns a list of solutions of the ODE @var{eqn} with \n"
+"independent variable @var{x} and dependent variable @var{y}.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@deffn {Function} odelin (@var{eqn}, @var{y}, @var{x})\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@code{odelin} solves linear homogeneous ODEs of first and \n"
+"second order with \n"
+"independent variable @var{x} and dependent variable @var{y}.  \n"
+"It returns a fundamental solution set of the ODE.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"For second order ODEs, @code{odelin} uses a method, due to Bronstein\n"
+"and Lafaille, that searches for solutions in terms of given \n"
+"special functions. \n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@c ===beg===\n"
+"@c load('contrib_ode)$\n"
+"@c odelin(x*(x+1)*'diff(y,x,2)+(x+5)*'diff(y,x,1)+(-4)*y,y,x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load('contrib_ode)$\n"
+"@group\n"
+"(%i2) odelin(x*(x+1)*'diff(y,x,2)+(x+5)*'diff(y,x,1)+(-4)*y,y,x);\n"
+"       gauss_a(- 6, - 2, - 3, - x)  gauss_b(- 6, - 2, - 3, - x)\n"
+"(%o2) @{---------------------------, ---------------------------@}\n"
+"                    4                            4\n"
+"                   x                            x\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@deffn {Function} ode_check (@var{eqn}, @var{soln})\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"Returns the value of ODE @var{eqn} after substituting a\n"
+"possible solution @var{soln}.  The value is equivalent to \n"
+"zero if @var{soln} is a solution of @var{eqn}.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@c ===beg===\n"
+"@c load('contrib_ode)$\n"
+"@c eqn:'diff(y,x,2)+(a*x+b)*y;\n"
+"@c ans:[y = bessel_y(1/3,2*(a*x+b)^(3/2)/(3*a))*%k2*sqrt(a*x+b)\n"
+"@c          +bessel_j(1/3,2*(a*x+b)^(3/2)/(3*a))*%k1*sqrt(a*x+b)];\n"
+"@c ode_check(eqn,ans[1]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load('contrib_ode)$\n"
+"@group\n"
+"(%i2) eqn:'diff(y,x,2)+(a*x+b)*y;\n"
+"                         2\n"
+"                        d y\n"
+"(%o2)                   --- + (b + a x) y\n"
+"                          2\n"
+"                        dx\n"
+"@end group\n"
+"(%i3) ans:[y = bessel_y(1/3,2*(a*x+b)^(3/2)/(3*a))*%k2*sqrt(a*x+b)\n"
+"         +bessel_j(1/3,2*(a*x+b)^(3/2)/(3*a))*%k1*sqrt(a*x+b)];\n"
+"                                  3/2\n"
+"                    1  2 (b + a x)\n"
+"(%o3) [y = bessel_y(-, --------------) %k2 sqrt(a x + b)\n"
+"                    3       3 a\n"
+"                                          3/2\n"
+"                            1  2 (b + a x)\n"
+"                 + bessel_j(-, --------------) %k1 sqrt(a x + b)]\n"
+"                            3       3 a\n"
+"@group\n"
+"(%i4) ode_check(eqn,ans[1]);\n"
+"(%o4)                           0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@defvr {System variable} method\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"The variable @code{method} is set to the successful solution\n"
+"method. \n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@defvr {Variable} %c\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@code{%c} is the integration constant for first order ODEs.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@defvr {Variable} %k1\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@code{%k1} is the first integration constant for second order ODEs.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@defvr {Variable} %k2\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@code{%k2} is the second integration constant for second order ODEs.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end defvr\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@anchor{gauss_a}\n"
+"@deffn {Function} gauss_a (@var{a}, @var{b}, @var{c}, @var{x})\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@code{gauss_a(a,b,c,x)} and @code{gauss_b(a,b,c,x)} are 2F1 \n"
+"geometric functions.  They represent any two independent\n"
+"solutions of the hypergeometric differential equation \n"
+"@code{x(1-x) diff(y,x,2) + [c-(a+b+1)x] diff(y,x) - aby = 0} (A&S 15.5.1).  \n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"The only use of these functions is in solutions of ODEs returned by \n"
+"@code{odelin} and @code{contrib_ode}.  The definition and use of these \n"
+"functions may change in future releases of Maxima.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"See also @mrefcomma{gauss_b} @mref{dgauss_a} and @mrefdot{gauss_b}\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@anchor{gauss_b}\n"
+"@deffn {Function} gauss_b (@var{a}, @var{b}, @var{c}, @var{x})\n"
+"See @mrefdot{gauss_a}\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@anchor{dgauss_a}\n"
+"@deffn {Function} dgauss_a (@var{a}, @var{b}, @var{c}, @var{x})\n"
+"The derivative with respect to @var{x} of @code{gauss_a(@var{a}, @var{b}, @var{c}, @var{x})}.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@deffn {Function} dgauss_b (@var{a}, @var{b}, @var{c}, @var{x})\n"
+"The derivative with respect to @var{x} of @code{gauss_b(@var{a}, @var{b}, @var{c}, @var{x})}.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+"@anchor{kummer_m}\n"
+"@deffn {Function} kummer_m (@var{a}, @var{b}, @var{x})\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"Kummer's M function, as defined in Abramowitz and Stegun,\n"
+"@i{Handbook of Mathematical Functions}, Section 13.1.2.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"The only use of this function is in solutions of ODEs returned by \n"
+"@code{odelin} and @code{contrib_ode}.  The definition and use of this \n"
+"function may change in future releases of Maxima.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"See also @mrefcomma{kummer_u} @mrefcomma{dkummer_m} and @mrefdot{dkummer_u}\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@anchor{kummer_u}\n"
+"@deffn {Function} kummer_u (@var{a}, @var{b}, @var{x})\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"Kummer's U function, as defined in Abramowitz and Stegun,\n"
+"@i{Handbook of Mathematical Functions}, Section 13.1.3.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"See @mrefdot{kummer_m}\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@anchor{dkummer_m}\n"
+"@deffn {Function} dkummer_m (@var{a}, @var{b}, @var{x})\n"
+"The derivative with respect to @var{x} of @code{kummer_m(@var{a}, @var{b}, @var{x})}.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@anchor{dkummer_u}\n"
+"@deffn {Function} dkummer_u (@var{a}, @var{b}, @var{x})\n"
+"The derivative with respect to @var{x} of @code{kummer_u(@var{a}, @var{b}, @var{x})}.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@deffn {Function} bessel_simplify (@var{expr})\n"
+"Simplifies expressions containing Bessel functions bessel_j, bessel_y,\n"
+"bessel_i, bessel_k, hankel_1, hankel_2, strauve_h and strauve_l.\n"
+"Recurrence relations (given in Abramowitz and Stegun,\n"
+"@i{Handbook of Mathematical Functions},\n"
+"Section 9.1.27) are used to replace functions of highest order n\n"
+"by functions of order n-1 and n-2.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"This process repeated until all the orders\n"
+"differ by less than 2.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@c ===beg===\n"
+"@c load('contrib_ode)$\n"
+"@c bessel_simplify(4*bessel_j(n,x^2)*(x^2-n^2/x^2) \n"
+"@c   +x*((bessel_j(n-2,x^2)-bessel_j(n,x^2))*x\n"
+"@c   -(bessel_j(n,x^2)-bessel_j(n+2,x^2))*x)\n"
+"@c   -2*bessel_j(n+1,x^2)+2*bessel_j(n-1,x^2));\n"
+"@c bessel_simplify(-2*bessel_j(1,z)*z^3-10*bessel_j(2,z)*z^2\n"
+"@c  +15*%pi*bessel_j(1,z)*struve_h(3,z)*z-15*%pi*struve_h(1,z)*bessel_j(3,z)*z\n"
+"@c  -15*%pi*bessel_j(0,z)*struve_h(2,z)*z+15*%pi*struve_h(0,z)*bessel_j(2,z)*z\n"
+"@c  -30*%pi*bessel_j(1,z)*struve_h(2,z)+30*%pi*struve_h(1,z)*bessel_j(2,z));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load('contrib_ode)$\n"
+"@group\n"
+"(%i2) bessel_simplify(4*bessel_j(n,x^2)*(x^2-n^2/x^2)\n"
+"  +x*((bessel_j(n-2,x^2)-bessel_j(n,x^2))*x\n"
+"  -(bessel_j(n,x^2)-bessel_j(n+2,x^2))*x)\n"
+"  -2*bessel_j(n+1,x^2)+2*bessel_j(n-1,x^2));\n"
+"(%o2)                           0\n"
+"@end group\n"
+"@group\n"
+"(%i3) bessel_simplify(-2*bessel_j(1,z)*z^3-10*bessel_j(2,z)*z^2\n"
+" +15*%pi*bessel_j(1,z)*struve_h(3,z)*z-15*%pi*struve_h(1,z)*bessel_j(3,z)*z\n"
+" -15*%pi*bessel_j(0,z)*struve_h(2,z)*z+15*%pi*struve_h(0,z)*bessel_j(2,z)*z\n"
+" -30*%pi*bessel_j(1,z)*struve_h(2,z)+30*%pi*struve_h(1,z)*bessel_j(2,z));\n"
+"(%o3)                           0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@category{Bessel functions}\n"
+"@category{Special functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@deffn {Function} expintegral_e_simplify (@var{expr})\n"
+"Simplify expressions containing exponential integral expintegral_e\n"
+"using the recurrence (A&S 5.1.14).\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"   expintegral_e(n+1,z) \n"
+"        = (1/n) * (exp(-z)-z*expintegral_e(n,z))      n = 1,2,3 ....\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package contrib_ode}\n"
+"@category{Exponential Integrals}\n"
+"@category{Special functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end deffn\n"
+"@node Possible improvements to contrib_ode, Test cases for contrib_ode, Functions and Variables for contrib_ode, contrib_ode-pkg\n"
+"@section Possible improvements to contrib_ode\n"
+"These routines are work in progress.  I still need to:\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@itemize @bullet\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"Extend the FACTOR method @code{ode1_factor} to work for multiple roots.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"Extend the FACTOR method @code{ode1_factor} to attempt to solve higher\n"
+"  order factors.  At present it only attemps to solve linear factors.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"Fix the LAGRANGE routine @code{ode1_lagrange} to prefer real roots over\n"
+"  complex roots.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"Add additional methods for Riccati equations.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"Improve the detection of Abel equations of second kind.  The exisiting\n"
+"  pattern matching is weak.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"Work on the Lie symmetry group routine @code{ode1_lie}.  There are quite a\n"
+"  few problems with it: some parts are unimplemented; some test cases\n"
+"  seem to run forever; other test cases crash; yet others return very\n"
+"  complex \"solutions\".  I wonder if it really ready for release yet.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"Add more test cases.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end itemize\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@node Test cases for contrib_ode, References for contrib_ode, Possible improvements to contrib_ode, contrib_ode-pkg\n"
+"@section Test cases for contrib_ode\n"
+"The routines have been tested on a approximately one thousand  test cases \n"
+"from Murphy,\n"
+"Kamke, Zwillinger and elsewhere.  These are included in the tests subdirectory.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"The Clairault routine @code{ode1_clairault} finds all known solutions,\n"
+"  including singular solutions, of the Clairault equations in Murphy and\n"
+"  Kamke.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"The other routines often return a single solution when multiple\n"
+"  solutions exist.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"Some of the \"solutions\" from @code{ode1_lie} are overly complex and\n"
+"  impossible to check.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"There are some crashes.\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@end itemize\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@node References for contrib_ode, ,Test cases for contrib_ode, contrib_ode-pkg\n"
+"@section References for contrib_ode\n"
+"@enumerate\n"
+"@item\n"
+"E. Kamke, Differentialgleichungen Losungsmethoden und Losungen, Vol 1,\n"
+"    Geest & Portig, Leipzig, 1961\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"G. M. Murphy, Ordinary Differential Equations and Their Solutions,\n"
+"    Van Nostrand, New York, 1960\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"D. Zwillinger, Handbook of Differential Equations, 3rd edition,\n"
+"    Academic Press, 1998\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"F. Schwarz, Symmetry Analysis of Abel's Equation, Studies in\n"
+"    Applied Mathematics, 100:269-294 (1998)\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"F. Schwarz, Algorithmic Solution of Abel's Equation,\n"
+"    Computing 61, 39-49 (1998)\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"E. S. Cheb-Terrab, A. D. Roche, Symmetries and First Order\n"
+"    ODE Patterns, Computer Physics Communications 113 (1998), p 239.\n"
+"@c dead link\n"
+"    (@url{http://lie.uwaterloo.ca/papers/ode_vii.pdf})\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item\n"
+"E. S. Cheb-Terrab, T. Kolokolnikov,  First Order ODEs,\n"
+"    Symmetries and Linear Transformations, European Journal of\n"
+"    Applied Mathematics, Vol. 14, No. 2, pp. 231-246 (2003).\n"
+"@c dead link\n"
+"    (@url{http://arxiv.org/abs/math-ph/0007023},@*\n"
+"    @url{http://lie.uwaterloo.ca/papers/ode_iv.pdf})\n"
+"@item\n"
+"G. W. Bluman, S. C. Anco, Symmetry and Integration Methods for\n"
+"    Differential Equations, Springer, (2002)\n"
+msgstr ""
+
+# contrib_ode.texi
+msgid ""
+"@item \n"
+"M. Bronstein, S. Lafaille,\n"
+"Solutions of linear ordinary differential equations in terms\n"
+"of special functions,\n"
+"Proceedings of ISSAC 2002, Lille, ACM Press, 23-28. \n"
+"(@url{http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac2002.pdf})\n"
+"@end enumerate\n"
+msgstr ""

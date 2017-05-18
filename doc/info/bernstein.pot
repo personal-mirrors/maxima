@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# bernstein.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for Bernstein::\n"
+"@end menu\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@node Functions and Variables for Bernstein,  , Bernstein-pkg, Bernstein-pkg\n"
+"@section Functions and Variables for Bernstein\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@anchor{bernstein_poly}\n"
+"@deffn {Function} bernstein_poly (@var{k}, @var{n}, @var{x})\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"Provided @code{k} is not a negative integer, the Bernstein polynomials\n"
+"are defined by @code{bernstein_poly(k,n,x) = binomial(n,k) x^k\n"
+"(1-x)^(n-k)}; for a negative integer @code{k}, the Bernstein polynomial\n"
+"@code{bernstein_poly(k,n,x)} vanishes.  When either @code{k} or @code{n} are\n"
+"non integers, the option variable @code{bernstein_explicit}\n"
+"controls the expansion of the Bernstein polynomials into its explicit form;\n"
+"example:\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@example\n"
+"(%i1) load(bernstein)$\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"(%i2) bernstein_poly(k,n,x);\n"
+"(%o2)                bernstein_poly(k, n, x)\n"
+"(%i3) bernstein_poly(k,n,x), bernstein_explicit : true;\n"
+"                                       n - k  k\n"
+"(%o3)            binomial(n, k) (1 - x)      x\n"
+"@end example\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"The Bernstein polynomials have both a gradef property and an integrate property:\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@example\n"
+"(%i4) diff(bernstein_poly(k,n,x),x);\n"
+"(%o4) (bernstein_poly(k - 1, n - 1, x)\n"
+"                                 - bernstein_poly(k, n - 1, x)) n\n"
+"(%i5) integrate(bernstein_poly(k,n,x),x);\n"
+"(%o5) \n"
+"                                                            k + 1\n"
+" hypergeometric([k + 1, k - n], [k + 2], x) binomial(n, k) x\n"
+" ----------------------------------------------------------------\n"
+"                              k + 1\n"
+"@end example\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"For numeric inputs, both real and complex, the Bernstein polynomials evaluate\n"
+"to a numeric result:\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@example\n"
+"(%i6) bernstein_poly(5,9, 1/2 + %i);\n"
+"                        39375 %i   39375\n"
+"(%o6)                   -------- + -----\n"
+"                          128       256\n"
+"(%i7) bernstein_poly(5,9, 0.5b0 + %i);\n"
+"(%o7)           3.076171875b2 %i + 1.5380859375b2\n"
+"@end example\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"To use @code{bernstein_poly}, first @code{load(\"bernstein\")}.\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@end deffn\n"
+"@anchor{bernstein_explicit}\n"
+"@defvr {Variable} bernstein_explicit\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"When either @code{k} or @code{n} are non integers, the option variable \n"
+"@code{bernstein_explicit} controls the expansion of @code{bernstein(k,n,x)} \n"
+"into its explicit form; example:\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@example\n"
+"(%i1) bernstein_poly(k,n,x);\n"
+"(%o1)                bernstein_poly(k, n, x)\n"
+"(%i2) bernstein_poly(k,n,x), bernstein_explicit : true;\n"
+"                                       n - k  k\n"
+"(%o2)            binomial(n, k) (1 - x)      x\n"
+"@end example\n"
+"When both @code{k} and @code{n} are explicitly integers, @code{bernstein(k,n,x)} \n"
+"@emph{always} expands to its explicit form.\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@end defvr\n"
+"@anchor{multibernstein_poly}\n"
+"@deffn {Function} multibernstein_poly (@var{[k1,k2,@dots{}, kp]}, @var{[n1,n2,@dots{}, np]}, @var{[x1,x2,@dots{}, xp]})\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"The multibernstein polynomial @code{multibernstein_poly (@var{[k1, k2, ..., \n"
+"kp]}, @var{[n1, n2, ..., np]}, @var{[x1, x2, ..., xp]})} is the product of\n"
+"bernstein polynomials @code{bernstein_poly(k1, n1, x1)\n"
+"bernstein_poly(k2, n2, x2) ... bernstein_poly(kp, np, xp)}.\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"To use @code{multibernstein_poly}, first @code{load(\"bernstein\")}.\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@anchor{bernstein_approx}\n"
+"@deffn {Function} bernstein_approx (@var{f}, @var{[x1, x1, @dots{}, xn]}, n)\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"Return the @code{n}-th order uniform Bernstein polynomial approximation for the\n"
+"function @code{(x1, x2, ..., xn) |--> f}.\n"
+"Examples\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@example\n"
+"(%i1) bernstein_approx(f(x),[x], 2);\n"
+"                 2       1                          2\n"
+"(%o1)      f(1) x  + 2 f(-) (1 - x) x + f(0) (1 - x)\n"
+"                         2\n"
+"(%i2) bernstein_approx(f(x,y),[x,y], 2);\n"
+"               2  2       1                2\n"
+"(%o2) f(1, 1) x  y  + 2 f(-, 1) (1 - x) x y\n"
+"                          2\n"
+"                  2  2          1   2\n"
+" + f(0, 1) (1 - x)  y  + 2 f(1, -) x  (1 - y) y\n"
+"                                2\n"
+"       1  1                               1         2\n"
+" + 4 f(-, -) (1 - x) x (1 - y) y + 2 f(0, -) (1 - x)  (1 - y) y\n"
+"       2  2                               2\n"
+"            2        2       1                      2\n"
+" + f(1, 0) x  (1 - y)  + 2 f(-, 0) (1 - x) x (1 - y)\n"
+"                             2\n"
+"                  2        2\n"
+" + f(0, 0) (1 - x)  (1 - y)\n"
+"@end example\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"To use @code{bernstein_approx}, first @code{load(\"bernstein\")}.\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@anchor{bernstein_expand}\n"
+"@deffn {Function} bernstein_expand (@var{e}, @var{[x1, x1, @dots{}, xn]})\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"Express the @emph{polynomial} @code{e} exactly as a linear combination of multi-variable\n"
+"Bernstein polynomials.\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@example\n"
+"(%i1) bernstein_expand(x*y+1,[x,y]);\n"
+"(%o1)    2 x y + (1 - x) y + x (1 - y) + (1 - x) (1 - y)\n"
+"(%i2) expand(%);\n"
+"(%o2)                        x y + 1\n"
+"@end example\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"Maxima signals an error when the first argument isn't a polynomial.\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"To use @code{bernstein_expand}, first @code{load(\"bernstein\")}.\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# bernstein.texi
+msgid ""
+msgstr ""

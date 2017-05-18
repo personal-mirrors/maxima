@@ -1,0 +1,608 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# alt-display.texi
+msgid ""
+"@menu\n"
+"* Introduction to alt-display::\n"
+"* Functions and Variables for alt-display::\n"
+"@end menu\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@node Introduction to alt-display, Functions and Variables for alt-display, alt-display-pkg, alt-display-pkg\n"
+"@section Introduction to alt-display\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"The @emph{alt-display} package provides a means to change the way that\n"
+"Maxima displays its output. The @var{*alt-display1d*} and\n"
+"@var{*alt-display2d*} Lisp hooks were introduced to Maxima in 2002, but\n"
+"were not easily accessible from the Maxima REPL until the introduction\n"
+"of this package.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"The package provides a general purpose function to define alternative\n"
+"display functions, and a separate function to set the display\n"
+"function. The package also provides customized display functions to\n"
+"produce output in @TeX{}, Texinfo, XML and all three output formats\n"
+"within Texinfo.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"Here is a sample session:\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@c (linenum:1,display2d:true,reset_displays());\n"
+"@example\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+"(%i2) set_alt_display(2,tex_display)$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i3) x/(x^2+y^2) = 1;\n"
+"\mbox@{\tt\red(@{\it \%o_3@}) \black@}$$@{@{x@}\over@{y^2+x^2@}@}=1$$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i4) set_alt_display(2,mathml_display)$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i5) x/(x^2+y^2) = 1;\n"
+"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"> <mi>mlabel</mi> \n"
+"<mfenced separators=\"\"><msub><mi>%o</mi> <mn>5</mn></msub> \n"
+"<mo>,</mo><mfrac><mrow><mi>x</mi> </mrow> <mrow><msup><mrow>\n"
+"<mi>y</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow>\n"
+"<mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow></mfrac> <mo>=</mo> \n"
+"<mn>1</mn> </mfenced> </math>\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i6) set_alt_display(2,multi_display_for_texinfo)$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i7) x/(x^2+y^2) = 1;\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@@iftex\n"
+"@@tex\n"
+"\mbox@{\tt\red(@{\it \%o_7@}) \black@}$$@{@{x@}\over@{y^2+x^2@}@}=1$$\n"
+"@@end tex\n"
+"@@end iftex\n"
+"@@ifhtml\n"
+"@@html\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"> <mi>mlabel</mi> \n"
+"<mfenced separators=\"\"><msub><mi>%o</mi> <mn>7</mn></msub> \n"
+"<mo>,</mo><mfrac><mrow><mi>x</mi> </mrow> <mrow><msup><mrow>\n"
+"<mi>y</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow>\n"
+"<mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow></mfrac> <mo>=</mo> \n"
+"<mn>1</mn> </mfenced> </math>\n"
+"@@end html\n"
+"@@end ifhtml\n"
+"@@ifinfo\n"
+"@@example\n"
+"(%o7) x/(y^2+x^2) = 1\n"
+"@@end example\n"
+"@@end ifinfo\n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"If the alternative display function causes an error, the error is\n"
+"trapped and the display function is reset to the default display. In the\n"
+"following example, the @code{error} function is set to display the\n"
+"output. This throws an error, which is handled by resetting the\n"
+"2d-display to the default.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@example\n"
+"(%i8) set_alt_display(2,?error)$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i9) x;\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"Error in *alt-display2d*.\n"
+"Messge: Condition designator ((MLABEL) $%O9 $X) is not of type (OR SYMBOL STRING\n"
+"                                                             FUNCTION).\n"
+"*alt-display2d* reset to nil.\n"
+" -- an error. To debug this try: debugmode(true);\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i10) x;\n"
+"(%o10)                                 x\n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@node Functions and Variables for alt-display,  , Introduction to alt-display, alt-display-pkg\n"
+"@section Functions and Variables for alt-display\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@deffn {Function} define_alt_display (@var{function}(@var{input}), @var{expr})\n"
+"This function is similar to @code{define}: it evaluates its arguments\n"
+"and expands into a function definition. The @var{function} is a\n"
+"function of a single input @var{input}. For convenience, a substitution\n"
+"is applied to @var{expr} after evaluation, to provide easy access to\n"
+"Lisp variable names.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"Set a time-stamp on each prompt:\n"
+"@example\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i2) display2d:false$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i3) define_alt_display(time_stamp(x),\n"
+"                   block([alt_display1d:false,alt_display2d:false],\n"
+"                         simp:true,\n"
+"                         prompt_prefix:printf(false,\"~a~%\",timedate()),\n"
+"                         displa(x)));\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%o3) time_stamp(x):=block([simp:false],\n"
+"                 block([?\*alt\-display1d\*:false,?\*alt\-display2d\*:false],\n"
+"                       simp:true,\n"
+"                       ?\*prompt\-prefix\*:printf(false,\"~a~%\",timedate()),\n"
+"                       ?displa(x)))\n"
+"(%i4) set_alt_display(1,time_stamp);\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%o4) done\n"
+"2016-10-03 09:49:27-05:00\n"
+"(%i5) \n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"The input line @code{%i3} defines @code{time_stamp} using\n"
+"@code{define_alt_display}. The output line @code{%o3} shows that the\n"
+"Maxima variable names @code{alt_display1d}, @code{alt_display2d} and\n"
+"@code{prompt_prefix} have been replaced by their Lisp translations, as\n"
+"has @code{displa} been replaced by @code{?displa} (the display\n"
+"function).\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"The display variables @code{alt_display1d} and @code{alt_display2d} are\n"
+"both bound to @code{false} in the body of @code{time_stamp} to prevent\n"
+"an infinite recursion in @code{displa}.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package alt-display}\n"
+"@closecatbox\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@anchor{info_display}\n"
+"@deffn {Function} info_display (@var{form})\n"
+"This is an alias for the default 1-d display function. It may be used as\n"
+"an alternative 1-d or 2-d display function.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@example\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i2) set_alt_display(2,info_display);\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%o2) done\n"
+"(%i3) x/y;\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%o3) x/y\n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package alt-display}\n"
+"@closecatbox\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@anchor{mathml_display}\n"
+"@deffn {Function} mathml_display (@var{form})\n"
+"Produces MathML output.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@example\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i2) set_alt_display(2,mathml_display);\n"
+"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"> <mi>mlabel</mi> \n"
+" <mfenced separators=\"\"><msub><mi>%o</mi> <mn>2</mn></msub> \n"
+" <mo>,</mo><mi>done</mi> </mfenced> </math>\n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package alt-display}\n"
+"@closecatbox\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@anchor{tex_display}\n"
+"@deffn {Function} tex_display (@var{form})\n"
+"Produces TeX output.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@example\n"
+"(%i2) set_alt_display(2,tex_display);\n"
+"\mbox@{\tt\red(@{\it \%o_2@}) \black@}$$\mathbf@{done@}$$\n"
+"(%i3) x/(x^2+y^2);\n"
+"\mbox@{\tt\red(@{\it \%o_3@}) \black@}$$@{@{x@}\over@{y^2+x^2@}@}$$\n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package alt-display}\n"
+"@closecatbox\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@deffn {Function} multi_display_for_texinfo (@var{form})\n"
+"Produces Texinfo output using all three display functions.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@example\n"
+"(%i2) set_alt_display(2,multi_display_for_texinfo)$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i3) x/(x^2+y^2);\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@@iftex\n"
+"@@tex\n"
+"\mbox@{\tt\red(@{\it \%o_3@}) \black@}$$@{@{x@}\over@{y^2+x^2@}@}$$\n"
+"@@end tex\n"
+"@@end iftex\n"
+"@@ifhtml\n"
+"@@html\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"   <math xmlns=\"http://www.w3.org/1998/Math/MathML\"> <mi>mlabel</mi> \n"
+"   <mfenced separators=\"\"><msub><mi>%o</mi> <mn>3</mn></msub> \n"
+"   <mo>,</mo><mfrac><mrow><mi>x</mi> </mrow> <mrow><msup><mrow>\n"
+"   <mi>y</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow>\n"
+"   <mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow></mfrac> </mfenced> </math>\n"
+"@@end html\n"
+"@@end ifhtml\n"
+"@@ifinfo\n"
+"@@example\n"
+"(%o3) x/(y^2+x^2)\n"
+"@@end example\n"
+"@@end ifinfo\n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package alt-display}\n"
+"@closecatbox\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@deffn {Functions} reset_displays ()\n"
+"Resets the prompt prefix and suffix to the empty string, and sets both\n"
+"1-d and 2-d display functions to the default.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package alt-display}\n"
+"@closecatbox\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@anchor{set_alt_display}\n"
+"@deffn {Function} set_alt_display (@var{num}, @var{display-function})\n"
+"The input @var{num} is the display to set; it may be either 1 or 2. The\n"
+"second input @var{display-function} is the display function to use. The\n"
+"display function may be either a Maxima function or a @code{lambda}\n"
+"expression.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"Here is an example where the display function is a @code{lambda}\n"
+"expression; it just displays the result as @TeX{}.\n"
+"@example\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i2) set_alt_display(2, lambda([form], tex(?caddr(form))))$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i3) integrate(exp(-t^2),t,0,inf);\n"
+"$$@{@{\sqrt@{\pi@}@}\over@{2@}@}$$\n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"A user-defined display function should take care that it @emph{prints}\n"
+"its output. A display function that returns a string will appear to\n"
+"display nothing, nor cause any errors.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package alt-display}\n"
+"@closecatbox\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@anchor{set_prompt}\n"
+"@deffn {Function} set_prompt (@var{fix}, @var{expr})\n"
+"Set the prompt prefix or suffix to @var{expr}. The input @var{fix} must\n"
+"evaluate to one of @code{prefix}, @code{suffix}, @code{general},\n"
+"@code{prolog} or @code{epilog}. The input @var{expr} must evaluate to\n"
+"either a string or @code{false}; if @code{false}, the @var{fix} is reset\n"
+"to the default value.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@example\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+"(%i2) set_prompt('prefix,printf(false,\"It is now: ~a~%\",timedate()))$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"It is now: 2014-01-07 15:23:23-05:00\n"
+"(%i3) \n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"The following example shows the effect of each option, except\n"
+"@code{prolog}. Note that the @code{epilog} prompt is printed as Maxima\n"
+"closes down. The @code{general} is printed between the end of input and\n"
+"the output, unless the input line ends in @code{$}.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"Here is an example to show where the prompt strings are placed.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@example\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i2) set_prompt(prefix,\"<<prefix>> \",suffix,\"<<suffix>> \",general,\n"
+"           printf(false,\"<<general>>~%\"),epilog,printf(false,\"<<epilog>>~%\"));\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%o2)                                done\n"
+"<<prefix>> (%i3) <<suffix>> x/y;\n"
+"<<general>>\n"
+"                                       x\n"
+"(%o3)                                  -\n"
+"                                       y\n"
+"<<prefix>> (%i4) <<suffix>> quit();\n"
+"<<general>>\n"
+"<<epilog>>\n"
+"@end example\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"Here is an example that shows how to colorize the input and output when\n"
+"Maxima is running in a terminal or terminal emulator like\n"
+"Emacs@footnote{Readers using the @code{info} reader in @code{Emacs} will\n"
+"see the actual prompt strings; other readers will see the colorized\n"
+"output}.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@ifinfo\n"
+"@c  (%i2) set_prompt('prefix,\"[1;31m\",'suffix,\"[0;32m\",'general,\"[1;34m\",'epilog,\"[00;m\")$\n"
+"@example\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i2) cs(s) := printf(false,\"~c[~am\",ascii(27),s)$\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"(%i3) set_prompt(prefix,cs(\"1;31\"),suffix,cs(\"0;32\"),general,cs(\"1;34\"),epilog,cs(\"00;\"));\n"
+"(%o3)                                done\n"
+"[1;31m(%i4)[0;32m integrate(exp(-x^2),x,0,inf);[1;34m\n"
+"                                   sqrt(%pi)\n"
+"(%o4)                              ---------\n"
+"                                       2\n"
+"[1;31m(%i5)[00;m\n"
+"@end example\n"
+"@end ifinfo\n"
+"@ifnotinfo\n"
+"@figure{color_terminal}\n"
+"@end ifnotinfo\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"Each prompt string starts with the ASCII escape character (27) followed\n"
+"by an open square bracket (91); each string ends with a lower-case m\n"
+"(109). The webpages\n"
+"@url{http://misc.flogisoft.com/bash/tip_colors_and_formatting} and\n"
+"@url{http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html} provide\n"
+"information on how to use control strings to set the terminal colors.\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package alt-display}\n"
+"@closecatbox\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# alt-display.texi
+msgid ""
+"@c Local Variables: \n"
+"@c mode: texinfo\n"
+"@c TeX-master: \"include-maxima\"\n"
+"@c End: \n"
+msgstr ""

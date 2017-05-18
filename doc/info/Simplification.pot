@@ -1,0 +1,2272 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Simplification.texi
+msgid ""
+"@menu\n"
+"* Introduction to Simplification::\n"
+"* Functions and Variables for Simplification::  \n"
+"@end menu\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to Simplification, Functions and Variables for Simplification,  , Simplification\n"
+"@section Introduction to Simplification\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"Maxima performs a cycle of actions in response to each new user-typed command. This \n"
+"consists of four steps: reading or \"parsing\" the input, evaluation, simplification \n"
+"and output. Parsing converts a syntactically valid sequence of typed characters into \n"
+"a data structure to be used for the rest of the operations. Evaluation includes \n"
+"replacing names with their assigned values. Simplification means rewriting an \n"
+"expression to be easier for the user or other programs to understand. Output includes \n"
+"displaying computational results in a variety of different formats and notations.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Evaluation and simplification sometimes appear to have similar functionality as they \n"
+"both have the goal of removing \"complexity\" and system designers have sometimes divided a \n"
+"task so that it is performed partly in each. For example, @code{integrate(x,x)} evaluates \n"
+"the answer as @code{x*x/2}, which is then simplified to @code{x^2/2}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Evaluation is always present: it is the consequence of having a programming system with \n"
+"functions, subroutines, variables, values, loops, assignments and so on. In the \n"
+"evaluation step, built-in or user-defined function names are replaced by their definitions, \n"
+"variables are replaced by their values. This is largely the same as activities of a \n"
+"conventional programming language, but extended to work with symbolic mathematical data. \n"
+"Because of the generality of the mathematics at hand, there are different possible models \n"
+"of evaluation and so the systems has optional \"flags\" that can steer the process of \n"
+"evaluation. @xref{Functions and Variables for Evaluation}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"By contrast, the intent of simplification is to maintain the value of an expression \n"
+"while re-formulating its representation to be smaller, simpler to understand, or to \n"
+"conform to particular specifications (like factored, expanded). For\n"
+"example, @code{sin(0)} to @code{0} or @code{x+x to 2*x}.\n"
+"There are several powerful tools to alter the results \n"
+"of simplification, since it is largely in this part of the system that a user can \n"
+"incorporate knowledge of newly introduced functions or symbolic notation into Maxima.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Simplification is generally done at four different levels:\n"
+"@itemize @bullet\n"
+"@item The internal, built-in automated simplifier,\n"
+"@item Built-in simplification routines that can be explicitly called by the user\n"
+"      at selected places in a program or command sequence,\n"
+"@item User-written simplification routines, linked to the simplifier by using\n"
+"      \"tellsimp\" or \"tellsimpafter\" and called automatically,\n"
+"@item User-written routines that can be explicitly called by the user at selected \n"
+"      places in a program or command sequence.\n"
+"@end itemize\n"
+"The internal simplifier belongs to the heart of Maxima. It is a large and \n"
+"complicated collection of programs, and it has been refined over many years and by \n"
+"thousands of users. Nevertheless, especially if you are trying out novel ideas or \n"
+"unconventional notation, you may find it helpful to make small (or large) changes \n"
+"to the program yourself. For details see for example the paper at the end of\n"
+"@url{https://people.eecs.berkeley.edu/~fateman/papers/intro5.txt}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Maxima internally represents expressions as \"trees\" with operators or \"roots\"\n"
+"like @code{+}, @code{*} , @code{=} and operands (\"leaves\") which are variables like\n"
+"@var{x}, @var{y}, @var{z}, functions\n"
+"or sub-trees, like @code{x*y}. Each operator has a simplification program\n"
+"associated with it.  @code{+} (which also covers binary @code{-} since\n"
+"@code{a-b = a+(-1)*b)} and @code{*} (which also covers @code{/} \n"
+"since @code{a/b = a*b^(-1)}) have rather elaborate simplification programs. These \n"
+"simplification programs (simplus, simptimes, simpexpt, etc.) are called whenever \n"
+"the simplifier encounters the respective arithmetic operators in an expression \n"
+"tree to be analyzed. \n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The structure of the simplifier dates back to 1965, and many hands have worked \n"
+"on it through the years. The structure turns out to be, in modern jargon, data-\n"
+"directed, or object-oriented. The program dispatches to the appropriate routine \n"
+"depending on the root of some sub-tree of the expression, recursively. This general\n"
+"notion means you can make modifications to the simplification process by very local \n"
+"changes to the program. In many cases it is conceptually straightforward to add an \n"
+"operator and add its simplification routine without disturbing existing code.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"We note that in addition to this general simplifier operating on algebraic \n"
+"expression trees, there are several other representations of expressions in \n"
+"Maxima which have separate methods and simplifiers. For example, the\n"
+"@code{rat()} function converts polynomials to vectors of coefficients to\n"
+"assist in rapid manipulation of such forms. Other representations include\n"
+"Taylor series and the (rarely used) Poisson series.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"All operators introduced by the user initially have no simplification\n"
+"programs associated with them.  Maxima does not know anything about\n"
+"function \"f\"  and so typing @code{f(a,b)} will result in simplifying\n"
+"@var{a},@var{b}, but not @code{f}. \n"
+"Even some built-in operators have no simplifications. For example,\n"
+"@code{=} does not \"simplify\" -- it is a place-holder with no\n"
+"simplification semantics other \n"
+"than to simplify its two arguments, in this case referred to as the left and \n"
+"right sides. Other parts of Maxima such as the solve program take special \n"
+"note of equations, that is, trees with @code{=} as the root. \n"
+"(Note -- in Maxima, the assignment operation is @code{:} . That is, @code{q: 4}\n"
+"sets the value of the symbol @var{q} to @code{4}.\n"
+"Function definition is done with @code{:=}. )\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The general simplifier returns results with an internal flag indicating the \n"
+"expression and each sub-expression has been simplified. This does not \n"
+"guarantee that it is unique over all possible equivalent expressions. That's \n"
+"too hard (theoretically, not possible given the generality of what can be \n"
+"expressed in Maxima). However, some aspects of the expression, such as the \n"
+"ordering of terms in a sum or product, are made uniform. This is important \n"
+"for the other programs to work properly.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"You can set a number of option variables which direct Maxima's processing to \n"
+"favor particular kinds of patterns as being goals. You can even use the most \n"
+"extreme option which is to turn the simplifier off by simp:false. We do not \n"
+"recommend this since many internal routines expect their arguments to be \n"
+"simplified. (About the only time it seems plausible to turn off the simplifier \n"
+"is in the rare case that you want to over-ride a built-in simplification. \n"
+"In that case  you might temporarily disable the simplifier, put in the new \n"
+"transformation via @mrefcomma{tellsimp} and then re-enable the simplifier\n"
+"by @code{simp:true}.)\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"It is more plausible for you to associate user-defined symbolic function names \n"
+"or operators with properties (@mrefcomma{additive}\n"
+"@mrefcomma{lassociative} @mrefcomma{oddfun} @mrefcomma{antisymmetric}\n"
+"@mrefcomma{linear} @mrefcomma{outative} @mrefcomma{commutative} \n"
+"@mrefcomma{multiplicative} @mrefcomma{rassociative} @mrefcomma{evenfun}\n"
+"@mref{nary} and @mref{symmetric}). These options steer \n"
+"the simplifier processing in systematic directions.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"For example, @code{declare(f,oddfun)} specifies that @code{f} is an odd function.\n"
+"Maxima will simplify @code{f(-x)} to @code{-f(x)}. In the case of an even\n"
+"function, that is @code{declare(g,evenfun)}, \n"
+"Maxima will simplify @code{g(-x)} to @code{g(x)}. You can also associate a\n"
+"programming function with a name such as @code{h(x):=x^2+1}. In that case the\n"
+"evaluator will immediately replace \n"
+"@code{h(3)} by @code{10}, and @code{h(a+1)} by @code{(a+1)^2+1}, so any properties\n"
+"of @code{h} will be ignored.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"In addition to these directly related properties set up by the user, facts and \n"
+"properties from the actual context may have an impact on the simplifier's behavior, \n"
+"too. @xref{Introduction to Maximas Database}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example: @code{sin(n*%pi)} is simplified to zero, if @var{n} is an integer.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c sin(n*%pi);\n"
+"@c declare(n, integer);\n"
+"@c sin(n*%pi);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) sin(n*%pi);\n"
+"(%o1)                      sin(%pi n)\n"
+"@end group\n"
+"@group\n"
+"(%i2) declare(n, integer);\n"
+"(%o2)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i3) sin(n*%pi);\n"
+"(%o3)                           0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"If automated simplification is not sufficient, you can consider a variety of \n"
+"built-in, but explicitly called simplfication functions (@mrefcomma{ratsimp}\n"
+"@mrefcomma{expand} @mrefcomma{factor} @mref{radcan} and others). There are\n"
+"also flags that will push simplification into one or another direction.\n"
+"Given @code{demoivre:true} the simplifier rewrites \n"
+"complex exponentials as trigonometric forms. Given @code{exponentialize:true}\n"
+"the  simplifier tries to do the reverse: rewrite trigonometric forms as complex \n"
+"exponentials.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"As everywhere in Maxima, by writing your own functions (be it in the Maxima \n"
+"user language or in the implementation language Lisp) and explicitly calling them \n"
+"at selected places in the program, you can respond to your individual \n"
+"simplification needs. Lisp gives you a handle on all the internal mechanisms, but \n"
+"you rarely need this full generality. \"Tellsimp\" is designed to generate much \n"
+"of the Lisp internal interface into the simplifier automatically.\n"
+"See @xref{Rules and Patterns}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Over the years (Maxima/Macsyma's origins date back to about 1966!) users have \n"
+"contributed numerous application packages and tools to extend or alter its \n"
+"functional behavior. Various non-standard and \"share\" packages exist to modify \n"
+"or extend simplification as well. You are invited to look into this more \n"
+"experimental material where work is still in progress. @xref{simplification-pkg}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The following appended material is optional on a first reading, and reading it \n"
+"is not necessary for productive use of Maxima. It is for the curious user who \n"
+"wants to understand what is going on, or the ambitious programmer who might \n"
+"wish to change the (open-source) code. Experimentation with redefining Maxima \n"
+"Lisp code is easily possible: to change the definition of a Lisp program (say \n"
+"the one that simplifies @code{cos()}, named @code{simp%cos}), you simply\n"
+"load into Maxima a text file that will overwrite the @code{simp%cos} function\n"
+"from the maxima package.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Simplification,  , Introduction to Simplification, Simplification\n"
+"@section Functions and Variables for Simplification\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{additive}\n"
+"@defvr {Property} additive\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"If @code{declare(f,additive)} has been executed, then:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"(1) If @code{f} is univariate, whenever the simplifier encounters @code{f}\n"
+"applied to a sum, @code{f} will be distributed over that sum.  I.e.\n"
+"@code{f(y+x)} will simplify to @code{f(y)+f(x)}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"(2) If @code{f} is a function of 2 or more arguments, additivity is defined as\n"
+"additivity in the first argument to @code{f}, as in the case of @code{sum} or\n"
+"@code{integrate}, i.e.  @code{f(h(x)+g(x),x)} will simplify to\n"
+"@code{f(h(x),x)+f(g(x),x)}.  This simplification does not occur when @code{f} is\n"
+"applied to expressions of the form @code{sum(x[i],i,lower-limit,upper-limit)}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c F3 (a + b + c);\n"
+"@c declare (F3, additive);\n"
+"@c F3 (a + b + c);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) F3 (a + b + c);\n"
+"(%o1)                     F3(c + b + a)\n"
+"@end group\n"
+"@group\n"
+"(%i2) declare (F3, additive);\n"
+"(%o2)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i3) F3 (a + b + c);\n"
+"(%o3)                 F3(c) + F3(b) + F3(a)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Operators} @category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{antisymmetric}\n"
+"@defvr {Property} antisymmetric\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"If @code{declare(h,antisymmetric)} is done, this tells the simplifier that\n"
+"@code{h} is antisymmetric.  E.g.  @code{h(x,z,y)} will simplify to \n"
+"@code{- h(x, y, z)}.  That is, it will give (-1)^n times the result given by\n"
+"@code{symmetric} or @code{commutative}, where n is the number of interchanges\n"
+"of two arguments necessary to convert it to that form.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c S (b, a);\n"
+"@c declare (S, symmetric);\n"
+"@c S (b, a);\n"
+"@c S (a, c, e, d, b);\n"
+"@c T (b, a);\n"
+"@c declare (T, antisymmetric);\n"
+"@c T (b, a);\n"
+"@c T (a, c, e, d, b);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) S (b, a);\n"
+"(%o1)                        S(b, a)\n"
+"@end group\n"
+"@group\n"
+"(%i2) declare (S, symmetric);\n"
+"(%o2)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i3) S (b, a);\n"
+"(%o3)                        S(a, b)\n"
+"@end group\n"
+"@group\n"
+"(%i4) S (a, c, e, d, b);\n"
+"(%o4)                   S(a, b, c, d, e)\n"
+"@end group\n"
+"@group\n"
+"(%i5) T (b, a);\n"
+"(%o5)                        T(b, a)\n"
+"@end group\n"
+"@group\n"
+"(%i6) declare (T, antisymmetric);\n"
+"(%o6)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i7) T (b, a);\n"
+"(%o7)                       - T(a, b)\n"
+"@end group\n"
+"@group\n"
+"(%i8) T (a, c, e, d, b);\n"
+"(%o8)                   T(a, b, c, d, e)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Operators} @category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@deffn {Function} combine (@var{expr})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Simplifies the sum @var{expr} by combining terms with the same\n"
+"denominator into a single term.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c 1*f/2*b + 2*c/3*a + 3*f/4*b +c/5*b*a;\n"
+"@c combine (%);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) 1*f/2*b + 2*c/3*a + 3*f/4*b +c/5*b*a;\n"
+"                      5 b f   a b c   2 a c\n"
+"(%o1)                 ----- + ----- + -----\n"
+"                        4       5       3\n"
+"@end group\n"
+"@group\n"
+"(%i2) combine (%);\n"
+"                  75 b f + 4 (3 a b c + 10 a c)\n"
+"(%o2)             -----------------------------\n"
+"                               60\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{commutative}\n"
+"@defvr {Property} commutative\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"If @code{declare(h, commutative)} is done, this tells the simplifier that\n"
+"@code{h} is a commutative function.  E.g.  @code{h(x, z, y)} will simplify to\n"
+"@code{h(x, y, z)}.  This is the same as @code{symmetric}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Exemplo:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c S (b, a);\n"
+"@c S (a, b) + S (b, a);\n"
+"@c declare (S, commutative);\n"
+"@c S (b, a);\n"
+"@c S (a, b) + S (b, a);\n"
+"@c S (a, c, e, d, b);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) S (b, a);\n"
+"(%o1)                        S(b, a)\n"
+"@end group\n"
+"@group\n"
+"(%i2) S (a, b) + S (b, a);\n"
+"(%o2)                   S(b, a) + S(a, b)\n"
+"@end group\n"
+"@group\n"
+"(%i3) declare (S, commutative);\n"
+"(%o3)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i4) S (b, a);\n"
+"(%o4)                        S(a, b)\n"
+"@end group\n"
+"@group\n"
+"(%i5) S (a, b) + S (b, a);\n"
+"(%o5)                       2 S(a, b)\n"
+"@end group\n"
+"@group\n"
+"(%i6) S (a, c, e, d, b);\n"
+"(%o6)                   S(a, b, c, d, e)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Operators} @category{Declarations and inferences}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{demoivre}\n"
+"@deffn  {Function} demoivre (@var{expr})\n"
+"@deffnx {Option variable} demoivre\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The function @code{demoivre (expr)} converts one expression\n"
+"without setting the global variable @code{demoivre}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"When the variable @code{demoivre} is @code{true}, complex exponentials are\n"
+"converted into equivalent expressions in terms of circular functions:\n"
+"@code{exp (a + b*%i)} simplifies to @code{%e^a * (cos(b) + %i*sin(b))}\n"
+"if @code{b} is free of @code{%i}.  @code{a} and @code{b} are not expanded.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The default value of @code{demoivre} is @code{false}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{exponentialize} converts circular and hyperbolic functions to exponential\n"
+"form.  @code{demoivre} and @code{exponentialize} cannot both be true at the same\n"
+"time.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Complex variables} @category{Trigonometric functions} @category{Hyperbolic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS WORK\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{function_distrib}\n"
+"@deffn {Function} distrib (@var{expr})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Distributes sums over products.  It differs from @code{expand} in that it works\n"
+"at only the top level of an expression, i.e., it doesn't recurse and it is\n"
+"faster than @code{expand}.  It differs from @code{multthru} in that it expands\n"
+"all sums at that level.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@example\n"
+"(%i1) distrib ((a+b) * (c+d));\n"
+"(%o1)                 b d + a d + b c + a c\n"
+"(%i2) multthru ((a+b) * (c+d));\n"
+"(%o2)                 (b + a) d + (b + a) c\n"
+"(%i3) distrib (1/((a+b) * (c+d)));\n"
+"                                1\n"
+"(%o3)                    ---------------\n"
+"                         (b + a) (d + c)\n"
+"(%i4) expand (1/((a+b) * (c+d)), 1, 0);\n"
+"                                1\n"
+"(%o4)                 ---------------------\n"
+"                      b d + a d + b c + a c\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{distribute_over}\n"
+"@defvr {Option variable} distribute_over\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{distribute_over} controls the mapping of functions over bags like lists, \n"
+"matrices, and equations.  At this time not all Maxima functions have this \n"
+"property.  It is possible to look up this property with the command\n"
+"@code{properties}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The mapping of functions is switched off, when setting @code{distribute_over} \n"
+"to the value @code{false}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The @code{sin} function maps over a list:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c sin([x,1,1.0]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) sin([x,1,1.0]);\n"
+"(%o1)         [sin(x), sin(1), 0.8414709848078965]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{mod} is a function with two arguments which maps over lists.  Mapping over \n"
+"nested lists is possible too:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c mod([x,11,2*a],10);\n"
+"@c mod([[x,y,z],11,2*a],10);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) mod([x,11,2*a],10);\n"
+"(%o1)             [mod(x, 10), 1, 2 mod(a, 5)]\n"
+"@end group\n"
+"@group\n"
+"(%i2) mod([[x,y,z],11,2*a],10);\n"
+"(%o2) [[mod(x, 10), mod(y, 10), mod(z, 10)], 1, 2 mod(a, 5)]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Mapping of the @code{floor} function over a matrix and an equation:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c floor(matrix([a,b],[c,d]));\n"
+"@c floor(a=b);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) floor(matrix([a,b],[c,d]));\n"
+"                     [ floor(a)  floor(b) ]\n"
+"(%o1)                [                    ]\n"
+"                     [ floor(c)  floor(d) ]\n"
+"@end group\n"
+"@group\n"
+"(%i2) floor(a=b);\n"
+"(%o2)                  floor(a) = floor(b)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Functions with more than one argument map over any of the arguments or all\n"
+"arguments:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c expintegral_e([1,2],[x,y]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) expintegral_e([1,2],[x,y]);\n"
+"(%o1) [[expintegral_e(1, x), expintegral_e(1, y)], \n"
+"                      [expintegral_e(2, x), expintegral_e(2, y)]]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Check if a function has the property distribute_over:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c properties(abs);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) properties(abs);\n"
+"(%o1) [integral, rule, distributes over bags, noun, gradef, \n"
+"                                                 system function]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The mapping of functions is switched off, when setting @code{distribute_over} \n"
+"to the value @code{false}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c distribute_over;\n"
+"@c sin([x,1,1.0]);\n"
+"@c distribute_over : not distribute_over;\n"
+"@c sin([x,1,1.0]);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) distribute_over;\n"
+"(%o1)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i2) sin([x,1,1.0]);\n"
+"(%o2)         [sin(x), sin(1), 0.8414709848078965]\n"
+"@end group\n"
+"@group\n"
+"(%i3) distribute_over : not distribute_over;\n"
+"(%o3)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i4) sin([x,1,1.0]);\n"
+"(%o4)                   sin([x, 1, 1.0])\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{domain}\n"
+"@defvr {Option variable} domain\n"
+"Default value: @code{real}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"When @code{domain} is set to @code{complex}, @code{sqrt (x^2)} will remain\n"
+"@code{sqrt (x^2)} instead of returning @code{abs(x)}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c PRESERVE EDITORIAL COMMENT -- MAY HAVE SOME SIGNIFICANCE NOT YET UNDERSTOOD !!!\n"
+"@c The notion of a \"domain\" of simplification is still in its infancy,\n"
+"@c and controls little more than this at the moment.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{evenfun}\n"
+"@anchor{oddfun}\n"
+"@defvr  {Property} evenfun\n"
+"@defvrx {Property} oddfun\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare(f, evenfun)} or @code{declare(f, oddfun)} tells Maxima to recognize\n"
+"the function @code{f} as an even or odd function.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@example\n"
+"(%i1) o (- x) + o (x);\n"
+"(%o1)                     o(x) + o(- x)\n"
+"(%i2) declare (o, oddfun);\n"
+"(%o2)                         done\n"
+"(%i3) o (- x) + o (x);\n"
+"(%o3)                           0\n"
+"(%i4) e (- x) - e (x);\n"
+"(%o4)                     e(- x) - e(x)\n"
+"(%i5) declare (e, evenfun);\n"
+"(%o5)                         done\n"
+"(%i6) e (- x) - e (x);\n"
+"(%o6)                           0\n"
+"@end example\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{expand}\n"
+"@deffn  {Function} expand @\n"
+"@fname{expand} (@var{expr}) @\n"
+"@fname{expand} (@var{expr}, @var{p}, @var{n})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Expand expression @var{expr}.\n"
+"Products of sums and exponentiated sums are\n"
+"multiplied out, numerators of rational expressions which are sums are\n"
+"split into their respective terms, and multiplication (commutative\n"
+"and non-commutative) are distributed over addition at all levels of\n"
+"@var{expr}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"For polynomials one should usually use @code{ratexpand} which uses a\n"
+"more efficient algorithm.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{maxnegex} and @code{maxposex} control the maximum negative and\n"
+"positive exponents, respectively, which will expand.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{expand (@var{expr}, @var{p}, @var{n})} expands @var{expr}, \n"
+"using @var{p} for @code{maxposex} and @var{n} for @code{maxnegex}.\n"
+"This is useful in order to expand part but not all of an expression.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{expon} - the exponent of the largest negative power which is\n"
+"automatically expanded (independent of calls to @code{expand}).  For example\n"
+"if @code{expon} is 4 then @code{(x+1)^(-5)} will not be automatically expanded.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{expop} - the highest positive exponent which is automatically expanded.\n"
+"Thus @code{(x+1)^3}, when typed, will be automatically expanded only if\n"
+"@code{expop} is greater than or equal to 3.  If it is desired to have\n"
+"@code{(x+1)^n} expanded where @code{n} is greater than @code{expop} then\n"
+"executing @code{expand ((x+1)^n)} will work only if @code{maxposex} is not\n"
+"less than @code{n}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{expand(expr, 0, 0)} causes a resimplification of @code{expr}.  @code{expr}\n"
+"is not reevaluated.  In distinction from @code{ev(expr, noeval)} a special\n"
+"representation (e. g. a CRE form) is removed.  See also @mrefdot{ev}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The @code{expand} flag used with @code{ev} causes expansion.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The file @file{share/simplification/facexp.mac}\n"
+"@c I should really use a macro which expands to something like\n"
+"@c @uref{file://...,,simplification/facexp.mac}.  But texi2html\n"
+"@c currently supports @uref only with one argument.\n"
+"@c Worse, the `file:' scheme is OS and browser dependent.\n"
+"contains several related functions (in particular @code{facsum},\n"
+"@code{factorfacsum} and @code{collectterms}, which are autoloaded) and variables\n"
+"(@code{nextlayerfactor} and @code{facsum_combine}) that provide the user with\n"
+"the ability to structure expressions by controlled expansion.\n"
+"@c MERGE share/simplification/facexp.usg INTO THIS FILE OR CREATE NEW FILE facexp.texi\n"
+"Brief function descriptions are available in @file{simplification/facexp.usg}.\n"
+"A demo is available by doing @code{demo(\"facexp\")}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c expr:(x+1)^2*(y+1)^3;\n"
+"@c expand(expr);\n"
+"@c expand(expr,2);\n"
+"@c expr:(x+1)^-2*(y+1)^3;\n"
+"@c expand(expr);\n"
+"@c expand(expr,2,2);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) expr:(x+1)^2*(y+1)^3;\n"
+"                               2        3\n"
+"(%o1)                   (x + 1)  (y + 1)\n"
+"@end group\n"
+"@group\n"
+"(%i2) expand(expr);\n"
+"       2  3        3    3      2  2        2      2      2\n"
+"(%o2) x  y  + 2 x y  + y  + 3 x  y  + 6 x y  + 3 y  + 3 x  y\n"
+"                                                      2\n"
+"                                     + 6 x y + 3 y + x  + 2 x + 1\n"
+"@end group\n"
+"@group\n"
+"(%i3) expand(expr,2);\n"
+"               2        3              3          3\n"
+"(%o3)         x  (y + 1)  + 2 x (y + 1)  + (y + 1)\n"
+"@end group\n"
+"@group\n"
+"(%i4) expr:(x+1)^-2*(y+1)^3;\n"
+"                                   3\n"
+"                            (y + 1)\n"
+"(%o4)                       --------\n"
+"                                   2\n"
+"                            (x + 1)\n"
+"@end group\n"
+"@group\n"
+"(%i5) expand(expr);\n"
+"            3               2\n"
+"           y             3 y            3 y             1\n"
+"(%o5) ------------ + ------------ + ------------ + ------------\n"
+"       2              2              2              2\n"
+"      x  + 2 x + 1   x  + 2 x + 1   x  + 2 x + 1   x  + 2 x + 1\n"
+"@end group\n"
+"@group\n"
+"(%i6) expand(expr,2,2);\n"
+"                                   3\n"
+"                            (y + 1)\n"
+"(%o6)                     ------------\n"
+"                           2\n"
+"                          x  + 2 x + 1\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Resimplify an expression without expansion:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c expr:(1+x)^2*sin(x);\n"
+"@c exponentialize:true;\n"
+"@c expand(expr,0,0);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) expr:(1+x)^2*sin(x);\n"
+"                                2\n"
+"(%o1)                    (x + 1)  sin(x)\n"
+"@end group\n"
+"@group\n"
+"(%i2) exponentialize:true;\n"
+"(%o2)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i3) expand(expr,0,0);\n"
+"                            2    %i x     - %i x\n"
+"                  %i (x + 1)  (%e     - %e      )\n"
+"(%o3)           - -------------------------------\n"
+"                                 2\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{expandwrt}\n"
+"@deffn {Function} expandwrt (@var{expr}, @var{x_1}, @dots{}, @var{x_n})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Expands expression @code{expr} with respect to the \n"
+"variables @var{x_1}, @dots{}, @var{x_n}.\n"
+"All products involving the variables appear explicitly.  The form returned\n"
+"will be free of products of sums of expressions that are not free of\n"
+"the variables.  @var{x_1}, @dots{}, @var{x_n}\n"
+"may be variables, operators, or expressions.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"By default, denominators are not expanded, but this can be controlled by\n"
+"means of the switch @code{expandwrt_denom}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"This function is autoloaded from\n"
+"@file{simplification/stopex.mac}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{expandwert_denom}\n"
+"@defvr {Option variable} expandwrt_denom\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{expandwrt_denom} controls the treatment of rational\n"
+"expressions by @code{expandwrt}.  If @code{true}, then both the numerator and\n"
+"denominator of the expression will be expanded according to the\n"
+"arguments of @code{expandwrt}, but if @code{expandwrt_denom} is @code{false},\n"
+"then only the numerator will be expanded in that way.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS A STAND-ALONE DESCRIPTION (NOT \"IS SIMILAR TO\")\n"
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{expandwrt_factored}\n"
+"@deffn {Function} expandwrt_factored (@var{expr}, @var{x_1}, @dots{}, @var{x_n})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"is similar to @code{expandwrt}, but treats expressions that are products\n"
+"somewhat differently.  @code{expandwrt_factored} expands only on those factors\n"
+"of @code{expr} that contain the variables @var{x_1}, @dots{}, @var{x_n}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NOT SURE WHY WE SHOULD MENTION THIS HERE\n"
+"This function is autoloaded from @file{simplification/stopex.mac}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{expon}\n"
+"@defvr {Option variable} expon\n"
+"Default value: 0\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{expon} is the exponent of the largest negative power which\n"
+"is automatically expanded (independent of calls to @code{expand}).  For\n"
+"example, if @code{expon} is 4 then @code{(x+1)^(-5)} will not be automatically\n"
+"expanded.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{exponentialize}\n"
+"@deffn  {Function} exponentialize (@var{expr})\n"
+"@deffnx {Option variable} exponentialize\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The function @code{exponentialize (expr)} converts \n"
+"circular and hyperbolic functions in @var{expr} to exponentials,\n"
+"without setting the global variable @code{exponentialize}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"When the variable @code{exponentialize} is @code{true},\n"
+"all circular and hyperbolic functions are converted to exponential form.\n"
+"The default value is @code{false}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{demoivre} converts complex exponentials into circular functions.\n"
+"@code{exponentialize} and @code{demoivre} cannot\n"
+"both be true at the same time.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Complex variables} @category{Trigonometric functions} @category{Hyperbolic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION\n"
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{expop}\n"
+"@defvr {Option variable} expop\n"
+"Default value: 0\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{expop} is the highest positive exponent which is automatically expanded.\n"
+"Thus @code{(x + 1)^3}, when typed, will be automatically expanded only if\n"
+"@code{expop} is greater than or equal to 3.  If it is desired to have\n"
+"@code{(x + 1)^n} expanded where @code{n} is greater than @code{expop} then\n"
+"executing @code{expand ((x + 1)^n)} will work only if @code{maxposex} is not\n"
+"less than n.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lassociative}\n"
+"@defvr {Property} lassociative\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare (g, lassociative)} tells the Maxima simplifier that @code{g} is\n"
+"left-associative.  E.g., @code{g (g (a, b), g (c, d))} will simplify to\n"
+"@code{g (g (g (a, b), c), d)}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Operators} @category{Simplification}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+"@c WHAT'S UP WITH THE QUOTE MARKS ??\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{linear}\n"
+"@defvr {Property} linear\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"One of Maxima's operator properties.  For univariate @code{f} so\n"
+"declared, \"expansion\" @code{f(x + y)} yields @code{f(x) + f(y)},\n"
+"@code{f(a*x)} yields @code{a*f(x)} takes\n"
+"place where @code{a} is a \"constant\".  For functions of two or more arguments,\n"
+"\"linearity\" is defined to be as in the case of @code{sum} or @code{integrate},\n"
+"i.e., @code{f (a*x + b, x)} yields @code{a*f(x,x) + b*f(1,x)}\n"
+"for @code{a} and @code{b} free of @code{x}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c declare (f, linear);\n"
+"@c f(x+y);\n"
+"@c declare (a, constant);\n"
+"@c f(a*x);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) declare (f, linear);\n"
+"(%o1)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i2) f(x+y);\n"
+"(%o2)                      f(y) + f(x)\n"
+"@end group\n"
+"@group\n"
+"(%i3) declare (a, constant);\n"
+"(%o3)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i4) f(a*x);\n"
+"(%o4)                        a f(x)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{linear} is equivalent to @code{additive} and @code{outative}.\n"
+"See also @mrefdot{opproperties}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c 'sum (F(k) + G(k), k, 1, inf);\n"
+"@c declare (nounify (sum), linear);\n"
+"@c 'sum (F(k) + G(k), k, 1, inf);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) 'sum (F(k) + G(k), k, 1, inf);\n"
+"                       inf\n"
+"                       ====\n"
+"                       \\n"
+"(%o1)                   >    (G(k) + F(k))\n"
+"                       /\n"
+"                       ====\n"
+"                       k = 1\n"
+"@end group\n"
+"@group\n"
+"(%i2) declare (nounify (sum), linear);\n"
+"(%o2)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i3) 'sum (F(k) + G(k), k, 1, inf);\n"
+"                     inf          inf\n"
+"                     ====         ====\n"
+"                     \            \\n"
+"(%o3)                 >    G(k) +  >    F(k)\n"
+"                     /            /\n"
+"                     ====         ====\n"
+"                     k = 1        k = 1\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Operators} @category{Simplification}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{maxnegex}\n"
+"@defvr {Option variable} maxnegex\n"
+"Default value: 1000\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{maxnegex} is the largest negative exponent which will\n"
+"be expanded by the @code{expand} command, see also @mrefdot{maxposex}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{maxposex}\n"
+"@defvr {Option variable} maxposex\n"
+"Default value: 1000\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{maxposex} is the largest exponent which will be\n"
+"expanded with the @code{expand} command, see also @mrefdot{maxnegex}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{multiplicative}\n"
+"@defvr {Property} multiplicative\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare(f, multiplicative)} tells the Maxima simplifier that @code{f}\n"
+"is multiplicative.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@enumerate\n"
+"@item\n"
+"If @code{f} is univariate, whenever the simplifier encounters @code{f} applied\n"
+"to a product, @code{f} distributes over that product.  E.g., @code{f(x*y)}\n"
+"simplifies to @code{f(x)*f(y)}.\n"
+"This simplification is not applied to expressions of the form @code{f('product(...))}.\n"
+"@item\n"
+"If @code{f} is a function of 2 or more arguments, multiplicativity is\n"
+"defined as multiplicativity in the first argument to @code{f}, e.g.,\n"
+"@code{f (g(x) * h(x), x)} simplifies to @code{f (g(x) ,x) * f (h(x), x)}.\n"
+"@end enumerate\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare(nounify(product), multiplicative)} tells Maxima to simplify symbolic products.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c F2 (a * b * c);\n"
+"@c declare (F2, multiplicative);\n"
+"@c F2 (a * b * c);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) F2 (a * b * c);\n"
+"(%o1)                       F2(a b c)\n"
+"@end group\n"
+"@group\n"
+"(%i2) declare (F2, multiplicative);\n"
+"(%o2)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i3) F2 (a * b * c);\n"
+"(%o3)                   F2(a) F2(b) F2(c)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare(nounify(product), multiplicative)} tells Maxima to simplify symbolic products.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c product (a[i] * b[i], i, 1, n);\n"
+"@c declare (nounify (product), multiplicative);\n"
+"@c product (a[i] * b[i], i, 1, n);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) product (a[i] * b[i], i, 1, n);\n"
+"                             n\n"
+"                           /===\\n"
+"                            ! !\n"
+"(%o1)                       ! !  a  b\n"
+"                            ! !   i  i\n"
+"                           i = 1\n"
+"@end group\n"
+"@group\n"
+"(%i2) declare (nounify (product), multiplicative);\n"
+"(%o2)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i3) product (a[i] * b[i], i, 1, n);\n"
+"                          n         n\n"
+"                        /===\     /===\\n"
+"                         ! !       ! !\n"
+"(%o3)                  ( ! !  a )  ! !  b\n"
+"                         ! !   i   ! !   i\n"
+"                        i = 1     i = 1\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Expressions} @category{Simplification}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS WORK\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{multthru}\n"
+"@deffn  {Function} multthru @\n"
+"@fname{multthru} (@var{expr}) @\n"
+"@fname{multthru} (@var{expr_1}, @var{expr_2})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Multiplies a factor (which should be a sum) of @var{expr} by the other factors\n"
+"of @var{expr}.  That is, @var{expr} is @code{@var{f_1} @var{f_2} ... @var{f_n}}\n"
+"where at least one factor, say @var{f_i}, is a sum of terms.  Each term in that\n"
+"sum is multiplied by the other factors in the product.  (Namely all the factors\n"
+"except @var{f_i}).  @code{multthru} does not expand exponentiated sums.\n"
+"This function is the fastest way to distribute products (commutative or\n"
+"noncommutative) over sums.  Since quotients are represented as products\n"
+"@code{multthru} can be used to divide sums by products as well.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{multthru (@var{expr_1}, @var{expr_2})} multiplies each term in\n"
+"@var{expr_2} (which should be a sum or an equation) by @var{expr_1}.  If\n"
+"@var{expr_1} is not itself a sum then this form is equivalent to\n"
+"@code{multthru (@var{expr_1}*@var{expr_2})}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@example\n"
+"(%i1) x/(x-y)^2 - 1/(x-y) - f(x)/(x-y)^3;\n"
+"                      1        x         f(x)\n"
+"(%o1)             - ----- + -------- - --------\n"
+"                    x - y          2          3\n"
+"                            (x - y)    (x - y)\n"
+"(%i2) multthru ((x-y)^3, %);\n"
+"                           2\n"
+"(%o2)             - (x - y)  + x (x - y) - f(x)\n"
+"(%i3) ratexpand (%);\n"
+"                           2\n"
+"(%o3)                   - y  + x y - f(x)\n"
+"(%i4) ((a+b)^10*s^2 + 2*a*b*s + (a*b)^2)/(a*b*s^2);\n"
+"                        10  2              2  2\n"
+"                 (b + a)   s  + 2 a b s + a  b\n"
+"(%o4)            ------------------------------\n"
+"                                  2\n"
+"                             a b s\n"
+"(%i5) multthru (%);  /* note that this does not expand (b+a)^10 */\n"
+"                                        10\n"
+"                       2   a b   (b + a)\n"
+"(%o5)                  - + --- + ---------\n"
+"                       s    2       a b\n"
+"                           s\n"
+"(%i6) multthru (a.(b+c.(d+e)+f));\n"
+"(%o6)            a . f + a . c . (e + d) + a . b\n"
+"(%i7) expand (a.(b+c.(d+e)+f));\n"
+"(%o7)         a . f + a . c . e + a . c . d + a . b\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{property_nary}\n"
+"@defvr {Property} nary\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare(f, nary)} tells Maxima to recognize the function @code{f} as an\n"
+"n-ary function.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The @code{nary} declaration is not the same as calling the\n"
+"@mxref{function_nary, nary} function.  The sole effect of\n"
+"@code{declare(f, nary)} is to instruct the Maxima simplifier to flatten nested\n"
+"expressions, for example, to simplify @code{foo(x, foo(y, z))} to\n"
+"@code{foo(x, y, z)}.  See also @mrefdot{declare}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@example\n"
+"(%i1) H (H (a, b), H (c, H (d, e)));\n"
+"(%o1)               H(H(a, b), H(c, H(d, e)))\n"
+"(%i2) declare (H, nary);\n"
+"(%o2)                         done\n"
+"(%i3) H (H (a, b), H (c, H (d, e)));\n"
+"(%o3)                   H(a, b, c, d, e)\n"
+"@end example\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{negdistrib}\n"
+"@defvr {Option variable} negdistrib\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"When @code{negdistrib} is @code{true}, -1 distributes over an expression.\n"
+"E.g., @code{-(x + y)} becomes @code{- y - x}.  Setting it to @code{false}\n"
+"will allow @code{- (x + y)} to be displayed like that.  This is sometimes useful\n"
+"but be very careful: like the @code{simp} flag, this is one flag you do not\n"
+"want to set to @code{false} as a matter of course or necessarily for other\n"
+"than local use in your Maxima.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c negdistrib;\n"
+"@c -(x+y);\n"
+"@c negdistrib : not negdistrib ;\n"
+"@c -(x+y);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) negdistrib;\n"
+"(%o1)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i2) -(x+y);\n"
+"(%o2)                       (- y) - x\n"
+"@end group\n"
+"@group\n"
+"(%i3) negdistrib : not negdistrib ;\n"
+"(%o3)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i4) -(x+y);\n"
+"(%o4)                       - (y + x)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{opproperties}\n"
+"@defvr {System variable} opproperties\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{opproperties} is the list of the special operator properties recognized\n"
+"by the Maxima simplifier:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c opproperties;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) opproperties;\n"
+"(%o1) [linear, additive, multiplicative, outative, evenfun, \n"
+"oddfun, commutative, symmetric, antisymmetric, nary, \n"
+"lassociative, rassociative]\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables} @category{Operators}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{outative}\n"
+"@defvr {Property} outative\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare(f, outative)} tells the Maxima simplifier that constant factors\n"
+"in the argument of @code{f} can be pulled out.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@enumerate\n"
+"@item\n"
+"If @code{f} is univariate, whenever the simplifier encounters @code{f} applied\n"
+"to a product, that product will be partitioned into factors that are constant\n"
+"and factors that are not and the constant factors will be pulled out.  E.g.,\n"
+"@code{f(a*x)} will simplify to @code{a*f(x)} where @code{a} is a constant.\n"
+"Non-atomic constant factors will not be pulled out.\n"
+"@item\n"
+"If @code{f} is a function of 2 or more arguments, outativity is defined as in\n"
+"the case of @code{sum} or @code{integrate}, i.e., @code{f (a*g(x), x)} will\n"
+"simplify to @code{a * f(g(x), x)} for @code{a} free of @code{x}.\n"
+"@end enumerate\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{sum}, @code{integrate}, and @code{limit} are all @code{outative}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c F1 (100 * x);\n"
+"@c declare (F1, outative);\n"
+"@c F1 (100 * x);\n"
+"@c declare (zz, constant);\n"
+"@c F1 (zz * y);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) F1 (100 * x);\n"
+"(%o1)                       F1(100 x)\n"
+"@end group\n"
+"@group\n"
+"(%i2) declare (F1, outative);\n"
+"(%o2)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i3) F1 (100 * x);\n"
+"(%o3)                       100 F1(x)\n"
+"@end group\n"
+"@group\n"
+"(%i4) declare (zz, constant);\n"
+"(%o4)                         done\n"
+"@end group\n"
+"@group\n"
+"(%i5) F1 (zz * y);\n"
+"(%o5)                       zz F1(y)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Operators}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{radcan}\n"
+"@deffn {Function} radcan (@var{expr})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Simplifies @var{expr}, which can contain logs, exponentials, and radicals, by \n"
+"converting it into a form which is canonical over a large class of expressions \n"
+"and a given ordering of variables; that is, all functionally equivalent forms \n"
+"are mapped into a unique form.  For a somewhat larger class of expressions, \n"
+"@code{radcan} produces a regular form.  Two equivalent expressions in this class \n"
+"do not necessarily have the same appearance, but their difference can be \n"
+"simplified by @code{radcan} to zero.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"For some expressions @code{radcan} is quite time consuming.  This is the cost \n"
+"of exploring certain relationships among the components of the expression for \n"
+"simplifications based on factoring and partial-fraction expansions of exponents.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c %e_to_numlog NEEDS ITS OWN @defvar !!!\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c %e_to_numlog HAS NO EFFECT ON RADCAN. RADCAN ALWAYS SIMPLIFIES \n"
+"@c exp(a*log(x)) --> x^a. Commenting the following out. 11/2009\n"
+"@c When @code{%e_to_numlog} is @code{true}, @code{%e^(r*log(expr))} simplifies \n"
+"@c to @code{expr^r} if @code{r} is a rational number.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c RADEXPAND CONTROLS THE SIMPLIFICATION OF THE POWER FUNCTION, E.G.\n"
+"@c (x*y)^a --> x^a*y^a AND (x^a)^b --> x^(a*b), IF RADEXPAND HAS THE VALUE 'ALL.\n"
+"@c THE VALUE OF RADEXPAND HAS NO EFFECT ON RADCAN. RADCAN ALWAYS SIMPLIFIES\n"
+"@c THE ABOVE EXPRESSIONS. COMMENTING THE FOLLOWING OUT. 11/2009\n"
+"@c When @code{radexpand} is @code{false}, certain transformations are inhibited.\n"
+"@c @code{radcan (sqrt (1-x))} remains @code{sqrt (1-x)} and is not simplified \n"
+"@c to @code{%i sqrt (x-1)}. @code{radcan (sqrt (x^2 - 2*x + 1))} remains \n"
+"@c @code{sqrt (x^2 - 2*x + 1)} and is not simplified to @code{x - 1}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c radcan((log(x+x^2)-log(x))^a/log(1+x)^(a/2));\n"
+"@c radcan((log(1+2*a^x+a^(2*x))/log(1+a^x)));\n"
+"@c radcan((%e^x-1)/(1+%e^(x/2)));\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) radcan((log(x+x^2)-log(x))^a/log(1+x)^(a/2));\n"
+"                                    a/2\n"
+"(%o1)                     log(x + 1)\n"
+"@end group\n"
+"@group\n"
+"(%i2) radcan((log(1+2*a^x+a^(2*x))/log(1+a^x)));\n"
+"(%o2)                           2\n"
+"@end group\n"
+"@group\n"
+"(%i3) radcan((%e^x-1)/(1+%e^(x/2)));\n"
+"                              x/2\n"
+"(%o3)                       %e    - 1\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{radexpand}\n"
+"@defvr {Option variable} radexpand\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{radexpand} controls some simplifications of radicals.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"When @code{radexpand} is @code{all}, causes nth roots of factors of a product\n"
+"which are powers of n to be pulled outside of the radical.  E.g. if\n"
+"@code{radexpand} is @code{all}, @code{sqrt (16*x^2)} simplifies to @code{4*x}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c EXPRESS SIMPLIFICATON RULES IN GENERAL CASE, NOT SPECIAL CASE\n"
+"More particularly, consider @code{sqrt (x^2)}.\n"
+"@itemize @bullet\n"
+"@item\n"
+"If @code{radexpand} is @code{all} or @code{assume (x > 0)} has been executed, \n"
+"@code{sqrt(x^2)} simplifies to @code{x}.\n"
+"@item\n"
+"If @code{radexpand} is @code{true} and @code{domain} is @code{real}\n"
+"(its default), @code{sqrt(x^2)} simplifies to @code{abs(x)}.\n"
+"@item\n"
+"If @code{radexpand} is @code{false}, or @code{radexpand} is @code{true} and\n"
+"@code{domain} is @code{complex}, @code{sqrt(x^2)} is not simplified.\n"
+"@end itemize\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c CORRECT STATEMENT HERE ???\n"
+"Note that @code{domain} only matters when @code{radexpand} is @code{true}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification flags and variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rassociative}\n"
+"@defvr {Property} rassociative\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare (g, rassociative)} tells the Maxima\n"
+"simplifier that @code{g} is right-associative.  E.g.,\n"
+"@code{g(g(a, b), g(c, d))} simplifies to @code{g(a, g(b, g(c, d)))}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Operators}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{scsimp}\n"
+"@deffn {Function} scsimp (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Sequential Comparative Simplification (method due to Stoute).\n"
+"@code{scsimp} attempts to simplify @var{expr}\n"
+"according to the rules @var{rule_1}, @dots{}, @var{rule_n}.\n"
+"If a smaller expression is obtained, the process repeats.  Otherwise after all\n"
+"simplifications are tried, it returns the original answer.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c MERGE EXAMPLES INTO THIS FILE\n"
+"@code{example (scsimp)} displays some examples.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Simplification functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{simp}\n"
+"@defvr {Option variable} simp\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{simp} enables simplification.  This is the default.  @code{simp} is also\n"
+"an @code{evflag}, which is recognized by the function @code{ev}.  See @mrefdot{ev}\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"When @code{simp} is used as an @code{evflag} with a value @code{false}, the \n"
+"simplification is suppressed only during the evaluation phase of an expression.\n"
+"The flag does not suppress the simplification which follows the evaluation \n"
+"phase.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Many Maxima functions and operations require simplification to be enabled to work normally.\n"
+"When simplification is disabled, many results will be incomplete,\n"
+"and in addition there may be incorrect results or program errors.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The simplification is switched off globally.  The expression @code{sin(1.0)} is\n"
+"not simplified to its numerical value.  The @code{simp}-flag switches the\n"
+"simplification on.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c simp:false;\n"
+"@c sin(1.0);\n"
+"@c sin(1.0),simp;\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) simp:false;\n"
+"(%o1)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i2) sin(1.0);\n"
+"(%o2)                       sin(1.0)\n"
+"@end group\n"
+"@group\n"
+"(%i3) sin(1.0),simp;\n"
+"(%o3)                  0.8414709848078965\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"The simplification is switched on again.  The @code{simp}-flag cannot suppress\n"
+"the simplification completely.  The output shows a simplified expression, but\n"
+"the variable @code{x} has an unsimplified expression as a value, because the\n"
+"assignment has occurred during the evaluation phase of the expression.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c simp:true;\n"
+"@c x:sin(1.0),simp:false;\n"
+"@c :lisp $x\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) simp:true;\n"
+"(%o1)                         true\n"
+"@end group\n"
+"@group\n"
+"(%i2) x:sin(1.0),simp:false;\n"
+"(%o2)                  0.8414709848078965\n"
+"@end group\n"
+"@group\n"
+"(%i3) :lisp $x\n"
+"((%SIN) 1.0)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Evaluation flags}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c NEEDS CLARIFICATION, EXAMPLES\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{symmetric}\n"
+"@defvr {Property} symmetric\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{declare (h, symmetric)} tells the Maxima\n"
+"simplifier that @code{h} is a symmetric function.  E.g., @code{h (x, z, y)} \n"
+"simplifies to @code{h (x, y, z)}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@code{commutative} is synonymous with @code{symmetric}.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Declarations and inferences} @category{Operators}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{xthru}\n"
+"@deffn {Function} xthru (@var{expr})\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Combines all terms of @var{expr} (which should be a sum) over a common\n"
+"denominator without expanding products and exponentiated sums as @code{ratsimp}\n"
+"does.  @code{xthru} cancels common factors in the numerator and denominator of\n"
+"rational expressions but only if the factors are explicit.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c REPHRASE IN NEUTRAL TONE (GET RID OF \"IT IS BETTER\")\n"
+"Sometimes it is better to use @code{xthru} before @code{ratsimp}ing an\n"
+"expression in order to cause explicit factors of the gcd of the numerator and\n"
+"denominator to be canceled thus simplifying the expression to be\n"
+"@code{ratsimp}ed.\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@c ===beg===\n"
+"@c ((x+2)^20 - 2*y)/(x+y)^20 + (x+y)^(-19) - x/(x+y)^20;\n"
+"@c xthru (%);\n"
+"@c ===end===\n"
+"@example\n"
+"@group\n"
+"(%i1) ((x+2)^20 - 2*y)/(x+y)^20 + (x+y)^(-19) - x/(x+y)^20;\n"
+"                                20\n"
+"                 1       (x + 2)   - 2 y       x\n"
+"(%o1)        --------- + --------------- - ---------\n"
+"                    19             20             20\n"
+"             (y + x)        (y + x)        (y + x)\n"
+"@end group\n"
+"@group\n"
+"(%i2) xthru (%);\n"
+"                                 20\n"
+"                          (x + 2)   - y\n"
+"(%o2)                     -------------\n"
+"                                   20\n"
+"                            (y + x)\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+"@opencatbox\n"
+"@category{Expressions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Simplification.texi
+msgid ""
+msgstr ""

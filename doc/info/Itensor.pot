@@ -1,0 +1,3986 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Itensor.texi
+msgid ""
+"@c RECOMMEND REVISE TEXT THROUGHOUT TO LOSE NOTION OF TIME RELATIVE TO PRESENT\n"
+"@c LOOK FOR \"NOW\", \"OLD\", \"NEW\", \"RECENT\", \"EARLIER\", DATES\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c RERUN EXAMPLES WITH ADDT'L WHITESPACE IN INPUT TO AID LEGIBILITY\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@menu\n"
+"* Introduction to itensor::\n"
+"* Functions and Variables for itensor::\n"
+"@end menu\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction to itensor, Functions and Variables for itensor, itensor, itensor\n"
+"@section Introduction to itensor\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Maxima implements symbolic tensor manipulation of two distinct types:\n"
+"component tensor manipulation (@code{ctensor} package) and indicial tensor\n"
+"manipulation (@code{itensor} package).\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Nota bene: Please see the note on 'new tensor notation' below.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Component tensor manipulation means that geometrical tensor\n"
+"objects are represented as arrays or matrices. Tensor operations such\n"
+"as contraction or covariant differentiation are carried out by\n"
+"actually summing over repeated (dummy) indices with @code{do} statements.\n"
+"That is, one explicitly performs operations on the appropriate tensor\n"
+"components stored in an array or matrix.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Indicial tensor manipulation is implemented by representing\n"
+"tensors as functions of their covariant, contravariant and derivative\n"
+"indices. Tensor operations such as contraction or covariant\n"
+"differentiation are performed by manipulating the indices themselves\n"
+"rather than the components to which they correspond.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"These two approaches to the treatment of differential, algebraic and\n"
+"analytic processes in the context of Riemannian geometry have various\n"
+"advantages and disadvantages which reveal themselves only through the\n"
+"particular nature and difficulty of the user's problem.  However, one\n"
+"should keep in mind the following characteristics of the two\n"
+"implementations:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The representation of tensors and tensor operations explicitly in\n"
+"terms of their components makes @code{ctensor} easy to use. Specification of\n"
+"the metric and the computation of the induced tensors and invariants\n"
+"is straightforward. Although all of Maxima's powerful simplification\n"
+"capacity is at hand, a complex metric with intricate functional and\n"
+"coordinate dependencies can easily lead to expressions whose size is\n"
+"excessive and whose structure is hidden. In addition, many calculations\n"
+"involve intermediate expressions which swell causing programs to\n"
+"terminate before completion. Through experience, a user can avoid\n"
+"many of these difficulties.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Because of the special way in which tensors and tensor operations\n"
+"are represented in terms of symbolic operations on their indices,\n"
+"expressions which in the component representation would be\n"
+"unmanageable can sometimes be greatly simplified by using the special\n"
+"routines for symmetrical objects in @code{itensor}. In this way the structure\n"
+"of a large expression may be more transparent. On the other hand, because\n"
+"of the special indicial representation in @code{itensor}, in some cases the\n"
+"user may find difficulty with the specification of the metric, function\n"
+"definition, and the evaluation of differentiated \"indexed\" objects.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{itensor} package can carry out differentiation with respect to an indexed\n"
+"variable, which allows one to use the package when dealing with Lagrangian\n"
+"and Hamiltonian formalisms. As it is possible to differentiate a field\n"
+"Lagrangian with respect to an (indexed) field variable, one can use Maxima\n"
+"to derive the corresponding Euler-Lagrange equations in indicial form. These\n"
+"equations can be translated into component tensor (@code{ctensor}) programs using\n"
+"the @code{ic_convert} function, allowing us to solve the field equations in a\n"
+"particular coordinate representation, or to recast the equations of motion\n"
+"in Hamiltonian form. See @code{einhil.dem} and @code{bradic.dem} for two comprehensive\n"
+"examples. The first, @code{einhil.dem}, uses the Einstein-Hilbert action to derive\n"
+"the Einstein field tensor in the homogeneous and isotropic case (Friedmann\n"
+"equations) and the spherically symmetric, static case (Schwarzschild\n"
+"solution.) The second, @code{bradic.dem}, demonstrates how to compute the Friedmann\n"
+"equations from the action of Brans-Dicke gravity theory, and also derives\n"
+"the Hamiltonian associated with the theory's scalar field.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Tensors} @category{Share packages} @category{Package itensor}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection New tensor notation\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Earlier versions of the @code{itensor} package in Maxima used a notation that sometimes\n"
+"led to incorrect index ordering. Consider the following, for instance:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i2) imetric(g);\n"
+"(%o2)                                done\n"
+"(%i3) ishow(g([],[j,k])*g([],[i,l])*a([i,j],[]))$\n"
+"                                 i l  j k\n"
+"(%t3)                           g    g    a\n"
+"                                           i j\n"
+"(%i4) ishow(contract(%))$\n"
+"                                      k l\n"
+"(%t4)                                a\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"This result is incorrect unless @code{a} happens to be a symmetric tensor.\n"
+"The reason why this happens is that although @code{itensor} correctly maintains\n"
+"the order within the set of covariant and contravariant indices, once an\n"
+"index is raised or lowered, its position relative to the other set of\n"
+"indices is lost.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"To avoid this problem, a new notation has been developed that remains fully\n"
+"compatible with the existing notation and can be used interchangeably. In\n"
+"this notation, contravariant indices are inserted in the appropriate\n"
+"positions in the covariant index list, but with a minus sign prepended.\n"
+"Functions like @mref{contract_Itensor} and @mref{ishow} are now aware of this\n"
+"new index notation and can process tensors appropriately.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"In this new notation, the previous example yields a correct result:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i5) ishow(g([-j,-k],[])*g([-i,-l],[])*a([i,j],[]))$\n"
+"                                 i l       j k\n"
+"(%t5)                           g    a    g\n"
+"                                      i j\n"
+"(%i6) ishow(contract(%))$\n"
+"                                      l k\n"
+"(%t6)                                a\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Presently, the only code that makes use of this notation is the @code{lc2kdt}\n"
+"function. Through this notation, it achieves consistent results as it\n"
+"applies the metric tensor to resolve Levi-Civita symbols without resorting\n"
+"to numeric indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Since this code is brand new, it probably contains bugs. While it has been\n"
+"tested to make sure that it doesn't break anything using the \"old\" tensor\n"
+"notation, there is a considerable chance that \"new\" tensors will fail to\n"
+"interoperate with certain functions or features. These bugs will be fixed\n"
+"as they are encountered... until then, caveat emptor!\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Indicial tensor manipulation\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The indicial tensor manipulation package may be loaded by\n"
+"@code{load(itensor)}. Demos are also available: try @code{demo(tensor)}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"In @code{itensor} a tensor is represented as an \"indexed object\" .  This is a\n"
+"function of 3 groups of indices which represent the covariant,\n"
+"contravariant and derivative indices.  The covariant indices are\n"
+"specified by a list as the first argument to the indexed object, and\n"
+"the contravariant indices by a list as the second argument. If the\n"
+"indexed object lacks either of these groups of indices then the empty\n"
+"list @code{[]} is given as the corresponding argument.  Thus, @code{g([a,b],[c])}\n"
+"represents an indexed object called @code{g} which has two covariant indices\n"
+"@code{(a,b)}, one contravariant index (@code{c}) and no derivative indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The derivative indices, if they are present, are appended as\n"
+"additional arguments to the symbolic function representing the tensor.\n"
+"They can be explicitly specified by the user or be created in the\n"
+"process of differentiation with respect to some coordinate variable.\n"
+"Since ordinary differentiation is commutative, the derivative indices\n"
+"are sorted alphanumerically, unless @code{iframe_flag} is set to @code{true},\n"
+"indicating that a frame metric is being used. This canonical ordering makes it\n"
+"possible for Maxima to recognize that, for example, @code{t([a],[b],i,j)} is\n"
+"the same as @code{t([a],[b],j,i)}.  Differentiation of an indexed object with\n"
+"respect to some coordinate whose index does not appear as an argument\n"
+"to the indexed object would normally yield zero. This is because\n"
+"Maxima would not know that the tensor represented by the indexed\n"
+"object might depend implicitly on the corresponding coordinate.  By\n"
+"modifying the existing Maxima function @code{diff} in @code{itensor}, Maxima now\n"
+"assumes that all indexed objects depend on any variable of\n"
+"differentiation unless otherwise stated.  This makes it possible for\n"
+"the summation convention to be extended to derivative indices. It\n"
+"should be noted that @code{itensor} does not possess the capabilities of\n"
+"raising derivative indices, and so they are always treated as\n"
+"covariant.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The following functions are available in the tensor package for\n"
+"manipulating indexed objects.  At present, with respect to the\n"
+"simplification routines, it is assumed that indexed objects do not\n"
+"by default possess symmetry properties. This can be overridden by\n"
+"setting the variable @code{allsym[false]} to @code{true}, which will\n"
+"result in treating all indexed objects completely symmetric in their\n"
+"lists of covariant indices and symmetric in their lists of\n"
+"contravariant indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{itensor} package generally treats tensors as opaque objects. Tensorial\n"
+"equations are manipulated based on algebraic rules, specifically symmetry\n"
+"and contraction rules. In addition, the @code{itensor} package understands\n"
+"covariant differentiation, curvature, and torsion. Calculations can be\n"
+"performed relative to a metric of moving frame, depending on the setting\n"
+"of the @code{iframe_flag} variable.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"A sample session below demonstrates how to load the @code{itensor} package,\n"
+"specify the name of the metric, and perform some simple calculations.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) imetric(g);\n"
+"(%o2)                                done\n"
+"(%i3) components(g([i,j],[]),p([i,j],[])*e([],[]))$\n"
+"(%i4) ishow(g([k,l],[]))$\n"
+"(%t4)                               e p\n"
+"                                       k l\n"
+"(%i5) ishow(diff(v([i],[]),t))$\n"
+"(%t5)                                  0\n"
+"(%i6) depends(v,t);\n"
+"(%o6)                               [v(t)]\n"
+"(%i7) ishow(diff(v([i],[]),t))$\n"
+"                                    d\n"
+"(%t7)                               -- (v )\n"
+"                                    dt   i\n"
+"(%i8) ishow(idiff(v([i],[]),j))$\n"
+"(%t8)                                v\n"
+"                                      i,j\n"
+"(%i9) ishow(extdiff(v([i],[]),j))$\n"
+"(%t9)                             v    - v\n"
+"                                   j,i    i,j\n"
+"                                  -----------\n"
+"                                       2\n"
+"(%i10) ishow(liediff(v,w([i],[])))$\n"
+"                               %3          %3\n"
+"(%t10)                        v   w     + v   w\n"
+"                                   i,%3    ,i  %3\n"
+"(%i11) ishow(covdiff(v([i],[]),j))$\n"
+"                                              %4\n"
+"(%t11)                        v    - v   ichr2\n"
+"                               i,j    %4      i j\n"
+"(%i12) ishow(ev(%,ichr2))$\n"
+"                %4 %5\n"
+"(%t12) v    - (g      v   (e p       + e   p     - e p       - e    p\n"
+"        i,j            %4     j %5,i    ,i  j %5      i j,%5    ,%5  i j\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                                         + e p       + e   p    ))/2\n"
+"                                              i %5,j    ,j  i %5\n"
+"(%i13) iframe_flag:true;\n"
+"(%o13)                               true\n"
+"(%i14) ishow(covdiff(v([i],[]),j))$\n"
+"                                             %6\n"
+"(%t14)                        v    - v   icc2\n"
+"                               i,j    %6     i j\n"
+"(%i15) ishow(ev(%,icc2))$\n"
+"                                             %6\n"
+"(%t15)                        v    - v   ifc2\n"
+"                               i,j    %6     i j\n"
+"(%i16) ishow(radcan(ev(%,ifc2,ifc1)))$\n"
+"             %6 %7                    %6 %7\n"
+"(%t16) - (ifg      v   ifb       + ifg      v   ifb       - 2 v\n"
+"                    %6    j %7 i             %6    i j %7      i,j\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                                             %6 %7\n"
+"                                        - ifg      v   ifb      )/2\n"
+"                                                    %6    %7 i j\n"
+"(%i17) ishow(canform(s([i,j],[])-s([j,i])))$\n"
+"(%t17)                            s    - s\n"
+"                                   i j    j i\n"
+"(%i18) decsym(s,2,0,[sym(all)],[]);\n"
+"(%o18)                               done\n"
+"(%i19) ishow(canform(s([i,j],[])-s([j,i])))$\n"
+"(%t19)                                 0\n"
+"(%i20) ishow(canform(a([i,j],[])+a([j,i])))$\n"
+"(%t20)                            a    + a\n"
+"                                   j i    i j\n"
+"(%i21) decsym(a,2,0,[anti(all)],[]);\n"
+"(%o21)                               done\n"
+"(%i22) ishow(canform(a([i,j],[])+a([j,i])))$\n"
+"(%t22)                                 0\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c end concepts itensor\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for itensor,  , Introduction to itensor, itensor\n"
+"@section Functions and Variables for itensor\n"
+"@subsection Managing indexed objects\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{dispcon}\n"
+"@deffn {Function} dispcon @\n"
+"@fname{dispcon} (@var{tensor_1}, @var{tensor_2}, @dots{}) @\n"
+"@fname{dispcon} (all)\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Displays the contraction properties of its arguments as were given to\n"
+"@code{defcon}.  @code{dispcon (all)} displays all the contraction properties\n"
+"which were defined.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{entertensor}\n"
+"@deffn {Function} entertensor (@var{name})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"is a function which, by prompting, allows one to create an indexed\n"
+"object called @var{name} with any number of tensorial and derivative\n"
+"indices. Either a single index or a list of indices (which may be\n"
+"null) is acceptable input (see the example under @code{covdiff}).\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{changename}\n"
+"@deffn {Function} changename (@var{old}, @var{new}, @var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"will change the name of all indexed objects called @var{old} to @var{new}\n"
+"in @var{expr}. @var{old} may be either a symbol or a list of the form\n"
+"@code{[@var{name}, @var{m}, @var{n}]} in which case only those indexed objects called\n"
+"@var{name} with @var{m} covariant and @var{n} contravariant indices will be\n"
+"renamed to @var{new}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@deffn {Function} listoftens\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@anchor{listoftens}\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Lists all tensors in a tensorial expression, complete with their indices. E.g.,\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i6) ishow(a([i,j],[k])*b([u],[],v)+c([x,y],[])*d([],[])*e)$\n"
+"                                         k\n"
+"(%t6)                        d e c    + a    b\n"
+"                                  x y    i j  u,v\n"
+"(%i7) ishow(listoftens(%))$\n"
+"                               k\n"
+"(%t7)                        [a   , b   , c   , d]\n"
+"                               i j   u,v   x y\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ishow}\n"
+"@deffn {Function} ishow (@var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"displays @var{expr} with the indexed objects in it shown having their\n"
+"covariant indices as subscripts and contravariant indices as\n"
+"superscripts. The derivative indices are displayed as subscripts,\n"
+"separated from the covariant indices by a comma (see the examples\n"
+"throughout this document).\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{indices}\n"
+"@deffn {Function} indices (@var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Returns a list of two elements.  The first is a list of the free\n"
+"indices in @var{expr} (those that occur only once). The second is the\n"
+"list of the dummy indices in @var{expr} (those that occur exactly twice)\n"
+"as the following example demonstrates.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) ishow(a([i,j],[k,l],m,n)*b([k,o],[j,m,p],q,r))$\n"
+"                                k l      j m p\n"
+"(%t2)                          a        b\n"
+"                                i j,m n  k o,q r\n"
+"(%i3) indices(%);\n"
+"(%o3)                 [[l, p, i, n, o, q, r], [k, j, m]]\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"A tensor product containing the same index more than twice is syntactically\n"
+"illegal. @code{indices} attempts to deal with these expressions in a\n"
+"reasonable manner; however, when it is called to operate upon such an\n"
+"illegal expression, its behavior should be considered undefined.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rename}\n"
+"@deffn {Function} rename @\n"
+"@fname{rename} (@var{expr}) @\n"
+"@fname{rename} (@var{expr}, @var{count})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Returns an expression equivalent to @var{expr} but with the dummy indices\n"
+"in each term chosen from the set @code{[%1, %2,...]}, if the optional second\n"
+"argument is omitted. Otherwise, the dummy indices are indexed\n"
+"beginning at the value of @var{count}.  Each dummy index in a product\n"
+"will be different. For a sum, @code{rename} will operate upon each term in\n"
+"the sum resetting the counter with each term. In this way @code{rename} can\n"
+"serve as a tensorial simplifier. In addition, the indices will be\n"
+"sorted alphanumerically (if @code{allsym} is @code{true}) with respect to\n"
+"covariant or contravariant indices depending upon the value of @code{flipflag}.\n"
+"If @code{flipflag} is @code{false} then the indices will be renamed according\n"
+"to the order of the contravariant indices. If @code{flipflag} is @code{true}\n"
+"the renaming will occur according to the order of the covariant\n"
+"indices. It often happens that the combined effect of the two renamings will\n"
+"reduce an expression more than either one by itself.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) allsym:true;\n"
+"(%o2)                                true\n"
+"(%i3) g([],[%4,%5])*g([],[%6,%7])*ichr2([%1,%4],[%3])*\n"
+"ichr2([%2,%3],[u])*ichr2([%5,%6],[%1])*ichr2([%7,r],[%2])-\n"
+"g([],[%4,%5])*g([],[%6,%7])*ichr2([%1,%2],[u])*\n"
+"ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$\n"
+"(%i4) expr:ishow(%)$\n"
+"@group\n"
+"       %4 %5  %6 %7      %3         u          %1         %2\n"
+"(%t4) g      g      ichr2      ichr2      ichr2      ichr2\n"
+"                         %1 %4      %2 %3      %5 %6      %7 r\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"        %4 %5  %6 %7      u          %1         %3         %2\n"
+"     - g      g      ichr2      ichr2      ichr2      ichr2\n"
+"                          %1 %2      %3 %5      %4 %6      %7 r\n"
+"@end group\n"
+"(%i5) flipflag:true;\n"
+"(%o5)                                true\n"
+"(%i6) ishow(rename(expr))$\n"
+"       %2 %5  %6 %7      %4         u          %1         %3\n"
+"(%t6) g      g      ichr2      ichr2      ichr2      ichr2\n"
+"                         %1 %2      %3 %4      %5 %6      %7 r\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"        %4 %5  %6 %7      u          %1         %3         %2\n"
+"     - g      g      ichr2      ichr2      ichr2      ichr2\n"
+"                          %1 %2      %3 %4      %5 %6      %7 r\n"
+"(%i7) flipflag:false;\n"
+"(%o7)                                false\n"
+"(%i8) rename(%th(2));\n"
+"(%o8)                                  0\n"
+"(%i9) ishow(rename(expr))$\n"
+"       %1 %2  %3 %4      %5         %6         %7        u\n"
+"(%t9) g      g      ichr2      ichr2      ichr2     ichr2\n"
+"                         %1 %6      %2 %3      %4 r      %5 %7\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"        %1 %2  %3 %4      %6         %5         %7        u\n"
+"     - g      g      ichr2      ichr2      ichr2     ichr2\n"
+"                          %1 %3      %2 %6      %4 r      %5 %7\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c THIS FUNCTION IS IN THE SHARE PACKAGE itensor.lisp\n"
+"@c MOVE THIS DESCRIPTION TO Itensor.texi\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{show}\n"
+"@deffn {Function} show (@var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Displays @code{expr} with the indexed objects in it shown\n"
+"having covariant indices as subscripts, contravariant indices as\n"
+"superscripts.  The derivative indices are displayed as subscripts,\n"
+"separated from the covariant indices by a comma.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor} @category{Display functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{flipflag}\n"
+"@defvr {Option variable} flipflag\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"If @code{false} then the indices will be\n"
+"renamed according to the order of the contravariant indices,\n"
+"otherwise according to the order of the covariant indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"If @code{flipflag} is @code{false} then @code{rename} forms a list\n"
+"of the contravariant indices as they are encountered from left to right\n"
+"(if @code{true} then of the covariant indices). The first dummy\n"
+"index in the list is renamed to @code{%1}, the next to @code{%2}, etc.\n"
+"Then sorting occurs after the @code{rename}-ing (see the example\n"
+"under @code{rename}).\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{defcon}\n"
+"@deffn {Function} defcon @\n"
+"@fname{defcon} (@var{tensor_1}) @\n"
+"@fname{defcon} (@var{tensor_1}, @var{tensor_2}, @var{tensor_3})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"gives @var{tensor_1} the property that the\n"
+"contraction of a product of @var{tensor_1} and @var{tensor_2} results in @var{tensor_3}\n"
+"with the appropriate indices.  If only one argument, @var{tensor_1}, is\n"
+"given, then the contraction of the product of @var{tensor_1} with any indexed\n"
+"object having the appropriate indices (say @code{my_tensor}) will yield an\n"
+"indexed object with that name, i.e. @code{my_tensor}, and with a new set of\n"
+"indices reflecting the contractions performed.\n"
+"    For example, if @code{imetric:g}, then @code{defcon(g)} will implement the\n"
+"raising and lowering of indices through contraction with the metric\n"
+"tensor.\n"
+"    More than one @code{defcon} can be given for the same indexed object; the\n"
+"latest one given which applies in a particular contraction will be\n"
+"used.\n"
+"@code{contractions} is a list of those indexed objects which have been given\n"
+"contraction properties with @code{defcon}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{remcon}\n"
+"@deffn {Function} remcon @\n"
+"@fname{remcon} (@var{tensor_1}, ..., @var{tensor_n}) @\n"
+"@fname{remcon} (all)\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Removes all the contraction properties\n"
+"from the (@var{tensor_1}, ..., @var{tensor_n}). @code{remcon(all)} removes all contraction\n"
+"properties from all indexed objects.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{contract_Itensor}\n"
+"@deffn {Function} contract (@var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Carries out the tensorial contractions in @var{expr} which may be any\n"
+"combination of sums and products. This function uses the information\n"
+"given to the @code{defcon} function. For best results, @code{expr}\n"
+"should be fully expanded. @code{ratexpand} is the fastest way to expand\n"
+"products and powers of sums if there are no variables in the denominators\n"
+"of the terms. The @code{gcd} switch should be @code{false} if GCD\n"
+"cancellations are unnecessary.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{indexed_tensor}\n"
+"@deffn {Function} indexed_tensor (@var{tensor})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Must be executed before assigning components to a @var{tensor} for which\n"
+"a built in value already exists as with @code{ichr1}, @code{ichr2},\n"
+"@code{icurvature}. See the example under @code{icurvature}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{components}\n"
+"@deffn {Function} components (@var{tensor}, @var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"permits one to assign an indicial value to an expression\n"
+"@var{expr} giving the values of the components of @var{tensor}. These\n"
+"are automatically substituted for the tensor whenever it occurs with\n"
+"all of its indices. The tensor must be of the form @code{t([...],[...])}\n"
+"where either list may be empty. @var{expr} can be any indexed expression\n"
+"involving other objects with the same free indices as @var{tensor}. When\n"
+"used to assign values to the metric tensor wherein the components\n"
+"contain dummy indices one must be careful to define these indices to\n"
+"avoid the generation of multiple dummy indices. Removal of this\n"
+"assignment is given to the function @code{remcomps}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"It is important to keep in mind that @code{components} cares only about\n"
+"the valence of a tensor, not about any particular index ordering. Thus\n"
+"assigning components to, say, @code{x([i,-j],[])}, @code{x([-j,i],[])}, or\n"
+"@code{x([i],[j])} all produce the same result, namely components being\n"
+"assigned to a tensor named @code{x} with valence @code{(1,1)}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Components can be assigned to an indexed expression in four ways, two\n"
+"of which involve the use of the @code{components} command:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"1) As an indexed expression. For instance:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i2) components(g([],[i,j]),e([],[i])*p([],[j]))$\n"
+"(%i3) ishow(g([],[i,j]))$\n"
+"                                      i  j\n"
+"(%t3)                                e  p\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"2) As a matrix:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i5) lg:-ident(4)$lg[1,1]:1$lg;\n"
+"@group\n"
+"                            [ 1   0    0    0  ]\n"
+"                            [                  ]\n"
+"                            [ 0  - 1   0    0  ]\n"
+"(%o5)                       [                  ]\n"
+"                            [ 0   0   - 1   0  ]\n"
+"                            [                  ]\n"
+"                            [ 0   0    0   - 1 ]\n"
+"@end group\n"
+"(%i6) components(g([i,j],[]),lg);\n"
+"(%o6)                                done\n"
+"(%i7) ishow(g([i,j],[]))$\n"
+"(%t7)                                g\n"
+"                                      i j\n"
+"(%i8) g([1,1],[]);\n"
+"(%o8)                                  1\n"
+"(%i9) g([4,4],[]);\n"
+"(%o9)                                 - 1\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"3) As a function. You can use a Maxima function to specify the\n"
+"components of a tensor based on its indices. For instance, the following\n"
+"code assigns @code{kdelta} to @code{h} if @code{h} has the same number\n"
+"of covariant and contravariant indices and no derivative indices, and\n"
+"@code{g} otherwise:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i4) h(l1,l2,[l3]):=if length(l1)=length(l2) and length(l3)=0\n"
+"  then kdelta(l1,l2) else apply(g,append([l1,l2], l3))$\n"
+"(%i5) ishow(h([i],[j]))$\n"
+"                                          j\n"
+"(%t5)                               kdelta\n"
+"                                          i\n"
+"(%i6) ishow(h([i,j],[k],l))$\n"
+"                                     k\n"
+"(%t6)                               g\n"
+"                                     i j,l\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"4) Using Maxima's pattern matching capabilities, specifically the\n"
+"@code{defrule} and @code{applyb1} commands:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) matchdeclare(l1,listp);\n"
+"(%o2)                                done\n"
+"(%i3) defrule(r1,m(l1,[]),(i1:idummy(),\n"
+"      g([l1[1],l1[2]],[])*q([i1],[])*e([],[i1])))$\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i4) defrule(r2,m([],l1),(i1:idummy(),\n"
+"      w([],[l1[1],l1[2]])*e([i1],[])*q([],[i1])))$\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i5) ishow(m([i,n],[])*m([],[i,m]))$\n"
+"@group\n"
+"                                    i m\n"
+"(%t5)                              m    m\n"
+"                                         i n\n"
+"@end group\n"
+"(%i6) ishow(rename(applyb1(%,r1,r2)))$\n"
+"                           %1  %2  %3 m\n"
+"(%t6)                     e   q   w     q   e   g\n"
+"                                         %1  %2  %3 n\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@anchor{remcomps}\n"
+"@deffn {Function} remcomps (@var{tensor})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Unbinds all values from @var{tensor} which were assigned with the\n"
+"@code{components} function.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c NEED LIST OF ARGUMENTS HERE\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{showcomps}\n"
+"@deffn {Function} showcomps (@var{tensor})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Shows component assignments of a tensor, as made using the @code{components}\n"
+"command. This function can be particularly useful when a matrix is assigned\n"
+"to an indicial tensor using @code{components}, as demonstrated by the\n"
+"following example:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(ctensor);\n"
+"(%o1)       /share/tensor/ctensor.mac\n"
+"(%i2) load(itensor);\n"
+"(%o2)      /share/tensor/itensor.lisp\n"
+"(%i3) lg:matrix([sqrt(r/(r-2*m)),0,0,0],[0,r,0,0],\n"
+"                [0,0,sin(theta)*r,0],[0,0,0,sqrt((r-2*m)/r)]);\n"
+"               [         r                                     ]\n"
+"               [ sqrt(-------)  0       0              0       ]\n"
+"               [      r - 2 m                                  ]\n"
+"               [                                               ]\n"
+"               [       0        r       0              0       ]\n"
+"(%o3)          [                                               ]\n"
+"               [       0        0  r sin(theta)        0       ]\n"
+"               [                                               ]\n"
+"               [                                      r - 2 m  ]\n"
+"               [       0        0       0        sqrt(-------) ]\n"
+"               [                                         r     ]\n"
+"(%i4) components(g([i,j],[]),lg);\n"
+"(%o4)                                done\n"
+"(%i5) showcomps(g([i,j],[]));\n"
+"                  [         r                                     ]\n"
+"                  [ sqrt(-------)  0       0              0       ]\n"
+"                  [      r - 2 m                                  ]\n"
+"                  [                                               ]\n"
+"                  [       0        r       0              0       ]\n"
+"(%t5)      g    = [                                               ]\n"
+"            i j   [       0        0  r sin(theta)        0       ]\n"
+"                  [                                               ]\n"
+"                  [                                      r - 2 m  ]\n"
+"                  [       0        0       0        sqrt(-------) ]\n"
+"                  [                                         r     ]\n"
+"(%o5)                                false\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{showcomps} command can also display components of a tensor of\n"
+"rank higher than 2.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{idummy}\n"
+"@deffn {Function} idummy ()\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Increments @code{icounter} and returns as its value an index of the form\n"
+"@code{%n} where n is a positive integer.  This guarantees that dummy indices\n"
+"which are needed in forming expressions will not conflict with indices\n"
+"already in use (see the example under @code{indices}).\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@anchor{idummyx}\n"
+"@defvr {Option variable} idummyx\n"
+"Default value: @code{%}\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Is the prefix for dummy indices (see the example under @code{indices}).\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{icounter}\n"
+"@defvr {Option variable} icounter\n"
+"Default value: @code{1}\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Determines the numerical suffix to be used in\n"
+"generating the next dummy index in the tensor package.  The prefix is\n"
+"determined by the option @code{idummy} (default: @code{%}).\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{kdelta}\n"
+"@deffn {Function} kdelta (@var{L1}, @var{L2})\n"
+"is the generalized Kronecker delta function defined in\n"
+"the @code{itensor} package with @var{L1} the list of covariant indices and @var{L2}\n"
+"the list of contravariant indices.  @code{kdelta([i],[j])} returns the ordinary\n"
+"Kronecker delta.  The command @code{ev(@var{expr},kdelta)} causes the evaluation of\n"
+"an expression containing @code{kdelta([],[])} to the dimension of the\n"
+"manifold.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"In what amounts to an abuse of this notation, @code{itensor} also allows\n"
+"@code{kdelta} to have 2 covariant and no contravariant, or 2 contravariant\n"
+"and no covariant indices, in effect providing a co(ntra)variant \"unit matrix\"\n"
+"capability. This is strictly considered a programming aid and not meant to\n"
+"imply that @code{kdelta([i,j],[])} is a valid tensorial object.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{kdels}\n"
+"@deffn {Function} kdels (@var{L1}, @var{L2})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Symmetrized Kronecker delta, used in some calculations. For instance:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) kdelta([1,2],[2,1]);\n"
+"(%o2)                                 - 1\n"
+"(%i3) kdels([1,2],[2,1]);\n"
+"(%o3)                                  1\n"
+"(%i4) ishow(kdelta([a,b],[c,d]))$\n"
+"                             c       d         d       c\n"
+"(%t4)                  kdelta  kdelta  - kdelta  kdelta\n"
+"                             a       b         a       b\n"
+"(%i4) ishow(kdels([a,b],[c,d]))$\n"
+"                             c       d         d       c\n"
+"(%t4)                  kdelta  kdelta  + kdelta  kdelta\n"
+"                             a       b         a       b\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{levi_civita}\n"
+"@deffn {Function} levi_civita (@var{L})\n"
+"is the permutation (or Levi-Civita) tensor which yields 1 if\n"
+"the list @var{L} consists of an even permutation of integers, -1 if it\n"
+"consists of an odd permutation, and 0 if some indices in @var{L} are\n"
+"repeated.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lc2kdt}\n"
+"@deffn {Function} lc2kdt (@var{expr})\n"
+"Simplifies expressions containing the Levi-Civita symbol, converting these\n"
+"to Kronecker-delta expressions when possible. The main difference between\n"
+"this function and simply evaluating the Levi-Civita symbol is that direct\n"
+"evaluation often results in Kronecker expressions containing numerical\n"
+"indices. This is often undesirable as it prevents further simplification.\n"
+"The @code{lc2kdt} function avoids this problem, yielding expressions that\n"
+"are more easily simplified with @code{rename} or @code{contract}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) expr:ishow('levi_civita([],[i,j])\n"
+"                 *'levi_civita([k,l],[])*a([j],[k]))$\n"
+"                                  i j  k\n"
+"(%t2)                  levi_civita    a  levi_civita\n"
+"                                       j            k l\n"
+"(%i3) ishow(ev(expr,levi_civita))$\n"
+"                                  i j  k       1 2\n"
+"(%t3)                       kdelta    a  kdelta\n"
+"                                  1 2  j       k l\n"
+"(%i4) ishow(ev(%,kdelta))$\n"
+"             i       j         j       i   k\n"
+"(%t4) (kdelta  kdelta  - kdelta  kdelta ) a\n"
+"             1       2         1       2   j\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                               1       2         2       1\n"
+"                        (kdelta  kdelta  - kdelta  kdelta )\n"
+"                               k       l         k       l\n"
+"(%i5) ishow(lc2kdt(expr))$\n"
+"                     k       i       j    k       j       i\n"
+"(%t5)               a  kdelta  kdelta  - a  kdelta  kdelta\n"
+"                     j       k       l    j       k       l\n"
+"(%i6) ishow(contract(expand(%)))$\n"
+"                                 i           i\n"
+"(%t6)                           a  - a kdelta\n"
+"                                 l           l\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{lc2kdt} function sometimes makes use of the metric tensor.\n"
+"If the metric tensor was not defined previously with @code{imetric},\n"
+"this results in an error.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i7) expr:ishow('levi_civita([],[i,j])\n"
+"                 *'levi_civita([],[k,l])*a([j,k],[]))$\n"
+"@group\n"
+"                                 i j            k l\n"
+"(%t7)                 levi_civita    levi_civita    a\n"
+"                                                     j k\n"
+"@end group\n"
+"(%i8) ishow(lc2kdt(expr))$\n"
+"Maxima encountered a Lisp error:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+" Error in $IMETRIC [or a callee]:\n"
+" $IMETRIC [or a callee] requires less than two arguments.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Automatically continuing.\n"
+"To reenable the Lisp debugger set *debugger-hook* to nil.\n"
+"(%i9) imetric(g);\n"
+"(%o9)                                done\n"
+"(%i10) ishow(lc2kdt(expr))$\n"
+"         %3 i       k   %4 j       l     %3 i       l   %4 j\n"
+"(%t10) (g     kdelta   g     kdelta   - g     kdelta   g    \n"
+"                    %3             %4               %3\n"
+"              k\n"
+"        kdelta  ) a\n"
+"              %4   j k\n"
+"(%i11) ishow(contract(expand(%)))$\n"
+"                                  l i    l i  j\n"
+"(%t11)                           a    - g    a\n"
+"                                              j\n"
+"@end example\n"
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c HMM, WHICH CATEGORY DOES THIS FALL INTO -- FUNCTION, VARIABLE, OTHER ??\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lc_l}\n"
+"@deffn {Function} lc_l\n"
+"Simplification rule used for expressions containing the unevaluated Levi-Civita\n"
+"symbol (@code{levi_civita}). Along with @code{lc_u}, it can be used to simplify\n"
+"many expressions more efficiently than the evaluation of @code{levi_civita}.\n"
+"For example:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) el1:ishow('levi_civita([i,j,k],[])*a([],[i])*a([],[j]))$\n"
+"                             i  j\n"
+"(%t2)                       a  a  levi_civita\n"
+"                                             i j k\n"
+"(%i3) el2:ishow('levi_civita([],[i,j,k])*a([i])*a([j]))$\n"
+"                                       i j k\n"
+"(%t3)                       levi_civita      a  a\n"
+"                                              i  j\n"
+"(%i4) canform(contract(expand(applyb1(el1,lc_l,lc_u))));\n"
+"(%t4)                                  0\n"
+"(%i5) canform(contract(expand(applyb1(el2,lc_l,lc_u))));\n"
+"(%t5)                                  0\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c HMM, WHICH CATEGORY DOES THIS FALL INTO -- FUNCTION, VARIABLE, OTHER ??\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@deffn {Function} lc_u\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Simplification rule used for expressions containing the unevaluated Levi-Civita\n"
+"symbol (@code{levi_civita}). Along with @code{lc_u}, it can be used to simplify\n"
+"many expressions more efficiently than the evaluation of @code{levi_civita}.\n"
+"For details, see @code{lc_l}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{canten}\n"
+"@deffn {Function} canten (@var{expr})\n"
+"Simplifies @var{expr} by renaming (see @code{rename})\n"
+"and permuting dummy indices. @code{rename} is restricted to sums of tensor\n"
+"products in which no derivatives are present. As such it is limited\n"
+"and should only be used if @code{canform} is not capable of carrying out the\n"
+"required simplification.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{canten} function returns a mathematically correct result only\n"
+"if its argument is an expression that is fully symmetric in its indices.\n"
+"For this reason, @code{canten} returns an error if @code{allsym} is not\n"
+"set to @code{true}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{concan}\n"
+"@deffn {Function} concan (@var{expr})\n"
+"Similar to @code{canten} but also performs index contraction.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Tensor symmetries\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{allsym}\n"
+"@defvr {Option variable} allsym\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"If @code{true} then all indexed objects\n"
+"are assumed symmetric in all of their covariant and contravariant\n"
+"indices. If @code{false} then no symmetries of any kind are assumed\n"
+"in these indices. Derivative indices are always taken to be symmetric\n"
+"unless @code{iframe_flag} is set to @code{true}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{decsym}\n"
+"@deffn {Function} decsym (@var{tensor}, @var{m}, @var{n}, [@var{cov_1}, @var{cov_2}, ...], [@var{contr_1}, @var{contr_2}, ...])\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Declares symmetry properties for @var{tensor} of @var{m} covariant and\n"
+"@var{n} contravariant indices. The @var{cov_i} and @var{contr_i} are\n"
+"pseudofunctions expressing symmetry relations among the covariant and\n"
+"contravariant indices respectively.  These are of the form\n"
+"@code{symoper(@var{index_1}, @var{index_2},...)} where @code{symoper} is one of\n"
+"@code{sym}, @code{anti} or @code{cyc} and the @var{index_i} are integers\n"
+"indicating the position of the index in the @var{tensor}.  This will\n"
+"declare @var{tensor} to be symmetric, antisymmetric or cyclic respectively\n"
+"in the @var{index_i}. @code{symoper(all)} is also an allowable form which\n"
+"indicates all indices obey the symmetry condition. For example, given an\n"
+"object @code{b} with 5 covariant indices,\n"
+"@code{decsym(b,5,3,[sym(1,2),anti(3,4)],[cyc(all)])} declares @code{b}\n"
+"symmetric in its first and second and antisymmetric in its third and\n"
+"fourth covariant indices, and cyclic in all of its contravariant indices.\n"
+"Either list of symmetry declarations may be null.  The function which\n"
+"performs the simplifications is @code{canform} as the example below\n"
+"illustrates.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) expr:contract( expand( a([i1, j1, k1], [])\n"
+"           *kdels([i, j, k], [i1, j1, k1])))$\n"
+"(%i3) ishow(expr)$\n"
+"@group\n"
+"(%t3)         a      + a      + a      + a      + a      + a\n"
+"               k j i    k i j    j k i    j i k    i k j    i j k\n"
+"@end group\n"
+"(%i4) decsym(a,3,0,[sym(all)],[]);\n"
+"(%o4)                                done\n"
+"(%i5) ishow(canform(expr))$\n"
+"(%t5)                              6 a\n"
+"                                      i j k\n"
+"(%i6) remsym(a,3,0);\n"
+"(%o6)                                done\n"
+"(%i7) decsym(a,3,0,[anti(all)],[]);\n"
+"(%o7)                                done\n"
+"(%i8) ishow(canform(expr))$\n"
+"(%t8)                                  0\n"
+"(%i9) remsym(a,3,0);\n"
+"(%o9)                                done\n"
+"(%i10) decsym(a,3,0,[cyc(all)],[]);\n"
+"(%o10)                               done\n"
+"(%i11) ishow(canform(expr))$\n"
+"(%t11)                        3 a      + 3 a\n"
+"                                 i k j      i j k\n"
+"(%i12) dispsym(a,3,0);\n"
+"(%o12)                     [[cyc, [[1, 2, 3]], []]]\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{remsym}\n"
+"@deffn {Function} remsym (@var{tensor}, @var{m}, @var{n})\n"
+"Removes all symmetry properties from @var{tensor} which has @var{m}\n"
+"covariant indices and @var{n} contravariant indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{canform}\n"
+"@deffn {Function} canform @\n"
+"@fname{canform} (@var{expr}) @\n"
+"@fname{canform} (@var{expr}, @var{rename})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Simplifies @var{expr} by renaming dummy\n"
+"indices and reordering all indices as dictated by symmetry conditions\n"
+"imposed on them. If @code{allsym} is @code{true} then all indices are assumed\n"
+"symmetric, otherwise symmetry information provided by @code{decsym}\n"
+"declarations will be used. The dummy indices are renamed in the same\n"
+"manner as in the @code{rename} function. When @code{canform} is applied to a large\n"
+"expression the calculation may take a considerable amount of time.\n"
+"This time can be shortened by calling @code{rename} on the expression first.\n"
+"Also see the example under @code{decsym}. Note: @code{canform} may not be able to\n"
+"reduce an expression completely to its simplest form although it will\n"
+"always return a mathematically correct result.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The optional second parameter @var{rename}, if set to @code{false}, suppresses renaming.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Indicial tensor calculus\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{itensor_diff}\n"
+"@deffn {Function} diff (@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"is the usual Maxima differentiation function which has been expanded\n"
+"in its abilities for @code{itensor}. It takes the derivative of @var{expr} with\n"
+"respect to @var{v_1} @var{n_1} times, with respect to @var{v_2} @var{n_2}\n"
+"times, etc. For the tensor package, the function has been modified so\n"
+"that the @var{v_i} may be integers from 1 up to the value of the variable\n"
+"@code{dim}.  This will cause the differentiation to be carried out with\n"
+"respect to the @var{v_i}th member of the list @code{vect_coords}.  If\n"
+"@code{vect_coords} is bound to an atomic variable, then that variable\n"
+"subscripted by @var{v_i} will be used for the variable of\n"
+"differentiation.  This permits an array of coordinate names or\n"
+"subscripted names like @code{x[1]}, @code{x[2]}, ...  to be used.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"A further extension adds the ability to @code{diff} to compute derivatives\n"
+"with respect to an indexed variable. In particular, the tensor package knows\n"
+"how to differentiate expressions containing combinations of the metric tensor\n"
+"and its derivatives with respect to the metric tensor and its first and\n"
+"second derivatives. This capability is particularly useful when considering\n"
+"Lagrangian formulations of a gravitational theory, allowing one to derive\n"
+"the Einstein tensor and field equations from the action principle.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{idiff}\n"
+"@deffn {Function} idiff (@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])\n"
+"Indicial differentiation. Unlike @code{diff}, which differentiates\n"
+"with respect to an independent variable, @code{idiff)} can be used\n"
+"to differentiate with respect to a coordinate. For an indexed object,\n"
+"this amounts to appending the @var{v_i} as derivative indices.\n"
+"Subsequently, derivative indices will be sorted, unless @code{iframe_flag}\n"
+"is set to @code{true}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@code{idiff} can also differentiate the determinant of the metric\n"
+"tensor. Thus, if @code{imetric} has been bound to @code{G} then\n"
+"@code{idiff(determinant(g),k)} will return\n"
+"@code{2 * determinant(g) * ichr2([%i,k],[%i])} where the dummy index @code{%i}\n"
+"is chosen appropriately.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{liediff}\n"
+"@deffn {Function} liediff (@var{v}, @var{ten})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Computes the Lie-derivative of the tensorial expression @var{ten} with\n"
+"respect to the vector field @var{v}. @var{ten} should be any indexed\n"
+"tensor expression; @var{v} should be the name (without indices) of a vector\n"
+"field. For example:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) ishow(liediff(v,a([i,j],[])*b([],[k],l)))$\n"
+"       k    %2            %2          %2\n"
+"(%t2) b   (v   a       + v   a     + v   a    )\n"
+"       ,l       i j,%2    ,j  i %2    ,i  %2 j\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                          %1  k        %1  k      %1  k\n"
+"                      + (v   b      - b   v    + v   b   ) a\n"
+"                              ,%1 l    ,l  ,%1    ,l  ,%1   i j\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{rediff}\n"
+"@deffn {Function} rediff (@var{ten})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Evaluates all occurrences of the @code{idiff} command in the tensorial\n"
+"expression @var{ten}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{undiff}\n"
+"@deffn {Function} undiff (@var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Returns an expression equivalent to @var{expr} but with all derivatives\n"
+"of indexed objects replaced by the noun form of the @code{idiff} function. Its\n"
+"arguments would yield that indexed object if the differentiation were\n"
+"carried out.  This is useful when it is desired to replace a\n"
+"differentiated indexed object with some function definition resulting\n"
+"in @var{expr} and then carry out the differentiation by saying\n"
+"@code{ev(@var{expr}, idiff)}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{evundiff}\n"
+"@deffn {Function} evundiff (@var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Equivalent to the execution of @code{undiff}, followed by @code{ev} and\n"
+"@code{rediff}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The point of this operation is to easily evalute expressions that cannot\n"
+"be directly evaluated in derivative form. For instance, the following\n"
+"causes an error:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) icurvature([i,j,k],[l],m);\n"
+"Maxima encountered a Lisp error:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+" Error in $ICURVATURE [or a callee]:\n"
+" $ICURVATURE [or a callee] requires less than three arguments.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Automatically continuing.\n"
+"To reenable the Lisp debugger set *debugger-hook* to nil.\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"However, if @code{icurvature} is entered in noun form, it can be evaluated\n"
+"using @code{evundiff}:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i3) ishow('icurvature([i,j,k],[l],m))$\n"
+"                                         l\n"
+"(%t3)                          icurvature\n"
+"                                         i j k,m\n"
+"(%i4) ishow(evundiff(%))$\n"
+"             l              l         %1           l           %1\n"
+"(%t4) - ichr2        - ichr2     ichr2      - ichr2       ichr2\n"
+"             i k,j m        %1 j      i k,m        %1 j,m      i k\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"             l              l         %1           l           %1\n"
+"      + ichr2        + ichr2     ichr2      + ichr2       ichr2\n"
+"             i j,k m        %1 k      i j,m        %1 k,m      i j\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Note: In earlier versions of Maxima, derivative forms of the\n"
+"Christoffel-symbols also could not be evaluated. This has been fixed now,\n"
+"so @code{evundiff} is no longer necessary for expressions like this:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i5) imetric(g);\n"
+"(%o5)                                done\n"
+"(%i6) ishow(ichr2([i,j],[k],l))$\n"
+"       k %3\n"
+"      g     (g         - g         + g        )\n"
+"              j %3,i l    i j,%3 l    i %3,j l\n"
+"(%t6) -----------------------------------------\n"
+"                          2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                         k %3\n"
+"                        g     (g       - g       + g      )\n"
+"                         ,l     j %3,i    i j,%3    i %3,j\n"
+"                      + -----------------------------------\n"
+"                                         2\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{flush}\n"
+"@deffn {Function} flush (@var{expr}, @var{tensor_1}, @var{tensor_2}, ...)\n"
+"Set to zero, in\n"
+"@var{expr}, all occurrences of the @var{tensor_i} that have no derivative indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{flushd}\n"
+"@deffn {Function} flushd (@var{expr}, @var{tensor_1}, @var{tensor_2}, ...)\n"
+"Set to zero, in\n"
+"@var{expr}, all occurrences of the @var{tensor_i} that have derivative indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{flushnd}\n"
+"@deffn {Function} flushnd (@var{expr}, @var{tensor}, @var{n})\n"
+"Set to zero, in @var{expr}, all\n"
+"occurrences of the differentiated object @var{tensor} that have @var{n} or more\n"
+"derivative indices as the following example demonstrates.\n"
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) ishow(a([i],[J,r],k,r)+a([i],[j,r,s],k,r,s))$\n"
+"                                J r      j r s\n"
+"(%t2)                          a      + a\n"
+"                                i,k r    i,k r s\n"
+"(%i3) ishow(flushnd(%,a,3))$\n"
+"                                     J r\n"
+"(%t3)                               a\n"
+"                                     i,k r\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{coord}\n"
+"@deffn {Function} coord (@var{tensor_1}, @var{tensor_2}, ...)\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Gives @var{tensor_i} the coordinate differentiation property that the\n"
+"derivative of contravariant vector whose name is one of the\n"
+"@var{tensor_i} yields a Kronecker delta. For example, if @code{coord(x)} has\n"
+"been done then @code{idiff(x([],[i]),j)} gives @code{kdelta([i],[j])}.\n"
+"@code{coord} is a list of all indexed objects having this property.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{remcoord}\n"
+"@deffn {Function} remcoord @\n"
+"@fname{remcoord} (@var{tensor_1}, @var{tensor_2}, ...) @\n"
+"@fname{remcoord} (all)\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Removes the coordinate differentiation property from the @code{tensor_i}\n"
+"that was established by the function @code{coord}.  @code{remcoord(all)}\n"
+"removes this property from all indexed objects.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{makebox}\n"
+"@deffn {Function} makebox (@var{expr})\n"
+"Display @var{expr} in the same manner as @code{show}; however,\n"
+"any tensor d'Alembertian occurring in @var{expr} will be indicated using the\n"
+"symbol @code{[]}.  For example, @code{[]p([m],[n])} represents\n"
+"@code{g([],[i,j])*p([m],[n],i,j)}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{conmetderiv}\n"
+"@deffn {Function} conmetderiv (@var{expr}, @var{tensor})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Simplifies expressions containing ordinary derivatives of\n"
+"both covariant and con@-tra@-va@-ri@-ant forms of the metric tensor (the\n"
+"current restriction).  For example, @code{conmetderiv} can relate the\n"
+"derivative of the contravariant metric tensor with the Christoffel\n"
+"symbols as seen from the following:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) ishow(g([],[a,b],c))$\n"
+"                                      a b\n"
+"(%t2)                                g\n"
+"                                      ,c\n"
+"(%i3) ishow(conmetderiv(%,g))$\n"
+"                         %1 b      a       %1 a      b\n"
+"(%t3)                 - g     ichr2     - g     ichr2\n"
+"                                   %1 c              %1 c\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{simpmetderiv}\n"
+"@deffn {Function} simpmetderiv @\n"
+"@fname{simpmetderiv} (@var{expr}) @\n"
+"@fname{simpmetderiv} (@var{expr}[, @var{stop}])\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Simplifies expressions containing products of the derivatives of the\n"
+"metric tensor. Specifically, @code{simpmetderiv} recognizes two identities:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"   ab        ab           ab                 a\n"
+"  g   g   + g   g     = (g   g  )   = (kdelta )   = 0\n"
+"   ,d  bc        bc,d         bc ,d          c ,d\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"hence\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"   ab          ab\n"
+"  g   g   = - g   g\n"
+"   ,d  bc          bc,d\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"and\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"  ab          ab\n"
+" g   g     = g   g\n"
+"  ,j  ab,i    ,i  ab,j\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"which follows from the symmetries of the Christoffel symbols.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{simpmetderiv} function takes one optional parameter which, when\n"
+"present, causes the function to stop after the first successful\n"
+"substitution in a product expression. The @code{simpmetderiv} function\n"
+"also makes use of the global variable @var{flipflag} which determines\n"
+"how to apply a ``canonical'' ordering to the product indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Put together, these capabilities can be used to achieve powerful\n"
+"simplifications that are difficult or impossible to accomplish otherwise.\n"
+"This is demonstrated through the following example that explicitly uses the\n"
+"partial simplification features of @code{simpmetderiv} to obtain a\n"
+"contractible expression:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) imetric(g);\n"
+"(%o2)                                done\n"
+"(%i3) ishow(g([],[a,b])*g([],[b,c])*g([a,b],[],d)*g([b,c],[],e))$\n"
+"                             a b  b c\n"
+"(%t3)                       g    g    g      g\n"
+"                                       a b,d  b c,e\n"
+"(%i4) ishow(canform(%))$\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"errexp1 has improper indices\n"
+" -- an error.  Quitting.  To debug this try debugmode(true);\n"
+"(%i5) ishow(simpmetderiv(%))$\n"
+"                             a b  b c\n"
+"(%t5)                       g    g    g      g\n"
+"                                       a b,d  b c,e\n"
+"(%i6) flipflag:not flipflag;\n"
+"(%o6)                                true\n"
+"(%i7) ishow(simpmetderiv(%th(2)))$\n"
+"                               a b  b c\n"
+"(%t7)                         g    g    g    g\n"
+"                               ,d   ,e   a b  b c\n"
+"(%i8) flipflag:not flipflag;\n"
+"(%o8)                                false\n"
+"(%i9) ishow(simpmetderiv(%th(2),stop))$\n"
+"                               a b  b c\n"
+"(%t9)                       - g    g    g      g\n"
+"                                    ,e   a b,d  b c\n"
+"(%i10) ishow(contract(%))$\n"
+"                                    b c\n"
+"(%t10)                           - g    g\n"
+"                                    ,e   c b,d\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"See also @code{weyl.dem} for an example that uses @mref{simpmetderiv}\n"
+"and @mref{conmetderiv} together to simplify contractions of the Weyl tensor.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------}\n"
+"@anchor{flush1deriv}\n"
+"@deffn {Function} flush1deriv (@var{expr}, @var{tensor})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Set to zero, in @code{expr}, all occurrences of @code{tensor} that have\n"
+"exactly one derivative index.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Tensors in curved spaces\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{imetric}\n"
+"@deffn {Function} imetric (@var{g})\n"
+"@deffnx {System variable} imetric\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Specifies the metric by assigning the variable @code{imetric:@var{g}} in\n"
+"addition, the con@-trac@-tion properties of the metric @var{g} are set up by\n"
+"executing the commands @code{defcon(@var{g}), defcon(@var{g}, @var{g}, kdelta)}.\n"
+"The variable @code{imetric} (unbound by default), is bound to the metric, assigned by\n"
+"the @code{imetric(@var{g})} command.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{idim}\n"
+"@deffn {Function} idim (@var{n})\n"
+"Sets the dimensions of the metric. Also initializes the antisymmetry\n"
+"properties of the Levi-Civita symbols for the given dimension.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ichr1}\n"
+"@deffn {Function} ichr1 ([@var{i}, @var{j}, @var{k}])\n"
+"Yields the Christoffel symbol of the first kind via the\n"
+"definition\n"
+"@example\n"
+"       (g      + g      - g     )/2 .\n"
+"         ik,j     jk,i     ij,k\n"
+"@end example\n"
+"@noindent\n"
+"To evaluate the Christoffel symbols for a particular metric, the\n"
+"variable @code{imetric} must be assigned a name as in the example under @code{chr2}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ichr2}\n"
+"@deffn {Function} ichr2 ([@var{i}, @var{j}], [@var{k}])\n"
+"Yields the Christoffel symbol of the second kind\n"
+"defined by the relation\n"
+"@example\n"
+"                       ks\n"
+"   ichr2([i,j],[k]) = g    (g      + g      - g     )/2\n"
+"                             is,j     js,i     ij,s\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{icurvature}\n"
+"@deffn {Function} icurvature ([@var{i}, @var{j}, @var{k}], [@var{h}])\n"
+"Yields the Riemann\n"
+"curvature tensor in terms of the Christoffel symbols of the second\n"
+"kind (@code{ichr2}).  The following notation is used:\n"
+"@example\n"
+"            h             h            h         %1         h\n"
+"  icurvature     = - ichr2      - ichr2     ichr2    + ichr2\n"
+"            i j k         i k,j        %1 j      i k        i j,k\n"
+"                            h          %1\n"
+"                     + ichr2      ichr2\n"
+"                            %1 k       i j\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{covdiff}\n"
+"@deffn {Function} covdiff (@var{expr}, @var{v_1}, @var{v_2}, ...)\n"
+"Yields the covariant derivative of @var{expr} with\n"
+"respect to the variables @var{v_i} in terms of the Christoffel symbols of the\n"
+"second kind (@code{ichr2}).  In order to evaluate these, one should use\n"
+"@code{ev(@var{expr},ichr2)}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) entertensor()$\n"
+"Enter tensor name: a;\n"
+"Enter a list of the covariant indices: [i,j];\n"
+"Enter a list of the contravariant indices: [k];\n"
+"Enter a list of the derivative indices: [];\n"
+"                                      k\n"
+"(%t2)                                a\n"
+"                                      i j\n"
+"(%i3) ishow(covdiff(%,s))$\n"
+"             k         %1     k         %1     k\n"
+"(%t3)     - a     ichr2    - a     ichr2    + a\n"
+"             i %1      j s    %1 j      i s    i j,s\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"             k     %1\n"
+"      + ichr2     a\n"
+"             %1 s  i j\n"
+"(%i4) imetric:g;\n"
+"(%o4)                                  g\n"
+"(%i5) ishow(ev(%th(2),ichr2))$\n"
+"         %1 %4  k\n"
+"        g      a     (g       - g       + g      )\n"
+"                i %1   s %4,j    j s,%4    j %4,s\n"
+"(%t5) - ------------------------------------------\n"
+"                            2\n"
+"@group\n"
+"    %1 %3  k\n"
+"   g      a     (g       - g       + g      )\n"
+"           %1 j   s %3,i    i s,%3    i %3,s\n"
+" - ------------------------------------------\n"
+"                       2\n"
+"    k %2  %1\n"
+"   g     a    (g        - g        + g       )\n"
+"          i j   s %2,%1    %1 s,%2    %1 %2,s     k\n"
+" + ------------------------------------------- + a\n"
+"                        2                         i j,s\n"
+"@end group\n"
+"(%i6)\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lorentz}\n"
+"@deffn {Function} lorentz_gauge (@var{expr})\n"
+"Imposes the Lorentz condition by substituting 0 for all\n"
+"indexed objects in @var{expr} that have a derivative index identical to a\n"
+"contravariant index.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{igeodesic}\n"
+"@deffn {Function} igeodesic_coords (@var{expr}, @var{name})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Causes undifferentiated Christoffel symbols and\n"
+"first derivatives of the metric tensor vanish in @var{expr}. The @var{name}\n"
+"in the @code{igeodesic_coords} function refers to the metric @var{name}\n"
+"(if it appears in @var{expr}) while the connection coefficients must be\n"
+"called with the names @code{ichr1} and/or @code{ichr2}. The following example\n"
+"demonstrates the verification of the cyclic identity satisfied by the Riemann\n"
+"curvature tensor using the @code{igeodesic_coords} function.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) ishow(icurvature([r,s,t],[u]))$\n"
+"             u            u         %1         u     \n"
+"(%t2) - ichr2      - ichr2     ichr2    + ichr2      \n"
+"             r t,s        %1 s      r t        r s,t \n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                                              u         %1\n"
+"                                       + ichr2     ichr2\n"
+"                                              %1 t      r s\n"
+"(%i3) ishow(igeodesic_coords(%,ichr2))$\n"
+"                                 u            u\n"
+"(%t3)                       ichr2      - ichr2\n"
+"                                 r s,t        r t,s\n"
+"(%i4) ishow(igeodesic_coords(icurvature([r,s,t],[u]),ichr2)+\n"
+"            igeodesic_coords(icurvature([s,t,r],[u]),ichr2)+\n"
+"            igeodesic_coords(icurvature([t,r,s],[u]),ichr2))$\n"
+"             u            u            u            u\n"
+"(%t4) - ichr2      + ichr2      + ichr2      - ichr2\n"
+"             t s,r        t r,s        s t,r        s r,t\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                                             u            u\n"
+"                                      - ichr2      + ichr2\n"
+"                                             r t,s        r s,t\n"
+"(%i5) canform(%);\n"
+"(%o5)                                  0\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Moving frames\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Maxima now has the ability to perform calculations using moving frames.\n"
+"These can be orthonormal frames (tetrads, vielbeins) or an arbitrary frame.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"To use frames, you must first set @code{iframe_flag} to @code{true}. This\n"
+"causes the Christoffel-symbols, @code{ichr1} and @code{ichr2}, to be replaced\n"
+"by the more general frame connection coefficients @code{icc1} and @code{icc2}\n"
+"in calculations. Speficially, the behavior of @code{covdiff} and\n"
+"@code{icurvature} is changed.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The frame is defined by two tensors: the inverse frame field (@code{ifri},\n"
+"the dual basis tetrad),\n"
+"and the frame metric @code{ifg}. The frame metric is the identity matrix for\n"
+"orthonormal frames, or the Lorentz metric for orthonormal frames in Minkowski\n"
+"spacetime. The inverse frame field defines the frame base (unit vectors).\n"
+"Contraction properties are defined for the frame field and the frame metric.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"When @code{iframe_flag} is true, many @code{itensor} expressions use the frame\n"
+"metric @code{ifg} instead of the metric defined by @code{imetric} for\n"
+"raising and lowerind indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"IMPORTANT: Setting the variable @code{iframe_flag} to @code{true} does NOT\n"
+"undefine the contraction properties of a metric defined by a call to\n"
+"@code{defcon} or @code{imetric}. If a frame field is used, it is best to\n"
+"define the metric by assigning its name to the variable @code{imetric}\n"
+"and NOT invoke the @code{imetric} function.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Maxima uses these two tensors to define the frame coefficients (@code{ifc1}\n"
+"and @code{ifc2}) which form part of the connection coefficients (@code{icc1}\n"
+"and @code{icc2}), as the following example demonstrates:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) iframe_flag:true;\n"
+"(%o2)                                true\n"
+"(%i3) ishow(covdiff(v([],[i]),j))$\n"
+"                               i        i     %1\n"
+"(%t3)                         v   + icc2     v\n"
+"                               ,j       %1 j\n"
+"(%i4) ishow(ev(%,icc2))$\n"
+"                               %1     i       i\n"
+"(%t4)                         v   ifc2     + v\n"
+"                                      %1 j    ,j\n"
+"(%i5) ishow(ev(%,ifc2))$\n"
+"                          %1    i %2                i\n"
+"(%t5)                    v   ifg     ifc1        + v\n"
+"                                         %1 j %2    ,j\n"
+"(%i6) ishow(ev(%,ifc1))$\n"
+"@group\n"
+"            %1    i %2\n"
+"           v   ifg     (ifb        - ifb        + ifb       )\n"
+"                           j %2 %1      %2 %1 j      %1 j %2     i\n"
+"(%t6)      -------------------------------------------------- + v\n"
+"                                   2                             ,j\n"
+"@end group\n"
+"(%i7) ishow(ifb([a,b,c]))$\n"
+"                                                   %3    %4\n"
+"(%t7)               (ifri        - ifri       ) ifr   ifr\n"
+"                         a %3,%4       a %4,%3     b     c\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"An alternate method is used to compute the frame bracket (@code{ifb}) if\n"
+"the @code{iframe_bracket_form} flag is set to @code{false}:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i8) block([iframe_bracket_form:false],ishow(ifb([a,b,c])))$\n"
+"                                %6    %5        %5      %6\n"
+"(%t8)              ifri     (ifr   ifr     - ifr     ifr  )\n"
+"                       a %5     b     c,%6      b,%6    c\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------}\n"
+"@anchor{iframes}\n"
+"@deffn {Function} iframes ()\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Since in this version of Maxima, contraction identities for @code{ifr} and\n"
+"@code{ifri} are always defined, as is the frame bracket (@code{ifb}), this\n"
+"function does nothing.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ifb}\n"
+"@defvr {Variable} ifb\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The frame bracket. The contribution of the frame metric to the connection\n"
+"coefficients is expressed using the frame bracket:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"          - ifb      + ifb      + ifb\n"
+"               c a b      b c a      a b c\n"
+"ifc1    = --------------------------------\n"
+"    abc                  2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The frame bracket itself is defined in terms of the frame field and frame\n"
+"metric. Two alternate methods of computation are used depending on the\n"
+"value of @code{frame_bracket_form}. If true (the default) or if the\n"
+"@code{itorsion_flag} is @code{true}:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"          d      e                                      f\n"
+"ifb =  ifr    ifr   (ifri      - ifri      - ifri    itr   )\n"
+"   abc    b      c       a d,e       a e,d       a f    d e\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Otherwise:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"             e      d        d      e\n"
+"ifb    = (ifr    ifr    - ifr    ifr   ) ifri\n"
+"   abc       b      c,e      b,e    c        a d\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{icc1}\n"
+"@defvr {Variable} icc1\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Connection coefficients of the first kind. In @code{itensor}, defined as\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"icc1    = ichr1    - ikt1    - inmc1\n"
+"    abc        abc       abc        abc\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"In this expression, if @code{iframe_flag} is true, the Christoffel-symbol\n"
+"@code{ichr1} is replaced with the frame connection coefficient @code{ifc1}.\n"
+"If @code{itorsion_flag} is @code{false}, @code{ikt1}\n"
+"will be omitted. It is also omitted if a frame base is used, as the\n"
+"torsion is already calculated as part of the frame bracket.\n"
+"Lastly, of @code{inonmet_flag} is @code{false},\n"
+"@code{inmc1} will not be present.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{icc2}\n"
+"@defvr {Variable} icc2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Connection coefficients of the second kind. In @code{itensor}, defined as\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"    c         c        c         c\n"
+"icc2   = ichr2   - ikt2   - inmc2\n"
+"    ab        ab       ab        ab\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"In this expression, if @code{iframe_flag} is true, the Christoffel-symbol\n"
+"@code{ichr2} is replaced with the frame connection coefficient @code{ifc2}.\n"
+"If @code{itorsion_flag} is @code{false}, @code{ikt2}\n"
+"will be omitted. It is also omitted if a frame base is used, as the\n"
+"torsion is already calculated as part of the frame bracket.\n"
+"Lastly, of @code{inonmet_flag} is @code{false},\n"
+"@code{inmc2} will not be present.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ifc1}\n"
+"@defvr {Variable} ifc1\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Frame coefficient of the first kind (also known as Ricci-rotation\n"
+"coefficients.) This tensor represents the contribution\n"
+"of the frame metric to the connection coefficient of the first kind. Defined\n"
+"as:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"          - ifb      + ifb      + ifb\n"
+"               c a b      b c a      a b c\n"
+"ifc1    = --------------------------------\n"
+"    abc                   2\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ifc2}\n"
+"@defvr {Variable} ifc2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Frame coefficient of the second kind. This tensor represents the contribution\n"
+"of the frame metric to the connection coefficient of the second kind. Defined\n"
+"as a permutation of the frame bracket (@code{ifb}) with the appropriate\n"
+"indices raised and lowered as necessary:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"    c       cd\n"
+"ifc2   = ifg   ifc1\n"
+"    ab             abd\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ifr}\n"
+"@defvr {Variable} ifr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The frame field. Contracts with the inverse frame field (@code{ifri}) to\n"
+"form the frame metric (@code{ifg}).\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ifri}\n"
+"@defvr {Variable} ifri\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The inverse frame field. Specifies the frame base (dual basis vectors). Along\n"
+"with the frame metric, it forms the basis of all calculations based on\n"
+"frames.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ifg}\n"
+"@defvr {Variable} ifg\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The frame metric. Defaults to @code{kdelta}, but can be changed using\n"
+"@code{components}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ifgi}\n"
+"@defvr {Variable} ifgi\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The inverse frame metric. Contracts with the frame metric (@code{ifg})\n"
+"to @code{kdelta}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{iframe_bracket_form}\n"
+"@defvr {Option variable} iframe_bracket_form\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Specifies how the frame bracket (@code{ifb}) is computed.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Torsion and nonmetricity\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Maxima can now take into account torsion and nonmetricity. When the flag\n"
+"@code{itorsion_flag} is set to @code{true}, the contribution of torsion\n"
+"is added to the connection coefficients. Similarly, when the flag\n"
+"@code{inonmet_flag} is true, nonmetricity components are included.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{inm}\n"
+"@defvr {Variable} inm\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The nonmetricity vector. Conformal nonmetricity is defined through the\n"
+"covariant derivative of the metric tensor. Normally zero, the metric\n"
+"tensor's covariant derivative will evaluate to the following when\n"
+"@code{inonmet_flag} is set to @code{true}:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"g     =- g  inm\n"
+" ij;k     ij   k\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{inmc1}\n"
+"@defvr {Variable} inmc1\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Covariant permutation of the nonmetricity vector components. Defined as\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"           g   inm  - inm  g   - g   inm\n"
+"            ab    c      a  bc    ac    b\n"
+"inmc1    = ------------------------------\n"
+"     abc                 2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(Substitute @code{ifg} in place of @code{g} if a frame metric is used.)\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{inmc2}\n"
+"@defvr {Variable} inmc2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Contravariant permutation of the nonmetricity vector components. Used\n"
+"in the connection coefficients if @code{inonmet_flag} is @code{true}. Defined\n"
+"as:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                      c         c         cd\n"
+"          -inm  kdelta  - kdelta  inm  + g   inm  g\n"
+"     c        a       b         a    b          d  ab\n"
+"inmc2   = -------------------------------------------\n"
+"     ab                        2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(Substitute @code{ifg} in place of @code{g} if a frame metric is used.)\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ikt1}\n"
+"@defvr {Variable} ikt1\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Covariant permutation of the torsion tensor (also known as contorsion).\n"
+"Defined as:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                  d           d       d\n"
+"          -g   itr  - g    itr   - itr   g\n"
+"            ad    cb    bd    ca      ab  cd\n"
+"ikt1    = ----------------------------------\n"
+"    abc                   2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(Substitute @code{ifg} in place of @code{g} if a frame metric is used.)\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ikt2}\n"
+"@defvr {Variable} ikt2\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Contravariant permutation of the torsion tensor (also known as contorsion).\n"
+"Defined as:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"    c     cd\n"
+"ikt2   = g   ikt1\n"
+"    ab           abd\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(Substitute @code{ifg} in place of @code{g} if a frame metric is used.)\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{itr}\n"
+"@defvr {Variable} itr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The torsion tensor. For a metric with torsion, repeated covariant\n"
+"differentiation on a scalar function will not commute, as demonstrated\n"
+"by the following example:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) imetric:g;\n"
+"(%o2)                                  g\n"
+"(%i3) covdiff( covdiff( f( [], []), i), j)\n"
+"                      - covdiff( covdiff( f( [], []), j), i)$\n"
+"(%i4) ishow(%)$\n"
+"                                   %4              %2\n"
+"(%t4)                    f    ichr2    - f    ichr2\n"
+"                          ,%4      j i    ,%2      i j\n"
+"(%i5) canform(%);\n"
+"(%o5)                                  0\n"
+"(%i6) itorsion_flag:true;\n"
+"(%o6)                                true\n"
+"(%i7) covdiff( covdiff( f( [], []), i), j)\n"
+"                      - covdiff( covdiff( f( [], []), j), i)$\n"
+"(%i8) ishow(%)$\n"
+"                           %8             %6\n"
+"(%t8)             f    icc2    - f    icc2    - f     + f\n"
+"                   ,%8     j i    ,%6     i j    ,j i    ,i j\n"
+"(%i9) ishow(canform(%))$\n"
+"                                   %1             %1\n"
+"(%t9)                     f    icc2    - f    icc2\n"
+"                           ,%1     j i    ,%1     i j\n"
+"(%i10) ishow(canform(ev(%,icc2)))$\n"
+"                                   %1             %1\n"
+"(%t10)                    f    ikt2    - f    ikt2\n"
+"                           ,%1     i j    ,%1     j i\n"
+"(%i11) ishow(canform(ev(%,ikt2)))$\n"
+"                      %2 %1                    %2 %1\n"
+"(%t11)          f    g      ikt1       - f    g      ikt1\n"
+"                 ,%2            i j %1    ,%2            j i %1\n"
+"(%i12) ishow(factor(canform(rename(expand(ev(%,ikt1))))))$\n"
+"                           %3 %2            %1       %1\n"
+"                     f    g      g      (itr    - itr   )\n"
+"                      ,%3         %2 %1     j i      i j\n"
+"(%t12)               ------------------------------------\n"
+"                                      2\n"
+"(%i13) decsym(itr,2,1,[anti(all)],[]);\n"
+"(%o13)                               done\n"
+"(%i14) defcon(g,g,kdelta);\n"
+"(%o14)                               done\n"
+"(%i15) subst(g,nounify(g),%th(3))$\n"
+"(%i16) ishow(canform(contract(%)))$\n"
+"                                           %1\n"
+"(%t16)                           - f    itr\n"
+"                                    ,%1    i j\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Exterior algebra\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{itensor} package can perform operations on totally antisymmetric\n"
+"covariant tensor fields. A totally antisymmetric tensor field of rank\n"
+"(0,L) corresponds with a differential L-form. On these objects, a\n"
+"multiplication operation known as the exterior product, or wedge product,\n"
+"is defined.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Unfortunately, not all authors agree on the definition of the wedge\n"
+"product. Some authors prefer a definition that corresponds with the\n"
+"notion of antisymmetrization: in these works, the wedge product of\n"
+"two vector fields, for instance, would be defined as\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"            a a  - a a\n"
+"             i j    j i\n"
+" a  /\ a  = -----------\n"
+"  i     j        2\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"More generally, the product of a p-form and a q-form would be defined as\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"                       1     k1..kp l1..lq\n"
+"A       /\ B       = ------ D              A       B\n"
+" i1..ip     j1..jq   (p+q)!  i1..ip j1..jq  k1..kp  l1..lq\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"where @code{D} stands for the Kronecker-delta.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Other authors, however, prefer a ``geometric'' definition that corresponds\n"
+"with the notion of the volume element:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"a  /\ a  = a a  - a a\n"
+" i     j    i j    j i\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"and, in the general case\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"                       1    k1..kp l1..lq\n"
+"A       /\ B       = ----- D              A       B\n"
+" i1..ip     j1..jq   p! q!  i1..ip j1..jq  k1..kp  l1..lq\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Since @code{itensor} is a tensor algebra package, the first of these two\n"
+"definitions appears to be the more natural one. Many applications, however,\n"
+"utilize the second definition. To resolve this dilemma, a flag has been\n"
+"implemented that controls the behavior of the wedge product: if\n"
+"@code{igeowedge_flag} is @code{false} (the default), the first, \"tensorial\"\n"
+"definition is used, otherwise the second, \"geometric\" definition will\n"
+"be applied.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@anchor{~}\n"
+"@defvr {Operator} ~\n"
+"@ifinfo\n"
+"@fnindex Wedge product\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The wedge product operator is denoted by the tilde @code{~}. This is\n"
+"a binary operator. Its arguments should be expressions involving scalars,\n"
+"covariant tensors of rank one, or covariant tensors of rank @code{l} that\n"
+"have been declared antisymmetric in all covariant indices.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The behavior of the wedge product operator is controlled by the\n"
+"@code{igeowedge_flag} flag, as in the following example:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) ishow(a([i])~b([j]))$\n"
+"                                 a  b  - b  a\n"
+"                                  i  j    i  j\n"
+"(%t2)                            -------------\n"
+"                                       2\n"
+"(%i3) decsym(a,2,0,[anti(all)],[]);\n"
+"(%o3)                                done\n"
+"(%i4) ishow(a([i,j])~b([k]))$\n"
+"                          a    b  + b  a    - a    b\n"
+"                           i j  k    i  j k    i k  j\n"
+"(%t4)                     ---------------------------\n"
+"                                       3\n"
+"(%i5) igeowedge_flag:true;\n"
+"(%o5)                                true\n"
+"(%i6) ishow(a([i])~b([j]))$\n"
+"(%t6)                            a  b  - b  a\n"
+"                                  i  j    i  j\n"
+"(%i7) ishow(a([i,j])~b([k]))$\n"
+"(%t7)                     a    b  + b  a    - a    b\n"
+"                           i j  k    i  j k    i k  j\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor} @category{Operators}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{|}\n"
+"@defvr {Operator} |\n"
+"@ifinfo\n"
+"@fnindex Contraction with a vector\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The vertical bar @code{|} denotes the \"contraction with a vector\" binary\n"
+"operation. When a totally antisymmetric covariant tensor is contracted\n"
+"with a contravariant vector, the result is the same regardless which index\n"
+"was used for the contraction. Thus, it is possible to define the\n"
+"contraction operation in an index-free manner.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"In the @code{itensor} package, contraction with a vector is always carried out\n"
+"with respect to the first index in the literal sorting order. This ensures\n"
+"better simplification of expressions involving the @code{|} operator. For instance:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) decsym(a,2,0,[anti(all)],[]);\n"
+"(%o2)                                done\n"
+"(%i3) ishow(a([i,j],[])|v)$\n"
+"                                    %1\n"
+"(%t3)                              v   a\n"
+"                                        %1 j\n"
+"(%i4) ishow(a([j,i],[])|v)$\n"
+"                                     %1\n"
+"(%t4)                             - v   a\n"
+"                                         %1 j\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Note that it is essential that the tensors used with the @code{|} operator be\n"
+"declared totally antisymmetric in their covariant indices. Otherwise,\n"
+"the results will be incorrect.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor} @category{Operators}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{extdiff}\n"
+"@deffn {Function} extdiff (@var{expr}, @var{i})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Computes the exterior derivative of @var{expr} with respect to the index\n"
+"@var{i}. The exterior derivative is formally defined as the wedge\n"
+"product of the partial derivative operator and a differential form. As\n"
+"such, this operation is also controlled by the setting of @code{igeowedge_flag}.\n"
+"For instance:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) ishow(extdiff(v([i]),j))$\n"
+"                                  v    - v\n"
+"                                   j,i    i,j\n"
+"(%t2)                             -----------\n"
+"                                       2\n"
+"(%i3) decsym(a,2,0,[anti(all)],[]);\n"
+"(%o3)                                done\n"
+"(%i4) ishow(extdiff(a([i,j]),k))$\n"
+"                           a      - a      + a\n"
+"                            j k,i    i k,j    i j,k\n"
+"(%t4)                      ------------------------\n"
+"                                      3\n"
+"(%i5) igeowedge_flag:true;\n"
+"(%o5)                                true\n"
+"(%i6) ishow(extdiff(v([i]),j))$\n"
+"(%t6)                             v    - v\n"
+"                                   j,i    i,j\n"
+"(%i7) ishow(extdiff(a([i,j]),k))$\n"
+"(%t7)                    - (a      - a      + a     )\n"
+"                             k j,i    k i,j    j i,k\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{hodge}\n"
+"@deffn {Function} hodge (@var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Compute the Hodge-dual of @var{expr}. For instance:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) imetric(g);\n"
+"(%o2)                            done\n"
+"(%i3) idim(4);\n"
+"(%o3)                            done\n"
+"(%i4) icounter:100;\n"
+"(%o4)                             100\n"
+"(%i5) decsym(A,3,0,[anti(all)],[])$\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i6) ishow(A([i,j,k],[]))$\n"
+"(%t6)                           A\n"
+"                                 i j k\n"
+"(%i7) ishow(canform(hodge(%)))$\n"
+"                          %1 %2 %3 %4\n"
+"               levi_civita            g        A\n"
+"                                       %1 %102  %2 %3 %4\n"
+"(%t7)          -----------------------------------------\n"
+"                                   6\n"
+"(%i8) ishow(canform(hodge(%)))$\n"
+"                 %1 %2 %3 %8            %4 %5 %6 %7\n"
+"(%t8) levi_civita            levi_civita            g       \n"
+"                                                     %1 %106\n"
+"                             g        g        g      A         /6\n"
+"                              %2 %107  %3 %108  %4 %8  %5 %6 %7\n"
+"(%i9) lc2kdt(%)$\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i10) %,kdelta$\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"(%i11) ishow(canform(contract(expand(%))))$\n"
+"(%t11)                     - A\n"
+"                              %106 %107 %108\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{igeowedge_flag}\n"
+"@defvr {Option variable} igeowedge_flag\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Controls the behavior of the wedge product and exterior derivative. When\n"
+"set to @code{false} (the default), the notion of differential forms will\n"
+"correspond with that of a totally antisymmetric covariant tensor field.\n"
+"When set to @code{true}, differential forms will agree with the notion\n"
+"of the volume element.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Exporting TeX expressions\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{itensor} package provides limited support for exporting tensor\n"
+"expressions to TeX. Since @code{itensor} expressions appear as function calls,\n"
+"the regular Maxima @code{tex} command will not produce the expected\n"
+"output. You can try instead the @code{tentex} command, which attempts\n"
+"to translate tensor expressions into appropriately indexed TeX objects.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{tentex}\n"
+"@deffn {Function} tentex (@var{expr})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"To use the @code{tentex} function, you must first load @code{tentex},\n"
+"as in the following example:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) load(tentex);\n"
+"(%o2)       /share/tensor/tentex.lisp\n"
+"(%i3) idummyx:m;\n"
+"(%o3)                                  m\n"
+"(%i4) ishow(icurvature([j,k,l],[i]))$\n"
+"            m1       i           m1       i           i\n"
+"(%t4)  ichr2    ichr2     - ichr2    ichr2     - ichr2\n"
+"            j k      m1 l        j l      m1 k        j l,k\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"                                                      i\n"
+"                                               + ichr2\n"
+"                                                      j k,l\n"
+"(%i5) tentex(%)$\n"
+"$$\Gamma_@{j\,k@}^@{m_1@}\,\Gamma_@{l\,m_1@}^@{i@}-\Gamma_@{j\,l@}^@{m_1@}\,\n"
+" \Gamma_@{k\,m_1@}^@{i@}-\Gamma_@{j\,l,k@}^@{i@}+\Gamma_@{j\,k,l@}^@{i@}$$\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Note the use of the @code{idummyx} assignment, to avoid the appearance\n"
+"of the percent sign in the TeX expression, which may lead to compile errors.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"NB: This version of the @code{tentex} function is somewhat experimental.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor} @category{TeX output}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Interfacing with ctensor\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The @code{itensor} package has the ability to generate Maxima code that can\n"
+"then be executed in the context of the @code{ctensor} package. The function that performs\n"
+"this task is @code{ic_convert}.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ic_convert}\n"
+"@deffn {Function} ic_convert (@var{eqn})\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"Converts the @code{itensor} equation @var{eqn} to a @code{ctensor} assignment statement.\n"
+"Implied sums over dummy indices are made explicit while indexed\n"
+"objects are transformed into arrays (the array subscripts are in the\n"
+"order of covariant followed by contravariant indices of the indexed\n"
+"objects). The derivative of an indexed object will be replaced by the\n"
+"noun form of @code{diff} taken with respect to @code{ct_coords} subscripted\n"
+"by the derivative index. The Christoffel symbols @code{ichr1} and @code{ichr2}\n"
+"will be translated to @code{lcs} and @code{mcs}, respectively and if\n"
+"@code{metricconvert} is @code{true} then all occurrences of the metric\n"
+"with two covariant (contravariant) indices will be renamed to @code{lg}\n"
+"(@code{ug}). In addition, @code{do} loops will be introduced summing over\n"
+"all free indices so that the\n"
+"transformed assignment statement can be evaluated by just doing\n"
+"@code{ev}. The following examples demonstrate the features of this\n"
+"function.\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@example\n"
+"(%i1) load(itensor);\n"
+"(%o1)      /share/tensor/itensor.lisp\n"
+"(%i2) eqn:ishow(t([i,j],[k])=f([],[])*g([l,m],[])*a([],[m],j)\n"
+"      *b([i],[l,k]))$\n"
+"                             k        m   l k\n"
+"(%t2)                       t    = f a   b    g\n"
+"                             i j      ,j  i    l m\n"
+"(%i3) ic_convert(eqn);\n"
+"(%o3) for i thru dim do (for j thru dim do (\n"
+"       for k thru dim do\n"
+"        t        : f sum(sum(diff(a , ct_coords ) b\n"
+"         i, j, k                   m           j   i, l, k\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+" g    , l, 1, dim), m, 1, dim)))\n"
+"  l, m\n"
+"(%i4) imetric(g);\n"
+"(%o4)                                done\n"
+"(%i5) metricconvert:true;\n"
+"(%o5)                                true\n"
+"(%i6) ic_convert(eqn);\n"
+"(%o6) for i thru dim do (for j thru dim do (\n"
+"       for k thru dim do\n"
+"        t        : f sum(sum(diff(a , ct_coords ) b\n"
+"         i, j, k                   m           j   i, l, k\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+" lg    , l, 1, dim), m, 1, dim)))\n"
+"   l, m\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package itensor} @category{Package ctensor}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@subsection Reserved words\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"The following Maxima words are used by the @code{itensor} package internally and\n"
+"should not be redefined:\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+"@c REFORMAT THIS TABLE USING TEXINFO MARKUP\n"
+"@example\n"
+"  Keyword    Comments\n"
+"  ------------------------------------------\n"
+"  indices2() Internal version of indices()\n"
+"  conti      Lists contravariant indices\n"
+"  covi       Lists covariant indices of a indexed object\n"
+"  deri       Lists derivative indices of an indexed object\n"
+"  name       Returns the name of an indexed object\n"
+"  concan\n"
+"  irpmon\n"
+"  lc0\n"
+"  _lc2kdt0\n"
+"  _lcprod\n"
+"  _extlc\n"
+"@end example\n"
+msgstr ""
+
+# Itensor.texi
+msgid ""
+msgstr ""

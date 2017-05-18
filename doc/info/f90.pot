@@ -1,0 +1,133 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# f90.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for f90::\n"
+"@end menu\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for f90,  , f90-pkg, f90-pkg\n"
+"@section Functions and Variables for f90\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{function_f90}\n"
+"@deffn {Function} f90 (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"Prints one or more expressions @var{expr_1}, @dots{}, @var{expr_n}\n"
+"as a Fortran 90 program.\n"
+"Output is printed to the standard output.\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"@code{f90} prints output in the so-called \"free form\" input format for\n"
+"Fortran 90: there is no special attention to column positions.\n"
+"Long lines are split at a fixed width with the ampersand @code{&} continuation\n"
+"character.\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"@code{load(f90)} loads this function.  See also the function @mrefdot{fortran}\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (f90)$\n"
+"@c foo : expand ((xxx + yyy + 7)^4);\n"
+"@c f90 ('foo = foo);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (f90)$\n"
+"(%i2) foo : expand ((xxx + yyy + 7)^4);\n"
+"         4            3         3        2    2             2\n"
+"(%o2) yyy  + 4 xxx yyy  + 28 yyy  + 6 xxx  yyy  + 84 xxx yyy\n"
+"          2        3             2\n"
+" + 294 yyy  + 4 xxx  yyy + 84 xxx  yyy + 588 xxx yyy + 1372 yyy\n"
+"      4         3          2\n"
+" + xxx  + 28 xxx  + 294 xxx  + 1372 xxx + 2401\n"
+"(%i3) f90 ('foo = foo);\n"
+"foo = yyy**4+4*xxx*yyy**3+28*yyy**3+6*xxx**2*yyy**2+84*xxx*yyy**2&\n"
+"+294*yyy**2+4*xxx**3*yyy+84*xxx**2*yyy+588*xxx*yyy+1372*yyy+xxx**&\n"
+"4+28*xxx**3+294*xxx**2+1372*xxx+2401\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"Multiple expressions.\n"
+"Capture standard output into a file via the @mref{with_stdout} function.\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (f90)$\n"
+"@c foo : sin (3*x + 1) - cos (7*x - 2);\n"
+"@c with_stdout (\"foo.f90\", f90 (x = 0.25, y = 0.625, 'foo = foo, 'stop, 'end));\n"
+"@c printfile (\"foo.f90\");\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (f90)$\n"
+"(%i2) foo : sin (3*x + 1) - cos (7*x - 2);\n"
+"(%o2)              sin(3 x + 1) - cos(7 x - 2)\n"
+"(%i3) with_stdout (\"foo.f90\",\n"
+"                   f90 (x=0.25, y=0.625, 'foo=foo, 'stop, 'end));\n"
+"(%o3)                         false\n"
+"(%i4) printfile (\"foo.f90\");\n"
+"x = 0.25\n"
+"y = 0.625\n"
+"foo = sin(3*x+1)-cos(7*x-2)\n"
+"stop\n"
+"end\n"
+"(%o4)                        foo.f90\n"
+"@end example\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+"@opencatbox\n"
+"@category{Translation and compilation} @category{Share packages} @category{Package f90}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# f90.texi
+msgid ""
+msgstr ""

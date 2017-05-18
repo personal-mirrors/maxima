@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# lindstedt.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for lindstedt::\n"
+"@end menu\n"
+msgstr ""
+
+# lindstedt.texi
+msgid ""
+"@node Functions and Variables for lindstedt,  , lindstedt-pkg, lindstedt-pkg\n"
+"@section Functions and Variables for lindstedt\n"
+"@anchor{Lindstedt}\n"
+"@deffn {Function} Lindstedt (@var{eq},@var{pvar},@var{torder},@var{ic})\n"
+"This is a first pass at a Lindstedt code.  It can solve problems\n"
+"with initial conditions entered, which can be arbitrary constants,\n"
+"(just not @var{%k1} and @var{%k2}) where the initial conditions on the perturbation\n"
+"equations are @math{z[i]=0, z'[i]=0} for @math{i>0}. @var{ic} is the list of \n"
+"initial conditions.\n"
+msgstr ""
+
+# lindstedt.texi
+msgid ""
+"Problems occur when initial conditions are not given, as the constants\n"
+"in the perturbation equations are the same as the zero order equation\n"
+"solution.  Also, problems occur when the initial conditions for the\n"
+"perturbation equations are not @math{z[i]=0, z'[i]=0} for @math{i>0}, such as the\n"
+"Van der Pol equation.\n"
+msgstr ""
+
+# lindstedt.texi
+msgid ""
+"Example:\n"
+"@example\n"
+"(%i1) load(\"makeOrders\")$\n"
+msgstr ""
+
+# lindstedt.texi
+msgid ""
+"(%i2) load(\"lindstedt\")$\n"
+msgstr ""
+
+# lindstedt.texi
+msgid ""
+"(%i3) Lindstedt('diff(x,t,2)+x-(e*x^3)/6,e,2,[1,0]);\n"
+"          2\n"
+"         e  (cos(5 T) - 24 cos(3 T) + 23 cos(T))\n"
+"(%o3) [[[---------------------------------------\n"
+"                          36864\n"
+"   e (cos(3 T) - cos(T))\n"
+" - --------------------- + cos(T)],\n"
+"            192\n"
+"          2\n"
+"       7 e    e\n"
+"T = (- ---- - -- + 1) t]]\n"
+"       3072   16\n"
+"@end example\n"
+msgstr ""
+
+# lindstedt.texi
+msgid ""
+"To use this function write first @code{load(\"makeOrders\")} and @code{load(\"lindstedt\")}.\n"
+msgstr ""
+
+# lindstedt.texi
+msgid ""
+"@opencatbox\n"
+"@category{Differential equations} @category{Share packages} @category{Package lindstedt}\n"
+"@closecatbox\n"
+msgstr ""
+
+# lindstedt.texi
+msgid ""
+"@end deffn\n"
+msgstr ""

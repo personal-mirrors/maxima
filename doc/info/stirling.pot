@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# stirling.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for stirling::\n"
+"@end menu\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"@node Functions and Variables for stirling,  , stirling-pkg, stirling-pkg\n"
+"@section Functions and Variables for stirling\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"@deffn {Function} stirling @\n"
+"@fname{stirling} (@var{z},@var{n}) @\n"
+"@fname{stirling} (@var{z},@var{n},@var{pred})\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"Replace @code{gamma(x)} with the @math{O(1/x^(2n-1))} Stirling formula. when @var{n} isn't\n"
+"a nonnegative integer, signal an error. With the optional third argument @code{pred},\n"
+"the Stirling formula is applied only when @code{pred} is true.\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"Reference: Abramowitz & Stegun, \" Handbook of mathematical functions\", 6.1.40.\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"Examples:\n"
+"@example\n"
+"(%i1) load (stirling)$\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"(%i2) stirling(gamma(%alpha+x)/gamma(x),1);\n"
+"       1/2 - x             x + %alpha - 1/2\n"
+"(%o2) x        (x + %alpha)\n"
+"                                   1           1\n"
+"                            --------------- - ---- - %alpha\n"
+"                            12 (x + %alpha)   12 x\n"
+"                          %e\n"
+"(%i3) taylor(%,x,inf,1);\n"
+"                    %alpha       2    %alpha\n"
+"          %alpha   x       %alpha  - x       %alpha\n"
+"(%o3)/T/ x       + -------------------------------- + . . .\n"
+"                                 2 x\n"
+"(%i4) map('factor,%);\n"
+"                                       %alpha - 1\n"
+"         %alpha   (%alpha - 1) %alpha x\n"
+"(%o4)   x       + -------------------------------\n"
+"                                  2\n"
+"@end example\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"The function @code{stirling} knows the difference between the variable 'gamma' and\n"
+"the function gamma:\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"@example\n"
+"(%i5) stirling(gamma + gamma(x),0);\n"
+"                                    x - 1/2   - x\n"
+"(%o5)    gamma + sqrt(2) sqrt(%pi) x        %e\n"
+"(%i6) stirling(gamma(y) + gamma(x),0);\n"
+"                         y - 1/2   - y\n"
+"(%o6) sqrt(2) sqrt(%pi) y        %e\n"
+"                                              x - 1/2   - x\n"
+"                         + sqrt(2) sqrt(%pi) x        %e\n"
+"@end example\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"To apply the Stirling formula only to terms that involve the variable @code{k},\n"
+"use an optional third argument; for example\n"
+"@example\n"
+"(%i7) makegamma(pochhammer(a,k)/pochhammer(b,k));\n"
+"(%o7) (gamma(b)*gamma(k+a))/(gamma(a)*gamma(k+b))\n"
+"(%i8) stirling(%,1, lambda([s], not(freeof(k,s))));\n"
+"(%o8) (%e^(b-a)*gamma(b)*(k+a)^(k+a-1/2)*(k+b)^(-k-b+1/2))/gamma(a)\n"
+"@end example\n"
+"The terms @code{gamma(a)} and @code{gamma(b)} are free of @code{k}, so the Stirling formula\n"
+"was not applied to these two terms.\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"To use this function write first @code{load(\"stirling\")}.\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"@opencatbox\n"
+"@category{Gamma and factorial functions} @category{Share packages} @category{Package stirling}\n"
+"@closecatbox\n"
+msgstr ""
+
+# stirling.texi
+msgid ""
+"@end deffn\n"
+msgstr ""

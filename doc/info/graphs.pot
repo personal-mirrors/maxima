@@ -1,0 +1,5006 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# graphs.texi
+msgid ""
+"@menu\n"
+"* Introduction to graphs::\n"
+"* Functions and Variables for graphs::\n"
+"@end menu\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@node Introduction to graphs, Functions and Variables for graphs, graphs-pkg, graphs-pkg\n"
+"@section Introduction to graphs\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The @code{graphs} package provides graph and digraph data structure for\n"
+"Maxima. Graphs and digraphs are simple (have no multiple edges nor\n"
+"loops), although digraphs can have a directed edge from @var{u} to\n"
+"@var{v} and a directed edge from @var{v} to @var{u}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Internally graphs are represented by adjacency lists and implemented as\n"
+"a lisp structures. Vertices are identified by their ids (an id is an\n"
+"integer). Edges/arcs are represented by lists of length 2. Labels can be\n"
+"assigned to vertices of graphs/digraphs and weights can be assigned to\n"
+"edges/arcs of graphs/digraphs.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"There is a @code{draw_graph} function for drawing graphs. Graphs are\n"
+"drawn using a force based vertex positioning\n"
+"algorithm. @code{draw_graph} can also use graphviz programs available\n"
+"from @url{http://www.graphviz.org}. @code{draw_graph} is based on the maxima\n"
+"@code{draw} package.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"To use the @code{graphs} package, first load it with @code{load(graphs)}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Share packages} @category{Package graphs}\n"
+"@closecatbox\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@node Functions and Variables for graphs, , Introduction to graphs, graphs-pkg\n"
+"@section Functions and Variables for graphs\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@subsection Building graphs\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{create_graph}\n"
+"@deffn {Function} create_graph @\n"
+"@fname{create_graph} (@var{v_list}, @var{e_list}) @\n"
+"@fname{create_graph} (@var{n}, @var{e_list}) @\n"
+"@fname{create_graph} (@var{v_list}, @var{e_list}, @var{directed})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Creates a new graph on the set of vertices @var{v_list} and with edges @var{e_list}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@var{v_list} is a list of vertices (@code{[v1, v2,..., vn]}) or a\n"
+"list of vertices together with vertex labels (@code{[[v1,l1], [v2,l2],..., [vn,ln]]}).\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@var{n} is the number of vertices. Vertices will be identified by integers from 0 to n-1.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@var{e_list} is a list of edges (@code{[e1, e2,..., em]}) or a list of\n"
+"edges together with edge-weights (@code{[[e1, w1], ..., [em, wm]]}).\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"If @var{directed} is not @code{false}, a directed graph will be returned.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 1: create a cycle on 3 vertices:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : create_graph([1,2,3], [[1,2], [2,3], [1,3]])$\n"
+"@c print_graph(g)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : create_graph([1,2,3], [[1,2], [2,3], [1,3]])$\n"
+"(%i3) print_graph(g)$\n"
+"Graph on 3 vertices with 3 edges.\n"
+"Adjacencies:\n"
+"  3 :  1  2\n"
+"  2 :  3  1\n"
+"  1 :  3  2\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 2: create a cycle on 3 vertices with edge weights:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : create_graph([1,2,3], [[[1,2], 1.0], [[2,3], 2.0],\n"
+"@c                           [[1,3], 3.0]])$\n"
+"@c print_graph(g)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : create_graph([1,2,3], [[[1,2], 1.0], [[2,3], 2.0],\n"
+"                          [[1,3], 3.0]])$\n"
+"(%i3) print_graph(g)$\n"
+"Graph on 3 vertices with 3 edges.\n"
+"Adjacencies:\n"
+"  3 :  1  2\n"
+"  2 :  3  1\n"
+"  1 :  3  2\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 3: create a directed graph:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c d : create_graph(\n"
+"@c         [1,2,3,4], \n"
+"@c         [\n"
+"@c          [1,3], [1,4],\n"
+"@c          [2,3], [2,4]\n"
+"@c         ],\n"
+"@c         'directed = true)$\n"
+"@c print_graph(d)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) d : create_graph(\n"
+"        [1,2,3,4],\n"
+"        [\n"
+"         [1,3], [1,4],\n"
+"         [2,3], [2,4]\n"
+"        ],\n"
+"        'directed = true)$\n"
+"(%i3) print_graph(d)$\n"
+"Digraph on 4 vertices with 4 arcs.\n"
+"Adjacencies:\n"
+"  4 :\n"
+"  3 :\n"
+"  2 :  4  3\n"
+"  1 :  4  3\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{copy_graph}\n"
+"@deffn {Function} copy_graph (@var{g})\n"
+"Returns a copy of the graph @var{g}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{circulant_graph}\n"
+"@deffn {Function} circulant_graph (@var{n}, @var{d})\n"
+"Returns the circulant graph with parameters @var{n} and @var{d}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : circulant_graph(10, [1,3])$\n"
+"@c print_graph(g)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : circulant_graph(10, [1,3])$\n"
+"(%i3) print_graph(g)$\n"
+"Graph on 10 vertices with 20 edges.\n"
+"Adjacencies:\n"
+"  9 :  2  6  0  8\n"
+"  8 :  1  5  9  7\n"
+"  7 :  0  4  8  6\n"
+"  6 :  9  3  7  5\n"
+"  5 :  8  2  6  4\n"
+"  4 :  7  1  5  3\n"
+"  3 :  6  0  4  2\n"
+"  2 :  9  5  3  1\n"
+"  1 :  8  4  2  0\n"
+"  0 :  7  3  9  1\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{clebsch_graph}\n"
+"@deffn {Function} clebsch_graph ()\n"
+"Returns the Clebsch graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{complement_graph}\n"
+"@deffn {Function} complement_graph (@var{g})\n"
+"Returns the complement of the graph @var{g}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{complete_bipartite_graph}\n"
+"@deffn {Function} complete_bipartite_graph (@var{n}, @var{m})\n"
+"Returns the complete bipartite graph on @var{n+m} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{complete_graph}\n"
+"@deffn {Function} complete_graph (@var{n})\n"
+"Returns the complete graph on @var{n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{cycle_digraph}\n"
+"@deffn {Function} cycle_digraph (@var{n})\n"
+"Returns the directed cycle on @var{n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{cycle_graph}\n"
+"@deffn {Function} cycle_graph (@var{n})\n"
+"Returns the cycle on @var{n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{cuboctahedron_graph}\n"
+"@deffn {Function} cuboctahedron_graph (@var{n})\n"
+"Returns the cuboctahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{cube_graph}\n"
+"@deffn {Function} cube_graph (@var{n})\n"
+"Returns the @var{n}-dimensional cube.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{dodecahedron_graph}\n"
+"@deffn {Function} dodecahedron_graph ()\n"
+"Returns the dodecahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{empty_graph}\n"
+"@deffn {Function} empty_graph (@var{n})\n"
+"Returns the empty graph on @var{n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{flower_snark}\n"
+"@deffn {Function} flower_snark (@var{n})\n"
+"Returns the flower graph on @var{4n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c f5 : flower_snark(5)$\n"
+"@c chromatic_index(f5);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) f5 : flower_snark(5)$\n"
+"(%i3) chromatic_index(f5);\n"
+"(%o3)                           4\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{from_adjacency_matrix}\n"
+"@deffn {Function} from_adjacency_matrix (@var{A})\n"
+"Returns the graph represented by its adjacency matrix @var{A}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{frucht_graph}\n"
+"@deffn {Function} frucht_graph ()\n"
+"Returns the Frucht graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph_product}\n"
+"@deffn {Function} graph_product (@var{g1}, @var{g1})\n"
+"Returns the direct product of graphs @var{g1} and @var{g2}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c grid : graph_product(path_graph(3), path_graph(4))$\n"
+"@c draw_graph(grid)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) grid : graph_product(path_graph(3), path_graph(4))$\n"
+"(%i3) draw_graph(grid)$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs01,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph_union}\n"
+"@deffn {Function} graph_union (@var{g1}, @var{g1})\n"
+"Returns the union (sum) of graphs @var{g1} and @var{g2}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{grid_graph}\n"
+"@deffn {Function} grid_graph (@var{n}, @var{m})\n"
+"Returns the @var{n x m} grid.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{great_rhombicosidodecahedron_graph}\n"
+"@deffn {Function} great_rhombicosidodecahedron_graph ()\n"
+"Returns the great rhombicosidodecahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{great_rhombicuboctahedron_graph}\n"
+"@deffn {Function} great_rhombicuboctahedron_graph ()\n"
+"Returns the great rhombicuboctahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{grotzch_graph}\n"
+"@deffn {Function} grotzch_graph ()\n"
+"Returns the Grotzch graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{heawood_graph}\n"
+"@deffn {Function} heawood_graph ()\n"
+"Returns the Heawood graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{icosahedron_graph}\n"
+"@deffn {Function} icosahedron_graph ()\n"
+"Returns the icosahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{icosidodecahedron_graph}\n"
+"@deffn {Function} icosidodecahedron_graph ()\n"
+"Returns the icosidodecahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{induced_subgraph}\n"
+"@deffn {Function} induced_subgraph (@var{V}, @var{g})\n"
+"Returns the graph induced on the subset @var{V} of vertices of the graph\n"
+"@var{g}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c V : [0,1,2,3,4]$\n"
+"@c g : induced_subgraph(V, p)$\n"
+"@c print_graph(g)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) V : [0,1,2,3,4]$\n"
+"(%i4) g : induced_subgraph(V, p)$\n"
+"(%i5) print_graph(g)$\n"
+"Graph on 5 vertices with 5 edges.\n"
+"Adjacencies:\n"
+"  4 :  3  0\n"
+"  3 :  2  4\n"
+"  2 :  1  3\n"
+"  1 :  0  2\n"
+"  0 :  1  4\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{line_graph}\n"
+"@deffn {Function} line_graph (@var{g})\n"
+"Returns the line graph of the graph @var{g}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{make_graph}\n"
+"@deffn {Function} make_graph @\n"
+"@fname{make_graph} (@var{vrt}, @var{f}) @\n"
+"@fname{make_graph} (@var{vrt}, @var{f}, @var{oriented})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Creates a graph using a predicate function @var{f}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@var{vrt} is a list/set of vertices or an integer. If @var{vrt} is an\n"
+"integer, then vertices of the graph will be integers from 1 to\n"
+"@var{vrt}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@var{f} is a predicate function. Two vertices @var{a} and @var{b} will\n"
+"be connected if @code{f(a,b)=true}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"If @var{directed} is not @var{false}, then the graph will be directed.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 1:\n"
+"@c ===beg===\n"
+"@c load(graphs)$\n"
+"@c g : make_graph(powerset({1,2,3,4,5}, 2), disjointp)$\n"
+"@c is_isomorphic(g, petersen_graph());\n"
+"@c get_vertex_label(1, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(graphs)$\n"
+"(%i2) g : make_graph(powerset(@{1,2,3,4,5@}, 2), disjointp)$\n"
+"(%i3) is_isomorphic(g, petersen_graph());\n"
+"(%o3)                         true\n"
+"(%i4) get_vertex_label(1, g);\n"
+"(%o4)                        @{1, 2@}\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 2:\n"
+"@c ===beg===\n"
+"@c load(graphs)$\n"
+"@c f(i, j) := is (mod(j, i)=0)$\n"
+"@c g : make_graph(20, f, directed=true)$\n"
+"@c out_neighbors(4, g);\n"
+"@c in_neighbors(18, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(graphs)$\n"
+"(%i2) f(i, j) := is (mod(j, i)=0)$\n"
+"(%i3) g : make_graph(20, f, directed=true)$\n"
+"(%i4) out_neighbors(4, g);\n"
+"(%o4)                    [8, 12, 16, 20]\n"
+"(%i5) in_neighbors(18, g);\n"
+"(%o5)                    [1, 2, 3, 6, 9]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{mycielski_graph}\n"
+"@deffn {Function} mycielski_graph (@var{g})\n"
+"Returns the mycielskian graph of the graph @var{g}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{new_graph}\n"
+"@deffn {Function} new_graph ()\n"
+"Returns the graph with no vertices and no edges.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{path_digraph}\n"
+"@deffn {Function} path_digraph (@var{n})\n"
+"Returns the directed path on @var{n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{path_graph}\n"
+"@deffn {Function} path_graph (@var{n})\n"
+"Returns the path on @var{n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{petersen_graph}\n"
+"@deffn {Function} petersen_graph @\n"
+"@fname{petersen_graph} () @\n"
+"@fname{petersen_graph} (@var{n}, @var{d})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns the petersen graph @var{P_@{n,d@}}. The default values for\n"
+"@var{n} and @var{d} are @code{n=5} and @code{d=2}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{random_bipartite_graph}\n"
+"@deffn {Function} random_bipartite_graph (@var{a}, @var{b}, @var{p})\n"
+"Returns a random bipartite graph on @code{a+b} vertices. Each edge is\n"
+"present with probability @var{p}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{random_digraph}\n"
+"@deffn {Function} random_digraph (@var{n}, @var{p})\n"
+"Returns a random directed graph on @var{n} vertices. Each arc is present\n"
+"with probability @var{p}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{random_regular_graph}\n"
+"@deffn {Function} random_regular_graph @\n"
+"@fname{random_regular_graph} (@var{n}) @\n"
+"@fname{random_regular_graph} (@var{n}, @var{d})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns a random @var{d}-regular graph on @var{n} vertices. The default\n"
+"value for @var{d} is @code{d=3}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{random_graph}\n"
+"@deffn {Function} random_graph (@var{n}, @var{p})\n"
+"Returns a random graph on @var{n} vertices. Each edge is present with\n"
+"probability @var{p}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{random_graph1}\n"
+"@deffn {Function} random_graph1 (@var{n}, @var{m})\n"
+"Returns a random graph on @var{n} vertices and random @var{m} edges.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{random_network}\n"
+"@deffn {Function} random_network (@var{n}, @var{p}, @var{w})\n"
+"Returns a random network on @var{n} vertices. Each arc is present with\n"
+"probability @var{p} and has a weight in the range @code{[0,w]}. The\n"
+"function returns a list @code{[network, source, sink]}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c [net, s, t] : random_network(50, 0.2, 10.0);\n"
+"@c max_flow(net, s, t)$\n"
+"@c first(%);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) [net, s, t] : random_network(50, 0.2, 10.0);\n"
+"(%o2)                   [DIGRAPH, 50, 51]\n"
+"(%i3) max_flow(net, s, t)$\n"
+"(%i4) first(%);\n"
+"(%o4)                   27.65981397932507\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{random_tournament}\n"
+"@deffn {Function} random_tournament (@var{n})\n"
+"Returns a random tournament on @var{n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{random_tree}\n"
+"@deffn {Function} random_tree (@var{n})\n"
+"Returns a random tree on @var{n} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{small_rhombicosidodecahedron_graph}\n"
+"@deffn {Function} small_rhombicosidodecahedron_graph ()\n"
+"Returns the small rhombicosidodecahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{small_rhombicuboctahedron_graph}\n"
+"@deffn {Function} small_rhombicuboctahedron_graph ()\n"
+"Returns the small rhombicuboctahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{snub_cube_graph}\n"
+"@deffn {Function} snub_cube_graph ()\n"
+"Returns the snub cube graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{snub_dodecahedron_graph}\n"
+"@deffn {Function} snub_dodecahedron_graph ()\n"
+"Returns the snub dodecahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{truncated_cube_graph}\n"
+"@deffn {Function} truncated_cube_graph ()\n"
+"Returns the truncated cube graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{truncated_dodecahedron_graph}\n"
+"@deffn {Function} truncated_dodecahedron_graph ()\n"
+"Returns the truncated dodecahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+"@anchor{truncated_icosahedron_graph}\n"
+"@deffn {Function} truncated_icosahedron_graph ()\n"
+"Returns the truncated icosahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+"@anchor{truncated_tetrahedron_graph}\n"
+"@deffn {Function} truncated_tetrahedron_graph ()\n"
+"Returns the truncated tetrahedron graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{tutte_graph}\n"
+"@deffn {Function} tutte_graph ()\n"
+"Returns the Tutte graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{underlying_graph}\n"
+"@deffn {Function} underlying_graph (@var{g})\n"
+"Returns the underlying graph of the directed graph @var{g}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{wheel_graph}\n"
+"@deffn {Function} wheel_graph (@var{n})\n"
+"Returns the wheel graph on @var{n+1} vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - constructions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@subsection Graph properties\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{adjacency_matrix}\n"
+"@deffn {Function} adjacency_matrix (@var{gr})\n"
+"Returns the adjacency matrix of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c c5 : cycle_graph(4)$\n"
+"@c adjacency_matrix(c5);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) c5 : cycle_graph(4)$\n"
+"(%i3) adjacency_matrix(c5);\n"
+"                         [ 0  1  0  1 ]\n"
+"                         [            ]\n"
+"                         [ 1  0  1  0 ]\n"
+"(%o3)                    [            ]\n"
+"                         [ 0  1  0  1 ]\n"
+"                         [            ]\n"
+"                         [ 1  0  1  0 ]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{average_degree}\n"
+"@deffn {Function} average_degree (@var{gr})\n"
+"Returns the average degree of vertices in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c average_degree(grotzch_graph());\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) average_degree(grotzch_graph());\n"
+"                               40\n"
+"(%o2)                          --\n"
+"                               11\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{biconnected_components}\n"
+"@deffn {Function} biconnected_components (@var{gr})\n"
+"Returns the (vertex sets of) 2-connected components of the graph\n"
+"@var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : create_graph(\n"
+"@c             [1,2,3,4,5,6,7],\n"
+"@c             [\n"
+"@c              [1,2],[2,3],[2,4],[3,4],\n"
+"@c              [4,5],[5,6],[4,6],[6,7]\n"
+"@c             ])$\n"
+"@c biconnected_components(g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : create_graph(\n"
+"            [1,2,3,4,5,6,7],\n"
+"            [\n"
+"             [1,2],[2,3],[2,4],[3,4],\n"
+"             [4,5],[5,6],[4,6],[6,7]\n"
+"            ])$\n"
+"(%i3) biconnected_components(g);\n"
+"(%o3)        [[6, 7], [4, 5, 6], [1, 2], [2, 3, 4]]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs13,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{bipartition}\n"
+"@deffn {Function} bipartition (@var{gr})\n"
+"Returns a bipartition of the vertices of the graph @var{gr} or an empty\n"
+"list if @var{gr} is not bipartite.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c h : heawood_graph()$\n"
+"@c [A,B]:bipartition(h);\n"
+"@c draw_graph(h, show_vertices=A, program=circular)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) h : heawood_graph()$\n"
+"(%i3) [A,B]:bipartition(h);\n"
+"(%o3)  [[8, 12, 6, 10, 0, 2, 4], [13, 5, 11, 7, 9, 1, 3]]\n"
+"(%i4) draw_graph(h, show_vertices=A, program=circular)$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs02,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{chromatic_index}\n"
+"@deffn {Function} chromatic_index (@var{gr})\n"
+"Returns the chromatic index of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c chromatic_index(p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) chromatic_index(p);\n"
+"(%o3)                           4\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{chromatic_number}\n"
+"@deffn {Function} chromatic_number (@var{gr})\n"
+"Returns the chromatic number of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c chromatic_number(cycle_graph(5));\n"
+"@c chromatic_number(cycle_graph(6));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) chromatic_number(cycle_graph(5));\n"
+"(%o2)                           3\n"
+"(%i3) chromatic_number(cycle_graph(6));\n"
+"(%o3)                           2\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{clear_edge_weight}\n"
+"@deffn {Function} clear_edge_weight (@var{e}, @var{gr})\n"
+"Removes the weight of the edge  @var{e} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : create_graph(3, [[[0,1], 1.5], [[1,2], 1.3]])$\n"
+"@c get_edge_weight([0,1], g);\n"
+"@c clear_edge_weight([0,1], g)$\n"
+"@c get_edge_weight([0,1], g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : create_graph(3, [[[0,1], 1.5], [[1,2], 1.3]])$\n"
+"(%i3) get_edge_weight([0,1], g);\n"
+"(%o3)                          1.5\n"
+"(%i4) clear_edge_weight([0,1], g)$\n"
+"(%i5) get_edge_weight([0,1], g);\n"
+"(%o5)                           1\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{clear_vertex_label}\n"
+"@deffn {Function} clear_vertex_label (@var{v}, @var{gr})\n"
+"Removes the label of the vertex @var{v} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : create_graph([[0,\"Zero\"], [1, \"One\"]], [[0,1]])$\n"
+"@c get_vertex_label(0, g);\n"
+"@c clear_vertex_label(0, g);\n"
+"@c get_vertex_label(0, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : create_graph([[0,\"Zero\"], [1, \"One\"]], [[0,1]])$\n"
+"(%i3) get_vertex_label(0, g);\n"
+"(%o3)                         Zero\n"
+"(%i4) clear_vertex_label(0, g);\n"
+"(%o4)                         done\n"
+"(%i5) get_vertex_label(0, g);\n"
+"(%o5)                         false\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{connected_components}\n"
+"@deffn {Function} connected_components (@var{gr})\n"
+"Returns the (vertex sets of) connected components of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g: graph_union(cycle_graph(5), path_graph(4))$\n"
+"@c connected_components(g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g: graph_union(cycle_graph(5), path_graph(4))$\n"
+"(%i3) connected_components(g);\n"
+"(%o3)            [[1, 2, 3, 4, 0], [8, 7, 6, 5]]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{diameter}\n"
+"@deffn {Function} diameter (@var{gr})\n"
+"Returns the diameter of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c diameter(dodecahedron_graph());\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) diameter(dodecahedron_graph());\n"
+"(%o2)                           5\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{edge_coloring}\n"
+"@deffn {Function} edge_coloring (@var{gr})\n"
+"Returns an optimal coloring of the edges of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The function returns the chromatic index and a list representing the\n"
+"coloring of the edges of @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c [ch_index, col] : edge_coloring(p);\n"
+"@c assoc([0,1], col);\n"
+"@c assoc([0,5], col);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) [ch_index, col] : edge_coloring(p);\n"
+"(%o3) [4, [[[0, 5], 3], [[5, 7], 1], [[0, 1], 1], [[1, 6], 2], \n"
+"[[6, 8], 1], [[1, 2], 3], [[2, 7], 4], [[7, 9], 2], [[2, 3], 2], \n"
+"[[3, 8], 3], [[5, 8], 2], [[3, 4], 1], [[4, 9], 4], [[6, 9], 3], \n"
+"[[0, 4], 2]]]\n"
+"(%i4) assoc([0,1], col);\n"
+"(%o4)                           1\n"
+"(%i5) assoc([0,5], col);\n"
+"(%o5)                           3\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{degree_sequence}\n"
+"@deffn {Function} degree_sequence (@var{gr})\n"
+"Returns the list of vertex degrees of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c degree_sequence(random_graph(10, 0.4));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) degree_sequence(random_graph(10, 0.4));\n"
+"(%o2)            [2, 2, 2, 2, 2, 2, 3, 3, 3, 3]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{edge_connectivity}\n"
+"@deffn {Function} edge_connectivity (@var{gr})\n"
+"Returns the edge-connectivity of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"See also @mref{min_edge_cut}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{edges}\n"
+"@deffn {Function} edges (@var{gr})\n"
+"Returns the list of edges (arcs) in a (directed) graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c edges(complete_graph(4));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) edges(complete_graph(4));\n"
+"(%o2)   [[2, 3], [1, 3], [1, 2], [0, 3], [0, 2], [0, 1]]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{get_edge_weight}\n"
+"@deffn {Function} get_edge_weight @\n"
+"@fname{get_edge_weight} (@var{e}, @var{gr}) @\n"
+"@fname{get_edge_weight} (@var{e}, @var{gr}, @var{ifnot})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns the weight of the edge @var{e} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"If there is no weight assigned to the edge, the function returns 1. If\n"
+"the edge is not present in the graph, the function signals an error or\n"
+"returns the optional argument @var{ifnot}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c c5 : cycle_graph(5)$\n"
+"@c get_edge_weight([1,2], c5);\n"
+"@c set_edge_weight([1,2], 2.0, c5);\n"
+"@c get_edge_weight([1,2], c5);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) c5 : cycle_graph(5)$\n"
+"(%i3) get_edge_weight([1,2], c5);\n"
+"(%o3)                           1\n"
+"(%i4) set_edge_weight([1,2], 2.0, c5);\n"
+"(%o4)                         done\n"
+"(%i5) get_edge_weight([1,2], c5);\n"
+"(%o5)                          2.0\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{get_vertex_label}\n"
+"@deffn {Function} get_vertex_label (@var{v}, @var{gr})\n"
+"Returns the label of the vertex @var{v} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : create_graph([[0,\"Zero\"], [1, \"One\"]], [[0,1]])$\n"
+"@c get_vertex_label(0, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : create_graph([[0,\"Zero\"], [1, \"One\"]], [[0,1]])$\n"
+"(%i3) get_vertex_label(0, g);\n"
+"(%o3)                         Zero\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph_charpoly}\n"
+"@deffn {Function} graph_charpoly (@var{gr}, @var{x})\n"
+"Returns the characteristic polynomial (in variable @var{x}) of the graph\n"
+"@var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c graph_charpoly(p, x), factor;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) graph_charpoly(p, x), factor;\n"
+"                                   5        4\n"
+"(%o3)               (x - 3) (x - 1)  (x + 2)\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph_center}\n"
+"@deffn {Function} graph_center (@var{gr})\n"
+"Returns the center of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : grid_graph(5,5)$\n"
+"@c graph_center(g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : grid_graph(5,5)$\n"
+"(%i3) graph_center(g);\n"
+"(%o3)                         [12]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph_eigenvalues}\n"
+"@deffn {Function} graph_eigenvalues (@var{gr})\n"
+"Returns the eigenvalues of the graph @var{gr}. The function returns\n"
+"eigenvalues in the same format as maxima @mref{eigenvalues} function.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c graph_eigenvalues(p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) graph_eigenvalues(p);\n"
+"(%o3)               [[3, - 2, 1], [1, 4, 5]]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph_periphery}\n"
+"@deffn {Function} graph_periphery (@var{gr})\n"
+"Returns the periphery of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : grid_graph(5,5)$\n"
+"@c graph_periphery(g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : grid_graph(5,5)$\n"
+"(%i3) graph_periphery(g);\n"
+"(%o3)                    [24, 20, 4, 0]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph_size}\n"
+"@deffn {Function} graph_size (@var{gr})\n"
+"Returns the number of edges in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c graph_size(p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) graph_size(p);\n"
+"(%o3)                          15\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph_order}\n"
+"@deffn {Function} graph_order (@var{gr})\n"
+"Returns the number of vertices in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c graph_order(p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) graph_order(p);\n"
+"(%o3)                          10\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{girth}\n"
+"@deffn {Function} girth (@var{gr})\n"
+"Returns the length of the shortest cycle in @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : heawood_graph()$\n"
+"@c girth(g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : heawood_graph()$\n"
+"(%i3) girth(g);\n"
+"(%o3)                           6\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{hamilton_cycle}\n"
+"@deffn {Function} hamilton_cycle (@var{gr})\n"
+"Returns the Hamilton cycle of the graph @var{gr} or an empty list if\n"
+"@var{gr} is not hamiltonian.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c c : cube_graph(3)$\n"
+"@c hc : hamilton_cycle(c);\n"
+"@c draw_graph(c, show_edges=vertices_to_cycle(hc))$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) c : cube_graph(3)$\n"
+"(%i3) hc : hamilton_cycle(c);\n"
+"(%o3)              [7, 3, 2, 6, 4, 0, 1, 5, 7]\n"
+"(%i4) draw_graph(c, show_edges=vertices_to_cycle(hc))$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs03,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{hamilton_path}\n"
+"@deffn {Function} hamilton_path (@var{gr})\n"
+"Returns the Hamilton path of the graph @var{gr} or an empty list if\n"
+"@var{gr} does not have a Hamilton path.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c hp : hamilton_path(p);\n"
+"@c draw_graph(p, show_edges=vertices_to_path(hp))$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) hp : hamilton_path(p);\n"
+"(%o3)            [0, 5, 7, 2, 1, 6, 8, 3, 4, 9]\n"
+"(%i4) draw_graph(p, show_edges=vertices_to_path(hp))$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs04,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{isomorphism}\n"
+"@deffn {Function} isomorphism (@var{gr1}, @var{gr2})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns a an isomorphism between graphs/digraphs @var{gr1} and\n"
+"@var{gr2}. If @var{gr1} and @var{gr2} are not isomorphic, it returns\n"
+"an empty list.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c clk5:complement_graph(line_graph(complete_graph(5)))$\n"
+"@c isomorphism(clk5, petersen_graph());\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) clk5:complement_graph(line_graph(complete_graph(5)))$\n"
+"(%i3) isomorphism(clk5, petersen_graph());\n"
+"(%o3) [9 -> 0, 2 -> 1, 6 -> 2, 5 -> 3, 0 -> 4, 1 -> 5, 3 -> 6, \n"
+"                                          4 -> 7, 7 -> 8, 8 -> 9]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{in_neighbors}\n"
+"@deffn {Function} in_neighbors (@var{v}, @var{gr})\n"
+"Returns the list of in-neighbors of the vertex @var{v} in the directed\n"
+"graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : path_digraph(3)$\n"
+"@c in_neighbors(2, p);\n"
+"@c out_neighbors(2, p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : path_digraph(3)$\n"
+"(%i3) in_neighbors(2, p);\n"
+"(%o3)                          [1]\n"
+"(%i4) out_neighbors(2, p);\n"
+"(%o4)                          []\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_biconnected}\n"
+"@deffn {Function} is_biconnected (@var{gr})\n"
+"Returns @code{true} if @var{gr} is 2-connected and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_biconnected(cycle_graph(5));\n"
+"@c is_biconnected(path_graph(5));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_biconnected(cycle_graph(5));\n"
+"(%o2)                         true\n"
+"(%i3) is_biconnected(path_graph(5));\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_bipartite}\n"
+"@deffn {Function} is_bipartite (@var{gr})\n"
+"Returns @code{true} if @var{gr} is bipartite (2-colorable) and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_bipartite(petersen_graph());\n"
+"@c is_bipartite(heawood_graph());\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_bipartite(petersen_graph());\n"
+"(%o2)                         false\n"
+"(%i3) is_bipartite(heawood_graph());\n"
+"(%o3)                         true\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_connected}\n"
+"@deffn {Function} is_connected (@var{gr})\n"
+"Returns @code{true} if the graph @var{gr} is connected and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_connected(graph_union(cycle_graph(4), path_graph(3)));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_connected(graph_union(cycle_graph(4), path_graph(3)));\n"
+"(%o2)                         false\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_digraph}\n"
+"@deffn {Function} is_digraph (@var{gr})\n"
+"Returns @code{true} if @var{gr} is a directed graph and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_digraph(path_graph(5));\n"
+"@c is_digraph(path_digraph(5));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_digraph(path_graph(5));\n"
+"(%o2)                         false\n"
+"(%i3) is_digraph(path_digraph(5));\n"
+"(%o3)                         true\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_edge_in_graph}\n"
+"@deffn {Function} is_edge_in_graph (@var{e}, @var{gr})\n"
+"Returns @code{true} if @var{e} is an edge (arc) in the (directed) graph @var{g}\n"
+"and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c c4 : cycle_graph(4)$\n"
+"@c is_edge_in_graph([2,3], c4);\n"
+"@c is_edge_in_graph([3,2], c4);\n"
+"@c is_edge_in_graph([2,4], c4);\n"
+"@c is_edge_in_graph([3,2], cycle_digraph(4));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) c4 : cycle_graph(4)$\n"
+"(%i3) is_edge_in_graph([2,3], c4);\n"
+"(%o3)                         true\n"
+"(%i4) is_edge_in_graph([3,2], c4);\n"
+"(%o4)                         true\n"
+"(%i5) is_edge_in_graph([2,4], c4);\n"
+"(%o5)                         false\n"
+"(%i6) is_edge_in_graph([3,2], cycle_digraph(4));\n"
+"(%o6)                         false\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_graph}\n"
+"@deffn {Function} is_graph (@var{gr})\n"
+"Returns @code{true} if @var{gr} is a graph and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_graph(path_graph(5));\n"
+"@c is_graph(path_digraph(5));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_graph(path_graph(5));\n"
+"(%o2)                         true\n"
+"(%i3) is_graph(path_digraph(5));\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_graph_or_digraph}\n"
+"@deffn {Function} is_graph_or_digraph (@var{gr})\n"
+"Returns @code{true} if @var{gr} is a graph or a directed graph and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_graph_or_digraph(path_graph(5));\n"
+"@c is_graph_or_digraph(path_digraph(5));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_graph_or_digraph(path_graph(5));\n"
+"(%o2)                         true\n"
+"(%i3) is_graph_or_digraph(path_digraph(5));\n"
+"(%o3)                         true\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_isomorphic}\n"
+"@deffn {Function} is_isomorphic (@var{gr1}, @var{gr2})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns @code{true} if graphs/digraphs @var{gr1} and @var{gr2} are isomorphic\n"
+"and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"See also @mrefdot{isomorphism}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c clk5:complement_graph(line_graph(complete_graph(5)))$\n"
+"@c is_isomorphic(clk5, petersen_graph());\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) clk5:complement_graph(line_graph(complete_graph(5)))$\n"
+"(%i3) is_isomorphic(clk5, petersen_graph());\n"
+"(%o3)                         true\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_planar}\n"
+"@deffn {Function} is_planar (@var{gr})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns @code{true} if @var{gr} is a planar graph and @code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The algorithm used is the Demoucron's algorithm, which is a quadratic time\n"
+"algorithm.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_planar(dodecahedron_graph());\n"
+"@c is_planar(petersen_graph());\n"
+"@c is_planar(petersen_graph(10,2));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_planar(dodecahedron_graph());\n"
+"(%o2)                         true\n"
+"(%i3) is_planar(petersen_graph());\n"
+"(%o3)                         false\n"
+"(%i4) is_planar(petersen_graph(10,2));\n"
+"(%o4)                         true\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_sconnected}\n"
+"@deffn {Function} is_sconnected (@var{gr})\n"
+"Returns @code{true} if the directed graph @var{gr} is strongly connected and\n"
+"@code{false} otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_sconnected(cycle_digraph(5));\n"
+"@c is_sconnected(path_digraph(5));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_sconnected(cycle_digraph(5));\n"
+"(%o2)                         true\n"
+"(%i3) is_sconnected(path_digraph(5));\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_vertex_in_graph}\n"
+"@deffn {Function} is_vertex_in_graph (@var{v}, @var{gr})\n"
+"Returns @code{true} if @var{v} is a vertex in the graph @var{g} and @code{false}  otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c c4 : cycle_graph(4)$\n"
+"@c is_vertex_in_graph(0, c4);\n"
+"@c is_vertex_in_graph(6, c4);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) c4 : cycle_graph(4)$\n"
+"(%i3) is_vertex_in_graph(0, c4);\n"
+"(%o3)                         true\n"
+"(%i4) is_vertex_in_graph(6, c4);\n"
+"(%o4)                         false\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{is_tree}\n"
+"@deffn {Function} is_tree (@var{gr})\n"
+"Returns @code{true} if @var{gr} is a tree and @code{false}  otherwise.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c is_tree(random_tree(4));\n"
+"@c is_tree(graph_union(random_tree(4), random_tree(5)));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) is_tree(random_tree(4));\n"
+"(%o2)                         true\n"
+"(%i3) is_tree(graph_union(random_tree(4), random_tree(5)));\n"
+"(%o3)                         false\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{laplacian_matrix}\n"
+"@deffn {Function} laplacian_matrix (@var{gr})\n"
+"Returns the laplacian matrix of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c laplacian_matrix(cycle_graph(5));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) laplacian_matrix(cycle_graph(5));\n"
+"                   [  2   - 1   0    0   - 1 ]\n"
+"                   [                         ]\n"
+"                   [ - 1   2   - 1   0    0  ]\n"
+"                   [                         ]\n"
+"(%o2)              [  0   - 1   2   - 1   0  ]\n"
+"                   [                         ]\n"
+"                   [  0    0   - 1   2   - 1 ]\n"
+"                   [                         ]\n"
+"                   [ - 1   0    0   - 1   2  ]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{max_clique}\n"
+"@deffn {Function} max_clique (@var{gr})\n"
+"Returns a maximum clique of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : random_graph(100, 0.5)$\n"
+"@c max_clique(g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : random_graph(100, 0.5)$\n"
+"(%i3) max_clique(g);\n"
+"(%o3)          [6, 12, 31, 36, 52, 59, 62, 63, 80]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{max_degree}\n"
+"@deffn {Function} max_degree (@var{gr})\n"
+"Returns the maximal degree of vertices of the graph @var{gr} and a\n"
+"vertex of maximal degree.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : random_graph(100, 0.02)$\n"
+"@c max_degree(g);\n"
+"@c vertex_degree(95, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : random_graph(100, 0.02)$\n"
+"(%i3) max_degree(g);\n"
+"(%o3)                        [6, 79]\n"
+"(%i4) vertex_degree(95, g);\n"
+"(%o4)                           2\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{max_flow}\n"
+"@deffn {Function} max_flow (@var{net}, @var{s}, @var{t})\n"
+"Returns a maximum flow through the network @var{net} with the source\n"
+"@var{s} and the sink @var{t}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The function returns the value of the maximal flow and a list\n"
+"representing the weights of the arcs in the optimal flow.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c net : create_graph(\n"
+"@c   [1,2,3,4,5,6],\n"
+"@c   [[[1,2], 1.0],\n"
+"@c    [[1,3], 0.3],\n"
+"@c    [[2,4], 0.2],\n"
+"@c    [[2,5], 0.3],\n"
+"@c    [[3,4], 0.1],\n"
+"@c    [[3,5], 0.1],\n"
+"@c    [[4,6], 1.0],\n"
+"@c    [[5,6], 1.0]],\n"
+"@c   directed=true)$\n"
+"@c [flow_value, flow] : max_flow(net, 1, 6);\n"
+"@c fl : 0$\n"
+"@c for u in out_neighbors(1, net) \n"
+"@c      do fl : fl + assoc([1, u], flow)$\n"
+"@c fl;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) net : create_graph(\n"
+"  [1,2,3,4,5,6],\n"
+"  [[[1,2], 1.0],\n"
+"   [[1,3], 0.3],\n"
+"   [[2,4], 0.2],\n"
+"   [[2,5], 0.3],\n"
+"   [[3,4], 0.1],\n"
+"   [[3,5], 0.1],\n"
+"   [[4,6], 1.0],\n"
+"   [[5,6], 1.0]],\n"
+"  directed=true)$\n"
+"(%i3) [flow_value, flow] : max_flow(net, 1, 6);\n"
+"(%o3) [0.7, [[[1, 2], 0.5], [[1, 3], 0.2], [[2, 4], 0.2], \n"
+"[[2, 5], 0.3], [[3, 4], 0.1], [[3, 5], 0.1], [[4, 6], 0.3], \n"
+"[[5, 6], 0.4]]]\n"
+"(%i4) fl : 0$\n"
+"(%i5) for u in out_neighbors(1, net)\n"
+"     do fl : fl + assoc([1, u], flow)$\n"
+"(%i6) fl;\n"
+"(%o6)                          0.7\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{max_independent_set}\n"
+"@deffn {Function} max_independent_set (@var{gr})\n"
+"Returns a maximum independent set of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c d : dodecahedron_graph()$\n"
+"@c mi : max_independent_set(d);\n"
+"@c draw_graph(d, show_vertices=mi)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) d : dodecahedron_graph()$\n"
+"(%i3) mi : max_independent_set(d);\n"
+"(%o3)             [0, 3, 5, 9, 10, 11, 18, 19]\n"
+"(%i4) draw_graph(d, show_vertices=mi)$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs05,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{max_matching}\n"
+"@deffn {Function} max_matching (@var{gr})\n"
+"Returns a maximum matching of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c d : dodecahedron_graph()$\n"
+"@c m : max_matching(d);\n"
+"@c draw_graph(d, show_edges=m)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) d : dodecahedron_graph()$\n"
+"(%i3) m : max_matching(d);\n"
+"(%o3) [[5, 7], [8, 9], [6, 10], [14, 19], [13, 18], [12, 17], \n"
+"                               [11, 16], [0, 15], [3, 4], [1, 2]]\n"
+"(%i4) draw_graph(d, show_edges=m)$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs06,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{min_degree}\n"
+"@deffn {Function} min_degree (@var{gr})\n"
+"Returns the minimum degree of vertices of the graph @var{gr} and a\n"
+"vertex of minimum degree.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : random_graph(100, 0.1)$\n"
+"@c min_degree(g);\n"
+"@c vertex_degree(21, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : random_graph(100, 0.1)$\n"
+"(%i3) min_degree(g);\n"
+"(%o3)                        [3, 49]\n"
+"(%i4) vertex_degree(21, g);\n"
+"(%o4)                           9\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{min_edge_cut}\n"
+"@deffn {Function} min_edge_cut (@var{gr})\n"
+"Returns the minimum edge cut in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"See also @mrefdot{edge_connectivity}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{min_vertex_cover}\n"
+"@deffn {Function} min_vertex_cover (@var{gr})\n"
+"Returns the minimum vertex cover of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{min_vertex_cut}\n"
+"@deffn {Function} min_vertex_cut (@var{gr})\n"
+"Returns the minimum vertex cut in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"See also @mrefdot{vertex_connectivity}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{minimum_spanning_tree}\n"
+"@deffn {Function} minimum_spanning_tree (@var{gr})\n"
+"Returns the minimum spanning tree of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : graph_product(path_graph(10), path_graph(10))$\n"
+"@c t : minimum_spanning_tree(g)$\n"
+"@c draw_graph(g, show_edges=edges(t))$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : graph_product(path_graph(10), path_graph(10))$\n"
+"(%i3) t : minimum_spanning_tree(g)$\n"
+"(%i4) draw_graph(g, show_edges=edges(t))$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs07,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{neighbors}\n"
+"@deffn {Function} neighbors (@var{v}, @var{gr})\n"
+"Returns the list of neighbors of the vertex @var{v} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : petersen_graph()$\n"
+"@c neighbors(3, p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : petersen_graph()$\n"
+"(%i3) neighbors(3, p);\n"
+"(%o3)                       [4, 8, 2]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{odd_girth}\n"
+"@deffn {Function} odd_girth (@var{gr})\n"
+"Returns the length of the shortest odd cycle in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : graph_product(cycle_graph(4), cycle_graph(7))$\n"
+"@c girth(g);\n"
+"@c odd_girth(g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : graph_product(cycle_graph(4), cycle_graph(7))$\n"
+"(%i3) girth(g);\n"
+"(%o3)                           4\n"
+"(%i4) odd_girth(g);\n"
+"(%o4)                           7\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{out_neighbors}\n"
+"@deffn {Function} out_neighbors (@var{v}, @var{gr})\n"
+"Returns the list of out-neighbors of the vertex @var{v} in the directed\n"
+"graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : path_digraph(3)$\n"
+"@c in_neighbors(2, p);\n"
+"@c out_neighbors(2, p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : path_digraph(3)$\n"
+"(%i3) in_neighbors(2, p);\n"
+"(%o3)                          [1]\n"
+"(%i4) out_neighbors(2, p);\n"
+"(%o4)                          []\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{planar_embedding}\n"
+"@deffn {Function} planar_embedding (@var{gr})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns the list of facial walks in a planar embedding of @var{gr} and\n"
+"@code{false} if @var{gr} is not a planar graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The graph @var{gr} must be biconnected.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The algorithm used is the Demoucron's algorithm, which is a quadratic time\n"
+"algorithm.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c planar_embedding(grid_graph(3,3));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) planar_embedding(grid_graph(3,3));\n"
+"(%o2) [[3, 6, 7, 8, 5, 2, 1, 0], [4, 3, 0, 1], [3, 4, 7, 6], \n"
+"                                      [8, 7, 4, 5], [1, 2, 5, 4]]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{print_graph}\n"
+"@deffn {Function} print_graph (@var{gr})\n"
+"Prints some information about the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c c5 : cycle_graph(5)$\n"
+"@c print_graph(c5)$\n"
+"@c dc5 : cycle_digraph(5)$\n"
+"@c print_graph(dc5)$\n"
+"@c out_neighbors(0, dc5);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) c5 : cycle_graph(5)$\n"
+"(%i3) print_graph(c5)$\n"
+"Graph on 5 vertices with 5 edges.\n"
+"Adjacencies:\n"
+"  4 :  0  3\n"
+"  3 :  4  2\n"
+"  2 :  3  1\n"
+"  1 :  2  0\n"
+"  0 :  4  1\n"
+"(%i4) dc5 : cycle_digraph(5)$\n"
+"(%i5) print_graph(dc5)$\n"
+"Digraph on 5 vertices with 5 arcs.\n"
+"Adjacencies:\n"
+"  4 :  0\n"
+"  3 :  4\n"
+"  2 :  3\n"
+"  1 :  2\n"
+"  0 :  1\n"
+"(%i6) out_neighbors(0, dc5);\n"
+"(%o6)                          [1]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{radius}\n"
+"@deffn {Function} radius (@var{gr})\n"
+"Returns the radius of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c radius(dodecahedron_graph());\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) radius(dodecahedron_graph());\n"
+"(%o2)                           5\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{set_edge_weight}\n"
+"@deffn {Function} set_edge_weight (@var{e}, @var{w}, @var{gr})\n"
+"Assigns the weight @var{w} to the edge @var{e} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : create_graph([1, 2], [[[1,2], 1.2]])$\n"
+"@c get_edge_weight([1,2], g);\n"
+"@c set_edge_weight([1,2], 2.1, g);\n"
+"@c get_edge_weight([1,2], g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : create_graph([1, 2], [[[1,2], 1.2]])$\n"
+"(%i3) get_edge_weight([1,2], g);\n"
+"(%o3)                          1.2\n"
+"(%i4) set_edge_weight([1,2], 2.1, g);\n"
+"(%o4)                         done\n"
+"(%i5) get_edge_weight([1,2], g);\n"
+"(%o5)                          2.1\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{set_vertex_label}\n"
+"@deffn {Function} set_vertex_label (@var{v}, @var{l}, @var{gr})\n"
+"Assigns the label @var{l} to the vertex @var{v} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : create_graph([[1, \"One\"], [2, \"Two\"]], [[1,2]])$\n"
+"@c get_vertex_label(1, g);\n"
+"@c set_vertex_label(1, \"oNE\", g);\n"
+"@c get_vertex_label(1, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : create_graph([[1, \"One\"], [2, \"Two\"]], [[1,2]])$\n"
+"(%i3) get_vertex_label(1, g);\n"
+"(%o3)                          One\n"
+"(%i4) set_vertex_label(1, \"oNE\", g);\n"
+"(%o4)                         done\n"
+"(%i5) get_vertex_label(1, g);\n"
+"(%o5)                          oNE\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{shortest_path}\n"
+"@deffn {Function} shortest_path (@var{u}, @var{v}, @var{gr})\n"
+"Returns the shortest path from @var{u} to @var{v} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c d : dodecahedron_graph()$\n"
+"@c path : shortest_path(0, 7, d);\n"
+"@c draw_graph(d, show_edges=vertices_to_path(path))$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) d : dodecahedron_graph()$\n"
+"(%i3) path : shortest_path(0, 7, d);\n"
+"(%o3)                   [0, 1, 19, 13, 7]\n"
+"(%i4) draw_graph(d, show_edges=vertices_to_path(path))$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs08,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{shortest_weighted_path}\n"
+"@deffn {Function} shortest_weighted_path (@var{u}, @var{v}, @var{gr})\n"
+"Returns the length of the shortest weighted path and the shortest\n"
+"weighted path from @var{u} to @var{v} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The length of a weighted path is the sum of edge weights of edges in the\n"
+"path. If an edge has no weight, then it has a default weight 1.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g: petersen_graph(20, 2)$\n"
+"@c for e in edges(g) do set_edge_weight(e, random(1.0), g)$\n"
+"@c shortest_weighted_path(0, 10, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g: petersen_graph(20, 2)$\n"
+"(%i3) for e in edges(g) do set_edge_weight(e, random(1.0), g)$\n"
+"(%i4) shortest_weighted_path(0, 10, g);\n"
+"(%o4) [2.575143920268482, [0, 20, 38, 36, 34, 32, 30, 10]]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{strong_components}\n"
+"@deffn {Function} strong_components (@var{gr})\n"
+"Returns the strong components of a directed graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c t : random_tournament(4)$\n"
+"@c strong_components(t);\n"
+"@c vertex_out_degree(3, t);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) t : random_tournament(4)$\n"
+"(%i3) strong_components(t);\n"
+"(%o3)                 [[1], [0], [2], [3]]\n"
+"(%i4) vertex_out_degree(3, t);\n"
+"(%o4)                           3\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{topological_sort}\n"
+"@deffn {Function} topological_sort (@var{dag})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns a topological sorting of the vertices of a directed graph\n"
+"@var{dag} or an empty list if @var{dag} is not a directed acyclic graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g:create_graph(\n"
+"@c          [1,2,3,4,5],\n"
+"@c          [\n"
+"@c           [1,2], [2,5], [5,3],\n"
+"@c           [5,4], [3,4], [1,3]\n"
+"@c          ],\n"
+"@c          directed=true)$\n"
+"@c topological_sort(g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g:create_graph(\n"
+"         [1,2,3,4,5],\n"
+"         [\n"
+"          [1,2], [2,5], [5,3],\n"
+"          [5,4], [3,4], [1,3]\n"
+"         ],\n"
+"         directed=true)$\n"
+"(%i3) topological_sort(g);\n"
+"(%o3)                    [1, 2, 5, 3, 4]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_connectivity}\n"
+"@deffn {Function} vertex_connectivity (@var{g})\n"
+"Returns the vertex connectivity of the graph @var{g}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"See also @mrefdot{min_vertex_cut}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_degree}\n"
+"@deffn {Function} vertex_degree (@var{v}, @var{gr})\n"
+"Returns the degree of the vertex @var{v} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_distance}\n"
+"@deffn {Function} vertex_distance (@var{u}, @var{v}, @var{gr})\n"
+"Returns the length of the shortest path between @var{u} and @var{v} in\n"
+"the (directed) graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c d : dodecahedron_graph()$\n"
+"@c vertex_distance(0, 7, d);\n"
+"@c shortest_path(0, 7, d);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) d : dodecahedron_graph()$\n"
+"(%i3) vertex_distance(0, 7, d);\n"
+"(%o3)                           4\n"
+"(%i4) shortest_path(0, 7, d);\n"
+"(%o4)                   [0, 1, 19, 13, 7]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_eccentricity}\n"
+"@deffn {Function} vertex_eccentricity (@var{v}, @var{gr})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns the eccentricity of the vertex @var{v} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g:cycle_graph(7)$\n"
+"@c vertex_eccentricity(0, g);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g:cycle_graph(7)$\n"
+"(%i3) vertex_eccentricity(0, g);\n"
+"(%o3)                           3\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_in_degree}\n"
+"@deffn {Function} vertex_in_degree (@var{v}, @var{gr})\n"
+"Returns the in-degree of the vertex @var{v} in the directed graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p5 : path_digraph(5)$\n"
+"@c print_graph(p5)$\n"
+"@c vertex_in_degree(4, p5);\n"
+"@c in_neighbors(4, p5);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p5 : path_digraph(5)$\n"
+"(%i3) print_graph(p5)$\n"
+"Digraph on 5 vertices with 4 arcs.\n"
+"Adjacencies:\n"
+"  4 :\n"
+"  3 :  4\n"
+"  2 :  3\n"
+"  1 :  2\n"
+"  0 :  1\n"
+"(%i4) vertex_in_degree(4, p5);\n"
+"(%o4)                           1\n"
+"(%i5) in_neighbors(4, p5);\n"
+"(%o5)                          [3]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_out_degree}\n"
+"@deffn {Function} vertex_out_degree (@var{v}, @var{gr})\n"
+"Returns the out-degree of the vertex @var{v} in the directed graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c t : random_tournament(10)$\n"
+"@c vertex_out_degree(0, t);\n"
+"@c out_neighbors(0, t);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) t : random_tournament(10)$\n"
+"(%i3) vertex_out_degree(0, t);\n"
+"(%o3)                           2\n"
+"(%i4) out_neighbors(0, t);\n"
+"(%o4)                        [7, 1]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertices}\n"
+"@deffn {Function} vertices (@var{gr})\n"
+"Returns the list of vertices in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c vertices(complete_graph(4));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) vertices(complete_graph(4));\n"
+"(%o2)                     [3, 2, 1, 0]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_coloring}\n"
+"@deffn {Function} vertex_coloring (@var{gr})\n"
+"Returns an optimal coloring of the vertices of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The function returns the chromatic number and a list representing the\n"
+"coloring of the vertices of @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p:petersen_graph()$\n"
+"@c vertex_coloring(p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p:petersen_graph()$\n"
+"(%i3) vertex_coloring(p);\n"
+"(%o3) [3, [[0, 2], [1, 3], [2, 2], [3, 3], [4, 1], [5, 3], \n"
+"                                 [6, 1], [7, 1], [8, 2], [9, 2]]]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{wiener_index}\n"
+"@deffn {Function} wiener_index (@var{gr})\n"
+"Returns the Wiener index of the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c wiener_index(dodecahedron_graph());\n"
+"@c ===end===\n"
+"@example\n"
+"(%i2) wiener_index(dodecahedron_graph());\n"
+"(%o2)                          500\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - properties}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@subsection Modifying graphs\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{add_edge}\n"
+"@deffn {Function} add_edge (@var{e}, @var{gr})\n"
+"Adds the edge @var{e} to the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c p : path_graph(4)$\n"
+"@c neighbors(0, p);\n"
+"@c add_edge([0,3], p);\n"
+"@c neighbors(0, p);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) p : path_graph(4)$\n"
+"(%i3) neighbors(0, p);\n"
+"(%o3)                          [1]\n"
+"(%i4) add_edge([0,3], p);\n"
+"(%o4)                         done\n"
+"(%i5) neighbors(0, p);\n"
+"(%o5)                        [3, 1]\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - modifications}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{add_edges}\n"
+"@deffn {Function} add_edges (@var{e_list}, @var{gr})\n"
+"Adds all edges in the list @var{e_list} to the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : empty_graph(3)$\n"
+"@c add_edges([[0,1],[1,2]], g)$\n"
+"@c print_graph(g)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : empty_graph(3)$\n"
+"(%i3) add_edges([[0,1],[1,2]], g)$\n"
+"(%i4) print_graph(g)$\n"
+"Graph on 3 vertices with 2 edges.\n"
+"Adjacencies:\n"
+"  2 :  1\n"
+"  1 :  2  0\n"
+"  0 :  1\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - modifications}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{add_vertex}\n"
+"@deffn {Function} add_vertex (@var{v}, @var{gr})\n"
+"Adds the vertex @var{v} to the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : path_graph(2)$\n"
+"@c add_vertex(2, g)$\n"
+"@c print_graph(g)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : path_graph(2)$\n"
+"(%i3) add_vertex(2, g)$\n"
+"(%i4) print_graph(g)$\n"
+"Graph on 3 vertices with 1 edges.\n"
+"Adjacencies:\n"
+"  2 :\n"
+"  1 :  0\n"
+"  0 :  1\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - modifications}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{add_vertices}\n"
+"@deffn {Function} add_vertices (@var{v_list}, @var{gr})\n"
+"Adds all vertices in the list @var{v_list} to the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - modifications}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{connect_vertices}\n"
+"@deffn {Function} connect_vertices (@var{v_list}, @var{u_list}, @var{gr})\n"
+"Connects all vertices from the list @var{v_list} with the vertices in\n"
+"the list @var{u_list} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@var{v_list} and @var{u_list} can be single vertices or lists of\n"
+"vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g : empty_graph(4)$\n"
+"@c connect_vertices(0, [1,2,3], g)$\n"
+"@c print_graph(g)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g : empty_graph(4)$\n"
+"(%i3) connect_vertices(0, [1,2,3], g)$\n"
+"(%i4) print_graph(g)$\n"
+"Graph on 4 vertices with 3 edges.\n"
+"Adjacencies:\n"
+"  3 :  0\n"
+"  2 :  0\n"
+"  1 :  0\n"
+"  0 :  3  2  1\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - modifications}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{contract_edge}\n"
+"@deffn {Function} contract_edge (@var{e}, @var{gr})\n"
+"Contracts the edge @var{e} in the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g: create_graph(\n"
+"@c       8, [[0,3],[1,3],[2,3],[3,4],[4,5],[4,6],[4,7]])$\n"
+"@c print_graph(g)$\n"
+"@c contract_edge([3,4], g)$\n"
+"@c print_graph(g)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g: create_graph(\n"
+"      8, [[0,3],[1,3],[2,3],[3,4],[4,5],[4,6],[4,7]])$\n"
+"(%i3) print_graph(g)$\n"
+"Graph on 8 vertices with 7 edges.\n"
+"Adjacencies:\n"
+"  7 :  4\n"
+"  6 :  4\n"
+"  5 :  4\n"
+"  4 :  7  6  5  3\n"
+"  3 :  4  2  1  0\n"
+"  2 :  3\n"
+"  1 :  3\n"
+"  0 :  3\n"
+"(%i4) contract_edge([3,4], g)$\n"
+"(%i5) print_graph(g)$\n"
+"Graph on 7 vertices with 6 edges.\n"
+"Adjacencies:\n"
+"  7 :  3\n"
+"  6 :  3\n"
+"  5 :  3\n"
+"  3 :  5  6  7  2  1  0\n"
+"  2 :  3\n"
+"  1 :  3\n"
+"  0 :  3\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - modifications}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{remove_edge}\n"
+"@deffn {Function} remove_edge (@var{e}, @var{gr})\n"
+"Removes the edge @var{e} from the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example:\n"
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c c3 : cycle_graph(3)$\n"
+"@c remove_edge([0,1], c3)$\n"
+"@c print_graph(c3)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) c3 : cycle_graph(3)$\n"
+"(%i3) remove_edge([0,1], c3)$\n"
+"(%i4) print_graph(c3)$\n"
+"Graph on 3 vertices with 2 edges.\n"
+"Adjacencies:\n"
+"  2 :  0  1\n"
+"  1 :  2\n"
+"  0 :  2\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - modifications}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{remove_vertex}\n"
+"@deffn {Function} remove_vertex (@var{v}, @var{gr})\n"
+"Removes the vertex @var{v} from the graph @var{gr}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@subsection Reading and writing to files\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{dimacs_export}\n"
+"@deffn {Function} dimacs_export @\n"
+"@fname{dimacs_export} (@var{gr}, @var{fl}) @\n"
+"@fname{dimacs_export} (@var{gr}, @var{fl}, @var{comment1}, ..., @var{commentn})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Exports the graph into the file @var{fl} in the DIMACS format. Optional\n"
+"comments will be added to the top of the file.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{dimacs_import}\n"
+"@deffn {Function} dimacs_import (@var{fl})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns the graph from file @var{fl} in the DIMACS format.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph6_decode}\n"
+"@deffn {Function} graph6_decode (@var{str})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns the graph encoded in the graph6 format in the string @var{str}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph6_encode}\n"
+"@deffn {Function} graph6_encode (@var{gr})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns a string which encodes the graph @var{gr} in the graph6 format.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph6_export}\n"
+"@deffn {Function} graph6_export (@var{gr_list}, @var{fl})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Exports graphs in the list @var{gr_list} to the file @var{fl} in the\n"
+"graph6 format.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{graph6_import}\n"
+"@deffn {Function} graph6_import (@var{fl})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns a list of graphs from the file @var{fl} in the graph6 format.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{sparse6_decode}\n"
+"@deffn {Function} sparse6_decode (@var{str})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns the graph encoded in the sparse6 format in the string @var{str}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{sparse6_encode}\n"
+"@deffn {Function} sparse6_encode (@var{gr})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns a string which encodes the graph @var{gr} in the sparse6 format.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{sparse6_export}\n"
+"@deffn {Function} sparse6_export (@var{gr_list}, @var{fl})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Exports graphs in the list @var{gr_list} to the file @var{fl} in the\n"
+"sparse6 format.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{sparse6_import}\n"
+"@deffn {Function} sparse6_import (@var{fl})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Returns a list of graphs from the file @var{fl} in the sparse6 format.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - io}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@subsection Visualization\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{draw_graph}\n"
+"@deffn {Function} draw_graph @\n"
+"@fname{draw_graph} (@var{graph}) @\n"
+"@fname{draw_graph} (@var{graph}, @var{option1}, ..., @var{optionk})\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Draws the graph using the @ref{draw-pkg} package.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The algorithm used to position vertices is specified by the optional\n"
+"argument @var{program}. The default value is\n"
+"@code{program=spring_embedding}. @var{draw_graph} can also use the\n"
+"graphviz programs for positioning vertices, but graphviz must be\n"
+"installed separately.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 1:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g:grid_graph(10,10)$\n"
+"@c m:max_matching(g)$\n"
+"@c draw_graph(g,\n"
+"@c    spring_embedding_depth=100,\n"
+"@c    show_edges=m, edge_type=dots,\n"
+"@c    vertex_size=0)$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g:grid_graph(10,10)$\n"
+"(%i3) m:max_matching(g)$\n"
+"(%i4) draw_graph(g,\n"
+"   spring_embedding_depth=100,\n"
+"   show_edges=m, edge_type=dots,\n"
+"   vertex_size=0)$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs09,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 2:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g:create_graph(16,\n"
+"@c     [\n"
+"@c      [0,1],[1,3],[2,3],[0,2],[3,4],[2,4],\n"
+"@c      [5,6],[6,4],[4,7],[6,7],[7,8],[7,10],[7,11],\n"
+"@c      [8,10],[11,10],[8,9],[11,12],[9,15],[12,13],\n"
+"@c      [10,14],[15,14],[13,14]\n"
+"@c     ])$\n"
+"@c t:minimum_spanning_tree(g)$\n"
+"@c draw_graph(\n"
+"@c     g,\n"
+"@c     show_edges=edges(t),\n"
+"@c     show_edge_width=4,\n"
+"@c     show_edge_color=green,\n"
+"@c     vertex_type=filled_square,\n"
+"@c     vertex_size=2\n"
+"@c     )$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g:create_graph(16,\n"
+"    [\n"
+"     [0,1],[1,3],[2,3],[0,2],[3,4],[2,4],\n"
+"     [5,6],[6,4],[4,7],[6,7],[7,8],[7,10],[7,11],\n"
+"     [8,10],[11,10],[8,9],[11,12],[9,15],[12,13],\n"
+"     [10,14],[15,14],[13,14]\n"
+"    ])$\n"
+"(%i3) t:minimum_spanning_tree(g)$\n"
+"(%i4) draw_graph(\n"
+"    g,\n"
+"    show_edges=edges(t),\n"
+"    show_edge_width=4,\n"
+"    show_edge_color=green,\n"
+"    vertex_type=filled_square,\n"
+"    vertex_size=2\n"
+"    )$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs10,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 3:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c g:create_graph(16,\n"
+"@c     [\n"
+"@c      [0,1],[1,3],[2,3],[0,2],[3,4],[2,4],\n"
+"@c      [5,6],[6,4],[4,7],[6,7],[7,8],[7,10],[7,11],\n"
+"@c      [8,10],[11,10],[8,9],[11,12],[9,15],[12,13],\n"
+"@c      [10,14],[15,14],[13,14]\n"
+"@c     ])$\n"
+"@c mi : max_independent_set(g)$\n"
+"@c draw_graph(\n"
+"@c     g,\n"
+"@c     show_vertices=mi,\n"
+"@c     show_vertex_type=filled_up_triangle,\n"
+"@c     show_vertex_size=2,\n"
+"@c     edge_color=cyan,\n"
+"@c     edge_width=3,\n"
+"@c     show_id=true,\n"
+"@c     text_color=brown\n"
+"@c     )$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) g:create_graph(16,\n"
+"    [\n"
+"     [0,1],[1,3],[2,3],[0,2],[3,4],[2,4],\n"
+"     [5,6],[6,4],[4,7],[6,7],[7,8],[7,10],[7,11],\n"
+"     [8,10],[11,10],[8,9],[11,12],[9,15],[12,13],\n"
+"     [10,14],[15,14],[13,14]\n"
+"    ])$\n"
+"(%i3) mi : max_independent_set(g)$\n"
+"(%i4) draw_graph(\n"
+"    g,\n"
+"    show_vertices=mi,\n"
+"    show_vertex_type=filled_up_triangle,\n"
+"    show_vertex_size=2,\n"
+"    edge_color=cyan,\n"
+"    edge_width=3,\n"
+"    show_id=true,\n"
+"    text_color=brown\n"
+"    )$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs11,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 4:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load (graphs)$\n"
+"@c net : create_graph(\n"
+"@c     [0,1,2,3,4,5],\n"
+"@c     [\n"
+"@c      [[0,1], 3], [[0,2], 2],\n"
+"@c      [[1,3], 1], [[1,4], 3],\n"
+"@c      [[2,3], 2], [[2,4], 2],\n"
+"@c      [[4,5], 2], [[3,5], 2]\n"
+"@c     ],\n"
+"@c     directed=true\n"
+"@c     )$\n"
+"@c draw_graph(\n"
+"@c     net,\n"
+"@c     show_weight=true,\n"
+"@c     vertex_size=0,\n"
+"@c     show_vertices=[0,5],\n"
+"@c     show_vertex_type=filled_square,\n"
+"@c     head_length=0.2,\n"
+"@c     head_angle=10,\n"
+"@c     edge_color=\"dark-green\",\n"
+"@c     text_color=blue\n"
+"@c     )$\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load (graphs)$\n"
+"(%i2) net : create_graph(\n"
+"    [0,1,2,3,4,5],\n"
+"    [\n"
+"     [[0,1], 3], [[0,2], 2],\n"
+"     [[1,3], 1], [[1,4], 3],\n"
+"     [[2,3], 2], [[2,4], 2],\n"
+"     [[4,5], 2], [[3,5], 2]\n"
+"    ],\n"
+"    directed=true\n"
+"    )$\n"
+"(%i3) draw_graph(\n"
+"    net,\n"
+"    show_weight=true,\n"
+"    vertex_size=0,\n"
+"    show_vertices=[0,5],\n"
+"    show_vertex_type=filled_square,\n"
+"    head_length=0.2,\n"
+"    head_angle=10,\n"
+"    edge_color=\"dark-green\",\n"
+"    text_color=blue\n"
+"    )$\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs12,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 5:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load(graphs)$\n"
+"@c g: petersen_graph(20, 2);\n"
+"@c draw_graph(g, redraw=true, program=planar_embedding);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(graphs)$\n"
+"(%i2) g: petersen_graph(20, 2);\n"
+"(%o2)                         GRAPH\n"
+"(%i3) draw_graph(g, redraw=true, program=planar_embedding);\n"
+"(%o3)                         done\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs14,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Example 6:\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@c ===beg===\n"
+"@c load(graphs)$\n"
+"@c t: tutte_graph();\n"
+"@c draw_graph(t, redraw=true, \n"
+"@c               fixed_vertices=[1,2,3,4,5,6,7,8,9]);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(graphs)$\n"
+"(%i2) t: tutte_graph();\n"
+"(%o2)                         GRAPH\n"
+"(%i3) draw_graph(t, redraw=true, \n"
+"                    fixed_vertices=[1,2,3,4,5,6,7,8,9]);\n"
+"(%o3)                         done\n"
+"@end example\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@ifhtml\n"
+"@image{figures/graphs15,6cm}\n"
+"@end ifhtml\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{draw_graph_program}\n"
+"@defvr {Option variable} draw_graph_program\n"
+"Default value: @var{spring_embedding}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The default value for the program used to position vertices in\n"
+"@code{draw_graph} program.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_id}\n"
+"@defvr {draw_graph option} show_id\n"
+"Default value: @var{false}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"If @var{true} then ids of the vertices are displayed.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_label}\n"
+"@defvr {draw_graph option} show_label\n"
+"Default value: @var{false}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"If @var{true} then labels of the vertices are displayed.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{label_alignment_graphs}\n"
+"@defvr {draw_graph option} label_alignment\n"
+"Default value: @var{center}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Determines how to align the labels/ids of the vertices. Can\n"
+"be @code{left}, @code{center} or @code{right}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_weight }\n"
+"@defvr {draw_graph option} show_weight \n"
+"Default value: @var{false}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"If @var{true} then weights of the edges are displayed.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_type}\n"
+"@defvr {draw_graph option} vertex_type\n"
+"Default value: @var{circle}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Defines how vertices are displayed. See the @var{point_type} option for\n"
+"the @code{draw} package for possible values.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_size}\n"
+"@defvr {draw_graph option} vertex_size\n"
+"The size of vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_color }\n"
+"@defvr {draw_graph option} vertex_color \n"
+"The color used for displaying vertices.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_vertices}\n"
+"@defvr {draw_graph option} show_vertices\n"
+"Default value: []\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"Display selected vertices in the using a different color.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_vertex_type}\n"
+"@defvr {draw_graph option} show_vertex_type\n"
+"Defines how vertices specified in @var{show_vertices} are displayed.\n"
+"See the @var{point_type} option for the @code{draw} package for possible\n"
+"values.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_vertex_size}\n"
+"@defvr {draw_graph option} show_vertex_size\n"
+"The size of vertices in @var{show_vertices}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_vertex_color }\n"
+"@defvr {draw_graph option} show_vertex_color \n"
+"The color used for displaying vertices in the @var{show_vertices} list.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_partition}\n"
+"@defvr {draw_graph option} vertex_partition\n"
+"Default value: []\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"A partition @code{[[v1,v2,...],...,[vk,...,vn]]} of the vertices of the\n"
+"graph. The vertices of each list in the partition will be drawn in a\n"
+"different color.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertex_coloring_variable}\n"
+"@defvr {draw_graph option} vertex_coloring\n"
+"Specifies coloring of the vertices. The coloring @var{col} must be\n"
+"specified in the format as returned by @var{vertex_coloring}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{edge_color }\n"
+"@defvr {draw_graph option} edge_color \n"
+"The color used for displaying edges.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{edge_width}\n"
+"@defvr {draw_graph option} edge_width\n"
+"The width of edges.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{edge_type}\n"
+"@defvr {draw_graph option} edge_type\n"
+"Defines how edges are displayed. See the @var{line_type} option for the\n"
+"@code{draw} package.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_edges}\n"
+"@defvr {draw_graph option} show_edges\n"
+"Display edges specified in the list @var{e_list} using a different\n"
+"color.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_edge_color}\n"
+"@defvr {draw_graph option} show_edge_color\n"
+"The color used for displaying edges in the @var{show_edges} list.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_edge_width}\n"
+"@defvr {draw_graph option} show_edge_width\n"
+"The width of edges in @var{show_edges}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{show_edge_type}\n"
+"@defvr {draw_graph option} show_edge_type\n"
+"Defines how edges in @var{show_edges} are displayed. See the\n"
+"@var{line_type} option for the @code{draw} package.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{edge_partition}\n"
+"@defvr {draw_graph option} edge_partition\n"
+"A partition @code{[[e1,e2,...],...,[ek,...,em]]} of edges of the\n"
+"graph. The edges of each list in the partition will be drawn using a\n"
+"different color.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{edge_coloring_variable}\n"
+"@defvr {draw_graph option} edge_coloring\n"
+"The coloring of edges. The coloring must be specified in the\n"
+"format as returned by the function @var{edge_coloring}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{redraw }\n"
+"@defvr {draw_graph option} redraw \n"
+"Default value: @var{false}\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"If @code{true}, vertex positions are recomputed even if the positions\n"
+"have been saved from a previous drawing of the graph.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{head_angle_graphs}\n"
+"@defvr {draw_graph option} head_angle\n"
+"Default value: 15\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The angle for the arrows displayed on arcs (in directed graphs).\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{head_length_graphs}\n"
+"@defvr {draw_graph option} head_length\n"
+"Default value: 0.1\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The length for the arrows displayed on arcs (in directed graphs).\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{spring_embedding_depth}\n"
+"@defvr {draw_graph option} spring_embedding_depth\n"
+"Default value: 50\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"The number of iterations in the spring embedding graph drawing\n"
+"algorithm.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{terminal_graphs}\n"
+"@defvr {draw_graph option} terminal\n"
+"The terminal used for drawing (see the @var{terminal} option in the\n"
+"@code{draw} package).\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{file_name_graphs}\n"
+"@defvr {draw_graph option} file_name\n"
+"The filename of the drawing if terminal is not screen.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{program}\n"
+"@defvr {draw_graph option} program\n"
+"Defines the program used for positioning vertices of the graph. Can be\n"
+"one of the graphviz programs (dot, neato, twopi, circ, fdp),\n"
+"@var{circular}, @var{spring_embedding} or\n"
+"@var{planar_embedding}. @var{planar_embedding} is only available for\n"
+"2-connected planar graphs. When @code{program=spring_embedding}, a set\n"
+"of vertices with fixed position can be specified with the\n"
+"@var{fixed_vertices} option.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{fixed_vertices}\n"
+"@defvr {draw_graph option} fixed_vertices\n"
+"Specifies a list of vertices which will have positions fixed along a regular polygon.\n"
+"Can be used when @code{program=spring_embedding}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertices_to_path}\n"
+"@deffn {Function} vertices_to_path (@var{v_list})\n"
+"Converts a list @var{v_list} of vertices to a list of edges of the path\n"
+"defined by @var{v_list}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@anchor{vertices_to_cycle}\n"
+"@deffn {Function} vertices_to_cycle (@var{v_list})\n"
+"Converts a list @var{v_list} of vertices to a list of edges of the cycle\n"
+"defined by @var{v_list}.\n"
+msgstr ""
+
+# graphs.texi
+msgid ""
+"@opencatbox\n"
+"@category{Package graphs}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""

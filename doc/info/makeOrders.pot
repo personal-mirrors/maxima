@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# makeOrders.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for makeOrders::\n"
+"@end menu\n"
+"@node Functions and Variables for makeOrders,  , makeOrders-pkg, makeOrders-pkg\n"
+"@section Functions and Variables for makeOrders\n"
+msgstr ""
+
+# makeOrders.texi
+msgid ""
+"@anchor{makeOrders_func}\n"
+"@deffn {Function} makeOrders (@var{indvarlist},@var{orderlist})\n"
+"Returns a list of all powers for a polynomial up to and including the arguments. \n"
+msgstr ""
+
+# makeOrders.texi
+msgid ""
+"@example\n"
+"(%i1) load(\"makeOrders\")$\n"
+msgstr ""
+
+# makeOrders.texi
+msgid ""
+"(%i2) makeOrders([a,b],[2,3]);\n"
+"(%o2) [[0, 0], [0, 1], [0, 2], [0, 3], [1, 0], [1, 1],\n"
+"            [1, 2], [1, 3], [2, 0], [2, 1], [2, 2], [2, 3]]\n"
+"(%i3) expand((1+a+a^2)*(1+b+b^2+b^3));\n"
+"       2  3      3    3    2  2      2    2    2\n"
+"(%o3) a  b  + a b  + b  + a  b  + a b  + b  + a  b + a b\n"
+"                                                  2\n"
+"                                           + b + a  + a + 1\n"
+"@end example\n"
+"where @code{[0, 1]} is associated with the term @math{b} and @code{[2, 3]} with @math{a^2 b^3}.\n"
+msgstr ""
+
+# makeOrders.texi
+msgid ""
+"To use this function write first @code{load(\"makeOrders\")}.\n"
+msgstr ""
+
+# makeOrders.texi
+msgid ""
+"@opencatbox\n"
+"@category{Polynomials} @category{Share packages} @category{Package makeOrders}\n"
+"@closecatbox\n"
+msgstr ""
+
+# makeOrders.texi
+msgid ""
+"@end deffn\n"
+msgstr ""
+
+# makeOrders.texi
+msgid ""
+msgstr ""

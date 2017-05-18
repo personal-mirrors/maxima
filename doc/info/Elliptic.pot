@@ -1,0 +1,807 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Elliptic.texi
+msgid ""
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@menu\n"
+"* Introduction to Elliptic Functions and Integrals::\n"
+"* Functions and Variables for Elliptic Functions::\n"
+"* Functions and Variables for Elliptic Integrals::\n"
+"@end menu\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@node Introduction to Elliptic Functions and Integrals, Functions and Variables for Elliptic Functions, , Top\n"
+"@comment  node-name,  next,  previous,  up\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@section Introduction to Elliptic Functions and Integrals\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"Maxima includes support for Jacobian elliptic functions and for\n"
+"complete and incomplete elliptic integrals.  This includes symbolic\n"
+"manipulation of these functions and numerical evaluation as well.\n"
+"Definitions of these functions and many of their properties can by\n"
+"found in Abramowitz and Stegun, Chapter 16--17.  As much as possible,\n"
+"we use the definitions and relationships given there.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"In particular, all elliptic functions and integrals use the parameter\n"
+"@math{m} instead of the modulus @math{k} or the modular angle\n"
+"@math{\alpha}.  This is one area where we differ from Abramowitz and\n"
+"Stegun who use the modular angle for the elliptic functions.  The\n"
+"following relationships are true:\n"
+"@ifinfo\n"
+"@math{m = k^2} and @math{k = \sin(\alpha)}\n"
+"@end ifinfo\n"
+"@tex\n"
+"$$m = k^2$$ and $$k = \sin\alpha $$\n"
+"@end tex\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"The elliptic functions and integrals are primarily intended to support\n"
+"symbolic computation.  Therefore, most of derivatives of the functions\n"
+"and integrals are known.  However, if floating-point values are given,\n"
+"a floating-point result is returned.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"Support for most of the other properties of elliptic functions and\n"
+"integrals other than derivatives has not yet been written.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"Some examples of elliptic functions:\n"
+"@c ===beg===\n"
+"@c jacobi_sn (u, m);\n"
+"@c jacobi_sn (u, 1);\n"
+"@c jacobi_sn (u, 0);\n"
+"@c diff (jacobi_sn (u, m), u);\n"
+"@c diff (jacobi_sn (u, m), m);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) jacobi_sn (u, m);\n"
+"(%o1)                    jacobi_sn(u, m)\n"
+"(%i2) jacobi_sn (u, 1);\n"
+"(%o2)                        tanh(u)\n"
+"(%i3) jacobi_sn (u, 0);\n"
+"(%o3)                        sin(u)\n"
+"(%i4) diff (jacobi_sn (u, m), u);\n"
+"(%o4)            jacobi_cn(u, m) jacobi_dn(u, m)\n"
+"(%i5) diff (jacobi_sn (u, m), m);\n"
+"(%o5) jacobi_cn(u, m) jacobi_dn(u, m)\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"      elliptic_e(asin(jacobi_sn(u, m)), m)\n"
+" (u - ------------------------------------)/(2 m)\n"
+"                     1 - m\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"            2\n"
+"   jacobi_cn (u, m) jacobi_sn(u, m)\n"
+" + --------------------------------\n"
+"              2 (1 - m)\n"
+"@end example\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"Some examples of elliptic integrals:\n"
+"@c ===beg===\n"
+"@c elliptic_f (phi, m);\n"
+"@c elliptic_f (phi, 0);\n"
+"@c elliptic_f (phi, 1);\n"
+"@c elliptic_e (phi, 1);\n"
+"@c elliptic_e (phi, 0);\n"
+"@c elliptic_kc (1/2);\n"
+"@c makegamma (%);\n"
+"@c diff (elliptic_f (phi, m), phi);\n"
+"@c diff (elliptic_f (phi, m), m);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) elliptic_f (phi, m);\n"
+"(%o1)                  elliptic_f(phi, m)\n"
+"(%i2) elliptic_f (phi, 0);\n"
+"(%o2)                          phi\n"
+"(%i3) elliptic_f (phi, 1);\n"
+"                               phi   %pi\n"
+"(%o3)                  log(tan(--- + ---))\n"
+"                                2     4\n"
+"(%i4) elliptic_e (phi, 1);\n"
+"(%o4)                       sin(phi)\n"
+"(%i5) elliptic_e (phi, 0);\n"
+"(%o5)                          phi\n"
+"(%i6) elliptic_kc (1/2);\n"
+"                                     1\n"
+"(%o6)                    elliptic_kc(-)\n"
+"                                     2\n"
+"(%i7) makegamma (%);\n"
+"                                 2 1\n"
+"                            gamma (-)\n"
+"                                   4\n"
+"(%o7)                      -----------\n"
+"                           4 sqrt(%pi)\n"
+"(%i8) diff (elliptic_f (phi, m), phi);\n"
+"                                1\n"
+"(%o8)                 ---------------------\n"
+"                                    2\n"
+"                      sqrt(1 - m sin (phi))\n"
+"(%i9) diff (elliptic_f (phi, m), m);\n"
+"       elliptic_e(phi, m) - (1 - m) elliptic_f(phi, m)\n"
+"(%o9) (-----------------------------------------------\n"
+"                              m\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"                                 cos(phi) sin(phi)\n"
+"                             - ---------------------)/(2 (1 - m))\n"
+"                                             2\n"
+"                               sqrt(1 - m sin (phi))\n"
+"@end example\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"Support for elliptic functions and integrals was written by Raymond\n"
+"Toy.  It is placed under the terms of the General Public License (GPL)\n"
+"that governs the distribution of Maxima.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@node Functions and Variables for Elliptic Functions, Functions and Variables for Elliptic Integrals, Introduction to Elliptic Functions and Integrals, Top\n"
+"@comment  node-name,  next,  previous,  up\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@section Functions and Variables for Elliptic Functions\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_sn}\n"
+"@deffn {Function} jacobi_sn (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{sn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_cn}\n"
+"@deffn {Function} jacobi_cn (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{cn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_dn}\n"
+"@deffn {Function} jacobi_dn (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{dn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_ns}\n"
+"@deffn {Function} jacobi_ns (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{ns(u,m) = 1/sn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_sc}\n"
+"@deffn {Function} jacobi_sc (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{sc(u,m) = sn(u,m)/cn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_sd}\n"
+"@deffn {Function} jacobi_sd (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{sd(u,m) = sn(u,m)/dn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_nc}\n"
+"@deffn {Function} jacobi_nc (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{nc(u,m) = 1/cn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_cs}\n"
+"@deffn {Function} jacobi_cs (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{cs(u,m) = cn(u,m)/sn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_cd}\n"
+"@deffn {Function} jacobi_cd (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{cd(u,m) = cn(u,m)/dn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_nd}\n"
+"@deffn {Function} jacobi_nd (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{nd(u,m) = 1/dn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_ds}\n"
+"@deffn {Function} jacobi_ds (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{ds(u,m) = dn(u,m)/sn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{jacobi_dc}\n"
+"@deffn {Function} jacobi_dc (@var{u}, @var{m})\n"
+"The Jacobian elliptic function @math{dc(u,m) = dn(u,m)/cn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_sn}\n"
+"@deffn {Function} inverse_jacobi_sn (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{sn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_cn}\n"
+"@deffn {Function} inverse_jacobi_cn (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{cn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_dn}\n"
+"@deffn {Function} inverse_jacobi_dn (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{dn(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_ns}\n"
+"@deffn {Function} inverse_jacobi_ns (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{ns(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_sc}\n"
+"@deffn {Function} inverse_jacobi_sc (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{sc(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_sd}\n"
+"@deffn {Function} inverse_jacobi_sd (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{sd(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_nc}\n"
+"@deffn {Function} inverse_jacobi_nc (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{nc(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_cs}\n"
+"@deffn {Function} inverse_jacobi_cs (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{cs(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_cd}\n"
+"@deffn {Function} inverse_jacobi_cd (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{cd(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_nd}\n"
+"@deffn {Function} inverse_jacobi_nd (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{nd(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_ds}\n"
+"@deffn {Function} inverse_jacobi_ds (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{ds(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{inverse_jacobi_dc}\n"
+"@deffn {Function} inverse_jacobi_dc (@var{u}, @var{m})\n"
+"The inverse of the Jacobian elliptic function @math{dc(u,m)}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+"@node Functions and Variables for Elliptic Integrals, , Functions and Variables for Elliptic Functions, Top\n"
+"@comment  node-name,  next,  previous,  up\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@section Functions and Variables for Elliptic Integrals\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{elliptic_f}\n"
+"@deffn {Function} elliptic_f (@var{phi}, @var{m})\n"
+"The incomplete elliptic integral of the first kind, defined as\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@ifhtml\n"
+"@math{integrate(1/sqrt(1 - m*sin(x)^2), x, 0, phi)}\n"
+"@end ifhtml\n"
+"@ifinfo\n"
+"@math{integrate(1/sqrt(1 - m*sin(x)^2), x, 0, phi)}\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@tex\n"
+"$$\int_0^\phi {{d\theta}\over{\sqrt{1 - m\sin^2\theta}}}$$\n"
+"@end tex\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"See also @ref{elliptic_e} and @ref{elliptic_kc}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic integrals}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{elliptic_e}\n"
+"@deffn {Function} elliptic_e (@var{phi}, @var{m})\n"
+"The incomplete elliptic integral of the second kind, defined as\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@ifhtml\n"
+"@math{elliptic_e(phi, m) = integrate(sqrt(1 - m*sin(x)^2), x, 0, phi)}\n"
+"@end ifhtml\n"
+"@ifinfo\n"
+"@math{elliptic_e(phi, m) = integrate(sqrt(1 - m*sin(x)^2), x, 0, phi)}\n"
+"@end ifinfo\n"
+"@tex\n"
+"$$\int_0^\phi \sqrt{1 - m\sin^2\theta} d\theta$$\n"
+"@end tex\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"See also @ref{elliptic_f} and @ref{elliptic_ec}.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic integrals}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{elliptic_eu}\n"
+"@deffn {Function} elliptic_eu (@var{u}, @var{m})\n"
+"The incomplete elliptic integral of the second kind, defined as\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@ifhtml\n"
+"@math{integrate(dn(v,m)^2,v,0,u) = integrate(sqrt(1-m*t^2)/sqrt(1-t^2), t, 0, tau)}\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"where @math{tau = sn(u,m)}.\n"
+"@end ifhtml\n"
+"@ifinfo\n"
+"@math{integrate(dn(v,m)^2,v,0,u) = integrate(sqrt(1-m*t^2)/sqrt(1-t^2), t, 0, tau)}\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"where @math{tau = sn(u,m)}.\n"
+"@end ifinfo\n"
+"@tex\n"
+"$$\int_0^u {\rm dn}(v, m) dv  = \int_0^\tau \sqrt{{1-m t^2}\over{1-t^2}} dt$$\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"where $\tau = {\rm sn}(u, m)$.\n"
+"@end tex\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"This is related to @math{elliptic_e} by\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@ifhtml\n"
+"@math{elliptic_eu(u, m) = elliptic_e(asin(sn(u,m)),m)}\n"
+"@end ifhtml\n"
+"@ifinfo\n"
+"@math{elliptic_eu(u, m) = elliptic_e(asin(sn(u,m)),m)}\n"
+"@end ifinfo\n"
+"@tex\n"
+"$$E(u,m) = E(\phi, m)$$\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"where $\phi = \sin^{-1} {\rm sn}(u, m)$.\n"
+"@end tex\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"See also @ref{elliptic_e}.\n"
+"@opencatbox\n"
+"@category{Elliptic integrals}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{elliptic_pi}\n"
+"@deffn {Function} elliptic_pi (@var{n}, @var{phi}, @var{m})\n"
+"The incomplete elliptic integral of the third kind, defined as\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@ifhtml\n"
+"@math{integrate(1/(1-n*sin(x)^2)/sqrt(1 - m*sin(x)^2), x, 0, phi)}\n"
+"@end ifhtml\n"
+"@ifinfo\n"
+"@math{integrate(1/(1-n*sin(x)^2)/sqrt(1 - m*sin(x)^2), x, 0, phi)}\n"
+"@end ifinfo\n"
+"@tex\n"
+"$$\int_0^\phi {{d\theta}\over{(1-n\sin^2 \theta)\sqrt{1 - m\sin^2\theta}}}$$\n"
+"@end tex\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic integrals}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{elliptic_kc}\n"
+"@deffn {Function} elliptic_kc (@var{m})\n"
+"The complete elliptic integral of the first kind, defined as\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@ifhtml\n"
+"@math{integrate(1/sqrt(1 - m*sin(x)^2), x, 0, %pi/2)}\n"
+"@end ifhtml\n"
+"@ifinfo\n"
+"@math{integrate(1/sqrt(1 - m*sin(x)^2), x, 0, %pi/2)}\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@tex\n"
+"$$\int_0^{{\pi}\over{2}} {{d\theta}\over{\sqrt{1 - m\sin^2\theta}}}$$\n"
+"@end tex\n"
+"For certain values of @math{m}, the value of the integral is known in\n"
+"terms of @math{Gamma} functions.  Use @code{makegamma} to evaluate them.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic integrals}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@anchor{elliptic_ec}\n"
+"@deffn {Function} elliptic_ec (@var{m})\n"
+"The complete elliptic integral of the second kind, defined as\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@ifhtml\n"
+"@math{integrate(sqrt(1 - m*sin(x)^2), x, 0, %pi/2)}\n"
+"@end ifhtml\n"
+"@ifinfo\n"
+"@math{integrate(sqrt(1 - m*sin(x)^2), x, 0, %pi/2)}\n"
+"@end ifinfo\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@tex\n"
+"$$\int_0^{{\pi}\over{2}} \sqrt{1 - m\sin^2\theta} d\theta$$\n"
+"@end tex\n"
+"For certain values of @math{m}, the value of the integral is known in\n"
+"terms of @math{Gamma} functions.  Use @code{makegamma} to evaluate them.\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+"@opencatbox\n"
+"@category{Elliptic integrals}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Elliptic.texi
+msgid ""
+msgstr ""

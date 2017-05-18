@@ -1,0 +1,865 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Runtime.texi
+msgid ""
+"@menu\n"
+"* Introduction for Runtime Environment::  \n"
+"* Interrupts::                  \n"
+"* Functions and Variables for Runtime Environment::  \n"
+"@end menu\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Introduction for Runtime Environment, Interrupts, Runtime Environment, Runtime Environment\n"
+"@section Introduction for Runtime Environment\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c THIS DISCUSSION OF maxima-init.mac REPLACES AN EARLIER WRITE-UP. !!!\n"
+"@c HOWEVER IT SEEMS THAT THIS TEXT REALLY WANTS TO BE UNDER A DIFFERENT HEADING. !!!\n"
+"@code{maxima-init.mac} is a file which is loaded automatically when Maxima\n"
+"starts.  You can use @code{maxima-init.mac} to customize your Maxima\n"
+"environment.  @code{maxima-init.mac}, if it exists, is typically placed in the\n"
+"directory named by @code{maxima_userdir},\n"
+"although it can be in any directory searched by the function @code{file_search}.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Here is an example @code{maxima-init.mac} file:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@example\n"
+"setup_autoload (\"specfun.mac\", ultraspherical, assoc_legendre_p);\n"
+"showtime:all;\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"In this example, @code{setup_autoload} tells Maxima to load the\n"
+"specified file\n"
+"(@code{specfun.mac}) if any of the functions (@code{ultraspherical},\n"
+"@code{assoc_legendre_p}) are called but not yet defined.\n"
+"Thus you needn't remember to load the file before calling the functions.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"The statement @code{showtime: all} tells Maxima to set the @code{showtime}\n"
+"variable.  The @code{maxima-init.mac} file can contain any other assignments or\n"
+"other Maxima statements.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Session management}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Interrupts, Functions and Variables for Runtime Environment, Introduction for Runtime Environment, Runtime Environment\n"
+"@section Interrupts\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"The user can stop a time-consuming computation with the\n"
+"^C (control-C) character.\n"
+"The default action is to stop the computation\n"
+"and print another user prompt.\n"
+"In this case, it is not possible to restart a stopped computation.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"If the Lisp variable @code{*debugger-hook*} is set to @code{nil}, by executing\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@example\n"
+":lisp (setq *debugger-hook* nil)\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@noindent\n"
+"then upon receiving ^C, Maxima will enter the Lisp debugger,\n"
+"and the user may use the debugger to inspect the Lisp environment.\n"
+"The stopped computation can be restarted by entering\n"
+"@code{continue} in the Lisp debugger.\n"
+"The means of returning to Maxima from the Lisp debugger\n"
+"(other than running the computation to completion)\n"
+"is different for each version of Lisp.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"On Unix systems, the character ^Z (control-Z) causes Maxima\n"
+"to stop altogether, and control is returned to the shell prompt.\n"
+"The @code{fg} command causes Maxima\n"
+"to resume from the point at which it was stopped.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Console interaction}\n"
+"@closecatbox\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c end concepts Runtime Environment\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Runtime Environment,  , Interrupts, Runtime Environment\n"
+"@section Functions and Variables for Runtime Environment\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{maxima_tempdir}\n"
+"@defvr {System variable} maxima_tempdir\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{maxima_tempdir} names the directory in which Maxima creates some temporary\n"
+"files.  In particular, temporary files for plotting are created in\n"
+"@code{maxima_tempdir}.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"The initial value of @code{maxima_tempdir} is the user's home directory, if\n"
+"Maxima can locate it; otherwise Maxima makes a guess about a suitable directory.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{maxima_tempdir} may be assigned a string which names a directory.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{maxima_userdir}\n"
+"@defvr {System variable} maxima_userdir\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{maxima_userdir} names a directory which Maxima searches to find Maxima and\n"
+"Lisp files.  (Maxima searches some other directories as well;\n"
+"@code{file_search_maxima} and @code{file_search_lisp} are the complete lists.)\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"The initial value of @code{maxima_userdir} is a subdirectory of the user's home\n"
+"directory, if Maxima can locate it; otherwise Maxima makes a guess about a\n"
+"suitable directory.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{maxima_userdir} may be assigned a string which names a directory.\n"
+"However, assigning to @code{maxima_userdir} does not automatically change\n"
+"@code{file_search_maxima} and @code{file_search_lisp};\n"
+"those variables must be changed separately.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Global variables}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{room}\n"
+"@deffn  {Function} room @\n"
+"@fname{room} () @\n"
+"@fname{room} (true) @\n"
+"@fname{room} (false)\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Prints out a description of the state of storage and\n"
+"stack management in Maxima.  @code{room} calls the Lisp function of \n"
+"the same name.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"@code{room ()} prints out a moderate description.\n"
+"@item\n"
+"@code{room (true)} prints out a verbose description.\n"
+"@item\n"
+"@code{room (false)} prints out a terse description.\n"
+"@end itemize\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Debugging}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{sstatus}\n"
+"@deffn {Function} sstatus (@var{keyword}, @var{item})\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"When @var{keyword} is the symbol @code{feature}, @var{item} is put on the list\n"
+"of system features.  After @code{sstatus (keyword, item)} is executed,\n"
+"@code{status (feature, item)} returns @code{true}.  If @var{keyword} is the\n"
+"symbol @code{nofeature}, @var{item} is deleted from the list of system features.\n"
+"This can be useful for package writers, to keep track of what features they have\n"
+"loaded in.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"See also @mrefdot{status}\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Programming}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{status}\n"
+"@deffn  {Function} status @\n"
+"@fname{status} (@code{feature}) @\n"
+"@fname{status} (@code{feature}, @var{item})\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Returns information about the presence or absence of certain system-dependent \n"
+"features.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"@code{status (feature)} returns a list of system features. These include Lisp \n"
+"version, operating system type, etc. The list may vary from one Lisp type to \n"
+"another.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@item \n"
+"@code{status (feature, item)} returns @code{true} if @var{item} is on the\n"
+"list of items returned by @code{status (feature)} and @code{false} otherwise.\n"
+"@code{status} quotes the argument @var{item}. The quote-quote operator \n"
+"@code{'@w{}'} defeats quotation. A feature whose name contains a special \n"
+"character, such as a hyphen, must be given as a string argument. For example,\n"
+"@code{status (feature, \"ansi-cl\")}.\n"
+"@end itemize\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"See also @mrefdot{sstatus}\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"The variable @code{features} contains a list of features which apply to \n"
+"mathematical expressions. See @code{features} and @code{featurep} for more \n"
+"information.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Programming}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c NEEDS CLARIFICATION\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{system}\n"
+"@deffn {Function} system (@var{command})\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Executes @var{command} as a separate process.  The command is passed to the\n"
+"default shell for execution.  @code{system} is not supported by all operating\n"
+"systems, but generally exists in Unix and Unix-like environments.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Supposing @code{_hist.out} is a list of frequencies which you wish to plot as a\n"
+"bar graph using @code{xgraph}.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@example\n"
+"(%i1) (with_stdout(\"_hist.out\",\n"
+"           for i:1 thru length(hist) do (\n"
+"             print(i,hist[i]))),\n"
+"       system(\"xgraph -bar -brw .7 -nl < _hist.out\"));\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"In order to make the plot be done in the background (returning control to\n"
+"Maxima) and remove the temporary file after it is done do:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@example\n"
+"system(\"(xgraph -bar -brw .7 -nl < _hist.out;  rm -f _hist.out)&\")\n"
+"@end example\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{time}\n"
+"@deffn {Function} time (%o1, %o2, %o3, @dots{})\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Returns a list of the times, in seconds, taken to compute the output lines\n"
+"@code{%o1}, @code{%o2}, @code{%o3}, @dots{} The time returned is Maxima's\n"
+"estimate of the internal computation time, not the elapsed time.  @code{time}\n"
+"can only be applied to output line variables; for any other variables,\n"
+"@code{time} returns @code{unknown}.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Set @code{showtime: true} to make Maxima print out the computation time \n"
+"and elapsed time with each output line.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Debugging}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{timedate}\n"
+"@deffn  {Function} timedate @\n"
+"@fname{timedate} (@var{T}, @var{tz_offset})\n"
+"@fname{timedate} (@var{T})\n"
+"@fname{timedate} () @\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{timedate(@var{T}, @var{tz_offset})} returns a string\n"
+"representing the time @var{T} in the time zone @var{tz_offset}.\n"
+"The string format is @code{YYYY-MM-DD HH:MM:SS.NNN[+|-]ZZ:ZZ}\n"
+"(using as many digits as necessary to represent the fractional part)\n"
+"if @var{T} has a nonzero fractional part,\n"
+"or @code{YYYY-MM-DD HH:MM:SS[+|-]ZZ:ZZ} if its fractional part is zero.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@var{T} measures time, in seconds, since midnight, January 1, 1900,\n"
+"in the GMT time zone.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@var{tz_offset} measures the offset of the time zone, in hours,\n"
+"east (positive) or west (negative) of GMT.\n"
+"@var{tz_offset} must be an integer, rational, or float between -24 and 24, inclusive.\n"
+"If @var{tz_offset} is not a multiple of 1/60, \n"
+"it is rounded to the nearest multiple of 1/60.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{timedate(@var{T})} is equivalent to @code{timedate(@var{T}, @var{tz_offset})}\n"
+"with @var{tz_offset} equal to the offset of the local time zone.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{timedate()} is equivalent to @code{timedate(absolute_real_time())}.\n"
+"That is, it returns the current time in the local time zone.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{timedate} with no argument returns a string representing the current time and date.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c ===beg===\n"
+"@c d : timedate ();\n"
+"@c print (\"timedate reports current time\", d) $\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) d : timedate ();\n"
+"(%o1)                      2010-06-08 04:08:09+01:00\n"
+"(%i2) print (\"timedate reports current time\", d) $\n"
+"timedate reports current time 2010-06-08 04:08:09+01:00\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{timedate} with an argument returns a string representing the argument.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c ===beg===\n"
+"@c timedate (0);\n"
+"@c timedate (absolute_real_time () - 7*24*3600);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) timedate (0);\n"
+"(%o1)                      1900-01-01 01:00:00+01:00\n"
+"(%i2) timedate (absolute_real_time () - 7*24*3600);\n"
+"(%o2)                      2010-06-01 04:19:51+01:00\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@code{timedate} with optional timezone offset.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c ===beg===\n"
+"@c timedate (1000000000, -9.5);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) timedate (1000000000, -9.5);\n"
+"(%o1)               1931-09-09 16:16:40-09:30\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Time and date functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{parse_timedate}\n"
+"@deffn  {Function} parse_timedate @\n"
+"@fname{parse_timedate} (@var{S})\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Parses a string @var{S} representing a date or date and time of day\n"
+"and returns the number of seconds since midnight, January 1, 1900 GMT.\n"
+"If there is a nonzero fractional part, the value returned is a rational number,\n"
+"otherwise, it is an integer.\n"
+"@code{parse_timedate} returns @code{false}\n"
+"if it cannot parse @var{S} according to any of the allowed formats.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"The string @var{S} must have one of the following formats,\n"
+"optionally followed by a timezone designation:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"@code{YYYY-MM-DD[ T]hh:mm:ss[,.]nnn}\n"
+"@item\n"
+"@code{YYYY-MM-DD[ T]hh:mm:ss}\n"
+"@item\n"
+"@code{YYYY-MM-DD}\n"
+"@end itemize\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"where the fields are year, month, day, hours, minutes, seconds, and fraction of a second,\n"
+"and square brackets indicate acceptable alternatives.\n"
+"The fraction may contain one or more digits.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Except for the fraction of a second,\n"
+"each field must have exactly the number of digits indicated:\n"
+"four digits for the year, and two for the month, day of the month, hours, minutes, and seconds.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"A timezone designation must have one of the following forms:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"@code{[+-]hh:mm}\n"
+"@item\n"
+"@code{[+-]hhmm}\n"
+"@item\n"
+"@code{[+-]hh}\n"
+"@item\n"
+"@code{Z}\n"
+"@end itemize\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"where @code{hh} and @code{mm} indicate hours and minutes east (@code{+}) or west (@code{-}) of GMT.\n"
+"The timezone may be from +24 hours (inclusive) to -24 hours (inclusive).\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"A literal character @code{Z} is equivalent to @code{+00:00} and its variants,\n"
+"indicating GMT.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"If no timezone is indicated,\n"
+"the time is assumed to be in the local time zone.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Any leading or trailing whitespace (space, tab, newline, and carriage return) is ignored,\n"
+"but any other leading or trailing characters cause @code{parse_timedate} to fail and return @code{false}.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"See also @mref{timedate} and @mrefdot{absolute_real_time}\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Midnight, January 1, 1900, in the local time zone, in each acceptable format.\n"
+"The result is the number of seconds the local time zone\n"
+"is ahead (negative result) or behind (positive result) GMT.\n"
+"In this example, the local time zone is 8 hours behind GMT.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c ===beg===\n"
+"@c parse_timedate (\"1900-01-01 00:00:00,000\");\n"
+"@c parse_timedate (\"1900-01-01 00:00:00.000\");\n"
+"@c parse_timedate (\"1900-01-01T00:00:00,000\");\n"
+"@c parse_timedate (\"1900-01-01T00:00:00.000\");\n"
+"@c parse_timedate (\"1900-01-01 00:00:00\");\n"
+"@c parse_timedate (\"1900-01-01T00:00:00\");\n"
+"@c parse_timedate (\"1900-01-01\");\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) parse_timedate (\"1900-01-01 00:00:00,000\");\n"
+"(%o1)                         28800\n"
+"(%i2) parse_timedate (\"1900-01-01 00:00:00.000\");\n"
+"(%o2)                         28800\n"
+"(%i3) parse_timedate (\"1900-01-01T00:00:00,000\");\n"
+"(%o3)                         28800\n"
+"(%i4) parse_timedate (\"1900-01-01T00:00:00.000\");\n"
+"(%o4)                         28800\n"
+"(%i5) parse_timedate (\"1900-01-01 00:00:00\");\n"
+"(%o5)                         28800\n"
+"(%i6) parse_timedate (\"1900-01-01T00:00:00\");\n"
+"(%o6)                         28800\n"
+"(%i7) parse_timedate (\"1900-01-01\");\n"
+"(%o7)                         28800\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Midnight, January 1, 1900, GMT, in different indicated time zones.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c ===beg===\n"
+"@c parse_timedate (\"1900-01-01 19:00:00+19:00\");\n"
+"@c parse_timedate (\"1900-01-01 07:00:00+07:00\");\n"
+"@c parse_timedate (\"1900-01-01 01:00:00+01:00\");\n"
+"@c parse_timedate (\"1900-01-01Z\");\n"
+"@c parse_timedate (\"1899-12-31 21:00:00-03:00\");\n"
+"@c parse_timedate (\"1899-12-31 13:00:00-11:00\");\n"
+"@c parse_timedate (\"1899-12-31 08:00:00-16:00\");\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) parse_timedate (\"1900-01-01 19:00:00+19:00\");\n"
+"(%o1)                           0\n"
+"(%i2) parse_timedate (\"1900-01-01 07:00:00+07:00\");\n"
+"(%o2)                           0\n"
+"(%i3) parse_timedate (\"1900-01-01 01:00:00+01:00\");\n"
+"(%o3)                           0\n"
+"(%i4) parse_timedate (\"1900-01-01Z\");\n"
+"(%o4)                           0\n"
+"(%i5) parse_timedate (\"1899-12-31 21:00:00-03:00\");\n"
+"(%o5)                           0\n"
+"(%i6) parse_timedate (\"1899-12-31 13:00:00-11:00\");\n"
+"(%o6)                           0\n"
+"(%i7) parse_timedate (\"1899-12-31 08:00:00-16:00\");\n"
+"(%o7)                           0\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Time and date functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{absolute_real_time}\n"
+"@deffn {Function} absolute_real_time ()\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Returns the number of seconds since midnight, January 1, 1900 GMT.\n"
+"The return value is an integer.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"See also @mref{elapsed_real_time} and @mrefdot{elapsed_run_time}\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c ===beg===\n"
+"@c absolute_real_time ();\n"
+"@c 1900 + absolute_real_time () / (365.25 * 24 * 3600);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) absolute_real_time ();\n"
+"(%o1)                      3385045277\n"
+"(%i2) 1900 + absolute_real_time () / (365.25 * 24 * 3600);\n"
+"(%o2)                   2007.265612087104\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Time and date functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{elapsed_real_time}\n"
+"@deffn {Function} elapsed_real_time ()\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Returns the number of seconds (including fractions of a second)\n"
+"since Maxima was most recently started or restarted.\n"
+"The return value is a floating-point number.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"See also @mref{absolute_real_time} and @mrefdot{elapsed_run_time}\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c ===beg===\n"
+"@c elapsed_real_time ();\n"
+"@c expand ((a + b)^500)$\n"
+"@c elapsed_real_time ();\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) elapsed_real_time ();\n"
+"(%o1)                       2.559324\n"
+"(%i2) expand ((a + b)^500)$\n"
+"(%i3) elapsed_real_time ();\n"
+"(%o3)                       7.552087\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Time and date functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{elapsed_run_time}\n"
+"@deffn {Function} elapsed_run_time ()\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Returns an estimate of the number of seconds (including fractions of a second)\n"
+"which Maxima has spent in computations since Maxima was most recently started\n"
+"or restarted.  The return value is a floating-point number.\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"See also @mref{absolute_real_time} and @mrefdot{elapsed_real_time}\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@c ===beg===\n"
+"@c elapsed_run_time ();\n"
+"@c expand ((a + b)^500)$\n"
+"@c elapsed_run_time ();\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) elapsed_run_time ();\n"
+"(%o1)                         0.04\n"
+"(%i2) expand ((a + b)^500)$\n"
+"(%i3) elapsed_run_time ();\n"
+"(%o3)                         1.26\n"
+"@end example\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+"@opencatbox\n"
+"@category{Time and date functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Runtime.texi
+msgid ""
+msgstr ""

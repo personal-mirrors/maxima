@@ -1,0 +1,2771 @@
+# SOME DESCRIPTIVE TITLE.">
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+ 
+# Number.texi
+msgid ""
+"@menu\n"
+"* Functions and Variables for Number Theory::  \n"
+"@end menu\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@node Functions and Variables for Number Theory,  , Number Theory, Number Theory\n"
+"@section Functions and Variables for Number Theory\n"
+"@c -----------------------------------------------------------------------------\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{bern}\n"
+"@deffn {Function} bern (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the @var{n}'th Bernoulli number for integer @var{n}.\n"
+"@c WELL, ACTUALLY bern SIMPLIFIES, LIKE FACTORIAL -- DO WE WANT TO GET INTO THAT ???\n"
+"@c OR JUST PRETEND IT'S \"RETURNED\" ???\n"
+"Bernoulli numbers equal to zero are suppressed if @code{zerobern} is\n"
+"@code{false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefdot{burn}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) zerobern: true$\n"
+"(%i2) map (bern, [0, 1, 2, 3, 4, 5, 6, 7, 8]);\n"
+"                      1  1       1      1        1\n"
+"(%o2)           [1, - -, -, 0, - --, 0, --, 0, - --]\n"
+"                      2  6       30     42       30\n"
+"(%i3) zerobern: false$\n"
+"(%i4) map (bern, [0, 1, 2, 3, 4, 5, 6, 7, 8]);\n"
+"                      1  1    1   1     1   5     691   7\n"
+"(%o4)           [1, - -, -, - --, --, - --, --, - ----, -]\n"
+"                      2  6    30  42    30  66    2730  6\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{bernpoly}\n"
+"@deffn {Function} bernpoly (@var{x}, @var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the @var{n}'th Bernoulli polynomial in the\n"
+"variable @var{x}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{bfzeta}\n"
+"@deffn {Function} bfzeta (@var{s}, @var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the Riemann zeta function for the argument @var{s}.\n"
+"The return value is a big float (bfloat);\n"
+"@var{n} is the number of digits in the return value.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory} @category{Numerical evaluation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{bfhzeta}\n"
+"@deffn {Function} bfhzeta (@var{s}, @var{h}, @var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the Hurwitz zeta function for the arguments @var{s} and @var{h}.\n"
+"The return value is a big float (bfloat);\n"
+"@var{n} is the number of digits in the return value.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The Hurwitz zeta function is defined as\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@tex\n"
+"$$\zeta \left(s,h\right) = \sum_{k=0}^\infty {1 \over \left(k+h\right)^{s}}$$\n"
+"@end tex\n"
+"@ifnottex\n"
+"@example\n"
+"                        inf\n"
+"                        ====\n"
+"                        \        1\n"
+"         zeta (s,h)  =   >    --------\n"
+"                        /            s\n"
+"                        ====  (k + h)\n"
+"                        k = 0\n"
+"@end example\n"
+"@end ifnottex\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{load (\"bffac\")} loads this function.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory} @category{Numerical evaluation}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{burn}\n"
+"@deffn {Function} burn (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns a rational number, which is an approximation of the @var{n}'th Bernoulli\n"
+"number for integer @var{n}.  @code{burn} exploits the observation that\n"
+"(rational) Bernoulli numbers can be approximated by (transcendental) zetas with\n"
+"tolerable efficiency:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"                   n - 1  1 - 2 n\n"
+"              (- 1)      2        zeta(2 n) (2 n)!\n"
+"     B(2 n) = ------------------------------------\n"
+"                                2 n\n"
+"                             %pi\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{burn} may be more efficient than @mref{bern} for large, isolated @var{n}\n"
+"as @mref{bern} computes all the Bernoulli numbers up to index @var{n} before \n"
+"returning.  @code{burn} invokes the approximation for even integers @var{n} >\n"
+"255.  For odd integers and @var{n} <= 255 the function @mref{bern} is called.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{load (\"bffac\")} loads this function.  See also @mrefdot{bern}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{chinese}\n"
+"@deffn {Function} chinese ([@var{r_1}, @dots{}, @var{r_n}], [@var{m_1}, @dots{}, @var{m_n}])\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Solves the system of congruences @code{x = r_1 mod m_1}, @dots{}, @code{x = r_n mod m_n}.\n"
+"The remainders @var{r_n} may be arbitrary integers while the moduli @var{m_n} have to be \n"
+"positive and pairwise coprime integers.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) mods : [1000, 1001, 1003, 1007];\n"
+"(%o1)                   [1000, 1001, 1003, 1007]\n"
+"(%i2) lreduce('gcd, mods);\n"
+"(%o2)                               1\n"
+"(%i3) x : random(apply(\"*\", mods));\n"
+"(%o3)                         685124877004\n"
+"(%i4) rems : map(lambda([z], mod(x, z)), mods);\n"
+"(%o4)                       [4, 568, 54, 624]\n"
+"(%i5) chinese(rems, mods);\n"
+"(%o5)                         685124877004\n"
+"(%i6) chinese([1, 2], [3, n]);\n"
+"(%o6)                    chinese([1, 2], [3, n])\n"
+"(%i7) %, n = 4;\n"
+"(%o7)                              10\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cf}\n"
+"@deffn {Function} cf (@var{expr})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Computes a continued fraction approximation.\n"
+"@var{expr} is an expression comprising continued fractions,\n"
+"square roots of integers, and literal real numbers\n"
+"(integers, rational numbers, ordinary floats, and bigfloats).\n"
+"@code{cf} computes exact expansions for rational numbers,\n"
+"but expansions are truncated at @code{ratepsilon} for ordinary floats\n"
+"and @code{10^(-fpprec)} for bigfloats.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Operands in the expression may be combined with arithmetic operators.\n"
+"Maxima does not know about operations on continued fractions\n"
+"outside of @code{cf}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{cf} evaluates its arguments after binding @code{listarith} to\n"
+"@code{false}.  @code{cf} returns a continued fraction, represented as a list.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"A continued fraction @code{a + 1/(b + 1/(c + ...))} is represented by the list\n"
+"@code{[a, b, c, ...]}.  The list elements @code{a}, @code{b}, @code{c}, @dots{}\n"
+"must evaluate to integers.  @var{expr} may also contain @code{sqrt (n)} where\n"
+"@code{n} is an integer.  In this case @code{cf} will give as many terms of the\n"
+"continued fraction as the value of the variable @mref{cflength} times the\n"
+"period.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"A continued fraction can be evaluated to a number by evaluating the arithmetic\n"
+"representation returned by @mrefdot{cfdisrep}  See also @mref{cfexpand} for\n"
+"another way to evaluate a continued fraction.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{cfdisrep} @mrefcomma{cfexpand} and @mrefdot{cflength}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@itemize @bullet\n"
+"@item\n"
+"@var{expr} is an expression comprising continued fractions and square roots of\n"
+"integers.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) cf ([5, 3, 1]*[11, 9, 7] + [3, 7]/[4, 3, 2]);\n"
+"(%o1)               [59, 17, 2, 1, 1, 1, 27]\n"
+"(%i2) cf ((3/17)*[1, -2, 5]/sqrt(11) + (8/13));\n"
+"(%o2)        [0, 1, 1, 1, 3, 2, 1, 4, 1, 9, 1, 9, 2]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@item\n"
+"@code{cflength} controls how many periods of the continued fraction\n"
+"are computed for algebraic, irrational numbers.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) cflength: 1$\n"
+"(%i2) cf ((1 + sqrt(5))/2);\n"
+"(%o2)                    [1, 1, 1, 1, 2]\n"
+"(%i3) cflength: 2$\n"
+"(%i4) cf ((1 + sqrt(5))/2);\n"
+"(%o4)               [1, 1, 1, 1, 1, 1, 1, 2]\n"
+"(%i5) cflength: 3$\n"
+"(%i6) cf ((1 + sqrt(5))/2);\n"
+"(%o6)           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@item\n"
+"A continued fraction can be evaluated by evaluating the arithmetic\n"
+"representation returned by @mrefdot{cfdisrep}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) cflength: 3$\n"
+"(%i2) cfdisrep (cf (sqrt (3)))$\n"
+"(%i3) ev (%, numer);\n"
+"(%o3)                   1.731707317073171\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@item\n"
+"Maxima does not know about operations on continued fractions outside of\n"
+"@code{cf}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) cf ([1,1,1,1,1,2] * 3);\n"
+"(%o1)                     [4, 1, 5, 2]\n"
+"(%i2) cf ([1,1,1,1,1,2]) * 3;\n"
+"(%o2)                  [3, 3, 3, 3, 3, 6]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@end itemize\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Continued fractions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c NEEDS CLARIFICATION -- MAKE EXPLICIT HOW list IS RELATED TO a, b, c, ...\n"
+"@c ALSO, CAN list CONTAIN ANYTHING OTHER THAN LITERAL INTEGERS ??\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cfdisrep}\n"
+"@deffn {Function} cfdisrep (@var{list})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Constructs and returns an ordinary arithmetic expression\n"
+"of the form @code{a + 1/(b + 1/(c + ...))}\n"
+"from the list representation of a continued fraction @code{[a, b, c, ...]}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) cf ([1, 2, -3] + [1, -2, 1]);\n"
+"(%o1)                     [1, 1, 1, 2]\n"
+"(%i2) cfdisrep (%);\n"
+"                                  1\n"
+"(%o2)                     1 + ---------\n"
+"                                    1\n"
+"                              1 + -----\n"
+"                                      1\n"
+"                                  1 + -\n"
+"                                      2\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Continued fractions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cfexpand}\n"
+"@deffn {Function} cfexpand (@var{x})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns a matrix of the numerators and denominators of the last (column 1) and\n"
+"next-to-last (column 2) convergents of the continued fraction @var{x}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) cf (rat (ev (%pi, numer)));\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"`rat' replaced 3.141592653589793 by 103993/33102 =3.141592653011902\n"
+"(%o1)                  [3, 7, 15, 1, 292]\n"
+"(%i2) cfexpand (%); \n"
+"                         [ 103993  355 ]\n"
+"(%o2)                    [             ]\n"
+"                         [ 33102   113 ]\n"
+"(%i3) %[1,1]/%[2,1], numer;\n"
+"(%o3)                   3.141592653011902\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Continued fractions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{cflength}\n"
+"@defvr {Option variable} cflength\n"
+"Default value: 1\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{cflength} controls the number of terms of the continued fraction the\n"
+"function @code{cf} will give, as the value @code{cflength} times the period.\n"
+"Thus the default is to give one period.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) cflength: 1$\n"
+"(%i2) cf ((1 + sqrt(5))/2);\n"
+"(%o2)                    [1, 1, 1, 1, 2]\n"
+"(%i3) cflength: 2$\n"
+"(%i4) cf ((1 + sqrt(5))/2);\n"
+"(%o4)               [1, 1, 1, 1, 1, 1, 1, 2]\n"
+"(%i5) cflength: 3$\n"
+"(%i6) cf ((1 + sqrt(5))/2);\n"
+"(%o6)           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Continued fractions}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{divsum}\n"
+"@deffn  {Function} divsum @\n"
+"@fname{divsum} (@var{n}, @var{k}) @\n"
+"@fname{divsum} (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{divsum (@var{n}, @var{k})} returns the sum of the divisors of @var{n}\n"
+"raised to the @var{k}'th power.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{divsum (@var{n})} returns the sum of the divisors of @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) divsum (12);\n"
+"(%o1)                          28\n"
+"(%i2) 1 + 2 + 3 + 4 + 6 + 12;\n"
+"(%o2)                          28\n"
+"(%i3) divsum (12, 2);\n"
+"(%o3)                          210\n"
+"(%i4) 1^2 + 2^2 + 3^2 + 4^2 + 6^2 + 12^2;\n"
+"(%o4)                          210\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{euler}\n"
+"@deffn {Function} euler (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the @var{n}'th Euler number for nonnegative integer @var{n}.\n"
+"Euler numbers equal to zero are suppressed if @code{zerobern} is\n"
+"@code{false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"For the Euler-Mascheroni constant, see @code{%gamma}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) zerobern: true$\n"
+"(%i2) map (euler, [0, 1, 2, 3, 4, 5, 6]);\n"
+"(%o2)               [1, 0, - 1, 0, 5, 0, - 61]\n"
+"(%i3) zerobern: false$\n"
+"(%i4) map (euler, [0, 1, 2, 3, 4, 5, 6]);\n"
+"(%o4)               [1, - 1, 5, - 61, 1385, - 50521, 2702765]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{factors_only}\n"
+"@defvr {Option variable} factors_only\n"
+"Default value: @code{false}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Controls the value returned by @mrefdot{ifactors} The default @code{false} \n"
+"causes @code{ifactors} to provide information about multiplicities of the \n"
+"computed prime factors. If @code{factors_only} is set to @code{true}, \n"
+"@code{ifactors} returns nothing more than a list of prime factors.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Example: See @mrefdot{ifactors}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fib}\n"
+"@deffn {Function} fib (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the @var{n}'th Fibonacci number.\n"
+"@code{fib(0)} is equal to 0 and @code{fib(1)} equal to 1, and \n"
+"@code{fib (-@var{n})} equal to @code{(-1)^(@var{n} + 1) * fib(@var{n})}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"After calling @code{fib},\n"
+"@code{prevfib} is equal to @code{fib(@var{n} - 1)},\n"
+"the Fibonacci number preceding the last one computed.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) map (fib, [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8]);\n"
+"(%o1)           [- 3, 2, - 1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{fibtophi}\n"
+"@deffn {Function} fibtophi (@var{expr})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Expresses Fibonacci numbers in @var{expr} in terms of the constant @code{%phi},\n"
+"which is @code{(1 + sqrt(5))/2}, approximately 1.61803399.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c ===beg===\n"
+"@c fibtophi (fib (n));\n"
+"@c fib (n-1) + fib (n) - fib (n+1);\n"
+"@c fibtophi (%);\n"
+"@c ratsimp (%);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) fibtophi (fib (n));\n"
+"                           n             n\n"
+"                       %phi  - (1 - %phi)\n"
+"(%o1)                  -------------------\n"
+"                           2 %phi - 1\n"
+"(%i2) fib (n-1) + fib (n) - fib (n+1);\n"
+"(%o2)          - fib(n + 1) + fib(n) + fib(n - 1)\n"
+"(%i3) fibtophi (%);\n"
+"            n + 1             n + 1       n             n\n"
+"        %phi      - (1 - %phi)        %phi  - (1 - %phi)\n"
+"(%o3) - --------------------------- + -------------------\n"
+"                2 %phi - 1                2 %phi - 1\n"
+"                                          n - 1             n - 1\n"
+"                                      %phi      - (1 - %phi)\n"
+"                                    + ---------------------------\n"
+"                                              2 %phi - 1\n"
+"(%i4) ratsimp (%);\n"
+"(%o4)                           0\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{ifactors}\n"
+"@deffn {Function} ifactors (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"For a positive integer @var{n} returns the factorization of @var{n}.  If\n"
+"@code{n=p1^e1..pk^nk} is the decomposition of @var{n} into prime\n"
+"factors, ifactors returns @code{[[p1, e1], ... , [pk, ek]]}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Factorization methods used are trial divisions by primes up to 9973,\n"
+"Pollard's rho and p-1 method and elliptic curves.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If the variable @code{ifactor_verbose} is set to @code{true}\n"
+"ifactor produces detailed output about what it is doing including\n"
+"immediate feedback as soon as a factor has been found.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The value returned by @code{ifactors} is controlled by the option variable @mrefdot{factors_only}\n"
+"The default @code{false} causes @code{ifactors} to provide information about \n"
+"the multiplicities of the computed prime factors. If @code{factors_only} \n"
+"is set to @code{true}, @code{ifactors} simply returns the list of \n"
+"prime factors.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) ifactors(51575319651600);\n"
+"(%o1)     [[2, 4], [3, 2], [5, 2], [1583, 1], [9050207, 1]]\n"
+"(%i2) apply(\"*\", map(lambda([u], u[1]^u[2]), %));\n"
+"(%o2)                        51575319651600\n"
+"(%i3) ifactors(51575319651600), factors_only : true;\n"
+"(%o3)                   [2, 3, 5, 1583, 9050207]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{igcdex}\n"
+"@deffn {Function} igcdex (@var{n}, @var{k})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns a list @code{[@var{a}, @var{b}, @var{u}]} where @var{u} is the greatest\n"
+"common divisor of @var{n} and @var{k}, and @var{u} is equal to\n"
+"@code{@var{a} @var{n} + @var{b} @var{k}}.  The arguments @var{n} and @var{k}\n"
+"must be integers.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{igcdex} implements the Euclidean algorithm.  See also @mrefdot{gcdex}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The command @code{load(gcdex)} loads the function.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) load(gcdex)$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i2) igcdex(30,18);\n"
+"(%o2)                      [- 1, 2, 6]\n"
+"(%i3) igcdex(1526757668, 7835626735736);\n"
+"(%o3)            [845922341123, - 164826435, 4]\n"
+"(%i4) igcdex(fib(20), fib(21));\n"
+"(%o4)                   [4181, - 2584, 1]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{inrt}\n"
+"@deffn {Function} inrt (@var{x}, @var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the integer @var{n}'th root of the absolute value of @var{x}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) l: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]$\n"
+"(%i2) map (lambda ([a], inrt (10^a, 3)), l);\n"
+"(%o2) [2, 4, 10, 21, 46, 100, 215, 464, 1000, 2154, 4641, 10000]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{inv_mod}\n"
+"@deffn {Function} inv_mod (@var{n}, @var{m})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Computes the inverse of @var{n} modulo @var{m}.\n"
+"@code{inv_mod (n,m)} returns @code{false}, \n"
+"if @var{n} is a zero divisor modulo @var{m}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) inv_mod(3, 41);\n"
+"(%o1)                           14\n"
+"(%i2) ratsimp(3^-1), modulus = 41;\n"
+"(%o2)                           14\n"
+"(%i3) inv_mod(3, 42);\n"
+"(%o3)                          false\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{isqrt}\n"
+"@deffn {Function} isqrt (@var{x})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the \"integer square root\" of the absolute value of @var{x}, which is an\n"
+"integer.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Mathematical functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{jacobi}\n"
+"@deffn {Function} jacobi (@var{p}, @var{q})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the Jacobi symbol of @var{p} and @var{q}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) l: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]$\n"
+"(%i2) map (lambda ([a], jacobi (a, 9)), l);\n"
+"(%o2)         [1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lcm}\n"
+"@deffn {Function} lcm (@var{expr_1}, @dots{}, @var{expr_n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the least common multiple of its arguments.\n"
+"The arguments may be general expressions as well as integers.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{load (\"functs\")} loads this function.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{lucas}\n"
+"@deffn {Function} lucas (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the @var{n}'th Lucas number.\n"
+"@code{lucas(0)} is equal to 2 and @code{lucas(1)} equal to 1, and \n"
+"@code{lucas(-@var{n})} equal to @code{(-1)^(-@var{n}) * lucas(@var{n})}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) map (lucas, [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8]);\n"
+"(%o1)             [7, - 4, 3, - 1, 2, 1, 3, 4, 7, 11, 18, 29, 47]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"After calling @code{lucas}, the global variable\n"
+"@code{next_lucas} is equal to @code{lucas (@var{n} + 1)},\n"
+"the Lucas number following the last returned. The example shows \n"
+"how Fibonacci numbers can be computed via @code{lucas} and @code{next_lucas}. \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) fib_via_lucas(n) := \n"
+"         block([lucas : lucas(n)],\n"
+"         signum(n) * (2*next_lucas - lucas)/5 )$\n"
+"(%i2) map (fib_via_lucas, [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8]);\n"
+"(%o2)             [- 3, 2, - 1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{mod}\n"
+"@deffn {Function} mod (@var{x}, @var{y})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If @var{x} and @var{y} are real numbers and @var{y} is nonzero, return\n"
+"@code{@var{x} - @var{y} * floor(@var{x} / @var{y})}.  Further for all real\n"
+"@var{x}, we have @code{mod (@var{x}, 0) = @var{x}}.  For a discussion of the\n"
+"definition @code{mod (@var{x}, 0) = @var{x}}, see Section 3.4, of\n"
+"\"Concrete Mathematics,\" by Graham, Knuth, and Patashnik.  The function\n"
+"@code{mod (@var{x}, 1)} is a sawtooth function with period 1 with\n"
+"@code{mod (1, 1) = 0} and @code{mod (0, 1) = 0}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"To find the principal argument (a number in the interval @code{(-%pi, %pi]}) of\n"
+"a complex number, use the function\n"
+"@code{@var{x} |-> %pi - mod (%pi - @var{x}, 2*%pi)}, where @var{x} is an\n"
+"argument.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"When @var{x} and @var{y} are constant expressions (@code{10 * %pi}, for \n"
+"example), @code{mod} uses the same big float evaluation scheme that @code{floor}\n"
+"and @code{ceiling} uses.  Again, it's possible, although unlikely, that\n"
+"@code{mod} could return an erroneous value in such cases.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"For nonnumerical arguments @var{x} or @var{y}, @code{mod} knows several\n"
+"simplification rules:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c ===beg===\n"
+"@c mod (x, 0);\n"
+"@c mod (a*x, a*y);\n"
+"@c mod (0, x);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) mod (x, 0);\n"
+"(%o1)                           x\n"
+"(%i2) mod (a*x, a*y);\n"
+"(%o2)                      a mod(x, y)\n"
+"(%i3) mod (0, x);\n"
+"(%o3)                           0\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Mathematical functions}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{next_prime}\n"
+"@deffn {Function} next_prime (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the smallest prime bigger than @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) next_prime(27);\n"
+"(%o1)                       29\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{partfrac}\n"
+"@deffn {Function} partfrac (@var{expr}, @var{var})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Expands the expression @var{expr} in partial fractions\n"
+"with respect to the main variable @var{var}.  @code{partfrac} does a complete\n"
+"partial fraction decomposition.  The algorithm employed is based on\n"
+"the fact that the denominators of the partial fraction expansion (the\n"
+"factors of the original denominator) are relatively prime.  The\n"
+"numerators can be written as linear combinations of denominators, and\n"
+"the expansion falls out.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) 1/(1+x)^2 - 2/(1+x) + 2/(2+x);\n"
+"                      2       2        1\n"
+"(%o1)               ----- - ----- + --------\n"
+"                    x + 2   x + 1          2\n"
+"                                    (x + 1)\n"
+"(%i2) ratsimp (%);\n"
+"                                 x\n"
+"(%o2)                 - -------------------\n"
+"                         3      2\n"
+"                        x  + 4 x  + 5 x + 2\n"
+"(%i3) partfrac (%, x);\n"
+"                      2       2        1\n"
+"(%o3)               ----- - ----- + --------\n"
+"                    x + 2   x + 1          2\n"
+"                                    (x + 1)\n"
+"@end example\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{power_mod}\n"
+"@deffn {Function} power_mod (@var{a}, @var{n}, @var{m})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Uses a modular algorithm to compute @code{a^n mod m} \n"
+"where @var{a} and @var{n} are integers and @var{m} is a positive integer.\n"
+"If @var{n} is negative, @code{inv_mod} is used to find the modular inverse.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) power_mod(3, 15, 5);\n"
+"(%o1)                          2\n"
+"(%i2) mod(3^15,5);\n"
+"(%o2)                          2\n"
+"(%i3) power_mod(2, -1, 5);\n"
+"(%o3)                          3\n"
+"(%i4) inv_mod(2,5);\n"
+"(%o4)                          3\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{primep}\n"
+"@deffn {Function} primep (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Primality test.  If @code{primep (@var{n})} returns @code{false}, @var{n} is a\n"
+"composite number and if it returns @code{true}, @var{n} is a prime number\n"
+"with very high probability.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"For @var{n} less than 341550071728321 a deterministic version of\n"
+"Miller-Rabin's test is used.  If @code{primep (@var{n})} returns\n"
+"@code{true}, then @var{n} is a prime number.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"For @var{n} bigger than 341550071728321 @code{primep} uses\n"
+"@code{primep_number_of_tests} Miller-Rabin's pseudo-primality tests and one \n"
+"Lucas pseudo-primality test.  The probability that a non-prime @var{n} will \n"
+"pass one Miller-Rabin test is less than 1/4.  Using the default value 25 for\n"
+"@code{primep_number_of_tests}, the probability of @var{n} being\n"
+"composite is much smaller that 10^-15.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{primep_number_of_tests}\n"
+"@defvr {Option variable} primep_number_of_tests\n"
+"Default value: 25\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Number of Miller-Rabin's tests used in @code{primep}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{primes}\n"
+"@deffn {Function} primes (@var{start}, @var{end})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the list of all primes from @var{start} to @var{end}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) primes(3, 7);\n"
+"(%o1)                     [3, 5, 7]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{prev_time}\n"
+"@deffn {Function} prev_prime (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the greatest prime smaller than @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) prev_prime(27);\n"
+"(%o1)                       23\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{qunit}\n"
+"@deffn {Function} qunit (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the principal unit of the real quadratic number field\n"
+"@code{sqrt (@var{n})} where @var{n} is an integer,\n"
+"i.e., the element whose norm is unity.\n"
+"This amounts to solving Pell's equation @code{a^2 - @var{n} b^2 = 1}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) qunit (17);\n"
+"(%o1)                     sqrt(17) + 4\n"
+"(%i2) expand (% * (sqrt(17) - 4));\n"
+"(%o2)                           1\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{totient}\n"
+"@deffn {Function} totient (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the number of integers less than or equal to @var{n} which\n"
+"are relatively prime to @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@defvr {Option variable} zerobern\n"
+"Default value: @code{true}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"When @code{zerobern} is @code{false}, @code{bern} excludes the Bernoulli numbers\n"
+"and @code{euler} excludes the Euler numbers which are equal to zero.\n"
+"See @code{bern} and @code{euler}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zeta}\n"
+"@deffn {Function} zeta (@var{n})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the Riemann zeta function.  If @var{n} is a negative integer, 0, or a\n"
+"positive even integer, the Riemann zeta function simplifies to an exact value.\n"
+"For a positive even integer the option variable @code{zeta%pi} has to be\n"
+"@code{true} in addition (See @code{zeta%pi}).  For a floating point or bigfloat\n"
+"number the Riemann zeta function is evaluated numerically.  Maxima returns a\n"
+"noun form @code{zeta (@var{n})} for all other arguments, including rational\n"
+"noninteger, and complex arguments, or for even integers, if @code{zeta%pi} has\n"
+"the value @code{false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{zeta(1)} is undefined, but Maxima knows the limit \n"
+"@code{limit(zeta(x), x, 1)} from above and below.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The Riemann zeta function distributes over lists, matrices, and equations.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mref{bfzeta} and @mrefdot{zeta%pi}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c ===beg===\n"
+"@c zeta([-2, -1, 0, 0.5, 2, 3,1+%i]);\n"
+"@c limit(zeta(x),x,1,plus);\n"
+"@c limit(zeta(x),x,1,minus);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) zeta([-2, -1, 0, 0.5, 2, 3, 1+%i]);\n"
+"                                             2\n"
+"            1     1                       %pi\n"
+"(%o1) [0, - --, - -, - 1.460354508809586, ----, zeta(3), \n"
+"            12    2                        6\n"
+"                                                    zeta(%i + 1)]\n"
+"(%i2) limit(zeta(x),x,1,plus);\n"
+"(%o2)                          inf\n"
+"(%i3) limit(zeta(x),x,1,minus);\n"
+"(%o3)                         minf\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zeta%pi}\n"
+"@defvr {Option variable} zeta%pi\n"
+"Default value: @mref{true}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"When @code{zeta%pi} is @code{true}, @code{zeta} returns an expression \n"
+"proportional to @code{%pi^n} for even integer @code{n}.  Otherwise, @code{zeta} \n"
+"returns a noun form @code{zeta (n)} for even integer @code{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c ===beg===\n"
+"@c zeta%pi: true$\n"
+"@c zeta (4);\n"
+"@c zeta%pi: false$\n"
+"@c zeta (4);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) zeta%pi: true$\n"
+"(%i2) zeta (4);\n"
+"                                 4\n"
+"                              %pi\n"
+"(%o2)                         ----\n"
+"                               90\n"
+"(%i3) zeta%pi: false$\n"
+"(%i4) zeta (4);\n"
+"(%o4)                        zeta(4)\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_add_table}\n"
+"@deffn {Function} zn_add_table (@var{n}) \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Shows an addition table of all elements in (Z/@var{n}Z).\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{zn_mult_table}  @mrefdot{zn_power_table}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_characteristic_factors}\n"
+"@deffn {Function} zn_characteristic_factors (@var{n}) \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns a list containing the characteristic factors of the totient of @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Using the characteristic factors a multiplication group modulo @var{n} \n"
+"can be expressed as a group direct product of cyclic subgroups.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"In case the group itself is cyclic the list only contains the totient \n"
+"and using @code{zn_primroot} a generator can be computed. \n"
+"If the totient splits into more than one characteristic factors \n"
+"@code{zn_factor_generators} finds generators of the corresponding subgroups.\n"
+" \n"
+"Each of the @code{r} factors in the list divides the right following factors. \n"
+"For the last factor @code{f_r} therefore holds @code{a^f_r = 1 (mod n)} \n"
+"for all @code{a} coprime to @var{n}.  \n"
+"This factor is also known as Carmichael function or Carmichael lambda.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If @code{n > 2}, then @code{totient(n)/2^r} is the number of quadratic residues, \n"
+"and each of these has @code{2^r} square roots.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{totient}  @mrefcomma{zn_primroot}  @mrefdot{zn_factor_generators}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The multiplication group modulo @code{14} is cyclic and its @code{6} elements \n"
+"can be generated by a primitive root.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) [zn_characteristic_factors(14), phi: totient(14)];\n"
+"(%o1)                              [[6], 6]\n"
+"(%i2) [zn_factor_generators(14), g: zn_primroot(14)];\n"
+"(%o2)                              [[3], 3]\n"
+"(%i3) M14: makelist(power_mod(g,i,14), i,0,phi-1);\n"
+"(%o3)                         [1, 3, 9, 13, 11, 5]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The multiplication group modulo @code{15} is not cyclic and its @code{8} elements \n"
+"can be generated by two factor generators.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) [[f1,f2]: zn_characteristic_factors(15), totient(15)];\n"
+"(%o1)                             [[2, 4], 8]\n"
+"(%i2) [[g1,g2]: zn_factor_generators(15), zn_primroot(15)];\n"
+"(%o2)                           [[11, 7], false]\n"
+"(%i3) UG1: makelist(power_mod(g1,i,15), i,0,f1-1);\n"
+"(%o3)                               [1, 11]\n"
+"(%i4) UG2: makelist(power_mod(g2,i,15), i,0,f2-1);\n"
+"(%o4)                            [1, 7, 4, 13]\n"
+"(%i5) M15: create_list(mod(i*j,15), i,UG1, j,UG2);\n"
+"(%o5)                      [1, 7, 4, 13, 11, 2, 14, 8]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"For the last characteristic factor @code{4} it holds that @code{a^4 = 1 (mod 15)} \n"
+"for all @code{a} in @code{M15}. \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{M15} has two characteristic factors and therefore @code{8/2^2} quadratic residues, \n"
+"and each of these has @code{2^2} square roots.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i6) zn_power_table(15);\n"
+"                               [ 1   1  1   1 ]\n"
+"                               [              ]\n"
+"                               [ 2   4  8   1 ]\n"
+"                               [              ]\n"
+"                               [ 4   1  4   1 ]\n"
+"                               [              ]\n"
+"                               [ 7   4  13  1 ]\n"
+"(%o6)                          [              ]\n"
+"                               [ 8   4  2   1 ]\n"
+"                               [              ]\n"
+"                               [ 11  1  11  1 ]\n"
+"                               [              ]\n"
+"                               [ 13  4  7   1 ]\n"
+"                               [              ]\n"
+"                               [ 14  1  14  1 ]\n"
+"(%i7) map(lambda([i], zn_nth_root(i,2,15)), [1,4]);\n"
+"(%o7)                   [[1, 4, 11, 14], [2, 7, 8, 13]]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_carmichael_lambda}\n"
+"@deffn {Function} zn_carmichael_lambda (@var{n}) \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns @code{1} if @var{n} is @code{1} and otherwise \n"
+"the greatest characteristic factor of the totient of @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"For remarks and examples see @mrefdot{zn_characteristic_factors}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_determinant}\n"
+"@deffn {Function} zn_determinant (@var{matrix}, @var{p}) \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Uses the technique of LU-decomposition to compute the determinant of @var{matrix} \n"
+"over (Z/@var{p}Z). @var{p} must be a prime. \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"However if the determinant is equal to zero the LU-decomposition might fail. \n"
+"In that case @code{zn_determinant} computes the determinant non-modular \n"
+"and reduces thereafter.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefdot{zn_invert_by_lu}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) m : matrix([1,3],[2,4]);\n"
+"                                [ 1  3 ]\n"
+"(%o1)                           [      ]\n"
+"                                [ 2  4 ]\n"
+"(%i2) zn_determinant(m, 5);\n"
+"(%o2)                               3\n"
+"(%i3) m : matrix([2,4,1],[3,1,4],[4,3,2]);\n"
+"                               [ 2  4  1 ]\n"
+"                               [         ]\n"
+"(%o3)                          [ 3  1  4 ]\n"
+"                               [         ]\n"
+"                               [ 4  3  2 ]\n"
+"(%i4) zn_determinant(m, 5);\n"
+"(%o4)                               0\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_factor_generators}\n"
+"@deffn {Function} zn_factor_generators (@var{n}) \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns a list containing factor generators corresponding to the \n"
+"characteristic factors of the totient of @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"For remarks and examples see @mrefdot{zn_characteristic_factors}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_invert_by_lu}\n"
+"@deffn {Function} zn_invert_by_lu (@var{matrix}, @var{p}) \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Uses the technique of LU-decomposition to compute the modular inverse of \n"
+"@var{matrix} over (Z/@var{p}Z). @var{p} must be a prime and @var{matrix} \n"
+"invertible. @code{zn_invert_by_lu} returns @code{false} if @var{matrix} \n"
+"is not invertible.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefdot{zn_determinant}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Example:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) m : matrix([1,3],[2,4]);\n"
+"                                [ 1  3 ]\n"
+"(%o1)                           [      ]\n"
+"                                [ 2  4 ]\n"
+"(%i2) zn_determinant(m, 5);\n"
+"(%o2)                               3\n"
+"(%i3) mi : zn_invert_by_lu(m, 5);\n"
+"                                [ 3  4 ]\n"
+"(%o3)                           [      ]\n"
+"                                [ 1  2 ]\n"
+"(%i4) matrixmap(lambda([a], mod(a, 5)), m . mi);\n"
+"                                [ 1  0 ]\n"
+"(%o4)                           [      ]\n"
+"                                [ 0  1 ]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_log}\n"
+"@deffn {Function} zn_log @\n"
+"@fname{zn_log} (@var{a}, @var{g}, @var{n})  @\n"
+"@fname{zn_log} (@var{a}, @var{g}, @var{n}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Computes the discrete logarithm. Let (Z/@var{n}Z)* be a cyclic group, @var{g} a \n"
+"primitive root modulo @var{n} and let @var{a} be a member of this group.  \n"
+"@code{zn_log (a, g, n)} then solves the congruence @code{g^x = a mod n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The applied algorithm needs a prime factorization of @code{totient(n)}. This factorization \n"
+"might be time consuming as well and in some cases it can be useful to factor first \n"
+"and then to pass the list of factors to @code{zn_log} as the fourth argument. \n"
+"The list must be of the same form as the list returned by @code{ifactors(totient(n))} \n"
+"using the default option @code{factors_only : false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The algorithm uses a Pohlig-Hellman-reduction and Pollard's Rho-method for \n"
+"discrete logarithms. The run time of @code{zn_log} primarily depends on the \n"
+"bitlength of the totient's greatest prime factor.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{zn_primroot}  @mrefcomma{zn_order}  @mrefcomma{ifactors}  @mrefdot{totient}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{zn_log (a, g, n)} solves the congruence @code{g^x = a mod n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) n : 22$\n"
+"(%i2) g : zn_primroot(n);\n"
+"(%o2)                               7\n"
+"(%i3) ord_7 : zn_order(7, n);\n"
+"(%o3)                              10\n"
+"(%i4) powers_7 : makelist(power_mod(g, x, n), x, 0, ord_7 - 1);\n"
+"(%o4)              [1, 7, 5, 13, 3, 21, 15, 17, 9, 19]\n"
+"(%i5) zn_log(21, g, n);\n"
+"(%o5)                               5\n"
+"(%i6) map(lambda([x], zn_log(x, g, n)), powers_7);\n"
+"(%o6)                [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The optional fourth argument must be of the same form as the list returned by \n"
+"@code{ifactors(totient(n))}.\n"
+"The run time primarily depends on the bitlength of the totient's greatest prime factor.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) (p : 2^127-1, primep(p));\n"
+"(%o1)                             true\n"
+"(%i2) ifs : ifactors(p - 1)$\n"
+"(%i3) g : zn_primroot(p, ifs);\n"
+"(%o3)                              43\n"
+"(%i4) a : power_mod(g, 1234567890, p)$\n"
+"(%i5) zn_log(a, g, p, ifs);\n"
+"(%o5)                          1234567890\n"
+"(%i6) time(%o5);  \n"
+"(%o6)                            [1.204]\n"
+"(%i7) f_max : last(ifs);\n"
+"(%o7)                       [77158673929, 1]\n"
+"(%i8) slength( printf(false, \"~b\", f_max[1]) );\n"
+"(%o8)                              37\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_mult_table}\n"
+"@deffn {Function} zn_mult_table @\n"
+"@fname{zn_mult_table} (@var{n})  @\n"
+"@fname{zn_mult_table} (@var{n}, @var{gcd})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Without the optional argument @var{gcd} @code{zn_mult_table(n)} shows a \n"
+"multiplication table of all elements in (Z/@var{n}Z)* which are all elements \n"
+"coprime to @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The optional second argument @var{gcd} allows to select a specific \n"
+"subset of (Z/@var{n}Z). If @var{gcd} is an integer, a multiplication table of \n"
+"all residues @code{x} with @code{gcd(x,n) = }@var{gcd} are returned.\n"
+"Additionally row and column headings are added for better readability. \n"
+"If necessary, these can be easily removed by @code{submatrix(1, table, 1)}. \n"
+" \n"
+"If @var{gcd} is set to @code{all}, the table is printed for all non-zero \n"
+"elements in (Z/@var{n}Z).\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The second example shows an alternative way to create a multiplication table \n"
+"for subgroups.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{zn_add_table}  @mrefdot{zn_power_table}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The default table shows all elements in (Z/@var{n}Z)* and allows to demonstrate \n"
+"and study basic properties of modular multiplication groups.\n"
+"E.g. the principal diagonal contains all quadratic residues, \n"
+"each row and column contains every element, the tables are symmetric, etc..\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If @var{gcd} is set to @code{all}, the table is printed for all non-zero \n"
+"elements in (Z/@var{n}Z).\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) zn_mult_table(8);\n"
+"                                [ 1  3  5  7 ]\n"
+"                                [            ]\n"
+"                                [ 3  1  7  5 ]\n"
+"(%o1)                           [            ]\n"
+"                                [ 5  7  1  3 ]\n"
+"                                [            ]\n"
+"                                [ 7  5  3  1 ]\n"
+"(%i2) zn_mult_table(8, all);\n"
+"                            [ 1  2  3  4  5  6  7 ]\n"
+"                            [                     ]\n"
+"                            [ 2  4  6  0  2  4  6 ]\n"
+"                            [                     ]\n"
+"                            [ 3  6  1  4  7  2  5 ]\n"
+"                            [                     ]\n"
+"(%o2)                       [ 4  0  4  0  4  0  4 ]\n"
+"                            [                     ]\n"
+"                            [ 5  2  7  4  1  6  3 ]\n"
+"                            [                     ]\n"
+"                            [ 6  4  2  0  6  4  2 ]\n"
+"                            [                     ]\n"
+"                            [ 7  6  5  4  3  2  1 ]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If @var{gcd} is an integer, row and column headings are added for better readability. \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If the subset chosen by @var{gcd} is a group there is another way to create \n"
+"a multiplication table. An isomorphic mapping from a group with @code{1} as \n"
+"identity builds a table which is easy to read. The mapping is accomplished via CRT.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"In the second version of @code{T36_4} the identity, here @code{28}, is placed in \n"
+"the top left corner, just like in table @code{T9}. \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) T36_4: zn_mult_table(36,4);\n"
+"                        [ *   4   8   16  20  28  32 ]\n"
+"                        [                            ]\n"
+"                        [ 4   16  32  28  8   4   20 ]\n"
+"                        [                            ]\n"
+"                        [ 8   32  28  20  16  8   4  ]\n"
+"                        [                            ]\n"
+"(%o1)                   [ 16  28  20  4   32  16  8  ]\n"
+"                        [                            ]\n"
+"                        [ 20  8   16  32  4   20  28 ]\n"
+"                        [                            ]\n"
+"                        [ 28  4   8   16  20  28  32 ]\n"
+"                        [                            ]\n"
+"                        [ 32  20  4   8   28  32  16 ]\n"
+"(%i2) T9: zn_mult_table(36/4);\n"
+"                             [ 1  2  4  5  7  8 ]\n"
+"                             [                  ]\n"
+"                             [ 2  4  8  1  5  7 ]\n"
+"                             [                  ]\n"
+"                             [ 4  8  7  2  1  5 ]\n"
+"(%o2)                        [                  ]\n"
+"                             [ 5  1  2  7  8  4 ]\n"
+"                             [                  ]\n"
+"                             [ 7  5  1  8  4  2 ]\n"
+"                             [                  ]\n"
+"                             [ 8  7  5  4  2  1 ]\n"
+"(%i3) T36_4: matrixmap(lambda([x], chinese([0,x],[4,9])), T9);\n"
+"                          [ 28  20  4   32  16  8  ]\n"
+"                          [                        ]\n"
+"                          [ 20  4   8   28  32  16 ]\n"
+"                          [                        ]\n"
+"                          [ 4   8   16  20  28  32 ]\n"
+"(%o3)                     [                        ]\n"
+"                          [ 32  28  20  16  8   4  ]\n"
+"                          [                        ]\n"
+"                          [ 16  32  28  8   4   20 ]\n"
+"                          [                        ]\n"
+"                          [ 8   16  32  4   20  28 ]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_nth_root}\n"
+"@deffn {Function} zn_nth_root @\n"
+"@fname{zn_nth_root} (@var{x}, @var{n}, @var{m})  @\n"
+"@fname{zn_nth_root} (@var{x}, @var{n}, @var{m}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns a list with all @var{n}-th roots of @var{x} from the multiplication \n"
+"subgroup of (Z/@var{m}Z) which contains @var{x}, or @code{false}, if @var{x} \n"
+"is no @var{n}-th power modulo @var{m} or not contained in any multiplication \n"
+"subgroup of (Z/@var{m}Z).\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@var{x} is an element of a multiplication subgroup modulo @var{m}, if the \n"
+"greatest common divisor @code{g = gcd(x,m)} is coprime to @code{m/g}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{zn_nth_root} is based on an algorithm by Adleman, Manders and Miller \n"
+"and on theorems about modulo multiplication groups by Daniel Shanks.\n"
+" \n"
+"The algorithm needs a prime factorization of the modulus @var{m}. \n"
+"So in case the factorization of @var{m} is known, the list of factors \n"
+"can be passed as the fourth argument. This optional argument\n"
+"must be of the same form as the list returned by @code{ifactors(m)} \n"
+"using the default option @code{factors_only: false}.\n"
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"A power table of the multiplication group modulo @code{14} \n"
+"followed by a list of lists containing all @var{n}-th roots of @code{1} \n"
+"with @var{n} from @code{1} to @code{6}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) zn_power_table(14);\n"
+"                         [ 1   1   1   1   1   1 ]\n"
+"                         [                       ]\n"
+"                         [ 3   9   13  11  5   1 ]\n"
+"                         [                       ]\n"
+"                         [ 5   11  13  9   3   1 ]\n"
+"(%o1)                    [                       ]\n"
+"                         [ 9   11  1   9   11  1 ]\n"
+"                         [                       ]\n"
+"                         [ 11  9   1   11  9   1 ]\n"
+"                         [                       ]\n"
+"                         [ 13  1   13  1   13  1 ]\n"
+"(%i2) makelist(zn_nth_root(1,n,14), n,1,6);\n"
+"(%o2)  [[1], [1, 13], [1, 9, 11], [1, 13], [1], [1, 3, 5, 9, 11, 13]]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"In the following example @var{x} is not coprime to @var{m}, \n"
+"but is a member of a multiplication subgroup of (Z/@var{m}Z) \n"
+"and any @var{n}-th root is a member of the same subgroup.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The residue class @code{3} is no member of any multiplication subgroup of (Z/63Z) \n"
+"and is therefore not returned as a third root of @code{27}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Here @code{zn_power_table} shows all residues @code{x} in (Z/63Z) \n"
+"with @code{gcd(x,63) = 9}. This subgroup is isomorphic to (Z/7Z)*  \n"
+"and its identity @code{36} is computed via CRT.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) m: 7*9$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i2) zn_power_table(m,9);\n"
+"                         [ 9   18  36  9   18  36 ]\n"
+"                         [                        ]\n"
+"                         [ 18  9   36  18  9   36 ]\n"
+"                         [                        ]\n"
+"                         [ 27  36  27  36  27  36 ]\n"
+"(%o2)                    [                        ]\n"
+"                         [ 36  36  36  36  36  36 ]\n"
+"                         [                        ]\n"
+"                         [ 45  9   27  18  54  36 ]\n"
+"                         [                        ]\n"
+"                         [ 54  18  27  9   45  36 ]\n"
+"(%i3) zn_nth_root(27,3,m);\n"
+"(%o3)                           [27, 45, 54]\n"
+"(%i4) id7:1$  id63_9: chinese([id7,0],[7,9]);\n"
+"(%o5)                                36\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"In the following RSA-like example, where the modulus @code{N} is squarefree, \n"
+"i.e. it splits into \n"
+"exclusively first power factors, every @code{x} from @code{0} to @code{N-1} \n"
+"is contained in a multiplication subgroup.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The process of decryption needs the @code{e}-th root. \n"
+"@code{e} is coprime to @code{totient(N)} and therefore the @code{e}-th root is unique. \n"
+"In this case @code{zn_nth_root} effectively performs CRT-RSA. \n"
+"(Please note that @code{flatten} removes braces but no solutions.)\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) [p,q,e]: [5,7,17]$  N: p*q$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i3) xs: makelist(x,x,0,N-1)$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i4) ys: map(lambda([x],power_mod(x,e,N)),xs)$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i5) zs: flatten(map(lambda([y], zn_nth_root(y,e,N)), ys))$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i6) is(zs = xs);\n"
+"(%o6)                             true\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"In the following example the factorization of the modulus is known \n"
+"and passed as the fourth argument.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) p: 2^107-1$  q: 2^127-1$  N: p*q$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i4) ibase: obase: 16$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i5) msg: 11223344556677889900aabbccddeeff$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i6) enc: power_mod(msg, 10001, N);\n"
+"(%o6)    1a8db7892ae588bdc2be25dd5107a425001fe9c82161abc673241c8b383\n"
+"(%i7) zn_nth_root(enc, 10001, N, [[p,1],[q,1]]);\n"
+"(%o7)               [11223344556677889900aabbccddeeff]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_order}\n"
+"@deffn {Function} zn_order @\n"
+"@fname{zn_order} (@var{x}, @var{n})  @\n"
+"@fname{zn_order} (@var{x}, @var{n}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Returns the order of @var{x} if it is a unit of the finite group (Z/@var{n}Z)* \n"
+"or returns @code{false}.  @var{x} is a unit modulo @var{n} if it is coprime to @var{n}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The applied algorithm needs a prime factorization of @code{totient(n)}. This factorization \n"
+"might be time consuming in some cases and it can be useful to factor first \n"
+"and then to pass the list of factors to @code{zn_log} as the third argument. \n"
+"The list must be of the same form as the list returned by @code{ifactors(totient(n))} \n"
+"using the default option @code{factors_only : false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{zn_primroot}  @mrefcomma{ifactors}  @mrefdot{totient}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{zn_order} computes the order of the unit @var{x} in (Z/@var{n}Z)*.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) n : 22$\n"
+"(%i2) g : zn_primroot(n);\n"
+"(%o2)                               7\n"
+"(%i3) units_22 : sublist(makelist(i,i,1,21), lambda([x], gcd(x, n) = 1));\n"
+"(%o3)              [1, 3, 5, 7, 9, 13, 15, 17, 19, 21]\n"
+"(%i4) (ord_7 : zn_order(7, n)) = totient(n);\n"
+"(%o4)                            10 = 10\n"
+"(%i5) powers_7 : makelist(power_mod(g,i,n), i,0,ord_7 - 1);\n"
+"(%o5)              [1, 7, 5, 13, 3, 21, 15, 17, 9, 19]\n"
+"(%i6) map(lambda([x], zn_order(x, n)), powers_7);\n"
+"(%o6)              [1, 10, 5, 10, 5, 2, 5, 10, 5, 10]\n"
+"(%i7) map(lambda([x], ord_7/gcd(x, ord_7)), makelist(i, i,0,ord_7 - 1));\n"
+"(%o7)              [1, 10, 5, 10, 5, 2, 5, 10, 5, 10]\n"
+"(%i8) totient(totient(n));\n"
+"(%o8)                               4\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The optional third argument must be of the same form as the list returned by \n"
+"@code{ifactors(totient(n))}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) (p : 2^142 + 217, primep(p));\n"
+"(%o1)                             true\n"
+"(%i2) ifs : ifactors( totient(p) )$\n"
+"(%i3) g : zn_primroot(p, ifs);\n"
+"(%o3)                               3\n"
+"(%i4) is( (ord_3 : zn_order(g, p, ifs)) = totient(p) );\n"
+"(%o4)                             true\n"
+"(%i5) map(lambda([x], ord_3/zn_order(x, p, ifs)), makelist(i,i,2,15));\n"
+"(%o5)        [22, 1, 44, 10, 5, 2, 22, 2, 8, 2, 1, 1, 20, 1]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_power_table}\n"
+"@deffn {Function} zn_power_table @\n"
+"@fname{zn_power_table} (@var{n})  @\n"
+"@fname{zn_power_table} (@var{n}, @var{gcd})  @\n"
+"@fname{zn_power_table} (@var{n}, @var{gcd}, @var{max_exp})\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Without any optional argument @code{zn_power_table(n)} \n"
+"shows a power table of all elements in (Z/@var{n}Z)* \n"
+"which are all residue classes coprime to @var{n}. \n"
+"The exponent loops from @code{1} to the greatest characteristic factor of \n"
+"@code{totient(n)} (also known as Carmichael function or Carmichael lambda)\n"
+"and the table ends with a column of ones on the right side. \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The optional second argument @var{gcd} allows to select powers of a specific \n"
+"subset of (Z/@var{n}Z). If @var{gcd} is an integer, powers of all residue \n"
+"classes @code{x} with @code{gcd(x,n) = }@var{gcd} are returned,\n"
+"i.e. the default value for @var{gcd} is @code{1}.   \n"
+"If @var{gcd} is set to @code{all}, the table contains powers of all elements \n"
+"in (Z/@var{n}Z).\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If the optional third argument @var{max_exp} is given, the exponent loops from \n"
+"@code{1} to @var{max_exp}. \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{zn_add_table}  @mrefdot{zn_mult_table}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The default which is @var{gcd}@code{ = 1} allows to demonstrate and study basic \n"
+"theorems of e.g. Fermat and Euler.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The argument @var{gcd} allows to select subsets of (Z/@var{n}Z) and to study \n"
+"multiplication subgroups and isomorphisms. \n"
+"E.g. the groups @code{G10} and @code{G10_2} are under multiplication both \n"
+"isomorphic to @code{G5}. @code{1} is the identity in @code{G5}. \n"
+"So are @code{1} resp. @code{6} the identities in @code{G10} resp. @code{G10_2}. \n"
+"There are corresponding mappings for primitive roots, n-th roots, etc..\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) zn_power_table(10);\n"
+"                              [ 1  1  1  1 ]\n"
+"                              [            ]\n"
+"                              [ 3  9  7  1 ]\n"
+"(%o1)                         [            ]\n"
+"                              [ 7  9  3  1 ]\n"
+"                              [            ]\n"
+"                              [ 9  1  9  1 ]\n"
+"(%i2) zn_power_table(10,2);\n"
+"                              [ 2  4  8  6 ]\n"
+"                              [            ]\n"
+"                              [ 4  6  4  6 ]\n"
+"(%o2)                         [            ]\n"
+"                              [ 6  6  6  6 ]\n"
+"                              [            ]\n"
+"                              [ 8  4  2  6 ]\n"
+"(%i3) zn_power_table(10,5);\n"
+"(%o3)                         [ 5  5  5  5 ]\n"
+"(%i4) zn_power_table(10,10);\n"
+"(%o4)                         [ 0  0  0  0 ]\n"
+"(%i5) G5: [1,2,3,4];\n"
+"(%o6)                          [1, 2, 3, 4]\n"
+"(%i6) G10_2: map(lambda([x], chinese([0,x],[2,5])), G5);\n"
+"(%o6)                          [6, 2, 8, 4]\n"
+"(%i7) G10: map(lambda([x], power_mod(3, zn_log(x,2,5), 10)), G5);\n"
+"(%o7)                          [1, 3, 7, 9]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If @var{gcd} is set to @code{all}, the table contains powers of all elements \n"
+"in (Z/@var{n}Z).\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The third argument @var{max_exp} allows to set the highest exponent. \n"
+"The following table shows a very small example of RSA.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) N:2*5$ phi:totient(N)$ e:7$ d:inv_mod(e,phi)$\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"(%i5) zn_power_table(N, all, e*d);\n"
+"       [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 ]\n"
+"       [                                                               ]\n"
+"       [ 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 ]\n"
+"       [                                                               ]\n"
+"       [ 2  4  8  6  2  4  8  6  2  4  8  6  2  4  8  6  2  4  8  6  2 ]\n"
+"       [                                                               ]\n"
+"       [ 3  9  7  1  3  9  7  1  3  9  7  1  3  9  7  1  3  9  7  1  3 ]\n"
+"       [                                                               ]\n"
+"       [ 4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4  6  4 ]\n"
+"(%o5)  [                                                               ]\n"
+"       [ 5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5  5 ]\n"
+"       [                                                               ]\n"
+"       [ 6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6 ]\n"
+"       [                                                               ]\n"
+"       [ 7  9  3  1  7  9  3  1  7  9  3  1  7  9  3  1  7  9  3  1  7 ]\n"
+"       [                                                               ]\n"
+"       [ 8  4  2  6  8  4  2  6  8  4  2  6  8  4  2  6  8  4  2  6  8 ]\n"
+"       [                                                               ]\n"
+"       [ 9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9 ]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_primroot}\n"
+"@deffn {Function} zn_primroot @\n"
+"@fname{zn_primroot} (@var{n})  @\n"
+"@fname{zn_primroot} (@var{n}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If the multiplicative group (Z/@var{n}Z)* is cyclic, @code{zn_primroot} computes the \n"
+"smallest primitive root modulo @var{n}.  (Z/@var{n}Z)* is cyclic if @var{n} is equal to \n"
+"@code{2}, @code{4}, @code{p^k} or @code{2*p^k}, where @code{p} is prime and \n"
+"greater than @code{2} and @code{k} is a natural number.  @code{zn_primroot} \n"
+"performs an according pretest if the option variable @mref{zn_primroot_pretest}\n"
+"(default: @code{false}) is set to @code{true}.  In any case the computation is limited \n"
+"by the upper bound @mrefdot{zn_primroot_limit}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If (Z/@var{n}Z)* is not cyclic or if there is no primitive root up to \n"
+"@code{zn_primroot_limit}, @code{zn_primroot} returns @code{false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The applied algorithm needs a prime factorization of @code{totient(n)}. This factorization \n"
+"might be time consuming in some cases and it can be useful to factor first \n"
+"and then to pass the list of factors to @code{zn_log} as an additional argument. \n"
+"The list must be of the same form as the list returned by @code{ifactors(totient(n))} \n"
+"using the default option @code{factors_only : false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{zn_primroot_p}  @mrefcomma{zn_order}  @mrefcomma{ifactors}  @mrefdot{totient}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{zn_primroot} computes the smallest primitive root modulo @var{n} or returns \n"
+"@code{false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) n : 14$\n"
+"(%i2) g : zn_primroot(n);\n"
+"(%o2)                               3\n"
+"(%i3) zn_order(g, n) = totient(n);\n"
+"(%o3)                             6 = 6\n"
+"(%i4) n : 15$\n"
+"(%i5) zn_primroot(n);\n"
+"(%o5)                             false\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The optional second argument must be of the same form as the list returned by \n"
+"@code{ifactors(totient(n))}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) (p : 2^142 + 217, primep(p));\n"
+"(%o1)                             true\n"
+"(%i2) ifs : ifactors( totient(p) )$\n"
+"(%i3) g : zn_primroot(p, ifs);\n"
+"(%o3)                               3\n"
+"(%i4) [time(%o2), time(%o3)];\n"
+"(%o4)                    [[15.556972], [0.004]]\n"
+"(%i5) is(zn_order(g, p, ifs) = p - 1);\n"
+"(%o5)                             true\n"
+"(%i6) n : 2^142 + 216$\n"
+"(%i7) ifs : ifactors(totient(n))$\n"
+"(%i8) zn_primroot(n, ifs), \n"
+"      zn_primroot_limit : 200, zn_primroot_verbose : true;\n"
+"`zn_primroot' stopped at zn_primroot_limit = 200\n"
+"(%o8)                             false\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_primroot_limit}\n"
+"@defvr {Option variable} zn_primroot_limit\n"
+"Default value: @code{1000} \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"If @mref{zn_primroot} cannot find a primitve root, it stops at this upper bound. \n"
+"If the option variable @mref{zn_primroot_verbose} (default: @code{false}) is \n"
+"set to @code{true}, a message will be printed when @code{zn_primroot_limit} is reached. \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_primroot_p}\n"
+"@deffn {Function} zn_primroot_p @\n"
+"@fname{zn_primroot_p} (@var{x}, @var{n})  @\n"
+"@fname{zn_primroot_p} (@var{x}, @var{n}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Checks whether @var{x} is a primitive root in the multiplicative group (Z/@var{n}Z)*.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The applied algorithm needs a prime factorization of @code{totient(n)}. This factorization \n"
+"might be time consuming and in case @code{zn_primroot_p} will be consecutively \n"
+"applied to a list of candidates it can be useful to factor first and then to \n"
+"pass the list of factors to @code{zn_log} as a third argument. \n"
+"The list must be of the same form as the list returned by @code{ifactors(totient(n))} \n"
+"using the default option @code{factors_only : false}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"See also @mrefcomma{zn_primroot}  @mrefcomma{zn_order}  @mrefcomma{ifactors}  @mrefdot{totient}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Examples:\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{zn_primroot_p} as a predicate function.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) n : 14$\n"
+"(%i2) units_14 : sublist(makelist(i,i,1,13), lambda([i], gcd(i, n) = 1));\n"
+"(%o2)                     [1, 3, 5, 9, 11, 13]\n"
+"(%i3) zn_primroot_p(13, n);\n"
+"(%o3)                            false\n"
+"(%i4) sublist(units_14, lambda([x], zn_primroot_p(x, n)));\n"
+"(%o4)                            [3, 5]\n"
+"(%i5) map(lambda([x], zn_order(x, n)), units_14);\n"
+"(%o5)                      [1, 6, 6, 3, 3, 2]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The optional third argument must be of the same form as the list returned by \n"
+"@code{ifactors(totient(n))}.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@example\n"
+"(%i1) (p : 2^142 + 217, primep(p));\n"
+"(%o1)                             true\n"
+"(%i2) ifs : ifactors( totient(p) )$\n"
+"(%i3) sublist(makelist(i,i,1,50), lambda([x], zn_primroot_p(x, p, ifs)));\n"
+"(%o3)      [3, 12, 13, 15, 21, 24, 26, 27, 29, 33, 38, 42, 48]\n"
+"(%i4) [time(%o2), time(%o3)];\n"
+"(%o4)                   [[7.748484], [0.036002]]\n"
+"@end example\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Predicate functions} @category{Number theory}\n"
+"@closecatbox\n"
+"@end deffn\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_primroot_pretest}\n"
+"@defvr {Option variable} zn_primroot_pretest\n"
+"Default value: @code{false} \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"The multiplicative group (Z/@var{n}Z)* is cyclic if @var{n} is equal to \n"
+"@code{2}, @code{4}, @code{p^k} or @code{2*p^k}, where @code{p} is prime and \n"
+"greater than @code{2} and @code{k} is a natural number.  \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@code{zn_primroot_pretest} controls whether @mref{zn_primroot} will check \n"
+"if one of these cases occur before it computes the smallest primitive root. \n"
+"Only if @code{zn_primroot_pretest} is set to @code{true} this pretest will be \n"
+"performed.\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@c -----------------------------------------------------------------------------\n"
+"@anchor{zn_primroot_verbose}\n"
+"@defvr {Option variable} zn_primroot_verbose\n"
+"Default value: @code{false} \n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"Controls whether @mref{zn_primroot} prints a message when reaching \n"
+"@mrefdot{zn_primroot_limit}\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+"@opencatbox\n"
+"@category{Number theory}\n"
+"@closecatbox\n"
+"@end defvr\n"
+msgstr ""
+
+# Number.texi
+msgid ""
+msgstr ""
