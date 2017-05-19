@@ -1,28 +1,10 @@
-# This file contains all translatable strings from a .texi file.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL>, YEAR.
-#
-msgid ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-06 22:01+0200\n"
-"PO-Revision-Date: 2017-05-19 16:31+0200\n"
-"Last-Translator: FULL NAME <EMAIL>\n"
-"Language-Team: LANGUAGE <LL.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-msgstr ""
-
 # celine.texi
 #: celine.texi:4
 msgid ""
 "@menu\n"
 "* Introduction to celine::\n"
 "@end menu\n"
-msgstr "* Einführung für Celine::"
+msgstr "* Einfhrung fr Celine::"
 
 # celine.texi
 #: celine.texi:7
@@ -30,8 +12,8 @@ msgid ""
 "@node Introduction to celine\n"
 "@section Introduction to celine\n"
 msgstr ""
-"@node Einführung für Celine\n"
-"@section Einführung für Celine\n"
+"@node Einfhrung fr Celine\n"
+"@section Einfhrung fr Celine\n"
 
 # celine.texi
 #: celine.texi:9
@@ -40,9 +22,11 @@ msgid ""
 "code. It is released under the @uref{https://creativecommons.org/about/cc0,"
 "Creative Commons CC0 license}.\n"
 msgstr ""
-"Eine Implementierung der Methode von Schwester Celine. Sie wurde von Barton Willis\n"
+"Eine Implementierung der Methode von Schwester Celine. Sie wurde von Barton "
+"Willis\n"
 "geschrieben und unter der\n"
-"@uref{https://creativecommons.org/about/cc0,Creative Commons CC0 Lizenz} veröffentlicht."
+"@uref{https://creativecommons.org/about/cc0,Creative Commons CC0 Lizenz} "
+"verffentlicht."
 
 # celine.texi
 #: celine.texi:12
@@ -52,9 +36,11 @@ msgid ""
 "This book is available at @uref{http://www.math.rutgers.edu/~zeilberg/AeqB."
 "pdf}\n"
 msgstr ""
-"Die Methode von Schwester Celine wird in den Kapiteln4.1--4.4 des Buches \"A=B\" von\n"
-"Marko Petkovsek, Herbert S. Wilf und Doron Zeilberger beschrieben. Das Buch ist unter\n"
-"@uref{http://www.math.rutgers.edu/~zeilberg/AeqB.pdf} erhältlich."
+"Die Methode von Schwester Celine wird in den Kapiteln4.1--4.4 des Buches "
+"\"A=B\" von\n"
+"Marko Petkovsek, Herbert S. Wilf und Doron Zeilberger beschrieben. Das Buch "
+"ist unter\n"
+"@uref{http://www.math.rutgers.edu/~zeilberg/AeqB.pdf} erhltlich."
 
 # celine.texi
 #: celine.texi:14
@@ -62,8 +48,9 @@ msgid ""
 "Let f = F(n,k). The function celine returns a set of recursion relations for "
 "F of the form\n"
 msgstr ""
-"Mit f = F(n,k) liefert die Funktion celine liefert einen Satz an rekursiven Verbindungen\n"
-"für F in der folgenden Form:"
+"Mit f = F(n,k) liefert die Funktion celine liefert einen Satz an rekursiven "
+"Verbindungen\n"
+"fr F in der folgenden Form:"
 
 # celine.texi
 #: celine.texi:16
@@ -73,20 +60,24 @@ msgstr ""
 
 # celine.texi
 #: celine.texi:21
+#, fuzzy
 msgid ""
-"where p_0 through p_p are polynomials. If Maxima is unable to determine that "
-"sum(sum(a(i,j) * F(n+i,k+j),i,0,p),j,0,q) / F(n,k) \n"
+"where @code{p_0} through @code{p_p} are polynomials. If Maxima is unable to "
+"determine that sum(sum(a(i,j) * F(n+i,k+j),i,0,p),j,0,q) / F(n,k) \n"
 "is a rational function of n and k, celine returns the empty set. When f "
 "involves parameters (variables other than n or k), celine\n"
 "might make assumptions about these parameters. Using 'put' with a key of "
 "'proviso,' Maxima saves these assumptions on the input \n"
 "label.\n"
 msgstr ""
-"p_0 bis p_p sind dabei Polynome. Wenn es Maxima nicht gelingt, eine rationale Funktion\n"
-"sum(sum(a(i,j) * F(n+i,k+j),i,0,p),j,0,q) / F(n,k) von n und k zu finden, wird eine leere\n"
-"Menge zurückgeliefert.\n"
-"Falls f Parameter außer n und k benötigt, kann es geschehen, dass celine Annahmen\n"
-"für diese Parameter machen. Mittels 'put' kann über die Eigenschaft 'proviso'\n"
+"p_0 bis p_p sind dabei Polynome. Wenn es Maxima nicht gelingt, eine "
+"rationale Funktion\n"
+"sum(sum(a(i,j) * F(n+i,k+j),i,0,p),j,0,q) / F(n,k) von n und k zu finden, "
+"wird eine leere\n"
+"Menge zurckgeliefert.\n"
+"Falls f Parameter auer n und k bentigt, kann es geschehen, dass celine "
+"Annahmen\n"
+"fr diese Parameter machen. Mittels 'put' kann ber die Eigenschaft 'proviso'\n"
 "ein Erfragen der anzunehmenden Werte erzwungen werden."
 
 # celine.texi
@@ -95,7 +86,8 @@ msgid ""
 "To use this function, first load the package integer_sequence, opsubst, and "
 "to_poly_solve.\n"
 msgstr ""
-"Um diese function verwenden zu können müssen die Pakete integer_sequence, opsubst und\n"
+"Um diese function verwenden zu knnen mssen die Pakete integer_sequence, "
+"opsubst und\n"
 "to_poly_solve geladen sein."
 
 # celine.texi
