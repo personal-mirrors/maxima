@@ -612,7 +612,7 @@ clean-chm:
 endif
 
 EXTRA_DIST = texi2html manual.css texi2html.init \
-    $(genericdirDATA) $(pdffigures) $(macfiles) \
+    $(genericdirDATA) $(pdffigures) $(macfiles) $(maxima_pofiles)\
     create_index build_index.pl maxima-index.lisp docdraw.mac \
     extract_categories1.awk extract_categories1.sed extract_categories.sh check_tab fix_tab \
     figures/Makefile.am figures/Makefile.in figures/README \
