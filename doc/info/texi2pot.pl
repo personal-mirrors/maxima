@@ -21,6 +21,8 @@ print "\"Content-Transfer-Encoding: 8bit\\n\"\n";
 $lastline = "";
 $paragraph = "";
 
+%knownParagraphs = ();
+
 # Read the file line by line
 while (my $line = <>) {
 
@@ -39,6 +41,22 @@ while (my $line = <>) {
 		$message .= $.;
 		$message .= "\nmsgid \"\"\n";
 		$message .= $paragraph;
+
+		# msgmerge doesn't like 2 paragraphs to be exactly identical =>
+		# if we detect several occurrences of an identical paragraph we
+		# equip all but the 1st one with comments that cause them to be
+		# different from each other.
+		if( exists $knownParagraphs{$paragraph} )
+		{
+		    $knownParagraphs{$paragraph} = $knownParagraphs{$paragraph} + 1;
+		    $message .= "\@c Occurrences of paragraphs with this contents up to now: ";
+		    $message .= $knownParagraphs{$paragraph} - 1;
+		    $message .= "\n";
+		}
+		else
+		{
+		    $knownParagraphs{$paragraph} = '1';
+		}
 		print $message;
 	    }
 	    $paragraph = "";
