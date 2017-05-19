@@ -64,7 +64,7 @@ while (my $line = <>) {
 	else
 	{
 	    # Escape quotation marks
-	    $line =~ s/\"/\\\\"/g;
+	    $line =~ s/\"/\\"/g;
 	    # Add a c-style newline marker to the line
 	    $line =~ s/(..*)/\"\1\\n\"/g;
 	    $paragraph .= $line;
