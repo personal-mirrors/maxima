@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# DataTypes.texi
+msgstr ""
+
+#: DataTypes.texi:9
 msgid ""
 "@menu\n"
 "* Numbers::\n"
@@ -29,7 +29,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:14
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Numbers, Strings, Data Types and Structures, Data Types and Structures\n"
@@ -37,7 +37,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:19
 msgid ""
 "@menu\n"
 "* Introduction to Numbers::\n"
@@ -45,7 +45,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:24
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Numbers, Functions and Variables for Numbers, Numbers, Numbers\n"
@@ -53,14 +53,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:28
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subheading Complex numbers\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:37
 msgid ""
 "A complex expression is specified in Maxima by adding the real part of the\n"
 "expression to @code{%i} times the imaginary part.  Thus the roots of the\n"
@@ -72,14 +72,14 @@ msgid ""
 "functions.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:41
 msgid ""
 "@opencatbox\n"
 "@category{Complex variables}\n"
 "@closecatbox\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:46
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Numbers, , Introduction to Numbers, Numbers\n"
@@ -87,28 +87,28 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:50
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bfloat}\n"
 "@deffn {Function} bfloat (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:54
 msgid ""
 "Converts all numbers and functions of numbers in @var{expr} to bigfloat numbers.\n"
 "The number of significant digits in the resulting bigfloats is specified by the\n"
 "global variable @mrefdot{fpprec}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:58
 msgid ""
 "When @mref{float2bf} is @code{false} a warning message is printed when\n"
 "a floating point number is converted into a bigfloat number (since\n"
 "this may lead to loss of precision).\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:63
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation}\n"
@@ -116,19 +116,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:67
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bfloatp}\n"
 "@deffn {Function} bfloatp (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:69
 msgid ""
 "Returns @code{true} if @var{expr} is a bigfloat number, otherwise @code{false}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:74
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation} @category{Predicate functions}\n"
@@ -136,7 +136,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:79
 msgid ""
 "@c --- 03.11.2011 --------------------------------------------------------------\n"
 "@anchor{bftorat}\n"
@@ -144,7 +144,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:85
 msgid ""
 "@code{bftorat} controls the conversion of bfloats to rational numbers.  When\n"
 "@code{bftorat} is @code{false}, @mref{ratepsilon} will be used to control the\n"
@@ -153,18 +153,18 @@ msgid ""
 "represent the bfloat.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:88
 msgid ""
 "Note: @code{bftorat} has no effect on the transformation to rational numbers\n"
 "with the function @mrefdot{rationalize}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:90
 msgid ""
 "Example:\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:105
 msgid ""
 "@example\n"
 "(%i1) ratepsilon:1e-4;\n"
@@ -182,7 +182,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:110
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation}\n"
@@ -190,7 +190,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:115
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bftrunc}\n"
@@ -198,7 +198,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:120
 msgid ""
 "@code{bftrunc} causes trailing zeroes in non-zero bigfloat numbers not to be\n"
 "displayed.  Thus, if @code{bftrunc} is @code{false}, @code{bfloat (1)}\n"
@@ -206,7 +206,7 @@ msgid ""
 "@code{1.0B0}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:125
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation}\n"
@@ -214,27 +214,27 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:129
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{evenp}\n"
 "@deffn {Function} evenp (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:133
 msgid ""
 "@c THIS IS STRANGE -- SHOULD RETURN NOUN FORM IF INDETERMINATE\n"
 "Returns @code{true} if @var{expr} is a literal even integer, otherwise\n"
 "@code{false}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:136
 msgid ""
 "@code{evenp} returns @code{false} if @var{expr} is a symbol, even if @var{expr}\n"
 "is declared @code{even}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:141
 msgid ""
 "@opencatbox\n"
 "@category{Predicate functions}\n"
@@ -242,14 +242,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:145
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{float}\n"
 "@deffn {Function} float (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:150
 msgid ""
 "Converts integers, rational numbers and bigfloats in @var{expr} to floating\n"
 "point numbers.  It is also an @mrefcomma{evflag} @code{float} causes\n"
@@ -257,7 +257,7 @@ msgid ""
 "point.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:155
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation} @category{Evaluation flags}\n"
@@ -265,7 +265,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:164
 msgid ""
 "@c --- 08.10.2010 DK -----------------------------------------------------------\n"
 "@anchor{float2bf}\n"
@@ -277,7 +277,7 @@ msgid ""
 "this may lead to loss of precision).\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:169
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation}\n"
@@ -285,20 +285,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:173
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{floatnump}\n"
 "@deffn {Function} floatnump (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:176
 msgid ""
 "Returns @code{true} if @var{expr} is a floating point number, otherwise\n"
 "@code{false}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:181
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation} @category{Predicate functions}\n"
@@ -306,7 +306,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:186
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fpprec}\n"
@@ -314,19 +314,19 @@ msgid ""
 "Default value: 16\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:190
 msgid ""
 "@code{fpprec} is the number of significant digits for arithmetic on bigfloat\n"
 "numbers.  @code{fpprec} does not affect computations on ordinary floating point\n"
 "numbers.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:192
 msgid ""
 "See also @mref{bfloat} and @mrefdot{fpprintprec}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:197
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation}\n"
@@ -334,7 +334,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:202
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fpprintprec}\n"
@@ -342,13 +342,13 @@ msgid ""
 "Default value: 0\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:205
 msgid ""
 "@code{fpprintprec} is the number of digits to print when printing an ordinary\n"
 "float or bigfloat number.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:211
 msgid ""
 "For ordinary floating point numbers,\n"
 "when @code{fpprintprec} has a value between 2 and 16 (inclusive),\n"
@@ -357,7 +357,7 @@ msgid ""
 "and the number of digits printed is 16.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:217
 msgid ""
 "For bigfloat numbers,\n"
 "when @code{fpprintprec} has a value between 2 and @code{fpprec} (inclusive),\n"
@@ -366,7 +366,7 @@ msgid ""
 "and the number of digits printed is equal to @code{fpprec}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:222
 msgid ""
 "For both ordinary floats and bigfloats,\n"
 "trailing zero digits are suppressed.\n"
@@ -374,12 +374,12 @@ msgid ""
 "if there are trailing zero digits.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:224
 msgid ""
 "@code{fpprintprec} cannot be 1.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:229
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation} @category{Display flags and variables}\n"
@@ -387,31 +387,31 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:233
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{integerp}\n"
 "@deffn {Function} integerp (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:236
 msgid ""
 "Returns @code{true} if @var{expr} is a literal numeric integer, otherwise\n"
 "@code{false}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:239
 msgid ""
 "@code{integerp} returns @code{false} if @var{expr} is a symbol, even if @var{expr}\n"
 "is declared @code{integer}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:241
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:262
 msgid ""
 "@example\n"
 "(%i1) integerp (0);\n"
@@ -435,7 +435,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:267
 msgid ""
 "@opencatbox\n"
 "@category{Predicate functions}\n"
@@ -443,7 +443,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:272
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{m1pbranch}\n"
@@ -451,14 +451,14 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:276
 msgid ""
 "@code{m1pbranch} is the principal branch for @code{-1} to a power.\n"
-"Quantities such as @code{(-1)^(1/3)} (that is, an \"odd\" rational exponent) and \n"
-"@code{(-1)^(1/4)} (that is, an \"even\" rational exponent) are handled as follows:\n"
+"Quantities such as @code{(-1)^(1/3)} (that is, an \\"odd\\" rational exponent) and \n"
+"@code{(-1)^(1/4)} (that is, an \\"even\\" rational exponent) are handled as follows:\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:283
 msgid ""
 "@c REDRAW THIS AS A TABLE\n"
 "@example\n"
@@ -468,7 +468,7 @@ msgid ""
 "(-1)^(1/4):   (-1)^(1/4)   \n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:289
 msgid ""
 "             domain:complex              \n"
 "m1pbranch:false          m1pbranch:true\n"
@@ -477,7 +477,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:294
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Global flags}\n"
@@ -485,18 +485,18 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:297
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} nonnegintegerp (@var{n})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:299
 msgid ""
 "Return @code{true} if and only if @code{@var{n} >= 0} and @var{n} is an integer.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:304
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra} @category{Predicate functions}\n"
@@ -504,20 +504,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:308
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{numberp}\n"
 "@deffn {Function} numberp (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:311
 msgid ""
 "Returns @code{true} if @var{expr} is a literal integer, rational number, \n"
 "floating point number, or bigfloat, otherwise @code{false}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:316
 msgid ""
 "@code{numberp} returns @code{false} if @var{expr} is a symbol, even if @var{expr}\n"
 "is a symbolic number such as @code{%pi} or @code{%i}, or declared to be\n"
@@ -525,12 +525,12 @@ msgid ""
 "@code{real}, @code{imaginary}, or @code{complex}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:318
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:336
 msgid ""
 "@example\n"
 "(%i1) numberp (42);\n"
@@ -551,7 +551,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:341
 msgid ""
 "@opencatbox\n"
 "@category{Predicate functions}\n"
@@ -559,22 +559,22 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:346
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 "@c WHAT ARE THE FUNCTIONS WHICH ARE EVALUATED IN FLOATING POINT ??\n"
-"@c WHAT IS A \"NUMERVAL\" ?? (SOMETHING DIFFERENT FROM A NUMERIC VALUE ??)\n"
+"@c WHAT IS A \\"NUMERVAL\\" ?? (SOMETHING DIFFERENT FROM A NUMERIC VALUE ??)\n"
 "@c NEED TO MENTION THIS IS AN evflag\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:350
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{numer}\n"
 "@defvr {Option variable} numer\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:355
 msgid ""
 "@code{numer} causes some mathematical functions (including exponentiation)\n"
 "with numerical arguments to be evaluated in floating point.  It causes\n"
@@ -582,17 +582,17 @@ msgid ""
 "their values.  It also sets the @mref{float} switch on.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:357
 msgid ""
 "See also @mrefdot{%enumer}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:359
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:376
 msgid ""
 "@c ===beg===\n"
 "@c [sqrt(2), sin(1), 1/(1+sqrt(3))];\n"
@@ -612,7 +612,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:381
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation} @category{Evaluation flags}\n"
@@ -620,7 +620,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:386
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{numer_pbranch}\n"
@@ -628,7 +628,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:393
 msgid ""
 "The option variable @code{numer_pbranch} controls the numerical evaluation of \n"
 "the power of a negative integer, rational, or floating point number.  When\n"
@@ -638,12 +638,12 @@ msgid ""
 "not an evaluated result is returned.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:395
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:428
 msgid ""
 "@c ===beg===\n"
 "@c (-2)^0.75;\n"
@@ -679,7 +679,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:433
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation}\n"
@@ -687,20 +687,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:436
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 "@c HOW TO FIND ALL VARIABLES WHICH HAVE NUMERVALS ??\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:440
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{numerval}\n"
 "@deffn {Function} numerval (@var{x_1}, @var{expr_1}, @dots{}, @var{var_n}, @var{expr_n})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:446
 msgid ""
 "Declares the variables @code{x_1}, @dots{}, @var{x_n} to have\n"
 "numeric values equal to @code{expr_1}, @dots{}, @code{expr_n}.\n"
@@ -709,13 +709,13 @@ msgid ""
 "@code{true}.  See also @mrefdot{ev}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:449
 msgid ""
 "The expressions @code{expr_1}, @dots{}, @code{expr_n} can be any expressions,\n"
 "not necessarily numeric.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:454
 msgid ""
 "@opencatbox\n"
 "@category{Declarations and inferences} @category{Numerical evaluation}\n"
@@ -723,27 +723,27 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:458
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{oddp}\n"
 "@deffn {Function} oddp (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:462
 msgid ""
 "@c THIS IS STRANGE -- SHOULD RETURN NOUN FORM IF INDETERMINATE\n"
 "Returns @code{true} if @var{expr} is a literal odd integer, otherwise\n"
 "@code{false}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:465
 msgid ""
 "@code{oddp} returns @code{false} if @var{expr} is a symbol, even if @var{expr}\n"
 "is declared @code{odd}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:470
 msgid ""
 "@opencatbox\n"
 "@category{Predicate functions}\n"
@@ -751,7 +751,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:475
 msgid ""
 "@c --- 03.11.2011 --------------------------------------------------------------\n"
 "@anchor{ratepsilon}\n"
@@ -759,14 +759,14 @@ msgid ""
 "Default value: @code{2.0e-15}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:479
 msgid ""
 "@code{ratepsilon} is the tolerance used in the conversion\n"
 "of floating point numbers to rational numbers, when the option variable\n"
 "@mref{bftorat} has the value @code{false}.  See @code{bftorat} for an example.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:484
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation} @category{Rational expressions}\n"
@@ -774,14 +774,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:488
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rationalize}\n"
 "@deffn {Function} rationalize (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:495
 msgid ""
 "Convert all double floats and big floats in the Maxima expression @var{expr} to\n"
 "their exact rational equivalents.  If you are not familiar with the binary\n"
@@ -791,7 +791,7 @@ msgid ""
 "representation.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:539
 msgid ""
 "@c ===beg===\n"
 "@c rationalize (0.5);\n"
@@ -838,7 +838,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:544
 msgid ""
 "@opencatbox\n"
 "@category{Numerical evaluation}\n"
@@ -846,25 +846,29 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:548
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ratnump}\n"
 "@deffn {Function} ratnump (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:551
 msgid ""
 "Returns @code{true} if @var{expr} is a literal integer or ratio of literal\n"
 "integers, otherwise @code{false}.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:556
 msgid ""
 "@opencatbox\n"
 "@category{Predicate functions} @category{Rational expressions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: DataTypes.texi:563
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@page\n"
 "@node Strings, Constants, Numbers, Data Types and Structures\n"
@@ -872,7 +876,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:568
 msgid ""
 "@menu\n"
 "* Introduction to Strings::\n"
@@ -880,7 +884,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:573
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Strings, Functions and Variables for Strings, Strings, Strings\n"
@@ -888,69 +892,69 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:584
 msgid ""
 "@cindex backslash\n"
-"@c The following three lines were commented out since they made \"make pdf\" abort\n"
+"@c The following three lines were commented out since they made \\"make pdf\\" abort\n"
 "@c with an error:\n"
 "@c @ifnotinfo\n"
 "@c @cindex \\n"
 "@c @end ifnotinfo\n"
 "@ifinfo\n"
 "@c adding the backslash to the index here breaks the LaTeX syntax of the file\n"
-"@c maxima.fns that is created by the first pdfLaTeX run by \"make pdf\".\n"
+"@c maxima.fns that is created by the first pdfLaTeX run by \\"make pdf\\".\n"
 "@end ifinfo\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:588
 msgid ""
-"Strings (quoted character sequences) are enclosed in double quote marks @code{\"}\n"
+"Strings (quoted character sequences) are enclosed in double quote marks @code{\\"}\n"
 "for input, and displayed with or without the quote marks, depending on the\n"
 "global variable @mrefdot{stringdisp}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:599
 msgid ""
 "Strings may contain any characters, including embedded tab, newline, and\n"
-"carriage return characters.  The sequence @code{\\"} is recognized as a literal\n"
+"carriage return characters.  The sequence @code{\\\"} is recognized as a literal\n"
 "double quote, and @code{\\} as a literal backslash.  When backslash appears at\n"
 "the end of a line, the backslash and the line termination (either newline or\n"
 "carriage return and newline) are ignored, so that the string continues with the\n"
 "next line.  No other special combinations of backslash with another character\n"
-"are recognized; when backslash appears before any character other than @code{\"},\n"
+"are recognized; when backslash appears before any character other than @code{\\"},\n"
 "@code{\}, or a line termination, the backslash is ignored.  There is no way to\n"
 "represent a special character (such as tab, newline, or carriage return)\n"
 "except by embedding the literal character in the string.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:602
 msgid ""
 "There is no character type in Maxima; a single character is represented as a\n"
 "one-character string.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:605
 msgid ""
 "The @code{stringproc} add-on package contains many functions for working with\n"
 "strings.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:607
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:658
 msgid ""
 "@c ===beg===\n"
-"@c s_1 : \"This is a string.\";\n"
-"@c s_2 : \"Embedded \\"double quotes\\" and backslash \\ characters.\";\n"
-"@c s_3 : \"Embedded line termination\n"
-"@c in this string.\";\n"
-"@c s_4 : \"Ignore the \\n"
+"@c s_1 : \\"This is a string.\\";\n"
+"@c s_2 : \\"Embedded \\\"double quotes\\\" and backslash \\ characters.\\";\n"
+"@c s_3 : \\"Embedded line termination\n"
+"@c in this string.\\";\n"
+"@c s_4 : \\"Ignore the \\n"
 "@c line termination \\n"
 "@c characters in \\n"
-"@c this string.\";\n"
+"@c this string.\\";\n"
 "@c stringdisp : false;\n"
 "@c s_1;\n"
 "@c stringdisp : true;\n"
@@ -958,24 +962,24 @@ msgid ""
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) s_1 : \"This is a string.\";\n"
+"(%i1) s_1 : \\"This is a string.\\";\n"
 "(%o1)                   This is a string.\n"
 "@end group\n"
 "@group\n"
-"(%i2) s_2 : \"Embedded \\"double quotes\\" and backslash \\ characters.\";\n"
-"(%o2) Embedded \"double quotes\" and backslash \ characters.\n"
+"(%i2) s_2 : \\"Embedded \\\"double quotes\\\" and backslash \\ characters.\\";\n"
+"(%o2) Embedded \\"double quotes\\" and backslash \ characters.\n"
 "@end group\n"
 "@group\n"
-"(%i3) s_3 : \"Embedded line termination\n"
+"(%i3) s_3 : \\"Embedded line termination\n"
 "(%o3) Embedded line termination\n"
 "in this string.\n"
 "@end group\n"
 "@group\n"
-"(%i4) in this string.\";\n"
+"(%i4) in this string.\\";\n"
 "(%o4) Ignore the line termination characters in this string.\n"
 "@end group\n"
 "@group\n"
-"(%i5) s_4 : \"Ignore the \\n"
+"(%i5) s_4 : \\"Ignore the \\n"
 "(%o5)                         false\n"
 "@end group\n"
 "@group\n"
@@ -987,21 +991,21 @@ msgid ""
 "(%o7)                         true\n"
 "@end group\n"
 "@group\n"
-"(%i8) this string.\";\n"
-"(%o8)                  \"This is a string.\"\n"
+"(%i8) this string.\\";\n"
+"(%o8)                  \\"This is a string.\\"\n"
 "@end group\n"
 "(%i9) stringdisp : false;\n"
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:662
 msgid ""
 "@opencatbox\n"
 "@category{Syntax}\n"
 "@closecatbox\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:667
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Strings, , Introduction to Strings, Strings\n"
@@ -1009,31 +1013,31 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:671
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{concat}\n"
 "@deffn {Function} concat (@var{arg_1}, @var{arg_2}, @dots{})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:674
 msgid ""
 "Concatenates its arguments.  The arguments must evaluate to atoms.  The return\n"
 "value is a symbol if the first argument is a symbol and a string otherwise.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:677
 msgid ""
 "@code{concat} evaluates its arguments.  The single quote @code{'} prevents\n"
 "evaluation.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:679
 msgid ""
 "See also @mref{sconcat} and @mrefdot{eval_string}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:688
 msgid ""
 "@example\n"
 "(%i1) y: 7$\n"
@@ -1045,14 +1049,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:692
 msgid ""
 "A symbol constructed by @code{concat} may be assigned a value and appear in\n"
 "expressions.  The @mref{::} (double colon) assignment operator evaluates its\n"
 "left-hand side.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:709
 msgid ""
 "@example\n"
 "(%i5) a: concat ('y, z/2);\n"
@@ -1072,12 +1076,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:711
 msgid ""
 "Note that although @code{concat (1, 2)} looks like a number, it is a string.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:716
 msgid ""
 "@example\n"
 "(%i10) concat (1, 2) + 3;\n"
@@ -1085,7 +1089,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:721
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Strings}\n"
@@ -1093,33 +1097,33 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:725
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sconcat}\n"
 "@deffn {Function} sconcat (@var{arg_1}, @var{arg_2}, @dots{})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:728
 msgid ""
 "Concatenates its arguments into a string.  Unlike @mrefcomma{concat} the\n"
 "arguments do @i{not} need to be atoms.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:730
 msgid ""
 "See also @mref{concat} and @mrefdot{eval_string}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:735
 msgid ""
 "@example\n"
-"(%i1) sconcat (\"xx[\", 3, \"]:\", expand ((x+y)^3));\n"
+"(%i1) sconcat (\\"xx[\\", 3, \\"]:\\", expand ((x+y)^3));\n"
 "(%o1)               xx[3]:y^3+3*x*y^2+3*x^2*y+x^3\n"
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:740
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Strings}\n"
@@ -1127,31 +1131,31 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:742
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:746
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{string}\n"
 "@deffn {Function} string (@var{expr})\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:749
 msgid ""
 "Converts @code{expr} to Maxima's linear notation just as if it had been typed\n"
 "in.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:752
 msgid ""
 "The return value of @code{string} is a string, and thus it cannot be used in a\n"
 "computation.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:757
 msgid ""
 "@opencatbox\n"
 "@category{Strings}\n"
@@ -1159,12 +1163,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:759
 msgid ""
 "@c SHOULD BE WRITTEN WITH LEADING ? BUT THAT CONFUSES CL-INFO SO WORK AROUND\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:764
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{stringdisp}\n"
@@ -1172,53 +1176,53 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:767
 msgid ""
 "When @code{stringdisp} is @code{true}, strings are displayed enclosed in double\n"
 "quote marks.  Otherwise, quote marks are not displayed.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:769
 msgid ""
 "@code{stringdisp} is always @code{true} when displaying a function definition.\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:771
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:798
 msgid ""
 "@c ===beg===\n"
 "@c stringdisp: false$\n"
-"@c \"This is an example string.\";\n"
+"@c \\"This is an example string.\\";\n"
 "@c foo () := \n"
-"@c       print (\"This is a string in a function definition.\");\n"
+"@c       print (\\"This is a string in a function definition.\\");\n"
 "@c stringdisp: true$\n"
-"@c \"This is an example string.\";\n"
+"@c \\"This is an example string.\\";\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) stringdisp: false$\n"
 "@group\n"
-"(%i2) \"This is an example string.\";\n"
+"(%i2) \\"This is an example string.\\";\n"
 "(%o2)              This is an example string.\n"
 "@end group\n"
 "@group\n"
 "(%i3) foo () :=\n"
-"      print (\"This is a string in a function definition.\");\n"
+"      print (\\"This is a string in a function definition.\\");\n"
 "(%o3) foo() := \n"
-"              print(\"This is a string in a function definition.\")\n"
+"              print(\\"This is a string in a function definition.\\")\n"
 "@end group\n"
 "(%i4) stringdisp: true$\n"
 "@group\n"
-"(%i5) \"This is an example string.\";\n"
-"(%o5)             \"This is an example string.\"\n"
+"(%i5) \\"This is an example string.\\";\n"
+"(%o5)             \\"This is an example string.\\"\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# DataTypes.texi
+#: DataTypes.texi:803
 msgid ""
 "@opencatbox\n"
 "@category{Display flags and variables}\n"
@@ -1226,6 +1230,3 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# DataTypes.texi
-msgid ""
-msgstr ""

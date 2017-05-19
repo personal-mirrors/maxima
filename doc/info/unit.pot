@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# unit.texi
+msgstr ""
+
+#: unit.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to Units::\n"
@@ -25,13 +25,13 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:8
 msgid ""
 "@node Introduction to Units, Functions and Variables for Units, unit-pkg, unit-pkg\n"
 "@section Introduction to Units\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:22
 msgid ""
 "The @emph{unit} package enables the user to convert between arbitrary\n"
 "units and work with dimensions in equations. The functioning of this package\n"
@@ -48,7 +48,7 @@ msgid ""
 "conversion option.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:32
 msgid ""
 "Note - when unit conversions are inexact Maxima will make approximations resulting\n"
 "in fractions. This is a consequence of the techniques used to simplify units.\n"
@@ -61,17 +61,17 @@ msgid ""
 "conversion process.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:35
 msgid ""
 "@emph{unit} is included in Maxima in the share/contrib/unit directory. It obeys\n"
 "normal Maxima package loading conventions:\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:46
 msgid ""
 "@example\n"
 "@group\n"
-"(%i1) load(\"unit\")$\n"
+"(%i1) load(\\"unit\\")$\n"
 "*******************************************************************\n"
 "*                       Units version 0.50                        *\n"
 "*          Definitions based on the NIST Reference on             *\n"
@@ -81,7 +81,7 @@ msgid ""
 "*******************************************************************\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:56
 msgid ""
 "Redefining necessary functions...\n"
 "WARNING: DEFUN/DEFMACRO: redefining function TOPLEVEL-MACSYMA-EVAL ...\n"
@@ -94,7 +94,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:62
 msgid ""
 "The WARNING messages are expected and not a cause for concern - they indicate\n"
 "the @emph{unit} package is redefining functions already defined in Maxima proper.\n"
@@ -103,42 +103,46 @@ msgid ""
 "packages those changes will be overwritten by this loading process.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:65
 msgid ""
 "The @emph{unit.mac} file also loads a lisp file @emph{unit-functions.lisp} which\n"
 "contains the lisp functions needed for the package.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:69
 msgid ""
 "Clifford Yapp is the primary author.  He has received valuable assistance from\n"
 "Barton Willis of the University of Nebraska at Kearney (UNK), Robert Dodier, and\n"
 "other intrepid folk of the Maxima mailing list.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:72
 msgid ""
 "There are probably lots of bugs.  Let me know.  @code{float} and @code{numer}\n"
 "don't do what is expected.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:76
 msgid ""
 "TODO : dimension functionality, handling of temperature,\n"
 "showabbr and friends.  Show examples with addition of quantities containing\n"
 "units.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:80
 msgid ""
 "@opencatbox\n"
 "@category{Physical units} @category{Share packages} @category{Package unit}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: unit.texi:84
+msgid ""
 "@node Functions and Variables for Units,  , Introduction to Units, unit-pkg\n"
 "@section Functions and Variables for Units\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:118
 msgid ""
 "@anchor{setunits}\n"
 "@deffn {Function} setunits (@var{list})\n"
@@ -175,7 +179,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:152
 msgid ""
 "In some cases this is the desired behavior.  If the user wishes to use other\n"
 "units, this is achieved with the @code{setunits} command:\n"
@@ -212,7 +216,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:169
 msgid ""
 "The setting of units is quite flexible.  For example, if we want to\n"
 "get back to kilograms, meters, and seconds as defaults for those\n"
@@ -232,7 +236,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:197
 msgid ""
 "Derived units are also handled by this command:\n"
 "@example\n"
@@ -263,7 +267,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:218
 msgid ""
 "Notice that the @emph{unit} package recognized the non MKS combination\n"
 "of mass, length, and inverse time squared as a force, and converted it\n"
@@ -287,7 +291,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:242
 msgid ""
 "To discontinue simplifying to any force, we use the uforget command:\n"
 "@example\n"
@@ -314,24 +318,24 @@ msgid ""
 "@code{uforget(%force)}.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:244
 msgid ""
-"See also @mref{uforget}. To use this function write first @code{load(\"unit\")}.\n"
+"See also @mref{uforget}. To use this function write first @code{load(\\"unit\\")}.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:248
 msgid ""
 "@opencatbox\n"
 "@category{Package unit}\n"
 "@closecatbox\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:250
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:282
 msgid ""
 "@anchor{uforget}\n"
 "@deffn {Function} uforget (@var{list})\n"
@@ -366,31 +370,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:286
 msgid ""
 "@code{uforget} operates on dimensions,\n"
 "not units, so any unit of a particular dimension will work.  The\n"
 "dimension itself is also a legal argument.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:288
 msgid ""
-"See also @mref{setunits}. To use this function write first @code{load(\"unit\")}.\n"
+"See also @mref{setunits}. To use this function write first @code{load(\\"unit\\")}.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:292
 msgid ""
 "@opencatbox\n"
 "@category{Package unit}\n"
 "@closecatbox\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:294
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:306
 msgid ""
 "@deffn {Function} convert (@var{expr}, @var{list})\n"
 "When resetting the global environment is overkill, there is the @code{convert}\n"
@@ -398,14 +402,14 @@ msgid ""
 "argument or a list of units to use in conversion.  When a convert operation is\n"
 "done, the normal global evaluation system is bypassed, in order to avoid the\n"
 "desired result being converted again.  As a consequence, for inexact calculations\n"
-"\"rat\" warnings will be visible if the global environment controlling this behavior\n"
+"\\"rat\\" warnings will be visible if the global environment controlling this behavior\n"
 "(@code{ratprint}) is true.  This is also useful for spot-checking the\n"
 "accuracy of a global conversion.  Another feature is @code{convert} will allow a\n"
 "user to do Base Dimension conversions even if the global environment is set to\n"
 "simplify to a Derived Dimension.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:324
 msgid ""
 "@example\n"
 "@group\n"
@@ -426,7 +430,7 @@ msgid ""
 "(%i4) convert(kg*m/s^2,[g,inch,minute]);\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:349
 msgid ""
 "`rat' replaced 39.37007874015748 by 5000/127 = 39.37007874015748\n"
 "                              18000000000   %in g\n"
@@ -454,7 +458,7 @@ msgid ""
 "(%i9) convert(kg*m^2/s^2,[N,inch]);\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:384
 msgid ""
 "`rat' replaced 39.37007874015748 by 5000/127 = 39.37007874015748\n"
 "                                 5000\n"
@@ -492,7 +496,7 @@ msgid ""
 "(%i16) convert(kg*m/s^2,[g,inch,s]);\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:392
 msgid ""
 "`rat' replaced 39.37007874015748 by 5000/127 = 39.37007874015748\n"
 "                                5000000   %in g\n"
@@ -503,27 +507,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:394
 msgid ""
-"See also @mref{setunits} and @mref{uforget}. To use this function write first @code{load(\"unit\")}.\n"
+"See also @mref{setunits} and @mref{uforget}. To use this function write first @code{load(\\"unit\\")}.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:398
 msgid ""
 "@opencatbox\n"
 "@category{Package unit}\n"
 "@closecatbox\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:400
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: unit.texi:405
+msgid ""
 "@anchor{usersetunits}\n"
 "@defvr {Optional variable} usersetunits\n"
 "Default value: none\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:427
 msgid ""
 "If a user wishes to have a default unit behavior other than that described,\n"
 "they can make use of @emph{maxima-init.mac} and the @emph{usersetunits}\n"
@@ -538,7 +546,7 @@ msgid ""
 "we would see the following behavior:\n"
 "@example\n"
 "@group\n"
-"(%i1) load(\"unit\")$\n"
+"(%i1) load(\\"unit\\")$\n"
 "*******************************************************************\n"
 "*                       Units version 0.50                        *\n"
 "*          Definitions based on the NIST Reference on             *\n"
@@ -548,7 +556,7 @@ msgid ""
 "*******************************************************************\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:677
 msgid ""
 "Redefining necessary functions...\n"
 "WARNING: DEFUN/DEFMACRO: redefining function\n"
@@ -801,7 +809,7 @@ msgid ""
 "control over their working environment.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:683
 msgid ""
 "@c One other significant customization option available is the @code{setunitprefix}\n"
 "@c command.  Normally, abbreviations used in this package are as close to those\n"
@@ -810,16 +818,20 @@ msgid ""
 "@c @code{setunitprefix} is provided for this case.  Here is an example of its use:\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:687
 msgid ""
 "@opencatbox\n"
 "@category{Package unit}\n"
 "@closecatbox\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:689
 msgid ""
 "@end defvr\n"
+msgstr ""
+
+#: unit.texi:712
+msgid ""
 "@deffn {Function} metricexpandall (@var{x})\n"
 "Rebuilds global unit lists automatically creating all desired metric units.\n"
 "@var{x} is a numerical argument which is used to specify how many metric\n"
@@ -843,51 +855,52 @@ msgid ""
 "@c This should be made configurable as a maxima-init.mac controllable option.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:716
 msgid ""
 "@opencatbox\n"
 "@category{Package unit}\n"
 "@closecatbox\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:718
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:721
 msgid ""
 "@defvr {Variable} %unitexpand\n"
 "Default value: @code{2}\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:724
 msgid ""
 "This is the value supplied to @code{metricexpandall} during the initial loading\n"
 "of @emph{unit}.\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:728
 msgid ""
 "@opencatbox\n"
 "@category{Package unit}\n"
 "@closecatbox\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:730
 msgid ""
 "@end defvr\n"
+msgstr ""
+
+#: unit.texi:734
+msgid ""
 "@c @deffn {Function} functionname (@var{arg1}, @var{arg2}, ..., @var{argn})\n"
 "@c @end deffn\n"
 msgstr ""
 
-# unit.texi
+#: unit.texi:738
 msgid ""
 "@c @defvr {Optional variable} variablename\n"
 "@c Default value: @code{true}\n"
 "@c @end defvr\n"
 msgstr ""
 
-# unit.texi
-msgid ""
-msgstr ""

@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Ctensor.texi
+msgstr ""
+
+#: Ctensor.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to ctensor::\n"
@@ -25,13 +25,13 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:8
 msgid ""
 "@node Introduction to ctensor, Functions and Variables for ctensor, ctensor, ctensor\n"
 "@section Introduction to ctensor\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:19
 msgid ""
 "@code{ctensor} is a component tensor manipulation package.  To use the @code{ctensor}\n"
 "package, type @code{load(ctensor)}.\n"
@@ -45,7 +45,7 @@ msgid ""
 "with other object definitions.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:28
 msgid ""
 "Next, the user enters the metric either directly or from a file by\n"
 "specifying its ordinal position.\n"
@@ -57,7 +57,7 @@ msgid ""
 "series.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:34
 msgid ""
 "A sample protocol is begun below for the static, spherically symmetric\n"
 "metric (standard coordinates) which will be applied to the problem of\n"
@@ -66,7 +66,7 @@ msgid ""
 "displayed for the standard metric as examples.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:45
 msgid ""
 "@example\n"
 "(%i1) load(ctensor);\n"
@@ -80,18 +80,18 @@ msgid ""
 "1. Enter a new metric?\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:47
 msgid ""
 "2. Enter a metric from a file?\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:50
 msgid ""
 "3. Approximate a metric with a Taylor series?\n"
 "1;\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:62
 msgid ""
 "Is the matrix  1. Diagonal  2. Symmetric  3. Antisymmetric  4. General\n"
 "Answer 1, 2, 3 or 4\n"
@@ -106,7 +106,7 @@ msgid ""
 "-d;\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:83
 msgid ""
 "Matrix entered.\n"
 "Enter functional dependencies with the DEPENDS function or 'N' if none\n"
@@ -130,21 +130,21 @@ msgid ""
 "                                  1, 1, 1   2 a\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:87
 msgid ""
 "                                             1\n"
 "(%t4)                           mcs        = -\n"
 "                                   1, 2, 2   x\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:91
 msgid ""
 "                                             1\n"
 "(%t5)                           mcs        = -\n"
 "                                   1, 3, 3   x\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:96
 msgid ""
 "                                            d\n"
 "                                             x\n"
@@ -152,21 +152,21 @@ msgid ""
 "                                  1, 4, 4   2 d\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:100
 msgid ""
 "                                              x\n"
 "(%t7)                          mcs        = - -\n"
 "                                  2, 2, 1     a\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:104
 msgid ""
 "                                           cos(y)\n"
 "(%t8)                         mcs        = ------\n"
 "                                 2, 3, 3   sin(y)\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:109
 msgid ""
 "                                               2\n"
 "                                          x sin (y)\n"
@@ -174,13 +174,13 @@ msgid ""
 "                              3, 3, 1         a\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:112
 msgid ""
 "(%t10)                   mcs        = - cos(y) sin(y)\n"
 "                            3, 3, 2\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:118
 msgid ""
 "                                            d\n"
 "                                             x\n"
@@ -189,30 +189,30 @@ msgid ""
 "(%o11)                               done\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:120
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:124
 msgid ""
 "@opencatbox\n"
 "@category{Tensors} @category{Share packages} @category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:127
 msgid ""
 "@c end concepts ctensor\n"
 "@node Functions and Variables for ctensor,  , Introduction to ctensor, ctensor\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:129
 msgid ""
 "@section Functions and Variables for ctensor\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:136
 msgid ""
 "@subsection Initialization and setup\n"
 "@anchor{csetup}\n"
@@ -222,7 +222,7 @@ msgid ""
 "interactively. See @code{ctensor} for more details.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:145
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -234,14 +234,14 @@ msgid ""
 "@fname{cmetric} ()\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:149
 msgid ""
 "A function in the @code{ctensor} (component tensor) package\n"
 "that computes the metric inverse and sets up the package for\n"
 "further calculations.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:157
 msgid ""
 "If @code{cframe_flag} is @code{false}, the function computes the inverse metric\n"
 "@code{ug} from the (user-defined) matrix @code{lg}. The metric determinant is\n"
@@ -252,7 +252,7 @@ msgid ""
 "the metric inverse.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:162
 msgid ""
 "If @code{cframe_flag} is @code{true}, the function expects that the values of\n"
 "@code{fri} (the inverse frame matrix) and @code{lfg} (the frame metric) are\n"
@@ -260,7 +260,7 @@ msgid ""
 "metric @code{ufg} are computed.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:171
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -272,18 +272,18 @@ msgid ""
 "@fname{ct_coordsys} (@var{coordinate_system})\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:174
 msgid ""
 "Sets up a predefined coordinate system and metric. The argument\n"
 "@var{coordinate_system} can be one of the following symbols:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:176
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:219
 msgid ""
 " SYMBOL             Dim Coordinates     Description/comments\n"
 " ------------------------------------------------------------------\n"
@@ -329,19 +329,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:223
 msgid ""
 "@code{coordinate_system} can also be a list of transformation functions,\n"
 "followed by a list containing the coordinate variables. For instance,\n"
 "you can specify a spherical metric as follows:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:225
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:243
 msgid ""
 "(%i1) load(ctensor);\n"
 "(%o1)       /share/tensor/ctensor.mac\n"
@@ -362,22 +362,22 @@ msgid ""
 "(%o5)                                  3\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:245
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:247
 msgid ""
 "Transformation functions can also be used when @code{cframe_flag} is @code{true}:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:249
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:264
 msgid ""
 "(%i1) load(ctensor);\n"
 "(%o1)       /share/tensor/ctensor.mac\n"
@@ -395,7 +395,7 @@ msgid ""
 " [    sin(theta)           r cos(theta)                0          ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:275
 msgid ""
 "(%i5) cmetric();\n"
 "(%o5)                                false\n"
@@ -409,39 +409,39 @@ msgid ""
 "                           [ 0  0   r  cos (theta) ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:277
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:280
 msgid ""
 "The optional argument @var{extra_arg} can be any one of the following:\n"
 "@c LOOKING AT share/tensor/ctensor.mac CIRCA LINE 837, misner IS RECOGNIZED ALSO; WHAT EFFECT DOES IT HAVE ??\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:282
 msgid ""
 "@code{cylindrical} tells @code{ct_coordsys} to attach an additional cylindrical coordinate.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:284
 msgid ""
 "@code{minkowski} tells @code{ct_coordsys} to attach an additional coordinate with negative metric signature.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:286
 msgid ""
 "@code{all} tells @code{ct_coordsys} to call @code{cmetric} and @code{christof(false)} after setting up the metric.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:289
 msgid ""
 "@c GLOBAL VARIABLE verbose IS USED IN ctensor.mac IN JUST THIS ONE CONTEXT\n"
 "If the global variable @code{verbose} is set to @code{true}, @code{ct_coordsys} displays the values of @code{dim}, @code{ct_coords}, and either @code{lg} or @code{lfg} and @code{fri}, depending on the value of @code{cframe_flag}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:297
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -452,38 +452,42 @@ msgid ""
 "Initializes the @code{ctensor} package.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:299
 msgid ""
 "The @code{init_ctensor} function reinitializes the @code{ctensor} package. It removes all arrays and matrices used by @code{ctensor}, resets all flags, resets @code{dim} to 4, and resets the frame metric to the Lorentz-frame.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:304
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Ctensor.texi:307
+msgid ""
 "@subsection The tensors of curved space\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:311
 msgid ""
 "The main purpose of the @code{ctensor} package is to compute the tensors\n"
 "of curved space(time), most notably the tensors used in general\n"
 "relativity.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:313
 msgid ""
 "When a metric base is used, @code{ctensor} can compute the following tensors:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:315
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:325
 msgid ""
 " lg  -- ug\n"
 "   \      \\n"
@@ -494,21 +498,25 @@ msgid ""
 "                 riem -- lriem -- weyl\n"
 "                     \\n"
 "                      uriem\n"
+msgstr ""
+
+#: Ctensor.texi:328
+msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:331
 msgid ""
 "@code{ctensor} can also work using moving frames. When @code{cframe_flag} is\n"
 "set to @code{true}, the following tensors can be calculated:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:333
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:343
 msgid ""
 " lfg -- ufg\n"
 "     \\n"
@@ -521,7 +529,7 @@ msgid ""
 "                              \uriem\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:359
 msgid ""
 "@end example\n"
 "@anchor{christof}\n"
@@ -540,7 +548,7 @@ msgid ""
 "manner that the final index is contravariant.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:370
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -554,7 +562,7 @@ msgid ""
 "then the non-zero components are displayed.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:385
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -572,7 +580,7 @@ msgid ""
 "of the array @code{uric[i,j]} without displaying the results.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:394
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -584,7 +592,7 @@ msgid ""
 "the Ricci tensor) of the Riemannian manifold with the given metric.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:410
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -603,7 +611,7 @@ msgid ""
 "also be factored.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:418
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -614,7 +622,7 @@ msgid ""
 "Covariant Einstein-tensor. @code{leinstein} stores the values of the covariant Einstein tensor in the array @code{lein}. The covariant Einstein-tensor is computed from the mixed Einstein tensor @code{ein} by multiplying it with the metric tensor. If the argument @var{dis} is @code{true}, then the non-zero values of the covariant Einstein tensor are displayed.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:429
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -628,7 +636,7 @@ msgid ""
 "index conventions are used:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:435
 msgid ""
 "@example\n"
 "                l      _l       _l       _l   _m    _l   _m\n"
@@ -637,7 +645,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:446
 msgid ""
 "This notation is consistent with the notation used by the @code{itensor}\n"
 "package and its @code{icurvature} function.\n"
@@ -651,7 +659,7 @@ msgid ""
 "each of the components will also be factored.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:451
 msgid ""
 "If the variable @code{cframe_flag} is @code{false}, the Riemann tensor is\n"
 "computed directly from the Christoffel-symbols. If @code{cframe_flag} is\n"
@@ -659,7 +667,7 @@ msgid ""
 "frame field coefficients.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:459
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -670,25 +678,25 @@ msgid ""
 "Covariant Riemann-tensor (@code{lriem[]}).\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:462
 msgid ""
 "Computes the covariant Riemann-tensor as the array @code{lriem}. If the\n"
 "argument @var{dis} is @code{true}, unique non-zero values are displayed.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:466
 msgid ""
 "If the variable @code{cframe_flag} is @code{true}, the covariant Riemann\n"
 "tensor is computed directly from the frame field coefficients. Otherwise,\n"
 "the (3,1) Riemann tensor is computed first.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:468
 msgid ""
 "For information on index ordering, see @code{riemann}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:478
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -701,7 +709,7 @@ msgid ""
 "if @var{dis} is @code{true}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:487
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -713,19 +721,19 @@ msgid ""
 "contracting the tensors\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:491
 msgid ""
 "@example\n"
 "lriem[i,j,k,l]*uriem[i,j,k,l].\n"
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:493
 msgid ""
 "This object is not automatically simplified since it can be very large.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:506
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -741,7 +749,7 @@ msgid ""
 "factored as well.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:511
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -749,12 +757,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:513
 msgid ""
 "@subsection Taylor series expansion\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:518
 msgid ""
 "The @code{ctensor} package has the ability to truncate results by assuming\n"
 "that they are Taylor-series approximations. This behavior is controlled by\n"
@@ -762,17 +770,17 @@ msgid ""
 "internally of the function @code{ctaylor} when simplifying results.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:520
 msgid ""
 "The @code{ctaylor} function is invoked by the following @code{ctensor} functions:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:522
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:535
 msgid ""
 "    Function     Comments\n"
 "    ---------------------------------\n"
@@ -788,7 +796,7 @@ msgid ""
 "@deffn {Function} ctaylor ()\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:543
 msgid ""
 "The @code{ctaylor} function truncates its argument by converting\n"
 "it to a Taylor-series using @code{taylor}, and then calling\n"
@@ -799,7 +807,7 @@ msgid ""
 "in @code{ctaypt}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:548
 msgid ""
 "As an example, consider a simple metric that is a perturbation of\n"
 "the Minkowski metric. Without further restrictions, even a diagonal\n"
@@ -807,12 +815,12 @@ msgid ""
 "complex:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:550
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:612
 msgid ""
 "(%i1) load(ctensor);\n"
 "(%o1)       /share/tensor/ctensor.mac\n"
@@ -877,23 +885,23 @@ msgid ""
 "(%o12)                               done\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:614
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:617
 msgid ""
 "However, if we recompute this example as an approximation that is\n"
 "linear in the variable @code{l}, we get much simpler expressions:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:619
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:656
 msgid ""
 "(%i14) ctayswitch:true;\n"
 "(%o14)                               true\n"
@@ -933,34 +941,38 @@ msgid ""
 "                              r               r r\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:660
 msgid ""
 "                            2               2      4    2\n"
 "              - 2 h44 l    r  - h33 h44 (l ) )/(4 r  sin (theta))\n"
 "                       r r                r\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:664
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:667
 msgid ""
 "This capability can be useful, for instance, when working in the weak\n"
 "field limit far from a gravitational source.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:672
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Ctensor.texi:675
+msgid ""
 "@subsection Frame fields\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:681
 msgid ""
 "When the variable @code{cframe_flag} is set to true, the @code{ctensor} package\n"
 "performs its calculations using a moving frame.\n"
@@ -969,12 +981,12 @@ msgid ""
 "The frame bracket (@code{fb[]}).\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:683
 msgid ""
 "Computes the frame bracket according to the following definition:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:689
 msgid ""
 "@example\n"
 "   c          c         c        d     e\n"
@@ -983,7 +995,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:694
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -991,12 +1003,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:696
 msgid ""
 "@subsection Algebraic classification\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:705
 msgid ""
 "A new feature (as of November, 2004) of @code{ctensor} is its ability to\n"
 "compute the Petrov classification of a 4-dimensional spacetime metric.\n"
@@ -1008,7 +1020,7 @@ msgid ""
 "counterpart (@code{npi}). See @code{petrov} for an example.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:710
 msgid ""
 "The null tetrad is constructed on the assumption that a four-dimensional\n"
 "orthonormal frame metric with metric signature (-,+,+,+) is being used.\n"
@@ -1016,41 +1028,41 @@ msgid ""
 "as follows:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:712
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:715
 msgid ""
 "np  = (fri  + fri ) / sqrt(2)\n"
 "  1       1      2\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:718
 msgid ""
 "np  = (fri  - fri ) / sqrt(2)\n"
 "  2       1      2\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:721
 msgid ""
 "np  = (fri  + %i fri ) / sqrt(2)\n"
 "  3       3         4\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:724
 msgid ""
 "np  = (fri  - %i fri ) / sqrt(2)\n"
 "  4       3         4\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:726
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:736
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1063,7 +1075,7 @@ msgid ""
 "See @code{petrov} for an example.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:751
 msgid ""
 "These coefficients are computed from the Weyl-tensor in a coordinate base.\n"
 "If a frame base is used, the Weyl-tensor is first converted to a coordinate\n"
@@ -1081,7 +1093,7 @@ msgid ""
 "distinguish between the two.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:759
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1092,13 +1104,13 @@ msgid ""
 "Computes the Petrov classification of the metric characterized by @code{psi[0]}...@code{psi[4]}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:762
 msgid ""
 "For example, the following demonstrates how to obtain the Petrov-classification\n"
 "of the Kerr metric:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:775
 msgid ""
 "@example\n"
 "(%i1) load(ctensor);\n"
@@ -1114,7 +1126,7 @@ msgid ""
 "(%t6) np =\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:791
 msgid ""
 "[ sqrt(r - 2 m)           sqrt(r)                                 ]\n"
 "[---------------   ---------------------    0            0        ]\n"
@@ -1133,35 +1145,35 @@ msgid ""
 "[                                       sqrt(2)        sqrt(2)    ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:795
 msgid ""
 "                             sqrt(r)         sqrt(r - 2 m)\n"
 "(%t7) npi = matrix([- ---------------------,---------------, 0, 0],\n"
 "                      sqrt(2) sqrt(r - 2 m) sqrt(2) sqrt(r)\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:799
 msgid ""
 "          sqrt(r)            sqrt(r - 2 m)\n"
 "[- ---------------------, - ---------------, 0, 0],\n"
 "   sqrt(2) sqrt(r - 2 m)    sqrt(2) sqrt(r)\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:803
 msgid ""
 "           1               %i\n"
 "[0, 0, ---------, --------------------],\n"
 "       sqrt(2) r  sqrt(2) r sin(theta)\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:807
 msgid ""
 "           1                 %i\n"
 "[0, 0, ---------, - --------------------])\n"
 "       sqrt(2) r    sqrt(2) r sin(theta)\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:812
 msgid ""
 "(%o7)                                done\n"
 "(%i7) psi(true);\n"
@@ -1169,13 +1181,13 @@ msgid ""
 "                                      0\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:815
 msgid ""
 "(%t9)                              psi  = 0\n"
 "                                      1\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:820
 msgid ""
 "                                          m\n"
 "(%t10)                             psi  = --\n"
@@ -1183,13 +1195,13 @@ msgid ""
 "                                          r\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:823
 msgid ""
 "(%t11)                             psi  = 0\n"
 "                                      3\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:829
 msgid ""
 "(%t12)                             psi  = 0\n"
 "                                      4\n"
@@ -1198,83 +1210,91 @@ msgid ""
 "(%o12)                                 D\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:831
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:837
 msgid ""
 "The Petrov classification function is based on the algorithm published in\n"
-"\"Classifying geometries in general relativity: III Classification in practice\"\n"
+"\\"Classifying geometries in general relativity: III Classification in practice\\"\n"
 "by Pollney, Skea, and d'Inverno, Class. Quant. Grav. 17 2885-2902 (2000).\n"
 "Except for some simple test cases, the implementation is untested as of\n"
 "December 19, 2004, and is likely to contain errors.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:842
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Ctensor.texi:845
+msgid ""
 "@subsection Torsion and nonmetricity\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:848
 msgid ""
 "@code{ctensor} has the ability to compute and include torsion and nonmetricity\n"
 "coefficients in the connection coefficients.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:852
 msgid ""
 "The torsion coefficients are calculated from a user-supplied tensor\n"
 "@code{tr}, which should be a rank (2,1) tensor. From this, the torsion\n"
 "coefficients @code{kt} are computed according to the following formulae:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:854
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:860
 msgid ""
 "              m          m      m\n"
 "       - g  tr   - g   tr   - tr   g\n"
 "          im  kj    jm   ki     ij  km\n"
 "kt   = -------------------------------\n"
 "  ijk                 2\n"
+msgstr ""
+
+#: Ctensor.texi:865
+msgid ""
 "  k     km\n"
 "kt   = g   kt\n"
 "  ij         ijm\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:867
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:870
 msgid ""
 "Note that only the mixed-index tensor is calculated and stored in the\n"
 "array @code{kt}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:874
 msgid ""
 "The nonmetricity coefficients are calculated from the user-supplied\n"
 "nonmetricity vector @code{nm}. From this, the nonmetricity coefficients\n"
 "@code{nmc} are computed as follows:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:876
 msgid ""
 "@example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:882
 msgid ""
 "             k    k        km\n"
 "       -nm  D  - D  nm  + g   nm  g\n"
@@ -1283,17 +1303,17 @@ msgid ""
 "   ij                2\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:884
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:886
 msgid ""
 "where D stands for the Kronecker-delta.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:892
 msgid ""
 "When @code{ctorsion_flag} is set to @code{true}, the values of @code{kt}\n"
 "are subtracted from the mixed-indexed connection coefficients computed by\n"
@@ -1302,7 +1322,7 @@ msgid ""
 "mixed-indexed connection coefficients.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:897
 msgid ""
 "If necessary, @code{christof} calls the functions @code{contortion} and\n"
 "@code{nonmetricity} in order to compute @code{kt} and @code{nm}.\n"
@@ -1310,12 +1330,12 @@ msgid ""
 "@deffn {Function} contortion (@var{tr})\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:899
 msgid ""
 "Computes the (2,1) contortion coefficients from the torsion tensor @var{tr}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:906
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1325,13 +1345,13 @@ msgid ""
 "@deffn {Function} nonmetricity (@var{nm})\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:909
 msgid ""
 "Computes the (2,1) nonmetricity coefficients from the nonmetricity\n"
 "vector @var{nm}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:914
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1339,7 +1359,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:924
 msgid ""
 "@subsection Miscellaneous features\n"
 "@anchor{ctransform}\n"
@@ -1350,7 +1370,7 @@ msgid ""
 "functions which define the transformation.  (Formerly called @code{transform}.)\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:931
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1360,7 +1380,7 @@ msgid ""
 "@deffn {Function} findde (@var{A}, @var{n})\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:939
 msgid ""
 "returns a list of the unique differential equations (expressions)\n"
 "corresponding to the elements of the @var{n} dimensional square\n"
@@ -1369,6 +1389,10 @@ msgid ""
 "differential equations. For the Einstein tensor (@code{ein}), which\n"
 "is a two dimensional array, if computed for the metric in the example\n"
 "below, @code{findde} gives the following independent differential equations:\n"
+msgstr ""
+
+#: Ctensor.texi:971
+msgid ""
 "@example\n"
 "(%i1) load(ctensor);\n"
 "(%o1)       /share/tensor/ctensor.mac\n"
@@ -1401,7 +1425,7 @@ msgid ""
 "        x                     x x         x        x    x\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:978
 msgid ""
 "                                              2          2\n"
 "                          + 2 a d d   - 2 a  d , a  x + a  - a]\n"
@@ -1411,7 +1435,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:988
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1424,7 +1448,7 @@ msgid ""
 "@code{contragrad} illustrates.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:995
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1434,15 +1458,15 @@ msgid ""
 "@deffn {Function} contragrad ()\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1000
 msgid ""
 "Computes the contravariant gradient of a scalar function allowing\n"
-"@c \"vector^F2name^F*\" LOOKS LIKE IT NEEDS TO BE FIXED UP, NOT SURE HOW THOUGH\n"
+"@c \\"vector^F2name^F*\\" LOOKS LIKE IT NEEDS TO BE FIXED UP, NOT SURE HOW THOUGH\n"
 "the user to choose the corresponding vector name as the example\n"
 "below for the Schwarzschild metric illustrates:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1023
 msgid ""
 "@example\n"
 "(%i1) load(ctensor);\n"
@@ -1468,7 +1492,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1032
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1480,7 +1504,7 @@ msgid ""
 "dependencies have been declared upon the function. For example:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1052
 msgid ""
 "@example\n"
 "(%i1) load(ctensor);\n"
@@ -1503,7 +1527,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1059
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1513,7 +1537,7 @@ msgid ""
 "@deffn {Function} checkdiv ()\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1066
 msgid ""
 "computes the covariant divergence of the mixed second rank tensor\n"
 "(whose first index must be covariant) by printing the\n"
@@ -1523,7 +1547,7 @@ msgid ""
 "In addition, the divergence (vector) is given the array name @code{div}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1077
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1537,7 +1561,7 @@ msgid ""
 "the argument @var{dis} is @code{true} then these equations are displayed.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1082
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1545,13 +1569,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1085
 msgid ""
 "@anchor{bdvac}\n"
 "@deffn {Function} bdvac (@var{f})\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1090
 msgid ""
 "generates the covariant components of the vacuum field equations of\n"
 "the Brans- Dicke gravitational theory. The scalar field is specified\n"
@@ -1559,13 +1583,13 @@ msgid ""
 "with functional dependencies, e.g., @code{'p(x)}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1093
 msgid ""
 "The components of the second rank covariant field tensor are\n"
 "represented by the array @code{bd}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1100
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1575,14 +1599,14 @@ msgid ""
 "@deffn {Function} invariant1 ()\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1104
 msgid ""
 "generates the mixed Euler- Lagrange tensor (field equations) for the\n"
 "invariant density of R^2. The field equations are the components of an\n"
 "array named @code{inv1}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1111
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1592,16 +1616,20 @@ msgid ""
 "@deffn {Function} invariant2 ()\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1113
 msgid ""
 "*** NOT YET IMPLEMENTED ***\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1117
 msgid ""
 "generates the mixed Euler- Lagrange tensor (field equations) for the\n"
 "invariant density of @code{ric[i,j]*uriem[i,j]}. The field equations are the\n"
 "components of an array named @code{inv2}.\n"
+msgstr ""
+
+#: Ctensor.texi:1125
+msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
@@ -1610,18 +1638,18 @@ msgid ""
 "@deffn {Function} bimetric ()\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1127
 msgid ""
 "*** NOT YET IMPLEMENTED ***\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1130
 msgid ""
 "generates the field equations of Rosen's bimetric theory. The field\n"
 "equations are the components of an array named @code{rosen}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1135
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1629,66 +1657,66 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1139
 msgid ""
 "@subsection Utility functions\n"
 "@anchor{diagmatrixp}\n"
 "@deffn {Function} diagmatrixp (@var{M},@var{n})\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1142
 msgid ""
 "Returns @code{true} if the first @var{n} rows and @var{n} columns of @var{M}\n"
 "form a diagonal matrix or (2D) array.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1146
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1150
 msgid ""
 "@end deffn\n"
 "@anchor{symmetricp}\n"
 "@deffn {Function} symmetricp (@var{M}, @var{n})\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1153
 msgid ""
 "Returns @code{true} if @var{M} is a @var{n} by @var{n} symmetric matrix or two-dimensional array,\n"
 "otherwise @code{false}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1157
 msgid ""
 "If @var{n} is less than the size of @var{M},\n"
 "@code{symmetricp} considers only the @var{n} by @var{n} submatrix (respectively, subarray)\n"
 "comprising rows 1 through @var{n} and columns 1 through @var{n}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1161
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1170
 msgid ""
 "@end deffn\n"
 "@anchor{ntermst}\n"
 "@deffn {Function} ntermst (@var{f})\n"
-"gives the user a quick picture of the \"size\" of the doubly subscripted\n"
+"gives the user a quick picture of the \\"size\\" of the doubly subscripted\n"
 "tensor (array) @var{f}.  It prints two element lists where the second\n"
 "element corresponds to NTERMS of the components specified by the first\n"
 "elements.  In this way, it is possible to quickly find the non-zero\n"
 "expressions and attempt simplification.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1183
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1704,7 +1732,7 @@ msgid ""
 "the Schwarzschild metric can be viewed as:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1211
 msgid ""
 "@example\n"
 "(%i1) load(ctensor);\n"
@@ -1735,7 +1763,7 @@ msgid ""
 "          [                                               r       ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1222
 msgid ""
 "                                [    2 m (r - 2 m)       ]\n"
 "                                [ 0  -------------  0  0 ]\n"
@@ -1749,7 +1777,7 @@ msgid ""
 "                                [ 0        0        0  0 ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1233
 msgid ""
 "                                [         m (r - 2 m)    ]\n"
 "                                [ 0  0  - -----------  0 ]\n"
@@ -1763,7 +1791,7 @@ msgid ""
 "                                [ 0  0        0        0 ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1244
 msgid ""
 "                                [            m (r - 2 m) ]\n"
 "                                [ 0  0  0  - ----------- ]\n"
@@ -1777,7 +1805,7 @@ msgid ""
 "                                [ 0  0  0        0       ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1255
 msgid ""
 "                               [       0         0  0  0 ]\n"
 "                               [                         ]\n"
@@ -1791,7 +1819,7 @@ msgid ""
 "                               [       0         0  0  0 ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1272
 msgid ""
 "             [     2 m                                         ]\n"
 "             [ ------------  0        0               0        ]\n"
@@ -1811,7 +1839,7 @@ msgid ""
 "             [                                    r  (r - 2 m) ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1283
 msgid ""
 "                                [ 0  0       0        0 ]\n"
 "                                [                       ]\n"
@@ -1825,7 +1853,7 @@ msgid ""
 "                                [ 0  0       0        0 ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1294
 msgid ""
 "                                [ 0  0  0       0       ]\n"
 "                                [                       ]\n"
@@ -1839,7 +1867,7 @@ msgid ""
 "                                [ 0  0  0       0       ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1304
 msgid ""
 "                                      [ 0  0  0  0 ]\n"
 "                                      [            ]\n"
@@ -1852,7 +1880,7 @@ msgid ""
 "                                      [ 0  0  0  0 ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1314
 msgid ""
 "                                      [ 0  0  0  0 ]\n"
 "                                      [            ]\n"
@@ -1865,7 +1893,7 @@ msgid ""
 "                                      [ 0  0  0  0 ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1328
 msgid ""
 "                               [   m                      ]\n"
 "                               [ - -   0   0       0      ]\n"
@@ -1882,7 +1910,7 @@ msgid ""
 "                               [                 r        ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1338
 msgid ""
 "                                    [ 0  0  0    0   ]\n"
 "                                    [                ]\n"
@@ -1895,7 +1923,7 @@ msgid ""
 "                                    [ 0  0  0    0   ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1349
 msgid ""
 "                                [       0        0  0  0 ]\n"
 "                                [                        ]\n"
@@ -1909,7 +1937,7 @@ msgid ""
 "                                [       r                ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1360
 msgid ""
 "                                [ 0        0        0  0 ]\n"
 "                                [                        ]\n"
@@ -1923,7 +1951,7 @@ msgid ""
 "                                [          r             ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1371
 msgid ""
 "                              [ 0  0          0          0 ]\n"
 "                              [                            ]\n"
@@ -1937,7 +1965,7 @@ msgid ""
 "                              [                r           ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1388
 msgid ""
 "           [        2                                             ]\n"
 "           [   m sin (theta)                                      ]\n"
@@ -1957,17 +1985,17 @@ msgid ""
 "           [        0                0                0         0 ]\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1390
 msgid ""
 "(%o5)                                done\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1392
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1401
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1979,7 +2007,7 @@ msgid ""
 "deleted.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1406
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -1987,15 +2015,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1408
 msgid ""
 "@subsection Variables used by @code{ctensor}\n"
+msgstr ""
+
+#: Ctensor.texi:1413
+msgid ""
 "@anchor{dim}\n"
 "@defvr {Option variable} dim\n"
 "Default value: 4\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1418
 msgid ""
 "An option in the @code{ctensor} (component tensor)\n"
 "package.  @code{dim} is the dimension of the manifold with the\n"
@@ -2003,26 +2035,26 @@ msgid ""
 "value @code{n}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1422
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1424
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1428
 msgid ""
 "@anchor{diagmetric}\n"
 "@defvr {Option variable} diagmetric\n"
 "Default value: @code{false}\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1435
 msgid ""
 "An option in the @code{ctensor} (component tensor)\n"
 "package.  If @code{diagmetric} is @code{true} special routines compute\n"
@@ -2032,49 +2064,49 @@ msgid ""
 "automatically by @code{csetup} if a diagonal metric is specified.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1439
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1441
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1444
 msgid ""
 "@anchor{ctrgsimp}\n"
 "@defvr {Option variable} ctrgsimp\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1447
 msgid ""
 "Causes trigonometric simplifications to be used when tensors are computed. Presently,\n"
 "@code{ctrgsimp} affects only computations involving a moving frame.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1451
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor} @category{Simplification flags and variables}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1453
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1456
 msgid ""
 "@anchor{cframe_flag}\n"
 "@defvr {Option variable} cframe_flag\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1463
 msgid ""
 "Causes computations to be performed relative to a moving frame as opposed to\n"
 "a holonomic metric. The frame is defined by the inverse frame array @code{fri}\n"
@@ -2084,50 +2116,50 @@ msgid ""
 "signature.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1467
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1469
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1472
 msgid ""
 "@anchor{ctorsion_flag}\n"
 "@defvr {Option variable} ctorsion_flag\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1476
 msgid ""
 "Causes the contortion tensor to be included in the computation of the\n"
 "connection coefficients. The contortion tensor itself is computed by\n"
 "@code{contortion} from the user-supplied tensor @code{tr}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1480
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1482
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1485
 msgid ""
 "@anchor{cnonmet_flag}\n"
 "@defvr {Option variable} cnonmet_flag\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1490
 msgid ""
 "Causes the nonmetricity coefficients to be included in the computation of\n"
 "the connection coefficients. The nonmetricity coefficients are computed\n"
@@ -2135,25 +2167,25 @@ msgid ""
 "@code{nonmetricity}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1494
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1496
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1499
 msgid ""
 "@anchor{ctayswitch}\n"
 "@defvr {Option variable} ctayswitch\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1504
 msgid ""
 "If set to @code{true}, causes some @code{ctensor} computations to be carried out using\n"
 "Taylor-series expansions. Presently, @code{christof}, @code{ricci},\n"
@@ -2161,159 +2193,159 @@ msgid ""
 "setting.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1508
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1510
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1513
 msgid ""
 "@anchor{ctayvar}\n"
 "@defvr {Option variable} ctayvar\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1516
 msgid ""
 "Variable used for Taylor-series expansion if @code{ctayswitch} is set to\n"
 "@code{true}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1520
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1522
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1525
 msgid ""
 "@anchor{ctaypov}\n"
 "@defvr {Option variable} ctaypov\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1528
 msgid ""
 "Maximum power used in Taylor-series expansion when @code{ctayswitch} is\n"
 "set to @code{true}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1532
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1534
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1537
 msgid ""
 "@anchor{ctaypt}\n"
 "@defvr {Option variable} ctaypt\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1540
 msgid ""
 "Point around which Taylor-series expansion is carried out when\n"
 "@code{ctayswitch} is set to @code{true}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1544
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1546
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1549
 msgid ""
 "@anchor{gdet}\n"
 "@defvr {System variable} gdet\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1552
 msgid ""
 "The determinant of the metric tensor @code{lg}. Computed by @code{cmetric} when\n"
 "@code{cframe_flag} is set to @code{false}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1556
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1558
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1561
 msgid ""
 "@anchor{ratchristof}\n"
 "@defvr {Option variable} ratchristof\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1563
 msgid ""
 "Causes rational simplification to be applied by @code{christof}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1567
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1569
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1573
 msgid ""
 "@anchor{rateinstein}\n"
 "@defvr {Option variable} rateinstein\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1577
 msgid ""
 "If @code{true} rational simplification will be\n"
 "performed on the non-zero components of Einstein tensors; if\n"
 "@code{ratfac} is @code{true} then the components will also be factored.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1581
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1586
 msgid ""
 "@end defvr\n"
 "@anchor{ratriemann}\n"
@@ -2321,7 +2353,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1591
 msgid ""
 "One of the switches which controls\n"
 "simplification of Riemann tensors; if @code{true}, then rational\n"
@@ -2329,350 +2361,350 @@ msgid ""
 "components will also be factored.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1595
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1597
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1601
 msgid ""
 "@anchor{ratweyl}\n"
 "@defvr {Option variable} ratweyl\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1605
 msgid ""
 "If @code{true}, this switch causes the @code{weyl} function\n"
 "to apply rational simplification to the values of the Weyl tensor. If\n"
 "@code{ratfac} is @code{true}, then the components will also be factored.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1609
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1611
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1615
 msgid ""
 "@anchor{lfg}\n"
 "@defvr {Variable} lfg\n"
 "The covariant frame metric. By default, it is initialized to the 4-dimensional Lorentz frame with signature (+,+,+,-). Used when @code{cframe_flag} is @code{true}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1619
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1621
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1625
 msgid ""
 "@anchor{ufg}\n"
 "@defvr {Variable} ufg\n"
 "The inverse frame metric. Computed from @code{lfg} when @code{cmetric} is called while @code{cframe_flag} is set to @code{true}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1629
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1631
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1635
 msgid ""
 "@anchor{riem}\n"
 "@defvr {Variable} riem\n"
 "The (3,1) Riemann tensor. Computed when the function @code{riemann} is invoked. For information about index ordering, see the description of @code{riemann}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1637
 msgid ""
 "If @code{cframe_flag} is @code{true}, @code{riem} is computed from the covariant Riemann-tensor @code{lriem}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1641
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1643
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1646
 msgid ""
 "@anchor{lriem}\n"
 "@defvr {Variable} lriem\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1648
 msgid ""
 "The covariant Riemann tensor. Computed by @code{lriemann}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1652
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1654
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1657
 msgid ""
 "@anchor{uriem}\n"
 "@defvr {Variable} uriem\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1659
 msgid ""
 "The contravariant Riemann tensor. Computed by @code{uriemann}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1663
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1665
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1668
 msgid ""
 "@anchor{ric}\n"
 "@defvr {Variable} ric\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1670
 msgid ""
 "The mixed Ricci-tensor. Computed by @code{ricci}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1674
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1676
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1679
 msgid ""
 "@anchor{uric}\n"
 "@defvr {Variable} uric\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1681
 msgid ""
 "The contravariant Ricci-tensor. Computed by @code{uricci}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1685
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1687
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1690
 msgid ""
 "@anchor{lg}\n"
 "@defvr {Variable} lg\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1693
 msgid ""
 "The metric tensor. This tensor must be specified (as a @code{dim} by @code{dim} matrix)\n"
 "before other computations can be performed.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1697
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1699
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1702
 msgid ""
 "@anchor{ug}\n"
 "@defvr {Variable} ug\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1704
 msgid ""
 "The inverse of the metric tensor. Computed by @code{cmetric}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1708
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1710
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1713
 msgid ""
 "@anchor{weyl_variable}\n"
 "@defvr {Variable} weyl\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1715
 msgid ""
 "The Weyl tensor. Computed by @code{weyl}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1719
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1721
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1724
 msgid ""
 "@anchor{fb}\n"
 "@defvr {Variable} fb\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1726
 msgid ""
 "Frame bracket coefficients, as computed by @code{frame_bracket}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1730
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1732
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1735
 msgid ""
 "@anchor{kinvariant}\n"
 "@defvr {Variable} kinvariant\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1737
 msgid ""
 "The Kretchmann invariant. Computed by @code{rinvariant}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1741
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1743
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1746
 msgid ""
 "@anchor{np}\n"
 "@defvr {Variable} np\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1748
 msgid ""
 "A Newman-Penrose null tetrad. Computed by @code{nptetrad}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1752
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1754
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1757
 msgid ""
 "@anchor{npi}\n"
 "@defvr {Variable} npi\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1760
 msgid ""
 "The raised-index Newman-Penrose null tetrad. Computed by @code{nptetrad}.\n"
 "Defined as @code{ug.np}. The product @code{np.transpose(npi)} is constant:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1771
 msgid ""
 "@example\n"
 "(%i39) trigsimp(np.transpose(npi));\n"
@@ -2686,30 +2718,30 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1775
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1777
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1780
 msgid ""
 "@anchor{tr}\n"
 "@defvr {Variable} tr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1782
 msgid ""
 "User-supplied rank-3 tensor representing torsion. Used by @code{contortion}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1787
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -2717,18 +2749,18 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1790
 msgid ""
 "@anchor{kt}\n"
 "@defvr {Variable} kt\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1792
 msgid ""
 "The contortion tensor, computed from @code{tr} by @code{contortion}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1797
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -2736,18 +2768,18 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1800
 msgid ""
 "@anchor{nm}\n"
 "@defvr {Variable} nm\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1802
 msgid ""
 "User-supplied nonmetricity vector. Used by @code{nonmetricity}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1807
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
@@ -2755,61 +2787,61 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1810
 msgid ""
 "@anchor{nmc}\n"
 "@defvr {Variable} nmc\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1812
 msgid ""
 "The nonmetricity coefficients, computed from @code{nm} by @code{nonmetricity}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1816
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1818
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1821
 msgid ""
 "@anchor{tensorkill}\n"
 "@defvr {System variable} tensorkill\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1824
 msgid ""
 "Variable indicating if the tensor package has been initialized. Set and used by\n"
 "@code{csetup}, reset by @code{init_ctensor}.\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1828
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1830
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1834
 msgid ""
 "@anchor{ct_coords}\n"
 "@defvr {Option variable} ct_coords\n"
 "Default value: @code{[]}\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1841
 msgid ""
 "An option in the @code{ctensor} (component tensor)\n"
 "package.  @code{ct_coords} contains a list of coordinates.\n"
@@ -2819,30 +2851,30 @@ msgid ""
 "See also @mrefdot{csetup}\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1845
 msgid ""
 "@opencatbox\n"
 "@category{Package ctensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1847
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1849
 msgid ""
 "@subsection Reserved names\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1852
 msgid ""
 "The following names are used internally by the @code{ctensor} package and\n"
 "should not be redefined:\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1877
 msgid ""
 "@example\n"
 "  Name         Description\n"
@@ -2868,14 +2900,22 @@ msgid ""
 "  trrc()       Ricci rotation coefficients, used by christof()\n"
 "  yesp()\n"
 "@end example\n"
+msgstr ""
+
+#: Ctensor.texi:1880
+msgid ""
 "@subsection Changes\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1884
 msgid ""
 "In November, 2004, the @code{ctensor} package was extensively rewritten.\n"
 "Many functions and variables have been renamed in order to make the\n"
 "package compatible with the commercial version of Macsyma.\n"
+msgstr ""
+
+#: Ctensor.texi:1910
+msgid ""
 "@example\n"
 "  New Name     Old Name        Description\n"
 "  ---------------------------------------------------------------------\n"
@@ -2902,11 +2942,8 @@ msgid ""
 "  weyl[]       W[]             (3,1) Weyl-tensor\n"
 msgstr ""
 
-# Ctensor.texi
+#: Ctensor.texi:1912
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Ctensor.texi
-msgid ""
-msgstr ""

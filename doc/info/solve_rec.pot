@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# solve_rec.texi
+msgstr ""
+
+#: solve_rec.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to solve_rec::\n"
@@ -25,32 +25,32 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:8
 msgid ""
 "@node Introduction to solve_rec, Functions and Variables for solve_rec, solve_rec-pkg, solve_rec-pkg\n"
 "@section Introduction to solve_rec\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:11
 msgid ""
 "@code{solve_rec} is a package for solving linear recurrences with polynomial\n"
 "coefficients.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:13
 msgid ""
 "A demo is available with @code{demo(solve_rec);}.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:15
 msgid ""
 "Example:\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:27
 msgid ""
 "@example\n"
-"(%i1) load(\"solve_rec\")$\n"
+"(%i1) load(\\"solve_rec\\")$\n"
 "@group\n"
 "(%i2) solve_rec((n+4)*s[n+2] + s[n+1] - (n+1)*s[n], s[n]);\n"
 "                                    n\n"
@@ -62,37 +62,37 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:31
 msgid ""
 "@opencatbox\n"
 "@category{Linear recurrences} @category{Share packages} @category{Package solve_rec}\n"
 "@closecatbox\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:34
 msgid ""
 "@node Functions and Variables for solve_rec,  , Introduction to solve_rec, solve_rec-pkg\n"
 "@section Functions and Variables for solve_rec\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:37
 msgid ""
 "@anchor{reduce_order}\n"
 "@deffn {Function} reduce_order (@var{rec}, @var{sol}, @var{var})\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:40
 msgid ""
 "Reduces the order of linear recurrence @var{rec} when a particular solution\n"
 "@var{sol} is known. The reduced reccurence can be used to get other solutions.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:42
 msgid ""
 "Example:\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:61
 msgid ""
 "@example\n"
 "@group\n"
@@ -114,7 +114,7 @@ msgid ""
 "                          n       n\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:69
 msgid ""
 "                           n - 1\n"
 "                           ====\n"
@@ -125,7 +125,7 @@ msgid ""
 "                           %j = 0\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:80
 msgid ""
 "(%o6)             (- n - 2) %u     - %u\n"
 "                              n + 1     n\n"
@@ -139,12 +139,12 @@ msgid ""
 "                        n    (n + 1)!\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:82
 msgid ""
 "So the general solution is\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:92
 msgid ""
 "             n - 1\n"
 "             ====        j\n"
@@ -157,79 +157,79 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:96
 msgid ""
 "@opencatbox\n"
 "@category{Package solve_rec}\n"
 "@closecatbox\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:98
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:102
 msgid ""
 "@anchor{simplify_products}\n"
 "@defvr {Option variable} simplify_products\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:105
 msgid ""
 "If @code{simplify_products} is @code{true}, @code{solve_rec} will try to\n"
 "simplify products in result.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:107
 msgid ""
 "See also: @mrefdot{solve_rec}\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:111
 msgid ""
 "@opencatbox\n"
 "@category{Package solve_rec}\n"
 "@closecatbox\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:113
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:116
 msgid ""
 "@anchor{simplify_sum}\n"
 "@deffn {Function} simplify_sum (@var{expr})\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:118
 msgid ""
 "Tries to simplify all sums appearing in @var{expr} to a closed form.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:121
 msgid ""
 "To use this function first load the @code{simplify_sum} package with\n"
 "@code{load(simplify_sum)}.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:123
 msgid ""
 "Example:\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:143
 msgid ""
 "@c ===beg===\n"
-"@c load(\"simplify_sum\")$\n"
+"@c load(\\"simplify_sum\\")$\n"
 "@c sum(binomial(n+k,k)/2^k, k, 1, n) + sum(binomial(2*n, 2*k), k, 1,n);\n"
 "@c simplify_sum(%);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"simplify_sum\")$\n"
+"(%i1) load(\\"simplify_sum\\")$\n"
 "@group\n"
 "(%i2) sum(binomial(n+k,k)/2^k,k,1,n)+sum(binomial(2*n,2*k),k,1,n);\n"
 "        n                          n\n"
@@ -244,7 +244,7 @@ msgid ""
 "(%i3) simplify_sum(%);\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:148
 msgid ""
 "                         2 n - 1    n\n"
 "(%o3)                   2        + 2  - 2\n"
@@ -252,19 +252,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:152
 msgid ""
 "@opencatbox\n"
 "@category{Package solve_rec} @category{Sums and products} @category{Simplification functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:154
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:160
 msgid ""
 "@anchor{solve_rec}\n"
 "@deffn {Function} solve_rec (@var{eqn}, @var{var}, [@var{init}])\n"
@@ -273,7 +273,7 @@ msgid ""
 "are initial conditions.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:165
 msgid ""
 "@code{solve_rec} can solve linear recurrences with constant coefficients,\n"
 "finds hypergeometrical solutions to homogeneous linear recurrences with\n"
@@ -281,25 +281,25 @@ msgid ""
 "polynomial coefficients and can solve Ricatti type recurrences.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:169
 msgid ""
 "Note that the running time of the algorithm used to find hypergeometrical\n"
 "solutions is exponential in the degree of the leading and trailing\n"
 "coefficient.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:172
 msgid ""
 "To use this function first load the @code{solve_rec} package with\n"
 "@code{load(solve_rec);}.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:174
 msgid ""
 "Example of linear recurrence with constant coefficients:\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:192
 msgid ""
 "@example\n"
 "@group\n"
@@ -320,12 +320,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:194
 msgid ""
 "Example of linear recurrence with polynomial coefficients:\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:210
 msgid ""
 "@example\n"
 "@group\n"
@@ -344,12 +344,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:212
 msgid ""
 "Example of Ricatti type recurrence:\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:231
 msgid ""
 "@example\n"
 "@group\n"
@@ -369,45 +369,49 @@ msgid ""
 "             5 x  - 3 x  - 25 x  + 15 x  + 20 x  - 12 x - 1584\n"
 "@end group\n"
 "@end example\n"
+msgstr ""
+
+#: solve_rec.texi:234
+msgid ""
 "See also: @mrefcomma{solve_rec_rat} @mref{simplify_products} and @mrefdot{product_use_gamma}\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:238
 msgid ""
 "@opencatbox\n"
 "@category{Package solve_rec}\n"
 "@closecatbox\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:240
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:243
 msgid ""
 "@anchor{solve_rec_rat}\n"
 "@deffn {Function} solve_rec_rat (@var{eqn}, @var{var}, [@var{init}])\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:246
 msgid ""
 "Solves for rational solutions to linear recurrences. See solve_rec for\n"
 "description of arguments.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:249
 msgid ""
 "To use this function first load the @code{solve_rec} package with\n"
 "@code{load(solve_rec);}.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:251
 msgid ""
 "Example:\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:268
 msgid ""
 "@example\n"
 "@group\n"
@@ -425,52 +429,56 @@ msgid ""
 "            x   (x - 1) (x + 1)\n"
 "@end group\n"
 "@end example\n"
+msgstr ""
+
+#: solve_rec.texi:271
+msgid ""
 "See also: @mrefdot{solve_rec}\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:275
 msgid ""
 "@opencatbox\n"
 "@category{Package solve_rec}\n"
 "@closecatbox\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:277
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:281
 msgid ""
 "@anchor{product_use_gamma}\n"
 "@defvr {Option variable} product_use_gamma\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:284
 msgid ""
 "When simplifying products, @code{solve_rec} introduces gamma function\n"
 "into the expression if @code{product_use_gamma} is @code{true}.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:286
 msgid ""
 "See also: @mrefcomma{simplify_products} @mrefdot{solve_rec}\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:290
 msgid ""
 "@opencatbox\n"
 "@category{Package solve_rec}\n"
 "@closecatbox\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:292
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:297
 msgid ""
 "@anchor{summand_to_rec}\n"
 "@deffn {Function} summand_to_rec @\n"
@@ -478,12 +486,12 @@ msgid ""
 "@fname{summand_to_rec} (@var{summand}, [@var{k}, @var{lo}, @var{hi}], @var{n})\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:299
 msgid ""
 "Returns the recurrence sattisfied by the sum\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:311
 msgid ""
 "@example\n"
 "@group\n"
@@ -498,27 +506,27 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:314
 msgid ""
 "where summand is hypergeometrical in @var{k} and @var{n}. If @var{lo} and @var{hi}\n"
 "are omitted, they are assumed to be @code{lo = -inf} and @code{hi = inf}.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:317
 msgid ""
 "To use this function first load the @code{simplify_sum} package with\n"
 "@code{load(simplify_sum)}.\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:319
 msgid ""
 "Example:\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:343
 msgid ""
 "@example\n"
-"(%i1) load(\"simplify_sum\")$\n"
+"(%i1) load(\\"simplify_sum\\")$\n"
 "@group\n"
 "(%i2) summand: binom(n,k);\n"
 "(%o2)                           binomial(n, k)\n"
@@ -542,14 +550,10 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# solve_rec.texi
+#: solve_rec.texi:347
 msgid ""
 "@opencatbox\n"
 "@category{Package solve_rec}\n"
 "@closecatbox\n"
 msgstr ""
 
-# solve_rec.texi
-msgid ""
-"@end deffn\n"
-msgstr ""

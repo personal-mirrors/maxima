@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Runtime.texi
+msgstr ""
+
+#: Runtime.texi:6
 msgid ""
 "@menu\n"
 "* Introduction for Runtime Environment::  \n"
@@ -26,7 +26,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:11
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction for Runtime Environment, Interrupts, Runtime Environment, Runtime Environment\n"
@@ -34,7 +34,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:19
 msgid ""
 "@c THIS DISCUSSION OF maxima-init.mac REPLACES AN EARLIER WRITE-UP. !!!\n"
 "@c HOWEVER IT SEEMS THAT THIS TEXT REALLY WANTS TO BE UNDER A DIFFERENT HEADING. !!!\n"
@@ -45,20 +45,20 @@ msgid ""
 "although it can be in any directory searched by the function @code{file_search}.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:21
 msgid ""
 "Here is an example @code{maxima-init.mac} file:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:26
 msgid ""
 "@example\n"
-"setup_autoload (\"specfun.mac\", ultraspherical, assoc_legendre_p);\n"
+"setup_autoload (\\"specfun.mac\\", ultraspherical, assoc_legendre_p);\n"
 "showtime:all;\n"
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:32
 msgid ""
 "In this example, @code{setup_autoload} tells Maxima to load the\n"
 "specified file\n"
@@ -67,21 +67,21 @@ msgid ""
 "Thus you needn't remember to load the file before calling the functions.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:36
 msgid ""
 "The statement @code{showtime: all} tells Maxima to set the @code{showtime}\n"
 "variable.  The @code{maxima-init.mac} file can contain any other assignments or\n"
 "other Maxima statements.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:40
 msgid ""
 "@opencatbox\n"
 "@category{Session management}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:45
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Interrupts, Functions and Variables for Runtime Environment, Introduction for Runtime Environment, Runtime Environment\n"
@@ -89,7 +89,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:51
 msgid ""
 "The user can stop a time-consuming computation with the\n"
 "^C (control-C) character.\n"
@@ -98,19 +98,19 @@ msgid ""
 "In this case, it is not possible to restart a stopped computation.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:53
 msgid ""
 "If the Lisp variable @code{*debugger-hook*} is set to @code{nil}, by executing\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:57
 msgid ""
 "@example\n"
 ":lisp (setq *debugger-hook* nil)\n"
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:66
 msgid ""
 "@noindent\n"
 "then upon receiving ^C, Maxima will enter the Lisp debugger,\n"
@@ -122,7 +122,7 @@ msgid ""
 "is different for each version of Lisp.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:71
 msgid ""
 "On Unix systems, the character ^Z (control-Z) causes Maxima\n"
 "to stop altogether, and control is returned to the shell prompt.\n"
@@ -130,19 +130,19 @@ msgid ""
 "to resume from the point at which it was stopped.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:75
 msgid ""
 "@opencatbox\n"
 "@category{Console interaction}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:77
 msgid ""
 "@c end concepts Runtime Environment\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:82
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Runtime Environment,  , Interrupts, Runtime Environment\n"
@@ -150,32 +150,32 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:86
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{maxima_tempdir}\n"
 "@defvr {System variable} maxima_tempdir\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:90
 msgid ""
 "@code{maxima_tempdir} names the directory in which Maxima creates some temporary\n"
 "files.  In particular, temporary files for plotting are created in\n"
 "@code{maxima_tempdir}.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:93
 msgid ""
 "The initial value of @code{maxima_tempdir} is the user's home directory, if\n"
 "Maxima can locate it; otherwise Maxima makes a guess about a suitable directory.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:95
 msgid ""
 "@code{maxima_tempdir} may be assigned a string which names a directory.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:100
 msgid ""
 "@opencatbox\n"
 "@category{Global variables}\n"
@@ -183,28 +183,28 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:104
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{maxima_userdir}\n"
 "@defvr {System variable} maxima_userdir\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:108
 msgid ""
 "@code{maxima_userdir} names a directory which Maxima searches to find Maxima and\n"
 "Lisp files.  (Maxima searches some other directories as well;\n"
 "@code{file_search_maxima} and @code{file_search_lisp} are the complete lists.)\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:112
 msgid ""
 "The initial value of @code{maxima_userdir} is a subdirectory of the user's home\n"
 "directory, if Maxima can locate it; otherwise Maxima makes a guess about a\n"
 "suitable directory.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:117
 msgid ""
 "@code{maxima_userdir} may be assigned a string which names a directory.\n"
 "However, assigning to @code{maxima_userdir} does not automatically change\n"
@@ -212,7 +212,7 @@ msgid ""
 "those variables must be changed separately.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:122
 msgid ""
 "@opencatbox\n"
 "@category{Global variables}\n"
@@ -220,7 +220,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:129
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{room}\n"
@@ -230,14 +230,14 @@ msgid ""
 "@fname{room} (false)\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:133
 msgid ""
 "Prints out a description of the state of storage and\n"
 "stack management in Maxima.  @code{room} calls the Lisp function of \n"
 "the same name.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:142
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -249,7 +249,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:147
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -257,14 +257,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:151
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sstatus}\n"
 "@deffn {Function} sstatus (@var{keyword}, @var{item})\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:158
 msgid ""
 "When @var{keyword} is the symbol @code{feature}, @var{item} is put on the list\n"
 "of system features.  After @code{sstatus (keyword, item)} is executed,\n"
@@ -274,12 +274,12 @@ msgid ""
 "loaded in.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:160
 msgid ""
 "See also @mrefdot{status}\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:165
 msgid ""
 "@opencatbox\n"
 "@category{Programming}\n"
@@ -287,7 +287,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:171
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{status}\n"
@@ -296,13 +296,13 @@ msgid ""
 "@fname{status} (@code{feature}, @var{item})\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:174
 msgid ""
 "Returns information about the presence or absence of certain system-dependent \n"
 "features.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:180
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -311,7 +311,7 @@ msgid ""
 "another.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:189
 msgid ""
 "@item \n"
 "@code{status (feature, item)} returns @code{true} if @var{item} is on the\n"
@@ -319,23 +319,23 @@ msgid ""
 "@code{status} quotes the argument @var{item}. The quote-quote operator \n"
 "@code{'@w{}'} defeats quotation. A feature whose name contains a special \n"
 "character, such as a hyphen, must be given as a string argument. For example,\n"
-"@code{status (feature, \"ansi-cl\")}.\n"
+"@code{status (feature, \\"ansi-cl\\")}.\n"
 "@end itemize\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:191
 msgid ""
 "See also @mrefdot{sstatus}\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:195
 msgid ""
 "The variable @code{features} contains a list of features which apply to \n"
 "mathematical expressions. See @code{features} and @code{featurep} for more \n"
 "information.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:200
 msgid ""
 "@opencatbox\n"
 "@category{Programming}\n"
@@ -343,63 +343,63 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:202
 msgid ""
 "@c NEEDS CLARIFICATION\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:206
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{system}\n"
 "@deffn {Function} system (@var{command})\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:210
 msgid ""
 "Executes @var{command} as a separate process.  The command is passed to the\n"
 "default shell for execution.  @code{system} is not supported by all operating\n"
 "systems, but generally exists in Unix and Unix-like environments.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:213
 msgid ""
 "Supposing @code{_hist.out} is a list of frequencies which you wish to plot as a\n"
 "bar graph using @code{xgraph}.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:220
 msgid ""
 "@example\n"
-"(%i1) (with_stdout(\"_hist.out\",\n"
+"(%i1) (with_stdout(\\"_hist.out\\",\n"
 "           for i:1 thru length(hist) do (\n"
 "             print(i,hist[i]))),\n"
-"       system(\"xgraph -bar -brw .7 -nl < _hist.out\"));\n"
+"       system(\\"xgraph -bar -brw .7 -nl < _hist.out\\"));\n"
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:223
 msgid ""
 "In order to make the plot be done in the background (returning control to\n"
 "Maxima) and remove the temporary file after it is done do:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:228
 msgid ""
 "@example\n"
-"system(\"(xgraph -bar -brw .7 -nl < _hist.out;  rm -f _hist.out)&\")\n"
+"system(\\"(xgraph -bar -brw .7 -nl < _hist.out;  rm -f _hist.out)&\\")\n"
 "@end example\n"
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:232
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{time}\n"
 "@deffn {Function} time (%o1, %o2, %o3, @dots{})\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:238
 msgid ""
 "Returns a list of the times, in seconds, taken to compute the output lines\n"
 "@code{%o1}, @code{%o2}, @code{%o3}, @dots{} The time returned is Maxima's\n"
@@ -408,13 +408,13 @@ msgid ""
 "@code{time} returns @code{unknown}.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:241
 msgid ""
 "Set @code{showtime: true} to make Maxima print out the computation time \n"
 "and elapsed time with each output line.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:246
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -422,7 +422,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:253
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{timedate}\n"
@@ -432,7 +432,7 @@ msgid ""
 "@fname{timedate} () @\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:260
 msgid ""
 "@code{timedate(@var{T}, @var{tz_offset})} returns a string\n"
 "representing the time @var{T} in the time zone @var{tz_offset}.\n"
@@ -442,13 +442,13 @@ msgid ""
 "or @code{YYYY-MM-DD HH:MM:SS[+|-]ZZ:ZZ} if its fractional part is zero.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:263
 msgid ""
 "@var{T} measures time, in seconds, since midnight, January 1, 1900,\n"
 "in the GMT time zone.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:269
 msgid ""
 "@var{tz_offset} measures the offset of the time zone, in hours,\n"
 "east (positive) or west (negative) of GMT.\n"
@@ -457,48 +457,48 @@ msgid ""
 "it is rounded to the nearest multiple of 1/60.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:272
 msgid ""
 "@code{timedate(@var{T})} is equivalent to @code{timedate(@var{T}, @var{tz_offset})}\n"
 "with @var{tz_offset} equal to the offset of the local time zone.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:275
 msgid ""
 "@code{timedate()} is equivalent to @code{timedate(absolute_real_time())}.\n"
 "That is, it returns the current time in the local time zone.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:277
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:279
 msgid ""
 "@code{timedate} with no argument returns a string representing the current time and date.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:290
 msgid ""
 "@c ===beg===\n"
 "@c d : timedate ();\n"
-"@c print (\"timedate reports current time\", d) $\n"
+"@c print (\\"timedate reports current time\\", d) $\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) d : timedate ();\n"
 "(%o1)                      2010-06-08 04:08:09+01:00\n"
-"(%i2) print (\"timedate reports current time\", d) $\n"
+"(%i2) print (\\"timedate reports current time\\", d) $\n"
 "timedate reports current time 2010-06-08 04:08:09+01:00\n"
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:292
 msgid ""
 "@code{timedate} with an argument returns a string representing the argument.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:303
 msgid ""
 "@c ===beg===\n"
 "@c timedate (0);\n"
@@ -512,12 +512,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:305
 msgid ""
 "@code{timedate} with optional timezone offset.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:313
 msgid ""
 "@c ===beg===\n"
 "@c timedate (1000000000, -9.5);\n"
@@ -528,7 +528,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:318
 msgid ""
 "@opencatbox\n"
 "@category{Time and date functions}\n"
@@ -536,7 +536,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:323
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{parse_timedate}\n"
@@ -544,7 +544,7 @@ msgid ""
 "@fname{parse_timedate} (@var{S})\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:330
 msgid ""
 "Parses a string @var{S} representing a date or date and time of day\n"
 "and returns the number of seconds since midnight, January 1, 1900 GMT.\n"
@@ -554,13 +554,13 @@ msgid ""
 "if it cannot parse @var{S} according to any of the allowed formats.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:333
 msgid ""
 "The string @var{S} must have one of the following formats,\n"
 "optionally followed by a timezone designation:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:342
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -572,26 +572,26 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:346
 msgid ""
 "where the fields are year, month, day, hours, minutes, seconds, and fraction of a second,\n"
 "and square brackets indicate acceptable alternatives.\n"
 "The fraction may contain one or more digits.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:350
 msgid ""
 "Except for the fraction of a second,\n"
 "each field must have exactly the number of digits indicated:\n"
 "four digits for the year, and two for the month, day of the month, hours, minutes, and seconds.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:352
 msgid ""
 "A timezone designation must have one of the following forms:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:363
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -605,41 +605,41 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:366
 msgid ""
 "where @code{hh} and @code{mm} indicate hours and minutes east (@code{+}) or west (@code{-}) of GMT.\n"
 "The timezone may be from +24 hours (inclusive) to -24 hours (inclusive).\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:369
 msgid ""
 "A literal character @code{Z} is equivalent to @code{+00:00} and its variants,\n"
 "indicating GMT.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:372
 msgid ""
 "If no timezone is indicated,\n"
 "the time is assumed to be in the local time zone.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:375
 msgid ""
 "Any leading or trailing whitespace (space, tab, newline, and carriage return) is ignored,\n"
 "but any other leading or trailing characters cause @code{parse_timedate} to fail and return @code{false}.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:377
 msgid ""
 "See also @mref{timedate} and @mrefdot{absolute_real_time}\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:379
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:384
 msgid ""
 "Midnight, January 1, 1900, in the local time zone, in each acceptable format.\n"
 "The result is the number of seconds the local time zone\n"
@@ -647,70 +647,70 @@ msgid ""
 "In this example, the local time zone is 8 hours behind GMT.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:410
 msgid ""
 "@c ===beg===\n"
-"@c parse_timedate (\"1900-01-01 00:00:00,000\");\n"
-"@c parse_timedate (\"1900-01-01 00:00:00.000\");\n"
-"@c parse_timedate (\"1900-01-01T00:00:00,000\");\n"
-"@c parse_timedate (\"1900-01-01T00:00:00.000\");\n"
-"@c parse_timedate (\"1900-01-01 00:00:00\");\n"
-"@c parse_timedate (\"1900-01-01T00:00:00\");\n"
-"@c parse_timedate (\"1900-01-01\");\n"
+"@c parse_timedate (\\"1900-01-01 00:00:00,000\\");\n"
+"@c parse_timedate (\\"1900-01-01 00:00:00.000\\");\n"
+"@c parse_timedate (\\"1900-01-01T00:00:00,000\\");\n"
+"@c parse_timedate (\\"1900-01-01T00:00:00.000\\");\n"
+"@c parse_timedate (\\"1900-01-01 00:00:00\\");\n"
+"@c parse_timedate (\\"1900-01-01T00:00:00\\");\n"
+"@c parse_timedate (\\"1900-01-01\\");\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) parse_timedate (\"1900-01-01 00:00:00,000\");\n"
+"(%i1) parse_timedate (\\"1900-01-01 00:00:00,000\\");\n"
 "(%o1)                         28800\n"
-"(%i2) parse_timedate (\"1900-01-01 00:00:00.000\");\n"
+"(%i2) parse_timedate (\\"1900-01-01 00:00:00.000\\");\n"
 "(%o2)                         28800\n"
-"(%i3) parse_timedate (\"1900-01-01T00:00:00,000\");\n"
+"(%i3) parse_timedate (\\"1900-01-01T00:00:00,000\\");\n"
 "(%o3)                         28800\n"
-"(%i4) parse_timedate (\"1900-01-01T00:00:00.000\");\n"
+"(%i4) parse_timedate (\\"1900-01-01T00:00:00.000\\");\n"
 "(%o4)                         28800\n"
-"(%i5) parse_timedate (\"1900-01-01 00:00:00\");\n"
+"(%i5) parse_timedate (\\"1900-01-01 00:00:00\\");\n"
 "(%o5)                         28800\n"
-"(%i6) parse_timedate (\"1900-01-01T00:00:00\");\n"
+"(%i6) parse_timedate (\\"1900-01-01T00:00:00\\");\n"
 "(%o6)                         28800\n"
-"(%i7) parse_timedate (\"1900-01-01\");\n"
+"(%i7) parse_timedate (\\"1900-01-01\\");\n"
 "(%o7)                         28800\n"
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:412
 msgid ""
 "Midnight, January 1, 1900, GMT, in different indicated time zones.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:438
 msgid ""
 "@c ===beg===\n"
-"@c parse_timedate (\"1900-01-01 19:00:00+19:00\");\n"
-"@c parse_timedate (\"1900-01-01 07:00:00+07:00\");\n"
-"@c parse_timedate (\"1900-01-01 01:00:00+01:00\");\n"
-"@c parse_timedate (\"1900-01-01Z\");\n"
-"@c parse_timedate (\"1899-12-31 21:00:00-03:00\");\n"
-"@c parse_timedate (\"1899-12-31 13:00:00-11:00\");\n"
-"@c parse_timedate (\"1899-12-31 08:00:00-16:00\");\n"
+"@c parse_timedate (\\"1900-01-01 19:00:00+19:00\\");\n"
+"@c parse_timedate (\\"1900-01-01 07:00:00+07:00\\");\n"
+"@c parse_timedate (\\"1900-01-01 01:00:00+01:00\\");\n"
+"@c parse_timedate (\\"1900-01-01Z\\");\n"
+"@c parse_timedate (\\"1899-12-31 21:00:00-03:00\\");\n"
+"@c parse_timedate (\\"1899-12-31 13:00:00-11:00\\");\n"
+"@c parse_timedate (\\"1899-12-31 08:00:00-16:00\\");\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) parse_timedate (\"1900-01-01 19:00:00+19:00\");\n"
+"(%i1) parse_timedate (\\"1900-01-01 19:00:00+19:00\\");\n"
 "(%o1)                           0\n"
-"(%i2) parse_timedate (\"1900-01-01 07:00:00+07:00\");\n"
+"(%i2) parse_timedate (\\"1900-01-01 07:00:00+07:00\\");\n"
 "(%o2)                           0\n"
-"(%i3) parse_timedate (\"1900-01-01 01:00:00+01:00\");\n"
+"(%i3) parse_timedate (\\"1900-01-01 01:00:00+01:00\\");\n"
 "(%o3)                           0\n"
-"(%i4) parse_timedate (\"1900-01-01Z\");\n"
+"(%i4) parse_timedate (\\"1900-01-01Z\\");\n"
 "(%o4)                           0\n"
-"(%i5) parse_timedate (\"1899-12-31 21:00:00-03:00\");\n"
+"(%i5) parse_timedate (\\"1899-12-31 21:00:00-03:00\\");\n"
 "(%o5)                           0\n"
-"(%i6) parse_timedate (\"1899-12-31 13:00:00-11:00\");\n"
+"(%i6) parse_timedate (\\"1899-12-31 13:00:00-11:00\\");\n"
 "(%o6)                           0\n"
-"(%i7) parse_timedate (\"1899-12-31 08:00:00-16:00\");\n"
+"(%i7) parse_timedate (\\"1899-12-31 08:00:00-16:00\\");\n"
 "(%o7)                           0\n"
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:443
 msgid ""
 "@opencatbox\n"
 "@category{Time and date functions}\n"
@@ -718,30 +718,30 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:447
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{absolute_real_time}\n"
 "@deffn {Function} absolute_real_time ()\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:450
 msgid ""
 "Returns the number of seconds since midnight, January 1, 1900 GMT.\n"
 "The return value is an integer.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:452
 msgid ""
 "See also @mref{elapsed_real_time} and @mrefdot{elapsed_run_time}\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:454
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:465
 msgid ""
 "@c ===beg===\n"
 "@c absolute_real_time ();\n"
@@ -755,7 +755,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:470
 msgid ""
 "@opencatbox\n"
 "@category{Time and date functions}\n"
@@ -763,31 +763,31 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:474
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{elapsed_real_time}\n"
 "@deffn {Function} elapsed_real_time ()\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:478
 msgid ""
 "Returns the number of seconds (including fractions of a second)\n"
 "since Maxima was most recently started or restarted.\n"
 "The return value is a floating-point number.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:480
 msgid ""
 "See also @mref{absolute_real_time} and @mrefdot{elapsed_run_time}\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:482
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:495
 msgid ""
 "@c ===beg===\n"
 "@c elapsed_real_time ();\n"
@@ -803,7 +803,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:500
 msgid ""
 "@opencatbox\n"
 "@category{Time and date functions}\n"
@@ -811,31 +811,31 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:504
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{elapsed_run_time}\n"
 "@deffn {Function} elapsed_run_time ()\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:508
 msgid ""
 "Returns an estimate of the number of seconds (including fractions of a second)\n"
 "which Maxima has spent in computations since Maxima was most recently started\n"
 "or restarted.  The return value is a floating-point number.\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:510
 msgid ""
 "See also @mref{absolute_real_time} and @mrefdot{elapsed_real_time}\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:512
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:525
 msgid ""
 "@c ===beg===\n"
 "@c elapsed_run_time ();\n"
@@ -851,7 +851,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Runtime.texi
+#: Runtime.texi:530
 msgid ""
 "@opencatbox\n"
 "@category{Time and date functions}\n"
@@ -859,6 +859,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Runtime.texi
-msgid ""
-msgstr ""

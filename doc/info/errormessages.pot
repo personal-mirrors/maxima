@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# errormessages.texi
+msgstr ""
+
+#: errormessages.texi:5
 msgid ""
 "@menu\n"
 "* Error messages::\n"
@@ -25,7 +25,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:26
 msgid ""
 "This chapter provides detailed information about the meaning of some error messages\n"
 "or on how to recover from errors.\n"
@@ -47,14 +47,22 @@ msgid ""
 "* undefined variable during plotting::\n"
 "* VTK is not installed::\n"
 "@end menu\n"
+msgstr ""
+
+#: errormessages.texi:36
+msgid ""
 "@node No such list element, argument must be a non-atomic expression, Error messages, Error messages\n"
-"@subsection apply: no such \"list\" element\n"
+"@subsection apply: no such \\"list\\" element\n"
 "One common cause for this error message is that square brackets operator\n"
 "(@code{[ ]}) was used trying to access a list element that whose element\n"
 "number was @code{< 1} or @code{> length(list)}.\n"
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:74
+msgid ""
 "@node argument must be a non-atomic expression, cannot assign to function, No such list element, Error messages\n"
 "@subsection argument must be a non-atomic expression\n"
 "This normally means that a list, a set or something else that consists of more than one\n"
@@ -93,11 +101,15 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:78
 msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:87
+msgid ""
 "@node cannot assign to function, 0 to a negative exponent, argument must be a non-atomic expression, Error messages\n"
 "@subsection assignment: cannot assign to <function name>\n"
 "Maxima supports several assignment operators. When trying to define a function\n"
@@ -105,12 +117,20 @@ msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:95
+msgid ""
 "@node 0 to a negative exponent, Comma is not a prefix operator, cannot assign to function, Error messages\n"
 "@subsection expt: undefined:  0 to a negative exponent.\n"
 "This message notifies about a classical division by zero error.\n"
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:104
+msgid ""
 "@node Comma is not a prefix operator, Illegal use of delimiter, 0 to a negative exponent, Error messages\n"
 "@subsection incorrect syntax: , is not a prefix operator\n"
 "This might be caused by a command starting with a comma (@code{,}) or by one comma\n"
@@ -118,6 +138,10 @@ msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:113
+msgid ""
 "@node Illegal use of delimiter, loadfile failed to load, Comma is not a prefix operator, Error messages\n"
 "@subsection incorrect syntax: Illegal use of delimiter )\n"
 "Common reasons for this error appearing are a closing parenthesis without an\n"
@@ -125,6 +149,10 @@ msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:139
+msgid ""
 "@node loadfile failed to load, makelist second argument must evaluate to a number, Illegal use of delimiter, Error messages\n"
 "@subsection loadfile: failed to load <filename>\n"
 "This error message normally indicates that the file exists, but can not be read.\n"
@@ -149,6 +177,10 @@ msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:146
+msgid ""
 "@node makelist second argument must evaluate to a number, Only symbols can be bound, loadfile failed to load, Error messages\n"
 "@subsection makelist: second argument must evaluate to a number\n"
 "@code{makelist} expects the second argument to be the name of the variable whose value is to\n"
@@ -156,11 +188,15 @@ msgid ""
 "something else, possibly a list or the name of a list.\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:150
 msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:160
+msgid ""
 "@node Only symbols can be bound, Operators of arguments must all be the same, makelist second argument must evaluate to a number, Error messages\n"
 "@subsection Only symbols can be bound\n"
 "The most probable cause for this error is that there was an attempt to either\n"
@@ -169,6 +205,10 @@ msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:197
+msgid ""
 "@node Operators of arguments must all be the same, out of memory, Only symbols can be bound, Error messages\n"
 "@subsection operators of arguments must all be the same\n"
 "One possible reason for this error message to appear is a try to use @mref{append} in order\n"
@@ -204,9 +244,17 @@ msgid ""
 "(%o2)             [a = 1, b = 2, c = 3, d = 5]\n"
 "@end group\n"
 "@end example\n"
+msgstr ""
+
+#: errormessages.texi:202
+msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:227
+msgid ""
 "@node out of memory, part fell off the end, Operators of arguments must all be the same, Error messages\n"
 "@subsection Out of memory\n"
 "Lisp typically handles several types of memory containing at least one stack\n"
@@ -230,6 +278,10 @@ msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:236
+msgid ""
 "@node part fell off the end, undefined variable during plotting, out of memory, Error messages\n"
 "@subsection part: fell off the end\n"
 "@code{part()} was used to access the @code{n}th item in something that has less than\n"
@@ -237,13 +289,17 @@ msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:242
+msgid ""
 "@node undefined variable during plotting, VTK is not installed, part fell off the end, Error messages\n"
 "@subsection undefined variable (draw or plot)\n"
 "A function could not be plotted since it still contained a variable maxima\n"
 "doesn't know the value of.\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:248
 msgid ""
 "In order to find out which variable this could be it is sometimes helpful to\n"
 "temporarily replace the name of the drawing command (@code{draw2d}, @code{plot2d}\n"
@@ -252,10 +308,10 @@ msgid ""
 "the drawing command sees.\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:269
 msgid ""
 "@example\n"
-"(%i1) load(\"draw\")$\n"
+"(%i1) load(\\"draw\\")$\n"
 "(%i2) f(x):=sin(omega*t);\n"
 "(%o2) f(x) := sin(omega t)\n"
 "(%i3) draw2d(\n"
@@ -276,16 +332,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:273
 msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:277
+msgid ""
 "@node VTK is not installed,  , undefined variable during plotting, Error messages\n"
 "@subsection VTK is not installed, which is required for Scene\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:290
 msgid ""
 "This might either mean that VTK is actually not installed - or cannot be found by\n"
 "maxima - or that maxima has no write access to the directory whose name is output\n"
@@ -301,11 +361,15 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:294
 msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: errormessages.texi:302
+msgid ""
 "@node Warning messages, ,Error messages,Error and warning messages\n"
 "@section Warning messages\n"
 "@menu\n"
@@ -314,7 +378,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# errormessages.texi
+#: errormessages.texi:314
 msgid ""
 "@node undefined variable during translation, replaced x by y, Warning messages, Warning messages\n"
 "@subsection Encountered undefined variable <x> in translation\n"
@@ -327,20 +391,5 @@ msgid ""
 "@opencatbox\n"
 "@category{Error messages}\n"
 "@closecatbox\n"
-"@node replaced x by y,  , undefined variable during translation, Warning messages\n"
-"@subsection Rat: replaced <x> by <y> = <z>\n"
-"Floating-point numbers provide a maximum number of digits that is typically high,\n"
-"but still limited. Good examples that this limitation might be too low\n"
-"even for harmless-looking examples include \n"
-"@uref{https://en.wikipedia.org/wiki/Wilkinson%27s_polynomial, Wilkinson's Polynomial},\n"
-"The Rump polynomial and the fact that an exact 1/10 cannot be expressed as a binary\n"
-"floating-point number. \n"
-"In places where the floating-point error might add up or hinder terms from\n"
-"cancelling each other out maxima therefore by default replaces them with exact\n"
-"fractions.\n"
-"See also @code{ratprint}, @code{ratepsilon}, @code{bftorat}, @code{fpprintprec}\n"
-"and @code{rationalize}.\n"
-"@opencatbox\n"
-"@category{Warning messages}\n"
-"@closecatbox\n"
 msgstr ""
+

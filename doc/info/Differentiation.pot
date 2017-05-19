@@ -1,30 +1,30 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Differentiation.texi
+msgstr ""
+
+#: Differentiation.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for Differentiation::  \n"
 "@end menu\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:9
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Differentiation,  , Differentiation, Differentiation\n"
@@ -32,14 +32,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:13
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{antid}\n"
 "@deffn {Function} antid (@var{expr}, @var{x}, @var{u(x)}) \n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:18
 msgid ""
 "@c TODO: The antid package is currently undocumented except of this function.\n"
 "Returns a two-element list, such that an antiderivative of @var{expr} with\n"
@@ -47,14 +47,14 @@ msgid ""
 "may contain an unknown function @var{u} and its derivatives.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:22
 msgid ""
 "Let @var{L}, a list of two elements, be the return value of @code{antid}.\n"
 "Then @code{@var{L}[1] + 'integrate (@var{L}[2], @var{x})}\n"
 "is an antiderivative of @var{expr} with respect to @var{x}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:29
 msgid ""
 "When @code{antid} succeeds entirely,\n"
 "the second element of the return value is zero.\n"
@@ -64,13 +64,13 @@ msgid ""
 "the first element is zero and the second nonzero.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:32
 msgid ""
-"@code{load (\"antid\")} loads this function.  The @code{antid} package also\n"
+"@code{load (\\"antid\\")} loads this function.  The @code{antid} package also\n"
 "defines the functions @code{nonzeroandfreeof} and @code{linear}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:38
 msgid ""
 "@code{antid} is related to @mref{antidiff} as follows.\n"
 "Let @var{L}, a list of two elements, be the return value of @code{antid}.\n"
@@ -79,15 +79,15 @@ msgid ""
 "variable of integration.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:40
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:81
 msgid ""
 "@c FOLLOWING EXAMPLES GENERATED FROM THESE INPUTS\n"
-"@c load (\"antid\")$\n"
+"@c load (\\"antid\\")$\n"
 "@c expr: exp (z(x)) * diff (z(x), x) * y(x);\n"
 "@c a1: antid (expr, x, z(x));\n"
 "@c a2: antidiff (expr, x, z(x));\n"
@@ -98,7 +98,7 @@ msgid ""
 "@c BUT I THINK THE FOLLOWING ILLUSTRATES THE BASIC FUNCTIONALITY MORE CLEARLY\n"
 "@c MAYBE MERGE IN THE DEMO PROBLEMS LATER\n"
 "@example\n"
-"(%i1) load (\"antid\")$\n"
+"(%i1) load (\\"antid\\")$\n"
 "(%i2) expr: exp (z(x)) * diff (z(x), x) * y(x);\n"
 "                            z(x)  d\n"
 "(%o2)                y(x) %e     (-- (z(x)))\n"
@@ -128,7 +128,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:86
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -136,21 +136,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:90
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{antidiff}\n"
 "@deffn {Function} antidiff (@var{expr}, @var{x}, @var{u}(@var{x}))\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:94
 msgid ""
 "Returns an antiderivative of @var{expr} with respect to @var{x}.\n"
 "The expression @var{expr} may contain an unknown function @var{u} and its\n"
 "derivatives.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:101
 msgid ""
 "When @code{antidiff} succeeds entirely, the resulting expression is free of\n"
 "integral signs (that is, free of the @code{integrate} noun).\n"
@@ -160,14 +160,14 @@ msgid ""
 "the return value is entirely within an integral sign.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:105
 msgid ""
-"@code{load (\"antid\")} loads this function.\n"
+"@code{load (\\"antid\\")} loads this function.\n"
 "The @code{antid} package also defines the functions @code{nonzeroandfreeof} and\n"
 "@code{linear}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:111
 msgid ""
 "@code{antidiff} is related to @code{antid} as follows.\n"
 "Let @var{L}, a list of two elements, be the return value of @code{antid}.\n"
@@ -176,15 +176,15 @@ msgid ""
 "variable of integration.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:113
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:154
 msgid ""
 "@c FOLLOWING EXAMPLES GENERATED FROM THESE INPUTS\n"
-"@c load (\"antid\")$\n"
+"@c load (\\"antid\\")$\n"
 "@c expr: exp (z(x)) * diff (z(x), x) * y(x);\n"
 "@c a1: antid (expr, x, z(x));\n"
 "@c a2: antidiff (expr, x, z(x));\n"
@@ -195,7 +195,7 @@ msgid ""
 "@c BUT I THINK THE FOLLOWING ILLUSTRATES THE BASIC FUNCTIONALITY MORE CLEARLY\n"
 "@c MAYBE MERGE IN THE DEMO PROBLEMS LATER\n"
 "@example\n"
-"(%i1) load (\"antid\")$\n"
+"(%i1) load (\\"antid\\")$\n"
 "(%i2) expr: exp (z(x)) * diff (z(x), x) * y(x);\n"
 "                            z(x)  d\n"
 "(%o2)                y(x) %e     (-- (z(x)))\n"
@@ -225,7 +225,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:159
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -233,7 +233,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:165
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{at}\n"
@@ -242,14 +242,14 @@ msgid ""
 "@fname{at} (@var{expr}, @var{eqn})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:169
 msgid ""
 "Evaluates the expression @var{expr} with the variables assuming the values as\n"
 "specified for them in the list of equations @code{[@var{eqn_1}, ...,\n"
 "@var{eqn_n}]} or the single equation @var{eqn}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:174
 msgid ""
 "If a subexpression depends on any of the variables for which a value is\n"
 "specified but there is no @code{atvalue} specified and it can't be otherwise\n"
@@ -257,23 +257,23 @@ msgid ""
 "two-dimensional form.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:176
 msgid ""
 "@code{at} carries out multiple substitutions in parallel.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:179
 msgid ""
 "See also @mrefdot{atvalue}  For other functions which carry out substitutions,\n"
 "see also @mref{subst} and @mrefdot{ev}\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:181
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:205
 msgid ""
 "@c ===beg===\n"
 "@c atvalue (f(x,y), [x = 0, y = 1], a^2);\n"
@@ -300,13 +300,13 @@ msgid ""
 "                                !@@1 = 0\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:208
 msgid ""
 "                                     2\n"
 "                          f(0, 1) = a\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:225
 msgid ""
 "(%o3)                         done\n"
 "@group\n"
@@ -326,19 +326,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:228
 msgid ""
 "Note that in the last line @code{y} is treated differently to @code{x}\n"
 "as @code{y} isn't used as a differentiation variable.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:231
 msgid ""
 "The difference between @mrefcomma{subst} @mref{at} and @mref{ev} can be\n"
 "seen in the following example:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:266
 msgid ""
 "@c ===beg===\n"
 "@c e1:I(t)=C*diff(U(t),t)$\n"
@@ -374,33 +374,37 @@ msgid ""
 "                                 dt\n"
 "@end group\n"
 "@end example\n"
+msgstr ""
+
+#: Differentiation.texi:272
+msgid ""
 "@opencatbox\n"
 "@category{Evaluation} @category{Differential equations}\n"
 "@closecatbox\n"
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:276
 msgid ""
 "@c I SUSPECT THERE IS MORE TO BE SAID HERE\n"
 "@c\n"
 "@c Me, too: Where is desolve, for example?\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:280
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{atomgrad}\n"
 "@defvr {Property} atomgrad\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:283
 msgid ""
 "@code{atomgrad} is the atomic gradient property of an expression.\n"
 "This property is assigned by @code{gradef}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:289
 msgid ""
 "@c NEED EXAMPLE HERE\n"
 "@opencatbox\n"
@@ -409,7 +413,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:295
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{atvalue}\n"
@@ -418,13 +422,13 @@ msgid ""
 "@fname{atvalue} (@var{expr}, @var{x_1} = @var{a_1}, @var{c})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:298
 msgid ""
 "Assigns the value @var{c} to @var{expr} at the point @code{@var{x} = @var{a}}.\n"
 "Typically boundary values are established by this mechanism.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:306
 msgid ""
 "@var{expr} is a function evaluation, @code{@var{f}(@var{x_1}, ..., @var{x_m})},\n"
 "or a derivative, @code{diff (@var{f}(@var{x_1}, ..., @var{x_m}), @var{x_1},\n"
@@ -435,7 +439,7 @@ msgid ""
 "@var{n_i} is the order of differentiation with respect to @var{x_i}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:311
 msgid ""
 "The point at which the atvalue is established is given by the list of equations\n"
 "@code{[@var{x_1} = @var{a_1}, ..., @var{x_m} = @var{a_m}]}.\n"
@@ -443,7 +447,7 @@ msgid ""
 "the sole equation may be given without enclosing it in a list.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:317
 msgid ""
 "@code{printprops ([@var{f_1}, @var{f_2}, ...], atvalue)} displays the atvalues\n"
 "of the functions @code{@var{f_1}, @var{f_2}, ...} as specified by calls to\n"
@@ -452,29 +456,29 @@ msgid ""
 "of all functions for which atvalues are defined.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:320
 msgid ""
 "The symbols @code{@@1}, @code{@@2}, @dots{} represent the\n"
 "variables @var{x_1}, @var{x_2}, @dots{} when atvalues are displayed.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:323
 msgid ""
 "@code{atvalue} evaluates its arguments.\n"
 "@code{atvalue} returns @var{c}, the atvalue.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:325
 msgid ""
 "See also @mrefdot{at}\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:327
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:351
 msgid ""
 "@c ===beg===\n"
 "@c atvalue (f(x,y), [x = 0, y = 1], a^2);\n"
@@ -501,13 +505,13 @@ msgid ""
 "                                !@@1 = 0\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:354
 msgid ""
 "                                     2\n"
 "                          f(0, 1) = a\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:371
 msgid ""
 "(%o3)                         done\n"
 "@group\n"
@@ -527,7 +531,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:376
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Declarations and inferences}\n"
@@ -535,21 +539,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:380
 msgid ""
 "@c LOOKS LIKE cartan IS THE NAME OF A PACKAGE AND NOT A FUNCTION OR VARIABLE\n"
 "@c PROBABLY SHOULD SPLIT OUT cartan AND ITS CONTENTS INTO ITS OWN TEXINFO FILE\n"
 "@c ext_diff AND lie_diff NOT DOCUMENTED (OTHER THAN HERE)\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:384
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{cartan}\n"
 "@deffn {Function} cartan\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:394
 msgid ""
 "The exterior calculus of differential forms is a basic tool\n"
 "of differential geometry developed by Elie Cartan and has important\n"
@@ -562,12 +566,12 @@ msgid ""
 "description of these commands along with examples.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:396
 msgid ""
 "@code{cartan} was implemented by F.B. Estabrook and H.D. Wahlquist.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:401
 msgid ""
 "@opencatbox\n"
 "@category{Differential geometry}\n"
@@ -575,31 +579,31 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:405
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{del}\n"
 "@deffn {Function} del (@var{x})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:407
 msgid ""
 "@code{del (@var{x})} represents the differential of the variable @math{x}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:411
 msgid ""
 "@code{diff} returns an expression containing @code{del}\n"
 "if an independent variable is not specified.\n"
-"In this case, the return value is the so-called \"total differential\".\n"
+"In this case, the return value is the so-called \\"total differential\\".\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:413
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:429
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c diff (log (x));\n"
@@ -618,7 +622,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:434
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus}\n"
@@ -626,36 +630,36 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:438
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{delta}\n"
 "@deffn {Function} delta (@var{t})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:440
 msgid ""
 "The Dirac Delta function.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:442
 msgid ""
 "Currently only @code{laplace} knows about the @code{delta} function.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:444
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:448
 msgid ""
 "@example\n"
 "(%i1) laplace (delta (t - a) * sin(b*t), t, s);\n"
 "Is  a  positive, negative, or zero?\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:453
 msgid ""
 "p;\n"
 "                                   - a s\n"
@@ -663,7 +667,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:458
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions} @category{Laplace transform}\n"
@@ -671,7 +675,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:463
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{dependencies}\n"
@@ -679,7 +683,7 @@ msgid ""
 "@defvrx {Function} dependencies (@var{f_1}, @dots{}, @var{f_n})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:469
 msgid ""
 "The variable @code{dependencies} is the list of atoms which have functional\n"
 "dependencies, assigned by @mref{depends}, the function @code{dependencies}, or @code{gradef}.\n"
@@ -688,7 +692,7 @@ msgid ""
 "The default value of @code{dependencies} is @code{[]}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:474
 msgid ""
 "The function @code{dependencies(@var{f_1}, @dots{}, @var{f_n})} appends @var{f_1}, @dots{}, @var{f_n},\n"
 "to the @code{dependencies} list,\n"
@@ -696,17 +700,17 @@ msgid ""
 "and @var{x_1}, @dots{}, @var{x_m} are any number of arguments.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:476
 msgid ""
 "@code{dependencies(@var{f}(@var{x_1}, @dots{}, @var{x_m}))} is equivalent to @code{depends(@var{f}, [@var{x_1}, @dots{}, @var{x_m}])}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:478
 msgid ""
 "See also @mref{depends} and @mrefdot{gradef}\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:524
 msgid ""
 "@c ===beg===\n"
 "@c dependencies;\n"
@@ -755,7 +759,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:529
 msgid ""
 "@opencatbox\n"
 "@category{Declarations and inferences} @category{Global variables}\n"
@@ -763,14 +767,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:533
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{depends}\n"
 "@deffn {Function} depends (@var{f_1}, @var{x_1}, @dots{}, @var{f_n}, @var{x_n})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:538
 msgid ""
 "Declares functional dependencies among variables for the purpose of computing\n"
 "derivatives.  In the absence of declared dependence, @code{diff (f, x)} yields\n"
@@ -778,7 +782,7 @@ msgid ""
 "symbolic derivative (that is, a @code{diff} noun).\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:546
 msgid ""
 "Each argument @var{f_1}, @var{x_1}, etc., can be the name of a variable or\n"
 "array, or a list of names.\n"
@@ -789,26 +793,26 @@ msgid ""
 "all elements of the array depend on @var{x_i}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:549
 msgid ""
 "@code{diff} recognizes indirect dependencies established by @code{depends}\n"
 "and applies the chain rule in these cases.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:552
 msgid ""
 "@code{remove (@var{f}, dependency)} removes all dependencies declared for\n"
 "@var{f}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:556
 msgid ""
 "@code{depends} returns a list of the dependencies established.\n"
 "The dependencies are appended to the global variable @code{dependencies}.\n"
 "@code{depends} evaluates its arguments.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:562
 msgid ""
 "@code{diff} is the only Maxima command which recognizes dependencies established\n"
 "by @code{depends}.  Other functions (@code{integrate}, @code{laplace}, etc.)\n"
@@ -817,12 +821,12 @@ msgid ""
 "@code{x} unless explicitly represented as @code{integrate (f(x), x)}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:564
 msgid ""
 "@code{depends(@var{f}, [@var{x_1}, @dots{}, @var{x_n}])} is equivalent to @code{dependencies(@var{f}(@var{x_1}, @dots{}, @var{x_n}))}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:585
 msgid ""
 "@c GENERATED BY THE FOLLOWING\n"
 "@c depends ([f, g], x);\n"
@@ -846,7 +850,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:594
 msgid ""
 "@c GENERATED BY THE FOLLOWING\n"
 "@c diff (r.s, t);\n"
@@ -858,7 +862,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:606
 msgid ""
 "@c GENERATED BY THE FOLLOWING\n"
 "@c remove (r, dependency);\n"
@@ -873,7 +877,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:611
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Declarations and inferences}\n"
@@ -881,7 +885,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:616
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{derivabrev}\n"
@@ -889,14 +893,14 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:620
 msgid ""
 "When @code{derivabbrev} is @code{true},\n"
 "symbolic derivatives (that is, @code{diff} nouns) are displayed as subscripts.\n"
 "Otherwise, derivatives are displayed in the Leibniz notation @code{dy/dx}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:626
 msgid ""
 "@c NEED EXAMPLES HERE\n"
 "@opencatbox\n"
@@ -905,31 +909,31 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:628
 msgid ""
 "@c SEEMS LIKE THIS STATEMENT COULD BE LESS CLUMSY\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:632
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{derivdegree}\n"
 "@deffn {Function} derivdegree (@var{expr}, @var{y}, @var{x})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:636
 msgid ""
 "Returns the highest degree of the derivative\n"
 "of the dependent variable @var{y} with respect to the independent variable\n"
 "@var{x} occurring in @var{expr}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:638
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:652
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c 'diff (y, x, 2) + 'diff (y, z, 3) + 'diff (y, x) * x^2;\n"
@@ -946,7 +950,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:657
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Expressions}\n"
@@ -954,25 +958,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:659
 msgid ""
 "@c I HAVE NO IDEA WHAT THIS DOES\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:663
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{derivlist}\n"
 "@deffn {Function} derivlist (@var{var_1}, @dots{}, @var{var_k})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:666
 msgid ""
 "Causes only differentiations with respect to\n"
 "the indicated variables, within the @code{ev} command.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:671
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Evaluation}\n"
@@ -980,7 +984,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:676
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{derivsubst}\n"
@@ -988,13 +992,13 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:679
 msgid ""
 "When @code{derivsubst} is @code{true}, a non-syntactic substitution such as\n"
 "@code{subst (x, 'diff (y, t), 'diff (y, t, 2))} yields @code{'diff (x, t)}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:684
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Expressions}\n"
@@ -1002,7 +1006,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:692
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{diff}\n"
@@ -1013,19 +1017,19 @@ msgid ""
 "@fname{diff} (@var{expr})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:695
 msgid ""
 "Returns the derivative or differential of @var{expr} with respect to some or\n"
 "all variables in @var{expr}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:698
 msgid ""
 "@code{diff (@var{expr}, @var{x}, @var{n})} returns the @var{n}'th derivative of\n"
 "@var{expr} with respect to @var{x}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:703
 msgid ""
 "@code{diff (@var{expr}, @var{x_1}, @var{n_1}, ..., @var{x_m}, @var{n_m})}\n"
 "returns the mixed partial derivative of @var{expr} with respect to @var{x_1}, \n"
@@ -1033,14 +1037,14 @@ msgid ""
 "@var{x_m}, @var{n_m}) ...), @var{x_1}, @var{n_1})}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:707
 msgid ""
 "@code{diff (@var{expr}, @var{x})}\n"
 "returns the first derivative of @var{expr} with respect to\n"
 "the variable @var{x}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:713
 msgid ""
 "@code{diff (@var{expr})} returns the total differential of @var{expr}, that is,\n"
 "the sum of the derivatives of @var{expr} with respect to each its variables\n"
@@ -1049,7 +1053,7 @@ msgid ""
 "No further simplification of @code{del} is offered.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:718
 msgid ""
 "The noun form of @code{diff} is required in some contexts,\n"
 "such as stating a differential equation.\n"
@@ -1057,18 +1061,18 @@ msgid ""
 "form instead of carrying out the differentiation.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:721
 msgid ""
 "When @code{derivabbrev} is @code{true}, derivatives are displayed as subscripts.\n"
 "Otherwise, derivatives are displayed in the Leibniz notation, @code{dy/dx}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:723
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:754
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c diff (exp (f(x)), x, 2);\n"
@@ -1102,20 +1106,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:757
 msgid ""
 "For the tensor package, the following modifications have been\n"
 "incorporated:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:761
 msgid ""
 "(1) The derivatives of any indexed objects in @var{expr} will have the\n"
 "variables @var{x_i} appended as additional arguments.  Then all the\n"
 "derivative indices will be sorted.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:772
 msgid ""
 "(2) The @var{x_i} may be integers from 1 up to the value of the variable\n"
 "@code{dimension} [default value: 4].  This will cause the differentiation to be\n"
@@ -1129,7 +1133,7 @@ msgid ""
 "treated as in (1) above.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:778
 msgid ""
 "@c NEED EXAMPLES FOR TENSOR STUFF\n"
 "@opencatbox\n"
@@ -1138,55 +1142,55 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:780
 msgid ""
 "@c MERGE THIS INTO @defun diff\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:784
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{symbol_diff}\n"
 "@defvr {Special symbol} diff\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:787
 msgid ""
 "When @code{diff} is present as an @code{evflag} in call to @code{ev},\n"
 "all differentiations indicated in @code{expr} are carried out.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:790
 msgid ""
 "@c NEED EXAMPLE HERE\n"
 "@end defvr\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:792
 msgid ""
 "@c NOT SURE HOW THIS IS SUPPOSED TO WORK\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:796
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{dscalar}\n"
 "@deffn {Function} dscalar (@var{f})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:798
 msgid ""
 "Applies the scalar d'Alembertian to the scalar function @var{f}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:802
 msgid ""
 "@c APPARENTLY dscalar DOESN'T EXIST IN THE CORE FILES ANYMORE\n"
 "@c ctensor HAS THE ONLY DEFN I FOUND (OUTSIDE OF archive/)\n"
-"@code{load (\"ctensor\")} loads this function.\n"
+"@code{load (\\"ctensor\\")} loads this function.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:807
 msgid ""
 "@c FOLLOWING EXAMPLE DOESN'T WORK; I GET dscalar (field) ==> 0\n"
 "@c (I GET 0 FOR THE ctensor VERSION OF dscalar, AND SAME FOR\n"
@@ -1194,7 +1198,7 @@ msgid ""
 "@c INCIDENTALLY dependencies IS DOCUMENTED ONLY AS A VARIABLE\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:820
 msgid ""
 "@c @example\n"
 "@c (%i41) dependencies(field(r));\n"
@@ -1210,7 +1214,7 @@ msgid ""
 "@c @end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:825
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Package ctensor}\n"
@@ -1218,14 +1222,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:829
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{express}\n"
 "@deffn {Function} express (@var{expr})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:838
 msgid ""
 "@c HERE IS THE PREVIOUS TEXT. WHAT IS THE POINT ABOUT depends ?? I'M NOT GETTING IT\n"
 "@c The result uses the noun form of any\n"
@@ -1237,7 +1241,7 @@ msgid ""
 "@c TODO: curl, grad, div and laplacian aren't currently documented.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:843
 msgid ""
 "Expands differential operator nouns into expressions in terms of partial\n"
 "derivatives.  @code{express} recognizes the operators @code{grad}, @code{div},\n"
@@ -1245,7 +1249,7 @@ msgid ""
 "@mref{~}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:848
 msgid ""
 "Symbolic derivatives (that is, @code{diff} nouns)\n"
 "in the return value of express may be evaluated by including @code{diff}\n"
@@ -1253,21 +1257,21 @@ msgid ""
 "In this context, @mref{diff} acts as an @mref{evfun}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:851
 msgid ""
-"@code{load (\"vect\")} loads this function.\n"
+"@code{load (\\"vect\\")} loads this function.\n"
 "@c IN POINT OF FACT, express IS A SIMPLIFICATION RULE, AND express1 IS THE FCN WHICH DOES ALL THE WORK\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:853
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:916
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
-"@c load (\"vect\")$\n"
+"@c load (\\"vect\\")$\n"
 "@c grad (x^2 + y^2 + z^2);\n"
 "@c express (%);\n"
 "@c ev (%, diff);\n"
@@ -1283,7 +1287,7 @@ msgid ""
 "@c [a, b, c] ~ [x, y, z];\n"
 "@c express (%);\n"
 "@example\n"
-"(%i1) load (\"vect\")$\n"
+"(%i1) load (\\"vect\\")$\n"
 "(%i2) grad (x^2 + y^2 + z^2);\n"
 "                              2    2    2\n"
 "(%o2)                  grad (z  + y  + x )\n"
@@ -1330,7 +1334,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:921
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Vectors} @category{Operators}\n"
@@ -1338,16 +1342,16 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:943
 msgid ""
 "@c COMMENTING OUT THIS TEXT PENDING RESOLUTION OF BUG REPORT # 836704:\n"
-"@c \"gendiff is all bugs: should be deprecated\"\n"
+"@c \\"gendiff is all bugs: should be deprecated\\"\n"
 "@c @defun gendiff\n"
 "@c Sometimes @code{diff(e,x,n)} can be reduced even though N is\n"
 "@c symbolic.\n"
 "@c \n"
 "@c @example\n"
-"@c batch(\"gendif\")$\n"
+"@c batch(\\"gendif\\")$\n"
 "@c @end example\n"
 "@c \n"
 "@c and you can try, for example,\n"
@@ -1363,7 +1367,7 @@ msgid ""
 "@c @end defun\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:949
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gradef}\n"
@@ -1372,13 +1376,13 @@ msgid ""
 "@fname{gradef} (@var{a}, @var{x}, @var{expr})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:952
 msgid ""
 "Defines the partial derivatives (i.e., the components of the gradient) of the\n"
 "function @var{f} or variable @var{a}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:959
 msgid ""
 "@code{gradef (@var{f}(@var{x_1}, ..., @var{x_n}), @var{g_1}, ..., @var{g_m})}\n"
 "defines @code{d@var{f}/d@var{x_i}} as @var{g_i}, where @var{g_i} is an\n"
@@ -1388,14 +1392,14 @@ msgid ""
 "@var{x_1} through @var{x_m} only.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:963
 msgid ""
 "@code{gradef (@var{a}, @var{x}, @var{expr})} defines the derivative of variable\n"
 "@var{a} with respect to @var{x} as @var{expr}.  This also establishes the\n"
 "dependence of @var{a} on @var{x} (via @code{depends (@var{a}, @var{x})}).\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:968
 msgid ""
 "The first argument @code{@var{f}(@var{x_1}, ..., @var{x_n})} or @var{a} is\n"
 "quoted, but the remaining arguments @var{g_1}, ..., @var{g_m} are evaluated.\n"
@@ -1403,33 +1407,33 @@ msgid ""
 "are defined.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:972
 msgid ""
 "@code{gradef} can redefine the derivatives of Maxima's built-in functions.\n"
 "For example, @code{gradef (sin(x), sqrt (1 - sin(x)^2))} redefines the\n"
 "derivative of @code{sin}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:974
 msgid ""
 "@code{gradef} cannot define partial derivatives for a subscripted function.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:978
 msgid ""
 "@code{printprops ([@var{f_1}, ..., @var{f_n}], gradef)} displays the partial\n"
 "derivatives of the functions @var{f_1}, ..., @var{f_n}, as defined by\n"
 "@code{gradef}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:982
 msgid ""
 "@code{printprops ([@var{a_n}, ..., @var{a_n}], atomgrad)} displays the partial\n"
 "derivatives of the variables @var{a_n}, ..., @var{a_n}, as defined by\n"
 "@code{gradef}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:987
 msgid ""
 "@code{gradefs} is the list of the functions\n"
 "for which partial derivatives have been defined by @code{gradef}.\n"
@@ -1437,7 +1441,7 @@ msgid ""
 "for which partial derivatives have been defined by @code{gradef}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:992
 msgid ""
 "@c REPHRASE THIS NEXT BIT\n"
 "Gradients are needed when, for example, a function is not known\n"
@@ -1445,7 +1449,7 @@ msgid ""
 "higher order derivatives.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:998
 msgid ""
 "@c NEED EXAMPLES HERE\n"
 "@opencatbox\n"
@@ -1454,7 +1458,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1003
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gradefs}\n"
@@ -1462,7 +1466,7 @@ msgid ""
 "Default value: @code{[]}\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1008
 msgid ""
 "@code{gradefs} is the list of the functions\n"
 "for which partial derivatives have been defined by @code{gradef}.\n"
@@ -1470,7 +1474,7 @@ msgid ""
 "for which partial derivatives have been defined by @code{gradef}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1013
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Declarations and inferences}\n"
@@ -1478,20 +1482,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1017
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{laplace}\n"
 "@deffn {Function} laplace (@var{expr}, @var{t}, @var{s})\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1020
 msgid ""
 "Attempts to compute the Laplace transform of @var{expr} with respect to the \n"
 "variable @var{t} and transform parameter @var{s}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1028
 msgid ""
 "@code{laplace} recognizes in @var{expr} the functions @code{delta}, @code{exp},\n"
 "@code{log}, @code{sin}, @code{cos}, @code{sinh}, @code{cosh}, and @code{erf},\n"
@@ -1502,17 +1506,17 @@ msgid ""
 "and can handle the @code{unit_step} function.  See also @mrefdot{specint}\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1030
 msgid ""
 "If @code{specint} cannot find a solution too, a noun @code{laplace} is returned.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1040
 msgid ""
 "@c REPHRASE THIS\n"
 "@var{expr} may also be a linear, constant coefficient differential equation in\n"
 "which case @code{atvalue} of the dependent variable is used.\n"
-"@c \"used\" -- USED HOW ??\n"
+"@c \\"used\\" -- USED HOW ??\n"
 "The required atvalue may be supplied either before or after the transform is\n"
 "computed.  Since the initial conditions must be specified at zero, if one has\n"
 "boundary conditions imposed elsewhere he can impose these on the general\n"
@@ -1520,14 +1524,14 @@ msgid ""
 "for them and substituting their values back.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1044
 msgid ""
 "@code{laplace} recognizes convolution integrals of the form\n"
 "@code{integrate (f(x) * g(t - x), x, 0, t)};\n"
 "other kinds of convolutions are not recognized.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1049
 msgid ""
 "Functional relations must be explicitly represented in @var{expr};\n"
 "implicit relations, established by @code{depends}, are not recognized.\n"
@@ -1535,17 +1539,17 @@ msgid ""
 "@code{f (x, y)} must appear in @var{expr}.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1051
 msgid ""
 "See also @mrefcomma{ilt}, the inverse Laplace transform.\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1053
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1113
 msgid ""
 "@c GENERATED FROM THE FOLLOWING:\n"
 "@c laplace (exp (2*t + a) * sin(t) * t, t, s);\n"
@@ -1608,12 +1612,12 @@ msgid ""
 "                        (s - %i) (s + %i) (%e      - 1)\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1115
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Differentiation.texi
+#: Differentiation.texi:1120
 msgid ""
 "@opencatbox\n"
 "@category{Laplace transform} @category{Differential equations}\n"
@@ -1621,6 +1625,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differentiation.texi
-msgid ""
-msgstr ""

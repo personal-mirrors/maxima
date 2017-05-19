@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Debugging.texi
+msgstr ""
+
+#: Debugging.texi:6
 msgid ""
 "@menu\n"
 "* Source Level Debugging::\n"
@@ -26,7 +26,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:11
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Source Level Debugging, Keyword Commands, , Debugging\n"
@@ -34,7 +34,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:16
 msgid ""
 "Maxima has a built-in source level debugger.  \n"
 "The user can set a breakpoint at a function,\n"
@@ -42,7 +42,7 @@ msgid ""
 "stack may be examined, together with the variables bound at that level.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:23
 msgid ""
 "The command @code{:help} or @code{:h} shows the list of debugger commands.\n"
 "(In general,\n"
@@ -52,7 +52,7 @@ msgid ""
 "functions to examine, define, and manipulate variables and expressions.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:30
 msgid ""
 "A breakpoint is set by the @code{:br} command at the Maxima prompt.\n"
 "Within the debugger,\n"
@@ -62,81 +62,81 @@ msgid ""
 "execution.  These commands are demonstrated in the example below.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:33
 msgid ""
 "@example\n"
-"(%i1) load (\"/tmp/foobar.mac\");\n"
+"(%i1) load (\\"/tmp/foobar.mac\\");\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:35
 msgid ""
 "(%o1)                           /tmp/foobar.mac\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:39
 msgid ""
 "(%i2) :br foo\n"
 "Turning on debugging debugmode(true)\n"
 "Bkpt 0 for foo (in /tmp/foobar.mac line 1) \n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:43
 msgid ""
 "(%i2) bar (2,3);\n"
 "Bkpt 0:(foobar.mac 1)\n"
 "/tmp/foobar.mac:1::\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:47
 msgid ""
 "(dbm:1) :bt                        <-- :bt typed here gives a backtrace\n"
 "#0: foo(y=5)(foobar.mac line 1)\n"
 "#1: bar(x=2,y=3)(foobar.mac line 9)\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:51
 msgid ""
 "(dbm:1) :n                         <-- Here type :n to advance line\n"
 "(foobar.mac 2)\n"
 "/tmp/foobar.mac:2::\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:55
 msgid ""
 "(dbm:1) :n                         <-- Here type :n to advance line\n"
 "(foobar.mac 3)\n"
 "/tmp/foobar.mac:3::\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:58
 msgid ""
 "(dbm:1) u;                         <-- Investigate value of u\n"
 "28\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:61
 msgid ""
 "(dbm:1) u: 33;                     <-- Change u to be 33\n"
 "33\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:63
 msgid ""
 "(dbm:1) :r                         <-- Type :r to resume the computation\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:66
 msgid ""
 "(%o2)                                1094\n"
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:68
 msgid ""
 "The file @code{/tmp/foobar.mac} is the following:\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:81
 msgid ""
 "@example\n"
 "foo(y) := block ([u:y^2],\n"
@@ -152,12 +152,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:83
 msgid ""
 "USE OF THE DEBUGGER THROUGH EMACS\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:91
 msgid ""
 "If the user is running the code under GNU emacs in a shell\n"
 "window (dbl shell), or is running the graphical interface version,\n"
@@ -168,7 +168,7 @@ msgid ""
 "time by typing M-n (Alt-n).\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:97
 msgid ""
 "Under Emacs you should run in a @code{dbl} shell, which requires the\n"
 "@code{dbl.el} file in the elisp directory.\n"
@@ -177,34 +177,34 @@ msgid ""
 "e.g., add the following to your @file{.emacs} file or the @file{site-init.el}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:102
 msgid ""
 "@example\n"
-"(setq load-path (cons \"/usr/share/maxima/5.9.1/emacs\" load-path))\n"
-"(autoload 'dbl \"dbl\")\n"
+"(setq load-path (cons \\"/usr/share/maxima/5.9.1/emacs\\" load-path))\n"
+"(autoload 'dbl \\"dbl\\")\n"
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:104
 msgid ""
 "then in emacs \n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:108
 msgid ""
 "@example\n"
 "M-x dbl\n"
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:112
 msgid ""
 "should start a shell window in which you can run programs, for example\n"
 "Maxima, gcl, gdb etc.   This shell window also knows about source level\n"
 "debugging, and display of source code in the other window.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:122
 msgid ""
 "The user may set a break point at a certain line of the\n"
 "file by typing @code{C-x space}.  This figures out which function\n"
@@ -217,14 +217,14 @@ msgid ""
 "evaluating the function into the Maxima, by typing @code{Alt-Control-x}.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:126
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:131
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Keyword Commands, Functions and Variables for Debugging, Source Level Debugging, Debugging\n"
@@ -232,7 +232,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:138
 msgid ""
 "Keyword commands are special keywords which are not interpreted as Maxima\n"
 "expressions.  A keyword command can be entered at the Maxima prompt or the\n"
@@ -242,7 +242,7 @@ msgid ""
 "may type @code{:lisp} followed by the form to be evaluated.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:143
 msgid ""
 "@example\n"
 "(%i1) :lisp (+ 2 3) \n"
@@ -250,19 +250,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:147
 msgid ""
 "The number of arguments taken depends on the particular command.  Also,\n"
 "you need not type the whole command, just enough to be unique among\n"
 "the break keywords.   Thus @code{:br} would suffice for @code{:break}.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:149
 msgid ""
 "The keyword commands are listed below.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:195
 msgid ""
 "@table @code\n"
 "@item :break F n\n"
@@ -311,14 +311,14 @@ msgid ""
 "@end table \n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:199
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:204
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Debugging, , Keyword Commands, Debugging\n"
@@ -326,7 +326,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:209
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{debugmode}\n"
@@ -334,7 +334,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:214
 msgid ""
 "When a Maxima error occurs, Maxima will start the debugger if @code{debugmode}\n"
 "is @code{true}.  The user may enter commands to examine the call stack, set\n"
@@ -342,14 +342,14 @@ msgid ""
 "list of debugger commands.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:218
 msgid ""
 "Enabling @code{debugmode} will not catch Lisp errors.\n"
 "@c DO WE WANT TO SAY MORE ABOUT DEBUGGING LISP ERRORS ???\n"
 "@c I'M NOT CONVINCED WE WANT TO OPEN THAT CAN OF WORMS !!!\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:223
 msgid ""
 "@opencatbox\n"
 "@category{Debugging} @category{Global flags}\n"
@@ -357,7 +357,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:228
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{refcheck}\n"
@@ -365,14 +365,14 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:232
 msgid ""
 "When @code{refcheck} is @code{true}, Maxima prints a message\n"
 "each time a bound variable is used for the first time in a\n"
 "computation.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:237
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation} @category{Console interaction} @category{Global flags}\n"
@@ -380,7 +380,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:242
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{setcheck}\n"
@@ -388,7 +388,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:253
 msgid ""
 "If @code{setcheck} is set to a list of variables (which can\n"
 "be subscripted), \n"
@@ -402,44 +402,44 @@ msgid ""
 "value it is bound to.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:256
 msgid ""
 "@code{setcheck} may be set to @code{all} or @code{true} thereby\n"
 "including all variables.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:259
 msgid ""
 "Each new assignment of @code{setcheck} establishes a new list of variables to\n"
 "check, and any variables previously assigned to @code{setcheck} are forgotten.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:263
 msgid ""
 "The names assigned to @code{setcheck} must be quoted if they would otherwise\n"
 "evaluate to something other than themselves.\n"
 "For example, if @code{x}, @code{y}, and @code{z} are already bound, then enter\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:267
 msgid ""
 "@example\n"
 "setcheck: ['x, 'y, 'z]$\n"
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:269
 msgid ""
 "to put them on the list of variables to check.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:272
 msgid ""
 "No printout is generated when a\n"
 "variable on the @code{setcheck} list is assigned to itself, e.g., @code{X: 'X}.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:277
 msgid ""
 "@opencatbox\n"
 "@category{Console interaction} @category{Global flags}\n"
@@ -447,7 +447,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:282
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{setcheckbreak}\n"
@@ -455,7 +455,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:290
 msgid ""
 "When @code{setcheckbreak} is @code{true},\n"
 "Maxima will present a break prompt \n"
@@ -466,12 +466,12 @@ msgid ""
 "Hence, one may assign a different value by assigning to @code{setval}.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:292
 msgid ""
 "See also @mref{setcheck} and @mrefdot{setval}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:297
 msgid ""
 "@opencatbox\n"
 "@category{Console interaction} @category{Global flags}\n"
@@ -479,26 +479,26 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:301
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{setval}\n"
 "@defvr {System variable} setval\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:305
 msgid ""
 "Holds the value to which a variable is about to be set when\n"
 "a @mref{setcheckbreak} occurs.\n"
 "Hence, one may assign a different value by assigning to @mref{setval}.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:307
 msgid ""
 "See also @mref{setcheck} and @mrefdot{setcheckbreak}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:312
 msgid ""
 "@opencatbox\n"
 "@category{Console interaction} @category{Global variables}\n"
@@ -506,7 +506,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:318
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{timer}\n"
@@ -515,7 +515,7 @@ msgid ""
 "@fname{timer} ()\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:323
 msgid ""
 "Given functions @var{f_1}, @dots{}, @var{f_n}, @code{timer} puts each one on the\n"
 "list of functions for which timing statistics are collected.\n"
@@ -523,18 +523,18 @@ msgid ""
 "the list accumulates from one call to the next.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:326
 msgid ""
 "@code{timer(all)} puts all user-defined functions (as named by the global\n"
 "variable @code{functions}) on the list of timed functions.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:328
 msgid ""
 "With no arguments,  @code{timer} returns the list of timed functions.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:335
 msgid ""
 "Maxima records how much time is spent executing each function\n"
 "on the list of timed functions.\n"
@@ -544,24 +544,24 @@ msgid ""
 "@code{untimer} removes functions from the list of timed functions.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:338
 msgid ""
 "@code{timer} quotes its arguments.\n"
 "@code{f(x) := x^2$ g:f$ timer(g)$} does not put @code{f} on the timer list.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:341
 msgid ""
 "If @code{trace(f)} is in effect, then @code{timer(f)} has no effect;\n"
 "@code{trace} and @code{timer} cannot both be in effect at the same time.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:343
 msgid ""
 "See also @mrefdot{timer_devalue}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:348
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -569,7 +569,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:353
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{untimer}\n"
@@ -577,19 +577,19 @@ msgid ""
 "@fname{untimer} ()\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:356
 msgid ""
 "Given functions @var{f_1}, @dots{}, @var{f_n},\n"
 "@code{untimer} removes each function from the timer list.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:359
 msgid ""
 "With no arguments, @code{untimer} removes all functions currently on the timer\n"
 "list.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:366
 msgid ""
 "After @code{untimer (f)} is executed, @code{timer_info (f)} still returns\n"
 "previously collected timing statistics,\n"
@@ -599,7 +599,7 @@ msgid ""
 "and puts @code{f} on the timer list again.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:371
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -607,7 +607,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:376
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{timer_devalue}\n"
@@ -615,7 +615,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:382
 msgid ""
 "When @code{timer_devalue} is @code{true}, Maxima subtracts from each timed\n"
 "function the time spent in other timed functions.  Otherwise, the time reported\n"
@@ -624,12 +624,12 @@ msgid ""
 "total time.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:384
 msgid ""
 "See also @mref{timer} and @mrefdot{timer_info}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:389
 msgid ""
 "@opencatbox\n"
 "@category{Debugging} @category{Global flags}\n"
@@ -637,7 +637,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:394
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{timer_info}\n"
@@ -645,7 +645,7 @@ msgid ""
 "@fname{timer_info} ()\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:399
 msgid ""
 "Given functions @var{f_1}, ..., @var{f_n}, @code{timer_info} returns a matrix\n"
 "containing timing information for each function.\n"
@@ -653,33 +653,33 @@ msgid ""
 "all functions currently on the timer list.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:404
 msgid ""
 "The matrix returned by @code{timer_info} contains the function name,\n"
 "time per function call, number of function calls, total time,\n"
-"and @code{gctime}, which meant \"garbage collection time\" in the original Macsyma\n"
+"and @code{gctime}, which meant \\"garbage collection time\\" in the original Macsyma\n"
 "but is now always zero.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:407
 msgid ""
 "The data from which @code{timer_info} constructs its return value\n"
 "can also be obtained by the @code{get} function:\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:411
 msgid ""
 "@example\n"
 "get(f, 'calls);  get(f, 'runtime);  get(f, 'gctime);\n"
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:413
 msgid ""
 "See also @mrefdot{timer}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:418
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -687,7 +687,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:424
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trace}\n"
@@ -696,7 +696,7 @@ msgid ""
 "@fname{trace} ()\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:429
 msgid ""
 "Given functions @var{f_1}, @dots{}, @var{f_n}, @code{trace} instructs Maxima to\n"
 "print out debugging information whenever those functions are called.\n"
@@ -704,44 +704,44 @@ msgid ""
 "functions to be traced; the list accumulates from one call to the next.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:432
 msgid ""
 "@code{trace(all)} puts all user-defined functions (as named by the global\n"
 "variable @code{functions}) on the list of functions to be traced.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:435
 msgid ""
 "With no arguments,\n"
 "@code{trace} returns a list of all the functions currently being traced.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:438
 msgid ""
 "The @code{untrace} function disables tracing.\n"
 "See also @mrefdot{trace_options}\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:441
 msgid ""
 "@code{trace} quotes its arguments.  Thus,\n"
 "@code{f(x) := x^2$ g:f$ trace(g)$} does not put @code{f} on the trace list.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:445
 msgid ""
 "When a function is redefined, it is removed from the timer list.\n"
 "Thus after @code{timer(f)$ f(x) := x^2$},\n"
 "function @code{f} is no longer on the timer list.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:448
 msgid ""
 "If @code{timer (f)} is in effect, then @code{trace (f)} has no effect;\n"
 "@code{trace} and @code{timer} can't both be in effect for the same function.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:453
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -749,7 +749,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:458
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trace_options}\n"
@@ -757,7 +757,7 @@ msgid ""
 "@fname{trace_options} (@var{f})\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:463
 msgid ""
 "Sets the trace options for function @var{f}.\n"
 "Any previous options are superseded.\n"
@@ -765,17 +765,17 @@ msgid ""
 "is also called (either before or after @code{trace_options}).\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:465
 msgid ""
 "@code{trace_options (@var{f})} resets all options to their default values.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:467
 msgid ""
 "The option keywords are:\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:487
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -798,7 +798,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:494
 msgid ""
 "Trace options are specified in two forms.  The presence of the option \n"
 "keyword alone puts the option into effect unconditionally.\n"
@@ -808,7 +808,7 @@ msgid ""
 "function makes the option conditional on the predicate.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:500
 msgid ""
 "The argument list to the predicate function is always \n"
 "@code{[level, direction, function, item]} where @code{level} is the recursion\n"
@@ -817,58 +817,58 @@ msgid ""
 "list (on entering) or the return value (on exiting).\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:502
 msgid ""
 "Here is an example of unconditional trace options:\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:505
 msgid ""
 "@example\n"
 "(%i1) ff(n) := if equal(n, 0) then 1 else n * ff(n - 1)$\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:507
 msgid ""
 "(%i2) trace (ff)$\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:509
 msgid ""
 "(%i3) trace_options (ff, lisp_print, break)$\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:512
 msgid ""
 "(%i4) ff(3);\n"
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:515
 msgid ""
 "Here is the same function, with the @code{break} option conditional\n"
 "on a predicate:\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:518
 msgid ""
 "@example\n"
 "(%i5) trace_options (ff, break(pp))$\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:521
 msgid ""
 "(%i6) pp (level, direction, function, item) := block (print (item),\n"
 "    return (function = 'ff and level = 3 and direction = exit))$\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:524
 msgid ""
 "(%i7) ff(6);\n"
 "@end example\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:529
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -876,7 +876,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:535
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{untrace}\n"
@@ -885,20 +885,20 @@ msgid ""
 "@fname{untrace} ()\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:539
 msgid ""
 "Given functions @var{f_1}, @dots{}, @var{f_n},\n"
 "@code{untrace} disables tracing enabled by the @code{trace} function.\n"
 "With no arguments, @code{untrace} disables tracing for all functions.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:542
 msgid ""
 "@code{untrace} returns a list of the functions for which \n"
 "it disabled tracing.\n"
 msgstr ""
 
-# Debugging.texi
+#: Debugging.texi:547
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -906,6 +906,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Debugging.texi
-msgid ""
-msgstr ""

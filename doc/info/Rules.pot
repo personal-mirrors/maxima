@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Rules.texi
+msgstr ""
+
+#: Rules.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to Rules and Patterns::  \n"
@@ -25,7 +25,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:10
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Rules and Patterns, Functions and Variables for Rules and Patterns, Rules and Patterns, Rules and Patterns\n"
@@ -33,7 +33,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:18
 msgid ""
 "This section describes user-defined pattern matching and simplification rules.\n"
 "There are two groups of functions which implement somewhat different pattern\n"
@@ -44,7 +44,7 @@ msgid ""
 "@code{matchdeclare}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:23
 msgid ""
 "Pattern-matching rules defined by @code{tellsimp} and @code{tellsimpafter} are\n"
 "applied automatically by the Maxima simplifier.  Rules defined by\n"
@@ -52,26 +52,26 @@ msgid ""
 "function call.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:27
 msgid ""
 "There are additional mechanisms for rules applied to polynomials by\n"
 "@code{tellrat}, and for commutative and noncommutative algebra in @code{affine}\n"
 "package.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:31
 msgid ""
 "@opencatbox\n"
 "@category{Simplification} @category{Rules and patterns}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:33
 msgid ""
 "@c end concepts Rules and Patterns\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:38
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Rules and Patterns,  , Introduction to Rules and Patterns, Rules and Patterns\n"
@@ -79,19 +79,19 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:40
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:44
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{apply1}\n"
 "@deffn {Function} apply1 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:52
 msgid ""
 "Repeatedly applies @var{rule_1} to\n"
 "@var{expr} until it fails, then repeatedly applies the same rule to all\n"
@@ -102,18 +102,18 @@ msgid ""
 "subexpression, the result is returned.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:55
 msgid ""
 "@code{maxapplydepth} is the depth of the deepest subexpressions processed by\n"
 "@code{apply1} and @code{apply2}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:57
 msgid ""
 "See also @mrefcomma{applyb1} @mref{apply2} and @mrefdot{let}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:62
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -121,19 +121,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:64
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:68
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{apply2}\n"
 "@deffn {Function} apply2 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:74
 msgid ""
 "If @var{rule_1} fails on a given subexpression, then @var{rule_2} is\n"
 "repeatedly applied, etc.  Only if all rules fail on a given\n"
@@ -142,18 +142,18 @@ msgid ""
 "subexpression is reprocessed, starting with the first rule.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:77
 msgid ""
 "@code{maxapplydepth} is the depth of the deepest subexpressions processed by\n"
 "@code{apply1} and @code{apply2}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:79
 msgid ""
 "See also @mref{apply1} and @mrefdot{let}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:84
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -161,19 +161,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:86
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:90
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{applyb1}\n"
 "@deffn {Function} applyb1 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:97
 msgid ""
 "Repeatedly applies @var{rule_1} to the deepest subexpression of @var{expr}\n"
 "until it fails, then repeatedly applies the same rule one level higher (i.e.,\n"
@@ -183,24 +183,24 @@ msgid ""
 "the result is returned.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:100
 msgid ""
 "@code{applyb1} is similar to @code{apply1} but works from\n"
 "the bottom up instead of from the top down.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:103
 msgid ""
 "@code{maxapplyheight} is the maximum height which @code{applyb1} reaches\n"
 "before giving up.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:105
 msgid ""
 "See also @mrefcomma{apply1} @mref{apply2} and @mrefdot{let}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:110
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -208,7 +208,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:115
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{current_let_rule_package}\n"
@@ -216,23 +216,23 @@ msgid ""
 "Default value: @code{default_let_rule_package}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:121
 msgid ""
 "@code{current_let_rule_package} is the name of the rule package that is used by\n"
-"functions in the @code{let} package (@code{letsimp}, etc.) @c NEED TO GIVE AN EXPLICIT LIST HERE (NOT \"ETC\")\n"
+"functions in the @code{let} package (@code{letsimp}, etc.) @c NEED TO GIVE AN EXPLICIT LIST HERE (NOT \\"ETC\\")\n"
 "if no other rule package is specified.\n"
 "This variable may be assigned the name of any rule package defined\n"
 "via the @code{let} command.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:125
 msgid ""
 "If a call such as @code{letsimp (expr, rule_pkg_name)} is made,\n"
 "the rule package @code{rule_pkg_name} is used for that function call only,\n"
 "and the value of @code{current_let_rule_package} is not changed.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:130
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -240,7 +240,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:136
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{default_let_rule_package}\n"
@@ -249,7 +249,7 @@ msgid ""
 "Default value: @code{default_let_rule_package}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:141
 msgid ""
 "@c THIS IS SORT OF CONFUSING. PROBABLY NEED TO GIVE MORE DETAIL HERE\n"
 "@code{default_let_rule_package} is the name of the rule package used when one\n"
@@ -257,7 +257,7 @@ msgid ""
 "@code{current_let_rule_package}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:146
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -265,7 +265,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:152
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{defmatch}\n"
@@ -274,13 +274,13 @@ msgid ""
 "@fname{defmatch} (@var{progname}, @var{pattern})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:155
 msgid ""
 "Defines a function @code{@var{progname}(@var{expr}, @var{x_1}, ..., @var{x_n})}\n"
 "which tests @var{expr} to see if it matches @var{pattern}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:162
 msgid ""
 "@var{pattern} is an expression containing the pattern arguments @var{x_1},\n"
 "@dots{}, @var{x_n} (if any) and some pattern variables (if any).  The pattern\n"
@@ -290,7 +290,7 @@ msgid ""
 "in @code{defmatch} matches only itself.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:167
 msgid ""
 "The first argument to the created function @var{progname} is an expression to be\n"
 "matched against the pattern and the other arguments are the actual arguments\n"
@@ -298,7 +298,7 @@ msgid ""
 "pattern.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:174
 msgid ""
 "If the match is successful, @var{progname} returns a list of equations whose\n"
 "left sides are the pattern arguments and pattern variables, and whose right\n"
@@ -308,24 +308,24 @@ msgid ""
 "@code{false}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:177
 msgid ""
 "A literal pattern (that is, a pattern which contains neither pattern arguments\n"
 "nor pattern variables) returns @code{true} if the match succeeds.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:180
 msgid ""
 "See also @mrefcomma{matchdeclare} @mrefcomma{defrule} @mref{tellsimp} and\n"
 "@mrefdot{tellsimpafter}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:182
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:189
 msgid ""
 "Define a function @code{linearp(expr, x)} which\n"
 "tests @code{expr} to see if it is of the form @code{a*x + b}\n"
@@ -335,7 +335,7 @@ msgid ""
 "@c HOW HARD WILL MAXIMA TRY TO COLLECT TERMS AND DO OTHER MUNGEING TO FIT THE PATTERN ??\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:216
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (a, lambda ([e], e#0 and freeof(x, e)), b, \n"
@@ -365,7 +365,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:222
 msgid ""
 "Define a function @code{linearp(expr)} which tests @code{expr}\n"
 "to see if it is of the form @code{a*x + b}\n"
@@ -374,7 +374,7 @@ msgid ""
 "not any other variable, because no pattern argument is given to @code{defmatch}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:242
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (a, lambda ([e], e#0 and freeof(x, e)), b, \n"
@@ -397,13 +397,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:245
 msgid ""
 "Define a function @code{checklimits(expr)} which tests @code{expr}\n"
 "to see if it is a definite integral.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:285
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare ([a, f], true);\n"
@@ -446,7 +446,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:290
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -454,19 +454,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:292
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:296
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{defrule}\n"
 "@deffn {Function} defrule (@var{rulename}, @var{pattern}, @var{replacement})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:303
 msgid ""
 "Defines and names a replacement rule for the given pattern.  If the rule named\n"
 "@var{rulename} is applied to an expression (by @code{apply1}, @code{applyb1}, or\n"
@@ -476,7 +476,7 @@ msgid ""
 "replacement which is then simplified.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:308
 msgid ""
 "The rules themselves can be\n"
 "treated as functions which transform an expression by one\n"
@@ -484,7 +484,7 @@ msgid ""
 "If the match fails, the rule function returns @code{false}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:313
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -492,12 +492,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:315
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:321
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{disprule}\n"
@@ -506,7 +506,7 @@ msgid ""
 "@fname{disprule} (all)\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:326
 msgid ""
 "Display rules with the names @var{rulename_1}, @dots{}, @var{rulename_n},\n"
 "as returned by @code{defrule}, @code{tellsimp}, or @code{tellsimpafter},\n"
@@ -514,29 +514,29 @@ msgid ""
 "Each rule is displayed with an intermediate expression label (@code{%t}).\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:328
 msgid ""
 "@code{disprule (all)} displays all rules.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:332
 msgid ""
 "@code{disprule} quotes its arguments.\n"
 "@code{disprule} returns the list of intermediate expression labels corresponding\n"
 "to the displayed rules.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:334
 msgid ""
 "See also @mrefcomma{letrules}  which displays rules defined by @mrefdot{let}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:336
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:353
 msgid ""
 "@c ===beg===\n"
 "@c tellsimpafter (foo (x, y), bar (x) + baz (y));\n"
@@ -556,17 +556,17 @@ msgid ""
 "(%t4)        foorule1 : foo(x, y) -> baz(y) + bar(x)\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:355
 msgid ""
 "(%t5)          +rule1 : y + x -> special_add(x, y)\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:357
 msgid ""
 "(%t6)                quux : mumble(x) -> []\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:363
 msgid ""
 "(%o6)                    [%t4, %t5, %t6]\n"
 "(%i6) ev(%);\n"
@@ -575,7 +575,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:368
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns} @category{Display functions}\n"
@@ -583,7 +583,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:374
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{let}\n"
@@ -592,14 +592,14 @@ msgid ""
 "@fname{let} ([@var{prod}, @var{repl}, @var{predname}, @var{arg_1}, @dots{}, @var{arg_n}], @var{package_name})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:378
 msgid ""
 "Defines a substitution rule for @code{letsimp} such that @var{prod} is replaced\n"
 "by @var{repl}.  @var{prod} is a product of positive or negative powers of the\n"
 "following terms:\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:390
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -614,7 +614,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:397
 msgid ""
 "A term to a positive power will only match a term having at least that\n"
 "power.  A term to a negative power\n"
@@ -624,7 +624,7 @@ msgid ""
 "See also @mrefdot{letrat}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:407
 msgid ""
 "If a predicate is included in the @code{let} function followed by a list of\n"
 "arguments, a tentative match (i.e. one that would be accepted if the predicate\n"
@@ -634,10 +634,10 @@ msgid ""
 "appearing in @var{prod}.\n"
 "@var{repl} may be any rational expression.  @c ONLY RATIONAL -- REALLY ??\n"
 "If any of the atoms or arguments from @var{prod} appear in @var{repl} the\n"
-"appropriate substitutions are made.  @c SPELL OUT \"APPROPRIATE\" IN THIS CONTEXT\n"
+"appropriate substitutions are made.  @c SPELL OUT \\"APPROPRIATE\\" IN THIS CONTEXT\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:414
 msgid ""
 "The global flag @code{letrat} controls the simplification of quotients by\n"
 "@code{letsimp}.  When @code{letrat} is @code{false}, @code{letsimp} simplifies\n"
@@ -647,7 +647,7 @@ msgid ""
 "the quotient are simplified in that order.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:425
 msgid ""
 "These substitution functions allow you to work with several rule packages at\n"
 "once.  Each rule package can contain any number of @code{let} rules and is\n"
@@ -661,7 +661,7 @@ msgid ""
 "@dots{}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:435
 msgid ""
 "@code{current_let_rule_package} is the name of the rule package that is\n"
 "presently being used.  This variable may be assigned the name of any rule\n"
@@ -674,7 +674,7 @@ msgid ""
 "@code{current_let_rule_package} defaults to @code{default_let_rule_package}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:455
 msgid ""
 "@example\n"
 "(%i1) matchdeclare ([a, a1, a2], true)$\n"
@@ -697,7 +697,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:461
 msgid ""
 "@c NEEDS ADDITIONAL EXAMPLES\n"
 "@opencatbox\n"
@@ -706,7 +706,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:466
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{letrat}\n"
@@ -714,20 +714,20 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:470
 msgid ""
 "When @code{letrat} is @code{false}, @code{letsimp} simplifies the\n"
 "numerator and denominator of a ratio separately,\n"
 "and does not simplify the quotient.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:473
 msgid ""
 "When @code{letrat} is @code{true},\n"
 "the numerator, denominator, and their quotient are simplified in that order.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:489
 msgid ""
 "@example\n"
 "(%i1) matchdeclare (n, true)$\n"
@@ -746,7 +746,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:494
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -754,12 +754,12 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:496
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:502
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{letrules}\n"
@@ -768,28 +768,28 @@ msgid ""
 "@fname{letrules} (@var{package_name})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:506
 msgid ""
 "Displays the rules in a rule package.\n"
 "@code{letrules ()} displays the rules in the current rule package.\n"
 "@code{letrules (@var{package_name})} displays the rules in @var{package_name}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:510
 msgid ""
 "The current rule package is named by @code{current_let_rule_package}.\n"
 "If not otherwise specified, @code{current_let_rule_package}\n"
 "defaults to @code{default_let_rule_package}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:514
 msgid ""
 "See also @mrefcomma{disprule} which displays rules defined by @mref{tellsimp} and\n"
 "@mrefdot{tellsimpafter}\n"
 "@c WHAT ABOUT defmatch AND defrule ??\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:519
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -797,7 +797,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:526
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{letsimp}\n"
@@ -807,31 +807,31 @@ msgid ""
 "@fname{letsimp} (@var{expr}, @var{package_name_1}, @dots{}, @var{package_name_n})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:529
 msgid ""
 "Repeatedly applies the substitution rules defined by @code{let}\n"
 "until no further change is made to @var{expr}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:531
 msgid ""
 "@code{letsimp (@var{expr})} uses the rules from @code{current_let_rule_package}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:534
 msgid ""
 "@code{letsimp (@var{expr}, @var{package_name})} uses the rules from\n"
 "@var{package_name} without changing @code{current_let_rule_package}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:538
 msgid ""
 "@code{letsimp (@var{expr}, @var{package_name_1}, ..., @var{package_name_n})}\n"
 "is equivalent to @code{letsimp (@var{expr}, @var{package_name_1})},\n"
 "followed by @code{letsimp (%, @var{package_name_2})}, and so on.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:544
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -840,7 +840,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:549
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{let_rule_packages}\n"
@@ -848,13 +848,13 @@ msgid ""
 "Default value: @code{[default_let_rule_package]}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:552
 msgid ""
 "@code{let_rule_packages} is a list of all user-defined let rule packages\n"
 "plus the default package @code{default_let_rule_package}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:557
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -862,14 +862,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:561
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{matchdeclare}\n"
 "@deffn {Function} matchdeclare (@var{a_1}, @var{pred_1}, @dots{}, @var{a_n}, @var{pred_n})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:566
 msgid ""
 "Associates a predicate @var{pred_k} \n"
 "with a variable or list of variables @var{a_k}\n"
@@ -877,7 +877,7 @@ msgid ""
 "for which the predicate returns anything other than @code{false}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:579
 msgid ""
 "A predicate is the name of a function,\n"
 "or a lambda expression,\n"
@@ -893,7 +893,7 @@ msgid ""
 "the predicate is not evaluated until a match is attempted.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:584
 msgid ""
 "A predicate may return a Boolean expression as well as @code{true} or\n"
 "@code{false}.  Boolean expressions are evaluated by @code{is} within the\n"
@@ -901,7 +901,7 @@ msgid ""
 "predicate.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:591
 msgid ""
 "If an expression satisfies a match predicate, the match variable is assigned the\n"
 "expression, except for match variables which are operands of addition @code{+}\n"
@@ -911,7 +911,7 @@ msgid ""
 "@c WOULD BE GREAT TO EXTEND PART+/PART* PROCESSING TO ALL N-ARY OPERATORS\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:602
 msgid ""
 "In the case of addition and multiplication, the match variable may be assigned a\n"
 "single expression which satisfies the match predicate, or a sum or product\n"
@@ -925,17 +925,17 @@ msgid ""
 "the match variable associated with the predicate.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:609
 msgid ""
 "The algorithm for processing addition and multiplication patterns makes some\n"
-"match results (for example, a pattern in which a \"match anything\" variable\n"
+"match results (for example, a pattern in which a \\"match anything\\" variable\n"
 "appears) dependent on the ordering of terms in the match pattern and in the\n"
 "expression to be matched.  However, if all match predicates are mutually\n"
 "exclusive, the match result is insensitive to ordering, as one match predicate\n"
 "cannot accept terms matched by another.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:615
 msgid ""
 "Calling @code{matchdeclare} with a variable @var{a} as an argument changes the\n"
 "@code{matchdeclare} property for @var{a}, if one was already declared; only the\n"
@@ -944,7 +944,7 @@ msgid ""
 "@code{remove}) do not affect existing rules.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:622
 msgid ""
 "@code{propvars (matchdeclare)} returns the list of all variables for which there\n"
 "is a @code{matchdeclare} property.  @code{printprops (@var{a}, matchdeclare)}\n"
@@ -954,25 +954,25 @@ msgid ""
 "the @code{matchdeclare} property from @var{a}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:626
 msgid ""
 "The functions @code{defmatch}, @code{defrule}, @code{tellsimp},\n"
 "@code{tellsimpafter}, and @code{let} construct rules which test expressions\n"
 "against patterns.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:629
 msgid ""
 "@code{matchdeclare} quotes its arguments.\n"
 "@code{matchdeclare} always returns @code{done}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:631
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:636
 msgid ""
 "A predicate is the name of a function,\n"
 "or a lambda expression,\n"
@@ -980,7 +980,7 @@ msgid ""
 "or @code{true} or @code{all}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:659
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (aa, integerp);\n"
@@ -1006,23 +1006,23 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:662
 msgid ""
 "If an expression satisfies a match predicate,\n"
 "the match variable is assigned the expression.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:677
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (aa, integerp, bb, atom);\n"
-"@c defrule (r1, bb^aa, [\"integer\" = aa, \"atom\" = bb]);\n"
+"@c defrule (r1, bb^aa, [\\"integer\\" = aa, \\"atom\\" = bb]);\n"
 "@c r1 (%pi^8);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) matchdeclare (aa, integerp, bb, atom);\n"
 "(%o1)                         done\n"
-"(%i2) defrule (r1, bb^aa, [\"integer\" = aa, \"atom\" = bb]);\n"
+"(%i2) defrule (r1, bb^aa, [\\"integer\\" = aa, \\"atom\\" = bb]);\n"
 "                    aa\n"
 "(%o2)        r1 : bb   -> [integer = aa, atom = bb]\n"
 "(%i3) r1 (%pi^8);\n"
@@ -1030,34 +1030,34 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:681
 msgid ""
 "In the case of addition and multiplication, the match variable may be assigned\n"
 "a single expression which satisfies the match predicate, or a sum or product\n"
 "(respectively) of such expressions.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:707
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (aa, atom, bb, lambda ([x], not atom(x)));\n"
-"@c defrule (r1, aa + bb, [\"all atoms\" = aa, \"all nonatoms\" = \n"
+"@c defrule (r1, aa + bb, [\\"all atoms\\" = aa, \\"all nonatoms\\" = \n"
 "@c                bb]);\n"
 "@c r1 (8 + a*b + sin(x));\n"
-"@c defrule (r2, aa * bb, [\"all atoms\" = aa, \"all nonatoms\" = \n"
+"@c defrule (r2, aa * bb, [\\"all atoms\\" = aa, \\"all nonatoms\\" = \n"
 "@c                bb]);\n"
 "@c r2 (8 * (a + b) * sin(x));\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) matchdeclare (aa, atom, bb, lambda ([x], not atom(x)));\n"
 "(%o1)                         done\n"
-"(%i2) defrule (r1, aa + bb, [\"all atoms\" = aa, \"all nonatoms\" =\n"
+"(%i2) defrule (r1, aa + bb, [\\"all atoms\\" = aa, \\"all nonatoms\\" =\n"
 "               bb]);\n"
 "bb + aa partitions `sum'\n"
 "(%o2)  r1 : bb + aa -> [all atoms = aa, all nonatoms = bb]\n"
 "(%i3) r1 (8 + a*b + sin(x));\n"
 "(%o3)     [all atoms = 8, all nonatoms = sin(x) + a b]\n"
-"(%i4) defrule (r2, aa * bb, [\"all atoms\" = aa, \"all nonatoms\" =\n"
+"(%i4) defrule (r2, aa * bb, [\\"all atoms\\" = aa, \\"all nonatoms\\" =\n"
 "               bb]);\n"
 "bb aa partitions `product'\n"
 "(%o4)   r2 : aa bb -> [all atoms = aa, all nonatoms = bb]\n"
@@ -1066,7 +1066,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:712
 msgid ""
 "When matching arguments of @code{+} and @code{*},\n"
 "if all match predicates are mutually exclusive,\n"
@@ -1074,28 +1074,28 @@ msgid ""
 "as one match predicate cannot accept terms matched by another.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:742
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (aa, atom, bb, lambda ([x], not atom(x)));\n"
-"@c defrule (r1, aa + bb, [\"all atoms\" = aa, \"all nonatoms\" = \n"
+"@c defrule (r1, aa + bb, [\\"all atoms\\" = aa, \\"all nonatoms\\" = \n"
 "@c                bb]);\n"
 "@c r1 (8 + a*b + %pi + sin(x) - c + 2^n);\n"
-"@c defrule (r2, aa * bb, [\"all atoms\" = aa, \"all nonatoms\" = \n"
+"@c defrule (r2, aa * bb, [\\"all atoms\\" = aa, \\"all nonatoms\\" = \n"
 "@c                bb]);\n"
 "@c r2 (8 * (a + b) * %pi * sin(x) / c * 2^n);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) matchdeclare (aa, atom, bb, lambda ([x], not atom(x)));\n"
 "(%o1)                         done\n"
-"(%i2) defrule (r1, aa + bb, [\"all atoms\" = aa, \"all nonatoms\" =\n"
+"(%i2) defrule (r1, aa + bb, [\\"all atoms\\" = aa, \\"all nonatoms\\" =\n"
 "               bb]);\n"
 "bb + aa partitions `sum'\n"
 "(%o2)  r1 : bb + aa -> [all atoms = aa, all nonatoms = bb]\n"
 "(%i3) r1 (8 + a*b + %pi + sin(x) - c + 2^n);\n"
 "                                                     n\n"
 "(%o3) [all atoms = %pi + 8, all nonatoms = sin(x) + 2  - c + a b]\n"
-"(%i4) defrule (r2, aa * bb, [\"all atoms\" = aa, \"all nonatoms\" =\n"
+"(%i4) defrule (r2, aa * bb, [\\"all atoms\\" = aa, \\"all nonatoms\\" =\n"
 "               bb]);\n"
 "bb aa partitions `product'\n"
 "(%o4)   r2 : aa bb -> [all atoms = aa, all nonatoms = bb]\n"
@@ -1107,13 +1107,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:745
 msgid ""
 "The functions @code{propvars} and @code{printprops} return information about\n"
 "match variables.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:769
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare ([aa, bb, cc], atom, [dd, ee], integerp);\n"
@@ -1140,7 +1140,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:774
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns} @category{Declarations and inferences}\n"
@@ -1148,12 +1148,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:776
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:781
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{maxapplydepth}\n"
@@ -1161,13 +1161,13 @@ msgid ""
 "Default value: 10000\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:784
 msgid ""
 "@code{maxapplydepth} is the maximum depth to which @code{apply1}\n"
 "and @code{apply2} will delve.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:789
 msgid ""
 "@opencatbox\n"
 "@category{Function application}\n"
@@ -1175,12 +1175,12 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:791
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:796
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{maxapplyheight}\n"
@@ -1188,13 +1188,13 @@ msgid ""
 "Default value: 10000\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:799
 msgid ""
 "@code{maxapplyheight} is the maximum height to which @code{applyb1}\n"
 "will reach before giving up.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:804
 msgid ""
 "@opencatbox\n"
 "@category{Function application}\n"
@@ -1202,12 +1202,12 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:806
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:814
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remlet}\n"
@@ -1218,21 +1218,21 @@ msgid ""
 "@fname{remlet} (all, @var{name})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:818
 msgid ""
 "Deletes the substitution rule, @var{prod} --> repl, most\n"
 "recently defined by the @code{let} function.  If name is supplied the rule is\n"
 "deleted from the rule package name.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:822
 msgid ""
 "@code{remlet()} and @code{remlet(all)} delete all substitution rules from the\n"
 "current rule package.  If the name of a rule package is supplied, e.g.\n"
 "@code{remlet (all, @var{name})}, the rule package @var{name} is also deleted.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:828
 msgid ""
 "If a substitution is to be changed using the same\n"
 "product, @code{remlet} need not be called, just redefine the substitution\n"
@@ -1241,13 +1241,13 @@ msgid ""
 "called the original substitution rule is revived.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:831
 msgid ""
 "See also @mrefcomma{remrule} which removes a rule defined by @mref{tellsimp} or\n"
 "@mrefdot{tellsimpafter}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:836
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -1255,7 +1255,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:842
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remrule}\n"
@@ -1264,12 +1264,12 @@ msgid ""
 "@fname{remrule} (@var{op}, all)\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:844
 msgid ""
 "Removes rules defined by @code{tellsimp} or @code{tellsimpafter}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:850
 msgid ""
 "@code{remrule (@var{op}, @var{rulename})}\n"
 "removes the rule with the name @var{rulename} from the operator @var{op}.\n"
@@ -1278,35 +1278,35 @@ msgid ""
 "@var{op} and @var{rulename} must be enclosed in double quote marks.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:852
 msgid ""
 "@code{remrule (@var{op}, all)} removes all rules for the operator @var{op}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:854
 msgid ""
 "See also @mrefcomma{remlet} which removes a rule defined by @mrefdot{let}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:856
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:904
 msgid ""
 "@c ===beg===\n"
 "@c tellsimp (foo (aa, bb), bb - aa);\n"
 "@c tellsimpafter (aa + bb, special_add (aa, bb));\n"
-"@c infix (\"@@\");\n"
+"@c infix (\\"@@\\");\n"
 "@c tellsimp (aa @@ bb, bb/aa);\n"
 "@c tellsimpafter (quux (%pi, %e), %pi - %e);\n"
 "@c tellsimpafter (quux (%e, %pi), %pi + %e);\n"
 "@c [foo (aa, bb), aa + bb, aa @@ bb, quux (%pi, %e), \n"
 "@c        quux (%e, %pi)];\n"
 "@c remrule (foo, foorule1);\n"
-"@c remrule (\"+\", ?\+rule1);\n"
-"@c remrule (\"@@\", ?\@\@rule1);\n"
+"@c remrule (\\"+\\", ?\+rule1);\n"
+"@c remrule (\\"@@\\", ?\@\@rule1);\n"
 "@c remrule (quux, all);\n"
 "@c [foo (aa, bb), aa + bb, aa @@ bb, quux (%pi, %e), \n"
 "@c         quux (%e, %pi)];\n"
@@ -1316,7 +1316,7 @@ msgid ""
 "(%o1)                   [foorule1, false]\n"
 "(%i2) tellsimpafter (aa + bb, special_add (aa, bb));\n"
 "(%o2)                   [+rule1, simplus]\n"
-"(%i3) infix (\"@@@@\");\n"
+"(%i3) infix (\\"@@@@\\");\n"
 "(%o3)                          @@@@\n"
 "(%i4) tellsimp (aa @@@@ bb, bb/aa);\n"
 "(%o4)                   [@@@@rule1, false]\n"
@@ -1331,9 +1331,9 @@ msgid ""
 "                                     aa\n"
 "(%i8) remrule (foo, foorule1);\n"
 "(%o8)                          foo\n"
-"(%i9) remrule (\"+\", ?\+rule1);\n"
+"(%i9) remrule (\\"+\\", ?\+rule1);\n"
 "(%o9)                           +\n"
-"(%i10) remrule (\"@@@@\", ?\@@\@@rule1);\n"
+"(%i10) remrule (\\"@@@@\\", ?\@@\@@rule1);\n"
 "(%o10)                         @@@@\n"
 "(%i11) remrule (quux, all);\n"
 "(%o11)                        quux\n"
@@ -1344,7 +1344,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:909
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -1352,54 +1352,54 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:911
 msgid ""
 "@c NEEDS EXPANSION OR MAYBE JUST APPROPRIATE REFS TO tellsimpafter\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:915
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tellsimp}\n"
 "@deffn {Function} tellsimp (@var{pattern}, @var{replacement})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:919
 msgid ""
 "is similar to @code{tellsimpafter} but places\n"
 "new information before old so that it is applied before the built-in\n"
 "simplification rules.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:927
 msgid ""
 "@code{tellsimp} is used when it is important to modify\n"
 "the expression before the simplifier works on it, for instance if the\n"
-"simplifier \"knows\" something about the expression, but what it returns\n"
+"simplifier \\"knows\\" something about the expression, but what it returns\n"
 "is not to your liking.\n"
-"If the simplifier \"knows\" something about the\n"
+"If the simplifier \\"knows\\" something about the\n"
 "main operator of the expression, but is simply not doing enough for\n"
 "you, you probably want to use @code{tellsimpafter}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:930
 msgid ""
 "The pattern may not be a\n"
 "sum, product, single variable, or number.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:933
 msgid ""
 "The system variable @code{rules} is the list of rules defined by\n"
 "@code{defrule}, @code{defmatch}, @code{tellsimp}, and @code{tellsimpafter}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:935
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:976
 msgid ""
 "@example\n"
 "(%i1) matchdeclare (x, freeof (%i));\n"
@@ -1418,7 +1418,7 @@ msgid ""
 "(%o7)                  [^rule1, simpexpt]\n"
 "(%i8) 0^0;\n"
 "(%o8)                           1\n"
-"(%i9) remrule (\"^\", %th(2)[1]);\n"
+"(%i9) remrule (\\"^\\", %th(2)[1]);\n"
 "(%o9)                           ^\n"
 "(%i10) tellsimp (sin(x)^2, 1 - cos(x)^2);\n"
 "(%o10)                 [^rule2, simpexpt]\n"
@@ -1443,7 +1443,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:981
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -1451,14 +1451,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:985
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tellsimpafter}\n"
 "@deffn {Function} tellsimpafter (@var{pattern}, @var{replacement})\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:993
 msgid ""
 "Defines a simplification rule which the Maxima simplifier applies after built-in\n"
 "simplification rules.  @var{pattern} is an expression, comprising pattern\n"
@@ -1469,7 +1469,7 @@ msgid ""
 "expression.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1002
 msgid ""
 "@var{pattern} may be any nonatomic expression in which the main operator is not\n"
 "a pattern variable; the simplification rule is associated with the main\n"
@@ -1481,7 +1481,7 @@ msgid ""
 "operators other than the main operator in @var{pattern}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1008
 msgid ""
 "There is one exception to the above rule concerning names of functions.\n"
 "The name of a subscripted function in an expression such as @code{aa[x](y)}\n"
@@ -1490,7 +1490,7 @@ msgid ""
 "expressions involving subscripted functions.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1015
 msgid ""
 "@c LET'S NOT GO INTO DETAILS ABOUT MAIN OPERATORS HERE; BUT PRESERVE THIS FOR REFERENCE\n"
 "@c The main operator of an expression @code{expr} is @code{caar $expr}.\n"
@@ -1500,7 +1500,7 @@ msgid ""
 "@c which appears in indexed function expressions (e.g., @code{foo[i](x)}).\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1028
 msgid ""
 "@c NEED TO REVIEW THIS PARAGRAPH FOR ACCURACY\n"
 "Simplification rules are applied after evaluation \n"
@@ -1516,7 +1516,7 @@ msgid ""
 "to ensure that all rules are applied.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1036
 msgid ""
 "Pattern variables are treated as local variables in simplification rules.\n"
 "Once a rule is defined, the value of a pattern variable\n"
@@ -1527,7 +1527,7 @@ msgid ""
 "declared by @code{put} and related functions) are global.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1046
 msgid ""
 "The rule constructed by @code{tellsimpafter} is named after the main operator of\n"
 "@var{pattern}.  Rules for built-in operators, and user-defined operators defined\n"
@@ -1540,7 +1540,7 @@ msgid ""
 "@c (that is, the name begins with dollar sign @code{$}).\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1053
 msgid ""
 "The treatment of noun and verb forms is slightly confused.  @c THIS IS A BUG.\n"
 "If a rule is defined for a noun (or verb) form\n"
@@ -1550,7 +1550,7 @@ msgid ""
 "the newly-defined rule applies only to the noun (or verb) form.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1058
 msgid ""
 "The rule constructed by @code{tellsimpafter} is an ordinary Lisp function.\n"
 "If the name of the rule is @code{$foorule1},\n"
@@ -1558,7 +1558,7 @@ msgid ""
 "and @code{:lisp (symbol-function '$foorule1)} displays its definition.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1063
 msgid ""
 "@code{tellsimpafter} quotes its arguments.\n"
 "@code{tellsimpafter} returns the list of rules for the main operator of\n"
@@ -1566,30 +1566,30 @@ msgid ""
 "@c WHAT IS simpfoo THAT SOMETIMES APPEARS, AND WHY DOES false SOMETIMES APPEAR IN RETURN VALUE ??\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1066
 msgid ""
 "See also @mrefcomma{matchdeclare} @mrefcomma{defmatch} @mrefcomma{defrule} @mrefcomma{tellsimp}\n"
 "@mrefcomma{let} @mrefcomma{kill} @mref{remrule} and @mrefdot{clear_rules}\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1068
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1071
 msgid ""
 "@var{pattern} may be any nonatomic expression in which the \n"
 "main operator is not a pattern variable.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1099
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (aa, atom, [ll, mm], listp, xx, true)$\n"
 "@c tellsimpafter (sin (ll), map (sin, ll));\n"
 "@c sin ([1/6, 1/4, 1/3, 1/2, 1]*%pi);\n"
-"@c tellsimpafter (ll^mm, map (\"^\", ll, mm));\n"
+"@c tellsimpafter (ll^mm, map (\\"^\\", ll, mm));\n"
 "@c [a, b, c]^[1, 2, 3];\n"
 "@c tellsimpafter (foo (aa (xx)), aa (foo (xx)));\n"
 "@c foo (bar (u - v));\n"
@@ -1602,7 +1602,7 @@ msgid ""
 "                    1  sqrt(2)  sqrt(3)\n"
 "(%o3)              [-, -------, -------, 1, 0]\n"
 "                    2     2        2\n"
-"(%i4) tellsimpafter (ll^mm, map (\"^\", ll, mm));\n"
+"(%i4) tellsimpafter (ll^mm, map (\\"^\\", ll, mm));\n"
 "(%o4)                  [^rule1, simpexpt]\n"
 "(%i5) [a, b, c]^[1, 2, 3];\n"
 "                                2   3\n"
@@ -1614,14 +1614,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1103
 msgid ""
 "Rules are applied in the order they were defined.\n"
 "If two rules can match an expression,\n"
 "the rule which was defined first is applied.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1120
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (aa, integerp);\n"
@@ -1641,14 +1641,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1124
 msgid ""
 "Pattern variables are treated as local variables in simplification rules.\n"
 "(Compare to @code{defmatch}, which treats pattern variables as global\n"
 "variables.)\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1144
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (aa, integerp, bb, atom);\n"
@@ -1671,7 +1671,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1149
 msgid ""
 "As with all atoms, properties of pattern variables are global even though values\n"
 "are local.  In this example, an assignment property is declared via\n"
@@ -1679,7 +1679,7 @@ msgid ""
 "Maxima.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1170
 msgid ""
 "@c ===beg===\n"
 "@c matchdeclare (aa, integerp, bb, atom);\n"
@@ -1703,14 +1703,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1174
 msgid ""
 "Rules are named after main operators.\n"
 "Names of rules for built-in and user-defined operators are Lisp identifiers,\n"
 "while names for other functions are Maxima identifiers.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1215
 msgid ""
 "@c ===beg===\n"
 "@c tellsimpafter (foo (%pi + %e), 3*%pi);\n"
@@ -1723,7 +1723,7 @@ msgid ""
 "@c foorule_name: first (%o1);\n"
 "@c plusrule_name: first (%o4);\n"
 "@c remrule (foo, foorule1);\n"
-"@c remrule (\"^\", ?\^rule1);\n"
+"@c remrule (\\"^\\", ?\^rule1);\n"
 "@c rules;\n"
 "@c ===end===\n"
 "@example\n"
@@ -1747,19 +1747,19 @@ msgid ""
 "(%o9)                        +rule1\n"
 "(%i10) remrule (foo, foorule1);\n"
 "(%o10)                         foo\n"
-"(%i11) remrule (\"^\", ?\^rule1);\n"
+"(%i11) remrule (\\"^\\", ?\^rule1);\n"
 "(%o11)                          ^\n"
 "(%i12) rules;\n"
 "(%o12)        [foorule2, foorule3, +rule1, *rule1]\n"
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1217
 msgid ""
 "A worked example: anticommutative multiplication.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1246
 msgid ""
 "@c ===beg===\n"
 "@c gt (i, j) := integerp(j) and i < j;\n"
@@ -1791,7 +1791,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1251
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -1799,20 +1799,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1255
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{clear_rules}\n"
 "@deffn {Function} clear_rules ()\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1258
 msgid ""
 "Executes @code{kill (rules)} and then resets the next rule number to 1\n"
 "for addition @code{+}, multiplication @code{*}, and exponentiation @code{^}.\n"
 msgstr ""
 
-# Rules.texi
+#: Rules.texi:1263
 msgid ""
 "@opencatbox\n"
 "@category{Rules and patterns}\n"
@@ -1820,6 +1820,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Rules.texi
-msgid ""
-msgstr ""

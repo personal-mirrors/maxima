@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Operators.texi
+msgstr ""
+
+#: Operators.texi:10
 msgid ""
 "@menu     \n"
 "* Introduction to operators::      \n"
@@ -30,7 +30,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:15
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to operators, Arithmetic operators, Operators, Operators\n"
@@ -38,17 +38,17 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:22
 msgid ""
 "It is possible to define new operators with specified precedence, to undefine\n"
 "existing operators, or to redefine the precedence of existing operators.  An\n"
 "operator may be unary prefix or unary postfix, binary infix, n-ary infix,\n"
-"matchfix, or nofix.  \"Matchfix\" means a pair of symbols which enclose their\n"
-"argument or arguments, and \"nofix\" means an operator which takes no arguments.\n"
+"matchfix, or nofix.  \\"Matchfix\\" means a pair of symbols which enclose their\n"
+"argument or arguments, and \\"nofix\\" means an operator which takes no arguments.\n"
 "As examples of the different types of operators, there are the following.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:35
 msgid ""
 "@table @asis\n"
 "@item unary prefix\n"
@@ -64,54 +64,54 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:38
 msgid ""
 "(There are no built-in nofix operators; for an example of such an operator,\n"
 "see @code{nofix}.)\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:42
 msgid ""
 "The mechanism to define a new operator is straightforward.  It is only necessary\n"
 "to declare a function as an operator; the operator function might or might not\n"
 "be defined.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:47
 msgid ""
 "An example of user-defined operators is the following.  Note that the explicit\n"
-"function call @code{\"dd\" (a)} is equivalent to @code{dd a}, likewise\n"
-"@code{\"<-\" (a, b)} is equivalent to @code{a <- b}.  Note also that the functions\n"
-"@code{\"dd\"} and @code{\"<-\"} are undefined in this example.\n"
+"function call @code{\\"dd\\" (a)} is equivalent to @code{dd a}, likewise\n"
+"@code{\\"<-\\" (a, b)} is equivalent to @code{a <- b}.  Note also that the functions\n"
+"@code{\\"dd\\"} and @code{\\"<-\\"} are undefined in this example.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:70
 msgid ""
 "@c ===beg===\n"
-"@c prefix (\"dd\");\n"
+"@c prefix (\\"dd\\");\n"
 "@c dd a;\n"
-"@c \"dd\" (a);\n"
-"@c infix (\"<-\");\n"
+"@c \\"dd\\" (a);\n"
+"@c infix (\\"<-\\");\n"
 "@c a <- dd b;\n"
-"@c \"<-\" (a, \"dd\" (b));\n"
+"@c \\"<-\\" (a, \\"dd\\" (b));\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) prefix (\"dd\");\n"
+"(%i1) prefix (\\"dd\\");\n"
 "(%o1)                          dd\n"
 "(%i2) dd a;\n"
 "(%o2)                         dd a\n"
-"(%i3) \"dd\" (a);\n"
+"(%i3) \\"dd\\" (a);\n"
 "(%o3)                         dd a\n"
-"(%i4) infix (\"<-\");\n"
+"(%i4) infix (\\"<-\\");\n"
 "(%o4)                          <-\n"
 "(%i5) a <- dd b;\n"
 "(%o5)                      a <- dd b\n"
-"(%i6) \"<-\" (a, \"dd\" (b));\n"
+"(%i6) \\"<-\\" (a, \\"dd\\" (b));\n"
 "(%o6)                      a <- dd b\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:79
 msgid ""
 "The Maxima functions which define new operators are summarized in this table,\n"
 "stating the default left and right binding powers (lbp and rbp, respectively).\n"
@@ -123,7 +123,7 @@ msgid ""
 "arguments; see the function descriptions for details.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:95
 msgid ""
 "@c MAKE ANCHORS FOR ALL 6 FUNCTIONS AND CHANGE @code TO @ref ACCORDINGLY\n"
 "@table @code\n"
@@ -142,19 +142,19 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:98
 msgid ""
 "For comparison, here are some built-in operators and their left and right\n"
 "binding powers.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:101
 msgid ""
 "@example\n"
 "Operator   lbp     rbp\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:127
 msgid ""
 "  :        180     20 \n"
 "  ::       180     20 \n"
@@ -183,70 +183,70 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:133
 msgid ""
 "@mref{remove} and @mref{kill} remove operator properties from an atom.\n"
-"@code{remove (\"@var{a}\", op)} removes only the operator properties of @var{a}.\n"
-"@code{kill (\"@var{a}\")} removes all properties of @var{a}, including the\n"
+"@code{remove (\\"@var{a}\\", op)} removes only the operator properties of @var{a}.\n"
+"@code{kill (\\"@var{a}\\")} removes all properties of @var{a}, including the\n"
 "operator properties.  Note that the name of the operator must be enclosed in\n"
 "quotation marks.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:177
 msgid ""
 "@c MAYBE COPY THIS EXAMPLE TO remove AND/OR kill\n"
 "@c ===beg===\n"
-"@c infix (\"##\");\n"
-"@c \"##\" (a, b) := a^b;\n"
+"@c infix (\\"##\\");\n"
+"@c \\"##\\" (a, b) := a^b;\n"
 "@c 5 ## 3;\n"
-"@c remove (\"##\", op);\n"
+"@c remove (\\"##\\", op);\n"
 "@c 5 ## 3;\n"
-"@c \"##\" (5, 3);\n"
-"@c infix (\"##\");\n"
+"@c \\"##\\" (5, 3);\n"
+"@c infix (\\"##\\");\n"
 "@c 5 ## 3;\n"
-"@c kill (\"##\");\n"
+"@c kill (\\"##\\");\n"
 "@c 5 ## 3;\n"
-"@c \"##\" (5, 3);\n"
+"@c \\"##\\" (5, 3);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) infix (\"##\");\n"
+"(%i1) infix (\\"##\\");\n"
 "(%o1)                          ##\n"
-"(%i2) \"##\" (a, b) := a^b;\n"
+"(%i2) \\"##\\" (a, b) := a^b;\n"
 "                                     b\n"
 "(%o2)                     a ## b := a\n"
 "(%i3) 5 ## 3;\n"
 "(%o3)                          125\n"
-"(%i4) remove (\"##\", op);\n"
+"(%i4) remove (\\"##\\", op);\n"
 "(%o4)                         done\n"
 "(%i5) 5 ## 3;\n"
 "Incorrect syntax: # is not a prefix operator\n"
 "5 ##\n"
 "  ^\n"
-"(%i5) \"##\" (5, 3);\n"
+"(%i5) \\"##\\" (5, 3);\n"
 "(%o5)                          125\n"
-"(%i6) infix (\"##\");\n"
+"(%i6) infix (\\"##\\");\n"
 "(%o6)                          ##\n"
 "(%i7) 5 ## 3;\n"
 "(%o7)                          125\n"
-"(%i8) kill (\"##\");\n"
+"(%i8) kill (\\"##\\");\n"
 "(%o8)                         done\n"
 "(%i9) 5 ## 3;\n"
 "Incorrect syntax: # is not a prefix operator\n"
 "5 ##\n"
 "  ^\n"
-"(%i9) \"##\" (5, 3);\n"
+"(%i9) \\"##\\" (5, 3);\n"
 "(%o9)                       ##(5, 3)\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:181
 msgid ""
 "@opencatbox\n"
 "@category{Operators} @category{Syntax}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:186
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Arithmetic operators, Relational operators, Introduction to operators, Operators\n"
@@ -254,7 +254,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:198
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{+}\n"
@@ -269,7 +269,7 @@ msgid ""
 "@fnindex Exponentiation\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:204
 msgid ""
 "@deffn {Operator} +\n"
 "@deffnx {Operator} -\n"
@@ -278,43 +278,43 @@ msgid ""
 "@deffnx {Operator} ^\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:209
 msgid ""
 "The symbols @code{+} @code{*} @code{/} and @code{^} represent addition,\n"
 "multiplication, division, and exponentiation, respectively.  The names of these\n"
-"operators are @code{\"+\"} @code{\"*\"} @code{\"/\"} and @code{\"^\"}, which may appear\n"
+"operators are @code{\\"+\\"} @code{\\"*\\"} @code{\\"/\\"} and @code{\\"^\\"}, which may appear\n"
 "where the name of a function or operator is required.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:213
 msgid ""
 "The symbols @code{+} and @code{-} represent unary addition and negation,\n"
-"respectively, and the names of these operators are @code{\"+\"} and @code{\"-\"},\n"
+"respectively, and the names of these operators are @code{\\"+\\"} and @code{\\"-\\"},\n"
 "respectively.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:218
 msgid ""
 "Subtraction @code{a - b} is represented within Maxima as addition,\n"
 "@code{a + (- b)}.  Expressions such as @code{a + (- b)} are displayed as\n"
-"subtraction.  Maxima recognizes @code{\"-\"} only as the name of the unary\n"
+"subtraction.  Maxima recognizes @code{\\"-\\"} only as the name of the unary\n"
 "negation operator, and not as the name of the binary subtraction operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:222
 msgid ""
 "Division @code{a / b} is represented within Maxima as multiplication,\n"
 "@code{a * b^(- 1)}.  Expressions such as @code{a * b^(- 1)} are displayed as\n"
-"division.  Maxima recognizes @code{\"/\"} as the name of the division operator.\n"
+"division.  Maxima recognizes @code{\\"/\\"} as the name of the division operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:225
 msgid ""
 "Addition and multiplication are n-ary, commutative operators.\n"
 "Division and exponentiation are binary, noncommutative operators.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:231
 msgid ""
 "Maxima sorts the operands of commutative operators to construct a canonical\n"
 "representation.  For internal storage, the ordering is determined by\n"
@@ -323,7 +323,7 @@ msgid ""
 "ordering.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:238
 msgid ""
 "Arithmetic computations are carried out on literal numbers (integers, rationals,\n"
 "ordinary floats, and bigfloats).  Except for exponentiation, all arithmetic\n"
@@ -333,7 +333,7 @@ msgid ""
 "to @mref{sqrt} or another exponentiation or left unchanged.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:243
 msgid ""
 "Floating-point contagion applies to arithmetic computations: if any operand is\n"
 "a bigfloat, the result is a bigfloat; otherwise, if any operand is an ordinary\n"
@@ -341,13 +341,13 @@ msgid ""
 "or integers and the result is a rational or integer.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:246
 msgid ""
 "Arithmetic computations are a simplification, not an evaluation.\n"
 "Thus arithmetic is carried out in quoted (but simplified) expressions.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:252
 msgid ""
 "Arithmetic operations are applied element-by-element to lists when the global\n"
 "flag @mref{listarith} is @code{true}, and always applied element-by-element to\n"
@@ -356,27 +356,27 @@ msgid ""
 "list or matrix.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:254
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:258
 msgid ""
 "Addition and multiplication are n-ary, commutative operators.\n"
 "Maxima sorts the operands to construct a canonical representation.\n"
-"The names of these operators are @code{\"+\"} and @code{\"*\"}.\n"
+"The names of these operators are @code{\\"+\\"} and @code{\\"*\\"}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:282
 msgid ""
 "@c ===beg===\n"
 "@c c + g + d + a + b + e + f;\n"
 "@c [op (%), args (%)];\n"
 "@c c * g * d * a * b * e * f;\n"
 "@c [op (%), args (%)];\n"
-"@c apply (\"+\", [a, 8, x, 2, 9, x, x, a]);\n"
-"@c apply (\"*\", [a, 8, x, 2, 9, x, x, a]);\n"
+"@c apply (\\"+\\", [a, 8, x, 2, 9, x, x, a]);\n"
+"@c apply (\\"*\\", [a, 8, x, 2, 9, x, x, a]);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) c + g + d + a + b + e + f;\n"
@@ -387,26 +387,26 @@ msgid ""
 "(%o3)                     a b c d e f g\n"
 "(%i4) [op (%), args (%)];\n"
 "(%o4)              [*, [a, b, c, d, e, f, g]]\n"
-"(%i5) apply (\"+\", [a, 8, x, 2, 9, x, x, a]);\n"
+"(%i5) apply (\\"+\\", [a, 8, x, 2, 9, x, x, a]);\n"
 "(%o5)                    3 x + 2 a + 19\n"
-"(%i6) apply (\"*\", [a, 8, x, 2, 9, x, x, a]);\n"
+"(%i6) apply (\\"*\\", [a, 8, x, 2, 9, x, x, a]);\n"
 "                                 2  3\n"
 "(%o6)                       144 a  x\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:285
 msgid ""
 "Division and exponentiation are binary, noncommutative operators.\n"
-"The names of these operators are @code{\"/\"} and @code{\"^\"}.\n"
+"The names of these operators are @code{\\"/\\"} and @code{\\"^\\"}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:303
 msgid ""
 "@c ===beg===\n"
 "@c [a / b, a ^ b];\n"
 "@c [map (op, %), map (args, %)];\n"
-"@c [apply (\"/\", [a, b]), apply (\"^\", [a, b])];\n"
+"@c [apply (\\"/\\", [a, b]), apply (\\"^\\", [a, b])];\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) [a / b, a ^ b];\n"
@@ -415,20 +415,20 @@ msgid ""
 "                              b\n"
 "(%i2) [map (op, %), map (args, %)];\n"
 "(%o2)              [[/, ^], [[a, b], [a, b]]]\n"
-"(%i3) [apply (\"/\", [a, b]), apply (\"^\", [a, b])];\n"
+"(%i3) [apply (\\"/\\", [a, b]), apply (\\"^\\", [a, b])];\n"
 "                              a   b\n"
 "(%o3)                        [-, a ]\n"
 "                              b\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:306
 msgid ""
 "Subtraction and division are represented internally\n"
 "in terms of addition and multiplication, respectively.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:319
 msgid ""
 "@c ===beg===\n"
 "@c [inpart (a - b, 0), inpart (a - b, 1), inpart (a - b, 2)];\n"
@@ -444,13 +444,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:322
 msgid ""
 "Computations are carried out on literal numbers.\n"
 "Floating-point contagion applies.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:335
 msgid ""
 "@c ===beg===\n"
 "@c 17 + b - (1/2)*29 + 11^(2/4);\n"
@@ -466,12 +466,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:337
 msgid ""
 "Arithmetic computations are a simplification, not an evaluation.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:358
 msgid ""
 "@c ===beg===\n"
 "@c simp : false;\n"
@@ -495,13 +495,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:361
 msgid ""
 "Arithmetic is carried out element-by-element for lists (depending on\n"
 "@code{listarith}) and matrices.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:402
 msgid ""
 "@c ===beg===\n"
 "@c matrix ([a, x], [h, u]) - matrix ([1, 2], [3, 4]);\n"
@@ -545,7 +545,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:407
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -553,14 +553,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:411
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{**}\n"
 "@deffn {Operator} **\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:416
 msgid ""
 "Exponentiation operator.\n"
 "Maxima recognizes @code{**} as the same operator as @mref{^} in input,\n"
@@ -568,18 +568,18 @@ msgid ""
 "or by placing the exponent as a superscript in 2-dimensional output.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:419
 msgid ""
 "The @mref{fortran} function displays the exponentiation operator as @code{**},\n"
 "whether it was input as @code{**} or @code{^}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:421
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:440
 msgid ""
 "@c ===beg===\n"
 "@c is (a**b = a^b);\n"
@@ -601,7 +601,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:445
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -609,7 +609,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:452
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{^^}\n"
@@ -619,7 +619,7 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:457
 msgid ""
 "Noncommutative exponentiation operator.\n"
 "@code{^^} is the exponentiation operator corresponding to noncommutative\n"
@@ -627,19 +627,19 @@ msgid ""
 "corresponds to commutative multiplication @code{*}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:461
 msgid ""
 "Noncommutative exponentiation is displayed by @code{^^} in 1-dimensional output,\n"
 "and by placing the exponent as a superscript within angle brackets @code{< >}\n"
 "in 2-dimensional output.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:463
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:475
 msgid ""
 "@c ===beg===\n"
 "@c a . a . b . b . b + a * a * a * b * b;\n"
@@ -654,7 +654,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:480
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -662,7 +662,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:487
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{.}\n"
@@ -672,15 +672,15 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:492
 msgid ""
 "The dot operator, for matrix (non-commutative) multiplication.\n"
-"When @code{\".\"} is used in this way, spaces should be left on both sides of\n"
+"When @code{\\".\\"} is used in this way, spaces should be left on both sides of\n"
 "it, e.g.  @code{A . B}  This distinguishes it plainly from a decimal point in\n"
 "a floating point number.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:505
 msgid ""
 "See also\n"
 "@mrefcomma{Dot}\n"
@@ -696,7 +696,7 @@ msgid ""
 "@mrefdot{dotscrules}\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:510
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -704,7 +704,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:515
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Relational operators, Logical operators, Arithmetic operators, Operators\n"
@@ -712,7 +712,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:525
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{<}\n"
@@ -725,7 +725,7 @@ msgid ""
 "@fnindex Greater than\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:530
 msgid ""
 "@deffn {Operator} <\n"
 "@deffnx {Operator} <=\n"
@@ -733,21 +733,21 @@ msgid ""
 "@deffnx {Operator} >\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:535
 msgid ""
 "The symbols @code{<} @code{<=} @code{>=} and @code{>} represent less than, less\n"
 "than or equal, greater than or equal, and greater than, respectively.  The names\n"
-"of these operators are @code{\"<\"} @code{\"<=\"} @code{\">=\"} and @code{\">\"}, which\n"
+"of these operators are @code{\\"<\\"} @code{\\"<=\\"} @code{\\">=\\"} and @code{\\">\\"}, which\n"
 "may appear where the name of a function or operator is required.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:538
 msgid ""
 "These relational operators are all binary operators; constructs such as\n"
 "@code{a < b < c} are not recognized by Maxima.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:545
 msgid ""
 "Relational expressions are evaluated to Boolean values by the functions\n"
 "@mref{is} and @mrefcomma{maybe} and the programming constructs\n"
@@ -757,7 +757,7 @@ msgid ""
 "otherwise prevented by quotation).\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:552
 msgid ""
 "When a relational expression cannot be evaluated to @code{true} or @code{false},\n"
 "the behavior of @code{is} and @code{if} are governed by the global flag\n"
@@ -767,35 +767,35 @@ msgid ""
 "expression.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:556
 msgid ""
 "@code{maybe} always behaves as if @code{prederror} were @code{false}, and\n"
 "@code{while} and @code{unless} always behave as if @code{prederror} were\n"
 "@code{true}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:558
 msgid ""
 "Relational operators do not distribute over lists or other aggregates.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:560
 msgid ""
 "See also @mrefcomma{=} @mrefcomma{#} @mrefcomma{equal} and @mrefdot{notequal}\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:562
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:565
 msgid ""
 "Relational expressions are evaluated to Boolean values by some functions and\n"
 "programming constructs.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:587
 msgid ""
 "@c ===beg===\n"
 "@c [x, y, z] : [123, 456, 789];\n"
@@ -820,13 +820,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:590
 msgid ""
 "Relational expressions are not otherwise evaluated or simplified to Boolean\n"
 "values, although the arguments of relational expressions are evaluated.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:603
 msgid ""
 "@c ===beg===\n"
 "@c [x, y, z] : [123, 456, 789];\n"
@@ -842,7 +842,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:608
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -850,7 +850,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:613
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Logical operators, Operators for Equations, Relational operators, Operators\n"
@@ -858,12 +858,12 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:615
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:622
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{and}\n"
@@ -873,19 +873,19 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:625
 msgid ""
 "The logical conjunction operator.  @code{and} is an n-ary infix operator;\n"
 "its operands are Boolean expressions, and its result is a Boolean value.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:628
 msgid ""
 "@code{and} forces evaluation (like @mref{is}) of one or more operands,\n"
 "and may force evaluation of all operands.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:633
 msgid ""
 "Operands are evaluated in the order in which they appear.  @code{and} evaluates\n"
 "only as many of its operands as necessary to determine the result.  If any\n"
@@ -893,7 +893,7 @@ msgid ""
 "evaluated.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:639
 msgid ""
 "The global flag @mref{prederror} governs the behavior of @code{and} when an\n"
 "evaluated operand cannot be determined to be @code{true} or @code{false}.\n"
@@ -902,13 +902,13 @@ msgid ""
 "accepted, and the result is a Boolean expression.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:642
 msgid ""
 "@code{and} is not commutative: @code{a and b} might not be equal to\n"
 "@code{b and a} due to the treatment of indeterminate operands.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:647
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -916,12 +916,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:649
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:656
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{not}\n"
@@ -931,18 +931,18 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:659
 msgid ""
 "The logical negation operator.  @code{not} is a prefix operator;\n"
 "its operand is a Boolean expression, and its result is a Boolean value.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:661
 msgid ""
 "@code{not} forces evaluation (like @code{is}) of its operand.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:667
 msgid ""
 "The global flag @mref{prederror} governs the behavior of @code{not} when its\n"
 "operand cannot be determined to be @code{true} or @code{false}.  @code{not}\n"
@@ -951,7 +951,7 @@ msgid ""
 "and the result is a Boolean expression.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:672
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -959,12 +959,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:674
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:681
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{or}\n"
@@ -974,19 +974,19 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:684
 msgid ""
 "The logical disjunction operator.  @code{or} is an n-ary infix operator;\n"
 "its operands are Boolean expressions, and its result is a Boolean value.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:687
 msgid ""
 "@code{or} forces evaluation (like @mref{is}) of one or more operands,\n"
 "and may force evaluation of all operands.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:692
 msgid ""
 "Operands are evaluated in the order in which they appear.  @code{or} evaluates\n"
 "only as many of its operands as necessary to determine the result.  If any\n"
@@ -994,7 +994,7 @@ msgid ""
 "evaluated.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:698
 msgid ""
 "The global flag @mref{prederror} governs the behavior of @code{or} when an\n"
 "evaluated operand cannot be determined to be @code{true} or @code{false}.\n"
@@ -1003,13 +1003,13 @@ msgid ""
 "accepted, and the result is a Boolean expression.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:701
 msgid ""
 "@code{or} is not commutative: @code{a or b} might not be equal to @code{b or a}\n"
 "due to the treatment of indeterminate operands.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:706
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -1017,7 +1017,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:711
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Operators for Equations, Assignment operators, Logical operators, Operators\n"
@@ -1025,7 +1025,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:718
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{#}\n"
@@ -1035,12 +1035,12 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:720
 msgid ""
 "Represents the negation of syntactic equality @mrefdot{=}\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:725
 msgid ""
 "Note that because of the rules for evaluation of predicate expressions\n"
 "(in particular because @code{not @var{expr}} causes evaluation of @var{expr}),\n"
@@ -1048,12 +1048,12 @@ msgid ""
 "instead of @code{@var{a} # @var{b}}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:727
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:750
 msgid ""
 "@c ===beg===\n"
 "@c a = b;\n"
@@ -1079,7 +1079,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:755
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -1087,7 +1087,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:763
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{=}\n"
@@ -1098,19 +1098,19 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:765
 msgid ""
 "The equation operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:769
 msgid ""
 "An expression @code{@var{a} = @var{b}}, by itself, represents an unevaluated\n"
 "equation, which might or might not hold.  Unevaluated equations may appear as\n"
 "arguments to @mref{solve} and @mref{algsys} or some other functions.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:780
 msgid ""
 "The function @mref{is} evaluates @code{=} to a Boolean value.\n"
 "@code{is(@var{a} = @var{b})} evaluates @code{@var{a} = @var{b}} to @code{true}\n"
@@ -1124,7 +1124,7 @@ msgid ""
 "equivalent and not syntactically equal.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:785
 msgid ""
 "The negation of @code{=} is represented by @mrefdot{#}\n"
 "As with @code{=}, an expression @code{@var{a} # @var{b}}, by itself, is not\n"
@@ -1132,14 +1132,14 @@ msgid ""
 "@code{true} or @code{false}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:789
 msgid ""
 "In addition to @code{is}, some other operators evaluate @code{=} and @code{#}\n"
 "to @code{true} or @code{false}, namely @mrefcomma{if} @mrefcomma{and}@w{}\n"
 "@mrefcomma{or} and @mrefdot{not}\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:794
 msgid ""
 "Note that because of the rules for evaluation of predicate expressions\n"
 "(in particular because @code{not @var{expr}} causes evaluation of @var{expr}),\n"
@@ -1147,29 +1147,29 @@ msgid ""
 "instead of @code{@var{a} # @var{b}}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:797
 msgid ""
 "@mref{rhs} and @mref{lhs} return the right-hand and left-hand sides,\n"
 "respectively, of an equation or inequation.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:799
 msgid ""
 "See also @mref{equal} and @mrefdot{notequal}\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:801
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:804
 msgid ""
 "An expression @code{@var{a} = @var{b}}, by itself, represents\n"
 "an unevaluated equation, which might or might not hold.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:833
 msgid ""
 "@c ===beg===\n"
 "@c eq_1 : a * x - 5 * y = 17;\n"
@@ -1201,14 +1201,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:837
 msgid ""
 "@code{is(@var{a} = @var{b})} evaluates @code{@var{a} = @var{b}} to @code{true}\n"
 "when @var{a} and @var{b} are syntactically equal (that is, identical).\n"
 "Expressions can be equivalent and not syntactically equal.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:855
 msgid ""
 "@c ===beg===\n"
 "@c a : (x + 1) * (x - 1);\n"
@@ -1229,12 +1229,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:857
 msgid ""
 "Some operators evaluate @code{=} and @code{#} to @code{true} or @code{false}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:877
 msgid ""
 "@c ===beg===\n"
 "@c if expand ((x + y)^2) = x^2 + 2 * x * y + y^2 then FOO else \n"
@@ -1257,13 +1257,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:880
 msgid ""
 "Because @code{not @var{expr}} causes evaluation of @var{expr},\n"
 "@code{not @var{a} = @var{b}} is equivalent to @code{is(@var{a} # @var{b})}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:891
 msgid ""
 "@c ===beg===\n"
 "@c [2 * x # 3 * x, not (2 * x = 3 * x)];\n"
@@ -1277,7 +1277,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:896
 msgid ""
 "@opencatbox\n"
 "@category{Operators}\n"
@@ -1285,7 +1285,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:901
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Assignment operators, User defined operators, Operators for Equations, Operators\n"
@@ -1293,7 +1293,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:908
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{:}\n"
@@ -1303,18 +1303,18 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:910
 msgid ""
 "Assignment operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:913
 msgid ""
 "When the left-hand side is a simple variable (not subscripted), @code{:}\n"
 "evaluates its right-hand side and associates that value with the left-hand side.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:918
 msgid ""
 "When the left-hand side is a subscripted element of a list, matrix, declared\n"
 "Maxima array, or Lisp array, the right-hand side is assigned to that element.\n"
@@ -1322,37 +1322,37 @@ msgid ""
 "naming nonexistent elements.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:922
 msgid ""
 "When the left-hand side is a subscripted element of an undeclared Maxima array,\n"
 "the right-hand side is assigned to that element, if it already exists,\n"
 "or a new element is allocated, if it does not already exist.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:926
 msgid ""
 "When the left-hand side is a list of simple and/or subscripted variables, the\n"
 "right-hand side must evaluate to a list, and the elements of the right-hand\n"
 "side are assigned to the elements of the left-hand side, in parallel.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:929
 msgid ""
 "See also @mref{kill} and @mrefcomma{remvalue} which undo the association between\n"
 "the left-hand side and its value.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:931
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:933
 msgid ""
 "Assignment to a simple variable.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:947
 msgid ""
 "@c ===beg===\n"
 "@c a;\n"
@@ -1369,12 +1369,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:949
 msgid ""
 "Assignment to an element of a list.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:963
 msgid ""
 "@c ===beg===\n"
 "@c b : [1, 2, 3];\n"
@@ -1391,12 +1391,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:965
 msgid ""
 "Assignment creates an undeclared array.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:985
 msgid ""
 "@c ===beg===\n"
 "@c c[99] : 789;\n"
@@ -1419,12 +1419,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:987
 msgid ""
 "Multiple assignment.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1004
 msgid ""
 "@c ===beg===\n"
 "@c [a, b, c] : [45, 67, 89];\n"
@@ -1444,13 +1444,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1007
 msgid ""
 "Multiple assignment is carried out in parallel.\n"
 "The values of @code{a} and @code{b} are exchanged in this example.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1024
 msgid ""
 "@c ===beg===\n"
 "@c [a, b] : [33, 55];\n"
@@ -1470,7 +1470,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1029
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation} @category{Operators}\n"
@@ -1478,7 +1478,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1037
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@need 900\n"
@@ -1489,23 +1489,23 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1039
 msgid ""
 "Assignment operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1042
 msgid ""
 "@code{::} is the same as @mref{:} (which see) except that @code{::} evaluates\n"
 "its left-hand side as well as its right-hand side.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1044
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1073
 msgid ""
 "@c ===beg===\n"
 "@c x : 'foo;\n"
@@ -1537,7 +1537,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1078
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation} @category{Operators}\n"
@@ -1545,7 +1545,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1085
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{::=}\n"
@@ -1555,70 +1555,70 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1091
 msgid ""
 "Macro function definition operator.\n"
-"@code{::=} defines a function (called a \"macro\" for historical reasons) which\n"
-"quotes its arguments, and the expression which it returns (called the \"macro\n"
-"expansion\") is evaluated in the context from which the macro was called.\n"
+"@code{::=} defines a function (called a \\"macro\\" for historical reasons) which\n"
+"quotes its arguments, and the expression which it returns (called the \\"macro\n"
+"expansion\\") is evaluated in the context from which the macro was called.\n"
 "A macro function is otherwise the same as an ordinary function.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1095
 msgid ""
 "@mref{macroexpand} returns a macro expansion (without evaluating it).\n"
 "@code{macroexpand (foo (x))} followed by @code{''%} is equivalent to\n"
 "@code{foo (x)} when @code{foo} is a macro function.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1099
 msgid ""
 "@code{::=} puts the name of the new macro function onto the global list\n"
 "@mrefdot{macros}  @mrefcomma{kill} @mrefcomma{remove} and @mref{remfunction}@w{}\n"
 "unbind macro function definitions and remove names from @code{macros}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1102
 msgid ""
 "@mref{fundef} or @mref{dispfun} return a macro function definition or assign it\n"
 "to a label, respectively.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1105
 msgid ""
 "Macro functions commonly contain @mref{buildq} and @mref{splice} expressions to\n"
 "construct an expression, which is then evaluated.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1107
 msgid ""
 "Examples\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1112
 msgid ""
 "A macro function quotes its arguments, so message (1) shows @code{y - z}, not\n"
 "the value of @code{y - z}.  The macro expansion (the quoted expression\n"
-"@code{'(print (\"(2) x is equal to\", x))}) is evaluated in the context from which\n"
+"@code{'(print (\\"(2) x is equal to\\", x))}) is evaluated in the context from which\n"
 "the macro was called, printing message (2).\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1132
 msgid ""
 "@c ===beg===\n"
 "@c x: %pi$\n"
 "@c y: 1234$\n"
 "@c z: 1729 * w$\n"
-"@c printq1 (x) ::= block (print (\"(1) x is equal to\", x), \n"
-"@c                                 '(print (\"(2) x is equal to\", x)))$\n"
+"@c printq1 (x) ::= block (print (\\"(1) x is equal to\\", x), \n"
+"@c                                 '(print (\\"(2) x is equal to\\", x)))$\n"
 "@c printq1 (y - z);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) x: %pi$\n"
 "(%i2) y: 1234$\n"
 "(%i3) z: 1729 * w$\n"
-"(%i4) printq1 (x) ::= block (print (\"(1) x is equal to\", x),\n"
-"      '(print (\"(2) x is equal to\", x)))$\n"
+"(%i4) printq1 (x) ::= block (print (\\"(1) x is equal to\\", x),\n"
+"      '(print (\\"(2) x is equal to\\", x)))$\n"
 "(%i5) printq1 (y - z);\n"
 "(1) x is equal to y - z\n"
 "(2) x is equal to %pi\n"
@@ -1626,21 +1626,21 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1136
 msgid ""
 "An ordinary function evaluates its arguments, so message (1) shows the value of\n"
 "@code{y - z}.  The return value is not evaluated, so message (2) is not printed\n"
 "until the explicit evaluation @code{''%}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1159
 msgid ""
 "@c ===beg===\n"
 "@c x: %pi$\n"
 "@c y: 1234$\n"
 "@c z: 1729 * w$\n"
-"@c printe1 (x) := block (print (\"(1) x is equal to\", x), \n"
-"@c       '(print (\"(2) x is equal to\", x)))$\n"
+"@c printe1 (x) := block (print (\\"(1) x is equal to\\", x), \n"
+"@c       '(print (\\"(2) x is equal to\\", x)))$\n"
 "@c printe1 (y - z);\n"
 "@c ''%;\n"
 "@c ===end===\n"
@@ -1648,8 +1648,8 @@ msgid ""
 "(%i1) x: %pi$\n"
 "(%i2) y: 1234$\n"
 "(%i3) z: 1729 * w$\n"
-"(%i4) printe1 (x) := block (print (\"(1) x is equal to\", x),\n"
-"      '(print (\"(2) x is equal to\", x)))$\n"
+"(%i4) printe1 (x) := block (print (\\"(1) x is equal to\\", x),\n"
+"      '(print (\\"(2) x is equal to\\", x)))$\n"
 "(%i5) printe1 (y - z);\n"
 "(1) x is equal to 1234 - 1729 w\n"
 "(%o5)                     print((2) x is equal to, x)\n"
@@ -1659,20 +1659,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1163
 msgid ""
 "@code{macroexpand} returns a macro expansion.\n"
 "@code{macroexpand (foo (x))} followed by @code{''%} is equivalent to\n"
 "@code{foo (x)} when @code{foo} is a macro function.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1187
 msgid ""
 "@c ===beg===\n"
 "@c x: %pi$\n"
 "@c y: 1234$\n"
 "@c z: 1729 * w$\n"
-"@c g (x) ::= buildq ([x], print (\"x is equal to\", x))$\n"
+"@c g (x) ::= buildq ([x], print (\\"x is equal to\\", x))$\n"
 "@c macroexpand (g (y - z));\n"
 "@c ''%;\n"
 "@c g (y - z);\n"
@@ -1681,7 +1681,7 @@ msgid ""
 "(%i1) x: %pi$\n"
 "(%i2) y: 1234$\n"
 "(%i3) z: 1729 * w$\n"
-"(%i4) g (x) ::= buildq ([x], print (\"x is equal to\", x))$\n"
+"(%i4) g (x) ::= buildq ([x], print (\\"x is equal to\\", x))$\n"
 "(%i5) macroexpand (g (y - z));\n"
 "(%o5)                     print(x is equal to, y - z)\n"
 "(%i6) ''%;\n"
@@ -1693,7 +1693,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1192
 msgid ""
 "@opencatbox\n"
 "@category{Function definition} @category{Operators}\n"
@@ -1701,7 +1701,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1199
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{:=}\n"
@@ -1711,12 +1711,12 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1201
 msgid ""
 "The function definition operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1207
 msgid ""
 "@code{@var{f}(@var{x_1}, ..., @var{x_n}) := @var{expr}} defines a function named\n"
 "@var{f} with arguments @var{x_1}, @dots{}, @var{x_n} and function body\n"
@@ -1725,7 +1725,7 @@ msgid ""
 "The function body is evaluated every time the function is called.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1213
 msgid ""
 "@code{@var{f}[@var{x_1}, ..., @var{x_n}] := @var{expr}} defines a so-called array function.\n"
 "Its function body is evaluated just once for each distinct value of its arguments,\n"
@@ -1734,7 +1734,7 @@ msgid ""
 "(A function of this kind is commonly known as a ``memoizing function''.)\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1220
 msgid ""
 "@code{@var{f}[@var{x_1}, ..., @var{x_n}](@var{y_1}, ..., @var{y_m}) := @var{expr}}\n"
 "is a special case of an array function.\n"
@@ -1744,7 +1744,7 @@ msgid ""
 "and the body of the lambda expression is that value.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1226
 msgid ""
 "When the last or only function argument @var{x_n} is a list of one element, the\n"
 "function defined by @code{:=} accepts a variable number of arguments.  Actual\n"
@@ -1753,7 +1753,7 @@ msgid ""
 "@var{x_n} as a list.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1232
 msgid ""
 "All function definitions appear in the same namespace; defining a function\n"
 "@code{f} within another function @code{g} does not automatically limit the scope\n"
@@ -1762,30 +1762,30 @@ msgid ""
 "in which @mref{local} appears.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1236
 msgid ""
 "If some formal argument @var{x_k} is a quoted symbol, the function defined by\n"
 "@code{:=} does not evaluate the corresponding actual argument.  Otherwise all\n"
 "actual arguments are evaluated.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1238
 msgid ""
 "See also @mref{define} and @mrefdot{::=}\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1240
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1243
 msgid ""
 "@code{:=} never evaluates the function body (unless explicitly evaluated by\n"
 "quote-quote).\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1263
 msgid ""
 "@c ===beg===\n"
 "@c expr : cos(y) - sin(x);\n"
@@ -1808,21 +1808,21 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1265
 msgid ""
 "@code{f(@var{x_1}, ..., @var{x_n}) := ...} defines an ordinary function.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1282
 msgid ""
 "@c ===beg===\n"
-"@c G1(x, y) := (print (\"Evaluating G1 for x=\", x, \"and y=\", y), x.y - y.x);\n"
+"@c G1(x, y) := (print (\\"Evaluating G1 for x=\\", x, \\"and y=\\", y), x.y - y.x);\n"
 "@c G1([1, a], [2, b]);\n"
 "@c G1([1, a], [2, b]);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) G1(x, y) := (print (\"Evaluating G1 for x=\", x, \"and y=\", y), x.y - y.x);\n"
-"(%o1) G1(x, y) := (print(\"Evaluating G1 for x=\", x, \"and y=\", \n"
+"(%i1) G1(x, y) := (print (\\"Evaluating G1 for x=\\", x, \\"and y=\\", y), x.y - y.x);\n"
+"(%o1) G1(x, y) := (print(\\"Evaluating G1 for x=\\", x, \\"and y=\\", \n"
 "                                               y), x . y - y . x)\n"
 "(%i2) G1([1, a], [2, b]);\n"
 "Evaluating G1 for x= [1, a] and y= [2, b] \n"
@@ -1833,15 +1833,15 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1284
 msgid ""
 "@code{f[@var{x_1}, ..., @var{x_n}] := ...} defines an array function.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1311
 msgid ""
 "@c ===beg===\n"
-"@c G2[a] := (print (\"Evaluating G2 for a=\", a), a^2);\n"
+"@c G2[a] := (print (\\"Evaluating G2 for a=\\", a), a^2);\n"
 "@c G2[1234];\n"
 "@c G2[1234];\n"
 "@c G2[2345];\n"
@@ -1849,9 +1849,9 @@ msgid ""
 "@c listarray (G2);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) G2[a] := (print (\"Evaluating G2 for a=\", a), a^2);\n"
+"(%i1) G2[a] := (print (\\"Evaluating G2 for a=\\", a), a^2);\n"
 "                                                     2\n"
-"(%o1)     G2  := (print(\"Evaluating G2 for a=\", a), a )\n"
+"(%o1)     G2  := (print(\\"Evaluating G2 for a=\\", a), a )\n"
 "            a\n"
 "(%i2) G2[1234];\n"
 "Evaluating G2 for a= 1234 \n"
@@ -1868,16 +1868,16 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1314
 msgid ""
 "@code{@var{f}[@var{x_1}, ..., @var{x_n}](@var{y_1}, ..., @var{y_m}) := @var{expr}}\n"
 "is a special case of an array function.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1345
 msgid ""
 "@c ===beg===\n"
-"@c G3[n](x) := (print (\"Evaluating G3 for n=\", n), diff (sin(x)^2, x, n));\n"
+"@c G3[n](x) := (print (\\"Evaluating G3 for n=\\", n), diff (sin(x)^2, x, n));\n"
 "@c G3[2];\n"
 "@c G3[2];\n"
 "@c G3[2](1);\n"
@@ -1885,8 +1885,8 @@ msgid ""
 "@c listarray (G3);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) G3[n](x) := (print (\"Evaluating G3 for n=\", n), diff (sin(x)^2, x, n));\n"
-"(%o1) G3 (x) := (print(\"Evaluating G3 for n=\", n), \n"
+"(%i1) G3[n](x) := (print (\\"Evaluating G3 for n=\\", n), diff (sin(x)^2, x, n));\n"
+"(%o1) G3 (x) := (print(\\"Evaluating G3 for n=\\", n), \n"
 "        n\n"
 "                                                     2\n"
 "                                             diff(sin (x), x, n))\n"
@@ -1908,32 +1908,32 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1348
 msgid ""
 "When the last or only function argument @var{x_n} is a list of one element,\n"
 "the function defined by @code{:=} accepts a variable number of arguments.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1359
 msgid ""
 "@c ===beg===\n"
-"@c H ([L]) := apply (\"+\", L);\n"
+"@c H ([L]) := apply (\\"+\\", L);\n"
 "@c H (a, b, c);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) H ([L]) := apply (\"+\", L);\n"
-"(%o1)                H([L]) := apply(\"+\", L)\n"
+"(%i1) H ([L]) := apply (\\"+\\", L);\n"
+"(%o1)                H([L]) := apply(\\"+\\", L)\n"
 "(%i2) H (a, b, c);\n"
 "(%o2)                       c + b + a\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1361
 msgid ""
 "@code{local} makes a local function definition.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1378
 msgid ""
 "@c ===beg===\n"
 "@c foo (x) := 1 - x;\n"
@@ -1953,7 +1953,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1383
 msgid ""
 "@opencatbox\n"
 "@category{Function definition} @category{Operators}\n"
@@ -1961,7 +1961,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1388
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node User defined operators, , Assignment operators, Operators\n"
@@ -1969,7 +1969,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1395
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{infix}\n"
@@ -1979,14 +1979,14 @@ msgid ""
 "@fname{infix} (@var{op}, @var{lbp}, @var{rbp}, @var{lpos}, @var{rpos}, @var{pos})\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1399
 msgid ""
 "Declares @var{op} to be an infix operator.  An infix operator is a function of\n"
 "two arguments, with the name of the function written between the arguments.\n"
 "For example, the subtraction operator @code{-} is an infix operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1404
 msgid ""
 "@code{infix (@var{op})} declares @var{op} to be an infix operator with default\n"
 "binding powers (left and right both equal to 180) and parts of speech (left and\n"
@@ -1994,14 +1994,14 @@ msgid ""
 "@c HOW IS pos DIFFERENT FROM lpos AND rpos ??\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1408
 msgid ""
 "@code{infix (@var{op}, @var{lbp}, @var{rbp})} declares @var{op} to be an infix\n"
 "operator with stated left and right binding powers and default parts of speech\n"
 "(left and right both equal to @code{any}).\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1413
 msgid ""
 "@code{infix (@var{op}, @var{lbp}, @var{rbp}, @var{lpos}, @var{rpos}, @var{pos})}\n"
 "declares @var{op} to be an infix operator with stated left and right binding\n"
@@ -2009,16 +2009,16 @@ msgid ""
 "operand, the right operand, and the operator result, respectively.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1419
 msgid ""
-"\"Part of speech\", in reference to operator declarations, means expression type.\n"
+"\\"Part of speech\\", in reference to operator declarations, means expression type.\n"
 "Three types are recognized: @code{expr}, @code{clause}, and @code{any},\n"
 "indicating an algebraic expression, a Boolean expression, or any kind of\n"
 "expression, respectively.  Maxima can detect some syntax errors by comparing the\n"
 "declared part of speech to an actual expression.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1426
 msgid ""
 "The precedence of @var{op} with respect to other operators derives from the left\n"
 "and right binding powers of the operators in question.  If the left and right\n"
@@ -2028,7 +2028,7 @@ msgid ""
 "relation holds.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1434
 msgid ""
 "The associativity of @var{op} depends on its binding powers.  Greater left\n"
 "binding power (@var{lbp}) implies an instance of @var{op} is evaluated before\n"
@@ -2039,32 +2039,32 @@ msgid ""
 "If @var{lbp} is equal to @var{rbp}, @var{op} is left-associative.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1436
 msgid ""
 "See also @ref{Introduction to operators}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1438
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1442
 msgid ""
 "If the left and right binding powers of @var{op} are both greater\n"
 "the left and right binding powers of some other operator,\n"
 "then @var{op} takes precedence over the other operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1468
 msgid ""
 "@c ===beg===\n"
 "@c :lisp (get '$+ 'lbp)\n"
 "@c :lisp (get '$+ 'rbp)\n"
-"@c infix (\"##\", 101, 101);\n"
-"@c \"##\"(a, b) := sconcat(\"(\", a, \",\", b, \")\");\n"
+"@c infix (\\"##\\", 101, 101);\n"
+"@c \\"##\\"(a, b) := sconcat(\\"(\\", a, \\",\\", b, \\")\\");\n"
 "@c 1 + a ## b + 2;\n"
-"@c infix (\"##\", 99, 99);\n"
+"@c infix (\\"##\\", 99, 99);\n"
 "@c 1 + a ## b + 2;\n"
 "@c ===end===\n"
 "@example\n"
@@ -2072,77 +2072,77 @@ msgid ""
 "100\n"
 "(%i1) :lisp (get '$+ 'rbp)\n"
 "100\n"
-"(%i1) infix (\"##\", 101, 101);\n"
+"(%i1) infix (\\"##\\", 101, 101);\n"
 "(%o1)                          ##\n"
-"(%i2) \"##\"(a, b) := sconcat(\"(\", a, \",\", b, \")\");\n"
-"(%o2)       (a ## b) := sconcat(\"(\", a, \",\", b, \")\")\n"
+"(%i2) \\"##\\"(a, b) := sconcat(\\"(\\", a, \\",\\", b, \\")\\");\n"
+"(%o2)       (a ## b) := sconcat(\\"(\\", a, \\",\\", b, \\")\\")\n"
 "(%i3) 1 + a ## b + 2;\n"
 "(%o3)                       (a,b) + 3\n"
-"(%i4) infix (\"##\", 99, 99);\n"
+"(%i4) infix (\\"##\\", 99, 99);\n"
 "(%o4)                          ##\n"
 "(%i5) 1 + a ## b + 2;\n"
 "(%o5)                       (a+1,b+2)\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1471
 msgid ""
 "Greater @var{lbp} makes @var{op} right-associative,\n"
 "while greater @var{rbp} makes @var{op} left-associative.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1490
 msgid ""
 "@c ===beg===\n"
-"@c infix (\"##\", 100, 99);\n"
-"@c \"##\"(a, b) := sconcat(\"(\", a, \",\", b, \")\")$\n"
+"@c infix (\\"##\\", 100, 99);\n"
+"@c \\"##\\"(a, b) := sconcat(\\"(\\", a, \\",\\", b, \\")\\")$\n"
 "@c foo ## bar ## baz;\n"
-"@c infix (\"##\", 100, 101);\n"
+"@c infix (\\"##\\", 100, 101);\n"
 "@c foo ## bar ## baz;\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) infix (\"##\", 100, 99);\n"
+"(%i1) infix (\\"##\\", 100, 99);\n"
 "(%o1)                          ##\n"
-"(%i2) \"##\"(a, b) := sconcat(\"(\", a, \",\", b, \")\")$\n"
+"(%i2) \\"##\\"(a, b) := sconcat(\\"(\\", a, \\",\\", b, \\")\\")$\n"
 "(%i3) foo ## bar ## baz;\n"
 "(%o3)                    (foo,(bar,baz))\n"
-"(%i4) infix (\"##\", 100, 101);\n"
+"(%i4) infix (\\"##\\", 100, 101);\n"
 "(%o4)                          ##\n"
 "(%i5) foo ## bar ## baz;\n"
 "(%o5)                    ((foo,bar),baz)\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1493
 msgid ""
 "Maxima can detect some syntax errors by comparing the\n"
 "declared part of speech to an actual expression.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1513
 msgid ""
 "@c ===beg===\n"
-"@c infix (\"##\", 100, 99, expr, expr, expr);\n"
+"@c infix (\\"##\\", 100, 99, expr, expr, expr);\n"
 "@c if x ## y then 1 else 0;\n"
-"@c infix (\"##\", 100, 99, expr, expr, clause);\n"
+"@c infix (\\"##\\", 100, 99, expr, expr, clause);\n"
 "@c if x ## y then 1 else 0;\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) infix (\"##\", 100, 99, expr, expr, expr);\n"
+"(%i1) infix (\\"##\\", 100, 99, expr, expr, expr);\n"
 "(%o1)                          ##\n"
 "(%i2) if x ## y then 1 else 0;\n"
 "Incorrect syntax: Found algebraic expression where logical\n"
 "expression expected\n"
 "if x ## y then \n"
 "             ^\n"
-"(%i2) infix (\"##\", 100, 99, expr, expr, clause);\n"
+"(%i2) infix (\\"##\\", 100, 99, expr, expr, clause);\n"
 "(%o2)                          ##\n"
 "(%i3) if x ## y then 1 else 0;\n"
 "(%o3)                if x ## y then 1 else 0\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1518
 msgid ""
 "@opencatbox\n"
 "@category{Operators} @category{Declarations and inferences} @category{Syntax}\n"
@@ -2150,7 +2150,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1524
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{matchfix}\n"
@@ -2159,15 +2159,15 @@ msgid ""
 "@fname{matchfix} (@var{ldelimiter}, @var{rdelimiter}, @var{arg_pos}, @var{pos})\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1527
 msgid ""
 "Declares a matchfix operator with left and right delimiters @var{ldelimiter}\n"
 "and @var{rdelimiter}.  The delimiters are specified as strings.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1537
 msgid ""
-"A \"matchfix\" operator is a function of any number of arguments,\n"
+"A \\"matchfix\\" operator is a function of any number of arguments,\n"
 "such that the arguments occur between matching left and right delimiters.\n"
 "The delimiters may be any strings, so long as the parser can\n"
 "distinguish the delimiters from the operands \n"
@@ -2178,13 +2178,13 @@ msgid ""
 "The right delimiter can be the same or different from the left delimiter.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1540
 msgid ""
 "A left delimiter can be associated with only one right delimiter;\n"
 "two different matchfix operators cannot have the same left delimiter.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1546
 msgid ""
 "An existing operator may be redeclared as a matchfix operator\n"
 "without changing its other properties.\n"
@@ -2193,7 +2193,7 @@ msgid ""
 "but operator functions cannot be defined for built-in operators.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1551
 msgid ""
 "The command @code{matchfix (@var{ldelimiter}, @var{rdelimiter}, @var{arg_pos},\n"
 "@var{pos})} declares the argument part-of-speech @var{arg_pos} and result\n"
@@ -2201,9 +2201,9 @@ msgid ""
 "@var{rdelimiter}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1558
 msgid ""
-"\"Part of speech\", in reference to operator declarations, means expression type.\n"
+"\\"Part of speech\\", in reference to operator declarations, means expression type.\n"
 "Three types are recognized: @code{expr}, @code{clause}, and @code{any},\n"
 "indicating an algebraic expression, a Boolean expression, or any kind of\n"
 "expression, respectively.\n"
@@ -2211,7 +2211,7 @@ msgid ""
 "declared part of speech to an actual expression.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1565
 msgid ""
 "@c DUNNO IF WE REALLY NEED TO MENTION BINDING POWER HERE -- AS NOTED IT'S IRRELEVANT\n"
 "@c An operator declared by @code{matchfix} is assigned a low binding power.\n"
@@ -2221,7 +2221,7 @@ msgid ""
 "@c to the declaration of a matchfix operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1575
 msgid ""
 "The function to carry out a matchfix operation is an ordinary\n"
 "user-defined function.\n"
@@ -2234,52 +2234,52 @@ msgid ""
 "@code{dispfun (@var{ldelimiter})} displays the function definition.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1580
 msgid ""
 "The only built-in matchfix operator is the list constructor @code{[ ]}.\n"
-"Parentheses @code{( )} and double-quotes @code{\" \"} \n"
+"Parentheses @code{( )} and double-quotes @code{\\" \\"} \n"
 "act like matchfix operators,\n"
 "but are not treated as such by the Maxima parser.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1584
 msgid ""
 "@code{matchfix} evaluates its arguments.\n"
 "@code{matchfix} returns its first argument, @var{ldelimiter}.\n"
 "@c HOW TO TAKE AWAY THE MATCHFIX PROPERTY ??\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1586
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1588
 msgid ""
 "Delimiters may be almost any strings.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1616
 msgid ""
 "@c ===beg===\n"
-"@c matchfix (\"@@\", \"~\");\n"
+"@c matchfix (\\"@@\\", \\"~\\");\n"
 "@c @@ a, b, c ~;\n"
-"@c matchfix (\">>\", \"<<\");\n"
+"@c matchfix (\\">>\\", \\"<<\\");\n"
 "@c >> a, b, c <<;\n"
-"@c matchfix (\"foo\", \"oof\");\n"
+"@c matchfix (\\"foo\\", \\"oof\\");\n"
 "@c foo a, b, c oof;\n"
 "@c >> w + foo x, y oof + z << / @@ p, q ~;\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) matchfix (\"@@@@\", \"~\");\n"
+"(%i1) matchfix (\\"@@@@\\", \\"~\\");\n"
 "(%o1)                          @@@@\n"
 "(%i2) @@@@ a, b, c ~;\n"
 "(%o2)                      @@@@a, b, c~\n"
-"(%i3) matchfix (\">>\", \"<<\");\n"
+"(%i3) matchfix (\\">>\\", \\"<<\\");\n"
 "(%o3)                          >>\n"
 "(%i4) >> a, b, c <<;\n"
 "(%o4)                      >>a, b, c<<\n"
-"(%i5) matchfix (\"foo\", \"oof\");\n"
+"(%i5) matchfix (\\"foo\\", \\"oof\\");\n"
 "(%o5)                          foo\n"
 "(%i6) foo a, b, c oof;\n"
 "(%o6)                     fooa, b, coof\n"
@@ -2290,16 +2290,16 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1618
 msgid ""
 "Matchfix operators are ordinary user-defined functions.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1638
 msgid ""
 "@example\n"
-"(%i1) matchfix (\"!-\", \"-!\");\n"
-"(%o1)                         \"!-\"\n"
+"(%i1) matchfix (\\"!-\\", \\"-!\\");\n"
+"(%o1)                         \\"!-\\"\n"
 "(%i2) !- x, y -! := x/y - y/x;\n"
 "                                    x   y\n"
 "(%o2)                   !-x, y-! := - - -\n"
@@ -2308,31 +2308,31 @@ msgid ""
 "                                    x   y\n"
 "(%o3)                   !-x, y-! := - - -\n"
 "                                    y   x\n"
-"(%i4) define (\"!-\" (x, y), x/y - y/x);\n"
+"(%i4) define (\\"!-\\" (x, y), x/y - y/x);\n"
 "                                    x   y\n"
 "(%o4)                   !-x, y-! := - - -\n"
 "                                    y   x\n"
-"(%i5) dispfun (\"!-\");\n"
+"(%i5) dispfun (\\"!-\\");\n"
 "                                    x   y\n"
 "(%t5)                   !-x, y-! := - - -\n"
 "                                    y   x\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1649
 msgid ""
 "(%o5)                         done\n"
 "(%i6) !-3, 5-!;\n"
 "                                16\n"
 "(%o6)                         - --\n"
 "                                15\n"
-"(%i7) \"!-\" (3, 5);\n"
+"(%i7) \\"!-\\" (3, 5);\n"
 "                                16\n"
 "(%o7)                         - --\n"
 "                                15\n"
 "@end example\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1654
 msgid ""
 "@opencatbox\n"
 "@category{Syntax} @category{Operators}\n"
@@ -2340,7 +2340,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1660
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{function_nary}\n"
@@ -2349,22 +2349,22 @@ msgid ""
 "@fname{nary} (@var{op}, @var{bp}, @var{arg_pos}, @var{pos})\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1667
 msgid ""
 "An @code{nary} operator is used to denote a function of any number of arguments,\n"
 "each of which is separated by an occurrence of the operator, e.g.  A+B or A+B+C.\n"
-"The @code{nary(\"x\")} function is a syntax extension function to declare @code{x}\n"
+"The @code{nary(\\"x\\")} function is a syntax extension function to declare @code{x}\n"
 "to be an @code{nary} operator.  Functions may be declared to be @code{nary}.  If\n"
 "@code{declare(j,nary);} is done, this tells the simplifier to simplify, e.g.\n"
 "@code{j(j(a,b),j(c,d))} to @code{j(a, b, c, d)}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1669
 msgid ""
 "See also @ref{Introduction to operators}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1674
 msgid ""
 "@opencatbox\n"
 "@category{Operators} @category{Syntax}\n"
@@ -2372,7 +2372,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1680
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{nofix}\n"
@@ -2381,22 +2381,22 @@ msgid ""
 "@fname{nofix} (@var{op}, @var{pos})\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1687
 msgid ""
 "@code{nofix} operators are used to denote functions of no arguments.\n"
 "The mere presence of such an operator in a command will cause the\n"
 "corresponding function to be evaluated.  For example, when one types\n"
-"\"exit;\" to exit from a Maxima break, \"exit\" is behaving similar to a\n"
-"@code{nofix} operator.  The function @code{nofix(\"x\")} is a syntax extension\n"
+"\\"exit;\\" to exit from a Maxima break, \\"exit\\" is behaving similar to a\n"
+"@code{nofix} operator.  The function @code{nofix(\\"x\\")} is a syntax extension\n"
 "function which declares @code{x} to be a @code{nofix} operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1689
 msgid ""
 "See also @ref{Introduction to operators}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1694
 msgid ""
 "@opencatbox\n"
 "@category{Operators} @category{Syntax}\n"
@@ -2404,7 +2404,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1700
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{postfix}\n"
@@ -2413,21 +2413,21 @@ msgid ""
 "@fname{postfix} (@var{op}, @var{lbp}, @var{lpos}, @var{pos})\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1706
 msgid ""
 "@code{postfix} operators like the @code{prefix} variety denote functions of a\n"
 "single argument, but in this case the argument immediately precedes an\n"
 "occurrence of the operator in the input string, e.g. 3!.  The\n"
-"@code{postfix(\"x\")} function is a syntax extension function to declare @code{x}\n"
+"@code{postfix(\\"x\\")} function is a syntax extension function to declare @code{x}\n"
 "to be a @code{postfix} operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1708
 msgid ""
 "See also @ref{Introduction to operators}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1713
 msgid ""
 "@opencatbox\n"
 "@category{Operators} @category{Syntax}\n"
@@ -2435,7 +2435,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1719
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{prefix}\n"
@@ -2444,20 +2444,20 @@ msgid ""
 "@fname{prefix} (@var{op}, @var{rbp}, @var{rpos}, @var{pos})\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1724
 msgid ""
 "A @code{prefix} operator is one which signifies a function of one argument,\n"
 "which argument immediately follows an occurrence of the operator.\n"
-"@code{prefix(\"x\")} is a syntax extension function to declare @code{x} to be a\n"
+"@code{prefix(\\"x\\")} is a syntax extension function to declare @code{x} to be a\n"
 "@code{prefix} operator.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1726
 msgid ""
 "See also @ref{Introduction to operators}.\n"
 msgstr ""
 
-# Operators.texi
+#: Operators.texi:1731
 msgid ""
 "@opencatbox\n"
 "@category{Operators} @category{Syntax}\n"
@@ -2465,6 +2465,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Operators.texi
-msgid ""
-msgstr ""

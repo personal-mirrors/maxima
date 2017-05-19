@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Arrays.texi
+msgstr ""
+
+#: Arrays.texi:6
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@page\n"
@@ -26,14 +26,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:10
 msgid ""
 "@menu\n"
 "* Functions and Variables for Arrays::  \n"
 "@end menu\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:15
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Arrays,  , Arrays, Arrays\n"
@@ -41,7 +41,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:22
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{array}\n"
@@ -51,34 +51,34 @@ msgid ""
 "@fname{array} ([@var{name_1}, @dots{}, @var{name_m}], @var{dim_1}, @dots{}, @var{dim_n})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:26
 msgid ""
 "Creates an @math{n}-dimensional array.  @math{n} may be less than or equal to 5.\n"
 "The subscripts for the @math{i}'th dimension are the integers running from 0 to\n"
 "@var{dim_i}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:29
 msgid ""
 "@code{array (@var{name}, @var{dim_1}, ..., @var{dim_n})} creates a general\n"
 "array.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:33
 msgid ""
 "@code{array (@var{name}, @var{type}, @var{dim_1}, ..., @var{dim_n})} creates\n"
 "an array, with elements of a specified type.  @var{type} can be @code{fixnum}\n"
 "for integers of limited size or @code{flonum} for floating-point numbers.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:37
 msgid ""
 "@code{array ([@var{name_1}, ..., @var{name_m}], @var{dim_1}, ..., @var{dim_n})}\n"
 "creates @math{m} arrays, all of the same dimensions.\n"
 "@c SAME TYPE AS WELL ??\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:51
 msgid ""
 "@c THIS DISCUSSION OF UNDECLARED ARRAYS REALLY WANTS TO BE SOMEWHERE ELSE\n"
 "If the user assigns to a subscripted variable before declaring the\n"
@@ -95,7 +95,7 @@ msgid ""
 "@c HOW DOES ONE CHANGE AN UNDECLARED ARRAY INTO A DECLARED ARRAY EXACTLY ??\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:56
 msgid ""
 "@opencatbox\n"
 "@category{Arrays}\n"
@@ -103,26 +103,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:60
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{arrayapply}\n"
 "@deffn {Function} arrayapply (@var{A}, [@var{i_1}, @dots{}, @var{i_n}])\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:63
 msgid ""
 "Evaluates @code{@var{A} [@var{i_1}, ..., @var{i_n}]},\n"
 "where @var{A} is an array and @var{i_1}, @dots{}, @var{i_n} are integers.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:66
 msgid ""
 "This is reminiscent of @mrefcomma{apply} except the first argument is an array\n"
 "instead of a function.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:71
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Arrays}\n"
@@ -130,21 +130,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:75
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{arrayinfo}\n"
 "@deffn {Function} arrayinfo (@var{A})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:79
 msgid ""
 "Returns information about the array @var{A}.\n"
 "The argument @var{A} may be a declared array, an undeclared (hashed) array,\n"
 "an array function, or a subscripted function.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:84
 msgid ""
 "For declared arrays, @code{arrayinfo} returns a list comprising the atom\n"
 "@code{declared}, the number of dimensions, and the size of each dimension.\n"
@@ -152,7 +152,7 @@ msgid ""
 "@code{listarray}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:89
 msgid ""
 "For undeclared arrays (hashed arrays), @code{arrayinfo} returns a list\n"
 "comprising the atom @code{hashed}, the number of subscripts,\n"
@@ -160,7 +160,7 @@ msgid ""
 "The values are returned by @code{listarray}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:94
 msgid ""
 "For array functions, @code{arrayinfo} returns a list comprising the atom\n"
 "@code{hashed}, the number of subscripts,\n"
@@ -168,7 +168,7 @@ msgid ""
 "The stored function values are returned by @code{listarray}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:99
 msgid ""
 "For subscripted functions, @code{arrayinfo} returns a list comprising the atom\n"
 "@code{hashed}, the number of subscripts,\n"
@@ -176,22 +176,22 @@ msgid ""
 "The lambda expressions are returned by @code{listarray}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:101
 msgid ""
 "See also @mrefdot{listarray}\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:103
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:105
 msgid ""
 "@code{arrayinfo} and @code{listarray} applied to a declared array.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:136
 msgid ""
 "@c ===beg===\n"
 "@c array (aa, 2, 3);\n"
@@ -225,12 +225,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:138
 msgid ""
 "@code{arrayinfo} and @code{listarray} applied to an undeclared (hashed) array.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:166
 msgid ""
 "@c ===beg===\n"
 "@c bb [FOO] : (a + b)^2;\n"
@@ -261,12 +261,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:168
 msgid ""
 "@code{arrayinfo} and @code{listarray} applied to an array function.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:206
 msgid ""
 "@c ===beg===\n"
 "@c cc [x, y] := y / x;\n"
@@ -307,12 +307,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:208
 msgid ""
 "@code{arrayinfo} and @code{listarray} applied to a subscripted function.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:243
 msgid ""
 "@c ===beg===\n"
 "@c dd [x] (y) := y ^ x;\n"
@@ -350,7 +350,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:248
 msgid ""
 "@opencatbox\n"
 "@category{Arrays}\n"
@@ -358,26 +358,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:252
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{arraymake}\n"
 "@deffn {Function} arraymake (@var{A}, [@var{i_1}, @dots{}, @var{i_n}])\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:255
 msgid ""
 "Returns the expression @code{@var{A}[@var{i_1}, ..., @var{i_n}]}.\n"
 "The result is an unevaluated array reference.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:258
 msgid ""
 "@code{arraymake} is reminiscent of @mrefcomma{funmake} except the return value\n"
 "is an unevaluated array reference instead of an unevaluated function call.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:340
 msgid ""
 "Examples:\n"
 "@c ===beg===\n"
@@ -462,7 +462,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:345
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Arrays}\n"
@@ -470,7 +470,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:350
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{arrays}\n"
@@ -478,7 +478,7 @@ msgid ""
 "Default value: @code{[]}\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:356
 msgid ""
 "@code{arrays} is a list of arrays that have been allocated.\n"
 "These comprise arrays declared by @code{array}, hashed arrays constructed by\n"
@@ -487,7 +487,7 @@ msgid ""
 "Arrays defined by @mref{make_array} are not included.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:362
 msgid ""
 "See also\n"
 "@mrefcomma{array} @mrefcomma{arrayapply} @mrefcomma{arrayinfo}@w{}\n"
@@ -496,12 +496,12 @@ msgid ""
 "@c IS THIS AN EXHAUSTIVE LIST ??\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:364
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:397
 msgid ""
 "@c ===beg===\n"
 "@c array (aa, 5, 7);\n"
@@ -537,7 +537,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:402
 msgid ""
 "@opencatbox\n"
 "@category{Arrays} @category{Global variables}\n"
@@ -545,25 +545,25 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:406
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{arraysetapply}\n"
 "@deffn {Function} arraysetapply (@var{A}, [@var{i_1}, @dots{}, @var{i_n}], @var{x})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:409
 msgid ""
 "Assigns @var{x} to @code{@var{A}[@var{i_1}, ..., @var{i_n}]},\n"
 "where @var{A} is an array and @var{i_1}, @dots{}, @var{i_n} are integers.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:411
 msgid ""
 "@code{arraysetapply} evaluates its arguments.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:416
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Arrays}\n"
@@ -571,26 +571,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:420
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fillarray}\n"
 "@deffn {Function} fillarray (@var{A}, @var{B})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:422
 msgid ""
 "Fills array @var{A} from @var{B}, which is a list or an array.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:426
 msgid ""
 "If a specific type was declared for @var{A} when it was created,\n"
 "it can only be filled with elements of that same type;\n"
 "it is an error if an attempt is made to copy an element of a different type.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:431
 msgid ""
 "If the dimensions of the arrays @var{A} and @var{B} are\n"
 "different, @var{A} is filled in row-major order.  If there are not enough\n"
@@ -598,22 +598,22 @@ msgid ""
 "rest of @var{A}.  If there are too many, the remaining ones are ignored.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:433
 msgid ""
 "@code{fillarray} returns its first argument.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:435
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:437
 msgid ""
 "Create an array of 9 elements and fill it from a list.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:462
 msgid ""
 "@c ===beg===\n"
 "@c array (a1, fixnum, 8);\n"
@@ -641,7 +641,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:467
 msgid ""
 "When there are too few elements to fill the array,\n"
 "the last element is repeated.\n"
@@ -649,7 +649,7 @@ msgid ""
 "the extra elements are ignored.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:492
 msgid ""
 "@c ===beg===\n"
 "@c a2 : make_array (fixnum, 8);\n"
@@ -677,12 +677,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:494
 msgid ""
 "Multple-dimension arrays are filled in row-major order.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:519
 msgid ""
 "@c ===beg===\n"
 "@c a3 : make_array (fixnum, 2, 5);\n"
@@ -710,7 +710,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:524
 msgid ""
 "@opencatbox\n"
 "@category{Arrays}\n"
@@ -718,21 +718,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:528
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{listarray}\n"
 "@deffn {Function} listarray (@var{A})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:532
 msgid ""
 "Returns a list of the elements of the array @var{A}.\n"
 "The argument @var{A} may be a declared array, an undeclared (hashed) array,\n"
 "an array function, or a subscripted function.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:537
 msgid ""
 "Elements are listed in row-major order.\n"
 "That is, elements are sorted according to the first index, then according to\n"
@@ -740,13 +740,13 @@ msgid ""
 "the order established by @mrefdot{orderless}\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:540
 msgid ""
 "For undeclared arrays, array functions, and subscripted functions,\n"
 "the elements correspond to the index values returned by @mrefdot{arrayinfo}\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:547
 msgid ""
 "Unbound elements of declared general arrays (that is, not @code{fixnum} and not\n"
 "@code{flonum}) are returned as @code{#####}.\n"
@@ -756,17 +756,17 @@ msgid ""
 "and subscripted functions are not returned.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:549
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:551
 msgid ""
 "@code{listarray} and @code{arrayinfo} applied to a declared array.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:582
 msgid ""
 "@c ===beg===\n"
 "@c array (aa, 2, 3);\n"
@@ -800,12 +800,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:584
 msgid ""
 "@code{listarray} and @code{arrayinfo} applied to an undeclared (hashed) array.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:612
 msgid ""
 "@c ===beg===\n"
 "@c bb [FOO] : (a + b)^2;\n"
@@ -836,12 +836,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:614
 msgid ""
 "@code{listarray} and @code{arrayinfo} applied to an array function.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:652
 msgid ""
 "@c ===beg===\n"
 "@c cc [x, y] := y / x;\n"
@@ -882,12 +882,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:654
 msgid ""
 "@code{listarray} and @code{arrayinfo} applied to a subscripted function.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:689
 msgid ""
 "@c ===beg===\n"
 "@c dd [x] (y) := y ^ x;\n"
@@ -925,7 +925,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:694
 msgid ""
 "@opencatbox\n"
 "@category{Arrays}\n"
@@ -933,19 +933,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:696
 msgid ""
 "@c NEEDS CLARIFICATION\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:700
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{make_array}\n"
 "@deffn {Function} make_array (@var{type}, @var{dim_1}, @dots{}, @var{dim_n})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:706
 msgid ""
 "Creates and returns a Lisp array.  @var{type} may\n"
 "be @code{any}, @code{flonum}, @code{fixnum}, @code{hashed} or \n"
@@ -954,7 +954,7 @@ msgid ""
 "and the @math{i}'th index runs from 0 to @math{@var{dim_i} - 1}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:712
 msgid ""
 "The advantage of @code{make_array} over @mref{array} is that the return value\n"
 "doesn't have a name, and once a pointer to it goes away, it will also go away.\n"
@@ -963,7 +963,7 @@ msgid ""
 "points to that object, so the object can be garbage collected.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:721
 msgid ""
 "@c 'FUNCTIONAL ARGUMENT IN MAKE_ARRAY APPEARS TO BE BROKEN\n"
 "@c EVEN AFTER READING THE CODE (SRC/AR.LISP) I CAN'T TELL HOW THIS IS SUPPOSED TO WORK\n"
@@ -972,15 +972,15 @@ msgid ""
 "@c @code{y: make_array ('functional, 'f, 'hashed, 1)} - the second argument to\n"
 "@c @code{make_array} in this case is the function to call to calculate array\n"
 "@c elements, and the rest of the arguments are passed recursively to\n"
-"@c @code{make_array} to generate the \"memory\" for the array function object.\n"
+"@c @code{make_array} to generate the \\"memory\\" for the array function object.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:723
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:793
 msgid ""
 "@c ===beg===\n"
 "@c A1 : make_array (fixnum, 10);\n"
@@ -1053,7 +1053,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:798
 msgid ""
 "@opencatbox\n"
 "@category{Arrays}\n"
@@ -1061,19 +1061,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:800
 msgid ""
 "@c DOES THIS MODIFY A OR DOES IT CREATE A NEW ARRAY ??\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:804
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rearray}\n"
 "@deffn {Function} rearray (@var{A}, @var{dim_1}, @dots{}, @var{dim_n})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:812
 msgid ""
 "Changes the dimensions of an array.\n"
 "The new array will be filled with the elements of the old one in\n"
@@ -1084,7 +1084,7 @@ msgid ""
 "changed.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:817
 msgid ""
 "@opencatbox\n"
 "@category{Arrays}\n"
@@ -1092,7 +1092,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:823
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remarray}\n"
@@ -1101,36 +1101,36 @@ msgid ""
 "@fname{remarray} (all)\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:827
 msgid ""
 "Removes arrays and array associated functions and frees the storage occupied.\n"
 "The arguments may be declared arrays, undeclared (hashed) arrays, array\n"
 "functions, and subscripted functions.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:829
 msgid ""
 "@code{remarray (all)} removes all items in the global list @mrefdot{arrays}\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:833
 msgid ""
 "@c WHAT DOES THIS MEAN EXACTLY ??\n"
 "It may be necessary to use this function if it is\n"
 "desired to redefine the values in a hashed array.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:835
 msgid ""
 "@code{remarray} returns the list of arrays removed.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:837
 msgid ""
 "@code{remarray} quotes its arguments.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:842
 msgid ""
 "@opencatbox\n"
 "@category{Arrays}\n"
@@ -1138,35 +1138,35 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:846
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{subvar}\n"
 "@deffn {Function} subvar (@var{x}, @var{i})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:848
 msgid ""
 "Evaluates the subscripted expression @code{@var{x}[@var{i}]}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:850
 msgid ""
 "@code{subvar} evaluates its arguments.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:853
 msgid ""
 "@code{arraymake (@var{x}, [@var{i}])} constructs the expression\n"
 "@code{@var{x}[@var{i}]}, but does not evaluate it.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:855
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:888
 msgid ""
 "@c ===beg===\n"
 "@c x : foo $\n"
@@ -1202,7 +1202,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:893
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Arrays}\n"
@@ -1210,25 +1210,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:895
 msgid ""
 "@c NEEDS EXPANSION AND EXAMPLES\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:899
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{subvarp}\n"
 "@deffn {Function} subvarp (@var{expr})\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:902
 msgid ""
 "Returns @code{true} if @var{expr} is a subscripted variable, for example\n"
 "@code{a[i]}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:907
 msgid ""
 "@opencatbox\n"
 "@category{Predicate functions}\n"
@@ -1236,7 +1236,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:912
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{use_fast_arrays}\n"
@@ -1244,31 +1244,31 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:916
 msgid ""
 "When @code{use_fast_arrays} is @code{true},\n"
 "undeclared arrays and arrays declared by @code{array} are values instead of properties,\n"
 "and undeclared arrays are implemented as Lisp hash tables.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:920
 msgid ""
 "When @code{use_fast_arrays} is @code{false},\n"
 "undeclared arrays and arrays declared by @code{array} are properties,\n"
 "and undeclared arrays are implemented with Maxima's own hash table implementation.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:922
 msgid ""
 "Arrays created by @code{make_array} are not affected by @code{use_fast_arrays}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:924
 msgid ""
 "See also @mrefdot{translate_fast_arrays}\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:929
 msgid ""
 "@opencatbox\n"
 "@category{Arrays} @category{Global flags}\n"
@@ -1276,7 +1276,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:934
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{translate_fast_arrays}\n"
@@ -1284,24 +1284,17 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:938
 msgid ""
 "When @code{translate_fast_arrays} is @code{true},\n"
 "the Maxima-to-Lisp translator generates code that assumes arrays are values instead of properties,\n"
 "as if @code{use_fast_arrays} were @code{true}.\n"
 msgstr ""
 
-# Arrays.texi
+#: Arrays.texi:942
 msgid ""
 "When @code{translate_fast_arrays} is @code{false},\n"
 "the Maxima-to-Lisp translator generates code that assumes arrays are properties,\n"
 "as if @code{use_fast_arrays} were @code{false}.\n"
 msgstr ""
 
-# Arrays.texi
-msgid ""
-"@opencatbox\n"
-"@category{Arrays} @category{Translation flags and variables}\n"
-"@closecatbox\n"
-"@end defvr\n"
-msgstr ""

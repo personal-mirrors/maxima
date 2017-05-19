@@ -1,45 +1,49 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# makeOrders.texi
+msgstr ""
+
+#: makeOrders.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for makeOrders::\n"
 "@end menu\n"
+msgstr ""
+
+#: makeOrders.texi:8
+msgid ""
 "@node Functions and Variables for makeOrders,  , makeOrders-pkg, makeOrders-pkg\n"
 "@section Functions and Variables for makeOrders\n"
 msgstr ""
 
-# makeOrders.texi
+#: makeOrders.texi:12
 msgid ""
 "@anchor{makeOrders_func}\n"
 "@deffn {Function} makeOrders (@var{indvarlist},@var{orderlist})\n"
 "Returns a list of all powers for a polynomial up to and including the arguments. \n"
 msgstr ""
 
-# makeOrders.texi
+#: makeOrders.texi:15
 msgid ""
 "@example\n"
-"(%i1) load(\"makeOrders\")$\n"
+"(%i1) load(\\"makeOrders\\")$\n"
 msgstr ""
 
-# makeOrders.texi
+#: makeOrders.texi:26
 msgid ""
 "(%i2) makeOrders([a,b],[2,3]);\n"
 "(%o2) [[0, 0], [0, 1], [0, 2], [0, 3], [1, 0], [1, 1],\n"
@@ -53,23 +57,20 @@ msgid ""
 "where @code{[0, 1]} is associated with the term @math{b} and @code{[2, 3]} with @math{a^2 b^3}.\n"
 msgstr ""
 
-# makeOrders.texi
+#: makeOrders.texi:28
 msgid ""
-"To use this function write first @code{load(\"makeOrders\")}.\n"
+"To use this function write first @code{load(\\"makeOrders\\")}.\n"
 msgstr ""
 
-# makeOrders.texi
+#: makeOrders.texi:32
 msgid ""
 "@opencatbox\n"
 "@category{Polynomials} @category{Share packages} @category{Package makeOrders}\n"
 "@closecatbox\n"
 msgstr ""
 
-# makeOrders.texi
+#: makeOrders.texi:34
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# makeOrders.texi
-msgid ""
-msgstr ""

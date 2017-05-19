@@ -1,36 +1,36 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# romberg.texi
+msgstr ""
+
+#: romberg.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for romberg::\n"
 "@end menu\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:7
 msgid ""
 "@node Functions and Variables for romberg, , Top, Top\n"
 "@section Functions and Variables for romberg\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:12
 msgid ""
 "@anchor{romberg_function}\n"
 "@deffn {Function} romberg @\n"
@@ -38,12 +38,12 @@ msgid ""
 "@fname{romberg} (@var{F}, @var{a}, @var{b})\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:14
 msgid ""
 "Computes a numerical integration by Romberg's method.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:19
 msgid ""
 "@code{romberg(@var{expr}, @var{x}, @var{a}, @var{b})}\n"
 "returns an estimate of the integral @code{integrate(@var{expr}, @var{x}, @var{a}, @var{b})}.\n"
@@ -51,7 +51,7 @@ msgid ""
 "when @var{x} is bound to a floating point value.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:27
 msgid ""
 "@code{romberg(@var{F}, @var{a}, @var{b})}\n"
 "returns an estimate of the integral @code{integrate(@var{F}(x), x, @var{a}, @var{b})}\n"
@@ -62,7 +62,7 @@ msgid ""
 "@var{F} may name a translated or compiled Maxima function.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:35
 msgid ""
 "The accuracy of @code{romberg} is governed by the global variables\n"
 "@code{rombergabs} and @code{rombergtol}.\n"
@@ -73,7 +73,7 @@ msgid ""
 "only the relative error test has any effect on @code{romberg}.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:42
 msgid ""
 "@code{romberg} halves the stepsize at most @code{rombergit} times before it gives up;\n"
 "the maximum number of function evaluations is therefore @code{2^rombergit}.\n"
@@ -83,7 +83,7 @@ msgid ""
 "this is a heuristic intended to prevent spurious termination when the integrand is oscillatory.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:51
 msgid ""
 "@code{romberg} repeatedly evaluates the integrand after binding the variable\n"
 "of integration to a specific value (and not before).\n"
@@ -95,22 +95,22 @@ msgid ""
 "the same accuracy with fewer function evaluations.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:53
 msgid ""
 "@code{load(romberg)} loads this function.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:55
 msgid ""
 "See also @code{QUADPACK}, a collection of numerical integration functions.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:57
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:69
 msgid ""
 "A 1-dimensional integration.\n"
 "@c ===beg===\n"
@@ -125,7 +125,7 @@ msgid ""
 "@c ===end===\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:93
 msgid ""
 "@example\n"
 "(%i1) load (romberg);\n"
@@ -152,7 +152,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:105
 msgid ""
 "A 2-dimensional integration, implemented by nested calls to @code{romberg}.\n"
 "@c ===beg===\n"
@@ -167,7 +167,7 @@ msgid ""
 "@c ===end===\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:132
 msgid ""
 "@example\n"
 "(%i1) load (romberg);\n"
@@ -197,26 +197,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:136
 msgid ""
 "@opencatbox\n"
 "@category{Package romberg} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:138
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:142
 msgid ""
 "@anchor{rombergabs}\n"
 "@defvr {Option variable} rombergabs\n"
 "Default value: 0.0\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:150
 msgid ""
 "The accuracy of @code{romberg} is governed by the global variables\n"
 "@code{rombergabs} and @code{rombergtol}.\n"
@@ -227,31 +227,31 @@ msgid ""
 "only the relative error test has any effect on @code{romberg}.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:152
 msgid ""
 "See also @mref{rombergit} and @mref{rombergmin}.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:156
 msgid ""
 "@opencatbox\n"
 "@category{Package romberg}\n"
 "@closecatbox\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:158
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:162
 msgid ""
 "@anchor{rombergit}\n"
 "@defvr {Option variable} rombergit\n"
 "Default value: 11\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:167
 msgid ""
 "@code{romberg} halves the stepsize at most @code{rombergit} times before it gives up;\n"
 "the maximum number of function evaluations is therefore @code{2^rombergit}.\n"
@@ -259,61 +259,61 @@ msgid ""
 "this is a heuristic intended to prevent spurious termination when the integrand is oscillatory.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:169
 msgid ""
 "See also @mref{rombergabs} and @mref{rombergtol}.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:173
 msgid ""
 "@opencatbox\n"
 "@category{Package romberg}\n"
 "@closecatbox\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:175
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:179
 msgid ""
 "@anchor{rombergmin}\n"
 "@defvr {Option variable} rombergmin\n"
 "Default value: 0\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:182
 msgid ""
 "@code{romberg} always makes at least @code{rombergmin} iterations;\n"
 "this is a heuristic intended to prevent spurious termination when the integrand is oscillatory.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:184
 msgid ""
 "See also @mref{rombergit}, @mref{rombergabs}, and @mref{rombergtol}.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:188
 msgid ""
 "@opencatbox\n"
 "@category{Package romberg}\n"
 "@closecatbox\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:190
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:194
 msgid ""
 "@anchor{rombergtol}\n"
 "@defvr {Option variable} rombergtol\n"
 "Default value: 1e-4\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:202
 msgid ""
 "The accuracy of @code{romberg} is governed by the global variables\n"
 "@code{rombergabs} and @code{rombergtol}.\n"
@@ -324,23 +324,20 @@ msgid ""
 "only the relative error test has any effect on @code{romberg}.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:204
 msgid ""
 "See also @mref{rombergit} and @mref{rombergmin}.\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:208
 msgid ""
 "@opencatbox\n"
 "@category{Package romberg}\n"
 "@closecatbox\n"
 msgstr ""
 
-# romberg.texi
+#: romberg.texi:210
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# romberg.texi
-msgid ""
-msgstr ""

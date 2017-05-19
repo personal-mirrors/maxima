@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Lists.texi
+msgstr ""
+
+#: Lists.texi:6
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@page\n"
@@ -26,7 +26,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:12
 msgid ""
 "@menu\n"
 "* Introduction to Lists::\n"
@@ -35,7 +35,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:17
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Lists, Functions and Variables for Lists, Lists, Lists\n"
@@ -43,21 +43,21 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:21
 msgid ""
 "Lists are the basic building block for Maxima and Lisp.  All data types\n"
 "other than arrays, hash tables and numbers are represented as Lisp lists,\n"
 "These Lisp lists have the form\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:25
 msgid ""
 "@example\n"
 "((MPLUS) $A 2)\n"
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:30
 msgid ""
 "@noindent\n"
 "to indicate an expression @code{a+2}.  At Maxima level one would see\n"
@@ -65,42 +65,42 @@ msgid ""
 "as\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:34
 msgid ""
 "@example\n"
 "[1, 2, 7, x+y]\n"
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:38
 msgid ""
 "@noindent\n"
 "for a list with 4 elements.  Internally this corresponds to a Lisp list\n"
 "of the form\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:42
 msgid ""
 "@example\n"
 "((MLIST) 1 2 7 ((MPLUS) $X $Y))\n"
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:46
 msgid ""
 "@noindent\n"
 "The flag which denotes the type field of the Maxima expression is a list\n"
 "itself, since after it has been through the simplifier the list would become\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:50
 msgid ""
 "@example\n"
 "((MLIST SIMP) 1 2 7 ((MPLUS SIMP) $X $Y))\n"
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:55
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Lists, Performance considerations for Lists ,Introduction to Lists, Lists\n"
@@ -108,7 +108,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:61
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{[}\n"
@@ -117,28 +117,32 @@ msgid ""
 "@fnindex Subscript operator\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:64
 msgid ""
 "@defvr  {Operator} [\n"
 "@defvrx {Operator} ]\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:66
 msgid ""
 "@code{[} and @code{]} mark the beginning and end, respectively, of a list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:72
 msgid ""
 "@code{[} and @code{]} also enclose the subscripts of\n"
 "a list, array, hash array, or array function. Note that\n"
 "other than for arrays accessing the @code{n}th element of a list\n"
 "may need an amount of time that is roughly proportional to  @code{n},\n"
 "@xref{Performance considerations for Lists}.\n"
+msgstr ""
+
+#: Lists.texi:75
+msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:130
 msgid ""
 "@c ===beg===\n"
 "@c x: [a, b, c];\n"
@@ -196,7 +200,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:135
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Operators}\n"
@@ -204,20 +208,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:138
 msgid ""
 "@c NEED ANOTHER deffn FOR GENERAL EXPRESSIONS ARGUMENTS\n"
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:142
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{append}\n"
 "@deffn {Function} append (@var{list_1}, @dots{}, @var{list_n})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:147
 msgid ""
 "Returns a single list of the elements of @var{list_1} followed\n"
 "by the elements of @var{list_2}, @dots{}  @code{append} also works on\n"
@@ -225,17 +229,17 @@ msgid ""
 "@code{f(a,b,c,d,e)}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:149
 msgid ""
 "See also @mrefcomma{addrow} @mref{addcol} and @mrefdot{join}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:151
 msgid ""
 "Do @code{example(append);} for an example.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:156
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -243,12 +247,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:158
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:164
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{assoc}\n"
@@ -257,7 +261,7 @@ msgid ""
 "@fname{assoc} (@var{key}, @var{list})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:170
 msgid ""
 "This function searches for @var{key} in the left hand side of the\n"
 "input @var{list}. The @var{list} argument should be a list, each of\n"
@@ -266,7 +270,7 @@ msgid ""
 "elements.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:176
 msgid ""
 "The @code{assoc} function iterates along @var{list}, checking the\n"
 "first part of each element for equality with @var{key}. If an element\n"
@@ -275,7 +279,7 @@ msgid ""
 "@code{assoc} returns either @code{false} or @var{default}, if given.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:184
 msgid ""
 "For example, in the expression @code{assoc (y, [[x,1], [y,2],\n"
 "[z,3]])}, the @code{assoc} function searches for @code{x} in the left\n"
@@ -286,7 +290,7 @@ msgid ""
 "so @code{assoc} returns @code{false}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:204
 msgid ""
 "@c ===beg===\n"
 "@c assoc (y, [[x,1], [y,2],[z,3]]);\n"
@@ -309,12 +313,16 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:209
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Lists.texi:216
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{cons}\n"
 "@deffn {Function} cons @\n"
@@ -322,14 +330,14 @@ msgid ""
 "@fname{cons} (@var{expr_1}, @var{expr_2})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:220
 msgid ""
 "@code{cons (@var{expr}, @var{list})} returns a new list constructed of the element \n"
 "@var{expr} as its first element, followed by the elements of @var{list}. This is \n"
-"analogous to the Lisp language construction operation \"cons\".\n"
+"analogous to the Lisp language construction operation \\"cons\\".\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:225
 msgid ""
 "The Maxima function @code{cons} can also be used where the second argument is other\n"
 "than a list and this might be useful. In this case, @code{cons (@var{expr_1}, @var{expr_2})}\n"
@@ -337,7 +345,7 @@ msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:240
 msgid ""
 "@c ===beg===\n"
 "@c cons(a,[b,c,d]);\n"
@@ -355,20 +363,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:243
 msgid ""
 "In general, @code{cons} applied to a nonlist doesn't make sense. For instance, @code{cons(a,b^c)}\n"
 "results in an illegal expression, since '^' cannot take three arguments. \n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:247
 msgid ""
 "When @code{inflag} is true, @code{cons} operates on the internal structure of an expression, otherwise\n"
 "@code{cons} operates on the displayed form. Especially when @code{inflag} is true, @code{cons} applied \n"
 "to a nonlist sometimes gives a surprising result; for example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:263
 msgid ""
 "@c ===beg===\n"
 "@c cons(a,-a), inflag : true;\n"
@@ -387,7 +395,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:268
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -395,19 +403,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:272
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{copylist}\n"
 "@deffn {Function} copylist (@var{list})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:274
 msgid ""
 "Returns a copy of the list @var{list}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:279
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
@@ -415,14 +423,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:283
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{create_list}\n"
 "@deffn {Function} create_list (@var{form}, @var{x_1}, @var{list_1}, @dots{}, @var{x_n}, @var{list_n})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:292
 msgid ""
 "Create a list by evaluating @var{form} with @var{x_1} bound to\n"
 "each element of @var{list_1}, and for each such binding bind @var{x_2}\n"
@@ -434,7 +442,7 @@ msgid ""
 "iteration.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:303
 msgid ""
 "@c ===beg===\n"
 "@c create_list (x^i, i, [1, 3, 7]);\n"
@@ -448,13 +456,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:306
 msgid ""
 "@noindent\n"
 "With a double iteration:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:316
 msgid ""
 "@c ===beg===\n"
 "@c create_list ([i, j], i, [a, b], j, [e, f, h]);\n"
@@ -467,14 +475,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:320
 msgid ""
 "Instead of @var{list_i} two args may be supplied each of which should\n"
 "evaluate to a number.  These will be the inclusive lower and\n"
 "upper bounds for the iteration.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:330
 msgid ""
 "@c ===beg===\n"
 "@c create_list ([i, j], i, [1, 2, 3], j, 1, i);\n"
@@ -487,13 +495,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:333
 msgid ""
 "Note that the limits or list for the @code{j} variable can\n"
 "depend on the current value of @code{i}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:338
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
@@ -501,7 +509,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:344
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{delete}\n"
@@ -510,16 +518,16 @@ msgid ""
 "@fname{delete} (@var{expr_1}, @var{expr_2}, @var{n})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:350
 msgid ""
 "@code{delete(@var{expr_1}, @var{expr_2})}\n"
 "removes from @var{expr_2} any arguments of its top-level operator\n"
-"which are the same (as determined by \"=\") as @var{expr_1}.\n"
-"Note that \"=\" tests for formal equality, not equivalence.\n"
+"which are the same (as determined by \\"=\\") as @var{expr_1}.\n"
+"Note that \\"=\\" tests for formal equality, not equivalence.\n"
 "Note also that arguments of subexpressions are not affected.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:355
 msgid ""
 "@var{expr_1} may be an atom or a non-atomic expression.\n"
 "@var{expr_2} may be any non-atomic expression.\n"
@@ -527,7 +535,7 @@ msgid ""
 "it does not modify @var{expr_2}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:361
 msgid ""
 "@code{delete(@var{expr_1}, @var{expr_2}, @var{n})}\n"
 "removes from @var{expr_2} the first @var{n} arguments of the top-level operator\n"
@@ -536,17 +544,17 @@ msgid ""
 "then all such arguments are removed.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:363
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:365
 msgid ""
 "Removing elements from a list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:375
 msgid ""
 "@c ===beg===\n"
 "@c delete (y, [w, x, y, z, z, y, x, w]);\n"
@@ -559,12 +567,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:377
 msgid ""
 "Removing terms from a sum.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:387
 msgid ""
 "@c ===beg===\n"
 "@c delete (sin(x), x + sin(x) + y);\n"
@@ -577,12 +585,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:389
 msgid ""
 "Removing factors from a product.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:399
 msgid ""
 "@c ===beg===\n"
 "@c delete (u - x, (u - w)*(u - x)*(u - y)*(u - z));\n"
@@ -595,12 +603,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:401
 msgid ""
 "Removing arguments from an arbitrary expression.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:411
 msgid ""
 "@c ===beg===\n"
 "@c delete (a, foo (a, b, c, d, a));\n"
@@ -613,12 +621,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:413
 msgid ""
 "Limit the number of removed arguments.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:423
 msgid ""
 "@c ===beg===\n"
 "@c delete (a, foo (a, b, a, c, d, a), 2);\n"
@@ -631,13 +639,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:426
 msgid ""
-"Whether arguments are the same as @var{expr_1} is determined by \"=\".\n"
-"Arguments which are @code{equal} but not \"=\" are not removed.\n"
+"Whether arguments are the same as @var{expr_1} is determined by \\"=\\".\n"
+"Arguments which are @code{equal} but not \\"=\\" are not removed.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:462
 msgid ""
 "@c ===beg===\n"
 "@c [is (equal (0, 0)), is (equal (0, 0.0)), is (equal (0, 0b0))];\n"
@@ -676,7 +684,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:467
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -684,25 +692,29 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:471
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{eighth}\n"
 "@deffn {Function} eighth (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:474
 msgid ""
 "Returns the 8'th item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:479
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Lists.texi:486
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{endcons}\n"
 "@deffn  {Function} endcons @\n"
@@ -710,7 +722,7 @@ msgid ""
 "@fname{endcons} (@var{expr_1}, @var{expr_2})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:492
 msgid ""
 "@code{endcons (@var{expr}, @var{list})} returns a new list constructed of the elements of \n"
 "@var{list} followed by @var{expr}. The Maxima function @code{endcons} can also be used where \n"
@@ -719,7 +731,7 @@ msgid ""
 "@var{expr_2} but with argument @code{endcons(expr_1, args(expr_2))}. Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:507
 msgid ""
 "@c ===beg===\n"
 "@c endcons(a,[b,c,d]);\n"
@@ -737,20 +749,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:510
 msgid ""
 "In general, @code{endcons} applied to a nonlist doesn't make sense. For instance, @code{endcons(a,b^c)}\n"
 "results in an illegal expression, since '^' cannot take three arguments. \n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:514
 msgid ""
 "When @code{inflag} is true, @code{endcons} operates on the internal structure of an expression, otherwise\n"
 "@code{endcons} operates on the displayed form. Especially when @code{inflag} is true, @code{endcons} applied \n"
 "to a nonlist sometimes gives a surprising result; for example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:530
 msgid ""
 "@c ===beg===\n"
 "@c endcons(a,-a), inflag : true;\n"
@@ -769,24 +781,28 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:535
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Lists.texi:540
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fifth}\n"
 "@deffn {Function} fifth (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:543
 msgid ""
 "Returns the 5'th item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:548
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -794,20 +810,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:552
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{first}\n"
 "@deffn {Function} first (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:555
 msgid ""
 "Returns the first part of @var{expr} which may result in the first element of a\n"
 "list, the first row of a matrix, the first term of a sum, etc.:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:574
 msgid ""
 "@example\n"
 "@group\n"
@@ -829,7 +845,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:581
 msgid ""
 "Note that\n"
 "@code{first} and its related functions, @code{rest} and @code{last}, work\n"
@@ -839,7 +855,7 @@ msgid ""
 "make a difference is that the simplifier re-orders expressions:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:592
 msgid ""
 "@example\n"
 "@group\n"
@@ -853,18 +869,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:595
 msgid ""
 "The functions @code{second} @dots{}\n"
 "@code{tenth} yield the second through the tenth part of their input argument.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:597
 msgid ""
 "See also @mref{firstn} and @mrefdot{part}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:602
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -872,20 +888,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:606
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{firstn}\n"
 "@deffn {Function} firstn (@var{expr}, @var{count})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:609
 msgid ""
 "Returns the first @var{count} arguments of @var{expr}, if @var{expr} has at least @var{count} arguments.\n"
 "Returns @var{expr} if @var{expr} has less than @var{count} arguments.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:614
 msgid ""
 "@var{expr} may be any nonatomic expression. \n"
 "When @var{expr} is something other than a list,\n"
@@ -893,14 +909,14 @@ msgid ""
 "@var{count} must be a nonnegative integer.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:618
 msgid ""
 "@code{firstn} honors the global flag @code{inflag},\n"
 "which governs whether the internal form of an expression is processed (when @code{inflag} is true)\n"
 "or the displayed form (when @code{inflag} is false).\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:623
 msgid ""
 "Note that @code{firstn(@var{expr}, 1)},\n"
 "which returns a nonatomic expression containing the first argument,\n"
@@ -908,22 +924,22 @@ msgid ""
 "which returns the first argument by itself.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:625
 msgid ""
 "See also @mref{lastn} and @mrefdot{rest}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:627
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:629
 msgid ""
 "@code{firstn} returns the first @var{count} elements of @var{expr}, if @var{expr} has at least @var{count} elements.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:659
 msgid ""
 "@c ===beg===\n"
 "@c mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
@@ -956,12 +972,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:661
 msgid ""
 "@code{firstn} returns @var{expr} if @var{expr} has less than @var{count} elements.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:676
 msgid ""
 "@c ===beg===\n"
 "@c mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
@@ -979,12 +995,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:678
 msgid ""
 "@var{expr} may be any nonatomic expression. \n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:716
 msgid ""
 "@c ===beg===\n"
 "@c myfoo : foo(1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
@@ -1025,12 +1041,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:718
 msgid ""
 "@code{firstn} honors the global flag @code{inflag}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:738
 msgid ""
 "@c ===beg===\n"
 "@c myexpr : a + b + c + d + e;\n"
@@ -1053,12 +1069,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:740
 msgid ""
 "Note that @code{firstn(@var{expr}, 1)} is not the same as @code{first(@var{expr})}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:755
 msgid ""
 "@c ===beg===\n"
 "@c firstn ([w, x, y, z], 1);\n"
@@ -1076,7 +1092,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:760
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1084,20 +1100,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:764
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fourth}\n"
 "@deffn {Function} fourth (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:767
 msgid ""
 "Returns the 4'th item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:772
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1105,14 +1121,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:776
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{join}\n"
 "@deffn {Function} join (@var{l}, @var{m})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:781
 msgid ""
 "Creates a new list containing the elements of lists @var{l} and @var{m},\n"
 "interspersed.  The result has elements @code{[@var{l}[1], @var{m}[1],\n"
@@ -1120,28 +1136,28 @@ msgid ""
 "type of elements.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:784
 msgid ""
 "If the lists are different lengths, @code{join} ignores elements of the longer\n"
 "list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:786
 msgid ""
 "Maxima complains if @var{l} or @var{m} is not a list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:788
 msgid ""
 "See also @mrefdot{append}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:790
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:810
 msgid ""
 "@c ===beg===\n"
 "@c L1: [a, sin(b), c!, d - 1];\n"
@@ -1164,7 +1180,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:815
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
@@ -1172,30 +1188,30 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:818
 msgid ""
 "@c NEEDS EXAMPLES\n"
-"@c HOW IS \"LAST\" PART DETERMINED ??\n"
+"@c HOW IS \\"LAST\\" PART DETERMINED ??\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:822
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{last}\n"
 "@deffn {Function} last (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:824
 msgid ""
 "Returns the last part (term, row, element, etc.) of the @var{expr}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:826
 msgid ""
 "See also @mrefdot{lastn}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:831
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1203,25 +1219,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:833
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:837
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lastn}\n"
 "@deffn {Function} lastn (@var{expr}, @var{count})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:840
 msgid ""
 "Returns the last @var{count} arguments of @var{expr}, if @var{expr} has at least @var{count} arguments.\n"
 "Returns @var{expr} if @var{expr} has less than @var{count} arguments.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:845
 msgid ""
 "@var{expr} may be any nonatomic expression. \n"
 "When @var{expr} is something other than a list,\n"
@@ -1229,14 +1245,14 @@ msgid ""
 "@var{count} must be a nonnegative integer.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:849
 msgid ""
 "@code{lastn} honors the global flag @code{inflag},\n"
 "which governs whether the internal form of an expression is processed (when @code{inflag} is true)\n"
 "or the displayed form (when @code{inflag} is false).\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:854
 msgid ""
 "Note that @code{lastn(@var{expr}, 1)},\n"
 "which returns a nonatomic expression containing the last argument,\n"
@@ -1244,22 +1260,22 @@ msgid ""
 "which returns the last argument by itself.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:856
 msgid ""
 "See also @mref{firstn} and @mrefdot{rest}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:858
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:860
 msgid ""
 "@code{lastn} returns the last @var{count} elements of @var{expr}, if @var{expr} has at least @var{count} elements.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:890
 msgid ""
 "@c ===beg===\n"
 "@c mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
@@ -1292,12 +1308,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:892
 msgid ""
 "@code{lastn} returns @var{expr} if @var{expr} has less than @var{count} elements.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:907
 msgid ""
 "@c ===beg===\n"
 "@c mylist : [1, a, 2, b, 3, x, 4 - y, 2*z + sin(u)];\n"
@@ -1315,12 +1331,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:909
 msgid ""
 "@var{expr} may be any nonatomic expression. \n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:947
 msgid ""
 "@c ===beg===\n"
 "@c myfoo : foo(1, a, 2, b, 3, x, 4 - y, 2*z + sin(u));\n"
@@ -1361,12 +1377,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:949
 msgid ""
 "@code{lastn} honors the global flag @code{inflag}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:969
 msgid ""
 "@c ===beg===\n"
 "@c myexpr : a + b + c + d + e;\n"
@@ -1389,12 +1405,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:971
 msgid ""
 "Note that @code{lastn(@var{expr}, 1)} is not the same as @code{last(@var{expr})}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:986
 msgid ""
 "@c ===beg===\n"
 "@c lastn ([w, x, y, z], 1);\n"
@@ -1412,7 +1428,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:991
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1420,14 +1436,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:995
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{length}\n"
 "@deffn {Function} length (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1000
 msgid ""
 "Returns (by default) the number of parts in the external\n"
 "(displayed) form of @var{expr}.  For lists this is the number of elements,\n"
@@ -1435,7 +1451,7 @@ msgid ""
 "of terms (see @mref{dispform}).\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1005
 msgid ""
 "The @code{length} command is affected by the @mref{inflag} switch.  So, e.g.\n"
 "@code{length(a/(b*c));} gives 2 if @code{inflag} is @code{false} (Assuming\n"
@@ -1443,7 +1459,7 @@ msgid ""
 "internal representation is essentially @code{a*b^-1*c^-1}).\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1010
 msgid ""
 "Determining a list's length typically needs an amount of time proportional\n"
 "to the number of elements in the list. If the length of a list is used inside\n"
@@ -1451,7 +1467,7 @@ msgid ""
 "is calculated outside the loop instead.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1015
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1459,7 +1475,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1020
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{listarith}\n"
@@ -1467,7 +1483,7 @@ msgid ""
 "Default value: @code{true} \n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1025
 msgid ""
 "If @code{false} causes any arithmetic operations with lists to be suppressed;\n"
 "when @code{true}, list-matrix operations are contagious causing lists to be\n"
@@ -1475,7 +1491,7 @@ msgid ""
 "list-list operations should return lists.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1030
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Global flags}\n"
@@ -1483,18 +1499,18 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1033
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} listp (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1035
 msgid ""
 "Returns @code{true} if @var{expr} is a list else @code{false}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1040
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Predicate functions}\n"
@@ -1502,7 +1518,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1046
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lreduce}\n"
@@ -1511,41 +1527,41 @@ msgid ""
 "@fname{lreduce} (@var{F}, @var{s}, @var{s_0})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1049
 msgid ""
 "Extends the binary function @var{F} to an n-ary function by composition,\n"
 "where @var{s} is a list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1053
 msgid ""
 "@code{lreduce(@var{F}, @var{s})} returns @code{F(... F(F(s_1, s_2), s_3), ... s_n)}.\n"
 "When the optional argument @var{s_0} is present,\n"
 "the result is equivalent to @code{lreduce(@var{F}, cons(@var{s_0}, @var{s}))}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1056
 msgid ""
 "The function @var{F} is first applied to the\n"
-"@i{leftmost} list elements, thus the name \"lreduce\".\n"
+"@i{leftmost} list elements, thus the name \\"lreduce\\".\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1058
 msgid ""
 "See also @mref{rreduce}, @mref{xreduce}, and @mref{tree_reduce}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1060
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1062
 msgid ""
 "@code{lreduce} without the optional argument.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1077
 msgid ""
 "@c ===beg===\n"
 "@c lreduce (f, [1, 2, 3]);\n"
@@ -1563,12 +1579,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1079
 msgid ""
 "@code{lreduce} with the optional argument.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1089
 msgid ""
 "@c ===beg===\n"
 "@c lreduce (f, [1, 2, 3], 4);\n"
@@ -1581,26 +1597,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1092
 msgid ""
 "@code{lreduce} applied to built-in binary operators.\n"
 "@code{/} is the division operator.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1110
 msgid ""
 "@c ===beg===\n"
-"@c lreduce (\"^\", args ({a, b, c, d}));\n"
-"@c lreduce (\"/\", args ({a, b, c, d}));\n"
+"@c lreduce (\\"^\\", args ({a, b, c, d}));\n"
+"@c lreduce (\\"/\\", args ({a, b, c, d}));\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) lreduce (\"^\", args (@{a, b, c, d@}));\n"
+"(%i1) lreduce (\\"^\\", args (@{a, b, c, d@}));\n"
 "                               b c d\n"
 "(%o1)                       ((a ) )\n"
 "@end group\n"
 "@group\n"
-"(%i2) lreduce (\"/\", args (@{a, b, c, d@}));\n"
+"(%i2) lreduce (\\"/\\", args (@{a, b, c, d@}));\n"
 "                                a\n"
 "(%o2)                         -----\n"
 "                              b c d\n"
@@ -1608,19 +1624,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1114
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1116
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1126
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{makelist}\n"
@@ -1633,7 +1649,7 @@ msgid ""
 "@fname{makelist} (@var{expr}, @var{x}, @var{list})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1131
 msgid ""
 "The first form, @code{makelist ()}, creates an empty list. The second form,\n"
 "@code{makelist (@var{expr})}, creates a list with @var{expr} as its single\n"
@@ -1641,7 +1657,7 @@ msgid ""
 "elements generated from @var{expr}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1137
 msgid ""
 "The most general form, @code{makelist (@var{expr}, @var{i}, @var{i_0},\n"
 "@var{i_max}, @var{step})}, returns the list of elements obtained when\n"
@@ -1650,7 +1666,7 @@ msgid ""
 "2*@var{step}, ..., with @var{|j|} less than or equal to @var{|i_max|}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1142
 msgid ""
 "The increment @var{step} can be a number (positive or negative) or an\n"
 "expression. If it is omitted, the default value 1 will be used. If both\n"
@@ -1658,7 +1674,7 @@ msgid ""
 "value of 1.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1147
 msgid ""
 "@code{makelist (@var{expr}, @var{x}, @var{list})} returns a list, the\n"
 "@code{j}'th element of which is equal to\n"
@@ -1666,12 +1682,12 @@ msgid ""
 "@code{length (@var{list})}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1149
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1184
 msgid ""
 "@c ===beg===\n"
 "@c makelist (concat (x,i), i, 6);\n"
@@ -1709,7 +1725,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1189
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
@@ -1717,45 +1733,45 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1193
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{member}\n"
 "@deffn {Function} member (@var{expr_1}, @var{expr_2})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1197
 msgid ""
 "Returns @code{true} if @code{is(@var{expr_1} = @var{a})}\n"
 "for some element @var{a} in @code{args(@var{expr_2})},\n"
 "otherwise returns @code{false}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1201
 msgid ""
 "@code{expr_2} is typically a list, in which case\n"
 "@code{args(@var{expr_2}) = @var{expr_2}} and @code{is(@var{expr_1} = @var{a})}\n"
 "for some element @var{a} in @code{expr_2} is the test.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1205
 msgid ""
 "@code{member} does not inspect parts of the arguments of @code{expr_2}, so it\n"
 "may return @code{false} even if @code{expr_1} is a part of some argument of\n"
 "@code{expr_2}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1207
 msgid ""
 "See also @mrefdot{elementp}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1209
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1256
 msgid ""
 "@c ===beg===\n"
 "@c member (8, [8, 8.0, 8b0]);\n"
@@ -1765,7 +1781,7 @@ msgid ""
 "@c member ([b, c], [[a, b], [b, c]]);\n"
 "@c F (1, 1/2, 1/4, 1/8);\n"
 "@c member (1/8, %);\n"
-"@c member (\"ab\", [\"aa\", \"ab\", sin(1), a + b]);\n"
+"@c member (\\"ab\\", [\\"aa\\", \\"ab\\", sin(1), a + b]);\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
@@ -1799,13 +1815,13 @@ msgid ""
 "(%o7)                         true\n"
 "@end group\n"
 "@group\n"
-"(%i8) member (\"ab\", [\"aa\", \"ab\", sin(1), a + b]);\n"
+"(%i8) member (\\"ab\\", [\\"aa\\", \\"ab\\", sin(1), a + b]);\n"
 "(%o8)                         true\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1261
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions} @category{Predicate functions}\n"
@@ -1813,20 +1829,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1265
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ninth}\n"
 "@deffn {Function} ninth (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1268
 msgid ""
 "Returns the 9'th item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1273
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1834,21 +1850,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1277
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{pop}\n"
 "@deffn {Function} pop (@var{list})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1281
 msgid ""
 "@code{pop} removes and returns the first element from the list @var{list}. The argument\n"
 "@var{list} must be a mapatom that is bound to a nonempty list. If the argument @var{list} is \n"
 "not bound to a nonempty list, Maxima signals an error. For examples, see @mrefdot{push}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1286
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1856,30 +1872,38 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1290
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{push}\n"
 "@deffn {Function} push (@var{item}, @var{list})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1295
 msgid ""
 "@code{push} prepends the item @var{item} to the list @var{list} and returns a copy of the new list. \n"
 "The second argument @var{list} must be a mapatom that is bound to a list. The first argument @var{item} \n"
 "can be any Maxima symbol or expression. If the argument @var{list} is not bound to a list, Maxima \n"
 "signals an error.\n"
+msgstr ""
+
+#: Lists.texi:1298
+msgid ""
 "To remove the first item from a list, see @mrefdot{pop}\n"
+msgstr ""
+
+#: Lists.texi:1301
+msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1355
 msgid ""
 "@c ===beg===\n"
 "@c ll: [];\n"
 "@c push (x, ll);\n"
 "@c push (x^2+y, ll);\n"
-"@c a: push (\"string\", ll);\n"
+"@c a: push (\\"string\\", ll);\n"
 "@c pop (ll);\n"
 "@c pop (ll);\n"
 "@c pop (ll);\n"
@@ -1901,7 +1925,7 @@ msgid ""
 "(%o3)                      [y + x , x]\n"
 "@end group\n"
 "@group\n"
-"(%i4) a: push (\"string\", ll);\n"
+"(%i4) a: push (\\"string\\", ll);\n"
 "                                     2\n"
 "(%o4)                  [string, y + x , x]\n"
 "@end group\n"
@@ -1930,7 +1954,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1360
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1938,7 +1962,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1366
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rest}\n"
@@ -1947,7 +1971,7 @@ msgid ""
 "@fname{rest} (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1375
 msgid ""
 "Returns @var{expr} with its first @var{n} elements removed if @var{n}\n"
 "is positive and its last @code{- @var{n}} elements removed if @var{n}\n"
@@ -1959,7 +1983,7 @@ msgid ""
 "returns @code{end}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1382
 msgid ""
 "Applying @code{rest} to expression such as @code{f(a,b,c)} returns\n"
 "@code{f(b,c)}. In general, applying @code{rest} to an nonlist doesn't\n"
@@ -1969,12 +1993,12 @@ msgid ""
 "returns @code{[a,b]} and @code{op(a^b)} returns ^.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1384
 msgid ""
 "See also @mref{firstn} and @mrefdot{lastn}\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1395
 msgid ""
 "@example\n"
 "@group\n"
@@ -1988,7 +2012,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1400
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -1996,27 +2020,27 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1403
 msgid ""
 "@c NEED ANOTHER deffn FOR GENERAL EXPRESSIONS ARGUMENTS\n"
 "@c SPLIT OFF EXAMPLES INTO EXAMPLE SECTION\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1407
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{reverse}\n"
 "@deffn {Function} reverse (@var{list})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1411
 msgid ""
 "Reverses the order of the members of the @var{list} (not\n"
 "the members themselves).  @code{reverse} also works on general expressions,\n"
 "e.g.  @code{reverse(a=b);} gives @code{b=a}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1416
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -2024,7 +2048,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1422
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rreduce}\n"
@@ -2033,41 +2057,41 @@ msgid ""
 "@fname{rreduce} (@var{F}, @var{s}, @var{s_@{n + 1@}})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1425
 msgid ""
 "Extends the binary function @var{F} to an n-ary function by composition,\n"
 "where @var{s} is a list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1429
 msgid ""
 "@code{rreduce(@var{F}, @var{s})} returns @code{F(s_1, ... F(s_@{n - 2@}, F(s_@{n - 1@}, s_n)))}.\n"
 "When the optional argument @var{s_@{n + 1@}} is present,\n"
 "the result is equivalent to @code{rreduce(@var{F}, endcons(@var{s_@{n + 1@}}, @var{s}))}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1432
 msgid ""
 "The function @var{F} is first applied to the\n"
-"@i{rightmost} list elements, thus the name \"rreduce\".\n"
+"@i{rightmost} list elements, thus the name \\"rreduce\\".\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1434
 msgid ""
 "See also @mref{lreduce}, @mref{tree_reduce}, and @mref{xreduce}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1436
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1438
 msgid ""
 "@code{rreduce} without the optional argument.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1453
 msgid ""
 "@c ===beg===\n"
 "@c rreduce (f, [1, 2, 3]);\n"
@@ -2085,12 +2109,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1455
 msgid ""
 "@code{rreduce} with the optional argument.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1465
 msgid ""
 "@c ===beg===\n"
 "@c rreduce (f, [1, 2, 3], 4);\n"
@@ -2103,28 +2127,28 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1468
 msgid ""
 "@code{rreduce} applied to built-in binary operators.\n"
 "@code{/} is the division operator.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1488
 msgid ""
 "@c ===beg===\n"
-"@c rreduce (\"^\", args ({a, b, c, d}));\n"
-"@c rreduce (\"/\", args ({a, b, c, d}));\n"
+"@c rreduce (\\"^\\", args ({a, b, c, d}));\n"
+"@c rreduce (\\"/\\", args ({a, b, c, d}));\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) rreduce (\"^\", args (@{a, b, c, d@}));\n"
+"(%i1) rreduce (\\"^\\", args (@{a, b, c, d@}));\n"
 "                                 d\n"
 "                                c\n"
 "                               b\n"
 "(%o1)                         a\n"
 "@end group\n"
 "@group\n"
-"(%i2) rreduce (\"/\", args (@{a, b, c, d@}));\n"
+"(%i2) rreduce (\\"/\\", args (@{a, b, c, d@}));\n"
 "                               a c\n"
 "(%o2)                          ---\n"
 "                               b d\n"
@@ -2132,32 +2156,32 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1492
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1494
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1498
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{second}\n"
 "@deffn {Function} second (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1501
 msgid ""
 "Returns the 2'nd item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1506
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -2165,20 +2189,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1510
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{seventh}\n"
 "@deffn {Function} seventh (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1513
 msgid ""
 "Returns the 7'th item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1518
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -2186,20 +2210,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1522
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sixth}\n"
 "@deffn {Function} sixth (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1525
 msgid ""
 "Returns the 6'th item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1530
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -2207,7 +2231,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1536
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sort}\n"
@@ -2216,7 +2240,7 @@ msgid ""
 "@fname{sort} (@var{L})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1543
 msgid ""
 "@code{sort(@var{L}, @var{P})} sorts a list @var{L} according to a predicate @code{P} of two arguments\n"
 "which defines a strict weak order on the elements of @var{L}.\n"
@@ -2226,64 +2250,64 @@ msgid ""
 "That is, @code{sort} is a stable sort.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1547
 msgid ""
 "If @code{@var{P}(a, b)} and @code{@var{P}(b, a)} are both @code{true} for some elements of @var{L},\n"
 "then @var{P} is not a valid sort predicate, and the result is undefined.\n"
 "If @code{@var{P}(a, b)} is something other than @code{true} or @code{false}, @code{sort} signals an error.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1551
 msgid ""
 "The predicate may be specified as the name of a function \n"
 "or binary infix operator, or as a @code{lambda} expression.  If specified as\n"
 "the name of an operator, the name must be enclosed in double quotes.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1553
 msgid ""
 "The sorted list is returned as a new object; the argument @var{L} is not modified.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1555
 msgid ""
 "@code{sort(@var{L})} is equivalent to @code{sort(@var{L}, orderlessp)}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1557
 msgid ""
 "The default sorting order is ascending, as determined by @mrefdot{orderlessp} The predicate @code{ordergreatp} sorts a list in descending order.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1559
 msgid ""
 "All Maxima atoms and expressions are comparable under @code{orderlessp} and @code{ordergreatp}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1562
 msgid ""
 "Operators @code{<} and @code{>} order numbers, constants, and constant expressions by magnitude.\n"
 "Note that @code{orderlessp} and @code{ordergreatp} do not order numbers, constants, and constant expressions by magnitude.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1565
 msgid ""
 "@code{ordermagnitudep} orders numbers, constants, and constant expressions the same as @code{<},\n"
 "and all other elements the same as @code{orderlessp}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1567
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1570
 msgid ""
 "@code{sort} sorts a list according to a predicate of two arguments\n"
 "which defines a strict weak order on the elements of the list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1585
 msgid ""
 "@c ===beg===\n"
 "@c sort ([1, a, b, 2, 3, c], 'orderlessp);\n"
@@ -2301,22 +2325,22 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1589
 msgid ""
 "The predicate may be specified as the name of a function \n"
 "or binary infix operator, or as a @code{lambda} expression.  If specified as\n"
 "the name of an operator, the name must be enclosed in double quotes.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1631
 msgid ""
 "@c ===beg===\n"
 "@c L : [[1, x], [3, y], [4, w], [2, z]];\n"
 "@c foo (a, b) := a[1] > b[1];\n"
 "@c sort (L, 'foo);\n"
-"@c infix (\">>\");\n"
+"@c infix (\\">>\\");\n"
 "@c a >> b := a[1] > b[1];\n"
-"@c sort (L, \">>\");\n"
+"@c sort (L, \\">>\\");\n"
 "@c sort (L, lambda ([a, b], a[1] > b[1]));\n"
 "@c ===end===\n"
 "@example\n"
@@ -2334,7 +2358,7 @@ msgid ""
 "(%o3)           [[4, w], [3, y], [2, z], [1, x]]\n"
 "@end group\n"
 "@group\n"
-"(%i4) infix (\">>\");\n"
+"(%i4) infix (\\">>\\");\n"
 "(%o4)                          >>\n"
 "@end group\n"
 "@group\n"
@@ -2343,7 +2367,7 @@ msgid ""
 "                                    1    1\n"
 "@end group\n"
 "@group\n"
-"(%i6) sort (L, \">>\");\n"
+"(%i6) sort (L, \\">>\\");\n"
 "(%o6)           [[4, w], [3, y], [2, z], [1, x]]\n"
 "@end group\n"
 "@group\n"
@@ -2353,12 +2377,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1633
 msgid ""
 "@code{sort(@var{L})} is equivalent to @code{sort(@var{L}, orderlessp)}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1653
 msgid ""
 "@c ===beg===\n"
 "@c L : [a, 2*b, -5, 7, 1 + %e, %pi];\n"
@@ -2381,12 +2405,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1655
 msgid ""
 "The default sorting order is ascending, as determined by @mrefdot{orderlessp} The predicate @code{ordergreatp} sorts a list in descending order.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1675
 msgid ""
 "@c ===beg===\n"
 "@c L : [a, 2*b, -5, 7, 1 + %e, %pi];\n"
@@ -2409,12 +2433,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1677
 msgid ""
 "All Maxima atoms and expressions are comparable under @code{orderlessp} and @code{ordergreatp}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1703
 msgid ""
 "@c ===beg===\n"
 "@c L : [11, -17, 29b0, 9*c, 7.55, foo(x, y), -5/2, b + a];\n"
@@ -2443,17 +2467,17 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1706
 msgid ""
 "Operators @code{<} and @code{>} order numbers, constants, and constant expressions by magnitude.\n"
 "Note that @code{orderlessp} and @code{ordergreatp} do not order numbers, constants, and constant expressions by magnitude.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1726
 msgid ""
 "@c ===beg===\n"
 "@c L : [%pi, 3, 4, %e, %gamma];\n"
-"@c sort (L, \">\");\n"
+"@c sort (L, \\">\\");\n"
 "@c sort (L, ordergreatp);\n"
 "@c ===end===\n"
 "@example\n"
@@ -2462,7 +2486,7 @@ msgid ""
 "(%o1)                [%pi, 3, 4, %e, %gamma]\n"
 "@end group\n"
 "@group\n"
-"(%i2) sort (L, \">\");\n"
+"(%i2) sort (L, \\">\\");\n"
 "(%o2)                [4, %pi, 3, %e, %gamma]\n"
 "@end group\n"
 "@group\n"
@@ -2472,13 +2496,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1729
 msgid ""
 "@code{ordermagnitudep} orders numbers, constants, and constant expressions the same as @code{<},\n"
 "and all other elements the same as @code{orderlessp}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1752
 msgid ""
 "@c ===beg===\n"
 "@c L : [%i, 1+%i, 2*x, minf, inf, %e, sin(1), 0, 1, 2, 3, 1.0, 1.0b0];\n"
@@ -2504,7 +2528,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1757
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
@@ -2512,25 +2536,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1761
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sublist}\n"
 "@deffn {Function} sublist (@var{list}, @var{p})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1764
 msgid ""
 "Returns the list of elements of @var{list} for which the predicate @code{p}\n"
 "returns @code{true}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1766
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1781
 msgid ""
 "@c ===beg===\n"
 "@c L: [1, 2, 3, 4, 5, 6];\n"
@@ -2548,7 +2572,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1786
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
@@ -2556,14 +2580,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1790
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sublist_indices}\n"
 "@deffn {Function} sublist_indices (@var{L}, @var{P})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1796
 msgid ""
 "Returns the indices of the elements @code{x} of the list @var{L} for which\n"
 "the predicate @code{maybe(@var{P}(x))} returns @code{true};\n"
@@ -2572,12 +2596,12 @@ msgid ""
 "@var{L} must be a literal list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1798
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1837
 msgid ""
 "@c ===beg===\n"
 "@c sublist_indices ('[a, b, b, c, 1, 2, b, 3, b], \n"
@@ -2619,7 +2643,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1842
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
@@ -2627,20 +2651,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1846
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tenth}\n"
 "@deffn {Function} tenth (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1849
 msgid ""
 "Returns the 10'th item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1854
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -2648,20 +2672,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1858
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{third}\n"
 "@deffn {Function} third (@var{expr})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1861
 msgid ""
 "Returns the 3'rd item of expression or list @var{expr}.\n"
 "See @mref{first} for more details.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1866
 msgid ""
 "@opencatbox\n"
 "@category{Lists} @category{Expressions}\n"
@@ -2669,7 +2693,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1873
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@c TREE_REDUCE ACCEPTS A SET OR LIST AS AN ARGUMENT, BUT RREDUCE AND LREDUCE WANT ONLY LISTS; STRANGE\n"
@@ -2679,13 +2703,13 @@ msgid ""
 "@fname{tree_reduce} (@var{F}, @var{s}, @var{s_0})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1876
 msgid ""
 "Extends the binary function @var{F} to an n-ary function by composition,\n"
 "where @var{s} is a set or list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1882
 msgid ""
 "@code{tree_reduce} is equivalent to the following:\n"
 "Apply @var{F} to successive pairs of elements\n"
@@ -2694,36 +2718,36 @@ msgid ""
 "Then repeat until the list is reduced to a single element, which is the return value.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1885
 msgid ""
 "When the optional argument @var{s_0} is present,\n"
 "the result is equivalent @code{tree_reduce(@var{F}, cons(@var{s_0}, @var{s}))}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1889
 msgid ""
 "For addition of floating point numbers,\n"
 "@code{tree_reduce} may return a sum that has a smaller rounding error\n"
 "than either @code{rreduce} or @code{lreduce}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1892
 msgid ""
 "The elements of @var{s} and the partial results may be arranged in a minimum-depth binary tree,\n"
-"thus the name \"tree_reduce\".\n"
+"thus the name \\"tree_reduce\\".\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1894
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1896
 msgid ""
 "@code{tree_reduce} applied to a list with an even number of elements.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1906
 msgid ""
 "@c ===beg===\n"
 "@c tree_reduce (f, [a, b, c, d]);\n"
@@ -2736,12 +2760,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1908
 msgid ""
 "@code{tree_reduce} applied to a list with an odd number of elements.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1918
 msgid ""
 "@c ===beg===\n"
 "@c tree_reduce (f, [a, b, c, d, e]);\n"
@@ -2754,48 +2778,48 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1922
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1924
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1928
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{unique}\n"
 "@deffn {Function} unique (@var{L})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1930
 msgid ""
 "Returns the unique elements of the list @var{L}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1934
 msgid ""
 "When all the elements of @var{L} are unique,\n"
 "@code{unique} returns a shallow copy of @var{L},\n"
 "not @var{L} itself.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1936
 msgid ""
 "If @var{L} is not a list, @code{unique} returns @var{L}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1938
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1949
 msgid ""
 "@c ===beg===\n"
 "@c unique ([1, %pi, a + b, 2, 1, %e, %pi, a + b, [1]]);\n"
@@ -2809,7 +2833,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1956
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@c XREDUCE ACCEPTS A SET OR LIST AS AN ARGUMENT, BUT RREDUCE AND LREDUCE WANT ONLY LISTS; STRANGE\n"
@@ -2819,7 +2843,7 @@ msgid ""
 "@fname{xreduce} (@var{F}, @var{s}, @var{s_0})\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1961
 msgid ""
 "Extends the function @var{F} to an n-ary function by composition,\n"
 "or, if @var{F} is already n-ary, applies @var{F} to @var{s}.\n"
@@ -2827,7 +2851,7 @@ msgid ""
 "The argument @var{s} is a list.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1968
 msgid ""
 "Functions known to be n-ary include\n"
 "addition @code{+}, multiplication @code{*}, @code{and}, @code{or}, @code{max},\n"
@@ -2837,13 +2861,13 @@ msgid ""
 "@code{xreduce} is expected to be faster than either @code{rreduce} or @code{lreduce}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1971
 msgid ""
 "When the optional argument @var{s_0} is present,\n"
 "the result is equivalent to @code{xreduce(@var{s}, cons(@var{s_0}, @var{s}))}.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1976
 msgid ""
 "@c NOT SURE WHAT IS THE RELEVANCE OF THE FOLLOWING COMMENT\n"
 "@c MAXIMA IS NEVER SO CAREFUL ABOUT FLOATING POINT ASSOCIATIVITY SO FAR AS I KNOW\n"
@@ -2851,18 +2875,18 @@ msgid ""
 "@code{xreduce} applies Maxima's n-ary addition when @var{s} contains floating point numbers.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1978
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:1981
 msgid ""
 "@code{xreduce} applied to a function known to be n-ary.\n"
 "@code{F} is called once, with all arguments.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2001
 msgid ""
 "@c ===beg===\n"
 "@c declare (F, nary);\n"
@@ -2885,13 +2909,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2004
 msgid ""
 "@code{xreduce} applied to a function not known to be n-ary.\n"
 "@code{G} is called several times, with two arguments each time.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2024
 msgid ""
 "@c ===beg===\n"
 "@c G ([L]) := L;\n"
@@ -2914,19 +2938,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2028
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2030
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2035
 msgid ""
 "@c h-----------------------------------------------------------------------------\n"
 "@node Performance considerations for Lists, ,Functions and Variables for Lists, Lists\n"
@@ -2934,7 +2958,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2045
 msgid ""
 "Lists provide efficient ways of appending and removing elements.\n"
 "They can be created without knowing their final dimensions.\n"
@@ -2947,7 +2971,7 @@ msgid ""
 "stack or a fifo:\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2059
 msgid ""
 "@c ===beg===\n"
 "@c l:[Test,1,2,3,4];\n"
@@ -2964,27 +2988,27 @@ msgid ""
 "                              Test\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2061
 msgid ""
 "                                1\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2063
 msgid ""
 "                                2\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2065
 msgid ""
 "                                3\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2067
 msgid ""
 "                                4\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2084
 msgid ""
 "(%o2)                         done\n"
 "@end example\n"
@@ -3004,33 +3028,33 @@ msgid ""
 "                              Test\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2086
 msgid ""
 "                                1\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2088
 msgid ""
 "                                2\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2090
 msgid ""
 "                                3\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2092
 msgid ""
 "                                4\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2095
 msgid ""
 "(%o2)                         done\n"
 "@end example\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2101
 msgid ""
 "Beginning traversal with the last element of a list is possible after\n"
 "reversing the list using @code{reverse ()}.\n"
@@ -3039,7 +3063,7 @@ msgid ""
 "declared array first.\n"
 msgstr ""
 
-# Lists.texi
+#: Lists.texi:2106
 msgid ""
 "It is also to note that the ending condition of @code{for} loops\n"
 "is tested for every iteration which means that the result of a\n"
@@ -3047,33 +3071,3 @@ msgid ""
 "condition:\n"
 msgstr ""
 
-# Lists.texi
-msgid ""
-"@c ===beg===\n"
-"@c l:makelist(i,i,1,100000)$\n"
-"@c lngth:length(l);\n"
-"@c x:1;\n"
-"@c for i:1 thru lngth do\n"
-"@c     x:x+1$\n"
-"@c x;\n"
-"@c ===end===\n"
-"@example\n"
-"(%i1) l:makelist(i,i,1,100000)$\n"
-"@group\n"
-"(%i2) lngth:length(l);\n"
-"(%o2)                        100000\n"
-"@end group\n"
-"@group\n"
-"(%i3) x:1;\n"
-"(%o3)                           1\n"
-"@end group\n"
-"@group\n"
-"(%i4) for i:1 thru lngth do\n"
-"    x:x+1$\n"
-"@end group\n"
-"@group\n"
-"(%i5) x;\n"
-"(%o5)                        100001\n"
-"@end group\n"
-"@end example\n"
-msgstr ""

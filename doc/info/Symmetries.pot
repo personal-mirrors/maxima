@@ -1,28 +1,28 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Symmetries.texi
+msgstr ""
+
+#: Symmetries.texi:2
 msgid ""
 "@c end concepts Symmetries\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:7
 msgid ""
 "@menu\n"
 "* Introduction to Symmetries::\n"
@@ -30,18 +30,18 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:10
 msgid ""
 "@node Introduction to Symmetries, Functions and Variables for Symmetries, Symmetries, Symmetries\n"
 "@section Introduction to Symmetries\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:12
 msgid ""
 "@code{sym} is a package for working with symmetric groups of polynomials.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:21
 msgid ""
 "@ifnottex\n"
 "It was written for Macsyma-Symbolics by Annick Valibouze (@url{http://www-calfor.lip6.fr/~avb/}).\n"
@@ -53,7 +53,7 @@ msgid ""
 "@end iftex\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:29
 msgid ""
 "@ifnottex\n"
 "@enumerate\n"
@@ -64,7 +64,7 @@ msgid ""
 "@url{http://www.stix.polytechnique.fr/publications/1984-1994.html}\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:35
 msgid ""
 "@item R@'esolvantes et fonctions sym@'etriques. Annick Valibouze.\n"
 "Proceedings of the ACM-SIGSAM 1989 International Symposium on Symbolic\n"
@@ -73,7 +73,7 @@ msgid ""
 "@url{http://www-calfor.lip6.fr/~avb/DonneesTelechargeables/MesArticles/issac89ACMValibouze.pdf}\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:40
 msgid ""
 "@item Symbolic computation with symmetric polynomials, an extension to Macsyma.\n"
 "Annick Valibouze. Computers and Mathematics (MIT, USA, June 13-17, 1989),\n"
@@ -81,7 +81,7 @@ msgid ""
 "@url{http://www.stix.polytechnique.fr/publications/1984-1994.html}\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:45
 msgid ""
 "@item Th@'eorie de Galois Constructive. Annick Valibouze. M@'emoire d'habilitation\n"
 "@`a diriger les recherches (HDR), Universit@'e P. et M. Curie (Paris VI), 1994.\n"
@@ -89,7 +89,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:53
 msgid ""
 "@iftex\n"
 "@enumerate\n"
@@ -100,7 +100,7 @@ msgid ""
 "Springer, Berlin, 1989.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:58
 msgid ""
 "@item R@'esolvantes et fonctions sym@'etriques\n"
 "@footnote{@url{www-calfor.lip6.fr/~avb/DonneesTelechargeables/MesArticles/issac89ACMValibouze.pdf}}.\n"
@@ -108,7 +108,7 @@ msgid ""
 "and Algebraic Computation, ISSAC'89 (Portland, Oregon). ACM Press, 390-399, 1989.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:63
 msgid ""
 "@item Symbolic computation with symmetric polynomials, an extension to Macsyma\n"
 "@footnote{@url{www.stix.polytechnique.fr/publications/1984-1994.html}}.\n"
@@ -116,7 +116,7 @@ msgid ""
 "Springer-Verlag, New York Berlin, 308-320, 1989.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:68
 msgid ""
 "@item Th@'eorie de Galois Constructive. Annick Valibouze. M@'emoire d'habilitation\n"
 "@`a diriger les recherches (HDR), Universit@'e P. et M. Curie (Paris VI), 1994.\n"
@@ -124,17 +124,25 @@ msgid ""
 "@end iftex\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:72
 msgid ""
 "@opencatbox\n"
 "@category{Group theory} @category{Polynomials} @category{Share packages} @category{Package sym}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: Symmetries.texi:76
+msgid ""
 "@node Functions and Variables for Symmetries,  , Introduction to Symmetries, Symmetries\n"
 "@section Functions and Variables for Symmetries\n"
+msgstr ""
+
+#: Symmetries.texi:79
+msgid ""
 "@subsection Changing bases\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:88
 msgid ""
 "@anchor{comp2pui}\n"
 "@deffn {Function} comp2pui (@var{n}, @var{L})\n"
@@ -146,7 +154,7 @@ msgid ""
 "otherwise the size is set to @var{n}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:98
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c comp2pui (3, [4, g]);\n"
@@ -159,7 +167,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:103
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -167,7 +175,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:108
 msgid ""
 "@anchor{ele2pui}\n"
 "@deffn {Function} ele2pui (@var{m}, @var{L})\n"
@@ -175,12 +183,12 @@ msgid ""
 "Similar to @code{comp2ele} and @code{comp2pui}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:110
 msgid ""
 "Other functions for changing bases: @code{comp2ele}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:115
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -188,7 +196,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:120
 msgid ""
 "@anchor{ele2comp}\n"
 "@deffn {Function} ele2comp (@var{m}, @var{L})\n"
@@ -196,12 +204,12 @@ msgid ""
 "Similar to @code{comp2ele} and @code{comp2pui}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:122
 msgid ""
 "Other functions for changing bases: @code{comp2ele}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:127
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -209,7 +217,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:141
 msgid ""
 "@anchor{elem}\n"
 "@deffn {Function} elem (@var{ele}, @var{sym}, @var{lvar})\n"
@@ -226,7 +234,7 @@ msgid ""
 "function @code{pui} is used in the same way.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:146
 msgid ""
 "On an alphabet of size 3 with @var{e1}, the first elementary symmetric\n"
 "function, with value 7, the symmetric polynomial in 3 variables whose\n"
@@ -234,7 +242,7 @@ msgid ""
 "@var{x^4-2*x*y} decomposes as follows in elementary symmetric functions:\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:154
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c elem ([3, 7], x^4 - 2*x*y, [x, y]);\n"
@@ -245,7 +253,7 @@ msgid ""
 "(%o1) 7 (e3 - 7 e2 + 7 (49 - e2)) + 21 e3\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:163
 msgid ""
 "                                         + (- 2 (49 - e2) - 2) e2\n"
 "@end group\n"
@@ -257,13 +265,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:166
 msgid ""
 "@noindent\n"
 "Other functions for changing bases: @code{comp2ele}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:171
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -271,7 +279,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:189
 msgid ""
 "@anchor{mon2schur}\n"
 "@deffn {Function} mon2schur (@var{L})\n"
@@ -292,7 +300,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:199
 msgid ""
 "This Schur function can be written in terms of monomials by using\n"
 "@code{treinat} and @code{kostka}.  The form returned is a symmetric\n"
@@ -305,7 +313,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:220
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c mon2schur ([1, 1, 1]);\n"
@@ -329,13 +337,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:223
 msgid ""
 "@noindent\n"
 "which means that for 3 variables this gives:\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:233
 msgid ""
 "@c UM, FROM WHAT ARGUMENTS WAS THE FOLLOWING GENERATED ?? (original comment)\n"
 "@example\n"
@@ -348,7 +356,7 @@ msgid ""
 "Other functions for changing bases: @code{comp2ele}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:238
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -356,7 +364,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:245
 msgid ""
 "@anchor{multi}\n"
 "@deffn {Function} multi_elem (@var{l_elem}, @var{multi_pc}, @var{l_var})\n"
@@ -366,7 +374,7 @@ msgid ""
 "@var{l_elem}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:262
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c multi_elem ([[2, e1, e2], [2, f1, f2]], a*x + a^2 + x^3, [[x, y], [a, b]]);\n"
@@ -386,17 +394,21 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:264
 msgid ""
 "Other functions for changing bases: @code{comp2ele}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:269
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:276
+msgid ""
 "@c WHAT ARE THE ARGUMENTS FOR THIS FUNCTION ?? (original comment)\n"
 "@anchor{multi_pui}\n"
 "@deffn {Function} multi_pui\n"
@@ -404,7 +416,7 @@ msgid ""
 "the function @code{elem}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:289
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c multi_pui ([[2, p1, p2], [2, t1, t2]], a*x + a^2 + x^3, [[x, y], [a, b]]);\n"
@@ -420,12 +432,16 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:294
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:309
+msgid ""
 "@c HMM, pui IS A VARIABLE AS WELL.  It's a function, for sure.\n"
 "@anchor{pui}\n"
 "@deffn {Function} pui (@var{L}, @var{sym}, @var{lvar})\n"
@@ -441,7 +457,7 @@ msgid ""
 "be 2). The function @code{pui} is used in the same way.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:336
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c pui;\n"
@@ -471,12 +487,16 @@ msgid ""
 "Other functions for changing bases: @code{comp2ele}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:341
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:350
+msgid ""
 "@anchor{pui2comp}\n"
 "@deffn {Function} pui2comp (@var{n}, @var{lpui})\n"
 "renders the list of the first @var{n} complete functions (with the\n"
@@ -486,7 +506,7 @@ msgid ""
 "@code{comp2pui}).\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:382
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c pui2comp (2, []);\n"
@@ -521,12 +541,16 @@ msgid ""
 "Other functions for changing bases: @code{comp2ele}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:387
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:395
+msgid ""
 "@anchor{pui2ele}\n"
 "@deffn {Function} pui2ele (@var{n}, @var{lpui})\n"
 "effects the passage from power functions to the elementary symmetric functions.\n"
@@ -535,12 +559,12 @@ msgid ""
 "@code{close}, it will return the @var{n}-th elementary symmetric function.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:397
 msgid ""
 "Other functions for changing bases: @code{comp2ele}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:402
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -548,7 +572,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:408
 msgid ""
 "@anchor{puireduc}\n"
 "@deffn {Function} puireduc (@var{n}, @var{lpui})\n"
@@ -557,7 +581,7 @@ msgid ""
 "first @var{m}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:427
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c puireduc (3, [2]);\n"
@@ -579,7 +603,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:432
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -587,7 +611,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:441
 msgid ""
 "@anchor{schur2comp}\n"
 "@deffn {Function} schur2comp (@var{P}, @var{l_var})\n"
@@ -597,6 +621,10 @@ msgid ""
 "the concatenation of the letter @code{h} and the integer @var{i}:\n"
 "@code{h@var{i}}.  This function expresses @var{P} in terms of Schur\n"
 "functions.\n"
+msgstr ""
+
+#: Symmetries.texi:458
+msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c schur2comp (h1*h2 - h3, [h1, h2, h3]);\n"
 "@c schur2comp (a*h3, [h3]);\n"
@@ -614,7 +642,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:463
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -622,7 +650,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:473
 msgid ""
 "@subsection Changing representations\n"
 "@anchor{cont2part}\n"
@@ -631,7 +659,7 @@ msgid ""
 "@var{pc} whose variables are in @var{lvar}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:489
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c pc: 2*a^3*b*x^4*y + x^5;\n"
@@ -650,12 +678,16 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:494
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:504
+msgid ""
 "@anchor{contract}\n"
 "@deffn {Function} contract (@var{psym}, @var{lvar})\n"
 "returns a contracted form (i.e. a monomial orbit under the action of the\n"
@@ -666,7 +698,7 @@ msgid ""
 "the polynomial.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:513
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c psym: explose (2*a^3*b*x^4*y, [x, y, z]);\n"
@@ -678,7 +710,7 @@ msgid ""
 "(%o1) 2 a  b y z  + 2 a  b x z  + 2 a  b y  z + 2 a  b x  z\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:523
 msgid ""
 "                                           3      4      3    4\n"
 "                                      + 2 a  b x y  + 2 a  b x  y\n"
@@ -691,7 +723,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:528
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -699,7 +731,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:533
 msgid ""
 "@anchor{explose}\n"
 "@deffn {Function} explose (@var{pc}, @var{lvar})\n"
@@ -707,7 +739,7 @@ msgid ""
 "@var{pc}. The list @var{lvar} contains the variables.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:542
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c explose (a*x + 1, [x, y, z]);\n"
@@ -719,7 +751,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:547
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -727,7 +759,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:552
 msgid ""
 "@anchor{part2cont}\n"
 "@deffn {Function} part2cont (@var{ppart}, @var{lvar})\n"
@@ -735,7 +767,7 @@ msgid ""
 "The contracted form is rendered with the variables in @var{lvar}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:562
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c part2cont ([[2*a^3*b, 4, 1]], [x, y]);\n"
@@ -748,19 +780,23 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:567
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:573
+msgid ""
 "@anchor{partpol}\n"
 "@deffn {Function} partpol (@var{psym}, @var{lvar})\n"
 "@var{psym} is a symmetric polynomial in the variables of the list\n"
 "@var{lvar}. This function retturns its partitioned representation.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:582
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c partpol (-a*(x + y) + 3*x*y, [x, y]);\n"
@@ -772,7 +808,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:587
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -780,7 +816,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:593
 msgid ""
 "@anchor{tcontract}\n"
 "@deffn {Function} tcontract (@var{pol}, @var{lvar})\n"
@@ -789,12 +825,16 @@ msgid ""
 "function @code{contract}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:598
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:605
+msgid ""
 "@anchor{tpartpol}\n"
 "@deffn {Function} tpartpol (@var{pol}, @var{lvar})\n"
 "tests if the polynomial @var{pol} is symmetric in the variables of the\n"
@@ -802,16 +842,20 @@ msgid ""
 "the function @code{partpol}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:610
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:615
+msgid ""
 "@subsection Groups and orbits\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:626
 msgid ""
 "@anchor{direct}\n"
 "@deffn {Function} direct ([@var{p_1}, ..., @var{p_n}], @var{y}, @var{f}, [@var{lvar_1}, ..., @var{lvar_n}])\n"
@@ -825,7 +869,7 @@ msgid ""
 "reduce the amount of computation.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:639
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c direct ([z^2  - e1* z + e2, z^2  - f1* z + f2],\n"
@@ -841,7 +885,7 @@ msgid ""
 "(%o1) y  - e1 f1 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:655
 msgid ""
 "                                 2            2             2   2\n"
 "                  - 4 e2 f2 - (e1  - 2 e2) (f1  - 2 f2) + e1  f1\n"
@@ -860,49 +904,49 @@ msgid ""
 "(%o3) y  - 2 e1 f1 y  + ((2 e1  - 6 e2) f2 + (2 e2 + e1 ) f1 ) y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:658
 msgid ""
 "                          3                               3   3\n"
 " + ((9 e3 + 5 e1 e2 - 2 e1 ) f1 f2 + (- 2 e3 - 2 e1 e2) f1 ) y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:661
 msgid ""
 "         2       2        4    2\n"
 " + ((9 e2  - 6 e1  e2 + e1 ) f2\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:664
 msgid ""
 "                    2       2       2                   2    4\n"
 " + (- 9 e1 e3 - 6 e2  + 3 e1  e2) f1  f2 + (2 e1 e3 + e2 ) f1 )\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:667
 msgid ""
 "  2          2                      2     3          2\n"
 " y  + (((9 e1  - 27 e2) e3 + 3 e1 e2  - e1  e2) f1 f2\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:670
 msgid ""
 "                 2            2    3                5\n"
 " + ((15 e2 - 2 e1 ) e3 - e1 e2 ) f1  f2 - 2 e2 e3 f1 ) y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:673
 msgid ""
 "           2                   3           3     2   2    3\n"
 " + (- 27 e3  + (18 e1 e2 - 4 e1 ) e3 - 4 e2  + e1  e2 ) f2\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:676
 msgid ""
 "         2      3                   3    2   2\n"
 " + (27 e3  + (e1  - 9 e1 e2) e3 + e2 ) f1  f2\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:681
 msgid ""
 "                   2    4        2   6\n"
 " + (e1 e2 e3 - 9 e3 ) f1  f2 + e3  f1\n"
@@ -910,14 +954,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:685
 msgid ""
 "Finding the polynomial whose roots are the sums @math{a+u} where @math{a}\n"
 "is a root of @math{z^2 - e_1 z + e_2} and @math{u} is a root of @math{z^2 -\n"
 "f_1 z + f_2}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:695
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c ratsimp (direct ([z^2 - e1* z + e2, z^2 - f1* z + f2],\n"
@@ -930,19 +974,19 @@ msgid ""
 "(%o1) y  + (- 2 f1 - 2 e1) y  + (2 f2 + f1  + 3 e1 f1 + 2 e2\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:698
 msgid ""
 "     2   2                              2               2\n"
 " + e1 ) y  + ((- 2 f1 - 2 e1) f2 - e1 f1  + (- 2 e2 - e1 ) f1\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:701
 msgid ""
 "                  2                     2            2\n"
 " - 2 e1 e2) y + f2  + (e1 f1 - 2 e2 + e1 ) f2 + e2 f1  + e1 e2 f1\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:706
 msgid ""
 "     2\n"
 " + e2\n"
@@ -950,7 +994,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:711
 msgid ""
 "@code{direct} accepts two flags: @code{elementaires} and\n"
 "@code{puissances} (default) which allow decomposing the symmetric\n"
@@ -958,19 +1002,19 @@ msgid ""
 "functions, or power functions, respectively.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:713
 msgid ""
 "Functions of @code{sym} used in this function:\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:717
 msgid ""
 "@code{multi_orbit} (so @code{orbit}), @code{pui_direct}, @code{multi_elem}\n"
 "(so @code{elem}), @code{multi_pui} (so @code{pui}), @code{pui2ele}, @code{ele2pui}\n"
 "(if the flag @code{direct} is in @code{puissances}).\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:722
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -978,13 +1022,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:727
 msgid ""
 "@anchor{multi_orbit}\n"
 "@deffn {Function} multi_orbit (@var{P}, [@var{lvar_1}, @var{lvar_2},..., @var{lvar_p}])\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:733
 msgid ""
 "@var{P} is a polynomial in the set of variables contained in the lists\n"
 "@var{lvar_1}, @var{lvar_2}, ..., @var{lvar_p}. This function returns the\n"
@@ -993,7 +1037,7 @@ msgid ""
 "lists.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:749
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c multi_orbit (a*x + b*y, [[x, y], [a, b]]);\n"
@@ -1012,7 +1056,7 @@ msgid ""
 "Also see: @code{orbit} for the action of a single symmetric group.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:754
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -1020,7 +1064,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:762
 msgid ""
 "@anchor{multsym}\n"
 "@deffn {Function} multsym (@var{ppart_1}, @var{ppart_2}, @var{n})\n"
@@ -1029,14 +1073,14 @@ msgid ""
 "order @var{n}. The polynomials are in their partitioned form.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:766
 msgid ""
 "Given the 2 symmetric polynomials in @var{x}, @var{y}:  @code{3*(x + y)\n"
 "+ 2*x*y} and @code{5*(x^2 + y^2)} whose partitioned forms are @code{[[3,\n"
 "1], [2, 1, 1]]} and @code{[[5, 2]]}, their product will be\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:777
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c multsym ([[3, 1], [2, 1, 1]], [[5, 2]], 2);\n"
@@ -1050,23 +1094,27 @@ msgid ""
 "that is @code{10*(x^3*y + y^3*x) + 15*(x^2*y + y^2*x) + 15*(x^3 + y^3)}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:779
 msgid ""
 "Functions for changing the representations of a symmetric polynomial:\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:782
 msgid ""
 "@code{contract}, @code{cont2part}, @code{explose}, @code{part2cont},\n"
 "@code{partpol}, @code{tcontract}, @code{tpartpol}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:787
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:794
+msgid ""
 "@anchor{orbit}\n"
 "@deffn {Function} orbit (@var{P}, @var{lvar})\n"
 "computes the orbit of the polynomial @var{P} in the variables in the list\n"
@@ -1074,7 +1122,7 @@ msgid ""
 "variables in the list @var{lvar}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:812
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c orbit (a*x + b*y, [x, y]);\n"
@@ -1095,17 +1143,21 @@ msgid ""
 "groups on a polynomial.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:817
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:821
+msgid ""
 "@anchor{pui_direct}\n"
 "@deffn {Function} pui_direct (@var{orbite}, [@var{lvar_1}, ..., @var{lvar_n}], [@var{d_1}, @var{d_2}, ..., @var{d_n}])\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:836
 msgid ""
 "Let @var{f} be a polynomial in @var{n} blocks of variables @var{lvar_1},\n"
 "..., @var{lvar_n}.  Let @var{c_i} be the number of variables in\n"
@@ -1123,7 +1175,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:849
 msgid ""
 "@iftex\n"
 "Let @var{SD} be the product of the symmetric groups @math{S_{d_1} \times\n"
@@ -1139,13 +1191,13 @@ msgid ""
 "the size of @code{@var{SD}(@var{f})}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:852
 msgid ""
 "The result is in multi-contracted form w.r.t. @var{SD}, i.e. only one\n"
 "element is kept per orbit, under the action of @var{SD}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:872
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c l: [[x, y], [a, b]];\n"
@@ -1168,19 +1220,19 @@ msgid ""
 "(%o3) [2 a x, 4 a b x y + 2 a  x , 3 a  b x  y + 2 a  x , \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:875
 msgid ""
 "    2  2  2  2      3    3        4  4\n"
 "12 a  b  x  y  + 4 a  b x  y + 2 a  x , \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:878
 msgid ""
 "    3  2  3  2      4    4        5  5\n"
 "10 a  b  x  y  + 5 a  b x  y + 2 a  x , \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:887
 msgid ""
 "    3  3  3  3       4  2  4  2      5    5        6  6\n"
 "40 a  b  x  y  + 15 a  b  x  y  + 6 a  b x  y + 2 a  x ]\n"
@@ -1192,7 +1244,7 @@ msgid ""
 "(%o4) [3 x + 2 a, 6 x y + 3 x  + 4 a x + 4 a , \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:895
 msgid ""
 "                 2                   3        2       2        3\n"
 "              9 x  y + 12 a x y + 3 x  + 6 a x  + 12 a  x + 8 a ]\n"
@@ -1203,12 +1255,16 @@ msgid ""
 "@c pui_direct ([y + x + 2*c, y + x + 2*b, y + x + 2*a], [[x, y], [a, b, c]], [3, 4]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:900
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:911
+msgid ""
 "@subsection Partitions\n"
 "@anchor{kostka}\n"
 "@deffn {Function} kostka (@var{part_1}, @var{part_2})\n"
@@ -1216,7 +1272,7 @@ msgid ""
 "@var{part_1} and @var{part_2}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:920
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c kostka ([3, 3, 3], [2, 2, 2, 1, 1, 1]);\n"
@@ -1228,18 +1284,22 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:925
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:930
+msgid ""
 "@anchor{lgtreillis}\n"
 "@deffn {Function} lgtreillis (@var{n}, @var{m})\n"
 "returns the list of partitions of weight @var{n} and length @var{m}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:941
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c lgtreillis (4, 2);\n"
@@ -1253,19 +1313,23 @@ msgid ""
 "Also see: @code{ltreillis}, @code{treillis} and @code{treinat}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:946
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:952
+msgid ""
 "@anchor{ltreillis}\n"
 "@deffn {Function} ltreillis (@var{n}, @var{m})\n"
 "returns the list of partitions of weight @var{n} and length less than or\n"
 "equal to @var{m}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:963
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c ltreillis (4, 2);\n"
@@ -1279,18 +1343,22 @@ msgid ""
 "Also see: @code{lgtreillis}, @code{treillis} and @code{treinat}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:968
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:973
+msgid ""
 "@anchor{treillis}\n"
 "@deffn {Function} treillis (@var{n})\n"
 "returns all partitions of weight @var{n}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:982
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c treillis (4);\n"
@@ -1302,24 +1370,28 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:984
 msgid ""
 "See also: @mrefcomma{lgtreillis} @mref{ltreillis} and @mrefdot{treinat}\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:989
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:995
+msgid ""
 "@anchor{treinat}\n"
 "@deffn {Function} treinat (@var{part})\n"
 "retruns the list of partitions inferior to the partition @var{part} w.r.t.\n"
 "the natural order.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1008
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c treinat ([5]);\n"
@@ -1335,7 +1407,7 @@ msgid ""
 "(%o2) [[5], [4, 1], [3, 2], [3, 1, 1], [2, 2, 1], [2, 1, 1, 1], \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1016
 msgid ""
 "                                                 [1, 1, 1, 1, 1]]\n"
 "@end group\n"
@@ -1346,12 +1418,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1018
 msgid ""
 "See also: @mrefcomma{lgtreillis} @mref{ltreillis} and @mrefdot{treillis}\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1023
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -1359,12 +1431,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1029
 msgid ""
 "@subsection Polynomials and their roots\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1036
 msgid ""
 "@anchor{ele2polynome}\n"
 "@deffn {Function} ele2polynome (@var{L}, @var{z})\n"
@@ -1374,7 +1446,7 @@ msgid ""
 "polynomial and @var{e_i} the @var{i}-th elementary symmetric function.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1059
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c ele2polynome ([2, e1, e2], z);\n"
@@ -1400,18 +1472,22 @@ msgid ""
 "The inverse: @code{polynome2ele (@var{P}, @var{z})}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1062
 msgid ""
 "Also see:\n"
 "@code{polynome2ele}, @code{pui2polynome}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1067
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1075
+msgid ""
 "@anchor{polynome2ele}\n"
 "@deffn {Function} polynome2ele (@var{P}, @var{x})\n"
 "gives the list @code{@var{l} = [@var{n}, @var{e_1}, ..., @var{e_n}]}\n"
@@ -1420,7 +1496,7 @@ msgid ""
 "of the roots of @var{P}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1092
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c polynome2ele (x^7 - 14*x^5 + 56*x^3 - 56*x + 22, x);\n"
@@ -1440,12 +1516,16 @@ msgid ""
 "The inverse: @code{ele2polynome (@var{l}, @var{x})}\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1097
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1104
+msgid ""
 "@anchor{prodrac}\n"
 "@deffn {Function} prodrac (@var{L}, @var{k})\n"
 "@var{L} is a list containing the elementary symmetric functions \n"
@@ -1453,12 +1533,12 @@ msgid ""
 "are the @var{k} by @var{k} products of the elements of @var{A}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1106
 msgid ""
 "Also see @code{somrac}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1111
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -1466,7 +1546,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1116
 msgid ""
 "@anchor{pui2polynome}\n"
 "@deffn {Function} pui2polynome (@var{x}, @var{lpui})\n"
@@ -1474,7 +1554,7 @@ msgid ""
 "are given in the list @var{lpui}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1147
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c polynome2ele (x^3 - 4*x^2 + 5*x - 1, x);\n"
@@ -1508,12 +1588,16 @@ msgid ""
 "@mrefcomma{polynome2ele} @mrefdot{ele2polynome}\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1152
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1159
+msgid ""
 "@anchor{somrac}\n"
 "@deffn {Function} somrac (@var{L}, @var{k})\n"
 "The list @var{L} contains elementary symmetric functions of a polynomial\n"
@@ -1521,12 +1605,12 @@ msgid ""
 "@var{k} by @var{k} distinct sums of the roots of @var{P}. \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1161
 msgid ""
 "Also see @code{prodrac}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1166
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -1534,12 +1618,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1172
 msgid ""
 "@subsection Resolvents\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1180
 msgid ""
 "@anchor{resolvante}\n"
 "@deffn {Function} resolvante (@var{P}, @var{x}, @var{f}, [@var{x_1},..., @var{x_d}]) \n"
@@ -1550,13 +1634,13 @@ msgid ""
 "variables which do not appear in the transformation function @var{f}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1183
 msgid ""
 "To increase the efficiency of the computation one may set flags in\n"
 "@code{resolvante} so as to use appropriate algorithms:\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1200
 msgid ""
 "If the function @var{f} is unitary:\n"
 "@itemize @bullet\n"
@@ -1576,7 +1660,7 @@ msgid ""
 "the function of the Cayley resolvent (usable up to degree 5)\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1208
 msgid ""
 "@c WHAT IS THIS ILLUSTRATING EXACTLY ??\n"
 "@example\n"
@@ -1587,7 +1671,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1228
 msgid ""
 "general,\n"
 "@end itemize\n"
@@ -1610,7 +1694,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1256
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c resolvante: unitaire$\n"
@@ -1641,37 +1725,37 @@ msgid ""
 "      [x]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1259
 msgid ""
-"\" resolvante unitaire \" [7, 0, 28, 0, 168, 0, 1120, - 154, 7840,\n"
+"\\" resolvante unitaire \\" [7, 0, 28, 0, 168, 0, 1120, - 154, 7840,\n"
 "                         - 2772, 56448, - 33880, \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1261
 msgid ""
 "413952, - 352352, 3076668, - 3363360, 23114112, - 30494464, \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1265
 msgid ""
 "175230832, - 267412992, 1338886528, - 2292126760] \n"
 "  3       6      3       9      6      3\n"
 "[x  - 1, x  - 2 x  + 1, x  - 3 x  + 3 x  - 1, \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1268
 msgid ""
 " 12      9      6      3       15      12       9       6      3\n"
 "x   - 4 x  + 6 x  - 4 x  + 1, x   - 5 x   + 10 x  - 10 x  + 5 x\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1271
 msgid ""
 "       18      15       12       9       6      3\n"
 " - 1, x   - 6 x   + 15 x   - 20 x  + 15 x  - 6 x  + 1, \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1277
 msgid ""
 " 21      18       15       12       9       6      3\n"
 "x   - 7 x   + 21 x   - 35 x   + 35 x  - 21 x  + 7 x  - 1] \n"
@@ -1680,7 +1764,7 @@ msgid ""
 "(%o2) y  + 7 y  - 539 y  - 1841 y  + 51443 y  + 315133 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1283
 msgid ""
 "                                              + 376999 y + 125253\n"
 "@end group\n"
@@ -1689,14 +1773,14 @@ msgid ""
 "(%i4) resolvante (x^4 - 1, x, x1 + 2*x2 + 3*x3, [x1, x2, x3]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1287
 msgid ""
-"\" resolvante lineaire \" \n"
+"\\" resolvante lineaire \\" \n"
 "       24       20         16            12             8\n"
 "(%o4) y   + 80 y   + 7520 y   + 1107200 y   + 49475840 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1294
 msgid ""
 "                                                    4\n"
 "                                       + 344489984 y  + 655360000\n"
@@ -1706,14 +1790,14 @@ msgid ""
 "(%i6) resolvante (x^4 - 1, x, x1 + 2*x2 + 3*x3, [x1, x2, x3]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1298
 msgid ""
-"\" resolvante generale \" \n"
+"\\" resolvante generale \\" \n"
 "       24       20         16            12             8\n"
 "(%o6) y   + 80 y   + 7520 y   + 1107200 y   + 49475840 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1304
 msgid ""
 "                                                    4\n"
 "                                       + 344489984 y  + 655360000\n"
@@ -1722,14 +1806,14 @@ msgid ""
 "(%i7) resolvante (x^4 - 1, x, x1 + 2*x2 + 3*x3, [x1, x2, x3, x4]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1308
 msgid ""
-"\" resolvante generale \" \n"
+"\\" resolvante generale \\" \n"
 "       24       20         16            12             8\n"
 "(%o7) y   + 80 y   + 7520 y   + 1107200 y   + 49475840 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1316
 msgid ""
 "                                                    4\n"
 "                                       + 344489984 y  + 655360000\n"
@@ -1740,7 +1824,7 @@ msgid ""
 "(%o8) y   + 80 y   + 7520 y   + 1107200 y   + 49475840 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1323
 msgid ""
 "                                                    4\n"
 "                                       + 344489984 y  + 655360000\n"
@@ -1750,9 +1834,9 @@ msgid ""
 "(%i10) resolvante (x^4 - 1, x, x1 + x2 + x3, [x1, x2, x3]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1331
 msgid ""
-"\" resolvante lineaire \" \n"
+"\\" resolvante lineaire \\" \n"
 "                              4\n"
 "(%o10)                       y  - 1\n"
 "@end group\n"
@@ -1761,9 +1845,9 @@ msgid ""
 "(%i12) resolvante (x^4 - 1, x, x1 + x2 + x3, [x1, x2, x3]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1338
 msgid ""
-"\" resolvante symetrique \" \n"
+"\\" resolvante symetrique \\" \n"
 "                              4\n"
 "(%o12)                       y  - 1\n"
 "@end group\n"
@@ -1771,9 +1855,9 @@ msgid ""
 "(%i13) resolvante (x^4 + x + 1, x, x1 - x2, [x1, x2]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1346
 msgid ""
-"\" resolvante symetrique \" \n"
+"\\" resolvante symetrique \\" \n"
 "                           6      2\n"
 "(%o13)                    y  - 4 y  - 1\n"
 "@end group\n"
@@ -1782,9 +1866,9 @@ msgid ""
 "(%i15) resolvante (x^4 + x + 1, x, x1 - x2, [x1, x2]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1354
 msgid ""
-"\" resolvante alternee \" \n"
+"\\" resolvante alternee \\" \n"
 "            12      8       6        4        2\n"
 "(%o15)     y   + 8 y  + 26 y  - 112 y  + 216 y  + 229\n"
 "@end group\n"
@@ -1793,38 +1877,38 @@ msgid ""
 "(%i17) resolvante (x^7 - 7*x + 3, x, x1*x2*x3, [x1, x2, x3]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1358
 msgid ""
-"\" resolvante produit \"\n"
+"\\" resolvante produit \\"\n"
 "        35      33         29        28         27        26\n"
 "(%o17) y   - 7 y   - 1029 y   + 135 y   + 7203 y   - 756 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1361
 msgid ""
 "         24           23          22            21           20\n"
 " + 1323 y   + 352947 y   - 46305 y   - 2463339 y   + 324135 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1364
 msgid ""
 "          19           18             17              15\n"
 " - 30618 y   - 453789 y   - 40246444 y   + 282225202 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1367
 msgid ""
 "             14              12             11            10\n"
 " - 44274492 y   + 155098503 y   + 12252303 y   + 2893401 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1370
 msgid ""
 "              9            8            7             6\n"
 " - 171532242 y  + 6751269 y  + 2657205 y  - 94517766 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1377
 msgid ""
 "            5             3\n"
 " - 3720087 y  + 26040609 y  + 14348907\n"
@@ -1834,38 +1918,38 @@ msgid ""
 "(%i19) resolvante (x^7 - 7*x + 3, x, x1*x2*x3, [x1, x2, x3]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1381
 msgid ""
-"\" resolvante symetrique \" \n"
+"\\" resolvante symetrique \\" \n"
 "        35      33         29        28         27        26\n"
 "(%o19) y   - 7 y   - 1029 y   + 135 y   + 7203 y   - 756 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1384
 msgid ""
 "         24           23          22            21           20\n"
 " + 1323 y   + 352947 y   - 46305 y   - 2463339 y   + 324135 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1387
 msgid ""
 "          19           18             17              15\n"
 " - 30618 y   - 453789 y   - 40246444 y   + 282225202 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1390
 msgid ""
 "             14              12             11            10\n"
 " - 44274492 y   + 155098503 y   + 12252303 y   + 2893401 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1393
 msgid ""
 "              9            8            7             6\n"
 " - 171532242 y  + 6751269 y  + 2657205 y  - 94517766 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1400
 msgid ""
 "            5             3\n"
 " - 3720087 y  + 26040609 y  + 14348907\n"
@@ -1875,27 +1959,27 @@ msgid ""
 "(%i21) resolvante (x^5 - 4*x^2 + x + 1, x, a, []);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1404
 msgid ""
-"\" resolvante de Cayley \"\n"
+"\\" resolvante de Cayley \\"\n"
 "        6       5         4          3            2\n"
 "(%o21) x  - 40 x  + 4080 x  - 92928 x  + 3772160 x  + 37880832 x\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1408
 msgid ""
 "                                                       + 93392896\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1411
 msgid ""
 "For the Cayley resolvent, the 2 last arguments are neutral and the input\n"
 "polynomial must necessarily be of degree 5.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1418
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -1905,12 +1989,16 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1423
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1435
+msgid ""
 "@anchor{resolvante_alternee1}\n"
 "@deffn {Function} resolvante_alternee1 (@var{P}, @var{x})\n"
 "calculates the transformation\n"
@@ -1923,7 +2011,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1442
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -1933,12 +2021,16 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1447
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1461
+msgid ""
 "@anchor{resolvante_bipartite}\n"
 "@deffn {Function} resolvante_bipartite (@var{P}, @var{x})\n"
 "calculates the transformation of\n"
@@ -1946,14 +2038,14 @@ msgid ""
 "@iftex\n"
 "@math{x_1 x_2 \cdots x_{n/2} + x_{n/2+1}\cdots x_n}.\n"
 "@end iftex\n"
-"@c UNFORTUNATELY TEXINFO DOES NOT HAVE A NOTION OF \"@ELSE\"\n"
+"@c UNFORTUNATELY TEXINFO DOES NOT HAVE A NOTION OF \\"@ELSE\\"\n"
 "@c SO IT IS NECESSARY TO REPEAT THE FOLLOWING NON-TEX STUFF FOR INFO AND FOR HTML ... SIGH\n"
 "@ifnottex\n"
 "@math{x_1 x_2 ... x_[n/2] + x_[n/2 + 1] ... x_n}.\n"
 "@end ifnottex\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1471
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c resolvante_bipartite (x^6 + 108, x);\n"
@@ -1966,7 +2058,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1478
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -1976,19 +2068,23 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1483
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1489
+msgid ""
 "@anchor{resolvante_diedrale}\n"
 "@deffn {Function} resolvante_diedrale (@var{P}, @var{x})\n"
 "calculates the transformation of @code{@var{P}(@var{x})} by the function\n"
 "@code{@var{x_1} @var{x_2} + @var{x_3} @var{x_4}}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1497
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c resolvante_diedrale (x^5 - 3*x^4 + 1, x);\n"
@@ -1999,20 +2095,20 @@ msgid ""
 "(%o1) x   - 21 x   - 81 x   - 21 x   + 207 x  + 1134 x  + 2331 x\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1500
 msgid ""
 "        6         5          4          3          2\n"
 " - 945 x  - 4970 x  - 18333 x  - 29079 x  - 20745 x  - 25326 x\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1504
 msgid ""
 " - 697\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1511
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -2022,19 +2118,23 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1516
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1522
+msgid ""
 "@anchor{resolvante_klein}\n"
 "@deffn {Function} resolvante_klein (@var{P}, @var{x})\n"
 "calculates the transformation of @code{@var{P}(@var{x})} by the function\n"
 "@code{@var{x_1} @var{x_2} @var{x_4} + @var{x_4}}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1529
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -2044,7 +2144,7 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1534
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -2052,7 +2152,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1539
 msgid ""
 "@anchor{resolvante_klein3}\n"
 "@deffn {Function} resolvante_klein3 (@var{P}, @var{x})\n"
@@ -2060,7 +2160,7 @@ msgid ""
 "@code{@var{x_1} @var{x_2} @var{x_4} + @var{x_4}}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1546
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -2070,19 +2170,23 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1551
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1557
+msgid ""
 "@anchor{resolvante_produit_sym}\n"
 "@deffn {Function} resolvante_produit_sym (@var{P}, @var{x})\n"
 "calculates the list of all product resolvents of the polynomial\n"
 "@code{@var{P}(@var{x})}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1567
 msgid ""
 "@c GENERATED FROM THE FOLLOWING\n"
 "@c resolvante_produit_sym (x^5 + 3*x^4 + 2*x - 1, x);\n"
@@ -2095,13 +2199,13 @@ msgid ""
 "(%o1) [y  + 3 y  + 2 y - 1, y   - 2 y  - 21 y  - 31 y  - 14 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1570
 msgid ""
 "    4       3      2       10      8       7    6       5       4\n"
 " - y  + 14 y  + 3 y  + 1, y   + 3 y  + 14 y  - y  - 14 y  - 31 y\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1577
 msgid ""
 "       3      2       5      4\n"
 " - 21 y  - 2 y  + 1, y  - 2 y  - 3 y - 1, y - 1]\n"
@@ -2111,19 +2215,19 @@ msgid ""
 "(%i3) resolvante (x^5 + 3*x^4 + 2*x - 1, x, a*b*c, [a, b, c]);\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1586
 msgid ""
-"\" resolvante produit \"\n"
+"\\" resolvante produit \\"\n"
 "       10      8       7    6        5       4       3     2\n"
 "(%o3) y   + 3 y  + 14 y  - y  - 14 y  - 31 y  - 21 y  - 2 y  + 1\n"
 "@end group\n"
 "@end example\n"
 "@c INPUT %i3 TICKLES A MINOR BUG IN resolvante: \n"
-"@c \" resolvante produit \" IS PRINTED FROM SOMEWHERE IN THE BOWELS OF resolvante\n"
+"@c \\" resolvante produit \\" IS PRINTED FROM SOMEWHERE IN THE BOWELS OF resolvante\n"
 "@c AND IT GOOFS UP THE DISPLAY OF THE EXPONENTS OF %o3 -- I THREW IN A LINE BREAK TO ADJUST\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1594
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -2134,19 +2238,23 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1599
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1605
+msgid ""
 "@anchor{resolvante_unitaire}\n"
 "@deffn {Function} resolvante_unitaire (@var{P}, @var{Q}, @var{x})\n"
 "computes the resolvent of the polynomial @code{@var{P}(@var{x})} by the\n"
 "polynomial @code{@var{Q}(@var{x})}. \n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1612
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -2156,7 +2264,7 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1617
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -2164,7 +2272,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1623
 msgid ""
 "@anchor{resolvante_vierer}\n"
 "@deffn {Function} resolvante_vierer (@var{P}, @var{x})\n"
@@ -2173,7 +2281,7 @@ msgid ""
 "@var{x_3} @var{x_4}}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1630
 msgid ""
 "See also:\n"
 "@flushleft\n"
@@ -2183,16 +2291,20 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1635
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Symmetries.texi:1640
+msgid ""
 "@subsection Miscellaneous\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1647
 msgid ""
 "@anchor{multinomial}\n"
 "@deffn {Function} multinomial (@var{r}, @var{part})\n"
@@ -2202,7 +2314,7 @@ msgid ""
 "@code{@var{r}!/(@var{i_1}! @var{i_2}! ... @var{i_k}!)}.\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1652
 msgid ""
 "@opencatbox\n"
 "@category{Package sym}\n"
@@ -2210,17 +2322,10 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Symmetries.texi
+#: Symmetries.texi:1656
 msgid ""
 "@anchor{permut}\n"
 "@deffn {Function} permut (@var{L})\n"
 "returns the list of permutations of the list @var{L}.\n"
 msgstr ""
 
-# Symmetries.texi
-msgid ""
-"@opencatbox\n"
-"@category{Package sym} @category{Lists}\n"
-"@closecatbox\n"
-"@end deffn\n"
-msgstr ""

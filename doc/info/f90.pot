@@ -1,30 +1,30 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# f90.texi
+msgstr ""
+
+#: f90.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for f90::\n"
 "@end menu\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:9
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for f90,  , f90-pkg, f90-pkg\n"
@@ -32,39 +32,39 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:13
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{function_f90}\n"
 "@deffn {Function} f90 (@var{expr_1}, @dots{}, @var{expr_n})\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:17
 msgid ""
 "Prints one or more expressions @var{expr_1}, @dots{}, @var{expr_n}\n"
 "as a Fortran 90 program.\n"
 "Output is printed to the standard output.\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:22
 msgid ""
-"@code{f90} prints output in the so-called \"free form\" input format for\n"
+"@code{f90} prints output in the so-called \\"free form\\" input format for\n"
 "Fortran 90: there is no special attention to column positions.\n"
 "Long lines are split at a fixed width with the ampersand @code{&} continuation\n"
 "character.\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:24
 msgid ""
 "@code{load(f90)} loads this function.  See also the function @mrefdot{fortran}\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:26
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:47
 msgid ""
 "@c ===beg===\n"
 "@c load (f90)$\n"
@@ -88,28 +88,28 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:50
 msgid ""
 "Multiple expressions.\n"
 "Capture standard output into a file via the @mref{with_stdout} function.\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:72
 msgid ""
 "@c ===beg===\n"
 "@c load (f90)$\n"
 "@c foo : sin (3*x + 1) - cos (7*x - 2);\n"
-"@c with_stdout (\"foo.f90\", f90 (x = 0.25, y = 0.625, 'foo = foo, 'stop, 'end));\n"
-"@c printfile (\"foo.f90\");\n"
+"@c with_stdout (\\"foo.f90\\", f90 (x = 0.25, y = 0.625, 'foo = foo, 'stop, 'end));\n"
+"@c printfile (\\"foo.f90\\");\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) load (f90)$\n"
 "(%i2) foo : sin (3*x + 1) - cos (7*x - 2);\n"
 "(%o2)              sin(3 x + 1) - cos(7 x - 2)\n"
-"(%i3) with_stdout (\"foo.f90\",\n"
+"(%i3) with_stdout (\\"foo.f90\\",\n"
 "                   f90 (x=0.25, y=0.625, 'foo=foo, 'stop, 'end));\n"
 "(%o3)                         false\n"
-"(%i4) printfile (\"foo.f90\");\n"
+"(%i4) printfile (\\"foo.f90\\");\n"
 "x = 0.25\n"
 "y = 0.625\n"
 "foo = sin(3*x+1)-cos(7*x-2)\n"
@@ -119,7 +119,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# f90.texi
+#: f90.texi:77
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation} @category{Share packages} @category{Package f90}\n"
@@ -127,6 +127,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# f90.texi
-msgid ""
-msgstr ""

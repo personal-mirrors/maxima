@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# stats.texi
+msgstr ""
+
+#: stats.texi:7
 msgid ""
 "@menu\n"
 "* Introduction to stats::\n"
@@ -27,28 +27,32 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:10
 msgid ""
 "@node Introduction to stats, Functions and Variables for inference_result, Top, Top\n"
 "@section Introduction to stats\n"
+msgstr ""
+
+#: stats.texi:14
+msgid ""
 "Package @code{stats} contains a set of classical statistical inference and\n"
 "hypothesis testing procedures.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:17
 msgid ""
 "All these functions return an @code{inference_result} Maxima object which contains\n"
 "the necessary results for population inferences and decision making.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:21
 msgid ""
 "Global variable @code{stats_numer} controls whether results are given in \n"
 "floating point or symbolic and rational format; its default value is @code{true}\n"
 "and results are returned in floating point format.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:26
 msgid ""
 "Package @code{descriptive} contains some utilities to manipulate data structures\n"
 "(lists and matrices); for example, to extract subsamples. It also contains some\n"
@@ -56,42 +60,42 @@ msgid ""
 "files. See @code{descriptive} and @code{numericalio} for more details.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:29
 msgid ""
 "Package @code{stats} loads packages @code{descriptive}, @code{distrib} and\n"
 "@code{inference_result}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:31
 msgid ""
 "For comments, bugs or suggestions, please contact the author at\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:33
 msgid ""
 "@var{'mario AT edu DOT xunta DOT es'}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:37
 msgid ""
 "@opencatbox\n"
 "@category{Statistical inference} @category{Share packages} @category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:40
 msgid ""
 "@node Functions and Variables for inference_result, Functions and Variables for stats, Introduction to stats, Top\n"
 "@section Functions and Variables for inference_result\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:43
 msgid ""
 "@anchor{inference_result}\n"
 "@deffn {Function} inference_result (@var{title}, @var{values}, @var{numbers})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:50
 msgid ""
 "Constructs an @code{inference_result} object of the type returned by the\n"
 "stats functions. Argument @var{title} is a\n"
@@ -101,27 +105,27 @@ msgid ""
 "indicating which values will be shown by default.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:52
 msgid ""
 "Example:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:59
 msgid ""
 "This is a simple example showing results concerning a rectangle. The title of\n"
-"this object is the string @code{\"Rectangle\"}, it stores five results, named\n"
+"this object is the string @code{\\"Rectangle\\"}, it stores five results, named\n"
 "@code{'base}, @code{'height}, @code{'diagonal}, @code{'area},\n"
 "and @code{'perimeter}, but only the first, second, fifth, and fourth\n"
 "will be displayed. The @code{'diagonal} is stored in this object, but it is\n"
 "not displayed; to access its value, make use of function @code{take_inference}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:94
 msgid ""
 "@c ===beg===\n"
 "@c load (inference_result)$\n"
 "@c b: 3$ h: 2$\n"
-"@c inference_result(\"Rectangle\",\n"
+"@c inference_result(\\"Rectangle\\",\n"
 "@c                  ['base=b,\n"
 "@c                   'height=h,\n"
 "@c                   'diagonal=sqrt(b^2+h^2),\n"
@@ -133,7 +137,7 @@ msgid ""
 "@example\n"
 "(%i1) load(inference_result)$\n"
 "(%i2) b: 3$ h: 2$\n"
-"(%i3) inference_result(\"Rectangle\",\n"
+"(%i3) inference_result(\\"Rectangle\\",\n"
 "                        ['base=b,\n"
 "                         'height=h,\n"
 "                         'diagonal=sqrt(b^2+h^2),\n"
@@ -154,73 +158,81 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:96
 msgid ""
 "See also @mrefdot{take_inference}\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:100
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:102
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: stats.texi:110
+msgid ""
 "@anchor{inferencep}\n"
 "@deffn {Function} inferencep (@var{obj})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:113
 msgid ""
 "Returns @code{true} or @code{false}, depending on whether @var{obj} is an\n"
 "@code{inference_result} object or not.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:117
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:119
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: stats.texi:127
+msgid ""
 "@anchor{items_inference}\n"
 "@deffn {Function} items_inference (@var{obj})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:130
 msgid ""
 "Returns a list with the names of the items stored in @var{obj}, which must\n"
 "be an @code{inference_result} object.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:132
 msgid ""
 "Example:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:136
 msgid ""
 "The @code{inference_result} object stores two values, named @code{'pi} and @code{'e},\n"
 "but only the second is displayed. The @code{items_inference} function returns the names\n"
 "of all items, no matter they are displayed or not.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:151
 msgid ""
 "@c ===beg===\n"
 "@c load (inference_result)$\n"
-"@c inference_result(\"Hi\", ['pi=%pi,'e=%e],[2]);\n"
+"@c inference_result(\\"Hi\\", ['pi=%pi,'e=%e],[2]);\n"
 "@c items_inference(%);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) load(inference_result)$\n"
-"(%i2) inference_result(\"Hi\", ['pi=%pi,'e=%e],[2]);\n"
+"(%i2) inference_result(\\"Hi\\", ['pi=%pi,'e=%e],[2]);\n"
 "                            |   Hi\n"
 "(%o2)                       |\n"
 "                            | e = %e\n"
@@ -229,19 +241,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:155
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:157
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:169
 msgid ""
 "@anchor{take_inference}\n"
 "@deffn {Function} take_inference @\n"
@@ -250,7 +262,7 @@ msgid ""
 "@fname{take_inference} (@var{list}, @var{obj})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:174
 msgid ""
 "Returns the @var{n}-th value stored in @var{obj} if @var{n} is a positive integer,\n"
 "or the item named @var{name} if this is the name of an item. If the first\n"
@@ -258,23 +270,23 @@ msgid ""
 "a list with the corresponding results.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:176
 msgid ""
 "Example:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:179
 msgid ""
 "Given an @code{inference_result} object, function @code{take_inference} is\n"
 "called in order to extract some information stored in it.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:223
 msgid ""
 "@c ===beg===\n"
 "@c load (inference_result)$\n"
 "@c b: 3$ h: 2$\n"
-"@c sol:inference_result(\"Rectangle\",\n"
+"@c sol:inference_result(\\"Rectangle\\",\n"
 "@c                      ['base=b,\n"
 "@c                       'height=h,\n"
 "@c                       'diagonal=sqrt(b^2+h^2),\n"
@@ -289,7 +301,7 @@ msgid ""
 "@example\n"
 "(%i1) load(inference_result)$\n"
 "(%i2) b: 3$ h: 2$\n"
-"(%i3) sol: inference_result(\"Rectangle\",\n"
+"(%i3) sol: inference_result(\\"Rectangle\\",\n"
 "                            ['base=b,\n"
 "                             'height=h,\n"
 "                             'diagonal=sqrt(b^2+h^2),\n"
@@ -316,52 +328,56 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:225
 msgid ""
 "See also @mrefcomma{inference_result} and @mrefdot{take_inference}\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:229
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:231
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:242
 msgid ""
 "@node Functions and Variables for stats, Functions and Variables for special distributions, Functions and Variables for inference_result, Top\n"
 "@section Functions and Variables for stats\n"
+msgstr ""
+
+#: stats.texi:247
+msgid ""
 "@anchor{stats_numer}\n"
 "@defvr {Option variable} stats_numer\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:251
 msgid ""
 "If @code{stats_numer} is @code{true}, inference statistical functions \n"
 "return their results in floating point numbers. If it is @code{false},\n"
 "results are given in symbolic and rational format.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:255
 msgid ""
 "@opencatbox\n"
 "@category{Package stats} @category{Numerical evaluation}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:257
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:264
 msgid ""
 "@anchor{test_mean}\n"
 "@deffn {Function} test_mean @\n"
@@ -369,7 +385,7 @@ msgid ""
 "@fname{test_mean} (@var{x}, @var{options} ...)\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:269
 msgid ""
 "This is the mean @var{t}-test. Argument @var{x} is a list or a column matrix\n"
 "containing a one dimensional sample. It also performs an asymptotic test\n"
@@ -377,44 +393,44 @@ msgid ""
 "@code{true}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:271
 msgid ""
 "Options:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:273
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:276
 msgid ""
 "@item\n"
 "@code{'mean}, default @code{0}, is the mean value to be checked.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:280
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
 "valid values are: @code{'twosided}, @code{'greater} and @code{'less}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:284
 msgid ""
 "@item\n"
 "@code{'dev}, default @code{'unknown}, this is the value of the standard deviation when it is \n"
 "known; valid values are: @code{'unknown} or a positive expression.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:288
 msgid ""
 "@item\n"
 "@code{'conflevel}, default @code{95/100}, confidence level for the confidence interval; it must\n"
 "be an expression which takes a value in (0,1).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:293
 msgid ""
 "@item\n"
 "@code{'asymptotic}, default @code{false}, indicates whether it performs an exact @var{t}-test or\n"
@@ -422,81 +438,81 @@ msgid ""
 "valid values are @code{true} and @code{false}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:295
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:298
 msgid ""
 "The output of function @code{test_mean} is an @code{inference_result} Maxima object\n"
 "showing the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:300
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:303
 msgid ""
 "@item\n"
 "@code{'mean_estimate}: the sample mean.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:306
 msgid ""
 "@item\n"
 "@code{'conf_level}: confidence level selected by the user.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:309
 msgid ""
 "@item\n"
 "@code{'conf_interval}: confidence interval for the population mean.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:312
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:315
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:318
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:321
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameter(s).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:324
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:326
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:328
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:333
 msgid ""
 "Performs an exact @var{t}-test with unknown variance. The null hypothesis\n"
 "is @math{H_0: mean=50} against the one sided alternative @math{H_1: mean<50};\n"
@@ -504,7 +520,7 @@ msgid ""
 "evidence for rejecting @math{H_0}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:361
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -512,7 +528,7 @@ msgid ""
 "@c test_mean(data,'conflevel=0.9,'alternative='less,'mean=50);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) data: [78,64,35,45,45,75,43,74,42,42]$\n"
 "(%i3) test_mean(data,'conflevel=0.9,'alternative='less,'mean=50);\n"
 "          |                 MEAN TEST\n"
@@ -535,7 +551,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:367
 msgid ""
 "This time Maxima performs an asymptotic test, based on the @i{Central Limit Theorem}.\n"
 "The null hypothesis is @math{H_0: equal(mean, 50)} against the two sided alternative @math{H_1: not equal(mean, 50)};\n"
@@ -544,7 +560,7 @@ msgid ""
 "this procedure should be applied to large samples.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:399
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -554,7 +570,7 @@ msgid ""
 "@c         'asymptotic=true,'mean=50);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) test_mean([36,118,52,87,35,256,56,178,57,57,89,34,25,98,35,\n"
 "              98,41,45,198,54,79,63,35,45,44,75,42,75,45,45,\n"
 "              45,51,123,54,151],\n"
@@ -579,19 +595,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:403
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:405
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:416
 msgid ""
 "@anchor{test_means_difference}\n"
 "@deffn {Function} test_means_difference @\n"
@@ -599,7 +615,7 @@ msgid ""
 "@fname{test_means_difference} (@var{x1}, @var{x2}, @var{options} ...)\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:425
 msgid ""
 "This is the difference of means @var{t}-test for two samples.\n"
 "Arguments @var{x1} and @var{x2} are lists or column matrices\n"
@@ -611,57 +627,57 @@ msgid ""
 "set to @code{true}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:427
 msgid ""
 "Options:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:429
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:431
 msgid ""
 "@item\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:435
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
 "valid values are: @code{'twosided}, @code{'greater} and @code{'less}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:439
 msgid ""
 "@item\n"
 "@code{'dev1}, default @code{'unknown}, this is the value of the standard deviation\n"
 "of the @var{x1} sample when it is known; valid values are: @code{'unknown} or a positive expression.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:443
 msgid ""
 "@item\n"
 "@code{'dev2}, default @code{'unknown}, this is the value of the standard deviation\n"
 "of the @var{x2} sample when it is known; valid values are: @code{'unknown} or a positive expression.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:447
 msgid ""
 "@item\n"
 "@code{'varequal}, default @code{false}, whether variances should be considered to be equal or not;\n"
 "this option takes effect only when @code{'dev1} and/or @code{'dev2} are  @code{'unknown}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:451
 msgid ""
 "@item\n"
 "@code{'conflevel}, default @code{95/100}, confidence level for the confidence interval; it must\n"
 "be an expression which takes a value in (0,1).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:456
 msgid ""
 "@item\n"
 "@code{'asymptotic}, default @code{false}, indicates whether it performs an exact @var{t}-test or\n"
@@ -669,96 +685,96 @@ msgid ""
 "valid values are @code{true} and @code{false}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:458
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:461
 msgid ""
 "The output of function @code{test_means_difference} is an @code{inference_result} Maxima object\n"
 "showing the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:463
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:466
 msgid ""
 "@item\n"
 "@code{'diff_estimate}: the difference of means estimate.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:469
 msgid ""
 "@item\n"
 "@code{'conf_level}: confidence level selected by the user.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:472
 msgid ""
 "@item\n"
 "@code{'conf_interval}: confidence interval for the difference of means.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:475
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:478
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:481
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:484
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameter(s).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:487
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:489
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:491
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:495
 msgid ""
 "The equality of means is tested with two small samples @var{x} and @var{y},\n"
 "against the alternative @math{H_1: m_1>m_2}, being @math{m_1} and @math{m_2}\n"
 "the populations means; variances are unknown and supposed to be different.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:500
 msgid ""
 "@c equivalent code for R:\n"
 "@c x <- c(20.4,62.5,61.3,44.2,11.1,23.7)\n"
 "@c y <- c(1.2,6.9,38.7,20.4,17.2)\n"
-"@c t.test(x,y,alternative=\"greater\")\n"
+"@c t.test(x,y,alternative=\\"greater\\")\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:530
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -767,7 +783,7 @@ msgid ""
 "@c test_means_difference(x,y,'alternative='greater);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x: [20.4,62.5,61.3,44.2,11.1,23.7]$\n"
 "(%i3) y: [1.2,6.9,38.7,20.4,17.2]$\n"
 "(%i4) test_means_difference(x,y,'alternative='greater);\n"
@@ -791,21 +807,21 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:533
 msgid ""
 "The same test as before, but now variances are supposed to be\n"
 "equal.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:538
 msgid ""
 "@c equivalent code for R:\n"
 "@c x <- c(20.4,62.5,61.3,44.2,11.1,23.7)\n"
 "@c y <- c(1.2,6.9,38.7,20.4,17.2)\n"
-"@c t.test(x,y,var.equal=T,alternative=\"greater\")\n"
+"@c t.test(x,y,var.equal=T,alternative=\\"greater\\")\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:570
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -815,7 +831,7 @@ msgid ""
 "@c                                                  'varequal=true);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x: [20.4,62.5,61.3,44.2,11.1,23.7]$\n"
 "(%i3) y: matrix([1.2],[6.9],[38.7],[20.4],[17.2])$\n"
 "(%i4) test_means_difference(x,y,'alternative='greater,\n"
@@ -840,19 +856,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:574
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:576
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:581
 msgid ""
 "@anchor{test_variance}\n"
 "@deffn {Function} test_variance @\n"
@@ -860,129 +876,129 @@ msgid ""
 "@fname{test_variance} (@var{x}, @var{options}, ...)\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:584
 msgid ""
 "This is the variance @var{chi^2}-test. Argument @var{x} is a list or a column matrix\n"
 "containing a one dimensional sample taken from a normal population.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:586
 msgid ""
 "Options:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:588
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:591
 msgid ""
 "@item\n"
 "@code{'mean}, default @code{'unknown}, is the population's mean, when it is known.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:595
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
 "valid values are: @code{'twosided}, @code{'greater} and @code{'less}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:598
 msgid ""
 "@item\n"
 "@code{'variance}, default @code{1}, this is the variance value (positive) to be checked.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:602
 msgid ""
 "@item\n"
 "@code{'conflevel}, default @code{95/100}, confidence level for the confidence interval; it must\n"
 "be an expression which takes a value in (0,1).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:604
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:607
 msgid ""
 "The output of function @code{test_variance} is an @code{inference_result} Maxima object\n"
 "showing the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:609
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:612
 msgid ""
 "@item\n"
 "@code{'var_estimate}: the sample variance.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:615
 msgid ""
 "@item\n"
 "@code{'conf_level}: confidence level selected by the user.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:618
 msgid ""
 "@item\n"
 "@code{'conf_interval}: confidence interval for the population variance.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:621
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:624
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:627
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:630
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameter.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:633
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:635
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:637
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:640
 msgid ""
 "It is tested whether the variance of a population with unknown mean\n"
 "is equal to or greater than 200.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:668
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -990,7 +1006,7 @@ msgid ""
 "@c test_variance(x,'alternative='greater,'variance=200);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x: [203,229,215,220,223,233,208,228,209]$\n"
 "(%i3) test_variance(x,'alternative='greater,'variance=200);\n"
 "             |                  VARIANCE TEST\n"
@@ -1013,19 +1029,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:672
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:674
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:685
 msgid ""
 "@anchor{test_variance_ratio}\n"
 "@deffn {Function} test_variance_ratio @\n"
@@ -1033,136 +1049,140 @@ msgid ""
 "@fname{test_variance_ratio} (@var{x1}, @var{x2}, @var{options} ...)\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:689
 msgid ""
 "This is the variance ratio @var{F}-test for two normal populations.\n"
 "Arguments @var{x1} and @var{x2} are lists or column matrices\n"
 "containing two independent samples.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:691
 msgid ""
 "Options:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:693
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:697
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
 "valid values are: @code{'twosided}, @code{'greater} and @code{'less}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:701
 msgid ""
 "@item\n"
 "@code{'mean1}, default @code{'unknown}, when it is known, this is the mean of\n"
 "the population from which @var{x1} was taken.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:705
 msgid ""
 "@item\n"
 "@code{'mean2}, default @code{'unknown}, when it is known, this is the mean of\n"
 "the population from which @var{x2} was taken.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:709
 msgid ""
 "@item\n"
 "@code{'conflevel}, default @code{95/100}, confidence level for the confidence interval of the\n"
 "ratio; it must be an expression which takes a value in (0,1).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:711
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:714
 msgid ""
 "The output of function @code{test_variance_ratio} is an @code{inference_result} Maxima object\n"
 "showing the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:716
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:719
 msgid ""
 "@item\n"
 "@code{'ratio_estimate}: the sample variance ratio.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:722
 msgid ""
 "@item\n"
 "@code{'conf_level}: confidence level selected by the user.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:725
 msgid ""
 "@item\n"
 "@code{'conf_interval}: confidence interval for the variance ratio.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:728
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:731
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:734
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:737
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameters.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:740
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:742
 msgid ""
 "@end enumerate\n"
+msgstr ""
+
+#: stats.texi:745
+msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:748
 msgid ""
 "The equality of the variances of two normal populations is checked\n"
 "against the alternative that the first is greater than the second.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:753
 msgid ""
 "@c equivalent code for R:\n"
 "@c x <- c(20.4,62.5,61.3,44.2,11.1,23.7)\n"
 "@c y <- c(1.2,6.9,38.7,20.4,17.2)\n"
-"@c var.test(x,y,alternative=\"greater\")\n"
+"@c var.test(x,y,alternative=\\"greater\\")\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:783
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -1171,7 +1191,7 @@ msgid ""
 "@c test_variance_ratio(x,y,'alternative='greater);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x: [20.4,62.5,61.3,44.2,11.1,23.7]$\n"
 "(%i3) y: [1.2,6.9,38.7,20.4,17.2]$\n"
 "(%i4) test_variance_ratio(x,y,'alternative='greater);\n"
@@ -1195,59 +1215,63 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:787
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:789
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: stats.texi:797
+msgid ""
 "@anchor{test_proportion}\n"
 "@deffn {Function} test_proportion @\n"
 "@fname{test_proportion} (@var{x}, @var{n}) @\n"
 "@fname{test_proportion} (@var{x}, @var{n}, @var{options} ...)\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:800
 msgid ""
 "Inferences on a proportion. Argument @var{x} is the number of successes\n"
 "in @var{n} trials in a Bernoulli experiment with unknown probability.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:802
 msgid ""
 "Options:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:804
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:807
 msgid ""
 "@item\n"
 "@code{'proportion}, default @code{1/2}, is the value of the proportion to be checked.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:811
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
 "valid values are: @code{'twosided}, @code{'greater} and @code{'less}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:815
 msgid ""
 "@item\n"
 "@code{'conflevel}, default @code{95/100}, confidence level for the confidence interval; it must\n"
 "be an expression which takes a value in (0,1).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:820
 msgid ""
 "@item\n"
 "@code{'asymptotic}, default @code{false}, indicates whether it performs an exact test\n"
@@ -1255,100 +1279,100 @@ msgid ""
 "valid values are @code{true} and @code{false}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:823
 msgid ""
 "@item\n"
 "@code{'correct}, default @code{true}, indicates whether Yates correction is applied or not.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:825
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:828
 msgid ""
 "The output of function @code{test_proportion} is an @code{inference_result} Maxima object\n"
 "showing the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:830
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:833
 msgid ""
 "@item\n"
 "@code{'sample_proportion}: the sample proportion.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:836
 msgid ""
 "@item\n"
 "@code{'conf_level}: confidence level selected by the user.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:839
 msgid ""
 "@item\n"
 "@code{'conf_interval}: Wilson confidence interval for the proportion.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:842
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:845
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:848
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:851
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameters.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:854
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:856
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:858
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:861
 msgid ""
 "Performs an exact test. The null hypothesis\n"
 "is @math{H_0: p=1/2} against the one sided alternative @math{H_1: p<1/2}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:887
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
 "@c test_proportion(45, 103, alternative = less);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) test_proportion(45, 103, alternative = less);\n"
 "         |            PROPORTION TEST              \n"
 "         |                                         \n"
@@ -1370,12 +1394,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:889
 msgid ""
 "A two sided asymptotic test. Confidence level is 99/100.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:919
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -1384,7 +1408,7 @@ msgid ""
 "@c               conflevel = 99/100, asymptotic=true);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) fpprintprec:7$\n"
 "(%i3) test_proportion(45, 103, \n"
 "                  conflevel = 99/100, asymptotic=true);\n"
@@ -1408,19 +1432,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:923
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:925
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:934
 msgid ""
 "@anchor{test_proportions_difference}\n"
 "@deffn {Function} test_proportions_difference @\n"
@@ -1428,7 +1452,7 @@ msgid ""
 "@fname{test_proportions_difference} (@var{x1}, @var{n1}, @var{x2}, @var{n2}, @var{options} @dots{})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:939
 msgid ""
 "Inferences on the difference of two proportions. Argument @var{x1} is the number of successes\n"
 "in @var{n1} trials in a Bernoulli experiment in the first population, and @var{x2} and @var{n2}\n"
@@ -1436,17 +1460,17 @@ msgid ""
 "is asymptotic.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:941
 msgid ""
 "Options:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:943
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:948
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
@@ -1454,95 +1478,95 @@ msgid ""
 "and @code{'less} (@code{p1 < p2}).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:952
 msgid ""
 "@item\n"
 "@code{'conflevel}, default @code{95/100}, confidence level for the confidence interval; it must\n"
 "be an expression which takes a value in (0,1).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:955
 msgid ""
 "@item\n"
 "@code{'correct}, default @code{true}, indicates whether Yates correction is applied or not.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:957
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:960
 msgid ""
 "The output of function @code{test_proportions_difference} is an @code{inference_result} Maxima object\n"
 "showing the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:962
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:965
 msgid ""
 "@item\n"
 "@code{'proportions}: list with the two sample proportions.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:968
 msgid ""
 "@item\n"
 "@code{'conf_level}: confidence level selected by the user.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:971
 msgid ""
 "@item\n"
 "@code{'conf_interval}: Confidence interval for the difference of proportions @code{p1 - p2}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:975
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure and warning message in case of any of the samples sizes\n"
 "is less than 10.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:978
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:981
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:984
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameters.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:987
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:989
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:991
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:999
 msgid ""
 "A machine produced 10 defective articles in a batch of 250.\n"
 "After some maintenance work, it produces 4 defective in a batch of 150.\n"
@@ -1553,7 +1577,7 @@ msgid ""
 "the p value, there is not enough evidence to accept the alternative.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1029
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -1562,7 +1586,7 @@ msgid ""
 "@c                             alternative = greater);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) fpprintprec:7$\n"
 "(%i3) test_proportions_difference(10, 250, 4, 150,\n"
 "                                alternative = greater);\n"
@@ -1586,13 +1610,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1032
 msgid ""
 "Exact standard deviation of the asymptotic normal\n"
 "distribution when the data are unknown.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1050
 msgid ""
 "@c ===beg===\n"
 "@c load(stats)$\n"
@@ -1601,7 +1625,7 @@ msgid ""
 "@c last(take_inference('distribution,sol));\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) stats_numer: false$\n"
 "(%i3) sol: test_proportions_difference(x1,n1,x2,n2)$\n"
 "(%i4) last(take_inference('distribution,sol));\n"
@@ -1613,19 +1637,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1054
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1056
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1061
 msgid ""
 "@anchor{test_sign}\n"
 "@deffn {Function} test_sign @\n"
@@ -1633,104 +1657,104 @@ msgid ""
 "@fname{test_sign} (@var{x}, @var{options} @dots{})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1064
 msgid ""
 "This is the non parametric sign test for the median of a continuous population.\n"
 "Argument @var{x} is a list or a column matrix containing a one dimensional sample.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1066
 msgid ""
 "Options:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1068
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1072
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
 "valid values are: @code{'twosided}, @code{'greater} and @code{'less}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1075
 msgid ""
 "@item\n"
 "@code{'median}, default @code{0}, is the median value to be checked.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1077
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1080
 msgid ""
 "The output of function @code{test_sign} is an @code{inference_result} Maxima object\n"
 "showing the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1082
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1085
 msgid ""
 "@item\n"
 "@code{'med_estimate}: the sample median.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1088
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1091
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1094
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1097
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameter(s).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1100
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1102
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1104
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1107
 msgid ""
 "Checks whether the population from which the sample was taken has median 6, \n"
 "against the alternative @math{H_1: median > 6}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1131
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -1738,7 +1762,7 @@ msgid ""
 "@c test_sign(x,'median=6,'alternative='greater);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x: [2,0.1,7,1.8,4,2.3,5.6,7.4,5.1,6.1,6]$\n"
 "(%i3) test_sign(x,'median=6,'alternative='greater);\n"
 "               |                  SIGN TEST\n"
@@ -1757,19 +1781,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1135
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1137
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1142
 msgid ""
 "@anchor{test_signed_rank}\n"
 "@deffn {Function} test_signed_rank @\n"
@@ -1777,7 +1801,7 @@ msgid ""
 "@fname{test_signed_rank} (@var{x}, @var{options} @dots{})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1147
 msgid ""
 "This is the Wilcoxon signed rank test to make inferences about the median of a\n"
 "continuous population. Argument @var{x} is a list or a column matrix\n"
@@ -1785,112 +1809,112 @@ msgid ""
 "sample size is greater than 20, or if there are zeroes or ties.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1150
 msgid ""
 "@c TODO: These two variables/functions aren't documented\n"
 "See also @code{pdf_rank_test} and @code{cdf_rank_test}\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1152
 msgid ""
 "Options:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1154
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1157
 msgid ""
 "@item\n"
 "@code{'median}, default @code{0}, is the median value to be checked.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1161
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
 "valid values are: @code{'twosided}, @code{'greater} and @code{'less}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1163
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1166
 msgid ""
 "The output of function @code{test_signed_rank} is an @code{inference_result} Maxima object\n"
 "with the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1168
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1171
 msgid ""
 "@item\n"
 "@code{'med_estimate}: the sample median.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1174
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1177
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1180
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1183
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameter(s).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1186
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1188
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1190
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1194
 msgid ""
 "Checks the null hypothesis @math{H_0: median = 15} against the \n"
 "alternative @math{H_1: median > 15}. This is an exact test, since\n"
 "there are no ties.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1198
 msgid ""
 "@c equivalent code for R:\n"
 "@c x <- c(17.1,15.9,13.7,13.4,15.5,17.6)\n"
-"@c wilcox.test(x,mu=15,alternative=\"greater\")\n"
+"@c wilcox.test(x,mu=15,alternative=\\"greater\\")\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1222
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -1898,7 +1922,7 @@ msgid ""
 "@c test_signed_rank(x,median=15,alternative=greater);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x: [17.1,15.9,13.7,13.4,15.5,17.6]$\n"
 "(%i3) test_signed_rank(x,median=15,alternative=greater);\n"
 "                 |             SIGNED RANK TEST\n"
@@ -1917,21 +1941,21 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1226
 msgid ""
 "Checks the null hypothesis @math{H_0: equal(median, 2.5)} against the \n"
 "alternative @math{H_1: not equal(median, 2.5)}. This is an approximated test,\n"
 "since there are ties.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1230
 msgid ""
 "@c equivalent code for R:\n"
 "@c y<-c(1.9,2.3,2.6,1.9,1.6,3.3,4.2,4,2.4,2.9,1.5,3,2.9,4.2,3.1)\n"
 "@c wilcox.test(y,mu=2.5)\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1254
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -1939,7 +1963,7 @@ msgid ""
 "@c test_signed_rank(y,median=2.5);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) y:[1.9,2.3,2.6,1.9,1.6,3.3,4.2,4,2.4,2.9,1.5,3,2.9,4.2,3.1]$\n"
 "(%i3) test_signed_rank(y,median=2.5);\n"
 "             |                 SIGNED RANK TEST\n"
@@ -1958,19 +1982,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1258
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1260
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1265
 msgid ""
 "@anchor{test_rank_sum}\n"
 "@deffn {Function} test_rank_sum @\n"
@@ -1978,7 +2002,7 @@ msgid ""
 "@fname{test_rank_sum} (@var{x1}, @var{x2}, @var{option})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1270
 msgid ""
 "This is the Wilcoxon-Mann-Whitney test for comparing the medians of two\n"
 "continuous populations. The first two arguments @var{x1} and @var{x2} are lists\n"
@@ -1986,86 +2010,86 @@ msgid ""
 "approximation if any of the sample sizes is greater than 10, or if there are ties.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1272
 msgid ""
 "Option:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1274
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1278
 msgid ""
 "@item\n"
 "@code{'alternative}, default @code{'twosided}, is the alternative hypothesis;\n"
 "valid values are: @code{'twosided}, @code{'greater} and @code{'less}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1280
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1283
 msgid ""
 "The output of function @code{test_rank_sum} is an @code{inference_result} Maxima object\n"
 "with the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1285
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1288
 msgid ""
 "@item\n"
 "@code{'method}: inference procedure.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1291
 msgid ""
 "@item\n"
 "@code{'hypotheses}: null and alternative hypotheses to be tested.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1294
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the sample statistic used for testing the null hypothesis.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1297
 msgid ""
 "@item\n"
 "@code{'distribution}: distribution of the sample statistic, together with its parameters.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1300
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value of the test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1302
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1304
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1307
 msgid ""
 "Checks whether populations have similar medians. Samples sizes\n"
 "are small and an exact test is made.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1312
 msgid ""
 "@c equivalent code for R:\n"
 "@c x <- c(12,15,17,38,42,10,23,35,28)\n"
@@ -2073,7 +2097,7 @@ msgid ""
 "@c wilcox.test(x,y)\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1336
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -2082,7 +2106,7 @@ msgid ""
 "@c test_rank_sum(x,y);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x:[12,15,17,38,42,10,23,35,28]$\n"
 "(%i3) y:[21,18,25,14,52,65,40,43]$\n"
 "(%i4) test_rank_sum(x,y);\n"
@@ -2100,22 +2124,22 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1340
 msgid ""
 "Now, with greater samples and ties, the procedure makes \n"
 "normal approximation. The alternative hypothesis is\n"
 "@math{H_1: median1 < median2}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1345
 msgid ""
 "@c equivalent code for R:\n"
 "@c x <- c(39,42,35,13,10,23,15,20,17,27)\n"
 "@c y <- c(20,52,66,19,41,32,44,25,14,39,43,35,19,56,27,15)\n"
-"@c wilcox.test(x,y,alternative=\"less\")\n"
+"@c wilcox.test(x,y,alternative=\\"less\\")\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1369
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -2124,7 +2148,7 @@ msgid ""
 "@c test_rank_sum(x,y,'alternative='less);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x: [39,42,35,13,10,23,15,20,17,27]$\n"
 "(%i3) y: [20,52,66,19,41,32,44,25,14,39,43,35,19,56,27,15]$\n"
 "(%i4) test_rank_sum(x,y,'alternative='less);\n"
@@ -2142,87 +2166,87 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1373
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1375
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1384
 msgid ""
 "@anchor{test_normality}\n"
 "@deffn {Function} test_normality (@var{x})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1388
 msgid ""
 "Shapiro-Wilk test for normality. Argument @var{x} is a list of numbers, and sample\n"
 "size must be greater than 2 and less or equal than 5000, otherwise, function\n"
 "@code{test_normality} signals an error message.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1390
 msgid ""
 "Reference:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1392
 msgid ""
 "  [1] Algorithm AS R94, Applied Statistics (1995), vol.44, no.4, 547-551\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1395
 msgid ""
 "The output of function @code{test_normality} is an @code{inference_result} Maxima object\n"
 "with the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1397
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1400
 msgid ""
 "@item\n"
 "@code{'statistic}: value of the @var{W} statistic.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1403
 msgid ""
 "@item\n"
 "@code{'p_value}: @math{p}-value under normal assumption.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1405
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1407
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1409
 msgid ""
 "Checks for the normality of a population, based on a sample of size 9.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1413
 msgid ""
 "@c equivalent code for R:\n"
 "@c x <- c(12,15,17,38,42,10,23,35,28)\n"
 "@c shapiro.test(x)\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1429
 msgid ""
 "@c ===beg===\n"
 "@c load (stats)$\n"
@@ -2230,7 +2254,7 @@ msgid ""
 "@c test_normality(x);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"stats\")$\n"
+"(%i1) load(\\"stats\\")$\n"
 "(%i2) x:[12,15,17,38,42,10,23,35,28]$\n"
 "(%i3) test_normality(x);\n"
 "                       |      SHAPIRO - WILK TEST\n"
@@ -2241,19 +2265,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1433
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1435
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1440
 msgid ""
 "@anchor{linear_regression}\n"
 "@deffn {Function} linear_regression @\n"
@@ -2261,7 +2285,7 @@ msgid ""
 "@fname{linear_regression} (@var{x} @var{option})\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1446
 msgid ""
 "Multivariate linear regression, \n"
 "@math{y_i = b0 + b1*x_1i + b2*x_2i + ... + bk*x_ki + u_i},\n"
@@ -2270,17 +2294,17 @@ msgid ""
 "last column is considered as the responses (@math{y_i}).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1448
 msgid ""
 "Option:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1450
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1456
 msgid ""
 "@item\n"
 "@code{'conflevel}, default @code{95/100}, confidence level for the\n"
@@ -2289,123 +2313,123 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1459
 msgid ""
 "The output of function @code{linear_regression} is an \n"
 "@code{inference_result} Maxima object with the following results:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1461
 msgid ""
 "@enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1464
 msgid ""
 "@item\n"
 "@code{'b_estimation}: regression coefficients estimates.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1468
 msgid ""
 "@item\n"
 "@code{'b_covariances}: covariance matrix of the regression \n"
 "coefficients estimates.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1471
 msgid ""
 "@item\n"
 "@code{b_conf_int}: confidence intervals of the regression coefficients.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1474
 msgid ""
 "@item\n"
 "@code{b_statistics}: statistics for testing coefficient.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1477
 msgid ""
 "@item\n"
 "@code{b_p_values}: p-values for coefficient tests.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1480
 msgid ""
 "@item\n"
 "@code{b_distribution}: probability distribution for coefficient tests.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1483
 msgid ""
 "@item\n"
 "@code{v_estimation}: unbiased variance estimator.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1486
 msgid ""
 "@item\n"
 "@code{v_conf_int}: variance confidence interval.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1489
 msgid ""
 "@item\n"
 "@code{v_distribution}: probability distribution for variance test.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1492
 msgid ""
 "@item\n"
 "@code{residuals}: residuals.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1495
 msgid ""
 "@item\n"
 "@code{adc}: adjusted determination coefficient.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1498
 msgid ""
 "@item\n"
 "@code{aic}: Akaike's information criterion.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1501
 msgid ""
 "@item\n"
 "@code{bic}: Bayes's information criterion.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1503
 msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1507
 msgid ""
 "Only items 1, 4, 5, 6, 7, 8, 9 and 11 above, in this order, \n"
 "are shown by default. The rest remain hidden until the user\n"
 "makes use of functions @code{items_inference} and @code{take_inference}.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1509
 msgid ""
 "Example:\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1512
 msgid ""
 "Fitting a linear model to a trivariate sample. The\n"
 "last column is considered as the responses (@math{y_i}).\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1573
 msgid ""
 "@c ===beg===\n"
-"@c load (\"stats\")$\n"
+"@c load (\\"stats\\")$\n"
 "@c X:matrix(\n"
 "@c    [58,111,64],[84,131,78],[78,158,83],\n"
 "@c    [81,147,88],[82,121,89],[102,165,99],\n"
@@ -2415,14 +2439,14 @@ msgid ""
 "@c items_inference(res);\n"
 "@c take_inference('b_covariances, res);\n"
 "@c take_inference('bic, res);\n"
-"@c load(\"draw\")$\n"
+"@c load(\\"draw\\")$\n"
 "@c draw2d(\n"
 "@c    points_joined = true,\n"
 "@c    grid = true,\n"
 "@c    points(take_inference('residuals, res)) )$\n"
 "@c ===end===\n"
 "@example\n"
-"(%i2) load(\"stats\")$\n"
+"(%i2) load(\\"stats\\")$\n"
 "(%i3) X:matrix(\n"
 "    [58,111,64],[84,131,78],[78,158,83],\n"
 "    [81,147,88],[82,121,89],[102,165,99],\n"
@@ -2458,7 +2482,7 @@ msgid ""
 "                  [ - .8532  - .02305   .01898  ]\n"
 "(%i8) take_inference('bic, res);\n"
 "(%o8)                          30.98\n"
-"(%i9) load(\"draw\")$\n"
+"(%i9) load(\\"draw\\")$\n"
 "(%i10) draw2d(\n"
 "    points_joined = true,\n"
 "    grid = true,\n"
@@ -2466,18 +2490,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1577
 msgid ""
 "@opencatbox\n"
 "@category{Package stats} @category{Statistical estimation}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1579
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: stats.texi:1587
+msgid ""
 "@node Functions and Variables for special distributions, , Functions and Variables for stats, Top\n"
 "@section Functions and Variables for special distributions\n"
+msgstr ""
+
+#: stats.texi:1594
+msgid ""
 "@anchor{pdf_signed_rank}\n"
 "@deffn {Function} pdf_signed_rank (@var{x}, @var{n})\n"
 "Probability density function of the exact distribution of the\n"
@@ -2485,24 +2517,24 @@ msgid ""
 "number and @var{n} a positive integer.\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1596
 msgid ""
 "See also @mrefdot{test_signed_rank}\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1600
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1602
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1608
 msgid ""
 "@anchor{cdf_signed_rank}\n"
 "@deffn {Function} cdf_signed_rank (@var{x}, @var{n})\n"
@@ -2511,24 +2543,24 @@ msgid ""
 "number and @var{n} a positive integer. \n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1610
 msgid ""
 "See also @mrefdot{test_signed_rank}\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1614
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1616
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1622
 msgid ""
 "@anchor{pdf_rank_sum}\n"
 "@deffn {Function} pdf_rank_sum (@var{x}, @var{n}, @var{m})\n"
@@ -2537,24 +2569,24 @@ msgid ""
 "number and @var{n} and @var{m} are both positive integers. \n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1624
 msgid ""
 "See also @mrefdot{test_rank_sum}\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1628
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1630
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1636
 msgid ""
 "@anchor{cdf_rank_sum}\n"
 "@deffn {Function} cdf_rank_sum (@var{x}, @var{n}, @var{m})\n"
@@ -2563,23 +2595,20 @@ msgid ""
 "number and @var{n} and @var{m} are both positive integers. \n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1638
 msgid ""
 "See also @mrefdot{test_rank_sum}\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1642
 msgid ""
 "@opencatbox\n"
 "@category{Package stats}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stats.texi
+#: stats.texi:1644
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# stats.texi
-msgid ""
-msgstr ""

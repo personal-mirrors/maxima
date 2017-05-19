@@ -1,33 +1,37 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# diag.texi
+msgstr ""
+
+#: diag.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for diag::\n"
 "@end menu\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:7
 msgid ""
 "@node Functions and Variables for diag,  , diag-pkg, diag-pkg\n"
 "@section Functions and Variables for diag\n"
+msgstr ""
+
+#: diag.texi:14
+msgid ""
 "@anchor{diag_function}\n"
 "@deffn {Function} diag (@var{lm})\n"
 "Constructs a matrix that is the block sum of the elements of\n"
@@ -35,30 +39,30 @@ msgid ""
 "element is scalar, it treated as a 1 by 1 matrix.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:17
 msgid ""
 "The resulting matrix will be square if each of the elements of\n"
 "@var{lm} is square.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:21
 msgid ""
 "Example:\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:23
 msgid ""
 "(%i2) a1:matrix([1,2,3],[0,4,5],[0,0,6])$\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:25
 msgid ""
 "(%i3) a2:matrix([1,1],[1,0])$\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:43
 msgid ""
 "(%i4) diag([a1,x,a2]);\n"
 "                   [ 1  2  3  0  0  0 ]\n"
@@ -79,34 +83,38 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:45
 msgid ""
-"To use this function write first @code{load(\"diag\")}.\n"
+"To use this function write first @code{load(\\"diag\\")}.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:49
 msgid ""
 "@opencatbox\n"
 "@category{Matrices} @category{Share packages} @category{Package diag}\n"
 "@closecatbox\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:51
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: diag.texi:56
+msgid ""
 "@anchor{JF}\n"
 "@deffn {Function} JF (@var{lambda},@var{n})\n"
 "Returns the Jordan cell of order @var{n} with eigenvalue @var{lambda}.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:60
 msgid ""
 "Example:\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:76
 msgid ""
 "(%i2) JF(2,5);\n"
 "                    [ 2  1  0  0  0 ]\n"
@@ -125,21 +133,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:78
 msgid ""
-"To use this function write first @code{load(\"diag\")}.\n"
+"To use this function write first @code{load(\\"diag\\")}.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:82
 msgid ""
 "@opencatbox\n"
 "@category{Package diag}\n"
 "@closecatbox\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:84
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: diag.texi:91
+msgid ""
 "@anchor{jordan}\n"
 "@deffn {Function} jordan (@var{mat})\n"
 "Returns the Jordan form of matrix @var{mat}, encoded as a list in a\n"
@@ -147,7 +159,7 @@ msgid ""
 "@code{dispJordan} using the output of @code{jordan} as the argument.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:97
 msgid ""
 "The elements of the returned list are themselves lists. The first\n"
 "element of each is an eigenvalue of @var{mat}. The remaining elements\n"
@@ -156,7 +168,7 @@ msgid ""
 "order. Eigenvalues are not repeated.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:104
 msgid ""
 "The functions @code{dispJordan}, @code{minimalPoly} and\n"
 "@code{ModeMatrix} expect the output of a call to @code{jordan} as an\n"
@@ -166,11 +178,11 @@ msgid ""
 "otherwise the functions might give incorrect answers.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:152
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
-"@c load(\"diag\")$\n"
+"@c load(\\"diag\\")$\n"
 "@c A: matrix([2,0,0,0,0,0,0,0],\n"
 "@c                 [1,2,0,0,0,0,0,0],\n"
 "@c                 [-4,1,2,0,0,0,0,0],\n"
@@ -183,7 +195,7 @@ msgid ""
 "@c dispJordan (%);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 "@group\n"
 "(%i2) A: matrix([2,0,0,0,0,0,0,0],\n"
 "                [1,2,0,0,0,0,0,0],\n"
@@ -217,21 +229,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:154
 msgid ""
-"To use this function write first @code{load(\"diag\")}. See also @mref{dispJordan} and @mrefdot{minimalPoly}\n"
+"To use this function write first @code{load(\\"diag\\")}. See also @mref{dispJordan} and @mrefdot{minimalPoly}\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:158
 msgid ""
 "@opencatbox\n"
 "@category{Package diag}\n"
 "@closecatbox\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:160
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: diag.texi:168
+msgid ""
 "@anchor{dispJordan}\n"
 "@deffn {Function} dispJordan (@var{l})\n"
 "Returns a matrix in Jordan canonical form (JCF) corresponding to the\n"
@@ -240,14 +256,14 @@ msgid ""
 "@mref{jordan} for details of this format.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:172
 msgid ""
 "Example:\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:178
 msgid ""
 "(%i2) b1:matrix([0,0,1,1,1],\n"
 "                [0,0,0,1,1],\n"
@@ -256,7 +272,7 @@ msgid ""
 "                [0,0,0,0,0])$\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:192
 msgid ""
 "(%i3) jordan(b1);\n"
 "(%o3)                  [[0, 3, 2]]\n"
@@ -273,21 +289,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:194
 msgid ""
-"To use this function write first @code{load(\"diag\")}. See also @mref{jordan} and @mrefdot{minimalPoly}\n"
+"To use this function write first @code{load(\\"diag\\")}. See also @mref{jordan} and @mrefdot{minimalPoly}\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:198
 msgid ""
 "@opencatbox\n"
 "@category{Package diag}\n"
 "@closecatbox\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:200
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: diag.texi:208
+msgid ""
 "@anchor{minimalPoly}\n"
 "@deffn {Function} minimalPoly (@var{l})\n"
 "Returns the minimal polynomial of the matrix whose Jordan form is\n"
@@ -296,14 +316,14 @@ msgid ""
 "format.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:212
 msgid ""
 "Example:\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:217
 msgid ""
 "(%i2) a:matrix([2,1,2,0],\n"
 "               [-2,2,1,2],\n"
@@ -311,7 +331,7 @@ msgid ""
 "               [3,1,2,-1])$\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:224
 msgid ""
 "(%i3) jordan(a);\n"
 "(%o3)               [[- 1, 1], [1, 3]]\n"
@@ -321,24 +341,24 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:226
 msgid ""
-"To use this function write first @code{load(\"diag\")}. See also @mref{jordan} and @mrefdot{dispJordan}\n"
+"To use this function write first @code{load(\\"diag\\")}. See also @mref{jordan} and @mrefdot{dispJordan}\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:230
 msgid ""
 "@opencatbox\n"
 "@category{Package diag}\n"
 "@closecatbox\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:232
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:237
 msgid ""
 "@anchor{ModeMatrix}\n"
 "@deffn {Function} ModeMatrix (@var{A}, [@var{jordan_info}])\n"
@@ -346,7 +366,7 @@ msgid ""
 "the Jordan form of @var{A}.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:243
 msgid ""
 "To calculate this, Maxima must find the Jordan form of @var{A}, which\n"
 "might be quite computationally expensive. If that has already been\n"
@@ -355,17 +375,17 @@ msgid ""
 "required format.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:273
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
-"@c load(\"diag\")$\n"
+"@c load(\\"diag\\")$\n"
 "@c A: matrix([2,1,2,0], [-2,2,1,2], [-2,-1,-1,1], [3,1,2,-1])$\n"
 "@c M: ModeMatrix (A);\n"
 "@c is ((M^^-1) . A . M = dispJordan (jordan (A)));\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 "(%i2) A: matrix([2,1,2,0], [-2,2,1,2], [-2,-1,-1,1], [3,1,2,-1])$\n"
 "(%i3) M: ModeMatrix (A);\n"
 "                      [  1    - 1   1   1 ]\n"
@@ -388,7 +408,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:278
 msgid ""
 "Note that, in this example, the Jordan form of @code{A} is computed\n"
 "twice. To avoid this, we could have stored the output of\n"
@@ -396,22 +416,26 @@ msgid ""
 "@code{ModeMatrix} and @code{dispJordan}.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:281
 msgid ""
-"To use this function write first @code{load(\"diag\")}. See also\n"
+"To use this function write first @code{load(\\"diag\\")}. See also\n"
 "@mref{jordan} and @mrefdot{dispJordan}\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:285
 msgid ""
 "@opencatbox\n"
 "@category{Package diag}\n"
 "@closecatbox\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:287
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: diag.texi:295
+msgid ""
 "@anchor{mat_function}\n"
 "@deffn {Function} mat_function (@var{f},@var{A})\n"
 "Returns @math{f(A)}, where @var{f} is an analytic function and @var{A}\n"
@@ -420,28 +444,28 @@ msgid ""
 "symbolic answers for small matrices.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:298
 msgid ""
 "@c What other methods do we have in Maxima at the moment? We should\n"
 "@c probably give links here...\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:300
 msgid ""
 "Example 1:\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:319
 msgid ""
 "The exponential of a matrix. We only give the first row of the answer,\n"
 "since the output is rather large.\n"
 "@c ===beg===\n"
-"@c load(\"diag\")$\n"
+"@c load(\\"diag\\")$\n"
 "@c A: matrix ([0,1,0], [0,0,1], [-1,-3,-3])$\n"
 "@c ratsimp (mat_function (exp, t*A)[1]);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 "(%i2) A: matrix ([0,1,0], [0,0,1], [-1,-3,-3])$\n"
 "@group\n"
 "(%i3) ratsimp (mat_function (exp, t*A)[1]);\n"
@@ -453,17 +477,17 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:321
 msgid ""
 "Example 2:\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:394
 msgid ""
 "Comparison with the Taylor series for the exponential and also\n"
 "comparing @code{exp(%i*A)} with sine and cosine.\n"
 "@c ===beg===\n"
-"@c load(\"diag\")$\n"
+"@c load(\\"diag\\")$\n"
 "@c A: matrix ([0,1,1,1],\n"
 "@c                  [0,0,0,1],\n"
 "@c                  [0,0,0,1],\n"
@@ -475,7 +499,7 @@ msgid ""
 "@c ratsimp (mat_function (cos, t*A) + %i*mat_function (sin, t*A));\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 "@group\n"
 "(%i2) A: matrix ([0,1,1,1],\n"
 "                 [0,0,0,1],\n"
@@ -534,23 +558,23 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:396
 msgid ""
 "Example 3:\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:426
 msgid ""
 "Power operations.\n"
 "@c ===beg===\n"
-"@c load(\"diag\")$\n"
+"@c load(\\"diag\\")$\n"
 "@c A: matrix([1,2,0], [0,1,0], [1,0,1])$\n"
 "@c integer_pow(x) := block ([k], declare (k, integer), x^k)$\n"
 "@c mat_function (integer_pow, A);\n"
 "@c A^^20;\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"diag\")$\n"
+"(%i1) load(\\"diag\\")$\n"
 "(%i2) A: matrix([1,2,0], [0,1,0], [1,0,1])$\n"
 "(%i3) integer_pow(x) := block ([k], declare (k, integer), x^k)$\n"
 "@group\n"
@@ -572,19 +596,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:428
 msgid ""
-"To use this function write first @code{load(\"diag\")}.\n"
+"To use this function write first @code{load(\\"diag\\")}.\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:432
 msgid ""
 "@opencatbox\n"
 "@category{Package diag}\n"
 "@closecatbox\n"
 msgstr ""
 
-# diag.texi
+#: diag.texi:434
 msgid ""
 "@end deffn\n"
 msgstr ""
+

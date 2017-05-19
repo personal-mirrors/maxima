@@ -1,30 +1,30 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Evaluation.texi
+msgstr ""
+
+#: Evaluation.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for Evaluation::\n"
 "@end menu\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:9
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Evaluation,  , Evaluation, Evaluation\n"
@@ -32,13 +32,13 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:12
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@c THIS ITEM IS VERY IMPORTANT !!\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:19
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quote}\n"
@@ -48,61 +48,61 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:21
 msgid ""
 "The single quote operator @code{'} prevents evaluation.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:23
 msgid ""
 "Applied to a symbol, the single quote prevents evaluation of the symbol.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:27
 msgid ""
 "Applied to a function call, the single quote prevents evaluation of the function\n"
 "call, although the arguments of the function are still evaluated (if evaluation\n"
 "is not otherwise prevented).  The result is the noun form of the function call.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:34
 msgid ""
 "Applied to a parenthesized expression, the single quote prevents evaluation of\n"
 "all symbols and function calls in the expression.\n"
-"@c DUNNO IF THESE EXAMPLES ARE STILL NEEDED -- COVERED BY ITEMS UNDER \"Examples\"\n"
+"@c DUNNO IF THESE EXAMPLES ARE STILL NEEDED -- COVERED BY ITEMS UNDER \\"Examples\\"\n"
 "E.g., @code{'(f(x))} means do not evaluate the expression @code{f(x)}.\n"
 "@code{'f(x)} (with the single quote applied to @code{f} instead of @code{f(x)})\n"
 "means return the noun form of @code{f} applied to @code{[x]}.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:36
 msgid ""
 "The single quote does not prevent simplification.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:39
 msgid ""
 "When the global flag @mref{noundisp} is @code{true}, nouns display with a single\n"
 "quote.  This switch is always @code{true} when displaying function definitions.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:41
 msgid ""
 "See also the quote-quote operator @mxref{quote-quote, ''} and @mrefdot{nouns}\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:43
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:46
 msgid ""
 "Applied to a symbol,\n"
 "the single quote prevents evaluation of the symbol.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:64
 msgid ""
 "@c ===beg===\n"
 "@c aa: 1024;\n"
@@ -123,13 +123,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:67
 msgid ""
 "Applied to a function call, the single quote prevents evaluation of the function\n"
 "call.  The result is the noun form of the function call.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:99
 msgid ""
 "@c ===beg===\n"
 "@c x0: 5;\n"
@@ -164,13 +164,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:102
 msgid ""
 "Applied to a parenthesized expression, the single quote prevents evaluation of\n"
 "all symbols and function calls in the expression.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:122
 msgid ""
 "@c ===beg===\n"
 "@c aa: 1024;\n"
@@ -193,12 +193,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:124
 msgid ""
 "The single quote does not prevent simplification.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:135
 msgid ""
 "@c ===beg===\n"
 "@c sin (17 * %pi) + cos (17 * %pi);\n"
@@ -212,13 +212,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:138
 msgid ""
 "Maxima considers floating point operations by its in-built mathematical\n"
 "functions to be a simplification.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:149
 msgid ""
 "@c ===beg===\n"
 "@c sin(1.0);\n"
@@ -232,13 +232,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:152
 msgid ""
 "When the global flag @mref{noundisp} is @code{true}, nouns display with a single\n"
 "quote.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:197
 msgid ""
 "@c ===beg===\n"
 "@c x:%pi;\n"
@@ -286,7 +286,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:202
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation} @category{Operators}\n"
@@ -294,7 +294,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:209
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quote-quote}\n"
@@ -304,25 +304,25 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:212
 msgid ""
 "The quote-quote operator @code{'@w{}'} (two single quote marks) modifies\n"
 "evaluation in input expressions.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:215
 msgid ""
 "Applied to a general expression @var{expr}, quote-quote causes the value of\n"
 "@var{expr} to be substituted for @var{expr} in the input expression.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:218
 msgid ""
 "Applied to the operator of an expression, quote-quote changes the operator from\n"
 "a noun to a verb (if it is not already a verb).\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:225
 msgid ""
 "The quote-quote operator is applied by the input parser; it is not stored as\n"
 "part of a parsed input expression.  The quote-quote operator is always applied\n"
@@ -332,28 +332,28 @@ msgid ""
 "@code{'}.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:227
 msgid ""
 "Quote-quote is recognized by @mref{batch} and @mrefdot{load}\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:229
 msgid ""
 "See also @mrefcomma{ev} the single-quote operator @mxref{quote, '} and @mrefdot{nouns}\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:231
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:234
 msgid ""
 "Applied to a general expression @var{expr}, quote-quote causes the value of\n"
 "@var{expr} to be substituted for @var{expr} in the input expression.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:284
 msgid ""
 "@c ===beg===\n"
 "@c expand ((a + b)^3);\n"
@@ -406,13 +406,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:287
 msgid ""
 "Applied to the operator of an expression, quote-quote changes the operator from\n"
 "a noun to a verb (if it is not already a verb).\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:304
 msgid ""
 "@c ===beg==\n"
 "@c declare (foo, noun);\n"
@@ -432,13 +432,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:307
 msgid ""
 "The quote-quote operator is applied by the input parser; it is not stored as\n"
 "part of a parsed input expression.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:322
 msgid ""
 "@c ===beg===\n"
 "@c [aa : bb, cc : dd, bb : 1234, dd : 5678];\n"
@@ -456,17 +456,17 @@ msgid ""
 "                           _ = cc + aa\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:324
 msgid ""
 "                         op(cc + aa) = +\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:326
 msgid ""
 "                    args(cc + aa) = [cc, aa]\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:332
 msgid ""
 "(%o3)                         done\n"
 "(%i4) ''(aa + cc);\n"
@@ -475,30 +475,30 @@ msgid ""
 "                           _ = dd + bb\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:334
 msgid ""
 "                         op(dd + bb) = +\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:336
 msgid ""
 "                    args(dd + bb) = [dd, bb]\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:339
 msgid ""
 "(%o5)                         done\n"
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:343
 msgid ""
 "Quote-quote causes evaluation when evaluation is otherwise suppressed, such as\n"
 "in function definitions, lambda expressions, and expressions quoted by single\n"
 "quote @code{'}.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:364
 msgid ""
 "@c ===beg===\n"
 "@c foo_1a (x) := ''(integrate (log (x), x));\n"
@@ -522,12 +522,12 @@ msgid ""
 "(%t3)               foo_1a(x) := x log(x) - x\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:366
 msgid ""
 "(%t4)           foo_1b(x) := integrate(log(x), x)\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:376
 msgid ""
 "(%o4)                      [%t3, %t4]\n"
 "(%i5) integrate (log (x), x);\n"
@@ -540,12 +540,12 @@ msgid ""
 "(%t8)               foo_2a(x) := x log(x) - x\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:378
 msgid ""
 "(%t9)                    foo_2b(x) := %\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:391
 msgid ""
 "(%o9)                      [%t7, %t8]\n"
 "(%i10) F : lambda ([u], diff (sin (u), u));\n"
@@ -561,7 +561,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:396
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation} @category{Operators}\n"
@@ -569,20 +569,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:399
 msgid ""
 "@c NEEDS CLARIFICATION\n"
 "@c VERY IMPORTANT !!\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:403
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ev}\n"
 "@deffn {Function} ev (@var{expr}, @var{arg_1}, @dots{}, @var{arg_n})\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:408
 msgid ""
 "Evaluates the expression @var{expr} in the environment specified by the\n"
 "arguments @var{arg_1}, @dots{}, @var{arg_n}.  The arguments are switches\n"
@@ -590,12 +590,12 @@ msgid ""
 "result (another expression) of the evaluation.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:410
 msgid ""
 "The evaluation is carried out in steps, as follows.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:415
 msgid ""
 "@enumerate\n"
 "@item\n"
@@ -603,7 +603,7 @@ msgid ""
 "be any or all of the following.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:492
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -683,7 +683,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:497
 msgid ""
 "The arguments of @code{ev} may be given in any order with the exception of\n"
 "substitution equations which are handled in sequence, left to right, and\n"
@@ -691,21 +691,21 @@ msgid ""
 "realpart)} is handled as @code{realpart (ratsimp (@var{expr}))}.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:501
 msgid ""
 "The @mrefcomma{simp} @mrefcomma{numer} and @mref{float} switches may also be set\n"
 "locally in a block, or globally in Maxima so that they will remain in effect\n"
 "until being reset.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:505
 msgid ""
 "If @var{expr} is a canonical rational expression (CRE), then the expression\n"
 "returned by @code{ev} is also a CRE, provided the @code{numer} and @code{float}\n"
 "switches are not both @code{true}.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:515
 msgid ""
 "@item\n"
 "During step (1), a list is made of the non-subscripted variables appearing on\n"
@@ -718,13 +718,13 @@ msgid ""
 "named by the label, so that @code{ev} may work on it.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:518
 msgid ""
 "@item\n"
 "If any substitutions are indicated by the arguments, they are carried out now.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:524
 msgid ""
 "@item\n"
 "The resulting expression is then re-evaluated (unless one of the arguments was\n"
@@ -733,7 +733,7 @@ msgid ""
 "evaluated and that @code{ev(F(x))} thus may behave like @code{F(ev(x))}.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:529
 msgid ""
 "@item\n"
 "For each instance of @mref{eval} in the arguments, steps (3) and (4) are\n"
@@ -741,17 +741,17 @@ msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:531
 msgid ""
 "See also @mxrefcomma{quote-quote, ''} @mref{at} and @mrefdot{subst}\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:533
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:547
 msgid ""
 "@c ===beg===\n"
 "@c sin(x) + cos(y) + (w+1)^2 + 'diff (sin(w), w);\n"
@@ -768,32 +768,32 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:551
 msgid ""
 "An alternate top level syntax has been provided for @code{ev}, whereby one\n"
 "may just type in its arguments, without the @code{ev()}.  That is, one may\n"
 "write simply\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:555
 msgid ""
 "@example\n"
 "@var{expr}, @var{arg_1}, ..., @var{arg_n}\n"
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:558
 msgid ""
 "This is not permitted as part of another expression, e.g., in functions,\n"
 "blocks, etc.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:560
 msgid ""
 "Notice the parallel binding process in the following example.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:570
 msgid ""
 "@example\n"
 "(%i3) programmode: false;\n"
@@ -806,14 +806,14 @@ msgid ""
 "Solution\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:574
 msgid ""
 "                                          1\n"
 "(%t7)                               y = - -\n"
 "                                          5\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:590
 msgid ""
 "                                         6\n"
 "(%t8)                                x = -\n"
@@ -832,7 +832,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:595
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation}\n"
@@ -840,25 +840,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:599
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{eval}\n"
 "@defvr {Special symbol} eval\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:602
 msgid ""
 "As an argument in a call to @code{ev (@var{expr})}, @code{eval} causes an extra\n"
 "evaluation of @var{expr}.  See @mrefdot{ev}\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:604
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:624
 msgid ""
 "@c ===beg===\n"
 "@c [a:b,b:c,c:d,d:e];\n"
@@ -881,7 +881,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:629
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation flags}\n"
@@ -889,14 +889,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:633
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{evflag}\n"
 "@defvr {Property} evflag\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:638
 msgid ""
 "When a symbol @var{x} has the @code{evflag} property, the expressions\n"
 "@code{ev(@var{expr}, @var{x})} and @code{@var{expr}, @var{x}} (at the\n"
@@ -904,20 +904,20 @@ msgid ""
 "That is, @var{x} is bound to @code{true} while @var{expr} is evaluated.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:641
 msgid ""
 "The expression @code{declare(@var{x}, evflag)} gives the @code{evflag} property\n"
 "to the variable @var{x}.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:645
 msgid ""
 "The flags which have the @code{evflag} property by default are the following:\n"
 "@c FOLLOWING LIST CONSTRUCTED FROM LIST UNDER (prog1 '(evflag properties) ...)\n"
 "@c NEAR LINE 2649 OF mlisp.lisp AT PRESENT (2004/11).\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:660
 msgid ""
 "@verbatim\n"
 "   algebraic          cauchysum       demoivre\n"
@@ -935,12 +935,12 @@ msgid ""
 "@end verbatim\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:662
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:714
 msgid ""
 "@c ===beg===\n"
 "@c sin (1/2);\n"
@@ -995,7 +995,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:719
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation flags} @category{Simplification flags and variables}\n"
@@ -1003,27 +1003,27 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:723
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{evfun}\n"
 "@defvr {Property} evfun\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:727
 msgid ""
 "When a function @var{F} has the @code{evfun} property, the expressions\n"
 "@code{ev(@var{expr}, @var{F})} and @code{@var{expr}, @var{F}} (at the\n"
 "interactive prompt) are equivalent to @code{@var{F}(ev(@var{expr}))}.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:730
 msgid ""
 "If two or more @code{evfun} functions @var{F}, @var{G}, etc., are specified,\n"
 "the functions are applied in the order that they are specified.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:736
 msgid ""
 "The expression @code{declare(@var{F}, evfun)} gives the @code{evfun} property\n"
 "to the function @var{F}.  The functions which have the @code{evfun} property by\n"
@@ -1032,7 +1032,7 @@ msgid ""
 "@c NEAR LINE 2643 IN mlisp.lisp AT PRESENT (2004/11).\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:743
 msgid ""
 "@verbatim\n"
 "   bfloat          factor       fullratsimp\n"
@@ -1042,12 +1042,12 @@ msgid ""
 "@end verbatim\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:745
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:815
 msgid ""
 "@c ===beg===\n"
 "@c x^3 - 1;\n"
@@ -1120,7 +1120,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:820
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation flags}\n"
@@ -1128,28 +1128,28 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:822
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:826
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{infeval}\n"
 "@defvr {Option variable} infeval\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:832
 msgid ""
-"Enables \"infinite evaluation\" mode.  @mref{ev} repeatedly evaluates an\n"
+"Enables \\"infinite evaluation\\" mode.  @mref{ev} repeatedly evaluates an\n"
 "expression until it stops changing.  To prevent a variable, say @code{X}, from\n"
 "being evaluated away in this mode, simply include @code{X='X} as an argument to\n"
 "@code{ev}.  Of course expressions such as @code{ev (X, X=X+1, infeval)} will\n"
 "generate an infinite loop.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:837
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation flags}\n"
@@ -1157,27 +1157,27 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:840
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 "@c NEED TO MENTION THIS IS AN evflag\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:844
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{noeval}\n"
 "@defvr {Special symbol} noeval\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:848
 msgid ""
 "@code{noeval} suppresses the evaluation phase of @mrefdot{ev}  This is useful in\n"
 "conjunction with other switches and in causing expressions      \n"
 "to be resimplified without being reevaluated.\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:853
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation flags}\n"
@@ -1185,27 +1185,27 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:855
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:859
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{nouns}\n"
 "@defvr {Special symbol} nouns\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:864
 msgid ""
 "@code{nouns} is an @mrefdot{evflag}  When used as an option to the @mref{ev}@w{}\n"
-"command, @code{nouns} converts all \"noun\" forms occurring in the expression\n"
-"being @code{ev}'d to \"verbs\", i.e., evaluates them.  See also\n"
+"command, @code{nouns} converts all \\"noun\\" forms occurring in the expression\n"
+"being @code{ev}'d to \\"verbs\\", i.e., evaluates them.  See also\n"
 "@mrefcomma{noun} @mrefcomma{nounify} @code{verb}, and @mrefdot{verbify}\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:869
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation flags} @category{Nouns and verbs}\n"
@@ -1213,26 +1213,26 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:873
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{pred}\n"
 "@defvr {Special symbol} pred\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:877
 msgid ""
 "As an argument in a call to @code{ev (@var{expr})}, @code{pred} causes \n"
 "predicates (expressions which evaluate to @code{true} or @code{false}) to be \n"
 "evaluated.  See @mrefdot{ev}\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:879
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:890
 msgid ""
 "@c ===beg===\n"
 "@c 1<2;\n"
@@ -1246,7 +1246,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Evaluation.texi
+#: Evaluation.texi:895
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation flags}\n"
@@ -1254,6 +1254,3 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Evaluation.texi
-msgid ""
-msgstr ""

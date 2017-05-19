@@ -1,34 +1,34 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Itensor.texi
-msgid ""
-"@c RECOMMEND REVISE TEXT THROUGHOUT TO LOSE NOTION OF TIME RELATIVE TO PRESENT\n"
-"@c LOOK FOR \"NOW\", \"OLD\", \"NEW\", \"RECENT\", \"EARLIER\", DATES\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:3
+msgid ""
+"@c RECOMMEND REVISE TEXT THROUGHOUT TO LOSE NOTION OF TIME RELATIVE TO PRESENT\n"
+"@c LOOK FOR \\"NOW\\", \\"OLD\\", \\"NEW\\", \\"RECENT\\", \\"EARLIER\\", DATES\n"
+msgstr ""
+
+#: Itensor.texi:5
 msgid ""
 "@c RERUN EXAMPLES WITH ADDT'L WHITESPACE IN INPUT TO AID LEGIBILITY\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:10
 msgid ""
 "@menu\n"
 "* Introduction to itensor::\n"
@@ -36,7 +36,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:15
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to itensor, Functions and Variables for itensor, itensor, itensor\n"
@@ -44,19 +44,19 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:19
 msgid ""
 "Maxima implements symbolic tensor manipulation of two distinct types:\n"
 "component tensor manipulation (@code{ctensor} package) and indicial tensor\n"
 "manipulation (@code{itensor} package).\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:21
 msgid ""
 "Nota bene: Please see the note on 'new tensor notation' below.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:28
 msgid ""
 "Component tensor manipulation means that geometrical tensor\n"
 "objects are represented as arrays or matrices. Tensor operations such\n"
@@ -66,7 +66,7 @@ msgid ""
 "components stored in an array or matrix.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:34
 msgid ""
 "Indicial tensor manipulation is implemented by representing\n"
 "tensors as functions of their covariant, contravariant and derivative\n"
@@ -75,7 +75,7 @@ msgid ""
 "rather than the components to which they correspond.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:41
 msgid ""
 "These two approaches to the treatment of differential, algebraic and\n"
 "analytic processes in the context of Riemannian geometry have various\n"
@@ -85,7 +85,7 @@ msgid ""
 "implementations:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:52
 msgid ""
 "The representation of tensors and tensor operations explicitly in\n"
 "terms of their components makes @code{ctensor} easy to use. Specification of\n"
@@ -99,7 +99,7 @@ msgid ""
 "many of these difficulties.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:62
 msgid ""
 "Because of the special way in which tensors and tensor operations\n"
 "are represented in terms of symbolic operations on their indices,\n"
@@ -109,10 +109,10 @@ msgid ""
 "of a large expression may be more transparent. On the other hand, because\n"
 "of the special indicial representation in @code{itensor}, in some cases the\n"
 "user may find difficulty with the specification of the metric, function\n"
-"definition, and the evaluation of differentiated \"indexed\" objects.\n"
+"definition, and the evaluation of differentiated \\"indexed\\" objects.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:78
 msgid ""
 "The @code{itensor} package can carry out differentiation with respect to an indexed\n"
 "variable, which allows one to use the package when dealing with Lagrangian\n"
@@ -131,27 +131,27 @@ msgid ""
 "the Hamiltonian associated with the theory's scalar field.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:82
 msgid ""
 "@opencatbox\n"
 "@category{Tensors} @category{Share packages} @category{Package itensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:86
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection New tensor notation\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:89
 msgid ""
 "Earlier versions of the @code{itensor} package in Maxima used a notation that sometimes\n"
 "led to incorrect index ordering. Consider the following, for instance:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:101
 msgid ""
 "@example\n"
 "(%i2) imetric(g);\n"
@@ -166,7 +166,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:107
 msgid ""
 "This result is incorrect unless @code{a} happens to be a symmetric tensor.\n"
 "The reason why this happens is that although @code{itensor} correctly maintains\n"
@@ -175,7 +175,7 @@ msgid ""
 "indices is lost.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:114
 msgid ""
 "To avoid this problem, a new notation has been developed that remains fully\n"
 "compatible with the existing notation and can be used interchangeably. In\n"
@@ -185,12 +185,12 @@ msgid ""
 "new index notation and can process tensors appropriately.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:116
 msgid ""
 "In this new notation, the previous example yields a correct result:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:126
 msgid ""
 "@example\n"
 "(%i5) ishow(g([-j,-k],[])*g([-i,-l],[])*a([i,j],[]))$\n"
@@ -203,7 +203,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:131
 msgid ""
 "Presently, the only code that makes use of this notation is the @code{lc2kdt}\n"
 "function. Through this notation, it achieves consistent results as it\n"
@@ -211,31 +211,31 @@ msgid ""
 "to numeric indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:137
 msgid ""
 "Since this code is brand new, it probably contains bugs. While it has been\n"
-"tested to make sure that it doesn't break anything using the \"old\" tensor\n"
-"notation, there is a considerable chance that \"new\" tensors will fail to\n"
+"tested to make sure that it doesn't break anything using the \\"old\\" tensor\n"
+"notation, there is a considerable chance that \\"new\\" tensors will fail to\n"
 "interoperate with certain functions or features. These bugs will be fixed\n"
 "as they are encountered... until then, caveat emptor!\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:141
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Indicial tensor manipulation\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:144
 msgid ""
 "The indicial tensor manipulation package may be loaded by\n"
 "@code{load(itensor)}. Demos are also available: try @code{demo(tensor)}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:154
 msgid ""
-"In @code{itensor} a tensor is represented as an \"indexed object\" .  This is a\n"
+"In @code{itensor} a tensor is represented as an \\"indexed object\\" .  This is a\n"
 "function of 3 groups of indices which represent the covariant,\n"
 "contravariant and derivative indices.  The covariant indices are\n"
 "specified by a list as the first argument to the indexed object, and\n"
@@ -246,7 +246,7 @@ msgid ""
 "@code{(a,b)}, one contravariant index (@code{c}) and no derivative indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:175
 msgid ""
 "The derivative indices, if they are present, are appended as\n"
 "additional arguments to the symbolic function representing the tensor.\n"
@@ -270,7 +270,7 @@ msgid ""
 "covariant.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:184
 msgid ""
 "The following functions are available in the tensor package for\n"
 "manipulating indexed objects.  At present, with respect to the\n"
@@ -282,7 +282,7 @@ msgid ""
 "contravariant indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:191
 msgid ""
 "The @code{itensor} package generally treats tensors as opaque objects. Tensorial\n"
 "equations are manipulated based on algebraic rules, specifically symmetry\n"
@@ -292,13 +292,13 @@ msgid ""
 "of the @code{iframe_flag} variable.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:194
 msgid ""
 "A sample session below demonstrates how to load the @code{itensor} package,\n"
 "specify the name of the metric, and perform some simple calculations.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:232
 msgid ""
 "@example\n"
 "(%i1) load(itensor);\n"
@@ -339,7 +339,7 @@ msgid ""
 "        i,j            %4     j %5,i    ,i  j %5      i j,%5    ,%5  i j\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:249
 msgid ""
 "                                         + e p       + e   p    ))/2\n"
 "                                              i %5,j    ,j  i %5\n"
@@ -359,7 +359,7 @@ msgid ""
 "                    %6    j %7 i             %6    i j %7      i,j\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:268
 msgid ""
 "                                             %6 %7\n"
 "                                        - ifg      v   ifb      )/2\n"
@@ -381,12 +381,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:270
 msgid ""
 "@c end concepts itensor\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:276
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for itensor,  , Introduction to itensor, itensor\n"
@@ -395,7 +395,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:282
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{dispcon}\n"
@@ -404,14 +404,14 @@ msgid ""
 "@fname{dispcon} (all)\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:286
 msgid ""
 "Displays the contraction properties of its arguments as were given to\n"
 "@code{defcon}.  @code{dispcon (all)} displays all the contraction properties\n"
 "which were defined.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:291
 msgid ""
 "@opencatbox\n"
 "@category{Display functions}\n"
@@ -419,14 +419,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:295
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{entertensor}\n"
 "@deffn {Function} entertensor (@var{name})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:300
 msgid ""
 "is a function which, by prompting, allows one to create an indexed\n"
 "object called @var{name} with any number of tensorial and derivative\n"
@@ -434,7 +434,7 @@ msgid ""
 "null) is acceptable input (see the example under @code{covdiff}).\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:305
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -442,14 +442,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:309
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{changename}\n"
 "@deffn {Function} changename (@var{old}, @var{new}, @var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:315
 msgid ""
 "will change the name of all indexed objects called @var{old} to @var{new}\n"
 "in @var{expr}. @var{old} may be either a symbol or a list of the form\n"
@@ -458,7 +458,7 @@ msgid ""
 "renamed to @var{new}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:320
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -466,28 +466,28 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:323
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} listoftens\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:325
 msgid ""
 "@anchor{listoftens}\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:327
 msgid ""
 "Lists all tensors in a tensorial expression, complete with their indices. E.g.,\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:329
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:338
 msgid ""
 "(%i6) ishow(a([i,j],[k])*b([u],[],v)+c([x,y],[])*d([],[])*e)$\n"
 "                                         k\n"
@@ -499,12 +499,12 @@ msgid ""
 "                               i j   u,v   x y\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:340
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:345
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -512,14 +512,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:349
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ishow}\n"
 "@deffn {Function} ishow (@var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:355
 msgid ""
 "displays @var{expr} with the indexed objects in it shown having their\n"
 "covariant indices as subscripts and contravariant indices as\n"
@@ -528,7 +528,7 @@ msgid ""
 "throughout this document).\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:360
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -536,14 +536,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:364
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{indices}\n"
 "@deffn {Function} indices (@var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:369
 msgid ""
 "Returns a list of two elements.  The first is a list of the free\n"
 "indices in @var{expr} (those that occur only once). The second is the\n"
@@ -551,12 +551,12 @@ msgid ""
 "as the following example demonstrates.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:371
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:380
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -568,12 +568,12 @@ msgid ""
 "(%o3)                 [[l, p, i, n, o, q, r], [k, j, m]]\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:382
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:387
 msgid ""
 "A tensor product containing the same index more than twice is syntactically\n"
 "illegal. @code{indices} attempts to deal with these expressions in a\n"
@@ -581,7 +581,7 @@ msgid ""
 "illegal expression, its behavior should be considered undefined.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:392
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -589,7 +589,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:398
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rename}\n"
@@ -598,7 +598,7 @@ msgid ""
 "@fname{rename} (@var{expr}, @var{count})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:413
 msgid ""
 "Returns an expression equivalent to @var{expr} but with the dummy indices\n"
 "in each term chosen from the set @code{[%1, %2,...]}, if the optional second\n"
@@ -616,12 +616,12 @@ msgid ""
 "reduce an expression more than either one by itself.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:415
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:429
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -638,7 +638,7 @@ msgid ""
 "                         %1 %4      %2 %3      %5 %6      %7 r\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:440
 msgid ""
 "        %4 %5  %6 %7      u          %1         %3         %2\n"
 "     - g      g      ichr2      ichr2      ichr2      ichr2\n"
@@ -652,7 +652,7 @@ msgid ""
 "                         %1 %2      %3 %4      %5 %6      %7 r\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:452
 msgid ""
 "        %4 %5  %6 %7      u          %1         %3         %2\n"
 "     - g      g      ichr2      ichr2      ichr2      ichr2\n"
@@ -667,7 +667,7 @@ msgid ""
 "                         %1 %6      %2 %3      %4 r      %5 %7\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:457
 msgid ""
 "        %1 %2  %3 %4      %6         %5         %7        u\n"
 "     - g      g      ichr2      ichr2      ichr2     ichr2\n"
@@ -675,7 +675,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:462
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -683,20 +683,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:465
 msgid ""
 "@c THIS FUNCTION IS IN THE SHARE PACKAGE itensor.lisp\n"
 "@c MOVE THIS DESCRIPTION TO Itensor.texi\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:469
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{show}\n"
 "@deffn {Function} show (@var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:474
 msgid ""
 "Displays @code{expr} with the indexed objects in it shown\n"
 "having covariant indices as subscripts, contravariant indices as\n"
@@ -704,7 +704,7 @@ msgid ""
 "separated from the covariant indices by a comma.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:479
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor} @category{Display functions}\n"
@@ -712,7 +712,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:484
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{flipflag}\n"
@@ -720,14 +720,14 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:488
 msgid ""
 "If @code{false} then the indices will be\n"
 "renamed according to the order of the contravariant indices,\n"
 "otherwise according to the order of the covariant indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:495
 msgid ""
 "If @code{flipflag} is @code{false} then @code{rename} forms a list\n"
 "of the contravariant indices as they are encountered from left to right\n"
@@ -737,7 +737,7 @@ msgid ""
 "under @code{rename}).\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:500
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -745,7 +745,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:506
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{defcon}\n"
@@ -754,7 +754,7 @@ msgid ""
 "@fname{defcon} (@var{tensor_1}, @var{tensor_2}, @var{tensor_3})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:522
 msgid ""
 "gives @var{tensor_1} the property that the\n"
 "contraction of a product of @var{tensor_1} and @var{tensor_2} results in @var{tensor_3}\n"
@@ -773,7 +773,7 @@ msgid ""
 "contraction properties with @code{defcon}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:527
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -781,7 +781,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:533
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remcon}\n"
@@ -790,14 +790,14 @@ msgid ""
 "@fname{remcon} (all)\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:537
 msgid ""
 "Removes all the contraction properties\n"
 "from the (@var{tensor_1}, ..., @var{tensor_n}). @code{remcon(all)} removes all contraction\n"
 "properties from all indexed objects.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:542
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -805,14 +805,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:546
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{contract_Itensor}\n"
 "@deffn {Function} contract (@var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:554
 msgid ""
 "Carries out the tensorial contractions in @var{expr} which may be any\n"
 "combination of sums and products. This function uses the information\n"
@@ -823,7 +823,7 @@ msgid ""
 "cancellations are unnecessary.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:559
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -831,21 +831,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:563
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{indexed_tensor}\n"
 "@deffn {Function} indexed_tensor (@var{tensor})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:567
 msgid ""
 "Must be executed before assigning components to a @var{tensor} for which\n"
 "a built in value already exists as with @code{ichr1}, @code{ichr2},\n"
 "@code{icurvature}. See the example under @code{icurvature}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:572
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -853,14 +853,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:576
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{components}\n"
 "@deffn {Function} components (@var{tensor}, @var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:587
 msgid ""
 "permits one to assign an indicial value to an expression\n"
 "@var{expr} giving the values of the components of @var{tensor}. These\n"
@@ -874,7 +874,7 @@ msgid ""
 "assignment is given to the function @code{remcomps}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:593
 msgid ""
 "It is important to keep in mind that @code{components} cares only about\n"
 "the valence of a tensor, not about any particular index ordering. Thus\n"
@@ -883,18 +883,18 @@ msgid ""
 "assigned to a tensor named @code{x} with valence @code{(1,1)}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:596
 msgid ""
 "Components can be assigned to an indexed expression in four ways, two\n"
 "of which involve the use of the @code{components} command:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:598
 msgid ""
 "1) As an indexed expression. For instance:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:604
 msgid ""
 "@example\n"
 "(%i2) components(g([],[i,j]),e([],[i])*p([],[j]))$\n"
@@ -903,22 +903,22 @@ msgid ""
 "(%t3)                                e  p\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:606
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:608
 msgid ""
 "2) As a matrix:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:610
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:631
 msgid ""
 "(%i5) lg:-ident(4)$lg[1,1]:1$lg;\n"
 "@group\n"
@@ -942,7 +942,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:637
 msgid ""
 "3) As a function. You can use a Maxima function to specify the\n"
 "components of a tensor based on its indices. For instance, the following\n"
@@ -951,12 +951,12 @@ msgid ""
 "@code{g} otherwise:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:639
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:651
 msgid ""
 "(%i4) h(l1,l2,[l3]):=if length(l1)=length(l2) and length(l3)=0\n"
 "  then kdelta(l1,l2) else apply(g,append([l1,l2], l3))$\n"
@@ -971,18 +971,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:654
 msgid ""
 "4) Using Maxima's pattern matching capabilities, specifically the\n"
 "@code{defrule} and @code{applyb1} commands:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:656
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:663
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -992,13 +992,13 @@ msgid ""
 "      g([l1[1],l1[2]],[])*q([i1],[])*e([],[i1])))$\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:666
 msgid ""
 "(%i4) defrule(r2,m([],l1),(i1:idummy(),\n"
 "      w([],[l1[1],l1[2]])*e([i1],[])*q([],[i1])))$\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:678
 msgid ""
 "(%i5) ishow(m([i,n],[])*m([],[i,m]))$\n"
 "@group\n"
@@ -1013,7 +1013,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:683
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1021,19 +1021,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:686
 msgid ""
 "@anchor{remcomps}\n"
 "@deffn {Function} remcomps (@var{tensor})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:689
 msgid ""
 "Unbinds all values from @var{tensor} which were assigned with the\n"
 "@code{components} function.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:694
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1041,19 +1041,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:696
 msgid ""
 "@c NEED LIST OF ARGUMENTS HERE\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:700
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{showcomps}\n"
 "@deffn {Function} showcomps (@var{tensor})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:705
 msgid ""
 "Shows component assignments of a tensor, as made using the @code{components}\n"
 "command. This function can be particularly useful when a matrix is assigned\n"
@@ -1061,12 +1061,12 @@ msgid ""
 "following example:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:707
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:740
 msgid ""
 "(%i1) load(ctensor);\n"
 "(%o1)       /share/tensor/ctensor.mac\n"
@@ -1102,18 +1102,18 @@ msgid ""
 "(%o5)                                false\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:742
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:745
 msgid ""
 "The @code{showcomps} command can also display components of a tensor of\n"
 "rank higher than 2.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:750
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1121,14 +1121,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:754
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{idummy}\n"
 "@deffn {Function} idummy ()\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:759
 msgid ""
 "Increments @code{icounter} and returns as its value an index of the form\n"
 "@code{%n} where n is a positive integer.  This guarantees that dummy indices\n"
@@ -1136,7 +1136,7 @@ msgid ""
 "already in use (see the example under @code{indices}).\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:764
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1144,19 +1144,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:768
 msgid ""
 "@anchor{idummyx}\n"
 "@defvr {Option variable} idummyx\n"
 "Default value: @code{%}\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:770
 msgid ""
 "Is the prefix for dummy indices (see the example under @code{indices}).\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:775
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1164,7 +1164,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:780
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{icounter}\n"
@@ -1172,14 +1172,14 @@ msgid ""
 "Default value: @code{1}\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:784
 msgid ""
 "Determines the numerical suffix to be used in\n"
 "generating the next dummy index in the tensor package.  The prefix is\n"
 "determined by the option @code{idummy} (default: @code{%}).\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:789
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1187,7 +1187,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:799
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{kdelta}\n"
@@ -1200,16 +1200,16 @@ msgid ""
 "manifold.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:805
 msgid ""
 "In what amounts to an abuse of this notation, @code{itensor} also allows\n"
 "@code{kdelta} to have 2 covariant and no contravariant, or 2 contravariant\n"
-"and no covariant indices, in effect providing a co(ntra)variant \"unit matrix\"\n"
+"and no covariant indices, in effect providing a co(ntra)variant \\"unit matrix\\"\n"
 "capability. This is strictly considered a programming aid and not meant to\n"
 "imply that @code{kdelta([i,j],[])} is a valid tensorial object.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:810
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1217,24 +1217,24 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:814
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{kdels}\n"
 "@deffn {Function} kdels (@var{L1}, @var{L2})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:816
 msgid ""
 "Symmetrized Kronecker delta, used in some calculations. For instance:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:818
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:833
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -1252,12 +1252,12 @@ msgid ""
 "                             a       b         a       b\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:835
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:840
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1265,7 +1265,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:848
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{levi_civita}\n"
@@ -1276,7 +1276,7 @@ msgid ""
 "repeated.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:853
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1284,7 +1284,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:864
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lc2kdt}\n"
@@ -1298,12 +1298,12 @@ msgid ""
 "are more easily simplified with @code{rename} or @code{contract}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:866
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:882
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -1322,7 +1322,7 @@ msgid ""
 "             1       2         1       2   j\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:895
 msgid ""
 "                               1       2         2       1\n"
 "                        (kdelta  kdelta  - kdelta  kdelta )\n"
@@ -1338,19 +1338,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:899
 msgid ""
 "The @code{lc2kdt} function sometimes makes use of the metric tensor.\n"
 "If the metric tensor was not defined previously with @code{imetric},\n"
 "this results in an error.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:901
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:911
 msgid ""
 "(%i7) expr:ishow('levi_civita([],[i,j])\n"
 "                 *'levi_civita([],[k,l])*a([j,k],[]))$\n"
@@ -1363,13 +1363,13 @@ msgid ""
 "Maxima encountered a Lisp error:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:914
 msgid ""
 " Error in $IMETRIC [or a callee]:\n"
 " $IMETRIC [or a callee] requires less than two arguments.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:931
 msgid ""
 "Automatically continuing.\n"
 "To reenable the Lisp debugger set *debugger-hook* to nil.\n"
@@ -1387,18 +1387,22 @@ msgid ""
 "(%t11)                           a    - g    a\n"
 "                                              j\n"
 "@end example\n"
+msgstr ""
+
+#: Itensor.texi:937
+msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
 "@closecatbox\n"
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:939
 msgid ""
 "@c HMM, WHICH CATEGORY DOES THIS FALL INTO -- FUNCTION, VARIABLE, OTHER ??\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:947
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lc_l}\n"
@@ -1409,12 +1413,12 @@ msgid ""
 "For example:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:949
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:964
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -1432,12 +1436,12 @@ msgid ""
 "(%t5)                                  0\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:966
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:971
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1445,18 +1449,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:973
 msgid ""
 "@c HMM, WHICH CATEGORY DOES THIS FALL INTO -- FUNCTION, VARIABLE, OTHER ??\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:976
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} lc_u\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:981
 msgid ""
 "Simplification rule used for expressions containing the unevaluated Levi-Civita\n"
 "symbol (@code{levi_civita}). Along with @code{lc_u}, it can be used to simplify\n"
@@ -1464,7 +1468,7 @@ msgid ""
 "For details, see @code{lc_l}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:986
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1472,7 +1476,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:995
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{canten}\n"
@@ -1484,7 +1488,7 @@ msgid ""
 "required simplification.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1000
 msgid ""
 "The @code{canten} function returns a mathematically correct result only\n"
 "if its argument is an expression that is fully symmetric in its indices.\n"
@@ -1492,7 +1496,7 @@ msgid ""
 "set to @code{true}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1005
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1500,7 +1504,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1010
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{concan}\n"
@@ -1508,7 +1512,7 @@ msgid ""
 "Similar to @code{canten} but also performs index contraction.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1015
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1516,14 +1520,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1019
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Tensor symmetries\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1024
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{allsym}\n"
@@ -1531,7 +1535,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1030
 msgid ""
 "If @code{true} then all indexed objects\n"
 "are assumed symmetric in all of their covariant and contravariant\n"
@@ -1540,7 +1544,7 @@ msgid ""
 "unless @code{iframe_flag} is set to @code{true}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1035
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1548,14 +1552,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1039
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{decsym}\n"
 "@deffn {Function} decsym (@var{tensor}, @var{m}, @var{n}, [@var{cov_1}, @var{cov_2}, ...], [@var{contr_1}, @var{contr_2}, ...])\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1057
 msgid ""
 "Declares symmetry properties for @var{tensor} of @var{m} covariant and\n"
 "@var{n} contravariant indices. The @var{cov_i} and @var{contr_i} are\n"
@@ -1576,12 +1580,12 @@ msgid ""
 "illustrates.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1059
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1089
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -1614,12 +1618,12 @@ msgid ""
 "(%o12)                     [[cyc, [[1, 2, 3]], []]]\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1091
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1096
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1627,7 +1631,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1102
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remsym}\n"
@@ -1636,7 +1640,7 @@ msgid ""
 "covariant indices and @var{n} contravariant indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1107
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1644,7 +1648,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1113
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{canform}\n"
@@ -1653,7 +1657,7 @@ msgid ""
 "@fname{canform} (@var{expr}, @var{rename})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1125
 msgid ""
 "Simplifies @var{expr} by renaming dummy\n"
 "indices and reordering all indices as dictated by symmetry conditions\n"
@@ -1668,12 +1672,12 @@ msgid ""
 "always return a mathematically correct result.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1127
 msgid ""
 "The optional second parameter @var{rename}, if set to @code{false}, suppresses renaming.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1132
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1681,21 +1685,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1136
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Indicial tensor calculus\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1140
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{itensor_diff}\n"
 "@deffn {Function} diff (@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1152
 msgid ""
 "is the usual Maxima differentiation function which has been expanded\n"
 "in its abilities for @code{itensor}. It takes the derivative of @var{expr} with\n"
@@ -1710,7 +1714,7 @@ msgid ""
 "subscripted names like @code{x[1]}, @code{x[2]}, ...  to be used.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1160
 msgid ""
 "A further extension adds the ability to @code{diff} to compute derivatives\n"
 "with respect to an indexed variable. In particular, the tensor package knows\n"
@@ -1721,7 +1725,7 @@ msgid ""
 "the Einstein tensor and field equations from the action principle.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1165
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1729,7 +1733,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1175
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{idiff}\n"
@@ -1742,7 +1746,7 @@ msgid ""
 "is set to @code{true}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1181
 msgid ""
 "@code{idiff} can also differentiate the determinant of the metric\n"
 "tensor. Thus, if @code{imetric} has been bound to @code{G} then\n"
@@ -1751,7 +1755,7 @@ msgid ""
 "is chosen appropriately.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1186
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1759,14 +1763,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1190
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{liediff}\n"
 "@deffn {Function} liediff (@var{v}, @var{ten})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1195
 msgid ""
 "Computes the Lie-derivative of the tensorial expression @var{ten} with\n"
 "respect to the vector field @var{v}. @var{ten} should be any indexed\n"
@@ -1774,12 +1778,12 @@ msgid ""
 "field. For example:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1197
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1204
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -1789,19 +1793,19 @@ msgid ""
 "       ,l       i j,%2    ,j  i %2    ,i  %2 j\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1208
 msgid ""
 "                          %1  k        %1  k      %1  k\n"
 "                      + (v   b      - b   v    + v   b   ) a\n"
 "                              ,%1 l    ,l  ,%1    ,l  ,%1   i j\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1210
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1215
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1809,20 +1813,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1219
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rediff}\n"
 "@deffn {Function} rediff (@var{ten})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1222
 msgid ""
 "Evaluates all occurrences of the @code{idiff} command in the tensorial\n"
 "expression @var{ten}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1227
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1830,14 +1834,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1231
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{undiff}\n"
 "@deffn {Function} undiff (@var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1239
 msgid ""
 "Returns an expression equivalent to @var{expr} but with all derivatives\n"
 "of indexed objects replaced by the noun form of the @code{idiff} function. Its\n"
@@ -1848,7 +1852,7 @@ msgid ""
 "@code{ev(@var{expr}, idiff)}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1244
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1856,27 +1860,27 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1248
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{evundiff}\n"
 "@deffn {Function} evundiff (@var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1251
 msgid ""
 "Equivalent to the execution of @code{undiff}, followed by @code{ev} and\n"
 "@code{rediff}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1255
 msgid ""
 "The point of this operation is to easily evalute expressions that cannot\n"
 "be directly evaluated in derivative form. For instance, the following\n"
 "causes an error:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1261
 msgid ""
 "@example\n"
 "(%i1) load(itensor);\n"
@@ -1885,26 +1889,26 @@ msgid ""
 "Maxima encountered a Lisp error:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1264
 msgid ""
 " Error in $ICURVATURE [or a callee]:\n"
 " $ICURVATURE [or a callee] requires less than three arguments.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1268
 msgid ""
 "Automatically continuing.\n"
 "To reenable the Lisp debugger set *debugger-hook* to nil.\n"
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1271
 msgid ""
 "However, if @code{icurvature} is entered in noun form, it can be evaluated\n"
 "using @code{evundiff}:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1281
 msgid ""
 "@example\n"
 "(%i3) ishow('icurvature([i,j,k],[l],m))$\n"
@@ -1917,7 +1921,7 @@ msgid ""
 "             i k,j m        %1 j      i k,m        %1 j,m      i k\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1286
 msgid ""
 "             l              l         %1           l           %1\n"
 "      + ichr2        + ichr2     ichr2      + ichr2       ichr2\n"
@@ -1925,14 +1929,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1290
 msgid ""
 "Note: In earlier versions of Maxima, derivative forms of the\n"
 "Christoffel-symbols also could not be evaluated. This has been fixed now,\n"
 "so @code{evundiff} is no longer necessary for expressions like this:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1300
 msgid ""
 "@example\n"
 "(%i5) imetric(g);\n"
@@ -1945,7 +1949,7 @@ msgid ""
 "                          2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1307
 msgid ""
 "                         k %3\n"
 "                        g     (g       - g       + g      )\n"
@@ -1955,7 +1959,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1312
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1963,7 +1967,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1318
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{flush}\n"
@@ -1972,7 +1976,7 @@ msgid ""
 "@var{expr}, all occurrences of the @var{tensor_i} that have no derivative indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1323
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1980,7 +1984,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1329
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{flushd}\n"
@@ -1989,7 +1993,7 @@ msgid ""
 "@var{expr}, all occurrences of the @var{tensor_i} that have derivative indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1334
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -1997,7 +2001,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1342
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{flushnd}\n"
@@ -2008,7 +2012,7 @@ msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1354
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -2023,7 +2027,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1359
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2031,14 +2035,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1363
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{coord}\n"
 "@deffn {Function} coord (@var{tensor_1}, @var{tensor_2}, ...)\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1369
 msgid ""
 "Gives @var{tensor_i} the coordinate differentiation property that the\n"
 "derivative of contravariant vector whose name is one of the\n"
@@ -2047,7 +2051,7 @@ msgid ""
 "@code{coord} is a list of all indexed objects having this property.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1374
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2055,7 +2059,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1380
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remcoord}\n"
@@ -2064,14 +2068,14 @@ msgid ""
 "@fname{remcoord} (all)\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1384
 msgid ""
 "Removes the coordinate differentiation property from the @code{tensor_i}\n"
 "that was established by the function @code{coord}.  @code{remcoord(all)}\n"
 "removes this property from all indexed objects.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1389
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2079,7 +2083,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1397
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{makebox}\n"
@@ -2090,7 +2094,7 @@ msgid ""
 "@code{g([],[i,j])*p([m],[n],i,j)}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1402
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2098,14 +2102,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1406
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{conmetderiv}\n"
 "@deffn {Function} conmetderiv (@var{expr}, @var{tensor})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1412
 msgid ""
 "Simplifies expressions containing ordinary derivatives of\n"
 "both covariant and con@-tra@-va@-ri@-ant forms of the metric tensor (the\n"
@@ -2114,12 +2118,12 @@ msgid ""
 "symbols as seen from the following:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1414
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1426
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -2134,7 +2138,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1431
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2142,7 +2146,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1437
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{simpmetderiv}\n"
@@ -2151,40 +2155,40 @@ msgid ""
 "@fname{simpmetderiv} (@var{expr}[, @var{stop}])\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1440
 msgid ""
 "Simplifies expressions containing products of the derivatives of the\n"
 "metric tensor. Specifically, @code{simpmetderiv} recognizes two identities:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1442
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1446
 msgid ""
 "   ab        ab           ab                 a\n"
 "  g   g   + g   g     = (g   g  )   = (kdelta )   = 0\n"
 "   ,d  bc        bc,d         bc ,d          c ,d\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1448
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1450
 msgid ""
 "hence\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1452
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1457
 msgid ""
 "   ab          ab\n"
 "  g   g   = - g   g\n"
@@ -2192,34 +2196,34 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1459
 msgid ""
 "and\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1461
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1465
 msgid ""
 "  ab          ab\n"
 " g   g     = g   g\n"
 "  ,j  ab,i    ,i  ab,j\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1467
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1469
 msgid ""
 "which follows from the symmetries of the Christoffel symbols.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1475
 msgid ""
 "The @code{simpmetderiv} function takes one optional parameter which, when\n"
 "present, causes the function to stop after the first successful\n"
@@ -2228,7 +2232,7 @@ msgid ""
 "how to apply a ``canonical'' ordering to the product indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1481
 msgid ""
 "Put together, these capabilities can be used to achieve powerful\n"
 "simplifications that are difficult or impossible to accomplish otherwise.\n"
@@ -2237,12 +2241,12 @@ msgid ""
 "contractible expression:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1483
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1493
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -2255,7 +2259,7 @@ msgid ""
 "(%i4) ishow(canform(%))$\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1516
 msgid ""
 "errexp1 has improper indices\n"
 " -- an error.  Quitting.  To debug this try debugmode(true);\n"
@@ -2281,18 +2285,18 @@ msgid ""
 "                                    ,e   c b,d\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1518
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1521
 msgid ""
 "See also @code{weyl.dem} for an example that uses @mref{simpmetderiv}\n"
 "and @mref{conmetderiv} together to simplify contractions of the Weyl tensor.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1526
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2300,20 +2304,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1530
 msgid ""
 "@c -----------------------------------------------------------------------------}\n"
 "@anchor{flush1deriv}\n"
 "@deffn {Function} flush1deriv (@var{expr}, @var{tensor})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1533
 msgid ""
 "Set to zero, in @code{expr}, all occurrences of @code{tensor} that have\n"
 "exactly one derivative index.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1538
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2321,14 +2325,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1542
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Tensors in curved spaces\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1547
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{imetric}\n"
@@ -2336,7 +2340,7 @@ msgid ""
 "@deffnx {System variable} imetric\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1553
 msgid ""
 "Specifies the metric by assigning the variable @code{imetric:@var{g}} in\n"
 "addition, the con@-trac@-tion properties of the metric @var{g} are set up by\n"
@@ -2345,7 +2349,7 @@ msgid ""
 "the @code{imetric(@var{g})} command.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1558
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2353,7 +2357,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1564
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{idim}\n"
@@ -2362,7 +2366,7 @@ msgid ""
 "properties of the Levi-Civita symbols for the given dimension.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1569
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2370,7 +2374,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1582
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ichr1}\n"
@@ -2386,7 +2390,7 @@ msgid ""
 "variable @code{imetric} must be assigned a name as in the example under @code{chr2}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1587
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2394,7 +2398,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1598
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ichr2}\n"
@@ -2408,7 +2412,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1603
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2416,7 +2420,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1618
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{icurvature}\n"
@@ -2434,7 +2438,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1623
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2442,7 +2446,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1631
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{covdiff}\n"
@@ -2453,12 +2457,12 @@ msgid ""
 "@code{ev(@var{expr},ichr2)}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1633
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1648
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -2476,7 +2480,7 @@ msgid ""
 "             i %1      j s    %1 j      i s    i j,s\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1674
 msgid ""
 "             k     %1\n"
 "      + ichr2     a\n"
@@ -2505,7 +2509,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1679
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2513,7 +2517,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1686
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lorentz}\n"
@@ -2523,7 +2527,7 @@ msgid ""
 "contravariant index.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1691
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2531,14 +2535,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1695
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{igeodesic}\n"
 "@deffn {Function} igeodesic_coords (@var{expr}, @var{name})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1703
 msgid ""
 "Causes undifferentiated Christoffel symbols and\n"
 "first derivatives of the metric tensor vanish in @var{expr}. The @var{name}\n"
@@ -2549,12 +2553,12 @@ msgid ""
 "curvature tensor using the @code{igeodesic_coords} function.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1705
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1712
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -2564,7 +2568,7 @@ msgid ""
 "             r t,s        %1 s      r t        r s,t \n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1726
 msgid ""
 "                                              u         %1\n"
 "                                       + ichr2     ichr2\n"
@@ -2581,7 +2585,7 @@ msgid ""
 "             t s,r        t r,s        s t,r        s r,t\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1732
 msgid ""
 "                                             u            u\n"
 "                                      - ichr2      + ichr2\n"
@@ -2590,12 +2594,12 @@ msgid ""
 "(%o5)                                  0\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1734
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1739
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2603,20 +2607,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1743
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Moving frames\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1746
 msgid ""
 "Maxima now has the ability to perform calculations using moving frames.\n"
 "These can be orthonormal frames (tetrads, vielbeins) or an arbitrary frame.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1752
 msgid ""
 "To use frames, you must first set @code{iframe_flag} to @code{true}. This\n"
 "causes the Christoffel-symbols, @code{ichr1} and @code{ichr2}, to be replaced\n"
@@ -2625,7 +2629,7 @@ msgid ""
 "@code{icurvature} is changed.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1759
 msgid ""
 "The frame is defined by two tensors: the inverse frame field (@code{ifri},\n"
 "the dual basis tetrad),\n"
@@ -2635,14 +2639,14 @@ msgid ""
 "Contraction properties are defined for the frame field and the frame metric.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1763
 msgid ""
 "When @code{iframe_flag} is true, many @code{itensor} expressions use the frame\n"
 "metric @code{ifg} instead of the metric defined by @code{imetric} for\n"
 "raising and lowerind indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1769
 msgid ""
 "IMPORTANT: Setting the variable @code{iframe_flag} to @code{true} does NOT\n"
 "undefine the contraction properties of a metric defined by a call to\n"
@@ -2651,19 +2655,19 @@ msgid ""
 "and NOT invoke the @code{imetric} function.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1773
 msgid ""
 "Maxima uses these two tensors to define the frame coefficients (@code{ifc1}\n"
 "and @code{ifc2}) which form part of the connection coefficients (@code{icc1}\n"
 "and @code{icc2}), as the following example demonstrates:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1775
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1804
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -2695,23 +2699,23 @@ msgid ""
 "                         a %3,%4       a %4,%3     b     c\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1806
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1809
 msgid ""
 "An alternate method is used to compute the frame bracket (@code{ifb}) if\n"
 "the @code{iframe_bracket_form} flag is set to @code{false}:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1811
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1816
 msgid ""
 "(%i8) block([iframe_bracket_form:false],ishow(ifb([a,b,c])))$\n"
 "                                %6    %5        %5      %6\n"
@@ -2719,26 +2723,26 @@ msgid ""
 "                       a %5     b     c,%6      b,%6    c\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1818
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1822
 msgid ""
 "@c -----------------------------------------------------------------------------}\n"
 "@anchor{iframes}\n"
 "@deffn {Function} iframes ()\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1826
 msgid ""
 "Since in this version of Maxima, contraction identities for @code{ifr} and\n"
 "@code{ifri} are always defined, as is the frame bracket (@code{ifb}), this\n"
 "function does nothing.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1831
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2746,25 +2750,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1835
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ifb}\n"
 "@defvr {Variable} ifb\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1838
 msgid ""
 "The frame bracket. The contribution of the frame metric to the connection\n"
 "coefficients is expressed using the frame bracket:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1840
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1845
 msgid ""
 "          - ifb      + ifb      + ifb\n"
 "               c a b      b c a      a b c\n"
@@ -2772,12 +2776,12 @@ msgid ""
 "    abc                  2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1847
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1852
 msgid ""
 "The frame bracket itself is defined in terms of the frame field and frame\n"
 "metric. Two alternate methods of computation are used depending on the\n"
@@ -2785,42 +2789,46 @@ msgid ""
 "@code{itorsion_flag} is @code{true}:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1854
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1858
 msgid ""
 "          d      e                                      f\n"
 "ifb =  ifr    ifr   (ifri      - ifri      - ifri    itr   )\n"
 "   abc    b      c       a d,e       a e,d       a f    d e\n"
+msgstr ""
+
+#: Itensor.texi:1861
+msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1863
 msgid ""
 "Otherwise:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1865
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1869
 msgid ""
 "             e      d        d      e\n"
 "ifb    = (ifr    ifr    - ifr    ifr   ) ifri\n"
 "   abc       b      c,e      b,e    c        a d\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1871
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1876
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2828,35 +2836,35 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1880
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{icc1}\n"
 "@defvr {Variable} icc1\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1882
 msgid ""
 "Connection coefficients of the first kind. In @code{itensor}, defined as\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1884
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1887
 msgid ""
 "icc1    = ichr1    - ikt1    - inmc1\n"
 "    abc        abc       abc        abc\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1889
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1897
 msgid ""
 "In this expression, if @code{iframe_flag} is true, the Christoffel-symbol\n"
 "@code{ichr1} is replaced with the frame connection coefficient @code{ifc1}.\n"
@@ -2867,7 +2875,7 @@ msgid ""
 "@code{inmc1} will not be present.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1902
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2875,36 +2883,36 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1906
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{icc2}\n"
 "@defvr {Variable} icc2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1908
 msgid ""
 "Connection coefficients of the second kind. In @code{itensor}, defined as\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1910
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1914
 msgid ""
 "    c         c        c         c\n"
 "icc2   = ichr2   - ikt2   - inmc2\n"
 "    ab        ab       ab        ab\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1916
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1924
 msgid ""
 "In this expression, if @code{iframe_flag} is true, the Christoffel-symbol\n"
 "@code{ichr2} is replaced with the frame connection coefficient @code{ifc2}.\n"
@@ -2915,7 +2923,7 @@ msgid ""
 "@code{inmc2} will not be present.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1929
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2923,14 +2931,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1933
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ifc1}\n"
 "@defvr {Variable} ifc1\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1938
 msgid ""
 "Frame coefficient of the first kind (also known as Ricci-rotation\n"
 "coefficients.) This tensor represents the contribution\n"
@@ -2938,21 +2946,25 @@ msgid ""
 "as:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1940
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1945
 msgid ""
 "          - ifb      + ifb      + ifb\n"
 "               c a b      b c a      a b c\n"
 "ifc1    = --------------------------------\n"
 "    abc                   2\n"
+msgstr ""
+
+#: Itensor.texi:1948
+msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1953
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -2960,14 +2972,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1957
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ifc2}\n"
 "@defvr {Variable} ifc2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1962
 msgid ""
 "Frame coefficient of the second kind. This tensor represents the contribution\n"
 "of the frame metric to the connection coefficient of the second kind. Defined\n"
@@ -2975,24 +2987,24 @@ msgid ""
 "indices raised and lowered as necessary:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1964
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1968
 msgid ""
 "    c       cd\n"
 "ifc2   = ifg   ifc1\n"
 "    ab             abd\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1970
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1975
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3000,20 +3012,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1979
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ifr}\n"
 "@defvr {Variable} ifr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1982
 msgid ""
 "The frame field. Contracts with the inverse frame field (@code{ifri}) to\n"
 "form the frame metric (@code{ifg}).\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1987
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3021,21 +3033,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1991
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ifri}\n"
 "@defvr {Variable} ifri\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:1995
 msgid ""
 "The inverse frame field. Specifies the frame base (dual basis vectors). Along\n"
 "with the frame metric, it forms the basis of all calculations based on\n"
 "frames.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2000
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3043,20 +3055,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2004
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ifg}\n"
 "@defvr {Variable} ifg\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2007
 msgid ""
 "The frame metric. Defaults to @code{kdelta}, but can be changed using\n"
 "@code{components}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2012
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3064,20 +3076,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2016
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ifgi}\n"
 "@defvr {Variable} ifgi\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2019
 msgid ""
 "The inverse frame metric. Contracts with the frame metric (@code{ifg})\n"
 "to @code{kdelta}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2024
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3085,7 +3097,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2029
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{iframe_bracket_form}\n"
@@ -3093,12 +3105,12 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2031
 msgid ""
 "Specifies how the frame bracket (@code{ifb}) is computed.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2036
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3106,14 +3118,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2040
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Torsion and nonmetricity\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2045
 msgid ""
 "Maxima can now take into account torsion and nonmetricity. When the flag\n"
 "@code{itorsion_flag} is set to @code{true}, the contribution of torsion\n"
@@ -3121,14 +3133,14 @@ msgid ""
 "@code{inonmet_flag} is true, nonmetricity components are included.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2049
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{inm}\n"
 "@defvr {Variable} inm\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2054
 msgid ""
 "The nonmetricity vector. Conformal nonmetricity is defined through the\n"
 "covariant derivative of the metric tensor. Normally zero, the metric\n"
@@ -3136,23 +3148,23 @@ msgid ""
 "@code{inonmet_flag} is set to @code{true}:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2056
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2059
 msgid ""
 "g     =- g  inm\n"
 " ij;k     ij   k\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2061
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2066
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3160,24 +3172,24 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2070
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{inmc1}\n"
 "@defvr {Variable} inmc1\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2072
 msgid ""
 "Covariant permutation of the nonmetricity vector components. Defined as\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2074
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2079
 msgid ""
 "           g   inm  - inm  g   - g   inm\n"
 "            ab    c      a  bc    ac    b\n"
@@ -3185,17 +3197,17 @@ msgid ""
 "     abc                 2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2081
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2083
 msgid ""
 "(Substitute @code{ifg} in place of @code{g} if a frame metric is used.)\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2088
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3203,26 +3215,26 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2092
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{inmc2}\n"
 "@defvr {Variable} inmc2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2096
 msgid ""
 "Contravariant permutation of the nonmetricity vector components. Used\n"
 "in the connection coefficients if @code{inonmet_flag} is @code{true}. Defined\n"
 "as:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2098
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2104
 msgid ""
 "                      c         c         cd\n"
 "          -inm  kdelta  - kdelta  inm  + g   inm  g\n"
@@ -3231,17 +3243,17 @@ msgid ""
 "     ab                        2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2106
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2108
 msgid ""
 "(Substitute @code{ifg} in place of @code{g} if a frame metric is used.)\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2113
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3249,25 +3261,25 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2117
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ikt1}\n"
 "@defvr {Variable} ikt1\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2120
 msgid ""
 "Covariant permutation of the torsion tensor (also known as contorsion).\n"
 "Defined as:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2122
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2128
 msgid ""
 "                  d           d       d\n"
 "          -g   itr  - g    itr   - itr   g\n"
@@ -3276,17 +3288,17 @@ msgid ""
 "    abc                   2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2130
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2132
 msgid ""
 "(Substitute @code{ifg} in place of @code{g} if a frame metric is used.)\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2137
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3294,42 +3306,42 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2141
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ikt2}\n"
 "@defvr {Variable} ikt2\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2144
 msgid ""
 "Contravariant permutation of the torsion tensor (also known as contorsion).\n"
 "Defined as:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2146
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2150
 msgid ""
 "    c     cd\n"
 "ikt2   = g   ikt1\n"
 "    ab           abd\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2152
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2154
 msgid ""
 "(Substitute @code{ifg} in place of @code{g} if a frame metric is used.)\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2159
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3337,26 +3349,26 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2163
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{itr}\n"
 "@defvr {Variable} itr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2167
 msgid ""
 "The torsion tensor. For a metric with torsion, repeated covariant\n"
 "differentiation on a scalar function will not commute, as demonstrated\n"
 "by the following example:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2169
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2217
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -3407,12 +3419,12 @@ msgid ""
 "                                    ,%1    i j\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2219
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2224
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3420,14 +3432,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2228
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Exterior algebra\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2234
 msgid ""
 "The @code{itensor} package can perform operations on totally antisymmetric\n"
 "covariant tensor fields. A totally antisymmetric tensor field of rank\n"
@@ -3436,7 +3448,7 @@ msgid ""
 "is defined.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2239
 msgid ""
 "Unfortunately, not all authors agree on the definition of the wedge\n"
 "product. Some authors prefer a definition that corresponds with the\n"
@@ -3444,7 +3456,7 @@ msgid ""
 "two vector fields, for instance, would be defined as\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2246
 msgid ""
 "@example\n"
 "            a a  - a a\n"
@@ -3454,12 +3466,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2248
 msgid ""
 "More generally, the product of a p-form and a q-form would be defined as\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2254
 msgid ""
 "@example\n"
 "                       1     k1..kp l1..lq\n"
@@ -3468,18 +3480,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2256
 msgid ""
 "where @code{D} stands for the Kronecker-delta.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2259
 msgid ""
 "Other authors, however, prefer a ``geometric'' definition that corresponds\n"
 "with the notion of the volume element:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2264
 msgid ""
 "@example\n"
 "a  /\ a  = a a  - a a\n"
@@ -3487,12 +3499,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2266
 msgid ""
 "and, in the general case\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2272
 msgid ""
 "@example\n"
 "                       1    k1..kp l1..lq\n"
@@ -3501,18 +3513,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2280
 msgid ""
 "Since @code{itensor} is a tensor algebra package, the first of these two\n"
 "definitions appears to be the more natural one. Many applications, however,\n"
 "utilize the second definition. To resolve this dilemma, a flag has been\n"
 "implemented that controls the behavior of the wedge product: if\n"
-"@code{igeowedge_flag} is @code{false} (the default), the first, \"tensorial\"\n"
-"definition is used, otherwise the second, \"geometric\" definition will\n"
+"@code{igeowedge_flag} is @code{false} (the default), the first, \\"tensorial\\"\n"
+"definition is used, otherwise the second, \\"geometric\\" definition will\n"
 "be applied.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2286
 msgid ""
 "@anchor{~}\n"
 "@defvr {Operator} ~\n"
@@ -3521,7 +3533,7 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2291
 msgid ""
 "The wedge product operator is denoted by the tilde @code{~}. This is\n"
 "a binary operator. Its arguments should be expressions involving scalars,\n"
@@ -3529,13 +3541,13 @@ msgid ""
 "have been declared antisymmetric in all covariant indices.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2294
 msgid ""
 "The behavior of the wedge product operator is controlled by the\n"
 "@code{igeowedge_flag} flag, as in the following example:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2319
 msgid ""
 "@example\n"
 "(%i1) load(itensor);\n"
@@ -3563,7 +3575,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2324
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor} @category{Operators}\n"
@@ -3571,7 +3583,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2331
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{|}\n"
@@ -3581,23 +3593,23 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2337
 msgid ""
-"The vertical bar @code{|} denotes the \"contraction with a vector\" binary\n"
+"The vertical bar @code{|} denotes the \\"contraction with a vector\\" binary\n"
 "operation. When a totally antisymmetric covariant tensor is contracted\n"
 "with a contravariant vector, the result is the same regardless which index\n"
 "was used for the contraction. Thus, it is possible to define the\n"
 "contraction operation in an index-free manner.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2341
 msgid ""
 "In the @code{itensor} package, contraction with a vector is always carried out\n"
 "with respect to the first index in the literal sorting order. This ensures\n"
 "better simplification of expressions involving the @code{|} operator. For instance:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2356
 msgid ""
 "@example\n"
 "(%i1) load(itensor);\n"
@@ -3615,14 +3627,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2360
 msgid ""
 "Note that it is essential that the tensors used with the @code{|} operator be\n"
 "declared totally antisymmetric in their covariant indices. Otherwise,\n"
 "the results will be incorrect.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2365
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor} @category{Operators}\n"
@@ -3630,14 +3642,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2369
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{extdiff}\n"
 "@deffn {Function} extdiff (@var{expr}, @var{i})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2375
 msgid ""
 "Computes the exterior derivative of @var{expr} with respect to the index\n"
 "@var{i}. The exterior derivative is formally defined as the wedge\n"
@@ -3646,7 +3658,7 @@ msgid ""
 "For instance:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2399
 msgid ""
 "@example\n"
 "(%i1) load(itensor);\n"
@@ -3673,12 +3685,12 @@ msgid ""
 "                             k j,i    k i,j    j i,k\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2401
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2406
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3686,24 +3698,24 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2410
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{hodge}\n"
 "@deffn {Function} hodge (@var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2412
 msgid ""
 "Compute the Hodge-dual of @var{expr}. For instance:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2414
 msgid ""
 "@example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2424
 msgid ""
 "(%i1) load(itensor);\n"
 "(%o1)      /share/tensor/itensor.lisp\n"
@@ -3716,7 +3728,7 @@ msgid ""
 "(%i5) decsym(A,3,0,[anti(all)],[])$\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2441
 msgid ""
 "(%i6) ishow(A([i,j,k],[]))$\n"
 "(%t6)                           A\n"
@@ -3736,24 +3748,24 @@ msgid ""
 "(%i9) lc2kdt(%)$\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2443
 msgid ""
 "(%i10) %,kdelta$\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2447
 msgid ""
 "(%i11) ishow(canform(contract(expand(%))))$\n"
 "(%t11)                     - A\n"
 "                              %106 %107 %108\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2449
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2454
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3761,7 +3773,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2459
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{igeowedge_flag}\n"
@@ -3769,7 +3781,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2465
 msgid ""
 "Controls the behavior of the wedge product and exterior derivative. When\n"
 "set to @code{false} (the default), the notion of differential forms will\n"
@@ -3778,7 +3790,7 @@ msgid ""
 "of the volume element.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2470
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor}\n"
@@ -3786,14 +3798,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2474
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Exporting TeX expressions\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2480
 msgid ""
 "The @code{itensor} package provides limited support for exporting tensor\n"
 "expressions to TeX. Since @code{itensor} expressions appear as function calls,\n"
@@ -3802,20 +3814,20 @@ msgid ""
 "to translate tensor expressions into appropriately indexed TeX objects.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2484
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tentex}\n"
 "@deffn {Function} tentex (@var{expr})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2487
 msgid ""
 "To use the @code{tentex} function, you must first load @code{tentex},\n"
 "as in the following example:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2499
 msgid ""
 "@example\n"
 "(%i1) load(itensor);\n"
@@ -3830,7 +3842,7 @@ msgid ""
 "            j k      m1 l        j l      m1 k        j l,k\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2507
 msgid ""
 "                                                      i\n"
 "                                               + ichr2\n"
@@ -3841,18 +3853,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2510
 msgid ""
 "Note the use of the @code{idummyx} assignment, to avoid the appearance\n"
 "of the percent sign in the TeX expression, which may lead to compile errors.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2512
 msgid ""
 "NB: This version of the @code{tentex} function is somewhat experimental.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2517
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor} @category{TeX output}\n"
@@ -3860,28 +3872,28 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2521
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Interfacing with ctensor\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2525
 msgid ""
 "The @code{itensor} package has the ability to generate Maxima code that can\n"
 "then be executed in the context of the @code{ctensor} package. The function that performs\n"
 "this task is @code{ic_convert}.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2529
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ic_convert}\n"
 "@deffn {Function} ic_convert (@var{eqn})\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2545
 msgid ""
 "Converts the @code{itensor} equation @var{eqn} to a @code{ctensor} assignment statement.\n"
 "Implied sums over dummy indices are made explicit while indexed\n"
@@ -3900,7 +3912,7 @@ msgid ""
 "function.\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2559
 msgid ""
 "@example\n"
 "(%i1) load(itensor);\n"
@@ -3917,7 +3929,7 @@ msgid ""
 "         i, j, k                   m           j   i, l, k\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2571
 msgid ""
 " g    , l, 1, dim), m, 1, dim)))\n"
 "  l, m\n"
@@ -3932,14 +3944,14 @@ msgid ""
 "         i, j, k                   m           j   i, l, k\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2575
 msgid ""
 " lg    , l, 1, dim), m, 1, dim)))\n"
 "   l, m\n"
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2580
 msgid ""
 "@opencatbox\n"
 "@category{Package itensor} @category{Package ctensor}\n"
@@ -3947,20 +3959,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2584
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Reserved words\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2587
 msgid ""
 "The following Maxima words are used by the @code{itensor} package internally and\n"
 "should not be redefined:\n"
 msgstr ""
 
-# Itensor.texi
+#: Itensor.texi:2604
 msgid ""
 "@c REFORMAT THIS TABLE USING TEXINFO MARKUP\n"
 "@example\n"
@@ -3980,6 +3992,3 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Itensor.texi
-msgid ""
-msgstr ""

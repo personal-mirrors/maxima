@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# graphs.texi
+msgstr ""
+
+#: graphs.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to graphs::\n"
@@ -25,13 +25,13 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:8
 msgid ""
 "@node Introduction to graphs, Functions and Variables for graphs, graphs-pkg, graphs-pkg\n"
 "@section Introduction to graphs\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:13
 msgid ""
 "The @code{graphs} package provides graph and digraph data structure for\n"
 "Maxima. Graphs and digraphs are simple (have no multiple edges nor\n"
@@ -39,7 +39,7 @@ msgid ""
 "@var{v} and a directed edge from @var{v} to @var{u}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:19
 msgid ""
 "Internally graphs are represented by adjacency lists and implemented as\n"
 "a lisp structures. Vertices are identified by their ids (an id is an\n"
@@ -48,7 +48,7 @@ msgid ""
 "edges/arcs of graphs/digraphs.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:25
 msgid ""
 "There is a @code{draw_graph} function for drawing graphs. Graphs are\n"
 "drawn using a force based vertex positioning\n"
@@ -57,30 +57,30 @@ msgid ""
 "@code{draw} package.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:27
 msgid ""
 "To use the @code{graphs} package, first load it with @code{load(graphs)}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:31
 msgid ""
 "@opencatbox\n"
 "@category{Share packages} @category{Package graphs}\n"
 "@closecatbox\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:34
 msgid ""
 "@node Functions and Variables for graphs, , Introduction to graphs, graphs-pkg\n"
 "@section Functions and Variables for graphs\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:36
 msgid ""
 "@subsection Building graphs\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:42
 msgid ""
 "@anchor{create_graph}\n"
 "@deffn {Function} create_graph @\n"
@@ -89,34 +89,34 @@ msgid ""
 "@fname{create_graph} (@var{v_list}, @var{e_list}, @var{directed})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:44
 msgid ""
 "Creates a new graph on the set of vertices @var{v_list} and with edges @var{e_list}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:47
 msgid ""
 "@var{v_list} is a list of vertices (@code{[v1, v2,..., vn]}) or a\n"
 "list of vertices together with vertex labels (@code{[[v1,l1], [v2,l2],..., [vn,ln]]}).\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:49
 msgid ""
 "@var{n} is the number of vertices. Vertices will be identified by integers from 0 to n-1.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:52
 msgid ""
 "@var{e_list} is a list of edges (@code{[e1, e2,..., em]}) or a list of\n"
 "edges together with edge-weights (@code{[[e1, w1], ..., [em, wm]]}).\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:54
 msgid ""
 "If @var{directed} is not @code{false}, a directed graph will be returned.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:71
 msgid ""
 "Example 1: create a cycle on 3 vertices:\n"
 "@c ===beg===\n"
@@ -136,7 +136,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:90
 msgid ""
 "Example 2: create a cycle on 3 vertices with edge weights:\n"
 "@c ===beg===\n"
@@ -158,7 +158,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:120
 msgid ""
 "Example 3: create a directed graph:\n"
 "@c ===beg===\n"
@@ -191,7 +191,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:125
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs}\n"
@@ -199,14 +199,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:129
 msgid ""
 "@anchor{copy_graph}\n"
 "@deffn {Function} copy_graph (@var{g})\n"
 "Returns a copy of the graph @var{g}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:134
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -214,14 +214,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:138
 msgid ""
 "@anchor{circulant_graph}\n"
 "@deffn {Function} circulant_graph (@var{n}, @var{d})\n"
 "Returns the circulant graph with parameters @var{n} and @var{d}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:162
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -248,7 +248,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:167
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -256,14 +256,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:171
 msgid ""
 "@anchor{clebsch_graph}\n"
 "@deffn {Function} clebsch_graph ()\n"
 "Returns the Clebsch graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:176
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -271,14 +271,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:180
 msgid ""
 "@anchor{complement_graph}\n"
 "@deffn {Function} complement_graph (@var{g})\n"
 "Returns the complement of the graph @var{g}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:185
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -286,14 +286,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:189
 msgid ""
 "@anchor{complete_bipartite_graph}\n"
 "@deffn {Function} complete_bipartite_graph (@var{n}, @var{m})\n"
 "Returns the complete bipartite graph on @var{n+m} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:194
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -301,14 +301,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:198
 msgid ""
 "@anchor{complete_graph}\n"
 "@deffn {Function} complete_graph (@var{n})\n"
 "Returns the complete graph on @var{n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:203
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -316,14 +316,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:207
 msgid ""
 "@anchor{cycle_digraph}\n"
 "@deffn {Function} cycle_digraph (@var{n})\n"
 "Returns the directed cycle on @var{n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:212
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -331,14 +331,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:216
 msgid ""
 "@anchor{cycle_graph}\n"
 "@deffn {Function} cycle_graph (@var{n})\n"
 "Returns the cycle on @var{n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:221
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -346,14 +346,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:225
 msgid ""
 "@anchor{cuboctahedron_graph}\n"
 "@deffn {Function} cuboctahedron_graph (@var{n})\n"
 "Returns the cuboctahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:230
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -361,14 +361,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:234
 msgid ""
 "@anchor{cube_graph}\n"
 "@deffn {Function} cube_graph (@var{n})\n"
 "Returns the @var{n}-dimensional cube.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:239
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -376,14 +376,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:243
 msgid ""
 "@anchor{dodecahedron_graph}\n"
 "@deffn {Function} dodecahedron_graph ()\n"
 "Returns the dodecahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:248
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -391,14 +391,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:252
 msgid ""
 "@anchor{empty_graph}\n"
 "@deffn {Function} empty_graph (@var{n})\n"
 "Returns the empty graph on @var{n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:257
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -406,14 +406,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:261
 msgid ""
 "@anchor{flower_snark}\n"
 "@deffn {Function} flower_snark (@var{n})\n"
 "Returns the flower graph on @var{4n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:274
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -429,7 +429,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:279
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -437,14 +437,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:283
 msgid ""
 "@anchor{from_adjacency_matrix}\n"
 "@deffn {Function} from_adjacency_matrix (@var{A})\n"
 "Returns the graph represented by its adjacency matrix @var{A}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:288
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -452,14 +452,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:292
 msgid ""
 "@anchor{frucht_graph}\n"
 "@deffn {Function} frucht_graph ()\n"
 "Returns the Frucht graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:297
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -467,14 +467,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:301
 msgid ""
 "@anchor{graph_product}\n"
 "@deffn {Function} graph_product (@var{g1}, @var{g1})\n"
 "Returns the direct product of graphs @var{g1} and @var{g2}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:313
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -489,7 +489,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:318
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -497,21 +497,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:322
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs01,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:326
 msgid ""
 "@anchor{graph_union}\n"
 "@deffn {Function} graph_union (@var{g1}, @var{g1})\n"
 "Returns the union (sum) of graphs @var{g1} and @var{g2}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:331
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -519,14 +519,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:335
 msgid ""
 "@anchor{grid_graph}\n"
 "@deffn {Function} grid_graph (@var{n}, @var{m})\n"
 "Returns the @var{n x m} grid.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:340
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -534,14 +534,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:344
 msgid ""
 "@anchor{great_rhombicosidodecahedron_graph}\n"
 "@deffn {Function} great_rhombicosidodecahedron_graph ()\n"
 "Returns the great rhombicosidodecahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:349
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -549,14 +549,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:353
 msgid ""
 "@anchor{great_rhombicuboctahedron_graph}\n"
 "@deffn {Function} great_rhombicuboctahedron_graph ()\n"
 "Returns the great rhombicuboctahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:358
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -564,14 +564,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:362
 msgid ""
 "@anchor{grotzch_graph}\n"
 "@deffn {Function} grotzch_graph ()\n"
 "Returns the Grotzch graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:367
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -579,14 +579,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:371
 msgid ""
 "@anchor{heawood_graph}\n"
 "@deffn {Function} heawood_graph ()\n"
 "Returns the Heawood graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:376
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -594,14 +594,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:380
 msgid ""
 "@anchor{icosahedron_graph}\n"
 "@deffn {Function} icosahedron_graph ()\n"
 "Returns the icosahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:385
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -609,14 +609,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:389
 msgid ""
 "@anchor{icosidodecahedron_graph}\n"
 "@deffn {Function} icosidodecahedron_graph ()\n"
 "Returns the icosidodecahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:394
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -624,7 +624,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:399
 msgid ""
 "@anchor{induced_subgraph}\n"
 "@deffn {Function} induced_subgraph (@var{V}, @var{g})\n"
@@ -632,7 +632,7 @@ msgid ""
 "@var{g}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:422
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -658,7 +658,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:427
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -666,14 +666,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:431
 msgid ""
 "@anchor{line_graph}\n"
 "@deffn {Function} line_graph (@var{g})\n"
 "Returns the line graph of the graph @var{g}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:436
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -681,7 +681,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:441
 msgid ""
 "@anchor{make_graph}\n"
 "@deffn {Function} make_graph @\n"
@@ -689,30 +689,30 @@ msgid ""
 "@fname{make_graph} (@var{vrt}, @var{f}, @var{oriented})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:443
 msgid ""
 "Creates a graph using a predicate function @var{f}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:447
 msgid ""
 "@var{vrt} is a list/set of vertices or an integer. If @var{vrt} is an\n"
 "integer, then vertices of the graph will be integers from 1 to\n"
 "@var{vrt}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:450
 msgid ""
 "@var{f} is a predicate function. Two vertices @var{a} and @var{b} will\n"
 "be connected if @code{f(a,b)=true}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:452
 msgid ""
 "If @var{directed} is not @var{false}, then the graph will be directed.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:468
 msgid ""
 "Example 1:\n"
 "@c ===beg===\n"
@@ -731,7 +731,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:486
 msgid ""
 "Example 2:\n"
 "@c ===beg===\n"
@@ -752,7 +752,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:491
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -760,14 +760,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:495
 msgid ""
 "@anchor{mycielski_graph}\n"
 "@deffn {Function} mycielski_graph (@var{g})\n"
 "Returns the mycielskian graph of the graph @var{g}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:500
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -775,14 +775,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:504
 msgid ""
 "@anchor{new_graph}\n"
 "@deffn {Function} new_graph ()\n"
 "Returns the graph with no vertices and no edges.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:509
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -790,14 +790,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:513
 msgid ""
 "@anchor{path_digraph}\n"
 "@deffn {Function} path_digraph (@var{n})\n"
 "Returns the directed path on @var{n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:518
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -805,14 +805,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:522
 msgid ""
 "@anchor{path_graph}\n"
 "@deffn {Function} path_graph (@var{n})\n"
 "Returns the path on @var{n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:527
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -820,7 +820,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:532
 msgid ""
 "@anchor{petersen_graph}\n"
 "@deffn {Function} petersen_graph @\n"
@@ -828,13 +828,13 @@ msgid ""
 "@fname{petersen_graph} (@var{n}, @var{d})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:535
 msgid ""
 "Returns the petersen graph @var{P_@{n,d@}}. The default values for\n"
 "@var{n} and @var{d} are @code{n=5} and @code{d=2}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:540
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -842,7 +842,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:545
 msgid ""
 "@anchor{random_bipartite_graph}\n"
 "@deffn {Function} random_bipartite_graph (@var{a}, @var{b}, @var{p})\n"
@@ -850,7 +850,7 @@ msgid ""
 "present with probability @var{p}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:550
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -858,7 +858,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:555
 msgid ""
 "@anchor{random_digraph}\n"
 "@deffn {Function} random_digraph (@var{n}, @var{p})\n"
@@ -866,7 +866,7 @@ msgid ""
 "with probability @var{p}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:560
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -874,7 +874,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:565
 msgid ""
 "@anchor{random_regular_graph}\n"
 "@deffn {Function} random_regular_graph @\n"
@@ -882,13 +882,13 @@ msgid ""
 "@fname{random_regular_graph} (@var{n}, @var{d})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:568
 msgid ""
 "Returns a random @var{d}-regular graph on @var{n} vertices. The default\n"
 "value for @var{d} is @code{d=3}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:573
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -896,7 +896,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:578
 msgid ""
 "@anchor{random_graph}\n"
 "@deffn {Function} random_graph (@var{n}, @var{p})\n"
@@ -904,7 +904,7 @@ msgid ""
 "probability @var{p}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:583
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -912,14 +912,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:587
 msgid ""
 "@anchor{random_graph1}\n"
 "@deffn {Function} random_graph1 (@var{n}, @var{m})\n"
 "Returns a random graph on @var{n} vertices and random @var{m} edges.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:592
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -927,7 +927,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:598
 msgid ""
 "@anchor{random_network}\n"
 "@deffn {Function} random_network (@var{n}, @var{p}, @var{w})\n"
@@ -936,7 +936,7 @@ msgid ""
 "function returns a list @code{[network, source, sink]}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:614
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -955,7 +955,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:619
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -963,14 +963,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:623
 msgid ""
 "@anchor{random_tournament}\n"
 "@deffn {Function} random_tournament (@var{n})\n"
 "Returns a random tournament on @var{n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:628
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -978,14 +978,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:632
 msgid ""
 "@anchor{random_tree}\n"
 "@deffn {Function} random_tree (@var{n})\n"
 "Returns a random tree on @var{n} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:637
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -993,14 +993,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:641
 msgid ""
 "@anchor{small_rhombicosidodecahedron_graph}\n"
 "@deffn {Function} small_rhombicosidodecahedron_graph ()\n"
 "Returns the small rhombicosidodecahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:646
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1008,14 +1008,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:650
 msgid ""
 "@anchor{small_rhombicuboctahedron_graph}\n"
 "@deffn {Function} small_rhombicuboctahedron_graph ()\n"
 "Returns the small rhombicuboctahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:655
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1023,14 +1023,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:659
 msgid ""
 "@anchor{snub_cube_graph}\n"
 "@deffn {Function} snub_cube_graph ()\n"
 "Returns the snub cube graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:664
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1038,14 +1038,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:668
 msgid ""
 "@anchor{snub_dodecahedron_graph}\n"
 "@deffn {Function} snub_dodecahedron_graph ()\n"
 "Returns the snub dodecahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:673
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1053,14 +1053,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:677
 msgid ""
 "@anchor{truncated_cube_graph}\n"
 "@deffn {Function} truncated_cube_graph ()\n"
 "Returns the truncated cube graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:682
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1068,36 +1068,44 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:686
 msgid ""
 "@anchor{truncated_dodecahedron_graph}\n"
 "@deffn {Function} truncated_dodecahedron_graph ()\n"
 "Returns the truncated dodecahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:691
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: graphs.texi:696
+msgid ""
 "@anchor{truncated_icosahedron_graph}\n"
 "@deffn {Function} truncated_icosahedron_graph ()\n"
 "Returns the truncated icosahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:701
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: graphs.texi:706
+msgid ""
 "@anchor{truncated_tetrahedron_graph}\n"
 "@deffn {Function} truncated_tetrahedron_graph ()\n"
 "Returns the truncated tetrahedron graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:711
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1105,14 +1113,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:715
 msgid ""
 "@anchor{tutte_graph}\n"
 "@deffn {Function} tutte_graph ()\n"
 "Returns the Tutte graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:720
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1120,14 +1128,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:724
 msgid ""
 "@anchor{underlying_graph}\n"
 "@deffn {Function} underlying_graph (@var{g})\n"
 "Returns the underlying graph of the directed graph @var{g}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:729
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1135,14 +1143,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:733
 msgid ""
 "@anchor{wheel_graph}\n"
 "@deffn {Function} wheel_graph (@var{n})\n"
 "Returns the wheel graph on @var{n+1} vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:738
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - constructions}\n"
@@ -1150,19 +1158,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:740
 msgid ""
 "@subsection Graph properties\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:744
 msgid ""
 "@anchor{adjacency_matrix}\n"
 "@deffn {Function} adjacency_matrix (@var{gr})\n"
 "Returns the adjacency matrix of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:763
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1184,7 +1192,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:768
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1192,14 +1200,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:772
 msgid ""
 "@anchor{average_degree}\n"
 "@deffn {Function} average_degree (@var{gr})\n"
 "Returns the average degree of vertices in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:785
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1215,7 +1223,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:790
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1223,7 +1231,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:795
 msgid ""
 "@anchor{biconnected_components}\n"
 "@deffn {Function} biconnected_components (@var{gr})\n"
@@ -1231,7 +1239,7 @@ msgid ""
 "@var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:818
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1257,14 +1265,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:822
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs13,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:827
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1272,7 +1280,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:832
 msgid ""
 "@anchor{bipartition}\n"
 "@deffn {Function} bipartition (@var{gr})\n"
@@ -1280,12 +1288,12 @@ msgid ""
 "list if @var{gr} is not bipartite.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:834
 msgid ""
 "Example:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:848
 msgid ""
 "@c ===beg===\n"
 "@c load (graphs)$\n"
@@ -1302,7 +1310,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:853
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1310,21 +1318,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:857
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs02,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:861
 msgid ""
 "@anchor{chromatic_index}\n"
 "@deffn {Function} chromatic_index (@var{gr})\n"
 "Returns the chromatic index of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:874
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1340,7 +1348,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:879
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1348,14 +1356,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:883
 msgid ""
 "@anchor{chromatic_number}\n"
 "@deffn {Function} chromatic_number (@var{gr})\n"
 "Returns the chromatic number of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:897
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1372,7 +1380,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:902
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1380,19 +1388,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:906
 msgid ""
 "@anchor{clear_edge_weight}\n"
 "@deffn {Function} clear_edge_weight (@var{e}, @var{gr})\n"
 "Removes the weight of the edge  @var{e} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:908
 msgid ""
 "Example:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:925
 msgid ""
 "@c ===beg===\n"
 "@c load (graphs)$\n"
@@ -1412,7 +1420,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:930
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1420,26 +1428,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:934
 msgid ""
 "@anchor{clear_vertex_label}\n"
 "@deffn {Function} clear_vertex_label (@var{v}, @var{gr})\n"
 "Removes the label of the vertex @var{v} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:953
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
 "@c load (graphs)$\n"
-"@c g : create_graph([[0,\"Zero\"], [1, \"One\"]], [[0,1]])$\n"
+"@c g : create_graph([[0,\\"Zero\\"], [1, \\"One\\"]], [[0,1]])$\n"
 "@c get_vertex_label(0, g);\n"
 "@c clear_vertex_label(0, g);\n"
 "@c get_vertex_label(0, g);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) load (graphs)$\n"
-"(%i2) g : create_graph([[0,\"Zero\"], [1, \"One\"]], [[0,1]])$\n"
+"(%i2) g : create_graph([[0,\\"Zero\\"], [1, \\"One\\"]], [[0,1]])$\n"
 "(%i3) get_vertex_label(0, g);\n"
 "(%o3)                         Zero\n"
 "(%i4) clear_vertex_label(0, g);\n"
@@ -1449,7 +1457,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:958
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1457,14 +1465,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:962
 msgid ""
 "@anchor{connected_components}\n"
 "@deffn {Function} connected_components (@var{gr})\n"
 "Returns the (vertex sets of) connected components of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:975
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1480,7 +1488,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:980
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1488,14 +1496,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:984
 msgid ""
 "@anchor{diameter}\n"
 "@deffn {Function} diameter (@var{gr})\n"
 "Returns the diameter of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:995
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1509,7 +1517,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1000
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1517,20 +1525,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1004
 msgid ""
 "@anchor{edge_coloring}\n"
 "@deffn {Function} edge_coloring (@var{gr})\n"
 "Returns an optimal coloring of the edges of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1007
 msgid ""
 "The function returns the chromatic index and a list representing the\n"
 "coloring of the edges of @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1029
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1555,7 +1563,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1034
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1563,14 +1571,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1038
 msgid ""
 "@anchor{degree_sequence}\n"
 "@deffn {Function} degree_sequence (@var{gr})\n"
 "Returns the list of vertex degrees of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1049
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1584,7 +1592,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1054
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1592,19 +1600,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1058
 msgid ""
 "@anchor{edge_connectivity}\n"
 "@deffn {Function} edge_connectivity (@var{gr})\n"
 "Returns the edge-connectivity of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1060
 msgid ""
 "See also @mref{min_edge_cut}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1065
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1612,14 +1620,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1069
 msgid ""
 "@anchor{edges}\n"
 "@deffn {Function} edges (@var{gr})\n"
 "Returns the list of edges (arcs) in a (directed) graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1080
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1633,7 +1641,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1085
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1641,7 +1649,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1090
 msgid ""
 "@anchor{get_edge_weight}\n"
 "@deffn {Function} get_edge_weight @\n"
@@ -1649,19 +1657,19 @@ msgid ""
 "@fname{get_edge_weight} (@var{e}, @var{gr}, @var{ifnot})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1092
 msgid ""
 "Returns the weight of the edge @var{e} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1096
 msgid ""
 "If there is no weight assigned to the edge, the function returns 1. If\n"
 "the edge is not present in the graph, the function signals an error or\n"
 "returns the optional argument @var{ifnot}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1115
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1683,7 +1691,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1120
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1691,30 +1699,30 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1124
 msgid ""
 "@anchor{get_vertex_label}\n"
 "@deffn {Function} get_vertex_label (@var{v}, @var{gr})\n"
 "Returns the label of the vertex @var{v} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1137
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
 "@c load (graphs)$\n"
-"@c g : create_graph([[0,\"Zero\"], [1, \"One\"]], [[0,1]])$\n"
+"@c g : create_graph([[0,\\"Zero\\"], [1, \\"One\\"]], [[0,1]])$\n"
 "@c get_vertex_label(0, g);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) load (graphs)$\n"
-"(%i2) g : create_graph([[0,\"Zero\"], [1, \"One\"]], [[0,1]])$\n"
+"(%i2) g : create_graph([[0,\\"Zero\\"], [1, \\"One\\"]], [[0,1]])$\n"
 "(%i3) get_vertex_label(0, g);\n"
 "(%o3)                         Zero\n"
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1142
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1722,7 +1730,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1147
 msgid ""
 "@anchor{graph_charpoly}\n"
 "@deffn {Function} graph_charpoly (@var{gr}, @var{x})\n"
@@ -1730,7 +1738,7 @@ msgid ""
 "@var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1161
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1747,7 +1755,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1166
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1755,14 +1763,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1170
 msgid ""
 "@anchor{graph_center}\n"
 "@deffn {Function} graph_center (@var{gr})\n"
 "Returns the center of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1183
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1778,7 +1786,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1188
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1786,7 +1794,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1193
 msgid ""
 "@anchor{graph_eigenvalues}\n"
 "@deffn {Function} graph_eigenvalues (@var{gr})\n"
@@ -1794,7 +1802,7 @@ msgid ""
 "eigenvalues in the same format as maxima @mref{eigenvalues} function.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1206
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1810,7 +1818,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1211
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1818,14 +1826,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1215
 msgid ""
 "@anchor{graph_periphery}\n"
 "@deffn {Function} graph_periphery (@var{gr})\n"
 "Returns the periphery of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1228
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1841,7 +1849,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1233
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1849,14 +1857,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1237
 msgid ""
 "@anchor{graph_size}\n"
 "@deffn {Function} graph_size (@var{gr})\n"
 "Returns the number of edges in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1250
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1872,7 +1880,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1255
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1880,14 +1888,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1259
 msgid ""
 "@anchor{graph_order}\n"
 "@deffn {Function} graph_order (@var{gr})\n"
 "Returns the number of vertices in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1272
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1903,7 +1911,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1277
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1911,14 +1919,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1281
 msgid ""
 "@anchor{girth}\n"
 "@deffn {Function} girth (@var{gr})\n"
 "Returns the length of the shortest cycle in @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1294
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1934,7 +1942,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1299
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1942,7 +1950,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1304
 msgid ""
 "@anchor{hamilton_cycle}\n"
 "@deffn {Function} hamilton_cycle (@var{gr})\n"
@@ -1950,7 +1958,7 @@ msgid ""
 "@var{gr} is not hamiltonian.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1319
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -1968,7 +1976,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1324
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -1976,14 +1984,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1328
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs03,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1333
 msgid ""
 "@anchor{hamilton_path}\n"
 "@deffn {Function} hamilton_path (@var{gr})\n"
@@ -1991,7 +1999,7 @@ msgid ""
 "@var{gr} does not have a Hamilton path.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1348
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2009,7 +2017,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1353
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2017,27 +2025,27 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1357
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs04,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1360
 msgid ""
 "@anchor{isomorphism}\n"
 "@deffn {Function} isomorphism (@var{gr1}, @var{gr2})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1364
 msgid ""
 "Returns a an isomorphism between graphs/digraphs @var{gr1} and\n"
 "@var{gr2}. If @var{gr1} and @var{gr2} are not isomorphic, it returns\n"
 "an empty list.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1378
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2054,7 +2062,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1383
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2062,7 +2070,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1388
 msgid ""
 "@anchor{in_neighbors}\n"
 "@deffn {Function} in_neighbors (@var{v}, @var{gr})\n"
@@ -2070,7 +2078,7 @@ msgid ""
 "graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1404
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2089,7 +2097,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1409
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2097,14 +2105,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1413
 msgid ""
 "@anchor{is_biconnected}\n"
 "@deffn {Function} is_biconnected (@var{gr})\n"
 "Returns @code{true} if @var{gr} is 2-connected and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1427
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2121,7 +2129,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1432
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2129,14 +2137,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1436
 msgid ""
 "@anchor{is_bipartite}\n"
 "@deffn {Function} is_bipartite (@var{gr})\n"
 "Returns @code{true} if @var{gr} is bipartite (2-colorable) and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1450
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2153,7 +2161,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1455
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2161,14 +2169,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1459
 msgid ""
 "@anchor{is_connected}\n"
 "@deffn {Function} is_connected (@var{gr})\n"
 "Returns @code{true} if the graph @var{gr} is connected and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1470
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2182,7 +2190,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1475
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2190,14 +2198,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1479
 msgid ""
 "@anchor{is_digraph}\n"
 "@deffn {Function} is_digraph (@var{gr})\n"
 "Returns @code{true} if @var{gr} is a directed graph and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1493
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2214,7 +2222,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1498
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2222,7 +2230,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1503
 msgid ""
 "@anchor{is_edge_in_graph}\n"
 "@deffn {Function} is_edge_in_graph (@var{e}, @var{gr})\n"
@@ -2230,7 +2238,7 @@ msgid ""
 "and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1525
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2255,7 +2263,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1530
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2263,14 +2271,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1534
 msgid ""
 "@anchor{is_graph}\n"
 "@deffn {Function} is_graph (@var{gr})\n"
 "Returns @code{true} if @var{gr} is a graph and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1548
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2287,7 +2295,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1553
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2295,14 +2303,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1557
 msgid ""
 "@anchor{is_graph_or_digraph}\n"
 "@deffn {Function} is_graph_or_digraph (@var{gr})\n"
 "Returns @code{true} if @var{gr} is a graph or a directed graph and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1571
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2319,7 +2327,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1576
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2327,24 +2335,24 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1579
 msgid ""
 "@anchor{is_isomorphic}\n"
 "@deffn {Function} is_isomorphic (@var{gr1}, @var{gr2})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1582
 msgid ""
 "Returns @code{true} if graphs/digraphs @var{gr1} and @var{gr2} are isomorphic\n"
 "and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1584
 msgid ""
 "See also @mrefdot{isomorphism}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1597
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2360,7 +2368,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1602
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2368,24 +2376,24 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1605
 msgid ""
 "@anchor{is_planar}\n"
 "@deffn {Function} is_planar (@var{gr})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1607
 msgid ""
 "Returns @code{true} if @var{gr} is a planar graph and @code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1610
 msgid ""
 "The algorithm used is the Demoucron's algorithm, which is a quadratic time\n"
 "algorithm.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1627
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2405,7 +2413,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1632
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2413,7 +2421,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1637
 msgid ""
 "@anchor{is_sconnected}\n"
 "@deffn {Function} is_sconnected (@var{gr})\n"
@@ -2421,7 +2429,7 @@ msgid ""
 "@code{false} otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1651
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2438,7 +2446,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1656
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2446,14 +2454,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1660
 msgid ""
 "@anchor{is_vertex_in_graph}\n"
 "@deffn {Function} is_vertex_in_graph (@var{v}, @var{gr})\n"
 "Returns @code{true} if @var{v} is a vertex in the graph @var{g} and @code{false}  otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1676
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2472,7 +2480,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1681
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2480,14 +2488,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1685
 msgid ""
 "@anchor{is_tree}\n"
 "@deffn {Function} is_tree (@var{gr})\n"
 "Returns @code{true} if @var{gr} is a tree and @code{false}  otherwise.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1699
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2504,7 +2512,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1704
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2512,14 +2520,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1708
 msgid ""
 "@anchor{laplacian_matrix}\n"
 "@deffn {Function} laplacian_matrix (@var{gr})\n"
 "Returns the laplacian matrix of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1727
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2541,7 +2549,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1732
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2549,14 +2557,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1736
 msgid ""
 "@anchor{max_clique}\n"
 "@deffn {Function} max_clique (@var{gr})\n"
 "Returns a maximum clique of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1749
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2572,7 +2580,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1754
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2580,7 +2588,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1759
 msgid ""
 "@anchor{max_degree}\n"
 "@deffn {Function} max_degree (@var{gr})\n"
@@ -2588,7 +2596,7 @@ msgid ""
 "vertex of maximal degree.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1775
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2607,7 +2615,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1780
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2615,7 +2623,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1785
 msgid ""
 "@anchor{max_flow}\n"
 "@deffn {Function} max_flow (@var{net}, @var{s}, @var{t})\n"
@@ -2623,13 +2631,13 @@ msgid ""
 "@var{s} and the sink @var{t}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1788
 msgid ""
 "The function returns the value of the maximal flow and a list\n"
 "representing the weights of the arcs in the optimal flow.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1832
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2676,7 +2684,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1837
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2684,14 +2692,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1841
 msgid ""
 "@anchor{max_independent_set}\n"
 "@deffn {Function} max_independent_set (@var{gr})\n"
 "Returns a maximum independent set of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1856
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2709,7 +2717,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1861
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2717,21 +2725,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1865
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs05,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1869
 msgid ""
 "@anchor{max_matching}\n"
 "@deffn {Function} max_matching (@var{gr})\n"
 "Returns a maximum matching of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1885
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2750,7 +2758,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1890
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2758,14 +2766,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1894
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs06,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1899
 msgid ""
 "@anchor{min_degree}\n"
 "@deffn {Function} min_degree (@var{gr})\n"
@@ -2773,7 +2781,7 @@ msgid ""
 "vertex of minimum degree.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1915
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2792,7 +2800,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1920
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2800,19 +2808,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1924
 msgid ""
 "@anchor{min_edge_cut}\n"
 "@deffn {Function} min_edge_cut (@var{gr})\n"
 "Returns the minimum edge cut in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1926
 msgid ""
 "See also @mrefdot{edge_connectivity}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1931
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2820,14 +2828,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1935
 msgid ""
 "@anchor{min_vertex_cover}\n"
 "@deffn {Function} min_vertex_cover (@var{gr})\n"
 "Returns the minimum vertex cover of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1940
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2835,19 +2843,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1944
 msgid ""
 "@anchor{min_vertex_cut}\n"
 "@deffn {Function} min_vertex_cut (@var{gr})\n"
 "Returns the minimum vertex cut in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1946
 msgid ""
 "See also @mrefdot{vertex_connectivity}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1951
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2855,14 +2863,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1955
 msgid ""
 "@anchor{minimum_spanning_tree}\n"
 "@deffn {Function} minimum_spanning_tree (@var{gr})\n"
 "Returns the minimum spanning tree of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1969
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2879,7 +2887,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1974
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2887,21 +2895,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1978
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs07,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1982
 msgid ""
 "@anchor{neighbors}\n"
 "@deffn {Function} neighbors (@var{v}, @var{gr})\n"
 "Returns the list of neighbors of the vertex @var{v} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:1995
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2917,7 +2925,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2000
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2925,14 +2933,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2004
 msgid ""
 "@anchor{odd_girth}\n"
 "@deffn {Function} odd_girth (@var{gr})\n"
 "Returns the length of the shortest odd cycle in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2020
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2951,7 +2959,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2025
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2959,7 +2967,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2030
 msgid ""
 "@anchor{out_neighbors}\n"
 "@deffn {Function} out_neighbors (@var{v}, @var{gr})\n"
@@ -2967,7 +2975,7 @@ msgid ""
 "graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2046
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -2986,7 +2994,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2051
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -2994,30 +3002,30 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2054
 msgid ""
 "@anchor{planar_embedding}\n"
 "@deffn {Function} planar_embedding (@var{gr})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2057
 msgid ""
 "Returns the list of facial walks in a planar embedding of @var{gr} and\n"
 "@code{false} if @var{gr} is not a planar graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2059
 msgid ""
 "The graph @var{gr} must be biconnected.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2062
 msgid ""
 "The algorithm used is the Demoucron's algorithm, which is a quadratic time\n"
 "algorithm.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2074
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3032,7 +3040,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2079
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3040,14 +3048,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2083
 msgid ""
 "@anchor{print_graph}\n"
 "@deffn {Function} print_graph (@var{gr})\n"
 "Prints some information about the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2116
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3083,7 +3091,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2121
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs}\n"
@@ -3091,14 +3099,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2125
 msgid ""
 "@anchor{radius}\n"
 "@deffn {Function} radius (@var{gr})\n"
 "Returns the radius of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2136
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3112,7 +3120,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2141
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3120,14 +3128,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2145
 msgid ""
 "@anchor{set_edge_weight}\n"
 "@deffn {Function} set_edge_weight (@var{e}, @var{w}, @var{gr})\n"
 "Assigns the weight @var{w} to the edge @var{e} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2164
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3149,7 +3157,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2169
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3157,36 +3165,36 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2173
 msgid ""
 "@anchor{set_vertex_label}\n"
 "@deffn {Function} set_vertex_label (@var{v}, @var{l}, @var{gr})\n"
 "Assigns the label @var{l} to the vertex @var{v} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2192
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
 "@c load (graphs)$\n"
-"@c g : create_graph([[1, \"One\"], [2, \"Two\"]], [[1,2]])$\n"
+"@c g : create_graph([[1, \\"One\\"], [2, \\"Two\\"]], [[1,2]])$\n"
 "@c get_vertex_label(1, g);\n"
-"@c set_vertex_label(1, \"oNE\", g);\n"
+"@c set_vertex_label(1, \\"oNE\\", g);\n"
 "@c get_vertex_label(1, g);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) load (graphs)$\n"
-"(%i2) g : create_graph([[1, \"One\"], [2, \"Two\"]], [[1,2]])$\n"
+"(%i2) g : create_graph([[1, \\"One\\"], [2, \\"Two\\"]], [[1,2]])$\n"
 "(%i3) get_vertex_label(1, g);\n"
 "(%o3)                          One\n"
-"(%i4) set_vertex_label(1, \"oNE\", g);\n"
+"(%i4) set_vertex_label(1, \\"oNE\\", g);\n"
 "(%o4)                         done\n"
 "(%i5) get_vertex_label(1, g);\n"
 "(%o5)                          oNE\n"
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2197
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3194,14 +3202,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2201
 msgid ""
 "@anchor{shortest_path}\n"
 "@deffn {Function} shortest_path (@var{u}, @var{v}, @var{gr})\n"
 "Returns the shortest path from @var{u} to @var{v} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2216
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3219,7 +3227,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2221
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3227,14 +3235,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2225
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs08,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2230
 msgid ""
 "@anchor{shortest_weighted_path}\n"
 "@deffn {Function} shortest_weighted_path (@var{u}, @var{v}, @var{gr})\n"
@@ -3242,18 +3250,18 @@ msgid ""
 "weighted path from @var{u} to @var{v} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2233
 msgid ""
 "The length of a weighted path is the sum of edge weights of edges in the\n"
 "path. If an edge has no weight, then it has a default weight 1.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2235
 msgid ""
 "Example:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2249
 msgid ""
 "@c ===beg===\n"
 "@c load (graphs)$\n"
@@ -3270,7 +3278,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2254
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3278,14 +3286,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2258
 msgid ""
 "@anchor{strong_components}\n"
 "@deffn {Function} strong_components (@var{gr})\n"
 "Returns the strong components of a directed graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2274
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3304,7 +3312,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2279
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3312,19 +3320,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2282
 msgid ""
 "@anchor{topological_sort}\n"
 "@deffn {Function} topological_sort (@var{dag})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2285
 msgid ""
 "Returns a topological sorting of the vertices of a directed graph\n"
 "@var{dag} or an empty list if @var{dag} is not a directed acyclic graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2310
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3352,7 +3360,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2315
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3360,19 +3368,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2319
 msgid ""
 "@anchor{vertex_connectivity}\n"
 "@deffn {Function} vertex_connectivity (@var{g})\n"
 "Returns the vertex connectivity of the graph @var{g}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2321
 msgid ""
 "See also @mrefdot{min_vertex_cut}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2326
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3380,14 +3388,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2330
 msgid ""
 "@anchor{vertex_degree}\n"
 "@deffn {Function} vertex_degree (@var{v}, @var{gr})\n"
 "Returns the degree of the vertex @var{v} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2335
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3395,7 +3403,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2340
 msgid ""
 "@anchor{vertex_distance}\n"
 "@deffn {Function} vertex_distance (@var{u}, @var{v}, @var{gr})\n"
@@ -3403,7 +3411,7 @@ msgid ""
 "the (directed) graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2356
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3422,7 +3430,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2361
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3430,18 +3438,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2364
 msgid ""
 "@anchor{vertex_eccentricity}\n"
 "@deffn {Function} vertex_eccentricity (@var{v}, @var{gr})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2366
 msgid ""
 "Returns the eccentricity of the vertex @var{v} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2379
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3457,7 +3465,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2384
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3465,14 +3473,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2388
 msgid ""
 "@anchor{vertex_in_degree}\n"
 "@deffn {Function} vertex_in_degree (@var{v}, @var{gr})\n"
 "Returns the in-degree of the vertex @var{v} in the directed graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2413
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3500,7 +3508,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2418
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3508,14 +3516,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2422
 msgid ""
 "@anchor{vertex_out_degree}\n"
 "@deffn {Function} vertex_out_degree (@var{v}, @var{gr})\n"
 "Returns the out-degree of the vertex @var{v} in the directed graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2438
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3534,7 +3542,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2443
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3542,14 +3550,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2447
 msgid ""
 "@anchor{vertices}\n"
 "@deffn {Function} vertices (@var{gr})\n"
 "Returns the list of vertices in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2458
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3563,7 +3571,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2463
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3571,20 +3579,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2467
 msgid ""
 "@anchor{vertex_coloring}\n"
 "@deffn {Function} vertex_coloring (@var{gr})\n"
 "Returns an optimal coloring of the vertices of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2470
 msgid ""
 "The function returns the chromatic number and a list representing the\n"
 "coloring of the vertices of @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2484
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3601,7 +3609,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2489
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3609,14 +3617,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2493
 msgid ""
 "@anchor{wiener_index}\n"
 "@deffn {Function} wiener_index (@var{gr})\n"
 "Returns the Wiener index of the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2503
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3629,7 +3637,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2508
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - properties}\n"
@@ -3637,19 +3645,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2510
 msgid ""
 "@subsection Modifying graphs\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2514
 msgid ""
 "@anchor{add_edge}\n"
 "@deffn {Function} add_edge (@var{e}, @var{gr})\n"
 "Adds the edge @var{e} to the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2533
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3671,7 +3679,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2538
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - modifications}\n"
@@ -3679,14 +3687,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2542
 msgid ""
 "@anchor{add_edges}\n"
 "@deffn {Function} add_edges (@var{e_list}, @var{gr})\n"
 "Adds all edges in the list @var{e_list} to the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2561
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3708,7 +3716,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2566
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - modifications}\n"
@@ -3716,14 +3724,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2570
 msgid ""
 "@anchor{add_vertex}\n"
 "@deffn {Function} add_vertex (@var{v}, @var{gr})\n"
 "Adds the vertex @var{v} to the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2589
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3745,7 +3753,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2594
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - modifications}\n"
@@ -3753,14 +3761,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2598
 msgid ""
 "@anchor{add_vertices}\n"
 "@deffn {Function} add_vertices (@var{v_list}, @var{gr})\n"
 "Adds all vertices in the list @var{v_list} to the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2603
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - modifications}\n"
@@ -3768,7 +3776,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2608
 msgid ""
 "@anchor{connect_vertices}\n"
 "@deffn {Function} connect_vertices (@var{v_list}, @var{u_list}, @var{gr})\n"
@@ -3776,13 +3784,13 @@ msgid ""
 "the list @var{u_list} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2611
 msgid ""
 "@var{v_list} and @var{u_list} can be single vertices or lists of\n"
 "vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2631
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3805,7 +3813,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2636
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - modifications}\n"
@@ -3813,14 +3821,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2640
 msgid ""
 "@anchor{contract_edge}\n"
 "@deffn {Function} contract_edge (@var{e}, @var{gr})\n"
 "Contracts the edge @var{e} in the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2677
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3860,7 +3868,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2682
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - modifications}\n"
@@ -3868,14 +3876,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2686
 msgid ""
 "@anchor{remove_edge}\n"
 "@deffn {Function} remove_edge (@var{e}, @var{gr})\n"
 "Removes the edge @var{e} from the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2705
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -3897,7 +3905,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2710
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - modifications}\n"
@@ -3905,14 +3913,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2714
 msgid ""
 "@anchor{remove_vertex}\n"
 "@deffn {Function} remove_vertex (@var{v}, @var{gr})\n"
 "Removes the vertex @var{v} from the graph @var{gr}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2719
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs}\n"
@@ -3920,12 +3928,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2721
 msgid ""
 "@subsection Reading and writing to files\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2726
 msgid ""
 "@anchor{dimacs_export}\n"
 "@deffn {Function} dimacs_export @\n"
@@ -3933,13 +3941,13 @@ msgid ""
 "@fname{dimacs_export} (@var{gr}, @var{fl}, @var{comment1}, ..., @var{commentn})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2729
 msgid ""
 "Exports the graph into the file @var{fl} in the DIMACS format. Optional\n"
 "comments will be added to the top of the file.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2734
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -3947,18 +3955,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2737
 msgid ""
 "@anchor{dimacs_import}\n"
 "@deffn {Function} dimacs_import (@var{fl})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2739
 msgid ""
 "Returns the graph from file @var{fl} in the DIMACS format.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2744
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -3966,18 +3974,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2747
 msgid ""
 "@anchor{graph6_decode}\n"
 "@deffn {Function} graph6_decode (@var{str})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2749
 msgid ""
 "Returns the graph encoded in the graph6 format in the string @var{str}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2754
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -3985,18 +3993,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2757
 msgid ""
 "@anchor{graph6_encode}\n"
 "@deffn {Function} graph6_encode (@var{gr})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2759
 msgid ""
 "Returns a string which encodes the graph @var{gr} in the graph6 format.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2764
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -4004,19 +4012,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2767
 msgid ""
 "@anchor{graph6_export}\n"
 "@deffn {Function} graph6_export (@var{gr_list}, @var{fl})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2770
 msgid ""
 "Exports graphs in the list @var{gr_list} to the file @var{fl} in the\n"
 "graph6 format.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2775
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -4024,18 +4032,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2778
 msgid ""
 "@anchor{graph6_import}\n"
 "@deffn {Function} graph6_import (@var{fl})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2780
 msgid ""
 "Returns a list of graphs from the file @var{fl} in the graph6 format.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2785
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -4043,18 +4051,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2788
 msgid ""
 "@anchor{sparse6_decode}\n"
 "@deffn {Function} sparse6_decode (@var{str})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2790
 msgid ""
 "Returns the graph encoded in the sparse6 format in the string @var{str}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2795
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -4062,18 +4070,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2798
 msgid ""
 "@anchor{sparse6_encode}\n"
 "@deffn {Function} sparse6_encode (@var{gr})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2800
 msgid ""
 "Returns a string which encodes the graph @var{gr} in the sparse6 format.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2805
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -4081,19 +4089,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2808
 msgid ""
 "@anchor{sparse6_export}\n"
 "@deffn {Function} sparse6_export (@var{gr_list}, @var{fl})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2811
 msgid ""
 "Exports graphs in the list @var{gr_list} to the file @var{fl} in the\n"
 "sparse6 format.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2816
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -4101,18 +4109,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2819
 msgid ""
 "@anchor{sparse6_import}\n"
 "@deffn {Function} sparse6_import (@var{fl})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2821
 msgid ""
 "Returns a list of graphs from the file @var{fl} in the sparse6 format.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2826
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - io}\n"
@@ -4120,12 +4128,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2828
 msgid ""
 "@subsection Visualization\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2833
 msgid ""
 "@anchor{draw_graph}\n"
 "@deffn {Function} draw_graph @\n"
@@ -4133,12 +4141,12 @@ msgid ""
 "@fname{draw_graph} (@var{graph}, @var{option1}, ..., @var{optionk})\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2835
 msgid ""
 "Draws the graph using the @ref{draw-pkg} package.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2841
 msgid ""
 "The algorithm used to position vertices is specified by the optional\n"
 "argument @var{program}. The default value is\n"
@@ -4147,12 +4155,12 @@ msgid ""
 "installed separately.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2843
 msgid ""
 "Example 1:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2862
 msgid ""
 "@c ===beg===\n"
 "@c load (graphs)$\n"
@@ -4174,19 +4182,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2866
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs09,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2868
 msgid ""
 "Example 2:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2907
 msgid ""
 "@c ===beg===\n"
 "@c load (graphs)$\n"
@@ -4228,19 +4236,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2911
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs10,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2913
 msgid ""
 "Example 3:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2956
 msgid ""
 "@c ===beg===\n"
 "@c load (graphs)$\n"
@@ -4286,19 +4294,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2960
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs11,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:2962
 msgid ""
 "Example 4:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3011
 msgid ""
 "@c ===beg===\n"
 "@c load (graphs)$\n"
@@ -4320,7 +4328,7 @@ msgid ""
 "@c     show_vertex_type=filled_square,\n"
 "@c     head_length=0.2,\n"
 "@c     head_angle=10,\n"
-"@c     edge_color=\"dark-green\",\n"
+"@c     edge_color=\\"dark-green\\",\n"
 "@c     text_color=blue\n"
 "@c     )$\n"
 "@c ===end===\n"
@@ -4344,25 +4352,25 @@ msgid ""
 "    show_vertex_type=filled_square,\n"
 "    head_length=0.2,\n"
 "    head_angle=10,\n"
-"    edge_color=\"dark-green\",\n"
+"    edge_color=\\"dark-green\\",\n"
 "    text_color=blue\n"
 "    )$\n"
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3015
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs12,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3017
 msgid ""
 "Example 5:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3030
 msgid ""
 "@c ===beg===\n"
 "@c load(graphs)$\n"
@@ -4378,19 +4386,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3034
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs14,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3036
 msgid ""
 "Example 6:\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3051
 msgid ""
 "@c ===beg===\n"
 "@c load(graphs)$\n"
@@ -4408,14 +4416,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3055
 msgid ""
 "@ifhtml\n"
 "@image{figures/graphs15,6cm}\n"
 "@end ifhtml\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3060
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs}\n"
@@ -4423,20 +4431,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3064
 msgid ""
 "@anchor{draw_graph_program}\n"
 "@defvr {Option variable} draw_graph_program\n"
 "Default value: @var{spring_embedding}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3067
 msgid ""
 "The default value for the program used to position vertices in\n"
 "@code{draw_graph} program.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3072
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4444,19 +4452,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3076
 msgid ""
 "@anchor{show_id}\n"
 "@defvr {draw_graph option} show_id\n"
 "Default value: @var{false}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3078
 msgid ""
 "If @var{true} then ids of the vertices are displayed.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3083
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4464,19 +4472,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3087
 msgid ""
 "@anchor{show_label}\n"
 "@defvr {draw_graph option} show_label\n"
 "Default value: @var{false}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3089
 msgid ""
 "If @var{true} then labels of the vertices are displayed.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3094
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4484,20 +4492,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3098
 msgid ""
 "@anchor{label_alignment_graphs}\n"
 "@defvr {draw_graph option} label_alignment\n"
 "Default value: @var{center}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3101
 msgid ""
 "Determines how to align the labels/ids of the vertices. Can\n"
 "be @code{left}, @code{center} or @code{right}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3106
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4505,19 +4513,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3110
 msgid ""
 "@anchor{show_weight }\n"
 "@defvr {draw_graph option} show_weight \n"
 "Default value: @var{false}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3112
 msgid ""
 "If @var{true} then weights of the edges are displayed.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3117
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4525,20 +4533,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3121
 msgid ""
 "@anchor{vertex_type}\n"
 "@defvr {draw_graph option} vertex_type\n"
 "Default value: @var{circle}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3124
 msgid ""
 "Defines how vertices are displayed. See the @var{point_type} option for\n"
 "the @code{draw} package for possible values.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3129
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4546,14 +4554,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3133
 msgid ""
 "@anchor{vertex_size}\n"
 "@defvr {draw_graph option} vertex_size\n"
 "The size of vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3138
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4561,14 +4569,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3142
 msgid ""
 "@anchor{vertex_color }\n"
 "@defvr {draw_graph option} vertex_color \n"
 "The color used for displaying vertices.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3147
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4576,19 +4584,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3151
 msgid ""
 "@anchor{show_vertices}\n"
 "@defvr {draw_graph option} show_vertices\n"
 "Default value: []\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3153
 msgid ""
 "Display selected vertices in the using a different color.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3158
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4596,7 +4604,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3164
 msgid ""
 "@anchor{show_vertex_type}\n"
 "@defvr {draw_graph option} show_vertex_type\n"
@@ -4605,7 +4613,7 @@ msgid ""
 "values.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3169
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4613,14 +4621,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3173
 msgid ""
 "@anchor{show_vertex_size}\n"
 "@defvr {draw_graph option} show_vertex_size\n"
 "The size of vertices in @var{show_vertices}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3178
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4628,14 +4636,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3182
 msgid ""
 "@anchor{show_vertex_color }\n"
 "@defvr {draw_graph option} show_vertex_color \n"
 "The color used for displaying vertices in the @var{show_vertices} list.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3187
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4643,21 +4651,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3191
 msgid ""
 "@anchor{vertex_partition}\n"
 "@defvr {draw_graph option} vertex_partition\n"
 "Default value: []\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3195
 msgid ""
 "A partition @code{[[v1,v2,...],...,[vk,...,vn]]} of the vertices of the\n"
 "graph. The vertices of each list in the partition will be drawn in a\n"
 "different color.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3200
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4665,7 +4673,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3205
 msgid ""
 "@anchor{vertex_coloring_variable}\n"
 "@defvr {draw_graph option} vertex_coloring\n"
@@ -4673,7 +4681,7 @@ msgid ""
 "specified in the format as returned by @var{vertex_coloring}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3210
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4681,14 +4689,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3214
 msgid ""
 "@anchor{edge_color }\n"
 "@defvr {draw_graph option} edge_color \n"
 "The color used for displaying edges.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3219
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4696,14 +4704,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3223
 msgid ""
 "@anchor{edge_width}\n"
 "@defvr {draw_graph option} edge_width\n"
 "The width of edges.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3228
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4711,7 +4719,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3233
 msgid ""
 "@anchor{edge_type}\n"
 "@defvr {draw_graph option} edge_type\n"
@@ -4719,7 +4727,7 @@ msgid ""
 "@code{draw} package.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3238
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4727,7 +4735,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3243
 msgid ""
 "@anchor{show_edges}\n"
 "@defvr {draw_graph option} show_edges\n"
@@ -4735,7 +4743,7 @@ msgid ""
 "color.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3248
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4743,14 +4751,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3252
 msgid ""
 "@anchor{show_edge_color}\n"
 "@defvr {draw_graph option} show_edge_color\n"
 "The color used for displaying edges in the @var{show_edges} list.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3257
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4758,14 +4766,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3261
 msgid ""
 "@anchor{show_edge_width}\n"
 "@defvr {draw_graph option} show_edge_width\n"
 "The width of edges in @var{show_edges}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3266
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4773,7 +4781,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3271
 msgid ""
 "@anchor{show_edge_type}\n"
 "@defvr {draw_graph option} show_edge_type\n"
@@ -4781,7 +4789,7 @@ msgid ""
 "@var{line_type} option for the @code{draw} package.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3276
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4789,7 +4797,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3282
 msgid ""
 "@anchor{edge_partition}\n"
 "@defvr {draw_graph option} edge_partition\n"
@@ -4798,7 +4806,7 @@ msgid ""
 "different color.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3287
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4806,7 +4814,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3292
 msgid ""
 "@anchor{edge_coloring_variable}\n"
 "@defvr {draw_graph option} edge_coloring\n"
@@ -4814,7 +4822,7 @@ msgid ""
 "format as returned by the function @var{edge_coloring}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3297
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4822,20 +4830,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3301
 msgid ""
 "@anchor{redraw }\n"
 "@defvr {draw_graph option} redraw \n"
 "Default value: @var{false}\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3304
 msgid ""
 "If @code{true}, vertex positions are recomputed even if the positions\n"
 "have been saved from a previous drawing of the graph.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3309
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4843,19 +4851,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3313
 msgid ""
 "@anchor{head_angle_graphs}\n"
 "@defvr {draw_graph option} head_angle\n"
 "Default value: 15\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3315
 msgid ""
 "The angle for the arrows displayed on arcs (in directed graphs).\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3320
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4863,19 +4871,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3324
 msgid ""
 "@anchor{head_length_graphs}\n"
 "@defvr {draw_graph option} head_length\n"
 "Default value: 0.1\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3326
 msgid ""
 "The length for the arrows displayed on arcs (in directed graphs).\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3331
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4883,20 +4891,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3335
 msgid ""
 "@anchor{spring_embedding_depth}\n"
 "@defvr {draw_graph option} spring_embedding_depth\n"
 "Default value: 50\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3338
 msgid ""
 "The number of iterations in the spring embedding graph drawing\n"
 "algorithm.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3343
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4904,7 +4912,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3348
 msgid ""
 "@anchor{terminal_graphs}\n"
 "@defvr {draw_graph option} terminal\n"
@@ -4912,7 +4920,7 @@ msgid ""
 "@code{draw} package).\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3353
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4920,14 +4928,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3357
 msgid ""
 "@anchor{file_name_graphs}\n"
 "@defvr {draw_graph option} file_name\n"
 "The filename of the drawing if terminal is not screen.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3362
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4935,7 +4943,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3372
 msgid ""
 "@anchor{program}\n"
 "@defvr {draw_graph option} program\n"
@@ -4948,7 +4956,7 @@ msgid ""
 "@var{fixed_vertices} option.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3377
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4956,7 +4964,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3382
 msgid ""
 "@anchor{fixed_vertices}\n"
 "@defvr {draw_graph option} fixed_vertices\n"
@@ -4964,7 +4972,7 @@ msgid ""
 "Can be used when @code{program=spring_embedding}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3387
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs} @category{Package graphs - draw_graphs options}\n"
@@ -4972,7 +4980,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3392
 msgid ""
 "@anchor{vertices_to_path}\n"
 "@deffn {Function} vertices_to_path (@var{v_list})\n"
@@ -4980,7 +4988,7 @@ msgid ""
 "defined by @var{v_list}.\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3397
 msgid ""
 "@opencatbox\n"
 "@category{Package graphs}\n"
@@ -4988,7 +4996,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# graphs.texi
+#: graphs.texi:3402
 msgid ""
 "@anchor{vertices_to_cycle}\n"
 "@deffn {Function} vertices_to_cycle (@var{v_list})\n"
@@ -4996,10 +5004,3 @@ msgid ""
 "defined by @var{v_list}.\n"
 msgstr ""
 
-# graphs.texi
-msgid ""
-"@opencatbox\n"
-"@category{Package graphs}\n"
-"@closecatbox\n"
-"@end deffn\n"
-msgstr ""

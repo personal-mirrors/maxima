@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# linearalgebra.texi
+msgstr ""
+
+#: linearalgebra.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to linearalgebra::\n"
@@ -25,7 +25,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:10
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to linearalgebra, Functions and Variables for linearalgebra, linearalgebra-pkg, linearalgebra-pkg\n"
@@ -33,17 +33,17 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:12
 msgid ""
 "@code{linearalgebra} is a collection of functions for linear algebra.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:14
 msgid ""
 "Example:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:121
 msgid ""
 "@c ===beg===\n"
 "@c M : matrix ([1, 2], [1, 2]);\n"
@@ -153,14 +153,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:125
 msgid ""
 "@opencatbox\n"
 "@category{Linear algebra} @category{Share packages} @category{Package linearalgebra}\n"
 "@closecatbox\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:131
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@need 800\n"
@@ -169,14 +169,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:135
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{addmatrices}\n"
 "@deffn {Function} addmatrices (@var{f}, @var{M_1}, @dots{}, @var{M_n})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:140
 msgid ""
 "@c REWORD -- THE RESULT IS NOT GENERALLY THE SUM OF M_1, ..., M_N\n"
 "Using the function @var{f} as the addition function, return the sum of the\n"
@@ -184,12 +184,12 @@ msgid ""
 "number of arguments (a Maxima nary function).\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:142
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:157
 msgid ""
 "@c ===beg===\n"
 "@c m1 : matrix([1,2],[3,4])$\n"
@@ -207,7 +207,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:162
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -215,20 +215,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:166
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{blockmatrixp}\n"
 "@deffn {Function} blockmatrixp (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:169
 msgid ""
 "Return true if and only if @var{M} is a matrix and every entry of \n"
 "@var{M} is a matrix.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:174
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra} @category{Predicate functions}\n"
@@ -236,21 +236,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:178
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{columnop}\n"
 "@deffn {Function} columnop (@var{M}, @var{i}, @var{j}, @var{theta})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:182
 msgid ""
 "If @var{M} is a matrix, return the matrix that results from doing the column\n"
 "operation @code{C_i <- C_i - @var{theta} * C_j}. If @var{M} doesn't have a row\n"
 "@var{i} or @var{j}, signal an error.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:187
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -258,20 +258,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:191
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{columnswap}\n"
 "@deffn {Function} columnswap (@var{M}, @var{i}, @var{j})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:194
 msgid ""
 "If @var{M} is a matrix, swap columns @var{i} and @var{j}.  If @var{M} doesn't\n"
 "have a column @var{i} or @var{j}, signal an error.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:199
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -279,14 +279,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:203
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{columnspace}\n"
 "@deffn {Function} columnspace (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:208
 msgid ""
 "If @var{M} is a matrix, return @code{span (v_1, ..., v_n)}, where the set\n"
 "@code{@{v_1, ..., v_n@}} is a basis for the column space of @var{M}.  The span \n"
@@ -294,7 +294,7 @@ msgid ""
 "one member, return @code{span ()}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:213
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -302,7 +302,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:219
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{cholesky}\n"
@@ -311,14 +311,14 @@ msgid ""
 "@fname{cholesky} (@var{M}, @var{field})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:223
 msgid ""
 "Return the Cholesky factorization of the matrix selfadjoint (or hermitian)\n"
 "matrix @var{M}.  The second argument defaults to 'generalring.' For a\n"
 "description of the possible values for @var{field}, see @code{lu_factor}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:228
 msgid ""
 "@opencatbox\n"
 "@category{Matrix decompositions} @category{Package linearalgebra}\n"
@@ -326,21 +326,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:232
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ctranspose}\n"
 "@deffn {Function} ctranspose (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:236
 msgid ""
 "Return the complex conjugate transpose of the matrix @var{M}.  The function\n"
 "@code{ctranspose} uses @code{matrix_element_transpose} to transpose each matrix\n"
 "element.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:241
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -348,21 +348,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:245
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{diag_matrix}\n"
 "@deffn {Function} diag_matrix (@var{d_1}, @var{d_2}, @dots{}, @var{d_n})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:249
 msgid ""
 "Return a diagonal matrix with diagonal entries @var{d_1}, @var{d_2}, @dots{},\n"
 "@var{d_n}.  When the diagonal entries are matrices, the zero entries of the\n"
 "returned matrix are zero matrices of the appropriate size; for example:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:256
 msgid ""
 "@c ===beg===\n"
 "@c diag_matrix(diag_matrix(1,2),diag_matrix(3,4));\n"
@@ -372,7 +372,7 @@ msgid ""
 "(%i1) diag_matrix(diag_matrix(1,2),diag_matrix(3,4));\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:265
 msgid ""
 "                            [ [ 1  0 ]  [ 0  0 ] ]\n"
 "                            [ [      ]  [      ] ]\n"
@@ -384,7 +384,7 @@ msgid ""
 "(%i2) diag_matrix(p,q);\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:270
 msgid ""
 "                                   [ p  0 ]\n"
 "(%o2)                              [      ]\n"
@@ -392,7 +392,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:275
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -400,21 +400,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:279
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{dotproduct}\n"
 "@deffn {Function} dotproduct (@var{u}, @var{v})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:283
 msgid ""
 "Return the dotproduct of vectors @var{u} and @var{v}.  This is the same as\n"
 "@code{conjugate (transpose (@var{u})) .  @var{v}}.  The arguments @var{u} and\n"
 "@var{v} must be column vectors.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:288
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -422,7 +422,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:294
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{eigens_by_jacobi}\n"
@@ -431,7 +431,7 @@ msgid ""
 "@fname{eigens_by_jacobi} (@var{A}, @var{field_type})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:300
 msgid ""
 "Computes the eigenvalues and eigenvectors of @var{A} by the method of Jacobi\n"
 "rotations.  @var{A} must be a symmetric matrix (but it need not be positive\n"
@@ -440,18 +440,18 @@ msgid ""
 "If @var{field_type} is not specified, it defaults to @code{floatfield}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:303
 msgid ""
 "The elements of @var{A} must be numbers or expressions which evaluate to numbers\n"
 "via @code{float} or @code{bfloat} (depending on @var{field_type}).\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:305
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:314
 msgid ""
 "@c ===beg===\n"
 "@c S : matrix ([1/sqrt(2), 1/sqrt(2)], [- 1/sqrt(2), 1/sqrt(2)]);\n"
@@ -463,7 +463,7 @@ msgid ""
 "@c ===end===\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:360
 msgid ""
 "@example\n"
 "(%i1) S: matrix([1/sqrt(2), 1/sqrt(2)],[-1/sqrt(2), 1/sqrt(2)]);\n"
@@ -512,7 +512,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:365
 msgid ""
 "@opencatbox\n"
 "@category{Matrix decompositions} @category{Package linearalgebra}\n"
@@ -520,14 +520,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:369
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{get_lu_factors}\n"
 "@deffn {Function} get_lu_factors (@var{x}) \n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:374
 msgid ""
 "When @code{@var{x} = lu_factor (@var{A})}, then @code{get_lu_factors} returns a\n"
 "list of the form @code{[P, L, U]}, where @var{P} is a permutation matrix,\n"
@@ -535,7 +535,7 @@ msgid ""
 "triangular, and @code{@var{A} = @var{P} @var{L} @var{U}}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:379
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -543,7 +543,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:385
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{hankel}\n"
@@ -552,14 +552,14 @@ msgid ""
 "@fname{hankel} (@var{col}, @var{row})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:389
 msgid ""
 "Return a Hankel matrix @var{H}.  The first column of @var{H} is @var{col};\n"
 "except for the first entry, the last row of @var{H} is @var{row}.  The\n"
 "default for @var{row} is the zero vector with the same length as @var{col}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:394
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -567,26 +567,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:398
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{hessian}\n"
 "@deffn {Function} hessian (@var{f}, @var{x})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:402
 msgid ""
 "Returns the Hessian matrix of @var{f} with respect to the list of variables\n"
 "@var{x}.  The @code{(i, j)}-th element of the Hessian matrix is\n"
 "@code{diff(@var{f}, @var{x}[i], 1, @var{x}[j], 1)}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:404
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:430
 msgid ""
 "@c ===beg===\n"
 "@c hessian (x * sin (y), [x, y]);\n"
@@ -615,7 +615,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:435
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Package linearalgebra}\n"
@@ -623,20 +623,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:439
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{hilbert_matrix}\n"
 "@deffn {Function} hilbert_matrix (@var{n})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:442
 msgid ""
 "Return the @var{n} by @var{n} Hilbert matrix.  When @var{n} isn't a positive\n"
 "integer, signal an error.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:447
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -644,7 +644,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:453
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{identfor}\n"
@@ -653,7 +653,7 @@ msgid ""
 "@fname{identfor} (@var{M}, @var{fld})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:458
 msgid ""
 "Return an identity matrix that has the same shape as the matrix\n"
 "@var{M}.  The diagonal entries of the identity matrix are the \n"
@@ -661,7 +661,7 @@ msgid ""
 "@var{fld} is @var{generalring}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:463
 msgid ""
 "The first argument @var{M} should be a square matrix or a non-matrix.  When\n"
 "@var{M} is a matrix, each entry of @var{M} can be a square matrix -- thus\n"
@@ -669,12 +669,12 @@ msgid ""
 "(finite) depth.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:465
 msgid ""
 "See also @mref{zerofor}\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:470
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -682,20 +682,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:474
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{invert_by_lu}\n"
 "@deffn {Function} invert_by_lu (@var{M}, @var{(rng generalring)})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:477
 msgid ""
 "Invert a matrix @var{M} by using the LU factorization.  The LU factorization\n"
 "is done using the ring @var{rng}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:482
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -703,26 +703,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:486
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{jacobian}\n"
 "@deffn {Function} jacobian (@var{f}, @var{x})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:490
 msgid ""
 "Returns the Jacobian matrix of the list of functions @var{f} with respect to\n"
 "the list of variables @var{x}.  The @code{(i, j)}-th element of the Jacobian\n"
 "matrix is @code{diff(@var{f}[i], @var{x}[j])}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:492
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:514
 msgid ""
 "@c ===beg===\n"
 "@c jacobian ([sin (u - v), sin (u * v)], [u, v]);\n"
@@ -747,7 +747,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:519
 msgid ""
 "@opencatbox\n"
 "@category{Differential calculus} @category{Package linearalgebra}\n"
@@ -755,19 +755,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:523
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{kronecker_product}\n"
 "@deffn {Function} kronecker_product (@var{A}, @var{B})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:525
 msgid ""
 "Return the Kronecker product of the matrices @var{A} and @var{B}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:530
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -775,7 +775,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:536
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{listp}\n"
@@ -784,7 +784,7 @@ msgid ""
 "@fname{listp} (@var{e})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:541
 msgid ""
 "Given an optional argument @var{p}, return @code{true} if @var{e} is a Maxima\n"
 "list and @var{p} evaluates to @code{true} for every list element.  When\n"
@@ -792,7 +792,7 @@ msgid ""
 "is a Maxima list.  In all other cases, return @code{false}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:546
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra} @category{Predicate functions}\n"
@@ -800,61 +800,61 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:550
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{locate_matrix_entry}\n"
 "@deffn {Function} locate_matrix_entry (@var{M}, @var{r_1}, @var{c_1}, @var{r_2}, @var{c_2}, @var{f}, @var{rel})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:554
 msgid ""
 "The first argument must be a matrix; the arguments\n"
 "@var{r_1} through @var{c_2} determine a sub-matrix of @var{M} that consists of\n"
 "rows @var{r_1} through @var{r_2} and columns @var{c_1} through @var{c_2}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:557
 msgid ""
 "Find a entry in the sub-matrix @var{M} that satisfies some property.\n"
 "Three cases:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:559
 msgid ""
 "(1) @code{@var{rel} = 'bool} and @var{f} a predicate: \n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:563
 msgid ""
 "Scan the sub-matrix from left to right then top to bottom,\n"
 "and return the index of the first entry that satisfies the \n"
 "predicate @var{f}.  If no matrix entry satisfies @var{f}, return @code{false}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:565
 msgid ""
 "(2) @code{@var{rel} = 'max} and @var{f} real-valued:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:568
 msgid ""
 "Scan the sub-matrix looking for an entry that maximizes @var{f}.\n"
 "Return the index of a maximizing entry.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:570
 msgid ""
 "(3) @code{@var{rel} = 'min} and @var{f} real-valued:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:573
 msgid ""
 "Scan the sub-matrix looking for an entry that minimizes @var{f}.\n"
 "Return the index of a minimizing entry.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:578
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -862,21 +862,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:582
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lu_backsub}\n"
 "@deffn {Function} lu_backsub (@var{M}, @var{b})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:586
 msgid ""
 "When @code{@var{M} = lu_factor (@var{A}, @var{field})},\n"
 "then @code{lu_backsub (@var{M}, @var{b})} solves the linear\n"
 "system @code{@var{A} @var{x} = @var{b}}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:591
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -884,20 +884,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:595
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lu_factor}\n"
 "@deffn {Function} lu_factor (@var{M}, @var{field})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:598
 msgid ""
 "Return a list of the form @code{[@var{LU}, @var{perm}, @var{fld}]}, or\n"
 "@code{[@var{LU}, @var{perm}, @var{fld}, @var{lower-cnd} @var{upper-cnd}]}, where\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:607
 msgid ""
 "(1) The matrix @var{LU} contains the factorization of @var{M} in a packed form.\n"
 "    Packed form means three things: First, the rows of @var{LU} are permuted\n"
@@ -909,7 +909,7 @@ msgid ""
 "    upper triangular part of @var{LU}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:616
 msgid ""
 "(2) When the field is either @code{floatfield} or @code{complexfield}, the\n"
 "    numbers @var{lower-cnd} and @var{upper-cnd} are lower and upper bounds for\n"
@@ -921,52 +921,52 @@ msgid ""
 "  The argument @var{M} must be a square matrix.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:619
 msgid ""
 "  The optional argument @var{fld} must be a symbol that determines a ring or\n"
 "  field.  The pre-defined fields and rings are:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:621
 msgid ""
 "  (a) @code{generalring}      -- the ring of Maxima expressions,\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:624
 msgid ""
 "  (b) @code{floatfield}       -- the field of floating point numbers of the\n"
 "                                 type double,\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:627
 msgid ""
 "  (c) @code{complexfield}     -- the field of complex floating point numbers of\n"
 "                                 the type double,\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:629
 msgid ""
 "  (d) @code{crering}          -- the ring of Maxima CRE expressions,\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:631
 msgid ""
 "  (e) @code{rationalfield}    -- the field of rational numbers,\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:633
 msgid ""
 "  (f) @code{runningerror}     -- track the all floating point rounding errors,\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:637
 msgid ""
 "  (g) @code{noncommutingring} -- the ring of Maxima expressions where\n"
 "                                 multiplication is the non-commutative dot\n"
 "                                 operator.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:642
 msgid ""
 "When the field is @code{floatfield}, @code{complexfield}, or\n"
 "@code{runningerror}, the algorithm uses partial pivoting; for all\n"
@@ -974,13 +974,13 @@ msgid ""
 "pivot.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:645
 msgid ""
 "Floating point addition arithmetic isn't associative, so the meaning\n"
 "of 'field' differs from the mathematical definition.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:652
 msgid ""
 "A member of the field @code{runningerror} is a two member Maxima list\n"
 "of the form @code{[x,n]},where @var{x} is a floating point number and\n"
@@ -990,7 +990,7 @@ msgid ""
 "of the order the square of the machine epsilon.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:670
 msgid ""
 "There is no user-interface for defining a new field.  A user that is\n"
 "familiar with Common Lisp should be able to define a new field.  To do\n"
@@ -1011,17 +1011,17 @@ msgid ""
 "converted to Maxima expressions.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:672
 msgid ""
 "See also  @mref{get_lu_factors}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:674
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:700
 msgid ""
 "@c ===beg===\n"
 "@c w[i,j] := random (1.0) + %i * random (1.0);\n"
@@ -1050,7 +1050,7 @@ msgid ""
 "(%i6) showtime : false$\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:722
 msgid ""
 "(%i7) M : matrix ([1 - z, 3], [3, 8 - z]); \n"
 "                        [ 1 - z    3   ]\n"
@@ -1075,7 +1075,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:727
 msgid ""
 "@opencatbox\n"
 "@category{Matrix decompositions} @category{Package linearalgebra}\n"
@@ -1083,7 +1083,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:733
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mat_cond}\n"
@@ -1092,7 +1092,7 @@ msgid ""
 "@fname{mat_cond} (@var{M}, inf)\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:741
 msgid ""
 "Return the @var{p}-norm matrix condition number of the matrix\n"
 "@var{m}.  The allowed values for @var{p} are 1 and @var{inf}.  This\n"
@@ -1103,7 +1103,7 @@ msgid ""
 "square of the matrix size.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:746
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1111,7 +1111,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:753
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mat_norm}\n"
@@ -1121,14 +1121,14 @@ msgid ""
 "@fname{mat_norm} (@var{M}, frobenius)\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:757
 msgid ""
 "Return the matrix @var{p}-norm of the matrix @var{M}.  The allowed values for\n"
 "@var{p} are 1, @code{inf}, and @code{frobenius} (the Frobenius matrix norm).\n"
 "The matrix @var{M} should be an unblocked matrix.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:762
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1136,7 +1136,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:768
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{linearalgebra_matrixp}\n"
@@ -1145,7 +1145,7 @@ msgid ""
 "@fname{matrixp} (@var{e})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:773
 msgid ""
 "Given an optional argument @var{p}, return @code{true} if @var{e} is \n"
 "a matrix and @var{p} evaluates to @code{true} for every matrix element.\n"
@@ -1153,12 +1153,12 @@ msgid ""
 "if @code{e} is a matrix.  In all other cases, return @code{false}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:775
 msgid ""
 "See also @mref{blockmatrixp}\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:780
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra} @category{Predicate functions}\n"
@@ -1166,20 +1166,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:784
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{matrix_size}\n"
 "@deffn {Function} matrix_size (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:787
 msgid ""
 "Return a two member list that gives the number of rows and columns, respectively\n"
 "of the matrix @var{M}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:792
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1187,20 +1187,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:796
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mat_fullunblocker}\n"
 "@deffn {Function} mat_fullunblocker (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:799
 msgid ""
 "If @var{M} is a block matrix, unblock the matrix to all levels.  If @var{M} is\n"
 "a matrix, return @var{M}; otherwise, signal an error.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:804
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1208,21 +1208,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:808
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mat_trace}\n"
 "@deffn {Function} mat_trace (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:812
 msgid ""
 "Return the trace of the matrix @var{M}.  If @var{M} isn't a matrix, return a\n"
 "noun form.  When @var{M} is a block matrix, @code{mat_trace(M)} returns\n"
 "the same value as does @code{mat_trace(mat_unblocker(m))}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:817
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1230,39 +1230,39 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:821
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mat_unblocker}\n"
 "@deffn {Function} mat_unblocker (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:824
 msgid ""
 "If @var{M} is a block matrix, unblock @var{M} one level.  If @var{M} is a\n"
 "matrix, @code{mat_unblocker (M)} returns @var{M}; otherwise, signal an error.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:828
 msgid ""
 "Thus if each entry of @var{M} is matrix, @code{mat_unblocker (M)} returns an \n"
 "unblocked matrix, but if each entry of @var{M} is a block matrix,\n"
 "@code{mat_unblocker (M)} returns a block matrix with one less level of blocking.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:832
 msgid ""
 "If you use block matrices, most likely you'll want to set\n"
-"@code{matrix_element_mult} to @code{\".\"} and @code{matrix_element_transpose} to\n"
+"@code{matrix_element_mult} to @code{\\".\\"} and @code{matrix_element_transpose} to\n"
 "@code{'transpose}.  See also @mref{mat_fullunblocker}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:834
 msgid ""
 "Example:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:861
 msgid ""
 "@c ===beg===\n"
 "@c A : matrix ([1, 2], [3, 4]);\n"
@@ -1292,7 +1292,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:866
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1300,14 +1300,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:870
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{nullspace}\n"
 "@deffn {Function} nullspace (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:875
 msgid ""
 "If @var{M} is a matrix, return @code{span (v_1, ..., v_n)}, where the set\n"
 "@code{@{v_1, ..., v_n@}} is a basis for the nullspace of @var{M}.  The span of\n"
@@ -1315,7 +1315,7 @@ msgid ""
 "return @code{span ()}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:880
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1323,19 +1323,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:884
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{nullity}\n"
 "@deffn {Function} nullity (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:886
 msgid ""
 "If @var{M} is a matrix, return the dimension of the nullspace of @var{M}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:891
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1343,25 +1343,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:895
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{orthogonal_complement}\n"
 "@deffn {Function} orthogonal_complement (@var{v_1}, @dots{}, @var{v_n})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:898
 msgid ""
 "Return @code{span (u_1, ..., u_m)}, where the set @code{@{u_1, ..., u_m@}} is a \n"
 "basis for the orthogonal complement of the set @code{(v_1, ..., v_n)}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:900
 msgid ""
 "Each vector @var{v_1} through @var{v_n} must be a column vector.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:905
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1369,7 +1369,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:912
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{polynomialp}\n"
@@ -1379,7 +1379,7 @@ msgid ""
 "@fname{polynomialp} (@var{p}, @var{L})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:919
 msgid ""
 "Return @code{true} if @var{p} is a polynomial in the variables in the list\n"
 "@var{L}.  The predicate @var{coeffp} must evaluate to @code{true} for each\n"
@@ -1389,7 +1389,7 @@ msgid ""
 "to use the default for @var{coeffp}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:925
 msgid ""
 "@c WORK THE FOLLOWING INTO THE PRECEDING\n"
 "The command @code{polynomialp (@var{p}, @var{L}, @var{coeffp})} is equivalent to\n"
@@ -1398,12 +1398,12 @@ msgid ""
 "@code{polynomialp (@var{p}, L@var{,} 'constantp, 'nonnegintegerp)}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:927
 msgid ""
 "The polynomial needn't be expanded:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:938
 msgid ""
 "@c ===beg===\n"
 "@c polynomialp ((x + 1)*(x + 2), [x]);\n"
@@ -1417,12 +1417,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:940
 msgid ""
 "An example using non-default values for coeffp and exponp:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:953
 msgid ""
 "@c ===beg===\n"
 "@c polynomialp ((x + 1)*(x + 2)^(3/2), [x], numberp, numberp);\n"
@@ -1438,12 +1438,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:955
 msgid ""
 "Polynomials with two variables:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:966
 msgid ""
 "@c ===beg===\n"
 "@c polynomialp (x^2 + 5*x*y + y^2, [x]);\n"
@@ -1457,7 +1457,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:971
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra} @category{Predicate functions}\n"
@@ -1465,26 +1465,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:975
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{polytocompanion}\n"
 "@deffn {Function} polytocompanion (@var{p}, @var{x})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:979
 msgid ""
 "If @var{p} is a polynomial in @var{x}, return the companion matrix of @var{p}.\n"
 "For a monic polynomial @var{p} of degree @var{n}, we have\n"
 "@code{@var{p} = (-1)^@var{n} charpoly (polytocompanion (@var{p}, @var{x}))}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:981
 msgid ""
 "When @var{p} isn't a polynomial in @var{x}, signal an error.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:986
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1492,42 +1492,42 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:990
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ptringularize}\n"
 "@deffn {Function} ptriangularize (@var{M}, @var{v})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:993
 msgid ""
 "If @var{M} is a matrix with each entry a polynomial in @var{v}, return \n"
 "a matrix @var{M2} such that\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:995
 msgid ""
 "(1) @var{M2} is upper triangular,\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:999
 msgid ""
 "(2) @code{@var{M2} = @var{E_n} ... @var{E_1} @var{M}},\n"
 "where @var{E_1} through @var{E_n} are elementary matrices \n"
 "whose entries are polynomials in @var{v},\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1001
 msgid ""
 "(3) @code{|det (@var{M})| = |det (@var{M2})|},\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1003
 msgid ""
 "Note: This function doesn't check that every entry is a polynomial in @var{v}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1008
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1535,44 +1535,44 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1012
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rowp}\n"
 "@deffn {Function} rowop (@var{M}, @var{i}, @var{j}, @var{theta})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1016
 msgid ""
 "If @var{M} is a matrix, return the matrix that results from doing the\n"
 "row operation @code{R_i <- R_i - theta * R_j}.  If @var{M} doesn't have a row\n"
 "@var{i} or @var{j}, signal an error.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1020
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
 "@closecatbox\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1022
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1024
 msgid ""
 "@deffn {Function} rank (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1027
 msgid ""
 "Return the rank of that matrix @var{M}.  The rank is the dimension of the\n"
 "column space.  Example:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1039
 msgid ""
 "@c ===beg===\n"
 "@c rank(matrix([1,2],[2,4]));\n"
@@ -1587,7 +1587,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1044
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1595,20 +1595,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1048
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rowswap}\n"
 "@deffn {Function} rowswap (@var{M}, @var{i}, @var{j})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1051
 msgid ""
 "If @var{M} is a matrix, swap rows @var{i} and @var{j}.  If @var{M} doesn't\n"
 "have a row @var{i} or @var{j}, signal an error.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1056
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1616,7 +1616,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1062
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{toeplitz}\n"
@@ -1625,14 +1625,14 @@ msgid ""
 "@fname{toeplitz} (@var{col}, @var{row})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1066
 msgid ""
 "Return a Toeplitz matrix @var{T}.  The first first column of @var{T} is\n"
 "@var{col}; except for the first entry, the first row of @var{T} is @var{row}.\n"
 "The default for @var{row} is complex conjugate of @var{col}.  Example:\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1081
 msgid ""
 "@c ===beg===\n"
 "@c toeplitz([1,2,3],[x,y,z]);\n"
@@ -1650,7 +1650,7 @@ msgid ""
 "(%i2)  toeplitz([1,1+%i]);\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1086
 msgid ""
 "                              [   1     1 - %I ]\n"
 "(%o2)                         [                ]\n"
@@ -1658,7 +1658,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1091
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1666,20 +1666,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1095
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{vandermonde_matrix}\n"
 "@deffn {Function} vandermonde_matrix ([@var{x_1}, ..., @var{x_n}])\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1098
 msgid ""
 "Return a @var{n} by @var{n} matrix whose @var{i}-th row is \n"
 "@code{[1, @var{x_i}, @var{x_i}^2, ... @var{x_i}^(@var{n}-1)]}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1103
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1687,7 +1687,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1109
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{zerofor}\n"
@@ -1696,7 +1696,7 @@ msgid ""
 "@fname{zerofor} (@var{M}, @var{fld})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1114
 msgid ""
 "Return a zero  matrix that has the same shape as the matrix\n"
 "@var{M}.  Every entry of the zero matrix is the\n"
@@ -1704,7 +1704,7 @@ msgid ""
 "@var{fld} is @var{generalring}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1119
 msgid ""
 "The first argument @var{M} should be a square matrix or a\n"
 "non-matrix.  When @var{M} is a matrix, each entry of @var{M} can be a\n"
@@ -1712,12 +1712,12 @@ msgid ""
 "matrix can be blocked to any (finite) depth.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1121
 msgid ""
 "See also @mref{identfor}\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1126
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra}\n"
@@ -1725,14 +1725,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1130
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{zeromatrixp}\n"
 "@deffn {Function} zeromatrixp (@var{M})\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1135
 msgid ""
 "If @var{M} is not a block matrix, return @code{true} if\n"
 "@code{is (equal (@var{e}, 0))} is true for each element @var{e} of the matrix\n"
@@ -1740,7 +1740,7 @@ msgid ""
 "evaluates to @code{true} for each element of @var{e}.\n"
 msgstr ""
 
-# linearalgebra.texi
+#: linearalgebra.texi:1140
 msgid ""
 "@opencatbox\n"
 "@category{Package linearalgebra} @category{Predicate functions}\n"
@@ -1748,6 +1748,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# linearalgebra.texi
-msgid ""
-msgstr ""

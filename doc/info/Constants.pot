@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Constants.texi
+msgstr ""
+
+#: Constants.texi:6
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@page\n"
@@ -26,14 +26,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:10
 msgid ""
 "@menu\n"
 "* Functions and Variables for Constants::\n"
 "@end menu\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:15
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Constants,  , Constants, Constants\n"
@@ -41,7 +41,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:24
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%e}\n"
@@ -53,14 +53,14 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:28
 msgid ""
 "@code{%e} represents the base of the natural logarithm, also known as Euler's\n"
 "number.  The numeric value of @code{%e} is the double-precision floating-point\n"
 "value 2.718281828459045d0.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:33
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -68,7 +68,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:41
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%i}\n"
@@ -79,12 +79,12 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:43
 msgid ""
 "@code{%i} represents the imaginary unit, @math{sqrt(- 1)}.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:48
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -92,20 +92,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:52
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{false}\n"
 "@defvr {Constant} false\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:55
 msgid ""
 "@code{false} represents the Boolean constant of the same name.\n"
 "Maxima implements @code{false} by the value @code{NIL} in Lisp.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:60
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -113,7 +113,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:67
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%gamma}\n"
@@ -123,13 +123,13 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:70
 msgid ""
 "The Euler-Mascheroni constant, 0.5772156649015329 ....\n"
 "@c DOUBTLESS THERE IS MORE TO SAY HERE.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:75
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -137,7 +137,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:82
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ind}\n"
@@ -147,22 +147,22 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:84
 msgid ""
 "@code{ind} represents a bounded, indefinite result.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:86
 msgid ""
 "See also @mrefdot{limit}\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:88
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:96
 msgid ""
 "@c ===beg===\n"
 "@c limit (sin(1/x), x, 0);\n"
@@ -173,7 +173,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:101
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -181,7 +181,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:108
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{inf}\n"
@@ -191,12 +191,12 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:110
 msgid ""
 "@code{inf} represents real positive infinity.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:115
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -204,7 +204,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:122
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{infinity}\n"
@@ -214,12 +214,12 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:124
 msgid ""
 "@code{infinity} represents complex infinity.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:129
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -227,7 +227,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:137
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{minf}\n"
@@ -238,12 +238,12 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:139
 msgid ""
 "@code{minf} represents real minus (i.e., negative) infinity.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:144
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -251,7 +251,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:152
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%phi}\n"
@@ -262,37 +262,37 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:156
 msgid ""
 "@code{%phi} represents the so-called @i{golden mean}, @math{(1 + sqrt(5))/2}.\n"
 "The numeric value of @code{%phi} is the double-precision floating-point value\n"
 "1.618033988749895d0.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:159
 msgid ""
 "@mref{fibtophi} expresses Fibonacci numbers @code{fib(n)} in terms of\n"
 "@code{%phi}.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:163
 msgid ""
 "By default, Maxima does not know the algebraic properties of @code{%phi}.\n"
 "After evaluating @code{tellrat(%phi^2 - %phi - 1)} and @code{algebraic: true},\n"
 "@mref{ratsimp} can simplify some expressions containing @code{%phi}.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:165
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:167
 msgid ""
 "@code{fibtophi} expresses Fibonacci numbers @code{fib(n)} in terms of @code{%phi}.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:194
 msgid ""
 "@c ===beg===\n"
 "@c fibtophi (fib (n));\n"
@@ -322,14 +322,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:198
 msgid ""
 "By default, Maxima does not know the algebraic properties of @code{%phi}.\n"
 "After evaluating @code{tellrat (%phi^2 - %phi - 1)} and @code{algebraic: true},\n"
 "@code{ratsimp} can simplify some expressions containing @code{%phi}.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:221
 msgid ""
 "@c ===beg===\n"
 "@c e : expand ((%phi^2 - %phi - 1) * (A + 1));\n"
@@ -355,7 +355,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:226
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -363,7 +363,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:233
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%pi}\n"
@@ -373,14 +373,14 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:237
 msgid ""
 "@code{%pi} represents the ratio of the perimeter of a circle to its diameter.\n"
 "The numeric value of @code{%pi} is the double-precision floating-point value\n"
 "3.141592653589793d0.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:242
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -388,20 +388,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:246
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{true}\n"
 "@defvr {Constant} true\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:249
 msgid ""
 "@code{true} represents the Boolean constant of the same name.\n"
 "Maxima implements @code{true} by the value @code{T} in Lisp.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:254
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -409,7 +409,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:261
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{und}\n"
@@ -419,22 +419,22 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:263
 msgid ""
 "@code{und} represents an undefined result.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:265
 msgid ""
 "See also @mrefdot{limit}\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:267
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:275
 msgid ""
 "@c ===beg===\n"
 "@c limit (x*sin(x), x, inf);\n"
@@ -445,7 +445,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:280
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -453,36 +453,36 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:284
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{zeroa}\n"
 "@defvr {Constant} zeroa\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:288
 msgid ""
 "@code{zeroa} represents an infinitesimal above zero.  @code{zeroa} can be used\n"
 "in expressions.  @code{limit} simplifies expressions which contain\n"
 "infinitesimals.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:290
 msgid ""
 "See also @mref{zerob} and @mrefdot{limit}\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:292
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:294
 msgid ""
 "@code{limit} simplifies expressions which contain infinitesimals:\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:305
 msgid ""
 "@c ===beg===\n"
 "@c limit(zeroa);\n"
@@ -496,7 +496,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:310
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -504,26 +504,26 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:314
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{zerob}\n"
 "@defvr {Constant} zerob\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:318
 msgid ""
 "@code{zerob} represents an infinitesimal below zero.  @code{zerob} can be used\n"
 "in expressions.  @code{limit} simplifies expressions which contain\n"
 "infinitesimals.\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:320
 msgid ""
 "See also @mref{zeroa} and @mrefdot{limit}\n"
 msgstr ""
 
-# Constants.texi
+#: Constants.texi:325
 msgid ""
 "@opencatbox\n"
 "@category{Constants}\n"
@@ -531,6 +531,3 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Constants.texi
-msgid ""
-msgstr ""

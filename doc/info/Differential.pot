@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Differential.texi
+msgstr ""
+
+#: Differential.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to Differential Equations::  \n"
@@ -25,13 +25,13 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:8
 msgid ""
 "@node Introduction to Differential Equations, Functions and Variables for Differential Equations, Differential Equations, Differential Equations\n"
 "@section Introduction to Differential Equations\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:15
 msgid ""
 "This section describes the functions available in Maxima to obtain\n"
 "analytic solutions for some specific types of first and second-order\n"
@@ -41,13 +41,13 @@ msgid ""
 "@code{plotdf}.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:18
 msgid ""
 "@node Functions and Variables for Differential Equations,  , Introduction to Differential Equations, Differential Equations\n"
 "@section Functions and Variables for Differential Equations\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:29
 msgid ""
 "@anchor{bc2}\n"
 "@deffn {Function} bc2 (@var{solution}, @var{xval1}, @var{yval1}, @var{xval2}, @var{yval2})\n"
@@ -61,12 +61,12 @@ msgid ""
 "form.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:31
 msgid ""
 "See @mref{ode2} for an example of its usage.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:36
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations}\n"
@@ -74,7 +74,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:41
 msgid ""
 "@anchor{desolve}\n"
 "@deffn {Function} desolve @\n"
@@ -82,7 +82,7 @@ msgid ""
 "@fname{desolve} ([@var{eqn_1}, ..., @var{eqn_n}], [@var{x_1}, ..., @var{x_n}])\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:49
 msgid ""
 "The function @code{desolve} solves systems of linear ordinary\n"
 "differential equations using Laplace transform.  Here the @var{eqn}'s\n"
@@ -93,7 +93,7 @@ msgid ""
 "correct way to define two equations:\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:54
 msgid ""
 "@example\n"
 "eqn_1: 'diff(f,x,2) = sin(x) + 'diff(g,x);\n"
@@ -101,12 +101,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:56
 msgid ""
 "The correct way would be:\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:61
 msgid ""
 "@example\n"
 "eqn_1: 'diff(f(x),x,2) = sin(x) + 'diff(g(x),x);\n"
@@ -114,7 +114,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:66
 msgid ""
 "The call to the function @code{desolve} would then be\n"
 "@example\n"
@@ -122,13 +122,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:69
 msgid ""
 "If initial conditions at @code{x=0} are known, they can be supplied before\n"
 "calling @code{desolve} by using @code{atvalue}.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:98
 msgid ""
 "@c ===beg===\n"
 "@c 'diff(f(x),x)='diff(g(x),x)+sin(x);\n"
@@ -160,7 +160,7 @@ msgid ""
 "(%o5) [f(x) = a %e  - a + 1, g(x) = \n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:104
 msgid ""
 "                                                x\n"
 "                                   cos(x) + a %e  - a + g(0) - 1]\n"
@@ -169,17 +169,17 @@ msgid ""
 "(%o6)   [a %e  = a %e , a %e  - cos(x) = a %e  - cos(x)]\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:106
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:108
 msgid ""
 "If @code{desolve} cannot obtain a solution, it returns @code{false}.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:121
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Laplace transform}\n"
@@ -195,12 +195,12 @@ msgid ""
 "@var{y0}}.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:123
 msgid ""
 "See @mref{ode2} for an example of its usage.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:139
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations}\n"
@@ -219,12 +219,12 @@ msgid ""
 "(@code{diff} does not have to be quoted).\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:141
 msgid ""
 "See @mref{ode2} for an example of its usage.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:146
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations}\n"
@@ -232,7 +232,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:160
 msgid ""
 "@anchor{ode2}\n"
 "@deffn {Function} ode2 (@var{eqn}, @var{dvar}, @var{ivar})\n"
@@ -249,7 +249,7 @@ msgid ""
 "third argument.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:173
 msgid ""
 "If @code{ode2} cannot obtain a solution for whatever reason, it returns\n"
 "@code{false}, after perhaps printing out an error message. The methods\n"
@@ -265,7 +265,7 @@ msgid ""
 "two first order linear equations to be solved sequentially.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:180
 msgid ""
 "In the course of solving ODE's, several variables are set purely for\n"
 "informational purposes: @code{method} denotes the method of solution\n"
@@ -275,7 +275,7 @@ msgid ""
 "particular solution for the variation of parameters technique.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:185
 msgid ""
 "In order to solve initial value problems (IVP) functions @code{ic1} and\n"
 "@code{ic2} are available for first and second order equations, and to\n"
@@ -283,12 +283,12 @@ msgid ""
 "can be used.\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:187
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:235
 msgid ""
 "@c ===beg===\n"
 "@c x^2*'diff(y,x) + 3*y*x = sin(x)/x;\n"
@@ -339,15 +339,8 @@ msgid ""
 "                            6           2\n"
 msgstr ""
 
-# Differential.texi
+#: Differential.texi:237
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Differential.texi
-msgid ""
-"@opencatbox\n"
-"@category{Differential equations}\n"
-"@closecatbox\n"
-"@end deffn\n"
-msgstr ""

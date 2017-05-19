@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Special.texi
+msgstr ""
+
+#: Special.texi:13
 msgid ""
 "@menu\n"
 "* Introduction to Special Functions::\n"
@@ -33,7 +33,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:18
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Special Functions, Bessel Functions, Special Functions, Special Functions\n"
@@ -41,12 +41,12 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:20
 msgid ""
 "Special function notation follows:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:26
 msgid ""
 "@example\n"
 "bessel_j (index, expr)         Bessel function, 1st kind\n"
@@ -55,7 +55,7 @@ msgid ""
 "bessel_k (index, expr)         Modified Bessel function, 2nd kind\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:31
 msgid ""
 "hankel_1 (v,z)                 Hankel function of the 1st kind\n"
 "hankel_2 (v,z)                 Hankel function of the 2nd kind\n"
@@ -63,27 +63,27 @@ msgid ""
 "struve_l (v,z)                 Struve L function\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:34
 msgid ""
 "assoc_legendre_p[v,u] (z)      Legendre function of degree v and order u \n"
 "assoc_legendre_q[v,u] (z)      Legendre function, 2nd kind\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:45
 msgid ""
 "%f[p,q] ([], [], expr)         Generalized Hypergeometric function\n"
 "gamma (z)                      Gamma function\n"
 "gamma_greek (a,z)              Incomplete gamma function\n"
 "gamma_incomplete (a,z)         Tail of incomplete gamma function\n"
 "hypergeometric (l1, l2, z)     Hypergeometric function\n"
-"@c IS slommel THE \"LOMMEL\" FUNCTION ?? NOT OTHERWISE MENTIONED IN TEXINFO FILES\n"
+"@c IS slommel THE \\"LOMMEL\\" FUNCTION ?? NOT OTHERWISE MENTIONED IN TEXINFO FILES\n"
 "slommel\n"
 "%m[u,k] (z)                    Whittaker function, 1st kind\n"
 "%w[u,k] (z)                    Whittaker function, 2nd kind\n"
 "erfc (z)                       Complement of the erf function\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:54
 msgid ""
 "expintegral_e (v,z)            Exponential integral E\n"
 "expintegral_e1 (z)             Exponential integral E1\n"
@@ -95,7 +95,7 @@ msgid ""
 "expintegral_chi (z)            Exponential integral Chi\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:59
 msgid ""
 "kelliptic (z)                  Complete elliptic integral of the first \n"
 "                               kind (K)\n"
@@ -103,14 +103,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:63
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Airy functions} @category{Special functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:68
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Bessel Functions, Airy Functions, Introduction to Special Functions, Special Functions\n"
@@ -118,24 +118,24 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:72
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bessel_j}\n"
 "@deffn {Function} bessel_j (@var{v}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:74
 msgid ""
 "The Bessel function of the first kind of order @math{v} and argument @math{z}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:76
 msgid ""
 "@code{bessel_j} is defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:88
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -150,7 +150,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:93
 msgid ""
 "@tex\n"
 "$$\sum_{k=0}^{\infty }{{{\left(-1\right)^{k}\,\left(z\over 2\right)^{v+2\,k}\n"
@@ -158,12 +158,12 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:95
 msgid ""
 "although the infinite series is not used for computations.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:100
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Special functions}\n"
@@ -171,19 +171,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:104
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bessel_y}\n"
 "@deffn {Function} bessel_y (@var{v}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:106
 msgid ""
 "The Bessel function of the second kind of order @math{v} and argument @math{z}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:115
 msgid ""
 "@code{bessel_y} is defined as\n"
 "@ifnottex\n"
@@ -195,7 +195,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:120
 msgid ""
 "@tex\n"
 "$${{\cos \left(\pi\,v\right)\,J_{v}(z)-J_{-v}(z)}\over{\n"
@@ -203,13 +203,13 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:123
 msgid ""
 "when @math{v} is not an integer.  When @math{v} is an integer @math{n},\n"
 "the limit as @math{v} approaches @math{n} is taken.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:128
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Special functions}\n"
@@ -217,20 +217,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:132
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bessel_i}\n"
 "@deffn {Function} bessel_i (@var{v}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:135
 msgid ""
 "The modified Bessel function of the first kind of order @math{v} and argument\n"
 "@math{z}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:148
 msgid ""
 "@code{bessel_i} is defined as\n"
 "@ifnottex\n"
@@ -246,7 +246,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:153
 msgid ""
 "@tex\n"
 "$$\sum_{k=0}^{\infty } {{1\over{k!\,\Gamma\n"
@@ -254,12 +254,12 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:155
 msgid ""
 "although the infinite series is not used for computations.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:160
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Special functions}\n"
@@ -267,20 +267,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:164
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bessel_k}\n"
 "@deffn {Function} bessel_k (@var{v}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:167
 msgid ""
 "The modified Bessel function of the second kind of order @math{v} and argument\n"
 "@math{z}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:179
 msgid ""
 "@code{bessel_k} is defined as\n"
 "@ifnottex\n"
@@ -295,13 +295,13 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:182
 msgid ""
 "when @math{v} is not an integer.  If @math{v} is an integer @math{n},\n"
 "then the limit as @math{v} approaches @math{n} is taken.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:187
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Special functions}\n"
@@ -309,56 +309,56 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:191
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{hankel_1}\n"
 "@deffn {Function} hankel_1 (@var{v}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:194
 msgid ""
 "The Hankel function of the first kind of order @math{v} and argument @math{z}\n"
 "(A&S 9.1.3). @code{hankel_1} is defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:198
 msgid ""
 "@example\n"
 "   bessel_j(v,z) + %i * bessel_y(v,z)\n"
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:202
 msgid ""
 "Maxima evaluates @code{hankel_1} numerically for a complex order @math{v} and \n"
 "complex argument @math{z} in float precision. The numerical evaluation in \n"
 "bigfloat precision is not supported.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:206
 msgid ""
 "When @code{besselexpand} is @code{true}, @code{hankel_1} is expanded in terms\n"
 "of elementary functions when the order @math{v} is half of an odd integer. \n"
 "See @code{besselexpand}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:208
 msgid ""
 "Maxima knows the derivative of @code{hankel_1} wrt the argument @math{z}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:210
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:212
 msgid ""
 "Numerical evaluation:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:227
 msgid ""
 "@c ===beg===\n"
 "@c hankel_1(1,0.5);\n"
@@ -376,12 +376,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:229
 msgid ""
 "Expansion of @code{hankel_1} when @code{besselexpand} is @code{true}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:241
 msgid ""
 "@c ===beg===\n"
 "@c hankel_1(1/2,z),besselexpand:true;\n"
@@ -396,13 +396,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:244
 msgid ""
 "Derivative of @code{hankel_1} wrt the argument @math{z}. The derivative wrt the \n"
 "order @math{v} is not supported. Maxima returns a noun form:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:263
 msgid ""
 "@c ===beg===\n"
 "@c diff(hankel_1(v,z),z);\n"
@@ -424,7 +424,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:268
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Special functions}\n"
@@ -432,51 +432,51 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:272
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{hankel_2}\n"
 "@deffn {Function} hankel_2 (@var{v}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:275
 msgid ""
 "The Hankel function of the second kind of order @math{v} and argument @math{z}\n"
 "(A&S 9.1.4). @code{hankel_2} is defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:279
 msgid ""
 "@example\n"
 "   bessel_j(v,z) - %i * bessel_y(v,z)\n"
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:283
 msgid ""
 "Maxima evaluates @code{hankel_2} numerically for a complex order @math{v} and \n"
 "complex argument @math{z} in float precision. The numerical evaluation in \n"
 "bigfloat precision is not supported.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:287
 msgid ""
 "When @code{besselexpand} is @code{true}, @code{hankel_2} is expanded in terms\n"
 "of elementary functions when the order @math{v} is half of an odd integer. \n"
 "See @code{besselexpand}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:289
 msgid ""
 "Maxima knows the derivative of @code{hankel_2} wrt the argument @math{z}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:291
 msgid ""
 "For examples see @code{hankel_1}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:296
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Special functions}\n"
@@ -484,7 +484,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:301
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{besselexpand}\n"
@@ -492,7 +492,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:307
 msgid ""
 "@c REPHRASE\n"
 "Controls expansion of the Bessel functions when the order is half of\n"
@@ -501,7 +501,7 @@ msgid ""
 "the Bessel function is expanded.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:323
 msgid ""
 "@example\n"
 "(%i1) besselexpand: false$\n"
@@ -520,7 +520,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:329
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Simplification flags and variables} \n"
@@ -529,14 +529,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:333
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{scaled_bessel_i}\n"
 "@deffn {Function} scaled_bessel_i (@var{v}, @var{z}) \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:341
 msgid ""
 "The scaled modified Bessel function of the first kind of order\n"
 "@math{v} and argument @math{z}.  That is, @math{scaled_bessel_i(v,z) =\n"
@@ -547,7 +547,7 @@ msgid ""
 "@code{exp(-abs(z))*bessel_i(v, z)}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:346
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions}\n"
@@ -555,18 +555,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:349
 msgid ""
 "@anchor{scaled_bessel_i0}\n"
 "@deffn {Function} scaled_bessel_i0 (@var{z}) \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:351
 msgid ""
 "Identical to @code{scaled_bessel_i(0,z)}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:356
 msgid ""
 "@opencatbox\n"
 "@category{Bessel functions} @category{Special functions}\n"
@@ -574,14 +574,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:360
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{scaled_bessel_i1}\n"
 "@deffn {Function} scaled_bessel_i1 (@var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:366
 msgid ""
 "Identical to @code{scaled_bessel_i(1,z)}.\n"
 "@opencatbox\n"
@@ -590,7 +590,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:375
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} %s [@var{u},@var{v}] (@var{z}) \n"
@@ -602,7 +602,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:380
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Airy Functions, Gamma and factorial Functions, Bessel Functions, Special Functions\n"
@@ -610,42 +610,42 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:383
 msgid ""
 "The Airy functions Ai(x) and Bi(x) are defined in Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Section 10.4. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:386
 msgid ""
 "@code{y = Ai(x)} and @code{y = Bi(x)} are two linearly independent solutions \n"
 "of the Airy differential equation @code{diff (y(x), x, 2) - x y(x) = 0}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:389
 msgid ""
 "If the argument @code{x} is a real or complex floating point \n"
 "number, the numerical value of the function is returned.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:393
 msgid ""
 "@anchor{airy_ai}\n"
 "@deffn {Function} airy_ai (@var{x})\n"
 "The Airy function Ai(x).  (A&S 10.4.2)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:395
 msgid ""
 "The derivative @code{diff (airy_ai(x), x)} is @code{airy_dai(x)}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:397
 msgid ""
 "See also @mrefcomma{airy_bi} @mrefcomma{airy_dai} @mrefdot{airy_dbi}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:402
 msgid ""
 "@opencatbox\n"
 "@category{Airy functions} @category{Special functions}\n"
@@ -653,7 +653,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:407
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{airy_dai}\n"
@@ -661,12 +661,12 @@ msgid ""
 "The derivative of the Airy function Ai @code{airy_ai(x)}. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:409
 msgid ""
 "See @code{airy_ai}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:414
 msgid ""
 "@opencatbox\n"
 "@category{Airy functions} @category{Special functions}\n"
@@ -674,7 +674,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:419
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{airy_bi}\n"
@@ -682,17 +682,17 @@ msgid ""
 "The Airy function Bi(x).  (A&S 10.4.3)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:421
 msgid ""
 "The derivative @code{diff (airy_bi(x), x)} is @code{airy_dbi(x)}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:423
 msgid ""
 "See @code{airy_ai}, @code{airy_dbi}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:428
 msgid ""
 "@opencatbox\n"
 "@category{Airy functions} @category{Special functions}\n"
@@ -700,7 +700,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:433
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{airy_dbi}\n"
@@ -708,12 +708,12 @@ msgid ""
 "The derivative of the Airy Bi function @code{airy_bi(x)}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:435
 msgid ""
 "See @code{airy_ai} and @code{airy_bi}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:440
 msgid ""
 "@opencatbox\n"
 "@category{Airy functions} @category{Special functions}\n"
@@ -721,7 +721,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:445
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Gamma and factorial Functions, Exponential Integrals, Airy Functions, Special Functions\n"
@@ -729,47 +729,47 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:449
 msgid ""
 "The gamma function and the related beta, psi and incomplete gamma \n"
 "functions are defined in Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Chapter 6.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:453
 msgid ""
 "@c FOLLOWING FUNCTIONS IN bffac.mac ARE NOT DESCRIBED IN .texi FILES: !!!\n"
 "@c obfac, azetb, vonschtoonk, divrlst, obzeta, bfhzeta, bfpsi0 !!!\n"
 "@c DON'T KNOW WHICH ONES ARE INTENDED FOR GENERAL USE !!!\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:456
 msgid ""
 "@c FOLLOWING FUNCTIONS IN bffac.mac ARE DESCRIBED IN Number.texi: !!!\n"
 "@c burn, bzeta, bfzeta !!!\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:459
 msgid ""
 "@c FOLLOWING FUNCTIONS IN bffac.mac ARE DESCRIBED HERE: !!!\n"
 "@c bfpsi, bffac, cbffac !!!\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:463
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bffac}\n"
 "@deffn {Function} bffac (@var{expr}, @var{n})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:467
 msgid ""
 "Bigfloat version of the factorial (shifted gamma)\n"
 "function.  The second argument is how many digits to retain and return,\n"
 "it's a good idea to request a couple of extra.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:472
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Numerical evaluation}\n"
@@ -777,7 +777,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:477
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bfpsi}\n"
@@ -785,7 +785,7 @@ msgid ""
 "@deffnx {Function} bfpsi0 (@var{z}, @var{fpprec})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:482
 msgid ""
 "@code{bfpsi} is the polygamma function of real argument @var{z} and integer\n"
 "order @var{n}.  @code{bfpsi0} is the digamma function.\n"
@@ -793,20 +793,20 @@ msgid ""
 "@code{bfpsi (0, @var{z}, @var{fpprec})}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:485
 msgid ""
 "These functions return bigfloat values.\n"
 "@var{fpprec} is the bigfloat precision of the return value.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:489
 msgid ""
 "@c psi0(1) = -%gamma IS AN INTERESTING PROPERTY BUT IN THE ABSENCE OF ANY OTHER\n"
 "@c DISCUSSION OF THE PROPERTIES OF THIS FUNCTION, THIS STATEMENT SEEMS OUT OF PLACE.\n"
 "@c Note @code{-bfpsi0 (1, fpprec)} provides @code{%gamma} (Euler's constant) as a bigfloat.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:494
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Numerical evaluation}\n"
@@ -814,7 +814,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:499
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{cbffac}\n"
@@ -822,12 +822,12 @@ msgid ""
 "Complex bigfloat factorial.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:501
 msgid ""
-"@code{load (\"bffac\")} loads this function.\n"
+"@code{load (\\"bffac\\")} loads this function.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:506
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Complex variables} @category{Numerical evaluation}\n"
@@ -835,19 +835,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:510
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gamma}\n"
 "@deffn {Function} gamma (@var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:512
 msgid ""
 "The basic definition of the gamma function (A&S 6.1.1) is\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:527
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -865,7 +865,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:535
 msgid ""
 "Maxima simplifies @code{gamma} for positive integer and positive and negative \n"
 "rational numbers. For half integral values the result is a rational number times \n"
@@ -876,44 +876,44 @@ msgid ""
 "avoid internal overflow. See @code{factlim} and @code{gammalim}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:537
 msgid ""
 "For negative integers @code{gamma} is not defined.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:540
 msgid ""
 "Maxima can evalute @code{gamma} numerically for real and complex values in float \n"
 "and bigfloat precision.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:542
 msgid ""
 "@code{gamma} has mirror symmetry.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:545
 msgid ""
 "When @code{gamma_expand} is @code{true}, Maxima expands @code{gamma} for \n"
 "arguments @code{z+n} and @code{z-n} where @code{n} is an integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:547
 msgid ""
 "Maxima knows the derivate of @code{gamma}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:549
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:551
 msgid ""
 "Simplification for integer, half integral, and rational numbers:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:566
 msgid ""
 "@example\n"
 "(%i1) map('gamma,[1,2,3,4,5,6,7,8,9]);\n"
@@ -931,12 +931,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:568
 msgid ""
 "Numerical evaluation for real and complex values:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:576
 msgid ""
 "@example\n"
 "(%i4) map('gamma,[2.5,2.5b0]);\n"
@@ -947,12 +947,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:578
 msgid ""
 "@code{gamma} has mirror symmetry:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:584
 msgid ""
 "@example\n"
 "(%i6) declare(z,complex)$\n"
@@ -961,19 +961,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:587
 msgid ""
 "Maxima expands @code{gamma(z+n)} and @code{gamma(z-n)}, when @code{gamma_expand} \n"
 "is @code{true}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:590
 msgid ""
 "@example\n"
 "(%i8) gamma_expand:true$\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:596
 msgid ""
 "(%i9) [gamma(z+1),gamma(z-1),gamma(z+2)/gamma(z+1)];\n"
 "                               gamma(z)\n"
@@ -982,12 +982,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:598
 msgid ""
 "The deriviative of @code{gamma}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:604
 msgid ""
 "@example\n"
 "(%i10) diff(gamma(z),z);\n"
@@ -996,17 +996,17 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:606
 msgid ""
 "See also @mrefdot{makegamma}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:608
 msgid ""
 "The Euler-Mascheroni constant is @code{%gamma}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:613
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Special functions}\n"
@@ -1014,18 +1014,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:616
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} log_gamma (@var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:618
 msgid ""
 "The natural logarithm of the gamma function.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:623
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Special functions}\n"
@@ -1033,18 +1033,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:626
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} gamma_greek (@var{a}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:628
 msgid ""
 "The lower incomplete gamma function (A&S 6.5.2):\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:643
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -1062,12 +1062,12 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:645
 msgid ""
 "See also @mref{gamma_incomplete} (upper incomplete gamma function).\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:650
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Special functions}\n"
@@ -1075,19 +1075,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:654
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gamma_incomplete}\n"
 "@deffn {Function} gamma_incomplete (@var{a}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:656
 msgid ""
 "The incomplete upper gamma function (A&S 6.5.3):\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:671
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -1105,20 +1105,20 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:675
 msgid ""
 "See also @mref{gamma_expand} for controlling how\n"
 "@code{gamma_incomplete} is expressed in terms of elementary functions\n"
 "and @code{erfc}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:678
 msgid ""
 "Also see the related functions @code{gamma_incomplete_regularized} and\n"
 "@code{gamma_incomplete_generalized}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:683
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Special functions}\n"
@@ -1126,18 +1126,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:686
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} gamma_incomplete_regularized (@var{a}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:688
 msgid ""
 "The regularized incomplete upper gamma function (A&S 6.5.1):\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:700
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -1152,19 +1152,19 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:704
 msgid ""
 "See also @mref{gamma_expand} for controlling how\n"
 "@code{gamma_incomplete} is expressed in terms of elementary functions\n"
 "and @mrefdot{erfc}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:706
 msgid ""
 "Also see @code{gamma_incomplete}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:711
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Special functions}\n"
@@ -1172,18 +1172,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:714
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} gamma_incomplete_generalized (@var{a}, @var{z1}, @var{z1})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:716
 msgid ""
 "The generalized incomplete gamma function.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:732
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -1202,24 +1202,28 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:734
 msgid ""
 "Also see @code{gamma_incomplete} and @code{gamma_incomplete_regularized}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:739
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Special functions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Special.texi:745
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gamma_expand}\n"
 "@defvr {Option variable} gamma_expand\n"
 "Default value: @code{false}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:750
 msgid ""
 "@code{gamma_expand} controls expansion of @code{gamma_incomplete}.\n"
 "When @code{gamma_expand} is @code{true}, @code{gamma_incomplete(v,z)}\n"
@@ -1227,7 +1231,7 @@ msgid ""
 "@code{z}, @code{exp(z)}, and @code{erfc(z)} when possible.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:766
 msgid ""
 "@example\n"
 "(%i1) gamma_incomplete(2,z);\n"
@@ -1246,14 +1250,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:770
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Simplification flags and variables}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:776
 msgid ""
 "@end defvr\n"
 "@c -----------------------------------------------------------------------------\n"
@@ -1262,7 +1266,7 @@ msgid ""
 "Default value: 10000\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:783
 msgid ""
 "@c REPHRASE\n"
 "@code{gammalim} controls simplification of the gamma\n"
@@ -1272,25 +1276,25 @@ msgid ""
 "simplification of the result of @code{gamma} of an integer argument as well.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:787
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Simplification flags and variables}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:789
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:792
 msgid ""
 "@c NEED CROSS REFS HERE\n"
 "@c NEED EXAMPLES HERE\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:798
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{makegamma}\n"
@@ -1299,12 +1303,12 @@ msgid ""
 "functions in @var{expr} into gamma functions.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:800
 msgid ""
 "See also @mrefdot{makefact}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:805
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -1312,7 +1316,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:810
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} beta (@var{a}, @var{b})\n"
@@ -1320,19 +1324,19 @@ msgid ""
 "(A&S 6.2.1).\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:814
 msgid ""
 "Maxima simplifies the beta function for positive integers and rational \n"
 "numbers, which sum to an integer. When @code{beta_args_sum_to_integer} is \n"
 "@code{true}, Maxima simplifies also general expressions which sum to an integer. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:816
 msgid ""
 "For @var{a} or @var{b} equal to zero the beta function is not defined.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:821
 msgid ""
 "In general the beta function is not defined for negative integers as an \n"
 "argument. The exception is for @var{a=-n}, @var{n} a positive integer \n"
@@ -1340,20 +1344,20 @@ msgid ""
 "analytic continuation. Maxima gives for this case a result.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:825
 msgid ""
 "When @code{beta_expand} is @code{true}, expressions like @code{beta(a+n,b)} and \n"
 "@code{beta(a-n,b)} or @code{beta(a,b+n)} and @code{beta(a,b-n)} with @code{n} \n"
 "an integer are simplified.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:828
 msgid ""
 "Maxima can evaluate the beta function for real and complex values in float and \n"
 "bigfloat precision. For numerical evaluation Maxima uses @code{log_gamma}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:833
 msgid ""
 "@example\n"
 "           - log_gamma(b + a) + log_gamma(b) + log_gamma(a)\n"
@@ -1361,33 +1365,33 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:835
 msgid ""
 "Maxima knows that the beta function is symmetric and has mirror symmetry.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:838
 msgid ""
 "Maxima knows the derivatives of the beta function with respect to @var{a} or \n"
 "@var{b}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:840
 msgid ""
 "To express the beta function as a ratio of gamma functions see @code{makegamma}. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:842
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:844
 msgid ""
 "Simplification, when one of the arguments is an integer:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:851
 msgid ""
 "@example\n"
 "(%i1) [beta(2,3),beta(2,1/3),beta(2,a)];\n"
@@ -1397,12 +1401,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:853
 msgid ""
 "Simplification for two rational numbers as arguments which sum to an integer:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:860
 msgid ""
 "@example\n"
 "(%i2) [beta(1/2,5/2),beta(1/3,2/3),beta(1/4,3/4)];\n"
@@ -1412,13 +1416,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:863
 msgid ""
 "When setting @code{beta_args_sum_to_integer} to @code{true} more general \n"
 "expression are simplified, when the sum of the arguments is an integer:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:871
 msgid ""
 "@example\n"
 "(%i3) beta_args_sum_to_integer:true$\n"
@@ -1429,12 +1433,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:873
 msgid ""
 "The possible results, when one of the arguments is a negative integer: \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:880
 msgid ""
 "@example\n"
 "(%i5) [beta(-3,1),beta(-3,2),beta(-3,3)];\n"
@@ -1444,13 +1448,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:883
 msgid ""
 "@code{beta(a+n,b)} or @code{beta(a-n)} with @code{n} an integer simplifies when \n"
 "@code{beta_expand} is @code{true}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:890
 msgid ""
 "@example\n"
 "(%i6) beta_expand:true$\n"
@@ -1460,17 +1464,17 @@ msgid ""
 "                       b + a              a - 1           b\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:892
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:894
 msgid ""
 "Beta is not defined, when one of the arguments is zero:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:900
 msgid ""
 "@example\n"
 "(%i7) beta(0,b);\n"
@@ -1479,44 +1483,44 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:903
 msgid ""
 "Numercial evaluation for real and complex arguments in float or bigfloat \n"
 "precision:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:907
 msgid ""
 "@example\n"
 "(%i8) beta(2.5,2.3);\n"
 "(%o8) .08694748611299981\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:910
 msgid ""
 "(%i9) beta(2.5,1.4+%i);\n"
 "(%o9) 0.0640144950796695 - .1502078053286415 %i\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:913
 msgid ""
 "(%i10) beta(2.5b0,2.3b0);\n"
 "(%o10) 8.694748611299969b-2\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:917
 msgid ""
 "(%i11) beta(2.5b0,1.4b0+%i);\n"
 "(%o11) 6.401449507966944b-2 - 1.502078053286415b-1 %i\n"
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:919
 msgid ""
 "Beta is symmetric and has mirror symmetry:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:927
 msgid ""
 "@example\n"
 "(%i14) beta(a,b)-beta(b,a);\n"
@@ -1527,12 +1531,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:929
 msgid ""
 "The derivative of the beta function wrt @code{a}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:935
 msgid ""
 "@example\n"
 "(%i17) diff(beta(a,b),a);\n"
@@ -1541,7 +1545,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:940
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -1549,18 +1553,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:943
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} beta_incomplete (@var{a}, @var{b}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:945
 msgid ""
 "The basic definition of the incomplete beta function (A&S 6.6.1) is\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:957
 msgid ""
 "@example\n"
 "@group\n"
@@ -1575,33 +1579,33 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:961
 msgid ""
 "This definition is possible for @math{realpart(a)>0} and @math{realpart(b)>0} \n"
 "and @math{abs(z)<1}. For other values the incomplete beta function can be \n"
 "defined through a generalized hypergeometric function:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:965
 msgid ""
 "@example\n"
 "   gamma(a) hypergeometric_generalized([a, 1 - b], [a + 1], z) z\n"
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:968
 msgid ""
 "(See functions.wolfram.com for a complete definition of the incomplete beta \n"
 "function.)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:971
 msgid ""
 "For negative integers @math{a = -n} and positive integers @math{b=m} with \n"
 "@math{m<=n} the incomplete beta function is defined through\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:981
 msgid ""
 "@example\n"
 "                            m - 1           k\n"
@@ -1614,58 +1618,58 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:984
 msgid ""
 "Maxima uses this definition to simplify @code{beta_incomplete} for @var{a} a \n"
 "negative integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:988
 msgid ""
 "For @var{a} a positive integer, @code{beta_incomplete} simplifies for any \n"
 "argument @var{b} and @var{z} and for @var{b} a positive integer for any \n"
 "argument @var{a} and @var{z}, with the exception of @var{a} a negative integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:992
 msgid ""
 "For @math{z=0} and @math{realpart(a)>0}, @code{beta_incomplete} has the \n"
 "specific value zero. For @var{z=1} and @math{realpart(b)>0}, \n"
 "@code{beta_incomplete} simplifies to the beta function @code{beta(a,b)}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:996
 msgid ""
 "Maxima evaluates @code{beta_incomplete} numerically for real and complex values \n"
 "in float or bigfloat precision. For the numerical evaluation an expansion of the \n"
 "incomplete beta function in continued fractions is used.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1000
 msgid ""
 "When the option variable @code{beta_expand} is @code{true}, Maxima expands\n"
 "expressions like @code{beta_incomplete(a+n,b,z)} and\n"
 "@code{beta_incomplete(a-n,b,z)} where n is a positive integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1004
 msgid ""
 "Maxima knows the derivatives of @code{beta_incomplete} with respect to the \n"
 "variables @var{a}, @var{b} and @var{z} and the integral with respect to the \n"
 "variable @var{z}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1006
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1008
 msgid ""
 "Simplification for @var{a} a positive integer:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1016
 msgid ""
 "@example\n"
 "(%i1) beta_incomplete(2,b,z);\n"
@@ -1676,12 +1680,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1018
 msgid ""
 "Simplification for @var{b} a positive integer:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1026
 msgid ""
 "@example\n"
 "(%i2) beta_incomplete(a,2,z);\n"
@@ -1692,12 +1696,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1028
 msgid ""
 "Simplification for @var{a} and @var{b} a positive integer:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1038
 msgid ""
 "@example\n"
 "(%i3) beta_incomplete(3,2,z);\n"
@@ -1710,12 +1714,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1040
 msgid ""
 "@var{a} is a negative integer and @math{b<=(-a)}, Maxima simplifies:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1048
 msgid ""
 "@example\n"
 "(%i4) beta_incomplete(-3,1,z);\n"
@@ -1726,12 +1730,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1050
 msgid ""
 "For the specific values @math{z=0} and @math{z=1}, Maxima simplifies:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1058
 msgid ""
 "@example\n"
 "(%i5) assume(a>0,b>0)$\n"
@@ -1742,12 +1746,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1060
 msgid ""
 "Numerical evaluation in float or bigfloat precision:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1068
 msgid ""
 "@example\n"
 "(%i8) beta_incomplete(0.25,0.50,0.9);\n"
@@ -1758,12 +1762,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1070
 msgid ""
 "For @math{abs(z)>1} @code{beta_incomplete} returns a complex result:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1075
 msgid ""
 "@example\n"
 "(%i11) beta_incomplete(0.25,0.50,1.7);\n"
@@ -1771,12 +1775,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1077
 msgid ""
 "Results for more general complex arguments:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1085
 msgid ""
 "@example\n"
 "(%i14) beta_incomplete(0.25+%i,1.0+%i,1.7+%i);\n"
@@ -1787,12 +1791,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1087
 msgid ""
 "Expansion, when @code{beta_expand} is @code{true}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1094
 msgid ""
 "@example\n"
 "(%i23) beta_incomplete(a+1,b,z),beta_expand:true;\n"
@@ -1802,7 +1806,7 @@ msgid ""
 "                             b + a                 b + a\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1103
 msgid ""
 "(%i24) beta_incomplete(a-1,b,z),beta_expand:true;\n"
 "                                                           b  a - 1\n"
@@ -1814,7 +1818,7 @@ msgid ""
 "Derivative and integral for @code{beta_incomplete}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1121
 msgid ""
 "@example\n"
 "(%i34) diff(beta_incomplete(a, b, z), z);\n"
@@ -1835,7 +1839,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1126
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -1843,18 +1847,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1129
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} beta_incomplete_regularized (@var{a}, @var{b}, @var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1131
 msgid ""
 "The regularized incomplete beta function (A&S 6.6.2), defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1138
 msgid ""
 "@example\n"
 "beta_incomplete_regularized(a, b, z) = \n"
@@ -1864,57 +1868,57 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1142
 msgid ""
 "As for @code{beta_incomplete} this definition is not complete. See \n"
 "functions.wolfram.com for a complete definition of \n"
 "@code{beta_incomplete_regularized}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1145
 msgid ""
 "@code{beta_incomplete_regularized} simplifies @var{a} or @var{b} a positive \n"
 "integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1149
 msgid ""
 "For @math{z=0} and @math{realpart(a)>0}, @code{beta_incomplete_regularized} has \n"
 "the specific value 0. For @var{z=1} and @math{realpart(b)>0}, \n"
 "@code{beta_incomplete_regularized} simplifies to 1.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1152
 msgid ""
 "Maxima can evaluate @code{beta_incomplete_regularized} for real and complex \n"
 "arguments in float and bigfloat precision.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1156
 msgid ""
 "When @code{beta_expand} is @code{true}, Maxima expands \n"
 "@code{beta_incomplete_regularized} for arguments @math{a+n} or @math{a-n}, \n"
 "where n is an integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1160
 msgid ""
 "Maxima knows the derivatives of @code{beta_incomplete_regularized} with respect \n"
 "to the variables @var{a}, @var{b}, and @var{z} and the integral with respect to \n"
 "the variable @var{z}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1162
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1164
 msgid ""
 "Simplification for @var{a} or @var{b} a positive integer:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1169
 msgid ""
 "@example\n"
 "(%i1) beta_incomplete_regularized(2,b,z);\n"
@@ -1922,14 +1926,14 @@ msgid ""
 "(%o1)                       1 - (1 - z)  (b z + 1)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1173
 msgid ""
 "(%i2) beta_incomplete_regularized(a,2,z);\n"
 "                                               a\n"
 "(%o2)                         (a (1 - z) + 1) z\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1178
 msgid ""
 "(%i3) beta_incomplete_regularized(3,2,z);\n"
 "                                               3\n"
@@ -1937,12 +1941,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1180
 msgid ""
 "For the specific values @math{z=0} and @math{z=1}, Maxima simplifies:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1188
 msgid ""
 "@example\n"
 "(%i4) assume(a>0,b>0)$\n"
@@ -1953,13 +1957,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1191
 msgid ""
 "Numerical evaluation for real and complex arguments in float and bigfloat \n"
 "precision:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1204
 msgid ""
 "@example\n"
 "(%i7) beta_incomplete_regularized(0.12,0.43,0.9);\n"
@@ -1975,12 +1979,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1206
 msgid ""
 "Expansion, when @code{beta_expand} is @code{true}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1220
 msgid ""
 "@example\n"
 "(%i13) beta_incomplete_regularized(a+1,b,z);\n"
@@ -1997,12 +2001,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1222
 msgid ""
 "The derivative and the integral wrt @var{z}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1238
 msgid ""
 "@example\n"
 "(%i15) diff(beta_incomplete_regularized(a,b,z),z);\n"
@@ -2021,7 +2025,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1243
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -2029,18 +2033,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1246
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} beta_incomplete_generalized (@var{a}, @var{b}, @var{z1}, @var{z2})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1248
 msgid ""
 "The basic definition of the generalized incomplete beta function is\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1260
 msgid ""
 "@example\n"
 "@group\n"
@@ -2055,13 +2059,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1263
 msgid ""
 "Maxima simplifies @code{beta_incomplete_regularized} for @var{a} and @var{b} \n"
 "a positive integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1268
 msgid ""
 "For @math{realpart(a)>0} and @math{z1=0} or @math{z2=0}, Maxima simplifies\n"
 "@code{beta_incomplete_generalized} to @code{beta_incomplete}. For \n"
@@ -2069,38 +2073,38 @@ msgid ""
 "expression with @code{beta} and @code{beta_incomplete}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1271
 msgid ""
 "Maxima evaluates @code{beta_incomplete_regularized} for real and complex values \n"
 "in float and bigfloat precision.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1275
 msgid ""
 "When @code{beta_expand} is @code{true}, Maxima expands \n"
 "@code{beta_incomplete_generalized} for @math{a+n} and @math{a-n}, @var{n} a \n"
 "positive integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1279
 msgid ""
 "Maxima knows the derivative of @code{beta_incomplete_generalized} with respect \n"
 "to the variables @var{a}, @var{b}, @var{z1}, and @var{z2} and the integrals with\n"
 "respect to the variables @var{z1} and @var{z2}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1281
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1284
 msgid ""
 "Maxima simplifies @code{beta_incomplete_generalized} for @var{a} and @var{b} a \n"
 "positive integer:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1304
 msgid ""
 "@example\n"
 "(%i1) beta_incomplete_generalized(2,b,z1,z2);\n"
@@ -2123,13 +2127,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1307
 msgid ""
 "Simplification for specific values @math{z1=0}, @math{z2=0}, @math{z1=1}, or \n"
 "@math{z2=1}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1312
 msgid ""
 "@example\n"
 "(%i4) assume(a > 0, b > 0)$\n"
@@ -2137,38 +2141,38 @@ msgid ""
 "(%o5)                    - beta_incomplete(a, b, z1)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1315
 msgid ""
 "(%i6) beta_incomplete_generalized(a,b,0,z2);\n"
 "(%o6)                    - beta_incomplete(a, b, z2)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1318
 msgid ""
 "(%i7) beta_incomplete_generalized(a,b,z1,1);\n"
 "(%o7)              beta(a, b) - beta_incomplete(a, b, z1)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1322
 msgid ""
 "(%i8) beta_incomplete_generalized(a,b,1,z2);\n"
 "(%o8)              beta_incomplete(a, b, z2) - beta(a, b)\n"
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1324
 msgid ""
 "Numerical evaluation for real arguments in float or bigfloat precision:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1328
 msgid ""
 "@example\n"
 "(%i9) beta_incomplete_generalized(1/2,3/2,0.25,0.31);\n"
 "(%o9)                        .09638178086368676\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1333
 msgid ""
 "(%i10) fpprec:32$\n"
 "(%i10) beta_incomplete_generalized(1/2,3/2,0.25,0.31b0);\n"
@@ -2176,12 +2180,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1335
 msgid ""
 "Numerical evaluation for complex arguments in float or bigfloat precision:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1343
 msgid ""
 "@example\n"
 "(%i11) beta_incomplete_generalized(1/2+%i,3/2+%i,0.25,0.31);\n"
@@ -2192,24 +2196,24 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1346
 msgid ""
 "Expansion for @math{a+n} or @math{a-n}, @var{n} a positive integer, when \n"
 "@code{beta_expand} is @code{true}: \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1349
 msgid ""
 "@example\n"
 "(%i14) beta_expand:true$\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1351
 msgid ""
 "(%i15) beta_incomplete_generalized(a+1,b,z1,z2);\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1360
 msgid ""
 "               b   a           b   a\n"
 "       (1 - z1)  z1  - (1 - z2)  z2\n"
@@ -2221,7 +2225,7 @@ msgid ""
 "(%i16) beta_incomplete_generalized(a-1,b,z1,z2);\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1369
 msgid ""
 "       beta_incomplete_generalized(a, b, z1, z2) (- b - a + 1)\n"
 "(%o16) -------------------------------------------------------\n"
@@ -2233,12 +2237,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1371
 msgid ""
 "Derivative wrt the variable @var{z1} and integrals wrt @var{z1} and @var{z2}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1383
 msgid ""
 "@example\n"
 "(%i17) diff(beta_incomplete_generalized(a,b,z1,z2),z1);\n"
@@ -2253,7 +2257,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1388
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -2261,20 +2265,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1391
 msgid ""
 "@defvr {Option variable} beta_expand\n"
 "Default value: false\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1395
 msgid ""
 "When @code{beta_expand} is @code{true}, @code{beta(a,b)} and related \n"
 "functions are expanded for arguments like @math{a+n} or @math{a-n}, \n"
 "where @math{n} is an integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1400
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Simplification flags and variables}\n"
@@ -2282,24 +2286,28 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1403
 msgid ""
 "@defvr {Option variable} beta_args_sum_to_integer\n"
 "Default value: false\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1406
 msgid ""
 "When @code{beta_args_sum_to_integer} is @code{true}, Maxima simplifies \n"
 "@code{beta(a,b)}, when the arguments @var{a} and @var{b} sum to an integer.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1411
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Simplification flags and variables}\n"
 "@closecatbox\n"
 "@end defvr\n"
+msgstr ""
+
+#: Special.texi:1418
+msgid ""
 "@c NEED INFO HERE ABOUT THE SUBSCRIPTED FORM psi[n](x)\n"
 "@c I (rtoy) don't think there is a plain psi(x) function anymore.\n"
 "@c @deffn {Function} psi (@var{x})\n"
@@ -2307,14 +2315,14 @@ msgid ""
 "@deffn {Function} psi [@var{n}](@var{x})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1422
 msgid ""
 "The derivative of @code{log (gamma (@var{x}))} of order @code{@var{n}+1}.\n"
 "Thus, @code{psi[0](@var{x})} is the first derivative,\n"
 "@code{psi[1](@var{x})} is the second derivative, etc.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1433
 msgid ""
 "Maxima does not know how, in general, to compute a numerical value of\n"
 "@code{psi}, but it can compute some exact values for rational args.\n"
@@ -2328,13 +2336,13 @@ msgid ""
 "will return an exact value.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1436
 msgid ""
 "The function @code{bfpsi} in the @code{bffac} package can compute\n"
 "numerical values.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1441
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -2342,37 +2350,37 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1444
 msgid ""
 "@defvr {Option variable} maxpsiposint\n"
 "Default value: 20\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1447
 msgid ""
 "@code{maxpsiposint} is the largest positive value for which\n"
 "@code{psi[n](x)} will try to compute an exact value.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1451
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1453
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1456
 msgid ""
 "@defvr {Option variable} maxpsinegint\n"
 "Default value: -10\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1461
 msgid ""
 "@code{maxpsinegint} is the most negative value for which\n"
 "@code{psi[n](x)} will try to compute an exact value.  That is if\n"
@@ -2380,25 +2388,25 @@ msgid ""
 "return simplified answer, even if it could.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1465
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1467
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1470
 msgid ""
 "@defvr {Option variable} maxpsifracnum\n"
 "Default value: 6\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1475
 msgid ""
 "Let @var{x} be a rational number less than one of the form @code{p/q}.\n"
 "If @code{p} is greater than @code{maxpsifracnum}, then\n"
@@ -2406,25 +2414,25 @@ msgid ""
 "value.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1479
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1481
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1484
 msgid ""
 "@defvr {Option variable} maxpsifracdenom\n"
 "Default value: 6\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1489
 msgid ""
 "Let @var{x} be a rational number less than one of the form @code{p/q}.\n"
 "If @code{q} is greater than @code{maxpsifracdenom}, then\n"
@@ -2432,19 +2440,19 @@ msgid ""
 "value.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1493
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1495
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1502
 msgid ""
 "@c NEED CROSS REFS HERE\n"
 "@c NEED EXAMPLES HERE\n"
@@ -2454,30 +2462,34 @@ msgid ""
 "functions in @var{expr} into factorials.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1504
 msgid ""
 "See also @mrefdot{makegamma}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1509
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Special.texi:1515
+msgid ""
 "@c AREN'T THERE OTHER FUNCTIONS THAT DO ESSENTIALLY THE SAME THING ??\n"
 "@deffn {Function} numfactor (@var{expr})\n"
 "Returns the numerical factor multiplying the expression\n"
 "@var{expr}, which should be a single term.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1518
 msgid ""
 "@c WHY IS content MENTIONED IN THIS CONTEXT ??\n"
 "@code{content} returns the greatest common divisor (gcd) of all terms in a sum.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1529
 msgid ""
 "@example\n"
 "(%i1) gamma (7/2);\n"
@@ -2491,37 +2503,41 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1534
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Special.texi:1538
+msgid ""
 "@node Exponential Integrals, Error Function, Gamma and factorial Functions, Special Functions\n"
 "@section Exponential Integrals\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1542
 msgid ""
 "The Exponential Integral and related funtions are defined in \n"
 "Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Chapter 5\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1545
 msgid ""
 "@deffn {Function} expintegral_e1 (@var{z})\n"
 "The Exponential Integral E1(z) (A&S 5.1.1) defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1549
 msgid ""
 "@ifnotinfo\n"
 "@tex\n"
 "$$E_1(z) = \int_z^\infty {e^{-t} \over t} dt$$\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1557
 msgid ""
 "with $|\arg\ z| < \pi$.\n"
 "@end tex\n"
@@ -2532,7 +2548,7 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1562
 msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals} @category{Special functions}\n"
@@ -2540,13 +2556,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1565
 msgid ""
 "@deffn {Function} expintegral_ei (@var{z})\n"
 "The Exponential Integral Ei(z) (A&S 5.1.2)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1570
 msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals} @category{Special functions}\n"
@@ -2554,13 +2570,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1573
 msgid ""
 "@deffn {Function} expintegral_li (@var{z})\n"
 "The Exponential Integral Li(z)  (A&S 5.1.3)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1578
 msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals} @category{Special functions}\n"
@@ -2568,13 +2584,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1581
 msgid ""
 "@deffn {Function} expintegral_e (@var{n},@var{z})\n"
 "The Exponential Integral En(z)  (A&S 5.1.4) defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1592
 msgid ""
 "@ifnotinfo\n"
 "@tex\n"
@@ -2588,7 +2604,7 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1597
 msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals} @category{Special functions}\n"
@@ -2596,13 +2612,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1600
 msgid ""
 "@deffn {Function} expintegral_si (@var{z})\n"
 "The Exponential Integral Si(z) (A&S 5.2.1) defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1609
 msgid ""
 "@ifnotinfo\n"
 "@tex\n"
@@ -2614,7 +2630,7 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1614
 msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals} @category{Special functions}\n"
@@ -2622,20 +2638,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1617
 msgid ""
 "@deffn {Function} expintegral_ci (@var{z})\n"
 "The Exponential Integral Ci(z) (A&S 5.2.2) defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1621
 msgid ""
 "@ifnotinfo\n"
 "@tex\n"
 "$${\rm Ci}(z) = \gamma + \log z + \int_0^z {{\cos t - 1} \over t} dt$$\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1627
 msgid ""
 "with $|\arg\ z| < \pi$.\n"
 "@end tex\n"
@@ -2644,13 +2660,13 @@ msgid ""
 "@math{%gamma + log(z) + integrate((cos(t) - 1)/t, t, 0, z)}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1630
 msgid ""
 "with @math{abs(arg z) < %pi}\n"
 "@end ifinfo\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1635
 msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals} @category{Special functions}\n"
@@ -2658,13 +2674,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1638
 msgid ""
 "@deffn {Function} expintegral_shi (@var{z})\n"
 "The Exponential Integral Shi(z) (A&S 5.2.3) defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1647
 msgid ""
 "@ifnotinfo\n"
 "@tex\n"
@@ -2674,26 +2690,30 @@ msgid ""
 "@ifinfo\n"
 "@math{integrate(sinh(t)/t, t, 0, z)}\n"
 "@end ifinfo\n"
+msgstr ""
+
+#: Special.texi:1653
+msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals} @category{Special functions}\n"
 "@closecatbox\n"
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1656
 msgid ""
 "@deffn {Function} expintegral_chi (@var{z})\n"
 "The Exponential Integral Chi(z) (A&S 5.2.4) defined as\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1660
 msgid ""
 "@ifnotinfo\n"
 "@tex\n"
 "$${\rm Chi}(z) = \gamma + \log z + \int_0^z {{\cosh t - 1} \over t} dt$$\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1666
 msgid ""
 "with $|\arg\ z| < \pi$.\n"
 "@end tex\n"
@@ -2702,13 +2722,13 @@ msgid ""
 "@math{%gamma + log(z) + integrate((cosh(t) - 1)/t, t, 0, z)}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1669
 msgid ""
 "with @math{abs(arg z) < %pi}\n"
 "@end ifinfo\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1674
 msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals} @category{Special functions}\n"
@@ -2716,20 +2736,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1677
 msgid ""
 "@defvr {Option variable} expintrep\n"
 "Default value: false\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1681
 msgid ""
 "Change the representation of one of the exponential integrals,\n"
 "@var{expintegral_e(m, z)}, @var{expintegral_e1}, or\n"
 "@var{expintegral_ei} to an equivalent form if possible.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1686
 msgid ""
 "Possible values for @var{expintrep} are @var{false},\n"
 "@var{gamma_incomplete}, @var{expintegral_e1}, @var{expintegral_ei},\n"
@@ -2737,7 +2757,7 @@ msgid ""
 "@var{expintegral_hyp}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1692
 msgid ""
 "@var{false} means that the representation is not changed.  Other\n"
 "values indicate the representation is to be changed to use the\n"
@@ -2746,7 +2766,7 @@ msgid ""
 "means @var{expintegral_shi} or @var{expintegral_chi}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1697
 msgid ""
 "@opencatbox\n"
 "@category{Exponential Integrals}\n"
@@ -2754,13 +2774,13 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1700
 msgid ""
 "@defvr {Option variable} expintexpand \n"
 "Default value: false\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1708
 msgid ""
 "Expand the Exponential Integral E[n](z)\n"
 "for half integral values in terms of Erfc or Erf and\n"
@@ -2771,32 +2791,32 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1711
 msgid ""
 "@node Error Function, Struve Functions, Exponential Integrals, Special Functions\n"
 "@section Error Function\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1715
 msgid ""
 "The Error function and related funtions are defined in \n"
 "Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Chapter 7\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1719
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{erf}\n"
 "@deffn {Function} erf (@var{z})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1721
 msgid ""
 "The Error Function erf(z) (A&S 7.1.1)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1727
 msgid ""
 "See also flag @mrefdot{erfflag}\n"
 "@opencatbox\n"
@@ -2805,14 +2825,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1731
 msgid ""
 "@anchor{erfc}\n"
 "@deffn {Function} erfc (@var{z})\n"
 "The Complementary Error Function erfc(z) (A&S 7.1.2)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1737
 msgid ""
 "@code{erfc(z) = 1-erf(z)}\n"
 "@opencatbox\n"
@@ -2821,13 +2841,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1740
 msgid ""
 "@deffn {Function} erfi (@var{z})\n"
 "The Imaginary Error Function. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1746
 msgid ""
 "@code{erfi(z) = -%i*erf(%i*z)}\n"
 "@opencatbox\n"
@@ -2836,7 +2856,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1753
 msgid ""
 "@deffn {Function} erf_generalized (@var{z1},@var{z2})\n"
 "Generalized Error function Erf(z1,z2)\n"
@@ -2846,25 +2866,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1756
 msgid ""
 "@deffn {Function} fresnel_c (@var{z})\n"
 "The Fresnel Integral C(z) = integrate(cos((%pi/2)*t^2),t,0,z). (A&S 7.3.1)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1759
 msgid ""
 "The simplification fresnel_c(-x) = -fresnel_c(x) is applied when\n"
 "flag @code{trigsign} is true.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1762
 msgid ""
 "The simplification fresnel_c(%i*x) =  %i*fresnel_c(x) is applied when\n"
 "flag @code{%iargs} is true.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1768
 msgid ""
 "See flags @code{erf_representation} and @code{hypergeometric_representation}.\n"
 "@opencatbox\n"
@@ -2873,25 +2893,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1771
 msgid ""
 "@deffn {Function} fresnel_s (@var{z})\n"
 "The Fresnel Integral S(z) = integrate(sin((%pi/2)*t^2),t,0,z). (A&S 7.3.2)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1774
 msgid ""
 "The simplification fresnel_s(-x) = -fresnel_s(x) is applied when\n"
 "flag @code{trigsign} is true.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1777
 msgid ""
 "The simplification fresnel_s(%i*x) =  -%i*fresnel_s(x) is applied when\n"
 "flag @code{%iargs} is true.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1783
 msgid ""
 "See flags @code{erf_representation} and @code{hypergeometric_representation}.\n"
 "@opencatbox\n"
@@ -2900,52 +2920,52 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1786
 msgid ""
 "@defvr {Option variable} erf_representation\n"
 "Default value: false\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1790
 msgid ""
 "When T erfc, erfi, erf_generalized, fresnel_s \n"
 "and fresnel_c are transformed to erf.\n"
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1793
 msgid ""
 "@defvr {Option variable} hypergeometric_representation\n"
 "Default value: false\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1797
 msgid ""
 "Enables transformation to a Hypergeometric\n"
 "representation for fresnel_s and fresnel_c\n"
 "@end defvr\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1800
 msgid ""
 "@node Struve Functions, Hypergeometric Functions, Error Function, Special Functions\n"
 "@section Struve Functions\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1803
 msgid ""
 "The Struve functions are defined in Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Chapter 12.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1807
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} struve_h (@var{v}, @var{z})\n"
 "The Struve Function H of order v and argument z. (A&S 12.1.1)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1812
 msgid ""
 "@opencatbox\n"
 "@category{Special functions}\n"
@@ -2953,14 +2973,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1816
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} struve_l (@var{v}, @var{z})\n"
 "The Modified Struve Function L of order v and argument z. (A&S 12.2.1)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1821
 msgid ""
 "@opencatbox\n"
 "@category{Special functions}\n"
@@ -2968,25 +2988,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1824
 msgid ""
 "@node Hypergeometric Functions, Parabolic Cylinder Functions, Struve Functions, Special Functions\n"
 "@section Hypergeometric Functions\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1827
 msgid ""
 "The Hypergeometric Functions are defined in Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Chapters 13 and 15.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1830
 msgid ""
 "Maxima has very limited knowledge of these functions.  They\n"
 "can be returned from function @code{hgfred}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1839
 msgid ""
 "@deffn {Function} %m [@var{k},@var{u}] (@var{z}) \n"
 "Whittaker M function\n"
@@ -2998,7 +3018,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1846
 msgid ""
 "@deffn {Function} %w [@var{k},@var{u}] (@var{z}) \n"
 "Whittaker W function.  (A&S 13.1.33)\n"
@@ -3006,6 +3026,10 @@ msgid ""
 "@category{Special functions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Special.texi:1856
+msgid ""
 "@deffn {Function} %f [@var{p},@var{q}] (@var{[a],[b],z}) \n"
 "The pFq(a1,a2,..ap;b1,b2,..bq;z) hypergeometric function,\n"
 "where @code{a} a list of length @code{p} and \n"
@@ -3016,7 +3040,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1865
 msgid ""
 "@deffn {Function} hypergeometric ([@var{a1}, ..., @var{ap}],[@var{b1}, ... ,@var{bq}], x)\n"
 "The hypergeometric function. Unlike Maxima's @code{%f} hypergeometric\n"
@@ -3028,7 +3052,7 @@ msgid ""
 "supported.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1870
 msgid ""
 "When the option variable @code{expand_hypergeometric} is true (default\n"
 "is false) and one of the arguments @code{a1} through @code{ap} is a\n"
@@ -3036,12 +3060,12 @@ msgid ""
 "expanded polynomial. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1872
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1877
 msgid ""
 "@example\n"
 "(%i1)  hypergeometric([],[],x);\n"
@@ -3049,31 +3073,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1879
 msgid ""
 "Polynomial cases automatically expand when @code{expand_hypergeometric} is true:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1883
 msgid ""
 "@example\n"
 "(%i2) hypergeometric([-3],[7],x);\n"
 "(%o2) hypergeometric([-3],[7],x)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1887
 msgid ""
 "(%i3) hypergeometric([-3],[7],x), expand_hypergeometric : true;\n"
 "(%o3) -x^3/504+3*x^2/56-3*x/7+1\n"
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1889
 msgid ""
 "Both double float and big float evaluation is supported:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1900
 msgid ""
 "@example\n"
 "(%i4) hypergeometric([5.1],[7.1 + %i],0.42);\n"
@@ -3087,25 +3111,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1903
 msgid ""
 "@node Parabolic Cylinder Functions, Functions and Variables for Special Functions, Hypergeometric Functions, Special Functions\n"
 "@section  Parabolic Cylinder Functions\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1906
 msgid ""
 "The Parabolic Cylinder Functions are defined in Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Chapter 19.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1909
 msgid ""
 "Maxima has very limited knowledge of these functions.  They\n"
 "can be returned from function @code{hgfred}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1916
 msgid ""
 "@deffn {Function} parabolic_cylinder_d (@var{v}, @var{z}) \n"
 "The parabolic cylinder function @code{parabolic_cylinder_d(v,z)}. (A&S 19.3.1)\n"
@@ -3113,19 +3137,27 @@ msgid ""
 "@category{Special functions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Special.texi:1922
+msgid ""
 "@node Functions and Variables for Special Functions,  , Parabolic Cylinder Functions, Special Functions\n"
 "@section Functions and Variables for Special Functions\n"
+msgstr ""
+
+#: Special.texi:1926
+msgid ""
 "@anchor{specint}\n"
 "@deffn {Function} specint (exp(- s*@var{t}) * @var{expr}, @var{t})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1929
 msgid ""
 "Compute the Laplace transform of @var{expr} with respect to the variable @var{t}.\n"
 "The integrand @var{expr} may contain special functions. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1935
 msgid ""
 "The following special functions are handled by @code{specint}: incomplete gamma \n"
 "function, error functions (but not the error function @code{erfi}, it is easy to \n"
@@ -3134,33 +3166,33 @@ msgid ""
 "functions, hermite and the laguerre polynomials.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1939
 msgid ""
 "Furthermore, @code{specint} can handle the hypergeometric function \n"
 "@code{%f[p,q]([],[],z)}, the whittaker function of the first kind \n"
 "@code{%m[u,k](z)} and of the second kind @code{%w[u,k](z)}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1942
 msgid ""
 "The result may be in terms of special functions and can include unsimplified \n"
 "hypergeometric functions.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1946
 msgid ""
 "When @code{laplace} fails to find a Laplace transform, @code{specint} is called. \n"
 "Because @code{laplace} knows more general rules for Laplace transforms, it is \n"
 "preferable to use @code{laplace} and not @code{specint}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1949
 msgid ""
 "@code{demo(hypgeo)} displays several examples of Laplace transforms computed by \n"
 "@code{specint}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1977
 msgid ""
 "Examples:\n"
 "@c ===beg===\n"
@@ -3191,12 +3223,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1979
 msgid ""
 "Examples for exponential integrals:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1988
 msgid ""
 "@example\n"
 "(%i4) assume(s>0,a>0,s-a>0)$\n"
@@ -3208,12 +3240,12 @@ msgid ""
 "(%i6) logarc:true$\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:1990
 msgid ""
 "(%i7) gamma_expand:true$\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2005
 msgid ""
 "radcan(specint((cos(t)*expintegral_si(t)\n"
 "                     -sin(t)*expintegral_ci(t))*%e^(-s*t),t));\n"
@@ -3231,13 +3263,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2008
 msgid ""
 "Results when using the expansion of @code{gamma_incomplete} and when changing \n"
 "the representation to @code{expintegral_e1}:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2017
 msgid ""
 "@example\n"
 "(%i10) assume(s>0)$\n"
@@ -3249,7 +3281,7 @@ msgid ""
 "                               sqrt(%pi) sqrt(s)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2023
 msgid ""
 "(%i12) gamma_expand:true$\n"
 "(%i13) specint(1/sqrt(%pi*t)*unit_step(t-k)*%e^(-s*t),t);\n"
@@ -3258,7 +3290,7 @@ msgid ""
 "                                     sqrt(s)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2031
 msgid ""
 "(%i14) expintrep:expintegral_e1$\n"
 "(%i15) ratsimp(specint(1/(t+a)^2*%e^(-s*t),t));\n"
@@ -3269,7 +3301,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2036
 msgid ""
 "@opencatbox\n"
 "@category{Laplace transform}\n"
@@ -3277,19 +3309,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2038
 msgid ""
 "@deffn {Function} hypergeometric_simp (@var{e})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2042
 msgid ""
 "@code{hypergeometric_simp} simplifies hypergeometric functions\n"
 "by applying @code{hgfred}\n"
 "to the arguments of any hypergeometric functions in the expression @var{e}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2047
 msgid ""
 "Only instances of @code{hypergeometric} are affected;\n"
 "any @code{%f}, @code{%w}, and @code{%m} in the expression @var{e} are not affected.\n"
@@ -3297,22 +3329,22 @@ msgid ""
 "(instead of changing to @code{%f} as @code{hgfred} would).\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2049
 msgid ""
 "@code{load(hypergeometric);} loads this function.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2051
 msgid ""
 "See also @mrefdot{hgfred}\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2053
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2077
 msgid ""
 "@c ===beg===\n"
 "@c load (hypergeometric) $\n"
@@ -3339,7 +3371,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2082
 msgid ""
 "@opencatbox\n"
 "@category{Hypergeometric functions} @category{Simplification functions} @category{Special functions}\n"
@@ -3347,20 +3379,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2085
 msgid ""
 "@anchor{hgfred}\n"
 "@deffn {Function} hgfred (@var{a}, @var{b}, @var{t})\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2089
 msgid ""
 "Simplify the generalized hypergeometric function in terms of other,\n"
 "simpler, forms.  @var{a} is a list of numerator parameters and @var{b}\n"
 "is a list of the denominator parameters. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2095
 msgid ""
 "If @code{hgfred} cannot simplify the hypergeometric function, it returns\n"
 "an expression of the form @code{%f[p,q]([a], [b], x)} where @var{p} is\n"
@@ -3369,7 +3401,7 @@ msgid ""
 "function. \n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2100
 msgid ""
 "@example\n"
 "(%i1) assume(not(equal(z,0)));\n"
@@ -3377,7 +3409,7 @@ msgid ""
 "(%i2) hgfred([v+1/2],[2*v+1],2*%i*z);\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2107
 msgid ""
 "                     v/2                               %i z\n"
 "                    4    bessel_j(v, z) gamma(v + 1) %e\n"
@@ -3387,7 +3419,7 @@ msgid ""
 "(%i3) hgfred([1,1],[2],z);\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2112
 msgid ""
 "                                   log(1 - z)\n"
 "(%o3)                            - ----------\n"
@@ -3395,7 +3427,7 @@ msgid ""
 "(%i4) hgfred([a,a+1/2],[3/2],z^2);\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2117
 msgid ""
 "                               1 - 2 a          1 - 2 a\n"
 "                        (z + 1)        - (1 - z)\n"
@@ -3403,18 +3435,18 @@ msgid ""
 "                                 2 (1 - 2 a) z\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2119
 msgid ""
 "@end example\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2122
 msgid ""
 "It can be beneficial to load orthopoly too as the following example\n"
 "shows.  Note that @var{L} is the generalized Laguerre polynomial.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2127
 msgid ""
 "@example\n"
 "(%i5) load(orthopoly)$\n"
@@ -3422,7 +3454,7 @@ msgid ""
 "@group\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2135
 msgid ""
 "                                    (a - 1)\n"
 "                                 2 L       (z)\n"
@@ -3433,7 +3465,7 @@ msgid ""
 "(%i7) ev(%);\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2140
 msgid ""
 "                                  2\n"
 "                                 z        2 z\n"
@@ -3441,13 +3473,13 @@ msgid ""
 "                              a (a + 1)    a\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2143
 msgid ""
 "@end example\n"
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2151
 msgid ""
 "@deffn {Function} lambert_w (@var{z})\n"
 "The principal branch of Lambert's W function W(z), the solution of \n"
@@ -3458,19 +3490,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2155
 msgid ""
 "@deffn {Function} generalized_lambert_w (@var{k}, @var{z})\n"
 "The @var{k}-th branch of Lambert's W function W(z), the solution of \n"
 "@code{z = W(z) * exp(W(z))}. (DLMF 4.13)\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2157
 msgid ""
 "The principal branch, denoted Wp(z) in DLMF, is @code{lambert_w(z) = generalized_lambert_w(0,z)}.\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2163
 msgid ""
 "The other branch with real values, denoted Wm(z) in DLMF, is @code{generalized_lambert_w(-1,z)}.\n"
 "@opencatbox\n"
@@ -3479,7 +3511,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2173
 msgid ""
 "@deffn {Function} nzeta (@var{z})\n"
 "The Plasma Dispersion Function \n"
@@ -3490,7 +3522,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2180
 msgid ""
 "@deffn {Function} nzetar (@var{z})\n"
 "Returns @code{realpart(nzeta(z))}.\n"
@@ -3500,7 +3532,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
+#: Special.texi:2187
 msgid ""
 "@deffn {Function} nzetai (@var{z})\n"
 "Returns @code{imagpart(nzeta(z))}.\n"
@@ -3510,6 +3542,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Special.texi
-msgid ""
-msgstr ""

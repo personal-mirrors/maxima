@@ -1,42 +1,42 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# bernstein.texi
+msgstr ""
+
+#: bernstein.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for Bernstein::\n"
 "@end menu\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:7
 msgid ""
 "@node Functions and Variables for Bernstein,  , Bernstein-pkg, Bernstein-pkg\n"
 "@section Functions and Variables for Bernstein\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:10
 msgid ""
 "@anchor{bernstein_poly}\n"
 "@deffn {Function} bernstein_poly (@var{k}, @var{n}, @var{x})\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:18
 msgid ""
 "Provided @code{k} is not a negative integer, the Bernstein polynomials\n"
 "are defined by @code{bernstein_poly(k,n,x) = binomial(n,k) x^k\n"
@@ -47,13 +47,13 @@ msgid ""
 "example:\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:21
 msgid ""
 "@example\n"
 "(%i1) load(bernstein)$\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:28
 msgid ""
 "(%i2) bernstein_poly(k,n,x);\n"
 "(%o2)                bernstein_poly(k, n, x)\n"
@@ -63,12 +63,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:30
 msgid ""
 "The Bernstein polynomials have both a gradef property and an integrate property:\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:42
 msgid ""
 "@example\n"
 "(%i4) diff(bernstein_poly(k,n,x),x);\n"
@@ -83,13 +83,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:45
 msgid ""
 "For numeric inputs, both real and complex, the Bernstein polynomials evaluate\n"
 "to a numeric result:\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:54
 msgid ""
 "@example\n"
 "(%i6) bernstein_poly(5,9, 1/2 + %i);\n"
@@ -101,27 +101,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:56
 msgid ""
-"To use @code{bernstein_poly}, first @code{load(\"bernstein\")}.\n"
+"To use @code{bernstein_poly}, first @code{load(\\"bernstein\\")}.\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:58
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: bernstein.texi:63
+msgid ""
 "@anchor{bernstein_explicit}\n"
 "@defvr {Variable} bernstein_explicit\n"
 "Default value: @code{false}\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:67
 msgid ""
 "When either @code{k} or @code{n} are non integers, the option variable \n"
 "@code{bernstein_explicit} controls the expansion of @code{bernstein(k,n,x)} \n"
 "into its explicit form; example:\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:77
 msgid ""
 "@example\n"
 "(%i1) bernstein_poly(k,n,x);\n"
@@ -134,14 +138,18 @@ msgid ""
 "@emph{always} expands to its explicit form.\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:79
 msgid ""
 "@end defvr\n"
+msgstr ""
+
+#: bernstein.texi:83
+msgid ""
 "@anchor{multibernstein_poly}\n"
 "@deffn {Function} multibernstein_poly (@var{[k1,k2,@dots{}, kp]}, @var{[n1,n2,@dots{}, np]}, @var{[x1,x2,@dots{}, xp]})\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:88
 msgid ""
 "The multibernstein polynomial @code{multibernstein_poly (@var{[k1, k2, ..., \n"
 "kp]}, @var{[n1, n2, ..., np]}, @var{[x1, x2, ..., xp]})} is the product of\n"
@@ -149,30 +157,30 @@ msgid ""
 "bernstein_poly(k2, n2, x2) ... bernstein_poly(kp, np, xp)}.\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:90
 msgid ""
-"To use @code{multibernstein_poly}, first @code{load(\"bernstein\")}.\n"
+"To use @code{multibernstein_poly}, first @code{load(\\"bernstein\\")}.\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:92
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:95
 msgid ""
 "@anchor{bernstein_approx}\n"
 "@deffn {Function} bernstein_approx (@var{f}, @var{[x1, x1, @dots{}, xn]}, n)\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:99
 msgid ""
 "Return the @code{n}-th order uniform Bernstein polynomial approximation for the\n"
 "function @code{(x1, x2, ..., xn) |--> f}.\n"
 "Examples\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:121
 msgid ""
 "@example\n"
 "(%i1) bernstein_approx(f(x),[x], 2);\n"
@@ -197,29 +205,29 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:123
 msgid ""
-"To use @code{bernstein_approx}, first @code{load(\"bernstein\")}.\n"
+"To use @code{bernstein_approx}, first @code{load(\\"bernstein\\")}.\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:125
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:128
 msgid ""
 "@anchor{bernstein_expand}\n"
 "@deffn {Function} bernstein_expand (@var{e}, @var{[x1, x1, @dots{}, xn]})\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:131
 msgid ""
 "Express the @emph{polynomial} @code{e} exactly as a linear combination of multi-variable\n"
 "Bernstein polynomials.\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:138
 msgid ""
 "@example\n"
 "(%i1) bernstein_expand(x*y+1,[x,y]);\n"
@@ -229,21 +237,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:140
 msgid ""
 "Maxima signals an error when the first argument isn't a polynomial.\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:142
 msgid ""
-"To use @code{bernstein_expand}, first @code{load(\"bernstein\")}.\n"
+"To use @code{bernstein_expand}, first @code{load(\\"bernstein\\")}.\n"
 msgstr ""
 
-# bernstein.texi
+#: bernstein.texi:144
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bernstein.texi
-msgid ""
-msgstr ""

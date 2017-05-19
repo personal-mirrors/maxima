@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# numericalio.texi
+msgstr ""
+
+#: numericalio.texi:6
 msgid ""
 "@menu\n"
 "* Introduction to numericalio::\n"
@@ -26,13 +26,13 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:9
 msgid ""
 "@node Introduction to numericalio, Functions and Variables for plain-text input and output, numericalio-pkg, numericalio-pkg\n"
 "@section Introduction to numericalio\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:15
 msgid ""
 "@code{numericalio} is a collection of functions to read and write files and streams.\n"
 "Functions for plain-text input and output\n"
@@ -41,7 +41,7 @@ msgid ""
 "can read and write only floating-point numbers.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:20
 msgid ""
 "If there already exists a list, matrix, or array object to store input data,\n"
 "@code{numericalio} input functions can write data into that object.\n"
@@ -49,19 +49,19 @@ msgid ""
 "to store the data, and return that object.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:24
 msgid ""
 "@opencatbox\n"
 "@category{File input} @category{File output} @category{Share packages} @category{Package numericalio}\n"
 "@closecatbox\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:26
 msgid ""
 "@subsection Plain-text input and output\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:33
 msgid ""
 "In plain-text input and output,\n"
 "it is assumed that each item to read or write is an atom:\n"
@@ -71,7 +71,7 @@ msgid ""
 "but the results are not specified here and subject to change.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:41
 msgid ""
 "Atoms in both input and output files have the same format as\n"
 "in Maxima batch files or the interactive console.\n"
@@ -82,18 +82,18 @@ msgid ""
 "No continuation character (to join broken lines) is recognized.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:43
 msgid ""
 "@subsection Separator flag values for input\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:46
 msgid ""
 "The functions for plain-text input and output take an optional argument,\n"
 "@var{separator_flag}, that tells what character separates data.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:56
 msgid ""
 "For plain-text input, these values of @var{separator_flag} are recognized:\n"
 "@code{comma} for comma separated values,\n"
@@ -106,7 +106,7 @@ msgid ""
 "@code{space} is assumed.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:62
 msgid ""
 "In plain-text input, multiple successive space and tab characters count as a single separator.\n"
 "However, multiple comma, pipe, or semicolon characters are significant.\n"
@@ -115,31 +115,31 @@ msgid ""
 "For example, @code{1234,,Foo} is treated the same as @code{1234,false,Foo}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:64
 msgid ""
 "@subsection Separator flag values for output\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:68
 msgid ""
 "For plain-text output, @code{tab}, for values separated by the tab character,\n"
 "is recognized as a value of @var{separator_flag},\n"
 "as well as @code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:72
 msgid ""
 "In plain-text output, @code{false} atoms are written as such;\n"
 "a list @code{[1234, false, Foo]} is written @code{1234,false,Foo},\n"
 "and there is no attempt to collapse the output to @code{1234,,Foo}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:74
 msgid ""
 "@subsection Binary floating-point input and output\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:79
 msgid ""
 "@code{numericalio} functions can read and write 8-byte IEEE 754 floating-point numbers.\n"
 "These numbers can be stored either least significant byte first or most significant byte first,\n"
@@ -147,27 +147,31 @@ msgid ""
 "If not specified, @code{numericalio} assumes the external byte order is most-significant byte first.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:82
 msgid ""
 "Other kinds of numbers are coerced to 8-byte floats;\n"
 "@code{numericalio} cannot read or write binary non-numeric data.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:86
 msgid ""
 "Some Lisp implementations do not recognize IEEE 754 special values\n"
 "(positive and negative infinity, not-a-number values, denormalized values).\n"
 "The effect of reading such values with @code{numericalio} is undefined.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:88
 msgid ""
 "@code{numericalio} includes functions to open a stream for reading or writing a stream of bytes.\n"
+msgstr ""
+
+#: numericalio.texi:92
+msgid ""
 "@node Functions and Variables for plain-text input and output, Functions and Variables for binary input and output, Introduction to numericalio, numericalio-pkg\n"
 "@section Functions and Variables for plain-text input and output\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:98
 msgid ""
 "@deffn {Function} read_matrix @\n"
 "@fname{read_matrix} (@var{S}) @\n"
@@ -176,7 +180,7 @@ msgid ""
 "@fname{read_matrix} (@var{S}, @var{M}, @var{separator_flag})\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:103
 msgid ""
 "@code{read_matrix(@var{S})} reads the source @var{S} and returns its entire content as a matrix.\n"
 "The size of the matrix is inferred from the input data;\n"
@@ -184,7 +188,7 @@ msgid ""
 "If some lines have different lengths, @code{read_matrix} complains.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:108
 msgid ""
 "@code{read_matrix(@var{S}, @var{M})} read the source @var{S} into the matrix @var{M},\n"
 "until @var{M} is full or the source is exhausted.\n"
@@ -192,46 +196,46 @@ msgid ""
 "the input need not have the same number of rows and columns as @var{M}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:118
 msgid ""
 "The source @var{S} may be a file name or a stream which for example allows skipping\n"
 "the very first line of a file (that may be useful, if you read CSV data, where the\n"
 "first line often contains the description of the columns):\n"
 "@example\n"
-"s : openr(\"data.txt\");\n"
+"s : openr(\\"data.txt\\");\n"
 "readline(s);  /* skip the first line */\n"
 "M : read_matrix(s, comma);  /* read the following (comma-separated) lines into matrix M */\n"
 "close(s);\n"
 "@end example\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:122
 msgid ""
 "The recognized values of @var{separator_flag} are\n"
 "@code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.\n"
 "If @var{separator_flag} is not specified, the file is assumed space-delimited.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:126
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
 "@closecatbox\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:128
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:132
 msgid ""
 "@deffn {Function} read_array @\n"
 "@fname{read_array} (@var{S}, @var{A}) @\n"
 "@fname{read_array} (@var{S}, @var{A}, @var{separator_flag})\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:137
 msgid ""
 "Reads the source @var{S} into the array @var{A},\n"
 "until @var{A} is full or the source is exhausted.\n"
@@ -239,44 +243,44 @@ msgid ""
 "the input need not conform to the dimensions of @var{A}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:139
 msgid ""
 "The source @var{S} may be a file name or a stream.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:143
 msgid ""
 "The recognized values of @var{separator_flag} are\n"
 "@code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.\n"
 "If @var{separator_flag} is not specified, the file is assumed space-delimited.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:147
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
 "@closecatbox\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:149
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:153
 msgid ""
 "@deffn {Function} read_hashed_array @\n"
 "@fname{read_hashed_array} (@var{S}, @var{A}) @\n"
 "@fname{read_hashed_array} (@var{S}, @var{A}, @var{separator_flag})\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:156
 msgid ""
 "Reads the source @var{S} and returns its entire content as a hashed array.\n"
 "The source @var{S} may be a file name or a stream.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:162
 msgid ""
 "@code{read_hashed_array} treats the first item on each line as a hash key,\n"
 "and associates the remainder of the line (as a list) with the key.\n"
@@ -285,65 +289,65 @@ msgid ""
 "Lines need not have the same numbers of elements.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:166
 msgid ""
 "The recognized values of @var{separator_flag} are\n"
 "@code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.\n"
 "If @var{separator_flag} is not specified, the file is assumed space-delimited.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:170
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
 "@closecatbox\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:172
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:176
 msgid ""
 "@deffn {Function} read_nested_list @\n"
 "@fname{read_nested_list} (@var{S}) @\n"
 "@fname{read_nested_list} (@var{S}, @var{separator_flag})\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:179
 msgid ""
 "Reads the source @var{S} and returns its entire content as a nested list.\n"
 "The source @var{S} may be a file name or a stream.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:183
 msgid ""
 "@code{read_nested_list} returns a list which has a sublist for each\n"
 "line of input. Lines need not have the same numbers of elements.\n"
 "Empty lines are @i{not} ignored: an empty line yields an empty sublist.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:187
 msgid ""
 "The recognized values of @var{separator_flag} are\n"
 "@code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.\n"
 "If @var{separator_flag} is not specified, the file is assumed space-delimited.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:191
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
 "@closecatbox\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:193
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:199
 msgid ""
 "@deffn {Function} read_list @\n"
 "@fname{read_list} (@var{S}) @\n"
@@ -352,83 +356,83 @@ msgid ""
 "@fname{read_list} (@var{S}, @var{L}, @var{separator_flag})\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:201
 msgid ""
 "@code{read_list(@var{S})} reads the source @var{S} and returns its entire content as a flat list.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:204
 msgid ""
 "@code{read_list(@var{S}, @var{L})} reads the source @var{S} into the list @var{L},\n"
 "until @var{L} is full or the source is exhausted.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:206
 msgid ""
 "The source @var{S} may be a file name or a stream.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:210
 msgid ""
 "The recognized values of @var{separator_flag} are\n"
 "@code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.\n"
 "If @var{separator_flag} is not specified, the file is assumed space-delimited.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:214
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
 "@closecatbox\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:216
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:220
 msgid ""
 "@deffn {Function} write_data @\n"
 "@fname{write_data} (@var{X}, @var{D}) @\n"
 "@fname{write_data} (@var{X}, @var{D}, @var{separator_flag})\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:222
 msgid ""
 "Writes the object @var{X} to the destination @var{D}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:225
 msgid ""
 "@code{write_data} writes a matrix in row-major order,\n"
 "with one line per row.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:229
 msgid ""
 "@code{write_data} writes an array created by @code{array} or @code{make_array}\n"
 "in row-major order, with a new line at the end of every slab.\n"
 "Higher-dimensional slabs are separated by additional new lines.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:232
 msgid ""
 "@code{write_data} writes a hashed array with each key followed by\n"
 "its associated list on one line.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:234
 msgid ""
 "@code{write_data} writes a nested list with each sublist on one line.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:236
 msgid ""
 "@code{write_data} writes a flat list all on one line.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:244
 msgid ""
 "The destination @var{D} may be a file name or a stream.\n"
 "When the destination is a file name,\n"
@@ -439,32 +443,32 @@ msgid ""
 "in particular, the stream remains open.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:248
 msgid ""
 "The recognized values of @var{separator_flag} are\n"
 "@code{comma}, @code{pipe}, @code{semicolon}, @code{space}, and @code{tab}.\n"
 "If @var{separator_flag} is not specified, the file is assumed space-delimited.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:252
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File output}\n"
 "@closecatbox\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:254
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:257
 msgid ""
 "@node Functions and Variables for binary input and output, , Functions and Variables for plain-text input and output, numericalio-pkg\n"
 "@section Functions and Variables for binary input and output\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:263
 msgid ""
 "@deffn {Function} assume_external_byte_order (@var{byte_order_flag})\n"
 "Tells @code{numericalio} the byte order for reading and writing binary data.\n"
@@ -473,12 +477,12 @@ msgid ""
 "and @code{msb} which indicates most-significant byte first, also called big-endian byte order.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:265
 msgid ""
 "If not specified, @code{numericalio} assumes the external byte order is most-significant byte first.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:270
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio}\n"
@@ -486,13 +490,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:273
 msgid ""
 "@deffn {Function} openr_binary (@var{file_name})\n"
 "Returns an input stream of 8-bit unsigned bytes to read the file named by @var{file_name}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:278
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
@@ -500,13 +504,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:281
 msgid ""
 "@deffn {Function} openw_binary (@var{file_name})\n"
 "Returns an output stream of 8-bit unsigned bytes to write the file named by @var{file_name}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:286
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File output}\n"
@@ -514,13 +518,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:289
 msgid ""
 "@deffn {Function} opena_binary (@var{file_name})\n"
 "Returns an output stream of 8-bit unsigned bytes to append the file named by @var{file_name}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:294
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File output}\n"
@@ -528,7 +532,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:299
 msgid ""
 "@deffn {Function} read_binary_matrix (@var{S}, @var{M})\n"
 "Reads binary 8-byte floating point numbers from the source @var{S} into the matrix @var{M}\n"
@@ -536,17 +540,17 @@ msgid ""
 "Elements of @var{M} are read in row-major order.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:301
 msgid ""
 "The source @var{S} may be a file name or a stream.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:303
 msgid ""
 "The byte order in elements of the source is specified by @code{assume_external_byte_order}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:308
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
@@ -554,7 +558,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:314
 msgid ""
 "@deffn {Function} read_binary_array (@var{S}, @var{A})\n"
 "Reads binary 8-byte floating point numbers from the source @var{S} into the array @var{A}\n"
@@ -563,17 +567,17 @@ msgid ""
 "Elements of @var{A} are read in row-major order.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:316
 msgid ""
 "The source @var{S} may be a file name or a stream.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:318
 msgid ""
 "The byte order in elements of the source is specified by @code{assume_external_byte_order}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:323
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
@@ -581,32 +585,32 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:327
 msgid ""
 "@deffn {Function} read_binary_list @\n"
 "@fname{read_binary_list} (@var{S}) @\n"
 "@fname{read_binary_list} (@var{S}, @var{L})\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:331
 msgid ""
 "@code{read_binary_list(@var{S})} reads the entire content of the source @var{S}\n"
 "as a sequence of binary 8-byte floating point numbers, and returns it as a list.\n"
 "The source @var{S} may be a file name or a stream.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:334
 msgid ""
 "@code{read_binary_list(@var{S}, @var{L})} reads 8-byte binary floating point numbers\n"
 "from the source @var{S} until the list @var{L} is full, or the source is exhausted.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:336
 msgid ""
 "The byte order in elements of the source is specified by @code{assume_external_byte_order}.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:341
 msgid ""
 "@opencatbox\n"
 "@category{Package numericalio} @category{File input}\n"
@@ -614,12 +618,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:343
 msgid ""
 "@deffn {Function} write_binary_data (@var{X}, @var{D})\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:348
 msgid ""
 "Writes the object @var{X}, comprising binary 8-byte IEEE 754 floating-point numbers,\n"
 "to the destination @var{D}.\n"
@@ -627,7 +631,7 @@ msgid ""
 "@code{write_binary_data} cannot write non-numeric data.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:353
 msgid ""
 "The object @var{X} may be a list, a nested list, a matrix,\n"
 "or an array created by @code{array} or @code{make_array};\n"
@@ -635,7 +639,7 @@ msgid ""
 "@code{write_binary_data} writes nested lists, matrices, and arrays in row-major order.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:361
 msgid ""
 "The destination @var{D} may be a file name or a stream.\n"
 "When the destination is a file name,\n"
@@ -646,16 +650,9 @@ msgid ""
 "in particular, the stream remains open.\n"
 msgstr ""
 
-# numericalio.texi
+#: numericalio.texi:364
 msgid ""
 "The byte order in elements of the destination\n"
 "is specified by @code{assume_external_byte_order}.\n"
 msgstr ""
 
-# numericalio.texi
-msgid ""
-"@opencatbox\n"
-"@category{Package numericalio} @category{File output}\n"
-"@closecatbox\n"
-"@end deffn\n"
-msgstr ""

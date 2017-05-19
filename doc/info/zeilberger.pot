@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# zeilberger.texi
+msgstr ""
+
+#: zeilberger.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to zeilberger::\n"
@@ -25,13 +25,13 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:8
 msgid ""
 "@node Introduction to zeilberger, Functions and Variables for zeilberger, zeilberger-pkg, zeilberger-pkg\n"
 "@section Introduction to zeilberger\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:13
 msgid ""
 "@code{zeilberger} is a implementation of Zeilberger's algorithm\n"
 "for definite hypergeometric summation, and also \n"
@@ -39,41 +39,41 @@ msgid ""
 "summation.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:15
 msgid ""
-"@code{zeilberger} makes use of the \"filtering\" optimization method developed by Axel Riese.\n"
+"@code{zeilberger} makes use of the \\"filtering\\" optimization method developed by Axel Riese.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:17
 msgid ""
 "@code{zeilberger} was developed by Fabrizio Caruso.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:19
 msgid ""
 "@code{load (zeilberger)} loads this package.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:23
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products} @category{Share packages} @category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:25
 msgid ""
 "@subsection The indefinite summation problem\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:29
 msgid ""
 "@code{zeilberger} implements Gosper's algorithm for indefinite hypergeometric summation.\n"
 "Given a hypergeometric term @math{F_k} in @math{k} we want to find its hypergeometric\n"
 "anti-difference, that is, a hypergeometric term @math{f_k} such that\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:36
 msgid ""
 "@tex\n"
 "$$F_k = f_{k+1} - f_k.$$\n"
@@ -83,12 +83,12 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:38
 msgid ""
 "@subsection The definite summation problem\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:56
 msgid ""
 "@code{zeilberger} implements Zeilberger's algorithm for definite hypergeometric summation.\n"
 "Given a proper hypergeometric term (in @math{n} and @math{k})\n"
@@ -109,7 +109,7 @@ msgid ""
 "and a rational function @math{R} in @math{n} and @math{k} such that\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:63
 msgid ""
 "@tex\n"
 "$$a_0 \, F_{n,k} + \ldots + a_d \, F_{n+d}, ~ k = \Delta_K \left(R\left(n,k\right) F_{n,k}\right),$$\n"
@@ -119,7 +119,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:81
 msgid ""
 "@tex\n"
 "\noindent\n"
@@ -140,18 +140,18 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:83
 msgid ""
 "@subsection Verbosity levels\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:86
 msgid ""
 "There are also verbose versions of the commands\n"
 "which are called by adding one of the following prefixes:\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:98
 msgid ""
 "@table @code\n"
 "@item Summary\n"
@@ -166,40 +166,44 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:102
 msgid ""
 "For example:@*\n"
 "@code{GosperVerbose}, @code{parGosperVeryVerbose},\n"
 "@code{ZeilbergerExtra}, @code{AntiDifferenceSummary}.\n"
+msgstr ""
+
+#: zeilberger.texi:106
+msgid ""
 "@node Functions and Variables for zeilberger, , Introduction to zeilberger, zeilberger-pkg\n"
 "@section Functions and Variables for zeilberger\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:109
 msgid ""
 "@anchor{AntiDifference}\n"
 "@deffn {Function} AntiDifference (@math{F_k}, @var{k})\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:112
 msgid ""
 "Returns the hypergeometric anti-difference of @math{F_k}, if it exists.@*\n"
 "Otherwise @code{AntiDifference} returns @code{no_hyp_antidifference}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:116
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:118
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:130
 msgid ""
 "@deffn {Function} Gosper (@math{F_k}, @var{k})\n"
 "Returns the rational certificate @math{R(k)} for @math{F_k}, that is,\n"
@@ -214,36 +218,36 @@ msgid ""
 "Otherwise, @code{Gosper} returns @code{no_hyp_sol}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:134
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:136
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:138
 msgid ""
 "@deffn {Function} GosperSum (@math{F_k}, @var{k}, @var{a}, @var{b})\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:142
 msgid ""
 "Returns the summmation of @math{F_k} from @math{@var{k} = @var{a}} to @math{@var{k} = @var{b}}\n"
 "if @math{F_k} has a hypergeometric anti-difference.\n"
 "Otherwise, @code{GosperSum} returns @code{nongosper_summable}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:144
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:206
 msgid ""
 "@c ===beg===\n"
 "@c load (zeilberger)$\n"
@@ -308,25 +312,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:210
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:212
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:215
 msgid ""
 "@iftex\n"
 "@deffn {Function} parGosper (@math{F_{n,k}}, @var{k}, @var{n}, @var{d})\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:220
 msgid ""
 "Attempts to find a @var{d}-th order recurrence for\n"
 "@tex\n"
@@ -334,84 +338,84 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:223
 msgid ""
 "The algorithm yields a sequence @math{[s_1, s_2, ..., s_m]} of solutions.\n"
 "Each solution has the form\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:227
 msgid ""
 "@tex\n"
 "$$\left[R\left(n, k\right), \left[a_0, a_1, \ldots, a_d\right]\right].$$\n"
 "@end tex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:229
 msgid ""
 "@code{parGosper} returns @code{[]} if it fails to find a recurrence.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:233
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:236
 msgid ""
 "@end deffn\n"
 "@end iftex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:239
 msgid ""
 "@ifnottex\n"
 "@deffn {Function} parGosper (@math{F_(n,k)}, @var{k}, @var{n}, @var{d})\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:241
 msgid ""
 "Attempts to find a @var{d}-th order recurrence for @math{F_(n,k)}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:244
 msgid ""
 "The algorithm yields a sequence @math{[s_1, s_2, ..., s_m]} of solutions.\n"
 "Each solution has the form\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:246
 msgid ""
 "@math{[R(n, k), [a_0, a_1, ..., a_d]].}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:248
 msgid ""
 "@code{parGosper} returns @code{[]} if it fails to find a recurrence.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:252
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:255
 msgid ""
 "@end deffn\n"
 "@end ifnottex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:258
 msgid ""
 "@iftex\n"
 "@deffn {Function} Zeilberger (@math{F_{n,k}}, @var{k}, @var{n})\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:263
 msgid ""
 "Attempts to compute the indefinite hypergeometric summation of\n"
 "@tex\n"
@@ -419,7 +423,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:268
 msgid ""
 "@code{Zeilberger} first invokes @code{Gosper}, and if that fails to find a solution, then invokes\n"
 "@code{parGosper} with order 1, 2, 3, ..., up to @code{MAX_ORD}.\n"
@@ -427,54 +431,54 @@ msgid ""
 "it stops and returns the solution.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:271
 msgid ""
 "The algorithms yields a sequence @math{[s_1, s_2, ..., s_m]} of solutions.\n"
 "Each solution has the form\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:275
 msgid ""
 "@tex\n"
 "$$\left[R\left(n, k\right), \left[a_0, a_1, \ldots, a_d\right]\right].$$\n"
 "@end tex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:277
 msgid ""
 "@code{Zeilberger} returns @code{[]} if it fails to find a solution.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:279
 msgid ""
 "@code{Zeilberger} invokes @code{Gosper} only if @code{Gosper_in_Zeilberger} is @code{true}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:283
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:286
 msgid ""
 "@end deffn\n"
 "@end iftex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:289
 msgid ""
 "@ifnottex\n"
 "@deffn {Function} Zeilberger (@math{F_(n,k)}, @var{k}, @var{n})\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:291
 msgid ""
 "Attempts to compute the indefinite hypergeometric summation of @math{F_(n,k)}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:296
 msgid ""
 "@code{Zeilberger} first invokes @code{Gosper}, and if that fails to find a solution, then invokes\n"
 "@code{parGosper} with order 1, 2, 3, ..., up to @code{MAX_ORD}.\n"
@@ -482,327 +486,324 @@ msgid ""
 "it stops and returns the solution.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:299
 msgid ""
 "The algorithms yields a sequence @math{[s_1, s_2, ..., s_m]} of solutions.\n"
 "Each solution has the form\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:301
 msgid ""
 "@math{[R(n,k), [a_0, a_1, ..., a_d]].}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:303
 msgid ""
 "@code{Zeilberger} returns @code{[]} if it fails to find a solution.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:305
 msgid ""
 "@code{Zeilberger} invokes @code{Gosper} only if @code{Gosper_in_Zeilberger} is @code{true}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:309
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:312
 msgid ""
 "@end deffn\n"
 "@end ifnottex\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:316
 msgid ""
 "@section General global variables\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:320
 msgid ""
 "@anchor{MAX_ORD}\n"
 "@defvr {Global variable} MAX_ORD\n"
 "Default value: 5\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:322
 msgid ""
 "@code{MAX_ORD} is the maximum recurrence order attempted by @code{Zeilberger}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:326
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:328
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:332
 msgid ""
 "@anchor{simplified_output}\n"
 "@defvr {Global variable} simplified_output\n"
 "Default value: @code{false}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:336
 msgid ""
 "When @code{simplified_output} is @code{true},\n"
 "functions in the @code{zeilberger} package attempt\n"
 "further simplification of the solution.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:340
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:342
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:346
 msgid ""
 "@anchor{linear_solver}\n"
 "@defvr {Global variable} linear_solver\n"
 "Default value: @code{linsolve}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:349
 msgid ""
 "@code{linear_solver} names the solver which is used to solve the system\n"
 "of equations in Zeilberger's algorithm.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:353
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:355
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:359
 msgid ""
 "@anchor{warnings}\n"
 "@defvr {Global variable} warnings\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:363
 msgid ""
 "When @code{warnings} is @code{true},\n"
 "functions in the @code{zeilberger} package print\n"
 "warning messages during execution.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:367
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:369
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:373
 msgid ""
 "@anchor{Gosper_in_Zeilberger}\n"
 "@defvr {Global variable} Gosper_in_Zeilberger\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:377
 msgid ""
 "When @code{Gosper_in_Zeilberger} is @code{true},\n"
 "the @code{Zeilberger} function calls @code{Gosper} before calling @code{parGosper}.\n"
 "Otherwise, @code{Zeilberger} goes immediately to @code{parGosper}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:381
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:383
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:387
 msgid ""
 "@anchor{trivial_solutions}\n"
 "@defvr {Global variable} trivial_solutions\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:391
 msgid ""
 "When @code{trivial_solutions} is @code{true},\n"
 "@code{Zeilberger} returns solutions\n"
 "which have certificate equal to zero, or all coefficients equal to zero.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:395
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:397
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:399
 msgid ""
 "@section Variables related to the modular test\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:403
 msgid ""
 "@anchor{mod_test}\n"
 "@defvr {Global variable} mod_test\n"
 "Default value: @code{false}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:407
 msgid ""
 "When @code{mod_test} is @code{true},\n"
 "@code{parGosper} executes a\n"
 "modular test for discarding systems with no solutions.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:411
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:413
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:417
 msgid ""
 "@anchor{modular_linear_solver}\n"
 "@defvr {Global variable} modular_linear_solver\n"
 "Default value: @code{linsolve}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:419
 msgid ""
 "@code{modular_linear_solver} names the linear solver used by the modular test in @code{parGosper}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:423
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:425
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:429
 msgid ""
 "@anchor{ev_point}\n"
 "@defvr {Global variable} ev_point\n"
 "Default value: @code{big_primes[10]}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:432
 msgid ""
 "@code{ev_point} is the value at which the variable @var{n} is evaluated\n"
 "when executing the modular test in @code{parGosper}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:436
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:438
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:442
 msgid ""
 "@anchor{mod_big_prime}\n"
 "@defvr {Global variable} mod_big_prime\n"
 "Default value: @code{big_primes[1]}\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:444
 msgid ""
 "@code{mod_big_prime} is the modulus used by the modular test in @code{parGosper}.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:448
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:450
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:454
 msgid ""
 "@anchor{mod_threshold}\n"
 "@defvr {Global variable} mod_threshold\n"
 "Default value: 4\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:457
 msgid ""
 "@code{mod_threshold} is the\n"
 "greatest order for which the modular test in @code{parGosper} is attempted.\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:461
 msgid ""
 "@opencatbox\n"
 "@category{Package zeilberger}\n"
 "@closecatbox\n"
 msgstr ""
 
-# zeilberger.texi
+#: zeilberger.texi:463
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# zeilberger.texi
-msgid ""
-msgstr ""

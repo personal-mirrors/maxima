@@ -1,58 +1,62 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# include-maxima.texi
+msgstr ""
+
+#: include-maxima.texi:2
 msgid ""
 "@c -*-texinfo-*-\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:6
 msgid ""
 "@c 2000-04-17 Jim Van Zandt <jrv@vanzandt.mv.com> Added header,\n"
 "@c info directory entry, reference to introduction chapter, and menu\n"
 "@c descriptions.  Rearranged chapters.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:11
 msgid ""
 "@c to update the menus do: \n"
-"@c (texinfo-multiple-files-update \"maxima.texi\" t t)\n"
+"@c (texinfo-multiple-files-update \\"maxima.texi\\" t t)\n"
 "@c\n"
 "@c texinfo-multiple-files-update will delete the detailed node listing!\n"
+msgstr ""
+
+#: include-maxima.texi:15
+msgid ""
 "@c start of header\n"
 "@settitle Maxima 5.39.365.g534a7d169 Manual\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:19
 msgid ""
 "@synindex ky fn\n"
 "@synindex vr fn\n"
 "@synindex cp fn\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:22
 msgid ""
 "@setchapternewpage odd\n"
 "@c end of header\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:35
 msgid ""
 "@ifnothtml\n"
 "@c We want texinfo not to change quotes to backticks in the pdf and the\n"
@@ -68,18 +72,18 @@ msgid ""
 "@end ifnothtml\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:38
 msgid ""
 "@ifinfo\n"
 "This is a Texinfo Maxima Manual\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:40
 msgid ""
 "Copyright 1994,2001 William F. Schelter\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:47
 msgid ""
 "@format\n"
 "INFO-DIR-SECTION Math\n"
@@ -89,7 +93,7 @@ msgid ""
 "@end format\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:52
 msgid ""
 "@macro var {expr}\n"
 "<\expr\>\n"
@@ -97,12 +101,12 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:56
 msgid ""
 "@include category-macros.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:65
 msgid ""
 "@titlepage\n"
 "@sp 10\n"
@@ -114,7 +118,7 @@ msgid ""
 "Maxima is a computer algebra system, implemented in Lisp.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:76
 msgid ""
 "Maxima is derived from the Macsyma system,\n"
 "developed at MIT in the years 1968 through 1982 as part of Project MAC.\n"
@@ -128,30 +132,30 @@ msgid ""
 "and develop DOE Macsyma, now called Maxima.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:78
 msgid ""
 "@end titlepage\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:81
 msgid ""
 "@summarycontents\n"
 "@contents\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:85
 msgid ""
 "@ifnottex\n"
 "@node Top, Introduction to Maxima, (dir), (dir)\n"
 "@top\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:87
 msgid ""
 "Maxima is a computer algebra system, implemented in Lisp.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:99
 msgid ""
 "Maxima is derived from the Macsyma system,\n"
 "developed at MIT in the years 1968 through 1982 as part of Project MAC.\n"
@@ -166,22 +170,22 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:101
 msgid ""
 "@c includes\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:103
 msgid ""
 "@menu\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:105
 msgid ""
 "@b{Maxima infrastructure}\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:119
 msgid ""
 "* Introduction to Maxima::      Sample Maxima sessions.\n"
 "* Bug Detection and Reporting:: Finding and reporting bugs in Maxima.\n"
@@ -198,7 +202,7 @@ msgid ""
 "* File Input and Output::       File input and output.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:141
 msgid ""
 "@b{Support for specific areas of mathematics}\n"
 "* Polynomials::                 Standard forms for polynomials, and\n"
@@ -223,7 +227,7 @@ msgid ""
 "* Groups::                      Abstract algebra.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:151
 msgid ""
 "@b{Advanced facilities and programming}\n"
 "* Runtime Environment::         Customization of the Maxima environment.\n"
@@ -236,7 +240,7 @@ msgid ""
 "* Debugging::                   Debugging Maxima programs.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:202
 msgid ""
 "@b{Additional packages}\n"
 "* alt-display-pkg::                 Alternative display package.\n"
@@ -290,44 +294,44 @@ msgid ""
 "* zeilberger-pkg::                  Functions for hypergeometric summation.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:205
 msgid ""
 "@b{Understanding maxima's output}\n"
 "* Error and warning messages::  Error and warning messages\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:208
 msgid ""
 "@b{Index}\n"
 "* Function and Variable Index:: Index.\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:211
 msgid ""
 "@comment @detailmenu\n"
 "@b{ --- The Detailed Node Listing --- }\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:214
 msgid ""
 "Introduction\n"
 "* Introduction to Maxima::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:217
 msgid ""
 "Bugs\n"
 "* Bug Detection and Reporting::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:221
 msgid ""
 "Help\n"
 "* Documentation::\n"
 "* Functions and Variables for Help::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:226
 msgid ""
 "Command Line\n"
 "* Introduction to Command Line::\n"
@@ -335,7 +339,7 @@ msgid ""
 "* Functions and Variables for Display::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:234
 msgid ""
 "Data Types and Structures\n"
 "* Numbers::\n"
@@ -346,7 +350,7 @@ msgid ""
 "* Structures::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:241
 msgid ""
 "Expressions\n"
 "* Introduction to Expressions::\n"
@@ -356,7 +360,7 @@ msgid ""
 "* Functions and Variables for Expressions::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:250
 msgid ""
 "Operators\n"
 "* Introduction to operators::\n"
@@ -368,19 +372,19 @@ msgid ""
 "* User defined operators::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:253
 msgid ""
 "Evaluation\n"
 "* Functions and Variables for Evaluation::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:256
 msgid ""
 "Simplification\n"
 "* Functions and Variables for Simplification::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:264
 msgid ""
 "Mathematical Functions\n"
 "* Functions for Numbers::\n"
@@ -391,7 +395,7 @@ msgid ""
 "* Random Numbers::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:270
 msgid ""
 "Maximas Database\n"
 "* Introduction to Maximas Database::\n"
@@ -400,7 +404,7 @@ msgid ""
 "* Functions and Variables for Predicates::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:278
 msgid ""
 "Plotting\n"
 "* Introduction to Plotting::\n"
@@ -411,7 +415,7 @@ msgid ""
 "* Gnuplot_pipes Format Functions::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:285
 msgid ""
 "File Input and Output\n"
 "* Comments::\n"
@@ -421,14 +425,14 @@ msgid ""
 "* Functions and Variables for Fortran Output::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:289
 msgid ""
 "Polynomials\n"
 "* Introduction to Polynomials::  \n"
 "* Functions and Variables for Polynomials::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:301
 msgid ""
 "Special Functions\n"
 "* Introduction to Special Functions:: \n"
@@ -443,7 +447,7 @@ msgid ""
 "* Functions and Variables for Special Functions::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:306
 msgid ""
 "Elliptic Functions\n"
 "* Introduction to Elliptic Functions and Integrals::\n"
@@ -451,39 +455,39 @@ msgid ""
 "* Functions and Variables for Elliptic Integrals::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:309
 msgid ""
 "Limits\n"
 "* Functions and Variables for Limits::      \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:312
 msgid ""
 "Differentiation\n"
 "* Functions and Variables for Differentiation::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:316
 msgid ""
 "Integration\n"
 "* Introduction to Integration::  \n"
 "* Functions and Variables for Integration::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:319
 msgid ""
 "Equations\n"
 "* Functions and Variables for Equations::   \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:323
 msgid ""
 "Differential Equations\n"
 "* Introduction to Differential Equations::  \n"
 "* Functions and Variables for Differential Equations::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:330
 msgid ""
 "Numerical\n"
 "* Introduction to fast Fourier transform::                     \n"
@@ -493,7 +497,7 @@ msgid ""
 "* Functions for numerical solution of differential equations::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:337
 msgid ""
 "Matrices and Linear Algebra\n"
 "* Introduction to Matrices and Linear Algebra::  \n"
@@ -503,35 +507,35 @@ msgid ""
 "* Functions and Variables for Matrices and Linear Algebra::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:341
 msgid ""
 "Affine\n"
 "* Introduction to Affine::\n"
 "* Functions and Variables for Affine::      \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:345
 msgid ""
 "itensor\n"
 "* Introduction to itensor::      \n"
 "* Functions and Variables for itensor::      \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:349
 msgid ""
 "ctensor\n"
 "* Introduction to ctensor::     \n"
 "* Functions and Variables for ctensor::     \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:353
 msgid ""
 "atensor\n"
 "* Introduction to atensor::     \n"
 "* Functions and Variables for atensor::     \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:360
 msgid ""
 "Sums, Products, and Series\n"
 "* Functions and Variables for Sums and Products::\n"
@@ -541,26 +545,26 @@ msgid ""
 "* Functions and Variables for Fourier series::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:363
 msgid ""
 "Number Theory\n"
 "* Functions and Variables for Number Theory::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:367
 msgid ""
 "Symmetries\n"
 "* Introduction to Symmetries::\n"
 "* Functions and Variables for Symmetries::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:370
 msgid ""
 "Groups\n"
 "* Functions and Variables for Groups::      \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:375
 msgid ""
 "Runtime Environment\n"
 "* Introduction for Runtime Environment::  \n"
@@ -568,7 +572,7 @@ msgid ""
 "* Functions and Variables for Runtime Environment::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:380
 msgid ""
 "Miscellaneous Options\n"
 "* Introduction to Miscellaneous Options::  \n"
@@ -576,21 +580,21 @@ msgid ""
 "* Functions and Variables for Miscellaneous Options::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:384
 msgid ""
 "Rules and Patterns\n"
 "* Introduction to Rules and Patterns::  \n"
 "* Functions and Variables for Rules and Patterns::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:388
 msgid ""
 "Sets\n"
 "* Introduction to Sets::       \n"
 "* Functions and Variables for Sets::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:394
 msgid ""
 "Function Definition\n"
 "* Introduction to Function Definition::  \n"
@@ -599,7 +603,7 @@ msgid ""
 "* Functions and Variables for Function Definition::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:400
 msgid ""
 "Program Flow\n"
 "* Lisp and Maxima::\n"
@@ -608,57 +612,57 @@ msgid ""
 "* Functions and Variables for Program Flow::  \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:403
 msgid ""
 "Debugging\n"
 "* Functions and Variables for Debugging::   \n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:407
 msgid ""
 "alt-display\n"
 "* Introduction to alt-display::\n"
 "* Functions and Variables for alt-display::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:411
 msgid ""
 "asympa\n"
 "* Introduction to asympa::\n"
 "* Functions and variables for asympa::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:414
 msgid ""
 "augmented_lagrangian\n"
 "* Functions and Variables for augmented_lagrangian::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:417
 msgid ""
 "Bernstein\n"
 "* Functions and Variables for Bernstein::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:420
 msgid ""
 "Bitwise\n"
 "* Functions and Variables for bitwise::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:423
 msgid ""
 "bode\n"
 "* Functions and Variables for bode::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:426
 msgid ""
 "clebsch_gordan\n"
 "* Functions and Variables for clebsch_gordan::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:431
 msgid ""
 "cobyla\n"
 "* Introduction to cobyla::\n"
@@ -666,7 +670,7 @@ msgid ""
 "* Examples for cobyla::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:438
 msgid ""
 "contrib_ode\n"
 "* Introduction to contrib_ode::\n"
@@ -676,7 +680,7 @@ msgid ""
 "* References for contrib_ode::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:444
 msgid ""
 "descriptive\n"
 "* Introduction to descriptive::\n"
@@ -685,13 +689,13 @@ msgid ""
 "* Functions and Variables for statistical graphs::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:447
 msgid ""
 "diag\n"
 "* Functions and Variables for diag::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:452
 msgid ""
 "distrib\n"
 "* Introduction to distrib::\n"
@@ -699,7 +703,7 @@ msgid ""
 "* Functions and Variables for discrete distributions::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:458
 msgid ""
 "draw\n"
 "* Introduction to draw::\n"
@@ -708,14 +712,14 @@ msgid ""
 "* Functions and Variables for worldmap::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:462
 msgid ""
 "drawdf\n"
 "* Introduction to drawdf::\n"
 "* Functions and Variables for drawdf::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:467
 msgid ""
 "dynamics\n"
 "* The dynamics package::\n"
@@ -723,7 +727,7 @@ msgid ""
 "* Visualization with VTK::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:472
 msgid ""
 "ezunits\n"
 "* Introduction to ezunits::\n"
@@ -731,20 +735,20 @@ msgid ""
 "* Functions and Variables for ezunits::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:475
 msgid ""
 "f90\n"
 "* Functions and Variables for f90::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:479
 msgid ""
 "finance\n"
 "* Introduction to finance::\n"
 "* Functions and Variables for finance::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:486
 msgid ""
 "fractals\n"
 "* Introduction to fractals::\n"
@@ -754,94 +758,94 @@ msgid ""
 "* Definitions for Peano maps::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:489
 msgid ""
 "ggf\n"
 "* Functions and Variables for ggf::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:493
 msgid ""
 "graphs\n"
 "* Introduction to graphs::\n"
 "* Functions and Variables for graphs::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:497
 msgid ""
 "grobner\n"
 "* Introduction to grobner::\n"
 "* Functions and Variables for grobner::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:500
 msgid ""
 "impdiff\n"
 "* Functions and Variables for impdiff::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:504
 msgid ""
 "interpol\n"
 "* Introduction to interpol::\n"
 "* Functions and Variables for interpol::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:508
 msgid ""
 "lapack\n"
 "* Introduction to lapack::\n"
 "* Functions and Variables for lapack::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:512
 msgid ""
 "lbfgs\n"
 "* Introduction to lbfgs::\n"
 "* Functions and Variables for lbfgs::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:515
 msgid ""
 "lindstedt\n"
 "* Functions and Variables for lindstedt::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:519
 msgid ""
 "linearalgebra\n"
 "* Introduction to linearalgebra::\n"
 "* Functions and Variables for linearalgebra::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:523
 msgid ""
 "lsquares\n"
 "* Introduction to lsquares::\n"
 "* Functions and Variables for lsquares::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:526
 msgid ""
 "makeOrders\n"
 "* Functions and Variables for makeOrders::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:530
 msgid ""
 "minpack\n"
 "* Introduction to minpack::\n"
 "* Functions and Variables for minpack::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:534
 msgid ""
 "mnewton\n"
 "* Introduction to mnewton::\n"
 "* Functions and Variables for mnewton::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:539
 msgid ""
 "numericalio\n"
 "* Introduction to numericalio::\n"
@@ -849,7 +853,7 @@ msgid ""
 "* Functions and Variables for binary input and output::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:544
 msgid ""
 "operatingsystem\n"
 "* Introduction to operatingsystem::\n"
@@ -857,39 +861,39 @@ msgid ""
 "* Environment operations::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:547
 msgid ""
 "opsubst\n"
 "* Functions and Variables for opsubst::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:551
 msgid ""
 "orthopoly\n"
 "* Introduction to orthogonal polynomials::\n"
 "* Functions and Variables for orthogonal polynomials::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:554
 msgid ""
 "ratpow\n"
 "* Functions and Variables for ratpow::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:557
 msgid ""
 "romberg\n"
 "* Functions and Variables for romberg::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:561
 msgid ""
 "simplex\n"
 "* Introduction to simplex::\n"
 "* Functions and Variables for simplex::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:571
 msgid ""
 "simplification\n"
 "* Introduction to simplification::\n"
@@ -902,14 +906,14 @@ msgid ""
 "* Package sqdnst::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:575
 msgid ""
 "solve_rec\n"
 "* Introduction to solve_rec::\n"
 "* Functions and Variables for solve_rec::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:581
 msgid ""
 "stats\n"
 "* Introduction to stats::\n"
@@ -918,13 +922,13 @@ msgid ""
 "* Functions and Variables for special distributions::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:584
 msgid ""
 "stirling\n"
 "* Functions and Variables for stirling::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:591
 msgid ""
 "stringproc\n"
 "* Introduction to String Processing::\n"
@@ -934,27 +938,27 @@ msgid ""
 "* Octets and Utilities for Cryptography::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:594
 msgid ""
 "to_poly_solve\n"
 "* Functions and Variables for to_poly_solve::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:598
 msgid ""
 "unit\n"
 "* Introduction to Units::       \n"
 "* Functions and Variables for Units::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:602
 msgid ""
 "zeilberger\n"
 "* Introduction to zeilberger::\n"
 "* Functions and Variables for zeilberger::\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:608
 msgid ""
 "Understanding maxima's output\n"
 "* Error messages::\n"
@@ -963,7 +967,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:613
 msgid ""
 "@c  Put the @node lines here, rather than in the @included files,\n"
 "@c  so emacs can automatically update them with C-c C-u C-e.\n"
@@ -971,35 +975,35 @@ msgid ""
 "@c  the detailed node listing!\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:617
 msgid ""
 "@node Introduction to Maxima, Bug Detection and Reporting, Top, Top\n"
 "@chapter Introduction to Maxima\n"
 "@include Introduction.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:621
 msgid ""
 "@node Bug Detection and Reporting, Help, Introduction to Maxima, Top\n"
 "@chapter Bug Detection and Reporting\n"
 "@include Bugs.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:625
 msgid ""
 "@node Help, Command Line, Bug Detection and Reporting, Top\n"
 "@chapter Help\n"
 "@include Help.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:629
 msgid ""
 "@node Command Line, Data Types and Structures, Help, Top\n"
 "@chapter Command Line\n"
 "@include Command.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:637
 msgid ""
 "@node Data Types and Structures, Expressions, Command Line, Top\n"
 "@chapter Data Types and Structures\n"
@@ -1010,604 +1014,600 @@ msgid ""
 "@include defstruct.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:641
 msgid ""
 "@node Expressions, Operators, Data Types and Structures, Top\n"
 "@chapter Expressions\n"
 "@include Expressions.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:645
 msgid ""
 "@node Operators, Evaluation, Expressions, Top\n"
 "@chapter Operators\n"
 "@include Operators.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:649
 msgid ""
 "@node Evaluation, Simplification, Operators, Top\n"
 "@chapter Evaluation\n"
 "@include Evaluation.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:653
 msgid ""
 "@node Simplification, Mathematical Functions, Evaluation, Top\n"
 "@chapter Simplification\n"
 "@include Simplification.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:657
 msgid ""
 "@node Mathematical Functions, Maximas Database, Simplification, Top\n"
 "@chapter Mathematical Functions\n"
 "@include MathFunctions.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:661
 msgid ""
 "@node Maximas Database, Plotting, Mathematical Functions, Top\n"
 "@chapter Maximas Database\n"
 "@include Database.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:665
 msgid ""
 "@node Plotting, File Input and Output, Maximas Database, Top\n"
 "@chapter Plotting\n"
 "@include Plotting.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:669
 msgid ""
 "@node File Input and Output, Polynomials, Plotting, Top\n"
 "@chapter File Input and Output\n"
 "@include Input.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:673
 msgid ""
 "@node Polynomials, Special Functions, File Input and Output, Top\n"
 "@chapter Polynomials\n"
 "@include Polynomials.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:677
 msgid ""
 "@node Special Functions, Elliptic Functions, Polynomials, Top\n"
 "@chapter Special Functions\n"
 "@include Special.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:681
 msgid ""
 "@node Elliptic Functions, Limits, Special Functions, Top\n"
 "@chapter Elliptic Functions\n"
 "@include Elliptic.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:685
 msgid ""
 "@node Limits, Differentiation, Elliptic Functions, Top\n"
 "@chapter Limits\n"
 "@include Limits.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:689
 msgid ""
 "@node Differentiation, Integration, Limits, Top\n"
 "@chapter Differentiation\n"
 "@include Differentiation.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:693
 msgid ""
 "@node Integration, Equations, Differentiation, Top\n"
 "@chapter Integration\n"
 "@include Integration.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:697
 msgid ""
 "@node Equations, Differential Equations, Integration, Top\n"
 "@chapter Equations\n"
 "@include Equations.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:701
 msgid ""
 "@node Differential Equations, Numerical, Equations, Top\n"
 "@chapter Differential Equations\n"
 "@include Differential.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:703
 msgid ""
 "@c @include NonCommutative.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:707
 msgid ""
 "@node Numerical, Matrices and Linear Algebra, Differential Equations, Top\n"
 "@chapter Numerical\n"
 "@include Numerical.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:711
 msgid ""
 "@node Matrices and Linear Algebra, Affine, Numerical, Top\n"
 "@chapter Matrices and Linear Algebra\n"
 "@include Matrices.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:715
 msgid ""
 "@node Affine, itensor, Matrices and Linear Algebra, Top\n"
 "@chapter Affine\n"
 "@include Affine.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:719
 msgid ""
 "@node itensor, ctensor, Affine, Top\n"
 "@chapter itensor\n"
 "@include Itensor.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:723
 msgid ""
 "@node ctensor, atensor, itensor, Top\n"
 "@chapter ctensor\n"
 "@include Ctensor.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:727
 msgid ""
 "@node atensor, Sums Products and Series, ctensor, Top\n"
 "@chapter atensor\n"
 "@include Atensor.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:731
 msgid ""
 "@node Sums Products and Series, Number Theory, atensor, Top\n"
 "@chapter Sums, Products, and Series\n"
 "@include Series.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:735
 msgid ""
 "@node Number Theory, Symmetries, Sums Products and Series, Top\n"
 "@chapter Number Theory\n"
 "@include Number.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:739
 msgid ""
 "@node Symmetries, Groups, Number Theory, Top\n"
 "@chapter Symmetries\n"
 "@include Symmetries.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:743
 msgid ""
 "@node Groups, Runtime Environment, Symmetries, Top\n"
 "@chapter Groups\n"
 "@include Groups.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:747
 msgid ""
 "@node Runtime Environment, Miscellaneous Options, Groups, Top\n"
 "@chapter Runtime Environment\n"
 "@include Runtime.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:751
 msgid ""
 "@node Miscellaneous Options, Rules and Patterns, Runtime Environment, Top\n"
 "@chapter Miscellaneous Options\n"
 "@include Miscellaneous.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:755
 msgid ""
 "@node Rules and Patterns, Sets, Miscellaneous Options, Top\n"
 "@chapter Rules and Patterns\n"
 "@include Rules.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:759
 msgid ""
 "@node Sets, Function Definition, Rules and Patterns, Top\n"
 "@chapter Sets\n"
 "@include nset.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:763
 msgid ""
 "@node Function Definition, Program Flow, Sets, Top\n"
 "@chapter Function Definition\n"
 "@include Function.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:767
 msgid ""
 "@node Program Flow, Debugging, Function Definition, Top\n"
 "@chapter Program Flow\n"
 "@include Program.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:771
 msgid ""
 "@node Debugging, alt-display-pkg, Program Flow, Top\n"
 "@chapter Debugging\n"
 "@include Debugging.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:775
 msgid ""
 "@node alt-display-pkg, asympa-pkg, Debugging, Top\n"
 "@chapter alt-display\n"
 "@include alt-display.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:779
 msgid ""
 "@node asympa-pkg, augmented_lagrangian-pkg, alt-display-pkg, Top\n"
 "@chapter asympa\n"
 "@include asympa.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:783
 msgid ""
 "@node augmented_lagrangian-pkg, Bernstein-pkg, asympa-pkg, Top\n"
 "@chapter augmented_lagrangian\n"
 "@include augmented_lagrangian.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:787
 msgid ""
 "@node Bernstein-pkg, bitwise-pkg, augmented_lagrangian-pkg, Top\n"
 "@chapter Bernstein\n"
 "@include bernstein.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:791
 msgid ""
 "@node bitwise-pkg\n"
 "@chapter bitwise\n"
 "@include bitwise.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:795
 msgid ""
 "@node bode-pkg\n"
 "@chapter bode\n"
 "@include bode.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:799
 msgid ""
 "@node celine-pkg\n"
 "@chapter celine\n"
 "@include celine.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:803
 msgid ""
 "@node clebsch_gordan-pkg\n"
 "@chapter clebsch_gordan\n"
 "@include clebsch_gordan.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:807
 msgid ""
 "@node cobyla-pkg\n"
 "@chapter cobyla\n"
 "@include cobyla.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:811
 msgid ""
 "@node contrib_ode-pkg, descriptive-pkg, cobyla-pkg, Top\n"
 "@chapter contrib_ode\n"
 "@include contrib_ode.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:815
 msgid ""
 "@node descriptive-pkg, diag-pkg, contrib_ode-pkg, Top\n"
 "@chapter descriptive\n"
 "@include descriptive.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:819
 msgid ""
 "@node diag-pkg, distrib-pkg, descriptive-pkg, Top\n"
 "@chapter diag\n"
 "@include diag.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:823
 msgid ""
 "@node distrib-pkg, draw-pkg, diag-pkg, Top\n"
 "@chapter distrib\n"
 "@include distrib.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:827
 msgid ""
 "@node draw-pkg, drawdf-pkg, distrib-pkg, Top\n"
 "@chapter draw\n"
 "@include draw.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:831
 msgid ""
 "@node drawdf-pkg, dynamics-pkg, draw-pkg, Top\n"
 "@chapter drawdf\n"
 "@include drawdf.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:835
 msgid ""
 "@node dynamics-pkg, engineering-format-pkg, drawdf-pkg, Top\n"
 "@chapter dynamics\n"
 "@include dynamics.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:839
 msgid ""
 "@node engineering-format-pkg, ezunits-pkg, dynamics-pkg, Top\n"
 "@chapter engineering-format\n"
 "@include engineering-format.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:843
 msgid ""
 "@node ezunits-pkg, f90-pkg, engineering-format-pkg, Top\n"
 "@chapter ezunits\n"
 "@include ezunits.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:847
 msgid ""
 "@node f90-pkg, finance-pkg, ezunits-pkg, Top\n"
 "@chapter f90\n"
 "@include f90.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:851
 msgid ""
 "@node finance-pkg, fractals-pkg, f90-pkg, Top\n"
 "@chapter finance\n"
 "@include finance.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:855
 msgid ""
 "@node fractals-pkg, ggf-pkg, finance-pkg, Top\n"
 "@chapter fractals\n"
 "@include fractals.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:859
 msgid ""
 "@node ggf-pkg, graphs-pkg, fractals-pkg, Top\n"
 "@chapter ggf\n"
 "@include ggf.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:863
 msgid ""
 "@node graphs-pkg, grobner-pkg, ggf-pkg, Top\n"
 "@chapter graphs\n"
 "@include graphs.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:867
 msgid ""
 "@node grobner-pkg, impdiff-pkg, graphs-pkg, Top\n"
 "@chapter grobner\n"
 "@include grobner.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:871
 msgid ""
 "@node impdiff-pkg, interpol-pkg, grobner-pkg, Top\n"
 "@chapter impdiff\n"
 "@include impdiff.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:875
 msgid ""
 "@node interpol-pkg, lapack-pkg, impdiff-pkg, Top\n"
 "@chapter interpol\n"
 "@include interpol.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:879
 msgid ""
 "@node lapack-pkg, lbfgs-pkg, interpol-pkg, Top\n"
 "@chapter lapack\n"
 "@include lapack.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:883
 msgid ""
 "@node lbfgs-pkg, lindstedt-pkg, lapack-pkg, Top\n"
 "@chapter lbfgs\n"
 "@include lbfgs.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:887
 msgid ""
 "@node lindstedt-pkg, linearalgebra-pkg, lbfgs-pkg, Top\n"
 "@chapter lindstedt\n"
 "@include lindstedt.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:891
 msgid ""
 "@node linearalgebra-pkg, lsquares-pkg, lindstedt-pkg, Top\n"
 "@chapter linearalgebra\n"
 "@include linearalgebra.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:895
 msgid ""
 "@node lsquares-pkg, minpack-pkg, linearalgebra-pkg, Top\n"
 "@chapter lsquares\n"
 "@include lsquares.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:899
 msgid ""
 "@node minpack-pkg, makeOrders-pkg, lsquares-pkg, Top\n"
 "@chapter minpack\n"
 "@include minpack.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:903
 msgid ""
 "@node makeOrders-pkg, mnewton-pkg, minpack-pkg, Top\n"
 "@chapter makeOrders\n"
 "@include makeOrders.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:907
 msgid ""
 "@node mnewton-pkg, numericalio-pkg, makeOrders-pkg, Top\n"
 "@chapter mnewton\n"
 "@include mnewton.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:911
 msgid ""
 "@node numericalio-pkg, operatingsystem-pkg, mnewton-pkg, Top\n"
 "@chapter numericalio\n"
 "@include numericalio.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:915
 msgid ""
 "@node operatingsystem-pkg, opsubst-pkg, numericalio-pkg, Top\n"
 "@chapter operatingsystem\n"
 "@include operatingsystem.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:919
 msgid ""
 "@node opsubst-pkg, orthopoly-pkg, operatingsystem-pkg, Top\n"
 "@chapter opsubst\n"
 "@include opsubst.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:923
 msgid ""
 "@node orthopoly-pkg, ratpow-pkg, opsubst-pkg, Top\n"
 "@chapter orthopoly\n"
 "@include orthopoly.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:927
 msgid ""
 "@node ratpow-pkg, romberg-pkg, orthopoly-pkg, Top\n"
 "@chapter ratpow\n"
 "@include ratpow.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:931
 msgid ""
 "@node romberg-pkg, simplex-pkg, ratpow-pkg, Top\n"
 "@chapter romberg\n"
 "@include romberg.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:935
 msgid ""
 "@node simplex-pkg, simplification-pkg, romberg-pkg, Top\n"
 "@chapter simplex\n"
 "@include simplex.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:939
 msgid ""
 "@node simplification-pkg, solve_rec-pkg, simplex-pkg, Top\n"
 "@chapter simplification\n"
 "@include simplifications.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:943
 msgid ""
 "@node solve_rec-pkg, stats-pkg, simplification-pkg, Top\n"
 "@chapter solve_rec\n"
 "@include solve_rec.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:947
 msgid ""
 "@node stats-pkg, stirling-pkg, solve_rec-pkg, Top\n"
 "@chapter stats\n"
 "@include stats.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:951
 msgid ""
 "@node stirling-pkg, stringproc-pkg, stats-pkg, Top\n"
 "@chapter stirling\n"
 "@include stirling.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:955
 msgid ""
 "@node stringproc-pkg, to_poly_solve-pkg, stirling-pkg, Top\n"
 "@chapter stringproc\n"
 "@include stringproc.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:959
 msgid ""
 "@node to_poly_solve-pkg, unit-pkg, stringproc-pkg, Top\n"
 "@chapter to_poly_solve\n"
 "@include to_poly_solve.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:963
 msgid ""
 "@node unit-pkg, zeilberger-pkg, to_poly_solve-pkg, Top\n"
 "@chapter unit\n"
 "@include unit.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:967
 msgid ""
 "@node zeilberger-pkg, Error and warning messages, unit-pkg, Top\n"
 "@chapter zeilberger\n"
 "@include zeilberger.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:971
 msgid ""
 "@node Error and warning messages, Function and Variable Index, zeilberger-pkg, Top\n"
 "@chapter Error and warning messages\n"
 "@include errormessages.texi\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:973
 msgid ""
 "@c end includes\n"
 msgstr ""
 
-# include-maxima.texi
+#: include-maxima.texi:976
 msgid ""
 "@node Function and Variable Index,  , Error and warning messages, Top\n"
 "@appendix Function and Variable Index\n"
 msgstr ""
 
-# include-maxima.texi
-msgid ""
-"@printindex fn\n"
-msgstr ""

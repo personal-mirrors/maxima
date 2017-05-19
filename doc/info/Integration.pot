@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Integration.texi
+msgstr ""
+
+#: Integration.texi:7
 msgid ""
 "@menu\n"
 "* Introduction to Integration::\n"
@@ -27,7 +27,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:12
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Integration, Functions and Variables for Integration, Integration, Integration\n"
@@ -35,7 +35,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:26
 msgid ""
 "Maxima has several routines for handling integration.\n"
 "The @code{integrate} function makes use of most of them.  There is also the\n"
@@ -46,18 +46,18 @@ msgid ""
 "Hypergeometric functions are being worked on,\n"
 "see @code{specint} for details.\n"
 "Generally speaking, Maxima only handles integrals which are\n"
-"integrable in terms of the \"elementary functions\" (rational functions,\n"
+"integrable in terms of the \\"elementary functions\\" (rational functions,\n"
 "trigonometrics, logs, exponentials, radicals, etc.) and a few\n"
 "extensions (error function, dilogarithm).  It does not handle\n"
 "integrals in terms of unknown functions such as @code{g(x)} and @code{h(x)}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:28
 msgid ""
 "@c end concepts Integration\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:33
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Integration, Introduction to QUADPACK, Introduction to Integration, Integration\n"
@@ -65,31 +65,31 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:35
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:39
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{changevar}\n"
 "@deffn {Function} changevar (@var{expr}, @var{f(x,y)}, @var{y}, @var{x})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:43
 msgid ""
 "Makes the change of variable given by @code{@var{f(x,y)} = 0} in all integrals\n"
 "occurring in @var{expr} with integration with respect to @var{x}.\n"
 "The new variable is @var{y}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:45
 msgid ""
 "The change of variable can also be written @code{@var{f(x)} = @var{g(y)}}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:72
 msgid ""
 "@c HMM, THIS EXAMPLE YIELDS A CORRECT BUT SLIGHTLY STRANGE RESULT...\n"
 "@example\n"
@@ -119,7 +119,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:77
 msgid ""
 "An expression containing a noun form, such as the instances of @code{'integrate}\n"
 "above, may be evaluated by @code{ev} with the @code{nouns} flag.\n"
@@ -127,7 +127,7 @@ msgid ""
 "by @code{ev (%o3, nouns)}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:82
 msgid ""
 "@code{changevar} may also be used to changes in the indices of a sum or\n"
 "product.  However, it must be realized that when a change is made in a\n"
@@ -135,7 +135,7 @@ msgid ""
 "higher degree function.  E.g.,\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:105
 msgid ""
 "@example\n"
 "@group\n"
@@ -161,7 +161,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:110
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -169,20 +169,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:113
 msgid ""
 "@c THIS ITEM IS A MESS, BUT DON'T BOTHER TO CLEAN IT UP:\n"
 "@c THE GAUSS-KRONROD FUNCTIONS (QUADPACK) MAKE THIS OBSOLETE\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:117
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{dblint}\n"
 "@deffn {Function} dblint (@var{f}, @var{r}, @var{s}, @var{a}, @var{b})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:122
 msgid ""
 "A double-integral routine which was written in\n"
 "top-level Maxima and then translated and compiled to machine code.\n"
@@ -190,7 +190,7 @@ msgid ""
 "method in both the x and y directions to calculate\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:137
 msgid ""
 "@tex\n"
 "$$\int_a^b \int_{r\left(x\right)}^{s\left(x\right)} f\left(x,y\right) \, dy \, dx.$$\n"
@@ -208,7 +208,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:163
 msgid ""
 "The function @var{f} must be a translated or compiled function of two variables,\n"
 "and @var{r} and @var{s} must each be a translated or compiled function of one\n"
@@ -237,7 +237,7 @@ msgid ""
 "in orders of magnitude speed improvement over interpreted code in many cases!\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:168
 msgid ""
 "@code{demo (dblint)} executes a demonstration of @code{dblint} applied to an\n"
 "example problem.\n"
@@ -245,7 +245,7 @@ msgid ""
 "@c @code{demo (dblint_1)} executes another demonstration.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:173
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -253,14 +253,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:177
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{defint}\n"
 "@deffn {Function} defint (@var{expr}, @var{x}, @var{a}, @var{b})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:184
 msgid ""
 "Attempts to compute a definite integral.  @code{defint} is called by\n"
 "@code{integrate} when limits of integration are specified, i.e., when\n"
@@ -270,14 +270,14 @@ msgid ""
 "@c SHOULD WE BOTHER TO DOCUMENT defint ??? NO FUNCTIONALITY HERE THAT IS NOT ALREADY PRESENT IN integrate !!!\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:188
 msgid ""
 "@code{defint} returns a symbolic expression, either the computed integral or the\n"
 "noun form of the integral.  See @code{quad_qag} and related functions for\n"
 "numerical approximation of definite integrals.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:193
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -285,7 +285,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:198
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{erfflag}\n"
@@ -293,14 +293,14 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:202
 msgid ""
 "When @code{erfflag} is @code{false}, prevents @code{risch} from introducing the\n"
 "@code{erf} function in the answer if there were none in the integrand to\n"
 "begin with.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:207
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -308,19 +308,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:209
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:213
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ilt}\n"
 "@deffn {Function} ilt (@var{expr}, @var{s}, @var{t})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:220
 msgid ""
 "Computes the inverse Laplace transform of @var{expr} with\n"
 "respect to @var{s} and parameter @var{t}.  @var{expr} must be a ratio of\n"
@@ -330,7 +330,7 @@ msgid ""
 "differential or convolution integral equation or a set of them.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:250
 msgid ""
 "@example\n"
 "@group\n"
@@ -363,7 +363,7 @@ msgid ""
 "Is  a b (a b - 1)  positive, negative, or zero?\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:258
 msgid ""
 "pos;\n"
 "               sqrt(a b (a b - 1)) t\n"
@@ -374,7 +374,7 @@ msgid ""
 "             a  b  - 2 a  b + a\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:265
 msgid ""
 "                                                       2\n"
 "                                             + ------------------\n"
@@ -384,7 +384,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:270
 msgid ""
 "@opencatbox\n"
 "@category{Laplace transform}\n"
@@ -392,7 +392,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:275
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{intanalysis}\n"
@@ -400,7 +400,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:280
 msgid ""
 "When @code{true}, definite integration tries to find poles in the integrand in \n"
 "the interval of integration.  If there are, then the integral is evaluated\n"
@@ -408,23 +408,23 @@ msgid ""
 "this check is not performed and integration is done assuming there are no poles.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:282
 msgid ""
 "See also @mrefdot{ldefint}\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:284
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:287
 msgid ""
 "Maxima can solve the following integrals, when @mref{intanalysis} is set to\n"
 "@code{false}:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:304
 msgid ""
 "@c ===beg===\n"
 "@c integrate(1/(sqrt(x+1)+1),x,0,1);\n"
@@ -444,20 +444,20 @@ msgid ""
 "                                0\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:307
 msgid ""
 "(%i2) integrate(1/(sqrt(x)+1),x,0,1),intanalysis:false;\n"
 "(%o2)                            2 - 2 log(2)\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:311
 msgid ""
 "(%i3) integrate(cos(a)/sqrt((tan(a))^2 +1),a,-%pi/2,%pi/2);\n"
 "The number 1 isn't in the domain of atanh\n"
 " -- an error. To debug this try: debugmode(true);\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:318
 msgid ""
 "(%i4) intanalysis:false$\n"
 "(%i5) integrate(cos(a)/sqrt((tan(a))^2+1),a,-%pi/2,%pi/2);\n"
@@ -467,7 +467,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:323
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -475,7 +475,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:329
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{integrate}\n"
@@ -484,7 +484,7 @@ msgid ""
 "@fname{integrate} (@var{expr}, @var{x}, @var{a}, @var{b})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:337
 msgid ""
 "Attempts to symbolically compute the integral of @var{expr} with respect to\n"
 "@var{x}.  @code{integrate (@var{expr}, @var{x})} is an indefinite integral,\n"
@@ -495,7 +495,7 @@ msgid ""
 "If @var{b} is equal to @var{a}, @code{integrate} returns zero.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:342
 msgid ""
 "See @code{quad_qag} and related functions for numerical approximation of\n"
 "definite integrals.  See @code{residue} for computation of residues\n"
@@ -503,7 +503,7 @@ msgid ""
 "indefinite integrals.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:348
 msgid ""
 "The integral (an expression free of @code{integrate}) is returned if\n"
 "@code{integrate} succeeds.  Otherwise the return value is\n"
@@ -512,7 +512,7 @@ msgid ""
 "The noun form of @code{integrate} is displayed with an integral sign.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:355
 msgid ""
 "In some circumstances it is useful to construct a noun form by hand, by quoting\n"
 "@code{integrate} with a single quote, e.g.,\n"
@@ -522,7 +522,7 @@ msgid ""
 "where @var{i} is the noun form of interest.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:368
 msgid ""
 "@c BEGIN EXPOSITION ON HEURISTICS\n"
 "@code{integrate} handles definite integrals separately from indefinite, and\n"
@@ -538,7 +538,7 @@ msgid ""
 "infinity or negative infinity; see also @mrefdot{ldefint}\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:373
 msgid ""
 "Special cases of indefinite integrals include trigonometric functions,\n"
 "exponential and logarithmic functions,\n"
@@ -546,7 +546,7 @@ msgid ""
 "@code{integrate} may also make use of a short table of elementary integrals.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:380
 msgid ""
 "@code{integrate} may carry out a change of variable\n"
 "if the integrand has the form @code{f(g(x)) * diff(g(x), x)}.\n"
@@ -556,7 +556,7 @@ msgid ""
 "See also @mref{changevar} and @mrefdot{antid}\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:389
 msgid ""
 "If none of the preceding heuristics find the indefinite integral, the Risch\n"
 "algorithm is executed.  The flag @mref{risch} may be set as an @code{evflag},\n"
@@ -568,14 +568,14 @@ msgid ""
 "@c END EXPOSITION ON HEURISTICS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:393
 msgid ""
 "@code{integrate} works only with functional relations represented explicitly\n"
 "with the @code{f(x)} notation.  @code{integrate} does not respect implicit\n"
 "dependencies established by the @code{depends} function.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:401
 msgid ""
 "@code{integrate} may need to know some property of a parameter in the integrand.\n"
 "@code{integrate} will first consult the @code{assume} database,\n"
@@ -586,30 +586,30 @@ msgid ""
 "or @code{pos;}, @code{zero;}, or @code{neg;}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:404
 msgid ""
 "@code{integrate} is not, by default, declared to be linear.  See @code{declare}\n"
 "and @code{linear}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:406
 msgid ""
 "@code{integrate} attempts integration by parts only in a few special cases.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:408
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:412
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
 "Elementary indefinite and definite integrals.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:440
 msgid ""
 "@example\n"
 "@group\n"
@@ -640,13 +640,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:443
 msgid ""
 "@item\n"
 "Use of @code{assume} and interactive query.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:451
 msgid ""
 "@example\n"
 "(%i1) assume (a > 1)$\n"
@@ -657,13 +657,13 @@ msgid ""
 "       5\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:454
 msgid ""
 "no;\n"
 "Is  2 a - 3  positive, negative, or zero?\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:461
 msgid ""
 "neg;\n"
 "                                   3\n"
@@ -673,7 +673,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:466
 msgid ""
 "@item\n"
 "Change of variable.  There are two changes of variable in this example:\n"
@@ -681,7 +681,7 @@ msgid ""
 "derivation @code{diff(r(x))} of an unspecified function @code{r(x)}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:485
 msgid ""
 "@example\n"
 "@group\n"
@@ -703,7 +703,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:492
 msgid ""
 "@item\n"
 "Return value contains the @code{'integrate} noun form.  In this example, Maxima\n"
@@ -713,7 +713,7 @@ msgid ""
 "@mref{integrate_use_rootsof} for more on integrals of rational functions.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:514
 msgid ""
 "@example\n"
 "@group\n"
@@ -738,7 +738,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:521
 msgid ""
 "@item\n"
 "Defining a function in terms of an integral.  The body of a function is not\n"
@@ -748,7 +748,7 @@ msgid ""
 "body of @code{f_2}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:546
 msgid ""
 "@example\n"
 "@group\n"
@@ -776,7 +776,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:551
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -784,7 +784,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:556
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{integration_constant}\n"
@@ -792,24 +792,24 @@ msgid ""
 "Default value: @code{%c}\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:560
 msgid ""
 "When a constant of integration is introduced by indefinite integration of an\n"
 "equation, the name of the constant is constructed by concatenating\n"
 "@code{integration_constant} and @code{integration_constant_counter}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:562
 msgid ""
 "@code{integration_constant} may be assigned any symbol.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:564
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:590
 msgid ""
 "@c ===beg===\n"
 "@c integrate (x^2 = 1, x);\n"
@@ -838,7 +838,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:595
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -846,7 +846,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:600
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{integration_constant_counter}\n"
@@ -854,25 +854,25 @@ msgid ""
 "Default value: 0\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:604
 msgid ""
 "When a constant of integration is introduced by indefinite integration of an\n"
 "equation, the name of the constant is constructed by concatenating\n"
 "@code{integration_constant} and @code{integration_constant_counter}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:607
 msgid ""
 "@code{integration_constant_counter} is incremented before constructing the next\n"
 "integration constant.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:609
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:651
 msgid ""
 "@c ===beg===\n"
 "@c integrate (x^2 = 1, x);\n"
@@ -917,7 +917,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:656
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -925,7 +925,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:661
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{integrate_use_rootsof}\n"
@@ -933,21 +933,21 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:665
 msgid ""
 "When @code{integrate_use_rootsof} is @code{true} and the denominator of\n"
 "a rational function cannot be factored, @code{integrate} returns the integral\n"
 "in a form which is a sum over the roots (not yet known) of the denominator.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:669
 msgid ""
 "For example, with @code{integrate_use_rootsof} set to @code{false},\n"
 "@code{integrate} returns an unsolved integral of a rational function in noun\n"
 "form:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:683
 msgid ""
 "@example\n"
 "(%i1) integrate_use_rootsof: false$\n"
@@ -964,14 +964,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:687
 msgid ""
 "Now we set the flag to be true and the unsolved part of the integral will be\n"
 "expressed as a summation over the roots of the denominator of the rational\n"
 "function:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:701
 msgid ""
 "@example\n"
 "(%i3) integrate_use_rootsof: true$\n"
@@ -988,7 +988,7 @@ msgid ""
 "               7\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:709
 msgid ""
 "                                                      2 x + 1\n"
 "                                  2            5 atan(-------)\n"
@@ -999,7 +999,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:715
 msgid ""
 "Alternatively the user may compute the roots of the denominator separately,\n"
 "and then express the integrand in terms of these roots, e.g.,\n"
@@ -1008,7 +1008,7 @@ msgid ""
 "Sometimes this will help Maxima obtain a more useful result.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:720
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -1016,19 +1016,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:722
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:726
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ldefint}\n"
 "@deffn {Function} ldefint (@var{expr}, @var{x}, @var{a}, @var{b})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:732
 msgid ""
 "Attempts to compute the definite integral of @var{expr} by using @code{limit}\n"
 "to evaluate the indefinite integral of @var{expr} with respect to @var{x}\n"
@@ -1037,7 +1037,7 @@ msgid ""
 "@code{ldefint} returns an expression containing limits as noun forms.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:739
 msgid ""
 "@code{ldefint} is not called from @code{integrate}, so executing\n"
 "@code{ldefint (@var{expr}, @var{x}, @var{a}, @var{b})} may yield a different\n"
@@ -1047,7 +1047,7 @@ msgid ""
 "special cases.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:744
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -1055,33 +1055,33 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:747
 msgid ""
 "@c UMM, IS THERE SOME TEXT MISSING HERE ???\n"
 "@c WHAT IS THIS ABOUT EXACTLY ??\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:751
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{potential}\n"
 "@deffn {Function} potential (@var{givengradient})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:754
 msgid ""
 "The calculation makes use of the global variable @code{potentialzeroloc[0]}\n"
 "which must be @code{nonlist} or of the form\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:758
 msgid ""
 "@example\n"
 "[indeterminatej=expressionj, indeterminatek=expressionk, ...]\n"
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:765
 msgid ""
 "the former being equivalent to the nonlist expression for all right-hand\n"
 "sides in the latter.  The indicated right-hand sides are used as the\n"
@@ -1091,21 +1091,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:769
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{residue}\n"
 "@deffn {Function} residue (@var{expr}, @var{z}, @var{z_0})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:773
 msgid ""
 "Computes the residue in the complex plane of the expression @var{expr} when the\n"
 "variable @var{z} assumes the value @var{z_0}.  The residue is the coefficient of\n"
 "@code{(@var{z} - @var{z_0})^(-1)} in the Laurent series for @var{expr}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:789
 msgid ""
 "@example\n"
 "@group\n"
@@ -1124,7 +1124,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:794
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus} @category{Complex variables}\n"
@@ -1132,14 +1132,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:798
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{risch}\n"
 "@deffn {Function} risch (@var{expr}, @var{x})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:805
 msgid ""
 "Integrates @var{expr} with respect to @var{x} using the\n"
 "transcendental case of the Risch algorithm.  (The algebraic case of\n"
@@ -1149,14 +1149,14 @@ msgid ""
 "@code{risch} if given these cases.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:809
 msgid ""
 "@code{erfflag}, if @code{false}, prevents @code{risch} from introducing the\n"
 "@code{erf} function in the answer if there were none in the integrand to begin\n"
 "with.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:825
 msgid ""
 "@example\n"
 "@group\n"
@@ -1175,7 +1175,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:830
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -1183,24 +1183,24 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:832
 msgid ""
 "@c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:836
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tldefint}\n"
 "@deffn {Function} tldefint (@var{expr}, @var{x}, @var{a}, @var{b})\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:838
 msgid ""
 "Equivalent to @code{ldefint} with @code{tlimswitch} set to @code{true}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:843
 msgid ""
 "@opencatbox\n"
 "@category{Integral calculus}\n"
@@ -1208,12 +1208,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:845
 msgid ""
 "@footnotestyle end\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:850
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to QUADPACK, Functions and Variables for QUADPACK, Functions and Variables for Integration, Integration\n"
@@ -1221,23 +1221,23 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:852
 msgid ""
 "@c FOLLOWING TEXT ADAPTED WITH HEAVY MODIFICATION FROM http://www.netlib.org/slatec/src/qpdoc.f\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:860
 msgid ""
 "QUADPACK is a collection of functions for the numerical\n"
 "computation of one-dimensional definite integrals.\n"
 "It originated from a joint project of\n"
 "R. Piessens @footnote{Applied Mathematics and Programming Division, K.U. Leuven},\n"
 "E. de Doncker @footnote{Applied Mathematics and Programming Division, K.U. Leuven},\n"
-"C. Ueberhuber @footnote{Institut f@\"ur Mathematik, T.U. Wien},\n"
+"C. Ueberhuber @footnote{Institut f@\\"ur Mathematik, T.U. Wien},\n"
 "and D. Kahaner @footnote{National Bureau of Standards, Washington, D.C., U.S.A}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:868
 msgid ""
 "The QUADPACK library included in Maxima is an automatic translation (via the\n"
 "program @code{f2cl}) of the Fortran source code of QUADPACK as it appears in\n"
@@ -1248,7 +1248,7 @@ msgid ""
 "it is not clear how that version differs from the SLATEC version.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:874
 msgid ""
 "The QUADPACK functions included in Maxima are all automatic, in the sense that\n"
 "these functions attempt to compute a result to a specified accuracy, requiring\n"
@@ -1257,7 +1257,7 @@ msgid ""
 "at the Maxima level.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:879
 msgid ""
 "Further information about QUADPACK can be found in the QUADPACK book\n"
 "@footnote{R. Piessens, E. de Doncker-Kapenga, C.W. Uberhuber, and D.K. Kahaner.\n"
@@ -1265,14 +1265,14 @@ msgid ""
 "Berlin: Springer-Verlag, 1983, ISBN 0387125531.}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:883
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Overview\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:892
 msgid ""
 "@table @code\n"
 "@item quad_qag\n"
@@ -1284,7 +1284,7 @@ msgid ""
 "The high-degree rules are suitable for strongly oscillating integrands.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:897
 msgid ""
 "@item quad_qags\n"
 "Integration of a general function over a finite interval.\n"
@@ -1292,7 +1292,7 @@ msgid ""
 "extrapolation (de Doncker, 1978) by the Epsilon algorithm (Wynn, 1956).\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:902
 msgid ""
 "@item quad_qagi\n"
 "Integration of a general function over an infinite or semi-infinite interval.\n"
@@ -1300,7 +1300,7 @@ msgid ""
 "then the same strategy as in @code{quad_qags} is applied.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:916
 msgid ""
 "@item quad_qawo\n"
 "@ifnottex\n"
@@ -1317,7 +1317,7 @@ msgid ""
 "similar to @code{quad_qags}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:922
 msgid ""
 "@item quad_qawf\n"
 "Calculates a Fourier cosine or Fourier sine transform on a semi-infinite\n"
@@ -1326,7 +1326,7 @@ msgid ""
 "(Wynn, 1956) is applied to the series of the integral contributions.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:938
 msgid ""
 "@item quad_qaws\n"
 "@ifnottex\n"
@@ -1345,14 +1345,14 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:942
 msgid ""
 "A globally adaptive subdivision strategy is applied, with modified\n"
 "Clenshaw-Curtis integration on the subintervals which contain @math{a}\n"
 "or @math{b}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:949
 msgid ""
 "@item quad_qawc\n"
 "Computes the Cauchy principal value of @math{f(x)/(x - c)} over a finite\n"
@@ -1362,19 +1362,23 @@ msgid ""
 "which contain the point @math{x = c}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:955
 msgid ""
 "@item quad_qagp\n"
 "Basically the same as @code{quad_qags} but points of singularity or\n"
 "discontinuity of the integrand must be supplied.  This makes it easier\n"
 "for the integrator to produce a good solution.\n"
 "@end table\n"
+msgstr ""
+
+#: Integration.texi:960
+msgid ""
 "@opencatbox\n"
 "@category{Integral calculus} @category{Numerical methods} @category{Share packages} @category{Package quadpack}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:965
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for QUADPACK, , Introduction to QUADPACK, Integration\n"
@@ -1382,13 +1386,13 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:968
 msgid ""
 "@c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS\n"
 "@c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:974
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_qag}\n"
@@ -1397,7 +1401,7 @@ msgid ""
 "@fname{quad_qag} (@var{f}, @var{x}, @var{a}, @var{b}, @var{key}, [@var{epsrel}, @var{epsabs}, @var{limit}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:980
 msgid ""
 "Integration of a general function over a finite interval.  @code{quad_qag}\n"
 "implements a simple globally adaptive integrator using the strategy of Aind\n"
@@ -1406,12 +1410,12 @@ msgid ""
 "are suitable for strongly oscillating integrands.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:982
 msgid ""
 "@code{quad_qag} computes the integral\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:989
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x), x, a, b)}\n"
@@ -1421,7 +1425,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:996
 msgid ""
 "The function to be integrated is @var{f(x)}, with dependent\n"
 "variable @var{x}, and the function is to be integrated between the\n"
@@ -1431,26 +1435,26 @@ msgid ""
 "High-order rules are suitable for strongly oscillating integrands.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:999
 msgid ""
 "The integrand may be specified as the name of a Maxima or Lisp function or\n"
 "operator, a Maxima lambda expression, or a general Maxima expression.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1003
 msgid ""
 "The numerical integration is done adaptively by subdividing the\n"
 "integration region into sub-intervals until the desired accuracy is\n"
 "achieved.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1006
 msgid ""
 "The keyword arguments are optional and may be specified in any order.\n"
 "They all take the form @code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1016
 msgid ""
 "@table @code\n"
 "@item epsrel\n"
@@ -1463,12 +1467,12 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1018
 msgid ""
 "@code{quad_qag} returns a list of four elements:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1029
 msgid ""
 "@itemize\n"
 "@item\n"
@@ -1482,12 +1486,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1031
 msgid ""
 "The error code (fourth element of the return value) can have the values:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1043
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -1502,22 +1506,22 @@ msgid ""
 "if the input is invalid.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1045
 msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1047
 msgid ""
 "@c NEED CROSS REFS HERE -- EITHER CROSS REF A QUADPACK OVERVIEW, OR CROSS REF EACH OF THE quad_* FUNCTIONS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1049
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1062
 msgid ""
 "@example\n"
 "@group\n"
@@ -1533,7 +1537,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1067
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -1541,13 +1545,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1070
 msgid ""
 "@c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS\n"
 "@c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1076
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_qags}\n"
@@ -1556,19 +1560,19 @@ msgid ""
 "@fname{quad_qags} (@var{f}, @var{x}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1080
 msgid ""
 "Integration of a general function over a finite interval.\n"
 "@code{quad_qags} implements globally adaptive interval subdivision with\n"
 "extrapolation (de Doncker, 1978) by the Epsilon algorithm (Wynn, 1956).\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1082
 msgid ""
 "@code{quad_qags} computes the integral\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1089
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x), x, a, b)}\n"
@@ -1578,26 +1582,26 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1093
 msgid ""
 "The function to be integrated is @var{f(x)}, with\n"
 "dependent variable @var{x}, and the function is to be integrated\n"
 "between the limits @var{a} and @var{b}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1096
 msgid ""
 "The integrand may be specified as the name of a Maxima or Lisp function or\n"
 "operator, a Maxima lambda expression, or a general Maxima expression.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1099
 msgid ""
 "The keyword arguments are optional and may be specified in any order.\n"
 "They all take the form @code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1109
 msgid ""
 "@table @code\n"
 "@item epsrel\n"
@@ -1610,12 +1614,12 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1111
 msgid ""
 "@code{quad_qags} returns a list of four elements:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1122
 msgid ""
 "@itemize\n"
 "@item\n"
@@ -1629,12 +1633,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1124
 msgid ""
 "The error code (fourth element of the return value) can have the values:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1141
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -1654,17 +1658,17 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1143
 msgid ""
 "@c NEED CROSS REFS HERE -- EITHER CROSS REF A QUADPACK OVERVIEW, OR CROSS REF EACH OF THE quad_* FUNCTIONS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1145
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1152
 msgid ""
 "@example\n"
 "@group\n"
@@ -1674,12 +1678,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1154
 msgid ""
 "Note that @code{quad_qags} is more accurate and efficient than @code{quad_qag} for this integrand.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1159
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -1687,13 +1691,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1162
 msgid ""
 "@c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS\n"
 "@c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1168
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_qagi}\n"
@@ -1702,19 +1706,19 @@ msgid ""
 "@fname{quad_qagi} (@var{f}, @var{x}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1172
 msgid ""
 "Integration of a general function over an infinite or semi-infinite interval.\n"
 "The interval is mapped onto a finite interval and\n"
 "then the same strategy as in @code{quad_qags} is applied.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1174
 msgid ""
 "@code{quad_qagi} evaluates one of the following integrals\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1181
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x), x, a, inf)}\n"
@@ -1724,7 +1728,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1188
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x), x, minf, a)}\n"
@@ -1734,7 +1738,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1195
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x), x, minf, inf)}\n"
@@ -1744,32 +1748,32 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1199
 msgid ""
 "using the Quadpack QAGI routine.  The function to be integrated is\n"
 "@var{f(x)}, with dependent variable @var{x}, and the function is to\n"
 "be integrated over an infinite range.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1202
 msgid ""
 "The integrand may be specified as the name of a Maxima or Lisp function or\n"
 "operator, a Maxima lambda expression, or a general Maxima expression.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1205
 msgid ""
 "One of the limits of integration must be infinity.  If not, then\n"
 "@code{quad_qagi} will just return the noun form.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1208
 msgid ""
 "The keyword arguments are optional and may be specified in any order.\n"
 "They all take the form @code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1218
 msgid ""
 "@table @code\n"
 "@item epsrel\n"
@@ -1782,12 +1786,12 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1220
 msgid ""
 "@code{quad_qagi} returns a list of four elements:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1231
 msgid ""
 "@itemize\n"
 "@item\n"
@@ -1801,12 +1805,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1233
 msgid ""
 "The error code (fourth element of the return value) can have the values:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1249
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -1825,22 +1829,22 @@ msgid ""
 "if the input is invalid.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1251
 msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1253
 msgid ""
 "@c NEED CROSS REFS HERE -- EITHER CROSS REF A QUADPACK OVERVIEW, OR CROSS REF EACH OF THE quad_* FUNCTIONS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1255
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1268
 msgid ""
 "@example\n"
 "@group\n"
@@ -1856,7 +1860,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1273
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -1864,13 +1868,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1276
 msgid ""
 "@c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS\n"
 "@c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1282
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_qawc}\n"
@@ -1879,7 +1883,7 @@ msgid ""
 "@fname{quad_qawc} (@var{f}, @var{x}, @var{c}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1287
 msgid ""
 "Computes the Cauchy principal value of @math{f(x)/(x - c)} over a finite\n"
 "interval.  The strategy is globally adaptive, and modified\n"
@@ -1887,12 +1891,12 @@ msgid ""
 "which contain the point @math{x = c}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1289
 msgid ""
 "@code{quad_qawc} computes the Cauchy principal value of\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1296
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x)/(x - c), x, a, b)}\n"
@@ -1902,26 +1906,26 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1300
 msgid ""
 "using the Quadpack QAWC routine.  The function to be integrated is\n"
 "@code{@var{f(x)}/(@var{x} - @var{c})}, with dependent variable @var{x}, and the\n"
 "function is to be integrated over the interval @var{a} to @var{b}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1303
 msgid ""
 "The integrand may be specified as the name of a Maxima or Lisp function or\n"
 "operator, a Maxima lambda expression, or a general Maxima expression.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1306
 msgid ""
 "The keyword arguments are optional and may be specified in any order.\n"
 "They all take the form @code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1316
 msgid ""
 "@table @code\n"
 "@item epsrel\n"
@@ -1934,12 +1938,12 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1318
 msgid ""
 "@code{quad_qawc} returns a list of four elements:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1329
 msgid ""
 "@itemize\n"
 "@item\n"
@@ -1953,12 +1957,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1331
 msgid ""
 "The error code (fourth element of the return value) can have the values:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1343
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -1973,17 +1977,17 @@ msgid ""
 "if the input is invalid.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1345
 msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1347
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1366
 msgid ""
 "@example\n"
 "@group\n"
@@ -2005,7 +2009,7 @@ msgid ""
 "                     2 4      + 2\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1380
 msgid ""
 "       3 alpha                       3 alpha\n"
 "       -------                       -------\n"
@@ -2022,7 +2026,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1385
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -2030,13 +2034,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1388
 msgid ""
 "@c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS\n"
 "@c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1394
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_qawf}\n"
@@ -2045,7 +2049,7 @@ msgid ""
 "@fname{quad_qawf} (@var{f}, @var{x}, @var{a}, @var{omega}, @var{trig}, [@var{epsabs}, @var{limit}, @var{maxp1}, @var{limlst}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1400
 msgid ""
 "Calculates a Fourier cosine or Fourier sine transform on a semi-infinite\n"
 "interval using the Quadpack QAWF function.  The same approach as in\n"
@@ -2054,12 +2058,12 @@ msgid ""
 "series of the integral contributions.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1402
 msgid ""
 "@code{quad_qawf} computes the integral\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1409
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x)*w(x), x, a, inf)}\n"
@@ -2069,12 +2073,12 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1411
 msgid ""
 "The weight function @math{w} is selected by @var{trig}:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1418
 msgid ""
 "@table @code\n"
 "@item cos\n"
@@ -2084,19 +2088,19 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1421
 msgid ""
 "The integrand may be specified as the name of a Maxima or Lisp function or\n"
 "operator, a Maxima lambda expression, or a general Maxima expression.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1424
 msgid ""
 "The keyword arguments are optional and may be specified in any order.\n"
 "They all take the form @code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1438
 msgid ""
 "@table @code\n"
 "@item epsabs\n"
@@ -2113,12 +2117,12 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1440
 msgid ""
 "@code{quad_qawf} returns a list of four elements:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1451
 msgid ""
 "@itemize\n"
 "@item\n"
@@ -2132,12 +2136,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1453
 msgid ""
 "The error code (fourth element of the return value) can have the values:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1465
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -2152,17 +2156,17 @@ msgid ""
 "if the input is invalid.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1467
 msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1469
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1487
 msgid ""
 "@example\n"
 "@group\n"
@@ -2183,7 +2187,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1492
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -2191,13 +2195,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1495
 msgid ""
 "@c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS\n"
 "@c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1501
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_qawo}\n"
@@ -2206,7 +2210,7 @@ msgid ""
 "@fname{quad_qawo} (@var{f}, @var{x}, @var{a}, @var{b}, @var{omega}, @var{trig}, [@var{epsrel}, @var{epsabs}, @var{limit}, @var{maxp1}, @var{limlst}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1527
 msgid ""
 "Integration of\n"
 "@ifnottex\n"
@@ -2235,13 +2239,13 @@ msgid ""
 "extrapolation, similar to @code{quad_qags}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1530
 msgid ""
 "@code{quad_qawo} computes the integral using the Quadpack QAWO\n"
 "routine:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1537
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x)*w(x), x, a, b)}\n"
@@ -2251,12 +2255,12 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1539
 msgid ""
 "The weight function @math{w} is selected by @var{trig}:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1556
 msgid ""
 "@table @code\n"
 "@item cos\n"
@@ -2276,19 +2280,19 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1559
 msgid ""
 "The integrand may be specified as the name of a Maxima or Lisp function or\n"
 "operator, a Maxima lambda expression, or a general Maxima expression.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1562
 msgid ""
 "The keyword arguments are optional and may be specified in any order.\n"
 "They all take the form @code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1578
 msgid ""
 "@table @code\n"
 "@item epsrel\n"
@@ -2307,12 +2311,12 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1580
 msgid ""
 "@code{quad_qawo} returns a list of four elements:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1591
 msgid ""
 "@itemize\n"
 "@item\n"
@@ -2326,12 +2330,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1593
 msgid ""
 "The error code (fourth element of the return value) can have the values:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1605
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -2346,17 +2350,17 @@ msgid ""
 "if the input is invalid.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1607
 msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1609
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1629
 msgid ""
 "@example\n"
 "@group\n"
@@ -2379,7 +2383,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1634
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -2387,13 +2391,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1637
 msgid ""
 "@c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS\n"
 "@c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1643
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_qaws}\n"
@@ -2402,7 +2406,7 @@ msgid ""
 "@fname{quad_qaws} (@var{f}, @var{x}, @var{a}, @var{b}, @var{alpha}, @var{beta}, @var{wfun}, [@var{epsrel}, @var{epsabs}, @var{limit}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1648
 msgid ""
 "Integration of @math{w(x) f(x)} over a finite interval, where @math{w(x)} is a\n"
 "certain algebraic or logarithmic function.  A globally adaptive subdivision\n"
@@ -2410,12 +2414,12 @@ msgid ""
 "subintervals which contain the endpoints of the interval of integration.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1650
 msgid ""
 "@code{quad_qaws} computes the integral using the Quadpack QAWS routine:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1657
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x)*w(x), x, a, b)}\n"
@@ -2425,12 +2429,12 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1659
 msgid ""
 "The weight function @math{w} is selected by @var{wfun}:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1690
 msgid ""
 "@table @code\n"
 "@item 1\n"
@@ -2464,19 +2468,19 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1693
 msgid ""
 "The integrand may be specified as the name of a Maxima or Lisp function or\n"
 "operator, a Maxima lambda expression, or a general Maxima expression.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1696
 msgid ""
 "The keyword arguments are optional and may be specified in any order.\n"
 "They all take the form @code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1706
 msgid ""
 "@table @code\n"
 "@item epsrel\n"
@@ -2489,12 +2493,12 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1708
 msgid ""
 "@code{quad_qaws} returns a list of four elements:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1719
 msgid ""
 "@itemize\n"
 "@item\n"
@@ -2508,12 +2512,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1721
 msgid ""
 "The error code (fourth element of the return value) can have the values:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1733
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -2528,17 +2532,17 @@ msgid ""
 "if the input is invalid.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1735
 msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1737
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1748
 msgid ""
 "@example\n"
 "@group\n"
@@ -2552,7 +2556,7 @@ msgid ""
 "Is  4 2      - 1  positive, negative, or zero?\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1761
 msgid ""
 "pos;\n"
 "                          alpha         alpha\n"
@@ -2568,7 +2572,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1766
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -2576,13 +2580,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1769
 msgid ""
 "@c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS\n"
 "@c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1775
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_qagp}\n"
@@ -2591,19 +2595,19 @@ msgid ""
 "@fname{quad_qagp} (@var{f}, @var{x}, @var{a}, @var{b}, @var{points}, [@var{epsrel}, @var{epsabs}, @var{limit}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1779
 msgid ""
 "Integration of a general function over a finite interval.\n"
 "@code{quad_qagp} implements globally adaptive interval subdivision with\n"
 "extrapolation (de Doncker, 1978) by the Epsilon algorithm (Wynn, 1956).\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1781
 msgid ""
 "@code{quad_qagp} computes the integral\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1788
 msgid ""
 "@ifnottex\n"
 "@math{integrate (f(x), x, a, b)}\n"
@@ -2613,32 +2617,32 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1792
 msgid ""
 "The function to be integrated is @var{f(x)}, with\n"
 "dependent variable @var{x}, and the function is to be integrated\n"
 "between the limits @var{a} and @var{b}.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1795
 msgid ""
 "The integrand may be specified as the name of a Maxima or Lisp function or\n"
 "operator, a Maxima lambda expression, or a general Maxima expression.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1798
 msgid ""
 "To help the integrator, the user must supply a list of points where\n"
 "the integrand is singular or discontinous.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1801
 msgid ""
 "The keyword arguments are optional and may be specified in any order.\n"
 "They all take the form @code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1811
 msgid ""
 "@table @code\n"
 "@item epsrel\n"
@@ -2651,12 +2655,12 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1813
 msgid ""
 "@code{quad_qagp} returns a list of four elements:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1824
 msgid ""
 "@itemize\n"
 "@item\n"
@@ -2670,12 +2674,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1826
 msgid ""
 "The error code (fourth element of the return value) can have the values:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1843
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -2695,17 +2699,17 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1845
 msgid ""
 "@c NEED CROSS REFS HERE -- EITHER CROSS REF A QUADPACK OVERVIEW, OR CROSS REF EACH OF THE quad_* FUNCTIONS\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1847
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1858
 msgid ""
 "@example\n"
 "@group\n"
@@ -2719,14 +2723,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1862
 msgid ""
 "The integrand has singularities at @code{1} and @code{sqrt(2)} so we supply\n"
 "these points to @code{quad_qagp}.  We also note that @code{quad_qagp} is\n"
 "more accurate and more efficient that @mrefdot{quad_qags}\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1867
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -2734,20 +2738,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1871
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{quad_control}\n"
 "@deffn  {Function} quad_control (@var{parameter}, [@var{value}])\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1874
 msgid ""
 "Control error handling for quadpack.  The parameter should be one of\n"
 "the following symbols:\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1884
 msgid ""
 "@table @code\n"
 "@item current_error\n"
@@ -2760,14 +2764,14 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1888
 msgid ""
 "If @var{value} is not given, then the current value of the\n"
 "@var{parameter} is returned.  If @var{value} is given, the value of\n"
 "@var{parameter} is set to the given value.\n"
 msgstr ""
 
-# Integration.texi
+#: Integration.texi:1893
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Package quadpack}\n"
@@ -2775,6 +2779,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Integration.texi
-msgid ""
-msgstr ""

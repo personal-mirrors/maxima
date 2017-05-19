@@ -1,33 +1,37 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# lindstedt.texi
+msgstr ""
+
+#: lindstedt.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for lindstedt::\n"
 "@end menu\n"
 msgstr ""
 
-# lindstedt.texi
+#: lindstedt.texi:7
 msgid ""
 "@node Functions and Variables for lindstedt,  , lindstedt-pkg, lindstedt-pkg\n"
 "@section Functions and Variables for lindstedt\n"
+msgstr ""
+
+#: lindstedt.texi:16
+msgid ""
 "@anchor{Lindstedt}\n"
 "@deffn {Function} Lindstedt (@var{eq},@var{pvar},@var{torder},@var{ic})\n"
 "This is a first pass at a Lindstedt code.  It can solve problems\n"
@@ -37,7 +41,7 @@ msgid ""
 "initial conditions.\n"
 msgstr ""
 
-# lindstedt.texi
+#: lindstedt.texi:22
 msgid ""
 "Problems occur when initial conditions are not given, as the constants\n"
 "in the perturbation equations are the same as the zero order equation\n"
@@ -46,19 +50,19 @@ msgid ""
 "Van der Pol equation.\n"
 msgstr ""
 
-# lindstedt.texi
+#: lindstedt.texi:26
 msgid ""
 "Example:\n"
 "@example\n"
-"(%i1) load(\"makeOrders\")$\n"
+"(%i1) load(\\"makeOrders\\")$\n"
 msgstr ""
 
-# lindstedt.texi
+#: lindstedt.texi:28
 msgid ""
-"(%i2) load(\"lindstedt\")$\n"
+"(%i2) load(\\"lindstedt\\")$\n"
 msgstr ""
 
-# lindstedt.texi
+#: lindstedt.texi:42
 msgid ""
 "(%i3) Lindstedt('diff(x,t,2)+x-(e*x^3)/6,e,2,[1,0]);\n"
 "          2\n"
@@ -75,19 +79,15 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lindstedt.texi
+#: lindstedt.texi:44
 msgid ""
-"To use this function write first @code{load(\"makeOrders\")} and @code{load(\"lindstedt\")}.\n"
+"To use this function write first @code{load(\\"makeOrders\\")} and @code{load(\\"lindstedt\\")}.\n"
 msgstr ""
 
-# lindstedt.texi
+#: lindstedt.texi:48
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Share packages} @category{Package lindstedt}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lindstedt.texi
-msgid ""
-"@end deffn\n"
-msgstr ""

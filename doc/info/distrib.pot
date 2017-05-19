@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# distrib.texi
+msgstr ""
+
+#: distrib.texi:6
 msgid ""
 "@menu\n"
 "* Introduction to distrib::\n"
@@ -26,19 +26,23 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:9
 msgid ""
 "@node Introduction to distrib, Functions and Variables for continuous distributions, distrib-pkg, distrib-pkg\n"
 "@section Introduction to distrib\n"
+msgstr ""
+
+#: distrib.texi:12
+msgid ""
 "Package @code{distrib} contains a set of functions for making probability computations on both discrete and continuous univariate models. \n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:14
 msgid ""
 "What follows is a short reminder of basic probabilistic related definitions.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:31
 msgid ""
 "Let @math{f(x)} be the @var{density function} of an absolute continuous random variable @math{X}. The @var{distribution function} is defined as\n"
 "@ifnottex\n"
@@ -58,7 +62,7 @@ msgid ""
 "which equals the probability @var{Pr(X <= x)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:47
 msgid ""
 "The @var{mean} value is a localization parameter and is defined as\n"
 "@ifnottex\n"
@@ -77,7 +81,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:65
 msgid ""
 "The @var{variance} is a measure of variation,\n"
 "@ifnottex\n"
@@ -98,7 +102,7 @@ msgid ""
 "which is a positive real number. The square root of the variance is the @var{standard deviation}, @math{D[X]=sqrt(V[X])}, and it is another measure of variation.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:82
 msgid ""
 "The @var{skewness coefficient} is a measure of non-symmetry,\n"
 "@ifnottex\n"
@@ -118,7 +122,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:100
 msgid ""
 "And the @var{kurtosis coefficient} measures the peakedness of the distribution,\n"
 "@ifnottex\n"
@@ -139,7 +143,7 @@ msgid ""
 "If @math{X} is gaussian, @math{KU[X]=0}. In fact, both skewness and kurtosis are shape parameters used to measure the non--gaussianity of a distribution.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:116
 msgid ""
 "If the random variable @math{X} is discrete, the density, or @var{probability}, function @math{f(x)} takes positive values within certain countable set of numbers @math{x_i}, and zero elsewhere. In this case, the distribution function is\n"
 "@ifnottex\n"
@@ -158,7 +162,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:132
 msgid ""
 "The mean, variance, standard deviation, skewness coefficient and kurtosis coefficient take the form\n"
 "@ifnottex\n"
@@ -177,7 +181,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:147
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -195,7 +199,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:156
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -207,7 +211,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:189
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -243,7 +247,7 @@ msgid ""
 "respectively.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:203
 msgid ""
 "There is a naming convention in package @code{distrib}. Every function name has two parts, the first one makes reference to the function or parameter we want to calculate,\n"
 "@example\n"
@@ -260,7 +264,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:224
 msgid ""
 "The second part is an explicit reference to the probabilistic model,\n"
 "@example\n"
@@ -284,7 +288,7 @@ msgid ""
 "   Gumbel              (*gumbel)\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:235
 msgid ""
 "Discrete distributions:\n"
 "   Binomial             (*binomial)\n"
@@ -298,48 +302,64 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:237
 msgid ""
 "For example, @code{pdf_student_t(x,n)} is the density function of the Student distribution with @var{n} degrees of freedom, @code{std_pareto(a,b)} is the standard deviation of the Pareto distribution with parameters @var{a} and @var{b} and @code{kurtosis_poisson(m)} is the kurtosis coefficient of the Poisson distribution with mean @var{m}.\n"
+msgstr ""
+
+#: distrib.texi:243
+msgid ""
 "In order to make use of package @code{distrib} you need first to load it by typing\n"
 "@example\n"
 "(%i1) load(distrib)$\n"
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:245
 msgid ""
 "For comments, bugs or suggestions, please contact the author at @var{'riotorto AT yahoo DOT com'}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:249
 msgid ""
 "@opencatbox\n"
 "@category{Statistical functions} @category{Share packages} @category{Package distrib}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: distrib.texi:255
+msgid ""
 "@node Functions and Variables for continuous distributions, Functions and Variables for discrete distributions, Introduction to distrib, distrib-pkg\n"
 "@section Functions and Variables for continuous distributions\n"
+msgstr ""
+
+#: distrib.texi:260
+msgid ""
 "@anchor{pdf_normal}\n"
 "@deffn {Function} pdf_normal (@var{x},@var{m},@var{s})\n"
 "Returns the value at @var{x} of the density function of a @math{Normal(m,s)} random variable, with @math{s>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:264
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:266
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:271
+msgid ""
 "@anchor{cdf_normal}\n"
 "@deffn {Function} cdf_normal (@var{x},@var{m},@var{s})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Normal(m,s)} random variable, with @math{s>0}. This function is defined in terms of Maxima's built-in error function @code{erf}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:285
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -356,27 +376,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:287
 msgid ""
 "See also @mrefdot{erf}\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:291
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:293
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:298
+msgid ""
 "@anchor{quantile_normal}\n"
 "@deffn {Function} quantile_normal (@var{q},@var{m},@var{s})\n"
 "Returns the @var{q}-quantile of a @math{Normal(m,s)} random variable, with @math{s>0}; in other words, this is the inverse of @mrefdot{cdf_normal} Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:313
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -394,146 +418,174 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:317
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:319
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:324
+msgid ""
 "@anchor{mean_normal}\n"
 "@deffn {Function} mean_normal (@var{m},@var{s})\n"
 "Returns the mean of a @math{Normal(m,s)} random variable, with @math{s>0}, namely @var{m}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:328
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:330
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:335
+msgid ""
 "@anchor{var_normal}\n"
 "@deffn {Function} var_normal (@var{m},@var{s})\n"
 "Returns the variance of a @math{Normal(m,s)} random variable, with @math{s>0}, namely @var{s^2}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:339
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:341
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:345
 msgid ""
 "@anchor{std_normal}\n"
 "@deffn {Function} std_normal (@var{m},@var{s})\n"
 "Returns the standard deviation of a @math{Normal(m,s)} random variable, with @math{s>0}, namely @var{s}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:349
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:351
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:356
+msgid ""
 "@anchor{skewness_normal}\n"
 "@deffn {Function} skewness_normal (@var{m},@var{s})\n"
 "Returns the skewness coefficient of a @math{Normal(m,s)} random variable, with @math{s>0}, which is always equal to 0. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:360
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:362
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:367
+msgid ""
 "@anchor{kurtosis_normal}\n"
 "@deffn {Function} kurtosis_normal (@var{m},@var{s})\n"
 "Returns the kurtosis coefficient of a @math{Normal(m,s)} random variable, with @math{s>0}, which is always equal to 0. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:371
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:373
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:378
+msgid ""
 "@anchor{random_normal}\n"
 "@deffn {Function} random_normal (@var{m},@var{s}) @\n"
 "@fname{random_normal} (@var{m},@var{s},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:380
 msgid ""
 "Returns a @math{Normal(m,s)} random variate, with @math{s>0}. Calling @code{random_normal} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:382
 msgid ""
 "This is an implementation of the Box-Mueller algorithm, as described in Knuth, D.E. (1981) @var{Seminumerical Algorithms. The Art of Computer Programming.} Addison-Wesley.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:384
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:388
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:390
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:395
+msgid ""
 "@anchor{pdf_student_t}\n"
 "@deffn {Function} pdf_student_t (@var{x},@var{n})\n"
 "Returns the value at @var{x} of the density function of a Student random variable @math{t(n)}, with @math{n>0} degrees of freedom. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:399
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:401
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:406
+msgid ""
 "@anchor{cdf_student_t}\n"
 "@deffn {Function} cdf_student_t (@var{x},@var{n})\n"
 "Returns the value at @var{x} of the distribution function of a Student random variable @math{t(n)}, with @math{n>0} degrees of freedom.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:423
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -553,52 +605,64 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:427
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:429
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:434
+msgid ""
 "@anchor{quantile_student_t}\n"
 "@deffn {Function} quantile_student_t (@var{q},@var{n})\n"
 "Returns the @var{q}-quantile of a Student random variable @math{t(n)}, with @math{n>0}; in other words, this is the inverse of @code{cdf_student_t}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:438
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:440
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:445
+msgid ""
 "@anchor{mean_student_t}\n"
 "@deffn {Function} mean_student_t (@var{n})\n"
 "Returns the mean of a Student random variable @math{t(n)}, with @math{n>0}, which is always equal to 0. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:449
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:451
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:456
+msgid ""
 "@anchor{var_student_t}\n"
 "@deffn {Function} var_student_t (@var{n})\n"
 "Returns the variance of a Student random variable @math{t(n)}, with @math{n>2}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:468
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -613,72 +677,88 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:472
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:474
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:479
+msgid ""
 "@anchor{std_student_t}\n"
 "@deffn {Function} std_student_t (@var{n})\n"
 "Returns the standard deviation of a Student random variable @math{t(n)}, with @math{n>2}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:483
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:485
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:490
+msgid ""
 "@anchor{skewness_student_t}\n"
 "@deffn {Function} skewness_student_t (@var{n})\n"
 "Returns the skewness coefficient of a Student random variable @math{t(n)}, with @math{n>3}, which is always equal to 0. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:494
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:496
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:501
+msgid ""
 "@anchor{kurtosis_student_t}\n"
 "@deffn {Function} kurtosis_student_t (@var{n})\n"
 "Returns the kurtosis coefficient of a Student random variable @math{t(n)}, with @math{n>4}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:505
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:507
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:512
+msgid ""
 "@anchor{random_student_t}\n"
 "@deffn {Function} random_student_t (@var{n}) @\n"
 "@fname{random_student_t} (@var{n},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:514
 msgid ""
 "Returns a Student random variate @math{t(n)}, with @math{n>0}. Calling @code{random_student_t} with a second argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:530
 msgid ""
 "The implemented algorithm is based on the fact that if @var{Z} is a normal random variable @math{N(0,1)} and @math{S^2} is a chi square random variable with @var{n} degrees of freedom, @math{Chi^2(n)}, then\n"
 "@ifnottex\n"
@@ -697,32 +777,36 @@ msgid ""
 "is a Student random variable with @var{n} degrees of freedom, @math{t(n)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:532
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:536
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:538
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:543
+msgid ""
 "@anchor{pdf_noncentral_student_t}\n"
 "@deffn {Function} pdf_noncentral_student_t (@var{x},@var{n},@var{ncp})\n"
 "Returns the value at @var{x} of the density function of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>0} degrees of freedom and noncentrality parameter @math{ncp}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:545
 msgid ""
 "Sometimes an extra work is necessary to get the final result.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:568
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -748,22 +832,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:572
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:574
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:579
+msgid ""
 "@anchor{cdf_noncentral_student_t}\n"
 "@deffn {Function} cdf_noncentral_student_t (@var{x},@var{n},@var{ncp})\n"
 "Returns the value at @var{x} of the distribution function of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>0} degrees of freedom and noncentrality parameter @math{ncp}. This function has no closed form and it is numerically computed.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:589
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -776,37 +864,45 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:593
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:595
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:600
+msgid ""
 "@anchor{quantile_noncentral_student_t}\n"
 "@deffn {Function} quantile_noncentral_student_t (@var{q},@var{n},@var{ncp})\n"
 "Returns the @var{q}-quantile of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>0} degrees of freedom and noncentrality parameter @math{ncp}; in other words, this is the inverse of @code{cdf_noncentral_student_t}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:604
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:606
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:611
+msgid ""
 "@anchor{mean_noncentral_student_t}\n"
 "@deffn {Function} mean_noncentral_student_t (@var{n},@var{ncp})\n"
 "Returns the mean of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>1} degrees of freedom and noncentrality parameter @math{ncp}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:627
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -825,87 +921,107 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:631
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:633
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:638
+msgid ""
 "@anchor{var_noncentral_student_t}\n"
 "@deffn {Function} var_noncentral_student_t (@var{n},@var{ncp})\n"
 "Returns the variance of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>2} degrees of freedom and noncentrality parameter @math{ncp}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:642
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:644
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:649
+msgid ""
 "@anchor{std_noncentral_student_t}\n"
 "@deffn {Function} std_noncentral_student_t (@var{n},@var{ncp})\n"
 "Returns the standard deviation of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>2} degrees of freedom and noncentrality parameter @math{ncp}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:653
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:655
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:660
+msgid ""
 "@anchor{skewness_noncentral_student_t}\n"
 "@deffn {Function} skewness_noncentral_student_t (@var{n},@var{ncp})\n"
 "Returns the skewness coefficient of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>3} degrees of freedom and noncentrality parameter @math{ncp}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:664
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:666
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:671
+msgid ""
 "@anchor{kurtosis_noncentral_student_t}\n"
 "@deffn {Function} kurtosis_noncentral_student_t (@var{n},@var{ncp})\n"
 "Returns the kurtosis coefficient of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>4} degrees of freedom and noncentrality parameter @math{ncp}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:675
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:677
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:682
+msgid ""
 "@anchor{random_noncentral_student_t}\n"
 "@deffn {Function} random_noncentral_student_t (@var{n},@var{ncp}) @\n"
 "@fname{random_noncentral_student_t} (@var{n},@var{ncp},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:684
 msgid ""
 "Returns a noncentral Student random variate @math{nc_t(n,ncp)}, with @math{n>0}. Calling @code{random_noncentral_student_t} with a third argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:700
 msgid ""
 "The implemented algorithm is based on the fact that if @var{X} is a normal random variable @math{N(ncp,1)} and @math{S^2} is a chi square random variable with @var{n} degrees of freedom, @math{Chi^2(n)}, then\n"
 "@ifnottex\n"
@@ -924,28 +1040,32 @@ msgid ""
 "is a noncentral Student random variable with @var{n} degrees of freedom and noncentrality parameter @math{ncp}, @math{nc_t(n,ncp)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:702
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:706
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:708
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:714
+msgid ""
 "@anchor{pdf_chi2}\n"
 "@deffn {Function} pdf_chi2 (@var{x},@var{n})\n"
 "Returns the value at @var{x} of the density function of a Chi-square random variable @math{Chi^2(n)}, with @math{n>0}.\n"
 "The @math{Chi^2(n)} random variable is equivalent to the @math{Gamma(n/2,2)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:729
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -963,22 +1083,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:733
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:735
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:740
+msgid ""
 "@anchor{cdf_chi2}\n"
 "@deffn {Function} cdf_chi2 (@var{x},@var{n})\n"
 "Returns the value at @var{x} of the distribution function of a Chi-square random variable @math{Chi^2(n)}, with @math{n>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:755
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -996,27 +1120,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:759
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:761
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:766
+msgid ""
 "@anchor{quantile_chi2}\n"
 "@deffn {Function} quantile_chi2 (@var{q},@var{n})\n"
 "Returns the @var{q}-quantile of a Chi-square random variable @math{Chi^2(n)}, with @math{n>0}; in other words, this is the inverse of @code{cdf_chi2}. Argument @var{q} must be an element of @math{[0,1]}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:768
 msgid ""
 "This function has no closed form and it is numerically computed.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:778
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1029,27 +1157,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:782
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:784
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:789
+msgid ""
 "@anchor{mean_chi2}\n"
 "@deffn {Function} mean_chi2 (@var{n})\n"
 "Returns the mean of a Chi-square random variable @math{Chi^2(n)}, with @math{n>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:791
 msgid ""
 "The @math{Chi^2(n)} random variable is equivalent to the @math{Gamma(n/2,2)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:801
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1062,27 +1194,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:805
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:807
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:812
+msgid ""
 "@anchor{var_chi2}\n"
 "@deffn {Function} var_chi2 (@var{n})\n"
 "Returns the variance of a Chi-square random variable @math{Chi^2(n)}, with @math{n>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:814
 msgid ""
 "The @math{Chi^2(n)} random variable is equivalent to the @math{Gamma(n/2,2)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:824
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1095,27 +1231,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:828
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:830
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:835
+msgid ""
 "@anchor{std_chi2}\n"
 "@deffn {Function} std_chi2 (@var{n})\n"
 "Returns the standard deviation of a Chi-square random variable @math{Chi^2(n)}, with @math{n>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:837
 msgid ""
 "The @math{Chi^2(n)} random variable is equivalent to the @math{Gamma(n/2,2)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:847
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1128,27 +1268,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:851
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:853
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:858
+msgid ""
 "@anchor{skewness_chi2}\n"
 "@deffn {Function} skewness_chi2 (@var{n})\n"
 "Returns the skewness coefficient of a Chi-square random variable @math{Chi^2(n)}, with @math{n>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:860
 msgid ""
 "The @math{Chi^2(n)} random variable is equivalent to the @math{Gamma(n/2,2)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:873
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1164,27 +1308,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:877
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:879
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:884
+msgid ""
 "@anchor{kurtosis_chi2}\n"
 "@deffn {Function} kurtosis_chi2 (@var{n})\n"
 "Returns the kurtosis coefficient of a Chi-square random variable @math{Chi^2(n)}, with @math{n>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:886
 msgid ""
 "The @math{Chi^2(n)} random variable is equivalent to the @math{Gamma(n/2,2)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:898
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1199,221 +1347,265 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:902
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:904
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:909
+msgid ""
 "@anchor{random_chi2}\n"
 "@deffn {Function} random_chi2 (@var{n}) @\n"
 "@fname{random_chi2} (@var{n},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:911
 msgid ""
 "Returns a Chi-square random variate @math{Chi^2(n)}, with @math{n>0}. Calling @code{random_chi2} with a second argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:913
 msgid ""
 "The simulation is based on the Ahrens-Cheng algorithm. See @code{random_gamma} for details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:915
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:919
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:921
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:926
+msgid ""
 "@anchor{pdf_noncentral_chi2}\n"
 "@deffn {Function} pdf_noncentral_chi2 (@var{x},@var{n},@var{ncp})\n"
 "Returns the value at @var{x} of the density function of a noncentral Chi-square random variable @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:930
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:932
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:937
+msgid ""
 "@anchor{cdf_noncentral_chi2}\n"
 "@deffn {Function} cdf_noncentral_chi2 (@var{x},@var{n},@var{ncp})\n"
 "Returns the value at @var{x} of the distribution function of a noncentral Chi-square random variable @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:941
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:943
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:948
+msgid ""
 "@anchor{quantile_noncentral_chi2}\n"
 "@deffn {Function} quantile_noncentral_chi2 (@var{q},@var{n},@var{ncp})\n"
 "Returns the @var{q}-quantile of a noncentral Chi-square random variable @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}; in other words, this is the inverse of @code{cdf_noncentral_chi2}. Argument @var{q} must be an element of @math{[0,1]}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:950
 msgid ""
 "This function has no closed form and it is numerically computed.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:954
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:956
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:961
+msgid ""
 "@anchor{mean_noncentral_chi2}\n"
 "@deffn {Function} mean_noncentral_chi2 (@var{n},@var{ncp})\n"
 "Returns the mean of a noncentral Chi-square random variable @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:965
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:967
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:972
+msgid ""
 "@anchor{var_noncentral_chi2}\n"
 "@deffn {Function} var_noncentral_chi2 (@var{n},@var{ncp})\n"
 "Returns the variance of a noncentral Chi-square random variable @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:976
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:978
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:983
+msgid ""
 "@anchor{std_noncentral_chi2}\n"
 "@deffn {Function} std_noncentral_chi2 (@var{n},@var{ncp})\n"
 "Returns the standard deviation of a noncentral Chi-square random variable @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:987
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:989
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:994
+msgid ""
 "@anchor{skewness_noncentral_chi2}\n"
 "@deffn {Function} skewness_noncentral_chi2 (@var{n},@var{ncp})\n"
 "Returns the skewness coefficient of a noncentral Chi-square random variable @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:998
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1000
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1005
+msgid ""
 "@anchor{kurtosis_noncentral_chi2}\n"
 "@deffn {Function} kurtosis_noncentral_chi2 (@var{n},@var{ncp})\n"
 "Returns the kurtosis coefficient of a noncentral Chi-square random variable @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1009
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1011
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1016
+msgid ""
 "@anchor{random_noncentral_chi2}\n"
 "@deffn {Function} random_noncentral_chi2 (@var{n},@var{ncp}) @\n"
 "@fname{random_noncentral_chi2} (@var{n},@var{ncp},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1018
 msgid ""
 "Returns a noncentral Chi-square random variate @math{nc_Chi^2(n,ncp)}, with @math{n>0} and noncentrality parameter @math{ncp>=0}. Calling @code{random_noncentral_chi2} with a third argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1020
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1024
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1026
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1032
 msgid ""
 "@anchor{pdf_f}\n"
 "@deffn {Function} pdf_f (@var{x},@var{m},@var{n})\n"
 "Returns the value at @var{x} of the density function of a F random variable @math{F(m,n)}, with @math{m,n>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1036
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1038
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1043
+msgid ""
 "@anchor{cdf_f}\n"
 "@deffn {Function} cdf_f (@var{x},@var{m},@var{n})\n"
 "Returns the value at @var{x} of the distribution function of a F random variable @math{F(m,n)}, with @math{m,n>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1058
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1431,22 +1623,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1062
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1064
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1069
+msgid ""
 "@anchor{quantile_f}\n"
 "@deffn {Function} quantile_f (@var{q},@var{m},@var{n})\n"
 "Returns the @var{q}-quantile of a F random variable @math{F(m,n)}, with @math{m,n>0}; in other words, this is the inverse of @code{cdf_f}. Argument @var{q} must be an element of @math{[0,1]}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1079
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1459,102 +1655,126 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1083
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1085
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1090
+msgid ""
 "@anchor{mean_f}\n"
 "@deffn {Function} mean_f (@var{m},@var{n})\n"
 "Returns the mean of a F random variable @math{F(m,n)}, with @math{m>0, n>2}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1094
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1096
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1101
+msgid ""
 "@anchor{var_f}\n"
 "@deffn {Function} var_f (@var{m},@var{n})\n"
 "Returns the variance of a F random variable @math{F(m,n)}, with @math{m>0, n>4}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1105
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1107
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1112
+msgid ""
 "@anchor{std_f}\n"
 "@deffn {Function} std_f (@var{m},@var{n})\n"
 "Returns the standard deviation of a F random variable @math{F(m,n)}, with @math{m>0, n>4}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1116
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1118
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1123
+msgid ""
 "@anchor{skewness_f}\n"
 "@deffn {Function} skewness_f (@var{m},@var{n})\n"
 "Returns the skewness coefficient of a F random variable @math{F(m,n)}, with @math{m>0, n>6}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1127
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1129
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1134
+msgid ""
 "@anchor{kurtosis_f}\n"
 "@deffn {Function} kurtosis_f (@var{m},@var{n})\n"
 "Returns the kurtosis coefficient of a F random variable @math{F(m,n)}, with @math{m>0, n>8}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1138
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1140
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1145
+msgid ""
 "@anchor{random_f}\n"
 "@deffn {Function} random_f (@var{m},@var{n}) @\n"
 "@fname{random_f} (@var{m},@var{n},@var{k})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1147
 msgid ""
 "Returns a F random variate @math{F(m,n)}, with @math{m,n>0}. Calling @code{random_f} with a third argument @var{k}, a random sample of size @var{k} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1160
 msgid ""
 "The simulation algorithm is based on the fact that if @var{X} is a @math{Chi^2(m)} random variable and @math{Y} is a @math{Chi^2(n)} random variable, then\n"
 "@ifnottex\n"
@@ -1570,32 +1790,36 @@ msgid ""
 "is a F random variable with @var{m} and @var{n} degrees of freedom, @math{F(m,n)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1162
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1166
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1168
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1173
+msgid ""
 "@anchor{pdf_exp}\n"
 "@deffn {Function} pdf_exp (@var{x},@var{m})\n"
 "Returns the value at @var{x} of the density function of an @math{Exponential(m)} random variable, with @math{m>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1175
 msgid ""
 "The @math{Exponential(m)} random variable is equivalent to the @math{Weibull(1,1/m)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1186
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1609,27 +1833,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1190
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1192
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1197
+msgid ""
 "@anchor{cdf_exp}\n"
 "@deffn {Function} cdf_exp (@var{x},@var{m})\n"
 "Returns the value at @var{x} of the distribution function of an @math{Exponential(m)} random variable, with @math{m>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1199
 msgid ""
 "The @math{Exponential(m)} random variable is equivalent to the @math{Weibull(1,1/m)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1210
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1643,27 +1871,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1214
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1216
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1221
+msgid ""
 "@anchor{quantile_exp}\n"
 "@deffn {Function} quantile_exp (@var{q},@var{m})\n"
 "Returns the @var{q}-quantile of an @math{Exponential(m)} random variable, with @math{m>0}; in other words, this is the inverse of @code{cdf_exp}. Argument @var{q} must be an element of @math{[0,1]}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1223
 msgid ""
 "The @math{Exponential(m)} random variable is equivalent to the @math{Weibull(1,1/m)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1238
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1681,27 +1913,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1242
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1244
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1249
+msgid ""
 "@anchor{mean_exp}\n"
 "@deffn {Function} mean_exp (@var{m})\n"
 "Returns the mean of an @math{Exponential(m)} random variable, with @math{m>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1251
 msgid ""
 "The @math{Exponential(m)} random variable is equivalent to the @math{Weibull(1,1/m)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1263
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1716,27 +1952,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1267
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1269
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1274
+msgid ""
 "@anchor{var_exp}\n"
 "@deffn {Function} var_exp (@var{m})\n"
 "Returns the variance of an @math{Exponential(m)} random variable, with @math{m>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1276
 msgid ""
 "The @math{Exponential(m)} random variable is equivalent to the @math{Weibull(1,1/m)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1289
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1752,27 +1992,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1293
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1295
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1300
+msgid ""
 "@anchor{std_exp}\n"
 "@deffn {Function} std_exp (@var{m})\n"
 "Returns the standard deviation of an @math{Exponential(m)} random variable, with @math{m>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1302
 msgid ""
 "The @math{Exponential(m)} random variable is equivalent to the @math{Weibull(1,1/m)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1314
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1787,27 +2031,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1318
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1320
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1325
+msgid ""
 "@anchor{skewness_exp}\n"
 "@deffn {Function} skewness_exp (@var{m})\n"
 "Returns the skewness coefficient of an @math{Exponential(m)} random variable, with @math{m>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1327
 msgid ""
 "The @math{Exponential(m)} random variable is equivalent to the @math{Weibull(1,1/m)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1337
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1820,27 +2068,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1341
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1343
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1348
+msgid ""
 "@anchor{kurtosis_exp}\n"
 "@deffn {Function} kurtosis_exp (@var{m})\n"
 "Returns the kurtosis coefficient of an @math{Exponential(m)} random variable, with @math{m>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1350
 msgid ""
 "The @math{Exponential(m)} random variable is equivalent to the @math{Weibull(1,1/m)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1360
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1853,67 +2105,79 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1364
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1366
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1371
+msgid ""
 "@anchor{random_exp}\n"
 "@deffn {Function} random_exp (@var{m}) @\n"
 "@fname{random_exp} (@var{m},@var{k})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1373
 msgid ""
 "Returns an @math{Exponential(m)} random variate, with @math{m>0}. Calling @code{random_exp} with a second argument @var{k}, a random sample of size @var{k} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1375
 msgid ""
 "The simulation algorithm is based on the general inverse method.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1377
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1381
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1383
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1388
+msgid ""
 "@anchor{pdf_lognormal}\n"
 "@deffn {Function} pdf_lognormal (@var{x},@var{m},@var{s})\n"
 "Returns the value at @var{x} of the density function of a @math{Lognormal(m,s)} random variable, with @math{s>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1392
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1394
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1399
+msgid ""
 "@anchor{cdf_lognormal}\n"
 "@deffn {Function} cdf_lognormal (@var{x},@var{m},@var{s})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Lognormal(m,s)} random variable, with @math{s>0}. This function is defined in terms of Maxima's built-in error function @code{erf}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1415
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1932,27 +2196,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1417
 msgid ""
 "See also @mrefdot{erf}\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1421
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1423
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1428
+msgid ""
 "@anchor{quantile_lognormal}\n"
 "@deffn {Function} quantile_lognormal (@var{q},@var{m},@var{s})\n"
 "Returns the @var{q}-quantile of a @math{Lognormal(m,s)} random variable, with @math{s>0}; in other words, this is the inverse of @code{cdf_lognormal}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1442
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -1969,146 +2237,174 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1446
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1448
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1453
+msgid ""
 "@anchor{mean_lognormal}\n"
 "@deffn {Function} mean_lognormal (@var{m},@var{s})\n"
 "Returns the mean of a @math{Lognormal(m,s)} random variable, with @math{s>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1457
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1459
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1464
+msgid ""
 "@anchor{var_lognormal}\n"
 "@deffn {Function} var_lognormal (@var{m},@var{s})\n"
 "Returns the variance of a @math{Lognormal(m,s)} random variable, with @math{s>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1468
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1470
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1474
 msgid ""
 "@anchor{std_lognormal}\n"
 "@deffn {Function} std_lognormal (@var{m},@var{s})\n"
 "Returns the standard deviation of a @math{Lognormal(m,s)} random variable, with @math{s>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1478
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1480
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1485
+msgid ""
 "@anchor{skewness_lognormal}\n"
 "@deffn {Function} skewness_lognormal (@var{m},@var{s})\n"
 "Returns the skewness coefficient of a @math{Lognormal(m,s)} random variable, with @math{s>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1489
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1491
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1496
+msgid ""
 "@anchor{kurtosis_lognormal}\n"
 "@deffn {Function} kurtosis_lognormal (@var{m},@var{s})\n"
 "Returns the kurtosis coefficient of a @math{Lognormal(m,s)} random variable, with @math{s>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1500
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1502
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1507
+msgid ""
 "@anchor{random_lognormal}\n"
 "@deffn {Function} random_lognormal (@var{m},@var{s}) @\n"
 "@fname{random_lognormal} (@var{m},@var{s},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1509
 msgid ""
 "Returns a @math{Lognormal(m,s)} random variate, with @math{s>0}. Calling @code{random_lognormal} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1511
 msgid ""
 "Log-normal variates are simulated by means of random normal variates. See @code{random_normal} for details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1513
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1517
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1519
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1524
+msgid ""
 "@anchor{pdf_gamma}\n"
 "@deffn {Function} pdf_gamma (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Gamma(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1528
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1530
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1535
+msgid ""
 "@anchor{cdf_gamma}\n"
 "@deffn {Function} cdf_gamma (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Gamma(a,b)} random variable, with @math{a,b>0}. \n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1550
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -2126,175 +2422,203 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1554
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1556
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1561
+msgid ""
 "@anchor{quantile_gamma}\n"
 "@deffn {Function} quantile_gamma (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Gamma(a,b)} random variable, with @math{a,b>0}; in other words, this is the inverse of @code{cdf_gamma}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1565
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1567
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1572
+msgid ""
 "@anchor{mean_gamma}\n"
 "@deffn {Function} mean_gamma (@var{a},@var{b})\n"
 "Returns the mean of a @math{Gamma(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1576
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1578
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1583
+msgid ""
 "@anchor{var_gamma}\n"
 "@deffn {Function} var_gamma (@var{a},@var{b})\n"
 "Returns the variance of a @math{Gamma(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1587
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1589
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1593
 msgid ""
 "@anchor{std_gamma}\n"
 "@deffn {Function} std_gamma (@var{a},@var{b})\n"
 "Returns the standard deviation of a @math{Gamma(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1597
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1599
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1604
+msgid ""
 "@anchor{skewness_gamma}\n"
 "@deffn {Function} skewness_gamma (@var{a},@var{b})\n"
 "Returns the skewness coefficient of a @math{Gamma(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1608
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1610
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1615
+msgid ""
 "@anchor{kurtosis_gamma}\n"
 "@deffn {Function} kurtosis_gamma (@var{a},@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Gamma(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1619
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1621
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1626
+msgid ""
 "@anchor{random_gamma}\n"
 "@deffn {Function} random_gamma (@var{a},@var{b}) @\n"
 "@fname{random_gamma} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1628
 msgid ""
 "Returns a @math{Gamma(a,b)} random variate, with @math{a,b>0}. Calling @code{random_gamma} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1630
 msgid ""
 "The implemented algorithm is a combinantion of two procedures, depending on the value of parameter @var{a}:\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1632
 msgid ""
 "For @math{a>=1}, Cheng, R.C.H. and Feast, G.M. (1979). @var{Some simple gamma variate generators}. Appl. Stat., 28, 3, 290-295.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1634
 msgid ""
 "For @math{0<a<1}, Ahrens, J.H. and Dieter, U. (1974). @var{Computer methods for sampling from gamma, beta, poisson and binomial cdf_tributions}. Computing, 12, 223-246.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1636
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1640
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1642
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1647
+msgid ""
 "@anchor{pdf_beta}\n"
 "@deffn {Function} pdf_beta (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Beta(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1651
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1653
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1659
 msgid ""
 "@anchor{cdf_beta}\n"
 "@deffn {Function} cdf_beta (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Beta(a,b)} random variable, with @math{a,b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1674
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -2312,779 +2636,923 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1678
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1680
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1685
+msgid ""
 "@anchor{quantile_beta}\n"
 "@deffn {Function} quantile_beta (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Beta(a,b)} random variable, with @math{a,b>0}; in other words, this is the inverse of @code{cdf_beta}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1689
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1691
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1696
+msgid ""
 "@anchor{mean_beta}\n"
 "@deffn {Function} mean_beta (@var{a},@var{b})\n"
 "Returns the mean of a @math{Beta(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1700
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1702
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1707
+msgid ""
 "@anchor{var_beta}\n"
 "@deffn {Function} var_beta (@var{a},@var{b})\n"
 "Returns the variance of a @math{Beta(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1711
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1713
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1717
 msgid ""
 "@anchor{std_beta}\n"
 "@deffn {Function} std_beta (@var{a},@var{b})\n"
 "Returns the standard deviation of a @math{Beta(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1721
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1723
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1728
+msgid ""
 "@anchor{skewness_beta}\n"
 "@deffn {Function} skewness_beta (@var{a},@var{b})\n"
 "Returns the skewness coefficient of a @math{Beta(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1732
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1734
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1739
+msgid ""
 "@anchor{kurtosis_beta}\n"
 "@deffn {Function} kurtosis_beta (@var{a},@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Beta(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1743
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1745
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1750
+msgid ""
 "@anchor{random_beta}\n"
 "@deffn {Function} random_beta (@var{a},@var{b}) @\n"
 "@fname{random_beta} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1752
 msgid ""
 "Returns a @math{Beta(a,b)} random variate, with @math{a,b>0}. Calling @code{random_beta} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1754
 msgid ""
 "The implemented algorithm is defined in Cheng, R.C.H.  (1978). @var{Generating Beta Variates with Nonintegral Shape Parameters}. Communications of the ACM, 21:317-322\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1756
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1760
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1762
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1766
 msgid ""
 "@anchor{pdf_continuous_uniform}\n"
 "@deffn {Function} pdf_continuous_uniform (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Continuous Uniform(a,b)} random variable, with @math{a<b}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1770
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1772
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1777
+msgid ""
 "@anchor{cdf_continuous_uniform}\n"
 "@deffn {Function} cdf_continuous_uniform (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Continuous Uniform(a,b)} random variable, with @math{a<b}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1781
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1783
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1788
+msgid ""
 "@anchor{quantile_continuous_uniform}\n"
 "@deffn {Function} quantile_continuous_uniform (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Continuous Uniform(a,b)} random variable, with @math{a<b}; in other words, this is the inverse of @code{cdf_continuous_uniform}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1792
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1794
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1799
+msgid ""
 "@anchor{mean_continuous_uniform}\n"
 "@deffn {Function} mean_continuous_uniform (@var{a},@var{b})\n"
 "Returns the mean of a @math{Continuous Uniform(a,b)} random variable, with @math{a<b}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1803
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1805
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1810
+msgid ""
 "@anchor{var_continuous_uniform}\n"
 "@deffn {Function} var_continuous_uniform (@var{a},@var{b})\n"
 "Returns the variance of a @math{Continuous Uniform(a,b)} random variable, with @math{a<b}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1814
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1816
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1820
 msgid ""
 "@anchor{std_continuous_uniform}\n"
 "@deffn {Function} std_continuous_uniform (@var{a},@var{b})\n"
 "Returns the standard deviation of a @math{Continuous Uniform(a,b)} random variable, with @math{a<b}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1824
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1826
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1831
+msgid ""
 "@anchor{skewness_continuous_uniform}\n"
 "@deffn {Function} skewness_continuous_uniform (@var{a},@var{b})\n"
 "Returns the skewness coefficient of a @math{Continuous Uniform(a,b)} random variable, with @math{a<b}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1835
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1837
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1842
+msgid ""
 "@anchor{kurtosis_continuous_uniform}\n"
 "@deffn {Function} kurtosis_continuous_uniform (@var{a},@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Continuous Uniform(a,b)} random variable, with @math{a<b}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1846
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1848
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1853
+msgid ""
 "@anchor{random_continuous_uniform}\n"
 "@deffn {Function} random_continuous_uniform (@var{a},@var{b}) @\n"
 "@fname{random_continuous_uniform} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1855
 msgid ""
 "Returns a @math{Continuous Uniform(a,b)} random variate, with @math{a<b}. Calling @code{random_continuous_uniform} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1857
 msgid ""
 "This is a direct application of the @code{random} built-in Maxima function.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1859
 msgid ""
 "See also @mrefdot{random} To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1863
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1865
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1870
+msgid ""
 "@anchor{pdf_logistic}\n"
 "@deffn {Function} pdf_logistic (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Logistic(a,b)} random variable , with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1874
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1876
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1881
+msgid ""
 "@anchor{cdf_logistic}\n"
 "@deffn {Function} cdf_logistic (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Logistic(a,b)} random variable , with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1885
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1887
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1892
+msgid ""
 "@anchor{quantile_logistic}\n"
 "@deffn {Function} quantile_logistic (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Logistic(a,b)} random variable , with @math{b>0}; in other words, this is the inverse of @code{cdf_logistic}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1896
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1898
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1903
+msgid ""
 "@anchor{mean_logistic}\n"
 "@deffn {Function} mean_logistic (@var{a},@var{b})\n"
 "Returns the mean of a @math{Logistic(a,b)} random variable , with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1907
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1909
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1914
+msgid ""
 "@anchor{var_logistic}\n"
 "@deffn {Function} var_logistic (@var{a},@var{b})\n"
 "Returns the variance of a @math{Logistic(a,b)} random variable , with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1918
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1920
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1925
+msgid ""
 "@anchor{std_logistic}\n"
 "@deffn {Function} std_logistic (@var{a},@var{b})\n"
 "Returns the standard deviation of a @math{Logistic(a,b)} random variable , with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1929
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1931
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1936
+msgid ""
 "@anchor{skewness_logistic}\n"
 "@deffn {Function} skewness_logistic (@var{a},@var{b})\n"
 "Returns the skewness coefficient of a @math{Logistic(a,b)} random variable , with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1940
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1942
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1947
+msgid ""
 "@anchor{kurtosis_logistic}\n"
 "@deffn {Function} kurtosis_logistic (@var{a},@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Logistic(a,b)} random variable , with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1951
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1953
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1958
+msgid ""
 "@anchor{random_logistic}\n"
 "@deffn {Function} random_logistic (@var{a},@var{b}) @\n"
 "@fname{random_logistic} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1960
 msgid ""
 "Returns a @math{Logistic(a,b)} random variate, with @math{b>0}. Calling @code{random_logistic} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1962
 msgid ""
 "The implemented algorithm is based on the general inverse method.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1964
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1968
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1970
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1975
+msgid ""
 "@anchor{pdf_pareto}\n"
 "@deffn {Function} pdf_pareto (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Pareto(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1979
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1981
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1986
+msgid ""
 "@anchor{cdf_pareto}\n"
 "@deffn {Function} cdf_pareto (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Pareto(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1990
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:1992
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:1997
+msgid ""
 "@anchor{quantile_pareto}\n"
 "@deffn {Function} quantile_pareto (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Pareto(a,b)} random variable, with @math{a,b>0}; in other words, this is the inverse of @code{cdf_pareto}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2001
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2003
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2008
+msgid ""
 "@anchor{mean_pareto}\n"
 "@deffn {Function} mean_pareto (@var{a},@var{b})\n"
 "Returns the mean of a @math{Pareto(a,b)} random variable, with @math{a>1,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2012
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2014
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2019
+msgid ""
 "@anchor{var_pareto}\n"
 "@deffn {Function} var_pareto (@var{a},@var{b})\n"
 "Returns the variance of a @math{Pareto(a,b)} random variable, with @math{a>2,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2023
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2025
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2029
 msgid ""
 "@anchor{std_pareto}\n"
 "@deffn {Function} std_pareto (@var{a},@var{b})\n"
 "Returns the standard deviation of a @math{Pareto(a,b)} random variable, with @math{a>2,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2033
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2035
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2041
 msgid ""
 "@anchor{skewness_pareto}\n"
 "@deffn {Function} skewness_pareto (@var{a},@var{b})\n"
 "Returns the skewness coefficient of a @math{Pareto(a,b)} random variable, with @math{a>3,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2045
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2047
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2052
+msgid ""
 "@anchor{kurtosis_pareto}\n"
 "@deffn {Function} kurtosis_pareto (@var{a},@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Pareto(a,b)} random variable, with @math{a>4,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2056
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2058
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2063
+msgid ""
 "@anchor{random_pareto}\n"
 "@deffn {Function} random_pareto (@var{a},@var{b}) @\n"
 "@fname{random_pareto} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2065
 msgid ""
 "Returns a @math{Pareto(a,b)} random variate, with @math{a>0,b>0}. Calling @code{random_pareto} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2067
 msgid ""
 "The implemented algorithm is based on the general inverse method.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2069
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2073
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2075
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2080
+msgid ""
 "@anchor{pdf_weibull}\n"
 "@deffn {Function} pdf_weibull (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Weibull(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2084
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2086
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2091
+msgid ""
 "@anchor{cdf_weibull}\n"
 "@deffn {Function} cdf_weibull (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Weibull(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2095
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2097
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2102
+msgid ""
 "@anchor{quantile_weibull}\n"
 "@deffn {Function} quantile_weibull (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Weibull(a,b)} random variable, with @math{a,b>0}; in other words, this is the inverse of @code{cdf_weibull}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2106
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2108
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2113
+msgid ""
 "@anchor{mean_weibull}\n"
 "@deffn {Function} mean_weibull (@var{a},@var{b})\n"
 "Returns the mean of a @math{Weibull(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2117
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2119
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2124
+msgid ""
 "@anchor{var_weibull}\n"
 "@deffn {Function} var_weibull (@var{a},@var{b})\n"
 "Returns the variance of a @math{Weibull(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2128
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2130
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2134
 msgid ""
 "@anchor{std_weibull}\n"
 "@deffn {Function} std_weibull (@var{a},@var{b})\n"
 "Returns the standard deviation of a @math{Weibull(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2138
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2140
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2146
 msgid ""
 "@anchor{skewness_weibull}\n"
 "@deffn {Function} skewness_weibull (@var{a},@var{b})\n"
 "Returns the skewness coefficient of a @math{Weibull(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2150
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2152
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2157
+msgid ""
 "@anchor{kurtosis_weibull}\n"
 "@deffn {Function} kurtosis_weibull (@var{a},@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Weibull(a,b)} random variable, with @math{a,b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2161
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2163
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2168
+msgid ""
 "@anchor{random_weibull}\n"
 "@deffn {Function} random_weibull (@var{a},@var{b}) @\n"
 "@fname{random_weibull} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2170
 msgid ""
 "Returns a @math{Weibull(a,b)} random variate, with @math{a,b>0}. Calling @code{random_weibull} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2172
 msgid ""
 "The implemented algorithm is based on the general inverse method.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2174
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2178
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2180
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2186
 msgid ""
 "@anchor{pdf_rayleigh}\n"
 "@deffn {Function} pdf_rayleigh (@var{x},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Rayleigh(b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2188
 msgid ""
 "The @math{Rayleigh(b)} random variable is equivalent to the @math{Weibull(2,1/b)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2200
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3099,27 +3567,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2204
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2206
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2211
+msgid ""
 "@anchor{cdf_rayleigh}\n"
 "@deffn {Function} cdf_rayleigh (@var{x},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Rayleigh(b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2213
 msgid ""
 "The @math{Rayleigh(b)} random variable is equivalent to the @math{Weibull(2,1/b)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2225
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3134,27 +3606,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2229
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2231
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2236
+msgid ""
 "@anchor{quantile_rayleigh}\n"
 "@deffn {Function} quantile_rayleigh (@var{q},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Rayleigh(b)} random variable, with @math{b>0}; in other words, this is the inverse of @code{cdf_rayleigh}. Argument @var{q} must be an element of @math{[0,1]}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2238
 msgid ""
 "The @math{Rayleigh(b)} random variable is equivalent to the @math{Weibull(2,1/b)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2250
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3169,27 +3645,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2254
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2256
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2261
+msgid ""
 "@anchor{mean_rayleigh}\n"
 "@deffn {Function} mean_rayleigh (@var{b})\n"
 "Returns the mean of a @math{Rayleigh(b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2263
 msgid ""
 "The @math{Rayleigh(b)} random variable is equivalent to the @math{Weibull(2,1/b)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2275
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3204,27 +3684,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2279
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2281
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2286
+msgid ""
 "@anchor{var_rayleigh}\n"
 "@deffn {Function} var_rayleigh (@var{b})\n"
 "Returns the variance of a @math{Rayleigh(b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2288
 msgid ""
 "The @math{Rayleigh(b)} random variable is equivalent to the @math{Weibull(2,1/b)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2303
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3242,27 +3726,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2307
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2309
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2314
+msgid ""
 "@anchor{std_rayleigh}\n"
 "@deffn {Function} std_rayleigh (@var{b})\n"
 "Returns the standard deviation of a @math{Rayleigh(b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2316
 msgid ""
 "The @math{Rayleigh(b)} random variable is equivalent to the @math{Weibull(2,1/b)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2330
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3279,27 +3767,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2334
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2336
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2341
+msgid ""
 "@anchor{skewness_rayleigh}\n"
 "@deffn {Function} skewness_rayleigh (@var{b})\n"
 "Returns the skewness coefficient of a @math{Rayleigh(b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2343
 msgid ""
 "The @math{Rayleigh(b)} random variable is equivalent to the @math{Weibull(2,1/b)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2360
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3319,27 +3811,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2364
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2366
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2371
+msgid ""
 "@anchor{kurtosis_rayleigh}\n"
 "@deffn {Function} kurtosis_rayleigh (@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Rayleigh(b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2373
 msgid ""
 "The @math{Rayleigh(b)} random variable is equivalent to the @math{Weibull(2,1/b)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2390
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3359,334 +3855,394 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2394
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2396
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2401
+msgid ""
 "@anchor{random_rayleigh}\n"
 "@deffn {Function} random_rayleigh (@var{b}) @\n"
 "@fname{random_rayleigh} (@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2403
 msgid ""
 "Returns a @math{Rayleigh(b)} random variate, with @math{b>0}. Calling @code{random_rayleigh} with a second argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2405
 msgid ""
 "The implemented algorithm is based on the general inverse method.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2407
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2411
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2413
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2419
 msgid ""
 "@anchor{pdf_laplace}\n"
 "@deffn {Function} pdf_laplace (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Laplace(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2423
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2425
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2430
+msgid ""
 "@anchor{cdf_laplace}\n"
 "@deffn {Function} cdf_laplace (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Laplace(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2434
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2436
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2441
+msgid ""
 "@anchor{quantile_laplace}\n"
 "@deffn {Function} quantile_laplace (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Laplace(a,b)} random variable, with @math{b>0}; in other words, this is the inverse of @code{cdf_laplace}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2445
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2447
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2452
+msgid ""
 "@anchor{mean_laplace}\n"
 "@deffn {Function} mean_laplace (@var{a},@var{b})\n"
 "Returns the mean of a @math{Laplace(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2456
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2458
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2463
+msgid ""
 "@anchor{var_laplace}\n"
 "@deffn {Function} var_laplace (@var{a},@var{b})\n"
 "Returns the variance of a @math{Laplace(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2467
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2469
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2474
+msgid ""
 "@anchor{std_laplace}\n"
 "@deffn {Function} std_laplace (@var{a},@var{b})\n"
 "Returns the standard deviation of a @math{Laplace(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2478
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2480
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2485
+msgid ""
 "@anchor{skewness_laplace}\n"
 "@deffn {Function} skewness_laplace (@var{a},@var{b})\n"
 "Returns the skewness coefficient of a @math{Laplace(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2489
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2491
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2496
+msgid ""
 "@anchor{kurtosis_laplace}\n"
 "@deffn {Function} kurtosis_laplace (@var{a},@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Laplace(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2500
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2502
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2507
+msgid ""
 "@anchor{random_laplace}\n"
 "@deffn {Function} random_laplace (@var{a},@var{b}) @\n"
 "@fname{random_laplace} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2509
 msgid ""
 "Returns a @math{Laplace(a,b)} random variate, with @math{b>0}. Calling @code{random_laplace} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2511
 msgid ""
 "The implemented algorithm is based on the general inverse method.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2513
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2517
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2519
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2525
 msgid ""
 "@anchor{pdf_cauchy}\n"
 "@deffn {Function} pdf_cauchy (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Cauchy(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2529
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2531
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2536
+msgid ""
 "@anchor{cdf_cauchy}\n"
 "@deffn {Function} cdf_cauchy (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Cauchy(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2540
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2542
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2547
+msgid ""
 "@anchor{quantile_cauchy}\n"
 "@deffn {Function} quantile_cauchy (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Cauchy(a,b)} random variable, with @math{b>0}; in other words, this is the inverse of @code{cdf_cauchy}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2551
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2553
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2558
+msgid ""
 "@anchor{random_cauchy}\n"
 "@deffn {Function} random_cauchy (@var{a},@var{b}) @\n"
 "@fname{random_cauchy} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2560
 msgid ""
 "Returns a @math{Cauchy(a,b)} random variate, with @math{b>0}. Calling @code{random_cauchy} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2562
 msgid ""
 "The implemented algorithm is based on the general inverse method.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2564
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2568
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2570
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2576
 msgid ""
 "@anchor{pdf_gumbel}\n"
 "@deffn {Function} pdf_gumbel (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the density function of a @math{Gumbel(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2580
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2582
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2587
+msgid ""
 "@anchor{cdf_gumbel}\n"
 "@deffn {Function} cdf_gumbel (@var{x},@var{a},@var{b})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Gumbel(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2591
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2593
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2598
+msgid ""
 "@anchor{quantile_gumbel}\n"
 "@deffn {Function} quantile_gumbel (@var{q},@var{a},@var{b})\n"
 "Returns the @var{q}-quantile of a @math{Gumbel(a,b)} random variable, with @math{b>0}; in other words, this is the inverse of @code{cdf_gumbel}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2602
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2604
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2609
+msgid ""
 "@anchor{mean_gumbel}\n"
 "@deffn {Function} mean_gumbel (@var{a},@var{b})\n"
 "Returns the mean of a @math{Gumbel(a,b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2620
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3700,52 +4256,64 @@ msgid ""
 "where symbol @code{%gamma} stands for the Euler-Mascheroni constant. See also @mrefdot{%gamma}\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2624
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2626
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2631
+msgid ""
 "@anchor{var_gumbel}\n"
 "@deffn {Function} var_gumbel (@var{a},@var{b})\n"
 "Returns the variance of a @math{Gumbel(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2635
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2637
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2642
+msgid ""
 "@anchor{std_gumbel}\n"
 "@deffn {Function} std_gumbel (@var{a},@var{b})\n"
 "Returns the standard deviation of a @math{Gumbel(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2646
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2648
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2653
+msgid ""
 "@anchor{skewness_gumbel}\n"
 "@deffn {Function} skewness_gumbel (@var{a},@var{b})\n"
 "Returns the skewness coefficient of a @math{Gumbel(a,b)} random variable, with @math{b>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2668
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3763,69 +4331,85 @@ msgid ""
 "where @code{zeta} stands for the Riemann's zeta function.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2672
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2674
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2679
+msgid ""
 "@anchor{kurtosis_gumbel}\n"
 "@deffn {Function} kurtosis_gumbel (@var{a},@var{b})\n"
 "Returns the kurtosis coefficient of a @math{Gumbel(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2683
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2685
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2690
+msgid ""
 "@anchor{random_gumbel}\n"
 "@deffn {Function} random_gumbel (@var{a},@var{b}) @\n"
 "@fname{random_gumbel} (@var{a},@var{b},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2692
 msgid ""
 "Returns a @math{Gumbel(a,b)} random variate, with @math{b>0}. Calling @code{random_gumbel} with a third argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2694
 msgid ""
 "The implemented algorithm is based on the general inverse method.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2696
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2700
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2702
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2706
+msgid ""
 "@node Functions and Variables for discrete distributions,  , Functions and Variables for continuous distributions, distrib-pkg\n"
 "@section Functions and Variables for discrete distributions\n"
+msgstr ""
+
+#: distrib.texi:2711
+msgid ""
 "@anchor{pdf_general_finite_discrete}\n"
 "@deffn {Function} pdf_general_finite_discrete (@var{x},@var{v})\n"
 "Returns the value at @var{x} of the probability function of a general finite discrete random variable, with vector probabilities @math{v}, such that @code{Pr(X=i) = v_i}. Vector @math{v} can be a list of nonnegative expressions, whose components will be normalized to get a vector of probabilities. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2728
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3845,27 +4429,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2732
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2734
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2739
+msgid ""
 "@anchor{cdf_general_finite_discrete}\n"
 "@deffn {Function} cdf_general_finite_discrete (@var{x},@var{v})\n"
 "Returns the value at @var{x} of the distribution function of a general finite discrete random variable, with vector probabilities @math{v}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2741
 msgid ""
 "See @code{pdf_general_finite_discrete} for more details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2763
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -3890,152 +4478,180 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2767
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2769
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2774
+msgid ""
 "@anchor{quantile_general_finite_discrete}\n"
 "@deffn {Function} quantile_general_finite_discrete (@var{q},@var{v})\n"
 "Returns the @var{q}-quantile of a general finite discrete random variable, with vector probabilities @math{v}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2776
 msgid ""
 "See @code{pdf_general_finite_discrete} for more details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2780
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2782
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2787
+msgid ""
 "@anchor{mean_general_finite_discrete}\n"
 "@deffn {Function} mean_general_finite_discrete (@var{v})\n"
 "Returns the mean of a general finite discrete random variable, with vector probabilities @math{v}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2789
 msgid ""
 "See @code{pdf_general_finite_discrete} for more details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2793
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2795
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2800
+msgid ""
 "@anchor{var_general_finite_discrete}\n"
 "@deffn {Function} var_general_finite_discrete (@var{v})\n"
 "Returns the variance of a general finite discrete random variable, with vector probabilities @math{v}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2802
 msgid ""
 "See @code{pdf_general_finite_discrete} for more details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2806
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2808
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2813
+msgid ""
 "@anchor{std_general_finite_discrete}\n"
 "@deffn {Function} std_general_finite_discrete (@var{v})\n"
 "Returns the standard deviation of a general finite discrete random variable, with vector probabilities @math{v}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2815
 msgid ""
 "See @code{pdf_general_finite_discrete} for more details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2819
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2821
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2826
+msgid ""
 "@anchor{skewness_general_finite_discrete}\n"
 "@deffn {Function} skewness_general_finite_discrete (@var{v})\n"
 "Returns the skewness coefficient of a general finite discrete random variable, with vector probabilities @math{v}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2828
 msgid ""
 "See @code{pdf_general_finite_discrete} for more details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2832
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2834
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2839
+msgid ""
 "@anchor{kurtosis_general_finite_discrete}\n"
 "@deffn {Function} kurtosis_general_finite_discrete (@var{v})\n"
 "Returns the kurtosis coefficient of a general finite discrete random variable, with vector probabilities @math{v}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2841
 msgid ""
 "See @code{pdf_general_finite_discrete} for more details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2845
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2847
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2852
+msgid ""
 "@anchor{random_general_finite_discrete}\n"
 "@deffn {Function} random_general_finite_discrete (@var{v}) @\n"
 "@fname{random_general_finite_discrete} (@var{v},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2854
 msgid ""
 "Returns a general finite discrete random variate, with vector probabilities @math{v}. Calling @code{random_general_finite_discrete} with a second argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2856
 msgid ""
 "See @code{pdf_general_finite_discrete} for more details.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2869
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4051,37 +4667,45 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2873
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2875
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2880
+msgid ""
 "@anchor{pdf_binomial}\n"
 "@deffn {Function} pdf_binomial (@var{x},@var{n},@var{p})\n"
 "Returns the value at @var{x} of the probability function of a @math{Binomial(n,p)} random variable, with @math{0 \leq p \leq 1} and @math{n} a positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2884
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2886
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2891
+msgid ""
 "@anchor{cdf_binomial}\n"
 "@deffn {Function} cdf_binomial (@var{x},@var{n},@var{p})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Binomial(n,p)} random variable, with @math{0 \leq p \leq 1} and @math{n} a positive integer.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2906
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4099,157 +4723,193 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2910
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2912
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2917
+msgid ""
 "@anchor{quantile_binomial}\n"
 "@deffn {Function} quantile_binomial (@var{q},@var{n},@var{p})\n"
 "Returns the @var{q}-quantile of a @math{Binomial(n,p)} random variable, with @math{0 \leq p \leq 1} and @math{n} a positive integer; in other words, this is the inverse of @code{cdf_binomial}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2921
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2923
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2928
+msgid ""
 "@anchor{mean_binomial}\n"
 "@deffn {Function} mean_binomial (@var{n},@var{p})\n"
 "Returns the mean of a @math{Binomial(n,p)} random variable, with @math{0 \leq p \leq 1} and @math{n} a positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2932
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2934
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2939
+msgid ""
 "@anchor{var_binomial}\n"
 "@deffn {Function} var_binomial (@var{n},@var{p})\n"
 "Returns the variance of a @math{Binomial(n,p)} random variable, with @math{0 \leq p \leq 1} and @math{n} a positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2943
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2945
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2950
+msgid ""
 "@anchor{std_binomial}\n"
 "@deffn {Function} std_binomial (@var{n},@var{p})\n"
 "Returns the standard deviation of a @math{Binomial(n,p)} random variable, with @math{0 \leq p \leq 1} and @math{n} a positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2954
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2956
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2961
+msgid ""
 "@anchor{skewness_binomial}\n"
 "@deffn {Function} skewness_binomial (@var{n},@var{p})\n"
 "Returns the skewness coefficient of a @math{Binomial(n,p)} random variable, with @math{0 \leq p \leq 1} and @math{n} a positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2965
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2967
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2972
+msgid ""
 "@anchor{kurtosis_binomial}\n"
 "@deffn {Function} kurtosis_binomial (@var{n},@var{p})\n"
 "Returns the kurtosis coefficient of a @math{Binomial(n,p)} random variable, with @math{0 \leq p \leq 1} and @math{n} a positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2976
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2978
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:2983
+msgid ""
 "@anchor{random_binomial}\n"
 "@deffn {Function} random_binomial (@var{n},@var{p}) @\n"
 "@fname{random_binomial} (@var{n},@var{p},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2985
 msgid ""
 "Returns a @math{Binomial(n,p)} random variate, with @math{0 \leq p \leq 1} and @math{n} a positive integer. Calling @code{random_binomial} with a third argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2987
 msgid ""
 "The implemented algorithm is based on the one described in Kachitvichyanukul, V. and Schmeiser, B.W. (1988) @var{Binomial Random Variate Generation}. Communications of the ACM, 31, Feb., 216.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2989
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2993
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:2995
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3000
+msgid ""
 "@anchor{pdf_poisson}\n"
 "@deffn {Function} pdf_poisson (@var{x},@var{m})\n"
 "Returns the value at @var{x} of the probability function of a @math{Poisson(m)} random variable, with @math{m>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3004
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3006
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3011
+msgid ""
 "@anchor{cdf_poisson}\n"
 "@deffn {Function} cdf_poisson (@var{x},@var{m})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Poisson(m)} random variable, with @math{m>0}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3024
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4265,147 +4925,179 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3028
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3030
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3035
+msgid ""
 "@anchor{quantile_poisson}\n"
 "@deffn {Function} quantile_poisson (@var{q},@var{m})\n"
 "Returns the @var{q}-quantile of a @math{Poisson(m)} random variable, with @math{m>0}; in other words, this is the inverse of @code{cdf_poisson}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3039
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3041
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3046
+msgid ""
 "@anchor{mean_poisson}\n"
 "@deffn {Function} mean_poisson (@var{m})\n"
 "Returns the mean of a @math{Poisson(m)} random variable, with  @math{m>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3050
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3052
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3057
+msgid ""
 "@anchor{var_poisson}\n"
 "@deffn {Function} var_poisson (@var{m})\n"
 "Returns the variance of a @math{Poisson(m)} random variable, with  @math{m>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3061
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3063
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3068
+msgid ""
 "@anchor{std_poisson}\n"
 "@deffn {Function} std_poisson (@var{m})\n"
 "Returns the standard deviation of a @math{Poisson(m)} random variable, with @math{m>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3072
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3074
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3079
+msgid ""
 "@anchor{skewness_poisson}\n"
 "@deffn {Function} skewness_poisson (@var{m})\n"
 "Returns the skewness coefficient of a @math{Poisson(m)} random variable, with @math{m>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3083
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3085
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3090
+msgid ""
 "@anchor{kurtosis_poisson}\n"
 "@deffn {Function} kurtosis_poisson (@var{m})\n"
 "Returns the kurtosis coefficient of a Poisson random variable  @math{Poi(m)}, with @math{m>0}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3094
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3096
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3101
+msgid ""
 "@anchor{random_poisson}\n"
 "@deffn {Function} random_poisson (@var{m}) @\n"
 "@fname{random_poisson} (@var{m},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3103
 msgid ""
 "Returns a @math{Poisson(m)} random variate, with @math{m>0}. Calling @code{random_poisson} with a second argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3105
 msgid ""
 "The implemented algorithm is the one described in Ahrens, J.H. and Dieter, U. (1982) @var{Computer Generation of Poisson Deviates From Modified Normal Distributions}. ACM Trans. Math. Software, 8, 2, June,163-179.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3107
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3111
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3113
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3118
+msgid ""
 "@anchor{pdf_bernoulli}\n"
 "@deffn {Function} pdf_bernoulli (@var{x},@var{p})\n"
 "Returns the value at @var{x} of the probability function of a @math{Bernoulli(p)} random variable, with @math{0 \leq p \leq 1}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3120
 msgid ""
 "The @math{Bernoulli(p)} random variable is equivalent to the @math{Binomial(1,p)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3130
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4418,57 +5110,69 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3134
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3136
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3141
+msgid ""
 "@anchor{cdf_bernoulli}\n"
 "@deffn {Function} cdf_bernoulli (@var{x},@var{p})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Bernoulli(p)} random variable, with @math{0 \leq p \leq 1}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3145
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3147
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3152
+msgid ""
 "@anchor{quantile_bernoulli}\n"
 "@deffn {Function} quantile_bernoulli (@var{q},@var{p})\n"
 "Returns the @var{q}-quantile of a @math{Bernoulli(p)} random variable, with @math{0 \leq p \leq 1}; in other words, this is the inverse of @code{cdf_bernoulli}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3156
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3158
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3163
+msgid ""
 "@anchor{mean_bernoulli}\n"
 "@deffn {Function} mean_bernoulli (@var{p})\n"
 "Returns the mean of a @math{Bernoulli(p)} random variable, with @math{0 \leq p \leq 1}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3165
 msgid ""
 "The @math{Bernoulli(p)} random variable is equivalent to the @math{Binomial(1,p)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3175
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4481,27 +5185,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3179
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3181
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3186
+msgid ""
 "@anchor{var_bernoulli}\n"
 "@deffn {Function} var_bernoulli (@var{p})\n"
 "Returns the variance of a @math{Bernoulli(p)} random variable, with @math{0 \leq p \leq 1}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3188
 msgid ""
 "The @math{Bernoulli(p)} random variable is equivalent to the @math{Binomial(1,p)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3198
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4514,27 +5222,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3202
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3204
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3209
+msgid ""
 "@anchor{std_bernoulli}\n"
 "@deffn {Function} std_bernoulli (@var{p})\n"
 "Returns the standard deviation of a @math{Bernoulli(p)} random variable, with @math{0 \leq p \leq 1}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3211
 msgid ""
 "The @math{Bernoulli(p)} random variable is equivalent to the @math{Binomial(1,p)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3221
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4547,27 +5259,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3225
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3227
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3232
+msgid ""
 "@anchor{skewness_bernoulli}\n"
 "@deffn {Function} skewness_bernoulli (@var{p})\n"
 "Returns the skewness coefficient of a @math{Bernoulli(p)} random variable, with @math{0 \leq p \leq 1}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3234
 msgid ""
 "The @math{Bernoulli(p)} random variable is equivalent to the @math{Binomial(1,p)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3246
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4582,27 +5298,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3250
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3252
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3257
+msgid ""
 "@anchor{kurtosis_bernoulli}\n"
 "@deffn {Function} kurtosis_bernoulli (@var{p})\n"
 "Returns the kurtosis coefficient of a @math{Bernoulli(p)} random variable, with @math{0 \leq p \leq 1}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3259
 msgid ""
 "The @math{Bernoulli(p)} random variable is equivalent to the @math{Binomial(1,p)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3271
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -4617,370 +5337,454 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3275
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3277
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3282
+msgid ""
 "@anchor{random_bernoulli}\n"
 "@deffn {Function} random_bernoulli (@var{p}) @\n"
 "@fname{random_bernoulli} (@var{p},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3284
 msgid ""
 "Returns a @math{Bernoulli(p)} random variate, with @math{0 \leq p \leq 1}. Calling @code{random_bernoulli} with a second argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3286
 msgid ""
 "This is a direct application of the @code{random} built-in Maxima function.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3288
 msgid ""
 "See also @mrefdot{random} To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3292
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3294
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3299
+msgid ""
 "@anchor{pdf_geometric}\n"
 "@deffn {Function} pdf_geometric (@var{x},@var{p})\n"
 "Returns the value at @var{x} of the probability function of a @math{Geometric(p)} random variable, with @math{0 < p \leq 1}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3303
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3305
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3310
+msgid ""
 "@anchor{cdf_geometric}\n"
 "@deffn {Function} cdf_geometric (@var{x},@var{p})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Geometric(p)} random variable, with @math{0 < p \leq 1}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3314
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3316
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3321
+msgid ""
 "@anchor{quantile_geometric}\n"
 "@deffn {Function} quantile_geometric (@var{q},@var{p})\n"
 "Returns the @var{q}-quantile of a @math{Geometric(p)} random variable, with @math{0 < p \leq 1}; in other words, this is the inverse of @code{cdf_geometric}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3325
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3327
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3332
+msgid ""
 "@anchor{mean_geometric}\n"
 "@deffn {Function} mean_geometric (@var{p})\n"
 "Returns the mean of a @math{Geometric(p)} random variable, with @math{0 < p \leq 1}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3336
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3338
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3343
+msgid ""
 "@anchor{var_geometric}\n"
 "@deffn {Function} var_geometric (@var{p})\n"
 "Returns the variance of a @math{Geometric(p)} random variable, with @math{0 < p \leq 1}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3347
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3349
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3354
+msgid ""
 "@anchor{std_geometric}\n"
 "@deffn {Function} std_geometric (@var{p})\n"
 "Returns the standard deviation of a @math{Geometric(p)} random variable, with @math{0 < p \leq 1}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3358
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3360
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3365
+msgid ""
 "@anchor{skewness_geometric}\n"
 "@deffn {Function} skewness_geometric (@var{p})\n"
 "Returns the skewness coefficient of a @math{Geometric(p)} random variable, with @math{0 < p \leq 1}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3369
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3371
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3376
+msgid ""
 "@anchor{kurtosis_geometric}\n"
 "@deffn {Function} kurtosis_geometric (@var{p})\n"
 "Returns the kurtosis coefficient of a geometric random variable  @math{Geo(p)}, with @math{0 < p \leq 1}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3380
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3382
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3387
+msgid ""
 "@anchor{random_geometric}\n"
 "@deffn {Function} random_geometric (@var{p}) @\n"
 "@fname{random_geometric} (@var{p},@var{n})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3389
 msgid ""
 "Returns a @math{Geometric(p)} random variate, with @math{0 < p \leq 1}. Calling @code{random_geometric} with a second argument @var{n}, a random sample of size @var{n} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3391
 msgid ""
 "The algorithm is based on simulation of Bernoulli trials.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3393
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3397
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3399
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3404
+msgid ""
 "@anchor{pdf_discrete_uniform}\n"
 "@deffn {Function} pdf_discrete_uniform (@var{x},@var{n})\n"
 "Returns the value at @var{x} of the probability function of a @math{Discrete Uniform(n)} random variable, with @math{n} a strictly positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3408
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3410
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3415
+msgid ""
 "@anchor{cdf_discrete_uniform}\n"
 "@deffn {Function} cdf_discrete_uniform (@var{x},@var{n})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Discrete Uniform(n)} random variable, with @math{n} a strictly positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3419
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3421
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3426
+msgid ""
 "@anchor{quantile_discrete_uniform}\n"
 "@deffn {Function} quantile_discrete_uniform (@var{q},@var{n})\n"
 "Returns the @var{q}-quantile of a @math{Discrete Uniform(n)} random variable, with @math{n} a strictly positive integer; in other words, this is the inverse of @code{cdf_discrete_uniform}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3430
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3432
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3437
+msgid ""
 "@anchor{mean_discrete_uniform}\n"
 "@deffn {Function} mean_discrete_uniform (@var{n})\n"
 "Returns the mean of a @math{Discrete Uniform(n)} random variable, with @math{n} a strictly positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3441
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3443
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3448
+msgid ""
 "@anchor{var_discrete_uniform}\n"
 "@deffn {Function} var_discrete_uniform (@var{n})\n"
 "Returns the variance of a @math{Discrete Uniform(n)} random variable, with @math{n} a strictly positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3452
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3454
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3459
+msgid ""
 "@anchor{std_discrete_uniform}\n"
 "@deffn {Function} std_discrete_uniform (@var{n})\n"
 "Returns the standard deviation of a @math{Discrete Uniform(n)} random variable, with @math{n} a strictly positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3463
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3465
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3470
+msgid ""
 "@anchor{skewness_discrete_uniform}\n"
 "@deffn {Function} skewness_discrete_uniform (@var{n})\n"
 "Returns the skewness coefficient of a @math{Discrete Uniform(n)} random variable, with @math{n} a strictly positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3474
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3476
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3481
+msgid ""
 "@anchor{kurtosis_discrete_uniform}\n"
 "@deffn {Function} kurtosis_discrete_uniform (@var{n})\n"
 "Returns the kurtosis coefficient of a @math{Discrete Uniform(n)} random variable, with @math{n} a strictly positive integer. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3485
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3487
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3492
+msgid ""
 "@anchor{random_discrete_uniform}\n"
 "@deffn {Function} random_discrete_uniform (@var{n}) @\n"
 "@fname{random_discrete_uniform} (@var{n},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3494
 msgid ""
 "Returns a @math{Discrete Uniform(n)} random variate, with @math{n} a strictly positive integer. Calling @code{random_discrete_uniform} with a second argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3496
 msgid ""
 "This is a direct application of the @code{random} built-in Maxima function.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3498
 msgid ""
 "See also @mrefdot{random} To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3502
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3504
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3513
+msgid ""
 "@anchor{pdf_hypergeometric}\n"
 "@deffn {Function} pdf_hypergeometric (@var{x},@var{n1},@var{n2},@var{n})\n"
 "Returns the value at @var{x} of the probability function of a @math{Hypergeometric(n1,n2,n)}\n"
 "random variable, with @var{n1}, @var{n2} and @var{n} non negative integers and @math{n<=n1+n2}.\n"
 "Being @var{n1} the number of objects of class A, @var{n2} the number of objects of class B, and\n"
 "@var{n} the size of the sample without replacement, this function returns the probability of\n"
-"event \"exactly @var{x} objects are of class A\". \n"
+"event \\"exactly @var{x} objects are of class A\\". \n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3515
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3519
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3521
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3528
+msgid ""
 "@anchor{cdf_hypergeometric}\n"
 "@deffn {Function} cdf_hypergeometric (@var{x},@var{n1},@var{n2},@var{n})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Hypergeometric(n1,n2,n)} \n"
@@ -4988,162 +5792,198 @@ msgid ""
 "See @code{pdf_hypergeometric} for a more complete description.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3530
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3534
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3536
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3541
+msgid ""
 "@anchor{quantile_hypergeometric}\n"
 "@deffn {Function} quantile_hypergeometric (@var{q},@var{n1},@var{n2},@var{n})\n"
 "Returns the @var{q}-quantile of a @math{Hypergeometric(n1,n2,n)} random variable, with @var{n1}, @var{n2} and @var{n} non negative integers and @math{n<=n1+n2}; in other words, this is the inverse of @code{cdf_hypergeometric}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3545
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3547
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3552
+msgid ""
 "@anchor{mean_hypergeometric}\n"
 "@deffn {Function} mean_hypergeometric (@var{n1},@var{n2},@var{n})\n"
 "Returns the mean of a discrete uniform random variable @math{Hyp(n1,n2,n)}, with @var{n1}, @var{n2} and @var{n} non negative integers and @math{n<=n1+n2}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3556
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3558
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3563
+msgid ""
 "@anchor{var_hypergeometric}\n"
 "@deffn {Function} var_hypergeometric (@var{n1},@var{n2},@var{n})\n"
 "Returns the variance of a hypergeometric  random variable @math{Hyp(n1,n2,n)}, with @var{n1}, @var{n2} and @var{n} non negative integers and @math{n<=n1+n2}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3567
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3569
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3574
+msgid ""
 "@anchor{std_hypergeometric}\n"
 "@deffn {Function} std_hypergeometric (@var{n1},@var{n2},@var{n})\n"
 "Returns the standard deviation of a @math{Hypergeometric(n1,n2,n)} random variable, with @var{n1}, @var{n2} and @var{n} non negative integers and @math{n<=n1+n2}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3578
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3580
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3585
+msgid ""
 "@anchor{skewness_hypergeometric}\n"
 "@deffn {Function} skewness_hypergeometric (@var{n1},@var{n2},@var{n})\n"
 "Returns the skewness coefficient of a @math{Hypergeometric(n1,n2,n)} random variable, with @var{n1}, @var{n2} and @var{n} non negative integers and @math{n<=n1+n2}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3589
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3591
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3596
+msgid ""
 "@anchor{kurtosis_hypergeometric}\n"
 "@deffn {Function} kurtosis_hypergeometric (@var{n1},@var{n2},@var{n})\n"
 "Returns the kurtosis coefficient of a @math{Hypergeometric(n1,n2,n)} random variable, with @var{n1}, @var{n2} and @var{n} non negative integers and @math{n<=n1+n2}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3600
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3602
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3607
+msgid ""
 "@anchor{random_hypergeometric}\n"
 "@deffn {Function} random_hypergeometric (@var{n1},@var{n2},@var{n}) @\n"
 "@fname{random_hypergeometric} (@var{n1},@var{n2},@var{n},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3609
 msgid ""
 "Returns a @math{Hypergeometric(n1,n2,n)} random variate, with @var{n1}, @var{n2} and @var{n} non negative integers and @math{n<=n1+n2}. Calling @code{random_hypergeometric} with a fourth argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3611
 msgid ""
 "Algorithm described in Kachitvichyanukul, V., Schmeiser, B.W. (1985) @var{Computer generation of hypergeometric random variates.} Journal of Statistical Computation and Simulation 22, 127-145.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3613
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3617
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3619
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3624
+msgid ""
 "@anchor{pdf_negative_binomial}\n"
 "@deffn {Function} pdf_negative_binomial (@var{x},@var{n},@var{p})\n"
 "Returns the value at @var{x} of the probability function of a @math{Negative Binomial(n,p)} random variable, with @math{0 < p \leq 1} and @math{n} a positive number. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3628
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3630
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3635
+msgid ""
 "@anchor{cdf_negative_binomial}\n"
 "@deffn {Function} cdf_negative_binomial (@var{x},@var{n},@var{p})\n"
 "Returns the value at @var{x} of the distribution function of a @math{Negative Binomial(n,p)} random variable, with @math{0 < p \leq 1} and @math{n} a positive number.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3647
 msgid ""
 "@c ===beg===\n"
 "@c load (distrib)$\n"
@@ -5158,134 +5998,158 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3651
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3653
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3658
+msgid ""
 "@anchor{quantile_negative_binomial}\n"
 "@deffn {Function} quantile_negative_binomial (@var{q},@var{n},@var{p})\n"
 "Returns the @var{q}-quantile of a @math{Negative Binomial(n,p)} random variable, with @math{0 < p \leq 1} and @math{n} a positive number; in other words, this is the inverse of @code{cdf_negative_binomial}. Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3662
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3664
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3669
+msgid ""
 "@anchor{mean_negative_binomial}\n"
 "@deffn {Function} mean_negative_binomial (@var{n},@var{p})\n"
 "Returns the mean of a @math{Negative Binomial(n,p)} random variable, with @math{0 < p \leq 1} and @math{n} a positive number. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3673
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3675
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3680
+msgid ""
 "@anchor{var_negative_binomial}\n"
 "@deffn {Function} var_negative_binomial (@var{n},@var{p})\n"
 "Returns the variance of a @math{Negative Binomial(n,p)} random variable, with @math{0 < p \leq 1} and @math{n} a positive number. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3684
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3686
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3691
+msgid ""
 "@anchor{std_negative_binomial}\n"
 "@deffn {Function} std_negative_binomial (@var{n},@var{p})\n"
 "Returns the standard deviation of a @math{Negative Binomial(n,p)} random variable, with @math{0 < p \leq 1} and @math{n} a positive number. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3695
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3697
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3702
+msgid ""
 "@anchor{skewness_negative_binomial}\n"
 "@deffn {Function} skewness_negative_binomial (@var{n},@var{p})\n"
 "Returns the skewness coefficient of a @math{Negative Binomial(n,p)} random variable, with @math{0 < p \leq 1} and @math{n} a positive number. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3706
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3708
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3713
+msgid ""
 "@anchor{kurtosis_negative_binomial}\n"
 "@deffn {Function} kurtosis_negative_binomial (@var{n},@var{p})\n"
 "Returns the kurtosis coefficient of a @math{Negative Binomial(n,p)} random variable, with @math{0 < p \leq 1} and @math{n} a positive number. To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3717
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3719
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: distrib.texi:3724
+msgid ""
 "@anchor{random_negative_binomial}\n"
 "@deffn {Function} random_negative_binomial (@var{n},@var{p}) @\n"
 "@fname{random_negative_binomial} (@var{n},@var{p},@var{m})\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3726
 msgid ""
 "Returns a @math{Negative Binomial(n,p)} random variate, with @math{0 < p \leq 1} and @math{n} a positive number. Calling @code{random_negative_binomial} with a third argument @var{m}, a random sample of size @var{m} will be simulated.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3728
 msgid ""
 "Algorithm described in Devroye, L. (1986) @var{Non-Uniform Random Variate Generation}. Springer Verlag, p. 480.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3730
 msgid ""
 "To make use of this function, write first @code{load(distrib)}.\n"
 msgstr ""
 
-# distrib.texi
+#: distrib.texi:3734
 msgid ""
 "@opencatbox\n"
 "@category{Package distrib} @category{Random numbers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# distrib.texi
-msgid ""
-"@end deffn\n"
-msgstr ""

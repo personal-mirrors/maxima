@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# minpack.texi
+msgstr ""
+
+#: minpack.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to minpack::\n"
@@ -25,38 +25,38 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:8
 msgid ""
 "@node Introduction to minpack, Functions and Variables for minpack, minpack-pkg, minpack-pkg\n"
 "@section Introduction to minpack\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:11
 msgid ""
 "@code{Minpack} is a Common Lisp translation (via @code{f2cl}) of the\n"
 "Fortran library MINPACK, as obtained from Netlib.\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:15
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods}  @category{Optimization} @category{Share packages} @category{Package minpack}\n"
 "@closecatbox\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:18
 msgid ""
 "@node Functions and Variables for minpack,  , Introduction to minpack, minpack-pkg\n"
 "@section Functions and Variables for minpack\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:21
 msgid ""
 "@anchor{minpack_lsquares}\n"
 "@deffn {Function} minpack_lsquares (@var{flist}, @var{varlist}, @var{guess} [, @var{tolerance}, @var{jacobian}])\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:26
 msgid ""
 "Compute the point that minimizes the sum of the squares of the\n"
 "functions in the list @var{flist}.  The variables are in the list\n"
@@ -64,7 +64,7 @@ msgid ""
 "in @var{guess}.  \n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:34
 msgid ""
 "The optional keyword arguments, @var{tolerance} and @var{jacobian}\n"
 "provide some control over the algorithm.  @var{tolerance} is the\n"
@@ -75,14 +75,14 @@ msgid ""
 "approximation is used.\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:38
 msgid ""
 "@code{minpack_lsquares} returns a list.  The first item is the\n"
 "estimated solution; the second is the sum of squares, and the third\n"
 "indicates the success of the algorithm.  The possible values are\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:62
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -109,7 +109,7 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:74
 msgid ""
 "@example\n"
 "/* Problem 6: Powell singular function */\n"
@@ -124,7 +124,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:83
 msgid ""
 "@example\n"
 "/* Same problem but use numerical approximation to Jacobian */\n"
@@ -136,12 +136,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:85
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:92
 msgid ""
 "@anchor{minpack_solve}\n"
 "@deffn {Function} minpack_solve (@var{flist}, @var{varlist}, @var{guess} [, @var{tolerance}, @var{jacobian}])\n"
@@ -151,7 +151,7 @@ msgid ""
 "be provided in @var{guess}.\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:100
 msgid ""
 "The optional keyword arguments, @var{tolerance} and @var{jacobian}\n"
 "provide some control over the algorithm.  @var{tolerance} is the\n"
@@ -162,14 +162,14 @@ msgid ""
 "approximation is used.\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:104
 msgid ""
 "@code{minpack_solve} returns a list.  The first item is the\n"
 "estimated solution; the second is the sum of squares, and the third\n"
 "indicates the success of the algorithm.  The possible values are\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:119
 msgid ""
 "@table @code\n"
 "@item 0\n"
@@ -187,21 +187,14 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:122
 msgid ""
 "@example\n"
 "@end example\n"
 msgstr ""
 
-# minpack.texi
+#: minpack.texi:124
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# minpack.texi
-msgid ""
-"@c Local Variables: \n"
-"@c mode: texinfo\n"
-"@c TeX-master: \"include-maxima\"\n"
-"@c End: \n"
-msgstr ""

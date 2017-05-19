@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Help.texi
+msgstr ""
+
+#: Help.texi:5
 msgid ""
 "@menu       \n"
 "* Documentation::               \n"
@@ -25,7 +25,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:10
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Documentation, Functions and Variables for Help, Help, Help\n"
@@ -33,12 +33,12 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:12
 msgid ""
 "@c SHOULD TALK ABOUT OTHER FORMS OF DOCUMENTATION ASIDE FROM ON-LINE MANUAL.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:18
 msgid ""
 "The Maxima on-line user's manual can be viewed in different forms.  From the\n"
 "Maxima interactive prompt, the user's manual is viewed as plain text by the\n"
@@ -47,24 +47,24 @@ msgid ""
 "web page by any ordinary web browser.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:20
 msgid ""
 "@mref{example} displays examples for many Maxima functions.  For example,\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:24
 msgid ""
 "@example\n"
 "(%i1) example (integrate);\n"
 "@end example\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:26
 msgid ""
 "yields\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:38
 msgid ""
 "@example\n"
 "(%i2) test(f):=block([u],u:integrate(f,x),ratsimp(f-diff(u,x)))\n"
@@ -79,19 +79,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:40
 msgid ""
 "and additional output.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:44
 msgid ""
 "@opencatbox\n"
 "@category{Console interaction}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:49
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Help,  , Documentation, Help\n"
@@ -99,14 +99,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:53
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{apropos}\n"
 "@deffn {Function} apropos (@var{string})\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:61
 msgid ""
 "Searches for Maxima names which have @var{string} appearing anywhere within\n"
 "them.  Thus, @code{apropos (exp)} returns a list of all the flags and functions\n"
@@ -117,34 +117,34 @@ msgid ""
 "to the translator, most of which begin with @code{tr_}.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:63
 msgid ""
-"@code{apropos(\"\")} returns a list with all Maxima names.\n"
+"@code{apropos(\\"\\")} returns a list with all Maxima names.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:65
 msgid ""
 "@code{apropos} returns the empty list @code{[]}, if no name is found.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:67
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:69
 msgid ""
-"Show all Maxima symbols which have @code{\"gamma\"} in the name:\n"
+"Show all Maxima symbols which have @code{\\"gamma\\"} in the name:\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:83
 msgid ""
 "@c ===beg===\n"
-"@c apropos(\"gamma\");\n"
+"@c apropos(\\"gamma\\");\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) apropos(\"gamma\");\n"
+"(%i1) apropos(\\"gamma\\");\n"
 "(%o1) [%gamma, gamma, gammalim, gamma_expand, gamma_greek, \n"
 "gamma_incomplete, gamma_incomplete_generalized, \n"
 "gamma_incomplete_regularized, Gamma, log_gamma, makegamma, \n"
@@ -154,7 +154,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:88
 msgid ""
 "@opencatbox\n"
 "@category{Help}\n"
@@ -162,14 +162,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:92
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{demo}\n"
 "@deffn {Function} demo (@var{filename})\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:97
 msgid ""
 "Evaluates Maxima expressions in @var{filename} and displays the results.\n"
 "@code{demo} pauses after evaluating each expression and continues after the\n"
@@ -177,68 +177,68 @@ msgid ""
 "to see a semicolon @code{;} followed by a carriage return.)\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:101
 msgid ""
 "@code{demo} searches the list of directories @mref{file_search_demo} to find\n"
 "@code{filename}.  If the file has the suffix @code{dem}, the suffix may be\n"
 "omitted.  See also @mrefdot{file_search}\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:104
 msgid ""
 "@code{demo} evaluates its argument.\n"
 "@code{demo} returns the name of the demonstration file.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:106
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:109
 msgid ""
 "@example\n"
-"(%i1) demo (\"disol\");\n"
+"(%i1) demo (\\"disol\\");\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:113
 msgid ""
 "batching /home/wfs/maxima/share/simplification/disol.dem\n"
 " At the _ prompt, type ';' followed by enter to get next demo\n"
 "(%i2)                      load(disol)\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:117
 msgid ""
 "_\n"
 "(%i3)           exp1 : a (e (g + f) + b (d + c))\n"
 "(%o3)               a (e (g + f) + b (d + c))\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:121
 msgid ""
 "_\n"
 "(%i4)                disolate(exp1, a, b, e)\n"
 "(%t4)                         d + c\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:123
 msgid ""
 "(%t5)                         g + f\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:125
 msgid ""
 "(%o5)                   a (%t5 e + %t4 b)\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:128
 msgid ""
 "_\n"
 "@end example\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:133
 msgid ""
 "@opencatbox\n"
 "@category{Help} @category{Console interaction} @category{File input}\n"
@@ -246,7 +246,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:141
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{describe}\n"
@@ -257,55 +257,55 @@ msgid ""
 "@fname{describe} (@var{string}, inexact)\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:144
 msgid ""
 "@code{describe(@var{string})} is equivalent to\n"
 "@code{describe(@var{string}, exact)}.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:147
 msgid ""
 "@code{describe(@var{string}, exact)} finds an item with title equal\n"
 "(case-insensitive) to @var{string}, if there is any such item.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:151
 msgid ""
 "@code{describe(@var{string}, inexact)} finds all documented items which contain\n"
 "@var{string} in their titles.  If there is more than one such item, Maxima asks\n"
 "the user to select an item or items to display.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:155
 msgid ""
 "At the interactive prompt, @code{? foo} (with a space between @code{?} and\n"
-"@code{foo}) is equivalent to @code{describe(\"foo\", exact)}, and @code{?? foo}\n"
-"is equivalent to @code{describe(\"foo\", inexact)}.\n"
+"@code{foo}) is equivalent to @code{describe(\\"foo\\", exact)}, and @code{?? foo}\n"
+"is equivalent to @code{describe(\\"foo\\", inexact)}.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:158
 msgid ""
-"@code{describe(\"\", inexact)} yields a list of all topics documented in the\n"
+"@code{describe(\\"\\", inexact)} yields a list of all topics documented in the\n"
 "on-line manual.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:161
 msgid ""
 "@code{describe} quotes its argument.  @code{describe} returns @code{true} if\n"
 "some documentation is found, otherwise @code{false}.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:163
 msgid ""
 "See also @ref{Documentation}.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:165
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:182
 msgid ""
 "@example\n"
 "(%i1) ?? integ\n"
@@ -325,7 +325,7 @@ msgid ""
 "Enter space-separated numbers, `all' or `none': 7 8\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:192
 msgid ""
 " -- Function: integrate (<expr>, <x>)\n"
 " -- Function: integrate (<expr>, <x>, <a>, <b>)\n"
@@ -338,7 +338,7 @@ msgid ""
 "     Default value: `false'\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:199
 msgid ""
 "     When `integrate_use_rootsof' is `true' and the denominator of\n"
 "     a rational function cannot be factored, `integrate' returns\n"
@@ -348,7 +348,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:204
 msgid ""
 "In this example, items 7 and 8 were selected (output is shortened as indicated\n"
 "by @code{[...]}).  All or none of the items could have been selected by entering\n"
@@ -356,7 +356,7 @@ msgid ""
 "respectively.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:209
 msgid ""
 "@opencatbox\n"
 "@category{Help} @category{Console interaction}\n"
@@ -364,7 +364,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:215
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{example}\n"
@@ -373,42 +373,42 @@ msgid ""
 "@fname{example} ()\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:220
 msgid ""
 "@code{example (@var{topic})} displays some examples of @var{topic}, which is a\n"
 "symbol or a string.  To get examples for operators like @code{if}, @code{do},\n"
-"or @code{lambda} the argument must be a string, e.g. @code{example (\"do\")}.\n"
+"or @code{lambda} the argument must be a string, e.g. @code{example (\\"do\\")}.\n"
 "@code{example} is not case sensitive.  Most topics are function names.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:222
 msgid ""
 "@code{example ()} returns the list of all recognized topics.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:225
 msgid ""
 "The name of the file containing the examples is given by the global option \n"
-"variable @mrefcomma{manual_demo} which defaults to @code{\"manual.demo\"}.\n"
+"variable @mrefcomma{manual_demo} which defaults to @code{\\"manual.demo\\"}.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:229
 msgid ""
 "@code{example} quotes its argument.  @code{example} returns @code{done} unless\n"
 "no examples are found or there is no argument, in which case @code{example}\n"
 "returns the list of all recognized topics.\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:231
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:254
 msgid ""
 "@c ===beg===\n"
 "@c example(append);\n"
-"@c example(\"lambda\");\n"
+"@c example(\\"lambda\\");\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
@@ -417,7 +417,7 @@ msgid ""
 "(%o2)             [y + x, 0, - 3.2, 2.5e+20, x]\n"
 "(%o2)                         done\n"
 "@end group\n"
-"(%i3) example(\"lambda\");\n"
+"(%i3) example(\\"lambda\\");\n"
 "(%i4) lambda([x,y,z],x^2+y^2+z^2)\n"
 "                                    2    2    2\n"
 "(%o4)            lambda([x, y, z], x  + y  + z )\n"
@@ -430,7 +430,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:259
 msgid ""
 "@opencatbox\n"
 "@category{Help} @category{Console interaction}\n"
@@ -438,21 +438,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:264
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{manual_demo}\n"
 "@defvr {Option variable} manual_demo\n"
-"Default value: @code{\"manual.demo\"}\n"
+"Default value: @code{\\"manual.demo\\"}\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:267
 msgid ""
 "@code{manual_demo} specifies the name of the file containing the examples for \n"
 "the function @code{example}.  See @mrefdot{example}\n"
 msgstr ""
 
-# Help.texi
+#: Help.texi:272
 msgid ""
 "@opencatbox\n"
 "@category{Help} @category{Global variables}\n"
@@ -460,6 +460,3 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Help.texi
-msgid ""
-msgstr ""

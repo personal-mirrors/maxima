@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Atensor.texi
+msgstr ""
+
+#: Atensor.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to atensor::\n"
@@ -25,28 +25,28 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:8
 msgid ""
 "@node Introduction to atensor, Functions and Variables for atensor, atensor, atensor\n"
 "@section Introduction to atensor\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:12
 msgid ""
 "@code{atensor} is an algebraic tensor manipulation package. To use @code{atensor},\n"
 "type @code{load(atensor)}, followed by a call to the @code{init_atensor}\n"
 "function.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:17
 msgid ""
 "The essence of @code{atensor} is a set of simplification rules for the\n"
-"noncommutative (dot) product operator (\"@code{.}\"). @code{atensor} recognizes\n"
+"noncommutative (dot) product operator (\\"@code{.}\\"). @code{atensor} recognizes\n"
 "several algebra types; the corresponding simplification rules are put\n"
 "into effect when the @code{init_atensor} function is called.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:22
 msgid ""
 "The capabilities of @code{atensor} can be demonstrated by defining the\n"
 "algebra of quaternions as a Clifford-algebra Cl(0,2) with two basis\n"
@@ -54,7 +54,7 @@ msgid ""
 "basis vectors and their product, i.e.:\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:27
 msgid ""
 "@example\n"
 "    i = v     j = v     k = v  . v\n"
@@ -62,14 +62,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:31
 msgid ""
 "Although the @code{atensor} package has a built-in definition for the\n"
 "quaternion algebra, it is not used in this example, in which we\n"
 "endeavour to build the quaternion multiplication table as a matrix:\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:74
 msgid ""
 "@example\n"
 "(%i1) load(atensor);\n"
@@ -115,7 +115,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:83
 msgid ""
 "@code{atensor} recognizes as base vectors indexed symbols, where the symbol\n"
 "is that stored in @code{asymbol} and the index runs between 1 and @code{adim}.\n"
@@ -127,18 +127,18 @@ msgid ""
 "in place of @code{av(v[i],v[j])}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:86
 msgid ""
 "Needless to say, the functions @code{sf}, @code{af} and @code{av}\n"
 "can be redefined.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:88
 msgid ""
 "When the @code{atensor} package is loaded, the following flags are set:\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:94
 msgid ""
 "@example\n"
 "dotscrules:true;\n"
@@ -147,7 +147,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:99
 msgid ""
 "If you wish to experiment with a nonassociative algebra, you may also\n"
 "consider setting @code{dotassoc} to @code{false}. In this case, however,\n"
@@ -155,25 +155,25 @@ msgid ""
 "simplifications.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:103
 msgid ""
 "@opencatbox\n"
 "@category{Tensors} @category{Share packages} @category{Package atensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:106
 msgid ""
 "@c end concepts atensor\n"
 "@node Functions and Variables for atensor,  , Introduction to atensor, atensor\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:108
 msgid ""
 "@section Functions and Variables for atensor\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:113
 msgid ""
 "@anchor{init_atensor}\n"
 "@deffn {Function} init_atensor @\n"
@@ -181,24 +181,24 @@ msgid ""
 "@fname{init_atensor} (@var{alg_type})\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:116
 msgid ""
 "Initializes the @code{atensor} package with the specified algebra type. @var{alg_type}\n"
 "can be one of the following:\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:118
 msgid ""
 "@code{universal}: The universal algebra has no commutation rules.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:121
 msgid ""
 "@code{grassmann}: The Grassman algebra is defined by the commutation\n"
 "relation @code{u.v+v.u=0}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:130
 msgid ""
 "@code{clifford}: The Clifford algebra is defined by the commutation\n"
 "relation @code{u.v+v.u=-2*sf(u,v)} where @code{sf} is a symmetric\n"
@@ -210,13 +210,13 @@ msgid ""
 "@code{adim} will default to 0 and @code{aform} will not be defined.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:133
 msgid ""
 "@code{symmetric}: The symmetric algebra is defined by the commutation\n"
 "relation @code{u.v-v.u=0}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:142
 msgid ""
 "@code{symplectic}: The symplectic algebra is defined by the commutation\n"
 "relation @code{u.v-v.u=2*af(u,v)} where @code{af} is an antisymmetric\n"
@@ -228,58 +228,62 @@ msgid ""
 "will not be defined.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:146
 msgid ""
 "@code{lie_envelop}: The algebra of the Lie envelope is defined by the\n"
 "commutation relation @code{u.v-v.u=2*av(u,v)} where @code{av} is\n"
 "an antisymmetric function.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:149
 msgid ""
 "The @code{init_atensor} function also recognizes several predefined\n"
 "algebra types:\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:153
 msgid ""
 "@code{complex} implements the algebra of complex numbers as the\n"
 "Clifford algebra Cl(0,1). The call @code{init_atensor(complex)} is\n"
 "equivalent to @code{init_atensor(clifford,0,0,1)}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:157
 msgid ""
 "@code{quaternion} implements the algebra of quaternions. The call\n"
 "@code{init_atensor (quaternion)} is equivalent to\n"
 "@code{init_atensor (clifford,0,0,2)}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:161
 msgid ""
 "@code{pauli} implements the algebra of Pauli-spinors as the Clifford-algebra\n"
 "Cl(3,0). A call to @code{init_atensor(pauli)} is equivalent to\n"
 "@code{init_atensor(clifford,3)}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:165
 msgid ""
 "@code{dirac} implements the algebra of Dirac-spinors as the Clifford-algebra\n"
 "Cl(3,1). A call to @code{init_atensor(dirac)} is equivalent to\n"
 "@code{init_atensor(clifford,3,0,1)}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:170
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Atensor.texi:174
+msgid ""
 "@anchor{atensimp}\n"
 "@deffn {Function} atensimp (@var{expr})\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:181
 msgid ""
 "Simplifies an algebraic tensor expression @var{expr} according to the rules\n"
 "configured by a call to @code{init_atensor}. Simplification includes\n"
@@ -289,19 +293,19 @@ msgid ""
 "for complex expressions.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:185
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor} @category{Simplification functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:187
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:192
 msgid ""
 "@anchor{alg_type}\n"
 "@deffn {Function} alg_type\n"
@@ -309,98 +313,98 @@ msgid ""
 "@code{clifford}, @code{symmetric}, @code{symplectic} and @code{lie_envelop}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:196
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:198
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:202
 msgid ""
 "@anchor{adim}\n"
 "@defvr {Variable} adim\n"
 "Default value: 0\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:205
 msgid ""
 "The dimensionality of the algebra. @code{atensor} uses the value of @code{adim}\n"
 "to determine if an indexed object is a valid base vector.  See @code{abasep}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:209
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor} @category{Global variables}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:211
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:215
 msgid ""
 "@anchor{aform}\n"
 "@defvr {Variable} aform\n"
 "Default value: @code{ident(3)}\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:218
 msgid ""
 "Default values for the bilinear forms @code{sf}, @code{af}, and\n"
 "@code{av}. The default is the identity matrix @code{ident(3)}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:222
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor} @category{Global variables}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:224
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:228
 msgid ""
 "@anchor{asymbol}\n"
 "@defvr {Variable} asymbol\n"
 "Default value: @code{v}\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:230
 msgid ""
 "The symbol for base vectors.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:234
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor} @category{Global variables}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:236
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:238
 msgid ""
 "@deffn {Function} sf (@var{u}, @var{v})\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:243
 msgid ""
 "A symmetric scalar function that is used in commutation relations.\n"
 "The default implementation checks if both arguments are base vectors\n"
@@ -408,25 +412,25 @@ msgid ""
 "corresponding value from the matrix @code{aform}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:247
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:249
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:252
 msgid ""
 "@anchor{af}\n"
 "@deffn {Function} af (@var{u}, @var{v})\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:257
 msgid ""
 "An antisymmetric scalar function that is used in commutation relations.\n"
 "The default implementation checks if both arguments are base vectors\n"
@@ -434,25 +438,25 @@ msgid ""
 "corresponding value from the matrix @code{aform}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:261
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:263
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:266
 msgid ""
 "@anchor{av}\n"
 "@deffn {Function} av (@var{u}, @var{v})\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:271
 msgid ""
 "An antisymmetric function that is used in commutation relations.\n"
 "The default implementation checks if both arguments are base vectors\n"
@@ -460,12 +464,12 @@ msgid ""
 "corresponding value from the matrix @code{aform}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:273
 msgid ""
 "For instance:\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:291
 msgid ""
 "@example\n"
 "(%i1) load(atensor);\n"
@@ -486,21 +490,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:295
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:297
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: Atensor.texi:301
+msgid ""
 "@anchor{abasep}\n"
 "@deffn {Function} abasep (@var{v})\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:306
 msgid ""
 "Checks if its argument is an @code{atensor} base vector. That is, if it is\n"
 "an indexed symbol, with the symbol being the same as the value of\n"
@@ -508,14 +516,10 @@ msgid ""
 "and @code{adim}.\n"
 msgstr ""
 
-# Atensor.texi
+#: Atensor.texi:310
 msgid ""
 "@opencatbox\n"
 "@category{Package atensor} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Atensor.texi
-msgid ""
-"@end deffn\n"
-msgstr ""

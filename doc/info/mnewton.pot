@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# mnewton.texi
+msgstr ""
+
+#: mnewton.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to mnewton::\n"
@@ -25,7 +25,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:10
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to mnewton, Functions and Variables for mnewton, mnewton-pkg, mnewton-pkg\n"
@@ -33,20 +33,20 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:13
 msgid ""
 "@code{mnewton} is an implementation of Newton's method for solving nonlinear\n"
 "equations in one or more variables.\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:17
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Share packages} @category{Package mnewton}\n"
 "@closecatbox\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:22
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for mnewton,  , Introduction to mnewton, mnewton-pkg\n"
@@ -54,7 +54,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:27
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{newtonepsilon}\n"
@@ -62,14 +62,14 @@ msgid ""
 "Default value: @code{10.0^(-fpprec/2)}\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:31
 msgid ""
 "Precision to determine when the @code{mnewton} function has converged towards\n"
 "the solution.  If @code{newtonepsilon} is a bigfloat, then @code{mnewton}\n"
 "computations are done with bigfloats.  See also @mrefdot{mnewton}\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:36
 msgid ""
 "@opencatbox\n"
 "@category{Package mnewton}\n"
@@ -77,7 +77,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:41
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{newtonmaxiter}\n"
@@ -85,18 +85,18 @@ msgid ""
 "Default value: @code{50}\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:44
 msgid ""
 "Maximum number of iterations to stop the @code{mnewton} function\n"
 "if it does not converge or if it converges too slowly.\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:46
 msgid ""
 "See also @mrefdot{mnewton}\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:51
 msgid ""
 "@opencatbox\n"
 "@category{Package mnewton}\n"
@@ -104,14 +104,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:55
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mnewton}\n"
 "@deffn {Function} mnewton (@var{FuncList},@var{VarList},@var{GuessList})\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:60
 msgid ""
 "Multiple nonlinear functions solution using the Newton method.\n"
 "@var{FuncList} is the list of functions to solve,\n"
@@ -119,25 +119,25 @@ msgid ""
 "@var{GuessList} is the list of initial approximations.\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:63
 msgid ""
 "The solution is returned in the same format that @code{solve()} returns.\n"
 "If the solution is not found, @code{[]} is returned.\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:66
 msgid ""
 "This function is controlled by global variables @mref{newtonepsilon} and\n"
 "@mrefdot{newtonmaxiter}\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:69
 msgid ""
 "@example\n"
-"(%i1) load(\"mnewton\")$\n"
+"(%i1) load(\\"mnewton\\")$\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:78
 msgid ""
 "(%i2) mnewton([x1+3*log(x1)-x2^2, 2*x1^2-x1*x2-5*x1+1],\n"
 "              [x1, x2], [5, 5]);\n"
@@ -149,25 +149,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:82
 msgid ""
 "The variable @code{newtonepsilon} controls the precision of the\n"
 "approximations.  It also controls if computations are performed with\n"
 "floats or bigfloats.\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:85
 msgid ""
 "@example\n"
 "(%i1) load(mnewton)$\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:87
 msgid ""
 "(%i2) (fpprec : 25, newtonepsilon : bfloat(10^(-fpprec+5)))$\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:92
 msgid ""
 "(%i3) mnewton([2*3^u-v/u-5, u+2^v-4], [u, v], [2, 2]);\n"
 "(%o3) [[u = 1.066618389595406772591173b0, \n"
@@ -175,13 +175,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:95
 msgid ""
-"To use this function write first @code{load(\"mnewton\")}.\n"
+"To use this function write first @code{load(\\"mnewton\\")}.\n"
 "See also @mref{newtonepsilon} and @mrefdot{newtonmaxiter}\n"
 msgstr ""
 
-# mnewton.texi
+#: mnewton.texi:100
 msgid ""
 "@opencatbox\n"
 "@category{Package mnewton}\n"
@@ -189,6 +189,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# mnewton.texi
-msgid ""
-msgstr ""

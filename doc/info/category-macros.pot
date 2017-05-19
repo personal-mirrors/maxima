@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# category-macros.texi
+msgstr ""
+
+#: category-macros.texi:16
 msgid ""
 "@ifhtml\n"
 "@macro fname {name}\n"
@@ -36,7 +36,7 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:32
 msgid ""
 "@ifhtml\n"
 "@macro figure {file}\n"
@@ -55,7 +55,7 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:39
 msgid ""
 "@ifhtml\n"
 "@macro opencatbox {}\n"
@@ -65,7 +65,7 @@ msgid ""
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:46
 msgid ""
 "@macro category {name}\n"
 "@html\n"
@@ -75,7 +75,7 @@ msgid ""
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:52
 msgid ""
 "@macro closecatbox {}\n"
 "@html\n"
@@ -84,99 +84,99 @@ msgid ""
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:54
 msgid ""
 "@c Macros for cross references\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:58
 msgid ""
 "@macro mref {nodename}\n"
 "@code{@ref{\nodename\}}\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:62
 msgid ""
 "@macro mxref {nodename, text}\n"
 "@code{@ref{\nodename\, \text\}}\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:66
 msgid ""
 "@macro mrefdot {nodename}\n"
 "@code{@ref{\nodename\}}.\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:70
 msgid ""
 "@macro mxrefdot {nodename, text}\n"
 "@code{@ref{\nodename\, \text\}}.\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:74
 msgid ""
 "@macro mrefcomma {nodename}\n"
 "@code{@ref{\nodename\}},\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:78
 msgid ""
 "@macro mxrefcomma {nodename, text}\n"
 "@code{@ref{\nodename\, \text\}},\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:82
 msgid ""
 "@macro mrefparen {nodename}\n"
 "@code{@ref{\nodename\}})\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:84
 msgid ""
 "@end ifhtml\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:86
 msgid ""
 "@c Non html versions of the macros\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:88
 msgid ""
 "@ifnothtml\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:91
 msgid ""
 "@macro opencatbox {}\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:94
 msgid ""
 "@macro category {name}\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:97
 msgid ""
 "@macro closecatbox {}\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:99
 msgid ""
 "@c Macros for cross references\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:104
 msgid ""
 "@ifnottex\n"
 "@macro mref {nodename}\n"
@@ -184,42 +184,42 @@ msgid ""
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:108
 msgid ""
 "@macro mxref {nodename, text}\n"
 "@code{\text\}\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:112
 msgid ""
 "@macro mrefdot {nodename}\n"
 "@code{\nodename\}.\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:116
 msgid ""
 "@macro mxrefdot {nodename, text}\n"
 "@code{\text\}.\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:120
 msgid ""
 "@macro mrefcomma {nodename}\n"
 "@code{\nodename\},\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:124
 msgid ""
 "@macro mxrefcomma {nodename, text}\n"
 "@code{\text\},\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:130
 msgid ""
 "@macro mrefparen {nodename}\n"
 "@code{\nodename\})\n"
@@ -228,61 +228,58 @@ msgid ""
 "@iftex\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:134
 msgid ""
 "@macro mref {nodename}\n"
 "@code{@mmref{\nodename\}{\nodename\}}\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:138
 msgid ""
 "@macro mxref {nodename, text}\n"
 "@code{@ref{\nodename\, \text\}}\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:142
 msgid ""
 "@macro mrefdot {nodename}\n"
 "@code{@mmref{\nodename\}{\nodename\}}.\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:146
 msgid ""
 "@macro mxrefdot {nodename, text}\n"
 "@code{@ref{\nodename\, \text\}}.\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:150
 msgid ""
 "@macro mrefcomma {nodename}\n"
 "@code{@mmref{\nodename\}{\nodename\}},\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:154
 msgid ""
 "@macro mxrefcomma {nodename, text}\n"
 "@code{@ref{\nodename\, \text\}},\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:158
 msgid ""
 "@macro mrefparen {nodename}\n"
 "@code{@mmref{\nodename\}{\nodename\}})\n"
 "@end macro\n"
 msgstr ""
 
-# category-macros.texi
+#: category-macros.texi:161
 msgid ""
 "@end iftex\n"
 "@end ifnothtml\n"
-"@tex\n"
-"\global\def\linkcolor{0 .5 0}\n"
-"\global\def\urlcolor{0 0 .5}\n"
-"@end tex\n"
 msgstr ""
+

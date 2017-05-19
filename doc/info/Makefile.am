@@ -82,7 +82,7 @@ maxima_pofiles = include-maxima.pot category-macros.pot Introduction.pot \
 SUFFIXES=.pot
 
 .texi.pot:
-	perl $(top_srcdir)/doc/info/texi2pot.pl $< $@
+	perl $(top_srcdir)/doc/info/texi2pot.pl $< >$@
 
 allpo: $(maxima_pofiles)
 

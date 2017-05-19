@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Function.texi
+msgstr ""
+
+#: Function.texi:7
 msgid ""
 "@menu\n"
 "* Introduction to Function Definition::  \n"
@@ -27,7 +27,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:12
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Function Definition, Function, Function Definition, Function Definition\n"
@@ -35,7 +35,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:19
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Function, Macros, Introduction to Function Definition, Function Definition\n"
@@ -45,34 +45,34 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:23
 msgid ""
 "@opencatbox\n"
 "@category{Function definition} @category{Programming}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:27
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Ordinary functions\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:30
 msgid ""
 "To define a function in Maxima you use the @code{:=} operator.\n"
 "E.g.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:34
 msgid ""
 "@example\n"
 "f(x) := sin(x)\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:39
 msgid ""
 "@noindent\n"
 "defines a function @code{f}.\n"
@@ -80,21 +80,21 @@ msgid ""
 "For example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:43
 msgid ""
 "@example\n"
 "lambda ([i, j], ...)\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:47
 msgid ""
 "@noindent\n"
 "can be used instead of @code{f}\n"
 "where\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:52
 msgid ""
 "@example\n"
 "f(i,j) := block ([], ...);\n"
@@ -102,20 +102,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:55
 msgid ""
 "@noindent\n"
 "would return a list with 1 added to each term.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:59
 msgid ""
 "You may also define a function with a variable number of arguments,\n"
 "by having a final argument which is assigned to a list of the extra\n"
 "arguments:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:70
 msgid ""
 "@example\n"
 "(%i1) f ([u]) := u;\n"
@@ -129,45 +129,45 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:73
 msgid ""
 "The right hand side of a function is an expression.  Thus\n"
 "if you want a sequence of expressions, you do\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:77
 msgid ""
 "@example\n"
 "f(x) := (expr1, expr2, ...., exprn);\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:79
 msgid ""
 "and the value of @var{exprn} is what is returned by the function.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:82
 msgid ""
 "If you wish to make a @code{return} from some expression inside the\n"
 "function then you must use @code{block} and @code{return}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:86
 msgid ""
 "@example\n"
 "block ([], expr1, ..., if (a > 10) then return(a), ..., exprn)\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:90
 msgid ""
 "is itself an expression, and so could take the place of the\n"
 "right hand side of a function definition.  Here it may happen\n"
 "that the return happens earlier than the last expression.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:107
 msgid ""
 "@c COPY THIS STUFF TO @defun block AS NEEDED\n"
 "@c ESPECIALLY STUFF ABOUT LOCAL VARIABLES\n"
@@ -187,14 +187,14 @@ msgid ""
 "but before @code{a} was bound.  Thus doing something like\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:111
 msgid ""
 "@example\n"
 "block ([a: a], expr1, ... a: a+3, ..., exprn)\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:119
 msgid ""
 "will protect the external value of @code{a} from being altered, but\n"
 "would let you access what that value was.  Thus the right hand\n"
@@ -205,59 +205,59 @@ msgid ""
 "session.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:122
 msgid ""
 "The actual arguments to a function are treated in exactly same way as\n"
 "the variables in a block.  Thus in\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:126
 msgid ""
 "@example\n"
 "f(x) := (expr1, ..., exprn);\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:128
 msgid ""
 "and\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:132
 msgid ""
 "@example\n"
 "f(1);\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:135
 msgid ""
 "we would have a similar context for evaluation of the expressions\n"
 "as if we had done\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:139
 msgid ""
 "@example\n"
 "block ([x: 1], expr1, ..., exprn)\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:143
 msgid ""
 "Inside functions, when the right hand side of a definition,\n"
 "may be computed at runtime, it is useful to use @code{define} and\n"
 "possibly @code{buildq}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:147
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@subsection Array functions\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:152
 msgid ""
 "An array function stores the function value the first time it is called with a\n"
 "given argument, and returns the stored value, without recomputing it, when that\n"
@@ -265,7 +265,7 @@ msgid ""
 "@i{memoizing function}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:158
 msgid ""
 "Array function names are appended to the global list @code{arrays}\n"
 "(not the global list @code{functions}).  @code{arrayinfo} returns the list of\n"
@@ -274,7 +274,7 @@ msgid ""
 "definition.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:167
 msgid ""
 "@code{arraymake} constructs an array function call,\n"
 "analogous to @code{funmake} for ordinary functions.\n"
@@ -286,13 +286,13 @@ msgid ""
 "are not too far off the mark.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:170
 msgid ""
 "@code{remarray} removes an array function definition (including any stored\n"
 "function values), analogous to @code{remfunction} for ordinary functions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:178
 msgid ""
 "@code{kill(@var{a}[@var{x}])} removes the value of the array function @var{a}\n"
 "stored for the argument @var{x};\n"
@@ -303,7 +303,7 @@ msgid ""
 "which also remove the function definition.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:183
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Macros, Functions and Variables for Function Definition, Function, Function Definition\n"
@@ -311,21 +311,21 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:187
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{buildq}\n"
 "@deffn {Function} buildq (@var{L}, @var{expr})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:191
 msgid ""
 "Substitutes variables named by the list @var{L} into the expression @var{expr},\n"
 "in parallel, without evaluating @var{expr}.  The resulting expression is\n"
 "simplified, but not evaluated, after @code{buildq} carries out the substitution.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:199
 msgid ""
 "The elements of @var{L} are symbols or assignment expressions\n"
 "@code{@var{symbol}: @var{value}}, evaluated in parallel.  That is, the binding\n"
@@ -336,7 +336,7 @@ msgid ""
 "the context from which @code{buildq} was called.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:204
 msgid ""
 "Then the variables named by @var{L} are substituted into @var{expr} in parallel.\n"
 "That is, the substitution for every variable is determined before any\n"
@@ -344,26 +344,26 @@ msgid ""
 "other.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:208
 msgid ""
 "If any variable @var{x} appears as @code{splice (@var{x})} in @var{expr},\n"
 "then @var{x} must be bound to a list,\n"
 "and the list is spliced (interpolated) into @var{expr} instead of substituted.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:212
 msgid ""
 "Any variables in @var{expr} not appearing in @var{L} are carried into the result\n"
 "verbatim, even if they have bindings in the context from which @code{buildq}\n"
 "was called.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:214
 msgid ""
 "Examples\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:219
 msgid ""
 "@code{a} is explicitly bound to @code{x}, while @code{b} has the same binding\n"
 "(namely 29) as in the calling context, and @code{c} is carried through verbatim.\n"
@@ -371,7 +371,7 @@ msgid ""
 "@code{''%}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:236
 msgid ""
 "@c ===beg===\n"
 "@c (a: 17, b: 29, c: 1729)$\n"
@@ -391,13 +391,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:239
 msgid ""
 "@code{e} is bound to a list, which appears as such in the arguments of\n"
 "@code{foo}, and interpolated into the arguments of @code{bar}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:254
 msgid ""
 "@c ===beg===\n"
 "@c buildq ([e: [a, b, c]], foo (x, e, y));\n"
@@ -415,13 +415,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:257
 msgid ""
 "The result is simplified after substitution.  If simplification were applied\n"
 "before substitution, these two results would be the same.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:272
 msgid ""
 "@c ===beg===\n"
 "@c buildq ([e: [a, b, c]], splice (e) + splice (e));\n"
@@ -439,7 +439,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:278
 msgid ""
 "The variables in @var{L} are bound in parallel; if bound sequentially,\n"
 "the first result would be @code{foo (b, b)}.\n"
@@ -448,7 +448,7 @@ msgid ""
 "which carries out substitutions sequentially.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:302
 msgid ""
 "@c ===beg===\n"
 "@c buildq ([a: b, b: a], foo (a, b));\n"
@@ -475,25 +475,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:306
 msgid ""
 "Construct a list of equations with some variables or expressions on the\n"
 "left-hand side and their values on the right-hand side.  @code{macroexpand}\n"
 "shows the expression returned by @code{show_values}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:328
 msgid ""
 "@c ===beg===\n"
-"@c show_values ([L]) ::= buildq ([L], map (\"=\", 'L, L));\n"
+"@c show_values ([L]) ::= buildq ([L], map (\\"=\\", 'L, L));\n"
 "@c (a: 17, b: 29, c: 1729)$\n"
 "@c show_values (a, b, c - a - b);\n"
 "@c macroexpand (show_values (a, b, c - a - b));\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) show_values ([L]) ::= buildq ([L], map (\"=\", 'L, L));\n"
-"(%o1)   show_values([L]) ::= buildq([L], map(\"=\", 'L, L))\n"
+"(%i1) show_values ([L]) ::= buildq ([L], map (\\"=\\", 'L, L));\n"
+"(%o1)   show_values([L]) ::= buildq([L], map(\\"=\\", 'L, L))\n"
 "@end group\n"
 "(%i2) (a: 17, b: 29, c: 1729)$\n"
 "@group\n"
@@ -507,18 +507,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:331
 msgid ""
 "Given a function of several arguments,\n"
 "create another function for which some of the arguments are fixed.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:352
 msgid ""
 "@c ===beg===\n"
 "@c curry (f, [a]) :=\n"
 "@c         buildq ([f, a], lambda ([[x]], apply (f, append (a, x))))$\n"
-"@c by3 : curry (\"*\", 3);\n"
+"@c by3 : curry (\\"*\\", 3);\n"
 "@c by3 (a + b);\n"
 "@c ===end===\n"
 "@example\n"
@@ -527,7 +527,7 @@ msgid ""
 "        buildq ([f, a], lambda ([[x]], apply (f, append (a, x))))$\n"
 "@end group\n"
 "@group\n"
-"(%i2) by3 : curry (\"*\", 3);\n"
+"(%i2) by3 : curry (\\"*\\", 3);\n"
 "(%o2)        lambda([[x]], apply(*, append([3], x)))\n"
 "@end group\n"
 "@group\n"
@@ -537,7 +537,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:357
 msgid ""
 "@opencatbox\n"
 "@category{Function definition}\n"
@@ -545,44 +545,44 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:361
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{macroexpand}\n"
 "@deffn {Function} macroexpand (@var{expr})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:365
 msgid ""
 "Returns the macro expansion of @var{expr} without evaluating it,\n"
 "when @code{expr} is a macro function call.\n"
 "Otherwise, @code{macroexpand} returns @var{expr}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:368
 msgid ""
 "If the expansion of @var{expr} yields another macro function call,\n"
 "that macro function call is also expanded.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:372
 msgid ""
 "@code{macroexpand} quotes its argument.\n"
 "However, if the expansion of a macro function call has side effects,\n"
 "those side effects are executed.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:374
 msgid ""
 "See also @mrefcomma{::=} @mrefcomma{macros} and @mrefdot{macroexpand1}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:376
 msgid ""
 "Examples\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:412
 msgid ""
 "@c ===beg===\n"
 "@c g (x) ::= x / 99;\n"
@@ -621,7 +621,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:417
 msgid ""
 "@opencatbox\n"
 "@category{Function application}\n"
@@ -629,44 +629,44 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:421
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{macroexpand1}\n"
 "@deffn {Function} macroexpand1 (@var{expr})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:425
 msgid ""
 "Returns the macro expansion of @var{expr} without evaluating it,\n"
 "when @code{expr} is a macro function call.\n"
 "Otherwise, @code{macroexpand1} returns @var{expr}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:429
 msgid ""
 "@code{macroexpand1} quotes its argument.\n"
 "However, if the expansion of a macro function call has side effects,\n"
 "those side effects are executed.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:432
 msgid ""
 "If the expansion of @var{expr} yields another macro function call,\n"
 "that macro function call is not expanded.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:434
 msgid ""
 "See also @mrefcomma{::=} @mrefcomma{macros} and @mrefdot{macroexpand}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:436
 msgid ""
 "Examples\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:470
 msgid ""
 "@c ===beg===\n"
 "@c g (x) ::= x / 99;\n"
@@ -703,7 +703,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:475
 msgid ""
 "@opencatbox\n"
 "@category{Function application}\n"
@@ -711,7 +711,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:480
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{macros}\n"
@@ -719,7 +719,7 @@ msgid ""
 "Default value: @code{[]}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:485
 msgid ""
 "@code{macros} is the list of user-defined macro functions.\n"
 "The macro function definition operator @code{::=} puts a new macro function\n"
@@ -727,12 +727,12 @@ msgid ""
 "macro functions from the list.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:487
 msgid ""
 "See also @mrefdot{infolists}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:492
 msgid ""
 "@opencatbox\n"
 "@category{Function definition} @category{Global variables}\n"
@@ -740,14 +740,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:496
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{splice}\n"
 "@deffn {Function} splice (@var{a})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:504
 msgid ""
 "Splices (interpolates) the list named by the atom @var{a} into an expression,\n"
 "but only if @code{splice} appears within @code{buildq};\n"
@@ -758,29 +758,29 @@ msgid ""
 "it cannot be a literal list or an expression which yields a list.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:512
 msgid ""
 "Typically @code{splice} supplies the arguments for a function or operator.\n"
 "For a function @code{f}, the expression @code{f (splice (@var{a}))} within\n"
 "@code{buildq} expands to @code{f (@var{a}[1], @var{a}[2], @var{a}[3], ...)}.\n"
-"For an operator @code{o}, the expression @code{\"o\" (splice (@var{a}))} within\n"
-"@code{buildq} expands to @code{\"o\" (@var{a}[1], @var{a}[2], @var{a}[3], ...)},\n"
+"For an operator @code{o}, the expression @code{\\"o\\" (splice (@var{a}))} within\n"
+"@code{buildq} expands to @code{\\"o\\" (@var{a}[1], @var{a}[2], @var{a}[3], ...)},\n"
 "where @code{o} may be any type of operator (typically one which takes multiple\n"
-"arguments).  Note that the operator must be enclosed in double quotes @code{\"}.\n"
+"arguments).  Note that the operator must be enclosed in double quotes @code{\\"}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:514
 msgid ""
 "Examples\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:543
 msgid ""
 "@c ===beg===\n"
 "@c buildq ([x: [1, %pi, z - y]], foo (splice (x)) / length (x));\n"
-"@c buildq ([x: [1, %pi]], \"/\" (splice (x)));\n"
-"@c matchfix (\"<>\", \"<>\");\n"
-"@c buildq ([x: [1, %pi, z - y]], \"<>\" (splice (x)));\n"
+"@c buildq ([x: [1, %pi]], \\"/\\" (splice (x)));\n"
+"@c matchfix (\\"<>\\", \\"<>\\");\n"
+"@c buildq ([x: [1, %pi, z - y]], \\"<>\\" (splice (x)));\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
@@ -790,23 +790,23 @@ msgid ""
 "                     length([1, %pi, z - y])\n"
 "@end group\n"
 "@group\n"
-"(%i2) buildq ([x: [1, %pi]], \"/\" (splice (x)));\n"
+"(%i2) buildq ([x: [1, %pi]], \\"/\\" (splice (x)));\n"
 "                                1\n"
 "(%o2)                          ---\n"
 "                               %pi\n"
 "@end group\n"
 "@group\n"
-"(%i3) matchfix (\"<>\", \"<>\");\n"
+"(%i3) matchfix (\\"<>\\", \\"<>\\");\n"
 "(%o3)                          <>\n"
 "@end group\n"
 "@group\n"
-"(%i4) buildq ([x: [1, %pi, z - y]], \"<>\" (splice (x)));\n"
+"(%i4) buildq ([x: [1, %pi, z - y]], \\"<>\\" (splice (x)));\n"
 "(%o4)                   <>1, %pi, z - y<>\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:548
 msgid ""
 "@opencatbox\n"
 "@category{Function definition}\n"
@@ -814,12 +814,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:550
 msgid ""
 "@c end concepts Function Definition\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:555
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Function Definition,  , Macros, Function Definition\n"
@@ -827,20 +827,20 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:559
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{apply}\n"
 "@deffn {Function} apply (@var{F}, [@var{x_1}, @dots{}, @var{x_n}])\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:562
 msgid ""
 "Constructs and evaluates an expression @code{@var{F}(@var{arg_1}, ...,\n"
 "@var{arg_n})}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:568
 msgid ""
 "@code{apply} does not attempt to distinguish array functions from ordinary\n"
 "functions; when @var{F} is the name of an array function, @code{apply} evaluates\n"
@@ -849,23 +849,23 @@ msgid ""
 "this case.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:570
 msgid ""
 "See also @mref{funmake} and @mrefdot{args}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:572
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:575
 msgid ""
 "@code{apply} evaluates its arguments.\n"
 "In this example, @code{min} is applied to the value of @code{L}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:590
 msgid ""
 "@c ===beg===\n"
 "@c L : [1, 5, -10.2, 4, 3];\n"
@@ -883,12 +883,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:592
 msgid ""
 "@code{apply} evaluates arguments, even if the function @var{F} quotes them.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:616
 msgid ""
 "@c ===beg===\n"
 "@c F (x) := x / 1729;\n"
@@ -915,7 +915,7 @@ msgid ""
 "                                  1729\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:629
 msgid ""
 "(%o3)                         [%t3]\n"
 "@end group\n"
@@ -931,21 +931,21 @@ msgid ""
 "                                  1729\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:633
 msgid ""
 "(%o5)                         [%t5]\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:637
 msgid ""
 "@code{apply} evaluates the function name @var{F}.\n"
 "Single quote @code{'} defeats evaluation.\n"
 "@code{demoivre} is the name of a global variable and also a function.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:663
 msgid ""
 "@c ===beg===\n"
 "@c demoivre;\n"
@@ -974,12 +974,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:665
 msgid ""
 "How to convert a nested list into a matrix:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:682
 msgid ""
 "@c ===beg===\n"
 "@c a:[[1,2],[3,4]];\n"
@@ -997,13 +997,17 @@ msgid ""
 "                            [ 3  4 ]\n"
 "@end group\n"
 "@end example\n"
+msgstr ""
+
+#: Function.texi:688
+msgid ""
 "@opencatbox\n"
 "@category{Function application}\n"
 "@closecatbox\n"
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:694
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{block}\n"
@@ -1012,7 +1016,7 @@ msgid ""
 "@fname{block} (@var{expr_1}, @dots{}, @var{expr_n})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:703
 msgid ""
 "The function @code{block} allows to make the variables @var{v_1}, @dots{},\n"
 "@var{v_m} to be local for a sequence of commands. If these variables\n"
@@ -1024,7 +1028,7 @@ msgid ""
 "values assigned within the block are lost.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:708
 msgid ""
 "If there is no need to define local variables then the list at the\n"
 "beginning of the @code{block} command may be omitted.\n"
@@ -1032,14 +1036,14 @@ msgid ""
 "@code{block} behaves similar to the following construct:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:712
 msgid ""
 "@example\n"
 "( expr_1, expr_2,... , expr_n );\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:718
 msgid ""
 "@var{expr_1}, @dots{}, @var{expr_n} will be evaluated in sequence and\n"
 "the value of the last expression will be returned. The sequence can be \n"
@@ -1048,7 +1052,7 @@ msgid ""
 "@code{throw} is evaluated.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:728
 msgid ""
 "The declaration @code{local(@var{v_1}, ..., @var{v_m})} within @code{block}\n"
 "saves the properties associated with the symbols @var{v_1}, @dots{}, @var{v_m},\n"
@@ -1061,7 +1065,7 @@ msgid ""
 "declarations within a block are actually global declarations.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:736
 msgid ""
 "@code{block} may appear within another @code{block}.\n"
 "Local variables are established each time a new @code{block} is evaluated.\n"
@@ -1069,10 +1073,10 @@ msgid ""
 "If a variable is non-local in a block,\n"
 "its value is the value most recently assigned by an enclosing block, if any,\n"
 "otherwise, it is the value of the variable in the global environment.\n"
-"This policy may coincide with the usual understanding of \"dynamic scope\".\n"
+"This policy may coincide with the usual understanding of \\"dynamic scope\\".\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:747
 msgid ""
 "The value of the block is the value of the last statement or the\n"
 "value of the argument to the function @code{return} which may be used to exit\n"
@@ -1086,23 +1090,23 @@ msgid ""
 "@code{go}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:750
 msgid ""
 "Blocks typically appear on the right side of a function definition\n"
 "but can be used in other places as well.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:752
 msgid ""
 "See also @mref{return} and @mrefdot{go}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:754
 msgid ""
 "@c Needs some examples.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:759
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Programming}\n"
@@ -1110,26 +1114,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:761
 msgid ""
 "@c REPHRASE, NEEDS EXAMPLE\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:765
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{break}\n"
 "@deffn {Function} break (@var{expr_1}, @dots{}, @var{expr_n})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:769
 msgid ""
 "Evaluates and prints @var{expr_1}, @dots{}, @var{expr_n} and then\n"
 "causes a Maxima break at which point the user can examine and change\n"
 "his environment.  Upon typing @code{exit;} the computation resumes.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:774
 msgid ""
 "@opencatbox\n"
 "@category{Debugging}\n"
@@ -1137,37 +1141,37 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:777
 msgid ""
 "@c FOR SOME REASON throw IS IN SOME OTHER FILE. MOVE throw INTO THIS FILE.\n"
 "@c NEEDS CLARIFICATION\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:781
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{catch}\n"
 "@deffn {Function} catch (@var{expr_1}, @dots{}, @var{expr_n})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:789
 msgid ""
 "Evaluates @var{expr_1}, @dots{}, @var{expr_n} one by one; if any\n"
 "leads to the evaluation of an expression of the\n"
 "form @code{throw (arg)}, then the value of the @code{catch} is the value of\n"
 "@code{throw (arg)}, and no further expressions are evaluated.\n"
-"This \"non-local return\" thus goes through any depth of\n"
+"This \\"non-local return\\" thus goes through any depth of\n"
 "nesting to the nearest enclosing @code{catch}.  If there is no @code{catch}\n"
 "enclosing a @code{throw}, an error message is printed.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:792
 msgid ""
 "If the evaluation of the arguments does not lead to the evaluation of any\n"
 "@code{throw} then the value of @code{catch} is the value of @var{expr_n}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:801
 msgid ""
 "@example\n"
 "(%i1) lambda ([x], if x < 0 then throw(x) else f(x))$\n"
@@ -1179,15 +1183,15 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:806
 msgid ""
 "@c REWORD THIS PART.\n"
 "The function @code{g} returns a list of @code{f} of each element of @code{l} if\n"
-"@code{l} consists only of non-negative numbers; otherwise, @code{g} \"catches\"\n"
-"the first negative element of @code{l} and \"throws\" it up.\n"
+"@code{l} consists only of non-negative numbers; otherwise, @code{g} \\"catches\\"\n"
+"the first negative element of @code{l} and \\"throws\\" it up.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:811
 msgid ""
 "@opencatbox\n"
 "@category{Programming}\n"
@@ -1195,7 +1199,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:818
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{compfile}\n"
@@ -1205,20 +1209,20 @@ msgid ""
 "@fname{compfile} (@var{filename}, all)\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:821
 msgid ""
 "Translates Maxima functions into Lisp and writes the translated code into the\n"
 "file @var{filename}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:825
 msgid ""
 "@code{compfile(@var{filename}, @var{f_1}, ..., @var{f_n})} translates the\n"
 "specified functions.  @code{compfile (@var{filename}, functions)} and\n"
 "@code{compfile (@var{filename}, all)} translate all user-defined functions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:831
 msgid ""
 "The Lisp translations are not evaluated, nor is the output file processed by\n"
 "the Lisp compiler.\n"
@@ -1227,12 +1231,12 @@ msgid ""
 "translates Maxima into Lisp, and then executes the Lisp compiler.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:833
 msgid ""
 "See also @mrefcomma{translate} @mrefcomma{translate_file} and @mrefdot{compile_file}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:838
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -1240,7 +1244,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:849
 msgid ""
 "@c THIS VARIABLE IS OBSOLETE: ASSIGNING compgrind: true CAUSES compfile\n"
 "@c TO EVENTUALLY CALL AN OBSOLETE FUNCTION SPRIN1.\n"
@@ -1254,7 +1258,7 @@ msgid ""
 "@c @end defvar\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:856
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{compile}\n"
@@ -1264,7 +1268,7 @@ msgid ""
 "@fname{compile} (all)\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:861
 msgid ""
 "Translates Maxima functions @var{f_1}, @dots{}, @var{f_n} into Lisp, evaluates\n"
 "the Lisp translations, and calls the Lisp function @code{COMPILE} on each\n"
@@ -1272,19 +1276,19 @@ msgid ""
 "compiled functions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:864
 msgid ""
 "@code{compile (all)} or @code{compile (functions)} compiles all user-defined\n"
 "functions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:867
 msgid ""
 "@code{compile} quotes its arguments; \n"
 "the quote-quote operator @code{'@w{}'} defeats quotation.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:883
 msgid ""
 "Compiling a function to native code can mean a big increase in speed and might \n"
 "cause the memory footprint to reduce drastically.\n"
@@ -1303,7 +1307,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:888
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -1311,7 +1315,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:898
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{define}\n"
@@ -1324,7 +1328,7 @@ msgid ""
 "@fname{define} (ev (@var{expr_1}), @var{expr_2})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:904
 msgid ""
 "Defines a function named @var{f} with arguments @var{x_1}, @dots{}, @var{x_n}\n"
 "and function body @var{expr}.  @code{define} always evaluates its second\n"
@@ -1333,7 +1337,7 @@ msgid ""
 "(with arguments enclosed in square brackets).\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:910
 msgid ""
 "When the last or only function argument @var{x_n} is a list of one element,\n"
 "the function defined by @code{define} accepts a variable number of arguments.\n"
@@ -1342,7 +1346,7 @@ msgid ""
 "@var{x_n} as a list.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:915
 msgid ""
 "When the first argument of @code{define} is an expression of the form\n"
 "@code{@var{f}(@var{x_1}, ..., @var{x_n})} or @code{@var{f}[@var{x_1}, ...,\n"
@@ -1350,14 +1354,14 @@ msgid ""
 "even if there is already a function or variable by that name.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:919
 msgid ""
 "When the first argument is an expression with operator @code{funmake},\n"
 "@code{arraymake}, or @code{ev}, the first argument is evaluated;\n"
 "this allows for the function name to be computed, as well as the body.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:925
 msgid ""
 "All function definitions appear in the same namespace; defining a function\n"
 "@code{f} within another function @code{g} does not automatically limit the scope\n"
@@ -1366,29 +1370,29 @@ msgid ""
 "in which @code{local} appears.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:929
 msgid ""
 "If some formal argument @var{x_k} is a quoted symbol (after evaluation), the\n"
 "function defined by @code{define} does not evaluate the corresponding actual\n"
 "argument.  Otherwise all actual arguments are evaluated.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:931
 msgid ""
 "See also @mref{:=} and @mrefdot{::=}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:933
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:935
 msgid ""
 "@code{define} always evaluates its second argument (unless explicitly quoted).\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:965
 msgid ""
 "@c ===beg===\n"
 "@c expr : cos(y) - sin(x);\n"
@@ -1421,13 +1425,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:968
 msgid ""
 "The function defined by @code{define} may be an ordinary Maxima function or an\n"
 "array function.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:984
 msgid ""
 "@c ===beg===\n"
 "@c define (G1 (x, y), x.y - y.x);\n"
@@ -1446,22 +1450,22 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:987
 msgid ""
 "When the last or only function argument @var{x_n} is a list of one element,\n"
 "the function defined by @code{define} accepts a variable number of arguments.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1002
 msgid ""
 "@c ===beg===\n"
-"@c define (H ([L]), '(apply (\"+\", L)));\n"
+"@c define (H ([L]), '(apply (\\"+\\", L)));\n"
 "@c H (a, b, c);\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) define (H ([L]), '(apply (\"+\", L)));\n"
-"(%o1)                H([L]) := apply(\"+\", L)\n"
+"(%i1) define (H ([L]), '(apply (\\"+\\", L)));\n"
+"(%o1)                H([L]) := apply(\\"+\\", L)\n"
 "@end group\n"
 "@group\n"
 "(%i2) H (a, b, c);\n"
@@ -1470,13 +1474,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1005
 msgid ""
 "When the first argument is an expression with operator @code{funmake},\n"
 "@code{arraymake}, or @code{ev}, the first argument is evaluated.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1041
 msgid ""
 "@c ===beg===\n"
 "@c [F : I, u : x];\n"
@@ -1515,7 +1519,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1046
 msgid ""
 "@opencatbox\n"
 "@category{Function definition}\n"
@@ -1523,20 +1527,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1049
 msgid ""
 "@c SEE NOTE BELOW ABOUT THE DOCUMENTATION STRING\n"
 "@c @deffn {Function} define_variable (@var{name}, @var{default_value}, @var{mode}, @var{documentation})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1053
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{define_variable}\n"
 "@deffn {Function} define_variable (@var{name}, @var{default_value}, @var{mode})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1059
 msgid ""
 "Introduces a global variable into the Maxima environment.\n"
 "@c IMPORT OF FOLLOWING STATEMENT UNCLEAR: IN WHAT WAY IS define_variable\n"
@@ -1545,12 +1549,12 @@ msgid ""
 "translated or compiled.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1061
 msgid ""
 "@code{define_variable} carries out the following steps:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1066
 msgid ""
 "@enumerate\n"
 "@item\n"
@@ -1558,24 +1562,28 @@ msgid ""
 "the translator.  See @code{mode_declare} for a list of the possible modes.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1069
 msgid ""
 "@item\n"
 "If the variable is unbound, @var{default_value} is assigned to @var{name}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1074
 msgid ""
 "@item\n"
 "Associates @var{name} with a test function\n"
 "to ensure that @var{name} is only assigned values of the declared mode.\n"
 "@end enumerate\n"
+msgstr ""
+
+#: Function.texi:1087
+msgid ""
 "@c FOLLOWING STATEMENT APPEARS TO BE OUT OF DATE.\n"
 "@c EXAMINING DEFMSPEC $DEFINE_VARIABLE AND DEF%TR $DEFINE_VARIABLE IN src/trmode.lisp,\n"
 "@c IT APPEARS THAT THE 4TH ARGUMENT IS NEVER REFERRED TO.\n"
 "@c EXECUTING translate_file ON A MAXIMA BATCH FILE WHICH CONTAINS\n"
-"@c define_variable (foo, 2222, integer, \"THIS IS FOO\");\n"
-"@c DOES NOT PUT \"THIS IS FOO\" INTO THE LISP FILE NOR THE UNLISP FILE.\n"
+"@c define_variable (foo, 2222, integer, \\"THIS IS FOO\\");\n"
+"@c DOES NOT PUT \\"THIS IS FOO\\" INTO THE LISP FILE NOR THE UNLISP FILE.\n"
 "@c The optional 4th argument is a documentation string.  When\n"
 "@c @code{translate_file} is used on a package which includes documentation\n"
 "@c strings, a second file is output in addition to the Lisp file which\n"
@@ -1583,7 +1591,7 @@ msgid ""
 "@c manuals, usage files, or (for instance) @code{describe}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1094
 msgid ""
 "The @code{value_check} property can be assigned to any variable which has been\n"
 "defined via @code{define_variable} with a mode other than @code{any}.\n"
@@ -1593,7 +1601,7 @@ msgid ""
 "assigned value.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1099
 msgid ""
 "@code{define_variable} evaluates @code{default_value}, and quotes @code{name}\n"
 "and @code{mode}.  @code{define_variable} returns the current value of\n"
@@ -1601,17 +1609,17 @@ msgid ""
 "and otherwise it is the previous value of @code{name}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1101
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1103
 msgid ""
 "@code{foo} is a Boolean variable, with the initial value @code{true}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1135
 msgid ""
 "@c ===beg===\n"
 "@c define_variable (foo, true, boolean);\n"
@@ -1646,18 +1654,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1137
 msgid ""
 "@code{bar} is an integer variable, which must be prime.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1176
 msgid ""
 "@c ===beg===\n"
 "@c define_variable (bar, 2, integer);\n"
 "@c qput (bar, prime_test, value_check);\n"
 "@c prime_test (y) := if not primep(y) then \n"
-"@c                            error (y, \"is not prime.\");\n"
+"@c                            error (y, \\"is not prime.\\");\n"
 "@c bar: 1439;\n"
 "@c bar: 1440;\n"
 "@c bar;\n"
@@ -1673,9 +1681,9 @@ msgid ""
 "@end group\n"
 "@group\n"
 "(%i3) prime_test (y) := if not primep(y) then\n"
-"                           error (y, \"is not prime.\");\n"
+"                           error (y, \\"is not prime.\\");\n"
 "(%o3) prime_test(y) := if not primep(y)\n"
-"                                   then error(y, \"is not prime.\")\n"
+"                                   then error(y, \\"is not prime.\\")\n"
 "@end group\n"
 "@group\n"
 "(%i4) bar: 1439;\n"
@@ -1693,19 +1701,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1180
 msgid ""
 "@code{baz_quux} is a variable which cannot be assigned a value.\n"
 "The mode @code{any_check} is like @code{any}, but @code{any_check} enables the\n"
 "@code{value_check} mechanism, and @code{any} does not.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1220
 msgid ""
 "@c ===beg===\n"
 "@c define_variable (baz_quux, 'baz_quux, any_check);\n"
 "@c F: lambda ([y], if y # 'baz_quux then \n"
-"@c                  error (\"Cannot assign to `baz_quux'.\"));\n"
+"@c                  error (\\"Cannot assign to `baz_quux'.\\"));\n"
 "@c qput (baz_quux, ''F, value_check);\n"
 "@c baz_quux: 'baz_quux;\n"
 "@c baz_quux: sqrt(2);\n"
@@ -1718,7 +1726,7 @@ msgid ""
 "@end group\n"
 "@group\n"
 "(%i2) F: lambda ([y], if y # 'baz_quux then\n"
-"                 error (\"Cannot assign to `baz_quux'.\"));\n"
+"                 error (\\"Cannot assign to `baz_quux'.\\"));\n"
 "(%o2) lambda([y], if y # 'baz_quux\n"
 "                        then error(Cannot assign to `baz_quux'.))\n"
 "@end group\n"
@@ -1743,7 +1751,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1225
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -1751,7 +1759,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1231
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{dispfun}\n"
@@ -1760,7 +1768,7 @@ msgid ""
 "@fname{dispfun} (all)\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1241
 msgid ""
 "Displays the definition of the user-defined functions @var{f_1}, @dots{},\n"
 "@var{f_n}.  Each argument may be the name of a macro (defined with @code{::=}),\n"
@@ -1773,14 +1781,14 @@ msgid ""
 "subscript.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1245
 msgid ""
 "@code{dispfun (all)} displays all user-defined functions as\n"
 "given by the @code{functions}, @code{arrays}, and @code{macros} lists,\n"
 "omitting subscripted functions defined with constant subscripts.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1250
 msgid ""
 "@code{dispfun} creates an intermediate expression label\n"
 "(@code{%t1}, @code{%t2}, etc.)\n"
@@ -1788,19 +1796,19 @@ msgid ""
 "In contrast, @code{fundef} returns the function definition.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1254
 msgid ""
 "@code{dispfun} quotes its arguments; the quote-quote operator @code{'@w{}'}\n"
 "defeats quotation.  @code{dispfun} returns the list of intermediate expression\n"
 "labels corresponding to the displayed functions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1256
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1299
 msgid ""
 "@c ===beg===\n"
 "@c m(x, y) ::= x^(-y);\n"
@@ -1846,27 +1854,27 @@ msgid ""
 "(%t6)                   m(x, y) ::= x\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1302
 msgid ""
 "                                     - y\n"
 "(%t7)                    f(x, y) := x\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1306
 msgid ""
 "                                    - y\n"
 "(%t8)                     g     := x\n"
 "                           x, y\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1310
 msgid ""
 "                                    - y\n"
 "(%t9)                     h (y) := x\n"
 "                           x\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1315
 msgid ""
 "                                    1\n"
 "(%t10)                     h (y) := --\n"
@@ -1874,7 +1882,7 @@ msgid ""
 "                                    5\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1320
 msgid ""
 "                                     1\n"
 "(%t11)                    h  (y) := ---\n"
@@ -1882,14 +1890,14 @@ msgid ""
 "                                    10\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1324
 msgid ""
 "                                    - y\n"
 "(%t12)                    i (y) := 8\n"
 "                           8\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1338
 msgid ""
 "(%o12)       [%t6, %t7, %t8, %t9, %t10, %t11, %t12]\n"
 "@end group\n"
@@ -1906,7 +1914,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1343
 msgid ""
 "@opencatbox\n"
 "@category{Function definition} @category{Display functions}\n"
@@ -1914,32 +1922,32 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1347
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fullmap}\n"
 "@deffn {Function} fullmap (@var{f}, @var{expr_1}, @dots{})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1350
 msgid ""
 "Similar to @code{map}, but @code{fullmap} keeps mapping down all subexpressions\n"
 "until the main operators are no longer the same.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1354
 msgid ""
 "@code{fullmap} is used by the Maxima simplifier for certain matrix\n"
 "manipulations; thus, Maxima sometimes generates an error message concerning\n"
 "@code{fullmap} even though @code{fullmap} was not explicitly called by the user.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1356
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1376
 msgid ""
 "@c ===beg===\n"
 "@c a + b * c;\n"
@@ -1962,7 +1970,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1381
 msgid ""
 "@opencatbox\n"
 "@category{Function application} @category{Expressions}\n"
@@ -1970,38 +1978,38 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1385
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fullmapl}\n"
 "@deffn {Function} fullmapl (@var{f}, @var{list_1}, @dots{})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1388
 msgid ""
 "Similar to @code{fullmap}, but @code{fullmapl} only maps onto lists and\n"
 "matrices.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1390
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1400
 msgid ""
 "@c ===beg===\n"
-"@c fullmapl (\"+\", [3, [4, 5]], [[a, 1], [0, -1.5]]);\n"
+"@c fullmapl (\\"+\\", [3, [4, 5]], [[a, 1], [0, -1.5]]);\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) fullmapl (\"+\", [3, [4, 5]], [[a, 1], [0, -1.5]]);\n"
+"(%i1) fullmapl (\\"+\\", [3, [4, 5]], [[a, 1], [0, -1.5]]);\n"
 "(%o1)                [[a + 3, 4], [4, 3.5]]\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1405
 msgid ""
 "@opencatbox\n"
 "@category{Function application} @category{Expressions}\n"
@@ -2009,7 +2017,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1410
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{functions}\n"
@@ -2017,7 +2025,7 @@ msgid ""
 "Default value: @code{[]}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1417
 msgid ""
 "@code{functions} is the list of ordinary Maxima functions\n"
 "in the current session.\n"
@@ -2027,24 +2035,24 @@ msgid ""
 "or in a Maxima file loaded by @code{load} or @code{batch}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1421
 msgid ""
 "Array functions (called with square brackets, e.g., @code{F[x]}) and subscripted\n"
 "functions (called with square brackets and parentheses, e.g., @code{F[x](y)})\n"
 "are listed by the global variable @code{arrays}, and not by @code{functions}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1423
 msgid ""
 "Lisp functions are not kept on any list.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1425
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1483
 msgid ""
 "@c ===beg===\n"
 "@c F_1 (x) := x - 100;\n"
@@ -2105,7 +2113,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1488
 msgid ""
 "@opencatbox\n"
 "@category{Function definition} @category{Global variables}\n"
@@ -2113,19 +2121,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1492
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fundef}\n"
 "@deffn {Function} fundef (@var{f})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1494
 msgid ""
 "Returns the definition of the function @var{f}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1507
 msgid ""
 "The argument may be\n"
 "@itemize @bullet\n"
@@ -2141,20 +2149,20 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1510
 msgid ""
 "@code{fundef} quotes its argument;\n"
 "the quote-quote operator @code{'@w{}'} defeats quotation.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1514
 msgid ""
 "@code{fundef (@var{f})} returns the definition of @var{f}.\n"
 "In contrast, @code{dispfun (@var{f})} creates an intermediate expression label\n"
 "and assigns the definition to the label.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1520
 msgid ""
 "@c PROBABLY NEED SOME EXAMPLES HERE\n"
 "@opencatbox\n"
@@ -2163,21 +2171,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1524
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{funmake}\n"
 "@deffn {Function} funmake (@var{F}, [@var{arg_1}, @dots{}, @var{arg_n}])\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1528
 msgid ""
 "Returns an expression @code{@var{F}(@var{arg_1}, ..., @var{arg_n})}.\n"
 "The return value is simplified, but not evaluated,\n"
 "so the function @var{F} is not called, even if it exists.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1534
 msgid ""
 "@code{funmake} does not attempt to distinguish array functions from ordinary\n"
 "functions; when @var{F} is the name of an array function,\n"
@@ -2186,27 +2194,27 @@ msgid ""
 "@code{arraymake} returns a function call with square brackets in this case.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1536
 msgid ""
 "@code{funmake} evaluates its arguments.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1538
 msgid ""
 "See also @mref{apply} and @mrefdot{args}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1540
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1542
 msgid ""
 "@code{funmake} applied to an ordinary Maxima function.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1564
 msgid ""
 "@c ===beg===\n"
 "@c F (x, y) := y^2 - x^2;\n"
@@ -2231,12 +2239,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1566
 msgid ""
 "@code{funmake} applied to a macro.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1590
 msgid ""
 "@c ===beg===\n"
 "@c G (x) ::= (x - 1)/2;\n"
@@ -2263,12 +2271,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1592
 msgid ""
 "@code{funmake} applied to a subscripted function.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1628
 msgid ""
 "@c ===beg===\n"
 "@c H [a] (x) := (x - 1)^a;\n"
@@ -2307,12 +2315,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1630
 msgid ""
 "@code{funmake} applied to a symbol which is not a defined function of any kind.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1645
 msgid ""
 "@c ===beg===\n"
 "@c funmake (A, [u]);\n"
@@ -2330,12 +2338,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1647
 msgid ""
 "@code{funmake} evaluates its arguments, but not the return value.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1678
 msgid ""
 "@c ===beg===\n"
 "@c det(a,b,c) := b^2 -4*a*c;\n"
@@ -2369,12 +2377,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1680
 msgid ""
 "Maxima simplifies @code{funmake}'s return value.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1690
 msgid ""
 "@c ===beg===\n"
 "@c funmake (sin, [%pi / 2]);\n"
@@ -2387,7 +2395,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1695
 msgid ""
 "@opencatbox\n"
 "@category{Function application} @category{Expressions}\n"
@@ -2395,7 +2403,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1702
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lambda}\n"
@@ -2405,7 +2413,7 @@ msgid ""
 "@fname{lambda} ([@var{x_1}, @dots{}, @var{x_m}, [@var{L}]], @var{expr_1}, @dots{}, @var{expr_n})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1709
 msgid ""
 "Defines and returns a lambda expression (that is, an anonymous function).\n"
 "The function may have required arguments @var{x_1}, @dots{}, @var{x_m} and/or\n"
@@ -2415,7 +2423,7 @@ msgid ""
 "expression may appear in some contexts in which a function name is expected.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1718
 msgid ""
 "When the function is evaluated, unbound local variables @var{x_1}, @dots{},\n"
 "@var{x_m} are created.  @code{lambda} may appear within @code{block} or another\n"
@@ -2424,10 +2432,10 @@ msgid ""
 "@code{block} or @code{lambda}.  If a variable is not local, its value is the\n"
 "value most recently assigned in an enclosing @code{block} or @code{lambda}, if\n"
 "any, otherwise, it is the value of the variable in the global environment.\n"
-"This policy may coincide with the usual understanding of \"dynamic scope\".\n"
+"This policy may coincide with the usual understanding of \\"dynamic scope\\".\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1723
 msgid ""
 "After local variables are established, @var{expr_1} through @var{expr_n} are\n"
 "evaluated in turn.  The special variable @code{%%}, representing the value of\n"
@@ -2435,7 +2443,7 @@ msgid ""
 "appear in the list of expressions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1729
 msgid ""
 "@code{return} cannot appear in a lambda expression unless enclosed by\n"
 "@code{block}, in which case @code{return} defines the return value of the block\n"
@@ -2444,18 +2452,18 @@ msgid ""
 "@code{block}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1732
 msgid ""
 "@code{lambda} quotes its arguments; \n"
 "the quote-quote operator @code{'@w{}'} defeats quotation.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1734
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1740
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -2464,7 +2472,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1757
 msgid ""
 "@c ===beg===\n"
 "@c f: lambda ([x], x^2);\n"
@@ -2484,7 +2492,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1762
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -2492,7 +2500,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1785
 msgid ""
 "@c ===beg===\n"
 "@c lambda ([x], x^2) (a);\n"
@@ -2518,7 +2526,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1793
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -2529,7 +2537,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1830
 msgid ""
 "@c ===beg===\n"
 "@c a: %pi$\n"
@@ -2569,7 +2577,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1837
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -2579,7 +2587,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1856
 msgid ""
 "@c ===beg===\n"
 "@c h: lambda ([a, b], h2: lambda ([a], a*b), h2(1/2));\n"
@@ -2601,17 +2609,17 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1863
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
 "Since @code{lambda} quotes its arguments, lambda expression @code{i} below does\n"
-"not define a \"multiply by @code{a}\" function.  Such a function can be defined\n"
+"not define a \\"multiply by @code{a}\\" function.  Such a function can be defined\n"
 "via @code{buildq}, as in lambda expression @code{i2} below.\n"
 "@end itemize\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1897
 msgid ""
 "@c ===beg===\n"
 "@c i: lambda ([a], lambda ([x], a*x));\n"
@@ -2648,7 +2656,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1904
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -2658,12 +2666,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1929
 msgid ""
 "@c ===beg===\n"
 "@c f : lambda ([aa, bb, [cc]], aa * cc + bb);\n"
 "@c f (foo, %i, 17, 29, 256);\n"
-"@c g : lambda ([[aa]], apply (\"+\", aa));\n"
+"@c g : lambda ([[aa]], apply (\\"+\\", aa));\n"
 "@c g (17, 29, x, y, z, %e);\n"
 "@c ===end===\n"
 "@example\n"
@@ -2676,7 +2684,7 @@ msgid ""
 "(%o2)       [17 foo + %i, 29 foo + %i, 256 foo + %i]\n"
 "@end group\n"
 "@group\n"
-"(%i3) g : lambda ([[aa]], apply (\"+\", aa));\n"
+"(%i3) g : lambda ([[aa]], apply (\\"+\\", aa));\n"
 "(%o3)             lambda([[aa]], apply(+, aa))\n"
 "@end group\n"
 "@group\n"
@@ -2686,7 +2694,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1934
 msgid ""
 "@opencatbox\n"
 "@category{Function definition}\n"
@@ -2694,19 +2702,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1936
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1940
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{local}\n"
 "@deffn {Function} local (@var{v_1}, @dots{}, @var{v_n})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1945
 msgid ""
 "Saves the properties associated with the symbols @var{v_1}, @dots{}, @var{v_n},\n"
 "removes any properties before evaluating other expressions,\n"
@@ -2714,7 +2722,7 @@ msgid ""
 "from the block or other compound expression in which @code{local} appears.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1952
 msgid ""
 "Some declarations are implemented as properties of a symbol, including\n"
 "@code{:=}, @code{array}, @code{dependencies}, @code{atvalue},\n"
@@ -2724,30 +2732,30 @@ msgid ""
 "which @code{local} appears; otherwise such declarations are global declarations.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1956
 msgid ""
 "@code{local} can only appear in @code{block}\n"
 "or in the body of a function definition or @code{lambda} expression,\n"
 "and only one occurrence is permitted in each.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1959
 msgid ""
 "@code{local} quotes its arguments.\n"
 "@code{local} returns @code{done}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1961
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1963
 msgid ""
 "A local function definition.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1988
 msgid ""
 "@c ===beg===\n"
 "@c foo (x) := 1 - x;\n"
@@ -2775,7 +2783,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1993
 msgid ""
 "@opencatbox\n"
 "@category{Function definition} @category{Programming}\n"
@@ -2783,7 +2791,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:1998
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{macroexpansion}\n"
@@ -2791,7 +2799,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2003
 msgid ""
 "@code{macroexpansion} controls whether the expansion (that is, the return value)\n"
 "of a macro function is substituted for the macro function call.\n"
@@ -2799,7 +2807,7 @@ msgid ""
 "at the cost of storing the expansion.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2024
 msgid ""
 "@table @code\n"
 "@item false\n"
@@ -2823,25 +2831,25 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2026
 msgid ""
 "Examples\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2030
 msgid ""
 "When @code{macroexpansion} is @code{false},\n"
 "a macro function is called every time the calling expression is evaluated,\n"
 "and the calling expression is not modified.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2078
 msgid ""
 "@c ===beg===\n"
 "@c f (x) := h (x) / g (x);\n"
-"@c g (x) ::= block (print (\"x + 99 is equal to\", x), \n"
+"@c g (x) ::= block (print (\\"x + 99 is equal to\\", x), \n"
 "@c                        return (x + 99));\n"
-"@c h (x) ::= block (print (\"x - 99 is equal to\", x), \n"
+"@c h (x) ::= block (print (\\"x - 99 is equal to\\", x), \n"
 "@c                        return (x - 99));\n"
 "@c macroexpansion: false;\n"
 "@c f (a * b);\n"
@@ -2856,15 +2864,15 @@ msgid ""
 "                                  g(x)\n"
 "@end group\n"
 "@group\n"
-"(%i2) g (x) ::= block (print (\"x + 99 is equal to\", x),\n"
+"(%i2) g (x) ::= block (print (\\"x + 99 is equal to\\", x),\n"
 "                       return (x + 99));\n"
-"(%o2) g(x) ::= block(print(\"x + 99 is equal to\", x), \n"
+"(%o2) g(x) ::= block(print(\\"x + 99 is equal to\\", x), \n"
 "                                                  return(x + 99))\n"
 "@end group\n"
 "@group\n"
-"(%i3) h (x) ::= block (print (\"x - 99 is equal to\", x),\n"
+"(%i3) h (x) ::= block (print (\\"x - 99 is equal to\\", x),\n"
 "                       return (x - 99));\n"
-"(%o3) h(x) ::= block(print(\"x - 99 is equal to\", x), \n"
+"(%o3) h(x) ::= block(print(\\"x - 99 is equal to\\", x), \n"
 "                                                  return(x - 99))\n"
 "@end group\n"
 "@group\n"
@@ -2886,7 +2894,7 @@ msgid ""
 "                                  g(x)\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2090
 msgid ""
 "(%o6)                         [%t6]\n"
 "@end group\n"
@@ -2901,20 +2909,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2094
 msgid ""
 "When @code{macroexpansion} is @code{expand},\n"
 "a macro function is called once,\n"
 "and the calling expression is not modified.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2142
 msgid ""
 "@c ===beg===\n"
 "@c f (x) := h (x) / g (x);\n"
-"@c g (x) ::= block (print (\"x + 99 is equal to\", x), \n"
+"@c g (x) ::= block (print (\\"x + 99 is equal to\\", x), \n"
 "@c                        return (x + 99));\n"
-"@c h (x) ::= block (print (\"x - 99 is equal to\", x), \n"
+"@c h (x) ::= block (print (\\"x - 99 is equal to\\", x), \n"
 "@c                        return (x - 99));\n"
 "@c macroexpansion: expand;\n"
 "@c f (a * b);\n"
@@ -2929,15 +2937,15 @@ msgid ""
 "                                  g(x)\n"
 "@end group\n"
 "@group\n"
-"(%i2) g (x) ::= block (print (\"x + 99 is equal to\", x),\n"
+"(%i2) g (x) ::= block (print (\\"x + 99 is equal to\\", x),\n"
 "                       return (x + 99));\n"
-"(%o2) g(x) ::= block(print(\"x + 99 is equal to\", x), \n"
+"(%o2) g(x) ::= block(print(\\"x + 99 is equal to\\", x), \n"
 "                                                  return(x + 99))\n"
 "@end group\n"
 "@group\n"
-"(%i3) h (x) ::= block (print (\"x - 99 is equal to\", x),\n"
+"(%i3) h (x) ::= block (print (\\"x - 99 is equal to\\", x),\n"
 "                       return (x - 99));\n"
-"(%o3) h(x) ::= block(print(\"x - 99 is equal to\", x), \n"
+"(%o3) h(x) ::= block(print(\\"x - 99 is equal to\\", x), \n"
 "                                                  return(x - 99))\n"
 "@end group\n"
 "@group\n"
@@ -2959,7 +2967,7 @@ msgid ""
 "                      mmacroexpanded(x + 99, g(x))\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2152
 msgid ""
 "(%o6)                         [%t6]\n"
 "@end group\n"
@@ -2972,20 +2980,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2156
 msgid ""
 "When @code{macroexpansion} is @code{displace},\n"
 "a macro function is called once,\n"
 "and the calling expression is modified.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2204
 msgid ""
 "@c ===beg===\n"
 "@c f (x) := h (x) / g (x);\n"
-"@c g (x) ::= block (print (\"x + 99 is equal to\", x), \n"
+"@c g (x) ::= block (print (\\"x + 99 is equal to\\", x), \n"
 "@c                        return (x + 99));\n"
-"@c h (x) ::= block (print (\"x - 99 is equal to\", x), \n"
+"@c h (x) ::= block (print (\\"x - 99 is equal to\\", x), \n"
 "@c                        return (x - 99));\n"
 "@c macroexpansion: displace;\n"
 "@c f (a * b);\n"
@@ -3000,15 +3008,15 @@ msgid ""
 "                                  g(x)\n"
 "@end group\n"
 "@group\n"
-"(%i2) g (x) ::= block (print (\"x + 99 is equal to\", x),\n"
+"(%i2) g (x) ::= block (print (\\"x + 99 is equal to\\", x),\n"
 "                       return (x + 99));\n"
-"(%o2) g(x) ::= block(print(\"x + 99 is equal to\", x), \n"
+"(%o2) g(x) ::= block(print(\\"x + 99 is equal to\\", x), \n"
 "                                                  return(x + 99))\n"
 "@end group\n"
 "@group\n"
-"(%i3) h (x) ::= block (print (\"x - 99 is equal to\", x),\n"
+"(%i3) h (x) ::= block (print (\\"x - 99 is equal to\\", x),\n"
 "                       return (x - 99));\n"
-"(%o3) h(x) ::= block(print(\"x - 99 is equal to\", x), \n"
+"(%o3) h(x) ::= block(print(\\"x - 99 is equal to\\", x), \n"
 "                                                  return(x - 99))\n"
 "@end group\n"
 "@group\n"
@@ -3030,7 +3038,7 @@ msgid ""
 "                                 x + 99\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2214
 msgid ""
 "(%o6)                         [%t6]\n"
 "@end group\n"
@@ -3043,7 +3051,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2219
 msgid ""
 "@opencatbox\n"
 "@category{Function application} @category{Global flags}\n"
@@ -3051,7 +3059,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2224
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mode_checkp}\n"
@@ -3059,7 +3067,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2229
 msgid ""
 "@c WHAT DOES THIS MEAN ??\n"
 "When @code{mode_checkp} is @code{true}, @code{mode_declare} checks the modes\n"
@@ -3067,7 +3075,7 @@ msgid ""
 "@c NEED SOME EXAMPLES HERE.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2234
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3075,7 +3083,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2239
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mode_check_errorp}\n"
@@ -3083,7 +3091,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2244
 msgid ""
 "@c WHAT DOES THIS MEAN ??\n"
 "When @code{mode_check_errorp} is @code{true}, @code{mode_declare} calls\n"
@@ -3091,7 +3099,7 @@ msgid ""
 "@c NEED SOME EXAMPLES HERE.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2249
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3099,7 +3107,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2254
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mode_check_warnp}\n"
@@ -3107,7 +3115,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2259
 msgid ""
 "@c WHAT DOES THIS MEAN ??\n"
 "When @code{mode_check_warnp} is @code{true}, mode errors are\n"
@@ -3115,7 +3123,7 @@ msgid ""
 "@c NEED SOME EXAMPLES HERE.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2264
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3123,19 +3131,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2266
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2270
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mode_declare}\n"
 "@deffn {Function} mode_declare (@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2275
 msgid ""
 "@code{mode_declare} is used to declare the modes of variables and functions for\n"
 "subsequent translation or compilation of functions.  @code{mode_declare} is\n"
@@ -3143,7 +3151,7 @@ msgid ""
 "a Maxima script, or executed at the interactive prompt.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2280
 msgid ""
 "The arguments of @code{mode_declare} are pairs consisting of a variable and a\n"
 "mode which is one of @code{boolean}, @code{fixnum}, @code{number},\n"
@@ -3151,7 +3159,7 @@ msgid ""
 "all of which are declared to have the same mode.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2294
 msgid ""
 "@c WHAT DOES THE FOLLOWING STATEMENT MEAN ???\n"
 "If a variable is an array, and if every element of the array which is\n"
@@ -3168,62 +3176,62 @@ msgid ""
 "Also if every element of the array is of the same mode, say @code{m}, then\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2298
 msgid ""
 "@example\n"
 "mode_declare (completearray (yi), m))\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2300
 msgid ""
 "should be used for efficient translation.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2303
 msgid ""
 "Numeric code using arrays might run faster\n"
 "by declaring the expected size of the array, as in:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2307
 msgid ""
 "@example\n"
 "mode_declare (completearray (a [10, 10]), float)\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2309
 msgid ""
 "for a floating point number array which is 10 x 10.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2313
 msgid ""
 "One may declare the mode of the result of a function by using\n"
 "@code{function (f_1, f_2, ...)} as an argument; here @code{f_1}, @code{f_2},\n"
 "@dots{} are the names of functions.  For example the expression,\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2317
 msgid ""
 "@example\n"
 "mode_declare ([function (f_1, f_2, ...)], fixnum)\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2320
 msgid ""
 "declares that the values returned by @code{f_1}, @code{f_2}, @dots{} are\n"
 "single-word integers.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2322
 msgid ""
 "@code{modedeclare} is a synonym for @code{mode_declare}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2327
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -3231,20 +3239,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2330
 msgid ""
 "@c WHAT IS THIS ABOUT ??\n"
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2334
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mode_identity}\n"
 "@deffn {Function} mode_identity (@var{arg_1}, @var{arg_2})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2351
 msgid ""
 "A special form used with @code{mode_declare} and @code{macros} to declare, e.g.,\n"
 "a list of lists of flonums, or other compound data object.  The first argument\n"
@@ -3264,20 +3272,20 @@ msgid ""
 "a more efficient way to do it would be to define a new primitive,\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2355
 msgid ""
 "@example\n"
 "firstnumb (x) ::= buildq ([x], mode_identity (number, first(x)));\n"
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2358
 msgid ""
 "and use @code{firstnumb}\n"
 "every time you take the first of a list of numbers.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2363
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -3285,7 +3293,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2369
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remfunction}\n"
@@ -3294,37 +3302,37 @@ msgid ""
 "@fname{remfunction} (all)\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2373
 msgid ""
 "Unbinds the function definitions of the symbols @var{f_1}, @dots{}, @var{f_n}.\n"
 "The arguments may be the names of ordinary functions (created by @mref{:=} or\n"
 "@mref{define}) or macro functions (created by @mref{::=}).\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2375
 msgid ""
 "@code{remfunction (all)} unbinds all function definitions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2377
 msgid ""
 "@code{remfunction} quotes its arguments.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2381
 msgid ""
 "@code{remfunction} returns a list of the symbols for which the function\n"
 "definition was unbound.  @code{false} is returned in place of any symbol for\n"
 "which there is no function definition.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2384
 msgid ""
 "@code{remfunction} does not apply to array functions or subscripted functions.\n"
 "@mref{remarray} applies to those types of functions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2389
 msgid ""
 "@opencatbox\n"
 "@category{Function definition}\n"
@@ -3332,12 +3340,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2391
 msgid ""
 "@c NEEDS MORE WORK !!!\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2396
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{savedef}\n"
@@ -3345,20 +3353,20 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2400
 msgid ""
 "When @code{savedef} is @code{true}, the Maxima version of a user function is\n"
 "preserved when the function is translated.  This permits the definition to be\n"
 "displayed by @code{dispfun} and allows the function to be edited.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2403
 msgid ""
 "When @code{savedef} is @code{false}, the names of translated functions are\n"
 "removed from the @code{functions} list.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2408
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3366,13 +3374,13 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2411
 msgid ""
 "@c IS THERE ANY REASON TO SET transcompile: false ??\n"
 "@c MAYBE THIS VARIABLE COULD BE PERMANENTLY SET TO true AND STRUCK FROM THE DOCUMENTATION.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2416
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{transcompile}\n"
@@ -3380,7 +3388,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2421
 msgid ""
 "When @code{transcompile} is @code{true}, @code{translate} and\n"
 "@code{translate_file} generate declarations to make the translated code more\n"
@@ -3388,12 +3396,12 @@ msgid ""
 "@c BUT THE DECLARATIONS DON'T SEEM TO BE NECESSARY, SO WHAT'S THE POINT AGAIN ??\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2423
 msgid ""
 "@code{compfile} sets @code{transcompile: true} for the duration.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2428
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3401,7 +3409,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2435
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{translate}\n"
@@ -3411,26 +3419,26 @@ msgid ""
 "@fname{translate} (all)\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2439
 msgid ""
 "Translates the user-defined functions @var{f_1}, @dots{}, @var{f_n} from the\n"
 "Maxima language into Lisp and evaluates the Lisp translations.\n"
 "Typically the translated functions run faster than the originals.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2442
 msgid ""
 "@code{translate (all)} or @code{translate (functions)} translates all\n"
 "user-defined functions.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2445
 msgid ""
 "Functions to be translated should include a call to @code{mode_declare} at the\n"
 "beginning when possible in order to produce more efficient code.  For example:\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2450
 msgid ""
 "@example\n"
 "f (x_1, x_2, ...) := block ([v_1, v_2, ...],\n"
@@ -3438,39 +3446,39 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2454
 msgid ""
 "@noindent\n"
 "where the @var{x_1}, @var{x_2}, @dots{}  are the parameters to the function and\n"
 "the @var{v_1}, @var{v_2}, @dots{} are the local variables.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2458
 msgid ""
 "The names of translated functions are removed from the @code{functions} list\n"
 "if @code{savedef} is @code{false} (see below) and are added to the @code{props}\n"
 "lists.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2460
 msgid ""
 "Functions should not be translated unless they are fully debugged.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2464
 msgid ""
 "Expressions are assumed simplified; if they are not, correct but non-optimal\n"
 "code gets generated.  Thus, the user should not set the @code{simp} switch to\n"
 "@code{false} which inhibits simplification of the expressions to be translated.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2467
 msgid ""
 "The switch @code{translate}, if @code{true}, causes automatic\n"
 "translation of a user's function to Lisp.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2477
 msgid ""
 "Note that translated\n"
 "functions may not run identically to the way they did before\n"
@@ -3483,7 +3491,7 @@ msgid ""
 "@c WHAT ABOUT % AND %% ???\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2482
 msgid ""
 "@code{savedef} - if @code{true} will cause the Maxima version of a user\n"
 "function to remain when the function is @code{translate}'d.  This permits the\n"
@@ -3491,20 +3499,20 @@ msgid ""
 "edited.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2486
 msgid ""
 "@code{transrun} - if @code{false} will cause the interpreted version of all\n"
 "functions to be run (provided they are still around) rather than the\n"
 "translated version.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2489
 msgid ""
 "The result returned by @code{translate} is a list of the names of the\n"
 "functions translated.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2494
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -3512,7 +3520,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2500
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{translate_file}\n"
@@ -3521,7 +3529,7 @@ msgid ""
 "@fname{translate_file} (@var{maxima_filename}, @var{lisp_filename})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2506
 msgid ""
 "Translates a file of Maxima code into a file of Lisp code.\n"
 "@code{translate_file} returns a list of three filenames:\n"
@@ -3530,15 +3538,15 @@ msgid ""
 "@code{translate_file} evaluates its arguments.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2511
 msgid ""
-"@code{translate_file (\"foo.mac\"); load(\"foo.LISP\")} is the same as the command\n"
-"@code{batch (\"foo.mac\")} except for certain restrictions, the use of\n"
+"@code{translate_file (\\"foo.mac\\"); load(\\"foo.LISP\\")} is the same as the command\n"
+"@code{batch (\\"foo.mac\\")} except for certain restrictions, the use of\n"
 "@code{'@w{}'} and @code{%}, for example.\n"
 "@c FIGURE OUT WHAT THE RESTRICTIONS ARE AND STATE THEM\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2518
 msgid ""
 "@code{translate_file (@var{maxima_filename})} translates a Maxima file\n"
 "@var{maxima_filename} into a similarly-named Lisp file.\n"
@@ -3548,7 +3556,7 @@ msgid ""
 "to the same directory from which the Maxima input comes.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2525
 msgid ""
 "@code{translate_file (@var{maxima_filename}, @var{lisp_filename})} translates\n"
 "a Maxima file @var{maxima_filename} into a Lisp file @var{lisp_filename}.\n"
@@ -3558,7 +3566,7 @@ msgid ""
 "in which case the Lisp output file is written to the specified directory.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2533
 msgid ""
 "@code{translate_file} also writes a file of translator warning\n"
 "messages of various degrees of severity.\n"
@@ -3569,7 +3577,7 @@ msgid ""
 "to the same directory from which the Maxima input comes.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2538
 msgid ""
 "@code{translate_file} emits Lisp code which causes\n"
 "some declarations and definitions to take effect as soon\n"
@@ -3577,7 +3585,7 @@ msgid ""
 "See @code{compile_file} for more on this topic.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2566
 msgid ""
 "@c CHECK ALL THESE AND SEE WHICH ONES ARE OBSOLETE\n"
 "See also \n"
@@ -3608,7 +3616,7 @@ msgid ""
 "@end flushleft\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2571
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -3616,7 +3624,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2576
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{transrun}\n"
@@ -3624,14 +3632,14 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2580
 msgid ""
 "When @code{transrun} is @code{false} will cause the interpreted\n"
 "version of all functions to be run (provided they are still around)\n"
 "rather than the translated version.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2585
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3639,13 +3647,13 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2588
 msgid ""
 "@c IN WHAT CONTEXT IS tr_array_as_ref: false APPROPRIATE ??? NOT SEEING THE USEFULNESS HERE.\n"
 "@c ALSO, I GUESS WE SHOULD HAVE AN ITEM FOR translate_fast_arrays, ANOTHER CONFUSING FLAG ...\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2593
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_array_as_ref}\n"
@@ -3653,7 +3661,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2599
 msgid ""
 "If @code{translate_fast_arrays} is @code{false}, array references in Lisp code\n"
 "emitted by @code{translate_file} are affected by @code{tr_array_as_ref}.\n"
@@ -3662,13 +3670,13 @@ msgid ""
 "otherwise array names appear as literal symbols in translated code.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2602
 msgid ""
 "@code{tr_array_as_ref} has no effect if @code{translate_fast_arrays} is\n"
 "@code{true}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2607
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3676,13 +3684,13 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2610
 msgid ""
 "@c WHY IS THIS FLAG NEEDED ??? UNDER WHAT CIRCUMSTANCES CAN TRANSLATION\n"
 "@c OF A BOUND VARIABLE USED AS A FUNCTION GO WRONG ???\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2615
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_bound_function_applyp}\n"
@@ -3690,7 +3698,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2621
 msgid ""
 "When @code{tr_bound_function_applyp} is @code{true}, Maxima gives a warning if a\n"
 "bound variable (such as a function argument) is found being used as a function.\n"
@@ -3699,13 +3707,13 @@ msgid ""
 "cases.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2624
 msgid ""
 "For example, an expression such as @code{g (f, x) := f (x+1)} will trigger\n"
 "the warning message.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2629
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3713,7 +3721,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2634
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_file_tty_messagesp}\n"
@@ -3721,7 +3729,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2639
 msgid ""
 "When @code{tr_file_tty_messagesp} is @code{true}, messages generated by\n"
 "@code{translate_file} during translation of a file are displayed on the console\n"
@@ -3729,7 +3737,7 @@ msgid ""
 "translation of the file are only inserted into the UNLISP file.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2644
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3737,14 +3745,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2648
 msgid ""
 "@c THIS FLAG APPEARS TO HAVE NO EFFECT. SHOULD CUT OUT THIS ITEM AND RELATED CODE.\n"
 "@c NOTE THAT THERE IS CODE IN src/transf.lisp WHICH USES THIS FLAG BUT THE MODE\n"
 "@c FLAG IS LOST SOMEWHERE ALONG THE WAY TO THE LISP OUTPUT FILE.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2653
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_float_can_branch_complex}\n"
@@ -3752,19 +3760,19 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2656
 msgid ""
 "Tells the Maxima-to-Lisp translator to assume that the functions \n"
 "@code{acos}, @code{asin}, @code{asec}, and @code{acsc} can return complex results.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2659
 msgid ""
 "The ostensible effect of @code{tr_float_can_branch_complex} is the following.\n"
 "However, it appears that this flag has no effect on the translator output.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2664
 msgid ""
 "When it is @code{true} then @code{acos(x)} is of mode @code{any}\n"
 "even if @code{x} is of mode @code{float} (as set by @code{mode_declare}).\n"
@@ -3772,7 +3780,7 @@ msgid ""
 "@code{float} if and only if @code{x} is of mode @code{float}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2669
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3780,7 +3788,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2674
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_function_call_default}\n"
@@ -3788,7 +3796,7 @@ msgid ""
 "Default value: @code{general}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2684
 msgid ""
 "@code{false} means give up and call @code{meval}, @code{expr} means assume Lisp\n"
 "fixed arg function.  @code{general}, the default gives code good for\n"
@@ -3801,7 +3809,7 @@ msgid ""
 "Maxima interpreter.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2689
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3809,7 +3817,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2694
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_numer}\n"
@@ -3817,13 +3825,13 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2697
 msgid ""
 "When @code{tr_numer} is @code{true}, @code{numer} properties are used for\n"
 "atoms which have them, e.g. @code{%pi}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2702
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3831,7 +3839,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2707
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_optimize_max_loop}\n"
@@ -3839,7 +3847,7 @@ msgid ""
 "Default value: 100\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2712
 msgid ""
 "@code{tr_optimize_max_loop} is the maximum number of times the\n"
 "macro-expansion and optimization pass of the translator will loop in\n"
@@ -3847,7 +3855,7 @@ msgid ""
 "non-terminating optimization properties.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2717
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3855,7 +3863,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2722
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_semicompile}\n"
@@ -3863,14 +3871,14 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2726
 msgid ""
 "When @code{tr_semicompile} is @code{true}, @code{translate_file} and\n"
 "@code{compfile} output forms which will be macroexpanded but not compiled into\n"
 "machine code by the Lisp compiler.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2731
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3878,12 +3886,12 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2733
 msgid ""
 "@c ARE ANY OF THESE OBSOLETE ??\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2743
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_state_vars}\n"
@@ -3896,7 +3904,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2751
 msgid ""
 "The list of the switches that affect the form of the\n"
 "translated output.\n"
@@ -3907,7 +3915,7 @@ msgid ""
 "track down bugs.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2756
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3915,27 +3923,27 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2760
 msgid ""
 "@c tr_warnings_get EXISTS AND FUNCTIONS AS ADVERTISED (SORT OF) -- RETURNS *tr-runtime-warned*\n"
 "@c WHICH HAS ONLY A FEW KINDS OF WARNINGS PUSHED ONTO IT; IT'S CERTAINLY NOT COMPREHENSIVE\n"
 "@c DO WE REALLY NEED THIS SLIGHTLY WORKING FUNCTION ??\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2764
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_warnings_get}\n"
 "@deffn {Function} tr_warnings_get ()\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2767
 msgid ""
 "Prints a list of warnings which have been given by\n"
 "the translator during the current translation.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2772
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -3943,21 +3951,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2776
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@defvr {Option variable} tr_warn_bad_function_calls\n"
 "Default value: @code{true}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2780
 msgid ""
 "- Gives a warning when\n"
 "when function calls are being made which may not be correct due to\n"
 "improper declarations that were made at translate time.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2785
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3965,7 +3973,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2790
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_warn_fexpr}\n"
@@ -3973,14 +3981,14 @@ msgid ""
 "Default value: @code{compfile}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2794
 msgid ""
 "- Gives a warning if any FEXPRs are\n"
 "encountered.  FEXPRs should not normally be output in translated code,\n"
 "all legitimate special program forms are translated.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2799
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -3988,7 +3996,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2804
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_warn_meval}\n"
@@ -3996,13 +4004,13 @@ msgid ""
 "Default value: @code{compfile}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2807
 msgid ""
 "- Gives a warning if the function @code{meval} gets called.  If @code{meval} is\n"
 "called that indicates problems in the translation.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2812
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -4010,7 +4018,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2817
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_warn_mode}\n"
@@ -4018,13 +4026,13 @@ msgid ""
 "Default value: @code{all}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2820
 msgid ""
 "- Gives a warning when variables are\n"
 "assigned values inappropriate for their mode.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2825
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -4032,7 +4040,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2830
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_warn_undeclared}\n"
@@ -4040,13 +4048,13 @@ msgid ""
 "Default value: @code{compile}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2833
 msgid ""
 "- Determines when to send\n"
 "warnings about undeclared variables to the TTY.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2838
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -4054,7 +4062,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2843
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{tr_warn_undefined_variable}\n"
@@ -4062,13 +4070,13 @@ msgid ""
 "Default value: @code{all}\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2846
 msgid ""
 "- Gives a warning when\n"
 "undefined global variables are seen.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2851
 msgid ""
 "@opencatbox\n"
 "@category{Translation flags and variables}\n"
@@ -4076,7 +4084,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2858
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{compile_file}\n"
@@ -4086,21 +4094,21 @@ msgid ""
 "@fname{compile_file} (@var{filename}, @var{compiled_filename}, @var{lisp_filename})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2862
 msgid ""
 "Translates the Maxima file @var{filename} into Lisp, executes the Lisp compiler,\n"
 "and, if the translation and compilation succeed, loads the compiled code into\n"
 "Maxima.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2866
 msgid ""
 "@code{compile_file} returns a list of the names of four files: the original\n"
 "Maxima file, the Lisp translation, notes on translation, and the compiled code.\n"
 "If the compilation fails, the fourth item is @code{false}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2878
 msgid ""
 "Some declarations and definitions take effect as soon\n"
 "as the Lisp code is compiled (without loading the compiled code).\n"
@@ -4115,14 +4123,14 @@ msgid ""
 "and @code{compfile}.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2882
 msgid ""
 "Assignments and function calls are not evaluated until the compiled code is\n"
 "loaded.  In particular, within the Maxima file, assignments to the translation\n"
 "flags (@code{tr_numer}, etc.) have no effect on the translation.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2887
 msgid ""
 "@c @code{compile_file} may mistake warnings for errors and\n"
 "@c return @code{false} as the name of the compiled code when, in fact,\n"
@@ -4130,17 +4138,17 @@ msgid ""
 "@c REPORTED AS SOURCEFORGE BUG # 1103722.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2889
 msgid ""
 "@var{filename} may not contain @code{:lisp} statements.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2891
 msgid ""
 "@code{compile_file} evaluates its arguments.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2896
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -4148,19 +4156,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2898
 msgid ""
 "@c NEEDS CLARIFICATION\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2902
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{declare_translated}\n"
 "@deffn {Function} declare_translated (@var{f_1}, @var{f_2}, @dots{})\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2911
 msgid ""
 "When translating a file of Maxima code\n"
 "to Lisp, it is important for the translator to know which functions it\n"
@@ -4172,7 +4180,7 @@ msgid ""
 "the translator does not know @code{fn} is going to be a Lisp function.\n"
 msgstr ""
 
-# Function.texi
+#: Function.texi:2916
 msgid ""
 "@opencatbox\n"
 "@category{Translation and compilation}\n"
@@ -4180,6 +4188,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Function.texi
-msgid ""
-msgstr ""

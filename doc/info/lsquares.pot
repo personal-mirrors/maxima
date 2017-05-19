@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# lsquares.texi
+msgstr ""
+
+#: lsquares.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to lsquares::\n"
@@ -25,7 +25,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:10
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to lsquares, Functions and Variables for lsquares, lsquares-pkg, lsquares-pkg\n"
@@ -33,20 +33,20 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:13
 msgid ""
 "@code{lsquares} is a collection of functions to implement the method of least squares\n"
 "to estimate parameters for a model from numerical data.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:17
 msgid ""
 "@opencatbox\n"
 "@category{Statistical estimation} @category{Share packages} @category{Package lsquares}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:22
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for lsquares,  , Introduction to lsquares, lsquares-pkg\n"
@@ -54,7 +54,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:27
 msgid ""
 "@anchor{lsquares_estimates}\n"
 "@deffn {Function} lsquares_estimates @\n"
@@ -62,7 +62,7 @@ msgid ""
 "@fname{lsquares_estimates} (@var{D}, @var{x}, @var{e}, @var{a}, initial = @var{L}, tol = @var{t})\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:33
 msgid ""
 "Estimate parameters @var{a} to best fit the equation @var{e}\n"
 "in the variables @var{x} and @var{a} to the data @var{D},\n"
@@ -71,13 +71,13 @@ msgid ""
 "and if that fails, then seeks an approximate solution.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:36
 msgid ""
 "The return value is a list of lists of equations of the form @code{[a = ..., b = ..., c = ...]}.\n"
 "Each element of the list is a distinct, equivalent minimum of the mean square error.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:46
 msgid ""
 "The data @var{D} must be a matrix.\n"
 "Each row is one datum (which may be called a `record' or `case' in some contexts),\n"
@@ -90,7 +90,7 @@ msgid ""
 "if @var{e} is not an equation, it is treated the same as @code{@var{e} = 0}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:51
 msgid ""
 "Additional arguments to @code{lsquares_estimates}\n"
 "are specified as equations and passed on verbatim to the function @code{lbfgs}\n"
@@ -98,7 +98,7 @@ msgid ""
 "when an exact result is not found.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:60
 msgid ""
 "If some exact solution can be found (via @code{solve}),\n"
 "the data @var{D} may contain non-numeric values.\n"
@@ -110,12 +110,12 @@ msgid ""
 "so all other kinds of numbers are converted to ordinary floats for calculations.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:62
 msgid ""
 "@code{load(lsquares)} loads this function.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:69
 msgid ""
 "See also\n"
 "@mref{lsquares_estimates_exact},\n"
@@ -125,17 +125,17 @@ msgid ""
 "and @mref{lsquares_residual_mse}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:71
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:73
 msgid ""
 "A problem for which an exact solution is found.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:106
 msgid ""
 "@c ===beg===\n"
 "@c load (lsquares)$\n"
@@ -171,13 +171,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:109
 msgid ""
 "A problem for which no exact solution is found,\n"
 "so @code{lsquares_estimates} resorts to numerical approximation.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:139
 msgid ""
 "@c ===beg===\n"
 "@c load (lsquares)$\n"
@@ -210,14 +210,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:143
 msgid ""
 "Exponential functions aren't well-conditioned for least min square fitting.\n"
 "In case that fitting to them fails it might be possible to get rid of the\n"
 "exponential function using an logarithm.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:185
 msgid ""
 "@c ===beg===\n"
 "@c load (lsquares)$\n"
@@ -262,12 +262,12 @@ msgid ""
 "*************************************************\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:187
 msgid ""
 "   I  NFN     FUNC                    GNORM                   STEPLENGTH\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:195
 msgid ""
 "   1    3     1.141838765593467D+00   1.067358003667488D-01   1.390943719972406D-02  \n"
 "   2    5     1.141118195694385D+00   1.237977833033414D-01   5.000000000000000D+00  \n"
@@ -278,7 +278,7 @@ msgid ""
 "   7   10     1.131620564856599D+00   2.519366958715444D-04   1.000000000000000D+00  \n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:201
 msgid ""
 " THE MINIMIZATION TERMINATED WITHOUT DETECTING ERRORS.\n"
 " IFLAG = 0\n"
@@ -287,25 +287,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:205
 msgid ""
 "@opencatbox\n"
 "@category{Package lsquares} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:207
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:210
 msgid ""
 "@anchor{lsquares_estimates_exact}\n"
 "@deffn {Function} lsquares_estimates_exact (@var{MSE}, @var{a})\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:215
 msgid ""
 "Estimate parameters @var{a} to minimize the mean square error @var{MSE},\n"
 "by constructing a system of equations and attempting to solve them symbolically via @code{solve}.\n"
@@ -313,7 +313,7 @@ msgid ""
 "such as that returned by @code{lsquares_mse}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:220
 msgid ""
 "The return value is a list of lists of equations of the form @code{[a = ..., b = ..., c = ...]}.\n"
 "The return value may contain zero, one, or two or more elements.\n"
@@ -321,7 +321,7 @@ msgid ""
 "each represents a distinct, equivalent minimum of the mean square error.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:227
 msgid ""
 "See also\n"
 "@mref{lsquares_estimates},\n"
@@ -331,12 +331,12 @@ msgid ""
 "and @mref{lsquares_residual_mse}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:229
 msgid ""
 "Example:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:271
 msgid ""
 "@c ===beg===\n"
 "@c load (lsquares)$\n"
@@ -381,25 +381,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:275
 msgid ""
 "@opencatbox\n"
 "@category{Package lsquares}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:277
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:280
 msgid ""
 "@anchor{lsquares_estimates_approximate}\n"
 "@deffn {Function} lsquares_estimates_approximate (@var{MSE}, @var{a}, initial = @var{L}, tol = @var{t})\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:285
 msgid ""
 "Estimate parameters @var{a} to minimize the mean square error @var{MSE},\n"
 "via the numerical minimization function @code{lbfgs}.\n"
@@ -407,7 +407,7 @@ msgid ""
 "such as that returned by @code{lsquares_mse}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:291
 msgid ""
 "The solution returned by @code{lsquares_estimates_approximate} is a local (perhaps global) minimum\n"
 "of the mean square error.\n"
@@ -416,13 +416,13 @@ msgid ""
 "namely a list of equations of the form @code{[a = ..., b = ..., c = ...]}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:294
 msgid ""
 "Additional arguments to @code{lsquares_estimates_approximate}\n"
 "are specified as equations and passed on verbatim to the function @code{lbfgs}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:301
 msgid ""
 "@var{MSE} must evaluate to a number when the parameters are assigned numeric values.\n"
 "This requires that the data from which @var{MSE} was constructed\n"
@@ -432,12 +432,12 @@ msgid ""
 "so all other kinds of numbers are converted to ordinary floats for calculations.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:303
 msgid ""
 "@code{load(lsquares)} loads this function.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:310
 msgid ""
 "See also\n"
 "@mref{lsquares_estimates},\n"
@@ -447,12 +447,12 @@ msgid ""
 "and @mref{lsquares_residual_mse}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:312
 msgid ""
 "Example:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:355
 msgid ""
 "@c ===beg===\n"
 "@c load (lsquares)$\n"
@@ -498,36 +498,36 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:359
 msgid ""
 "@opencatbox\n"
 "@category{Package lsquares} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:361
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:364
 msgid ""
 "@anchor{lsquares_mse}\n"
 "@deffn {Function} lsquares_mse (@var{D}, @var{x}, @var{e})\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:367
 msgid ""
 "Returns the mean square error (MSE), a summation expression, for the equation @var{e}\n"
 "in the variables @var{x}, with data @var{D}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:369
 msgid ""
 "The MSE is defined as:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:384
 msgid ""
 "@tex\n"
 "$${1 \over n} \, \sum_{i=1}^n \left[{\rm lhs}\left(e_i\right) - {\rm rhs}\left(e_i\right)\right]^2,$$\n"
@@ -545,23 +545,23 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:387
 msgid ""
 "where @var{n} is the number of data and @code{@var{e}[i]} is the equation @var{e}\n"
 "evaluated with the variables in @var{x} assigned values from the @code{i}-th datum, @code{@var{D}[i]}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:389
 msgid ""
 "@code{load(lsquares)} loads this function.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:391
 msgid ""
 "Example:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:487
 msgid ""
 "@c ===beg===\n"
 "@c load (lsquares)$\n"
@@ -660,31 +660,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:491
 msgid ""
 "@opencatbox\n"
 "@category{Package lsquares}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:493
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:496
 msgid ""
 "@anchor{lsquares_residuals}\n"
 "@deffn {Function} lsquares_residuals (@var{D}, @var{x}, @var{e}, @var{a})\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:499
 msgid ""
 "Returns the residuals for the equation @var{e}\n"
 "with specified parameters @var{a} and data @var{D}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:504
 msgid ""
 "@var{D} is a matrix, @var{x} is a list of variables,\n"
 "@var{e} is an equation or general expression;\n"
@@ -692,12 +692,12 @@ msgid ""
 "@var{a} is a list of equations which specify values for any free parameters in @var{e} aside from @var{x}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:506
 msgid ""
 "The residuals are defined as:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:516
 msgid ""
 "@tex\n"
 "$${\rm lhs}\left(e_i\right) - {\rm rhs}\left(e_i\right),$$\n"
@@ -710,24 +710,24 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:520
 msgid ""
 "where @code{@var{e}[i]} is the equation @var{e}\n"
 "evaluated with the variables in @var{x} assigned values from the @code{i}-th datum, @code{@var{D}[i]},\n"
 "and assigning any remaining free variables from @var{a}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:522
 msgid ""
 "@code{load(lsquares)} loads this function.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:524
 msgid ""
 "Example:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:566
 msgid ""
 "@c ===beg===\n"
 "@c load (lsquares)$\n"
@@ -772,36 +772,36 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:570
 msgid ""
 "@opencatbox\n"
 "@category{Package lsquares}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:572
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:575
 msgid ""
 "@anchor{lsquares_residual_mse}\n"
 "@deffn {Function} lsquares_residual_mse (@var{D}, @var{x}, @var{e}, @var{a})\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:578
 msgid ""
 "Returns the residual mean square error (MSE) for the equation @var{e}\n"
 "with specified parameters @var{a} and data @var{D}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:580
 msgid ""
 "The residual MSE is defined as:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:595
 msgid ""
 "@tex\n"
 "$${1 \over n} \, \sum_{i=1}^n \left[{\rm lhs}\left(e_i\right) - {\rm rhs}\left(e_i\right)\right]^2,$$\n"
@@ -819,24 +819,24 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:599
 msgid ""
 "where @code{@var{e}[i]} is the equation @var{e}\n"
 "evaluated with the variables in @var{x} assigned values from the @code{i}-th datum, @code{@var{D}[i]},\n"
 "and assigning any remaining free variables from @var{a}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:601
 msgid ""
 "@code{load(lsquares)} loads this function.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:603
 msgid ""
 "Example:\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:645
 msgid ""
 "@c ===beg===\n"
 "@c load (lsquares)$\n"
@@ -881,38 +881,42 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:649
 msgid ""
 "@opencatbox\n"
 "@category{Package lsquares}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:651
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:659
 msgid ""
 "@anchor{plsquares}\n"
 "@deffn {Function} plsquares @\n"
 "@fname{plsquares} (@var{Mat},@var{VarList},@var{depvars}) @\n"
 "@fname{plsquares} (@var{Mat},@var{VarList},@var{depvars},@var{maxexpon}) @\n"
 "@fname{plsquares} (@var{Mat},@var{VarList},@var{depvars},@var{maxexpon},@var{maxdegree})\n"
-"Multivariable polynomial adjustment of a data table by the \"least squares\"\n"
-"method. @var{Mat} is a matrix containing the data, @var{VarList} is a list of variable names (one for each Mat column, but use \"-\" instead of varnames to ignore Mat columns), @var{depvars} is the name of a dependent variable or a list with one or more names of dependent variables (which names should be in @var{VarList}), @var{maxexpon} is the optional maximum exponent for each independent variable (1 by default), and @var{maxdegree} is the optional maximum polynomial degree (@var{maxexpon} by default); note that the sum of exponents of each term must be equal or smaller than @var{maxdegree}, and if @code{maxdgree = 0} then no limit is applied.\n"
+"Multivariable polynomial adjustment of a data table by the \\"least squares\\"\n"
+"method. @var{Mat} is a matrix containing the data, @var{VarList} is a list of variable names (one for each Mat column, but use \\"-\\" instead of varnames to ignore Mat columns), @var{depvars} is the name of a dependent variable or a list with one or more names of dependent variables (which names should be in @var{VarList}), @var{maxexpon} is the optional maximum exponent for each independent variable (1 by default), and @var{maxdegree} is the optional maximum polynomial degree (@var{maxexpon} by default); note that the sum of exponents of each term must be equal or smaller than @var{maxdegree}, and if @code{maxdgree = 0} then no limit is applied.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:661
 msgid ""
 "If @var{depvars} is the name of a dependent variable (not in a list), @code{plsquares} returns the adjusted polynomial. If @var{depvars} is a list of one or more dependent variables, @code{plsquares} returns a list with the adjusted polynomial(s). The Coefficients of Determination  are displayed in order to inform about the goodness of fit, which ranges from 0 (no correlation) to 1 (exact correlation). These values are also stored in the global variable @var{DETCOEF} (a list if @var{depvars} is a list).\n"
-"A simple example of multivariable linear adjustment:\n"
-"@example\n"
-"(%i1) load(\"plsquares\")$\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:666
+msgid ""
+"A simple example of multivariable linear adjustment:\n"
+"@example\n"
+"(%i1) load(\\"plsquares\\")$\n"
+msgstr ""
+
+#: lsquares.texi:674
 msgid ""
 "(%i2) plsquares(matrix([1,2,0],[3,5,4],[4,7,9],[5,8,10]),\n"
 "                [x,y,z],z);\n"
@@ -923,7 +927,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:684
 msgid ""
 "The same example without degree restrictions:\n"
 "@example\n"
@@ -936,7 +940,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:697
 msgid ""
 "How many diagonals does a N-sides polygon have? What polynomial degree should be used?\n"
 "@example\n"
@@ -952,7 +956,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:712
 msgid ""
 "How many ways do we have to put two queens without they are threatened into a n x n chessboard?\n"
 "@example\n"
@@ -970,7 +974,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:726
 msgid ""
 "An example with six dependent variables:\n"
 "@example\n"
@@ -987,23 +991,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:728
 msgid ""
-"To use this function write first @code{load(\"lsquares\")}.\n"
+"To use this function write first @code{load(\\"lsquares\\")}.\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:732
 msgid ""
 "@opencatbox\n"
 "@category{Package lsquares} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lsquares.texi
+#: lsquares.texi:734
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lsquares.texi
-msgid ""
-msgstr ""

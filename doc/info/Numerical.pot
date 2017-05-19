@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Numerical.texi
+msgstr ""
+
+#: Numerical.texi:8
 msgid ""
 "@menu\n"
 "* Introduction to fast Fourier transform::                     \n"
@@ -28,7 +28,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:13
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to fast Fourier transform, Functions and Variables for fast Fourier transform, Numerical, Numerical\n"
@@ -36,25 +36,25 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:16
 msgid ""
 "The @code{fft} package comprises functions for the numerical (not symbolic)\n"
 "computation of the fast Fourier transform.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:20
 msgid ""
 "@opencatbox\n"
 "@category{Fourier transform} @category{Numerical methods} @category{Share packages} @category{Package fft}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:22
 msgid ""
 "@c end concepts Numerical\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:27
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for fast Fourier transform, Functions for numerical solution of equations, Introduction to fast Fourier transform, Numerical\n"
@@ -62,14 +62,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:31
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{polartorect}\n"
 "@deffn {Function} polartorect (@var{r}, @var{t})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:36
 msgid ""
 "Translates complex values of the form @code{r %e^(%i t)} to the form\n"
 "@code{a + b %i}, where @var{r} is the magnitude and @var{t} is the phase.\n"
@@ -77,14 +77,14 @@ msgid ""
 "The array size need not be a power of 2.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:40
 msgid ""
 "The original values of the input arrays are\n"
 "replaced by the real and imaginary parts, @code{a} and @code{b}, on return.\n"
 "The outputs are calculated as\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:45
 msgid ""
 "@example\n"
 "a = r cos(t)\n"
@@ -92,17 +92,17 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:47
 msgid ""
 "@mref{polartorect} is the inverse function of @mrefdot{recttopolar}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:49
 msgid ""
 "@code{load(fft)} loads this function.  See also @mrefdot{fft}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:54
 msgid ""
 "@opencatbox\n"
 "@category{Package fft} @category{Complex variables}\n"
@@ -110,14 +110,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:58
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{recttopolar}\n"
 "@deffn {Function} recttopolar (@var{a}, @var{b})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:63
 msgid ""
 "Translates complex values of the form @code{a + b %i} to the form\n"
 "@code{r %e^(%i t)}, where @var{a} is the real part and @var{b} is the imaginary\n"
@@ -125,14 +125,14 @@ msgid ""
 "The array size need not be a power of 2.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:67
 msgid ""
 "The original values of the input arrays are\n"
 "replaced by the magnitude and angle, @code{r} and @code{t}, on return.\n"
 "The outputs are calculated as\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:72
 msgid ""
 "@example\n"
 "r = sqrt(a^2 + b^2)\n"
@@ -140,22 +140,22 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:74
 msgid ""
 "The computed angle is in the range @code{-%pi} to @code{%pi}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:76
 msgid ""
 "@code{recttopolar} is the inverse function of @mrefdot{polartorect}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:78
 msgid ""
 "@code{load(fft)} loads this function.  See also @mrefdot{fft}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:83
 msgid ""
 "@opencatbox\n"
 "@category{Package fft} @category{Complex variables}\n"
@@ -163,14 +163,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:87
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{inverse_fft}\n"
 "@deffn {Function} inverse_fft (@var{y})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:95
 msgid ""
 "Computes the inverse complex fast Fourier transform.\n"
 "@var{y} is a list or array (named or unnamed) which contains the data to\n"
@@ -181,7 +181,7 @@ msgid ""
 "or symbolic constants.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:103
 msgid ""
 "@code{inverse_fft} returns a new object of the same type as @var{y},\n"
 "which is not modified.\n"
@@ -192,48 +192,48 @@ msgid ""
 "slower, but supports bfloats. \n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:107
 msgid ""
 "The inverse discrete Fourier transform is defined as follows.\n"
 "Let @code{x} be the output of the inverse transform.\n"
 "Then for @code{j} from 0 through @code{n - 1},\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:111
 msgid ""
 "@example\n"
 "x[j] = sum(y[k] exp(-2 %i %pi j k / n), k, 0, n - 1)\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:114
 msgid ""
 "As there are various sign and normalization conventions possible,\n"
 "this definition of the transform may differ from that used by other mathematical software.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:116
 msgid ""
 "@code{load(fft)} loads this function.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:119
 msgid ""
 "See also @mref{fft} (forward transform), @mrefcomma{recttopolar} and\n"
 "@mrefdot{polartorect}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:121
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:123
 msgid ""
 "Real data.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:146
 msgid ""
 "@c ===beg===\n"
 "@c load (fft) $\n"
@@ -259,12 +259,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:148
 msgid ""
 "Complex data.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:172
 msgid ""
 "@c ===beg===\n"
 "@c load (fft) $\n"
@@ -291,7 +291,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:177
 msgid ""
 "@opencatbox\n"
 "@category{Package fft}\n"
@@ -299,14 +299,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:181
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fft}\n"
 "@deffn {Function} fft (@var{x})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:189
 msgid ""
 "Computes the complex fast Fourier transform.\n"
 "@var{x} is a list or array (named or unnamed) which contains the data to\n"
@@ -317,7 +317,7 @@ msgid ""
 "or symbolic constants.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:199
 msgid ""
 "@code{fft} returns a new object of the same type as @var{x},\n"
 "which is not modified.\n"
@@ -330,45 +330,45 @@ msgid ""
 "which is potentially faster.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:203
 msgid ""
 "The discrete Fourier transform is defined as follows.\n"
 "Let @code{y} be the output of the transform.\n"
 "Then for @code{k} from 0 through @code{n - 1},\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:207
 msgid ""
 "@example\n"
 "y[k] = (1/n) sum(x[j] exp(+2 %i %pi j k / n), j, 0, n - 1)\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:210
 msgid ""
 "As there are various sign and normalization conventions possible,\n"
 "this definition of the transform may differ from that used by other mathematical software.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:213
 msgid ""
 "When the data @var{x} are real,\n"
 "real coefficients @code{a} and @code{b} can be computed such that\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:217
 msgid ""
 "@example\n"
 "x[j] = sum(a[k]*cos(2*%pi*j*k/n)+b[k]*sin(2*%pi*j*k/n), k, 0, n/2)\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:219
 msgid ""
 "with\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:224
 msgid ""
 "@example\n"
 "a[0] = realpart (y[0])\n"
@@ -376,12 +376,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:226
 msgid ""
 "and, for k from 1 through n/2 - 1,\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:231
 msgid ""
 "@example\n"
 "a[k] = realpart (y[k] + y[n - k])\n"
@@ -389,12 +389,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:233
 msgid ""
 "and\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:238
 msgid ""
 "@example\n"
 "a[n/2] = realpart (y[n/2])\n"
@@ -402,12 +402,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:240
 msgid ""
 "@code{load(fft)} loads this function.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:245
 msgid ""
 "See also @mref{inverse_fft} (inverse transform), @mrefcomma{recttopolar} and\n"
 "@mrefdot{polartorect}. See @mref{real_fft} for FFTs of a real-valued\n"
@@ -415,17 +415,17 @@ msgid ""
 "bigfloat values.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:247
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:249
 msgid ""
 "Real data.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:272
 msgid ""
 "@c ===beg===\n"
 "@c load (fft) $\n"
@@ -451,12 +451,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:274
 msgid ""
 "Complex data.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:298
 msgid ""
 "@c ===beg===\n"
 "@c load (fft) $\n"
@@ -483,12 +483,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:300
 msgid ""
 "Computation of sine and cosine coefficients.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:350
 msgid ""
 "@c ===beg===\n"
 "@c load (fft) $\n"
@@ -541,7 +541,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:355
 msgid ""
 "@opencatbox\n"
 "@category{Package fft}\n"
@@ -549,14 +549,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:359
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{real_fft}\n"
 "@deffn {Function} real_fft (@var{x})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:364
 msgid ""
 "Computes the fast Fourier transform of a real-valued sequence\n"
 "@var{x}.  This is equivalent to performing @code{fft(x)}, except that\n"
@@ -564,12 +564,12 @@ msgid ""
 "the length of @var{x}.  @code{N} must be power of two.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:366
 msgid ""
 "No check is made that @var{x} contains only real values.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:371
 msgid ""
 "The symmetry properites of the Fourier transform of real sequences to\n"
 "reduce he complexity.  In particular the first and last output values\n"
@@ -577,7 +577,7 @@ msgid ""
 "may be computed more quickly than @code{fft}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:378
 msgid ""
 "Since the output length is short, the normal @mref{inverse_fft} cannot\n"
 "be directly used.  Use @mref{inverse_real_fft} to compute the inverse.\n"
@@ -587,7 +587,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:385
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{inverse_real_fft}\n"
@@ -597,13 +597,13 @@ msgid ""
 "input @var{x} is expected to be the output of @code{real_fft}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:388
 msgid ""
 "No check is made to ensure that the input has the correct format.\n"
 "(The first and last elements must be purely real.)\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:393
 msgid ""
 "@opencatbox\n"
 "@category{Package fft}\n"
@@ -611,14 +611,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:397
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bf_inverse_fft}\n"
 "@deffn {Function} bf_inverse_fft (@var{y})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:405
 msgid ""
 "Computes the inverse complex fast Fourier transform.  This is the\n"
 "bigfloat version of @mref{inverse_fft} that converts the input to\n"
@@ -629,13 +629,13 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:408
 msgid ""
 "@anchor{bf_fft}\n"
 "@deffn {Function} bf_fft (@var{y})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:416
 msgid ""
 "Computes the forward complex fast Fourier transform.  This is the\n"
 "bigfloat version of @mref{fft} that converts the input to\n"
@@ -646,20 +646,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:419
 msgid ""
 "@anchor{bf_real_fft}\n"
 "@deffn {Function} bf_real_fft (@var{x})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:423
 msgid ""
 "Computes the forward fast Fourier transform of a real-valued input\n"
 "returning a bigfloat result.  This is the bigfloat version of\n"
 "@code{real_fft}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:428
 msgid ""
 "@opencatbox\n"
 "@category{Package fft}\n"
@@ -667,7 +667,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:433
 msgid ""
 "@anchor{bf_inverse_real_fft}\n"
 "@deffn {Function} bf_inverse_real_fft (@var{y})\n"
@@ -675,7 +675,7 @@ msgid ""
 "bigfloat output.  This is the bigfloat version of @code{inverse_real_fft}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:438
 msgid ""
 "@opencatbox\n"
 "@category{Package fft}\n"
@@ -683,7 +683,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:443
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions for numerical solution of equations, Introduction to numerical solution of differential equations, Functions and Variables for fast Fourier transform, Numerical\n"
@@ -691,7 +691,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:448
 msgid ""
 "@anchor{horner}\n"
 "@deffn  {Function} horner @\n"
@@ -699,7 +699,7 @@ msgid ""
 "@fname{horner} (@var{expr})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:453
 msgid ""
 "Returns a rearranged representation of @var{expr} as in Horner's rule, using\n"
 "@var{x} as the main variable if it is specified.  @code{x} may be omitted in\n"
@@ -707,14 +707,14 @@ msgid ""
 "@var{expr} is used.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:457
 msgid ""
 "@code{horner} sometimes improves stability if @code{expr} is\n"
 "to be numerically evaluated.  It is also useful if Maxima is used to\n"
 "generate programs to be run in Fortran.  See also @mrefdot{stringout}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:472
 msgid ""
 "@c ===beg===\n"
 "@c expr: 1e-155*x^2 - 5.5*x + 5.2e155;\n"
@@ -732,12 +732,12 @@ msgid ""
 "Maxima encountered a Lisp error:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:474
 msgid ""
 " arithmetic error FLOATING-POINT-OVERFLOW signalled\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:480
 msgid ""
 "Automatically continuing.\n"
 "To enable the Lisp debugger set *debugger-hook* to nil.\n"
@@ -746,7 +746,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:485
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods}\n"
@@ -754,7 +754,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:499
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{find_root}\n"
@@ -771,7 +771,7 @@ msgid ""
 "@deffnx {Option variable} find_root_rel\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:504
 msgid ""
 "Finds a root of the expression @var{expr} or the function @var{f} over the\n"
 "closed interval @math{[@var{a}, @var{b}]}.  The expression @var{expr} may be an\n"
@@ -779,7 +779,7 @@ msgid ""
 "@code{lhs(@var{expr}) - rhs(@var{expr})}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:509
 msgid ""
 "Given that Maxima can evaluate @var{expr} or @var{f} over\n"
 "@math{[@var{a}, @var{b}]} and that @var{expr} or @var{f} is continuous,\n"
@@ -787,14 +787,14 @@ msgid ""
 "or one of the roots if there is more than one.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:513
 msgid ""
 "@code{find_root} initially applies binary search.\n"
 "If the function in question appears to be smooth enough,\n"
 "@code{find_root} applies linear interpolation instead.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:519
 msgid ""
 "@code{bf_find_root} is a bigfloat version of @code{find_root}.  The\n"
 "function is computed using bigfloat arithmetic and a bigfloat result\n"
@@ -803,7 +803,7 @@ msgid ""
 "to @code{bf_find_root}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:524
 msgid ""
 "The accuracy of @code{find_root} is governed by @code{abserr} and\n"
 "@code{relerr}, which are optional keyword arguments to\n"
@@ -811,7 +811,7 @@ msgid ""
 "@code{key=val}.  The keyword arguments are\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:532
 msgid ""
 "@table @code\n"
 "@item abserr\n"
@@ -822,7 +822,7 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:538
 msgid ""
 "@code{find_root} stops when the function in question evaluates to\n"
 "something less than or equal to @code{abserr}, or if successive\n"
@@ -831,7 +831,7 @@ msgid ""
 "@code{find_root_abs} and @code{find_root_rel} are both zero.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:548
 msgid ""
 "@code{find_root} expects the function in question to have a different sign at\n"
 "the endpoints of the search interval.\n"
@@ -844,25 +844,25 @@ msgid ""
 "The default value of @code{find_root_error} is @code{true}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:552
 msgid ""
 "If @var{f} evaluates to something other than a number at any step in the search\n"
 "algorithm, @code{find_root} returns a partially-evaluated @code{find_root}\n"
 "expression.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:555
 msgid ""
 "The order of @var{a} and @var{b} is ignored; the region in which a root is\n"
 "sought is @math{[min(@var{a}, @var{b}), max(@var{a}, @var{b})]}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:557
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:565
 msgid ""
 "@c PREVIOUS EXAMPLE STUFF -- MAY WANT TO BRING TRANSLATE BACK INTO THE EXAMPLE\n"
 "@c f(x):=(mode_declare(x,float),sin(x)-x/2.0);\n"
@@ -873,7 +873,7 @@ msgid ""
 "@c interpolate(f,0.1,%pi);                 time=  5 msec\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:607
 msgid ""
 "@c ===beg===\n"
 "@c f(x) := sin(x) - x/2;\n"
@@ -918,7 +918,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:612
 msgid ""
 "@opencatbox\n"
 "@category{Algebraic equations} @category{Numerical methods}\n"
@@ -926,14 +926,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:616
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{newton}\n"
 "@deffn {Function} newton (@var{expr}, @var{x}, @var{x_0}, @var{eps})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:622
 msgid ""
 "Returns an approximate solution of @code{@var{expr} = 0} by Newton's method,\n"
 "considering @var{expr} to be a function of one variable, @var{x}.\n"
@@ -942,7 +942,7 @@ msgid ""
 "(with @var{expr} evaluated at the current value of @var{x}).\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:627
 msgid ""
 "@code{newton} allows undefined variables to appear in @var{expr},\n"
 "so long as the termination test @code{abs(@var{expr}) < @var{eps}} evaluates\n"
@@ -950,23 +950,23 @@ msgid ""
 "Thus it is not necessary that @var{expr} evaluate to a number.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:629
 msgid ""
 "@code{load(newton1)} loads this function.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:632
 msgid ""
 "See also @mrefcomma{realroots} @mrefcomma{allroots} @mref{find_root} and\n"
 "@ref{mnewton-pkg}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:634
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:658
 msgid ""
 "@c ===beg===\n"
 "@c load (newton1);\n"
@@ -993,7 +993,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:663
 msgid ""
 "@opencatbox\n"
 "@category{Algebraic equations} @category{Numerical methods}\n"
@@ -1001,7 +1001,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:668
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to numerical solution of differential equations, Functions for numerical solution of differential equations, Functions for numerical solution of equations, Numerical\n"
@@ -1009,7 +1009,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:695
 msgid ""
 "The Ordinary Differential Equations (ODE) solved by the functions in this\n"
 "section should have the form,\n"
@@ -1039,7 +1039,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:703
 msgid ""
 "The first argument in the functions will be a list with the expressions on\n"
 "the right-side of the ODE's. The variables whose derivatives are represented\n"
@@ -1050,11 +1050,15 @@ msgid ""
 "autonomous.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:707
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Numerical methods} @category{Plotting}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: Numerical.texi:718
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions for numerical solution of differential equations, , Introduction to numerical solution of differential equations, Numerical\n"
 "@section Functions for numerical solution of differential equations\n"
@@ -1066,21 +1070,21 @@ msgid ""
 "@fname{plotdf} ([@var{dudt},c@var{dvdt}], [@var{u},c@var{v}], options@dots{})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:722
 msgid ""
 "The function @code{plotdf} creates a two-dimensional plot of the direction\n"
 "field (also called slope field) for a first-order Ordinary Differential\n"
 "Equation (ODE) or a system of two autonomous first-order ODE's.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:726
 msgid ""
 "Plotdf requires Xmaxima, even if its run from a Maxima session in\n"
 "a console, since the plot will be created by the Tk scripts in Xmaxima.\n"
 "If Xmaxima is not installed plotdf will not work.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:734
 msgid ""
 "@var{dydx}, @var{dxdt} and @var{dydt} are expressions that depend on\n"
 "@var{x} and @var{y}. @var{dvdu}, @var{dudt} and @var{dvdt} are\n"
@@ -1091,7 +1095,7 @@ msgid ""
 "@var{sliders} option.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:744
 msgid ""
 "Several other options can be given within the command, or selected in\n"
 "the menu. Integral curves can be obtained by clicking on the plot, or\n"
@@ -1104,22 +1108,22 @@ msgid ""
 "numerical method used is 4th order Runge-Kutta with variable time steps.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:746
 msgid ""
 "@b{Plot window menu:}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:748
 msgid ""
 "The menu bar of the plot window has the following seven icons:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:750
 msgid ""
 "An X. Can be used to close the plot window.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:756
 msgid ""
 "A wrench and a screwdriver. Opens the configuration menu with several\n"
 "fields that show the ODE(s) in use and various other settings. If a pair\n"
@@ -1128,44 +1132,44 @@ msgid ""
 "addition to the ones already shown.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:760
 msgid ""
 "Two arrows following a circle. Replots the direction field with the\n"
 "new settings defined in the configuration menu and replots only the last\n"
 "integral curve that was previously plotted.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:764
 msgid ""
 "Hard disk drive with an arrow. Used to save a copy of the\n"
 "plot, in Postscript format, in the file specified in a field of the\n"
 "box that appears when that icon is clicked.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:766
 msgid ""
 "Magnifying glass with a plus sign. Zooms in the plot.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:770
 msgid ""
 "Magnifying glass with a minus sign. Zooms out the plot. The plot can be\n"
 "displaced by holding down the right mouse button while the mouse is\n"
 "moved.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:773
 msgid ""
 "Icon of a plot. Opens another window with a plot of the two variables\n"
 "in terms of time, for the last integral curve that was plotted.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:775
 msgid ""
 "@b{Plot options:}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:780
 msgid ""
 "Options can also be given within the @code{plotdf} itself, each one being\n"
 "a list of two or more elements. The first element in each option is the name\n"
@@ -1173,12 +1177,12 @@ msgid ""
 "option.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:782
 msgid ""
 "The options which are recognized by @code{plotdf} are the following:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:788
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -1187,7 +1191,7 @@ msgid ""
 "100.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:799
 msgid ""
 "@item\n"
 "@dfn{direction} defines the direction of the independent\n"
@@ -1201,7 +1205,7 @@ msgid ""
 "The default value is @code{both}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:806
 msgid ""
 "@item\n"
 "@dfn{tinitial} defines the initial value of variable @var{t} used\n"
@@ -1211,7 +1215,7 @@ msgid ""
 "The default value is 0.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:815
 msgid ""
 "@item\n"
 "@dfn{versus_t} is used to create a second plot window, with a\n"
@@ -1223,7 +1227,7 @@ msgid ""
 "The default value is 0.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:820
 msgid ""
 "@item\n"
 "@dfn{trajectory_at} defines the coordinates @var{xinitial} and\n"
@@ -1231,7 +1235,7 @@ msgid ""
 "The option is empty by default.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:826
 msgid ""
 "@item\n"
 "@dfn{parameters} defines a list of parameters, and their\n"
@@ -1240,7 +1244,7 @@ msgid ""
 "string with a comma-separated sequence of pairs @code{name=value}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:832
 msgid ""
 "@item\n"
 "@dfn{sliders} defines a list of parameters that will be changed\n"
@@ -1249,7 +1253,7 @@ msgid ""
 "string with a comma-separated sequence of elements @code{name=min:max}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:837
 msgid ""
 "@item\n"
 "@dfn{xfun} defines a string with semi-colon-separated sequence\n"
@@ -1257,7 +1261,7 @@ msgid ""
 "Those functions will be parsed by Tcl and not by Maxima.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:844
 msgid ""
 "@item\n"
 "@dfn{x} should be followed by two numbers, which will set up the minimum\n"
@@ -1267,7 +1271,7 @@ msgid ""
 "The default horizontal range is from -10 to 10.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:851
 msgid ""
 "@item\n"
 "@dfn{y} should be followed by two numbers, which will set up the minimum\n"
@@ -1277,19 +1281,19 @@ msgid ""
 "The default vertical range is from -10 to 10.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:854
 msgid ""
 "@item\n"
 "@dfn{xaxislabel} will be used to identify the horizontal axis. Its default value is the name of the first state variable.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:857
 msgid ""
 "@item\n"
 "@dfn{yaxislabel} will be used to identify the vertical axis. Its default value is the name of the second state variable.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:862
 msgid ""
 "@item\n"
 "@dfn{number_of_arrows} should be set to a square number and defines the approximate\n"
@@ -1297,12 +1301,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:864
 msgid ""
 "@strong{Examples:}\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:874
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -1315,44 +1319,44 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:878
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotdf1,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:893
 msgid ""
 "@item\n"
 "To obtain the direction field for the equation @math{diff(y,x) = x - y^2} and the solution with initial condition @math{y(-1) = 3}, we can use the command:\n"
 "@c ===beg===\n"
-"@c plotdf(x-y^2,[xfun,\"sqrt(x);-sqrt(x)\"],\n"
+"@c plotdf(x-y^2,[xfun,\\"sqrt(x);-sqrt(x)\\"],\n"
 "@c          [trajectory_at,-1,3], [direction,forward],\n"
 "@c          [y,-5,5], [x,-4,16])$\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) plotdf(x-y^2,[xfun,\"sqrt(x);-sqrt(x)\"],\n"
+"(%i1) plotdf(x-y^2,[xfun,\\"sqrt(x);-sqrt(x)\\"],\n"
 "         [trajectory_at,-1,3], [direction,forward],\n"
 "         [y,-5,5], [x,-4,16])$\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:895
 msgid ""
 "The graph also shows the function @math{y = sqrt(x)}. \n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:899
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotdf2,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:916
 msgid ""
 "@item\n"
 "The following example shows the direction field of a harmonic oscillator,\n"
@@ -1361,50 +1365,50 @@ msgid ""
 "will allow you to change the value of @math{m} interactively (@math{k} is\n"
 "fixed at 2):\n"
 "@c ===beg===\n"
-"@c plotdf([v,-k*z/m], [z,v], [parameters,\"m=2,k=2\"],\n"
-"@c            [sliders,\"m=1:5\"], [trajectory_at,6,0])$\n"
+"@c plotdf([v,-k*z/m], [z,v], [parameters,\\"m=2,k=2\\"],\n"
+"@c            [sliders,\\"m=1:5\\"], [trajectory_at,6,0])$\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) plotdf([v,-k*z/m], [z,v], [parameters,\"m=2,k=2\"],\n"
-"           [sliders,\"m=1:5\"], [trajectory_at,6,0])$\n"
+"(%i1) plotdf([v,-k*z/m], [z,v], [parameters,\\"m=2,k=2\\"],\n"
+"           [sliders,\\"m=1:5\\"], [trajectory_at,6,0])$\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:920
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotdf3,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:935
 msgid ""
 "@item\n"
 "To plot the direction field of the Duffing equation, @math{m*x''+c*x'+k*x+b*x^3 = 0}, we introduce the variable @math{y=x'} and use:\n"
 "@c ===beg===\n"
 "@c plotdf([y,-(k*x + c*y + b*x^3)/m],\n"
-"@c              [parameters,\"k=-1,m=1.0,c=0,b=1\"],\n"
-"@c              [sliders,\"k=-2:2,m=-1:1\"],[tstep,0.1])$\n"
+"@c              [parameters,\\"k=-1,m=1.0,c=0,b=1\\"],\n"
+"@c              [sliders,\\"k=-2:2,m=-1:1\\"],[tstep,0.1])$\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
 "(%i1) plotdf([y,-(k*x + c*y + b*x^3)/m],\n"
-"             [parameters,\"k=-1,m=1.0,c=0,b=1\"],\n"
-"             [sliders,\"k=-2:2,m=-1:1\"],[tstep,0.1])$\n"
+"             [parameters,\\"k=-1,m=1.0,c=0,b=1\\"],\n"
+"             [sliders,\\"k=-2:2,m=-1:1\\"],[tstep,0.1])$\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:939
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotdf4,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:945
 msgid ""
 "@item\n"
 "The direction field for a damped pendulum, including the\n"
@@ -1413,56 +1417,56 @@ msgid ""
 "the two state variables as a function of time:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:962
 msgid ""
 "@c ===beg===\n"
 "@c plotdf([w,-g*sin(a)/l - b*w/m/l], [a,w],\n"
-"@c         [parameters,\"g=9.8,l=0.5,m=0.3,b=0.05\"],\n"
+"@c         [parameters,\\"g=9.8,l=0.5,m=0.3,b=0.05\\"],\n"
 "@c         [trajectory_at,1.05,-9],[tstep,0.01],\n"
 "@c         [a,-10,2], [w,-14,14], [direction,forward],\n"
-"@c         [nsteps,300], [sliders,\"m=0.1:1\"], [versus_t,1])$\n"
+"@c         [nsteps,300], [sliders,\\"m=0.1:1\\"], [versus_t,1])$\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
 "(%i1) plotdf([w,-g*sin(a)/l - b*w/m/l], [a,w],\n"
-"        [parameters,\"g=9.8,l=0.5,m=0.3,b=0.05\"],\n"
+"        [parameters,\\"g=9.8,l=0.5,m=0.3,b=0.05\\"],\n"
 "        [trajectory_at,1.05,-9],[tstep,0.01],\n"
 "        [a,-10,2], [w,-14,14], [direction,forward],\n"
-"        [nsteps,300], [sliders,\"m=0.1:1\"], [versus_t,1])$\n"
+"        [nsteps,300], [sliders,\\"m=0.1:1\\"], [versus_t,1])$\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:966
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotdf5,8cm}@image{figures/plotdf6,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:968
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:972
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Plotting} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:974
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:976
 msgid ""
 "@deffn {Function} ploteq (@var{exp}, ...options...)\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:983
 msgid ""
 "Plots equipotential curves for @var{exp}, which should be an expression\n"
 "depending on two variables. The curves are obtained by integrating the\n"
@@ -1472,7 +1476,7 @@ msgid ""
 "fieldlines).\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:988
 msgid ""
 "This program also requires Xmaxima, even if its run from a Maxima session in\n"
 "a console, since the plot will be created by the Tk scripts in Xmaxima.\n"
@@ -1480,55 +1484,55 @@ msgid ""
 "(or gives its coordinate with in the set-up menu or via the trajectory_at option).\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:991
 msgid ""
 "Most options accepted by plotdf can also be used for ploteq and the plot\n"
 "interface is the same that was described in plotdf.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:993
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1002
 msgid ""
 "@c ===beg===\n"
 "@c V: 900/((x+1)^2+y^2)^(1/2)-900/((x-1)^2+y^2)^(1/2)$\n"
-"@c ploteq(V,[x,-2,2],[y,-2,2],[fieldlines,\"blue\"])$\n"
+"@c ploteq(V,[x,-2,2],[y,-2,2],[fieldlines,\\"blue\\"])$\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) V: 900/((x+1)^2+y^2)^(1/2)-900/((x-1)^2+y^2)^(1/2)$\n"
-"(%i2) ploteq(V,[x,-2,2],[y,-2,2],[fieldlines,\"blue\"])$\n"
+"(%i2) ploteq(V,[x,-2,2],[y,-2,2],[fieldlines,\\"blue\\"])$\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1005
 msgid ""
 "Clicking on a point will plot the equipotential curve that passes by that point\n"
 "(in red) and the orthogonal trajectory (in blue).\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1009
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Plotting} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1011
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1015
 msgid ""
 "@deffn {Function} rk @\n"
 "@fname{rk} (@var{ODE}, @var{var}, @var{initial}, @var{domain}) @\n"
 "@fname{rk} ([@var{ODE1}, @dots{}, @var{ODEm}], [@var{v1}, @dots{}, @var{vm}], [@var{init1}, @dots{}, @var{initm}], @var{domain})\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1022
 msgid ""
 "The first form solves numerically one first-order ordinary differential\n"
 "equation, and the second form solves a system of m of those equations,\n"
@@ -1538,7 +1542,7 @@ msgid ""
 "variable with respect to the independent variable.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1032
 msgid ""
 "The independent variable is specified with @code{domain}, which must be a\n"
 "list of four elements as, for instance:\n"
@@ -1551,7 +1555,7 @@ msgid ""
 "within that interval.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1045
 msgid ""
 "If @var{m} equations are going to be solved, there should be @var{m}\n"
 "dependent variables @var{v1}, @var{v2}, ..., @var{vm}. The initial values\n"
@@ -1567,7 +1571,7 @@ msgid ""
 "as the derivative of the third dependent variable.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1054
 msgid ""
 "The program will try to integrate the equations from the initial value\n"
 "of the independent variable until its last value, using constant\n"
@@ -1579,12 +1583,12 @@ msgid ""
 "by the values of the dependent variables corresponding to that point.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1056
 msgid ""
 "To solve numerically the differential equation\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1065
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -1596,13 +1600,13 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1068
 msgid ""
 "With initial value x(t=0) = 1, in the interval of t from 0 to 8 and with\n"
 "increments of 0.1 for t, use:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1077
 msgid ""
 "@c ===beg===\n"
 "@c results: rk(t-x^2,x,1,[t,0,8,0.1])$\n"
@@ -1614,17 +1618,17 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1079
 msgid ""
 "the results will be saved in the list @code{results} and the plot will show the solution obtained, with @var{t} on the horizontal axis and @var{x} on the vertical axis.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1081
 msgid ""
 "To solve numerically the system:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1090
 msgid ""
 "@ifnottex\n"
 "@example\n"
@@ -1636,36 +1640,32 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1092
 msgid ""
 "for t between 0 and 4, and with values of -1.25 and 0.75 for x and y at t=0:\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1101
 msgid ""
 "@c ===beg===\n"
 "@c sol: rk([4-x^2-4*y^2,y^2-x^2+1],[x,y],[-1.25,0.75],[t,0,4,0.02])$\n"
-"@c plot2d ([discrete,makelist([p[1],p[3]],p,sol)], [xlabel,\"t\"],[ylabel,\"y\"])$\n"
+"@c plot2d ([discrete,makelist([p[1],p[3]],p,sol)], [xlabel,\\"t\\"],[ylabel,\\"y\\"])$\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) sol: rk([4-x^2-4*y^2,y^2-x^2+1],[x,y],[-1.25,0.75],[t,0,4,0.02])$\n"
-"(%i2) plot2d ([discrete,makelist([p[1],p[3]],p,sol)], [xlabel,\"t\"],[ylabel,\"y\"])$\n"
+"(%i2) plot2d ([discrete,makelist([p[1],p[3]],p,sol)], [xlabel,\\"t\\"],[ylabel,\\"y\\"])$\n"
 "@end example\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1103
 msgid ""
 "The plot will show the solution for variable @var{y} as a function of @var{t}.\n"
 msgstr ""
 
-# Numerical.texi
+#: Numerical.texi:1107
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Numerical.texi
-msgid ""
-"@end deffn\n"
-msgstr ""

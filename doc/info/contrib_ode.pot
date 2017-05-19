@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# contrib_ode.texi
+msgstr ""
+
+#: contrib_ode.texi:8
 msgid ""
 "@menu\n"
 "* Introduction to contrib_ode::\n"
@@ -28,17 +28,17 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:10
 msgid ""
 "@node Introduction to contrib_ode, Functions and Variables for contrib_ode, contrib_ode-pkg, contrib_ode-pkg\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:12
 msgid ""
 "@section Introduction to contrib_ode \n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:20
 msgid ""
 "Maxima's ordinary differential equation (ODE) solver @code{ode2} solves\n"
 "elementary linear ODEs of first and second order.  The function\n"
@@ -49,13 +49,13 @@ msgid ""
 "moved from the contrib directory and integrated into Maxima.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:23
 msgid ""
 "This package must be loaded with the command @code{load('contrib_ode)}\n"
 "before use.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:29
 msgid ""
 "The calling convention for @code{contrib_ode} is identical to @code{ode2}.  \n"
 "It takes\n"
@@ -64,7 +64,7 @@ msgid ""
 "variable.  When successful, it returns a list of solutions.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:37
 msgid ""
 "The form of the solution differs from @code{ode2}.\n"
 "As non-linear equations can have multiple solutions, \n"
@@ -75,30 +75,30 @@ msgid ""
 "an explicit solution for the dependent variable,\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:40
 msgid ""
 "@item\n"
 "an implicit solution for the dependent variable,\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:43
 msgid ""
 "@item\n"
 "a parametric solution in terms of variable @code{%t}, or\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:46
 msgid ""
 "@item\n"
 "a tranformation into another ODE in variable @code{%u}.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:48
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:54
 msgid ""
 "@code{%c} is used to represent the constant of integration for first order equations.\n"
 "@code{%k1} and @code{%k2} are the constants for second order equations.  \n"
@@ -107,13 +107,13 @@ msgid ""
 "perhaps printing out an error message.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:57
 msgid ""
 "It is necessary to return a list of solutions, as even first order\n"
 "non-linear ODEs can have multiple solutions.  For example:\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:77
 msgid ""
 "@c ===beg===\n"
 "@c load('contrib_ode)$\n"
@@ -136,12 +136,12 @@ msgid ""
 "                    dx               dx\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:79
 msgid ""
 "              first order equation not linear in y'\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:88
 msgid ""
 "                                             x\n"
 "(%o3)             [y = log(x) + %c, y = %c %e ]\n"
@@ -153,13 +153,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:91
 msgid ""
 "Nonlinear ODEs can have singular solutions without constants of\n"
 "integration, as in the second solution of the following example:\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:110
 msgid ""
 "@c ===beg===\n"
 "@c load('contrib_ode)$\n"
@@ -181,12 +181,12 @@ msgid ""
 "                       dx       dx\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:112
 msgid ""
 "              first order equation not linear in y'\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:122
 msgid ""
 "                                           2\n"
 "                                 2        x\n"
@@ -197,12 +197,16 @@ msgid ""
 "(%o4)                       clairault\n"
 "@end group\n"
 "@end example\n"
+msgstr ""
+
+#: contrib_ode.texi:127
+msgid ""
 "The following ODE has two parametric solutions in terms of the dummy\n"
 "variable @code{%t}.  In this case the parametric solutions can be manipulated\n"
 "to give explicit solutions.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:152
 msgid ""
 "@c ===beg===\n"
 "@c load('contrib_ode)$\n"
@@ -230,12 +234,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:154
 msgid ""
 "The following example (Kamke 1.112) demonstrates an implicit solution.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:185
 msgid ""
 "@c ===beg===\n"
 "@c load('contrib_ode)$\n"
@@ -269,12 +273,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:187
 msgid ""
 " \n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:219
 msgid ""
 "The following Riccati equation is transformed into a linear\n"
 "second order ODE in the variable @code{%u}.  Maxima is unable to\n"
@@ -307,6 +311,10 @@ msgid ""
 "(%o4)                        riccati\n"
 "@end group\n"
 "@end example\n"
+msgstr ""
+
+#: contrib_ode.texi:226
+msgid ""
 "For first order ODEs @code{contrib_ode} calls @code{ode2}.  It then tries the\n"
 "following methods: factorization, Clairault, Lagrange, Riccati,\n"
 "Abel and Lie symmetry methods.  The Lie method is not attempted\n"
@@ -314,55 +322,59 @@ msgid ""
 "if the Riccati method returns an unsolved second order ODE.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:228
 msgid ""
 "For second order ODEs @code{contrib_ode} calls @code{ode2} then @code{odelin}.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:231
 msgid ""
 "Extensive debugging traces and messages are displayed if the command\n"
 "@code{put('contrib_ode,true,'verbose)} is executed.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:235
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Share packages} @category{Package contrib_ode}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: contrib_ode.texi:239
+msgid ""
 "@node Functions and Variables for contrib_ode, Possible improvements to contrib_ode, Introduction to contrib_ode, contrib_ode-pkg\n"
 "@section Functions and Variables for contrib_ode\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:241
 msgid ""
 "@deffn {Function} contrib_ode (@var{eqn}, @var{y}, @var{x})\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:244
 msgid ""
 "Returns a list of solutions of the ODE @var{eqn} with \n"
 "independent variable @var{x} and dependent variable @var{y}.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:248
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:250
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:252
 msgid ""
 "@deffn {Function} odelin (@var{eqn}, @var{y}, @var{x})\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:257
 msgid ""
 "@code{odelin} solves linear homogeneous ODEs of first and \n"
 "second order with \n"
@@ -370,14 +382,14 @@ msgid ""
 "It returns a fundamental solution set of the ODE.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:261
 msgid ""
 "For second order ODEs, @code{odelin} uses a method, due to Bronstein\n"
 "and Lafaille, that searches for solutions in terms of given \n"
 "special functions. \n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:276
 msgid ""
 "@c ===beg===\n"
 "@c load('contrib_ode)$\n"
@@ -395,31 +407,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:280
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:282
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:284
 msgid ""
 "@deffn {Function} ode_check (@var{eqn}, @var{soln})\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:288
 msgid ""
 "Returns the value of ODE @var{eqn} after substituting a\n"
 "possible solution @var{soln}.  The value is equivalent to \n"
 "zero if @var{soln} is a solution of @var{eqn}.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:321
 msgid ""
 "@c ===beg===\n"
 "@c load('contrib_ode)$\n"
@@ -455,114 +467,114 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:325
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:327
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:329
 msgid ""
 "@defvr {System variable} method\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:332
 msgid ""
 "The variable @code{method} is set to the successful solution\n"
 "method. \n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:336
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:338
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:340
 msgid ""
 "@defvr {Variable} %c\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:342
 msgid ""
 "@code{%c} is the integration constant for first order ODEs.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:346
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:348
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:350
 msgid ""
 "@defvr {Variable} %k1\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:352
 msgid ""
 "@code{%k1} is the first integration constant for second order ODEs.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:356
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:358
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:360
 msgid ""
 "@defvr {Variable} %k2\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:362
 msgid ""
 "@code{%k2} is the second integration constant for second order ODEs.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:366
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:368
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:371
 msgid ""
 "@anchor{gauss_a}\n"
 "@deffn {Function} gauss_a (@var{a}, @var{b}, @var{c}, @var{x})\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:376
 msgid ""
 "@code{gauss_a(a,b,c,x)} and @code{gauss_b(a,b,c,x)} are 2F1 \n"
 "geometric functions.  They represent any two independent\n"
@@ -570,186 +582,190 @@ msgid ""
 "@code{x(1-x) diff(y,x,2) + [c-(a+b+1)x] diff(y,x) - aby = 0} (A&S 15.5.1).  \n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:380
 msgid ""
 "The only use of these functions is in solutions of ODEs returned by \n"
 "@code{odelin} and @code{contrib_ode}.  The definition and use of these \n"
 "functions may change in future releases of Maxima.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:382
 msgid ""
 "See also @mrefcomma{gauss_b} @mref{dgauss_a} and @mrefdot{gauss_b}\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:386
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:388
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:392
 msgid ""
 "@anchor{gauss_b}\n"
 "@deffn {Function} gauss_b (@var{a}, @var{b}, @var{c}, @var{x})\n"
 "See @mrefdot{gauss_a}\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:396
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:398
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:402
 msgid ""
 "@anchor{dgauss_a}\n"
 "@deffn {Function} dgauss_a (@var{a}, @var{b}, @var{c}, @var{x})\n"
 "The derivative with respect to @var{x} of @code{gauss_a(@var{a}, @var{b}, @var{c}, @var{x})}.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:406
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:408
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:411
 msgid ""
 "@deffn {Function} dgauss_b (@var{a}, @var{b}, @var{c}, @var{x})\n"
 "The derivative with respect to @var{x} of @code{gauss_b(@var{a}, @var{b}, @var{c}, @var{x})}.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:415
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:417
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: contrib_ode.texi:421
+msgid ""
 "@anchor{kummer_m}\n"
 "@deffn {Function} kummer_m (@var{a}, @var{b}, @var{x})\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:424
 msgid ""
 "Kummer's M function, as defined in Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Section 13.1.2.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:428
 msgid ""
 "The only use of this function is in solutions of ODEs returned by \n"
 "@code{odelin} and @code{contrib_ode}.  The definition and use of this \n"
 "function may change in future releases of Maxima.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:430
 msgid ""
 "See also @mrefcomma{kummer_u} @mrefcomma{dkummer_m} and @mrefdot{dkummer_u}\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:434
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:436
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:439
 msgid ""
 "@anchor{kummer_u}\n"
 "@deffn {Function} kummer_u (@var{a}, @var{b}, @var{x})\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:442
 msgid ""
 "Kummer's U function, as defined in Abramowitz and Stegun,\n"
 "@i{Handbook of Mathematical Functions}, Section 13.1.3.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:444
 msgid ""
 "See @mrefdot{kummer_m}\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:448
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:450
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:454
 msgid ""
 "@anchor{dkummer_m}\n"
 "@deffn {Function} dkummer_m (@var{a}, @var{b}, @var{x})\n"
 "The derivative with respect to @var{x} of @code{kummer_m(@var{a}, @var{b}, @var{x})}.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:458
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:460
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:464
 msgid ""
 "@anchor{dkummer_u}\n"
 "@deffn {Function} dkummer_u (@var{a}, @var{b}, @var{x})\n"
 "The derivative with respect to @var{x} of @code{kummer_u(@var{a}, @var{b}, @var{x})}.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:468
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:470
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:478
 msgid ""
 "@deffn {Function} bessel_simplify (@var{expr})\n"
 "Simplifies expressions containing Bessel functions bessel_j, bessel_y,\n"
@@ -760,13 +776,13 @@ msgid ""
 "by functions of order n-1 and n-2.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:481
 msgid ""
 "This process repeated until all the orders\n"
 "differ by less than 2.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:510
 msgid ""
 "@c ===beg===\n"
 "@c load('contrib_ode)$\n"
@@ -798,7 +814,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:516
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
@@ -807,25 +823,25 @@ msgid ""
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:518
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:522
 msgid ""
 "@deffn {Function} expintegral_e_simplify (@var{expr})\n"
 "Simplify expressions containing exponential integral expintegral_e\n"
 "using the recurrence (A&S 5.1.14).\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:525
 msgid ""
 "   expintegral_e(n+1,z) \n"
 "        = (1/n) * (exp(-z)-z*expintegral_e(n,z))      n = 1,2,3 ....\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:531
 msgid ""
 "@opencatbox\n"
 "@category{Package contrib_ode}\n"
@@ -834,82 +850,94 @@ msgid ""
 "@closecatbox\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:533
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: contrib_ode.texi:537
+msgid ""
 "@node Possible improvements to contrib_ode, Test cases for contrib_ode, Functions and Variables for contrib_ode, contrib_ode-pkg\n"
 "@section Possible improvements to contrib_ode\n"
+msgstr ""
+
+#: contrib_ode.texi:540
+msgid ""
 "These routines are work in progress.  I still need to:\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:542
 msgid ""
 "@itemize @bullet\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:545
 msgid ""
 "@item\n"
 "Extend the FACTOR method @code{ode1_factor} to work for multiple roots.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:549
 msgid ""
 "@item\n"
 "Extend the FACTOR method @code{ode1_factor} to attempt to solve higher\n"
 "  order factors.  At present it only attemps to solve linear factors.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:553
 msgid ""
 "@item\n"
 "Fix the LAGRANGE routine @code{ode1_lagrange} to prefer real roots over\n"
 "  complex roots.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:556
 msgid ""
 "@item\n"
 "Add additional methods for Riccati equations.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:560
 msgid ""
 "@item\n"
 "Improve the detection of Abel equations of second kind.  The exisiting\n"
 "  pattern matching is weak.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:566
 msgid ""
 "@item\n"
 "Work on the Lie symmetry group routine @code{ode1_lie}.  There are quite a\n"
 "  few problems with it: some parts are unimplemented; some test cases\n"
 "  seem to run forever; other test cases crash; yet others return very\n"
-"  complex \"solutions\".  I wonder if it really ready for release yet.\n"
+"  complex \\"solutions\\".  I wonder if it really ready for release yet.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:569
 msgid ""
 "@item\n"
 "Add more test cases.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:571
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:574
 msgid ""
 "@node Test cases for contrib_ode, References for contrib_ode, Possible improvements to contrib_ode, contrib_ode-pkg\n"
 "@section Test cases for contrib_ode\n"
+msgstr ""
+
+#: contrib_ode.texi:579
+msgid ""
 "The routines have been tested on a approximately one thousand  test cases \n"
 "from Murphy,\n"
 "Kamke, Zwillinger and elsewhere.  These are included in the tests subdirectory.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:585
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -918,70 +946,74 @@ msgid ""
 "  Kamke.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:589
 msgid ""
 "@item\n"
 "The other routines often return a single solution when multiple\n"
 "  solutions exist.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:593
 msgid ""
 "@item\n"
-"Some of the \"solutions\" from @code{ode1_lie} are overly complex and\n"
+"Some of the \\"solutions\\" from @code{ode1_lie} are overly complex and\n"
 "  impossible to check.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:596
 msgid ""
 "@item\n"
 "There are some crashes.\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:598
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:601
 msgid ""
 "@node References for contrib_ode, ,Test cases for contrib_ode, contrib_ode-pkg\n"
 "@section References for contrib_ode\n"
+msgstr ""
+
+#: contrib_ode.texi:607
+msgid ""
 "@enumerate\n"
 "@item\n"
 "E. Kamke, Differentialgleichungen Losungsmethoden und Losungen, Vol 1,\n"
 "    Geest & Portig, Leipzig, 1961\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:611
 msgid ""
 "@item\n"
 "G. M. Murphy, Ordinary Differential Equations and Their Solutions,\n"
 "    Van Nostrand, New York, 1960\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:615
 msgid ""
 "@item\n"
 "D. Zwillinger, Handbook of Differential Equations, 3rd edition,\n"
 "    Academic Press, 1998\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:619
 msgid ""
 "@item\n"
 "F. Schwarz, Symmetry Analysis of Abel's Equation, Studies in\n"
 "    Applied Mathematics, 100:269-294 (1998)\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:623
 msgid ""
 "@item\n"
 "F. Schwarz, Algorithmic Solution of Abel's Equation,\n"
 "    Computing 61, 39-49 (1998)\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:629
 msgid ""
 "@item\n"
 "E. S. Cheb-Terrab, A. D. Roche, Symmetries and First Order\n"
@@ -990,7 +1022,7 @@ msgid ""
 "    (@url{http://lie.uwaterloo.ca/papers/ode_vii.pdf})\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:637
 msgid ""
 "@item\n"
 "E. S. Cheb-Terrab, T. Kolokolnikov,  First Order ODEs,\n"
@@ -999,12 +1031,16 @@ msgid ""
 "@c dead link\n"
 "    (@url{http://arxiv.org/abs/math-ph/0007023},@*\n"
 "    @url{http://lie.uwaterloo.ca/papers/ode_iv.pdf})\n"
+msgstr ""
+
+#: contrib_ode.texi:642
+msgid ""
 "@item\n"
 "G. W. Bluman, S. C. Anco, Symmetry and Integration Methods for\n"
 "    Differential Equations, Springer, (2002)\n"
 msgstr ""
 
-# contrib_ode.texi
+#: contrib_ode.texi:649
 msgid ""
 "@item \n"
 "M. Bronstein, S. Lafaille,\n"
@@ -1012,5 +1048,5 @@ msgid ""
 "of special functions,\n"
 "Proceedings of ISSAC 2002, Lille, ACM Press, 23-28. \n"
 "(@url{http://www-sop.inria.fr/cafe/Manuel.Bronstein/publications/issac2002.pdf})\n"
-"@end enumerate\n"
 msgstr ""
+

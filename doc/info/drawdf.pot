@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# drawdf.texi
+msgstr ""
+
+#: drawdf.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to drawdf::\n"
@@ -25,27 +25,27 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:8
 msgid ""
 "@node Introduction to drawdf, Functions and Variables for drawdf, drawdf-pkg, drawdf-pkg\n"
 "@section Introduction to drawdf\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:12
 msgid ""
 "The function @code{drawdf} draws the direction field of a first-order\n"
 "Ordinary Differential Equation (ODE) or a system of two autonomous\n"
 "first-order ODE's.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:16
 msgid ""
 "Since this is an additional package, in order to use it you must first\n"
 "load it with @code{load(drawdf)}.  Drawdf is built upon the @code{draw}\n"
 "package, which requires Gnuplot 4.2.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:29
 msgid ""
 "To plot the direction field of a single ODE, the ODE must be written in\n"
 "the form:\n"
@@ -61,7 +61,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:35
 msgid ""
 "and the function @var{F} should be given as the argument for\n"
 "@code{drawdf}. If the independent and dependent variables are not @var{x},\n"
@@ -70,7 +70,7 @@ msgid ""
 "(see the examples).\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:48
 msgid ""
 "To plot the direction field of a set of two autonomous ODE's, they must\n"
 "be written in the form\n"
@@ -86,7 +86,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:58
 msgid ""
 "and the argument for @code{drawdf} should be a list with the two\n"
 "functions @var{G} and @var{F}, in that order; namely, the first\n"
@@ -99,30 +99,34 @@ msgid ""
 "then the one on the vertical axis.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:62
 msgid ""
 "If only one ODE is given, @code{drawdf} will implicitly admit\n"
 "@code{x=t}, and @code{G(x,y)=1}, transforming the non-autonomous\n"
 "equation into a system of two autonomous equations.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:68
 msgid ""
 "@opencatbox\n"
 "@category{Differential equations} @category{Plotting}\n"
 "@category{Share packages} @category{Package drawdf}\n"
 "@category{Package draw}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: drawdf.texi:72
+msgid ""
 "@node Functions and Variables for drawdf,  , Introduction to drawdf, drawdf-pkg\n"
 "@section Functions and Variables for drawdf\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:74
 msgid ""
 "@subsection Functions\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:82
 msgid ""
 "@deffn {Function} drawdf @\n"
 "@fname{drawdf} (@var{dydx}, ...options and objects...) @\n"
@@ -133,13 +137,13 @@ msgid ""
 "@fname{drawdf} ([@var{dudt},@var{dvdt}], [@var{u},@var{umin},@var{umax}], [@var{v},@var{vmin},@var{vmax}], ...options and objects...)\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:85
 msgid ""
 "Function @code{drawdf} draws a 2D direction field with optional\n"
 "solution curves and other graphics using the @code{draw} package.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:91
 msgid ""
 "The first argument specifies the derivative(s), and must be either an\n"
 "expression or a list of two expressions.  @var{dydx}, @var{dxdt} and\n"
@@ -148,7 +152,7 @@ msgid ""
 "@var{u} and @var{v}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:98
 msgid ""
 "If the independent and dependent variables are not @var{x} and\n"
 "@var{y}, then their names must be specified immediately following the\n"
@@ -158,7 +162,7 @@ msgid ""
 "@code{[}@var{v},@var{vmin},@var{vmax}@code{]}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:104
 msgid ""
 "The remaining arguments are @i{graphic options}, @i{graphic objects},\n"
 "or lists containing graphic options and objects, nested to arbitrary\n"
@@ -167,7 +171,7 @@ msgid ""
 "@code{gr2d} from the @code{draw} package.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:110
 msgid ""
 "The arguments are interpreted sequentially: @i{graphic options} affect\n"
 "all following @i{graphic objects}.  Furthermore, @i{graphic objects}\n"
@@ -176,14 +180,14 @@ msgid ""
 "of the scene.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:114
 msgid ""
 "The additional @i{graphic objects} supported by @code{drawdf} include:\n"
 "@code{solns_at}, @code{points_at}, @code{saddles_at}, @code{soln_at},\n"
 "@code{point_at}, and @code{saddle_at}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:120
 msgid ""
 "The additional @i{graphic options} supported by @code{drawdf} include:\n"
 "@code{field_degree}, @code{soln_arrows}, @code{field_arrows},\n"
@@ -192,7 +196,7 @@ msgid ""
 "@code{field_tstep}, @code{field_nsteps}, and @code{field_duration}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:125
 msgid ""
 "Commonly used @i{graphic objects} inherited from the @code{draw}\n"
 "package include: @code{explicit}, @code{implicit}, @code{parametric},\n"
@@ -200,7 +204,7 @@ msgid ""
 "others supported by @code{draw2d} and @code{gr2d}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:134
 msgid ""
 "Commonly used @i{graphic options} inherited from the @code{draw}\n"
 "package include:@*\n"
@@ -212,29 +216,29 @@ msgid ""
 "others supported by @code{draw2d} and @code{gr2d}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:136
 msgid ""
 "See also @mref{draw2d}. \n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:140
 msgid ""
 "Users of wxMaxima or Imaxima may optionally use @code{wxdrawdf}, which\n"
 "is identical to @code{drawdf} except that the graphics are drawn\n"
 "within the notebook using @code{wxdraw}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:142
 msgid ""
 "To make use of this function, write first @code{load(drawdf)}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:144
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:151
 msgid ""
 "@example\n"
 "(%i1) load(drawdf)$\n"
@@ -244,13 +248,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:154
 msgid ""
 "For backward compatibility, @code{drawdf} accepts\n"
 "most of the parameters supported by plotdf.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:159
 msgid ""
 "@example\n"
 "(%i5) drawdf(2*cos(t)-1+y, [t,y], [t,-5,10], [y,-4,9],\n"
@@ -258,14 +262,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:163
 msgid ""
 "@code{soln_at} and @code{solns_at} draw solution curves\n"
 "passing through the specified points, using a slightly\n"
 "enhanced 4th-order Runge Kutta numerical integrator.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:169
 msgid ""
 "@example\n"
 "(%i6) drawdf(2*cos(t)-1+y, [t,-5,10], [y,-4,9],\n"
@@ -274,7 +278,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:174
 msgid ""
 "@code{field_degree=2} causes the field to be composed of quadratic\n"
 "splines, based on the first and second derivatives at each grid point.\n"
@@ -282,7 +286,7 @@ msgid ""
 "of columns and rows in the grid.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:181
 msgid ""
 "@example\n"
 "(%i7) drawdf(2*cos(t)-1+y, [t,-5,10], [y,-4,9],\n"
@@ -292,14 +296,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:185
 msgid ""
 "@code{soln_arrows=true} adds arrows to the solution curves, and (by\n"
 "default) removes them from the direction field.  It also changes the\n"
 "default colors to emphasize the solution curves.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:191
 msgid ""
 "@example\n"
 "(%i8) drawdf(2*cos(t)-1+y, [t,-5,10], [y,-4,9],\n"
@@ -308,7 +312,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:198
 msgid ""
 "@code{duration=40} specifies the time duration of numerical\n"
 "integration (default 10).  Integration will also stop automatically if\n"
@@ -318,7 +322,7 @@ msgid ""
 "model a predator-prey system.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:207
 msgid ""
 "@example\n"
 "(%i9) drawdf([x*(1-x-y), y*(3/4-y-x/2)], [x,0,1.1], [y,0,1],\n"
@@ -330,14 +334,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:211
 msgid ""
 "@code{field_degree='solns} causes the field to be composed\n"
 "of many small solution curves computed by 4th-order\n"
 "Runge Kutta, with better results in this case.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:220
 msgid ""
 "@example\n"
 "(%i10) drawdf([x*(1-x-y), y*(3/4-y-x/2)], [x,0,1.1], [y,0,1],\n"
@@ -349,7 +353,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:228
 msgid ""
 "@code{saddles_at} attempts to automatically linearize the equation at\n"
 "each saddle, and to plot a numerical solution corresponding to each\n"
@@ -360,7 +364,7 @@ msgid ""
 "pendulum.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:236
 msgid ""
 "@example\n"
 "(%i11) drawdf([y,-9*sin(x)-y/5], tstep=0.05,\n"
@@ -371,12 +375,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:238
 msgid ""
 "@code{show_field=false} suppresses the field entirely.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:247
 msgid ""
 "@example\n"
 "(%i12) drawdf([y,-9*sin(x)-y/5], tstep=0.05,\n"
@@ -388,57 +392,54 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:251
 msgid ""
 "@code{drawdf} passes all unrecognized parameters to @code{draw2d} or\n"
 "@code{gr2d}, allowing you to combine the full power of the @code{draw}\n"
 "package with @code{drawdf}.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:259
 msgid ""
 "@example\n"
 "(%i13) drawdf(x^2+y^2, [x,-2,2], [y,-2,2], field_color=gray,\n"
-"              key=\"soln 1\", color=black, soln_at(0,0),\n"
-"              key=\"soln 2\", color=red, soln_at(0,1),\n"
-"              key=\"isocline\", color=green, line_width=2,\n"
+"              key=\\"soln 1\\", color=black, soln_at(0,0),\n"
+"              key=\\"soln 2\\", color=red, soln_at(0,1),\n"
+"              key=\\"isocline\\", color=green, line_width=2,\n"
 "              nticks=100, parametric(cos(t),sin(t),t,0,2*%pi))$\n"
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:263
 msgid ""
 "@code{drawdf} accepts nested lists of graphic options and objects,\n"
 "allowing convenient use of makelist and other function calls to\n"
 "generate graphics.\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:274
 msgid ""
 "@example\n"
 "(%i14) colors : ['red,'blue,'purple,'orange,'green]$\n"
 "(%i15) drawdf([x-x*y/2, (x*y - 3*y)/4],\n"
 "              [x,2.5,3.5], [y,1.5,2.5],\n"
 "              field_color = gray,\n"
-"              makelist([ key   = concat(\"soln\",k),\n"
+"              makelist([ key   = concat(\\"soln\\",k),\n"
 "                         color = colors[k],\n"
 "                         soln_at(3, 2 + k/20) ],\n"
 "                       k,1,5))$\n"
 "@end example\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:278
 msgid ""
 "@opencatbox\n"
 "@category{Package drawdf}\n"
 "@closecatbox\n"
 msgstr ""
 
-# drawdf.texi
+#: drawdf.texi:280
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# drawdf.texi
-msgid ""
-msgstr ""

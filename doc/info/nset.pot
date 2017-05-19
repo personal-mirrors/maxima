@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# nset.texi
+msgstr ""
+
+#: nset.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to Sets::       \n"
@@ -25,13 +25,13 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:8
 msgid ""
 "@node Introduction to Sets, Functions and Variables for Sets, Sets, Sets\n"
 "@section Introduction to Sets\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:14
 msgid ""
 "Maxima provides set functions, such as intersection and \n"
 "union, for finite sets that are defined by explicit enumeration.\n"
@@ -40,7 +40,7 @@ msgid ""
 "work with sets that have members that are either lists or sets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:20
 msgid ""
 "In addition to functions for finite sets, Maxima provides some\n"
 "functions related to combinatorics; these include the Stirling\n"
@@ -49,12 +49,12 @@ msgid ""
 "Maxima also defines a Kronecker delta function.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:22
 msgid ""
 "@subsection Usage\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:28
 msgid ""
 "To construct a set with members @code{a_1, ..., a_n}, write\n"
 "@code{set(a_1, ..., a_n)} or @code{@{a_1, ..., a_n@}};\n"
@@ -63,13 +63,13 @@ msgid ""
 "Sets are always displayed with curly braces.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:31
 msgid ""
 "If a member is listed more than\n"
 "once, simplification eliminates the redundant member.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:60
 msgid ""
 "@c ===beg===\n"
 "@c set();\n"
@@ -101,7 +101,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:69
 msgid ""
 "Two would-be elements @var{x} and @var{y} are redundant\n"
 "(i.e., considered the same for the purpose of set construction)\n"
@@ -113,7 +113,7 @@ msgid ""
 "in that case the elements @var{x} and @var{y} are considered distinct.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:111
 msgid ""
 "@c ===beg===\n"
 "@c x: a/c + b/c;\n"
@@ -158,12 +158,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:113
 msgid ""
 "To construct a set from the elements of a list, use @code{setify}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:121
 msgid ""
 "@c ===beg===\n"
 "@c setify ([b, a]);\n"
@@ -174,14 +174,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:125
 msgid ""
 "Set members @code{x} and @code{y} are equal provided @code{is(x = y)} \n"
 "evaluates to @code{true}. Thus @code{rat(x)} and @code{x} are equal as set\n"
 "members; consequently, \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:133
 msgid ""
 "@c ===beg===\n"
 "@c {x, rat(x)};\n"
@@ -192,13 +192,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:136
 msgid ""
 "Further, since @code{is((x - 1)*(x + 1) = x^2 - 1)} evaluates to @code{false}, \n"
 "@code{(x - 1)*(x + 1)} and @code{x^2 - 1} are distinct set members; thus \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:145
 msgid ""
 "@c ===beg===\n"
 "@c {(x - 1)*(x + 1), x^2 - 1};\n"
@@ -210,12 +210,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:147
 msgid ""
 "To reduce this set to a singleton set, apply @code{rat} to each set member:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:160
 msgid ""
 "@c ===beg===\n"
 "@c {(x - 1)*(x + 1), x^2 - 1};\n"
@@ -231,13 +231,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:163
 msgid ""
 "To remove redundancies from other sets, you may need to use other\n"
 "simplification functions. Here is an example that uses @code{trigsimp}:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:175
 msgid ""
 "@c ===beg===\n"
 "@c {1, cos(x)^2 + sin(x)^2};\n"
@@ -252,7 +252,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:180
 msgid ""
 "A set is simplified when its members are non-redundant and\n"
 "sorted. The current version of the set functions uses the Maxima function\n"
@@ -260,13 +260,13 @@ msgid ""
 "the set functions might use a different ordering function}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:183
 msgid ""
 "Some operations on sets, such as substitution, automatically force a \n"
 "re-simplification; for example,\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:199
 msgid ""
 "@c ===beg===\n"
 "@c s: {a, b, c}$\n"
@@ -285,7 +285,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:205
 msgid ""
 "Maxima treats lists and sets as distinct objects;\n"
 "functions such as @code{union} and @code{intersection} complain\n"
@@ -294,7 +294,7 @@ msgid ""
 "to a set. Thus\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:217
 msgid ""
 "@c ===beg===\n"
 "@c union ([1, 2], {a, b});\n"
@@ -309,7 +309,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:222
 msgid ""
 "To extract all set elements of a set @code{s} that satisfy a predicate\n"
 "@code{f}, use @code{subset(s, f)}. (A @i{predicate} is a \n"
@@ -317,7 +317,7 @@ msgid ""
 "in a given set that do not depend on a variable @code{z}, use\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:232
 msgid ""
 "@c ===beg===\n"
 "@c subset ({x + y + z, x - y + 4, x + y - 5}, \n"
@@ -330,31 +330,31 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:235
 msgid ""
 "The section @ref{Functions and Variables for Sets} has a complete list of\n"
 "the set functions in Maxima.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:239
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:241
 msgid ""
 "@subsection Set Member Iteration\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:244
 msgid ""
 "There two ways to to iterate over set members. One way is the use\n"
 "@code{map}; for example:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:252
 msgid ""
 "@c ===beg===\n"
 "@c map (f, {a, b, c});\n"
@@ -365,12 +365,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:254
 msgid ""
 "The other way is to use @code{for @var{x} in @var{s} do}\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:268
 msgid ""
 "@c ===beg===\n"
 "@c s: {a, b, c};\n"
@@ -387,7 +387,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:278
 msgid ""
 "The Maxima functions @code{first} and @code{rest} work\n"
 "correctly on sets. Applied to a set, @code{first} returns the first\n"
@@ -400,7 +400,7 @@ msgid ""
 "@code{first} and @code{rest} may function differently or not at all.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:284
 msgid ""
 "@c WHAT EXACTLY IS THE EFFECT OF ordergreat AND orderless ON THE SET FUNCTIONS ??\n"
 "Maxima's @code{orderless} and @code{ordergreat} mechanisms are \n"
@@ -409,58 +409,58 @@ msgid ""
 "and do not call @code{unorder}. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:286
 msgid ""
 "@subsection Authors\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:290
 msgid ""
 "Stavros Macrakis of Cambridge, Massachusetts and Barton Willis of the\n"
 "University of Nebraska at Kearney (UNK) wrote the Maxima set functions and their\n"
 "documentation. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:293
 msgid ""
 "@node Functions and Variables for Sets,  , Introduction to Sets, Sets\n"
 "@section Functions and Variables for Sets\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:296
 msgid ""
 "@anchor{adjoin}\n"
 "@deffn {Function} adjoin (@var{x}, @var{a}) \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:298
 msgid ""
 "Returns the union of the set @var{a} with @code{@{@var{x}@}}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:300
 msgid ""
 "@code{adjoin} complains if @var{a} is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:304
 msgid ""
 "@code{adjoin(@var{x}, @var{a})} and @code{union(set(@var{x}), @var{a})}\n"
 "are equivalent;\n"
 "however, @code{adjoin} may be somewhat faster than @code{union}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:306
 msgid ""
 "See also @mref{disjoin}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:308
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:319
 msgid ""
 "@c ===beg===\n"
 "@c adjoin (c, {a, b});\n"
@@ -474,53 +474,53 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:323
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:325
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:328
 msgid ""
 "@anchor{belln}\n"
 "@deffn {Function} belln (@var{n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:331
 msgid ""
 "Represents the @math{n}-th Bell number.\n"
 "@code{belln(n)} is the number of partitions of a set with @var{n} members.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:335
 msgid ""
 "For nonnegative integers @var{n},\n"
 "@code{belln(@var{n})} simplifies to the @math{n}-th Bell number.\n"
 "@code{belln} does not simplify for any other arguments.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:337
 msgid ""
 "@code{belln} distributes over equations, lists, matrices, and sets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:339
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:341
 msgid ""
 "@code{belln} applied to nonnegative integers.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:357
 msgid ""
 "@c ===beg===\n"
 "@c makelist (belln (i), i, 0, 6);\n"
@@ -539,12 +539,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:359
 msgid ""
 "@code{belln} applied to arguments which are not nonnegative integers.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:367
 msgid ""
 "@c ===beg===\n"
 "@c [belln (x), belln (sqrt(3)), belln (-9)];\n"
@@ -555,41 +555,41 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:371
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:373
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:376
 msgid ""
 "@anchor{cardinality}\n"
 "@deffn {Function} cardinality (@var{a})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:378
 msgid ""
 "Returns the number of distinct elements of the set @var{a}. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:381
 msgid ""
 "@code{cardinality} ignores redundant elements\n"
 "even when simplification is disabled.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:383
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:400
 msgid ""
 "@c ===beg===\n"
 "@c cardinality ({});\n"
@@ -609,19 +609,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:404
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:406
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:412
 msgid ""
 "@anchor{cartesian_product}\n"
 "@deffn {Function} cartesian_product (@var{b_1}, ... , @var{b_n})\n"
@@ -630,17 +630,17 @@ msgid ""
 "respectively.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:414
 msgid ""
 "@code{cartesian_product} complains if any argument is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:416
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:433
 msgid ""
 "@c ===beg===\n"
 "@c cartesian_product ({0, 1});\n"
@@ -660,40 +660,44 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:437
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:439
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: nset.texi:445
+msgid ""
 "@anchor{disjoin}\n"
 "@deffn {Function} disjoin (@var{x}, @var{a})\n"
 "Returns the set @var{a} without the member @var{x}.\n"
 "If @var{x} is not a member of @var{a}, return @var{a} unchanged.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:447
 msgid ""
 "@code{disjoin} complains if @var{a} is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:451
 msgid ""
 "@code{disjoin(@var{x}, @var{a})}, @code{delete(@var{x}, @var{a})}, and\n"
 "@code{setdifference(@var{a}, set(@var{x}))} are all equivalent. \n"
 "Of these, @code{disjoin} is generally faster than the others.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:453
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:467
 msgid ""
 "@c ===beg===\n"
 "@c disjoin (a, {a, b, c, d});\n"
@@ -710,36 +714,36 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:471
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:473
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:477
 msgid ""
 "@anchor{disjointp}\n"
 "@deffn {Function} disjointp (@var{a}, @var{b}) \n"
 "Returns @code{true} if and only if the sets @var{a} and @var{b} are disjoint.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:479
 msgid ""
 "@code{disjointp} complains if either @var{a} or @var{b} is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:481
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:492
 msgid ""
 "@c ===beg===\n"
 "@c disjointp ({a, b, c}, {1, 2, 3});\n"
@@ -753,30 +757,30 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:496
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:498
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:501
 msgid ""
 "@anchor{divisors}\n"
 "@deffn {Function} divisors (@var{n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:503
 msgid ""
 "Represents the set of divisors of @var{n}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:508
 msgid ""
 "@code{divisors(@var{n})} simplifies to a set of integers\n"
 "when @var{n} is a nonzero integer.\n"
@@ -784,44 +788,44 @@ msgid ""
 "The divisors of a negative integer are the divisors of its absolute value.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:510
 msgid ""
 "@code{divisors} distributes over equations, lists, matrices, and sets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:512
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:515
 msgid ""
 "We can verify that 28 is a perfect number:\n"
 "the sum of its divisors (except for itself) is 28.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:526
 msgid ""
 "@c ===beg===\n"
 "@c s: divisors(28);\n"
-"@c lreduce (\"+\", args(s)) - 28;\n"
+"@c lreduce (\\"+\\", args(s)) - 28;\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) s: divisors(28);\n"
 "(%o1)                 @{1, 2, 4, 7, 14, 28@}\n"
-"(%i2) lreduce (\"+\", args(s)) - 28;\n"
+"(%i2) lreduce (\\"+\\", args(s)) - 28;\n"
 "(%o2)                          28\n"
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:530
 msgid ""
 "@code{divisors} is a simplifying function.\n"
 "Substituting 8 for @code{a} in @code{divisors(a)}\n"
 "yields the divisors without reevaluating @code{divisors(8)}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:541
 msgid ""
 "@c ===beg===\n"
 "@c divisors (a);\n"
@@ -835,12 +839,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:543
 msgid ""
 "@code{divisors} distributes over equations, lists, matrices, and sets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:562
 msgid ""
 "@c ===beg===\n"
 "@c divisors (a = b);\n"
@@ -862,19 +866,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:566
 msgid ""
 "@opencatbox\n"
 "@category{Integers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:568
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:573
 msgid ""
 "@anchor{elementp}\n"
 "@deffn {Function} elementp (@var{x}, @var{a})\n"
@@ -882,17 +886,17 @@ msgid ""
 "set @var{a}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:575
 msgid ""
 "@code{elementp} complains if @var{a} is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:577
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:588
 msgid ""
 "@c ===beg===\n"
 "@c elementp (sin(1), {sin(1), sin(2), sin(3)});\n"
@@ -906,19 +910,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:592
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:594
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:599
 msgid ""
 "@anchor{emptyp}\n"
 "@deffn {Function} emptyp (@var{a})\n"
@@ -926,12 +930,12 @@ msgid ""
 "the empty list.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:601
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:612
 msgid ""
 "@c ===beg===\n"
 "@c map (emptyp, [{}, []]);\n"
@@ -945,14 +949,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:616
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:623
 msgid ""
 "@end deffn\n"
 "       \n"
@@ -962,21 +966,21 @@ msgid ""
 "to the equivalence relation @var{F}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:627
 msgid ""
 "@var{F} is a function of two variables defined on the Cartesian product of @var{s} with @var{s}.\n"
 "The return value of @var{F} is either @code{true} or @code{false},\n"
 "or an expression @var{expr} such that @code{is(@var{expr})} is either @code{true} or @code{false}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:631
 msgid ""
 "When @var{F} is not an equivalence relation,\n"
 "@code{equiv_classes} accepts it without complaint,\n"
 "but the result is generally incorrect in that case.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:636
 msgid ""
 "@c EXCESSIVE DETAIL HERE. PROBABLY JUST CUT THIS\n"
 "@c @var{F} may be a relational operator (built-in or user-defined),\n"
@@ -984,17 +988,17 @@ msgid ""
 "@c a macro, or a subscripted function.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:638
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:640
 msgid ""
 "The equivalence relation is a lambda expression which returns @code{true} or @code{false}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:650
 msgid ""
 "@c ===beg===\n"
 "@c equiv_classes ({1, 1.0, 2, 2.0, 3, 3.0}, \n"
@@ -1007,13 +1011,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:653
 msgid ""
 "The equivalence relation is the name of a relational function\n"
 "which @code{is} evaluates to @code{true} or @code{false}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:661
 msgid ""
 "@c ===beg===\n"
 "@c equiv_classes ({1, 1.0, 2, 2.0, 3, 3.0}, equal);\n"
@@ -1024,12 +1028,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:663
 msgid ""
 "The equivalence classes are numbers which differ by a multiple of 3.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:673
 msgid ""
 "@c ===beg===\n"
 "@c equiv_classes ({1, 2, 3, 4, 5, 6, 7}, \n"
@@ -1042,19 +1046,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:677
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:679
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:684
 msgid ""
 "@anchor{every}\n"
 "@deffn {Function} every @\n"
@@ -1062,12 +1066,12 @@ msgid ""
 "@fname{every} (@var{f}, @var{L_1}, ..., @var{L_n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:686
 msgid ""
 "Returns @code{true} if the predicate @var{f} is @code{true} for all given arguments.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:693
 msgid ""
 "Given one set as the second argument, \n"
 "@code{every(@var{f}, @var{s})} returns @code{true}\n"
@@ -1077,7 +1081,7 @@ msgid ""
 "@code{every} may evaluate @code{@var{f}(@var{a_i})} in any order.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:701
 msgid ""
 "Given one or more lists as arguments,\n"
 "@code{every(@var{f}, @var{L_1}, ..., @var{L_n})} returns @code{true}\n"
@@ -1088,13 +1092,13 @@ msgid ""
 "@code{every} evaluates lists in the order of increasing index.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:704
 msgid ""
 "Given an empty set @code{@{@}} or empty lists @code{[]} as arguments,\n"
 "@code{every} returns @code{true}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:709
 msgid ""
 "When the global flag @code{maperror} is @code{true}, all lists \n"
 "@var{L_1}, ..., @var{L_n} must have equal lengths.\n"
@@ -1102,7 +1106,7 @@ msgid ""
 "effectively truncated to the length of the shortest list. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:719
 msgid ""
 "Return values of the predicate @var{f} which evaluate (via @code{is})\n"
 "to something other than @code{true} or @code{false}\n"
@@ -1115,18 +1119,18 @@ msgid ""
 "and the return value from @code{every} is @code{unknown}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:721
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:724
 msgid ""
 "@code{every} applied to a single set.\n"
 "The predicate is a function of one argument.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:735
 msgid ""
 "@c ===beg===\n"
 "@c every (integerp, {1, 2, 3, 4, 5, 6});\n"
@@ -1140,42 +1144,42 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:738
 msgid ""
 "@code{every} applied to two lists.\n"
 "The predicate is a function of two arguments.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:749
 msgid ""
 "@c ===beg===\n"
-"@c every (\"=\", [a, b, c], [a, b, c]);\n"
-"@c every (\"#\", [a, b, c], [a, b, c]);\n"
+"@c every (\\"=\\", [a, b, c], [a, b, c]);\n"
+"@c every (\\"#\\", [a, b, c], [a, b, c]);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) every (\"=\", [a, b, c], [a, b, c]);\n"
+"(%i1) every (\\"=\\", [a, b, c], [a, b, c]);\n"
 "(%o1)                         true\n"
-"(%i2) every (\"#\", [a, b, c], [a, b, c]);\n"
+"(%i2) every (\\"#\\", [a, b, c], [a, b, c]);\n"
 "(%o2)                         false\n"
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:753
 msgid ""
 "Return values of the predicate @var{f} which evaluate\n"
 "to something other than @code{true} or @code{false}\n"
 "are governed by the global flag @code{prederror}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:775
 msgid ""
 "@c ===beg===\n"
 "@c prederror : false;\n"
 "@c map (lambda ([a, b], is (a < b)), [x, y, z], \n"
 "@c                    [x^2, y^2, z^2]);\n"
-"@c every (\"<\", [x, y, z], [x^2, y^2, z^2]);\n"
+"@c every (\\"<\\", [x, y, z], [x^2, y^2, z^2]);\n"
 "@c prederror : true;\n"
-"@c every (\"<\", [x, y, z], [x^2, y^2, z^2]);\n"
+"@c every (\\"<\\", [x, y, z], [x^2, y^2, z^2]);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) prederror : false;\n"
@@ -1183,23 +1187,23 @@ msgid ""
 "(%i2) map (lambda ([a, b], is (a < b)), [x, y, z],\n"
 "                   [x^2, y^2, z^2]);\n"
 "(%o2)              [unknown, unknown, unknown]\n"
-"(%i3) every (\"<\", [x, y, z], [x^2, y^2, z^2]);\n"
+"(%i3) every (\\"<\\", [x, y, z], [x^2, y^2, z^2]);\n"
 "(%o3)                        unknown\n"
 "(%i4) prederror : true;\n"
 "(%o4)                         true\n"
-"(%i5) every (\"<\", [x, y, z], [x^2, y^2, z^2]);\n"
+"(%i5) every (\\"<\\", [x, y, z], [x^2, y^2, z^2]);\n"
 "(%o5)                         false\n"
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:779
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:786
 msgid ""
 "@end deffn\n"
 " \n"
@@ -1209,29 +1213,29 @@ msgid ""
 "@fname{extremal_subset} (@var{s}, @var{f}, min)\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:788
 msgid ""
 "Returns the subset of @var{s} for which the function @var{f} takes on maximum or minimum values.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:791
 msgid ""
 "@code{extremal_subset(@var{s}, @var{f}, max)} returns the subset of the set or \n"
 "list @var{s} for which the real-valued function @var{f} takes on its maximum value.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:794
 msgid ""
 "@code{extremal_subset(@var{s}, @var{f}, min)} returns the subset of the set or \n"
 "list @var{s} for which the real-valued function @var{f} takes on its minimum value.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:796
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:807
 msgid ""
 "@c ===beg===\n"
 "@c extremal_subset ({-2, -1, 0, 1, 2}, abs, max);\n"
@@ -1245,38 +1249,38 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:811
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:813
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:816
 msgid ""
 "@anchor{flatten}\n"
 "@deffn {Function} flatten (@var{expr})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:819
 msgid ""
 "Collects arguments of subexpressions which have the same operator as @var{expr}\n"
 "and constructs an expression from these collected arguments.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:823
 msgid ""
 "Subexpressions in which the operator is different from the main operator of @code{expr}\n"
 "are copied without modification,\n"
 "even if they, in turn, contain some subexpressions in which the operator is the same as for @code{expr}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:828
 msgid ""
 "It may be possible for @code{flatten} to construct expressions in which the number\n"
 "of arguments differs from the declared arguments for an operator;\n"
@@ -1284,23 +1288,23 @@ msgid ""
 "@code{flatten} does not try to detect such situations.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:831
 msgid ""
 "Expressions with special representations, for example, canonical rational expressions (CRE), \n"
 "cannot be flattened; in such cases, @code{flatten} returns its argument unchanged.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:833
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:835
 msgid ""
 "Applied to a list, @code{flatten} gathers all list elements that are lists.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:843
 msgid ""
 "@c ===beg===\n"
 "@c flatten ([a, b, [c, [d, e], f], [[g, h]], i, j]);\n"
@@ -1311,12 +1315,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:845
 msgid ""
 "Applied to a set, @code{flatten} gathers all members of set elements that are sets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:856
 msgid ""
 "@c ===beg===\n"
 "@c flatten ({a, {b}, {{c}}});\n"
@@ -1330,14 +1334,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:860
 msgid ""
 "@code{flatten} is similar to the effect of declaring the main operator n-ary.\n"
 "However, @code{flatten} has no effect on subexpressions which have an operator\n"
 "different from the main operator, while an n-ary declaration affects those.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:874
 msgid ""
 "@c ===beg===\n"
 "@c expr: flatten (f (g (f (f (x)))));\n"
@@ -1354,12 +1358,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:876
 msgid ""
 "@code{flatten} treats subscripted functions the same as any other operator.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:885
 msgid ""
 "@c ===beg===\n"
 "@c flatten (f[5] (f[5] (x, y), z));\n"
@@ -1371,13 +1375,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:888
 msgid ""
 "It may be possible for @code{flatten} to construct expressions in which the number\n"
 "of arguments differs from the declared arguments for an operator;\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:903
 msgid ""
 "@c ===beg===\n"
 "@c 'mod (5, 'mod (7, 4));\n"
@@ -1395,19 +1399,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:907
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:909
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:916
 msgid ""
 "@anchor{full_listify}\n"
 "@deffn {Function} full_listify (@var{a})\n"
@@ -1417,17 +1421,17 @@ msgid ""
 "even if the main operator is not @code{set}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:918
 msgid ""
 "@code{listify} replaces only the main operator.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:920
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:931
 msgid ""
 "@c ===beg===\n"
 "@c full_listify ({a, b, {c, {d, e, f}, g}});\n"
@@ -1441,19 +1445,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:935
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:937
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:943
 msgid ""
 "@anchor{fullsetify}\n"
 "@deffn {Function} fullsetify (@var{a})\n"
@@ -1462,23 +1466,23 @@ msgid ""
 "When @var{a} is not a list, it is returned unchanged.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:945
 msgid ""
 "@code{setify} replaces only the main operator.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:947
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:950
 msgid ""
 "In line @code{(%o2)}, the argument of @code{f} isn't converted to a set\n"
 "because the main operator of @code{f([b])} isn't a list.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:961
 msgid ""
 "@c ===beg===\n"
 "@c fullsetify ([a, [a]]);\n"
@@ -1492,41 +1496,41 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:965
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:967
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:970
 msgid ""
 "@anchor{identity}\n"
 "@deffn {Function} identity (@var{x})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:972
 msgid ""
 "Returns @var{x} for any argument @var{x}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:974
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:977
 msgid ""
 "@code{identity} may be used as a predicate when the arguments\n"
 "are already Boolean values.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:986
 msgid ""
 "@c ===beg===\n"
 "@c every (identity, [true, true]);\n"
@@ -1538,7 +1542,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:991
 msgid ""
 "@anchor{integer_partitions}\n"
 "@deffn {Function} integer_partitions @\n"
@@ -1546,20 +1550,20 @@ msgid ""
 "@fname{integer_partitions} (@var{n}, @var{len})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:994
 msgid ""
 "Returns integer partitions of @var{n}, that is,\n"
 "lists of integers which sum to @var{n}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:998
 msgid ""
 "@code{integer_partitions(@var{n})} returns the set of\n"
 "all partitions of the integer @var{n}.\n"
 "Each partition is a list sorted from greatest to least.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1004
 msgid ""
 "@code{integer_partitions(@var{n}, @var{len})}\n"
 "returns all partitions that have length @var{len} or less; in this\n"
@@ -1568,25 +1572,25 @@ msgid ""
 "Each partition is a list sorted from greatest to least.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1008
 msgid ""
 "A list @math{[a_1, ..., a_m]} is a partition of a nonnegative integer\n"
 "@math{n} when (1) each @math{a_i} is a nonzero integer, and (2) \n"
 "@math{a_1 + ... + a_m = n.} Thus 0 has no partitions.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1010
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1032
 msgid ""
 "@c ===beg===\n"
 "@c integer_partitions (3);\n"
 "@c s: integer_partitions (25)$\n"
 "@c cardinality (s);\n"
-"@c map (lambda ([x], apply (\"+\", x)), s);\n"
+"@c map (lambda ([x], apply (\\"+\\", x)), s);\n"
 "@c integer_partitions (5, 3);\n"
 "@c integer_partitions (5, 2);\n"
 "@c ===end===\n"
@@ -1596,7 +1600,7 @@ msgid ""
 "(%i2) s: integer_partitions (25)$\n"
 "(%i3) cardinality (s);\n"
 "(%o3)                         1958\n"
-"(%i4) map (lambda ([x], apply (\"+\", x)), s);\n"
+"(%i4) map (lambda ([x], apply (\\"+\\", x)), s);\n"
 "(%o4)                         @{25@}\n"
 "(%i5) integer_partitions (5, 3);\n"
 "(%o5) @{[2, 2, 1], [3, 1, 1], [3, 2, 0], [4, 1, 0], [5, 0, 0]@}\n"
@@ -1605,13 +1609,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1035
 msgid ""
 "To find all partitions that satisfy a condition, use the function @code{subset};\n"
 "here is an example that finds all partitions of 10 that consist of prime numbers.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1050
 msgid ""
 "@c ===beg===\n"
 "@c s: integer_partitions (10)$\n"
@@ -1629,42 +1633,42 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1054
 msgid ""
 "@opencatbox\n"
 "@category{Integers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1056
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1059
 msgid ""
 "@anchor{intersect}\n"
 "@deffn {Function} intersect (@var{a_1}, ..., @var{a_n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1061
 msgid ""
 "@code{intersect} is the same as @code{intersection}, which see.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1065
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1067
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1072
 msgid ""
 "@anchor{intersection}\n"
 "@deffn {Function} intersection (@var{a_1}, ..., @var{a_n})\n"
@@ -1672,17 +1676,17 @@ msgid ""
 "sets @var{a_1} through @var{a_n}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1074
 msgid ""
 "@code{intersection} complains if any argument is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1076
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1105
 msgid ""
 "@c ===beg===\n"
 "@c S_1 : {a, b, c, d};\n"
@@ -1714,29 +1718,29 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1109
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1111
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1113
 msgid ""
 "@deffn {Function} kron_delta (@var{x1}, @var{x2}, @dots{}, @var{xp})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1115
 msgid ""
 "Represents the Kronecker delta function.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1122
 msgid ""
 "@code{kron_delta} simplifies to 1 when @var{xi} and @var{yj} are equal\n"
 "for all pairs of arguments, and it simplifies to 0 when @var{xi} and\n"
@@ -1746,12 +1750,12 @@ msgid ""
 "signals an error.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1124
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1144
 msgid ""
 "@c ===beg===\n"
 "@c kron_delta(a,a);\n"
@@ -1772,32 +1776,36 @@ msgid ""
 "(%i5) kron_delta(x,y);\n"
 "(%o5)                                  1\n"
 "@end example\n"
+msgstr ""
+
+#: nset.texi:1147
+msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1150
 msgid ""
 "@anchor{listify}\n"
 "@deffn {Function} listify (@var{a})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1153
 msgid ""
 "Returns a list containing the members of @var{a} when @var{a} is a set.\n"
 "Otherwise, @code{listify} returns @var{a}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1155
 msgid ""
 "@code{full_listify} replaces all set operators in @var{a} by list operators.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1157
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1168
 msgid ""
 "@c ===beg===\n"
 "@c listify ({a, b, c, d});\n"
@@ -1811,25 +1819,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1172
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1174
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1177
 msgid ""
 "@anchor{makeset}\n"
 "@deffn {Function} makeset (@var{expr}, @var{x}, @var{s})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1183
 msgid ""
 "Returns a set with members generated from the expression @var{expr},\n"
 "where @var{x} is a list of variables in @var{expr},\n"
@@ -1838,7 +1846,7 @@ msgid ""
 "@var{expr} is evaluated with the variables @var{x} bound in parallel to a member of @var{s}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1188
 msgid ""
 "Each member of @var{s} must have the same length as @var{x}.\n"
 "The list of variables @var{x} must be a list of symbols, without subscripts.\n"
@@ -1846,24 +1854,24 @@ msgid ""
 "and each member of @var{s} must be a list of one element.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1192
 msgid ""
 "@c FOLLOWING EQUIVALENT EXPRESSION IS REALLY TOO COMPLICATED, JUST SKIP IT FOR NOW\n"
 "@c @code{makeset(@var{expr}, @var{x}, @var{s})} returns the same result as\n"
-"@c @code{setify(map(lambda([L], sublis(map(\"=\", ''@var{x}, L), ''@var{expr})), args(@var{s})))}.\n"
+"@c @code{setify(map(lambda([L], sublis(map(\\"=\\", ''@var{x}, L), ''@var{expr})), args(@var{s})))}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1194
 msgid ""
 "See also @mref{makelist}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1196
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1223
 msgid ""
 "@c ===beg===\n"
 "@c makeset (i/j, [i, j], [[1, a], [2, b], [3, c], [4, d]]);\n"
@@ -1893,30 +1901,30 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1227
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1229
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1232
 msgid ""
 "@anchor{moebius}\n"
 "@deffn {Function} moebius (@var{n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1234
 msgid ""
 "Represents the Moebius function.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1239
 msgid ""
 "When @var{n} is product of @math{k} distinct primes,\n"
 "@code{moebius(@var{n})} simplifies to @math{(-1)^k};\n"
@@ -1924,17 +1932,17 @@ msgid ""
 "and it simplifies to 0 for all other positive integers. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1241
 msgid ""
 "@code{moebius} distributes over equations, lists, matrices, and sets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1243
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1277
 msgid ""
 "@c ===beg===\n"
 "@c moebius (1);\n"
@@ -1971,14 +1979,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1281
 msgid ""
 "@opencatbox\n"
 "@category{Integers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1288
 msgid ""
 "@end deffn\n"
 " \n"
@@ -1988,12 +1996,12 @@ msgid ""
 "@fname{multinomial_coeff} ()\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1290
 msgid ""
 "Returns the multinomial coefficient.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1296
 msgid ""
 "When each @var{a_k} is a nonnegative integer, the multinomial coefficient\n"
 "gives the number of ways of placing @code{@var{a_1} + ... + @var{a_n}} \n"
@@ -2002,22 +2010,22 @@ msgid ""
 "evaluates to @code{(@var{a_1} + ... + @var{a_n})!/(@var{a_1}! ... @var{a_n}!)}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1298
 msgid ""
 "@code{multinomial_coeff()} (with no arguments) evaluates to 1.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1300
 msgid ""
 "@code{minfactorial} may be able to simplify the value returned by @code{multinomial_coeff}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1302
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1325
 msgid ""
 "@c ===beg===\n"
 "@c multinomial_coeff (1, 2, x);\n"
@@ -2043,19 +2051,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1329
 msgid ""
 "@opencatbox\n"
 "@category{Integers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1331
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1336
 msgid ""
 "@anchor{num_distinct_partitions}\n"
 "@deffn {Function} num_distinct_partitions @\n"
@@ -2063,32 +2071,32 @@ msgid ""
 "@fname{num_distinct_partitions} (@var{n}, list)\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1340
 msgid ""
 "Returns the number of distinct integer partitions of @var{n}\n"
 "when @var{n} is a nonnegative integer.\n"
 "Otherwise, @code{num_distinct_partitions} returns a noun expression.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1343
 msgid ""
 "@code{num_distinct_partitions(@var{n}, list)} returns a \n"
 "list of the number of distinct partitions of 1, 2, 3, ..., @var{n}. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1347
 msgid ""
 "A distinct partition of @var{n} is\n"
 "a list of distinct positive integers @math{k_1}, ..., @math{k_m}\n"
 "such that @math{@var{n} = k_1 + ... + k_m}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1349
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1363
 msgid ""
 "@c ===beg===\n"
 "@c num_distinct_partitions (12);\n"
@@ -2105,19 +2113,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1367
 msgid ""
 "@opencatbox\n"
 "@category{Integers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1369
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1374
 msgid ""
 "@anchor{num_partitions}\n"
 "@deffn {Function} num_partitions @\n"
@@ -2125,32 +2133,32 @@ msgid ""
 "@fname{num_partitions} (@var{n}, list)\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1378
 msgid ""
 "Returns the number of integer partitions of @var{n}\n"
 "when @var{n} is a nonnegative integer.\n"
 "Otherwise, @code{num_partitions} returns a noun expression.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1381
 msgid ""
 "@code{num_partitions(@var{n}, list)} returns a\n"
 "list of the number of integer partitions of 1, 2, 3, ..., @var{n}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1385
 msgid ""
 "For a nonnegative integer @var{n}, @code{num_partitions(@var{n})} is equal to\n"
 "@code{cardinality(integer_partitions(@var{n}))}; however, @code{num_partitions} \n"
 "does not actually construct the set of partitions, so it is much faster.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1387
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1401
 msgid ""
 "@c ===beg===\n"
 "@c num_partitions (5) = cardinality (integer_partitions (5));\n"
@@ -2167,30 +2175,30 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1405
 msgid ""
 "@opencatbox\n"
 "@category{Integers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1407
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1412
 msgid ""
 "@anchor{partition_set}\n"
 "@deffn {Function} partition_set (@var{a}, @var{f})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1414
 msgid ""
 "Partitions the set @var{a} according to the predicate @var{f}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1419
 msgid ""
 "@code{partition_set} returns a list of two sets.\n"
 "The first set comprises the elements of @var{a} for which @var{f} evaluates to @code{false},\n"
@@ -2198,22 +2206,22 @@ msgid ""
 "@code{partition_set} does not apply @code{is} to the return value of @var{f}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1421
 msgid ""
 "@code{partition_set} complains if @var{a} is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1423
 msgid ""
 "See also @mref{subset}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1425
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1438
 msgid ""
 "@c ===beg===\n"
 "@c partition_set ({2, 7, 1, 8, 2, 8}, evenp);\n"
@@ -2229,52 +2237,52 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1442
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1444
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1447
 msgid ""
 "@anchor{permutations}\n"
 "@deffn {Function} permutations (@var{a})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1450
 msgid ""
 "Returns a set of all distinct permutations of the members of \n"
 "the list or set @var{a}. Each permutation is a list, not a set. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1453
 msgid ""
 "When @var{a} is a list, duplicate members of @var{a} are included\n"
 "in the permutations.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1455
 msgid ""
 "@code{permutations} complains if @var{a} is not a literal list or set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1457
 msgid ""
 "See also @mref{random_permutation}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1459
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1470
 msgid ""
 "@c ===beg===\n"
 "@c permutations ([a, a]);\n"
@@ -2288,19 +2296,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1474
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1476
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1481
 msgid ""
 "@anchor{powerset}\n"
 "@deffn {Function} powerset @\n"
@@ -2308,35 +2316,35 @@ msgid ""
 "@fname{powerset} (@var{a}, @var{n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1483
 msgid ""
 "Returns the set of all subsets of @var{a}, or a subset of that set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1486
 msgid ""
 "@code{powerset(@var{a})} returns the set of all subsets of the set @var{a}.\n"
 "@code{powerset(@var{a})} has @code{2^cardinality(@var{a})} members.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1489
 msgid ""
 "@code{powerset(@var{a}, @var{n})} returns the set of all subsets of @var{a} that have \n"
 "cardinality @var{n}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1492
 msgid ""
 "@code{powerset} complains if @var{a} is not a literal set,\n"
 "or if @var{n} is not a nonnegative integer.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1494
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1517
 msgid ""
 "@c ===beg===\n"
 "@c powerset ({a, b, c});\n"
@@ -2362,43 +2370,43 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1521
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1523
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1526
 msgid ""
 "@anchor{random_permutation}\n"
 "@deffn {Function} random_permutation (@var{a})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1529
 msgid ""
 "Returns a random permutation of the set or list @var{a},\n"
 "as constructed by the Knuth shuffle algorithm.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1533
 msgid ""
 "The return value is a new list, which is distinct\n"
 "from the argument even if all elements happen to be the same.\n"
 "However, the elements of the argument are not copied.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1535
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1552
 msgid ""
 "@c ===beg===\n"
 "@c random_permutation ([a, b, c, 1, 2, 3]);\n"
@@ -2418,41 +2426,41 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1556
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1558
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1561
 msgid ""
 "@anchor{setdifference}\n"
 "@deffn {Function}  setdifference (@var{a}, @var{b})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1564
 msgid ""
 "Returns a set containing the elements in the set @var{a} that are\n"
 "not in the set @var{b}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1566
 msgid ""
 "@code{setdifference} complains if either @var{a} or @var{b} is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1568
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1594
 msgid ""
 "@c ===beg===\n"
 "@c S_1 : {a, b, c, x, y, z};\n"
@@ -2481,25 +2489,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1598
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1600
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1603
 msgid ""
 "@anchor{setequalp}\n"
 "@deffn {Function} setequalp (@var{a}, @var{b})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1612
 msgid ""
 "Returns @code{true} if sets @var{a} and @var{b} have the same number of elements\n"
 "@c $SETEQUALP CALLS THE LISP FUNCTION LIKE,\n"
@@ -2511,12 +2519,12 @@ msgid ""
 "Otherwise, @code{setequalp} returns @code{false}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1614
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1628
 msgid ""
 "@c ===beg===\n"
 "@c setequalp ({1, 2, 3}, {1, 2, 3});\n"
@@ -2533,42 +2541,42 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1632
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1634
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1637
 msgid ""
 "@anchor{setify}\n"
 "@deffn {Function} setify (@var{a})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1641
 msgid ""
 "Constructs a set from the elements of the list @var{a}. Duplicate\n"
 "elements of the list @var{a} are deleted and the elements\n"
 "are sorted according to the predicate @code{orderlessp}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1643
 msgid ""
 "@code{setify} complains if @var{a} is not a literal list.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1645
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1659
 msgid ""
 "@c ===beg===\n"
 "@c setify ([1, 2, 3, a, b, c]);\n"
@@ -2585,48 +2593,48 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1663
 msgid ""
 "@opencatbox\n"
 "@category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1665
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1668
 msgid ""
 "@anchor{setp}\n"
 "@deffn {Function} setp (@var{a})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1670
 msgid ""
 "Returns @code{true} if and only if @var{a} is a Maxima set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1673
 msgid ""
 "@code{setp} returns @code{true} for unsimplified sets (that is, sets with redundant members)\n"
 "as well as simplified sets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1677
 msgid ""
 "@c NOT SURE WE NEED TO MENTION THIS. OK FOR NOW\n"
 "@code{setp} is equivalent to the Maxima function\n"
 "@code{setp(a) := not atom(a) and op(a) = 'set}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1679
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1693
 msgid ""
 "@c ===beg===\n"
 "@c simp : false;\n"
@@ -2643,19 +2651,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1697
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1699
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1704
 msgid ""
 "@anchor{set_partitions}\n"
 "@deffn {Function} set_partitions @\n"
@@ -2663,33 +2671,33 @@ msgid ""
 "@fname{set_partitions} (@var{a}, @var{n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1706
 msgid ""
 "Returns the set of all partitions of @var{a}, or a subset of that set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1709
 msgid ""
 "@code{set_partitions(@var{a}, @var{n})} returns a set of all\n"
 "decompositions of @var{a} into @var{n} nonempty disjoint subsets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1711
 msgid ""
 "@code{set_partitions(@var{a})} returns the set of all partitions.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1713
 msgid ""
 "@code{stirling2} returns the cardinality of the set of partitions of a set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1715
 msgid ""
 "A set of sets @math{P} is a partition of a set @math{S} when\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1724
 msgid ""
 "@enumerate\n"
 "@item\n"
@@ -2701,17 +2709,17 @@ msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1726
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1728
 msgid ""
 "The empty set is a partition of itself, the conditions 1 and 2 being vacuously true.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1736
 msgid ""
 "@c ===beg===\n"
 "@c set_partitions ({});\n"
@@ -2722,12 +2730,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1738
 msgid ""
 "The cardinality of the set of partitions of a set can be found using @code{stirling2}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1750
 msgid ""
 "@c ===beg===\n"
 "@c s: {0, 1, 2, 3, 4, 5}$\n"
@@ -2742,12 +2750,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1752
 msgid ""
 "Each member of @code{p} should have @var{n} = 3 members; let's check.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1764
 msgid ""
 "@c ===beg===\n"
 "@c s: {0, 1, 2, 3, 4, 5}$\n"
@@ -2762,13 +2770,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1767
 msgid ""
 "Finally, for each member of @code{p}, the union of its members should \n"
 "equal @code{s}; again let's check.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1779
 msgid ""
 "@c ===beg===\n"
 "@c s: {0, 1, 2, 3, 4, 5}$\n"
@@ -2783,19 +2791,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1783
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1785
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1790
 msgid ""
 "@anchor{some}\n"
 "@deffn {Function} some @\n"
@@ -2803,12 +2811,12 @@ msgid ""
 "@fname{some} (@var{f}, @var{L_1}, ..., @var{L_n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1792
 msgid ""
 "Returns @code{true} if the predicate @var{f} is @code{true} for one or more given arguments.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1799
 msgid ""
 "Given one set as the second argument, \n"
 "@code{some(@var{f}, @var{s})} returns @code{true}\n"
@@ -2818,7 +2826,7 @@ msgid ""
 "@code{some} may evaluate @code{@var{f}(@var{a_i})} in any order.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1807
 msgid ""
 "Given one or more lists as arguments,\n"
 "@code{some(@var{f}, @var{L_1}, ..., @var{L_n})} returns @code{true}\n"
@@ -2829,13 +2837,13 @@ msgid ""
 "@code{some} evaluates lists in the order of increasing index.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1810
 msgid ""
 "Given an empty set @code{@{@}} or empty lists @code{[]} as arguments,\n"
 "@code{some} returns @code{false}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1815
 msgid ""
 "When the global flag @code{maperror} is @code{true}, all lists \n"
 "@var{L_1}, ..., @var{L_n} must have equal lengths.\n"
@@ -2843,7 +2851,7 @@ msgid ""
 "effectively truncated to the length of the shortest list. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1823
 msgid ""
 "Return values of the predicate @var{f} which evaluate (via @code{is})\n"
 "to something other than @code{true} or @code{false}\n"
@@ -2854,18 +2862,18 @@ msgid ""
 "such values are treated as @code{unknown}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1825
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1828
 msgid ""
 "@code{some} applied to a single set.\n"
 "The predicate is a function of one argument.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1839
 msgid ""
 "@c ===beg===\n"
 "@c some (integerp, {1, 2, 3, 4, 5, 6});\n"
@@ -2879,44 +2887,44 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1842
 msgid ""
 "@code{some} applied to two lists.\n"
 "The predicate is a function of two arguments.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1853
 msgid ""
 "@c ===beg===\n"
-"@c some (\"=\", [a, b, c], [a, b, c]);\n"
-"@c some (\"#\", [a, b, c], [a, b, c]);\n"
+"@c some (\\"=\\", [a, b, c], [a, b, c]);\n"
+"@c some (\\"#\\", [a, b, c], [a, b, c]);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) some (\"=\", [a, b, c], [a, b, c]);\n"
+"(%i1) some (\\"=\\", [a, b, c], [a, b, c]);\n"
 "(%o1)                         true\n"
-"(%i2) some (\"#\", [a, b, c], [a, b, c]);\n"
+"(%i2) some (\\"#\\", [a, b, c], [a, b, c]);\n"
 "(%o2)                         false\n"
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1857
 msgid ""
 "Return values of the predicate @var{f} which evaluate\n"
 "to something other than @code{true} or @code{false}\n"
 "are governed by the global flag @code{prederror}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1885
 msgid ""
 "@c ===beg===\n"
 "@c prederror : false;\n"
 "@c map (lambda ([a, b], is (a < b)), [x, y, z], \n"
 "@c            [x^2, y^2, z^2]);\n"
-"@c some (\"<\", [x, y, z], [x^2, y^2, z^2]);\n"
-"@c some (\"<\", [x, y, z], [x^2, y^2, z + 1]);\n"
+"@c some (\\"<\\", [x, y, z], [x^2, y^2, z^2]);\n"
+"@c some (\\"<\\", [x, y, z], [x^2, y^2, z + 1]);\n"
 "@c prederror : true;\n"
-"@c some (\"<\", [x, y, z], [x^2, y^2, z^2]);\n"
-"@c some (\"<\", [x, y, z], [x^2, y^2, z + 1]);\n"
+"@c some (\\"<\\", [x, y, z], [x^2, y^2, z^2]);\n"
+"@c some (\\"<\\", [x, y, z], [x^2, y^2, z + 1]);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) prederror : false;\n"
@@ -2924,56 +2932,56 @@ msgid ""
 "(%i2) map (lambda ([a, b], is (a < b)), [x, y, z],\n"
 "           [x^2, y^2, z^2]);\n"
 "(%o2)              [unknown, unknown, unknown]\n"
-"(%i3) some (\"<\", [x, y, z], [x^2, y^2, z^2]);\n"
+"(%i3) some (\\"<\\", [x, y, z], [x^2, y^2, z^2]);\n"
 "(%o3)                        unknown\n"
-"(%i4) some (\"<\", [x, y, z], [x^2, y^2, z + 1]);\n"
+"(%i4) some (\\"<\\", [x, y, z], [x^2, y^2, z + 1]);\n"
 "(%o4)                         true\n"
 "(%i5) prederror : true;\n"
 "(%o5)                         true\n"
-"(%i6) some (\"<\", [x, y, z], [x^2, y^2, z^2]);\n"
+"(%i6) some (\\"<\\", [x, y, z], [x^2, y^2, z^2]);\n"
 "(%o6)                         false\n"
-"(%i7) some (\"<\", [x, y, z], [x^2, y^2, z + 1]);\n"
+"(%i7) some (\\"<\\", [x, y, z], [x^2, y^2, z + 1]);\n"
 "(%o7)                         true\n"
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1889
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Lists}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1891
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1894
 msgid ""
 "@anchor{stirling1}\n"
 "@deffn {Function} stirling1 (@var{n}, @var{m})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1896
 msgid ""
 "Represents the Stirling number of the first kind.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1900
 msgid ""
 "When @var{n} and @var{m} are nonnegative \n"
 "integers, the magnitude of @code{stirling1 (@var{n}, @var{m})} is the number of \n"
 "permutations of a set with @var{n} members that have @var{m} cycles.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1903
 msgid ""
 "@code{stirling1} is a simplifying function.\n"
 "Maxima knows the following identities:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1919
 msgid ""
 "@enumerate\n"
 "@item\n"
@@ -2992,15 +3000,19 @@ msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1923
 msgid ""
 "These identities are applied when the arguments are literal integers\n"
 "or symbols declared as integers, and the first argument is nonnegative.\n"
 "@code{stirling1} does not simplify for non-integer arguments.\n"
+msgstr ""
+
+#: nset.texi:1926
+msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1938
 msgid ""
 "@c ===beg===\n"
 "@c declare (n, integer)$\n"
@@ -3013,41 +3025,45 @@ msgid ""
 "(%i3) stirling1 (n, n);\n"
 "(%o3)                           1\n"
 "@end example\n"
+msgstr ""
+
+#: nset.texi:1943
+msgid ""
 "@opencatbox\n"
 "@category{Integers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1945
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1948
 msgid ""
 "@anchor{stirling2}\n"
 "@deffn {Function} stirling2 (@var{n}, @var{m})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1950
 msgid ""
 "Represents the Stirling number of the second kind.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1954
 msgid ""
 "When @var{n} and @var{m} are nonnegative \n"
 "integers, @code{stirling2 (@var{n}, @var{m})} is the number of ways a set with \n"
 "cardinality @var{n} can be partitioned into @var{m} disjoint subsets.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1957
 msgid ""
 "@code{stirling2} is a simplifying function.\n"
 "Maxima knows the following identities.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1966
 msgid ""
 "@enumerate\n"
 "@item @math{stirling2(n,0) = 1, n >= 1} (see @url{http://dlmf.nist.gov/26.8.E17} and stirling2(0,0) = 1)\n"
@@ -3059,19 +3075,19 @@ msgid ""
 "@end enumerate\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1970
 msgid ""
 "These identities are applied when the arguments are literal integers\n"
 "or symbols declared as integers, and the first argument is nonnegative.\n"
 "@code{stirling2} does not simplify for non-integer arguments.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1972
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1984
 msgid ""
 "@c ===beg===\n"
 "@c declare (n, integer)$\n"
@@ -3086,12 +3102,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1986
 msgid ""
 "@code{stirling2} does not simplify for non-integer arguments.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1994
 msgid ""
 "@c ===beg===\n"
 "@c stirling2 (%pi, %pi);\n"
@@ -3102,52 +3118,52 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:1998
 msgid ""
 "@opencatbox\n"
 "@category{Integers}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2000
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2003
 msgid ""
 "@anchor{subset}\n"
 "@deffn {Function} subset (@var{a}, @var{f})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2005
 msgid ""
 "Returns the subset of the set @var{a} that satisfies the predicate @var{f}. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2009
 msgid ""
 "@code{subset} returns a set which comprises the elements of @var{a}\n"
 "for which @var{f} returns anything other than @code{false}.\n"
 "@code{subset} does not apply @code{is} to the return value of @var{f}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2011
 msgid ""
 "@code{subset} complains if @var{a} is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2013
 msgid ""
 "See also @mref{partition_set}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2015
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2026
 msgid ""
 "@c ===beg===\n"
 "@c subset ({1, 2, x, x + y, z, x + y + z}, atom);\n"
@@ -3161,40 +3177,40 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2030
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2032
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2035
 msgid ""
 "@anchor{subsetp}\n"
 "@deffn {Function} subsetp (@var{a}, @var{b})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2037
 msgid ""
 "Returns @code{true} if and only if the set @var{a} is a subset of @var{b}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2039
 msgid ""
 "@code{subsetp} complains if either @var{a} or @var{b} is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2041
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2052
 msgid ""
 "@c ===beg===\n"
 "@c subsetp ({1, 2, 3}, {a, 1, b, 2, c, 3});\n"
@@ -3208,47 +3224,47 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2056
 msgid ""
 "@opencatbox\n"
 "@category{Sets} @category{Predicate functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2058
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2061
 msgid ""
 "@anchor{symmdifference}\n"
 "@deffn {Function} symmdifference (@var{a_1}, @dots{}, @var{a_n})\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2063
 msgid ""
 "Returns the symmetric difference of sets @var{a_1}, @dots{}, @var{a_n}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2067
 msgid ""
 "Given two arguments, @code{symmdifference (@var{a}, @var{b})} is the same as\n"
 "@code{union (setdifference (@var{a}, @var{b}), setdifference (@var{b},\n"
 "@var{a}))}.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2069
 msgid ""
 "@code{symmdifference} complains if any argument is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2071
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2100
 msgid ""
 "@c ===beg===\n"
 "@c S_1 : {a, b, c};\n"
@@ -3280,41 +3296,41 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2104
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2106
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2110
 msgid ""
 "@anchor{union}\n"
 "@deffn {Function} union (@var{a_1}, ..., @var{a_n})\n"
 "Returns the union of the sets @var{a_1} through @var{a_n}. \n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2112
 msgid ""
 "@code{union()} (with no arguments) returns the empty set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2114
 msgid ""
 "@code{union} complains if any argument is not a literal set.\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2116
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2145
 msgid ""
 "@c ===beg===\n"
 "@c S_1 : {a, b, c + d, %e};\n"
@@ -3346,18 +3362,15 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2149
 msgid ""
 "@opencatbox\n"
 "@category{Sets}\n"
 "@closecatbox\n"
 msgstr ""
 
-# nset.texi
+#: nset.texi:2151
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# nset.texi
-msgid ""
-msgstr ""

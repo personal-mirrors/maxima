@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# interpol.texi
+msgstr ""
+
+#: interpol.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to interpol::\n"
@@ -25,46 +25,50 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:8
 msgid ""
 "@node Introduction to interpol, Functions and Variables for interpol, interpol-pkg, interpol-pkg\n"
 "@section Introduction to interpol\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:11
 msgid ""
 "Package @code{interpol} defines the Lagrangian, the linear and the cubic \n"
 "splines methods for polynomial interpolation.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:13
 msgid ""
 "For comments, bugs or suggestions, please contact me at @var{'mario AT edu DOT xunta DOT es'}.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:17
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Share packages} @category{Package interpol}\n"
 "@closecatbox\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:20
 msgid ""
 "@node Functions and Variables for interpol,  , Introduction to interpol, interpol-pkg\n"
 "@section Functions and Variables for interpol\n"
+msgstr ""
+
+#: interpol.texi:26
+msgid ""
 "@anchor{lagrange}\n"
 "@deffn {Function} lagrange @\n"
 "@fname{lagrange} (@var{points}) @\n"
 "@fname{lagrange} (@var{points}, @var{option})\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:28
 msgid ""
 "Computes the polynomial interpolation by the Lagrangian method. Argument @var{points} must be either:\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:37
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -76,32 +80,32 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:39
 msgid ""
 "In the first two cases the pairs are ordered with respect to the first coordinate before making computations.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:41
 msgid ""
 "With the @var{option} argument it is possible to select the name for the independent variable, which is @code{'x} by default; to define another one, write something like @code{varname='z}. \n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:43
 msgid ""
 "Note that when working with high degree polynomials, floating point evaluations are unstable.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:45
 msgid ""
 "See also @mrefcomma{linearinterpol}  @mrefcomma{cspline}  and @mrefdot{ratinterpol}\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:47
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:122
 msgid ""
 "@example\n"
 "(%i1) load(interpol)$\n"
@@ -153,11 +157,11 @@ msgid ""
 "(%i8) /* Plot the polynomial together with points */\n"
 "      draw2d(\n"
 "        color      = red,\n"
-"        key        = \"Lagrange polynomial\",\n"
+"        key        = \\"Lagrange polynomial\\",\n"
 "        explicit(f(x),x,0,10),\n"
 "        point_size = 3,\n"
 "        color      = blue,\n"
-"        key        = \"Sample points\",\n"
+"        key        = \\"Sample points\\",\n"
 "        points(p))$\n"
 "(%i9) /* Change variable name */\n"
 "      lagrange(p, varname=w);\n"
@@ -179,43 +183,51 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:126
 msgid ""
 "@opencatbox\n"
 "@category{Package interpol}\n"
 "@closecatbox\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:128
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: interpol.texi:133
+msgid ""
 "@anchor{charfun2}\n"
 "@deffn {Function} charfun2 (@var{x}, @var{a}, @var{b})\n"
 "Returns @code{true} if number @var{x} belongs to the interval @math{[a, b)}, and @code{false} otherwise.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:137
 msgid ""
 "@opencatbox\n"
 "@category{Package interpol}\n"
 "@closecatbox\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:139
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: interpol.texi:145
+msgid ""
 "@anchor{linearinterpol}\n"
 "@deffn {Function} linearinterpol @\n"
 "@fname{linearinterpol} (@var{points}) @\n"
 "@fname{linearinterpol} (@var{points}, @var{option})\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:147
 msgid ""
 "Computes the polynomial interpolation by the linear method. Argument @var{points} must be either:\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:156
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -227,27 +239,27 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:158
 msgid ""
 "In the first two cases the pairs are ordered with respect to the first coordinate before making computations.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:160
 msgid ""
 "With the @var{option} argument it is possible to select the name for the independent variable, which is @code{'x} by default; to define another one, write something like @code{varname='z}. \n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:162
 msgid ""
 "See also @mrefcomma{lagrange}  @mrefcomma{cspline}  and @mrefdot{ratinterpol}\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:164
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:176
 msgid ""
 "@example\n"
 "(%i1) load(interpol)$\n"
@@ -262,7 +274,7 @@ msgid ""
 "     3\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:212
 msgid ""
 "(%i4) f(x):=''%;\n"
 "                13   3 x\n"
@@ -283,11 +295,11 @@ msgid ""
 "(%i8)  /* Plot the polynomial together with points */\n"
 "       draw2d(\n"
 "         color      = red,\n"
-"         key        = \"Linear interpolator\",\n"
+"         key        = \\"Linear interpolator\\",\n"
 "         explicit(f(x),x,-5,20),\n"
 "         point_size = 3,\n"
 "         color      = blue,\n"
-"         key        = \"Sample points\",\n"
+"         key        = \\"Sample points\\",\n"
 "         points(args(p)))$\n"
 "(%i9)  /* Change variable name */\n"
 "       linearinterpol(p, varname='s);\n"
@@ -301,19 +313,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:216
 msgid ""
 "@opencatbox\n"
 "@category{Package interpol}\n"
 "@closecatbox\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:218
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:225
 msgid ""
 "@anchor{cspline}\n"
 "@deffn {Function} cspline @\n"
@@ -321,12 +333,12 @@ msgid ""
 "@fname{cspline} (@var{points}, @var{option1}, @var{option2}, ...)\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:227
 msgid ""
 "Computes the polynomial interpolation by the cubic splines method. Argument @var{points} must be either:\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:236
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -338,12 +350,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:238
 msgid ""
 "In the first two cases the pairs are ordered with respect to the first coordinate before making computations.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:243
 msgid ""
 "There are three options to fit specific needs:\n"
 "@itemize @bullet\n"
@@ -351,25 +363,25 @@ msgid ""
 "@code{'d1}, default @code{'unknown}, is the first derivative at @math{x_1}; if it is @code{'unknown}, the second derivative at @math{x_1} is made equal to 0 (natural cubic spline); if it is equal to a number, the second derivative is calculated based on this number.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:246
 msgid ""
 "@item\n"
 "@code{'dn}, default @code{'unknown}, is the first derivative at @math{x_n}; if it is @code{'unknown}, the second derivative at @math{x_n} is made equal to 0 (natural cubic spline); if it is equal to a number, the second derivative is calculated based on this number.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:250
 msgid ""
 "@item\n"
 "@code{'varname}, default @code{'x}, is the name of the independent variable.\n"
 "@end itemize\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:252
 msgid ""
 "See also @mrefcomma{lagrange}  @mrefcomma{linearinterpol}  and @mrefdot{ratinterpol}\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:276
 msgid ""
 "Examples:\n"
 "@example\n"
@@ -396,7 +408,7 @@ msgid ""
 "       4932       274      1644     274\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:324
 msgid ""
 "(%i4) f(x):=''%$\n"
 "(%i5) /* Some evaluations */\n"
@@ -406,11 +418,11 @@ msgid ""
 "(%i7) /* Plotting interpolating function */\n"
 "      draw2d(\n"
 "        color      = red,\n"
-"        key        = \"Cubic splines\",\n"
+"        key        = \\"Cubic splines\\",\n"
 "        explicit(f(x),x,0,10),\n"
 "        point_size = 3,\n"
 "        color      = blue,\n"
-"        key        = \"Sample points\",\n"
+"        key        = \\"Sample points\\",\n"
 "        points(p))$\n"
 "(%i8) /* New call, but giving values at the derivatives */\n"
 "      cspline(p,d1=0,dn=0);\n"
@@ -435,31 +447,31 @@ msgid ""
 "(%i9) /* Plotting both functions together */\n"
 "      draw2d(\n"
 "        color      = black,\n"
-"        key        = \"Cubic splines (default)\",\n"
+"        key        = \\"Cubic splines (default)\\",\n"
 "        explicit(f(x),x,0,10),\n"
 "        color      = red,\n"
-"        key        = \"Cubic splines (d1=0,dn=0)\",\n"
+"        key        = \\"Cubic splines (d1=0,dn=0)\\",\n"
 "        explicit(g(x),x,0,10),\n"
 "        point_size = 3,\n"
 "        color      = blue,\n"
-"        key        = \"Sample points\",\n"
+"        key        = \\"Sample points\\",\n"
 "        points(p))$\n"
 "@end example\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:328
 msgid ""
 "@opencatbox\n"
 "@category{Package interpol}\n"
 "@closecatbox\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:330
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:335
 msgid ""
 "@anchor{ratinterpol}\n"
 "@deffn {Function} ratinterpol @\n"
@@ -467,14 +479,14 @@ msgid ""
 "@fname{ratinterpol} (@var{points}, @var{numdeg}, @var{option1})\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:339
 msgid ""
 "Generates a rational interpolator for data given by @var{points} and the degree of the numerator\n"
 "being equal to @var{numdeg}; the degree of the denominator is calculated\n"
 "automatically. Argument @var{points} must be either:\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:348
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -486,12 +498,12 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:350
 msgid ""
 "In the first two cases the pairs are ordered with respect to the first coordinate before making computations.\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:356
 msgid ""
 "There is one option to fit specific needs:\n"
 "@itemize @bullet\n"
@@ -500,17 +512,17 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:358
 msgid ""
 "See also @mrefcomma{lagrange}  @mrefcomma{linearinterpol}  @mrefcomma{cspline}  @mrefcomma{minpack_lsquares}  and @ref{lbfgs-pkg}\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:360
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:373
 msgid ""
 "@example\n"
 "(%i1) load(interpol)$\n"
@@ -521,19 +533,15 @@ msgid ""
 "          explicit(ratinterpol(p,k),x,0,9),                      \n"
 "          point_size = 3,                                        \n"
 "          points(p),                                             \n"
-"          title = concat(\"Degree of numerator = \",k),            \n"
+"          title = concat(\\"Degree of numerator = \\",k),            \n"
 "          yrange=[0,10])$\n"
 "@end example\n"
 msgstr ""
 
-# interpol.texi
+#: interpol.texi:377
 msgid ""
 "@opencatbox\n"
 "@category{Package interpol}\n"
 "@closecatbox\n"
 msgstr ""
 
-# interpol.texi
-msgid ""
-"@end deffn\n"
-msgstr ""

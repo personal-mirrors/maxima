@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# simplex.texi
+msgstr ""
+
+#: simplex.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to simplex::\n"
@@ -25,30 +25,30 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:8
 msgid ""
 "@node Introduction to simplex, Functions and Variables for simplex, simplex-pkg, simplex-pkg\n"
 "@section Introduction to simplex\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:10
 msgid ""
 "@code{simplex} is a package for linear optimization using the simplex algorithm.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:12
 msgid ""
 "Example:\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:24
 msgid ""
 "@c ===beg===\n"
-"@c load(\"simplex\")$\n"
+"@c load(\\"simplex\\")$\n"
 "@c minimize_lp(x+y, [3*x+2*y>2, x+4*y>3]);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"simplex\")$\n"
+"(%i1) load(\\"simplex\\")$\n"
 "(%i2) minimize_lp(x+y, [3*x+2*y>2, x+4*y>3]);\n"
 "                  9        7       1\n"
 "(%o2)            [--, [y = --, x = -]]\n"
@@ -56,40 +56,40 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:28
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods}  @category{Optimization} @category{Share packages} @category{Package simplex}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:30
 msgid ""
 "@subsection Tests for simplex\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:32
 msgid ""
 "There are some tests in the directory @code{share/simplex/Tests}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:34
 msgid ""
 "@subsubsection klee_minty\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:37
 msgid ""
 "The function @code{klee_minty} produces input for @code{linear_program}, for which\n"
 "exponential time for solving is required without scaling.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:39
 msgid ""
 "Example:\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:44
 msgid ""
 "@example\n"
 "load(klee_minty)$\n"
@@ -97,12 +97,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:46
 msgid ""
 "A better approach:\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:52
 msgid ""
 "@example\n"
 "epsilon_sx : 0$\n"
@@ -111,12 +111,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:54
 msgid ""
 "@subsubsection NETLIB\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:59
 msgid ""
 "Some smaller problems from netlib (@url{http://www.netlib.org/lp/data/}) test\n"
 "suite are converted to a format, readable by Maxima. Problems are @code{adlittle},\n"
@@ -124,29 +124,29 @@ msgid ""
 "matrix @var{A} and vectors @var{b} and @var{c}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:61
 msgid ""
 "Example:\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:70
 msgid ""
 "@example\n"
-"A : read_matrix(\"adlittle_A.csv\", 'csv)$\n"
-"b : read_list(\"adlittle_b.csv\", 'csv)$\n"
-"c : read_list(\"adlittle_c.csv\", 'csv)$\n"
+"A : read_matrix(\\"adlittle_A.csv\\", 'csv)$\n"
+"b : read_list(\\"adlittle_b.csv\\", 'csv)$\n"
+"c : read_list(\\"adlittle_c.csv\\", 'csv)$\n"
 "linear_program(A, b, c)$\n"
 "%[2]\n"
 "=> 225494.963126615\n"
 "@end example\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:72
 msgid ""
 "Results:\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:80
 msgid ""
 "@example\n"
 "PROBLEM        MINIMUM                SCALING\n"
@@ -157,48 +157,48 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:83
 msgid ""
 "@node Functions and Variables for simplex,  , Introduction to simplex, simplex-pkg\n"
 "@section Functions and Variables for simplex\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:87
 msgid ""
 "@anchor{epsilon_lp}\n"
 "@defvr {Option variable} epsilon_lp\n"
 "Default value: @code{10^-8}\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:89
 msgid ""
 "Epsilon used for numerical computations in @code{linear_program}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:91
 msgid ""
 "See also: @mref{linear_program}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:95
 msgid ""
 "@opencatbox\n"
 "@category{Package simplex}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:97
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:100
 msgid ""
 "@anchor{linear_program}\n"
 "@deffn {Function} linear_program (@var{A}, @var{b}, @var{c})\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:106
 msgid ""
 "@code{linear_program} is an implementation of the simplex algorithm.\n"
 "@code{linear_program(A, b, c)} computes a vector @var{x} for which\n"
@@ -207,26 +207,26 @@ msgid ""
 "and @var{c} are lists.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:111
 msgid ""
 "@code{linear_program} returns a list which contains the minimizing\n"
 "vector @var{x} and the minimum value @code{c.x}. If the problem is not\n"
-"bounded, it returns \"Problem not bounded!\" and if the problem is not\n"
-"feasible, it returns \"Problem not feasible!\".\n"
+"bounded, it returns \\"Problem not bounded!\\" and if the problem is not\n"
+"feasible, it returns \\"Problem not feasible!\\".\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:114
 msgid ""
 "To use this function first load the @code{simplex} package with\n"
 "@code{load(simplex);}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:116
 msgid ""
 "Example:\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:132
 msgid ""
 "@c ===beg===\n"
 "@c A: matrix([1,1,-1,0], [2,-3,0,-1], [4,-5,0,0])$\n"
@@ -245,56 +245,60 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:134
 msgid ""
 "See also: @mref{minimize_lp}, @mref{scale_lp}, and @mref{epsilon_lp}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:138
 msgid ""
 "@opencatbox\n"
 "@category{Package simplex} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:140
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:143
 msgid ""
 "@anchor{maximize_lp}\n"
 "@deffn {Function} maximize_lp (@var{obj}, @var{cond}, [@var{pos}])\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:147
 msgid ""
 "Maximizes linear objective function @var{obj} subject to some linear\n"
 "constraints @var{cond}. See @mref{minimize_lp} for detailed\n"
 "description of arguments and return value.\n"
+msgstr ""
+
+#: simplex.texi:150
+msgid ""
 "See also: @mref{minimize_lp}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:154
 msgid ""
 "@opencatbox\n"
 "@category{Package simplex} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:156
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:159
 msgid ""
 "@anchor{minimize_lp}\n"
 "@deffn {Function} minimize_lp (@var{obj}, @var{cond}, [@var{pos}])\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:165
 msgid ""
 "Minimizes a linear objective function @var{obj} subject to some linear\n"
 "constraints @var{cond}. @var{cond} a list of linear equations or\n"
@@ -303,17 +307,17 @@ msgid ""
 "of decision variables which are assumed to be positive.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:172
 msgid ""
 "If the minimum exists, @code{minimize_lp} returns a list which\n"
 "contains the minimum value of the objective function and a list of\n"
 "decision variable values for which the minimum is attained. If the\n"
-"problem is not bounded, @code{minimize_lp} returns \"Problem not\n"
-"bounded!\" and if the problem is not feasible, it returns \"Problem not\n"
-"feasible!\".\n"
+"problem is not bounded, @code{minimize_lp} returns \\"Problem not\n"
+"bounded!\\" and if the problem is not feasible, it returns \\"Problem not\n"
+"feasible!\\".\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:178
 msgid ""
 "The decision variables are not assumed to be nonegative by default. If\n"
 "all decision variables are nonegative, set @code{nonegative_lp} to\n"
@@ -322,24 +326,24 @@ msgid ""
 "efficient than adding constraints).\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:181
 msgid ""
 "@code{minimize_lp} uses the simplex algorithm which is implemented in\n"
 "maxima @code{linear_program} function.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:184
 msgid ""
 "To use this function first load the @code{simplex} package with\n"
 "@code{load(simplex);}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:186
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:205
 msgid ""
 "@c ===beg===\n"
 "@c minimize_lp(x+y, [3*x+y=0, x+2*y>2]);\n"
@@ -359,123 +363,124 @@ msgid ""
 "(%i4) minimize_lp(x+y, [3*x+y>0]);\n"
 "(%o4)                Problem not bounded!\n"
 "@end example\n"
+msgstr ""
+
+#: simplex.texi:208
+msgid ""
 "See also: @mref{maximize_lp}, @mref{nonegative_lp}, @mref{epsilon_lp}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:212
 msgid ""
 "@opencatbox\n"
 "@category{Package simplex} @category{Numerical methods}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:214
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:218
 msgid ""
 "@anchor{nonegative_lp}\n"
 "@defvr {Option variable} nonegative_lp\n"
 "Default value: @code{false}\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:221
 msgid ""
 "If @code{nonegative_lp} is true all decision variables to\n"
 "@code{minimize_lp} and @code{maximize_lp} are assumed to be positive.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:223
 msgid ""
 "See also: @mref{minimize_lp}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:227
 msgid ""
 "@opencatbox\n"
 "@category{Package simplex}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:229
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:233
 msgid ""
 "@anchor{scale_lp}\n"
 "@defvr {Option variable} scale_lp\n"
 "Default value: @code{false}\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:236
 msgid ""
 "When @code{scale_lp} is @code{true},\n"
 "@code{linear_program} scales its input so that the maximum absolute value in each row or column is 1.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:240
 msgid ""
 "@opencatbox\n"
 "@category{Package simplex}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:242
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:245
 msgid ""
 "@anchor{pivot_count_sx}\n"
 "@defvr {Variable} pivot_count_sx\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:248
 msgid ""
 "After @code{linear_program} returns,\n"
 "@code{pivot_count_sx} is the number of pivots in last computation.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:252
 msgid ""
 "@opencatbox\n"
 "@category{Package simplex}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:254
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:257
 msgid ""
 "@anchor{pivot_max_sx}\n"
 "@defvr {Variable} pivot_max_sx\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:259
 msgid ""
 "@code{pivot_max_sx} is the maximum number of pivots allowed by @code{linear_program}.\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:263
 msgid ""
 "@opencatbox\n"
 "@category{Package simplex}\n"
 "@closecatbox\n"
 msgstr ""
 
-# simplex.texi
+#: simplex.texi:265
 msgid ""
 "@end defvr\n"
 msgstr ""
 
-# simplex.texi
-msgid ""
-msgstr ""

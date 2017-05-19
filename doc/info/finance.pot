@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# finance.texi
+msgstr ""
+
+#: finance.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to finance::\n"
@@ -25,18 +25,18 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:8
 msgid ""
 "@node Introduction to finance, Functions and Variables for finance, finance-pkg, finance-pkg\n"
 "@section Introduction to finance\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:10
 msgid ""
 "This is the Finance Package (Ver 0.1).\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:16
 msgid ""
 "In all the functions, @var{rate} is the compound interest\n"
 "rate, @var{num} is the number of periods and must be\n"
@@ -45,36 +45,40 @@ msgid ""
 "for Inputs.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:19
 msgid ""
 "Note that before using the functions defined in this \n"
 "package, you have to load it writing @code{load(finance)$}.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:21
 msgid ""
 "Author: Nicolas Guarin Zapata.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:24
 msgid ""
 "@node Functions and Variables for finance,  , Introduction to finance, finance-pkg\n"
 "@section Functions and Variables for finance\n"
+msgstr ""
+
+#: finance.texi:28
+msgid ""
 "@anchor{days360}\n"
 "@deffn {Function} days360 (@var{year1},@var{month1},@var{day1},@var{year2},@var{month2},@var{day2})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:30
 msgid ""
 "Calculates the distance between 2 dates, assuming 360 days years, 30 days months.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:32
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:38
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -83,33 +87,37 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:42
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:44
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:48
+msgid ""
 "@anchor{fv}\n"
 "@deffn {Function} fv (@var{rate},@var{PV},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:52
 msgid ""
 "We can calculate the future value of a Present one given a certain interest rate.\n"
 "@var{rate} is the interest rate, @var{PV} is the present value and @var{num} is\n"
 "the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:54
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:60
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -118,33 +126,37 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:64
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:66
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:70
+msgid ""
 "@anchor{pv}\n"
 "@deffn {Function} pv (@var{rate},@var{FV},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:74
 msgid ""
 "We can calculate the present value of a Future one given a certain interest rate.\n"
 "@var{rate} is the interest rate, @var{FV} is the future value and @var{num} is\n"
 "the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:76
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:82
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -153,21 +165,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:86
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:88
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:92
+msgid ""
 "@anchor{graph_flow}\n"
 "@deffn {Function} graph_flow (@var{val})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:97
 msgid ""
 "Plots the money flow in a time line, the positive values are in blue\n"
 "and upside; the negative ones are in red and downside.\n"
@@ -175,12 +191,12 @@ msgid ""
 "@var{val} is a list of flow values.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:99
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:104
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -188,33 +204,37 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:108
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:110
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:114
+msgid ""
 "@anchor{annuity_pv}\n"
 "@deffn {Function} annuity_pv (@var{rate},@var{PV},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:118
 msgid ""
 "We can calculate the annuity knowing the present value (like an amount),\n"
 "it is a constant and periodic payment. @var{rate} is the interest rate,\n"
 "@var{PV} is the present value and @var{num} is the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:120
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:126
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -223,33 +243,37 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:130
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:132
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:136
+msgid ""
 "@anchor{annuity_fv}\n"
 "@deffn {Function} annuity_fv (@var{rate},@var{FV},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:140
 msgid ""
 "We can calculate the annuity knowing the desired value (future value),\n"
 "it is a constant and periodic payment. @var{rate} is the interest rate,\n"
 "@var{FV} is the future value and @var{num} is the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:142
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:148
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -258,33 +282,37 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:152
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:154
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:158
+msgid ""
 "@anchor{geo_annuity_pv}\n"
 "@deffn {Function} geo_annuity_pv (@var{rate},@var{growing_rate},@var{PV},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:162
 msgid ""
 "We can calculate the annuity knowing the present value (like an amount),\n"
 "in a growing periodic payment. @var{rate} is the interest rate, @var{growing_rate}\n"
 "is the growing rate, @var{PV} is the present value and @var{num} is the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:164
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:170
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -293,33 +321,37 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:174
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:176
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:180
+msgid ""
 "@anchor{geo_annuity_fv}\n"
 "@deffn {Function} geo_annuity_fv (@var{rate},@var{growing_rate},@var{FV},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:184
 msgid ""
 "We can calculate the annuity knowing the desired value (future value),\n"
 "in a growing periodic payment. @var{rate} is the interest rate, @var{growing_rate}\n"
 "is the growing rate, @var{FV} is the future value and @var{num} is the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:186
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:192
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -328,42 +360,42 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:196
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:198
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:201
 msgid ""
 "@anchor{amortization}\n"
 "@deffn {Function} amortization (@var{rate},@var{amount},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:205
 msgid ""
 "Amortization table determined by a specific rate.\n"
 "@var{rate} is the interest rate, @var{amount} is the amount value,\n"
 "and @var{num} is the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:207
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:226
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
 "(%i2) amortization(0.05,56000,12)$\n"
-"      \"n\"    \"Balance\"     \"Interest\"   \"Amortization\"  \"Payment\"      \n"
+"      \\"n\\"    \\"Balance\\"     \\"Interest\\"   \\"Amortization\\"  \\"Payment\\"      \n"
 "     0.000     56000.000         0.000         0.000         0.000  \n"
 "     1.000     52481.777      2800.000      3518.223      6318.223  \n"
 "     2.000     48787.643      2624.089      3694.134      6318.223  \n"
@@ -380,42 +412,46 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:230
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:232
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:236
+msgid ""
 "@anchor{arit_amortization}\n"
 "@deffn {Function} arit_amortization (@var{rate},@var{increment},@var{amount},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:244
 msgid ""
 "The amortization table determined by a specific rate and with growing payment\n"
 "can be claculated by @code{arit_amortization}.\n"
 "Notice that the payment is not constant, it presents\n"
 "an arithmetic growing, increment is then the difference between two\n"
-"consecutive rows in the \"Payment\" column.\n"
+"consecutive rows in the \\"Payment\\" column.\n"
 "@var{rate} is the interest rate, @var{increment} is the increment, @var{amount}\n"
 "is the amount value, and @var{num} is the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:246
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:265
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
 "(%i2) arit_amortization(0.05,1000,56000,12)$\n"
-"      \"n\"    \"Balance\"     \"Interest\"   \"Amortization\"  \"Payment\"      \n"
+"      \\"n\\"    \\"Balance\\"     \\"Interest\\"   \\"Amortization\\"  \\"Payment\\"      \n"
 "     0.000     56000.000         0.000         0.000         0.000  \n"
 "     1.000     57403.679      2800.000     -1403.679      1396.321  \n"
 "     2.000     57877.541      2870.184      -473.863      2396.321  \n"
@@ -432,42 +468,46 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:269
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:271
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:275
+msgid ""
 "@anchor{geo_amortization}\n"
 "@deffn {Function} geo_amortization (@var{rate},@var{growing_rate},@var{amount},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:283
 msgid ""
 "The amortization table determined by rate, amount,\n"
 "and number of periods can be found by @code{geo_amortization}.\n"
 "Notice that the payment is not constant, it presents\n"
 "a geometric growing, @var{growing_rate} is then the quotient between two\n"
-"consecutive rows in the \"Payment\" column.\n"
+"consecutive rows in the \\"Payment\\" column.\n"
 "@var{rate} is the interest rate, @var{amount}\n"
 "is the amount value, and @var{num} is the number of periods.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:285
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:304
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
 "(%i2) geo_amortization(0.05,0.03,56000,12)$\n"
-"      \"n\"    \"Balance\"     \"Interest\"   \"Amortization\"  \"Payment\"      \n"
+"      \\"n\\"    \\"Balance\\"     \\"Interest\\"   \\"Amortization\\"  \\"Payment\\"      \n"
 "     0.000     56000.000         0.000         0.000         0.000  \n"
 "     1.000     53365.296      2800.000      2634.704      5434.704  \n"
 "     2.000     50435.816      2668.265      2929.480      5597.745  \n"
@@ -484,21 +524,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:308
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:310
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:314
+msgid ""
 "@anchor{saving}\n"
 "@deffn {Function} saving (@var{rate},@var{amount},@var{num})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:319
 msgid ""
 "The table that represents the values in a constant and periodic\n"
 "saving can be found by @code{saving}.\n"
@@ -506,17 +550,17 @@ msgid ""
 "of periods to save.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:321
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:343
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
 "(%i2) saving(0.15,12000,15)$\n"
-"      \"n\"    \"Balance\"     \"Interest\"   \"Payment\"      \n"
+"      \\"n\\"    \\"Balance\\"     \\"Interest\\"   \\"Payment\\"      \n"
 "     0.000         0.000         0.000         0.000  \n"
 "     1.000       252.205         0.000       252.205  \n"
 "     2.000       542.240        37.831       252.205  \n"
@@ -536,33 +580,37 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:347
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:349
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:353
+msgid ""
 "@anchor{npv}\n"
 "@deffn {Function} npv (@var{rate},@var{val})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:357
 msgid ""
 "Calculates the present value of a value series to evaluate the viability in a\n"
 "project.\n"
 "@var{val} is a list of varying cash flows.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:359
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:365
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -571,21 +619,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:369
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:371
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:375
+msgid ""
 "@anchor{irr}\n"
 "@deffn {Function} irr (@var{val},@var{IO})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:380
 msgid ""
 "IRR (Internal Rate of Return) is the value of rate which makes Net Present Value\n"
 "zero.\n"
@@ -593,12 +645,12 @@ msgid ""
 "@var{I0} is the initial investment.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:382
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:389
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -608,21 +660,25 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:393
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:395
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: finance.texi:399
+msgid ""
 "@anchor{benefit_cost}\n"
 "@deffn {Function} benefit_cost (@var{rate},@var{input},@var{output})\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:406
 msgid ""
 "Calculates the ratio Benefit/Cost. Benefit is the Net Present Value (NPV)\n"
 "of the inputs, and Cost is the Net Present Value (NPV) of the outputs.\n"
@@ -632,12 +688,12 @@ msgid ""
 "and @var{output} is a list of output values.\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:408
 msgid ""
 "Example:\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:414
 msgid ""
 "@example\n"
 "(%i1) load(finance)$\n"
@@ -646,18 +702,15 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:418
 msgid ""
 "@opencatbox\n"
 "@category{Package finance}\n"
 "@closecatbox\n"
 msgstr ""
 
-# finance.texi
+#: finance.texi:420
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# finance.texi
-msgid ""
-msgstr ""

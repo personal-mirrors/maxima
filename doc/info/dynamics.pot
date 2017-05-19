@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# dynamics.texi
+msgstr ""
+
+#: dynamics.texi:6
 msgid ""
 "@menu\n"
 "* The dynamics package::\n"
@@ -26,13 +26,13 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:9
 msgid ""
 "@node The dynamics package, Graphical analysis of discrete dynamical systems, dynamics-pkg, dynamics-pkg\n"
 "@section The dynamics package\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:16
 msgid ""
 "Package @code{dynamics} includes functions for 3D visualization,\n"
 "animations, graphical analysis of differential and difference equations\n"
@@ -42,32 +42,32 @@ msgid ""
 "sets are described in the section on @mrefdot{Plotting}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:19
 msgid ""
 "All the functions in this package will be loaded automatically the first\n"
 "time they are used.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:23
 msgid ""
 "@opencatbox\n"
 "@category{Dynamical systems} @category{Share packages} @category{Package dynamics}\n"
 "@closecatbox\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:26
 msgid ""
 "@node Graphical analysis of discrete dynamical systems,  Visualization with VTK, The dynamics package, dynamics-pkg\n"
 "@section Graphical analysis of discrete dynamical systems\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:29
 msgid ""
 "@anchor{chaosgame}\n"
 "@deffn {Function} chaosgame ([[@var{x1}, @var{y1}]@dots{}[@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{b}, @var{n}, @var{options}, @dots{});\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:38
 msgid ""
 "Implements the so-called chaos game: the initial point (@var{x0},\n"
 "@var{y0}) is plotted and then one of the @var{m} points\n"
@@ -79,12 +79,12 @@ msgid ""
 "same as for @mrefdot{plot2d}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:40
 msgid ""
 "@strong{Example}. A plot of Sierpinsky's triangle:\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:45
 msgid ""
 "@example\n"
 "(%i1) chaosgame([[0, 0], [1, 0], [0.5, sqrt(3)/2]], [0.1, 0.1], 1/2,\n"
@@ -92,32 +92,32 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:49
 msgid ""
 "@ifnotinfo\n"
 "@figure{dynamics7}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:53
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:55
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:58
 msgid ""
 "@anchor{evolution}\n"
 "@deffn {Function} evolution (@var{F}, @var{y0}, @var{n},  @dots{}, @var{options}, @dots{});\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:71
 msgid ""
 "Draws @var{n+1} points in a two-dimensional graph, where the horizontal\n"
 "coordinates of the points are the integers 0, 1, 2, ..., @var{n}, and\n"
@@ -133,7 +133,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:77
 msgid ""
 "With initial value @var{y(0)} equal to @var{y0}. @var{F} must be an\n"
 "expression that depends only on one variable (in the example, it\n"
@@ -142,12 +142,12 @@ msgid ""
 " This function accepts the same options as @mrefdot{plot2d}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:79
 msgid ""
 "@strong{Example}.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:86
 msgid ""
 "@example\n"
 "(%i1) evolution(cos(y), 2, 11);\n"
@@ -155,23 +155,27 @@ msgid ""
 "@ifnotinfo\n"
 "@figure{dynamics1}\n"
 "@end ifnotinfo\n"
+msgstr ""
+
+#: dynamics.texi:91
+msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:93
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:96
 msgid ""
 "@anchor{evolution2d}\n"
 "@deffn {Function} evolution2d ([@var{F}, @var{G}], [@var{u}, @var{v}], [@var{u0}, @var{y0}], @var{n}, @var{options}, @dots{});\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:108
 msgid ""
 "Shows, in a two-dimensional plot, the first @var{n+1} points in the\n"
 "sequence of points defined by the two-dimensional discrete dynamical\n"
@@ -186,7 +190,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:113
 msgid ""
 "With initial values @var{u0} and @var{v0}. @var{F} and @var{G} must be\n"
 "two expressions that depend only on two variables, @var{u} and\n"
@@ -194,12 +198,12 @@ msgid ""
 "same as for @mrefdot{plot2d}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:115
 msgid ""
 "@strong{Example}. Evolution of a two-dimensional discrete dynamical system:\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:121
 msgid ""
 "@example\n"
 "(%i1) f: 0.6*x*(1+2*x)+0.8*y*(x-1)-y^2-0.9$\n"
@@ -208,19 +212,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:125
 msgid ""
 "@ifnotinfo\n"
 "@figure{dynamics5}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:127
 msgid ""
 "And an enlargement of a small region in that fractal:\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:132
 msgid ""
 "@example\n"
 "(%i9) evolution2d([f,g], [x,y], [-0.5,0], 300000, [x,-0.8,-0.6],\n"
@@ -228,32 +232,32 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:136
 msgid ""
 "@ifnotinfo\n"
 "@figure{dynamics6}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:140
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:142
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:145
 msgid ""
 "@anchor{ifs}\n"
 "@deffn {Function} ifs ([@var{r1}, @dots{}, @var{rm}], [@var{A1},@dots{}, @var{Am}], [[@var{x1}, @var{y1}], @dots{}, [@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{n}, @var{options}, @dots{});\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:151
 msgid ""
 "Implements the Iterated Function System method. This method is similar\n"
 "to the method described in the function @mrefdot{chaosgame} but instead of\n"
@@ -262,7 +266,7 @@ msgid ""
 "matrix @var{Ai} that corresponds to the point chosen randomly.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:158
 msgid ""
 "The random choice of one of the @var{m} attractive points can be made\n"
 "with a non-uniform probability distribution defined by the weights\n"
@@ -272,12 +276,12 @@ msgid ""
 "options are the same as for @mrefdot{plot2d}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:160
 msgid ""
 "@strong{Example}. Barnsley's fern, obtained with 4 matrices and 4 points:\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:173
 msgid ""
 "@example\n"
 "(%i1) a1: matrix([0.85,0.04],[-0.04,0.85])$\n"
@@ -293,32 +297,32 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:177
 msgid ""
 "@ifnotinfo\n"
 "@figure{dynamics8}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:181
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:183
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:186
 msgid ""
 "@anchor{orbits}\n"
 "@deffn {Function} orbits (@var{F}, @var{y0}, @var{n1}, @var{n2}, [@var{x}, @var{x0}, @var{xf}, @var{xstep}], @var{options}, @dots{});\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:191
 msgid ""
 "Draws the orbits diagram for a family of one-dimensional\n"
 "discrete dynamical systems, with one parameter @var{x}; that kind of\n"
@@ -326,7 +330,7 @@ msgid ""
 "system.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:203
 msgid ""
 "The function @var{F(y)} defines a sequence with a starting value of\n"
 "@var{y0}, as in the case of the function @code{evolution}, but in this\n"
@@ -341,27 +345,27 @@ msgid ""
 "in the vertical direction.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:206
 msgid ""
 "@strong{Example}. Orbits diagram of the quadratic map, with a parameter\n"
 "@var{a}:\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:210
 msgid ""
 "@example\n"
 "(%i1) orbits(x^2+a, 0, 50, 200, [a, -2, 0.25], [style, dots]);\n"
 "@end example\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:214
 msgid ""
 "@ifnotinfo\n"
 "@figure{dynamics3}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:220
 msgid ""
 "To enlarge the region around the lower bifurcation near x @code{=} -1.25 use:\n"
 "@example\n"
@@ -370,32 +374,32 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:224
 msgid ""
 "@ifnotinfo\n"
 "@figure{dynamics4}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:228
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:230
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:233
 msgid ""
 "@anchor{staircase}\n"
 "@deffn {Function} staircase (@var{F}, @var{y0}, @var{n},@var{options},@dots{});\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:244
 msgid ""
 "Draws a staircase diagram for the sequence defined by the recurrence\n"
 "relation\n"
@@ -409,7 +413,7 @@ msgid ""
 "@end tex\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:254
 msgid ""
 "The interpretation and allowed values of the input parameters is the\n"
 "same as for the function @mrefdot{evolution} A staircase diagram consists\n"
@@ -422,12 +426,12 @@ msgid ""
 "reached. The options are the same as for @mrefdot{plot2d}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:256
 msgid ""
 "@strong{Example}.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:263
 msgid ""
 "@example\n"
 "(%i1) staircase(cos(y), 1, 11, [y, 0, 1.2]);\n"
@@ -437,25 +441,25 @@ msgid ""
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:267
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:269
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:272
 msgid ""
 "@node Visualization with VTK, , Graphical analysis of discrete dynamical systems, dynamics-pkg\n"
 "@section Visualization with VTK\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:277
 msgid ""
 "Function scene creates 3D images and animations using the @emph{Visualization\n"
 "ToolKit} (VTK) software. In order to use that function, Xmaxima and VTK should be\n"
@@ -463,13 +467,13 @@ msgid ""
 "some system might come in a separate package).\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:280
 msgid ""
 "@anchor{scene}\n"
 "@deffn {Function} scene (@var{objects}, @dots{}, @var{options}, @dots{});\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:300
 msgid ""
 "Accepts an empty list or a list of several @mxref{scene_objects,objects}\n"
 "and @mxrefdot{scene_options,options} The program launches Xmaxima, which\n"
@@ -482,17 +486,17 @@ msgid ""
 " \n"
 "@strong{Example}. A hexagonal pyramid with a blue background:\n"
 "@c ===beg===\n"
-"@c scene(cone, [background,\"#9980e5\"])$\n"
+"@c scene(cone, [background,\\"#9980e5\\"])$\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) scene(cone, [background,\"#9980e5\"])$\n"
+"(%i1) scene(cone, [background,\\"#9980e5\\"])$\n"
 "@end example\n"
 "@ifnotinfo\n"
 "@figure{scene1}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:308
 msgid ""
 "By holding down the left button of the mouse while it is moved on the\n"
 "graphics window, the camera can be rotated showing different views of\n"
@@ -503,14 +507,14 @@ msgid ""
 "button while moving it up or down will zoom in or out.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:312
 msgid ""
 "Each object option should be a list starting with the option name,\n"
 "followed by its value. The list of allowed options can be found in the\n"
 "@mxref{object_options,Scene object's options} section.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:326
 msgid ""
 "@strong{Example}. This will show a sphere falling to the ground and\n"
 "bouncing off without losing any energy. To start or pause the\n"
@@ -527,31 +531,31 @@ msgid ""
 "@c ===end===\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:329
 msgid ""
 "@example\n"
 "(%i1) p: makelist ([0,0,2.1- 9.8*t^2/2], t, 0, 0.64, 0.01)$\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:331
 msgid ""
 "(%i2) p: append (p, reverse(p))$\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:335
 msgid ""
 "(%i3) ball: [sphere, [radius,0.1], [thetaresolution,20],\n"
 "  [phiresolution,20], [position,0,0,2.1], [color,red],\n"
 "  [animate,position,p]]$\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:338
 msgid ""
 "(%i4) ground: [cube, [xlength,2], [ylength,2], [zlength,0.2],\n"
 "  [position,0,0,-0.1],[color,violet]]$\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:344
 msgid ""
 "(%i5) scene (ball, ground, restart)$\n"
 "@end example\n"
@@ -560,7 +564,7 @@ msgid ""
 "@end ifnotinfo\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:349
 msgid ""
 "The @var{restart} option was used to make the animation restart\n"
 "automatically every time the last point in the position list is reached.\n"
@@ -568,39 +572,39 @@ msgid ""
 "option of plot2d. \n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:353
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:355
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:358
 msgid ""
 "@anchor{scene_options}\n"
 "@subsection Scene options\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:362
 msgid ""
 "@anchor{scene_azimuth}\n"
 "@defvr {Scene option} azimuth [azimuth, @var{angle}]\n"
 "Default value: @code{135}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:366
 msgid ""
 "The rotation of the camera on the horizontal (x, y) plane. @var{angle}\n"
 "must be a real number; an angle of 0 means that the camera points in the\n"
 "direction of the y axis and the x axis will appear on the right.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:371
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -608,20 +612,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:375
 msgid ""
 "@anchor{scene_background}\n"
 "@defvr {Scene option} background [background, @var{color}]\n"
 "Default value: @code{black}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:378
 msgid ""
 "The color of the graphics window's background. It accepts color names or\n"
 "hexadecimal red-green-blue strings (see the @mref{color} option of plot2d).\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:383
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -629,14 +633,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:387
 msgid ""
 "@anchor{scene_elevation}\n"
 "@defvr {Scene option} elevation [elevation, @var{angle}]\n"
 "Default value: @code{30}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:392
 msgid ""
 "The vertical rotation of the camera. The @var{angle} must be a real\n"
 "number; an angle of 0 means that the camera points on the horizontal,\n"
@@ -644,7 +648,7 @@ msgid ""
 "down from the horizontal.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:397
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -652,20 +656,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:401
 msgid ""
 "@anchor{scene_height}\n"
 "@defvr {Scene option} height [height, @var{pixels}]\n"
 "Default value: @code{500}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:404
 msgid ""
 "The height, in pixels, of the graphics window. @var{pixels} must be a\n"
 "positive integer number.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:409
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -673,21 +677,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:413
 msgid ""
 "@anchor{scene_restart}\n"
 "@defvr {Scene option} restart [restart, @var{value}]\n"
 "Default value: @code{false}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:417
 msgid ""
 "A true value means that animations will restart automatically when the\n"
 "end of the list is reached. Writing just ``restart'' is equivalent to\n"
 "[restart, @var{true}].\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:422
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -695,20 +699,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:426
 msgid ""
 "@anchor{scene_tstep}\n"
 "@defvr {Scene option} tstep [tstep, @var{time}]\n"
 "Default value: @code{10}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:429
 msgid ""
 "The amount of time, in mili-seconds, between iterations among\n"
 "consecutive animation frames. @var{time} must be a real number.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:434
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -716,20 +720,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:438
 msgid ""
 "@anchor{scene_width}\n"
 "@defvr {Scene option} width [width, @var{pixels}]\n"
 "Default value: @code{500}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:441
 msgid ""
 "The width, in pixels, of the graphics window. @var{pixels} must be a\n"
 "positive integer number.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:446
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -737,21 +741,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:450
 msgid ""
 "@anchor{scene_windowname}\n"
 "@defvr {Scene option} windowname [windowtitle, @var{name}]\n"
 "Default value: @code{.scene}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:454
 msgid ""
 "@var{name} must be a string that can be used as the name of the Tk\n"
 "window created by Xmaxima for the @code{scene} graphics. The default\n"
 "value @code{.scene} implies that a new top level window will be created.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:459
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -759,20 +763,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:463
 msgid ""
 "@anchor{scene_windowtitle}\n"
 "@defvr {Scene option} windowtitle [windowtitle, @var{name}]\n"
 "Default value: @code{Xmaxima: scene}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:466
 msgid ""
 "@var{name} must be a string that will be written in the title of the\n"
 "window created by @code{scene}.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:471
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -780,19 +784,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:474
 msgid ""
 "@anchor{scene_objects}\n"
 "@subsection Scene objects\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:477
 msgid ""
 "@anchor{cone}\n"
 "@defvr {Scene object} cone [cone, @var{options}]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:488
 msgid ""
 "Creates a regular pyramid with height equal to 1 and a hexagonal base\n"
 "with vertices 0.5 units away from the axis. Options\n"
@@ -806,7 +810,7 @@ msgid ""
 "change those defaults.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:496
 msgid ""
 "@strong{Example}. This shows a pyramid that starts rotating around the z\n"
 "axis when the play button is pressed.\n"
@@ -817,7 +821,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:501
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -825,13 +829,13 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:504
 msgid ""
 "@anchor{cube}\n"
 "@defvr {Scene object} cube [cube, @var{options}]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:510
 msgid ""
 "A cube with edges of 1 unit and faces parallel to the xy, xz and yz\n"
 "planes. The lengths of the three edges can be changed with options\n"
@@ -840,7 +844,7 @@ msgid ""
 "the faces can be rotated with option @mxrefdot{object_orientation,orientation}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:515
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -848,13 +852,13 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:518
 msgid ""
 "@anchor{cylinder}\n"
 "@defvr {Scene object} cylinder [cylinder, @var{options}]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:529
 msgid ""
 "Creates a regular prism with height equal to 1 and a hexagonal base with\n"
 "vertices 0.5 units away from the axis. Options\n"
@@ -868,7 +872,7 @@ msgid ""
 "@mxref{object_center,center} to change those defaults.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:534
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -876,18 +880,18 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:537
 msgid ""
 "@anchor{sphere}\n"
 "@defvr {Scene object} sphere [sphere, @var{options}]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:539
 msgid ""
 "A sphere with default radius of 0.5 units and center at the origin. \n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:544
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -895,19 +899,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:547
 msgid ""
 "@anchor{object_options}\n"
 "@subsection Scene object's options\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:550
 msgid ""
 "@anchor{object_animation}\n"
 "@defvr {Object option} animation [animation, @var{property}, @var{positions}]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:560
 msgid ""
 "@var{property} should be one of the following 4 object's properties:\n"
 "@mxrefcomma{object_origin,origin} @mxrefcomma{object_scale,scale}\n"
@@ -920,12 +924,12 @@ msgid ""
 "the animation restart after the play button is pressed again.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:562
 msgid ""
 "See also @mxrefdot{object_track,track}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:567
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -933,14 +937,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:571
 msgid ""
 "@anchor{object_capping}\n"
 "@defvr {Object option} capping [capping, @var{number}]\n"
 "Default value: @code{1}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:580
 msgid ""
 "In a cone or a cylinder, it defines whether the base (or bases) will be\n"
 "shown. A value of 1 for @var{number} makes the base visible and a value\n"
@@ -952,14 +956,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:584
 msgid ""
 "@anchor{object_center}\n"
 "@defvr {Object option} center [center, @var{point}]\n"
 "Default value: @code{[0, 0, 0]}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:589
 msgid ""
 "The coordinates of the object's geometric center, with respect to its\n"
 "@mxrefdot{object_position, position} @var{point} can be a list with 3\n"
@@ -967,7 +971,7 @@ msgid ""
 "or cube it will be at half its height and in a sphere at its center.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:594
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -975,20 +979,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:598
 msgid ""
 "@anchor{object_color}\n"
 "@defvr {Object option} color [color, @var{colorname}]\n"
 "Default value: @code{white}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:601
 msgid ""
 "The color of the object. It accepts color names or hexadecimal\n"
 "red-green-blue strings (see the @mref{color} option of plot2d).\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:606
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -996,14 +1000,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:610
 msgid ""
 "@anchor{object_endphi}\n"
 "@defvr {Object option} endphi [endphi, @var{angle}]\n"
 "Default value: @code{180}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:616
 msgid ""
 "In a sphere phi is the angle on the vertical plane that passes through\n"
 "the z axis, measured from the positive part of the z axis. @var{angle}\n"
@@ -1012,13 +1016,13 @@ msgid ""
 "part of the sphere's surface.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:619
 msgid ""
 "See also @mxref{object_startphi,startphi} and\n"
 "@mxrefdot{object_phiresolution,phiresolution}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:624
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1026,14 +1030,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:628
 msgid ""
 "@anchor{object_endtheta}\n"
 "@defvr {Object option} endtheta [endtheta, @var{angle}]\n"
 "Default value: @code{360}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:634
 msgid ""
 "In a sphere theta is the angle on the horizontal plane (longitude),\n"
 "measured from the positive part of the x axis. @var{angle} must be a\n"
@@ -1042,13 +1046,13 @@ msgid ""
 "the sphere's surface.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:637
 msgid ""
 "See also @mxref{object_starttheta,starttheta} and\n"
 "@mxrefdot{object_thetaresolution,thetaresolution}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:642
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1056,20 +1060,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:646
 msgid ""
 "@anchor{object_height}\n"
 "@defvr {Object option} height [height, @var{value}]\n"
 "Default value: @code{1}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:649
 msgid ""
 "@var{value} must be a positive number which sets the height of a cone\n"
 "or a cylinder.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:654
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1077,20 +1081,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:658
 msgid ""
 "@anchor{object_linewidth}\n"
 "@defvr {Object option} linewidth [linewidth, @var{value}]\n"
 "Default value: @code{1}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:661
 msgid ""
 "The width of the lines, when option @mxref{object_wireframe,wireframe} is\n"
 "used. @var{value} must be a positive number.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:666
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1098,21 +1102,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:670
 msgid ""
 "@anchor{object_opacity}\n"
 "@defvr {Object option} opacity [opacity, @var{value}]\n"
 "Default value: @code{1}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:674
 msgid ""
 "@var{value} must be a number between 0 and 1. The lower the number, the\n"
 "more transparent the object will become. The default value of 1 means a\n"
 "completely opaque object.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:679
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1120,14 +1124,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:683
 msgid ""
 "@anchor{object_orientation}\n"
 "@defvr {Object option} orientation [orientation, @var{angles}]\n"
 "Default value: @code{[0, 0, 0]}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:688
 msgid ""
 "Three angles by which the object will be rotated with respect to the\n"
 "three axis. @var{angles} can be a list with 3 real numbers, or 3 real\n"
@@ -1135,7 +1139,7 @@ msgid ""
 "the x axis of the object to the y axis of the reference frame.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:693
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1143,21 +1147,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:697
 msgid ""
 "@anchor{object_origin}\n"
 "@defvr {Object option} origin [origin, @var{point}]\n"
 "Default value: @code{[0, 0, 0]}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:701
 msgid ""
 "The coordinates of the object's origin, with respect to which its\n"
 "other dimensions are defined. @var{point} can be a list with 3\n"
 "real numbers, or 3 real numbers separated by commas.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:706
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1165,27 +1169,27 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:710
 msgid ""
 "@anchor{object_phiresolution}\n"
 "@defvr {Object option} phiresolution [phiresolution, @var{num}]\n"
 "Default value: @code{}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:714
 msgid ""
 "The number of sub-intervals into which the phi angle interval from\n"
 "@mxref{object_startphi,startphi} to @mxref{object_endphi,endphi}\n"
 "will be divided. @var{num} must be a positive integer.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:717
 msgid ""
 "See also @mxref{object_startphi,startphi} and\n"
 "@mxrefdot{object_endphi,endphi}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:722
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1193,25 +1197,25 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:725
 msgid ""
 "@anchor{object_points}\n"
 "@defvr {Object option} points  [points]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:728
 msgid ""
 "Only the vertices of the triangulation used to render the surface will\n"
 "be shown. @strong{Example}: @code{[sphere, [points]]}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:731
 msgid ""
 "See also @mxref{object_surface,surface} and\n"
 "@mxrefdot{object_wireframe,wireframe}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:736
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1219,20 +1223,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:740
 msgid ""
 "@anchor{object_pointsize}\n"
 "@defvr {Object option} pointsize [pointsize, @var{value}]\n"
 "Default value: @code{1}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:743
 msgid ""
 "The size of the points, when option @mxref{object_points,points} is\n"
 "used. @var{value} must be a positive number.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:748
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1240,20 +1244,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:752
 msgid ""
 "@anchor{object_position}\n"
 "@defvr {Object option} position [position, @var{point}]\n"
 "Default value: @code{[0, 0, 0]}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:755
 msgid ""
 "The coordinates of the object's position. @var{point} can be a list with 3\n"
 "real numbers, or 3 real numbers separated by commas.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:760
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1261,20 +1265,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:764
 msgid ""
 "@anchor{object_radius}\n"
 "@defvr {Object option} radius [radius, @var{value}]\n"
 "Default value: @code{0.5}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:767
 msgid ""
 "The radius or a sphere or the distance from the axis to the base's\n"
 "vertices in a cylinder or a cone. @var{value} must be a positive number.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:772
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1282,14 +1286,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:776
 msgid ""
 "@anchor{object_resolution}\n"
 "@defvr {Object option} resolution [resolution, @var{number}]\n"
 "Default value: @code{6}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:784
 msgid ""
 "@var{number} must be a integer greater than 2 that sets the number of\n"
 "edges in the base of a cone or a cylinder.\n"
@@ -1300,14 +1304,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:788
 msgid ""
 "@anchor{object_scale}\n"
 "@defvr {Object option} scale [scale, @var{factors}]\n"
 "Default value: @code{[1, 1, 1]}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:795
 msgid ""
 "Three numbers by which the object will be scaled with respect to the\n"
 "three axis. @var{factors} can be a list with 3 real numbers, or 3 real\n"
@@ -1317,7 +1321,7 @@ msgid ""
 "unchanged.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:800
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1325,14 +1329,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:804
 msgid ""
 "@anchor{object_startphi}\n"
 "@defvr {Object option} startphi [startphi, @var{angle}]\n"
 "Default value: @code{0}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:810
 msgid ""
 "In a sphere phi is the angle on the vertical plane that passes through\n"
 "the z axis, measured from the positive part of the z axis. @var{angle}\n"
@@ -1341,13 +1345,13 @@ msgid ""
 "part of the sphere's surface.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:813
 msgid ""
 "See also @mxref{object_endphi,endphi} and\n"
 "@mxrefdot{object_phiresolution,phiresolution}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:818
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1355,14 +1359,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:822
 msgid ""
 "@anchor{object_starttheta}\n"
 "@defvr {Object option} starttheta [starttheta, @var{angle}]\n"
 "Default value: @code{0}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:828
 msgid ""
 "In a sphere theta is the angle on the horizontal plane (longitude),\n"
 "measured from the positive part of the x axis. @var{angle} must be a\n"
@@ -1371,13 +1375,13 @@ msgid ""
 "the sphere's surface.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:831
 msgid ""
 "See also @mxref{object_endtheta,endtheta} and\n"
 "@mxrefdot{object_thetaresolution,thetaresolution}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:836
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1385,13 +1389,13 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:839
 msgid ""
 "@anchor{object_surface}\n"
 "@defvr {Object option} surface [surface]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:844
 msgid ""
 "The surfaces of the object will be rendered and the lines and points of\n"
 "the triangulation used to build the surface will not be shown. This is\n"
@@ -1399,7 +1403,7 @@ msgid ""
 "@mxref{object_points,points} or @mxrefdot{object_wireframe,wireframe}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:849
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1407,27 +1411,27 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:853
 msgid ""
 "@anchor{object_thetaresolution}\n"
 "@defvr {Object option} thetaresolution [thetaresolution, @var{num}]\n"
 "Default value: @code{}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:857
 msgid ""
 "The number of sub-intervals into which the theta angle interval from\n"
 "@mxref{object_starttheta,starttheta} to @mxref{object_endtheta,endtheta}\n"
 "will be divided. @var{num} must be a positive integer.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:860
 msgid ""
 "See also @mxref{object_starttheta,starttheta} and\n"
 "@mxrefdot{object_endtheta,endtheta}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:865
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1435,13 +1439,13 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:868
 msgid ""
 "@anchor{object_track}\n"
 "@defvr {Object option} track [track, @var{positions}]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:876
 msgid ""
 "@var{positions} should be a list of points. When the play button is\n"
 "pressed, the object position will be changed sequentially through all\n"
@@ -1452,60 +1456,64 @@ msgid ""
 "again.\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:880
 msgid ""
 "@strong{Example}. This will show the trajectory of a ball thrown with\n"
 "speed of 5 m/s, at an angle of 45 degrees, when the air resistance can\n"
 "be neglected:\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:883
 msgid ""
 "@example\n"
 "(%i1) p: makelist ([0,4*t,4*t- 9.8*t^2/2], t, 0, 0.82, 0.01)$\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:885
 msgid ""
 "(%i2) ball: [sphere, [radius,0.1], [color,red], [track,p]]$\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:888
 msgid ""
 "(%i3) ground: [cube, [xlength,2], [ylength,4], [zlength,0.2],\n"
 "      [position,0,1.5,-0.2],[color,green]]$\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:891
 msgid ""
 "(%i4) scene (ball, ground)$\n"
 "@end example\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:893
 msgid ""
 "See also @mxrefdot{object_animation,animation}\n"
+msgstr ""
+
+#: dynamics.texi:899
+msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:903
 msgid ""
 "@anchor{object_xlength}\n"
 "@defvr {Object option} xlength [xlength, @var{length}]\n"
 "Default value: @code{1}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:907
 msgid ""
 "The height of a cube in the x direction. @var{length} must be a positive\n"
 "number. See also @mxref{object_ylength,ylength} and\n"
 "@mxrefdot{object_zlength,zlength}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:912
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1513,21 +1521,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:916
 msgid ""
 "@anchor{object_ylength}\n"
 "@defvr {Object option} ylength [ylength, @var{length}]\n"
 "Default value: @code{1}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:920
 msgid ""
 "The height of a cube in the y direction. @var{length} must be a positive\n"
 "number. See also @mxref{object_xlength,xlength} and\n"
 "@mxrefdot{object_zlength,zlength}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:925
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1535,21 +1543,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:929
 msgid ""
 "@anchor{object_zlength}\n"
 "@defvr {Object option} zlength [zlength, @var{length}]\n"
 "Default value: @code{1}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:933
 msgid ""
 "The height of a cube in z the direction. @var{length} must be a positive\n"
 " number.  See also @mxref{object_xlength,xlength} and\n"
 " @mxrefdot{object_ylength,ylength}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:938
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
@@ -1557,28 +1565,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:941
 msgid ""
 "@anchor{object_wireframe}\n"
 "@defvr {Object option} wireframe  [wireframe]\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:944
 msgid ""
 "Only the edges of the triangulation used to render the surface will be\n"
 "shown. @strong{Example}: @code{[cube, [wireframe]]}\n"
 msgstr ""
 
-# dynamics.texi
+#: dynamics.texi:947
 msgid ""
 "See also @mxref{object_surface,surface} and\n"
 "@mxrefdot{object_points,points}\n"
 msgstr ""
 
-# dynamics.texi
-msgid ""
-"@opencatbox\n"
-"@category{Package dynamics} @category{Plotting}\n"
-"@closecatbox\n"
-"@end defvr\n"
-msgstr ""

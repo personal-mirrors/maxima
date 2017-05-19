@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# defstruct.texi
+msgstr ""
+
+#: defstruct.texi:6
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@page\n"
@@ -26,7 +26,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:11
 msgid ""
 "@menu\n"
 "* Introduction to Structures::       \n"
@@ -34,7 +34,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:16
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Structures, Functions and Variables for Structures, Structures, Structures\n"
@@ -42,7 +42,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:21
 msgid ""
 "Maxima provides a simple data aggregate called a structure.\n"
 "A structure is an expression in which arguments are identified by name (the field name)\n"
@@ -50,7 +50,7 @@ msgid ""
 "A field value can be any expression.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:28
 msgid ""
 "A structure is defined by the @code{defstruct} function;\n"
 "the global variable @code{structures} is the list of user-defined structures.\n"
@@ -60,7 +60,7 @@ msgid ""
 "and @code{kill(@var{x}@@ @var{a})} unbinds the field @var{a} of the structure instance @var{x}.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:36
 msgid ""
 "In the pretty-printing console display (with @code{display2d} equal to @code{true}),\n"
 "structure instances are displayed with the value of each field\n"
@@ -71,7 +71,7 @@ msgid ""
 "structure instances are displayed without the field names.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:42
 msgid ""
 "There is no way to use a field name as a function name,\n"
 "although a field value can be a lambda expression.\n"
@@ -80,7 +80,7 @@ msgid ""
 "all fields are always visible.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:47
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Structures,  , Introduction to Structures, Structures\n"
@@ -88,19 +88,19 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:51
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{structures}\n"
 "@defvr {Global variable} structures\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:53
 msgid ""
 "@code{structures} is the list of user-defined structures defined by @code{defstruct}.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:58
 msgid ""
 "@opencatbox\n"
 "@category{Structures} @category{Global variables}\n"
@@ -108,7 +108,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:64
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{defstruct}\n"
@@ -117,7 +117,7 @@ msgid ""
 "@fname{defstruct} (@var{S}(@var{a_1} = @var{v_1}, @dots{}, @var{a_n} = @var{v_n}))\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:70
 msgid ""
 "Define a structure, which is a list of named fields @var{a_1}, @dots{},\n"
 "@var{a_n} associated with a symbol @var{S}.\n"
@@ -126,7 +126,7 @@ msgid ""
 "@code{new(@var{S})} creates a new instance of structure @var{S}.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:75
 msgid ""
 "An argument which is just a symbol @var{a} specifies the name of a field.\n"
 "An argument which is an equation @code{@var{a} = @var{v}} specifies the field name @var{a}\n"
@@ -134,23 +134,23 @@ msgid ""
 "The default value can be any expression.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:77
 msgid ""
 "@code{defstruct} puts @var{S} on the list of user-defined structures, @code{structures}.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:80
 msgid ""
 "@code{kill(@var{S})} removes @var{S} from the list of user-defined structures,\n"
 "and removes the structure definition.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:82
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:111
 msgid ""
 "@c ===beg===\n"
 "@c defstruct (foo (a, b, c));\n"
@@ -182,7 +182,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:116
 msgid ""
 "@opencatbox\n"
 "@category{Structures}\n"
@@ -190,7 +190,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:122
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{new}\n"
@@ -199,30 +199,30 @@ msgid ""
 "@fname{new} (@var{S} (@var{v_1}, @dots{}, @var{v_n}))\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:124
 msgid ""
 "@code{new} creates new instances of structures.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:128
 msgid ""
 "@code{new(@var{S})} creates a new instance of structure @var{S}\n"
 "in which each field is assigned its default value, if any,\n"
 "or no value at all if no default was specified in the structure definition.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:131
 msgid ""
 "@code{new(@var{S}(@var{v_1}, ..., @var{v_n}))} creates a new instance of @var{S}\n"
 "in which fields are assigned the values @var{v_1}, @dots{}, @var{v_n}.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:133
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:147
 msgid ""
 "@c ===beg===\n"
 "@c defstruct (foo (w, x = %e, y = 42, z));\n"
@@ -239,7 +239,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:152
 msgid ""
 "@opencatbox\n"
 "@category{Structures}\n"
@@ -247,36 +247,36 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:155
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Operator} @@\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:159
 msgid ""
 "@code{@@} is the structure field access operator.\n"
 "The expression @code{@var{x}@@ @var{a}} refers to the value of field @var{a} of the structure instance @var{x}.\n"
 "The field name is not evaluated.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:162
 msgid ""
 "If the field @var{a} in @var{x} has not been assigned a value,\n"
 "@code{@var{x}@@ @var{a}} evaluates to itself.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:164
 msgid ""
 "@code{kill(@var{x}@@ @var{a})} removes the value of field @var{a} in @var{x}.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:166
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:195
 msgid ""
 "@c ===beg===\n"
 "@c defstruct (foo (x, y, z));\n"
@@ -308,12 +308,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:197
 msgid ""
 "The field name is not evaluated.\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:226
 msgid ""
 "@c ===beg===\n"
 "@c defstruct (bar (g, h));\n"
@@ -345,7 +345,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# defstruct.texi
+#: defstruct.texi:231
 msgid ""
 "@opencatbox\n"
 "@category{Structures} @category{Operators}\n"
@@ -353,6 +353,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# defstruct.texi
-msgid ""
-msgstr ""

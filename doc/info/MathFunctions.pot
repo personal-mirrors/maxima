@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# MathFunctions.texi
+msgstr ""
+
+#: MathFunctions.texi:9
 msgid ""
 "@menu\n"
 "* Functions for Numbers::\n"
@@ -29,7 +29,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:14
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions for Numbers, Functions for Complex Numbers, Mathematical Functions, Mathematical Functions\n"
@@ -37,14 +37,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:18
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{abs}\n"
 "@deffn {Function} abs (@var{z})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:24
 msgid ""
 "The @code{abs} function represents the mathematical absolute value function and\n"
 "works for both numerical and symbolic values. If the argument, @var{z}, is a\n"
@@ -53,7 +53,7 @@ msgid ""
 "also simplified.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:29
 msgid ""
 "Maxima can differentiate, integrate and calculate limits for expressions\n"
 "containing @code{abs}. The @code{abs_integrate} package further extends\n"
@@ -61,38 +61,38 @@ msgid ""
 "(%i12) in the examples below.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:33
 msgid ""
 "When applied to a list or matrix, @code{abs} automatically distributes over\n"
 "the terms. Similarly, it distributes over both sides of an\n"
 "equation. To alter this behaviour, see the variable @mrefdot{distribute_over}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:35
 msgid ""
 "See also @mrefdot{cabs}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:37
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:41
 msgid ""
 "Calculation of @code{abs} for real and complex numbers, including numerical\n"
 "constants and various infinities. The first example shows how @code{abs}\n"
 "distributes over the elements of a list.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:45
 msgid ""
 "@example\n"
 "(%i1) abs([-4, 0, 1, 1+%i]);\n"
 "(%o1)                  [4, 0, 1, sqrt(2)]\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:54
 msgid ""
 "(%i2) abs((1+%i)*(1-%i));\n"
 "(%o2)                           2\n"
@@ -104,12 +104,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:56
 msgid ""
 "Simplification of expressions containing @code{abs}:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:64
 msgid ""
 "@example\n"
 "(%i5) abs(x^2);\n"
@@ -120,7 +120,7 @@ msgid ""
 "(%o6)                       x  abs(x)\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:70
 msgid ""
 "(%i7) abs(abs(x));\n"
 "(%o7)                       abs(x)\n"
@@ -129,7 +129,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:75
 msgid ""
 "Integrating and differentiating with the @code{abs} function. Note that more\n"
 "integrals involving the @code{abs} function can be performed, if the\n"
@@ -137,14 +137,14 @@ msgid ""
 "transform of @code{abs}: see @mrefdot{laplace}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:79
 msgid ""
 "@example\n"
 "(%i9) diff(x*abs(x),x),expand;\n"
 "(%o9)                       2 abs(x)\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:84
 msgid ""
 "(%i10) integrate(abs(x),x);\n"
 "                             x abs(x)\n"
@@ -152,7 +152,7 @@ msgid ""
 "                                2\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:91
 msgid ""
 "(%i11) integrate(x*abs(x),x);\n"
 "                           /\n"
@@ -162,7 +162,7 @@ msgid ""
 "                           /\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:98
 msgid ""
 "(%i12) load(abs_integrate)$\n"
 "(%i13) integrate(x*abs(x),x);\n"
@@ -172,7 +172,7 @@ msgid ""
 "                         2            6\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:104
 msgid ""
 "(%i14) integrate(abs(x),x,-2,%pi);\n"
 "                               2\n"
@@ -181,7 +181,7 @@ msgid ""
 "                             2\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:111
 msgid ""
 "(%i15) laplace(abs(x),x,s);\n"
 "                               1\n"
@@ -191,7 +191,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:116
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -199,20 +199,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:120
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ceiling}\n"
 "@deffn {Function} ceiling (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:123
 msgid ""
 "When @var{x} is a real number, return the least integer that \n"
 "is greater than or equal to @var{x}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:130
 msgid ""
 "If @var{x} is a constant expression (@code{10 * %pi}, for example), \n"
 "@code{ceiling} evaluates @var{x} using big floating point numbers, and \n"
@@ -222,13 +222,13 @@ msgid ""
 "the floating point evaluation is done using three values for @mrefdot{fpprec}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:133
 msgid ""
 "For non-constant inputs, @code{ceiling} tries to return a simplified value.\n"
 "Here are examples of the simplifications that @code{ceiling} knows about:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:168
 msgid ""
 "@c ===beg===\n"
 "@c ceiling (ceiling (x));\n"
@@ -266,26 +266,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:171
 msgid ""
 "The @code{ceiling} function distributes over lists, matrices and equations.\n"
 "See @mrefdot{distribute_over}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:174
 msgid ""
 "Finally, for all inputs that are manifestly complex, @code{ceiling} returns \n"
 "a noun form.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:178
 msgid ""
 "If the range of a function is a subset of the integers, it can be declared to\n"
 "be @code{integervalued}.  Both the @code{ceiling} and @mref{floor} functions\n"
 "can use this information; for example:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:195
 msgid ""
 "@c ===beg===\n"
 "@c declare (f, integervalued)$\n"
@@ -305,38 +305,38 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:197
 msgid ""
 "Example use:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:266
 msgid ""
 "@c ===beg===\n"
 "@c unitfrac(r) := block([uf : [], q],\n"
 "@c     if not(ratnump(r)) then \n"
-"@c        error(\"unitfrac: argument must be a rational number\"),\n"
+"@c        error(\\"unitfrac: argument must be a rational number\\"),\n"
 "@c     while r # 0 do (\n"
 "@c         uf : cons(q : 1/ceiling(1/r), uf),\n"
 "@c         r : r - q),\n"
 "@c     reverse(uf));\n"
 "@c unitfrac (9/10);\n"
-"@c apply (\"+\", %);\n"
+"@c apply (\\"+\\", %);\n"
 "@c unitfrac (-9/10);\n"
-"@c apply (\"+\", %);\n"
+"@c apply (\\"+\\", %);\n"
 "@c unitfrac (36/37);\n"
-"@c apply (\"+\", %);\n"
+"@c apply (\\"+\\", %);\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) unitfrac(r) := block([uf : [], q],\n"
 "    if not(ratnump(r)) then\n"
-"       error(\"unitfrac: argument must be a rational number\"),\n"
+"       error(\\"unitfrac: argument must be a rational number\\"),\n"
 "    while r # 0 do (\n"
 "        uf : cons(q : 1/ceiling(1/r), uf),\n"
 "        r : r - q),\n"
 "    reverse(uf));\n"
 "(%o1) unitfrac(r) := block([uf : [], q], \n"
-"if not ratnump(r) then error(\"unitfrac: argument must be a rational number\"\n"
+"if not ratnump(r) then error(\\"unitfrac: argument must be a rational number\\"\n"
 "                                     1\n"
 "), while r # 0 do (uf : cons(q : ----------, uf), r : r - q), \n"
 "                                         1\n"
@@ -350,7 +350,7 @@ msgid ""
 "                            2  3  15\n"
 "@end group\n"
 "@group\n"
-"(%i3) apply (\"+\", %);\n"
+"(%i3) apply (\\"+\\", %);\n"
 "                               9\n"
 "(%o3)                          --\n"
 "                               10\n"
@@ -362,7 +362,7 @@ msgid ""
 "                                  10\n"
 "@end group\n"
 "@group\n"
-"(%i5) apply (\"+\", %);\n"
+"(%i5) apply (\\"+\\", %);\n"
 "                                9\n"
 "(%o5)                         - --\n"
 "                                10\n"
@@ -374,7 +374,7 @@ msgid ""
 "                        2  3  8  69  6808\n"
 "@end group\n"
 "@group\n"
-"(%i7) apply (\"+\", %);\n"
+"(%i7) apply (\\"+\\", %);\n"
 "                               36\n"
 "(%o7)                          --\n"
 "                               37\n"
@@ -382,7 +382,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:271
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -390,21 +390,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:275
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{entier}\n"
 "@deffn {Function} entier (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:279
 msgid ""
 "Returns the largest integer less than or equal to @var{x} where @var{x} is\n"
 "numeric.  @mref{fix} (as in @code{fixnum}) is a synonym for this, so\n"
 "@code{fix(@var{x})} is precisely the same.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:284
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -412,20 +412,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:288
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{floor}\n"
 "@deffn {Function} floor (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:291
 msgid ""
 "When @var{x} is a real number, return the largest integer that is less than or\n"
 "equal to @var{x}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:298
 msgid ""
 "If @var{x} is a constant expression (@code{10 * %pi}, for example), @code{floor}\n"
 "evaluates @var{x} using big floating point numbers, and applies @code{floor} to\n"
@@ -435,13 +435,13 @@ msgid ""
 "evaluation is done using three values for @mrefdot{fpprec}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:301
 msgid ""
 "For non-constant inputs, @code{floor} tries to return a simplified value.  Here\n"
 "are examples of the simplifications that @code{floor} knows about:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:336
 msgid ""
 "@c ===beg===\n"
 "@c floor (ceiling (x));\n"
@@ -479,26 +479,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:339
 msgid ""
 "The @code{floor} function distributes over lists, matrices and equations.\n"
 "See @mrefdot{distribute_over}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:342
 msgid ""
 "Finally, for all inputs that are manifestly complex, @code{floor} returns \n"
 "a noun form.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:346
 msgid ""
 "If the range of a function is a subset of the integers, it can be declared to\n"
 "be @code{integervalued}.  Both the @mref{ceiling} and @code{floor} functions\n"
 "can use this information; for example:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:363
 msgid ""
 "@c ===beg===\n"
 "@c declare (f, integervalued)$\n"
@@ -518,7 +518,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:368
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -526,19 +526,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:372
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fix}\n"
 "@deffn {Function} fix (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:374
 msgid ""
 "A synonym for @code{entier (@var{x})}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:379
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -546,21 +546,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:383
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lmax}\n"
 "@deffn {Function} lmax (@var{L})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:387
 msgid ""
 "When @var{L} is a list or a set, return @code{apply ('max, args (@var{L}))}.\n"
 "When @var{L} is not a list or a set, signal an error.\n"
 "See also @mref{lmin} and @mrefdot{max}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:392
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions} @category{Lists} @category{Sets}\n"
@@ -568,21 +568,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:396
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lmin}\n"
 "@deffn {Function} lmin (@var{L})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:400
 msgid ""
 "When @var{L} is a list or a set, return @code{apply ('min, args (@var{L}))}.\n"
 "When @var{L} is not a list or a set, signal an error.\n"
 "See also @mref{lmax} and @mrefdot{min}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:405
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions} @category{Lists} @category{Sets}\n"
@@ -590,14 +590,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:409
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{max}\n"
 "@deffn {Function} max (@var{x_1}, @dots{}, @var{x_n})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:417
 msgid ""
 "Return a simplified value for the maximum of the expressions @var{x_1} through\n"
 "@var{x_n}.  When @code{get (trylevel, maxmin)}, is 2 or greater, @code{max}\n"
@@ -608,12 +608,12 @@ msgid ""
 "to 2, use @code{put (trylevel, 2, maxmin)}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:419
 msgid ""
 "See also @mref{min} and @mrefdot{lmax}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:424
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -621,14 +621,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:428
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{min}\n"
 "@deffn {Function} min (@var{x_1}, @dots{}, @var{x_n})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:436
 msgid ""
 "Return a simplified value for the minimum of the expressions @code{x_1} through\n"
 "@code{x_n}.  When @code{get (trylevel, maxmin)}, is 2 or greater, @code{min}\n"
@@ -639,12 +639,12 @@ msgid ""
 "to 2, use @code{put (trylevel, 2, maxmin)}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:438
 msgid ""
 "See also @mref{max} and @mrefdot{lmin}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:443
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -652,27 +652,27 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:447
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{round}\n"
 "@deffn {Function} round (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:451
 msgid ""
 "When @var{x} is a real number, returns the closest integer to @var{x}.\n"
 "Multiples of 1/2 are rounded to the nearest even integer.  Evaluation of\n"
 "@var{x} is similar to @mref{floor} and @mrefdot{ceiling}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:454
 msgid ""
 "The @code{round} function distributes over lists, matrices and equations.\n"
 "See @mrefdot{distribute_over}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:459
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -680,21 +680,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:463
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{signum}\n"
 "@deffn {Function} signum (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:467
 msgid ""
 "For either real or complex numbers @var{x}, the signum function returns\n"
 "0 if @var{x} is zero; for a nonzero numeric input @var{x}, the signum function\n"
 "returns @code{x/abs(x)}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:474
 msgid ""
 "For non-numeric inputs, Maxima attempts to determine the sign of the input.\n"
 "When the sign is negative, zero, or positive, @code{signum} returns -1,0, 1,\n"
@@ -704,13 +704,13 @@ msgid ""
 "@code{signum(x) * signum(y)}).\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:477
 msgid ""
 "The @code{signum} function distributes over a list, a matrix, or an\n"
 "equation.  See @mrefdot{distribute_over}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:482
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -718,27 +718,27 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:486
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{truncate}\n"
 "@deffn {Function} truncate (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:490
 msgid ""
 "When @var{x} is a real number, return the closest integer to @var{x} not\n"
 "greater in absolute value than @var{x}.  Evaluation of @var{x} is similar\n"
 "to @mref{floor} and @mrefdot{ceiling}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:493
 msgid ""
 "The @code{truncate} function distributes over lists, matrices and equations.\n"
 "See @mrefdot{distribute_over}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:498
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -746,7 +746,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:503
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions for Complex Numbers, Combinatorial Functions, Functions for Numbers, Mathematical Functions\n"
@@ -754,14 +754,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:507
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{cabs}\n"
 "@deffn {Function} cabs (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:513
 msgid ""
 "Calculates the absolute value of an expression representing a complex\n"
 "number.  Unlike the function @mrefcomma{abs} the @code{cabs} function always\n"
@@ -770,7 +770,7 @@ msgid ""
 "calculates the absolute value of @code{x + %i*y} as\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:548
 msgid ""
 "@c ===beg===\n"
 "@c cabs (1);\n"
@@ -808,13 +808,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:551
 msgid ""
 "If @code{cabs} returns a noun form this most commonly is caused by\n"
 "some properties of the variables involved not being known:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:584
 msgid ""
 "@c ===beg===\n"
 "@c cabs (a+%i*b);\n"
@@ -850,7 +850,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:590
 msgid ""
 "The @code{cabs} function can use known properties like symmetry properties of\n"
 "complex functions to help it calculate the absolute value of an expression.  If\n"
@@ -859,7 +859,7 @@ msgid ""
 "conjugate function and complex characteristic.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:595
 msgid ""
 "@code{cabs} is a verb function and is not suitable for symbolic\n"
 "calculations.  For such calculations (including integration,\n"
@@ -867,36 +867,36 @@ msgid ""
 "values), use @mrefdot{abs}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:598
 msgid ""
 "The result of @code{cabs} can include the absolute value function,\n"
 "@mrefcomma{abs} and the arc tangent, @mrefdot{atan2}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:601
 msgid ""
 "When applied to a list or matrix, @code{cabs} automatically distributes over\n"
 "the terms.  Similarly, it distributes over both sides of an equation.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:605
 msgid ""
 "For further ways to compute with complex numbers, see the functions\n"
 "@mrefcomma{rectform} @mrefcomma{realpart} @mrefcomma{imagpart}@w{}\n"
 "@mrefcomma{carg} @mref{conjugate} and @mrefdot{polarform}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:607
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:609
 msgid ""
 "Examples with @mref{sqrt} and @mrefdot{sin}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:618
 msgid ""
 "@example\n"
 "(%i1) cabs(sqrt(1+%i*x));\n"
@@ -908,13 +908,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:621
 msgid ""
 "The error function, @mrefcomma{erf} has mirror symmetry, which is used here in\n"
 "the calculation of the absolute value with a complex argument:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:633
 msgid ""
 "@example\n"
 "(%i3) cabs(erf(x+%i*y));\n"
@@ -929,14 +929,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:637
 msgid ""
 "Maxima knows complex identities for the Bessel functions, which allow\n"
 "it to compute the absolute value for complex arguments.  Here is an\n"
 "example for @mrefdot{bessel_j}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:642
 msgid ""
 "@example\n"
 "(%i4) cabs(bessel_j(1,%i));\n"
@@ -944,7 +944,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:647
 msgid ""
 "@opencatbox\n"
 "@category{Complex variables}\n"
@@ -952,38 +952,38 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:651
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{carg}\n"
 "@deffn {Function} carg (@var{z})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:655
 msgid ""
 "Returns the complex argument of @var{z}.  The complex argument is an angle\n"
 "@code{theta} in @code{(-%pi, %pi]} such that @code{r exp (theta %i) = @var{z}}\n"
 "where @code{r} is the magnitude of @var{z}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:658
 msgid ""
 "@code{carg} is a computational function, not a simplifying function.\n"
 "@c PROBABLY NEED TO EXPLAIN IMPLICATIONS OF ABOVE STATEMENT\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:661
 msgid ""
 "See also @mref{abs} (complex magnitude), @mrefcomma{polarform}@w{}\n"
 "@mrefcomma{rectform} @mrefcomma{realpart} and @mrefdot{imagpart}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:663
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:706
 msgid ""
 "@c ===beg===\n"
 "@c carg (1);\n"
@@ -1029,13 +1029,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:709
 msgid ""
 "If @code{carg} returns a noun form this most communly is caused by\n"
 "some properties of the variables involved not being known:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:741
 msgid ""
 "@c ===beg===\n"
 "@c carg (a+%i*b);\n"
@@ -1070,7 +1070,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:746
 msgid ""
 "@opencatbox\n"
 "@category{Complex variables}\n"
@@ -1078,19 +1078,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:750
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{conjugate}\n"
 "@deffn {Function} conjugate (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:752
 msgid ""
 "Returns the complex conjugate of @var{x}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:782
 msgid ""
 "@c ===beg===\n"
 "@c declare ([aa, bb], real, cc, complex, ii, imaginary);\n"
@@ -1123,7 +1123,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:787
 msgid ""
 "@opencatbox\n"
 "@category{Complex variables}\n"
@@ -1131,37 +1131,37 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:791
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{imagpart}\n"
 "@deffn {Function} imagpart (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:793
 msgid ""
 "Returns the imaginary part of the expression @var{expr}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:797
 msgid ""
 "@code{imagpart} is a computational function, not a simplifying function.\n"
 "@c PROBABLY NEED TO EXPLAIN IMPLICATIONS OF ABOVE STATEMENT\n"
 "@c SEE ALSO SF BUG REPORT # 902290\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:800
 msgid ""
 "See also @mrefcomma{abs} @mrefcomma{carg} @mrefcomma{polarform}@w{}\n"
 "@mrefcomma{rectform} and @mrefdot{realpart}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:802
 msgid ""
 "Example:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:827
 msgid ""
 "@c ===beg===\n"
 "@c imagpart (a+b*%i);\n"
@@ -1189,7 +1189,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:832
 msgid ""
 "@opencatbox\n"
 "@category{Complex variables}\n"
@@ -1197,30 +1197,30 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:834
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:838
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{polarform}\n"
 "@deffn {Function} polarform (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:841
 msgid ""
 "Returns an expression @code{r %e^(%i theta)} equivalent to @var{expr},\n"
 "such that @code{r} and @code{theta} are purely real.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:843
 msgid ""
 "Example:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:868
 msgid ""
 "@c ===beg===\n"
 "@c polarform(a+b*%i);\n"
@@ -1248,7 +1248,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:873
 msgid ""
 "@opencatbox\n"
 "@category{Complex variables} @category{Exponential and logarithm functions}\n"
@@ -1256,26 +1256,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:877
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{realpart}\n"
 "@deffn {Function} realpart (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:881
 msgid ""
 "Returns the real part of @var{expr}.  @code{realpart} and @mref{imagpart} will\n"
 "work on expressions involving trigonometric and hyperbolic functions,\n"
 "as well as square root, logarithm, and exponentiation.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:883
 msgid ""
 "Example:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:908
 msgid ""
 "@c ===beg===\n"
 "@c realpart (a+b*%i);\n"
@@ -1303,7 +1303,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:913
 msgid ""
 "@opencatbox\n"
 "@category{Complex variables}\n"
@@ -1311,25 +1311,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:917
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rectform}\n"
 "@deffn {Function} rectform (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:920
 msgid ""
 "Returns an expression @code{a + b %i} equivalent to @var{expr},\n"
 "such that @var{a} and @var{b} are purely real.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:922
 msgid ""
 "Example:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:942
 msgid ""
 "@c ===beg===\n"
 "@c rectform(sqrt(2)*%e^(%i*%pi/4));\n"
@@ -1352,7 +1352,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:947
 msgid ""
 "@opencatbox\n"
 "@category{Complex variables}\n"
@@ -1360,7 +1360,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:952
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Combinatorial Functions, Root Exponential and Logarithmic Functions, Functions for Complex Numbers, Mathematical Functions\n"
@@ -1368,7 +1368,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:959
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{!!}\n"
@@ -1378,12 +1378,12 @@ msgid ""
 "@end ifinfo\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:961
 msgid ""
 "The double factorial operator.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:968
 msgid ""
 "For an integer, float, or rational number @code{n}, @code{n!!} evaluates to the\n"
 "product @code{n (n-2) (n-4) (n-6) ... (n - 2 (k-1))} where @code{k} is equal to\n"
@@ -1393,14 +1393,14 @@ msgid ""
 "@c REPORTED TO BUG TRACKER AS BUG # 1093138 !!!\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:972
 msgid ""
 "For an even (or odd) integer @code{n}, @code{n!!} evaluates to the product of\n"
 "all the consecutive even (or odd) integers from 2 (or 1) through @code{n}\n"
 "inclusive.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:977
 msgid ""
 "For an argument @code{n} which is not an integer, float, or rational, @code{n!!}\n"
 "yields a noun form @code{genfact (n, n/2, 2)}.\n"
@@ -1408,7 +1408,7 @@ msgid ""
 "@c -- MENTION THAT? OR TOO MUCH DETAIL ???\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:982
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Operators}\n"
@@ -1416,14 +1416,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:986
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{binomial}\n"
 "@deffn {Function} binomial (@var{x}, @var{y})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:991
 msgid ""
 "The binomial coefficient @code{@var{x}!/(@var{y}! (@var{x} - @var{y})!)}.\n"
 "If @var{x} and @var{y} are integers, then the numerical value of the binomial\n"
@@ -1431,12 +1431,12 @@ msgid ""
 "binomial coefficient is expressed as a polynomial.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:993
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1027
 msgid ""
 "@c ===beg===\n"
 "@c binomial (11, 7);\n"
@@ -1473,7 +1473,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1032
 msgid ""
 "@opencatbox\n"
 "@category{Number theory}\n"
@@ -1481,32 +1481,32 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1036
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{factcomb}\n"
 "@deffn {Function} factcomb (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1040
 msgid ""
 "Tries to combine the coefficients of factorials in @var{expr}\n"
 "with the factorials themselves by converting, for example, @code{(n + 1)*n!}\n"
 "into @code{(n + 1)!}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1043
 msgid ""
 "@mref{sumsplitfact} if set to @code{false} will cause @mref{minfactorial} to be\n"
 "applied after a @code{factcomb}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1045
 msgid ""
 "Example:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1082
 msgid ""
 "@c ===beg===\n"
 "@c sumsplitfact;\n"
@@ -1546,7 +1546,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1087
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -1554,7 +1554,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1093
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{!}\n"
@@ -1563,19 +1563,19 @@ msgid ""
 "@deffnx {Operator} !\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1096
 msgid ""
 "Represents the factorial function.  Maxima treats @code{factorial (@var{x})}\n"
 "the same as @code{@var{x}!}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1099
 msgid ""
 "For any complex number @code{x}, except for negative integers, @code{x!} is \n"
 "defined as @code{gamma(x+1)}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1106
 msgid ""
 "For an integer @code{x}, @code{x!} simplifies to the product of the integers \n"
 "from 1 to @code{x} inclusive.  @code{0!} simplifies to 1.  For a real or complex \n"
@@ -1585,7 +1585,7 @@ msgid ""
 "@code{sqrt (%pi)} (since @code{gamma (1/2)} is equal to @code{sqrt (%pi)}).\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1111
 msgid ""
 "The option variables @mref{factlim} and @mref{gammalim} control the numerical\n"
 "evaluation of factorials for integer and rational arguments.  The functions \n"
@@ -1593,7 +1593,7 @@ msgid ""
 "factorials.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1116
 msgid ""
 "The functions @mrefcomma{gamma} @mrefcomma{bffac} and @mref{cbffac} are\n"
 "varieties of the gamma function.  @code{bffac} and @code{cbffac} are called\n"
@@ -1601,36 +1601,36 @@ msgid ""
 "numbers in bigfloat precision.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1118
 msgid ""
 "@mref{makegamma} substitutes @code{gamma} for factorials and related functions.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1121
 msgid ""
 "Maxima knows the derivative of the factorial function and the limits for \n"
 "specific values like negative integers.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1124
 msgid ""
 "The option variable @mref{factorial_expand} controls the simplification of\n"
 "expressions like @code{(n+x)!}, where @code{n} is an integer.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1126
 msgid ""
 "See also @mrefdot{binomial}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1130
 msgid ""
 "The factorial of an integer is simplified to an exact number unless the operand \n"
 "is greater than @code{factlim}.  The factorial for real and complex numbers is \n"
 "evaluated in float or bigfloat precision.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1159
 msgid ""
 "@c ===beg===\n"
 "@c factlim : 10;\n"
@@ -1662,14 +1662,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1163
 msgid ""
 "The factorial of a known constant, or general expression is not simplified.\n"
 "Even so it may be possible to simplify the factorial after evaluating the\n"
 "operand.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1179
 msgid ""
 "@c ===beg===\n"
 "@c [(%i + 1)!, %pi!, %e!, (cos(1) + sin(1))!];\n"
@@ -1688,13 +1688,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1182
 msgid ""
 "@c REMOVING THIS EXAMPLE. IT IS NOT SPECIFIC FOR THE FACTORIAL FUNCTION:\n"
 "@c The factorial of an unbound symbol is not simplified.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1193
 msgid ""
 "@c @c ===beg===\n"
 "@c @c kill (foo);\n"
@@ -1708,13 +1708,13 @@ msgid ""
 "@c @end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1196
 msgid ""
 "Factorials are simplified, not evaluated.\n"
 "Thus @code{x!} may be replaced even in a quoted expression.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1209
 msgid ""
 "@c ===beg===\n"
 "@c '([0!, (7/2)!, 4.77!, 8!, 20!]);\n"
@@ -1730,12 +1730,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1211
 msgid ""
 "Maxima knows the derivative of the factorial function.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1222
 msgid ""
 "@c ===beg===\n"
 "@c diff(x!,x);\n"
@@ -1749,13 +1749,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1225
 msgid ""
 "The option variable @code{factorial_expand} controls expansion and \n"
 "simplification of expressions with the factorial function.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1235
 msgid ""
 "@c ===beg===\n"
 "@c (n+1)!/n!,factorial_expand:true;\n"
@@ -1768,7 +1768,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1240
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Operators}\n"
@@ -1776,12 +1776,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1242
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1247
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{factlim}\n"
@@ -1789,13 +1789,13 @@ msgid ""
 "Default value: 100000\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1250
 msgid ""
 "@code{factlim} specifies the highest factorial which is\n"
 "automatically expanded.  If it is -1 then all integers are expanded.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1255
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -1803,7 +1803,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1260
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{factorial_expand}\n"
@@ -1811,14 +1811,14 @@ msgid ""
 "Default value: false\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1264
 msgid ""
 "The option variable @code{factorial_expand} controls the simplification of \n"
 "expressions like @code{(n+1)!}, where @code{n} is an integer.\n"
 "See @mref{factorial} for an example.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1269
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -1826,26 +1826,26 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1271
 msgid ""
 "@c IS THIS DEFINITION CORRECT ??\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1275
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{genfact}\n"
 "@deffn {Function} genfact (@var{x}, @var{y}, @var{z})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1279
 msgid ""
 "Returns the generalized factorial, defined as\n"
 "@code{x (x-z) (x - 2 z) ... (x - (y - 1) z)}.  Thus, when @var{x} is an integer,\n"
 "@code{genfact (x, x, 1) = x!} and @code{genfact (x, x/2, 2) = x!!}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1284
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions}\n"
@@ -1853,21 +1853,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1288
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{minfactorial}\n"
 "@deffn {Function} minfactorial (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1292
 msgid ""
 "Examines @var{expr} for occurrences of two factorials\n"
 "which differ by an integer.\n"
 "@code{minfactorial} then turns one into a polynomial times the other.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1298
 msgid ""
 "@c I CAN'T TELL WHAT THIS IS SUPPOSED TO MEAN. !!!\n"
 "@c minfactorial DOESN'T SEEM TO DO ANYTHING binomial DOESN'T DO BY ITSELF !!!\n"
@@ -1876,7 +1876,7 @@ msgid ""
 "@c converted into ratios of factorials.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1309
 msgid ""
 "@example\n"
 "(%i1) n!/(n+2)!;\n"
@@ -1890,7 +1890,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1314
 msgid ""
 "@opencatbox\n"
 "@category{Number theory}\n"
@@ -1898,7 +1898,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1319
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sumsplitfact}\n"
@@ -1906,14 +1906,14 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1323
 msgid ""
 "When @code{sumsplitfact} is @code{false},\n"
-"@c \"IS APPLIED\" -- UNDER WHAT CIRCUMSTANCES EXACTLY ??\n"
+"@c \\"IS APPLIED\\" -- UNDER WHAT CIRCUMSTANCES EXACTLY ??\n"
 "@mref{minfactorial} is applied after a @mrefdot{factcomb}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1366
 msgid ""
 "@c ===beg===\n"
 "@c sumsplitfact;\n"
@@ -1959,7 +1959,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1371
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Simplification flags and variables}\n"
@@ -1967,7 +1967,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1376
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Root Exponential and Logarithmic Functions, Trigonometric Functions, Combinatorial Functions, Mathematical Functions\n"
@@ -1975,7 +1975,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1381
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%e_to_numlog}\n"
@@ -1983,16 +1983,16 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1387
 msgid ""
 "When @code{true}, @code{r} some rational number, and @code{x} some expression,\n"
 "@code{%e^(r*log(x))} will be simplified into @code{x^r} .  It should be noted\n"
 "that the @code{radcan} command also does this transformation, and more\n"
 "complicated transformations of this ilk as well.  The @code{logcontract}\n"
-"command \"contracts\" expressions containing @code{log}.\n"
+"command \\"contracts\\" expressions containing @code{log}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1392
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Simplification flags and variables}\n"
@@ -2000,7 +2000,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1397
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%emode}\n"
@@ -2008,33 +2008,33 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1400
 msgid ""
 "When @code{%emode} is @code{true}, @code{%e^(%pi %i x)} is simplified as\n"
 "follows.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1404
 msgid ""
 "@code{%e^(%pi %i x)} simplifies to @code{cos (%pi x) + %i sin (%pi x)} if\n"
 "@code{x} is a floating point number, an integer, or a multiple of 1/2, 1/3, 1/4,\n"
 "or 1/6, and then further simplified.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1408
 msgid ""
 "For other numerical @code{x}, @code{%e^(%pi %i x)} simplifies to\n"
 "@code{%e^(%pi %i y)} where @code{y} is @code{x - 2 k} for some integer @code{k}\n"
 "such that @code{abs(y) < 1}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1411
 msgid ""
 "When @code{%emode} is @code{false}, no special simplification of\n"
 "@code{%e^(%pi %i x)} is carried out.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1460
 msgid ""
 "@c ===beg===\n"
 "@c %emode;\n"
@@ -2086,7 +2086,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1465
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Simplification flags and variables}\n"
@@ -2094,7 +2094,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1470
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%enumer}\n"
@@ -2102,24 +2102,24 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1473
 msgid ""
 "When @code{%enumer} is @code{true}, @code{%e} is replaced by its numeric value\n"
 "2.718@dots{}  whenever @code{numer} is @code{true}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1476
 msgid ""
 "When @code{%enumer} is @code{false}, this substitution is carried out\n"
 "only if the exponent in @code{%e^x} evaluates to a number.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1478
 msgid ""
 "See also @mref{ev} and @mrefdot{numer}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1529
 msgid ""
 "@c ===beg===\n"
 "@c %enumer;\n"
@@ -2173,7 +2173,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1534
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Evaluation flags}\n"
@@ -2181,45 +2181,45 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1536
 msgid ""
 "@c PROBABLY MORE TO BE SAID HERE\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1540
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{exp}\n"
 "@deffn {Function} exp (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1544
 msgid ""
 "Represents the exponential function.  Instances of @code{exp (@var{x})} in input\n"
 "are simplified to @code{%e^@var{x}}; @code{exp} does not appear in simplified\n"
 "expressions.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1548
 msgid ""
 "@code{demoivre} if @code{true} causes @code{%e^(a + b %i)} to simplify to\n"
 "@code{%e^(a (cos(b) + %i sin(b)))} if @code{b} is free of @code{%i}.\n"
 "See @mrefdot{demoivre}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1551
 msgid ""
 "@code{%emode}, when @code{true}, causes @code{%e^(%pi %i x)} to be simplified.\n"
 "See @mrefdot{%emode}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1554
 msgid ""
 "@code{%enumer}, when @code{true} causes @code{%e} to be replaced by\n"
 "2.718@dots{} whenever @code{numer} is @code{true}.  See @mrefdot{%enumer}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1581
 msgid ""
 "@c ===beg===\n"
 "@c demoivre;\n"
@@ -2249,24 +2249,28 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1586
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: MathFunctions.texi:1591
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{li}\n"
 "@deffn {Function} li [@var{s}] (@var{z})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1594
 msgid ""
 "Represents the polylogarithm function of order @var{s} and argument @var{z},\n"
 "defined by the infinite series\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1609
 msgid ""
 "@tex\n"
 "$${\rm Li}_s \left(z\right) = \sum_{k=1}^\infty {z^k \over k^s}$$\n"
@@ -2284,20 +2288,20 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1612
 msgid ""
 "@code{li [1]} is @code{- log (1 - z)}.  @code{li [2]} and @code{li [3]} are the\n"
 "dilogarithm and trilogarithm functions, respectively.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1616
 msgid ""
 "When the order is 1, the polylogarithm simplifies to @code{- log (1 - z)}, which\n"
 "in turn simplifies to a numerical value if @var{z} is a real or complex floating\n"
 "point number or the @code{numer} evaluation flag is present.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1621
 msgid ""
 "When the order is 2 or 3,\n"
 "the polylogarithm simplifies to a numerical value\n"
@@ -2305,12 +2309,12 @@ msgid ""
 "or the @code{numer} evaluation flag is present.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1623
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1686
 msgid ""
 "@c ===beg===\n"
 "@c assume (x > 0);\n"
@@ -2376,7 +2380,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1691
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions}\n"
@@ -2384,30 +2388,30 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1695
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{log}\n"
 "@deffn {Function} log (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1697
 msgid ""
 "Represents the natural (base @math{e}) logarithm of @var{x}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1700
 msgid ""
 "Maxima does not have a built-in function for the base 10 logarithm or other \n"
 "bases. @code{log10(x) := log(x) / log(10)} is a useful definition.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1702
 msgid ""
 "Simplification and evaluation of logarithms is governed by several global flags:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1711
 msgid ""
 "@table @code\n"
 "@item @code{logexpand}\n"
@@ -2419,32 +2423,32 @@ msgid ""
 "@code{false}, all of these simplifications will be turned off.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1715
 msgid ""
 "@item @code{logsimp}\n"
 "if @code{false} then no simplification of @code{%e} to a power containing \n"
 "@code{log}'s is done.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1719
 msgid ""
 "@item @code{lognegint}\n"
 "if @code{true} implements the rule @code{log(-n)} -> @code{log(n)+%i*%pi} for \n"
 "@code{n} a positive integer.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1727
 msgid ""
 "@item @code{%e_to_numlog}\n"
 "when @code{true}, @code{r} some rational number, and @code{x} some expression,\n"
 "the expression @code{%e^(r*log(x))} will be simplified into @code{x^r}.  It\n"
 "should be noted that the @code{radcan} command also does this transformation,\n"
 "and more complicated transformations of this as well. The @code{logcontract} \n"
-"command \"contracts\" expressions containing @code{log}.\n"
+"command \\"contracts\\" expressions containing @code{log}.\n"
 "@end table\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1732
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions}\n"
@@ -2452,7 +2456,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1737
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{logabs}\n"
@@ -2460,17 +2464,17 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1744
 msgid ""
 "When doing indefinite integration where logs are generated, e.g.\n"
 "@code{integrate(1/x,x)}, the answer is given in terms of @code{log(abs(...))}\n"
 "if @code{logabs} is @code{true}, but in terms of @code{log(...)} if\n"
 "@code{logabs} is @code{false}.  For definite integration, the @code{logabs:true}\n"
-"setting is used, because here \"evaluation\" of the indefinite integral at the\n"
+"setting is used, because here \\"evaluation\\" of the indefinite integral at the\n"
 "endpoints is often needed.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1749
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Integral calculus} @category{Global flags}\n"
@@ -2478,12 +2482,12 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1751
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1756
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{logarc}\n"
@@ -2491,7 +2495,7 @@ msgid ""
 "@defvrx {Function} logarc (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1761
 msgid ""
 "When the global variable @code{logarc} is @code{true},\n"
 "inverse circular and hyperbolic functions are replaced by\n"
@@ -2499,14 +2503,14 @@ msgid ""
 "The default value of @code{logarc} is @code{false}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1765
 msgid ""
 "The function @code{logarc(@var{expr})} carries out that replacement for\n"
 "an expression @var{expr}\n"
 "without setting the global variable @code{logarc}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1770
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Simplification flags and variables} @category{Simplification functions}\n"
@@ -2514,7 +2518,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1775
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{logconcoeffp}\n"
@@ -2522,7 +2526,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1782
 msgid ""
 "Controls which coefficients are\n"
 "contracted when using @code{logcontract}.  It may be set to the name of a\n"
@@ -2532,7 +2536,7 @@ msgid ""
 "@code{logcontract(1/2*log(x));} will give @code{log(sqrt(x))}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1787
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Simplification flags and variables}\n"
@@ -2540,21 +2544,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1791
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{logcontract}\n"
 "@deffn {Function} logcontract (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1795
 msgid ""
 "Recursively scans the expression @var{expr}, transforming\n"
 "subexpressions of the form @code{a1*log(b1) + a2*log(b2) + c} into\n"
 "@code{log(ratsimp(b1^a1 * b2^a2)) + c}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1808
 msgid ""
 "@c ===beg===\n"
 "@c 2*(a*log(x) + 2*a*log(y))$\n"
@@ -2570,11 +2574,11 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1818
 msgid ""
 "The declaration @code{declare(n,integer)} causes\n"
 "@code{logcontract(2*a*n*log(x))} to simplify to @code{a*log(x^(2*n))}.  The\n"
-"coefficients that \"contract\" in this manner are those such as the 2 and the\n"
+"coefficients that \\"contract\\" in this manner are those such as the 2 and the\n"
 "@code{n} here which satisfy @code{featurep(coeff,integer)}.  The user can\n"
 "control which coefficients are contracted by setting the option\n"
 "@code{logconcoeffp} to the name of a predicate function of one argument.\n"
@@ -2583,7 +2587,7 @@ msgid ""
 "@code{logcontract(1/2*log(x));} will give @code{log(sqrt(x))}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1823
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions}\n"
@@ -2591,7 +2595,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1828
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{logexpand}\n"
@@ -2599,7 +2603,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1835
 msgid ""
 "If @code{true}, that is the default value, causes @code{log(a^b)} to become\n"
 "@code{b*log(a)}.  If it is set to @code{all}, @code{log(a*b)} will also simplify\n"
@@ -2609,24 +2613,24 @@ msgid ""
 "is set to @code{false}, all of these simplifications will be turned off.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1838
 msgid ""
 "When @code{logexpand} is set to @code{all} or @code{super},\n"
 "the logarithm of a product expression simplifies to a summation of logarithms.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1840
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1843
 msgid ""
 "When @code{logexpand} is @code{true},\n"
 "@code{log(a^b)} simplifies to @code{b*log(a)}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1851
 msgid ""
 "@c ===beg===\n"
 "@c log(n^2), logexpand=true;\n"
@@ -2637,13 +2641,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1854
 msgid ""
 "When @code{logexpand} is @code{all},\n"
 "@code{log(a*b)} simplifies to @code{log(a)+log(b)}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1862
 msgid ""
 "@c ===beg===\n"
 "@c log(10*x), logexpand=all;\n"
@@ -2654,14 +2658,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1866
 msgid ""
 "When @code{logexpand} is @code{super},\n"
 "@code{log(a/b)} simplifies to @code{log(a)-log(b)}\n"
 "for rational numbers @code{a/b} with @code{a#1}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1874
 msgid ""
 "@c ===beg===\n"
 "@c log(a/(n + 1)), logexpand=super;\n"
@@ -2672,13 +2676,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1877
 msgid ""
 "When @code{logexpand} is set to @code{all} or @code{super},\n"
 "the logarithm of a product expression simplifies to a summation of logarithms.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1908
 msgid ""
 "@c ===beg===\n"
 "@c my_product : product (X(i), i, 1, n);\n"
@@ -2712,13 +2716,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1911
 msgid ""
 "When @code{logexpand} is @code{false},\n"
 "these simplifications are disabled.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1938
 msgid ""
 "@c ===beg===\n"
 "@c logexpand : false $\n"
@@ -2748,7 +2752,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1943
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Simplification flags and variables}\n"
@@ -2756,7 +2760,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1948
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lognegint}\n"
@@ -2764,13 +2768,13 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1951
 msgid ""
 "If @code{true} implements the rule\n"
 "@code{log(-n)} -> @code{log(n)+%i*%pi} for @code{n} a positive integer.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1956
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Simplification flags and variables}\n"
@@ -2778,7 +2782,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1961
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{logsimp}\n"
@@ -2786,13 +2790,13 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1964
 msgid ""
 "If @code{false} then no simplification of @code{%e} to a\n"
 "power containing @code{log}'s is done.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1969
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Simplification flags and variables}\n"
@@ -2800,20 +2804,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1973
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{plog}\n"
 "@deffn {Function} plog (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1976
 msgid ""
 "Represents the principal branch of the complex-valued natural\n"
 "logarithm with @code{-%pi} < @code{carg(@var{x})} <= @code{+%pi} .\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1981
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Complex variables}\n"
@@ -2821,20 +2825,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1985
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sqrt}\n"
 "@deffn {Function} sqrt (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1988
 msgid ""
 "The square root of @var{x}.  It is represented internally by\n"
 "@code{@var{x}^(1/2)}.  See also @mref{rootscontract} and @mrefdot{radexpand}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1993
 msgid ""
 "@opencatbox\n"
 "@category{Mathematical functions}\n"
@@ -2842,7 +2846,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:1999
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@page\n"
@@ -2851,7 +2855,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2004
 msgid ""
 "@menu\n"
 "* Introduction to Trigonometric::\n"
@@ -2859,7 +2863,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2009
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Trigonometric, Functions and Variables for Trigonometric, Trigonometric Functions, Trigonometric Functions\n"
@@ -2867,7 +2871,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2025
 msgid ""
 "Maxima has many trigonometric functions defined.  Not all trigonometric\n"
 "identities are programmed, but it is possible for the user to add many\n"
@@ -2886,14 +2890,14 @@ msgid ""
 "for details.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2029
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
 "@closecatbox\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2034
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Trigonometric,  , Introduction to Trigonometric, Trigonometric Functions\n"
@@ -2901,7 +2905,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2039
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%piargs}\n"
@@ -2909,7 +2913,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2049
 msgid ""
 "When @code{%piargs} is @code{true},\n"
 "trigonometric functions are simplified to algebraic constants\n"
@@ -2922,7 +2926,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2058
 msgid ""
 "@iftex\n"
 "Maxima knows some identities which can be applied when @math{\pi}, etc.,\n"
@@ -2934,12 +2938,12 @@ msgid ""
 "integer).\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2060
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2106
 msgid ""
 "@c ===beg===\n"
 "@c %piargs : false$\n"
@@ -2988,7 +2992,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2115
 msgid ""
 "@iftex\n"
 "Some identities are applied when @math{\pi} and @math{\pi/2} are multiplied by\n"
@@ -3000,7 +3004,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2130
 msgid ""
 "@c ===beg===\n"
 "@c declare (n, integer, m, even)$\n"
@@ -3018,7 +3022,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2135
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification flags and variables}\n"
@@ -3026,7 +3030,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2140
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{%iargs}\n"
@@ -3034,7 +3038,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2149
 msgid ""
 "When @code{%iargs} is @code{true},\n"
 "trigonometric functions are simplified to hyperbolic functions\n"
@@ -3046,7 +3050,7 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2157
 msgid ""
 "Even when the argument is demonstrably real, the simplification is applied;\n"
 "@iftex\n"
@@ -3057,12 +3061,12 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2159
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2178
 msgid ""
 "@c ===beg===\n"
 "@c %iargs : false$\n"
@@ -3084,12 +3088,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2180
 msgid ""
 "Even when the argument is demonstrably real, the simplification is applied.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2197
 msgid ""
 "@c ===beg===\n"
 "@c declare (x, imaginary)$\n"
@@ -3109,7 +3113,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2202
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Hyperbolic functions} @category{Simplification flags and variables}\n"
@@ -3117,18 +3121,18 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2205
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} acos (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2207
 msgid ""
 "-- Arc Cosine.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2212
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3136,18 +3140,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2215
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} acosh (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2217
 msgid ""
 "-- Hyperbolic Arc Cosine.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2222
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3155,18 +3159,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2225
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} acot (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2227
 msgid ""
 "-- Arc Cotangent.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2232
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3174,18 +3178,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2235
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} acoth (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2237
 msgid ""
 "-- Hyperbolic Arc Cotangent.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2242
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3193,18 +3197,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2245
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} acsc (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2247
 msgid ""
 "-- Arc Cosecant.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2252
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3212,18 +3216,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2255
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} acsch (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2257
 msgid ""
 "-- Hyperbolic Arc Cosecant.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2262
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3231,18 +3235,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2265
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} asec (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2267
 msgid ""
 "-- Arc Secant.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2272
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3250,18 +3254,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2275
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} asech (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2277
 msgid ""
 "-- Hyperbolic Arc Secant.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2282
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3269,18 +3273,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2285
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} asin (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2287
 msgid ""
 "-- Arc Sine.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2292
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3288,18 +3292,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2295
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} asinh (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2297
 msgid ""
 "-- Hyperbolic Arc Sine.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2302
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3307,18 +3311,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2305
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} atan (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2307
 msgid ""
 "-- Arc Tangent.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2312
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3326,20 +3330,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2316
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{atan2}\n"
 "@deffn {Function} atan2 (@var{y}, @var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2319
 msgid ""
 "-- yields the value of @code{atan(@var{y}/@var{x})} in the interval @code{-%pi}\n"
 "to @code{%pi}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2324
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3347,18 +3351,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2327
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} atanh (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2329
 msgid ""
 "-- Hyperbolic Arc Tangent.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2334
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3366,19 +3370,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2337
 msgid ""
 "@c IS THIS DESCRIPTION ACCURATE ??\n"
 "@c LET'S BE EXPLICIT ABOUT EXACTLY WHAT ARE THE RULES IMPLEMENTED BY THIS PACKAGE\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2340
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@defvr {Package} atrig1\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2347
 msgid ""
 "The @code{atrig1} package contains several additional simplification rules\n"
 "for inverse trigonometric functions.  Together with rules\n"
@@ -3388,7 +3392,7 @@ msgid ""
 "Do @code{load(atrig1);} to use them.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2352
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Package atrig1}\n"
@@ -3396,18 +3400,18 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2355
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} cos (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2357
 msgid ""
 "-- Cosine.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2362
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3415,18 +3419,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2365
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} cosh (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2367
 msgid ""
 "-- Hyperbolic Cosine.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2372
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3434,18 +3438,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2375
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} cot (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2377
 msgid ""
 "-- Cotangent.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2382
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3453,18 +3457,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2385
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} coth (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2387
 msgid ""
 "-- Hyperbolic Cotangent.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2392
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3472,18 +3476,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2395
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} csc (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2397
 msgid ""
 "-- Cosecant.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2402
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3491,18 +3495,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2405
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} csch (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2407
 msgid ""
 "-- Hyperbolic Cosecant.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2412
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3510,7 +3514,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2417
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{halfangles}\n"
@@ -3518,19 +3522,19 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2420
 msgid ""
 "When @code{halfangles} is @code{true}, trigonometric functions of arguments \n"
 "@code{@var{expr}/2} are simplified to functions of @var{expr}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2423
 msgid ""
 "For a real argument @var{x} in the interval @code{0 < x < 2*%pi} the sine of \n"
 "the half-angle simplifies to a simple formula:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2429
 msgid ""
 "@example\n"
 "                         sqrt(1 - cos(x))\n"
@@ -3539,13 +3543,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2432
 msgid ""
 "A complicated factor is needed to make this formula correct for all complex \n"
 "arguments @var{z}:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2438
 msgid ""
 "@verbatim\n"
 "           realpart(z)\n"
@@ -3554,7 +3558,7 @@ msgid ""
 "(- 1)                   (1 - unit_step(- imagpart(z))\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2444
 msgid ""
 "                            realpart(z)            realpart(z)\n"
 "                      floor(-----------) - ceiling(-----------)\n"
@@ -3563,19 +3567,19 @@ msgid ""
 "@end verbatim\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2448
 msgid ""
 "Maxima knows this factor and similar factors for the functions @code{sin}, \n"
 "@code{cos}, @code{sinh}, and @code{cosh}.  For special values of the argument \n"
 "@math{z} these factors simplify accordingly.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2450
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2485
 msgid ""
 "@c ===beg===\n"
 "@c halfangles : false$\n"
@@ -3613,7 +3617,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2490
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification flags and variables}\n"
@@ -3621,19 +3625,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2493
 msgid ""
 "@c IS THIS DESCRIPTION ACCURATE ??\n"
 "@c LET'S BE EXPLICIT ABOUT EXACTLY WHAT ARE THE RULES IMPLEMENTED BY THIS PACKAGE\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2496
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@defvr {Package} ntrig\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2502
 msgid ""
 "The @code{ntrig} package contains a set of simplification rules that are\n"
 "used to simplify trigonometric function whose arguments are of the form\n"
@@ -3642,7 +3646,7 @@ msgid ""
 "@c NEED TO LOAD THIS PACKAGE ??\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2507
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Package ntrig}\n"
@@ -3650,18 +3654,18 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2510
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} sec (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2512
 msgid ""
 "-- Secant.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2517
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3669,18 +3673,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2520
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} sech (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2522
 msgid ""
 "-- Hyperbolic Secant.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2527
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3688,19 +3692,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2531
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sin}\n"
 "@deffn {Function} sin (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2533
 msgid ""
 "-- Sine.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2538
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3708,18 +3712,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2541
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} sinh (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2543
 msgid ""
 "-- Hyperbolic Sine.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2548
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3727,18 +3731,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2551
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} tan (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2553
 msgid ""
 "-- Tangent.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2558
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions}\n"
@@ -3746,18 +3750,18 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2561
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@deffn {Function} tanh (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2563
 msgid ""
 "-- Hyperbolic Tangent.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2568
 msgid ""
 "@opencatbox\n"
 "@category{Hyperbolic functions}\n"
@@ -3765,19 +3769,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2570
 msgid ""
 "@c NEEDS CLARIFICATION AND EXAMPLES\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2574
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trigexpand}\n"
 "@deffn {Function} trigexpand (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2581
 msgid ""
 "Expands trigonometric and hyperbolic functions of\n"
 "sums of angles and of multiple angles occurring in @var{expr}.  For best\n"
@@ -3787,12 +3791,12 @@ msgid ""
 "into sines and cosines immediately, set the switch @code{trigexpand: true}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2583
 msgid ""
 "@code{trigexpand} is governed by the following global flags:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2600
 msgid ""
 "@table @code\n"
 "@item trigexpand\n"
@@ -3802,22 +3806,22 @@ msgid ""
 "If @code{true} causes half-angles to be simplified\n"
 "away.\n"
 "@item trigexpandplus\n"
-"Controls the \"sum\" rule for @code{trigexpand},\n"
+"Controls the \\"sum\\" rule for @code{trigexpand},\n"
 "expansion of sums (e.g. @code{sin(x + y)}) will take place only if\n"
 "@code{trigexpandplus} is @code{true}.\n"
 "@item trigexpandtimes\n"
-"Controls the \"product\" rule for @code{trigexpand},\n"
+"Controls the \\"product\\" rule for @code{trigexpand},\n"
 "expansion of products (e.g. @code{sin(2 x)}) will take place only if\n"
 "@code{trigexpandtimes} is @code{true}.\n"
 "@end table\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2602
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2618
 msgid ""
 "@c ===beg===\n"
 "@c x+sin(3*x)/sin(x),trigexpand=true,expand;\n"
@@ -3836,7 +3840,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2623
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification functions}\n"
@@ -3844,7 +3848,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2628
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trigexpandplus}\n"
@@ -3852,16 +3856,16 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2634
 msgid ""
-"@code{trigexpandplus} controls the \"sum\" rule for\n"
+"@code{trigexpandplus} controls the \\"sum\\" rule for\n"
 "@code{trigexpand}.  Thus, when the @code{trigexpand} command is used or the\n"
 "@code{trigexpand} switch set to @code{true}, expansion of sums\n"
 "(e.g. @code{sin(x+y))} will take place only if @code{trigexpandplus} is\n"
 "@code{true}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2639
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification flags and variables}\n"
@@ -3869,7 +3873,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2644
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trigexpandtimes}\n"
@@ -3877,15 +3881,15 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2649
 msgid ""
-"@code{trigexpandtimes} controls the \"product\" rule for @code{trigexpand}.\n"
+"@code{trigexpandtimes} controls the \\"product\\" rule for @code{trigexpand}.\n"
 "Thus, when the @code{trigexpand} command is used or the @code{trigexpand}\n"
 "switch set to @code{true}, expansion of products (e.g. @code{sin(2*x)})\n"
 "will take place only if @code{trigexpandtimes} is @code{true}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2654
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification flags and variables}\n"
@@ -3893,7 +3897,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2659
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{triginverses}\n"
@@ -3901,26 +3905,26 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2663
 msgid ""
 "@code{triginverses} controls the simplification of the\n"
 "composition of trigonometric and hyperbolic functions with their inverse\n"
 "functions.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2666
 msgid ""
 "If @code{all}, both e.g. @code{atan(tan(@var{x}))}\n"
 "and @code{tan(atan(@var{x}))} simplify to @var{x}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2669
 msgid ""
 "If @code{true}, the @code{@var{arcfun}(@var{fun}(@var{x}))}\n"
 "simplification is turned off.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2674
 msgid ""
 "If @code{false}, both the\n"
 "@code{@var{arcfun}(@var{fun}(@var{x}))} and\n"
@@ -3928,7 +3932,7 @@ msgid ""
 "simplifications are turned off.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2679
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification flags and variables}\n"
@@ -3936,7 +3940,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2685
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trigreduce}\n"
@@ -3945,7 +3949,7 @@ msgid ""
 "@fname{trigreduce} (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2690
 msgid ""
 "Combines products and powers of trigonometric\n"
 "and hyperbolic sin's and cos's of @var{x} into those of multiples of @var{x}.\n"
@@ -3953,12 +3957,12 @@ msgid ""
 "denominators.  If @var{x} is omitted then all variables in @var{expr} are used.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2692
 msgid ""
 "See also @code{poissimp}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2704
 msgid ""
 "@c ===beg===\n"
 "@c trigreduce(-sin(x)^2+3*cos(x)^2+x);\n"
@@ -3973,7 +3977,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2727
 msgid ""
 "@c \n"
 "@c     OBSOLETE\n"
@@ -3999,7 +4003,7 @@ msgid ""
 "@c @end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2732
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification functions}\n"
@@ -4007,7 +4011,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2737
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trigsign}\n"
@@ -4015,14 +4019,14 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2741
 msgid ""
 "When @code{trigsign} is @code{true}, it permits simplification of negative\n"
 "arguments to trigonometric functions.  E.g., @code{sin(-x)} will become\n"
 "@code{-sin(x)} only if @code{trigsign} is @code{true}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2746
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification flags and variables}\n"
@@ -4030,14 +4034,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2750
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trigsimp}\n"
 "@deffn {Function} trigsimp (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2768
 msgid ""
 "@iftex\n"
 "Employs the identities\n"
@@ -4058,19 +4062,19 @@ msgid ""
 "@end ifnottex\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2771
 msgid ""
 "@code{trigreduce}, @code{ratsimp}, and @code{radcan} may be\n"
 "able to further simplify the result.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2774
 msgid ""
-"@code{demo (\"trgsmp.dem\")} displays some examples of @code{trigsimp}.\n"
+"@code{demo (\\"trgsmp.dem\\")} displays some examples of @code{trigsimp}.\n"
 "@c MERGE EXAMPLES INTO THIS ITEM\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2779
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification functions}\n"
@@ -4078,19 +4082,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2781
 msgid ""
 "@c NEEDS CLARIFICATION\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2785
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trigrat}\n"
 "@deffn {Function} trigrat (@var{expr})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2793
 msgid ""
 "Gives a canonical simplified quasilinear form of a trigonometrical expression;\n"
 "@var{expr} is a rational fraction of several @code{sin}, @code{cos} or\n"
@@ -4101,7 +4105,7 @@ msgid ""
 "possible.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2803
 msgid ""
 "@c ===beg===\n"
 "@c trigrat(sin(3*a)/sin(a+%pi/3));\n"
@@ -4114,14 +4118,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2807
 msgid ""
 "The following example is taken from\n"
 "Davenport, Siret, and Tournier, @i{Calcul Formel}, Masson (or in English,\n"
 "Addison-Wesley), section 1.5.5, Morley theorem.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2868
 msgid ""
 "@c ===beg===\n"
 "@c c : %pi/3 - a - b$\n"
@@ -4185,7 +4189,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2873
 msgid ""
 "@opencatbox\n"
 "@category{Trigonometric functions} @category{Simplification functions}\n"
@@ -4193,7 +4197,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2879
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@page\n"
@@ -4202,7 +4206,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2887
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{make_random_state}\n"
@@ -4213,50 +4217,50 @@ msgid ""
 "@fname{make_random_state} (false)\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2890
 msgid ""
 "@c OMIT THIS FOR NOW. SEE COMMENT BELOW.\n"
 "@c @defunx make_random_state (@var{a})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2893
 msgid ""
 "A random state object represents the state of the random number generator.\n"
 "The state comprises 627 32-bit words.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2897
 msgid ""
 "@code{make_random_state (@var{n})} returns a new random state object\n"
 "created from an integer seed value equal to @var{n} modulo 2^32.\n"
 "@var{n} may be negative.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2901
 msgid ""
 "@c OMIT THIS FOR NOW. NOT SURE HOW THIS IS SUPPOSED TO WORK.\n"
 "@c @code{make_random_state (@var{a})} returns a new random state object\n"
 "@c created from an array @var{a}, which must be a Lisp array of 32 unsigned bytes.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2903
 msgid ""
 "@code{make_random_state (@var{s})} returns a copy of the random state @var{s}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2906
 msgid ""
 "@code{make_random_state (true)} returns a new random state object,\n"
 "using the current computer clock time as the seed.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2909
 msgid ""
 "@code{make_random_state (false)} returns a copy of the current state\n"
 "of the random number generator.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2914
 msgid ""
 "@opencatbox\n"
 "@category{Random numbers}\n"
@@ -4264,24 +4268,24 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2918
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{set_random_state}\n"
 "@deffn {Function} set_random_state (@var{s})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2920
 msgid ""
 "Copies @var{s} to the random number generator state.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2922
 msgid ""
 "@code{set_random_state} always returns @code{done}.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2927
 msgid ""
 "@opencatbox\n"
 "@category{Random numbers}\n"
@@ -4289,14 +4293,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2931
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{random}\n"
 "@deffn {Function} random (@var{x})\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2938
 msgid ""
 "Returns a pseudorandom number.  If @var{x} is an integer,\n"
 "@code{random (@var{x})} returns an integer from 0 through @code{@var{x} - 1}\n"
@@ -4306,24 +4310,24 @@ msgid ""
 "@var{x} is not positive.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2941
 msgid ""
 "The functions @code{make_random_state} and @code{set_random_state}\n"
 "maintain the state of the random number generator.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2944
 msgid ""
 "The Maxima random number generator is an implementation of the Mersenne twister\n"
 "MT 19937.\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:2946
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:3010
 msgid ""
 "@c ===beg===\n"
 "@c s1: make_random_state (654321)$\n"
@@ -4390,7 +4394,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# MathFunctions.texi
+#: MathFunctions.texi:3015
 msgid ""
 "@opencatbox\n"
 "@category{Random numbers} @category{Numerical methods}\n"
@@ -4398,6 +4402,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# MathFunctions.texi
-msgid ""
-msgstr ""

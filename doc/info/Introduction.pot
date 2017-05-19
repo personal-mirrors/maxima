@@ -1,30 +1,30 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Introduction.texi
-msgid ""
-"Start Maxima with the command \"maxima\".  Maxima will display version\n"
-"information and a prompt.  End each Maxima command with a semicolon.\n"
-"End the session with the command \"quit();\".  Here's a sample session:\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:4
+msgid ""
+"Start Maxima with the command \\"maxima\\".  Maxima will display version\n"
+"information and a prompt.  End each Maxima command with a semicolon.\n"
+"End the session with the command \\"quit();\\".  Here's a sample session:\n"
+msgstr ""
+
+#: Introduction.texi:25
 msgid ""
 "@example\n"
 "[wfs@@chromium]$ maxima\n"
@@ -48,7 +48,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:31
 msgid ""
 "Maxima can search the info pages.  Use the @mref{describe} command to show\n"
 "information about the command or all the commands and variables containing \n"
@@ -57,7 +57,7 @@ msgid ""
 "(inexact search) are abbreviations for @code{describe}:\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:47
 msgid ""
 "@example\n"
 "(%i1) ?? integ\n"
@@ -76,25 +76,25 @@ msgid ""
 "Enter space-separated numbers, `all' or `none': 5 4\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:51
 msgid ""
 " -- Function: integerp (<expr>)\n"
 "     Returns `true' if <expr> is a literal numeric integer, otherwise\n"
 "     `false'.\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:54
 msgid ""
 "     `integerp' returns false if its argument is a symbol, even if the\n"
 "     argument is declared integer.\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:56
 msgid ""
 "     Examples:\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:75
 msgid ""
 "          (%i1) integerp (0);\n"
 "          (%o1)                         true\n"
@@ -116,7 +116,7 @@ msgid ""
 "          (%o9)                         false\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:85
 msgid ""
 " -- Function: askinteger (<expr>, integer)\n"
 " -- Function: askinteger (<expr>)\n"
@@ -129,27 +129,27 @@ msgid ""
 "     (<expr>)' is equivalent to `askinteger (<expr>, integer)'.\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:89
 msgid ""
 "     `askinteger (<expr>, even)' and `askinteger (<expr>, odd)'\n"
 "     likewise attempt to determine if <expr> is an even integer or odd\n"
 "     integer, respectively.\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:92
 msgid ""
 "(%o1)                                true\n"
 "@end example\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:96
 msgid ""
 "To use a result in later calculations, you can assign it to a variable or\n"
 "refer to it by its automatically supplied label.  In addition, @mref{%}@w{}\n"
 "refers to the most recent calculated result:\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:108
 msgid ""
 "@example\n"
 "(%i1) u: expand ((x + y)^6);\n"
@@ -164,12 +164,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:110
 msgid ""
 "Maxima knows about complex numbers and numerical constants:\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:117
 msgid ""
 "@example\n"
 "(%i1) cos(%pi);\n"
@@ -179,12 +179,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:119
 msgid ""
 "Maxima can do differential and integral calculus:\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:134
 msgid ""
 "@example\n"
 "(%i1) u: expand ((x + y)^6);\n"
@@ -202,12 +202,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:136
 msgid ""
 "Maxima can solve linear systems and cubic equations:\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:145
 msgid ""
 "@example\n"
 "(%i1) linsolve ([3*x + 4*y = 7, 2*x + a*y = 13], [x, y]);\n"
@@ -219,14 +219,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:149
 msgid ""
 "Maxima can solve nonlinear sets of equations.  Note that if you don't\n"
 "want a result printed, you can finish your command with @kbd{$} instead\n"
 "of @kbd{;}.\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:157
 msgid ""
 "@example\n"
 "(%i1) eq_1: x^2 + 3*x*y + y^2 = 0$\n"
@@ -237,7 +237,7 @@ msgid ""
 "                    2                 2\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:162
 msgid ""
 "                               3 sqrt(5) - 7        sqrt(5) - 3\n"
 "                          [y = -------------, x = - -----------]]\n"
@@ -245,12 +245,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:164
 msgid ""
 "Maxima can generate plots of one or more functions:\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:186
 msgid ""
 "@example\n"
 "(%i1) plot2d (sin(x)/x, [x, -20, 20])$\n"
@@ -275,7 +275,7 @@ msgid ""
 "@end ifnotinfo \n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:192
 msgid ""
 "@c FOLLOWING TEXT DESCRIBES THE TCL/TK PLOT WINDOW WHICH IS NO LONGER THE DEFAULT\n"
 "@c Moving the cursor to the top left corner of the plot window will pop up\n"
@@ -284,13 +284,10 @@ msgid ""
 "@c You can rotate a 3D plot.\n"
 msgstr ""
 
-# Introduction.texi
+#: Introduction.texi:196
 msgid ""
 "@opencatbox\n"
 "@category{Help}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Introduction.texi
-msgid ""
-msgstr ""

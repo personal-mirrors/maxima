@@ -1,36 +1,36 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# augmented_lagrangian.texi
+msgstr ""
+
+#: augmented_lagrangian.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for augmented_lagrangian::\n"
 "@end menu\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:7
 msgid ""
 "@node Functions and Variables for augmented_lagrangian,  , augmented_lagrangian-pkg, augmented_lagrangian-pkg\n"
 "@section Functions and Variables for augmented_lagrangian\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:13
 msgid ""
 "@deffn  {Function} augmented_lagrangian_method @\n"
 "@fname{augmented_lagrangian_method} (@var{FOM}, @var{xx}, @var{C}, @var{yy}) @\n"
@@ -39,7 +39,7 @@ msgid ""
 "@fname{augmented_lagrangian_method} ([@var{FOM}, @var{grad}], @var{xx}, @var{C}, @var{yy}, optional_args)\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:19
 msgid ""
 "Returns an approximate minimum of the expression @var{FOM}\n"
 "with respect to the variables @var{xx},\n"
@@ -48,7 +48,7 @@ msgid ""
 "The method employed is the augmented Lagrangian method (see Refs [1] and [2]).\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:24
 msgid ""
 "@var{grad}, if present, is the gradient of @var{FOM} with respect to @var{xx},\n"
 "represented as a list of expressions,\n"
@@ -56,20 +56,20 @@ msgid ""
 "If not present, the gradient is constructed automatically.\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:27
 msgid ""
 "@var{FOM} and each element of @var{grad}, if present,\n"
 "must be ordinary expressions, not names of functions or lambda expressions.\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:31
 msgid ""
 "@code{optional_args} represents additional arguments,\n"
 "specified as @code{@var{symbol} = @var{value}}.\n"
 "The optional arguments recognized are:\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:42
 msgid ""
 "@table @code\n"
 "@item niter\n"
@@ -83,45 +83,45 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:46
 msgid ""
 "This implementation minimizes the augmented Lagrangian by\n"
 "applying the limited-memory BFGS (LBFGS) algorithm,\n"
 "which is a quasi-Newton algorithm.\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:48
 msgid ""
 "@code{load(augmented_lagrangian)} loads this function.\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:50
 msgid ""
 "See also @ref{lbfgs-pkg}\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:52
 msgid ""
 "References:\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:55
 msgid ""
 "@c Both links seem invalid now (one redirects somewhere, one is access forbidden). Remove them?\n"
 "[1] @url{http://www-fp.mcs.anl.gov/otc/Guide/OptWeb/continuous/constrained/nonlinearcon/auglag.html}\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:57
 msgid ""
 "[2] @url{http://www.cs.ubc.ca/spider/ascher/542/chap10.pdf}\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:59
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:88
 msgid ""
 "@c ===beg===\n"
 "@c load (lbfgs);\n"
@@ -153,12 +153,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:90
 msgid ""
 "Same example as before, but this time the gradient is supplied as an argument.\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:124
 msgid ""
 "@c ===beg===\n"
 "@c load (lbfgs)$\n"
@@ -195,18 +195,15 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:128
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Optimization} @category{Share packages} @category{Package augmented_lagrangian} \n"
 "@closecatbox\n"
 msgstr ""
 
-# augmented_lagrangian.texi
+#: augmented_lagrangian.texi:130
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# augmented_lagrangian.texi
-msgid ""
-msgstr ""

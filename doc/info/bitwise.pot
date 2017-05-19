@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# bitwise.texi
+msgstr ""
+
+#: bitwise.texi:6
 msgid ""
 "The package @code{bitwise} provides functions that allow to manipulate\n"
 "bits of integer constants. As always maxima attempts to simplify the result\n"
@@ -26,35 +26,35 @@ msgid ""
 "mechanism.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:10
 msgid ""
 "@menu\n"
 "* Functions and Variables for bitwise::\n"
 "@end menu\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:13
 msgid ""
 "@node Functions and Variables for bitwise, , Top, Top\n"
 "@section Functions and Variables for bitwise\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:16
 msgid ""
 "@anchor{bit_not}\n"
 "@deffn {Function} bit_not (@var{int})\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:19
 msgid ""
 "Inverts all bits of a signed integer. The result of this action reads\n"
 "@code{-int - 1}.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:51
 msgid ""
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_not(i);\n"
 "@c bit_not(bit_not(i));\n"
 "@c bit_not(3);\n"
@@ -62,7 +62,7 @@ msgid ""
 "@c bit_not(-101);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_not(i);\n"
 "(%o2)                      bit_not(i)\n"
@@ -86,7 +86,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:58
 msgid ""
 "@opencatbox\n"
 "@category{Number theory}\n"
@@ -96,28 +96,28 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:61
 msgid ""
 "@anchor{bit_and}\n"
 "@deffn {Function} bit_and (@var{int1}, ...)\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:63
 msgid ""
 "This function calculates a bitwise @code{and} of two or more signed integers.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:90
 msgid ""
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_and(i,i);\n"
 "@c bit_and(i,i,i);\n"
 "@c bit_and(1,3);\n"
 "@c bit_and(-7,7);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_and(i,i);\n"
 "(%o2)                           i\n"
@@ -137,18 +137,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:114
 msgid ""
 "If it is known if one of the parameters to @code{bit_and} is even this information\n"
 "is taken into consideration by the function.\n"
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c declare(e,even,o,odd);\n"
 "@c bit_and(1,e);\n"
 "@c bit_and(1,o);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) declare(e,even,o,odd);\n"
 "(%o2)                         done\n"
@@ -164,7 +164,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:121
 msgid ""
 "@opencatbox\n"
 "@category{Number theory}\n"
@@ -174,28 +174,28 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:124
 msgid ""
 "@anchor{bit_or}\n"
 "@deffn {Function} bit_or (@var{int1}, ...)\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:126
 msgid ""
 "This function calculates a bitwise @code{or} of two or more signed integers.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:153
 msgid ""
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_or(i,i);\n"
 "@c bit_or(i,i,i);\n"
 "@c bit_or(1,3);\n"
 "@c bit_or(-7,7);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_or(i,i);\n"
 "(%o2)                           i\n"
@@ -215,18 +215,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:177
 msgid ""
 "If it is known if one of the parameters to @code{bit_or} is even this information\n"
 "is taken into consideration by the function.\n"
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c declare(e,even,o,odd);\n"
 "@c bit_or(1,e);\n"
 "@c bit_or(1,o);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) declare(e,even,o,odd);\n"
 "(%o2)                         done\n"
@@ -242,7 +242,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:184
 msgid ""
 "@opencatbox\n"
 "@category{Number theory}\n"
@@ -252,28 +252,28 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:187
 msgid ""
 "@anchor{bit_xor}\n"
 "@deffn {Function} bit_xor (@var{int1}, ...)\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:189
 msgid ""
 "This function calculates a bitwise @code{or} of two or more signed integers.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:216
 msgid ""
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_xor(i,i);\n"
 "@c bit_xor(i,i,i);\n"
 "@c bit_xor(1,3);\n"
 "@c bit_xor(-7,7);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_xor(i,i);\n"
 "(%o2)                           0\n"
@@ -293,18 +293,18 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:240
 msgid ""
 "If it is known if one of the parameters to @code{bit_xor} is even this information\n"
 "is taken into consideration by the function.\n"
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c declare(e,even,o,odd);\n"
 "@c bit_xor(1,e);\n"
 "@c bit_xor(1,o);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) declare(e,even,o,odd);\n"
 "(%o2)                         done\n"
@@ -320,7 +320,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:247
 msgid ""
 "@opencatbox\n"
 "@category{Number theory}\n"
@@ -328,21 +328,25 @@ msgid ""
 "@category{Package bitwise}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: bitwise.texi:251
+msgid ""
 "@anchor{bit_lsh}\n"
 "@deffn {Function} bit_lsh (@var{int}, @var{nBits})\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:255
 msgid ""
 "This function shifts all bits of the signed integer @code{int} to the left by\n"
 "@code{nBits} bits. The width of the integer is extended by @code{nBits} for\n"
 "this process. The result of @code{bit_lsh} therefore is @code{int * 2}.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:298
 msgid ""
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_lsh(0,1);\n"
 "@c bit_lsh(1,0);\n"
 "@c bit_lsh(1,1);\n"
@@ -351,7 +355,7 @@ msgid ""
 "@c bit_lsh(-2,1);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_lsh(0,1);\n"
 "(%o2)                           0\n"
@@ -383,21 +387,25 @@ msgid ""
 "@category{Package bitwise}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: bitwise.texi:302
+msgid ""
 "@anchor{bit_rsh}\n"
 "@deffn {Function} bit_rsh (@var{int}, @var{nBits})\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:306
 msgid ""
 "This function shifts all bits of the signed integer @code{int} to the right by\n"
 "@code{nBits} bits. The width of the integer is reduced by @code{nBits} for\n"
 "this process.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:354
 msgid ""
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_rsh(0,1);\n"
 "@c bit_rsh(2,0);\n"
 "@c bit_rsh(2,1);\n"
@@ -407,7 +415,7 @@ msgid ""
 "@c bit_rsh(-2,2);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_rsh(0,1);\n"
 "(%o2)                           0\n"
@@ -445,29 +453,29 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:357
 msgid ""
 "@anchor{bit_length}\n"
 "@deffn {Function} bit_length (@var{int})\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:360
 msgid ""
 "determines how many bits a variable needs to be long in order to store the\n"
 "number @code{int}. This function only operates on positive numbers.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:393
 msgid ""
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_length(0);\n"
 "@c bit_length(1);\n"
 "@c bit_length(7);\n"
 "@c bit_length(8);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_length(0);\n"
 "(%o2)                           0\n"
@@ -493,21 +501,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:396
 msgid ""
 "@anchor{bit_onep}\n"
 "@deffn {Function} bit_onep (@var{int}, @var{nBit})\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:398
 msgid ""
 "determines if bits @code{nBit} is set in the signed integer @code{int}.\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:435
 msgid ""
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_onep(85,0);\n"
 "@c bit_onep(85,1);\n"
 "@c bit_onep(85,2);\n"
@@ -516,7 +524,7 @@ msgid ""
 "@c bit_onep(i,100);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_onep(85,0);\n"
 "(%o2)                         true\n"
@@ -544,12 +552,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
+#: bitwise.texi:469
 msgid ""
 "For signed numbers the sign bit is interpreted to be more than @code{nBit} to the\n"
 "left of the leftmost bit of @code{int} that reads @code{1}.\n"
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c bit_onep(-2,0);\n"
 "@c bit_onep(-2,1);\n"
 "@c bit_onep(-2,2);\n"
@@ -557,7 +565,7 @@ msgid ""
 "@c bit_onep(-2,4);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) bit_onep(-2,0);\n"
 "(%o2)                         false\n"
@@ -579,16 +587,20 @@ msgid ""
 "(%o6)                         true\n"
 "@end group\n"
 "@end example\n"
+msgstr ""
+
+#: bitwise.texi:494
+msgid ""
 "If it is known if the number to be tested is even this information\n"
 "is taken into consideration by the function.\n"
 "@c ===beg===\n"
-"@c load(\"bitwise\")$\n"
+"@c load(\\"bitwise\\")$\n"
 "@c declare(e,even,o,odd);\n"
 "@c bit_onep(e,0);\n"
 "@c bit_onep(o,0);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) load(\"bitwise\")$\n"
+"(%i1) load(\\"bitwise\\")$\n"
 "@group\n"
 "(%i2) declare(e,even,o,odd);\n"
 "(%o2)                         done\n"
@@ -604,12 +616,3 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# bitwise.texi
-msgid ""
-"@opencatbox\n"
-"@category{Number theory}\n"
-"@category{Binary operations}\n"
-"@category{Package bitwise}\n"
-"@closecatbox\n"
-"@end deffn\n"
-msgstr ""

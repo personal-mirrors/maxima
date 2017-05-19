@@ -1,62 +1,62 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# stirling.texi
+msgstr ""
+
+#: stirling.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for stirling::\n"
 "@end menu\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:7
 msgid ""
 "@node Functions and Variables for stirling,  , stirling-pkg, stirling-pkg\n"
 "@section Functions and Variables for stirling\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:11
 msgid ""
 "@deffn {Function} stirling @\n"
 "@fname{stirling} (@var{z},@var{n}) @\n"
 "@fname{stirling} (@var{z},@var{n},@var{pred})\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:15
 msgid ""
 "Replace @code{gamma(x)} with the @math{O(1/x^(2n-1))} Stirling formula. when @var{n} isn't\n"
 "a nonnegative integer, signal an error. With the optional third argument @code{pred},\n"
 "the Stirling formula is applied only when @code{pred} is true.\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:17
 msgid ""
-"Reference: Abramowitz & Stegun, \" Handbook of mathematical functions\", 6.1.40.\n"
+"Reference: Abramowitz & Stegun, \\" Handbook of mathematical functions\\", 6.1.40.\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:21
 msgid ""
 "Examples:\n"
 "@example\n"
 "(%i1) load (stirling)$\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:40
 msgid ""
 "(%i2) stirling(gamma(%alpha+x)/gamma(x),1);\n"
 "       1/2 - x             x + %alpha - 1/2\n"
@@ -78,13 +78,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:43
 msgid ""
 "The function @code{stirling} knows the difference between the variable 'gamma' and\n"
 "the function gamma:\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:54
 msgid ""
 "@example\n"
 "(%i5) stirling(gamma + gamma(x),0);\n"
@@ -98,7 +98,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:65
 msgid ""
 "To apply the Stirling formula only to terms that involve the variable @code{k},\n"
 "use an optional third argument; for example\n"
@@ -112,19 +112,15 @@ msgid ""
 "was not applied to these two terms.\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:67
 msgid ""
-"To use this function write first @code{load(\"stirling\")}.\n"
+"To use this function write first @code{load(\\"stirling\\")}.\n"
 msgstr ""
 
-# stirling.texi
+#: stirling.texi:71
 msgid ""
 "@opencatbox\n"
 "@category{Gamma and factorial functions} @category{Share packages} @category{Package stirling}\n"
 "@closecatbox\n"
 msgstr ""
 
-# stirling.texi
-msgid ""
-"@end deffn\n"
-msgstr ""

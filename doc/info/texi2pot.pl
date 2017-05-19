@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-print "# This file contains all translatable strings from a .texi file.\\n\n";
+print "# This file contains all translatable strings from a .texi file.\n";
 print "# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER\n";
 print "# This file is distributed under the same license as the PACKAGE package.\n";
 print "# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n";

@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# lapack.texi
+msgstr ""
+
+#: lapack.texi:5
 msgid ""
 "@menu\n"
 "* Introduction to lapack::\n"
@@ -25,35 +25,39 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:8
 msgid ""
 "@node Introduction to lapack, Functions and Variables for lapack, lapack-pkg, lapack-pkg\n"
 "@section Introduction to lapack\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:11
 msgid ""
 "@code{lapack} is a Common Lisp translation (via the program @code{f2cl}) of the Fortran library LAPACK,\n"
 "as obtained from the SLATEC project.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:15
 msgid ""
 "@opencatbox\n"
 "@category{Numerical methods} @category{Share packages} @category{Package lapack}\n"
 "@closecatbox\n"
+msgstr ""
+
+#: lapack.texi:19
+msgid ""
 "@node Functions and Variables for lapack, , Introduction to lapack, lapack-pkg\n"
 "@section Functions and Variables for lapack\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:23
 msgid ""
 "@deffn {Function} dgeev @\n"
 "@fname{dgeev} (@var{A}) @\n"
 "@fname{dgeev} (@var{A}, @var{right_p}, @var{left_p})\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:28
 msgid ""
 "Computes the eigenvalues and, optionally, the eigenvectors of a matrix @var{A}.\n"
 "All elements of @var{A} must be integer or floating point numbers.\n"
@@ -61,7 +65,7 @@ msgid ""
 "@var{A} might or might not be symmetric.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:33
 msgid ""
 "@code{dgeev(@var{A})} computes only the eigenvalues of @var{A}.\n"
 "@code{dgeev(@var{A}, @var{right_p}, @var{left_p})} computes the eigenvalues of @var{A}\n"
@@ -69,7 +73,7 @@ msgid ""
 "and the left eigenvectors when @math{@var{left_p} = @code{true}}.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:38
 msgid ""
 "A list of three items is returned.\n"
 "The first item is a list of the eigenvalues.\n"
@@ -77,45 +81,45 @@ msgid ""
 "The third item is @code{false} or the matrix of left eigenvectors.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:40
 msgid ""
 "The right eigenvector @math{v(j)} (the @math{j}-th column of the right eigenvector matrix) satisfies\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:42
 msgid ""
 "@math{A . v(j) = lambda(j) . v(j)}\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:45
 msgid ""
 "where @math{lambda(j)} is the corresponding eigenvalue.\n"
 "The left eigenvector @math{u(j)} (the @math{j}-th column of the left eigenvector matrix) satisfies\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:47
 msgid ""
 "@math{u(j)**H . A = lambda(j) . u(j)**H}\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:50
 msgid ""
 "where @math{u(j)**H} denotes the conjugate transpose of @math{u(j)}.\n"
 "The Maxima function @code{ctranspose} computes the conjugate transpose.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:53
 msgid ""
 "The computed eigenvectors are normalized to have Euclidean norm\n"
 "equal to 1, and largest component has imaginary part equal to zero.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:55
 msgid ""
 "Example:\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:96
 msgid ""
 "@c ===beg===\n"
 "@c load (lapack)$\n"
@@ -159,42 +163,42 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:100
 msgid ""
 "@opencatbox\n"
 "@category{Package lapack}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:102
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:104
 msgid ""
 "@deffn {Function} dgeqrf (@var{A})\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:108
 msgid ""
 "Computes the QR decomposition of the matrix @var{A}.\n"
 "All elements of @var{A} must be integer or floating point numbers.\n"
 "@var{A} may or may not have the same number of rows and columns.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:116
 msgid ""
 "A list of two items is returned.\n"
 "The first item is the matrix @var{Q}, which is a square, orthonormal matrix\n"
 "which has the same number of rows as @var{A}.\n"
 "The second item is the matrix @var{R}, which is the same size as @var{A},\n"
 "and which has all elements equal to zero below the diagonal.\n"
-"The product @code{@var{Q} . @var{R}}, where \".\" is the noncommutative multiplication operator,\n"
+"The product @code{@var{Q} . @var{R}}, where \\".\\" is the noncommutative multiplication operator,\n"
 "is equal to @var{A} (ignoring floating point round-off errors).\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:143
 msgid ""
 "@c ===beg===\n"
 "@c load (lapack)$\n"
@@ -224,24 +228,24 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:147
 msgid ""
 "@opencatbox\n"
 "@category{Package lapack}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:149
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:151
 msgid ""
 "@deffn {Function} dgesv (@var{A}, @var{b})\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:156
 msgid ""
 "Computes the solution @var{x} of the linear equation @math{@var{A} @var{x} = @var{b}},\n"
 "where @var{A} is a square matrix, and @var{b} is a matrix of the same number of rows\n"
@@ -249,7 +253,7 @@ msgid ""
 "The return value @var{x} is the same size as @var{b}.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:161
 msgid ""
 "The elements of @var{A} and @var{b} must evaluate to real floating point numbers via @code{float};\n"
 "thus elements may be any numeric type, symbolic numerical constants, or expressions which evaluate to floats.\n"
@@ -257,22 +261,22 @@ msgid ""
 "All arithmetic is carried out as floating point operations.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:163
 msgid ""
 "@code{dgesv} computes the solution via the LU decomposition of @var{A}.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:165
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:167
 msgid ""
 "@code{dgesv} computes the solution of the linear equation @math{@var{A} @var{x} = @var{b}}.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:190
 msgid ""
 "@c ===beg===\n"
 "@c A : matrix ([1, -2.5], [0.375, 5]);\n"
@@ -298,13 +302,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:193
 msgid ""
 "@var{b} is a matrix with the same number of rows as @var{A} and any number of columns.\n"
 "@var{x} is the same size as @var{b}.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:216
 msgid ""
 "@c ===beg===\n"
 "@c A : matrix ([1, -0.15], [1.82, 2]);\n"
@@ -330,12 +334,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:218
 msgid ""
 "The elements of @var{A} and @var{b} must evaluate to real floating point numbers.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:243
 msgid ""
 "@c ===beg===\n"
 "@c A : matrix ([5, -%pi], [1b0, 11/17]);\n"
@@ -363,26 +367,26 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:247
 msgid ""
 "@opencatbox\n"
 "@category{Package lapack} @category{Linear equations}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:249
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:253
 msgid ""
 "@deffn {Function} dgesvd @\n"
 "@fname{dgesvd} (@var{A}) @\n"
 "@fname{dgesvd} (@var{A}, @var{left_p}, @var{right_p})\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:258
 msgid ""
 "Computes the singular value decomposition (SVD) of a matrix @var{A},\n"
 "comprising the singular values and, optionally, the left and right singular vectors.\n"
@@ -390,7 +394,7 @@ msgid ""
 "@var{A} might or might not be square (same number of rows and columns).\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:263
 msgid ""
 "Let @math{m} be the number of rows, and @math{n} the number of columns of @var{A}.\n"
 "The singular value decomposition of @var{A} comprises three matrices,\n"
@@ -398,20 +402,20 @@ msgid ""
 "such that\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:266
 msgid ""
 "@c this code breaks texi2pdf: @math{@var{A} = @var{U} . @var{Sigma} . @var{V^T}}\n"
 "@math{@var{A} = @var{U} . @var{Sigma} . @var{V}^T}\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:270
 msgid ""
 "where @var{U} is an @math{m}-by-@math{m} unitary matrix,\n"
 "@var{Sigma} is an @math{m}-by-@math{n} diagonal matrix,\n"
 "and @var{V^T} is an @math{n}-by-@math{n} unitary matrix.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:278
 msgid ""
 "Let @math{sigma[i]} be a diagonal element of @math{Sigma},\n"
 "that is, @math{@var{Sigma}[i, i] = @var{sigma}[i]}.\n"
@@ -422,7 +426,7 @@ msgid ""
 "Note that @code{dgesvd} returns the transpose of @var{V}, not @var{V} itself.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:283
 msgid ""
 "@code{dgesvd(@var{A})} computes only the singular values of @var{A}.\n"
 "@code{dgesvd(@var{A}, @var{left_p}, @var{right_p})} computes the singular values of @var{A}\n"
@@ -430,7 +434,7 @@ msgid ""
 "and the right singular vectors when @math{@var{right_p} = @code{true}}.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:288
 msgid ""
 "A list of three items is returned.\n"
 "The first item is a list of the singular values.\n"
@@ -438,12 +442,12 @@ msgid ""
 "The third item is @code{false} or the matrix of right singular vectors.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:290
 msgid ""
 "Example:\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:371
 msgid ""
 "@c ===beg===\n"
 "@c load (lapack)$\n"
@@ -527,30 +531,30 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:375
 msgid ""
 "@opencatbox\n"
 "@category{Package lapack}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:377
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:380
 msgid ""
 "@deffn {Function} dlange (@var{norm}, @var{A})\n"
 "@deffnx {Function} zlange (@var{norm}, @var{A})\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:382
 msgid ""
 "Computes a norm or norm-like function of the matrix @var{A}.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:398
 msgid ""
 "@table @code\n"
 "@item max\n"
@@ -569,19 +573,19 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:402
 msgid ""
 "@opencatbox\n"
 "@category{Package lapack}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:404
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:410
 msgid ""
 "@deffn {Function} dgemm @\n"
 "@fname{dgemm} (@var{A}, @var{B}) @\n"
@@ -590,13 +594,13 @@ msgid ""
 "a third matrix.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:413
 msgid ""
 "In the simplest form, @code{dgemm(@var{A}, @var{B})} computes the\n"
 "product of the two real matrices, @var{A} and @var{B}.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:422
 msgid ""
 "In the second form, @code{dgemm} computes the @math{@var{alpha} *\n"
 "@var{A} * @var{B} + @var{beta} * @var{C}} where @var{A}, @var{B},\n"
@@ -608,7 +612,7 @@ msgid ""
 "@code{key=val}.  The keyword arguments are:\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:442
 msgid ""
 "@table @code\n"
 "@item C\n"
@@ -631,7 +635,7 @@ msgid ""
 "@end table\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:524
 msgid ""
 "@c ===beg===\n"
 "@c load (lapack)$\n"
@@ -716,7 +720,7 @@ msgid ""
 "                               [ 111  134  157 ]\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:529
 msgid ""
 "@end example\n"
 "@opencatbox\n"
@@ -724,72 +728,69 @@ msgid ""
 "@closecatbox\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:531
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:535
 msgid ""
 "@deffn {Function} zgeev @\n"
 "@fname{zgeev} (@var{A}) @\n"
 "@fname{zgeev} (@var{A}, @var{right_p}, @var{left_p})\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:537
 msgid ""
 "Like @code{dgeev}, but the matrix @var{A} is complex.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:541
 msgid ""
 "@opencatbox\n"
 "@category{Package lapack}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:543
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:547
 msgid ""
 "@deffn {Function} zheev @\n"
 "@fname{zheev} (@var{A}) @\n"
 "@fname{zheev} (@var{A}, @var{eigvec_p})\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:551
 msgid ""
 "Like @code{zheev}, but the matrix @var{A} is assumed to be a square\n"
 "complex Hermitian matrix. If @var{eigvec_p} is @code{true}, then the\n"
 "eigenvectors of the matrix are also computed.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:553
 msgid ""
 "No check is made that the matrix @var{A} is, in fact, Hermitian.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:556
 msgid ""
 "A list of two items is returned, as in @code{dgeev}: a list of\n"
 "eigenvalues, and @code{false} or the matrix of the eigenvectors.\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:560
 msgid ""
 "@opencatbox\n"
 "@category{Package lapack}\n"
 "@closecatbox\n"
 msgstr ""
 
-# lapack.texi
+#: lapack.texi:562
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# lapack.texi
-msgid ""
-msgstr ""

@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Series.texi
+msgstr ""
+
+#: Series.texi:9
 msgid ""
 "@menu\n"
 "* Functions and Variables for Sums and Products::\n"
@@ -29,7 +29,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:14
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Sums and Products, Introduction to Series, Sums Products and Series, Sums Products and Series\n"
@@ -37,14 +37,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:18
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{bashindices}\n"
 "@deffn {Function} bashindices (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:25
 msgid ""
 "Transforms the expression @var{expr} by giving each summation and product a\n"
 "unique index.  This gives @code{changevar} greater precision when it is working\n"
@@ -54,7 +54,7 @@ msgid ""
 "@code{gensumnum:0$} resets it.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:30
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -62,26 +62,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:34
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lsum}\n"
 "@deffn {Function} lsum (@var{expr}, @var{x}, @var{L})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:38
 msgid ""
 "Represents the sum of @var{expr} for each element @var{x} in @var{L}.\n"
 "A noun form @code{'lsum} is returned if the argument @var{L} does not evaluate\n"
 "to a list.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:40
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:60
 msgid ""
 "@c ===beg===\n"
 "@c lsum (x^i, i, [1, 2, 7]);\n"
@@ -104,7 +104,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:65
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -112,19 +112,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:67
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:71
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{intosum}\n"
 "@deffn {Function} intosum (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:78
 msgid ""
 "Moves multiplicative factors outside a summation to inside.\n"
 "If the index is used in the\n"
@@ -134,14 +134,14 @@ msgid ""
 "does not remove this property, it only bypasses it.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:82
 msgid ""
 "@c WHAT ARE THESE CASES ??\n"
 "In some cases, a @code{scanmap (multthru, @var{expr})} may be necessary before\n"
 "the @code{intosum}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:87
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -149,7 +149,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:92
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{simpproduct}\n"
@@ -157,7 +157,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:98
 msgid ""
 "When @code{simpproduct} is @code{true}, the result of a @code{product} is simplified.\n"
 "This simplification may sometimes be able to produce a closed form.  If\n"
@@ -166,7 +166,7 @@ msgid ""
 "in mathematics.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:103
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products} @category{Simplification flags and variables}\n"
@@ -174,34 +174,34 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:107
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{product}\n"
 "@deffn {Function} product (@var{expr}, @var{i}, @var{i_0}, @var{i_1})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:111
 msgid ""
 "Represents a product of the values of @var{expr} as\n"
 "the index @var{i} varies from @var{i_0} to @var{i_1}.\n"
 "The noun form @code{'product} is displayed as an uppercase letter pi.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:114
 msgid ""
 "@code{product} evaluates @var{expr} and lower and upper limits @var{i_0} and\n"
 "@var{i_1}, @code{product} quotes (does not evaluate) the index @var{i}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:118
 msgid ""
 "If the upper and lower limits differ by an integer,\n"
 "@var{expr} is evaluated for each value of the index @var{i},\n"
 "and the result is an explicit product.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:124
 msgid ""
 "Otherwise, the range of the index is indefinite.\n"
 "Some rules are applied to simplify the product.\n"
@@ -210,17 +210,17 @@ msgid ""
 "product; otherwise, the result is a noun form @code{'product}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:126
 msgid ""
 "See also @mref{nouns} and @mrefdot{evflag}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:128
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:140
 msgid ""
 "@c ===beg===\n"
 "@c product (x + i*(i+1)/2, i, 1, 4);\n"
@@ -235,7 +235,7 @@ msgid ""
 "@c ===end===\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:178
 msgid ""
 "@example\n"
 "(%i1) product (x + i*(i+1)/2, i, 1, 4);\n"
@@ -276,7 +276,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:183
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -284,12 +284,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:185
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:190
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{simpsum}\n"
@@ -297,7 +297,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:196
 msgid ""
 "When @code{simpsum} is @code{true}, the result of a @code{sum} is simplified.\n"
 "This simplification may sometimes be able to produce a closed form.  If\n"
@@ -306,7 +306,7 @@ msgid ""
 "in mathematics.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:201
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products} @category{Simplification flags and variables}\n"
@@ -314,34 +314,34 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:205
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sum}\n"
 "@deffn {Function} sum (@var{expr}, @var{i}, @var{i_0}, @var{i_1})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:209
 msgid ""
 "Represents a summation of the values of @var{expr} as\n"
 "the index @var{i} varies from @var{i_0} to @var{i_1}.\n"
 "The noun form @code{'sum} is displayed as an uppercase letter sigma.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:212
 msgid ""
 "@code{sum} evaluates its summand @var{expr} and lower and upper limits @var{i_0}\n"
 "and @var{i_1}, @code{sum} quotes (does not evaluate) the index @var{i}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:216
 msgid ""
 "If the upper and lower limits differ by an integer, the summand @var{expr} is\n"
 "evaluated for each value of the summation index @var{i}, and the result is an\n"
 "explicit sum.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:222
 msgid ""
 "Otherwise, the range of the index is indefinite.\n"
 "Some rules are applied to simplify the summation.\n"
@@ -350,7 +350,7 @@ msgid ""
 "summation; otherwise, the result is a noun form @code{'sum}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:227
 msgid ""
 "When the @code{evflag} (evaluation flag) @code{cauchysum} is @code{true},\n"
 "a product of summations is expressed as a Cauchy product,\n"
@@ -358,13 +358,13 @@ msgid ""
 "index of the outer one, rather than varying independently.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:230
 msgid ""
 "The global variable @code{genindex} is the alphabetic prefix used to generate\n"
 "the next index of summation, when an automatically generated index is needed.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:235
 msgid ""
 "@code{gensumnum} is the numeric suffix used to generate the next index of\n"
 "summation, when an automatically generated index is needed.\n"
@@ -372,19 +372,19 @@ msgid ""
 "@code{genindex} with no numeric suffix.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:239
 msgid ""
 "See also @mrefcomma{lsum} @mrefcomma{sumcontract} @mrefcomma{intosum}\n"
 "@mrefcomma{bashindices} @mrefcomma{niceindices}\n"
 "@mrefcomma{nouns} @mrefcomma{evflag} and @ref{zeilberger-pkg}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:241
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:256
 msgid ""
 "@c ===beg===\n"
 "@c sum (i^2, i, 1, 7);\n"
@@ -402,7 +402,7 @@ msgid ""
 "@c ===end===\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:321
 msgid ""
 "@example\n"
 "(%i1) sum (i^2, i, 1, 7);\n"
@@ -470,7 +470,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:326
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -478,19 +478,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:328
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:332
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sumcontract}\n"
 "@deffn {Function} sumcontract (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:340
 msgid ""
 "Combines all sums of an addition that have\n"
 "upper and lower bounds that differ by constants.  The result is an\n"
@@ -501,14 +501,14 @@ msgid ""
 "reasonable index if it cannot use any supplied.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:344
 msgid ""
 "@c WHEN IS intosum NECESSARY BEFORE sumcontract ??\n"
 "It may be necessary to do an @code{intosum (@var{expr})} before the\n"
 "@code{sumcontract}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:349
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -516,7 +516,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:354
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sumexpand}\n"
@@ -524,23 +524,23 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:357
 msgid ""
 "When @code{sumexpand} is @code{true}, products of sums and\n"
 "exponentiated sums simplify to nested sums.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:359
 msgid ""
 "See also @mrefdot{cauchysum}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:361
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:383
 msgid ""
 "@example\n"
 "(%i1) sumexpand: true$\n"
@@ -565,7 +565,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:388
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products} @category{Simplification flags and variables}\n"
@@ -573,7 +573,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:393
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Series, Functions and Variables for Series, Functions and Variables for Sums and Products, Sums Products and Series\n"
@@ -581,7 +581,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:399
 msgid ""
 "Maxima contains functions @code{taylor} and @code{powerseries} for finding the \n"
 "series of differentiable functions.  It also has tools such as @code{nusum}\n"
@@ -590,12 +590,12 @@ msgid ""
 "variables which control the expansion.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:401
 msgid ""
 "@c end concepts Series\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:406
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Series, Introduction to Fourier series, Introduction to Series, Sums Products and Series\n"
@@ -603,7 +603,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:411
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{cauchysum}\n"
@@ -611,7 +611,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:420
 msgid ""
 "@c REPHRASE\n"
 "When multiplying together sums with @code{inf} as their upper limit,\n"
@@ -623,12 +623,12 @@ msgid ""
 "independently.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:422
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:457
 msgid ""
 "@c ===beg===\n"
 "@c sumexpand: false$\n"
@@ -666,7 +666,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:462
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -674,14 +674,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:466
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{deftaylor}\n"
 "@deffn {Function} deftaylor (@var{f_1}(@var{x_1}), @var{expr_1}, @dots{}, @var{f_n}(@var{x_n}), @var{expr_n})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:471
 msgid ""
 "For each function @var{f_i} of one variable @var{x_i}, \n"
 "@code{deftaylor} defines @var{expr_i} as the Taylor series about zero.\n"
@@ -689,24 +689,24 @@ msgid ""
 "more general expressions are accepted by @code{deftaylor} without complaint.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:474
 msgid ""
 "@code{powerseries (@var{f_i}(@var{x_i}), @var{x_i}, 0)}\n"
 "returns the series defined by @code{deftaylor}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:477
 msgid ""
 "@code{deftaylor} returns a list of the functions @var{f_1}, @dots{}, @var{f_n}.\n"
 "@code{deftaylor} evaluates its arguments.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:479
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:497
 msgid ""
 "@example\n"
 "(%i1) deftaylor (f(x), x^2 + sum(x^i/(2^i*i!^2), i, 4, inf));\n"
@@ -727,7 +727,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:502
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -735,7 +735,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:507
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{maxtayorder}\n"
@@ -743,7 +743,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:512
 msgid ""
 "@c REPHRASE\n"
 "When @code{maxtayorder} is @code{true}, then during algebraic\n"
@@ -751,7 +751,7 @@ msgid ""
 "as many terms as are known to be correct.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:517
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -759,14 +759,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:521
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{niceindices}\n"
 "@deffn {Function} niceindices (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:529
 msgid ""
 "Renames the indices of sums and products in @var{expr}.  @code{niceindices}\n"
 "attempts to rename each index to the value of @code{niceindicespref[1]}, unless\n"
@@ -777,18 +777,18 @@ msgid ""
 "@code{niceindicespref[1]}, e.g., @code{i0}, @code{i1}, @code{i2}, @dots{}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:532
 msgid ""
 "@code{niceindices} returns an expression.\n"
 "@code{niceindices} evaluates its argument.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:534
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:557
 msgid ""
 "@example\n"
 "(%i1) niceindicespref;\n"
@@ -814,7 +814,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:562
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -822,7 +822,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:567
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{niceindicespref}\n"
@@ -830,24 +830,24 @@ msgid ""
 "Default value: @code{[i, j, k, l, m, n]}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:570
 msgid ""
 "@code{niceindicespref} is the list from which @code{niceindices}\n"
 "takes the names of indices for sums and products.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:573
 msgid ""
 "The elements of @code{niceindicespref} are typically names of variables,\n"
 "although that is not enforced by @code{niceindices}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:575
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:595
 msgid ""
 "@example\n"
 "(%i1) niceindicespref: [p, q, r, s, t, u]$\n"
@@ -870,7 +870,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:600
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -878,14 +878,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:604
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{nusum}\n"
 "@deffn {Function} nusum (@var{expr}, @var{x}, @var{i_0}, @var{i_1})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:609
 msgid ""
 "Carries out indefinite hypergeometric summation of @var{expr} with\n"
 "respect to @var{x} using a decision procedure due to R.W. Gosper.\n"
@@ -893,37 +893,37 @@ msgid ""
 "factorials, binomials, and rational functions.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:619
 msgid ""
-"@c UMM, DO WE REALLY NEED TO DEFINE \"DEFINITE\" AND \"INDEFINITE\" SUMMATION HERE ??\n"
+"@c UMM, DO WE REALLY NEED TO DEFINE \\"DEFINITE\\" AND \\"INDEFINITE\\" SUMMATION HERE ??\n"
 "@c (CAN'T WE MAKE THE POINT WITHOUT DRAGGING IN SOME NONSTANDARD TERMINOLOGY ??)\n"
-"The terms \"definite\"\n"
-"and \"indefinite summation\" are used analogously to \"definite\" and\n"
-"\"indefinite integration\".\n"
+"The terms \\"definite\\"\n"
+"and \\"indefinite summation\\" are used analogously to \\"definite\\" and\n"
+"\\"indefinite integration\\".\n"
 "To sum indefinitely means to give a symbolic result\n"
 "for the sum over intervals of variable length, not just e.g. 0 to\n"
 "inf.  Thus, since there is no formula for the general partial sum of\n"
 "the binomial series, @code{nusum} can't do it.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:622
 msgid ""
 "@code{nusum} and @code{unsum} know a little about sums and differences of\n"
 "finite products.  See also @mrefdot{unsum}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:624
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:627
 msgid ""
 "@example\n"
 "(%i1) nusum (n*n!, n, 0, n);\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:648
 msgid ""
 "Dependent equations eliminated:  (1)\n"
 "(%o1)                     (n + 1)! - 1\n"
@@ -947,7 +947,7 @@ msgid ""
 "(%i5) nusum (%, n, 1, n);\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:657
 msgid ""
 "Dependent equations eliminated:  (2 3)\n"
 "                            n\n"
@@ -959,7 +959,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:662
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -967,29 +967,29 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:664
 msgid ""
 "@c THIS ITEM NEEDS SERIOUS WORK\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:668
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{pade}\n"
 "@deffn {Function} pade (@var{taylor_series}, @var{numer_deg_bound}, @var{denom_deg_bound})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:675
 msgid ""
 "Returns a list of\n"
 "all rational functions which have the given Taylor series expansion\n"
 "where the sum of the degrees of the numerator and the denominator is\n"
 "less than or equal to the truncation level of the power series, i.e.\n"
-"are \"best\" approximants, and which additionally satisfy the specified\n"
+"are \\"best\\" approximants, and which additionally satisfy the specified\n"
 "degree bounds.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:680
 msgid ""
 "@var{taylor_series} is a univariate Taylor series.\n"
 "@var{numer_deg_bound} and @var{denom_deg_bound}\n"
@@ -997,7 +997,7 @@ msgid ""
 "the numerator and denominator.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:688
 msgid ""
 "@var{taylor_series} can also be a Laurent series, and the degree\n"
 "bounds can be @code{inf} which causes all rational functions whose total\n"
@@ -1005,10 +1005,10 @@ msgid ""
 "returned.  Total degree is defined as @code{@var{numer_deg_bound} +\n"
 "@var{denom_deg_bound}}.\n"
 "Length of a power series is defined as\n"
-"@code{\"truncation level\" + 1 - min(0, \"order of series\")}.\n"
+"@code{\\"truncation level\\" + 1 - min(0, \\"order of series\\")}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:706
 msgid ""
 "@example\n"
 "(%i1) taylor (1 + x + x^2 + x^3, x, 0, 3);\n"
@@ -1029,7 +1029,7 @@ msgid ""
 "             2    16    32   1024    2048    32768   65536\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:714
 msgid ""
 "                                  8         9          10\n"
 "                            5853 x    2847 x    83787 x\n"
@@ -1040,7 +1040,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:719
 msgid ""
 "There is no rational function of degree 4 numerator/denominator, with this\n"
 "power series expansion.  You must in general have degree of the numerator and\n"
@@ -1048,7 +1048,7 @@ msgid ""
 "in order to have enough unknown coefficients to solve.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:724
 msgid ""
 "@example\n"
 "(%i5) pade (t, 5, 5);\n"
@@ -1056,26 +1056,26 @@ msgid ""
 "(%o5) [- (520256329 x  - 96719020632 x  - 489651410240 x\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:727
 msgid ""
 "                  2\n"
 " - 1619100813312 x  - 2176885157888 x - 2386516803584)\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:730
 msgid ""
 "               5                 4                  3\n"
 "/(47041365435 x  + 381702613848 x  + 1360678489152 x\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:734
 msgid ""
 "                  2\n"
 " + 2856700692480 x  + 3370143559680 x + 2386516803584)]\n"
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:739
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1083,14 +1083,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:743
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{powerseries}\n"
 "@deffn {Function} powerseries (@var{expr}, @var{x}, @var{a})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:757
 msgid ""
 "Returns the general form of the power series expansion for @var{expr} in the \n"
 "variable @var{x} about the point @var{a} (which may be @code{inf} for infinity):\n"
@@ -1107,19 +1107,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:760
 msgid ""
 "If @code{powerseries} is unable to expand @var{expr},\n"
 "@code{taylor} may give the first several terms of the series.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:763
 msgid ""
 "When @code{verbose} is @code{true},\n"
 "@code{powerseries} prints progress messages.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:792
 msgid ""
 "@example\n"
 "(%i1) verbose: true$\n"
@@ -1151,7 +1151,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:797
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1159,7 +1159,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:802
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{psexpand}\n"
@@ -1167,28 +1167,28 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:806
 msgid ""
 "When @code{psexpand} is @code{true},\n"
 "an extended rational function expression is displayed fully expanded.\n"
 "The switch @code{ratexpand} has the same effect.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:810
 msgid ""
 "@c WE NEED TO BE EXPLICIT HERE\n"
 "When @code{psexpand} is @code{false},\n"
 "a multivariate expression is displayed just as in the rational function package.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:814
 msgid ""
 "@c TERMS OF WHAT ??\n"
 "When @code{psexpand} is  @code{multi},\n"
 "then terms with the same total degree in the variables are grouped together.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:819
 msgid ""
 "@opencatbox\n"
 "@category{Display flags and variables}\n"
@@ -1196,7 +1196,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:824
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{revert}\n"
@@ -1204,7 +1204,7 @@ msgid ""
 "@deffnx {Function} revert2 (@var{expr}, @var{x}, @var{n})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:830
 msgid ""
 "These functions return the reversion of @var{expr}, a Taylor series about zero\n"
 "in the variable @var{x}.  @code{revert} returns a polynomial of degree equal to\n"
@@ -1213,20 +1213,20 @@ msgid ""
 "@var{expr}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:832
 msgid ""
-"@code{load (\"revert\")} loads these functions.\n"
+"@code{load (\\"revert\\")} loads these functions.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:834
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:865
 msgid ""
 "@example\n"
-"(%i1) load (\"revert\")$\n"
+"(%i1) load (\\"revert\\")$\n"
 "(%i2) t: taylor (exp(x) - 1, x, 0, 6);\n"
 "                   2    3    4    5     6\n"
 "                  x    x    x    x     x\n"
@@ -1257,7 +1257,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:870
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1265,7 +1265,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:879
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taylor}\n"
@@ -1277,7 +1277,7 @@ msgid ""
 "@fname{taylor} (@var{expr}, [@var{x_1}, @var{a_1}, @var{n_1}], [@var{x_2}, @var{a_2}, @var{n_2}], @dots{})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:884
 msgid ""
 "@code{taylor (@var{expr}, @var{x}, @var{a}, @var{n})} expands the expression\n"
 "@var{expr} in a truncated Taylor or Laurent series in the variable @var{x}\n"
@@ -1285,7 +1285,7 @@ msgid ""
 "containing terms through @code{(@var{x} - @var{a})^@var{n}}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:891
 msgid ""
 "If @var{expr} is of the form @code{@var{f}(@var{x})/@var{g}(@var{x})} and\n"
 "@code{@var{g}(@var{x})} has no terms up to degree @var{n} then @code{taylor}\n"
@@ -1295,7 +1295,7 @@ msgid ""
 "less than or equal to @code{@var{n} 2^taylordepth}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:896
 msgid ""
 "@code{taylor (@var{expr}, [@var{x_1}, @var{x_2}, ...], @var{a}, @var{n})}\n"
 "returns a truncated power series \n"
@@ -1303,7 +1303,7 @@ msgid ""
 "about the point @code{(@var{a}, @var{a}, ...)}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:901
 msgid ""
 "@code{taylor (@var{expr}, [@var{x_1}, @var{a_1}, @var{n_1}], [@var{x_2},\n"
 "@var{a_2}, @var{n_2}], ...)} returns a truncated power series in the variables\n"
@@ -1311,7 +1311,7 @@ msgid ""
 "@code{(@var{a_1}, @var{a_2}, ...)}, truncated at @var{n_1}, @var{n_2}, @dots{}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:906
 msgid ""
 "@code{taylor (@var{expr}, [@var{x_1}, @var{x_2}, ...], [@var{a_1},\n"
 "@var{a_2}, ...], [@var{n_1}, @var{n_2}, ...])} returns a truncated power series\n"
@@ -1319,21 +1319,21 @@ msgid ""
 "@code{(@var{a_1}, @var{a_2}, ...)}, truncated at @var{n_1}, @var{n_2}, @dots{}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:910
 msgid ""
 "@code{taylor (@var{expr}, [@var{x}, @var{a}, @var{n}, 'asymp])} returns an\n"
 "expansion of @var{expr} in negative powers of @code{@var{x} - @var{a}}.\n"
 "The highest order term is @code{(@var{x} - @var{a})^@var{-n}}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:914
 msgid ""
 "When @code{maxtayorder} is @code{true}, then during algebraic\n"
 "manipulation of (truncated) Taylor series, @code{taylor} tries to retain\n"
 "as many terms as are known to be correct.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:922
 msgid ""
 "When @code{psexpand} is @code{true},\n"
 "an extended rational function expression is displayed fully expanded.\n"
@@ -1344,17 +1344,17 @@ msgid ""
 "then terms with the same total degree in the variables are grouped together.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:924
 msgid ""
 "See also the @mref{taylor_logexpand} switch for controlling expansion.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:926
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:950
 msgid ""
 "@c EXAMPLES ADAPTED FROM example (taylor)\n"
 "@c taylor (sqrt (sin(x) + a*x + 1), x, 0, 3);\n"
@@ -1381,7 +1381,7 @@ msgid ""
 "                 2               8\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1000
 msgid ""
 "                                   3      2             3\n"
 "                               (3 a  + 9 a  + 9 a - 1) x\n"
@@ -1434,7 +1434,7 @@ msgid ""
 "            x    2 x    120 x\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1007
 msgid ""
 "                                                          + . . .\n"
 "(%i11) taylor (sqrt (1 - k^2*sin(x)^2), x, 0, 6);\n"
@@ -1444,7 +1444,7 @@ msgid ""
 "                2            24\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1018
 msgid ""
 "                                    6       4       2   6\n"
 "                               (45 k  - 60 k  + 16 k ) x\n"
@@ -1458,7 +1458,7 @@ msgid ""
 "                         2                 6\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1029
 msgid ""
 "                               4      3       2         4\n"
 "                             (n  - 6 n  + 11 n  - 6 n) x\n"
@@ -1472,7 +1472,7 @@ msgid ""
 "              6                 2\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1044
 msgid ""
 "                    3                       2\n"
 "               y   y            2      1   y            3\n"
@@ -1490,7 +1490,7 @@ msgid ""
 "                             y                    y\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1055
 msgid ""
 "                                           1            3\n"
 "                                      + (- -- + . . .) x  + . . .\n"
@@ -1504,7 +1504,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1060
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1512,7 +1512,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1065
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taylordepth}\n"
@@ -1520,7 +1520,7 @@ msgid ""
 "Default value: 3\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1070
 msgid ""
 "@c UM, THE CONTEXT FOR THIS REMARK NEEDS TO BE ESTABLISHED\n"
 "If there are still no nonzero terms, @code{taylor} doubles the degree of the\n"
@@ -1528,7 +1528,7 @@ msgid ""
 "less than or equal to @code{@var{n} 2^taylordepth}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1075
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1536,14 +1536,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1079
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taylorinfo}\n"
 "@deffn {Function} taylorinfo (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1084
 msgid ""
 "Returns information about the Taylor series @var{expr}.\n"
 "The return value is a list of lists.\n"
@@ -1551,17 +1551,17 @@ msgid ""
 "the point of expansion, and the degree of the expansion.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1086
 msgid ""
 "@code{taylorinfo} returns @code{false} if @var{expr} is not a Taylor series.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1088
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1093
 msgid ""
 "@example\n"
 "(%i1) taylor ((1 - y^2)/(1 - x), x, 0, 3, [y, a, inf]);\n"
@@ -1569,19 +1569,19 @@ msgid ""
 "(%o1)/T/ - (y - a)  - 2 a (y - a) + (1 - a )\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1096
 msgid ""
 "         2                        2\n"
 " + (1 - a  - 2 a (y - a) - (y - a) ) x\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1099
 msgid ""
 "         2                        2   2\n"
 " + (1 - a  - 2 a (y - a) - (y - a) ) x\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1105
 msgid ""
 "         2                        2   3\n"
 " + (1 - a  - 2 a (y - a) - (y - a) ) x  + . . .\n"
@@ -1590,7 +1590,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1110
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1598,20 +1598,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1114
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taylorp}\n"
 "@deffn {Function} taylorp (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1117
 msgid ""
 "Returns @code{true} if @var{expr} is a Taylor series,\n"
 "and @code{false} otherwise.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1122
 msgid ""
 "@opencatbox\n"
 "@category{Predicate functions} @category{Power series}\n"
@@ -1619,12 +1619,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1124
 msgid ""
 "@c WHAT IS THIS ABOUT EXACTLY ??\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1129
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taylor_logexpand}\n"
@@ -1632,13 +1632,13 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1132
 msgid ""
 "@code{taylor_logexpand} controls expansions of logarithms in\n"
 "@code{taylor} series.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1137
 msgid ""
 "When @code{taylor_logexpand} is @code{true}, all logarithms are expanded fully\n"
 "so that zero-recognition problems involving logarithmic identities do not\n"
@@ -1646,13 +1646,13 @@ msgid ""
 "mathematically correct since it ignores branch information.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1140
 msgid ""
 "When @code{taylor_logexpand} is set to @code{false}, then the only expansion of\n"
 "logarithms that occur is that necessary to obtain a formal power series.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1146
 msgid ""
 "@c NEED EXAMPLES HERE\n"
 "@opencatbox\n"
@@ -1661,7 +1661,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1151
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taylor_order_coefficients}\n"
@@ -1669,21 +1669,21 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1154
 msgid ""
 "@code{taylor_order_coefficients} controls the ordering of\n"
 "coefficients in a Taylor series.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1159
 msgid ""
 "When @code{taylor_order_coefficients} is @code{true},\n"
 "coefficients of taylor series are ordered canonically.\n"
-"@c IS MAXIMA'S NOTION OF \"CANONICALLY\" DESCRIBED ELSEWHERE ??\n"
+"@c IS MAXIMA'S NOTION OF \\"CANONICALLY\\" DESCRIBED ELSEWHERE ??\n"
 "@c AND WHAT HAPPENS WHEN IT IS FALSE ??\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1165
 msgid ""
 "@c NEED EXAMPLES HERE\n"
 "@opencatbox\n"
@@ -1692,20 +1692,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1169
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taylor_simplifier}\n"
 "@deffn {Function} taylor_simplifier (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1172
 msgid ""
 "Simplifies coefficients of the power series @var{expr}.\n"
 "@code{taylor} calls this function.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1177
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1713,7 +1713,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1182
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taylor_truncate_polynomials}\n"
@@ -1721,21 +1721,21 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1186
 msgid ""
-"@c WHAT IS THE \"INPUT TRUNCATION LEVEL\" ?? THE ARGUMENT n OF taylor ??\n"
+"@c WHAT IS THE \\"INPUT TRUNCATION LEVEL\\" ?? THE ARGUMENT n OF taylor ??\n"
 "When @code{taylor_truncate_polynomials} is @code{true},\n"
 "polynomials are truncated based upon the input truncation levels.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1190
 msgid ""
 "Otherwise,\n"
 "polynomials input to @code{taylor} are considered to have infinite precison.\n"
-"@c WHAT IS \"INFINITE PRECISION\" IN THIS CONTEXT ??\n"
+"@c WHAT IS \\"INFINITE PRECISION\\" IN THIS CONTEXT ??\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1195
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1743,21 +1743,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1199
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{taytorat}\n"
 "@deffn {Function} taytorat (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1203
 msgid ""
 "Converts @var{expr} from @code{taylor} form to canonical rational expression\n"
 "(CRE) form.  The effect is the same as @code{rat (ratdisrep (@var{expr}))}, but\n"
 "faster.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1208
 msgid ""
 "@opencatbox\n"
 "@category{Power series} @category{Rational expressions}\n"
@@ -1765,26 +1765,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1212
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{trunc}\n"
 "@deffn {Function} trunc (@var{expr})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1216
 msgid ""
 "Annotates the internal representation of the general expression @var{expr}\n"
 "so that it is displayed as if its sums were truncated Taylor series.\n"
 "@var{expr} is not otherwise modified.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1218
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1229
 msgid ""
 "@example\n"
 "(%i1) expr: x^2 + x + 1;\n"
@@ -1798,7 +1798,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1234
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1806,26 +1806,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1238
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{unsum}\n"
 "@deffn {Function} unsum (@var{f}, @var{n})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1242
 msgid ""
 "Returns the first backward difference\n"
 "@code{@var{f}(@var{n}) - @var{f}(@var{n} - 1)}.\n"
 "Thus @code{unsum} in a sense is the inverse of @code{sum}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1244
 msgid ""
 "See also @mrefdot{nusum}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1251
 msgid ""
 "Examples:\n"
 "@c GENERATED FROM THE FOLLOWING INPUTS\n"
@@ -1835,7 +1835,7 @@ msgid ""
 "@c unsum (%, n);\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1274
 msgid ""
 "@example\n"
 "(%i1) g(p) := p*4^n/binomial(2*n,n);\n"
@@ -1861,7 +1861,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1279
 msgid ""
 "@opencatbox\n"
 "@category{Sums and products}\n"
@@ -1869,7 +1869,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1284
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{verbose}\n"
@@ -1877,13 +1877,13 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1287
 msgid ""
 "When @code{verbose} is @code{true},\n"
 "@code{powerseries} prints progress messages.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1292
 msgid ""
 "@opencatbox\n"
 "@category{Power series}\n"
@@ -1891,7 +1891,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1297
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Fourier series, Functions and Variables for Fourier series, Functions and Variables for Series, Sums Products and Series\n"
@@ -1899,7 +1899,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1302
 msgid ""
 "The @code{fourie} package comprises functions for the symbolic computation\n"
 "of Fourier series.\n"
@@ -1907,14 +1907,14 @@ msgid ""
 "coefficients and some functions for manipulation of expressions.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1306
 msgid ""
 "@opencatbox\n"
 "@category{Fourier transform} @category{Share packages} @category{Package fourie}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1311
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Fourier series, Functions and Variables for Poisson series, Introduction to Fourier series, Sums Products and Series\n"
@@ -1922,25 +1922,25 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1313
 msgid ""
 "@c REPHRASE\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1317
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{equalp}\n"
 "@deffn {Function} equalp (@var{x}, @var{y})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1320
 msgid ""
 "Returns @code{true} if @code{equal (@var{x}, @var{y})} otherwise @code{false}\n"
 "(doesn't give an error message like @code{equal (x, y)} would do in this case).\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1326
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -1949,7 +1949,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1332
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remfun}\n"
@@ -1958,20 +1958,20 @@ msgid ""
 "@fname{remfun} (@var{f}, @var{expr}, @var{x})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1335
 msgid ""
 "@code{remfun (@var{f}, @var{expr})} replaces all occurrences of @code{@var{f}\n"
 "(@var{arg})} by @var{arg} in @var{expr}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1339
 msgid ""
 "@code{remfun (@var{f}, @var{expr}, @var{x})} replaces all occurrences of\n"
 "@code{@var{f} (@var{arg})} by @var{arg} in @var{expr} only if @var{arg} contains\n"
 "the variable @var{x}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1345
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -1980,7 +1980,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1351
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{funp}\n"
@@ -1989,20 +1989,20 @@ msgid ""
 "@fname{funp} (@var{f}, @var{expr}, @var{x})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1354
 msgid ""
 "@code{funp (@var{f}, @var{expr})}\n"
 "returns @code{true} if @var{expr} contains the function @var{f}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1358
 msgid ""
 "@code{funp (@var{f}, @var{expr}, @var{x})}\n"
 "returns @code{true} if @var{expr} contains the function @var{f} and the variable\n"
 "@var{x} is somewhere in the argument of one of the instances of @var{f}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1364
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2011,7 +2011,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1371
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{absint}\n"
@@ -2021,7 +2021,7 @@ msgid ""
 "@fname{absint} (@var{f}, @var{x}, @var{a}, @var{b})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1377
 msgid ""
 "@code{absint (@var{f}, @var{x}, @var{halfplane})}\n"
 "returns the indefinite integral of @var{f} with respect to\n"
@@ -2030,13 +2030,13 @@ msgid ""
 "@code{abs (x)}, @code{abs (sin (x))}, @code{abs (a) * exp (-abs (b) * abs (x))}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1380
 msgid ""
 "@code{absint (@var{f}, @var{x})} is equivalent to\n"
 "@code{absint (@var{f}, @var{x}, pos)}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1385
 msgid ""
 "@code{absint (@var{f}, @var{x}, @var{a}, @var{b})} returns the definite integral\n"
 "of @var{f} with respect to @var{x} from @var{a} to @var{b}.\n"
@@ -2044,7 +2044,7 @@ msgid ""
 "@var{f} may include absolute values.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1391
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2053,25 +2053,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1393
 msgid ""
 "@c NEEDS EXPANSION\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1397
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fourier}\n"
 "@deffn {Function} fourier (@var{f}, @var{x}, @var{p})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1400
 msgid ""
 "Returns a list of the Fourier coefficients of @code{@var{f}(@var{x})} defined\n"
 "on the interval @code{[-p, p]}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1406
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2080,25 +2080,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1408
 msgid ""
 "@c NEES EXPANSION. WHAT IS THE ARGUMENT l ??\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1412
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{foursimp}\n"
 "@deffn {Function} foursimp (@var{l})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1415
 msgid ""
 "Simplifies @code{sin (n %pi)} to 0 if @code{sinnpiflag} is @code{true} and\n"
 "@code{cos (n %pi)} to @code{(-1)^n} if @code{cosnpiflag} is @code{true}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1421
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2107,7 +2107,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1426
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sinnpiflag}\n"
@@ -2115,12 +2115,12 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1428
 msgid ""
 "See @code{foursimp}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1433
 msgid ""
 "@opencatbox\n"
 "@category{Package fourie}\n"
@@ -2128,7 +2128,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1438
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{cosnpiflag}\n"
@@ -2136,12 +2136,12 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1440
 msgid ""
 "See @code{foursimp}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1445
 msgid ""
 "@opencatbox\n"
 "@category{Package fourie}\n"
@@ -2149,26 +2149,26 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1447
 msgid ""
 "@c NEEDS EXPANSION. EXPLAIN x AND p HERE (DO NOT REFER SOMEWHERE ELSE)\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1451
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fourexpand}\n"
 "@deffn {Function} fourexpand (@var{l}, @var{x}, @var{p}, @var{limit})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1455
 msgid ""
 "Constructs and returns the Fourier series from the list of Fourier coefficients\n"
 "@var{l} up through @var{limit} terms (@var{limit} may be @code{inf}).  @var{x}\n"
 "and @var{p} have same meaning as in @code{fourier}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1461
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2177,25 +2177,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1463
 msgid ""
 "@c NEEDS EXPANSION\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1467
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fourcos}\n"
 "@deffn {Function} fourcos (@var{f}, @var{x}, @var{p})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1470
 msgid ""
 "Returns the Fourier cosine coefficients for @code{@var{f}(@var{x})} defined on\n"
 "@code{[0, @var{p}]}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1476
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2204,25 +2204,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1478
 msgid ""
 "@c NEEDS EXPANSION\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1482
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{foursin}\n"
 "@deffn {Function} foursin (@var{f}, @var{x}, @var{p})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1485
 msgid ""
 "Returns the Fourier sine coefficients for @code{@var{f}(@var{x})} defined on\n"
 "@code{[0, @var{p}]}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1491
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2231,25 +2231,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1493
 msgid ""
 "@c NEEDS EXPANSION\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1497
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{totalfourier}\n"
 "@deffn {Function} totalfourier (@var{f}, @var{x}, @var{p})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1500
 msgid ""
 "Returns @code{fourexpand (foursimp (fourier (@var{f}, @var{x}, @var{p})),\n"
 "@var{x}, @var{p}, 'inf)}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1506
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2258,25 +2258,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1508
 msgid ""
 "@c NEEDS EXPANSION\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1512
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fourint}\n"
 "@deffn {Function} fourint (@var{f}, @var{x})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1515
 msgid ""
 "Constructs and returns a list of the Fourier integral coefficients of\n"
 "@code{@var{f}(@var{x})} defined on @code{[minf, inf]}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1521
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2285,25 +2285,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1523
 msgid ""
 "@c NEEDS EXPANSION\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1527
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{fourintcos}\n"
 "@deffn {Function} fourintcos (@var{f}, @var{x})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1530
 msgid ""
 "Returns the Fourier cosine integral coefficients for @code{@var{f}(@var{x})}\n"
 "on @code{[0, inf]}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1536
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
@@ -2312,43 +2312,47 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1538
 msgid ""
 "@c NEEDS EXPANSION\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1542
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{forintsin}\n"
 "@deffn {Function} fourintsin (@var{f}, @var{x})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1545
 msgid ""
 "Returns the Fourier sine integral coefficients for @code{@var{f}(@var{x})} on\n"
 "@code{[0, inf]}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1551
 msgid ""
 "@c NEEDS EXAMPLES\n"
 "@opencatbox\n"
 "@category{Package fourie}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Series.texi:1557
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Poisson series, , Functions and Variables for Fourier series, Sums Products and Series\n"
 "@section Functions and Variables for Poisson series\n"
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1559
 msgid ""
 "@c NEED EXAMPLES HERE\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1564
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{intopois}\n"
@@ -2356,7 +2360,7 @@ msgid ""
 "Converts @var{a} into a Poisson encoding.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1569
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2364,19 +2368,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1571
 msgid ""
 "@c NEED EXAMPLES HERE\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1575
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{outopois}\n"
 "@deffn {Function} outofpois (@var{a})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1581
 msgid ""
 "Converts @var{a} from Poisson encoding to general representation.  If @var{a} is\n"
 "not in Poisson form, @code{outofpois} carries out the conversion,\n"
@@ -2385,7 +2389,7 @@ msgid ""
 "for sums of powers of sine and cosine terms of a particular type.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1586
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2393,26 +2397,26 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1589
 msgid ""
 "@c NEED MORE INFO HERE\n"
 "@c NEED EXAMPLES HERE\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1593
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poisdiff}\n"
 "@deffn {Function} poisdiff (@var{a}, @var{b})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1596
 msgid ""
 "Differentiates @var{a} with respect to @var{b}. @var{b} must occur only\n"
 "in the trig arguments or only in the coefficients.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1601
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2420,27 +2424,27 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1605
 msgid ""
 "@c LOOKING AT THE CODE IN src/pois3.lisp, THIS FCN SEEMS TO COMPUTE THE EXPONENT\n"
 "@c BY MULTIPLYING IN A LOOP DUNNO HOW WE WANT TO EXPLAIN THAT\n"
-"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
+"@c REPHRASE WITHOUT USING THE TERM \\"FUNCTIONALLY IDENTICAL\\"\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1609
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poisexpt}\n"
 "@deffn {Function} poisexpt (@var{a}, @var{b})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1612
 msgid ""
 "Functionally identical to @code{intopois (@var{a}^@var{b})}.\n"
 "@var{b} must be a positive integer.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1617
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2448,25 +2452,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1619
 msgid ""
 "@c WHAT IS THIS ABOUT ??\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1623
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poisint}\n"
 "@deffn {Function} poisint (@var{a}, @var{b})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1626
 msgid ""
 "Integrates in a similarly restricted sense (to @code{poisdiff}).  Non-periodic\n"
 "terms in @var{b} are dropped if @var{b} is in the trig arguments.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1631
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2474,7 +2478,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1636
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poislim}\n"
@@ -2482,7 +2486,7 @@ msgid ""
 "Default value: 5\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1641
 msgid ""
 "@code{poislim} determines the domain of the coefficients in\n"
 "the arguments of the trig functions.  The initial value of 5\n"
@@ -2490,7 +2494,7 @@ msgid ""
 "can be set to [-2^(n-1)+1, 2^(n-1)].\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1646
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2498,19 +2502,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1648
 msgid ""
 "@c UMM, WHAT IS THIS ABOUT EXACTLY ?? EXAMPLES NEEDED\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1652
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poismap}\n"
 "@deffn {Function} poismap (@var{series}, @var{sinfn}, @var{cosfn})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1657
 msgid ""
 "will map the functions @var{sinfn} on the sine terms and @var{cosfn} on the\n"
 "cosine terms of the Poisson series given.  @var{sinfn} and @var{cosfn} are\n"
@@ -2518,7 +2522,7 @@ msgid ""
 "a term in series respectively.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1662
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2526,24 +2530,24 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1664
 msgid ""
-"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
+"@c REPHRASE WITHOUT USING THE TERM \\"FUNCTIONALLY IDENTICAL\\"\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1668
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poisplus}\n"
 "@deffn {Function} poisplus (@var{a}, @var{b})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1670
 msgid ""
 "Is functionally identical to @code{intopois (a + b)}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1675
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2551,20 +2555,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1679
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poissimp}\n"
 "@deffn {Function} poissimp (@var{a})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1682
 msgid ""
 "Converts @var{a} into a Poisson series for @var{a} in general\n"
 "representation.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1687
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2572,25 +2576,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1689
 msgid ""
 "@c MORE INFO NEEDED HERE\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1693
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poisson}\n"
 "@defvr {Special symbol} poisson\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1696
 msgid ""
 "The symbol @code{/P/} follows the line label of Poisson series\n"
 "expressions.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1701
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2598,32 +2602,32 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1705
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poissubst}\n"
 "@deffn {Function} poissubst (@var{a}, @var{b}, @var{c})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1707
 msgid ""
 "Substitutes @var{a} for @var{b} in @var{c}.  @var{c} is a Poisson series.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1711
 msgid ""
 "(1) Where @var{B} is a variable @var{u}, @var{v}, @var{w}, @var{x}, @var{y},\n"
 "or @var{z}, then @var{a} must be an expression linear in those variables (e.g.,\n"
 "@code{6*u + 4*v}).\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1714
 msgid ""
 "(2) Where @var{b} is other than those variables, then @var{a} must also be\n"
 "free of those variables, and furthermore, free of sines or cosines.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1723
 msgid ""
 "@code{poissubst (@var{a}, @var{b}, @var{c}, @var{d}, @var{n})} is a special type\n"
 "of substitution which operates on @var{a} and @var{b} as in type (1) above, but\n"
@@ -2635,7 +2639,7 @@ msgid ""
 "@code{cos(u)*(1 - %e^2/2) - sin(u)*(%e - %e^3/6)}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1728
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2643,24 +2647,24 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1730
 msgid ""
-"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
+"@c REPHRASE WITHOUT USING THE TERM \\"FUNCTIONALLY IDENTICAL\\"\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1734
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poistimes}\n"
 "@deffn {Function} poistimes (@var{a}, @var{b})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1736
 msgid ""
 "Is functionally identical to @code{intopois (@var{a}*@var{b})}.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1741
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2668,19 +2672,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1743
 msgid ""
 "@c HOW DOES THIS WORK ?? NEED MORE INFO AND EXAMPLES\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1747
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{poistrim}\n"
 "@deffn {Function} poistrim ()\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1753
 msgid ""
 "is a reserved function name which (if the user has defined\n"
 "it) gets applied during Poisson multiplication.  It is a predicate\n"
@@ -2689,7 +2693,7 @@ msgid ""
 "that term) are eliminated during multiplication.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1758
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series}\n"
@@ -2697,21 +2701,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1762
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{printpois}\n"
 "@deffn {Function} printpois (@var{a})\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1766
 msgid ""
 "Prints a Poisson series in a readable format.  In common\n"
 "with @code{outofpois}, it will convert @var{a} into a Poisson encoding first, if\n"
 "necessary.\n"
 msgstr ""
 
-# Series.texi
+#: Series.texi:1771
 msgid ""
 "@opencatbox\n"
 "@category{Poisson series} @category{Display functions}\n"
@@ -2719,6 +2723,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Series.texi
-msgid ""
-msgstr ""

@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Expressions.texi
+msgstr ""
+
+#: Expressions.texi:8
 msgid ""
 "@menu\n"
 "* Introduction to Expressions::\n"
@@ -28,7 +28,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:13
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Expressions, Nouns and Verbs, Expressions, Expressions\n"
@@ -36,13 +36,13 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:16
 msgid ""
 "There are a number of reserved words which should not be used as variable names.\n"
 "Their use would cause a possibly cryptic syntax error.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:25
 msgid ""
 "@example\n"
 "integrate            next           from                 diff            \n"
@@ -54,7 +54,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:30
 msgid ""
 "Most things in Maxima are expressions.  A sequence of expressions\n"
 "can be made into an expression by separating them by commas and\n"
@@ -62,7 +62,7 @@ msgid ""
 "@i{comma expression}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:40
 msgid ""
 "@example\n"
 "(%i1) x: 3$\n"
@@ -75,13 +75,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:43
 msgid ""
 "Even loops in Maxima are expressions, although the value they\n"
 "return is the not too useful @code{done}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:49
 msgid ""
 "@example\n"
 "(%i1) y: (x: 1, for i from 1 thru 10 do (x: x*i))$\n"
@@ -90,13 +90,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:52
 msgid ""
 "Whereas what you really want is probably to include a third\n"
 "term in the @i{comma expression} which actually gives back the value.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:58
 msgid ""
 "@example\n"
 "(%i3) y: (x: 1, for i from 1 thru 10 do (x: x*i), x)$\n"
@@ -105,7 +105,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:63
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Nouns and Verbs, Identifiers, Introduction to Expressions, Expressions\n"
@@ -113,10 +113,10 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:71
 msgid ""
-"Maxima distinguishes between operators which are \"nouns\" and operators which are\n"
-"\"verbs\".  A verb is an operator which can be executed.  A noun is an operator\n"
+"Maxima distinguishes between operators which are \\"nouns\\" and operators which are\n"
+"\\"verbs\\".  A verb is an operator which can be executed.  A noun is an operator\n"
 "which appears as a symbol in an expression, without being executed.  By default,\n"
 "function names are verbs.  A verb can be changed into a noun by quoting the\n"
 "function name or applying the @mref{nounify} function.  A noun can be changed\n"
@@ -124,7 +124,7 @@ msgid ""
 "@mref{nouns} causes @mref{ev} to evaluate nouns in an expression.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:79
 msgid ""
 "The verb form is distinguished by a leading dollar sign @code{$} on the\n"
 "corresponding Lisp symbol.  In contrast, the noun form is distinguished by a\n"
@@ -135,18 +135,18 @@ msgid ""
 "causes Maxima to display nouns with a leading quote mark @code{'}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:82
 msgid ""
 "See also @mrefcomma{noun} @mrefcomma{nouns} @mrefcomma{nounify} and\n"
 "@mrefdot{verbify}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:84
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:153
 msgid ""
 "@c ===beg===\n"
 "@c foo (x) := x^2;\n"
@@ -218,14 +218,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:157
 msgid ""
 "@opencatbox\n"
 "@category{Evaluation} @category{Nouns and verbs}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:162
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Identifiers, Inequality, Nouns and Verbs, Expressions\n"
@@ -233,21 +233,21 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:166
 msgid ""
 "Maxima identifiers may comprise alphabetic characters, plus the numerals 0\n"
 "through 9, plus any special character preceded by the backslash @code{\}\n"
 "character.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:170
 msgid ""
 "A numeral may be the first character of an identifier if it is preceded by a\n"
 "backslash.  Numerals which are the second or later characters need not be\n"
 "preceded by a backslash.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:175
 msgid ""
 "Characters may be declared alphabetic by the @code{declare} function.\n"
 "If so declared, they need not be preceded by a backslash in an identifier.\n"
@@ -255,25 +255,25 @@ msgid ""
 "through @code{z}, @code{%}, and @code{_}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:178
 msgid ""
 "Maxima is case-sensitive.  The identifiers @code{foo}, @code{FOO}, and\n"
 "@code{Foo} are distinct.  See @ref{Lisp and Maxima} for more on this point.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:182
 msgid ""
 "A Maxima identifier is a Lisp symbol which begins with a dollar sign @code{$}.\n"
 "Any other Lisp symbol is preceded by a question mark @code{?} when it appears\n"
 "in Maxima.  See @ref{Lisp and Maxima} for more on this point.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:184
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:254
 msgid ""
 "@c ===beg===\n"
 "@c %an_ordinary_identifier42;\n"
@@ -284,7 +284,7 @@ msgid ""
 "@c [symbolp (foo\+bar), symbolp (\1729)];\n"
 "@c [is (foo\+bar = foo+bar), is (\1729 = 1729)];\n"
 "@c baz\~quux;\n"
-"@c declare (\"~\", alphabetic);\n"
+"@c declare (\\"~\\", alphabetic);\n"
 "@c baz~quux;\n"
 "@c [is (foo = FOO), is (FOO = Foo), is (Foo = foo)];\n"
 "@c :lisp (defvar *my-lisp-variable* '$foo)\n"
@@ -324,7 +324,7 @@ msgid ""
 "(%o8)                       baz~quux\n"
 "@end group\n"
 "@group\n"
-"(%i9) declare (\"~\", alphabetic);\n"
+"(%i9) declare (\\"~\\", alphabetic);\n"
 "(%o9)                         done\n"
 "@end group\n"
 "@group\n"
@@ -346,14 +346,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:258
 msgid ""
 "@opencatbox\n"
 "@category{Syntax}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:263
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Inequality, Functions and Variables for Expressions, Identifiers, Expressions\n"
@@ -361,14 +361,14 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:267
 msgid ""
 "Maxima has the inequality operators @code{<}, @code{<=}, @code{>=}, @code{>},\n"
 "@code{#}, and @code{notequal}.  See @code{if} for a description of conditional\n"
 "expressions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:272
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Expressions,  , Inequality, Expressions\n"
@@ -376,25 +376,25 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:274
 msgid ""
 "@c NEEDS WORK, ESPECIALLY EXAMPLES\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:278
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{alias}\n"
 "@deffn {Function} alias (@var{new_name_1}, @var{old_name_1}, @dots{}, @var{new_name_n}, @var{old_name_n})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:281
 msgid ""
 "provides an alternate name for a (user or system) function, variable, array,\n"
 "etc.  Any even number of arguments may be used.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:286
 msgid ""
 "@opencatbox\n"
 "@category{Declarations and inferences}\n"
@@ -402,7 +402,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:291
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{aliases}\n"
@@ -410,14 +410,14 @@ msgid ""
 "Default value: @code{[]}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:295
 msgid ""
 "@code{aliases} is the list of atoms which have a user defined alias (set up by\n"
 "the @mrefcomma{alias} @mrefcomma{ordergreat} @mref{orderless} functions or by\n"
 "declaring the atom a @mref{noun} with @mrefdot{declare})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:300
 msgid ""
 "@opencatbox\n"
 "@category{Declarations and inferences} @category{Global variables}\n"
@@ -425,20 +425,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:303
 msgid ""
 "@c NEEDS TO BE REWORKED.  NOT CONVINCED THIS SYMBOL NEEDS ITS OWN ITEM\n"
 "@c (SHOULD BE DESCRIBED IN CONTEXT OF EACH FUNCTION WHICH RECOGNIZES IT)\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:307
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{allbut}\n"
 "@defvr {Keyword} allbut\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:312
 msgid ""
 "works with the @code{part} commands (i.e.  @mrefcomma{part}@w{}\n"
 "@mrefcomma{inpart} @mrefcomma{substpart} @mrefcomma{substinpart}@w{}\n"
@@ -446,7 +446,7 @@ msgid ""
 "For example,\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:327
 msgid ""
 "@c ===beg===\n"
 "@c expr : e + d + c + b + a;\n"
@@ -464,12 +464,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:329
 msgid ""
 "while\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:344
 msgid ""
 "@c ===beg===\n"
 "@c expr : e + d + c + b + a;\n"
@@ -487,12 +487,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:346
 msgid ""
 "@code{allbut} is also recognized by @mrefdot{kill}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:366
 msgid ""
 "@c ===beg===\n"
 "@c [aa : 11, bb : 22, cc : 33, dd : 44, ee : 55];\n"
@@ -515,7 +515,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:371
 msgid ""
 "@code{kill(allbut(@var{a_1}, @var{a_2}, ...))} has the effect of\n"
 "@code{kill(all)} except that it does not kill the symbols @var{a_1}, @var{a_2},\n"
@@ -523,14 +523,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:375
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{args}\n"
 "@deffn {Function} args (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:380
 msgid ""
 "Returns the list of arguments of @code{expr}, which may be any kind of\n"
 "expression other than an atom.  Only the arguments of the top-level operator\n"
@@ -538,24 +538,24 @@ msgid ""
 "subexpressions of elements of the list of arguments.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:383
 msgid ""
 "The order of the items in the list may depend on the global flag\n"
 "@mrefdot{inflag}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:386
 msgid ""
-"@code{args (@var{expr})} is equivalent to @code{substpart (\"[\", @var{expr}, 0)}.\n"
+"@code{args (@var{expr})} is equivalent to @code{substpart (\\"[\\", @var{expr}, 0)}.\n"
 "See also @mrefcomma{substpart} @mrefcomma{apply} @mrefcomma{funmake} and @mrefdot{op}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:388
 msgid ""
 "How to convert a matrix to a nested list:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:405
 msgid ""
 "@c ===beg===\n"
 "@c M:matrix([1,2],[3,4]);\n"
@@ -575,13 +575,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:408
 msgid ""
 "Since maxima internally treats a sum of @code{n} terms as a summation command\n"
 "with @code{n} arguments args() can extract the list of terms in a sum:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:423
 msgid ""
 "@c ===beg===\n"
 "@c a+b+c;\n"
@@ -599,7 +599,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:430
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -607,20 +607,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:433
 msgid ""
 "@c REPHRASE\n"
 "@c SPLIT OFF EXAMPLES INTO EXAMPLE SECTION\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:437
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{atom}\n"
 "@deffn {Function} atom (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:442
 msgid ""
 "Returns @code{true} if @var{expr} is atomic (i.e. a number, name or string) else\n"
 "@code{false}.  Thus @code{atom(5)} is @code{true} while @code{atom(a[1])} and\n"
@@ -628,7 +628,7 @@ msgid ""
 "unbound).\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:447
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Predicate functions}\n"
@@ -636,7 +636,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:453
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{box}\n"
@@ -645,44 +645,44 @@ msgid ""
 "@fname{box} (@var{expr}, @var{a})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:457
 msgid ""
 "Returns @var{expr} enclosed in a box.  The return value is an expression with\n"
 "@code{box} as the operator and @var{expr} as the argument.  A box is drawn on\n"
 "the display when @code{display2d} is @code{true}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:461
 msgid ""
 "@code{box (@var{expr}, @var{a})} encloses @var{expr} in a box labelled by the\n"
 "symbol @var{a}.  The label is truncated if it is longer than the width of the\n"
 "box.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:465
 msgid ""
 "@code{box} evaluates its argument.  However, a boxed expression does not\n"
 "evaluate to its content, so boxed expressions are effectively excluded from\n"
 "computations. @mref{rembox} removes the box again.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:468
 msgid ""
 "@mref{boxchar} is the character used to draw the box in @code{box} and in the\n"
 "@mref{dpart} and @mref{lpart} functions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:470
 msgid ""
 "See also @mrefcomma{rembox} @mref{dpart} and @mrefdot{lpart}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:472
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:530
 msgid ""
 "@c ===beg===\n"
 "@c box (a^2 + b^2);\n"
@@ -691,16 +691,16 @@ msgid ""
 "@c box (a^2 + b^2);\n"
 "@c box (a^2 + b^2, term_1);\n"
 "@c 1729 - box (1729);\n"
-"@c boxchar: \"-\";\n"
+"@c boxchar: \\"-\\";\n"
 "@c box (sin(x) + cos(y));\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
 "(%i1) box (a^2 + b^2);\n"
-"                            \"\"\"\"\"\"\"\"\"\n"
-"                            \" 2    2\"\n"
-"(%o1)                       \"b  + a \"\n"
-"                            \"\"\"\"\"\"\"\"\"\n"
+"                            \\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
+"                            \\" 2    2\\"\n"
+"(%o1)                       \\"b  + a \\"\n"
+"                            \\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
 "@end group\n"
 "@group\n"
 "(%i2) a : 1234;\n"
@@ -712,26 +712,26 @@ msgid ""
 "@end group\n"
 "@group\n"
 "(%i4) box (a^2 + b^2);\n"
-"                      \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n"
-"                      \"       2          \"\n"
-"(%o4)                 \"(c - d)  + 1522756\"\n"
-"                      \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n"
+"                      \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
+"                      \\"       2          \\"\n"
+"(%o4)                 \\"(c - d)  + 1522756\\"\n"
+"                      \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
 "@end group\n"
 "@group\n"
 "(%i5) box (a^2 + b^2, term_1);\n"
-"                      term_1\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n"
-"                      \"       2          \"\n"
-"(%o5)                 \"(c - d)  + 1522756\"\n"
-"                      \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\n"
+"                      term_1\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
+"                      \\"       2          \\"\n"
+"(%o5)                 \\"(c - d)  + 1522756\\"\n"
+"                      \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
 "@end group\n"
 "@group\n"
 "(%i6) 1729 - box (1729);\n"
-"                                 \"\"\"\"\"\"\n"
-"(%o6)                     1729 - \"1729\"\n"
-"                                 \"\"\"\"\"\"\n"
+"                                 \\"\\"\\"\\"\\"\\"\n"
+"(%o6)                     1729 - \\"1729\\"\n"
+"                                 \\"\\"\\"\\"\\"\\"\n"
 "@end group\n"
 "@group\n"
-"(%i7) boxchar: \"-\";\n"
+"(%i7) boxchar: \\"-\\";\n"
 "(%o7)                           -\n"
 "@end group\n"
 "@group\n"
@@ -743,7 +743,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:535
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -751,27 +751,27 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:540
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{boxchar}\n"
 "@defvr {Option variable} boxchar\n"
-"Default value: @code{\"}\n"
+"Default value: @code{\\"}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:543
 msgid ""
 "@code{boxchar} is the character used to draw the box in the @mref{box}@w{}\n"
 "and in the @mref{dpart} and @mref{lpart} functions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:546
 msgid ""
 "All boxes in an expression are drawn with the current value of @code{boxchar};\n"
 "the drawing character is not stored with the box expression.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:551
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -779,19 +779,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:553
 msgid ""
 "@c NEEDS CLARIFICATION !!!\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:557
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{collapse}\n"
 "@deffn {Function} collapse (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:566
 msgid ""
 "Collapses @var{expr} by causing all of its common (i.e., equal) subexpressions\n"
 "to share (i.e., use the same cells), thereby saving space.  (@code{collapse} is\n"
@@ -803,7 +803,7 @@ msgid ""
 "@code{collapse (listarray ('A))}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:571
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -811,21 +811,21 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:575
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{copy}\n"
 "@deffn {Function} copy (@var{e})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:579
 msgid ""
 "Return a copy of the Maxima expression @var{e}.  Although @var{e} can be any\n"
 "Maxima expression, the copy function is the most useful when @var{e} is either \n"
 "a list or a matrix; consider:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:600
 msgid ""
 "@c ===beg===\n"
 "@c m : [1,[2,3]]$\n"
@@ -849,12 +849,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:602
 msgid ""
 "Let's try the same experiment, but this time let @var{mm} be a copy of @var{m}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:623
 msgid ""
 "@c ===beg===\n"
 "@c m : [1,[2,3]]$\n"
@@ -878,12 +878,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:625
 msgid ""
 "This time, the assignment to @var{mm} does not change the value of @var{m}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:630
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -891,29 +891,29 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:632
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:636
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{disolate}\n"
 "@deffn {Function} disolate (@var{expr}, @var{x_1}, @dots{}, @var{x_n})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:643
 msgid ""
 "is similar to @mref{isolate}@code{ (@var{expr}, @var{x})} except that it enables the\n"
 "user to isolate more than one variable simultaneously.  This might be useful,\n"
 "for example, if one were attempting to change variables in a multiple\n"
 "integration, and that variable change involved two or more of the integration\n"
 "variables.  This function is autoloaded from @file{simplification/disol.mac}.\n"
-"A demo is available by @code{demo(\"disol\")$}.\n"
+"A demo is available by @code{demo(\\"disol\\")$}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:648
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -921,7 +921,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:654
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{dispform}\n"
@@ -930,41 +930,41 @@ msgid ""
 "@fname{dispform} (@var{expr}, all)\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:656
 msgid ""
 "Returns the external representation of @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:660
 msgid ""
 "@code{dispform(@var{expr})} returns the external representation with respect to\n"
 "the main (top-level) operator.  @code{dispform(@var{expr}, all)} returns the\n"
 "external representation with respect to all operators in @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:662
 msgid ""
 "See also @mrefcomma{part} @mrefcomma{inpart} and @mrefdot{inflag}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:664
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:667
 msgid ""
-"The internal representation of @code{- x} is \"negative one times @code{x}\"\n"
-"while the external representation is \"minus @code{x}\".\n"
+"The internal representation of @code{- x} is \\"negative one times @code{x}\\"\n"
+"while the external representation is \\"minus @code{x}\\".\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:694
 msgid ""
 "@c ===beg===\n"
 "@c - x;\n"
-"@c ?format (true, \"~S~%\", %);\n"
+"@c ?format (true, \\"~S~%\\", %);\n"
 "@c dispform (- x);\n"
-"@c ?format (true, \"~S~%\", %);\n"
+"@c ?format (true, \\"~S~%\\", %);\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
@@ -972,7 +972,7 @@ msgid ""
 "(%o1)                          - x\n"
 "@end group\n"
 "@group\n"
-"(%i2) ?format (true, \"~S~%\", %);\n"
+"(%i2) ?format (true, \\"~S~%\\", %);\n"
 "((MTIMES SIMP) -1 $X)\n"
 "(%o2)                         false\n"
 "@end group\n"
@@ -981,26 +981,26 @@ msgid ""
 "(%o3)                          - x\n"
 "@end group\n"
 "@group\n"
-"(%i4) ?format (true, \"~S~%\", %);\n"
+"(%i4) ?format (true, \\"~S~%\\", %);\n"
 "((MMINUS SIMP) $X)\n"
 "(%o4)                         false\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:697
 msgid ""
-"The internal representation of @code{sqrt(x)} is \"@code{x} to the power 1/2\"\n"
-"while the external representation is \"square root of @code{x}\".\n"
+"The internal representation of @code{sqrt(x)} is \\"@code{x} to the power 1/2\\"\n"
+"while the external representation is \\"square root of @code{x}\\".\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:724
 msgid ""
 "@c ===beg===\n"
 "@c sqrt (x);\n"
-"@c ?format (true, \"~S~%\", %);\n"
+"@c ?format (true, \\"~S~%\\", %);\n"
 "@c dispform (sqrt (x));\n"
-"@c ?format (true, \"~S~%\", %);\n"
+"@c ?format (true, \\"~S~%\\", %);\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
@@ -1008,7 +1008,7 @@ msgid ""
 "(%o1)                        sqrt(x)\n"
 "@end group\n"
 "@group\n"
-"(%i2) ?format (true, \"~S~%\", %);\n"
+"(%i2) ?format (true, \\"~S~%\\", %);\n"
 "((MEXPT SIMP) $X ((RAT SIMP) 1 2))\n"
 "(%o2)                         false\n"
 "@end group\n"
@@ -1017,19 +1017,19 @@ msgid ""
 "(%o3)                        sqrt(x)\n"
 "@end group\n"
 "@group\n"
-"(%i4) ?format (true, \"~S~%\", %);\n"
+"(%i4) ?format (true, \\"~S~%\\", %);\n"
 "((%SQRT SIMP) $X)\n"
 "(%o4)                         false\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:726
 msgid ""
 "Use of the optional argument @code{all}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:751
 msgid ""
 "@c ===beg===\n"
 "@c expr : sin (sqrt (x));\n"
@@ -1057,7 +1057,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:756
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1065,19 +1065,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:758
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:762
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{dpart}\n"
 "@deffn {Function} dpart (@var{expr}, @var{n_1}, @dots{}, @var{n_k})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:767
 msgid ""
 "Selects the same subexpression as @mrefcomma{part} but instead of just returning\n"
 "that subexpression as its value, it returns the whole expression with the\n"
@@ -1085,20 +1085,20 @@ msgid ""
 "expression.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:777
 msgid ""
 "@example\n"
 "(%i1) dpart (x+y/z^2, 1, 2, 1);\n"
 "                             y\n"
 "(%o1)                       ---- + x\n"
 "                               2\n"
-"                            \"\"\"\n"
-"                            \"z\"\n"
-"                            \"\"\"\n"
+"                            \\"\\"\\"\n"
+"                            \\"z\\"\n"
+"                            \\"\\"\\"\n"
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:782
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1106,7 +1106,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:787
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{exptisolate}\n"
@@ -1114,14 +1114,14 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:791
 msgid ""
 "@c WHAT DOES THIS MEAN EXACTLY ??\n"
 "@code{exptisolate}, when @code{true}, causes @code{isolate (expr, var)} to\n"
 "examine exponents of atoms (such as @code{%e}) which contain @code{var}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:797
 msgid ""
 "@c NEED EXAMPLES HERE\n"
 "@opencatbox\n"
@@ -1130,7 +1130,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:802
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{exptsubst}\n"
@@ -1138,13 +1138,13 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:805
 msgid ""
 "@code{exptsubst}, when @code{true}, permits substitutions such as @code{y}\n"
 "for @code{%e^x} in @code{%e^(a x)}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:838
 msgid ""
 "@c ===beg===\n"
 "@c %e^(a*x);\n"
@@ -1180,7 +1180,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:843
 msgid ""
 "@opencatbox\n"
 "@category{Exponential and logarithm functions} @category{Expressions}\n"
@@ -1188,14 +1188,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:847
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{freeof}\n"
 "@deffn {Function} freeof (@var{x_1}, @dots{}, @var{x_n}, @var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:852
 msgid ""
 "@code{freeof (@var{x_1}, @var{expr})} returns @code{true} if no subexpression of\n"
 "@var{expr} is equal to @var{x_1} or if @var{x_1} occurs only as a dummy variable\n"
@@ -1203,21 +1203,21 @@ msgid ""
 "in @var{expr}, and returns @code{false} otherwise.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:856
 msgid ""
 "@code{freeof (@var{x_1}, ..., @var{x_n}, @var{expr})} is equivalent to \n"
 "@code{freeof (@var{x_1}, @var{expr}) and ... and freeof (@var{x_n},\n"
 "@var{expr})}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:860
 msgid ""
 "The arguments @var{x_1}, @dots{}, @var{x_n} may be names of functions and\n"
 "variables, subscripted names, operators (enclosed in double quotes), or general\n"
 "expressions.  @code{freeof} evaluates its arguments.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:866
 msgid ""
 "@code{freeof} operates only on @var{expr} as it stands (after simplification and\n"
 "evaluation) and does not attempt to determine if some equivalent expression \n"
@@ -1226,7 +1226,7 @@ msgid ""
 "the original form of @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:873
 msgid ""
 "A variable is a dummy variable in an expression if it has no binding outside of \n"
 "the expression.  Dummy variables recognized by @code{freeof} are the index of a \n"
@@ -1236,25 +1236,25 @@ msgid ""
 "@mref{lambda} expressions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:876
 msgid ""
 "The indefinite form of @code{integrate} is @i{not} free of its variable of \n"
 "integration.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:878
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:882
 msgid ""
 "Arguments are names of functions, variables, subscripted names, operators, and \n"
 "expressions.  @code{freeof (a, b, expr)} is equivalent to \n"
 "@code{freeof (a, expr) and freeof (b, expr)}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:903
 msgid ""
 "@example\n"
 "(%i1) expr: z^3 * cos (a[1]) * b^(c+d);\n"
@@ -1271,19 +1271,19 @@ msgid ""
 "(%o5)                         false\n"
 "(%i6) freeof (b^(c+d), expr);\n"
 "(%o6)                         false\n"
-"(%i7) freeof (\"^\", expr);\n"
+"(%i7) freeof (\\"^\\", expr);\n"
 "(%o7)                         false\n"
 "(%i8) freeof (w, sin, a[2], sin (a[2]), b*(c+d), expr);\n"
 "(%o8)                         true\n"
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:905
 msgid ""
 "@code{freeof} evaluates its arguments.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:912
 msgid ""
 "@example\n"
 "(%i1) expr: (a+b)^5$\n"
@@ -1293,13 +1293,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:915
 msgid ""
 "@code{freeof} does not consider equivalent expressions.\n"
 "Simplification may yield an equivalent but different expression.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:931
 msgid ""
 "@example\n"
 "(%i1) expr: (a+b)^5$\n"
@@ -1318,13 +1318,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:934
 msgid ""
 "A summation or definite integral is free of its dummy variable.\n"
 "An indefinite integral is not free of its variable of integration.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:943
 msgid ""
 "@example\n"
 "(%i1) freeof (i, 'sum (f(i), i, 0, n));\n"
@@ -1336,7 +1336,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:948
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1344,7 +1344,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:953
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{inflag}\n"
@@ -1352,26 +1352,26 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:956
 msgid ""
 "When @code{inflag} is @code{true}, functions for part extraction inspect the\n"
 "internal form of @code{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:960
 msgid ""
 "Note that the simplifier re-orders expressions.  Thus @code{first (x + y)}\n"
 "returns @code{x} if @code{inflag} is @code{true} and @code{y} if @code{inflag}\n"
 "is @code{false}.  (@code{first (y + x)} gives the same results.)\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:963
 msgid ""
 "Also, setting @code{inflag} to @code{true} and calling @mref{part} or\n"
 "@mref{substpart} is the same as calling @mref{inpart} or @mrefdot{substinpart}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:969
 msgid ""
 "Functions affected by the setting of @code{inflag} are: @mrefcomma{part}@w{}\n"
 "@mrefcomma{substpart} @mrefcomma{first} @mrefcomma{rest} @mrefcomma{last}@w{}\n"
@@ -1380,7 +1380,7 @@ msgid ""
 "@mrefdot{pickapart}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:975
 msgid ""
 "@c NEED EXAMPLES HERE\n"
 "@opencatbox\n"
@@ -1389,19 +1389,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:977
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:981
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{inpart}\n"
 "@deffn {Function} inpart (@var{expr}, @var{n_1}, @dots{}, @var{n_k})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:991
 msgid ""
 "is similar to @mref{part} but works on the internal representation of the\n"
 "expression rather than the displayed form and thus may be faster since no\n"
@@ -1410,16 +1410,16 @@ msgid ""
 "internal form is often different from that in the displayed form) and in dealing\n"
 "with unary minus, subtraction, and division (since these operators are removed\n"
 "from the expression).  @code{part (x+y, 0)} or @code{inpart (x+y, 0)} yield\n"
-"@code{+}, though in order to refer to the operator it must be enclosed in \"s.\n"
-"For example @code{... if inpart (%o9,0) = \"+\" then ...}.\n"
+"@code{+}, though in order to refer to the operator it must be enclosed in \\"s.\n"
+"For example @code{... if inpart (%o9,0) = \\"+\\" then ...}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:993
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1008
 msgid ""
 "@example\n"
 "(%i1) x + y + w*z;\n"
@@ -1437,7 +1437,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1013
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1445,19 +1445,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1015
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1019
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{isolate}\n"
 "@deffn {Function} isolate (@var{expr}, @var{x})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1026
 msgid ""
 "Returns @var{expr} with subexpressions which are sums and which do not contain\n"
 "@var{var} replaced by intermediate expression labels (these being atomic symbols\n"
@@ -1467,21 +1467,25 @@ msgid ""
 "can all be substituted back by evaluating the expression in which they occur.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1030
 msgid ""
 "@mref{exptisolate} (default value: @code{false}) if @code{true} will cause\n"
 "@code{isolate} to examine exponents of atoms (like @code{%e}) which contain\n"
 "@var{var}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1033
 msgid ""
 "@code{isolate_wrt_times} if @code{true}, then @code{isolate} will also isolate\n"
 "with respect to products.  See @mrefdot{isolate_wrt_times} See also @mrefdot{disolate}\n"
+msgstr ""
+
+#: Expressions.texi:1036
+msgid ""
 "Do @code{example (isolate)} for examples.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1041
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1489,12 +1493,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1043
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1048
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{isolate_wrt_times}\n"
@@ -1502,32 +1506,36 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1051
 msgid ""
 "When @code{isolate_wrt_times} is @code{true}, @code{isolate} will also isolate\n"
 "with respect to products.  E.g. compare both settings of the switch on\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1055
 msgid ""
 "@example\n"
 "(%i1) isolate_wrt_times: true$\n"
 "(%i2) isolate (expand ((a+b+c)^2), c);\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1057
 msgid ""
 "(%t2)                          2 a\n"
+msgstr ""
+
+#: Expressions.texi:1060
+msgid ""
 "(%t3)                          2 b\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1063
 msgid ""
 "                          2            2\n"
 "(%t4)                    b  + 2 a b + a\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1071
 msgid ""
 "                     2\n"
 "(%o4)               c  + %t3 c + %t2 c + %t4\n"
@@ -1538,7 +1546,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1076
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1546,12 +1554,12 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1078
 msgid ""
 "@c NEEDS EXAMPLES\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1083
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{listconstvars}\n"
@@ -1559,7 +1567,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1091
 msgid ""
 "When @code{listconstvars} is @code{true} the list returned by\n"
 "@code{listofvars} contains constant variables, such as @code{%e},\n"
@@ -1570,7 +1578,7 @@ msgid ""
 "omit constant variables from @code{listofvars} return value.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1096
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1578,7 +1586,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1101
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{listdummyvars}\n"
@@ -1586,21 +1594,21 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1107
 msgid ""
-"When @code{listdummyvars} is @code{false}, \"dummy variables\" in the expression\n"
+"When @code{listdummyvars} is @code{false}, \\"dummy variables\\" in the expression\n"
 "will not be included in the list returned by @mrefdot{listofvars}  (The meaning\n"
-"of \"dummy variables\" is as given in @mrefdot{freeof}  \"Dummy variables\" are\n"
+"of \\"dummy variables\\" is as given in @mrefdot{freeof}  \\"Dummy variables\\" are\n"
 "mathematical things like the index of a sum or product, the limit variable,\n"
 "and the definite integration variable.)\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1109
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1118
 msgid ""
 "@example\n"
 "(%i1) listdummyvars: true$\n"
@@ -1612,7 +1620,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1123
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1620,37 +1628,37 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1125
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1129
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{listofvars}\n"
 "@deffn {Function} listofvars (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1131
 msgid ""
 "Returns a list of the variables in @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1135
 msgid ""
 "@mref{listconstvars} if @code{true} causes @code{listofvars} to include \n"
 "@code{%e}, @code{%pi}, @code{%i}, and any variables declared constant in the \n"
 "list it returns if they appear in @var{expr}.  The default is to omit these.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1138
 msgid ""
 "See also the option variable @mref{listdummyvars} to exclude or include\n"
-"\"dummy variables\" in the list of variables.\n"
+"\\"dummy variables\\" in the list of variables.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1144
 msgid ""
 "@example\n"
 "(%i1) listofvars (f (x[1]+y) / g^(2+a));\n"
@@ -1659,7 +1667,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1149
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1667,31 +1675,31 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1151
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1155
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lfreeof}\n"
 "@deffn {Function} lfreeof (@var{list}, @var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1159
 msgid ""
 "For each member @var{m} of @var{list}, calls\n"
 "@code{freeof (@var{m}, @var{expr})}.  It returns @code{false} if any call to\n"
 "@mref{freeof} does and @code{true} otherwise.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1161
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1181
 msgid ""
 "@c ===beg===\n"
 "@c lfreeof ([ a, x], x^2+b);\n"
@@ -1714,7 +1722,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1186
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1722,25 +1730,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1188
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1192
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{lpart}\n"
 "@deffn {Function} lpart (@var{label}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1195
 msgid ""
 "is similar to @mref{dpart} but uses a labelled box.  A labelled box is similar\n"
 "to the one produced by @code{dpart} but it has a name in the top line.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1200
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1748,19 +1756,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1202
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1206
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mainvar}\n"
 "@defvr {Property} mainvar\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1216
 msgid ""
 "You may declare variables to be @code{mainvar}.  The ordering scale for atoms is\n"
 "essentially: numbers < constants (e.g., @code{%e}, @code{%pi}) < scalars < other\n"
@@ -1773,7 +1781,7 @@ msgid ""
 "@code{x} is a @code{mainvar}, you probably should also save @code{x}.)\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1221
 msgid ""
 "@opencatbox\n"
 "@category{Declarations and inferences} @category{Expressions}\n"
@@ -1781,31 +1789,31 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1223
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1227
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{noun}\n"
 "@defvr {Property} noun\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1231
 msgid ""
 "@code{noun} is one of the options of the @mref{declare} command.  It makes a\n"
-"function so declared a \"noun\", meaning that it won't be evaluated\n"
+"function so declared a \\"noun\\", meaning that it won't be evaluated\n"
 "automatically.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1233
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1260
 msgid ""
 "@c ===beg===\n"
 "@c factor (12345678);\n"
@@ -1835,7 +1843,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1265
 msgid ""
 "@opencatbox\n"
 "@category{Nouns and verbs}\n"
@@ -1843,12 +1851,12 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1267
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1272
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{noundisp}\n"
@@ -1856,14 +1864,14 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1276
 msgid ""
 "When @code{noundisp} is @code{true}, nouns display with\n"
 "a single quote.  This switch is always @code{true} when displaying function\n"
 "definitions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1281
 msgid ""
 "@opencatbox\n"
 "@category{Display flags and variables} @category{Nouns and verbs}\n"
@@ -1871,19 +1879,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1283
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1287
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{nounify}\n"
 "@deffn {Function} nounify (@var{f})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1293
 msgid ""
 "Returns the noun form of the function name @var{f}.  This is\n"
 "needed if one wishes to refer to the name of a verb function as if it\n"
@@ -1892,12 +1900,12 @@ msgid ""
 "the form returned if a function call is preceded by a quote.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1295
 msgid ""
 "See also @mrefdot{verbify}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1300
 msgid ""
 "@opencatbox\n"
 "@category{Nouns and verbs}\n"
@@ -1905,19 +1913,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1302
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1306
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{nterms}\n"
 "@deffn {Function} nterms (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1312
 msgid ""
 "Returns the number of terms that @var{expr} would have if it were fully\n"
 "expanded out and no cancellations or combination of terms occurred.\n"
@@ -1926,7 +1934,7 @@ msgid ""
 "terms @var{expr} has (if it is a sum).\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1317
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -1934,25 +1942,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1319
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1323
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{op}\n"
 "@deffn {Function} op (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1326
 msgid ""
 "Returns the main operator of the expression @var{expr}.\n"
 "@code{op (@var{expr})} is equivalent to @code{part (@var{expr}, 0)}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1333
 msgid ""
 "@code{op} returns a string if the main operator is a built-in or user-defined\n"
 "prefix, binary or n-ary infix, postfix, matchfix, or nofix operator.\n"
@@ -1962,27 +1970,27 @@ msgid ""
 "and @code{op} returns a symbol.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1335
 msgid ""
 "@code{op} observes the value of the global flag @mrefdot{inflag}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1337
 msgid ""
 "@code{op} evaluates it argument.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1339
 msgid ""
 "See also @mrefdot{args}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1341
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1409
 msgid ""
 "@c ===beg===\n"
 "@c stringdisp: true$\n"
@@ -2003,11 +2011,11 @@ msgid ""
 "(%i1) stringdisp: true$\n"
 "@group\n"
 "(%i2) op (a * b * c);\n"
-"(%o2)                          \"*\"\n"
+"(%o2)                          \\"*\\"\n"
 "@end group\n"
 "@group\n"
 "(%i3) op (a * b + c);\n"
-"(%o3)                          \"+\"\n"
+"(%o3)                          \\"+\\"\n"
 "@end group\n"
 "@group\n"
 "(%i4) op ('sin (a + b));\n"
@@ -2015,19 +2023,19 @@ msgid ""
 "@end group\n"
 "@group\n"
 "(%i5) op (a!);\n"
-"(%o5)                          \"!\"\n"
+"(%o5)                          \\"!\\"\n"
 "@end group\n"
 "@group\n"
 "(%i6) op (-a);\n"
-"(%o6)                          \"-\"\n"
+"(%o6)                          \\"-\\"\n"
 "@end group\n"
 "@group\n"
 "(%i7) op ([a, b, c]);\n"
-"(%o7)                          \"[\"\n"
+"(%o7)                          \\"[\\"\n"
 "@end group\n"
 "@group\n"
 "(%i8) op ('(if a > b then c else d));\n"
-"(%o8)                         \"if\"\n"
+"(%o8)                         \\"if\\"\n"
 "@end group\n"
 "@group\n"
 "(%i9) op ('foo (a));\n"
@@ -2035,11 +2043,11 @@ msgid ""
 "@end group\n"
 "@group\n"
 "(%i10) prefix (foo);\n"
-"(%o10)                        \"foo\"\n"
+"(%o10)                        \\"foo\\"\n"
 "@end group\n"
 "@group\n"
 "(%i11) op (foo a);\n"
-"(%o11)                        \"foo\"\n"
+"(%o11)                        \\"foo\\"\n"
 "@end group\n"
 "@group\n"
 "(%i12) op (F [x, y] (a, b, c));\n"
@@ -2053,7 +2061,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1414
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Operators}\n"
@@ -2061,12 +2069,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1416
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1422
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{operatorp}\n"
@@ -2075,20 +2083,20 @@ msgid ""
 "@fname{operatorp} (@var{expr}, [@var{op_1}, @dots{}, @var{op_n}])\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1425
 msgid ""
 "@code{operatorp (@var{expr}, @var{op})} returns @code{true}\n"
 "if @var{op} is equal to the operator of @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1429
 msgid ""
 "@code{operatorp (@var{expr}, [@var{op_1}, ..., @var{op_n}])} returns\n"
 "@code{true} if some element @var{op_1}, @dots{}, @var{op_n} is equal to the\n"
 "operator of @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1434
 msgid ""
 "@opencatbox\n"
 "@category{Operators} @category{Predicate functions}\n"
@@ -2096,12 +2104,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1436
 msgid ""
 "@c NEEDS CLARIFICATION, EXAMPLES\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1441
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{option_opsubst}\n"
@@ -2109,14 +2117,14 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1445
 msgid ""
 "When @code{opsubst} is @code{false}, @mref{subst} does not attempt to\n"
 "substitute into the operator of an expression.  E.g., \n"
 "@code{(opsubst: false, subst (x^2, r, r+r[0]))} will work.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1480
 msgid ""
 "@c ===beg===\n"
 "@c r+r[0];\n"
@@ -2154,7 +2162,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1485
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2162,46 +2170,50 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1487
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1491
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{optimize}\n"
 "@deffn {Function} optimize (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1497
 msgid ""
 "Returns an expression that produces the same value and\n"
 "side effects as @var{expr} but does so more efficiently by avoiding the\n"
 "recomputation of common subexpressions.  @code{optimize} also has the side\n"
-"effect of \"collapsing\" its argument so that all common subexpressions\n"
+"effect of \\"collapsing\\" its argument so that all common subexpressions\n"
 "are shared.  Do @code{example (optimize)} for examples.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1502
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
 "@closecatbox\n"
 "@end deffn\n"
+msgstr ""
+
+#: Expressions.texi:1508
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{optimprefix}\n"
 "@defvr {Option variable} optimprefix\n"
 "Default value: @code{%}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1511
 msgid ""
 "@code{optimprefix} is the prefix used for generated symbols by\n"
 "the @mref{optimize} command.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1516
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2209,7 +2221,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1522
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ordergreat}\n"
@@ -2218,21 +2230,21 @@ msgid ""
 "@deffnx {Function} orderless (@var{v_1}, @dots{}, @var{v_n})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1526
 msgid ""
 "@code{ordergreat} changes the canonical ordering of Maxima expressions\n"
 "such that @var{v_1} succeeds @var{v_2} succeeds @dots{}  succeeds @var{v_n},\n"
 "and @var{v_n} succeeds any other symbol not mentioned as an argument.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1530
 msgid ""
 "@code{orderless} changes the canonical ordering of Maxima expressions\n"
 "such that @var{v_1} precedes @var{v_2} precedes @dots{} precedes @var{v_n},\n"
 "and @var{v_n} precedes any other variable not mentioned as an argument.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1535
 msgid ""
 "The order established by @code{ordergreat} and @code{orderless} is dissolved\n"
 "by @mrefdot{unorder}  @code{ordergreat} and @code{orderless} can be called only\n"
@@ -2240,12 +2252,12 @@ msgid ""
 "@code{ordergreat} and @code{orderless} has any effect.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1537
 msgid ""
 "See also @mrefdot{ordergreatp}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1542
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2253,7 +2265,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1548
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ordergreatp}\n"
@@ -2262,32 +2274,32 @@ msgid ""
 "@deffnx {Function} orderlessp (@var{expr_1}, @var{expr_2})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1551
 msgid ""
 "@code{ordergreatp} returns @code{true} if @var{expr_1} succeeds @var{expr_2} in\n"
 "the canonical ordering of Maxima expressions, and @code{false} otherwise.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1554
 msgid ""
 "@code{orderlessp} returns @code{true} if @var{expr_1} precedes @var{expr_2} in\n"
 "the canonical ordering of Maxima expressions, and @code{false} otherwise.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1558
 msgid ""
 "All Maxima atoms and expressions are comparable under @code{ordergreatp} and\n"
 "@code{orderlessp}, although there are isolated examples of expressions for which\n"
 "these predicates are not transitive; that is a bug.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1561
 msgid ""
 "The canonical ordering of atoms (symbols, literal numbers, and strings) is the\n"
 "following.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1568
 msgid ""
 "(integers and floats) precede (bigfloats) precede\n"
 "(declared constants) precede (strings) precede (declared scalars)\n"
@@ -2297,7 +2309,7 @@ msgid ""
 "(first argument to @code{ordergreat}) precedes (declared main variables)\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1576
 msgid ""
 "For non-atomic expressions, the canonical ordering is derived from the ordering\n"
 "for atoms.  For the built-in @code{+} @code{*} and @code{^} operators,\n"
@@ -2308,34 +2320,34 @@ msgid ""
 "considered the operator and the subscript is considered an argument.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1580
 msgid ""
 "The canonical ordering of expressions is modified by the functions\n"
 "@mref{ordergreat} and @mrefcomma{orderless} and the @mrefcomma{mainvar}@w{}\n"
 "@mrefcomma{constant} and @code{scalar} declarations.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1582
 msgid ""
 "See also @mrefdot{sort}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1584
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1587
 msgid ""
 "Ordering ordinary symbols and constants.\n"
 "Note that @code{%pi} is not ordered according to its numerical value.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1602
 msgid ""
 "@c ===beg===\n"
 "@c stringdisp : true;\n"
-"@c sort ([%pi, 3b0, 3.0, x, X, \"foo\", 3, a, 4, \"bar\", 4.0, 4b0]);\n"
+"@c sort ([%pi, 3b0, 3.0, x, X, \\"foo\\", 3, a, 4, \\"bar\\", 4.0, 4b0]);\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
@@ -2343,18 +2355,18 @@ msgid ""
 "(%o1)                         true\n"
 "@end group\n"
 "@group\n"
-"(%i2) sort ([%pi, 3b0, 3.0, x, X, \"foo\", 3, a, 4, \"bar\", 4.0, 4b0]);\n"
-"(%o2) [3, 3.0, 4, 4.0, 3.0b0, 4.0b0, %pi, \"bar\", \"foo\", X, a, x]\n"
+"(%i2) sort ([%pi, 3b0, 3.0, x, X, \\"foo\\", 3, a, 4, \\"bar\\", 4.0, 4b0]);\n"
+"(%o2) [3, 3.0, 4, 4.0, 3.0b0, 4.0b0, %pi, \\"bar\\", \\"foo\\", X, a, x]\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1604
 msgid ""
 "Effect of @code{ordergreat} and @code{orderless} functions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1629
 msgid ""
 "@c ===beg===\n"
 "@c sort ([M, H, K, T, E, W, G, A, P, J, S]);\n"
@@ -2382,12 +2394,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1631
 msgid ""
 "Effect of @code{mainvar}, @code{constant}, and @code{scalar} declarations.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1661
 msgid ""
 "@c ===beg===\n"
 "@c sort ([aa, foo, bar, bb, baz, quux, cc, dd, A1, B1, C1]);\n"
@@ -2420,12 +2432,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1663
 msgid ""
 "Ordering non-atomic expressions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1682
 msgid ""
 "@c ===beg===\n"
 "@c sort ([1, 2, n, f(1), f(2), f(2, 1), g(1), g(1, 2), g(n), \n"
@@ -2447,7 +2459,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1687
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Predicate functions}\n"
@@ -2455,19 +2467,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1689
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1693
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{part}\n"
 "@deffn {Function} part (@var{expr}, @var{n_1}, @dots{}, @var{n_k})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1699
 msgid ""
 "Returns parts of the displayed form of @code{expr}.  It obtains the part of\n"
 "@code{expr} as specified by the indices @var{n_1}, @dots{}, @var{n_k}.  First\n"
@@ -2476,46 +2488,46 @@ msgid ""
 "@code{expr}.  If no indices are specified @code{expr} is returned.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1701
 msgid ""
 "@code{part} can be used to obtain an element of a list, a row of a matrix, etc.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1707
 msgid ""
-"@c \"If the last argument to a part function\" => FOLLOWING APPLIES TO OTHER FUNCTIONS ??\n"
+"@c \\"If the last argument to a part function\\" => FOLLOWING APPLIES TO OTHER FUNCTIONS ??\n"
 "@c ATTEMPT TO VERIFY; IF SO, COPY THIS COMMENTARY TO DESCRIPTIONS OF OTHER FUNCTIONS\n"
 "If the last argument to a @code{part} function is a list of indices then\n"
 "several subexpressions are picked out, each one corresponding to an\n"
 "index of the list.  Thus @code{part (x + y + z, [1, 3])} is @code{z+x}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1711
 msgid ""
 "@mref{piece} holds the last expression selected when using the @code{part}\n"
 "functions.  It is set during the execution of the function and thus\n"
 "may be referred to in the function itself as shown below.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1715
 msgid ""
 "If @mref{partswitch} is set to @code{true} then @code{end} is returned when a\n"
 "selected part of an expression doesn't exist, otherwise an error message is\n"
 "given.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1718
 msgid ""
 "See also @mrefcomma{inpart} @mrefcomma{substpart} @mrefcomma{substinpart}@w{}\n"
 "@mrefcomma{dpart} and @mrefdot{lpart}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1720
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1740
 msgid ""
 "@c ===beg===\n"
 "@c part(z+2*y+a,2);\n"
@@ -2538,12 +2550,12 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1742
 msgid ""
 "@code{example (part)} displays additional examples.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1747
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2551,19 +2563,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1749
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1753
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{partition}\n"
 "@deffn {Function} partition (@var{expr}, @var{x})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1758
 msgid ""
 "Returns a list of two expressions.  They are (1) the factors of @var{expr}\n"
 "(if it is a product), the terms of @var{expr} (if it is a sum), or the list\n"
@@ -2571,12 +2583,12 @@ msgid ""
 "or list which do.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1760
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1769
 msgid ""
 "@example\n"
 "(%i1) partition (2*a*x*f(x), x);\n"
@@ -2588,7 +2600,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1774
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2596,12 +2608,12 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1776
 msgid ""
 "@c NEEDS EXAMPLE\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1781
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{partswitch}\n"
@@ -2609,14 +2621,14 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1785
 msgid ""
 "When @code{partswitch} is @code{true}, @code{end} is returned\n"
 "when a selected part of an expression doesn't exist, otherwise an\n"
 "error message is given.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1790
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2624,14 +2636,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1794
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{pickapart}\n"
 "@deffn {Function} pickapart (@var{expr}, @var{n})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1799
 msgid ""
 "Assigns intermediate expression labels to subexpressions of @var{expr} at depth\n"
 "@var{n}, an integer.  Subexpressions at greater or lesser depths are not\n"
@@ -2639,18 +2651,18 @@ msgid ""
 "intermediate expressions equivalent to the original expression @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1802
 msgid ""
 "See also @mrefcomma{part} @mrefcomma{dpart} @mrefcomma{lpart}@w{}\n"
 "@mrefcomma{inpart} and @mrefdot{reveal}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1804
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1820
 msgid ""
 "@example\n"
 "(%i1) expr: (a+b)/2 + sin (x^2)/3 - log (1 + sqrt(x+1));\n"
@@ -2669,33 +2681,49 @@ msgid ""
 "(%i3) pickapart (expr, 1);\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1822
 msgid ""
 "(%t3)                - log(sqrt(x + 1) + 1)\n"
+msgstr ""
+
+#: Expressions.texi:1828
+msgid ""
 "                                  2\n"
 "                             sin(x )\n"
 "(%t4)                        -------\n"
 "                                3\n"
+msgstr ""
+
+#: Expressions.texi:1833
+msgid ""
 "                              b + a\n"
 "(%t5)                         -----\n"
 "                                2\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1836
 msgid ""
 "(%o5)                    %t5 + %t4 + %t3\n"
 "(%i5) pickapart (expr, 2);\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1838
 msgid ""
 "(%t6)                 log(sqrt(x + 1) + 1)\n"
+msgstr ""
+
+#: Expressions.texi:1842
+msgid ""
 "                                  2\n"
 "(%t7)                        sin(x )\n"
+msgstr ""
+
+#: Expressions.texi:1845
+msgid ""
 "(%t8)                         b + a\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1850
 msgid ""
 "                         %t8   %t7\n"
 "(%o8)                    --- + --- - %t6\n"
@@ -2703,14 +2731,18 @@ msgid ""
 "(%i8) pickapart (expr, 3);\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1852
 msgid ""
 "(%t9)                    sqrt(x + 1) + 1\n"
+msgstr ""
+
+#: Expressions.texi:1856
+msgid ""
 "                                2\n"
 "(%t10)                         x\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1861
 msgid ""
 "                  b + a              sin(%t10)\n"
 "(%o10)            ----- - log(%t9) + ---------\n"
@@ -2718,7 +2750,7 @@ msgid ""
 "(%i10) pickapart (expr, 4);\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1870
 msgid ""
 "(%t11)                     sqrt(x + 1)\n"
 "@group\n"
@@ -2730,12 +2762,12 @@ msgid ""
 "(%i11) pickapart (expr, 5);\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1872
 msgid ""
 "(%t12)                        x + 1\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1883
 msgid ""
 "                   2\n"
 "              sin(x )   b + a\n"
@@ -2749,7 +2781,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1888
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2757,19 +2789,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1890
 msgid ""
 "@c NEEDS WORK\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1894
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{piece}\n"
 "@defvr {System variable} piece\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1899
 msgid ""
 "Holds the last expression selected when using the @mref{part} functions.\n"
 "@c WHAT DOES THIS MEAN EXACTLY ??\n"
@@ -2777,12 +2809,12 @@ msgid ""
 "the function itself.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1901
 msgid ""
-"@c NEED \"SEE ALSO\" TO POINT TO LIST OF ALL RELEVANT FUNCTIONS\n"
+"@c NEED \\"SEE ALSO\\" TO POINT TO LIST OF ALL RELEVANT FUNCTIONS\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1906
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2790,7 +2822,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1912
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{psubst}\n"
@@ -2799,36 +2831,36 @@ msgid ""
 "@fname{psubst} (@var{a}, @var{b}, @var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1915
 msgid ""
 "@code{psubst(@var{a}, @var{b}, @var{expr})} is simliar to @code{subst}.  See \n"
 "@mrefdot{subst}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1918
 msgid ""
 "In distinction from @code{subst} the function @code{psubst} makes parallel \n"
 "substitutions, if the first argument @var{list} is a list of equations.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1920
 msgid ""
 "See also @mref{sublis} for making parallel substitutions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1922
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1926
 msgid ""
 "The first example shows parallel substitution with @code{psubst}.  The second\n"
 "example shows the result for the function @code{subst}, which does a serial\n"
 "substitution.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1941
 msgid ""
 "@c ===beg===\n"
 "@c psubst ([a^2=b, b=a], sin(a^2) + sin(b));\n"
@@ -2846,7 +2878,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1946
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2854,7 +2886,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1953
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{rembox}\n"
@@ -2864,39 +2896,39 @@ msgid ""
 "@fname{rembox} (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1955
 msgid ""
 "Removes boxes from @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1958
 msgid ""
 "@code{rembox (@var{expr}, unlabelled)} removes all unlabelled boxes from\n"
 "@var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1960
 msgid ""
 "@code{rembox (@var{expr}, @var{label})} removes only boxes bearing @var{label}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1962
 msgid ""
 "@code{rembox (@var{expr})} removes all boxes, labelled and unlabelled.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1965
 msgid ""
 "Boxes are drawn by the @mrefcomma{box} @mrefcomma{dpart} and @mref{lpart}@w{}\n"
 "functions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:1967
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2032
 msgid ""
 "@c ===beg===\n"
 "@c expr: (a*d - b*c)/h^2 + sin(%pi*x);\n"
@@ -2922,36 +2954,36 @@ msgid ""
 "@end group\n"
 "@group\n"
 "(%i3) expr2: lpart (BAR, lpart (FOO, %, 1), 2);\n"
-"                                  BAR\"\"\"\"\"\"\"\"\n"
-"                   FOO\"\"\"\"\"\"\"\"\"   \"a d - b c\"\n"
-"(%o3)              \"sin(%pi x)\" + \"---------\"\n"
-"                   \"\"\"\"\"\"\"\"\"\"\"\"   \"    2    \"\n"
-"                                  \"   h     \"\n"
-"                                  \"\"\"\"\"\"\"\"\"\"\"\n"
+"                                  BAR\\"\\"\\"\\"\\"\\"\\"\\"\n"
+"                   FOO\\"\\"\\"\\"\\"\\"\\"\\"\\"   \\"a d - b c\\"\n"
+"(%o3)              \\"sin(%pi x)\\" + \\"---------\\"\n"
+"                   \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"   \\"    2    \\"\n"
+"                                  \\"   h     \\"\n"
+"                                  \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
 "@end group\n"
 "@group\n"
 "(%i4) rembox (expr2, unlabelled);\n"
-"                                  BAR\"\"\"\"\"\"\"\"\n"
-"                   FOO\"\"\"\"\"\"\"\"\"   \"a d - b c\"\n"
-"(%o4)              \"sin(%pi x)\" + \"---------\"\n"
-"                   \"\"\"\"\"\"\"\"\"\"\"\"   \"    2    \"\n"
-"                                  \"   h     \"\n"
-"                                  \"\"\"\"\"\"\"\"\"\"\"\n"
+"                                  BAR\\"\\"\\"\\"\\"\\"\\"\\"\n"
+"                   FOO\\"\\"\\"\\"\\"\\"\\"\\"\\"   \\"a d - b c\\"\n"
+"(%o4)              \\"sin(%pi x)\\" + \\"---------\\"\n"
+"                   \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"   \\"    2    \\"\n"
+"                                  \\"   h     \\"\n"
+"                                  \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
 "@end group\n"
 "@group\n"
 "(%i5) rembox (expr2, FOO);\n"
-"                                 BAR\"\"\"\"\"\"\"\"\n"
-"                                 \"a d - b c\"\n"
-"(%o5)               sin(%pi x) + \"---------\"\n"
-"                                 \"    2    \"\n"
-"                                 \"   h     \"\n"
-"                                 \"\"\"\"\"\"\"\"\"\"\"\n"
+"                                 BAR\\"\\"\\"\\"\\"\\"\\"\\"\n"
+"                                 \\"a d - b c\\"\n"
+"(%o5)               sin(%pi x) + \\"---------\\"\n"
+"                                 \\"    2    \\"\n"
+"                                 \\"   h     \\"\n"
+"                                 \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\n"
 "@end group\n"
 "@group\n"
 "(%i6) rembox (expr2, BAR);\n"
-"                    FOO\"\"\"\"\"\"\"\"\"   a d - b c\n"
-"(%o6)               \"sin(%pi x)\" + ---------\n"
-"                    \"\"\"\"\"\"\"\"\"\"\"\"       2\n"
+"                    FOO\\"\\"\\"\\"\\"\\"\\"\\"\\"   a d - b c\n"
+"(%o6)               \\"sin(%pi x)\\" + ---------\n"
+"                    \\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"\\"       2\n"
 "                                      h\n"
 "@end group\n"
 "@group\n"
@@ -2964,7 +2996,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2037
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -2972,20 +3004,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2041
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{reveal}\n"
 "@deffn {Function} reveal (@var{expr}, @var{depth})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2044
 msgid ""
 "Replaces parts of @var{expr} at the specified integer @var{depth}\n"
 "with descriptive summaries.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2062
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
@@ -3006,24 +3038,24 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2065
 msgid ""
 "When @var{depth} is greater than or equal to the maximum depth of @var{expr},\n"
 "@code{reveal (@var{expr}, @var{depth})} returns @var{expr} unmodified.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2068
 msgid ""
 "@code{reveal} evaluates its arguments.\n"
 "@code{reveal} returns the summarized expression.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2070
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2118
 msgid ""
 "@c === beg ===\n"
 "@c e: expand ((a - b)^2)/expand ((exp(a) + exp(b))^2);\n"
@@ -3074,7 +3106,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2123
 msgid ""
 "@opencatbox\n"
 "@category{Expressions} @category{Display functions}\n"
@@ -3082,41 +3114,41 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2125
 msgid ""
 "@c NEEDS EXPANSION, CLARIFICATION, MORE EXAMPLES\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2129
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sublis}\n"
 "@deffn {Function} sublis (@var{list}, @var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2132
 msgid ""
 "Makes multiple parallel substitutions into an expression.  @var{list} is a list\n"
 "of equations.  The left hand side of the equations must be an atom.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2135
 msgid ""
 "The variable @mref{sublis_apply_lambda} controls simplification after\n"
 "@code{sublis}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2137
 msgid ""
 "See also @mref{psubst} for making parallel substitutions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2139
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2149
 msgid ""
 "@c ===beg===\n"
 "@c sublis ([a=b, b=a], sin(a) + cos(b));\n"
@@ -3129,7 +3161,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2154
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -3137,7 +3169,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2159
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{sublis_apply_lambda}\n"
@@ -3145,14 +3177,14 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2163
 msgid ""
 "Controls whether @code{lambda}'s substituted are applied in simplification after\n"
 "@code{sublis} is used or whether you have to do an @mref{ev} to get things to\n"
 "apply.  @code{true} means do the application.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2168
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -3160,7 +3192,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2173
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{subnumsimp}\n"
@@ -3168,39 +3200,39 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2177
 msgid ""
 "If @code{true} then the functions @mref{subst} and @mref{psubst} can substitute\n"
 "a subscripted variable @code{f[x]} with a number, when only the symbol @code{f}\n"
 "is given.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2179
 msgid ""
 "See also @mrefdot{subst}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2182
 msgid ""
 "@example\n"
 "(%i1) subst(100,g,g[x]+2);\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2186
 msgid ""
 "subst: cannot substitute 100 for operator g in expression g\n"
 "                                                           x\n"
 " -- an error. To debug this try: debugmode(true);\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2190
 msgid ""
 "(%i2) subst(100,g,g[x]+2),subnumsimp:true;\n"
 "(%o2)                          102\n"
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2195
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -3208,19 +3240,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2197
 msgid ""
 "@c NEEDS CLARIFICATION, MORE EXAMPLES\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2201
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{subst}\n"
 "@deffn {Function} subst (@var{a}, @var{b}, @var{c})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2215
 msgid ""
 "Substitutes @var{a} for @var{b} in @var{c}.  @var{b} must be an atom or a\n"
 "complete subexpression of @var{c}.  For example, @code{x+y+z} is a complete\n"
@@ -3231,19 +3263,19 @@ msgid ""
 "the form @code{e^(1/f)} then one could use @code{subst (a^f, e, c)}.  The\n"
 "@code{subst} command also discerns the @code{x^y} in @code{x^-y} so that\n"
 "@code{subst (a, sqrt(x), 1/sqrt(x))} yields @code{1/a}.  @var{a} and @var{b}\n"
-"may also be operators of an expression enclosed in double-quotes @code{\"} or\n"
+"may also be operators of an expression enclosed in double-quotes @code{\\"} or\n"
 "they may be function names.  If one wishes to substitute for the independent\n"
 "variable in derivative forms then the @code{at} function (see below) should be\n"
 "used.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2218
 msgid ""
 "@c UMM, REVERSE THIS AND MOVE IT TO substitute ??\n"
 "@code{subst} is an alias for @code{substitute}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2226
 msgid ""
 "The commands @code{subst (@var{eq_1}, @var{expr})} or\n"
 "@code{subst ([@var{eq_1}, ..., @var{eq_k}], @var{expr})} are other permissible\n"
@@ -3254,13 +3286,13 @@ msgid ""
 "making parallel substitutions.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2229
 msgid ""
 "@mref{exptsubst} if @code{true} permits substitutions\n"
 "like @code{y} for @code{%e^x} in @code{%e^(a*x)} to take place.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2234
 msgid ""
 "@c WHAT IS THIS ABOUT ??\n"
 "When @code{opsubst} is @code{false},\n"
@@ -3268,17 +3300,17 @@ msgid ""
 "E.g. @code{(opsubst: false, subst (x^2, r, r+r[0]))} will work.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2236
 msgid ""
 "See also @mrefcomma{at} @mref{ev} and @mrefdot{psubst}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2238
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2254
 msgid ""
 "@c ===beg===\n"
 "@c subst (a, x+y, x + (x+y)^2 + y);\n"
@@ -3297,13 +3329,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2257
 msgid ""
 "The substitution is done in serial for a list of equations.  Compare this with\n"
 "a parallel substitution:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2272
 msgid ""
 "@c ===beg===\n"
 "@c subst([a=b, b=c], a+b);\n"
@@ -3321,22 +3353,22 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2276
 msgid ""
 "Single-character Operators like @code{+} and @code{-} have to be quoted in\n"
 "order to be replaced by subst. It is to note, though, that @code{a+b-c}\n"
 "might be expressed as @code{a+b+(-1*c)} internally.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2281
 msgid ""
 "@example\n"
-"(%i3) subst([\"+\"=\"-\"],a+b-c);\n"
+"(%i3) subst([\\"+\\"=\\"-\\"],a+b-c);\n"
 "(%o3)                                 c-b+a\n"
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2310
 msgid ""
 "The difference between @code{subst} and @code{at} can be seen in the\n"
 "following example:\n"
@@ -3368,13 +3400,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2313
 msgid ""
 "@noindent\n"
 "For further examples, do @code{example (subst)}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2318
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -3382,30 +3414,30 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2320
 msgid ""
 "@c NEEDS CLARIFICATION\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2324
 msgid ""
 "@c ----------------------------------------------------------------------------\n"
 "@anchor{substinpart}\n"
 "@deffn {Function} substinpart (@var{x}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2327
 msgid ""
 "Similar to @mrefcomma{substpart} but @code{substinpart} works on the\n"
 "internal representation of @var{expr}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2329
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2354
 msgid ""
 "@c ===beg===\n"
 "@c x . 'diff (f(x), x, 2);\n"
@@ -3433,14 +3465,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2358
 msgid ""
 "If the last argument to a @code{part} function is a list of indices then\n"
 "several subexpressions are picked out, each one corresponding to an\n"
 "index of the list.  Thus\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2368
 msgid ""
 "@c ===beg===\n"
 "@c part (x + y + z, [1, 3]);\n"
@@ -3453,7 +3485,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2375
 msgid ""
 "@mref{piece} holds the value of the last expression selected when using the\n"
 "@code{part} functions.  It is set during the execution of the function and\n"
@@ -3463,7 +3495,7 @@ msgid ""
 "message is given.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2417
 msgid ""
 "@c ===beg===\n"
 "@c expr: 27*y^3 + 54*x*y^2 + 36*x^2*y + y + 8*x^3 + x + 1;\n"
@@ -3508,13 +3540,13 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2420
 msgid ""
 "Also, setting the option @mref{inflag} to @code{true} and calling @mref{part}\n"
 "or @mref{substpart} is the same as calling @mref{inpart} or @code{substinpart}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2425
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -3522,39 +3554,39 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2427
 msgid ""
 "@c NEEDS CLARIFICATION\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2431
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{substpart}\n"
 "@deffn {Function} substpart (@var{x}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2437
 msgid ""
 "Substitutes @var{x} for the subexpression picked out by the rest of the\n"
 "arguments as in @mrefdot{part}  It returns the new value of @var{expr}.  @var{x}\n"
 "may be some operator to be substituted for an operator of @var{expr}.  In some\n"
-"cases @var{x} needs to be enclosed in double-quotes @code{\"} (e.g.\n"
-"@code{substpart (\"+\", a*b, 0)} yields @code{b + a}).\n"
+"cases @var{x} needs to be enclosed in double-quotes @code{\\"} (e.g.\n"
+"@code{substpart (\\"+\\", a*b, 0)} yields @code{b + a}).\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2439
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2470
 msgid ""
 "@c ===beg===\n"
 "@c 1/(x^2 + 2);\n"
 "@c substpart (3/2, %, 2, 1, 2);\n"
 "@c a*x + f(b, y);\n"
-"@c substpart (\"+\", %, 1, 0);\n"
+"@c substpart (\\"+\\", %, 1, 0);\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
@@ -3576,20 +3608,20 @@ msgid ""
 "(%o3)                     a x + f(b, y)\n"
 "@end group\n"
 "@group\n"
-"(%i4) substpart (\"+\", %, 1, 0);\n"
+"(%i4) substpart (\\"+\\", %, 1, 0);\n"
 "(%o4)                    x + f(b, y) + a\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2474
 msgid ""
 "Also, setting the option @mref{inflag} to @code{true} and calling @mref{part}\n"
 "or @code{substpart} is the same as calling @code{inpart} or\n"
 "@mrefdot{substinpart}\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2479
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -3597,28 +3629,28 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2483
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{symbolp}\n"
 "@deffn {Function} symbolp (@var{expr})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2487
 msgid ""
 "Returns @code{true} if @var{expr} is a symbol, else @code{false}.  In effect,\n"
 "@code{symbolp(x)} is equivalent to the predicate\n"
 "@code{atom(x) and not numberp(x)}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2491
 msgid ""
 "@c FOLLOWING REALLY WANTS TO BE @xref{Identiifers} BUT THAT\n"
 "@c LEAVES THE UNPLEASANT RESIDUE *Note ...:: IN THE OUTPUT OF describe\n"
 "See also @ref{Identifiers}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2496
 msgid ""
 "@opencatbox\n"
 "@category{Predicate functions}\n"
@@ -3626,14 +3658,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2500
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{unorder}\n"
 "@deffn {Function} unorder ()\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2509
 msgid ""
 "Disables the aliasing created by the last use of the ordering commands \n"
 "@code{ordergreat} and @code{orderless}.  @code{ordergreat} and @code{orderless} \n"
@@ -3645,12 +3677,12 @@ msgid ""
 "See also @code{ordergreat} and @code{orderless}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2511
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2516
 msgid ""
 "@code{ordergreat(a)} introduces an alias for the symbol @code{a}.  Therefore,\n"
 "the difference of @code{%o2} and @code{%o4} does not vanish.  @code{unorder}\n"
@@ -3658,7 +3690,7 @@ msgid ""
 "output @code{%o7}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2556
 msgid ""
 "@c ===beg===\n"
 "@c unorder();\n"
@@ -3701,7 +3733,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2561
 msgid ""
 "@opencatbox\n"
 "@category{Expressions}\n"
@@ -3709,25 +3741,25 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2565
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{verbify}\n"
 "@deffn {Function} verbify (@var{f})\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2568
 msgid ""
 "Returns the verb form of the function name @var{f}.\n"
 "See also @code{verb}, @code{noun}, and @code{nounify}.\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2570
 msgid ""
 "Examples:\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2595
 msgid ""
 "@c ===beg===\n"
 "@c verbify ('foo);\n"
@@ -3755,7 +3787,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Expressions.texi
+#: Expressions.texi:2600
 msgid ""
 "@opencatbox\n"
 "@category{Nouns and verbs}\n"
@@ -3763,6 +3795,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Expressions.texi
-msgid ""
-msgstr ""

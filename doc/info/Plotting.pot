@@ -1,23 +1,23 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# Plotting.texi
+msgstr ""
+
+#: Plotting.texi:9
 msgid ""
 "@menu\n"
 "* Introduction to Plotting::\n"
@@ -29,7 +29,7 @@ msgid ""
 "@end menu\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:14
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Introduction to Plotting, Plotting Formats, Plotting, Plotting\n"
@@ -37,7 +37,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:25
 msgid ""
 "Maxima uses an external plotting package to make the plots (see the\n"
 "section on @mref{Plotting Formats}).  The plotting functions calculate a\n"
@@ -51,7 +51,7 @@ msgid ""
 "@code{xmaxima}, @code{mgnuplot}, @code{gnuplot_pipes} or @code{geomview}).\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:32
 msgid ""
 "There are to save the plot in a graphic format file. In those cases, the\n"
 "file @code{maxout_xxx.format} created by Maxima includes commands that will\n"
@@ -61,7 +61,7 @@ msgid ""
 "normally used for the kind of graphic file selected.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:40
 msgid ""
 "The @code{maxout_xxx.format} and @code{maxplot.extension} files are created\n"
 "in the directory specified by the system variable\n"
@@ -72,7 +72,7 @@ msgid ""
 "the file(s) created, including their complete path.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:48
 msgid ""
 "If the format used is either @code{gnuplot} or @code{xmaxima}, the\n"
 "external programs @code{gnuplot} or @code{xmaxima} can be run, giving it\n"
@@ -83,7 +83,7 @@ msgid ""
 "inspected to look for the source of the problem.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:55
 msgid ""
 "The additional package @ref{draw} provides functions similar to the ones\n"
 "described in this section with some extra features. Note that some\n"
@@ -93,14 +93,14 @@ msgid ""
 "information for either of those two packages.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:59
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:64
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Plotting Formats, Functions and Variables for Plotting, Introduction to Plotting, Plotting\n"
@@ -108,7 +108,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:70
 msgid ""
 "Maxima can use either Gnuplot, Xmaxima or Geomview as graphics program. Gnuplot and Geomview are\n"
 "external programs which must be installed separately, while Xmaxima\n"
@@ -117,32 +117,32 @@ msgid ""
 "(see also the @mref{Plotting Options} section).\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:72
 msgid ""
 "The plotting formats are the following:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:76
 msgid ""
 "@itemize @bullet\n"
 "@item\n"
 "@strong{gnuplot} (default on Windows)\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:80
 msgid ""
 "Used to launch the external program gnuplot, which must be installed in\n"
 "your system.  All plotting commands and data are saved into the file\n"
 "@code{maxout_xxx.gnuplot}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:83
 msgid ""
 "@item\n"
 "@strong{gnuplot_pipes} (default on non-Windows platforms)\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:93
 msgid ""
 "This format is not available in Windows platforms.\n"
 "It is similar to the @code{gnuplot} format except that the commands are sent\n"
@@ -155,7 +155,7 @@ msgid ""
 "displayed on the screen.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:98
 msgid ""
 "This format is only used to plot to the screen; whenever graphic files are\n"
 "created, the format is silently switched to @code{gnuplot} and\n"
@@ -163,13 +163,13 @@ msgid ""
 "in file @code{maxout_xxx.gnuplot}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:101
 msgid ""
 "@item\n"
 "@strong{mgnuplot}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:107
 msgid ""
 "Mgnuplot is a Tk-based wrapper around gnuplot.  It is included in the\n"
 "Maxima distribution.  Mgnuplot offers a rudimentary GUI for gnuplot,\n"
@@ -178,13 +178,13 @@ msgid ""
 "Unix systems, the Tcl/Tk system.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:110
 msgid ""
 "@item\n"
 "@strong{xmaxima}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:121
 msgid ""
 "Xmaxima is a Tcl/Tk graphical interface for Maxima that can also be used\n"
 "to display plots created when Maxima is run from the console or from\n"
@@ -198,38 +198,38 @@ msgid ""
 "name of that file as argument.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:124
 msgid ""
 "In previous versions this format used to be called @code{openmath}; that\n"
 "old name still works as a synonym for @code{xmaxima}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:127
 msgid ""
 "@item\n"
 "@strong{geomview}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:131
 msgid ""
 "Geomview, a Motif based interactive 3D viewing program for Unix, can\n"
 "also be used to display plots created by Maxima.  To use this format,\n"
 "the geomview program must be installed.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:133
 msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:137
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:142
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Functions and Variables for Plotting, Plotting Options, Plotting Formats, Plotting\n"
@@ -237,31 +237,35 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:146
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{contour_plot}\n"
 "@deffn {Function} contour_plot (@var{expr}, @var{x_range}, @var{y_range}, @var{options}, @dots{})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:150
 msgid ""
 "It plots the contours (curves of equal value) of @var{expr}\n"
 "over the region @var{x_range} by @var{y_range}.\n"
 "Any additional arguments are treated the same as in @mrefdot{plot3d}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:156
 msgid ""
 "This function only works when the plot format is either @code{gnuplot}\n"
 "or @code{gnuplot_pipes}.  The additional package\n"
 "@mrefcomma{implicit_plot} which works in any graphic format, can also be\n"
 "used to plot contours but a separate expression must be given for each\n"
 "contour.\n"
+msgstr ""
+
+#: Plotting.texi:159
+msgid ""
 "Examples:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:169
 msgid ""
 "@c ===beg===\n"
 "@c contour_plot (x^2 + y^2, [x, -4, 4], [y, -4, 4])$\n"
@@ -274,7 +278,7 @@ msgid ""
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:175
 msgid ""
 "You can add any options accepted by @code{plot3d}; for instance, the\n"
 "option @mref{legend} with a value of false, to remove the\n"
@@ -283,18 +287,18 @@ msgid ""
 "@mrefcomma{gnuplot_preamble}  as in the next example:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:191
 msgid ""
 "@c ===beg===\n"
 "@c contour_plot (u^3 + v^2, [u, -4, 4], [v, -4, 4], \n"
 "@c               [legend,false],\n"
-"@c               [gnuplot_preamble, \"set cntrparam levels 12\"])$\n"
+"@c               [gnuplot_preamble, \\"set cntrparam levels 12\\"])$\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
 "(%i1) contour_plot (u^3 + v^2, [u, -4, 4], [v, -4, 4],\n"
 "              [legend,false],\n"
-"              [gnuplot_preamble, \"set cntrparam levels 12\"])$\n"
+"              [gnuplot_preamble, \\"set cntrparam levels 12\\"])$\n"
 "@end group\n"
 "@end example\n"
 "@ifnotinfo\n"
@@ -302,7 +306,7 @@ msgid ""
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:196
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -310,33 +314,33 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:200
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{geomview_command}\n"
 "@defvr {System variable} geomview_command\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:206
 msgid ""
 "This variable stores the name of the command used to run the geomview\n"
 "program when the plot format is @code{geomview}. Its default value is\n"
-"\"geomview\".  If the geomview program is not found unless you give\n"
+"\\"geomview\\".  If the geomview program is not found unless you give\n"
 "its complete path or if you want to try a different version of it,\n"
 "you may change the value of this variable. For instance,\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:213
 msgid ""
 "@c ===beg===\n"
-"@c geomview_command: \"/usr/local/bin/my_geomview\"$\n"
+"@c geomview_command: \\"/usr/local/bin/my_geomview\\"$\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) geomview_command: \"/usr/local/bin/my_geomview\"$\n"
+"(%i1) geomview_command: \\"/usr/local/bin/my_geomview\\"$\n"
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:218
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -344,14 +348,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:222
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{get_plot_option}\n"
 "@deffn {Function} get_plot_option (@var{keyword}, @var{index})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:227
 msgid ""
 "Returns the current default value of the option named @var{keyword},\n"
 "which is a list. The optional argument @var{index} must be a positive\n"
@@ -359,40 +363,40 @@ msgid ""
 "(element 1 is the name of the option).\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:231
 msgid ""
 "See also @mrefcomma{set_plot_option} @mref{remove_plot_option} and the\n"
 "section on Plotting Options.\n"
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:235
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_command}\n"
 "@defvr {System variable} gnuplot_command\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:241
 msgid ""
 "This variable stores the name of the command used to run the gnuplot\n"
 "program when the plot format is @code{gnuplot}. Its default value is\n"
-"\"gnuplot\". If the gnuplot program is not found unless you give its\n"
+"\\"gnuplot\\". If the gnuplot program is not found unless you give its\n"
 "complete path or if you want to try a different version of it, you\n"
 "may change the value of this variable. For instance,\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:248
 msgid ""
 "@c ===beg===\n"
-"@c gnuplot_command: \"/usr/local/bin/my_gnuplot\"$\n"
+"@c gnuplot_command: \\"/usr/local/bin/my_gnuplot\\"$\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) gnuplot_command: \"/usr/local/bin/my_gnuplot\"$\n"
+"(%i1) gnuplot_command: \\"/usr/local/bin/my_gnuplot\\"$\n"
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:253
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -400,24 +404,24 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:257
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_file_args}\n"
 "@defvr {System variable} gnuplot_file_args\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:264
 msgid ""
 "When a graphic file is going to be created using @code{gnuplot}, this\n"
 "variable is used to specify the way the file name should be passed to\n"
-"gnuplot. Its default value is \"~s\", which means that the name of the\n"
+"gnuplot. Its default value is \\"~s\\", which means that the name of the\n"
 "file will be passed directly. The contents of this variable can be\n"
 "changed in order to add options for the gnuplot program, adding those\n"
-"options before the format directive \"~s\".\n"
+"options before the format directive \\"~s\\".\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:269
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -425,41 +429,41 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:273
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_view_args}\n"
 "@defvr {System variable} gnuplot_view_args\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:281
 msgid ""
 "This variable is used to parse the argument that will be passed to the\n"
 "gnuplot program when the plot format is @code{gnuplot}. Its default\n"
-"value is \"-persist ~s\", where \"~s\" will be replaced with the name of the\n"
+"value is \\"-persist ~s\\", where \\"~s\\" will be replaced with the name of the\n"
 "file where the gnuplot commands have been written (usually\n"
-"\"maxout_xxx.gnuplot\"). The option @code{-persist} tells gnuplot to exit\n"
+"\\"maxout_xxx.gnuplot\\"). The option @code{-persist} tells gnuplot to exit\n"
 "after the commands in the file have been executed, without closing the\n"
 "window that displays the plot.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:284
 msgid ""
 "Those familiar with gnuplot, might want to change the value of this\n"
 "variable. For example, by changing it to:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:291
 msgid ""
 "@c ===beg===\n"
-"@c gnuplot_view_args: \"~s -\"$\n"
+"@c gnuplot_view_args: \\"~s -\\"$\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) gnuplot_view_args: \"~s -\"$\n"
+"(%i1) gnuplot_view_args: \\"~s -\\"$\n"
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:296
 msgid ""
 "gnuplot will not be closed after the commands in the file have been\n"
 "executed; thus, the window with the plot will remain, as well as the\n"
@@ -467,17 +471,17 @@ msgid ""
 "modify the plot.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:303
 msgid ""
-"In Windows versions of Gnuplot older than 4.6.3 the behavior of \"~s -\"\n"
-"and \"-persist ~s\" were the opposite; namely, \"-persist ~s\" made the plot\n"
-"window and the gnuplot interactive shell remain, while \"~s -\" closed the\n"
+"In Windows versions of Gnuplot older than 4.6.3 the behavior of \\"~s -\\"\n"
+"and \\"-persist ~s\\" were the opposite; namely, \\"-persist ~s\\" made the plot\n"
+"window and the gnuplot interactive shell remain, while \\"~s -\\" closed the\n"
 "gnuplot shell keeping the plot window. Therefore, when older gnuplot\n"
 "versions are used in Windows, it might be necessary to adjust the value\n"
 "of @code{gnuplot_view_args}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:308
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -485,7 +489,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:314
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{implicit_plot}\n"
@@ -494,7 +498,7 @@ msgid ""
 "@fname{implicit_plot} ([@var{expr_1}, @dots{}, @var{expr_n}], @var{x_range}, @var{y_range})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:322
 msgid ""
 "Displays a plot of a function on the real plane, defined implicitly by\n"
 "the expression @var{expr}. The domain in the plane is defined by\n"
@@ -505,18 +509,18 @@ msgid ""
 "also be given as extra arguments for the @code{implicit_plot} command.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:325
 msgid ""
 "The method used by @code{implicit_plot} consists of tracking sign\n"
 "changes on the domain given and it can fail for complicated expressions.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:327
 msgid ""
 "@code{load(implicit_plot)} loads this function.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:337
 msgid ""
 "Example:\n"
 "@c ===beg===\n"
@@ -529,14 +533,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:341
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting3,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:346
 msgid ""
 "@opencatbox\n"
 "@category{Plotting} @category{Share packages} @category{Package implicit_plot}\n"
@@ -544,14 +548,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:350
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{julia}\n"
 "@deffn {Function} julia (@var{x}, @var{y}, ...@var{options}...)\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:356
 msgid ""
 "Creates a graphic representation of the Julia set for the complex number\n"
 "(@var{x} + i @var{y}). The two mandatory parameters @var{x} and @var{y}\n"
@@ -560,7 +564,7 @@ msgid ""
 "time julia is used, it will be loaded automatically.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:366
 msgid ""
 "Each pixel in the grid is given a color corresponding to the number of\n"
 "iterations it takes the sequence that starts at that point to move out\n"
@@ -573,7 +577,7 @@ msgid ""
 "command.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:372
 msgid ""
 "The default domain used goes from -2 to 2 in both axes and can be\n"
 "changed with the @code{x} and @code{y} options. By default, the two axes\n"
@@ -582,7 +586,7 @@ msgid ""
 "also accepted.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:377
 msgid ""
 "The following example shows a region of the Julia set for the number\n"
 "-0.55 + i0.6. The option @mref{color_bar_tics} is used to prevent\n"
@@ -590,7 +594,7 @@ msgid ""
 "corresponding the maximum 36 iterations would not be black.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:388
 msgid ""
 "@c ===beg===\n"
 "@c julia (-0.55, 0.6, [iterations, 36], [x, -0.3, 0.2],\n"
@@ -604,25 +608,33 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:392
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting4,8cm}\n"
 "@end ifnotinfo\n"
+msgstr ""
+
+#: Plotting.texi:397
+msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:399
 msgid ""
 "@end deffn\n"
+msgstr ""
+
+#: Plotting.texi:404
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{make_transform}\n"
 "@deffn {Function} make_transform ([@var{var1}, @var{var2}, @var{var3}], @var{fx}, @var{fy}, @var{fz})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:415
 msgid ""
 "Returns a function suitable to be used in the option @mref{transform_xy}@w{}\n"
 "of plot3d.  The three variables @var{var1}, @var{var2}, @var{var3} are\n"
@@ -636,7 +648,7 @@ msgid ""
 "for those two transformations.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:420
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -644,14 +656,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:424
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mandelbrot}\n"
 "@deffn {Function} mandelbrot (@var{options})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:429
 msgid ""
 "Creates a graphic representation of the Mandelbrot set. This program is\n"
 "part of the additional package @code{dynamics}, but that package does\n"
@@ -659,7 +671,7 @@ msgid ""
 "will be loaded automatically.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:436
 msgid ""
 "This program can be called without any arguments, in which case it will\n"
 "use a default value of 9 iterations per point, a grid with dimensions\n"
@@ -669,7 +681,7 @@ msgid ""
 "number of iterations.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:446
 msgid ""
 "Each pixel in the grid is given a color corresponding to the number of\n"
 "iterations it takes the sequence starting at zero to move out\n"
@@ -682,12 +694,12 @@ msgid ""
 "is used or the option @mref{same_xy} is disabled.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:448
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:457
 msgid ""
 "@c ===beg===\n"
 "@c mandelbrot ([iterations, 30], [x, -2, 1], [y, -1.2, 1.2],\n"
@@ -699,33 +711,33 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:461
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting5,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:465
 msgid ""
 "@opencatbox\n"
 "@category{Package dynamics} @category{Plotting}\n"
 "@closecatbox\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:467
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:471
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{polar_to_xy}\n"
 "@deffn {System function} polar_to_xy\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:476
 msgid ""
 "It can be given as value for the @mref{transform_xy} option of\n"
 "plot3d.  Its effect will be to interpret the two independent variables in\n"
@@ -733,7 +745,7 @@ msgid ""
 "coordinates), and transform them into x and y coordinates.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:481
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -741,7 +753,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:488
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{plot2d}\n"
@@ -751,7 +763,7 @@ msgid ""
 "@fname{plot2d} ([@var{plot_1}, @dots{}, @var{plot_n}], @var{x_range}, @dots{}, @var{options}, @dots{})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:495
 msgid ""
 "Where @var{plot}, @var{plot_1}, @dots{}, @var{plot_n} can be either\n"
 "expressions, function names or a list with\n"
@@ -761,13 +773,13 @@ msgid ""
 "@var{y_expr}, @var{t_range}]}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:498
 msgid ""
 "Displays a plot of one or more expressions as a function of one\n"
 "variable or parameter.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:505
 msgid ""
 "@code{plot2d} displays one or several plots in two dimensions.  When\n"
 "expressions or function name are used to define the plots,\n"
@@ -777,7 +789,7 @@ msgid ""
 "@code{[@var{variable}, @var{min}, @var{max}]}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:517
 msgid ""
 "A plot can also be defined in the discrete or parametric forms.  The\n"
 "discrete form is used to plot a set of points with given coordinates.  A\n"
@@ -792,7 +804,7 @@ msgid ""
 "at consecutive integer values (1,2,3,...) on the x axis.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:525
 msgid ""
 "A parametric plot is defined by a list starting with the keyword\n"
 "@var{parametric}, followed by two expressions or function names and a\n"
@@ -803,7 +815,7 @@ msgid ""
 "functions, as @var{param} increases from @var{min} to @var{max}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:533
 msgid ""
 "A range for the vertical axis is an optional argument with the form:\n"
 "@code{[y, @var{min}, @var{max}]} (the keyword @var{y} is always used for\n"
@@ -814,13 +826,13 @@ msgid ""
 "points.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:536
 msgid ""
 "All other options should also be lists, starting with a keyword and\n"
 "followed by one or more values.  See @mrefdot{plot_options}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:542
 msgid ""
 "If there are several plots to be plotted, a legend will be\n"
 "written to identity each of the expressions.  The labels that should be\n"
@@ -829,18 +841,18 @@ msgid ""
 "function names.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:545
 msgid ""
 "@c PUT EXAMPLES FOR PRECEDING SIMPLE FORMS OF plot2d HERE\n"
 "@strong{Examples:}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:547
 msgid ""
 "Plot of a common function:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:554
 msgid ""
 "@c ===beg===\n"
 "@c plot2d (sin(x), [x, -%pi, %pi])$\n"
@@ -850,20 +862,20 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:558
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting6,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:561
 msgid ""
 "If the function grows too fast, it might be necessary to limit the\n"
 "values in the vertical axis using the @mref{y} option:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:568
 msgid ""
 "@c ===beg===\n"
 "@c plot2d (sec(x), [x, -2, 2], [y, -20, 20])$\n"
@@ -873,14 +885,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:572
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting7,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:579
 msgid ""
 "When the plot box is disabled, no labels are created for the axes. In\n"
 "that case, instead of using @mref{xlabel} and @mref{ylabel} to set the\n"
@@ -890,35 +902,35 @@ msgid ""
 "fill a square.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:592
 msgid ""
 "@c ===beg===\n"
 "@c plot2d ( x^2 - 1, [x, -3, 3], [box, false], grid2d,\n"
 "@c      [yx_ratio, 1], [axes, solid], [xtics, -2, 4, 2],\n"
-"@c      [ytics, 2, 2, 6], [label, [\"x\", 2.9, -0.3],\n"
-"@c      [\"x^2-1\", 0.1, 8]], [title, \"A parabola\"])$\n"
+"@c      [ytics, 2, 2, 6], [label, [\\"x\\", 2.9, -0.3],\n"
+"@c      [\\"x^2-1\\", 0.1, 8]], [title, \\"A parabola\\"])$\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) plot2d ( x^2 - 1, [x, -3, 3], [box, false], grid2d,\n"
 "      [yx_ratio, 1], [axes, solid], [xtics, -2, 4, 2],\n"
-"      [ytics, 2, 2, 6], [label, [\"x\", 2.9, -0.3],\n"
-"      [\"x^2-1\", 0.1, 8]], [title, \"A parabola\"])$\n"
+"      [ytics, 2, 2, 6], [label, [\\"x\\", 2.9, -0.3],\n"
+"      [\\"x^2-1\\", 0.1, 8]], [title, \\"A parabola\\"])$\n"
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:596
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting8,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:598
 msgid ""
 "A plot with a logarithmic scale in the vertical axis:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:605
 msgid ""
 "@c ===beg===\n"
 "@c plot2d (exp(3*s), [s, -2, 2], logy)$\n"
@@ -928,19 +940,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:609
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting9,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:611
 msgid ""
 "Plotting functions by name:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:627
 msgid ""
 "@c ===beg===\n"
 "@c F(x) := x^2 $\n"
@@ -959,19 +971,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:631
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting10,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:633
 msgid ""
 "A plot of the butterfly curve, defined parametrically:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:642
 msgid ""
 "@c ===beg===\n"
 "@c r: (exp(cos(t))-2*cos(4*t)-sin(t/12)^5)$\n"
@@ -983,21 +995,21 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:646
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting11,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:650
 msgid ""
 "Plot of a circle, using its parametric representation, together with the\n"
 "function -|x|. The circle will only look like a circle if the scale in the\n"
 "two axes is the same, which is done with the option @mrefdot{same_xy}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:661
 msgid ""
 "@c ===beg===\n"
 "@c plot2d([[parametric, cos(t), sin(t), [t,0,2*%pi]], -abs(x)],\n"
@@ -1011,19 +1023,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:665
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting12,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:667
 msgid ""
 "A plot of 200 random numbers between 0 and 9:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:676
 msgid ""
 "@c ===beg===\n"
 "@c plot2d ([discrete, makelist ( random(10), 200)])$\n"
@@ -1035,19 +1047,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:680
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting13,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:682
 msgid ""
 "A plot of a discrete set of points, defining x and y coordinates separately:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:691
 msgid ""
 "@c ===beg===\n"
 "@c plot2d ([discrete, makelist(i*%pi, i, 1, 5),\n"
@@ -1059,35 +1071,35 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:695
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting14,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:699
 msgid ""
 "In the next example a table with three columns is saved in a file\n"
 "``data.txt'' which is then read and the second and third column are\n"
 "plotted on the two axes:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:718
 msgid ""
 "@c ===beg===\n"
-"@c with_stdout (\"data.txt\", for x:0 thru 10 do\n"
+"@c with_stdout (\\"data.txt\\", for x:0 thru 10 do\n"
 "@c                              print (x, x^2, x^3))$\n"
-"@c data: read_matrix (\"data.txt\")$\n"
+"@c data: read_matrix (\\"data.txt\\")$\n"
 "@c plot2d ([discrete, transpose(data)[2], transpose(data)[3]],\n"
 "@c   [style,points], [point_type,diamond], [color,red])$\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) with_stdout (\"data.txt\", for x:0 thru 10 do\n"
+"(%i1) with_stdout (\\"data.txt\\", for x:0 thru 10 do\n"
 "                             print (x, x^2, x^3))$\n"
 "@end group\n"
-"(%i2) data: read_matrix (\"data.txt\")$\n"
+"(%i2) data: read_matrix (\\"data.txt\\")$\n"
 "@group\n"
 "(%i3) plot2d ([discrete, transpose(data)[2], transpose(data)[3]],\n"
 "  [style,points], [point_type,diamond], [color,red])$\n"
@@ -1095,28 +1107,28 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:722
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting15,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:724
 msgid ""
 "A plot of discrete data points together with a continuous function:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:745
 msgid ""
 "@c ===beg===\n"
 "@c xy: [[10, .6], [20, .9], [30, 1.1], [40, 1.3], [50, 1.4]]$\n"
 "@c plot2d([[discrete, xy], 2*%pi*sqrt(l/980)], [l,0,50],\n"
 "@c         [style, points, lines], [color, red, blue],\n"
 "@c         [point_type, asterisk],\n"
-"@c         [legend, \"experiment\", \"theory\"],\n"
-"@c         [xlabel, \"pendulum's length (cm)\"],\n"
-"@c         [ylabel, \"period (s)\"])$\n"
+"@c         [legend, \\"experiment\\", \\"theory\\"],\n"
+"@c         [xlabel, \\"pendulum's length (cm)\\"],\n"
+"@c         [ylabel, \\"period (s)\\"])$\n"
 "@c ===end===\n"
 "@example\n"
 "(%i1) xy: [[10, .6], [20, .9], [30, 1.1], [40, 1.3], [50, 1.4]]$\n"
@@ -1124,26 +1136,26 @@ msgid ""
 "(%i2) plot2d([[discrete, xy], 2*%pi*sqrt(l/980)], [l,0,50],\n"
 "        [style, points, lines], [color, red, blue],\n"
 "        [point_type, asterisk],\n"
-"        [legend, \"experiment\", \"theory\"],\n"
-"        [xlabel, \"pendulum's length (cm)\"],\n"
-"        [ylabel, \"period (s)\"])$\n"
+"        [legend, \\"experiment\\", \\"theory\\"],\n"
+"        [xlabel, \\"pendulum's length (cm)\\"],\n"
+"        [ylabel, \\"period (s)\\"])$\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:749
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting16,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:751
 msgid ""
 "See also the section about Plotting Options.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:756
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1151,7 +1163,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:762
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{plot3d}\n"
@@ -1160,30 +1172,30 @@ msgid ""
 "@fname{plot3d} ([@var{expr_1}, @dots{}, @var{expr_n}], @var{x_range}, @var{y_range}, @dots{}, @var{options}, @dots{})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:765
 msgid ""
 "Displays a plot of one or more surfaces defined as functions of two\n"
 "variables or in parametric form.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:769
 msgid ""
 "The functions to be plotted may be specified as expressions or function names.\n"
 "The mouse can be used to rotate the plot looking at the surface from different\n"
 "sides.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:771
 msgid ""
 "@strong{Examples:}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:773
 msgid ""
 "Plot of a function of two variables:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:784
 msgid ""
 "@c ===beg===\n"
 "@c plot3d (u^2 - v^2, [u, -2, 2], [v, -3, 3], [grid, 100, 100],\n"
@@ -1197,21 +1209,21 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:788
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting17,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:792
 msgid ""
 "Use of the @mref{z} option to limit a function that goes to infinity\n"
 " (in this case the function is minus infinity on the x and y axes); this also\n"
 "shows how to plot with only lines and no shading:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:803
 msgid ""
 "@c ===beg===\n"
 "@c plot3d ( log ( x^2*y^2 ), [x, -2, 2], [y, -2, 2], [z, -8, 4],\n"
@@ -1225,14 +1237,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:807
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting18,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:812
 msgid ""
 "The infinite values of z can also be avoided by choosing a grid that\n"
 "does not fall on any points where the function is undefined, as in the\n"
@@ -1240,7 +1252,7 @@ msgid ""
 "include a color bar that relates colors to values of the z variable:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:827
 msgid ""
 "@c ===beg===\n"
 "@c plot3d (log (x^2*y^2), [x, -2, 2], [y, -2, 2],[grid, 29, 29],\n"
@@ -1258,14 +1270,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:831
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting19,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:836
 msgid ""
 "Two surfaces in the same plot. Ranges specific to one of the surfaces can\n"
 "be given by placing each expression and its ranges in a separate list;\n"
@@ -1273,7 +1285,7 @@ msgid ""
 "definitions.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:849
 msgid ""
 "@c ===beg===\n"
 "@c plot3d ([[-3*x - y, [x, -2, 2], [y, -2, 2]],\n"
@@ -1289,19 +1301,19 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:853
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting20,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:855
 msgid ""
 "Plot of a Klein bottle, defined parametrically:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:872
 msgid ""
 "@c ===beg===\n"
 "@c expr_1: 5*cos(x)*(cos(x/2)*cos(y)+sin(x/2)*sin(2*y)+3)-10$\n"
@@ -1321,14 +1333,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:876
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting21,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:881
 msgid ""
 "Plot of a ``spherical harmonic'' function, using the predefined\n"
 "transformation, @code{spherical_to_xyz} to transform from spherical\n"
@@ -1336,7 +1348,7 @@ msgid ""
 "@mrefdot{spherical_to_xyz}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:896
 msgid ""
 "@c ===beg===\n"
 "@c plot3d (sin(2*theta)*cos(phi), [theta, 0, %pi],\n"
@@ -1354,21 +1366,21 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:900
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting22,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:904
 msgid ""
 "Use of the pre-defined function @code{polar_to_xy} to transform from\n"
 "cylindrical to rectangular coordinates.  See the documentation for\n"
 "@mrefdot{polar_to_xy}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:915
 msgid ""
 "@c ===beg===\n"
 "@c plot3d (r^.33*cos(th/3), [r,0,1], [th,0,6*%pi], [box, false],\n"
@@ -1382,14 +1394,14 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:919
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting23,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:925
 msgid ""
 "Plot of a sphere using the transformation from spherical to rectangular\n"
 "coordinates. Option @mref{same_xyz} is used to get the three axes\n"
@@ -1398,30 +1410,30 @@ msgid ""
 "surface correctly.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:938
 msgid ""
 "@c ===beg===\n"
 "@c plot3d ( 5, [theta, 0, %pi], [phi, 0, 2*%pi], same_xyz,\n"
 "@c   [transform_xy, spherical_to_xyz], [mesh_lines_color,blue],\n"
-"@c   [palette,[gradient,\"#1b1b4e\", \"#8c8cf8\"]], [legend, false])$\n"
+"@c   [palette,[gradient,\\"#1b1b4e\\", \\"#8c8cf8\\"]], [legend, false])$\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
 "(%i1) plot3d ( 5, [theta, 0, %pi], [phi, 0, 2*%pi], same_xyz,\n"
 "  [transform_xy, spherical_to_xyz], [mesh_lines_color,blue],\n"
-"  [palette,[gradient,\"#1b1b4e\", \"#8c8cf8\"]], [legend, false])$\n"
+"  [palette,[gradient,\\"#1b1b4e\\", \\"#8c8cf8\\"]], [legend, false])$\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:942
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting24,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:947
 msgid ""
 "Definition of a function of two-variables using a matrix.  Notice the\n"
 "single quote in the definition of the function, to prevent @code{plot3d}\n"
@@ -1429,7 +1441,7 @@ msgid ""
 "indices.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:960
 msgid ""
 "@c ===beg===\n"
 "@c M: matrix([1,2,3,4], [1,2,3,2], [1,2,3,4], [1,2,3,3])$\n"
@@ -1445,48 +1457,48 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:964
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting25,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:967
 msgid ""
 "By setting the elevation equal to zero, a surface can be seen as a map\n"
 "in which each color represents a different level.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:980
 msgid ""
 "@c ===beg===\n"
-"@c plot3d (cos (-x^2 + y^3/4), [x,-4,4], [y,-4,4], [zlabel,\"\"],\n"
+"@c plot3d (cos (-x^2 + y^3/4), [x,-4,4], [y,-4,4], [zlabel,\\"\\"],\n"
 "@c        [mesh_lines_color,false], [elevation,0], [azimuth,0],\n"
 "@c        color_bar, [grid,80,80], [ztics,false], [color_bar_tics,1])$\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) plot3d (cos (-x^2 + y^3/4), [x,-4,4], [y,-4,4], [zlabel,\"\"],\n"
+"(%i1) plot3d (cos (-x^2 + y^3/4), [x,-4,4], [y,-4,4], [zlabel,\\"\\"],\n"
 "       [mesh_lines_color,false], [elevation,0], [azimuth,0],\n"
 "       color_bar, [grid,80,80], [ztics,false], [color_bar_tics,1])$\n"
 "@end group\n"
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:984
 msgid ""
 "@ifnotinfo\n"
 "@image{figures/plotting26,8cm}\n"
 "@end ifnotinfo\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:986
 msgid ""
 "See also the section about Plotting Options.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:991
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1494,14 +1506,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:995
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{plot_options}\n"
 "@defvr {System variable} plot_options\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1000
 msgid ""
 "This option is being kept for compatibility with older versions, but its\n"
 "use is deprecated. To set global plotting options, see their current\n"
@@ -1509,7 +1521,7 @@ msgid ""
 "@mref{get_plot_option} and @mrefdot{remove_plot_option}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1005
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1517,25 +1529,25 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1009
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{remove_plot_option}\n"
 "@deffn {Function} remove_plot_option (@var{name})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1011
 msgid ""
 "Removes the default value of an option. The name of the option must be given.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1014
 msgid ""
 "See also @mrefcomma{set_plot_option} @mref{get_plot_option} and the section\n"
 "on Plotting Options.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1022
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1546,7 +1558,7 @@ msgid ""
 "@deffn {Function} set_plot_option (@var{option})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1027
 msgid ""
 "Accepts any of the options listed in the section Plotting Options, and\n"
 "saves them for use in plotting commands. The values of the options set\n"
@@ -1554,30 +1566,30 @@ msgid ""
 "not given, the default values set with this function will be used.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1031
 msgid ""
 "@code{set_plot_option} evaluates its argument and returns the complete\n"
 "list of options (after modifying the option given). If called without\n"
 "any arguments, it will simply show the list of current default options.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1034
 msgid ""
 "See also @mrefcomma{remove_plot_option} @mref{get_plot_option} and the section\n"
 "on Plotting Options.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1036
 msgid ""
 "Example:\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1038
 msgid ""
 "Modification of the @mref{grid} values.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1052
 msgid ""
 "@c ===beg===\n"
 "@c set_plot_option ([grid, 30, 40]);\n"
@@ -1594,7 +1606,7 @@ msgid ""
 "@end example\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1057
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1602,14 +1614,14 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1061
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{spherical_to_xyz}\n"
 "@deffn {System function} spherical_to_xyz\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1068
 msgid ""
 "It can be given as value for the @mref{transform_xy} option of\n"
 "@mrefdot{plot3d} Its effect will be to interpret the two independent\n"
@@ -1619,7 +1631,7 @@ msgid ""
 "transform them into x, y and z coordinates.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1073
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1627,7 +1639,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1078
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Plotting Options, Gnuplot Options, Functions and Variables for Plotting, Plotting\n"
@@ -1635,7 +1647,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1086
 msgid ""
 "All options consist of a list starting with one of the keywords in this\n"
 "section, followed by one or more values. Some of the options may have\n"
@@ -1644,18 +1656,22 @@ msgid ""
 "values true or false, can also be set to true by simply writing their\n"
 "names. For instance, typing logx as an option is equivalent to writing\n"
 "[logx, true].\n"
+msgstr ""
+
+#: Plotting.texi:1092
+msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{adapt_depth}\n"
 "@defvr {Plot option} adapt_depth [adapt_depth, @var{integer}]\n"
 "Default value: @code{5}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1094
 msgid ""
 "The maximum number of splittings used by the adaptive plotting routine.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1099
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1663,7 +1679,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1104
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{axes}\n"
@@ -1671,7 +1687,7 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1111
 msgid ""
 "Where @var{symbol} can be either @code{true}, @code{false}, @code{x},\n"
 "@code{y} or @code{solid}. If @code{false}, no axes are shown; if equal\n"
@@ -1681,7 +1697,7 @@ msgid ""
 "line. This option does not have any effect in the 3 dimensional plots.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1116
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1689,7 +1705,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1121
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{azimuth}\n"
@@ -1697,7 +1713,7 @@ msgid ""
 "Default value: @code{30}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1128
 msgid ""
 "A plot3d plot can be thought of as starting with the x and y axis in the\n"
 "horizontal and vertical axis, as in plot2d, and the z axis coming out of\n"
@@ -1707,12 +1723,12 @@ msgid ""
 "the value for the azimuth, in degrees.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1130
 msgid ""
 "See also @mrefdot{elevation}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1135
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1720,7 +1736,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1140
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{option_box}\n"
@@ -1728,13 +1744,13 @@ msgid ""
 "Default value: @code{true}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1143
 msgid ""
 "If set to @code{true}, a bounding box will be drawn for the plot; if set\n"
 "to @code{false}, no box will be drawn.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1148
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1742,21 +1758,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1152
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{color}\n"
 "@defvr {Plot option} color [color, @var{color_1}, @dots{}, @var{color_n}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1156
 msgid ""
 "In 2d plots it defines the color (or colors) for the various curves.  In\n"
 "@mrefcomma{plot3d} it defines the colors used for the mesh lines of the\n"
 "surfaces, when no palette is being used.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1165
 msgid ""
 "If there are more curves or surfaces than colors, the colors will be\n"
 "repeated in sequence. The valid colors are @code{red}, @code{green},\n"
@@ -1768,7 +1784,7 @@ msgid ""
 "will be used instead.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1170
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1776,7 +1792,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1175
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{color_bar}\n"
@@ -1784,7 +1800,7 @@ msgid ""
 "Default value: @code{false} in plot3d, @code{true} in mandelbrot and julia\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1180
 msgid ""
 "Where @var{symbol} can be either @code{true} or @code{false}.  If\n"
 "@code{true}, whenever @mrefcomma{plot3d} @mref{mandelbrot} or\n"
@@ -1792,7 +1808,7 @@ msgid ""
 "shown on the right, showing the corresponding between colors and values.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1185
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1800,14 +1816,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1189
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{color_bar_tics}\n"
 "@defvr {Plot option} color_bar_tics [color_bar_tics, @var{x1}, @var{x2}, @var{x3}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1196
 msgid ""
 "Defines the values at which a mark and a number will be placed in the\n"
 "color bar. The first number is the initial value, the second the\n"
@@ -1817,7 +1833,7 @@ msgid ""
 "chosen automatically.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1201
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1825,7 +1841,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1206
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{elevation}\n"
@@ -1833,7 +1849,7 @@ msgid ""
 "Default value: @code{60}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1213
 msgid ""
 "A plot3d plot can be thought of as starting with the x and y axis in the\n"
 "horizontal and vertical axis, as in plot2d, and the z axis coming out of\n"
@@ -1843,12 +1859,12 @@ msgid ""
 "the value for the azimuth, in degrees.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1215
 msgid ""
 "See also @mrefdot{azimuth}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1220
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1856,7 +1872,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1225
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{grid}\n"
@@ -1864,14 +1880,14 @@ msgid ""
 "Default value: @code{30}, @code{30}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1229
 msgid ""
 "Sets the number of grid points to use in the x- and y-directions for\n"
 "three-dimensional plotting or for the @mref{julia} and @mref{mandelbrot}\n"
 "programs.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1234
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1879,7 +1895,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1239
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{grid2d}\n"
@@ -1887,7 +1903,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1244
 msgid ""
 "Shows a grid of lines on the xy plane. The points where the grid lines\n"
 "are placed are the same points where tics are marked in the x and y\n"
@@ -1895,7 +1911,7 @@ msgid ""
 "options.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1249
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1903,7 +1919,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1254
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{iterations}\n"
@@ -1911,12 +1927,12 @@ msgid ""
 "Default value: @code{9}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1256
 msgid ""
 "Number of iterations made by the programs mandelbrot and julia.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1261
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1924,20 +1940,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1265
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{label}\n"
 "@defvr  {Plot option} label [label, [@var{string}, @var{x}, @var{y}], @dots{}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1268
 msgid ""
 "Writes one or several labels in the points with @var{x}, @var{y}\n"
 "coordinates indicated after each label.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1273
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1945,7 +1961,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1279
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{legend}\n"
@@ -1954,7 +1970,7 @@ msgid ""
 "@fname{legend} [legend, @var{false}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1285
 msgid ""
 "It specifies the labels for the plots when various plots are shown.  If\n"
 "there are more plots than the number of labels given, they will be\n"
@@ -1963,7 +1979,7 @@ msgid ""
 "words discrete1, discrete2, @dots{}, for discrete sets of points.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1290
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1971,20 +1987,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1294
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{logx}\n"
 "@defvr {Plot option} logx [logx, @var{value}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1297
 msgid ""
 "Makes the horizontal axes to be scaled logarithmically. It can be either\n"
 "true or false.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1302
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -1992,20 +2008,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1306
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{logy}\n"
 "@defvr {Plot option} logy [logy, @var{value}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1309
 msgid ""
 "Makes the vertical axes to be scaled logarithmically. It can be either\n"
 "true or false.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1314
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2013,7 +2029,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1319
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{mesh_lines_color}\n"
@@ -2021,7 +2037,7 @@ msgid ""
 "Default value: @code{black}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1324
 msgid ""
 "It sets the color used by plot3d to draw the mesh lines, when a palette is\n"
 "being used.  It accepts the same colors as for the option @mref{color}@w{}\n"
@@ -2029,7 +2045,7 @@ msgid ""
 "value @code{false} to eliminate completely the mesh lines.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1329
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2037,7 +2053,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1334
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{nticks}\n"
@@ -2045,7 +2061,7 @@ msgid ""
 "Default value: @code{29}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1339
 msgid ""
 "When plotting functions with @mrefcomma{plot2d} it is gives the initial\n"
 "number of points used by the adaptive plotting routine for plotting\n"
@@ -2053,7 +2069,7 @@ msgid ""
 "it sets the number of points that will be shown for the plot.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1344
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2061,7 +2077,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1350
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{palette}\n"
@@ -2070,14 +2086,14 @@ msgid ""
 "@fname{palette} [palette, @var{false}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1354
 msgid ""
 "It can consist of one palette or a list of several palettes.  Each\n"
 "palette is a list with a keyword followed by values. If the keyword is\n"
 "gradient, it should be followed by a list of valid colors.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1363
 msgid ""
 "If the keyword is hue, saturation or value, it must be followed by 4\n"
 "numbers. The first three numbers, which must be between 0 and 1, define\n"
@@ -2089,7 +2105,7 @@ msgid ""
 "corresponding values of the modified attribute will be rounded modulo 1.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1368
 msgid ""
 "Gnuplot only uses the first palette in the list; xmaxima will use the\n"
 "palettes in the list sequentially, when several surfaces are plotted\n"
@@ -2097,7 +2113,7 @@ msgid ""
 "sequentially.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1374
 msgid ""
 "The color of the mesh lines will be given by the option\n"
 "@mrefdot{mesh_lines_color}  If @code{palette} is given the value\n"
@@ -2106,7 +2122,7 @@ msgid ""
 "determined by the option @mrefdot{color}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1379
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2114,7 +2130,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1385
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{plot_format}\n"
@@ -2123,18 +2139,18 @@ msgid ""
 "other systems.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1388
 msgid ""
 "Where @var{format} is one of the following: gnuplot, xmaxima, mgnuplot,\n"
 "gnuplot_pipes or geomview.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1390
 msgid ""
 "It sets the format to be used for plotting.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1395
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2142,7 +2158,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1400
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{plot_real_part}\n"
@@ -2150,7 +2166,7 @@ msgid ""
 "Default value: @code{false}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1410
 msgid ""
 "If set to @code{true}, the functions to be plotted will be considered\n"
 "as complex functions whose real value should be plotted; this is\n"
@@ -2163,7 +2179,7 @@ msgid ""
 "@code{plot_realpart} were @code{false}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1415
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2171,14 +2187,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1419
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{point_type}\n"
 "@defvr {Plot option} point_type [point_type, @var{type_1}, @dots{}, @var{type_n}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1428
 msgid ""
 "In gnuplot, each set of points to be plotted with the style ``points''\n"
 "or ``linespoints'' will be represented with objects taken from this\n"
@@ -2190,7 +2206,7 @@ msgid ""
 "@code{lozenge}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1433
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2198,14 +2214,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1437
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{pdf_file}\n"
 "@defvr {Plot option} pdf_file [pdf_file, @var{file_name}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1449
 msgid ""
 "Saves the plot into a PDF file with name equal to @var{file_name},\n"
 "rather than showing it in the screen.  By default, the file will be\n"
@@ -2220,7 +2236,7 @@ msgid ""
 "size of 17.2 cm by 12.9 cm and font of 18 points.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1454
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2228,14 +2244,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1458
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{png_file}\n"
 "@defvr {Plot option} png_file [png_file, @var{file_name}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1469
 msgid ""
 "Saves the plot into a PNG graphics file with name equal to @var{file_name},\n"
 "rather than showing it in the screen. By default, the file will be\n"
@@ -2249,7 +2265,7 @@ msgid ""
 "will be used, with a font of size 12. \n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1474
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2257,14 +2273,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1478
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ps_file}\n"
 "@defvr {Plot option} ps_file [ps_file, @var{file_name}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1490
 msgid ""
 "Saves the plot into a Postscript file with name equal to @var{file_name},\n"
 "rather than showing it in the screen.  By default, the file will be\n"
@@ -2279,7 +2295,7 @@ msgid ""
 "size of 16.4 cm by 12.3 cm and font of 24 points.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1495
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2287,14 +2303,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1499
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{run_viewer}\n"
 "@defvr {Plot option} run_viewer [run_viewer, @var{symbol}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1504
 msgid ""
 "This option is only used when the plot format is @code{gnuplot} and the\n"
 "terminal is @code{default} or when the Gnuplot terminal is set to\n"
@@ -2302,7 +2318,7 @@ msgid ""
 "value.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1510
 msgid ""
 "If the terminal is @code{default}, a file @code{maxout_xxx.gnuplot} (or\n"
 "other name specified with @mref{gnuplot_out_file}) is created with the\n"
@@ -2311,7 +2327,7 @@ msgid ""
 "commands and show the plot.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1517
 msgid ""
 "If the terminal is @code{default}, gnuplot is run to execute the\n"
 "commands in @code{maxout_xxx.gnuplot}, producing another file\n"
@@ -2321,13 +2337,13 @@ msgid ""
 "in the Maxima or Xmaxima console.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1520
 msgid ""
 "The default value for this option is true, making the plots to be shown\n"
 "in either the console or a separate graphics window.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1525
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2335,20 +2351,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1529
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{same_xy}\n"
 "@defvr {Plot option} same_xy [same_xy , @var{value}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1532
 msgid ""
 "It can be either true or false. If true, the scales used in the x and y\n"
 "axes will be the same, in either 2d or 3d plots. See also @mrefdot{yx_ratio}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1537
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2356,20 +2372,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1541
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{same_xyz}\n"
 "@defvr {Plot option} same_xyz [same_xyz , @var{value}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1544
 msgid ""
 "It can be either true or false. If true, the scales used in the 3 axes of\n"
 "a 3d plot will be the same.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1549
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2377,7 +2393,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1555
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{style}\n"
@@ -2386,7 +2402,7 @@ msgid ""
 "@fname{style} [style, [@var{style_1}], @dots{}, [@var{style_n}]]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1563
 msgid ""
 "The styles that will be used for the various functions or sets of data\n"
 "in a 2d plot.  The word @var{style} must be followed by one or more\n"
@@ -2397,7 +2413,7 @@ msgid ""
 "isolated dots.  Gnuplot accepts also an @var{impulses} style.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1572
 msgid ""
 "Each of the styles can be enclosed inside a list with some additional\n"
 "parameters.  @var{lines} accepts one or two numbers: the width of the\n"
@@ -2409,7 +2425,7 @@ msgid ""
 "instead of orange.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1582
 msgid ""
 "@var{points} accepts one two or three parameters; the first parameter\n"
 "is the radius of the points, the second parameter is an integer that\n"
@@ -2422,13 +2438,13 @@ msgid ""
 "12: filled lozenges and 13: open lozenges.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1585
 msgid ""
 "@var{linespoints} accepts up to four parameters: line width, points\n"
 "radius, color and type of object to replace the points.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1592
 msgid ""
 "See also @mref{color} and @mrefdot{point_type}\n"
 " \n"
@@ -2438,14 +2454,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1596
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{svg_file}\n"
 "@defvr {Plot option} svg_file [svg_file, @var{file_name}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1607
 msgid ""
 "Saves the plot into an SVG file with name equal to @var{file_name},\n"
 "rather than showing it in the screen.  By default, the file will be\n"
@@ -2459,7 +2475,7 @@ msgid ""
 "will be used with font of 14 points.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1612
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2467,19 +2483,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1616
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{t}\n"
 "@defvr {Plot option} t [t, @var{min}, @var{max}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1618
 msgid ""
 "Default range for parametric plots.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1623
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2487,19 +2503,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1627
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{title}\n"
 "@defvr {Plot option} title [title, @var{text}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1629
 msgid ""
 "Defines a title that will be written at the top of the plot.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1634
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2507,27 +2523,27 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1638
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{transform_xy}\n"
 "@defvr {Plot option} transform_xy [transform_xy, @var{symbol}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1642
 msgid ""
 "Where @var{symbol} is either @code{false} or the result obtained by\n"
 "using the function @code{transform_xy}.  If different from @code{false},\n"
 "it will be used to transform the 3 coordinates in plot3d.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1645
 msgid ""
 "See @mrefcomma{make_transform} @mref{polar_to_xy} and\n"
 "@mrefdot{spherical_to_xyz}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1650
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2535,14 +2551,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1654
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{x}\n"
 "@defvr {Plot option} x [x, @var{min}, @var{max}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1660
 msgid ""
 "When used as the first option in a @mref{plot2d} command (or any of the\n"
 "first two in @mref{plot3d}), it indicates that the first independent variable\n"
@@ -2551,7 +2567,7 @@ msgid ""
 "horizontal domain that will be shown in the plot.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1665
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2559,14 +2575,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1669
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{xlabel}\n"
 "@defvr {Plot option} xlabel [xlabel, @var{string}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1676
 msgid ""
 "Specifies the @var{string} that will label the first axis; if this option is\n"
 "not used, that label will be the name of the independent variable, when plotting\n"
@@ -2576,7 +2592,7 @@ msgid ""
 "plot.  It can not be used with @mrefdot{set_plot_option}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1681
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2584,14 +2600,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1685
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{xtics}\n"
 "@defvr {Plot option} xtics [xtics, @var{x1}, @var{x2}, @var{x3}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1692
 msgid ""
 "Defines the values at which a mark and a number will be placed in the x\n"
 "axis. The first number is the initial value, the second the increments\n"
@@ -2601,7 +2617,7 @@ msgid ""
 "automatically.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1697
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2609,21 +2625,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1701
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{xy_scale}\n"
 "@defvr {Plot option} xy_scale [xy_scale, @var{sx}, @var{sy}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1705
 msgid ""
 "In a 2d plot, it defines the ratio of the total size of the Window to\n"
 "the size that will be used for the plot. The two numbers given as\n"
 "arguments are the scale factors for the x and y axes. \n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1710
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2631,14 +2647,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1714
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{y}\n"
 "@defvr {Plot option} y [y, @var{min}, @var{max}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1719
 msgid ""
 "When used as one of the first two options in @mrefcomma{plot3d} it indicates\n"
 "that one of the independent variables is y and it sets its range.  Otherwise,\n"
@@ -2646,7 +2662,7 @@ msgid ""
 "shown in the plot.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1724
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2654,14 +2670,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1728
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ylabel}\n"
 "@defvr {Plot option} ylabel [ylabel, @var{string}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1735
 msgid ""
 "Specifies the @var{string} that will label the second axis; if this\n"
 "option is not used, that label will be ``y'', when plotting functions\n"
@@ -2671,7 +2687,7 @@ msgid ""
 "plot.  It can not be used with @mrefdot{set_plot_option}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1740
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2679,14 +2695,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1744
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{ytics}\n"
 "@defvr {Plot option} ytics [ytics, @var{y1}, @var{y2}, @var{y3}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1751
 msgid ""
 "Defines the values at which a mark and a number will be placed in the y\n"
 "axis. The first number is the initial value, the second the increments\n"
@@ -2696,7 +2712,7 @@ msgid ""
 "automatically\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1759
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2707,13 +2723,13 @@ msgid ""
 "@defvr {Plot option} yx_ratio [yx_ratio, @var{r}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1762
 msgid ""
 "In a 2d plot, the ratio between the vertical and the horizontal sides of\n"
 "the rectangle used to make the plot. See also @mrefdot{same_xy}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1767
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2721,20 +2737,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1771
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{z}\n"
 "@defvr {Plot option} z [z, @var{min}, @var{max}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1774
 msgid ""
 "Used in @mref{plot3d} to set the effective range of values of z that will be\n"
 "shown in the plot.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1779
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2742,14 +2758,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1783
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{zlabel}\n"
 "@defvr {Plot option} zlabel [zlabel, @var{string}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1789
 msgid ""
 "Specifies the @var{string} that will label the third axis, when using\n"
 "@mrefdot{plot3d}  If this option is not used, that label will be ``z'', when\n"
@@ -2758,7 +2774,7 @@ msgid ""
 "ignored by @mref{plot2d} and @mrefdot{implicit_plot}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1794
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2766,19 +2782,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1798
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{zmin}\n"
 "@defvr {Plot option} zmin [zmin, @var{z}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1800
 msgid ""
 "In 3d plots, the value of z that will be at the bottom of the plot box.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1805
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2786,7 +2802,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1810
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Gnuplot Options, Gnuplot_pipes Format Functions, Plotting Options, Plotting\n"
@@ -2794,7 +2810,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1817
 msgid ""
 "There are several plot options specific to gnuplot.  All of them consist\n"
 "of a keyword (the name of the option), followed by a string that should\n"
@@ -2804,14 +2820,14 @@ msgid ""
 "specific option.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1821
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_term}\n"
 "@defvr {Plot option} gnuplot_term [gnuplot_term, @var{terminal_name}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1827
 msgid ""
 "Sets the output terminal type for gnuplot. The argument @var{terminal_name}\n"
 "can be a string or one of the following 3 special symbols\n"
@@ -2820,23 +2836,23 @@ msgid ""
 "@strong{default} (default value)\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1831
 msgid ""
 "Gnuplot output is displayed in a separate graphical window and the\n"
 "gnuplot terminal used will be specified by the value of the option\n"
 "@mrefdot{gnuplot_default_term_command}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1834
 msgid ""
 "@item\n"
 "@strong{dumb}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1843
 msgid ""
-"Gnuplot output is saved to a file @code{maxout_xxx.gnuplot} using \"ASCII\n"
-"art\" approximation to graphics. If the option @mref{gnuplot_out_file} is\n"
+"Gnuplot output is saved to a file @code{maxout_xxx.gnuplot} using \\"ASCII\n"
+"art\\" approximation to graphics. If the option @mref{gnuplot_out_file} is\n"
 "set to @var{filename}, the plot will be saved there, instead of the\n"
 "default @code{maxout_xxx.gnuplot}. The settings for the ``dumb'' terminal of\n"
 "Gnuplot are given by the value of option\n"
@@ -2845,13 +2861,13 @@ msgid ""
 "will also be shown in the Maxima or Xmaxima console.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1846
 msgid ""
 "@item\n"
 "@strong{ps}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1851
 msgid ""
 "Gnuplot generates commands in the PostScript page description language.\n"
 "If the option @mref{gnuplot_out_file} is set to @var{filename}, gnuplot\n"
@@ -2859,21 +2875,21 @@ msgid ""
 "saved as @code{maxplot.ps} file. The settings for this terminal are given by the value of the option @mrefdot{gnuplot_dumb_term_command}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1854
 msgid ""
 "@item\n"
 "A string representing any valid gnuplot term specification\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1867
 msgid ""
 "Gnuplot can generate output in many other graphical formats such as png,\n"
 "jpeg, svg etc. To use those formats, option @code{gnuplot_term} can be\n"
 "set to any supported gnuplot term name (which must be a symbol) or even a\n"
 "full gnuplot term specification with any valid options (which must be a string).  For\n"
 "example @code{[gnuplot_term, png]} creates output in PNG (Portable\n"
-"Network Graphics) format while @code{[gnuplot_term, \"png size\n"
-"1000,1000\"]} creates PNG of 1000 x 1000 pixels size.  If the option\n"
+"Network Graphics) format while @code{[gnuplot_term, \\"png size\n"
+"1000,1000\\"]} creates PNG of 1000 x 1000 pixels size.  If the option\n"
 "@mref{gnuplot_out_file} is set to @var{filename}, gnuplot writes the\n"
 "output to @var{filename}.  Otherwise, it is saved as\n"
 "@code{maxplot.@var{term}} file, where @var{term} is gnuplot terminal\n"
@@ -2881,7 +2897,7 @@ msgid ""
 "@end itemize\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1872
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2889,14 +2905,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1876
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_out_file}\n"
 "@defvr {Plot option} gnuplot_out_file [gnuplot_out_file, @var{file_name}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1886
 msgid ""
 "It can be used to replace the default name for the file that contains\n"
 "the commands that will interpreted by gnuplot, when the terminal is set\n"
@@ -2909,7 +2925,7 @@ msgid ""
 "they can be seen if the command is ended by semi-colon.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1892
 msgid ""
 "When used in conjunction with the @mref{gnuplot_term} option, it can be\n"
 "used to save the plot in a file, in one of the graphic formats supported\n"
@@ -2918,7 +2934,7 @@ msgid ""
 "or @mrefdot{svg_file}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1897
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2926,20 +2942,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1901
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_pm3d}\n"
 "@defvr {Plot option} gnuplot_pm3d [gnuplot_pm3d, @var{value}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1904
 msgid ""
 "With a value of @code{false}, it can be used to disable the use of PM3D\n"
 "mode, which is enabled by default.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1909
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2947,21 +2963,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1913
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_preamble}\n"
 "@defvr {Plot option} gnuplot_preamble [gnuplot_preamble, @var{string}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1917
 msgid ""
 "This option inserts gnuplot commands before any other commands sent to\n"
 "Gnuplot. Any valid gnuplot commands may be used. Multiple commands should\n"
 "be separated with a semi-colon. See also @mrefdot{gnuplot_postamble}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1922
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2969,14 +2985,14 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1926
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_postamble}\n"
 "@defvr {Plot option} gnuplot_postamble [gnuplot_postamble, @var{string}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1931
 msgid ""
 "This option inserts gnuplot commands after other commands sent to\n"
 "Gnuplot and right before the plot command is sent. Any valid gnuplot\n"
@@ -2984,7 +3000,7 @@ msgid ""
 "semi-colon. See also @mrefdot{gnuplot_preamble}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1936
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -2992,7 +3008,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1941
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_default_term_command}\n"
@@ -3000,13 +3016,13 @@ msgid ""
 "[gnuplot_default_term_command, @var{command}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1944
 msgid ""
 "The gnuplot command to set the terminal type for the default\n"
-"terminal. It this option is not set, the command used will be: @code{\"set term wxt size 640,480 font \\",12\\"; set term pop\"}.\n"
+"terminal. It this option is not set, the command used will be: @code{\\"set term wxt size 640,480 font \\\",12\\\"; set term pop\\"}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1949
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3014,7 +3030,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1954
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_dumb_term_command}\n"
@@ -3022,14 +3038,14 @@ msgid ""
 "[gnuplot_dumb_term_command, @var{command}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1958
 msgid ""
 "The gnuplot command to set the terminal type for the dumb terminal.  It\n"
-"this option is not set, the command used will be: @code{\"set term dumb\n"
-"79 22\"}, which makes the text output 79 characters by 22 characters.\n"
+"this option is not set, the command used will be: @code{\\"set term dumb\n"
+"79 22\\"}, which makes the text output 79 characters by 22 characters.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1963
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3037,20 +3053,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1967
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_pdf_term_command}\n"
 "@defvr {Plot option} gnuplot_pdf_term_command [gnuplot_pdf_term_command, @var{command}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1970
 msgid ""
 "The gnuplot command to set the terminal type for the PDF\n"
-"terminal.  If this option is not set, the command used will be: @code{\"set term pdfcairo color solid lw 3 size 17.2 cm, 12.9 cm font \\",18\\"\"}. See the gnuplot documentation for more information.\n"
+"terminal.  If this option is not set, the command used will be: @code{\\"set term pdfcairo color solid lw 3 size 17.2 cm, 12.9 cm font \\\",18\\\"\\"}. See the gnuplot documentation for more information.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1975
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3058,22 +3074,22 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1979
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_png_term_command}\n"
 "@defvr {Plot option} gnuplot_png_term_command [gnuplot_png_term_command, @var{command}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1984
 msgid ""
 "The gnuplot command to set the terminal type for the PNG terminal.  If\n"
 "this option is not set, the command used will be:\n"
-"@code{\"set term pngcairo font \\",12\\"\"}. See the gnuplot documentation\n"
+"@code{\\"set term pngcairo font \\\",12\\\"\\"}. See the gnuplot documentation\n"
 "for more information.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1989
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3081,21 +3097,21 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1993
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_ps_term_command}\n"
 "@defvr {Plot option} gnuplot_ps_term_command [gnuplot_ps_term_command, @var{command}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:1997
 msgid ""
 "The gnuplot command to set the terminal type for the PostScript\n"
-"terminal.  If this option is not set, the command used will be: @code{\"set term postscript eps color solid lw 2 size 16.4 cm, 12.3 cm font \\",24\\"\"}. See the gnuplot documentation for @code{set term postscript} for\n"
+"terminal.  If this option is not set, the command used will be: @code{\\"set term postscript eps color solid lw 2 size 16.4 cm, 12.3 cm font \\\",24\\\"\\"}. See the gnuplot documentation for @code{set term postscript} for\n"
 "more information.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2002
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3103,22 +3119,22 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2006
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_svg_term_command}\n"
 "@defvr {Plot option} gnuplot_svg_term_command [gnuplot_svg_term_command, @var{command}]\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2011
 msgid ""
 "The gnuplot command to set the terminal type for the SVG\n"
 "terminal.  If this option is not set, the command used will be:\n"
-"@code{\"set term svg font \\",14\\"\"}. See the gnuplot documentation for\n"
+"@code{\\"set term svg font \\\",14\\\"\\"}. See the gnuplot documentation for\n"
 "more information.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2016
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3126,20 +3142,20 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2020
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_curve_titles}\n"
 "@defvr {Plot option} gnuplot_curve_titles\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2023
 msgid ""
 "This is an obsolete option that has been replaced @mref{legend} described\n"
 "above.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2028
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3147,19 +3163,19 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2032
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_curve_styles}\n"
 "@defvr {Plot option} gnuplot_curve_styles\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2034
 msgid ""
 "This is an obsolete option that has been replaced by @mrefdot{style}\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2039
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3167,7 +3183,7 @@ msgid ""
 "@end defvr\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2044
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@node Gnuplot_pipes Format Functions,  , Gnuplot Options, Plotting\n"
@@ -3175,20 +3191,20 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2048
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_start}\n"
 "@deffn {Function} gnuplot_start ()\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2051
 msgid ""
 "Opens the pipe to gnuplot used for plotting with the @code{gnuplot_pipes}\n"
 "format.  Is not necessary to manually open the pipe before plotting.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2056
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3196,19 +3212,19 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2060
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_close}\n"
 "@deffn {Function} gnuplot_close ()\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2062
 msgid ""
 "Closes the pipe to gnuplot which is used with the @code{gnuplot_pipes} format.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2067
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3216,20 +3232,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2071
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_restart}\n"
 "@deffn {Function} gnuplot_restart ()\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2074
 msgid ""
 "Closes the pipe to gnuplot which is used with the @code{gnuplot_pipes}\n"
 "format and opens a new pipe.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2079
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3237,7 +3253,7 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2085
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_replot}\n"
@@ -3246,14 +3262,14 @@ msgid ""
 "@fname{gnuplot_replot} (@var{s})\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2089
 msgid ""
 "Updates the gnuplot window.  If @code{gnuplot_replot} is called with a\n"
 "gnuplot command in a string @var{s}, then @code{s} is sent to gnuplot\n"
 "before reploting the window.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2094
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3261,20 +3277,20 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2098
 msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{gnuplot_reset}\n"
 "@deffn {Function} gnuplot_reset ()\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2101
 msgid ""
 "Resets the state of gnuplot used with the @code{gnuplot_pipes} format.  To\n"
 "update the gnuplot window call @mref{gnuplot_replot} after @code{gnuplot_reset}.\n"
 msgstr ""
 
-# Plotting.texi
+#: Plotting.texi:2106
 msgid ""
 "@opencatbox\n"
 "@category{Plotting}\n"
@@ -3282,6 +3298,3 @@ msgid ""
 "@end deffn\n"
 msgstr ""
 
-# Plotting.texi
-msgid ""
-msgstr ""

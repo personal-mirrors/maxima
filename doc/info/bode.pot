@@ -1,39 +1,43 @@
-# SOME DESCRIPTIVE TITLE.">
+# This file contains all translatable strings from a .texi file.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL>, YEAR.
 #
 #, fuzzy
 msgid ""
-msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 22:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
- 
-# bode.texi
+msgstr ""
+
+#: bode.texi:4
 msgid ""
 "@menu\n"
 "* Functions and Variables for bode::\n"
 "@end menu\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:7
 msgid ""
 "@node Functions and Variables for bode,  , bode-pkg, bode-pkg\n"
 "@section Functions and Variables for bode\n"
+msgstr ""
+
+#: bode.texi:12
+msgid ""
 "@anchor{bode_gain}\n"
 "@deffn {Function} bode_gain (@var{H}, @var{range}, ...@var{plot_opts}...)\n"
 "Function to draw Bode gain plots.\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:20
 msgid ""
 "Examples (1 through 7 from \n"
 "@example\n"
@@ -41,117 +45,117 @@ msgid ""
 "@end example\n"
 "8 from Ron Crummett):\n"
 "@example\n"
-"(%i1) load(\"bode\")$\n"
+"(%i1) load(\\"bode\\")$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:22
 msgid ""
 "(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:24
 msgid ""
 "(%i3) bode_gain (H1 (s), [w, 1/1000, 1000])$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:26
 msgid ""
 "(%i4) H2 (s) := 1 / (1 + s/omega0)$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:28
 msgid ""
 "(%i5) bode_gain (H2 (s), [w, 1/1000, 1000]), omega0 = 10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:30
 msgid ""
 "(%i6) H3 (s) := 1 / (1 + s/omega0)^2$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:32
 msgid ""
 "(%i7) bode_gain (H3 (s), [w, 1/1000, 1000]), omega0 = 10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:34
 msgid ""
 "(%i8) H4 (s) := 1 + s/omega0$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:36
 msgid ""
 "(%i9) bode_gain (H4 (s), [w, 1/1000, 1000]), omega0 = 10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:38
 msgid ""
 "(%i10) H5 (s) := 1/s$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:40
 msgid ""
 "(%i11) bode_gain (H5 (s), [w, 1/1000, 1000])$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:42
 msgid ""
 "(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:45
 msgid ""
 "(%i13) bode_gain (H6 (s), [w, 1/1000, 1000]), \n"
 "                  omega0 = 10, zeta = 1/10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:47
 msgid ""
 "(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:50
 msgid ""
 "(%i15) bode_gain (H7 (s), [w, 1/1000, 1000]),\n"
 "                  omega0 = 10, zeta = 1/10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:52
 msgid ""
 "(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:55
 msgid ""
 "(%i17) bode_gain (H8 (s), [w, 1/1000, 1000])$\n"
 "@end example\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:57
 msgid ""
-"To use this function write first @code{load(\"bode\")}. See also @mrefdot{bode_phase}\n"
+"To use this function write first @code{load(\\"bode\\")}. See also @mrefdot{bode_phase}\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:61
 msgid ""
 "@opencatbox\n"
 "@category{Plotting} @category{Package bode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:63
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:67
 msgid ""
 "@anchor{bode_phase}\n"
 "@deffn {Function} bode_phase (@var{H}, @var{range}, ...@var{plot_opts}...)\n"
 "Function to draw Bode phase plots.\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:75
 msgid ""
 "Examples (1 through 7 from \n"
 "@example\n"
@@ -159,121 +163,118 @@ msgid ""
 "@end example\n"
 "8 from Ron Crummett):\n"
 "@example\n"
-"(%i1) load(\"bode\")$\n"
+"(%i1) load(\\"bode\\")$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:77
 msgid ""
 "(%i2) H1 (s) := 100 * (1 + s) / ((s + 10) * (s + 100))$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:79
 msgid ""
 "(%i3) bode_phase (H1 (s), [w, 1/1000, 1000])$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:81
 msgid ""
 "(%i4) H2 (s) := 1 / (1 + s/omega0)$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:83
 msgid ""
 "(%i5) bode_phase (H2 (s), [w, 1/1000, 1000]), omega0 = 10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:85
 msgid ""
 "(%i6) H3 (s) := 1 / (1 + s/omega0)^2$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:87
 msgid ""
 "(%i7) bode_phase (H3 (s), [w, 1/1000, 1000]), omega0 = 10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:89
 msgid ""
 "(%i8) H4 (s) := 1 + s/omega0$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:91
 msgid ""
 "(%i9) bode_phase (H4 (s), [w, 1/1000, 1000]), omega0 = 10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:93
 msgid ""
 "(%i10) H5 (s) := 1/s$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:95
 msgid ""
 "(%i11) bode_phase (H5 (s), [w, 1/1000, 1000])$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:97
 msgid ""
 "(%i12) H6 (s) := 1/((s/omega0)^2 + 2 * zeta * (s/omega0) + 1)$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:100
 msgid ""
 "(%i13) bode_phase (H6 (s), [w, 1/1000, 1000]), \n"
 "                   omega0 = 10, zeta = 1/10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:102
 msgid ""
 "(%i14) H7 (s) := (s/omega0)^2 + 2 * zeta * (s/omega0) + 1$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:105
 msgid ""
 "(%i15) bode_phase (H7 (s), [w, 1/1000, 1000]), \n"
 "                   omega0 = 10, zeta = 1/10$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:107
 msgid ""
 "(%i16) H8 (s) := 0.5 / (0.0001 * s^3 + 0.002 * s^2 + 0.01 * s)$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:109
 msgid ""
 "(%i17) bode_phase (H8 (s), [w, 1/1000, 1000])$\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:112
 msgid ""
 "(%i18) block ([bode_phase_unwrap : false],\n"
 "              bode_phase (H8 (s), [w, 1/1000, 1000]));\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:116
 msgid ""
 "(%i19) block ([bode_phase_unwrap : true], \n"
 "              bode_phase (H8 (s), [w, 1/1000, 1000]));\n"
 "@end example\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:118
 msgid ""
-"To use this function write first @code{load(\"bode\")}. See also @mrefdot{bode_gain}\n"
+"To use this function write first @code{load(\\"bode\\")}. See also @mrefdot{bode_gain}\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:122
 msgid ""
 "@opencatbox\n"
 "@category{Plotting} @category{Package bode}\n"
 "@closecatbox\n"
 msgstr ""
 
-# bode.texi
+#: bode.texi:124
 msgid ""
 "@end deffn\n"
 msgstr ""
 
-# bode.texi
-msgid ""
-msgstr ""
