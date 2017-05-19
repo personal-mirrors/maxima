@@ -7,6 +7,7 @@ print "# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.\n";
 print "#\n";
 print "#, fuzzy\n";
 print "msgid \"\"\n";
+print "msgstr \"\"\n";
 print "\"Project-Id-Version: PACKAGE VERSION\\n\"\n";
 print "\"Report-Msgid-Bugs-To: \\n\"\n";
 print "\"POT-Creation-Date: 2017-05-06 22:01+0200\\n\"\n";
@@ -32,16 +33,14 @@ while (my $line = <>) {
 	# Is this the last line of a paragraph?
 	if($line eq "\n")
 	{
-	    if ($paragraph ne "")
+	    if ($paragraph ne "\n")
 	    {
-		$message  = "msgstr \"\"\n\n";
-		$message .= "#: ";
+		$message = "\n#: ";
 		$message .= $ARGV;
 		$message .=":";
 		$message .= $.;
 		$message .= "\nmsgid \"\"\n";
 		$message .= $paragraph;
-
 		# msgmerge doesn't like 2 paragraphs to be exactly identical =>
 		# if we detect several occurrences of an identical paragraph we
 		# equip all but the 1st one with comments that cause them to be
@@ -57,6 +56,8 @@ while (my $line = <>) {
 		{
 		    $knownParagraphs{$paragraph} = '1';
 		}
+		$message .= "msgstr \"\"\n";
+
 		print $message;
 	    }
 	    $paragraph = "";
@@ -72,5 +73,3 @@ while (my $line = <>) {
     }
     $lastline = $line;
 }
-
-print "msgstr \"\"\n\n";
