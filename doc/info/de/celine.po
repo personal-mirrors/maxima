@@ -1,0 +1,203 @@
+# This file contains all translatable strings from a .texi file.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL>, YEAR.
+#
+msgid ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-06 22:01+0200\n"
+"PO-Revision-Date: 2017-05-19 16:31+0200\n"
+"Last-Translator: FULL NAME <EMAIL>\n"
+"Language-Team: LANGUAGE <LL.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+msgstr ""
+
+# celine.texi
+#: celine.texi:4
+msgid ""
+"@menu\n"
+"* Introduction to celine::\n"
+"@end menu\n"
+msgstr "* Einführung für Celine::"
+
+# celine.texi
+#: celine.texi:7
+msgid ""
+"@node Introduction to celine\n"
+"@section Introduction to celine\n"
+msgstr ""
+"@node Einführung für Celine\n"
+"@section Einführung für Celine\n"
+
+# celine.texi
+#: celine.texi:9
+msgid ""
+"Maxima implementation of Sister Celine's method. Barton Willis wrote this "
+"code. It is released under the @uref{https://creativecommons.org/about/cc0,"
+"Creative Commons CC0 license}.\n"
+msgstr ""
+"Eine Implementierung der Methode von Schwester Celine. Sie wurde von Barton Willis\n"
+"geschrieben und unter der\n"
+"@uref{https://creativecommons.org/about/cc0,Creative Commons CC0 Lizenz} veröffentlicht."
+
+# celine.texi
+#: celine.texi:12
+msgid ""
+"Celine's method is described in Sections 4.1--4.4 of the book \"A=B\", by "
+"Marko Petkovsek, Herbert S. Wilf, and Doron Zeilberger.\n"
+"This book is available at @uref{http://www.math.rutgers.edu/~zeilberg/AeqB."
+"pdf}\n"
+msgstr ""
+"Die Methode von Schwester Celine wird in den Kapiteln4.1--4.4 des Buches \"A=B\" von\n"
+"Marko Petkovsek, Herbert S. Wilf und Doron Zeilberger beschrieben. Das Buch ist unter\n"
+"@uref{http://www.math.rutgers.edu/~zeilberg/AeqB.pdf} erhältlich."
+
+# celine.texi
+#: celine.texi:14
+msgid ""
+"Let f = F(n,k). The function celine returns a set of recursion relations for "
+"F of the form\n"
+msgstr ""
+"Mit f = F(n,k) liefert die Funktion celine liefert einen Satz an rekursiven Verbindungen\n"
+"für F in der folgenden Form:"
+
+# celine.texi
+#: celine.texi:16
+msgid ""
+"    p_0(n) * fff(n,k) + p_1(n) * fff(n+1,k) + ... +  p_p(n) * fff(n+p,k+q),\n"
+msgstr ""
+
+# celine.texi
+#: celine.texi:21
+msgid ""
+"where p_0 through p_p are polynomials. If Maxima is unable to determine that "
+"sum(sum(a(i,j) * F(n+i,k+j),i,0,p),j,0,q) / F(n,k) \n"
+"is a rational function of n and k, celine returns the empty set. When f "
+"involves parameters (variables other than n or k), celine\n"
+"might make assumptions about these parameters. Using 'put' with a key of "
+"'proviso,' Maxima saves these assumptions on the input \n"
+"label.\n"
+msgstr ""
+"p_0 bis p_p sind dabei Polynome. Wenn es Maxima nicht gelingt, eine rationale Funktion\n"
+"sum(sum(a(i,j) * F(n+i,k+j),i,0,p),j,0,q) / F(n,k) von n und k zu finden, wird eine leere\n"
+"Menge zurückgeliefert.\n"
+"Falls f Parameter außer n und k benötigt, kann es geschehen, dass celine Annahmen\n"
+"für diese Parameter machen. Mittels 'put' kann über die Eigenschaft 'proviso'\n"
+"ein Erfragen der anzunehmenden Werte erzwungen werden."
+
+# celine.texi
+#: celine.texi:23
+msgid ""
+"To use this function, first load the package integer_sequence, opsubst, and "
+"to_poly_solve.\n"
+msgstr ""
+"Um diese function verwenden zu können müssen die Pakete integer_sequence, opsubst und\n"
+"to_poly_solve geladen sein."
+
+# celine.texi
+#: celine.texi:25
+msgid "Examples:\n"
+msgstr "Beispiele:"
+
+# celine.texi
+#: celine.texi:43
+msgid ""
+"@c ===beg===\n"
+"@c load(\"integer_sequence\")$\n"
+"@c load(\"opsubst\")$\n"
+"@c load(\"to_poly_solve\")$\n"
+"@c load(\"celine\")$\n"
+"@c celine(n!,n,k,1,0);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(\"integer_sequence\")$\n"
+"(%i2) load(\"opsubst\")$\n"
+"(%i3) load(\"to_poly_solve\")$\n"
+"(%i4) load(\"celine\")$\n"
+"@group\n"
+"(%i5) celine(n!,n,k,1,0);\n"
+"(%o5)       @{fff(n + 1, k) - n fff(n, k) - fff(n, k)@}\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# celine.texi
+#: celine.texi:67
+msgid ""
+"Verification that this result is correct:\n"
+"@c ===beg===\n"
+"@c load(\"integer_sequence\")$\n"
+"@c load(\"opsubst\")$\n"
+"@c load(\"to_poly_solve\")$\n"
+"@c load(\"celine\")$\n"
+"@c g1:{fff(n+1,k)-n*fff(n,k)-fff(n,k)};\n"
+"@c ratsimp(minfactorial(first(g1))),fff(n,k) := n!;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(\"integer_sequence\")$\n"
+"(%i2) load(\"opsubst\")$\n"
+"(%i3) load(\"to_poly_solve\")$\n"
+"(%i4) load(\"celine\")$\n"
+"@group\n"
+"(%i5) g1:@{fff(n+1,k)-n*fff(n,k)-fff(n,k)@};\n"
+"(%o5)       @{fff(n + 1, k) - n fff(n, k) - fff(n, k)@}\n"
+"@end group\n"
+"@group\n"
+"(%i6) ratsimp(minfactorial(first(g1))),fff(n,k) := n!;\n"
+"(%o6)                           0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+# celine.texi
+#: celine.texi:111
+msgid ""
+"An example with parameters including the test that the result of the "
+"example\n"
+"is correct:\n"
+"@c ===beg===\n"
+"@c load(\"integer_sequence\")$\n"
+"@c load(\"opsubst\")$\n"
+"@c load(\"to_poly_solve\")$\n"
+"@c load(\"celine\")$\n"
+"@c e : pochhammer(a,k) * pochhammer(-k,n) / (pochhammer(b,k));\n"
+"@c recur : celine(e,n,k,2,1);\n"
+"@c /* Test this result for correctness */\n"
+"@c first(%), fff(n,k) := ''(e)$\n"
+"@c makefact(makegamma(%))$\n"
+"@c minfactorial(factor(minfactorial(factor(%))));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(\"integer_sequence\")$\n"
+"(%i2) load(\"opsubst\")$\n"
+"(%i3) load(\"to_poly_solve\")$\n"
+"(%i4) load(\"celine\")$\n"
+"@group\n"
+"(%i5) e : pochhammer(a,k) * pochhammer(-k,n) / (pochhammer(b,k));\n"
+"                           (a)  (- k)\n"
+"                              k      n\n"
+"(%o5)                      -----------\n"
+"                              (b)\n"
+"                                 k\n"
+"@end group\n"
+"@group\n"
+"(%i6) recur : celine(e,n,k,2,1);\n"
+"(%o6) @{fff(n + 2, k + 1) - fff(n + 2, k) - b fff(n + 1, k + 1)\n"
+" + n ((- fff(n + 1, k + 1)) + 2 fff(n + 1, k) - a fff(n, k)\n"
+" - fff(n, k)) + a (fff(n + 1, k) - fff(n, k)) + 2 fff(n + 1, k)\n"
+"    2\n"
+" - n  fff(n, k)@}\n"
+"@end group\n"
+"(%i7) /* Test this result for correctness */\n"
+"(%i8) first(%), fff(n,k) := ''(e)$\n"
+"@group\n"
+"(%i9) makefact(makegamma(%))$\n"
+"(%o9)                           0\n"
+"@end group\n"
+"(%i10) minfactorial(factor(minfactorial(factor(%))));\n"
+"@end example\n"
+msgstr ""
