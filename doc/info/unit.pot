@@ -71,7 +71,7 @@ msgstr ""
 msgid ""
 "@example\n"
 "@group\n"
-"(%i1) load(\\"unit\\")$\n"
+"(%i1) load(\"unit\")$\n"
 "*******************************************************************\n"
 "*                       Units version 0.50                        *\n"
 "*          Definitions based on the NIST Reference on             *\n"
@@ -320,7 +320,7 @@ msgstr ""
 
 #: unit.texi:244
 msgid ""
-"See also @mref{uforget}. To use this function write first @code{load(\\"unit\\")}.\n"
+"See also @mref{uforget}. To use this function write first @code{load(\"unit\")}.\n"
 msgstr ""
 
 #: unit.texi:248
@@ -379,7 +379,7 @@ msgstr ""
 
 #: unit.texi:288
 msgid ""
-"See also @mref{setunits}. To use this function write first @code{load(\\"unit\\")}.\n"
+"See also @mref{setunits}. To use this function write first @code{load(\"unit\")}.\n"
 msgstr ""
 
 #: unit.texi:292
@@ -404,7 +404,7 @@ msgid ""
 "argument or a list of units to use in conversion.  When a convert operation is\n"
 "done, the normal global evaluation system is bypassed, in order to avoid the\n"
 "desired result being converted again.  As a consequence, for inexact calculations\n"
-"\\"rat\\" warnings will be visible if the global environment controlling this behavior\n"
+"\"rat\" warnings will be visible if the global environment controlling this behavior\n"
 "(@code{ratprint}) is true.  This is also useful for spot-checking the\n"
 "accuracy of a global conversion.  Another feature is @code{convert} will allow a\n"
 "user to do Base Dimension conversions even if the global environment is set to\n"
@@ -511,7 +511,7 @@ msgstr ""
 
 #: unit.texi:394
 msgid ""
-"See also @mref{setunits} and @mref{uforget}. To use this function write first @code{load(\\"unit\\")}.\n"
+"See also @mref{setunits} and @mref{uforget}. To use this function write first @code{load(\"unit\")}.\n"
 msgstr ""
 
 #: unit.texi:398
@@ -550,7 +550,7 @@ msgid ""
 "we would see the following behavior:\n"
 "@example\n"
 "@group\n"
-"(%i1) load(\\"unit\\")$\n"
+"(%i1) load(\"unit\")$\n"
 "*******************************************************************\n"
 "*                       Units version 0.50                        *\n"
 "*          Definitions based on the NIST Reference on             *\n"

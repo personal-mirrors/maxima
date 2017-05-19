@@ -65,7 +65,7 @@ msgstr ""
 #: Debugging.texi:33
 msgid ""
 "@example\n"
-"(%i1) load (\\"/tmp/foobar.mac\\");\n"
+"(%i1) load (\"/tmp/foobar.mac\");\n"
 msgstr ""
 
 #: Debugging.texi:35
@@ -180,8 +180,8 @@ msgstr ""
 #: Debugging.texi:102
 msgid ""
 "@example\n"
-"(setq load-path (cons \\"/usr/share/maxima/5.9.1/emacs\\" load-path))\n"
-"(autoload 'dbl \\"dbl\\")\n"
+"(setq load-path (cons \"/usr/share/maxima/5.9.1/emacs\" load-path))\n"
+"(autoload 'dbl \"dbl\")\n"
 "@end example\n"
 msgstr ""
 
@@ -661,7 +661,7 @@ msgstr ""
 msgid ""
 "The matrix returned by @code{timer_info} contains the function name,\n"
 "time per function call, number of function calls, total time,\n"
-"and @code{gctime}, which meant \\"garbage collection time\\" in the original Macsyma\n"
+"and @code{gctime}, which meant \"garbage collection time\" in the original Macsyma\n"
 "but is now always zero.\n"
 msgstr ""
 

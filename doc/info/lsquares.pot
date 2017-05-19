@@ -919,8 +919,8 @@ msgid ""
 "@fname{plsquares} (@var{Mat},@var{VarList},@var{depvars}) @\n"
 "@fname{plsquares} (@var{Mat},@var{VarList},@var{depvars},@var{maxexpon}) @\n"
 "@fname{plsquares} (@var{Mat},@var{VarList},@var{depvars},@var{maxexpon},@var{maxdegree})\n"
-"Multivariable polynomial adjustment of a data table by the \\"least squares\\"\n"
-"method. @var{Mat} is a matrix containing the data, @var{VarList} is a list of variable names (one for each Mat column, but use \\"-\\" instead of varnames to ignore Mat columns), @var{depvars} is the name of a dependent variable or a list with one or more names of dependent variables (which names should be in @var{VarList}), @var{maxexpon} is the optional maximum exponent for each independent variable (1 by default), and @var{maxdegree} is the optional maximum polynomial degree (@var{maxexpon} by default); note that the sum of exponents of each term must be equal or smaller than @var{maxdegree}, and if @code{maxdgree = 0} then no limit is applied.\n"
+"Multivariable polynomial adjustment of a data table by the \"least squares\"\n"
+"method. @var{Mat} is a matrix containing the data, @var{VarList} is a list of variable names (one for each Mat column, but use \"-\" instead of varnames to ignore Mat columns), @var{depvars} is the name of a dependent variable or a list with one or more names of dependent variables (which names should be in @var{VarList}), @var{maxexpon} is the optional maximum exponent for each independent variable (1 by default), and @var{maxdegree} is the optional maximum polynomial degree (@var{maxexpon} by default); note that the sum of exponents of each term must be equal or smaller than @var{maxdegree}, and if @code{maxdgree = 0} then no limit is applied.\n"
 msgstr ""
 
 #: lsquares.texi:661
@@ -932,7 +932,7 @@ msgstr ""
 msgid ""
 "A simple example of multivariable linear adjustment:\n"
 "@example\n"
-"(%i1) load(\\"plsquares\\")$\n"
+"(%i1) load(\"plsquares\")$\n"
 msgstr ""
 
 #: lsquares.texi:674
@@ -1012,7 +1012,7 @@ msgstr ""
 
 #: lsquares.texi:728
 msgid ""
-"To use this function write first @code{load(\\"lsquares\\")}.\n"
+"To use this function write first @code{load(\"lsquares\")}.\n"
 msgstr ""
 
 #: lsquares.texi:732

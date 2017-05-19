@@ -99,8 +99,8 @@ msgstr ""
 
 #: Matrices.texi:58
 msgid ""
-"@code{vect} is a package of functions for vector analysis.  @code{load (\\"vect\\")}\n"
-"loads this package, and @code{demo (\\"vect\\")} displays a demonstration.\n"
+"@code{vect} is a package of functions for vector analysis.  @code{load (\"vect\")}\n"
+"loads this package, and @code{demo (\"vect\")} displays a demonstration.\n"
 "@c find maxima -name \*orth\* YIELDS NOTHING; ARE THESE FUNCTIONS IN ANOTHER FILE NOW ??\n"
 "@c and SHARE;VECT ORTH contains definitions of various orthogonal curvilinear coordinate systems.\n"
 msgstr ""
@@ -130,7 +130,7 @@ msgstr ""
 msgid ""
 "By default the @code{vect} package does not declare the dot operator to be a\n"
 "commutative operator.  To get a commutative dot operator @code{.}, the command\n"
-"@code{declare(\\".\\", commutative)} must be executed.\n"
+"@code{declare(\".\", commutative)} must be executed.\n"
 msgstr ""
 
 #: Matrices.texi:81
@@ -154,14 +154,14 @@ msgid ""
 "symbolic computation of eigenvalues and eigenvectors.\n"
 "Maxima loads the package automatically if one of the functions\n"
 "@code{eigenvalues} or @code{eigenvectors} is invoked.\n"
-"The package may be loaded explicitly as @code{load (\\"eigen\\")}.\n"
+"The package may be loaded explicitly as @code{load (\"eigen\")}.\n"
 msgstr ""
 
 #: Matrices.texi:97
 msgid ""
-"@code{demo (\\"eigen\\")} displays a demonstration of the capabilities\n"
+"@code{demo (\"eigen\")} displays a demonstration of the capabilities\n"
 "of this package.\n"
-"@code{batch (\\"eigen\\")} executes the same demonstration,\n"
+"@code{batch (\"eigen\")} executes the same demonstration,\n"
 "but without the user prompt between successive computations.\n"
 msgstr ""
 
@@ -515,7 +515,7 @@ msgstr ""
 
 #: Matrices.texi:318
 msgid ""
-"@code{load (\\"eigen\\")} loads this function.\n"
+"@code{load (\"eigen\")} loads this function.\n"
 msgstr ""
 
 #: Matrices.texi:322
@@ -532,10 +532,10 @@ msgstr ""
 
 #: Matrices.texi:340
 msgid ""
-"@c HMM, SPURIOUS \\"redefining the Macsyma function\\".\n"
+"@c HMM, SPURIOUS \"redefining the Macsyma function\".\n"
 "@c LEAVE IT HERE SINCE THAT'S WHAT A USER ACTUALLY SEES.\n"
 "@example\n"
-"(%i1) load (\\"eigen\\")$\n"
+"(%i1) load (\"eigen\")$\n"
 "Warning - you are redefining the Macsyma function eigenvalues\n"
 "Warning - you are redefining the Macsyma function eigenvectors\n"
 "(%i2) columnvector ([aa, bb, cc, dd]);\n"
@@ -1015,7 +1015,7 @@ msgstr ""
 msgid ""
 "When @code{dotassoc} is @code{true}, an expression @code{(A.B).C} simplifies to\n"
 "@code{A.(B.C)}.\n"
-"@c \\".\\" MEANS NONCOMMUTATIVE MULTIPLICATION RIGHT ??\n"
+"@c \".\" MEANS NONCOMMUTATIVE MULTIPLICATION RIGHT ??\n"
 msgstr ""
 
 #: Matrices.texi:638
@@ -1115,7 +1115,7 @@ msgstr ""
 #: Matrices.texi:692
 msgid ""
 "@code{dotident} is the value returned by @code{X^^0}.\n"
-"@c \\"RETURNED\\" ?? IS THIS A SIMPLIFICATION OR AN EVALUATION ??\n"
+"@c \"RETURNED\" ?? IS THIS A SIMPLIFICATION OR AN EVALUATION ??\n"
 msgstr ""
 
 #: Matrices.texi:698
@@ -1140,7 +1140,7 @@ msgstr ""
 msgid ""
 "When @code{dotscrules} is @code{true}, an expression @code{A.SC} or @code{SC.A}\n"
 "simplifies to @code{SC*A} and @code{A.(SC*B)} simplifies to @code{SC*(A.B)}.\n"
-"@c HMM, DOES \\"SC\\" MEAN \\"SCALAR\\" HERE ?? CLARIFY\n"
+"@c HMM, DOES \"SC\" MEAN \"SCALAR\" HERE ?? CLARIFY\n"
 msgstr ""
 
 #: Matrices.texi:713
@@ -1250,7 +1250,7 @@ msgid ""
 "@mref{columnvector} and @mref{gramschmidt}) will not work.\n"
 "@c WHICH ONES ARE THE FUNCTIONS WHICH DON'T WORK ??\n"
 "@c ACTUALLY IT'S MORE IMPORTANT TO LIST THE ONES WHICH DON'T WORK HERE\n"
-"@c WHAT DOES \\"will not work\\" MEAN, ANYWAY ??\n"
+"@c WHAT DOES \"will not work\" MEAN, ANYWAY ??\n"
 "Sometimes @code{solve} may find only a subset of the roots of the polynomial.\n"
 "This may happen when the factoring of the polynomial contains polynomials\n"
 "of degree 5 or more. In such cases a warning message is displayed and the\n"
@@ -1271,7 +1271,7 @@ msgid ""
 "The package @code{eigen.mac} is loaded automatically when\n"
 "@code{eigenvalues} or @mref{eigenvectors} is referenced.\n"
 "If @code{eigen.mac} is not already loaded,\n"
-"@code{load (\\"eigen\\")} loads it.\n"
+"@code{load (\"eigen\")} loads it.\n"
 "After loading, all functions and variables in the package are available.\n"
 "@c REFER TO OVERVIEW OF PACKAGE (INCLUDING LIST OF FUNCTIONS) HERE\n"
 msgstr ""
@@ -1315,7 +1315,7 @@ msgid ""
 "The package @code{eigen.mac} is loaded automatically when\n"
 "@mref{eigenvalues} or @code{eigenvectors} is referenced.\n"
 "If @code{eigen.mac} is not already loaded,\n"
-"@code{load (\\"eigen\\")} loads it.\n"
+"@code{load (\"eigen\")} loads it.\n"
 "After loading, all functions and variables in the package are available.\n"
 msgstr ""
 
@@ -1870,7 +1870,7 @@ msgstr ""
 
 #: Matrices.texi:1190
 msgid ""
-"@code{load (\\"eigen\\")} loads this function.\n"
+"@code{load (\"eigen\")} loads this function.\n"
 @c Occurrences of paragraphs with this contents up to now: 1
 msgstr ""
 
@@ -2027,7 +2027,7 @@ msgstr ""
 #: Matrices.texi:1284
 msgid ""
 "@example\n"
-"(%i1) lmxchar: \\"|\\"$\n"
+"(%i1) lmxchar: \"|\"$\n"
 "(%i2) matrix ([a, b, c], [d, e, f], [g, h, i]);\n"
 "                           | a  b  c ]\n"
 "                           |         ]\n"
@@ -2422,8 +2422,8 @@ msgstr ""
 #: Matrices.texi:1605
 msgid ""
 "@example\n"
-"(%i1) matrix_element_add: \\"*\\"$\n"
-"(%i2) matrix_element_mult: \\"^\\"$\n"
+"(%i1) matrix_element_add: \"*\"$\n"
+"(%i2) matrix_element_mult: \"^\"$\n"
 "(%i3) aa: matrix ([a, b, c], [d, e, f]);\n"
 "                           [ a  b  c ]\n"
 "(%o3)                      [         ]\n"
@@ -2489,7 +2489,7 @@ msgstr ""
 #: Matrices.texi:1649
 msgid ""
 "@example\n"
-"(%i1) matrix_element_add: lambda ([[x]], sqrt (apply (\\"+\\", x)))$\n"
+"(%i1) matrix_element_add: lambda ([[x]], sqrt (apply (\"+\", x)))$\n"
 "(%i2) matrix_element_mult: lambda ([x, y], (x - y)^2)$\n"
 "(%i3) [a, b, c] . [x, y, z];\n"
 "                          2          2          2\n"
@@ -2640,7 +2640,7 @@ msgstr ""
 
 #: Matrices.texi:1734
 msgid ""
-"@code{load (\\"nchrpl\\")} loads this function.\n"
+"@code{load (\"nchrpl\")} loads this function.\n"
 msgstr ""
 
 #: Matrices.texi:1739
@@ -2693,7 +2693,7 @@ msgid ""
 "characteristic polynomial.  From these quantities the symmetric\n"
 "functions of the roots can be calculated, which are nothing more than\n"
 "the coefficients of the characteristic polynomial.  @code{charpoly} works by\n"
-"@c SHOULD THAT BE \\"m\\" INSTEAD OF \\"a\\" IN THE NEXT LINE ??\n"
+"@c SHOULD THAT BE \"m\" INSTEAD OF \"a\" IN THE NEXT LINE ??\n"
 "forming the determinant of @code{@var{x} * ident [n] - a}.  Thus\n"
 "@code{ncharpoly} wins, for example, in the case of large dense matrices filled\n"
 "with integers, since it avoids polynomial arithmetic altogether.\n"
@@ -2701,7 +2701,7 @@ msgstr ""
 
 #: Matrices.texi:1770
 msgid ""
-"@code{load (\\"nchrpl\\")} loads this file.\n"
+"@code{load (\"nchrpl\")} loads this file.\n"
 msgstr ""
 
 #: Matrices.texi:1775
@@ -3014,7 +3014,7 @@ msgstr ""
 
 #: Matrices.texi:1954
 msgid ""
-"@code{load (\\"eigen\\")} loads this function.\n"
+"@code{load (\"eigen\")} loads this function.\n"
 @c Occurrences of paragraphs with this contents up to now: 2
 msgstr ""
 
@@ -3216,7 +3216,7 @@ msgstr ""
 
 #: Matrices.texi:2075
 msgid ""
-"@code{load (\\"eigen\\")} loads this function.\n"
+"@code{load (\"eigen\")} loads this function.\n"
 @c Occurrences of paragraphs with this contents up to now: 3
 msgstr ""
 
@@ -3251,7 +3251,7 @@ msgstr ""
 
 #: Matrices.texi:2093
 msgid ""
-"@code{load (\\"eigen\\")} loads this function.\n"
+"@code{load (\"eigen\")} loads this function.\n"
 @c Occurrences of paragraphs with this contents up to now: 4
 msgstr ""
 

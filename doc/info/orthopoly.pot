@@ -64,7 +64,7 @@ msgstr ""
 msgid ""
 "@c Start Maxima and compile orthopoly. To do this, use the command\n"
 "@c \n"
-"@c (c1) compile_file(\\"orthopoly.lisp\\");\n"
+"@c (c1) compile_file(\"orthopoly.lisp\");\n"
 msgstr ""
 
 #: orthopoly.texi:36
@@ -716,18 +716,18 @@ msgstr ""
 #: orthopoly.texi:486
 msgid ""
 "@c ===beg===\n"
-"@c infix (\\"@+\\")$\n"
-"@c \\"@+\\"(x,y) := interval (part (x, 1) + part (y, 1), part (x, 2) \n"
+"@c infix (\"@+\")$\n"
+"@c \"@+\"(x,y) := interval (part (x, 1) + part (y, 1), part (x, 2) \n"
 "@c       + part (y, 2))$\n"
 "@c legendre_p (7, 0.1) @+ legendre_p (8, 0.1);\n"
 "@c ===end===\n"
 "@example\n"
-"(%i1) infix (\\"@@+\\")$\n"
+"(%i1) infix (\"@@+\")$\n"
 msgstr ""
 
 #: orthopoly.texi:489
 msgid ""
-"(%i2) \\"@@+\\"(x,y) := interval (part (x, 1) + part (y, 1), part (x, 2)\n"
+"(%i2) \"@@+\"(x,y) := interval (part (x, 1) + part (y, 1), part (x, 2)\n"
 "      + part (y, 2))$\n"
 msgstr ""
 

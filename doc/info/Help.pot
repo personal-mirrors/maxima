@@ -119,7 +119,7 @@ msgstr ""
 
 #: Help.texi:63
 msgid ""
-"@code{apropos(\\"\\")} returns a list with all Maxima names.\n"
+"@code{apropos(\"\")} returns a list with all Maxima names.\n"
 msgstr ""
 
 #: Help.texi:65
@@ -134,17 +134,17 @@ msgstr ""
 
 #: Help.texi:69
 msgid ""
-"Show all Maxima symbols which have @code{\\"gamma\\"} in the name:\n"
+"Show all Maxima symbols which have @code{\"gamma\"} in the name:\n"
 msgstr ""
 
 #: Help.texi:83
 msgid ""
 "@c ===beg===\n"
-"@c apropos(\\"gamma\\");\n"
+"@c apropos(\"gamma\");\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
-"(%i1) apropos(\\"gamma\\");\n"
+"(%i1) apropos(\"gamma\");\n"
 "(%o1) [%gamma, gamma, gammalim, gamma_expand, gamma_greek, \n"
 "gamma_incomplete, gamma_incomplete_generalized, \n"
 "gamma_incomplete_regularized, Gamma, log_gamma, makegamma, \n"
@@ -199,7 +199,7 @@ msgstr ""
 #: Help.texi:109
 msgid ""
 "@example\n"
-"(%i1) demo (\\"disol\\");\n"
+"(%i1) demo (\"disol\");\n"
 msgstr ""
 
 #: Help.texi:113
@@ -280,13 +280,13 @@ msgstr ""
 #: Help.texi:155
 msgid ""
 "At the interactive prompt, @code{? foo} (with a space between @code{?} and\n"
-"@code{foo}) is equivalent to @code{describe(\\"foo\\", exact)}, and @code{?? foo}\n"
-"is equivalent to @code{describe(\\"foo\\", inexact)}.\n"
+"@code{foo}) is equivalent to @code{describe(\"foo\", exact)}, and @code{?? foo}\n"
+"is equivalent to @code{describe(\"foo\", inexact)}.\n"
 msgstr ""
 
 #: Help.texi:158
 msgid ""
-"@code{describe(\\"\\", inexact)} yields a list of all topics documented in the\n"
+"@code{describe(\"\", inexact)} yields a list of all topics documented in the\n"
 "on-line manual.\n"
 msgstr ""
 
@@ -379,7 +379,7 @@ msgstr ""
 msgid ""
 "@code{example (@var{topic})} displays some examples of @var{topic}, which is a\n"
 "symbol or a string.  To get examples for operators like @code{if}, @code{do},\n"
-"or @code{lambda} the argument must be a string, e.g. @code{example (\\"do\\")}.\n"
+"or @code{lambda} the argument must be a string, e.g. @code{example (\"do\")}.\n"
 "@code{example} is not case sensitive.  Most topics are function names.\n"
 msgstr ""
 
@@ -391,7 +391,7 @@ msgstr ""
 #: Help.texi:225
 msgid ""
 "The name of the file containing the examples is given by the global option \n"
-"variable @mrefcomma{manual_demo} which defaults to @code{\\"manual.demo\\"}.\n"
+"variable @mrefcomma{manual_demo} which defaults to @code{\"manual.demo\"}.\n"
 msgstr ""
 
 #: Help.texi:229
@@ -410,7 +410,7 @@ msgstr ""
 msgid ""
 "@c ===beg===\n"
 "@c example(append);\n"
-"@c example(\\"lambda\\");\n"
+"@c example(\"lambda\");\n"
 "@c ===end===\n"
 "@example\n"
 "@group\n"
@@ -419,7 +419,7 @@ msgid ""
 "(%o2)             [y + x, 0, - 3.2, 2.5e+20, x]\n"
 "(%o2)                         done\n"
 "@end group\n"
-"(%i3) example(\\"lambda\\");\n"
+"(%i3) example(\"lambda\");\n"
 "(%i4) lambda([x,y,z],x^2+y^2+z^2)\n"
 "                                    2    2    2\n"
 "(%o4)            lambda([x, y, z], x  + y  + z )\n"
@@ -446,7 +446,7 @@ msgid ""
 "@c -----------------------------------------------------------------------------\n"
 "@anchor{manual_demo}\n"
 "@defvr {Option variable} manual_demo\n"
-"Default value: @code{\\"manual.demo\\"}\n"
+"Default value: @code{\"manual.demo\"}\n"
 msgstr ""
 
 #: Help.texi:267

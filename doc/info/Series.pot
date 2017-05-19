@@ -911,11 +911,11 @@ msgstr ""
 
 #: Series.texi:619
 msgid ""
-"@c UMM, DO WE REALLY NEED TO DEFINE \\"DEFINITE\\" AND \\"INDEFINITE\\" SUMMATION HERE ??\n"
+"@c UMM, DO WE REALLY NEED TO DEFINE \"DEFINITE\" AND \"INDEFINITE\" SUMMATION HERE ??\n"
 "@c (CAN'T WE MAKE THE POINT WITHOUT DRAGGING IN SOME NONSTANDARD TERMINOLOGY ??)\n"
-"The terms \\"definite\\"\n"
-"and \\"indefinite summation\\" are used analogously to \\"definite\\" and\n"
-"\\"indefinite integration\\".\n"
+"The terms \"definite\"\n"
+"and \"indefinite summation\" are used analogously to \"definite\" and\n"
+"\"indefinite integration\".\n"
 "To sum indefinitely means to give a symbolic result\n"
 "for the sum over intervals of variable length, not just e.g. 0 to\n"
 "inf.  Thus, since there is no formula for the general partial sum of\n"
@@ -1003,7 +1003,7 @@ msgid ""
 "all rational functions which have the given Taylor series expansion\n"
 "where the sum of the degrees of the numerator and the denominator is\n"
 "less than or equal to the truncation level of the power series, i.e.\n"
-"are \\"best\\" approximants, and which additionally satisfy the specified\n"
+"are \"best\" approximants, and which additionally satisfy the specified\n"
 "degree bounds.\n"
 msgstr ""
 
@@ -1023,7 +1023,7 @@ msgid ""
 "returned.  Total degree is defined as @code{@var{numer_deg_bound} +\n"
 "@var{denom_deg_bound}}.\n"
 "Length of a power series is defined as\n"
-"@code{\\"truncation level\\" + 1 - min(0, \\"order of series\\")}.\n"
+"@code{\"truncation level\" + 1 - min(0, \"order of series\")}.\n"
 msgstr ""
 
 #: Series.texi:706
@@ -1235,7 +1235,7 @@ msgstr ""
 
 #: Series.texi:832
 msgid ""
-"@code{load (\\"revert\\")} loads these functions.\n"
+"@code{load (\"revert\")} loads these functions.\n"
 msgstr ""
 
 #: Series.texi:834
@@ -1247,7 +1247,7 @@ msgstr ""
 #: Series.texi:865
 msgid ""
 "@example\n"
-"(%i1) load (\\"revert\\")$\n"
+"(%i1) load (\"revert\")$\n"
 "(%i2) t: taylor (exp(x) - 1, x, 0, 6);\n"
 "                   2    3    4    5     6\n"
 "                  x    x    x    x     x\n"
@@ -1706,7 +1706,7 @@ msgstr ""
 msgid ""
 "When @code{taylor_order_coefficients} is @code{true},\n"
 "coefficients of taylor series are ordered canonically.\n"
-"@c IS MAXIMA'S NOTION OF \\"CANONICALLY\\" DESCRIBED ELSEWHERE ??\n"
+"@c IS MAXIMA'S NOTION OF \"CANONICALLY\" DESCRIBED ELSEWHERE ??\n"
 "@c AND WHAT HAPPENS WHEN IT IS FALSE ??\n"
 msgstr ""
 
@@ -1751,7 +1751,7 @@ msgstr ""
 
 #: Series.texi:1186
 msgid ""
-"@c WHAT IS THE \\"INPUT TRUNCATION LEVEL\\" ?? THE ARGUMENT n OF taylor ??\n"
+"@c WHAT IS THE \"INPUT TRUNCATION LEVEL\" ?? THE ARGUMENT n OF taylor ??\n"
 "When @code{taylor_truncate_polynomials} is @code{true},\n"
 "polynomials are truncated based upon the input truncation levels.\n"
 msgstr ""
@@ -1760,7 +1760,7 @@ msgstr ""
 msgid ""
 "Otherwise,\n"
 "polynomials input to @code{taylor} are considered to have infinite precison.\n"
-"@c WHAT IS \\"INFINITE PRECISION\\" IN THIS CONTEXT ??\n"
+"@c WHAT IS \"INFINITE PRECISION\" IN THIS CONTEXT ??\n"
 msgstr ""
 
 #: Series.texi:1195
@@ -2483,7 +2483,7 @@ msgstr ""
 msgid ""
 "@c LOOKING AT THE CODE IN src/pois3.lisp, THIS FCN SEEMS TO COMPUTE THE EXPONENT\n"
 "@c BY MULTIPLYING IN A LOOP DUNNO HOW WE WANT TO EXPLAIN THAT\n"
-"@c REPHRASE WITHOUT USING THE TERM \\"FUNCTIONALLY IDENTICAL\\"\n"
+"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
 msgstr ""
 
 #: Series.texi:1609
@@ -2590,7 +2590,7 @@ msgstr ""
 
 #: Series.texi:1664
 msgid ""
-"@c REPHRASE WITHOUT USING THE TERM \\"FUNCTIONALLY IDENTICAL\\"\n"
+"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
 msgstr ""
 
 #: Series.texi:1668
@@ -2711,7 +2711,7 @@ msgstr ""
 
 #: Series.texi:1730
 msgid ""
-"@c REPHRASE WITHOUT USING THE TERM \\"FUNCTIONALLY IDENTICAL\\"\n"
+"@c REPHRASE WITHOUT USING THE TERM \"FUNCTIONALLY IDENTICAL\"\n"
 @c Occurrences of paragraphs with this contents up to now: 1
 msgstr ""
 

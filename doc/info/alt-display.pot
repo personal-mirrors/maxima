@@ -58,7 +58,7 @@ msgstr ""
 msgid ""
 "@c (linenum:1,display2d:true,reset_displays());\n"
 "@example\n"
-"(%i1) load(\\"alt-display.mac\\")$\n"
+"(%i1) load(\"alt-display.mac\")$\n"
 "(%i2) set_alt_display(2,tex_display)$\n"
 msgstr ""
 
@@ -76,8 +76,8 @@ msgstr ""
 #: alt-display.texi:40
 msgid ""
 "(%i5) x/(x^2+y^2) = 1;\n"
-"<math xmlns=\\"http://www.w3.org/1998/Math/MathML\\"> <mi>mlabel</mi> \n"
-"<mfenced separators=\\"\\"><msub><mi>%o</mi> <mn>5</mn></msub> \n"
+"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"> <mi>mlabel</mi> \n"
+"<mfenced separators=\"\"><msub><mi>%o</mi> <mn>5</mn></msub> \n"
 "<mo>,</mo><mfrac><mrow><mi>x</mi> </mrow> <mrow><msup><mrow>\n"
 "<mi>y</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow>\n"
 "<mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow></mfrac> <mo>=</mo> \n"
@@ -107,8 +107,8 @@ msgstr ""
 
 #: alt-display.texi:67
 msgid ""
-"<math xmlns=\\"http://www.w3.org/1998/Math/MathML\\"> <mi>mlabel</mi> \n"
-"<mfenced separators=\\"\\"><msub><mi>%o</mi> <mn>7</mn></msub> \n"
+"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"> <mi>mlabel</mi> \n"
+"<mfenced separators=\"\"><msub><mi>%o</mi> <mn>7</mn></msub> \n"
 "<mo>,</mo><mfrac><mrow><mi>x</mi> </mrow> <mrow><msup><mrow>\n"
 "<mi>y</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow>\n"
 "<mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow></mfrac> <mo>=</mo> \n"
@@ -179,7 +179,7 @@ msgstr ""
 msgid ""
 "Set a time-stamp on each prompt:\n"
 "@example\n"
-"(%i1) load(\\"alt-display.mac\\")$\n"
+"(%i1) load(\"alt-display.mac\")$\n"
 msgstr ""
 
 #: alt-display.texi:104
@@ -192,7 +192,7 @@ msgid ""
 "(%i3) define_alt_display(time_stamp(x),\n"
 "                   block([alt_display1d:false,alt_display2d:false],\n"
 "                         simp:true,\n"
-"                         prompt_prefix:printf(false,\\"~a~%\\",timedate()),\n"
+"                         prompt_prefix:printf(false,\"~a~%\",timedate()),\n"
 "                         displa(x)));\n"
 msgstr ""
 
@@ -201,7 +201,7 @@ msgid ""
 "(%o3) time_stamp(x):=block([simp:false],\n"
 "                 block([?\*alt\-display1d\*:false,?\*alt\-display2d\*:false],\n"
 "                       simp:true,\n"
-"                       ?\*prompt\-prefix\*:printf(false,\\"~a~%\\",timedate()),\n"
+"                       ?\*prompt\-prefix\*:printf(false,\"~a~%\",timedate()),\n"
 "                       ?displa(x)))\n"
 "(%i4) set_alt_display(1,time_stamp);\n"
 msgstr ""
@@ -254,7 +254,7 @@ msgstr ""
 #: alt-display.texi:147
 msgid ""
 "@example\n"
-"(%i1) load(\\"alt-display.mac\\")$\n"
+"(%i1) load(\"alt-display.mac\")$\n"
 msgstr ""
 
 #: alt-display.texi:149
@@ -298,15 +298,15 @@ msgstr ""
 #: alt-display.texi:168
 msgid ""
 "@example\n"
-"(%i1) load(\\"alt-display.mac\\")$\n"
+"(%i1) load(\"alt-display.mac\")$\n"
 @c Occurrences of paragraphs with this contents up to now: 1
 msgstr ""
 
 #: alt-display.texi:174
 msgid ""
 "(%i2) set_alt_display(2,mathml_display);\n"
-"<math xmlns=\\"http://www.w3.org/1998/Math/MathML\\"> <mi>mlabel</mi> \n"
-" <mfenced separators=\\"\\"><msub><mi>%o</mi> <mn>2</mn></msub> \n"
+"<math xmlns=\"http://www.w3.org/1998/Math/MathML\"> <mi>mlabel</mi> \n"
+" <mfenced separators=\"\"><msub><mi>%o</mi> <mn>2</mn></msub> \n"
 " <mo>,</mo><mi>done</mi> </mfenced> </math>\n"
 "@end example\n"
 msgstr ""
@@ -386,8 +386,8 @@ msgstr ""
 
 #: alt-display.texi:227
 msgid ""
-"   <math xmlns=\\"http://www.w3.org/1998/Math/MathML\\"> <mi>mlabel</mi> \n"
-"   <mfenced separators=\\"\\"><msub><mi>%o</mi> <mn>3</mn></msub> \n"
+"   <math xmlns=\"http://www.w3.org/1998/Math/MathML\"> <mi>mlabel</mi> \n"
+"   <mfenced separators=\"\"><msub><mi>%o</mi> <mn>3</mn></msub> \n"
 "   <mo>,</mo><mfrac><mrow><mi>x</mi> </mrow> <mrow><msup><mrow>\n"
 "   <mi>y</mi> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup><mrow>\n"
 "   <mi>x</mi> </mrow> <mn>2</mn> </msup> </mrow></mfrac> </mfenced> </math>\n"
@@ -451,7 +451,7 @@ msgid ""
 "Here is an example where the display function is a @code{lambda}\n"
 "expression; it just displays the result as @TeX{}.\n"
 "@example\n"
-"(%i1) load(\\"alt-display.mac\\")$\n"
+"(%i1) load(\"alt-display.mac\")$\n"
 msgstr ""
 
 #: alt-display.texi:257
@@ -501,8 +501,8 @@ msgstr ""
 #: alt-display.texi:283
 msgid ""
 "@example\n"
-"(%i1) load(\\"alt-display.mac\\")$\n"
-"(%i2) set_prompt('prefix,printf(false,\\"It is now: ~a~%\\",timedate()))$\n"
+"(%i1) load(\"alt-display.mac\")$\n"
+"(%i2) set_prompt('prefix,printf(false,\"It is now: ~a~%\",timedate()))$\n"
 msgstr ""
 
 #: alt-display.texi:287
@@ -528,14 +528,14 @@ msgstr ""
 #: alt-display.texi:297
 msgid ""
 "@example\n"
-"(%i1) load(\\"alt-display.mac\\")$\n"
+"(%i1) load(\"alt-display.mac\")$\n"
 @c Occurrences of paragraphs with this contents up to now: 2
 msgstr ""
 
 #: alt-display.texi:300
 msgid ""
-"(%i2) set_prompt(prefix,\\"<<prefix>> \\",suffix,\\"<<suffix>> \\",general,\n"
-"           printf(false,\\"<<general>>~%\\"),epilog,printf(false,\\"<<epilog>>~%\\"));\n"
+"(%i2) set_prompt(prefix,\"<<prefix>> \",suffix,\"<<suffix>> \",general,\n"
+"           printf(false,\"<<general>>~%\"),epilog,printf(false,\"<<epilog>>~%\"));\n"
 msgstr ""
 
 #: alt-display.texi:311
@@ -564,19 +564,19 @@ msgstr ""
 #: alt-display.texi:322
 msgid ""
 "@ifinfo\n"
-"@c  (%i2) set_prompt('prefix,\\"[1;31m\\",'suffix,\\"[0;32m\\",'general,\\"[1;34m\\",'epilog,\\"[00;m\\")$\n"
+"@c  (%i2) set_prompt('prefix,\"[1;31m\",'suffix,\"[0;32m\",'general,\"[1;34m\",'epilog,\"[00;m\")$\n"
 "@example\n"
-"(%i1) load(\\"alt-display.mac\\")$\n"
+"(%i1) load(\"alt-display.mac\")$\n"
 msgstr ""
 
 #: alt-display.texi:324
 msgid ""
-"(%i2) cs(s) := printf(false,\\"~c[~am\\",ascii(27),s)$\n"
+"(%i2) cs(s) := printf(false,\"~c[~am\",ascii(27),s)$\n"
 msgstr ""
 
 #: alt-display.texi:337
 msgid ""
-"(%i3) set_prompt(prefix,cs(\\"1;31\\"),suffix,cs(\\"0;32\\"),general,cs(\\"1;34\\"),epilog,cs(\\"00;\\"));\n"
+"(%i3) set_prompt(prefix,cs(\"1;31\"),suffix,cs(\"0;32\"),general,cs(\"1;34\"),epilog,cs(\"00;\"));\n"
 "(%o3)                                done\n"
 "[1;31m(%i4)[0;32m integrate(exp(-x^2),x,0,inf);[1;34m\n"
 "                                   sqrt(%pi)\n"
