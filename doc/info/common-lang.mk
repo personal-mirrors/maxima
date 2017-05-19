@@ -109,7 +109,7 @@ SUFFIXES=.texi
 	cat $< | perl $(top_srcdir)/doc/info/po2texi.pl > $@
 
 allpo: FORCE
-	for i in *.po; msgmerge $i ../`basename $i .po`.pot;done
+	for i in *.po; do msgmerge --update $$i ../`basename $$i .po`.pot;done
 
 FORCE:
 
