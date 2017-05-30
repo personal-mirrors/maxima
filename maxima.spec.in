@@ -260,6 +260,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications
 %{_datadir}/bash-completion
 %{_datadir}/pixmaps
+%{_datadir}/mime
 %dir %{_libexecdir}/maxima
 %{_libexecdir}/maxima/%{version}
 %{_infodir}/*
