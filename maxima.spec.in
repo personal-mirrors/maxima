@@ -257,6 +257,9 @@ rm -rf $RPM_BUILD_ROOT
 %if %{enable_lang_pt_br_utf}
 %exclude %{_datadir}/maxima/%{version}/doc/html/pt_BR.utf8
 %endif
+%dir %{_datadir}/applications
+%dir %{_datadir}/bash-completion
+%dir %{_datadir}/pixmaps
 %dir %{_libexecdir}/maxima
 %{_libexecdir}/maxima/%{version}
 %{_infodir}/*
