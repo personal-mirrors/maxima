@@ -5,3 +5,14 @@
 
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-sbcl --enable-clisp
+
+override_dh_auto_build:
+	make
+
+override_dh_auto_install:
+	dh_auto_install
+
+get-orig-source:
+	uscan --force-download --repack --rename --destdir .
+
+.PHONY: get-orig-source
