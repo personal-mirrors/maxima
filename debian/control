@@ -1,0 +1,22 @@
+Source: maxima
+Section: math
+Priority: optional
+Maintainer: Gunter Königsmann <gunter@physikbuch.de>
+Build-Depends: sbcl, clisp , texinfo, libreadline-dev, locales, automake, debhelper ( >=9 ), autoconf, gawk | awk, texlive-latex-recommended, tex-common, python
+Standards-Version: 3.9.8
+
+Package: maxima
+Architecture: any
+Depends:  ${shlibs:Depends}, ${misc:Depends}
+Recommends: gnuplot-x11
+Suggests: texmacs, wish
+Conflicts: maxima-share, maxima-doc, xmaxima, maxima-emacs
+Description: A computer algebra system
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with over
+ 10000 self tests.
