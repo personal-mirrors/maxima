@@ -2,7 +2,7 @@ Source: maxima
 Section: math
 Priority: optional
 Maintainer: Gunter Königsmann <gunter@physikbuch.de>
-Build-Depends: sbcl, clisp , texinfo, libreadline-dev, locales, automake, debhelper ( >=9 ), autoconf, gawk | awk, texlive-latex-recommended, tex-common, python
+Build-Depends: sbcl, clisp , texinfo, libreadline-dev, locales, automake, debhelper ( >=9 ), autoconf, gawk | awk, texlive-latex-recommended, tex-common, python, dh-autoreconf | debhelper (>= 9.20160403~)
 Standards-Version: 3.9.8
 
 Package: maxima
