@@ -13,7 +13,8 @@ override_dh_auto_configure:
 override_dh_genbuildinfo:
 	./debian/dpkg-genbuildinfo
 
-override_dh_auto_test:
+override_dh_auto_install:
+	dh_auto_install -X usr/share/maxima/5.40.0/share/logic/COPYING
 
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .

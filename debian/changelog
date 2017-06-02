@@ -3,12 +3,11 @@ maxima (5.40.0-1) unstable; urgency=medium
   * New upstream release
   * Dropped all the patches
   * Dropped the division into separate packages
-  * Changed the lisp from gcl to sbcl+clisp as the gcl shipped with debian wouldn't
-    build the current maxima.
+  * Changed the lisp from gcl to sbcl+clisp
 
  -- Gunter Königsmann <wxmaxima@physikbuch.de>  Thu, 01 Jun 2017 06:01:14 +0000
 
-maxima (5.40.0-1) unstable; urgency=medium
+maxima (5.39.0-2) unstable; urgency=medium
 
   * fix_closeto_test_1 patch to correct 32bit test failure
 
