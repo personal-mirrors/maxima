@@ -3,11 +3,14 @@ Section: math
 Priority: optional
 Maintainer: Gunter Königsmann <gunter@physikbuch.de>
 Build-Depends: sbcl, clisp , texinfo, libreadline-dev, locales, automake, debhelper ( >=9 ), autoconf, gawk | awk, texlive-latex-recommended, tex-common, python, dh-autoreconf | debhelper (>= 9.20160403~)
+Vcs-Browser: https://sourceforge.net/p/maxima/code/ci/master/tree/
+Vcs-Git: https://peterpall@git.code.sf.net/p/maxima/code
+Homepage: https://maxima.sourceforge.net/
 Standards-Version: 3.9.8
 
 Package: maxima
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}
+Depends:  ${shlibs:Depends}, ${misc:Depends}, sbcl, clisp
 Recommends: gnuplot-x11
 Suggests: texmacs, wish
 Conflicts: maxima-share, maxima-doc, xmaxima, maxima-emacs
@@ -19,4 +22,4 @@ Description: A computer algebra system
  It has a symbolic source level debugger for maxima code.  Maxima is
  based on the original Macsyma developed at MIT in the 1970s.  It is
  quite versatile, reasonably powerful and comes with over
- 10000 self tests.
+ 10000 self test steps.
