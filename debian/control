@@ -13,7 +13,9 @@ Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, sbcl, clisp
 Recommends: gnuplot-x11
 Suggests: texmacs, wish
-Conflicts: maxima-share, maxima-doc, xmaxima, maxima-emacs
+Replaces: maxima-share, maxima-doc, xmaxima, maxima-emacs
+Breaks: maxima-share, maxima-doc, xmaxima, maxima-emacs
+Provides: maxima-share, maxima-doc, xmaxima, maxima-emacs
 Description: Computer algebra system
  Maxima is a fully symbolic computation program.  It is full featured
  doing symbolic manipulation of polynomials, matrices, rational
