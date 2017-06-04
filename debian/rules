@@ -6,20 +6,60 @@
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-sbcl --enable-clisp
 
-#override_dh_auto_build:
-#	make
-#	dh_auto_install
+override_dh_auto_build:
+	dh_auto_build --max-parallel=4
+
+
+# Build architecture-independent files.
+binary-indep: build install
+	dh_testdir -i
+	dh_testroot -i
+	dh_installdocs -i
+	dh_installexamples -i
+	dh_installmenu -i
+	dh_installemacsen -i
+	dh_installtex -i -p maxima-emacs
+	dh_installcron -i
+	dh_installman -i
+	dh_desktop -i
+	dh_installinfo -p maxima-doc debian/tmp/usr/share/info/*info*
+	dh_installchangelogs  -i debian/ChangeLog
+	dh_link -i
+	dh_strip -i
+	dh_compress -i -X.shtml -X.hh -Xmaxima-index.lisp
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_shlibdeps -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+# Build architecture-dependent files.
+binary-arch: build install
+	dh_testdir -a
+	dh_testroot -a
+	dh_installdocs -a
+	dh_installexamples -a
+	dh_installmenu -a
+	dh_installemacsen -a
+	dh_installcron -a
+	dh_installman -a
+	dh_desktop -a
+	dh_installinfo -a
+	dh_installchangelogs  -a debian/ChangeLog
+	dh_link -a
+	dh_strip -a $(NO_STRIP)
+	dh_compress -a
+	dh_fixperms -a
+	dh_installdeb -a
+	dh_shlibdeps -a
+	dh_gencontrol -a
+	dh_md5sums -a
+	dh_builddeb -a
+
+override_dh_auto_test:
 
 override_dh_genbuildinfo:
-	./debian/dpkg-genbuildinfo
-
-override_dh_genbuildinfo-all:
-	./debian/dpkg-genbuildinfo
-
-override_dh_genbuildinfo-any:
-	./debian/dpkg-genbuildinfo
-
-override_dh_genbuildinfo -indep:
 	./debian/dpkg-genbuildinfo
 
 override_dh_auto_install:
