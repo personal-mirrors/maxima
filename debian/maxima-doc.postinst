@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Debian installs compressed info files. Maxima needs them in their
+# uncompressed form, instead.
+set -e
+
+if [ "$1" = "configure" ] ; then
+
+	for i in /usr/share/info/maxima*.gz; do gunzip --keep $i;done
+
+fi
+
+#DEBHELPER#
