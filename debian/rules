@@ -6,6 +6,9 @@
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-sbcl --enable-clisp --prefix=/usr
 
+override_dh_auto_clean:
+	dh_clean -k
+
 override_dh_auto_build:
 	dh_auto_build --max-parallel=4
 
