@@ -24,7 +24,9 @@ binary-indep: build install
 	dh_installtex -i -p maxima-emacs
 	dh_installcron -i
 	dh_installman -i
+	dh_desktop -i
 	dh_installinfo -p maxima-doc debian/tmp/usr/share/info/*info*
+	dh_installchangelogs  -i debian/ChangeLog
 	dh_link -i
 	dh_strip -i
 	dh_compress -i -X.shtml -X.hh -Xmaxima-index.lisp
@@ -45,7 +47,9 @@ binary-arch: build install
 	dh_installemacsen -a
 	dh_installcron -a
 	dh_installman -a
+	dh_desktop -a
 	dh_installinfo -a
+	dh_installchangelogs  -a debian/ChangeLog
 	dh_link -a
 	dh_strip -a $(NO_STRIP)
 	dh_compress -a
@@ -57,6 +61,12 @@ binary-arch: build install
 	dh_builddeb -a
 
 override_dh_genbuildinfo:
+	./debian/dpkg-genbuildinfo
+
+override_dh_genbuildinfo-any:
+	./debian/dpkg-genbuildinfo
+
+override_dh_genbuildinfo-indep:
 	./debian/dpkg-genbuildinfo
 
 get-orig-source:
