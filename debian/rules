@@ -17,7 +17,8 @@ override_dh_auto_clean:
 # Not necessary. But speeds up the build by using more processors
 override_dh_auto_build:
 	dh_auto_build --max-parallel=4
-
+	dh_auto_install
+	ls -l debian/tmp
 
 # Build architecture-independent files. Why this is needed I don't know. But it is.
 binary-indep: build install
