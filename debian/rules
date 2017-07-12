@@ -1,5 +1,8 @@
 #!/usr/bin/make -f
 
+DH_VERBOSE = 1
+export DH_VERBOSE
+
 # The standard rule.
 %:
 	dh $@ 
@@ -18,7 +21,7 @@ override_dh_auto_clean:
 override_dh_auto_build:
 	dh_auto_build --max-parallel=4
 	dh_auto_install
-	ls -l debian/tmp
+	ls -l
 
 # Build architecture-independent files. Why this is needed I don't know. But it is.
 binary-indep: build install
