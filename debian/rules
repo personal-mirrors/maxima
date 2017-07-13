@@ -1,7 +1,6 @@
 #!/usr/bin/make -f
 
-DH_VERBOSE = 1
-export DH_VERBOSE
+export DH_VERBOSE=1
 
 # The standard rule.
 %:
@@ -9,7 +8,7 @@ export DH_VERBOSE
 
 # Tell configure to produce a build for two lisps.
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-sbcl --enable-clisp
+	dh_auto_configure -- --enable-sbcl --enable-clisp --prefix=$(CURDIR)/debian/tmp/
 
 # This avoids dh_clean from being called between the generation of the two packages
 # and therefore hinders debuild from deleting files we want to package before we can
@@ -22,6 +21,12 @@ override_dh_auto_build:
 	dh_auto_build --max-parallel=4
 	dh_auto_install
 	ls -l
+
+override_dh_auto_install-any:
+	make install
+
+override_dh_auto_install-indep:
+	make install
 
 # Build architecture-independent files. Why this is needed I don't know. But it is.
 binary-indep: build install
