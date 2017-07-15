@@ -14,6 +14,18 @@ override_dh_auto_build:
 	make install
 	ls -l debian
 
+binary: binary-arch binary-indep
+
+binary-arch:
+	make -j 4
+	make install
+	ls -l debian
+
+binary-indep:
+	make -j 4
+	make install
+	ls -l debian
+
 # The following rules are needed as debhelper by default aborts if no standard elf binary is
 # produced. We produce a lisp core dump or something similar it doesn't interpret as "compiled".
 override_dh_genbuildinfo:
