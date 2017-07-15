@@ -19,16 +19,11 @@ override_dh_auto_clean:
 # Not necessary. But speeds up the build by using more processors
 override_dh_auto_build:
 	dh_auto_build --max-parallel=4
-	dh_auto_install
-	ls -l
-
-override_dh_auto_install-any:
+	ls debian -l
 	make install
 
-override_dh_auto_install-indep:
-	make install
 
-# Build architecture-independent files. Why this is needed I don't know. But it is.
+# Build architecture-independent files. Why this is needed I don't know. But it seems to be.
 binary-indep: build install
 	dh_testdir -i
 	dh_testroot -i
@@ -78,6 +73,9 @@ binary-arch: build install
 # The following rules are needed as debhelper by default aborts if no standard elf binary is
 # produced. We produce a lisp core dump or something similar it doesn't interpret as "compiled".
 override_dh_genbuildinfo:
+	./debian/dpkg-genbuildinfo
+
+override_dh_genbuildinfo-all:
 	./debian/dpkg-genbuildinfo
 
 override_dh_genbuildinfo-any:
