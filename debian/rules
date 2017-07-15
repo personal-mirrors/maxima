@@ -6,6 +6,7 @@
 
 # Tell configure to produce a build for two lisps.
 override_dh_auto_configure:
+	./bootstrap
 	./configure --enable-sbcl --enable-clisp --prefix=$(CURDIR)/debian/tmp/usr
 
 # Not necessary. But speeds up the build by using more processors
