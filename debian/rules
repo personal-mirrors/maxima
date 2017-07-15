@@ -1,81 +1,22 @@
 #!/usr/bin/make -f
 
-export DH_VERBOSE=1
-
 # The standard rule.
 %:
 	dh $@ 
 
 # Tell configure to produce a build for two lisps.
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-sbcl --enable-clisp --prefix=$(CURDIR)/debian/tmp/
-
-# This avoids dh_clean from being called between the generation of the two packages
-# and therefore hinders debuild from deleting files we want to package before we can
-# do so.
-override_dh_auto_clean:
-	dh_prep
+	./configure --enable-sbcl --enable-clisp --prefix=$(CURDIR)/debian/tmp/usr
 
 # Not necessary. But speeds up the build by using more processors
 override_dh_auto_build:
-	dh_auto_build --max-parallel=4
-	ls debian -l
+	make -j 4
 	make install
-
-
-# Build architecture-independent files. Why this is needed I don't know. But it seems to be.
-binary-indep: build install
-	dh_testdir -i
-	dh_testroot -i
-	dh_installdocs -i
-	dh_installexamples -i
-	dh_installmenu -i
-	dh_installemacsen -i
-	dh_installtex -i -p maxima-emacs
-	dh_installcron -i
-	dh_installman -i
-	dh_installinfo -p maxima-doc debian/tmp/usr/share/info/*info*
-	dh_link -i
-	dh_strip -i
-	dh_compress -i -X.shtml -X.hh -Xmaxima-index.lisp
-	dh_fixperms -i
-	dh_installdeb -i
-	dh_shlibdeps -i
-	dh_gencontrol -i
-	dh_md5sums -i
-	dh_builddeb -i
-
-# Build architecture-dependent files. Why this is needed I don't know. But it is.
-binary-arch: build install
-	dh_testdir -a
-	dh_testroot -a
-	dh_installdocs -a
-	dh_installexamples -a
-	dh_installmenu -a
-	dh_installemacsen -a
-	dh_installcron -a
-	dh_installman -a
-	dh_installinfo -a
-	dh_link -a
-	dh_strip -a $(NO_STRIP)
-	dh_compress -a
-	dh_fixperms -a
-	dh_installdeb -a
-	dh_shlibdeps -a
-	dh_gencontrol -a
-	dh_md5sums -a
-	dh_builddeb -a
-
-# Can be uncommented in order to temporarily disable the automatic tests
-#
-#override_dh_auto_test:
+	ls -l debian
 
 # The following rules are needed as debhelper by default aborts if no standard elf binary is
 # produced. We produce a lisp core dump or something similar it doesn't interpret as "compiled".
 override_dh_genbuildinfo:
-	./debian/dpkg-genbuildinfo
-
-override_dh_genbuildinfo-all:
 	./debian/dpkg-genbuildinfo
 
 override_dh_genbuildinfo-any:
@@ -86,4 +27,5 @@ override_dh_genbuildinfo-indep:
 
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
+
 .PHONY: get-orig-source
