@@ -1,25 +1,56 @@
 #!/usr/bin/make -f
 
+# The standard rule.
 %:
 	dh $@ 
 
+# Tell configure to produce a build for two lisps.
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-sbcl --enable-clisp
+	./bootstrap
+	./configure --enable-sbcl --enable-clisp --prefix=$(CURDIR)/debian/tmp/usr
 
-override_dh_auto_test:
+# Not necessary. But speeds up the build by using more processors
+override_dh_auto_build:
+	make -j 4
+	make install
+	ls -l debian
+
+binary: binary-arch binary-indep
+
+binary-arch:
+	make -j 4
+	make install
+	ls -l debian
+
+binary-indep:
+	make -j 4
+	make install
+	ls -l debian
+
+# The following rules are needed as debhelper by default aborts if no standard elf binary is
+# produced. We produce a lisp core dump or something similar it doesn't interpret as "compiled".
+override_dh_genbuildinfo:
+	./debian/dpkg-genbuildinfo
+
+override_dh_genbuildinfo-any:
+	./debian/dpkg-genbuildinfo
+
+override_dh_genbuildinfo-all:
+	./debian/dpkg-genbuildinfo
 
 override_dh_genbuildinfo-indep:
 	./debian/dpkg-genbuildinfo
 
-override_dh_genbuildinfo:
-	./debian/dpkg-genbuildinfo
-
-override_dh_genbuildinfo-arch:
-	./debian/dpkg-genbuildinfo
-
-override_dh_auto_install:
-	dh_auto_install -X usr/share/maxima/5.40.0/share/logic/COPYING
-
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	make install
+override_dh_auto_install-any:
+	make install
+override_dh_auto_install-indep:
+	make install
+
 .PHONY: get-orig-source
