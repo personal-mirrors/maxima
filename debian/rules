@@ -4,20 +4,17 @@
 %:
 	dh $@ --parallel
 
-# Tell configure to produce a build for two lisps.
+# Tell configure to produce a build for three lisps.
 override_dh_auto_configure:
 	./bootstrap
 	dh_auto_configure -- --enable-sbcl --enable-clisp
 
-override_dh_install:
-	dh_install --fail-missing
-
-override_dh_missing:
-	dh_missing --fail-missing
-
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
 
+# This one is really important: The maxima source contains a folder named
+# "binary" whose existance without declaring "binary" as a phony make target
+# will signal make that it doesn't need to build the binary.
 .PHONY: get-orig-source binary
 
 binary:
