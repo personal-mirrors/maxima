@@ -2,7 +2,7 @@
 
 # The standard rule.
 %:
-	dh $@ --parallel
+	dh $@
 
 # Tell configure to produce a build for three lisps.
 override_dh_auto_configure:
@@ -18,4 +18,4 @@ get-orig-source:
 .PHONY: get-orig-source binary
 
 binary:
-	dh $@  --parallel
+	dh $@
