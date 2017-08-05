@@ -10,7 +10,7 @@ Standards-Version: 3.9.8
 
 Package: maxima
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, sbcl, clisp
+Depends:  ${shlibs:Depends}, ${misc:Depends}, sbcl, clisp, gcl
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish
 Replaces: maxima-share, xmaxima, maxima-emacs
