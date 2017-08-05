@@ -1,5 +1,8 @@
 #!/usr/bin/make -f
 
+# GCL comes in two flavours. We need the ANSI one.
+export GCL_ANSI=t
+
 # The standard rule.
 %:
 	dh $@
