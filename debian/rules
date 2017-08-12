@@ -10,7 +10,7 @@ export GCL_ANSI=t
 # Tell configure to produce a build for three lisps.
 override_dh_auto_configure:
 	./bootstrap
-	dh_auto_configure -- --enable-sbcl --enable-clisp --enable-gcl --enable-ecl
+	dh_auto_configure -- --enable-sbcl --enable-clisp --enable-gcl
 
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
