@@ -10,7 +10,7 @@ export GCL_ANSI=t
 # Tell configure to produce a build for three lisps.
 override_dh_auto_configure:
 	./bootstrap
-	dh_auto_configure -- --enable-sbcl --enable-clisp --enable-gcl --enable-ecl
+	dh_auto_configure -- --enable-sbcl --enable-clisp --enable-gcl
 
 # This rule isn't necessary in order to build any package. But it is
 # helpful when a build server is used as it causes the test suite
