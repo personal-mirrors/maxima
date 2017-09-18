@@ -2,7 +2,7 @@ Source: maxima
 Section: math
 Priority: optional
 Maintainer: Gunter Königsmann <gunter@physikbuch.de>
-Build-Depends: sbcl, clisp, gcl, texinfo, libreadline-dev, locales, automake, debhelper ( >=9 ), autoconf, gawk | awk, texlive-latex-recommended, texlive-latex-base, python, dh-autoreconf | debhelper (>= 9.20160403~)
+Build-Depends: sbcl, clisp, gcl, texinfo, libreadline-dev, locales, automake, debhelper ( >=9 ), autoconf, gawk | awk, texlive-latex-recommended, texlive-latex-base, python, dh-autoreconf | debhelper (>= 9.20160403~), ecl, libffi-dev
 Vcs-Browser: https://sourceforge.net/p/maxima/code/ci/master/tree/
 Vcs-Git: https://peterpall@git.code.sf.net/p/maxima/code
 Homepage: https://maxima.sourceforge.net/
@@ -10,7 +10,7 @@ Standards-Version: 3.9.8
 
 Package: maxima
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, sbcl, clisp, gcl
+Depends:  ${shlibs:Depends}, ${misc:Depends}, sbcl, clisp, gcl, ecl
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish
 Replaces: maxima-share, xmaxima, maxima-emacs
