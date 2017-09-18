@@ -12,6 +12,12 @@ override_dh_auto_configure:
 	./bootstrap
 	dh_auto_configure -- --enable-sbcl --enable-clisp --enable-gcl
 
+# This rule isn't necessary in order to build any package. But it is
+# helpful when a build server is used as it causes the test suite
+# to output the full test log in case of a build server.
+override_dh_auto_test:
+	if make check; then true; else cat tests/test-suite.log;exit -1;fi
+
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
 
