@@ -3,6 +3,10 @@
 # GCL comes in two flavours. We need the ANSI one.
 export GCL_ANSI=t
 
+# On xenial/64 bit GCL did run into a testbench error. The following
+# line is supposed to fix it:
+export GCL_MEM_MULTIPLE=0.1
+
 # The standard rule.
 %:
 	dh $@
