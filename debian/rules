@@ -12,6 +12,9 @@ export GCL_MEM_MULTIPLE=0.1
 	dh $@
 
 # Tell configure to produce a build for three lisps.
+# ecl would be a fourth potential lisp. But (at least in Oct 2017)
+# https://bugs.launchpad.net/ubuntu/+source/ecl/+bug/317827
+# prevents creating ubuntu packages using ecl.
 override_dh_auto_configure:
 	./bootstrap
 	dh_auto_configure -- --enable-sbcl --enable-clisp --enable-gcl
