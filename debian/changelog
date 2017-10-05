@@ -1,11 +1,12 @@
-maxima (5.40.0-1) unstable; urgency=medium
+maxima (5.41.0-1) unstable; urgency=medium
 
   * New upstream release
   * Dropped all the patches
-  * Dropped the division into separate packages
-  * Changed the lisp from gcl to sbcl+clisp
+  * Dropped most of the the division into separate packages
+  * Tried to minimize the debian build instructions
+  * Changed the lisp from gcl to clisp
 
- -- Gunter Königsmann <wxmaxima@physikbuch.de>  Thu, 01 Jun 2017 06:01:14 +0000
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Thu, 05 Oct 2017 10:01:14 +0000
 
 maxima (5.39.0-2) unstable; urgency=medium
 
