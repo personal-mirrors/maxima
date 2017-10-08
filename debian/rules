@@ -11,6 +11,10 @@ export GCL_ANSI=t
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-clisp
 
+override_dh_installinfo:
+	dh_installinfo
+	dh_install usr/share/info/maxima-index.lisp
+
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
 
