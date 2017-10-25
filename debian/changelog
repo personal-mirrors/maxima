@@ -1,3 +1,11 @@
+maxima (5.41.0-3) unstable; urgency=medium
+
+  * Enabled the sbcl-build that is reasonably fast and doesn't require the system
+    to contain a specific sbcl install.
+  * Found a way to split maxima into maxima-clisp and maxima-sbcl
+
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Wed, 25 Oct 2017 19:55:14 +0000
+
 maxima (5.41.0-2) unstable; urgency=medium
 
   * debian/rules: Add the lisp index to the info files we need to distribute.
