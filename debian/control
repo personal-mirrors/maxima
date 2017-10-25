@@ -29,7 +29,7 @@ Description: Computer algebra system
 
 Package: maxima-gcl
 Architecture: all
-Depends:  ${shlibs:Depends}, ${misc:Depends}, gcl
+Depends:  ${shlibs:Depends}, ${misc:Depends}, gcl, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Provides: maxima (= ${binary:Version})
 Suggests: texmacs, wish
@@ -51,7 +51,7 @@ Description: Computer algebra system
 
 Package: maxima-sbcl
 Architecture: all
-Depends:  ${shlibs:Depends}, ${misc:Depends}
+Depends:  ${shlibs:Depends}, ${misc:Depends}, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish 
 Replaces: maxima-share, xmaxima, maxima-emacs
@@ -75,7 +75,7 @@ Description: Computer algebra system
 
 Package: maxima-clisp
 Architecture: all
-Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish
 Replaces: maxima-share, xmaxima, maxima-emacs
