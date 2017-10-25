@@ -51,9 +51,9 @@ Description: Computer algebra system
 
 Package: maxima-sbcl
 Architecture: all
-Depends:  ${shlibs:Depends}, ${misc:Depends}, sbcl
+Depends:  ${shlibs:Depends}, ${misc:Depends}
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
-Suggests: texmacs, wish
+Suggests: texmacs, wish 
 Replaces: maxima-share, xmaxima, maxima-emacs
 Breaks: maxima-share, xmaxima, maxima-emacs
 Provides: maxima (= ${binary:Version})
@@ -68,6 +68,8 @@ Description: Computer algebra system
  self tests.
  This package contains a maxima that was compiled by sbcl: sbcl is
  much faster for some tasks than gcl while being slower at others.
+ It also is able to create binaries that run on systems sbcl isn't
+ installed on.
  If more than one maxima is installed at the same time this maxima
  is run if maxima is called as "maxima -l sbcl"
 

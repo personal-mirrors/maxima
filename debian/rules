@@ -15,9 +15,12 @@ export GCL_MEM_MULTIPLE=0.1
 # ecl would be a fourth potential lisp. But (at least in Oct 2017)
 # https://bugs.launchpad.net/ubuntu/+source/ecl/+bug/317827
 # prevents creating ubuntu packages using ecl.
+# --enable-sbcl-exec tells the build system to create a maxima that
+# will work even if the corresponding sbcl version currently isn't
+# installed.
 override_dh_auto_configure:
 	./bootstrap
-	dh_auto_configure -- --enable-sbcl --enable-clisp --enable-gcl
+	dh_auto_configure -- --enable-sbcl --enable-clisp --enable-gcl --enable-sbcl-exec
 
 # This rule isn't necessary in order to build any package. But it is
 # helpful when a build server is used as it causes the test suite
