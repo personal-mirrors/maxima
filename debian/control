@@ -28,7 +28,7 @@ Description: Computer algebra system
  This package contains the files all maxima flavours require.
 
 Package: maxima-gcl
-Architecture: all
+Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, gcl, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Provides: maxima (= ${binary:Version})
@@ -50,7 +50,7 @@ Description: Computer algebra system
  is run if maxima is called as "maxima -l gcl"
 
 Package: maxima-sbcl
-Architecture: all
+Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish 
@@ -74,7 +74,7 @@ Description: Computer algebra system
  is run if maxima is called as "maxima -l sbcl"
 
 Package: maxima-clisp
-Architecture: all
+Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish
