@@ -13,8 +13,8 @@ Architecture: all
 Depends:  ${shlibs:Depends}, ${misc:Depends}
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish
-Replaces: maxima-share, xmaxima, maxima-emacs, maxima
-Breaks: maxima-share, xmaxima, maxima-emacs, maxima
+Replaces: maxima-share, xmaxima, maxima-emacs
+Breaks: maxima-share, xmaxima, maxima-emacs
 Provides: maxima-share, xmaxima, maxima-emacs
 Description: Computer algebra system
  Maxima is a fully symbolic computation program.  It is full featured
@@ -32,9 +32,9 @@ Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, gcl, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Provides: maxima (= ${binary:Version})
+Replaces: maxima
 Suggests: texmacs, wish
 Replaces: maxima-share, xmaxima, maxima-emacs
-Breaks: maxima-share, xmaxima, maxima-emacs
 Description: Computer algebra system
  Maxima is a fully symbolic computation program.  It is full featured
  doing symbolic manipulation of polynomials, matrices, rational
@@ -54,8 +54,7 @@ Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish 
-Replaces: maxima-share, xmaxima, maxima-emacs
-Breaks: maxima-share, xmaxima, maxima-emacs
+Replaces: maxima
 Provides: maxima (= ${binary:Version})
 Description: Computer algebra system
  Maxima is a fully symbolic computation program.  It is full featured
@@ -78,8 +77,7 @@ Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common
 Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Suggests: texmacs, wish
-Replaces: maxima-share, xmaxima, maxima-emacs
-Breaks: maxima-share, xmaxima, maxima-emacs
+Replaces: maxima
 Provides: maxima (= ${binary:Version})
 Description: Computer algebra system
  Maxima is a fully symbolic computation program.  It is full featured
