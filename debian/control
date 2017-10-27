@@ -8,6 +8,21 @@ Vcs-Git: https://peterpall@git.code.sf.net/p/maxima/code
 Homepage: https://maxima.sourceforge.net/
 Standards-Version: 3.9.8
 
+Package: maxima
+Architecture: all
+Depends:  ${shlibs:Depends}, ${misc:Depends}
+Depends: maxima-sbcl
+Description: Computer algebra system
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with extensive
+ self tests.
+ This is a dummy package that requests dpkg to install maxima-sbcl.
+
 Package: maxima-common
 Architecture: all
 Depends:  ${shlibs:Depends}, ${misc:Depends}
@@ -34,7 +49,6 @@ Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
 Provides: maxima (= ${binary:Version})
 Replaces: maxima
 Suggests: texmacs, wish
-Replaces: maxima-share, xmaxima, maxima-emacs
 Description: Computer algebra system
  Maxima is a fully symbolic computation program.  It is full featured
  doing symbolic manipulation of polynomials, matrices, rational
