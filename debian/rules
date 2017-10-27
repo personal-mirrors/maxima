@@ -28,6 +28,12 @@ override_dh_auto_configure:
 override_dh_auto_test:
 	if make check; then true; else cat tests/test-suite.log;false;fi
 
+# In order to keep the packages small debhelper normally removes all
+# debug symbols and similar things. Unfortunately in the sbcl case
+# this includes most of maxima => we need an exception.
+override_dh_auto_strip:
+	dh_strip -X sbcl
+
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
 
