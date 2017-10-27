@@ -20,8 +20,10 @@ Description: Computer algebra system
  based on the original Macsyma developed at MIT in the 1970s.  It is
  quite versatile, reasonably powerful and comes with extensive
  self tests.
- This is a dummy package that requests dpkg to install maxima-sbcl.
-
+ This is a dummy package that makes sure that at least one of the
+ maxima flavours is installed. It can be safely removed if any of the
+ maxima flavours is installed manually.
+ 
 Package: maxima-common
 Architecture: all
 Depends:  ${shlibs:Depends}, ${misc:Depends}
