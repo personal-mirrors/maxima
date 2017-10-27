@@ -4,7 +4,7 @@
 export GCL_ANSI=t
 
 # On xenial/64 bit GCL did run into a testbench error. The following
-# line is supposed to fix it:
+# line fixes this:
 export GCL_MEM_MULTIPLE=0.1
 
 # The standard rule.
@@ -30,9 +30,9 @@ override_dh_auto_test:
 
 # In order to keep the packages small debhelper normally removes all
 # debug symbols and similar things. Unfortunately in the sbcl case
-# this includes most of maxima => we need an exception.
-override_dh_auto_strip:
-	dh_strip -X sbcl
+# this removes maxima, as well so we end up with only the lisp runtime
+# instead => we need another override.
+override_dh_strip:
 
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
