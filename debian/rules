@@ -25,7 +25,8 @@ override_dh_auto_configure:
 # Tell the debhelper tools to include the index maxima needs in the
 # info directory.
 override_dh_installinfo:
-	dh_installinfo usr/share/info/*
+	dh_installinfo
+	dh_install usr/share/info/maxima-index.lisp
 
 # This rule isn't necessary in order to build any package. But it is
 # helpful when a build server is used as it causes the test suite

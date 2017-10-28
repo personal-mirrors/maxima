@@ -27,11 +27,11 @@ Description: Computer algebra system
 Package: maxima-common
 Architecture: all
 Depends:  ${misc:Depends}
-Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
+Recommends: gnuplot-x11, gnuplot
 Suggests: texmacs, wish
 Replaces: maxima-share, xmaxima, maxima-emacs
 Breaks: maxima-share, xmaxima, maxima-emacs
-Provides: maxima-share, xmaxima, maxima-emacs
+Provides: maxima-share, xmaxima, maxima-emacs, maxima-doc (= ${binary:Version})
 Description: Computer algebra system
  Maxima is a fully symbolic computation program.  It is full featured
  doing symbolic manipulation of polynomials, matrices, rational
@@ -46,7 +46,7 @@ Description: Computer algebra system
 Package: maxima-gcl
 Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, gcl, maxima-common
-Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
+Recommends: gnuplot-x11, wxmaxima, gnuplot
 Provides: maxima (= ${binary:Version})
 Replaces: maxima
 Suggests: texmacs, wish
@@ -67,7 +67,7 @@ Description: Computer algebra system
 Package: maxima-sbcl
 Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, maxima-common
-Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
+Recommends: gnuplot-x11, wxmaxima, gnuplot
 Suggests: texmacs, wish 
 Replaces: maxima
 Provides: maxima (= ${binary:Version})
@@ -90,7 +90,7 @@ Description: Computer algebra system
 Package: maxima-clisp
 Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common
-Recommends: gnuplot-x11, wxmaxima, maxima-doc, gnuplot
+Recommends: gnuplot-x11, wxmaxima, gnuplot
 Suggests: texmacs, wish
 Replaces: maxima
 Provides: maxima (= ${binary:Version})
@@ -111,17 +111,3 @@ Description: Computer algebra system
  memory-efficient.
  If more than one maxima is installed at the same time this maxima
  is run if maxima is called as "maxima -l clisp"
-
-Package: maxima-doc
-Architecture: all
-Depends:  ${misc:Depends}
-Description: Computer algebra system
- Maxima is a fully symbolic computation program.  It is full featured
- doing symbolic manipulation of polynomials, matrices, rational
- functions, integration, Todd-coxeter methods for finite group
- analysis, graphing, multiple precision floating point computation.
- It has a symbolic source level debugger for maxima code.  Maxima is
- based on the original Macsyma developed at MIT in the 1970s.  It is
- quite versatile, reasonably powerful and comes with over
- 10000 self test steps.
- This package contains maxima's online manual.
