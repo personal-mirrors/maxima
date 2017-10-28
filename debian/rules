@@ -22,6 +22,12 @@ override_dh_auto_configure:
 	./bootstrap
 	dh_auto_configure -- --enable-clisp --enable-gcl --enable-sbcl-exec
 
+# Tell the debhelper tools to include the index maxima needs in the
+# info directory.
+override_dh_installinfo:
+	dh_installinfo
+	dh_install usr/share/info/maxima-index.lisp
+
 # This rule isn't necessary in order to build any package. But it is
 # helpful when a build server is used as it causes the test suite
 # to output the full test log in case of a build server.
