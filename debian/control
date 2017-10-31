@@ -66,11 +66,29 @@ Description: Computer algebra system
  based on the original Macsyma developed at MIT in the 1970s.  It is
  quite versatile, reasonably powerful and comes with extensive
  self tests.
- This package contains a maxima that was compiled by clisp: Packages
- compiled with clisp tend to be able to run on different computers
- even if they don't contain exactly the clisp build maxima was
- compiled with. Clisp is typically way slower than clisp and sbcl,
- but it contains fast bignum arithmetics and tends to be extremely
- memory-efficient.
+ This package contains a maxima that was compiled by clisp.
+ Clisp typically is way slower than sbcl, but it contains fast bignum
+ arithmetics and tends to be extremely memory-efficient.
  If more than one maxima is installed at the same time this maxima
  is run if maxima is called as "maxima -l clisp"
+
+Package: maxima-ecl
+Architecture: any
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common
+Replaces: maxima
+Recommends: gnuplot-x11, wxmaxima, gnuplot
+Suggests: texmacs, wish
+Provides: maxima (= ${binary:Version})
+Description: Computer algebra system
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with extensive
+ self tests.
+ This package contains a maxima that was compiled by ecl which
+ performance-wise normally lies between sbcl and clisp.
+ If more than one maxima is installed at the same time this maxima
+ is run if maxima is called as "maxima -l ecl"
