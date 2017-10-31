@@ -9,7 +9,7 @@ export GCL_ANSI=t
 
 # Tell configure which lisps to build for.
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-clisp-exec -enable-sbcl-exec
+	dh_auto_configure -- --enable-clisp-exec --enable-sbcl-exec --enable-ecl
 
 # In order to keep the packages small debhelper normally removes all
 # debug symbols and similar things. Unfortunately in the sbcl case
