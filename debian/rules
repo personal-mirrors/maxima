@@ -20,7 +20,7 @@ export GCL_MEM_MULTIPLE=0.1
 # installed.
 override_dh_auto_configure:
 	./bootstrap
-	dh_auto_configure -- --enable-clisp --enable-gcl --enable-sbcl-exec
+	dh_auto_configure -- --enable-clisp-exec --enable-gcl --enable-sbcl-exec
 
 # Tell the debhelper tools to include the index maxima needs in the
 # info directory.
