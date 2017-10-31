@@ -8,8 +8,11 @@ export GCL_ANSI=t
 	dh $@
 
 # Tell configure which lisps to build for.
+#
+# Emptying the LDFLAGS works around the following bug in Ubuntu:
+# https://bugs.launchpad.net/ubuntu/+source/ecl/+bug/317827
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-clisp-exec --enable-sbcl-exec --enable-ecl
+	dh_auto_configure -- --enable-clisp-exec --enable-sbcl-exec --enable-ecl LDFLAGS=""
 
 # In order to keep the packages small debhelper normally removes all
 # debug symbols and similar things. Unfortunately in the sbcl case
