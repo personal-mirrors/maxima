@@ -45,7 +45,7 @@ Description: Computer algebra system
 
 Package: maxima-gcl
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, gcl, maxima-common
+Depends:  ${shlibs:Depends}, ${misc:Depends}, gcc, maxima-common
 Recommends: gnuplot-x11, wxmaxima, gnuplot
 Provides: maxima (= ${binary:Version})
 Replaces: maxima
