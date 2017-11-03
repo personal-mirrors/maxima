@@ -14,7 +14,7 @@ Depends:  ${misc:Depends}
 Recommends: gnuplot-x11, wxmaxima, gnuplot
 Replaces: maxima-share, xmaxima, maxima-emacs, maxima-doc
 Breaks: maxima-share, xmaxima, maxima-emacs, maxima-doc
-Suggests: texmacs, wish
+Suggests: texmacs, wish, python-vtk6, tcl-vtk6 
 Provides: maxima-share, xmaxima, maxima-emacs, maxima-doc (= ${binary:Version})
 Description: Computer algebra system
  Maxima is a fully symbolic computation program.  It is full featured
