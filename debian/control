@@ -28,7 +28,7 @@ Package: maxima-common
 Architecture: all
 Depends:  ${misc:Depends}
 Recommends: gnuplot-x11, gnuplot
-Suggests: texmacs, wish
+Suggests: texmacs, wish, python-vtk6, tcl-vtk6 
 Replaces: maxima-share, xmaxima, maxima-emacs, maxima-doc
 Breaks: maxima-share, xmaxima, maxima-emacs, maxima-doc
 Provides: maxima-share, xmaxima, maxima-emacs, maxima-doc (= ${binary:Version})
