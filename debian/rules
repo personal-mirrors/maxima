@@ -26,7 +26,7 @@ export GCL_MEM_MULTIPLE=0.1
 # https://bugs.launchpad.net/ubuntu/+source/ecl/+bug/317827
 override_dh_auto_configure:
 	./bootstrap
-	dh_auto_configure -- --enable-clisp-exec --enable-gcl --enable-sbcl-exec LDFLAGS=""
+	dh_auto_configure -- --enable-clisp-exec --enable-ecl --enable-gcl --enable-sbcl-exec LDFLAGS=""
 
 # Tell the debhelper tools to include the index maxima needs in the
 # info directory.
