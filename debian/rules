@@ -1,5 +1,9 @@
 #!/usr/bin/make -f
 
+# Provide maxma with a writeable home directory so it can compile
+# packages while running the testbench.
+export MAXIMA_USERDIR=debian/tmp/tmp
+
 # GCL comes in two flavours. We need the ANSI one.
 export GCL_ANSI=t
 
