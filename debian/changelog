@@ -1,2166 +1,405 @@
-maxima (5.41.0-6) unstable; urgency=medium
+wxmaxima (18.02.0-2) unstable; urgency=medium
 
-  * gcl and ecl depend on gcc for loading share packages.
+  * Added a patch that repairs "Replace all" when not matching the case.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sat, 21 Feb 2018 03:25:36 +0100
 
- -- Gunter Königsmann <wxmaxima@physikbuch.de>  Thu, 2 Nov 2017 18:52:14 +0000
+wxmaxima (18.02.0-1) unstable; urgency=medium
 
-maxima (5.41.0-6) unstable; urgency=medium
+  * New upstream release (closes: bug#890637, #890212)
+  * Added a patch that makes the new version use the correct gnuplot parameters.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sat, 17 Feb 2018 19:07:36 +0100
 
-  * Enable the gcl build.
+wxmaxima (17.10.1-1) unstable; urgency=medium
 
- -- Gunter Königsmann <wxmaxima@physikbuch.de>  Wed, 1 Nov 2017 10:07:14 +0000
+  * New upstream release incorporating all the patches and enabling
+    tooltips for the more exotic worksheet items
+  * Dropped all the patches.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sun, 22 Oct 2017 06:40:36 +0100
 
-maxima (5.41.0-5) unstable; urgency=medium
+wxmaxima (17.10.0-3) unstable; urgency=medium
 
-  * Create a image that is independent of the lisps installed on the system for
-    clisp, too.
+  * debian/control: Instead of dropping the dependency to a specific maxima
+    I accidentally dropped the dependency to maxima entirely.
+    (closes: bug#877891)
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Fri, 6 Oct 2017 21:52:36 +0100
 
- -- Gunter Königsmann <wxmaxima@physikbuch.de>  Tue, 31 Oct 2017 13:37:14 +0000
+wxmaxima (17.10.0-2) unstable; urgency=medium
 
-maxima (5.41.0-4) unstable; urgency=medium
+  * Patch: One of the bugfixes in wxMaxima could cause a race condition that could
+    cause maxima's output to be attached to the wrong input cell => Reverted that
+    bugfix as attaching the output at the right place is more important than
+    supporting :lisp commands in the very first cell of the worksheet.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Fri, 6 Oct 2017 9:25:36 +0100
 
-  * Merged maxima-doc and maxima-common: No need to split the program in this
-    many packages.
+wxmaxima (17.10.0-1) unstable; urgency=medium
 
- -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sat, 28 Oct 2017 08:45:14 +0000
+  * New upstream release with many new features, bugfixes and performance
+    improvements.
+  * Switched the build system to cmake replacing the dependency to dh-autoreconf
+    by the dependency to cmake.
+  * Bumped the standards version to 3.9.8
+  * debian/rules: Cleaned up override_dh_auto_build and override_dh_auto_install
+  * debian/control: wxMaxima doesn't depend on a specific version of maxima and
+    maxima-doc.
+  * debian/control: There is a good fallback for a missing fonts-jsmath.
+    maxima-doc isn't necessary for running wxMaxima and the type of pdf
+    animations texlive-latex-extra was needed for are no more
+    supported by any major pdf viewer => Changed these packages to "suggested".
+  * debian/control: Dropped the dependency to ImageMagick, perl and texinfo
+    which are no more used.
+  * debian/copyright: wxmathml.lisp has been replaced by wxmathml.lisp.in
+  * debian/watch: github is the new project location.
+  *  Tried to make the watch file work again.
+  * Dropped all patches as they were upstreamed.
+  * Added a Patch that updates the location of appdata.xml
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sun, 1 Oct 2017 21:12:36 +0100
 
-maxima (5.41.0-3) unstable; urgency=medium
+wxmaxima (16.12.2-2) unstable; urgency=medium
 
-  * Enabled the sbcl-build that is reasonably fast and doesn't require the system
-    to contain a specific sbcl install.
-  * Found a way to split maxima into maxima-clisp and maxima-sbcl
+  * Resolved an incompatibility with the gcl debian is currently shipped with.
+    (closes: bug#853787)
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sun, 19 Feb 2017 19:39:36 +0100
 
- -- Gunter Königsmann <wxmaxima@physikbuch.de>  Wed, 25 Oct 2017 19:55:14 +0000
+wxmaxima (16.12.2-1) unstable; urgency=medium
 
-maxima (5.41.0-2) unstable; urgency=medium
+  * New upstream release that repairs drag-and-drop.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Wed, 25 Jan 2017 22:41:36 +0100
 
-  * debian/rules: Add the lisp index to the info files we need to distribute.
+wxmaxima (16.12.0-1) unstable; urgency=medium
 
- -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sun, 08 Oct 2017 10:01:14 +0000
+  * New upstream release. Contains literally hundreds of bug fixes,
+    performance improvements and usability improvements.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Mon, 12 Dec 2016 06:42:36 +0100
 
-maxima (5.41.0-1) unstable; urgency=medium
+wxmaxima (16.04.2-1) unstable; urgency=medium
+
+  * New upstream release. Fixes bugs reported since the last release including
+    special cases of integrals and fractions.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Wed, 11 May 2016 21:20:36 +0100
+
+wxmaxima (16.04.1-1) unstable; urgency=medium
+
+  * New upstream release. Fixes another printing problem, a possible crash
+    and a scrolling issue.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Wed, 06 Apr 2016 12:17:36 +0100
+
+wxmaxima (16.04.0-1) unstable; urgency=medium
+
+  * New upstream release. Fixes printing and brings in many new features,
+    bug fixes, performance and stability improvements.
+  * Moved the patch that removes the double menu upstream
+  * Deleted the .menu file that should be obsolete by now, anyway.
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sun, 03 Apr 2016 18:28:36 +0100
+
+wxmaxima (15.08.2-1) unstable; urgency=medium
+
+  * New upstream release. Fixes sidebar buttons and toolbar enable.
+  * Removed the broken and duplicate menu file
+  * Unbroke the remaining menu file (closes: bug#798156)
+  * added a .gbp file for debcheckout
+  * Added information about the packaging branch to debian/control
+  * Dropped the patch that adds a missing .po file since it was added upstream
+  * Dropped the parch that adds a mimetype to the .desktop file (is upstream)
+  * Now we register our docs with doc-base
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Wed, 09 Sep 2015 03:39:36 +0100
+
+wxmaxima (15.08.1-2) unstable; urgency=medium
+
+  * Added a patch that adds the missing en.po to the tarball.
+  * Added a patch that corrects the desktop file.
+  * Cleaned up debian/rules
+  * Added the .menu file to the debian directory
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Thu, 03 Sep 2015 07:37:36 +0100
+
+wxmaxima (15.08.1-1) unstable; urgency=medium
+
+  * New upstream release (closes: bug#466997) introducing
+    syntax highlighting, many performance, stability and usability fixes,
+    a content assistant, a state-of-the-art html export,
+    compatibility to maxima 5.37, support for a subset of Markdown and
+    bash autocompletion
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Tue, 01 Sep 2015 19:03:36 +0100
+
+wxmaxima (15.04.0-1) unstable; urgency=medium
+
+  * New upstream release with many new features (closes: bug#752528, #617355)
+    The list of the most important user-visible changes can be viewed in
+    the file ChangeLog in the original tarball.
+  * New maintainer (closes: bug#744706)
+  * Added ibus-gtk2 to the dependencies (needed for hotkey processing in some
+    setups)
+  * Added imagemagick to the dependencies (else export of animations breaks
+    silently)
+  * Changed recommended font from ttf-jsmath (virtual package) to the real
+    package fonts-jsmath
+  * wxMaxima now includes a manual that adds perl, texinfo and gettext to the
+    build-dependencies  * debian/copyright: The tango icons have been released
+    to the public domain
+  * debian/compat: Updated the standards version to 9.
+  * The patch that adds the desktop file now is included in upstream
+  * The patch that improves key modifier handling now is included in upstream
+  * Desktop integration (.desktop file, desktop icon, registered mimetypes,
+    appdata.xml) is
+    now included in upstream.
+  * debian/copyright: Corrected the filename of data/wxmathml.lisp
+ -- Gunter Königsmann <wxmaxima@physikbuch.de>  Sat, 04 Jul 2015 10:16:36 +0100
+
+wxmaxima (13.04.2-4) unstable; urgency=medium
+
+  * QA upload.
+  * New patch 100_improve_key_modifiers_handling.patch cherry-picked from
+    upstream git which fixes #742988 under wxWidgets 3.0.
+  * Update to use wxWidgets 3.0 again.  (closes: #741569)
+
+ -- Olly Betts <olly@survex.com>  Tue, 29 Apr 2014 09:47:11 +1200
+
+wxmaxima (13.04.2-3) unstable; urgency=medium
+
+  * Orphan package.
+  * Revert the update to wxWidgets 3.0. (closes: #742988)
+  * Remove myself from Uploaders and set the QA Group as Maintainer.
+
+ -- Frank S. Thomas <fst@debian.org>  Sun, 27 Apr 2014 09:41:59 +0200
+
+wxmaxima (13.04.2-2) unstable; urgency=low
+
+  * Use dh-autoreconf to support arm64. (closes: #728003)
+  * Bumped Standards-Version from 3.9.4 to 3.9.5, no changes required.
+
+ -- Frank S. Thomas <fst@debian.org>  Sun, 16 Mar 2014 10:05:36 +0100
+
+wxmaxima (13.04.2-1.1) unstable; urgency=low
+
+  * Non-maintainer upload at maintainer's request.
+  * Update to use wxWidgets 3.0.  (closes: #741569)
+
+ -- Olly Betts <olly@survex.com>  Sat, 15 Mar 2014 10:59:46 +1300
+
+wxmaxima (13.04.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upload to unstable. (closes: #711965)
+  * Updated debian/copyright for the new release.
+  * Bumped Standards-Version from 3.9.3 to 3.9.4, no changes required.
+
+ -- Frank S. Thomas <fst@debian.org>  Wed, 19 Jun 2013 18:16:46 +0200
+
+wxmaxima (12.04.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Shows the output of build_info(). (closes: #670088)
+  * Bumped Standards-Version from 3.9.2 to 3.9.3, no changes required.
+  * Use debhelper >= 9 and dpkg-buildflags.
+  * Added independent license paragraphs to debian/copyright.
+
+ -- Frank S. Thomas <fst@debian.org>  Tue, 01 May 2012 18:04:55 +0200
+
+wxmaxima (12.01.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Registers text/x-wxmaxima-batch as MimeType for wxMaxima documents.
+      (closes: #626525)
+    - Indicates in the desktop file that a filename can be passed as command
+      line argument to wxMaxima. (LP: #887806)
+  * Updated debian/copyright according to the latest DEP5 specification.
+
+ -- Frank S. Thomas <fst@debian.org>  Tue, 17 Jan 2012 21:27:27 +0100
+
+wxmaxima (11.08.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped Standards-Version from 3.9.1 to 3.9.2, no changes required.
+  * Updated debian/copyright for the new release.
+
+ -- Frank S. Thomas <fst@debian.org>  Mon, 15 Aug 2011 08:11:02 +0200
+
+wxmaxima (11.04.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Adds support for CUA editing keys. (closes: #610559)
+  * debian/rules: Added a get-orig-source target that calls uscan to document
+    explicitly how upstream tarballs are obtained.
+
+ -- Frank S. Thomas <fst@debian.org>  Sat, 23 Apr 2011 00:37:15 +0200
+
+wxmaxima (0.8.7-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Frank S. Thomas <fst@debian.org>  Sun, 06 Feb 2011 10:29:26 +0100
+
+wxmaxima (0.8.7-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Frank S. Thomas <fst@debian.org>  Thu, 27 Jan 2011 08:32:01 +0100
+
+wxmaxima (0.8.6-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bumped Standards-Version from 3.8.4 to 3.9.1, no changes required.
+  * Updated debian/copyright for the new release.
+
+ -- Frank S. Thomas <fst@debian.org>  Sun, 14 Nov 2010 09:20:29 +0100
+
+wxmaxima (0.8.5-2) unstable; urgency=low
+
+  * debian/control: Recommend libgnomeprintui2.2-0 which is required to
+    print properly. Thanks to Andres Cimmarusti for hunting down this
+    issue. (closes: #575297)
+
+ -- Frank S. Thomas <fst@debian.org>  Sat, 12 Jun 2010 01:58:34 +0200
+
+wxmaxima (0.8.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped Standards-Version from 3.8.3 to 3.8.4, no changes required.
+  * Updated debian/copyright for the new release.
+
+ -- Frank S. Thomas <fst@debian.org>  Tue, 04 May 2010 22:33:55 +0200
+
+wxmaxima (0.8.4-1) unstable; urgency=low
+
+  * New upstream release.
+    - wxMaxima shows now appropriate error messages when plotting undefined
+      functions. (closes: #545105)
+  * Switched to source format "3.0 (quilt)".
+  * Removed debian/patches/001_renamed_client_to_server.patch which was
+    required for Maxima (<< 5.18). Now that a newer Maxima version is in
+    unstable, this patch has been dropped and the Maxima dependency has
+    been bumped to (>= 5.18). (closes: #561326)
+  * Updated debian/copyright for the new release.
+
+ -- Frank S. Thomas <fst@debian.org>  Wed, 16 Dec 2009 12:34:45 +0100
+
+wxmaxima (0.8.3a-2) unstable; urgency=low
+
+  * debian/watch: Changed regexp to match versions with lower case characters.
+  * debian/control: Recommend ttf-jsmath which is required for displaying
+    mathematical symbols and greek letters. Thanks to Brendon Higgins!
+    (closes: #550022)
+
+ -- Frank S. Thomas <fst@debian.org>  Sun, 18 Oct 2009 17:05:03 +0200
+
+wxmaxima (0.8.3a-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Bumped Standards-Version from 3.8.2 to 3.8.3, no changes
+    required.
+  * debian/patches/: wxmaxima.desktop was updated upstream according to the
+    latest freedesktop.org specs so reduced 201_fix_desktop_file.patch to the
+    Debian specific bits and renamed it to 002_adapt_desktop_file.patch.
+  * debian/rules: Do not configure with "--enable-unicode-glyphs" because this
+    option has been removed in this release.
+  * Updated debian/copyright for the new release.
+
+ -- Frank S. Thomas <fst@debian.org>  Sat, 29 Aug 2009 11:09:53 +0200
+
+wxmaxima (0.8.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules: Set configure's --build and --host options properly
+    according to the autotools-dev documentation.
+  * debian/patches/: Added 001_renamed_client_to_server.patch so that wxMaxima
+    works with Maxima (<< 5.18).
+  * debian/control: This version requires wxWidgets (>= 2.8.4), bumped
+    build-dependency accordingly.
+  * Update config.{guess,sub} at build time and therefore added autotools-dev
+    to Build-Depends.
+
+ -- Frank S. Thomas <fst@debian.org>  Sun, 28 Jun 2009 13:58:42 +0200
+
+wxmaxima (0.8.1-1) unstable; urgency=low
+
+  * New upstream release. (closes: #484281, #508181)
+    - Does not fail to build from source. (closes: #527708)
+    - Warns on quit if modified files are not saved. (closes: #457599)
+    - Does not display an error pupup on program startup. (closes: #368630)
+    - Does not exhibit "strange" Lisp errors with recent maxima.
+      (closes: #493882, #487391)
+  * debian/control:
+    - Took over package from Rafa Rodríguez Galván with his permission. Thanks
+      Rafa and Marco for all your work! Set Debian Science Maintainers as
+      Maintainer and myself as Uploader.
+    - Added Vcs-{Git,Browser} and Homepage fields.
+    - wxWidgets >= 2.8.0 is required now; updated build-dependency accordingly.
+    - Bumped Standards-Version to 3.8.2.
+    - libxml2-dev is not required anymore; removed it from Build-Depends.
+    - Edited Description with the help of the debian-l10n-english folks.
+  * Updated debian/copyright and adapted it to DEP5. (closes: #439964)
+  * Added debian/watch file.
+  * debian/wxmaxima.menu:
+    - Changed section "Apps/Math" to "Applications/Science/Mathematics".
+    - Use 16x16 and 32x32 wxMaxima icons. (closes: #428820)
+  * Use dh and quilt's new debhelper addon instead of CDBS to minimize
+    debian/rules. This required to build-depend on debhelper (>= 7.0.50) and
+    quilt (>= 0.46-7).
+  * debian/patches/:
+    - Added 201_fix_desktop_file.patch that changes wxmaxima.desktop so that it
+      is valid according to the latest freedesktop.org specs. (closes: #466997)
+    - Removed config.patch; applied upstream.
+
+ -- Frank S. Thomas <fst@debian.org>  Sat, 27 Jun 2009 15:18:46 +0200
+
+wxmaxima (0.7.1-1) unstable; urgency=low
 
   * New upstream release
-  * Dropped all the patches
-  * Dropped most of the the division into separate packages
-  * Tried to minimize the debian build instructions
-  * Changed the lisp from gcl to clisp
+  * Added a patch to replace automatically the parameter 'maxima' in 
+    users ~/.wxMaxima if set to a wrong value (it happens on upgrades from
+    wxmaxima_0.7.0a-1). (Closes: #391535)
 
- -- Gunter Königsmann <wxmaxima@physikbuch.de>  Thu, 05 Oct 2017 10:01:14 +0000
+ -- Marco Presi (Zufus) <zufus@debian.org>  Mon, 26 Feb 2007 12:32:24 +0000
 
-maxima (5.39.0-2) unstable; urgency=medium
+wxmaxima (0.7.0a-1) unstable; urgency=low
 
-  * fix_closeto_test_1 patch to correct 32bit test failure
+  * New upstream release.
+  * Updated depends on maxima (>= 5.10.0). Closes: #387782
+  * Added depends on maxima-doc
+  * Bumped standard versions tp 3.7.2
+  * Added a patch to locate documentation
+  * Disabled support for drag and drop (knonw bug in upstream sources)
 
- -- Camm Maguire <camm@debian.org>  Mon, 08 May 2017 20:14:14 +0000
+ -- Marco Presi (Zufus) <zufus@debian.org>  Wed, 27 Sep 2006 11:39:41 +0200
 
-maxima (5.39.0-1) unstable; urgency=medium
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Sat, 06 May 2017 14:12:19 +0000
-
-maxima (5.38.1-8) unstable; urgency=medium
-
-  * Fix help system
-  * Bug fix: "Maxima&#39;s online help is unreachable", thanks to Emmanuel
-    Charpentier (Closes: #845430).
-
- -- Camm Maguire <camm@debian.org>  Fri, 25 Nov 2016 20:41:22 +0000
-
-maxima (5.38.1-7) unstable; urgency=medium
-
-  * Build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Tue, 22 Nov 2016 15:28:04 +0000
-
-maxima (5.38.1-6) unstable; urgency=medium
-
-  * Build-dep against latest gcl
-  * Bug fix: "imaxima does not load in maxima", thanks to Emmanuel
-    Charpentier (Closes: #844697).
-
- -- Camm Maguire <camm@debian.org>  Sat, 19 Nov 2016 21:29:35 +0000
-
-maxima (5.38.1-5) unstable; urgency=medium
-
-  * Build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Tue, 01 Nov 2016 13:00:12 +0000
-
-maxima (5.38.1-4) unstable; urgency=medium
-
-  * Build-dep against latest gcl
-  * Bug fix: "maxima-emacs does not work", thanks to Bastien ROUCARIES
-    (Closes: #842164).
-
- -- Camm Maguire <camm@debian.org>  Sat, 29 Oct 2016 11:11:52 +0000
-
-maxima (5.38.1-3) unstable; urgency=medium
-
-  * Build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Tue, 11 Oct 2016 20:59:25 +0000
-
-maxima (5.38.1-2) unstable; urgency=medium
-
-  * Build-dep against latest gcl
-  * Bug fix: "FTBFS: tests failures", thanks to Lucas Nussbaum (Closes:
-    #831248).
-
- -- Camm Maguire <camm@debian.org>  Sat, 01 Oct 2016 11:37:38 +0000
-
-maxima (5.38.1-1) unstable; urgency=medium
+wxmaxima (0.6.4-1) unstable; urgency=low
 
   * New upstream release
-  * Build-dep against latest gcl
+  * Upstream changes fix documentation browsing. Closes: #340152
 
- -- Camm Maguire <camm@debian.org>  Mon, 26 Sep 2016 20:19:59 +0000
+ -- Marco Presi (Zufus) <zufus@debian.org>  Mon, 21 Nov 2005 15:57:51 -0500
 
-maxima (5.38.0-3) unstable; urgency=medium
+wxmaxima (0.6.3-1) unstable; urgency=low
 
-  * consolidate patches
-  * Bug fix: "FTBFS when built with dpkg-buildpackage -A (tests fail)",
-    thanks to Santiago Vila (Closes: #816982).
-  * Bug fix: "looking for info documentation in the wrong location
-    (again)", thanks to Kyanos (Closes: #810578).
-  * Bug fix: "info files not where maxima expects them", thanks to Sanjoy
-    Mahajan (Closes: #815940).
-  * Bug fix: "changelog.gz is more than ten years old", thanks to Igor
-    Bogomazov (Closes: #820781).
+  * New upstream release.
+  * wxmaxima now depends on maxima>=5.9.2 due to case-sensitive 
+    commands introduction in maxima 5.9.2
 
- -- Camm Maguire <camm@debian.org>  Wed, 13 Apr 2016 14:49:57 +0000
+ -- Marco Presi (Zufus) <zufus@debian.org>  Thu, 17 Nov 2005 22:12:36 -0500
 
-maxima (5.38.0-2) unstable; urgency=medium
+wxmaxima (0.6.2-4) unstable; urgency=low
 
-  * fix i386 test failure
+  * Added wxmaxima.desktop
 
- -- Camm Maguire <camm@debian.org>  Sun, 10 Apr 2016 03:34:54 +0000
+ -- Marco Presi (Zufus) <zufus@debian.org>  Tue, 25 Oct 2005 14:52:44 -0400
 
-maxima (5.38.0-1) unstable; urgency=medium
+wxmaxima (0.6.2-3) unstable; urgency=low
 
-  * New upstream release
+  [ Rafa Rodriguez Galvan ]
+  * Provided wxmaxima.menu entry. Closes: #335645.
 
- -- Camm Maguire <camm@debian.org>  Wed, 06 Apr 2016 17:57:43 +0000
+  [ Marco Presi ]
+  * Added maxima icon.
 
-maxima (5.37.3-1) unstable; urgency=medium
+ -- Marco Presi (Zufus) <zufus@debian.org>  Tue, 25 Oct 2005 12:17:05 -0400
 
-  * New upstream release
-  * Todo: simplify clean/restore/save rules by foregoing aclocal and automake
+wxmaxima (0.6.2-2) unstable; urgency=low
 
- -- Camm Maguire <camm@debian.org>  Tue, 17 Nov 2015 18:57:07 +0000
+  * Modified erroneous entry in Maintainer: field.
 
-maxima (5.37.2-9) unstable; urgency=medium
+ -- Marco Presi (Zufus) <zufus@debian.org>  Sun, 23 Oct 2005 13:27:55 -0400
 
-  * Bug fix: "maxima do not load the draw package.", thanks to Renato
-    Alvarez Nodarse (Closes: #803251).  rework sys:*load-pathname* patch
-  * do not rebuild docs, remove build-dep on texi2html
-  * no xmaxima in menu
-  * use dh_compress to compress Manual.ps.gz
+wxmaxima (0.6.2-1) unstable; urgency=low
 
- -- Camm Maguire <camm@debian.org>  Thu, 29 Oct 2015 19:20:13 +0000
+  * Initial release Closes: #290922
 
-maxima (5.37.2-8) unstable; urgency=medium
-
-  * Bug fix: "FTBFS on mips64el", thanks to James Cowgill (Closes:
-    #775728). Rebuild against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Wed, 28 Oct 2015 11:16:02 +0000
-
-maxima (5.37.2-7) unstable; urgency=medium
-
-  * build-dep latest gcl, fix FTBFS mips64el
-
- -- Camm Maguire <camm@debian.org>  Fri, 23 Oct 2015 11:25:04 +0000
-
-maxima (5.37.2-6) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Fri, 16 Oct 2015 13:14:26 +0000
-
-maxima (5.37.2-5) unstable; urgency=medium
-
-  * build-dep latest gcl
-  * remove strace/setarch diagnostics
-
- -- Camm Maguire <camm@debian.org>  Tue, 13 Oct 2015 17:16:32 +0000
-
-maxima (5.37.2-4) unstable; urgency=medium
-
-  * setarch diagnostic tool in debian/rules
-
- -- Camm Maguire <camm@debian.org>  Sun, 11 Oct 2015 16:26:36 +0000
-
-maxima (5.37.2-3) unstable; urgency=medium
-
-  * remove references to si:*load-pathname*
-  * strace build diagnostic
-
- -- Camm Maguire <camm@debian.org>  Fri, 09 Oct 2015 20:55:01 +0000
-
-maxima (5.37.2-2) unstable; urgency=medium
-
-  * build-dep on latest gcl
-  * remove obsolete compatability code in debian/rules
-
- -- Camm Maguire <camm@debian.org>  Fri, 09 Oct 2015 14:13:39 +0000
-
-maxima (5.37.2-1) unstable; urgency=medium
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Thu, 01 Oct 2015 16:28:16 +0000
-
-maxima (5.37.1-4) unstable; urgency=medium
-
-  * build-dep on latest gcl
-
- -- Camm Maguire <camm@debian.org>  Tue, 29 Sep 2015 21:39:16 +0000
-
-maxima (5.37.1-3) unstable; urgency=medium
-
-  * build-dep on latest gcl
-  * Bug fix: "Precision issues", thanks to Julien Puydt (Closes: #777072).
-
- -- Camm Maguire <camm@debian.org>  Fri, 25 Sep 2015 16:26:23 +0000
-
-maxima (5.37.1-2) unstable; urgency=medium
-
-  * build-dep on python
-
- -- Camm Maguire <camm@debian.org>  Tue, 15 Sep 2015 18:38:33 +0000
-
-maxima (5.37.1-1) unstable; urgency=medium
-
-  * New upstream release
-  * Bug fix: "looking for info documentation in the wrong location",
-    thanks to Antonio Terceiro (Closes: #788430).
-  * Bug fix: "Fails to build from a git repository", thanks to Tobias
-    Hansen (Closes: #780315).
-
- -- Camm Maguire <camm@debian.org>  Tue, 15 Sep 2015 16:34:03 +0000
-
-maxima (5.36.1-2) unstable; urgency=medium
-
-  * Bug fix: "Embedded code copy with missing copyright", thanks to Maria
-    Valentina Marin (Closes: #795056).  Build-dep system texi2html
-  * newer standards
-
- -- Camm Maguire <camm@debian.org>  Mon, 07 Sep 2015 15:37:37 +0000
-
-maxima (5.36.1-1) unstable; urgency=medium
-
-  * New upstream release
-
- -- Camm Maguire <camm@barriere.debian.org>  Mon, 01 Jun 2015 17:56:11 +0000
-
-maxima (5.35.1-7) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Fri, 29 May 2015 01:34:17 +0000
-
-maxima (5.35.1-6) unstable; urgency=medium
-
-  * add 10MB si::*code-block-reserve*
-
- -- Camm Maguire <camm@debian.org>  Mon, 25 May 2015 12:15:04 +0000
-
-maxima (5.35.1-5) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Sat, 16 May 2015 11:57:08 +0000
-
-maxima (5.35.1-4) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Thu, 30 Apr 2015 21:34:54 -0400
-
-maxima (5.35.1-3) unstable; urgency=medium
-
-  * build-dep latest gcl
-  * run testsuite with -g to catch intermittent failures on autobuilders
-
- -- Camm Maguire <camm@debian.org>  Tue, 28 Apr 2015 11:50:07 -0400
-
-maxima (5.35.1-2) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Fri, 24 Apr 2015 13:51:30 -0400
-
-maxima (5.35.1-1) unstable; urgency=medium
-
-  * New upstream release
-  * Bug fix: "[maxima] incorrect handling of UTF8 characters", thanks to
-    Maximilian Gaukler (Closes: #617357).  Temporarily extend gcl's
-    alpha-char-p to handle utf8 continuation characters pending a more
-    general utf8 string in gcl.
-
- -- Camm Maguire <camm@debian.org>  Mon, 15 Dec 2014 11:33:47 -0500
-
-maxima (5.34.1-4) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Thu, 23 Oct 2014 20:05:56 -0400
-
-maxima (5.34.1-3) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Mon, 29 Sep 2014 09:42:34 -0400
-
-maxima (5.34.1-2) unstable; urgency=medium
-
-  * update config.sub, config.guess
-
- -- Camm Maguire <camm@debian.org>  Mon, 29 Sep 2014 09:42:22 -0400
-
-maxima (5.34.1-1) unstable; urgency=medium
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Wed, 10 Sep 2014 10:13:47 -0400
-
-maxima (5.34.0-1) unstable; urgency=medium
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Wed, 03 Sep 2014 10:25:51 -0400
-
-maxima (5.33.0-20) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Sun, 31 Aug 2014 19:05:15 -0400
-
-maxima (5.33.0-19) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Thu, 21 Aug 2014 18:46:50 +0000
-
-maxima (5.33.0-18) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Tue, 19 Aug 2014 19:19:44 +0000
-
-maxima (5.33.0-17) unstable; urgency=medium
-
-  * build-dep latest gcl
-  * mv favicon.ico into debian/
-
- -- Camm Maguire <camm@debian.org>  Thu, 14 Aug 2014 20:51:07 +0000
-
-maxima (5.33.0-16) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Thu, 14 Aug 2014 18:17:56 +0000
-
-maxima (5.33.0-15) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Wed, 06 Aug 2014 20:32:32 +0000
-
-maxima (5.33.0-14) unstable; urgency=medium
-
-  * build-dep latest gcl
-  * Bug fix: "&quot;Segmentation fault&quot; during startup", thanks to
-    Joerg Morbitzer (Closes: #756465).
-  * Bug fix: "Maxima segfaults when calculating determinant", thanks to
-    Jeronimo Pellegrini (Closes: #756337).
-
- -- Camm Maguire <camm@debian.org>  Tue, 05 Aug 2014 01:56:07 +0000
-
-maxima (5.33.0-13) unstable; urgency=medium
-
-  * build-dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Thu, 24 Jul 2014 22:03:31 +0000
-
-maxima (5.33.0-12) unstable; urgency=medium
-
-  * build-dep latest gcl
-  * Bug fix: "cannot use prelink on maxima binary", thanks to Laurent
-    Bonnaud (Closes: #262891).
-  * remove obsolete external plotting and tips documentation
-
- -- Camm Maguire <camm@debian.org>  Tue, 22 Jul 2014 19:35:20 +0000
-
-maxima (5.33.0-11) unstable; urgency=medium
-
-  * Bug fix: "maxima wants wxt as backend for gnuplot", thanks to Harven
-    (Closes: #752214). patch gnuplot_default_term_command
-
- -- Camm Maguire <camm@debian.org>  Thu, 17 Jul 2014 21:17:23 +0000
-
-maxima (5.33.0-10) unstable; urgency=medium
-
-  * rebuild against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Wed, 16 Jul 2014 21:13:29 +0000
-
-maxima (5.33.0-9) unstable; urgency=medium
-
-  * gcl version number mismatch
-
- -- Camm Maguire <camm@debian.org>  Wed, 09 Jul 2014 18:56:55 +0000
-
-maxima (5.33.0-8) unstable; urgency=medium
-
-  * update rtest8 from upstream, disallow test suite failures again
-  * Bug fix: "uninstalable because dependency on unavailable binutils.",
-    thanks to Daniel Serpell (Closes: #753445). build-dep latest gcl
-  * Bug fix: "Maxima fails to load lapack (and I know why)", thanks to
-    Jeronimo Pellegrini (Closes: #748883).
-
- -- Camm Maguire <camm@debian.org>  Wed, 09 Jul 2014 17:30:10 +0000
-
-maxima (5.33.0-7) unstable; urgency=medium
-
-  * test suite failure independent of gcc version, sidestep
-
- -- Camm Maguire <camm@debian.org>  Fri, 04 Jul 2014 14:24:46 +0000
-
-maxima (5.33.0-6) unstable; urgency=medium
-
-  * reinsist on test suite perfection, gcl back off to gcc 4.8 on i386
-
- -- Camm Maguire <camm@debian.org>  Fri, 04 Jul 2014 01:55:48 +0000
-
-maxima (5.33.0-5) unstable; urgency=medium
-
-  * sidestep gcc 4.9.0 test failures for now
-
- -- Camm Maguire <camm@debian.org>  Tue, 01 Jul 2014 14:18:58 +0000
-
-maxima (5.33.0-4) unstable; urgency=medium
-
-  * build dep latest gcl
-
- -- Camm Maguire <camm@debian.org>  Mon, 30 Jun 2014 02:29:51 +0000
-
-maxima (5.33.0-3) unstable; urgency=high
-
-  * Bug fix: "maxima fails to plot through gnuplot", thanks to Andres
-    Cimmarusti (Closes: #747221).
-
- -- Camm Maguire <camm@debian.org>  Fri, 16 May 2014 13:40:05 +0000
-
-maxima (5.33.0-2) unstable; urgency=high
-
-  * Bug fix: "Segmentation fault", thanks to Thorsten Bonow (Closes:
-    #743880).
-
- -- Camm Maguire <camm@debian.org>  Tue, 15 Apr 2014 20:51:52 +0000
-
-maxima (5.33.0-1) unstable; urgency=low
-
-  * New upstream release
-  * Bug fix: "FTBFS in Wheezy", thanks to Moritz Mühlenhoff (Closes:
-    #739944).
-  * Bug fix: "Asking for documentation on hessian() shows documentation on
-    hankel()", thanks to Jeronimo Pellegrini (Closes: #713071).
-  * Bug fix: "1000!^0.01 produces i.nfE+142498684", thanks to Sanjoy
-    Mahajan (Closes: #707596).
-  * Bug fix: "Funny behaviour on dialog buttons", thanks to Neilen
-    (Closes: #155264).
-  * Bug fix: "maxima Depends: on gnuplot-x11, which is not strictly
-    necessary ", thanks to Ivan Shmakov (Closes: #731985). Depends ->
-    Recommends.
-
- -- Camm Maguire <camm@debian.org>  Thu, 03 Apr 2014 16:26:22 +0000
-
-maxima (5.32.1-1) unstable; urgency=low
-
-  * New upstream release
-  * Bug fix: "depends on tk8.5 and calls /usr/bin/wish", thanks to Sergei
-    Golovan (Closes: #725694).  Depend on tk
-  * lintian fixes
-
- -- Camm Maguire <camm@debian.org>  Thu, 09 Jan 2014 16:41:19 +0000
-
-maxima (5.31.3-5) unstable; urgency=low
-
-  * rebuild against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Thu, 14 Nov 2013 16:38:29 +0000
-
-maxima (5.31.3-4) unstable; urgency=low
-
-  * rebuild against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Wed, 23 Oct 2013 18:12:26 +0000
-
-maxima (5.31.3-3) unstable; urgency=low
-
-  * rebuild against latest gcl to fix unrandomize on ii386
-
- -- Camm Maguire <camm@debian.org>  Mon, 21 Oct 2013 00:53:39 +0000
-
-maxima (5.31.3-2) unstable; urgency=low
-
-  * build-dep on latest gcl
-  * Bug fix: "Maxima aborts with error &quot;Unrecoverable error:
-    Segmentation violation..", thanks to Robert Jacobs (Closes: #726366).
-  * Bug fix: "[maxima] [regression][solved upstream] Lu_factor fail",
-    thanks to Bastien ROUCARIÈS (Closes: #714824).  New upstream source
-    incorporates patch
-
- -- Camm Maguire <camm@debian.org>  Fri, 18 Oct 2013 14:49:02 +0000
-
-maxima (5.31.3-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Wed, 16 Oct 2013 15:45:59 +0000
-
-maxima (5.31.0-5) unstable; urgency=low
-
-  * build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Wed, 16 Oct 2013 00:30:06 +0000
-
-maxima (5.31.0-4) unstable; urgency=low
-
-  * build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Fri, 11 Oct 2013 15:24:49 +0000
-
-maxima (5.31.0-3) unstable; urgency=low
-
-  * build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Wed, 02 Oct 2013 19:58:11 +0000
-
-maxima (5.31.0-2) unstable; urgency=low
-
-  * build-dep against latest gcl
-  * add --enable-sys-proclaim configure option
-
- -- Camm Maguire <camm@debian.org>  Tue, 01 Oct 2013 15:46:36 +0000
-
-maxima (5.31.0-1) unstable; urgency=low
-
-  * New upstream release
-  * Bug fix: "[maxima] Patch is not documented", thanks to Bastien
-    ROUCARIÈS (Closes: #717632).  Document live patches.
-
- -- Camm Maguire <camm@debian.org>  Wed, 04 Sep 2013 14:12:09 +0000
-
-maxima (5.30.0-16) unstable; urgency=low
-
-  * build-dep against latest gcl
-  * fix clean target
-
- -- Camm Maguire <camm@debian.org>  Wed, 07 Aug 2013 17:11:12 +0000
-
-maxima (5.30.0-15) unstable; urgency=low
-
-  * build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Mon, 05 Aug 2013 20:42:36 +0000
-
-maxima (5.30.0-14) unstable; urgency=low
-
-  * build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Fri, 02 Aug 2013 16:50:07 +0000
-
-maxima (5.30.0-13) unstable; urgency=low
-
-  * build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Sat, 27 Jul 2013 12:55:13 +0000
-
-maxima (5.30.0-12) unstable; urgency=low
-
-  * build-dep against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Tue, 23 Jul 2013 18:16:01 +0000
-
-maxima (5.30.0-11) unstable; urgency=low
-
-  * build-dep on latest gcl
-
- -- Camm Maguire <camm@debian.org>  Sat, 20 Jul 2013 02:06:41 +0000
-
-maxima (5.30.0-10) unstable; urgency=low
-
-  * build-dep on latest gcl
-
- -- Camm Maguire <camm@debian.org>  Mon, 08 Jul 2013 17:08:19 +0000
-
-maxima (5.30.0-9) unstable; urgency=low
-
-  * build-dep on latest gcl
-
- -- Camm Maguire <camm@debian.org>  Tue, 02 Jul 2013 15:59:54 +0000
-
-maxima (5.30.0-8) unstable; urgency=low
-
-  * b-d on unversioned automake 
-
- -- Camm Maguire <camm@debian.org>  Sat, 22 Jun 2013 11:57:35 +0000
-
-maxima (5.30.0-7) unstable; urgency=low
-
-  * minor edits to enable repeated builds
-  * rebuild against new gcl
-
- -- Camm Maguire <camm@debian.org>  Fri, 21 Jun 2013 20:25:12 +0000
-
-maxima (5.30.0-6) unstable; urgency=low
-
-  * Bug fix: "[maxima] Documentation broken?", thanks to
-    lorenz.wenner@fsfe.org</a>; (Closes: #708210).  Edit maxima-index.lisp
-    to reflect new location.
-
- -- Camm Maguire <camm@debian.org>  Tue, 21 May 2013 12:22:55 -0400
-
-maxima (5.30.0-5) unstable; urgency=low
-
-  * Bug fix: "./Bugs.texi:20: table requires an argument: the formatter
-    for @item (and many other Texinfo errors)", thanks to Julien Puydt
-    (Closes: #708517).  Applied patch
-
- -- Camm Maguire <camm@debian.org>  Tue, 21 May 2013 11:17:11 -0400
-
-maxima (5.30.0-4) unstable; urgency=low
-
-  * fix typo in *maxima-index-dir*
-  * add debian/tmp/usr/share/doc/maxima to maxima.install.in
-
- -- Camm Maguire <camm@debian.org>  Wed, 01 May 2013 13:40:22 +0000
-
-maxima (5.30.0-3) unstable; urgency=low
-
-  * put maxima-index.lisp in maxima package
-
- -- Camm Maguire <camm@debian.org>  Mon, 29 Apr 2013 15:44:26 +0000
-
-maxima (5.30.0-2) unstable; urgency=low
-
-  * Fix index.lisp build error
-
- -- Camm Maguire <camm@debian.org>  Tue, 23 Apr 2013 16:12:11 +0000
-
-maxima (5.30.0-1) unstable; urgency=low
-
-  * New upstream release
-  * Bug fix: "Do not depend on tex-common", thanks to Elrond (Closes:
-    #694049).
-
- -- Camm Maguire <camm@debian.org>  Mon, 22 Apr 2013 20:57:09 +0000
-
-maxima (5.29.1-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Sat, 29 Dec 2012 13:45:07 +0000
-
-maxima (5.28.0-2) unstable; urgency=low
-
-  * emacs24
-  * rebuild on mips
-
- -- Camm Maguire <camm@debian.org>  Wed, 22 Aug 2012 15:54:32 +0000
-
-maxima (5.28.0-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Mon, 20 Aug 2012 18:45:39 +0000
-
-maxima (5.27.0-3) unstable; urgency=low
-
-  * Build depend on tex-common to clear lintian errors
-
- -- Camm Maguire <camm@debian.org>  Sat, 05 May 2012 17:16:58 +0000
-
-maxima (5.27.0-2) unstable; urgency=low
-
-  * Bug fix: "unowned file /usr/local/share/texmf/ls-R after purge (policy
-    6.8, 9.1.2)", thanks to Andreas Beckmann (Closes: #669385).
-
- -- Camm Maguire <camm@debian.org>  Thu, 19 Apr 2012 19:31:56 +0000
-
-maxima (5.27.0-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Fri, 06 Apr 2012 18:17:11 +0000
-
-maxima (5.26.0-4) unstable; urgency=low
-
-  * Bug fix: "deps needs to be adjusted", thanks to Dave Witbrodt (Closes:
-    #667436).  maxima-emacs depends on texlive-latex-recommended
-
- -- Camm Maguire <camm@debian.org>  Wed, 04 Apr 2012 17:58:34 +0000
-
-maxima (5.26.0-3) unstable; urgency=low
-
-  * remove NO_STRIP for ppc
-  * lintian fixes
-  * newer standards
-
- -- Camm Maguire <camm@debian.org>  Fri, 20 Jan 2012 20:38:54 +0000
-
-maxima (5.26.0-2) unstable; urgency=low
-
-  * Bug fix: "Please enable build-arch and build-indep targets", thanks to
-    Niels Thykier (Closes: #648152).
-  * Bug fix: "Please consider dropping Recommends on wish", thanks to
-    Eckhart Wörner (Closes: #623170).
-  * Bug fix: "[maxima-emacs] Description does not mention imaxima", thanks
-    to Bastien ROUCARIES (Closes: #614976).
-
- -- Camm Maguire <camm@debian.org>  Tue, 17 Jan 2012 16:54:14 +0000
-
-maxima (5.26.0-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Wed, 04 Jan 2012 20:38:41 +0000
-
-maxima (5.24.0-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Mon, 16 May 2011 15:55:32 +0000
-
-maxima (5.22.1-9) unstable; urgency=low
-
-  * build-depend on latest gcl
-
- -- Camm Maguire <camm@debian.org>  Fri, 05 Nov 2010 15:47:24 +0000
-
-maxima (5.22.1-8) unstable; urgency=low
-
-  * build-depend on latest gcl for mips
-
- -- Camm Maguire <camm@debian.org>  Wed, 20 Oct 2010 15:53:42 +0000
-
-maxima (5.22.1-7) unstable; urgency=low
-
-  * Bug fix: "FTBFS on mipsel: Unrecoverable error: Segmentation
-    violation..", thanks to Cyril Brulebois (Closes: #599981).
-
- -- Camm Maguire <camm@debian.org>  Sat, 16 Oct 2010 22:14:18 +0000
-
-maxima (5.22.1-6) unstable; urgency=low
-
-  * reuild against latest gcl
-
- -- Camm Maguire <camm@debian.org>  Sat, 25 Sep 2010 23:45:50 +0000
-
-maxima (5.22.1-5) unstable; urgency=low
-
-  * sync package changes with squeeze build
-
- -- Camm Maguire <camm@debian.org>  Wed, 22 Sep 2010 20:47:04 +0000
-
-maxima (5.22.1-4) unstable; urgency=low
-
-  * restore changes from failed uupdate history
-
- -- Camm Maguire <camm@debian.org>  Wed, 08 Sep 2010 15:20:32 +0000
-
-maxima (5.22.1-3) unstable; urgency=low
-
-  * build-dep latest gcl to fix mips/ppc
-
- -- Camm Maguire <camm@debian.org>  Mon, 23 Aug 2010 21:16:41 +0000
-
-maxima (5.22.1-2) unstable; urgency=low
-
-  * build-dep latest gcl to fix alt-link targets.
-
- -- Camm Maguire <camm@debian.org>  Mon, 23 Aug 2010 21:16:13 +0000
-
-maxima (5.22.1-1) unstable; urgency=low
-
-  * New upstream release
-  * Bug fix: "Please reduce recommends from maxima to maxima-emacs to
-    suggests", thanks to Petter Reinholdtsen (Closes: #574171).
-  * Bug fix: "Please enable alternative pdf-viewer / postscript-viewer",
-    thanks to Andreas Tille (Closes: #590785).
-
- -- Camm Maguire <camm@debian.org>  Fri, 20 Aug 2010 15:07:01 +0000
-
-maxima (5.22.0-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Wed, 04 Aug 2010 12:47:38 +0000
-
-maxima (5.21.1-2) unstable; urgency=low
-
-  * Bug fix: "autoload imath is missing in
-    /etc/emacs/site-start.d/50maxima-emacs.el", thanks to M G Berberich
-    (Closes: #585134).
-
- -- Camm Maguire <camm@debian.org>  Thu, 10 Jun 2010 14:11:56 +0000
-
-maxima (5.21.1-1) unstable; urgency=high
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Fri, 30 Apr 2010 13:30:33 +0000
-
-maxima (5.21.0-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Wed, 14 Apr 2010 15:42:56 +0000
-
-maxima (5.20.1-6) unstable; urgency=low
-
-  * fix testsuite on sparc
-  * lintian fixes
-  * 3.0 (quilt) source format
-  * activate scimax trigger
-  * Bug fix: "Please reduce recommends from maxima to maxima-emacs to
-    suggests", thanks to Petter Reinholdtsen (Closes: #574171).
-  * Bug fix: "Please consider the use of dpkg-trigger for Maxima", thanks
-    to Sylvestre Ledru (Closes: #576699).
-  * Bug fix: "Improve LAPACK support", thanks to Hendrik Weimer (Closes:
-    #503128).  GCL non longer required to use lapack, files built in home
-    dir.
-
- -- Camm Maguire <camm@debian.org>  Wed, 07 Apr 2010 18:07:19 +0000
-
-maxima (5.20.1-5) unstable; urgency=low
-
-  * fix FTBFS on sparc
-
- -- Camm Maguire <camm@debian.org>  Tue, 19 Jan 2010 15:14:55 +0000
-
-maxima (5.20.1-4) unstable; urgency=low
-
-  * -O0 on ia64, fixing testsuite for now.
-  * no SGC on sparc, no testsuite error on sparc until gcl with -O2 is in testing
-  * Bug fix: "Missing dependency on texlive-latex3", thanks to Andreas
-    Rottmann (Closes: #565545).
-
- -- Camm Maguire <camm@debian.org>  Mon, 18 Jan 2010 19:07:01 +0000
-
-maxima (5.20.1-3) unstable; urgency=low
-
-  * more test suite error fixes
-
- -- Camm Maguire <camm@debian.org>  Tue, 05 Jan 2010 03:36:14 +0000
-
-maxima (5.20.1-2) unstable; urgency=low
-
-  * Fix testsuite errors
-
- -- Camm Maguire <camm@debian.org>  Wed, 30 Dec 2009 23:06:14 +0000
-
-maxima (5.20.1-1) unstable; urgency=low
-
-  * New upstream release
-  * Bug fix: "integral of positive function is negative", thanks to Sanjoy
-    Mahajan (Closes: #530442).
-  * Bug fix: "double quote (&#39;&#39;) operator does not work!", thanks
-    to Andres Cimmarusti (Closes: #556134).  Bug in documentation no
-    longer present.  Please reopen if you disagree.
-
- -- Camm Maguire <camm@debian.org>  Wed, 16 Dec 2009 15:36:29 +0000
-
-maxima (5.20.0-1) unstable; urgency=low
-
-  [  Camm Maguire ]
-  * New upstream release
-  * Bug fix: "replacing libreadline5-dev build dependency with
-    libreadline-dev", thanks to Matthias Klose (Closes: #553812).
-  * Bug fix: "crash after ctrl-C", thanks to Miroslaw Kwasniak (Closes:
-    #450703). Build depend on >= gcl-2.6.7-26.
-  * Bug fix: "xmaxima 5.10.0 can&#39;t find it&#39;s docs in
-    /usr/share/maxima/5.13.0/doc", thanks to Siward de Groot (Closes:
-    #489167).
-  * Bug fix: "Wrong project address in the manpage", thanks to Simon
-    Danner (Closes: #519853). Fixed upstream
-  * Bug fix: "maxima should recommend or suggest maxima-emacs", thanks to
-    Chris Walker (Closes: #502632).
-  * Bug fix: "[maxima] maxima version 5.18.1 was out since April", thanks
-    to Huy (Closes: #533113).
-  * Bug fix: "upstream version of maxima is now 5.19.2, please update!",
-    thanks to Andres Cimmarusti (Closes: #552280).
-  * Bug fix: "/etc/emacs/site-start.d/50imaxima-imath.el missing", thanks
-    to M G Berberich (Closes: #493725).
-  * lintian fixes
-  * change maintainer address
-
- -- Camm Maguire <camm@debian.org>  Tue, 15 Dec 2009 14:35:33 +0000
-
-maxima (5.17.1-1) unstable; urgency=low
-
-  * New upstream release
-
- --  Camm Maguire <camm@debian.org>  Fri, 06 Feb 2009 03:48:15 +0000
-
-maxima (5.17.0-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Fri, 12 Dec 2008 14:03:18 -0500
-
-maxima (5.16.3-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@debian.org>  Mon, 01 Sep 2008 17:32:31 +0000
-
-maxima (5.16.2-1) unstable; urgency=high
-
-  * New upstream release
-  * Bug fix: "No such file or directory", thanks to Lucas Nussbaum
-    (Closes: #474909). Build-dep against latest gcl
-  * Bug fix: "fails to integrate a simple rational function", thanks to
-    Alexei Sheplyakov (Closes: #474684).  new release
-  * Bug fix: "maxima needs gnuplot-x11 to plot", thanks to
-    cardaniuc@gmail.com</a>; (Closes: #479100). depend on gnuplot-x11
-  * Bug fix: "segfaults in quad_qagi()", thanks to Stephen Dann (Closes:
-    #480308). Apparently fixed in new release -- cannot trigger
-  * Bug fix: "Maxima fails on &#39;load(rducon);&#39;", thanks to Felix
-    Homann (Closes: #484278). Fixed in new release
-  * Bug fix: "new upstream version available", thanks to Stanislav
-    Maslovski (Closes: #489302).
-  * Bug fix: "describe triggers &quot;fatal&quot; lisp error", thanks to
-    David Bremner (Closes: #488518).  Missing maxima-doc now reports
-    describe error
-  * Bug fix: "New upstream version 5.15.0", thanks to Felix Homann
-    (Closes: #484279).
-
- -- Camm Maguire <camm@enhanced.com>  Sun, 24 Aug 2008 17:06:39 +0000
-
-maxima (5.15.0-2) unstable; urgency=low
-
-  * Build-dep against gcl -38 for randomized sbrk and sincos fixes.
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 31 Jul 2008 16:26:03 -0400
-
-maxima (5.15.0-1) unstable; urgency=low
-
-  * New upstream release
-  * Accept 3.1 NMU
-  * Test autobuild to catch any failurs with current gcl
-  * extract_categories.sh from cvs
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 29 Jul 2008 17:20:19 -0400
-
-maxima (5.13.0-3) unstable; urgency=low
-
-  * Bug fix: "maxima-doc: installs info pages with the wrong section",
-    thanks to Riccardo Stagni (Closes: #447908). fix alias
-  * build-dep texlive-latex-recommended
-  * build-dep latest gcl to get arm build
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 03 Dec 2007 09:42:23 -0500
-
-maxima (5.13.0-2) unstable; urgency=low
-
-  * (si::putprop (quote cl-info::cause-maxima-index-to-load) 
-  "/usr/share/doc/maxima-doc/info/maxima-index.lisp"  (quote autoload)) in final image save
-  * Bug fix: "maxima-doc: documentation not accessible from within
-    maxima", thanks to Thor Andreassen (Closes: #427535).
-  * Bug fix: "describe() can&#39;t find maxima-index.lisp", thanks to Timo
-    Juhani Lindfors (Closes: #417846).
-  * Bug fix: "Dependency on texlive is not fine-grained enough", thanks to
-    Florent Rougon (Closes: #428158). maxima-emacs depends on tetex-extra
-    | texlive-base-bin
-  * Bug fix: "maxima: long description should be improved", thanks to
-    Marcus Better (Closes: #441837). copy from maxima-doc
-  * Bug fix: "maxima: maxima hangs (infinite loop?)", thanks to Andrew T
-    . Young (Closes: #198466).  Fixed upstream
-  * cleaned diff
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 23 Oct 2007 13:50:02 -0400
-
-maxima (5.13.0-1) unstable; urgency=low
-
-  * New upstream release
-  * Bug fix: "maxima: Maxima fails to start with locale configured to
-    el_gr.utf8", thanks to Dimitrios Liappis (Closes: #446916).  Fixed
-    upstream.
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 19 Oct 2007 16:42:14 -0400
-
-maxima (5.12.0-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 04 May 2007 09:38:06 -0400
-
-maxima (5.11.0-1) unstable; urgency=low
-
-  * New upstream release
-  * Rebuild brings in shlibdeps, Closes: #411147
-  * xmaxima now correctly accesses external documentation via external
-    browser, Closes: #155256
-  * New ctensor package replacing ctensr, csetup replacing tsetup, works
-    in xmaxima.  Inaccurate statement regarding conformal flatness
-    remains.  Closes: 191671.
-  * New xmaxima launches external browser with password/proxy support,
-    Closes: #155257.
-  * edited pt doc files so they compile on package build
-  * remove obsolete file omplotdata
-  * update fsf address
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 26 Mar 2007 15:37:26 -0400
-
-maxima (5.10.0-6) unstable; urgency=low
-
-  * use normalized constants in f2cl-lib.lisp
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 18 Oct 2006 14:52:42 -0400
-
-maxima (5.10.0-5) unstable; urgency=low
-
-  * Build-depend on gcl_2.6.7-26, Closes: #393230.
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 16 Oct 2006 13:11:30 -0400
-
-maxima (5.10.0-4) unstable; urgency=low
-
-  * Build-depend on gcl_2.6.7-25
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 12 Oct 2006 13:39:45 -0400
-
-maxima (5.10.0-3) unstable; urgency=low
-
-  * Build-depend on gcl_2.6.7-23
-  * Newer standards
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 11 Oct 2006 11:03:28 -0400
-
-maxima (5.10.0-2) unstable; urgency=low
-
-  * Fix configure bug, Closes: #390157. Closes: #390395. Closes: #389825.
-  * maxima-emacs can take texlive too, Closes: #391136.
-  * Don't compress certain doc files, Closes: #389779.
-  * automake1.9 build dep, Closes: #376656.
-
- -- Camm Maguire <camm@enhanced.com>  Thu,  5 Oct 2006 15:33:23 -0400
-
-maxima (5.10.0-1) unstable; urgency=low
-
-  * New upstream release
-  * Build depend on newest gcl, Closes: 385703.
-  * Build depend on xlibs, Closes: #338215.  Closes: #389302.
-  * dh_strip -Xmaxima on ppc, Closes: #340151.
-  * Build-depend on tetex-extra | texlive, Closes: #381672.
-  * install xmaxima.desktop, Closes: #375776
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 25 Sep 2006 15:11:50 -0400
-
-maxima (5.9.3-2) unstable; urgency=low
-
-  * Build-depend on automake1.9, CLoses: #374663, Closes: #376656
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 30 Aug 2006 14:09:14 -0400
-
-maxima (5.9.3-1) unstable; urgency=low
-
-  * New upstream release
-  * Cleaned up descriptions, CLoses: #333229.
-  * Rebuild against newer libgmp3, Closes: #348630
-  * New release fixed typo in man page. Closes: #341019
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  6 Jun 2006 17:56:49 +0000
-
-maxima (5.9.2-2) unstable; urgency=low
-
-  * Push :system-p t to compile command in defsystem.lisp, Closes:
-    #336562.
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  8 Nov 2005 17:15:29 +0000
-
-maxima (5.9.2-1) unstable; urgency=low
-
-  * New upstream release
-  * patch maxima.el to fix prompt-swallowing bug.
-  * use sf.net redirector in watch file
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 21 Oct 2005 19:44:13 +0000
-
-maxima (5.9.1-13) unstable; urgency=low
-
-  * Build depend on gcl >= 2.6.7-10 to get ppc gcc configure fix, Closes:
-    333393.
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 13 Oct 2005 13:27:08 +0000
-
-maxima (5.9.1-12) unstable; urgency=low
-
-  * Build depend on gcl >= 2.6.7-9 for 64bit fixes
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  7 Oct 2005 13:13:02 +0000
-
-maxima (5.9.1-11) unstable; urgency=low
-
-  * Build depend on gcl >= 2.6.7-7 to get dlopen linking fix needed for
-    mips, hppa, alpha and ia64
-  * rework build strategy switching based on the native-reloc feature in
-    the installed gcl.
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 29 Sep 2005 18:32:42 +0000
-
-maxima (5.9.1-10) unstable; urgency=high
-
-  * Rebuild against libgmp3c2, Closes: #323563, Closes: #325852
-  * libreadline5-dev build dep, Closes: #326325.  Closes: #301515
-  * Remove binutils-dev dependency and depend on >= gcl 2.6.7-6 which has
-    it built in
-  * Incorporate libreadline Control-D fix from gcl, Closes: 301516.
-  * Depend on gnuplot_nox, Closes: #329016
-  * Rename doc-base files .shtml -> .html, Closes: #303224
-  * newer standards
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 21 Sep 2005 16:21:03 +0000
-
-maxima (5.9.1-9) unstable; urgency=high
-
-  * ghostview -> gv
-  * maxima recommends gv
-  * Add plotting and tips doc-base docs from home website pages.
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 25 Feb 2005 17:33:18 +0000
-
-maxima (5.9.1-8) unstable; urgency=high
-
-  * Bug fix: "expensive X/tk dependence: request for package split",
-    thanks to Sam Halliday (Closes: #291090).  Remove tk dependence from
-    maxima package, as gnuplot is default plotting command now.
-  * Bug fix: "maxima: Mike Clarkson's version of the manual is superiour",
-    thanks to Karl M. Hegbloom (Closes: #196585).  This is not
-    redistributable, so a link to an appropriate page has been added into
-    README.Debian instead.
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 23 Feb 2005 19:38:01 +0000
-
-maxima (5.9.1-7) unstable; urgency=high
-
-  * [Nn]etscape -> sensible-browser in xmaxima, Closes: #280978, Closes:
-    #280979
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 13 Nov 2004 18:39:14 +0000
-
-maxima (5.9.1-6) unstable; urgency=high
-
-  * Really depend on gnuplot.
-
- -- Camm Maguire <camm@enhanced.com>  Sat,  6 Nov 2004 14:04:52 +0000
-
-maxima (5.9.1-5) unstable; urgency=high
-
-  * Update watch file
-  * Depend on gnuplot, Closes: #279895.
-
- -- Camm Maguire <camm@enhanced.com>  Sat,  6 Nov 2004 02:43:52 +0000
-
-maxima (5.9.1-4) unstable; urgency=high
-
-  * compile before load with alt-link in src/Makefile.am
-  * Add interfaces/xmaxima/win32/Makefile for clean target of debian/rules
-
- -- Camm Maguire <camm@enhanced.com>  Thu,  7 Oct 2004 15:05:31 +0000
-
-maxima (5.9.1-3) unstable; urgency=high
-
-  * Rerelease to wake up the autobuilders
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  5 Oct 2004 20:31:51 +0000
-
-maxima (5.9.1-2) unstable; urgency=high
-
-  * fix build sequence for non-save-sys architectures (5.9.1 now compiles
-    anonymous closures to be saved in the final image)
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  1 Oct 2004 03:08:16 +0000
-
-maxima (5.9.1-1) unstable; urgency=high
-
-  * New upstream release
-  * compat 4
-  * New release Closes: #232516
-  * pre-build maximabook pdf included, as building from source requires
-    latex files of questionable copyright status.
-  * Update config.guess and config.sub
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 30 Sep 2004 15:53:43 +0000
-
-maxima (5.9.0-28) unstable; urgency=low
-
-  * Update debian/maxima-doc.info
-  * Build depend on latest gcl for performance and stability improvements.
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 17 Sep 2004 14:18:06 +0000
-
-maxima (5.9.0-27) unstable; urgency=low
-
-  * Bug fix: "xmaxima: Fails to require a Tk version greater than 8.3",
-    thanks to Patricio Rojo (Closes: #257655).  Depend on tk8.4 | tk8.3.
-    TODO -- check that the user has not set wish to tk8.0 or prompt for
-    reset via debconf.
-
- -- Camm Maguire <camm@enhanced.com>  Mon,  5 Jul 2004 15:08:17 +0000
-
-maxima (5.9.0-26) unstable; urgency=low
-
-  * Build depend on latest gcl to restore m68k build
-  * Remove build-depends on build essential findutils
-  * Change manpage header from 1L to 1
-  * quote strings in menu entry
-
- -- Camm Maguire <camm@enhanced.com>  Sat,  3 Jul 2004 01:56:03 +0000
-
-maxima (5.9.0-25) unstable; urgency=low
-
-  * Bug fix: "FTBFS: unexpected testcase errors", thanks to Goswin von
-    Brederlow (Closes: #253541).  Build depend on latest gcl with compiler
-    casts added for a stack aligned at less than a word boundary
-    (e.g. passing small integer constants as arguments)
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 14 Jun 2004 19:16:08 +0000
-
-maxima (5.9.0-24) unstable; urgency=low
-
-  * Bug fix: "maxima should recommend/suggest maxima-share/-doc", thanks
-    to Elrond (Closes: #250004).  maxima recommends maxima-share and
-    suggests maxima-doc.
-  * Build depend on latest gcl
-  * Make platform specific build-depends vlid for all platforms, in
-    anticipation of new platform entries breaking, a la amd64
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 31 May 2004 18:48:07 +0000
-
-maxima (5.9.0-23) unstable; urgency=low
-
-  * Turn on sgc when available in image
-
- -- Camm Maguire <camm@enhanced.com>  Sat,  7 Feb 2004 19:44:50 +0000
-
-maxima (5.9.0-22) unstable; urgency=low
-
-  * Bug fix: "Maxima assumes netscape is your web browser.", thanks to
-    Chris Walker (Closes: #230728).  Use sensible-browser in place of
-    netscape.
-
- -- Camm Maguire <camm@enhanced.com>  Mon,  2 Feb 2004 14:23:08 +0000
-
-maxima (5.9.0-21) unstable; urgency=low
-
-  * Build-depend on latest gcl to capture readline bugfix
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 28 Jan 2004 16:29:09 +0000
-
-maxima (5.9.0-20) unstable; urgency=low
-
-  * Bug fix: "emaxima.sty should be in tex path", thanks to Chris Walker
-    (Closes: #229882).  Moved to /usr/share/texmf/tex/latex/.
-  * maxima-emacs depends on tetex-extra
-  * texhas calls in maxima-emacs postinst and postrm
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 27 Jan 2004 16:55:37 +0000
-
-maxima (5.9.0-19) unstable; urgency=low
-
-  * Bug fix: "maxima: should use readline for interactive input", thanks
-    to Dwayne C. Litzenberger (Closes: #198573). New Readline support in
-    underlying GCL enables readline automatically
-  * Newer standards
-  * Build dep gcl >= 2.6.1-21
-
- -- Camm Maguire <camm@enhanced.com>  Wed,  7 Jan 2004 16:10:27 +0000
-
-maxima (5.9.0-18) unstable; urgency=low
-
-  * Bug fix: "xmaxima: fails to find ghostview", thanks to Piotr
-    P. Karwasz (Closes: #223949).  Replaced references to ghostview with
-    gv.
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 17 Dec 2003 20:00:26 +0000
-
-maxima (5.9.0-17) unstable; urgency=low
-
-  * Update long description from latest upstream README file, Closes:
-    #213782
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 14 Oct 2003 17:33:10 +0000
-
-maxima (5.9.0-16) unstable; urgency=low
-
-  * No-op rerelease to awaken autobuilders
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 16 Sep 2003 13:47:22 +0000
-
-maxima (5.9.0-15) unstable; urgency=low
-
-  * Build-dep on gcl-2.6.1-8 or newer to fix compressed info reading,
-    Closes: #210573
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 13 Sep 2003 23:08:33 +0000
-
-maxima (5.9.0-14) unstable; urgency=low
-
-  * change tetex-bin build-dep to tetex-extra
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 11 Sep 2003 00:35:15 +0000
-
-maxima (5.9.0-13) unstable; urgency=low
-
-  * Add Build-dep on tetex-bin for maximabook
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 10 Sep 2003 21:50:51 +0000
-
-maxima (5.9.0-12) unstable; urgency=low
-
-  * Put in versioned dependencies on maxima packages, e.g. xmaxima 5.9.0
-    dep maxima (>=5.9.0), Closes: #208983  (submitter had xmaxima 5.9.0
-    and maxima 5.6 installed)
-  * Build depend on newer gcl closes tempfile bug, Closes: #198469
-  * Eliminate references to old info files
-  * Fix load path in maxima-emacs.emacsen-startup to enable tex updates
-    in emaxima mode; also add autoload for emaxima-mode; Closes: #208708
-  * Add maximabook to maxima-doc package
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  9 Sep 2003 18:56:08 +0000
-
-maxima (5.9.0-11) unstable; urgency=low
-
-  * maxima-doc replaces maxima (<< 5.9.0-1)
-  * Set maxima-info-dir and maxima-info-index-file variables in maxima-
-    emacs.emacsen-startup to enable maxima-info and maxima-help
-    functions.  Added note in maxima-emacs.README.Debian indicating that
-    autocompression-mode must be on for the latter to work at present.
-    Closes: #187017.
-  * Clarified copyright file as approved by upstream and FSF; Closes:
-    #193976
-  * Newer standards
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 26 May 2003 00:22:33 +0000
-
-maxima (5.9.0-10) unstable; urgency=low
-
-  * Fix broken dh_stip syntax, Closes: #186858
-
- -- Camm Maguire <camm@enhanced.com>  Sun, 30 Mar 2003 13:44:25 -0500
-
-maxima (5.9.0-9) unstable; urgency=low
-
-  * Rework test routine depends, Closes: #186812
-  * m68k test correction no longer needed
-  * Work around broken strip on powerpc and ia64, Closes: #186200
-
- -- Camm Maguire <camm@enhanced.com>  Sun, 30 Mar 2003 09:04:43 -0500
-
-maxima (5.9.0-8) unstable; urgency=low
-
-  * Build binary-indep packages correctly, Closes: #186618
-  * xmaxima depends on maxima-share, Closes: #186661
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 29 Mar 2003 07:15:15 -0500
-
-maxima (5.9.0-7) unstable; urgency=low
-
-  * Re-release to restart autobuilds with new gcl
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 24 Mar 2003 09:53:58 -0500
-
-maxima (5.9.0-6) unstable; urgency=low
-
-  * Build-depend on gcl-2.5.2
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 21 Mar 2003 07:27:55 -0500
-
-maxima (5.9.0-5) unstable; urgency=low
-
-  * Fix test suite results for extra precision on m68k
-  * run test suite from user's directory, which needs to be writeable,
-    Closes: #183172
-  * xmaxima depends on maxima-test and maxima-doc, Closes: #183483
-  * Depend on latest gcl
-
- -- Camm Maguire <camm@enhanced.com>  Thu,  6 Mar 2003 07:54:02 -0500
-
-maxima (5.9.0-4) unstable; urgency=low
-
-  * Remove dbl.el, which depends on non-existent gcl.el
-  * maxima-emacs now uses newer emaxima interface
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 27 Feb 2003 18:35:45 -0500
-
-maxima (5.9.0-3) unstable; urgency=low
-
-  * Edited maxima-doc.doc-base, Closes: #182511
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 27 Feb 2003 17:33:27 -0500
-
-maxima (5.9.0-2) unstable; urgency=low
-
-  * Fix lintian error: copyright file edits
-  * Fix lintian error: eliminate /usr/doc/ link setting
-  * Fix lintian error: wish script syntax modification
-  * Fix lintian error: eliminate duplicate conffile in maxima-emacs
-  * Fix lintian error: remove self-conflicts control field
-  * Updated config.sub and config.guess
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 19 Feb 2003 21:19:56 -0500
-
-maxima (5.9.0-1) unstable; urgency=low
-
-  * New upstream release
-  * gcl.el is gone, Closes: #167482
-  * Package is split, Closes: #158662
-  * zsolve is documented by upstream as being unavailable, Closes: #138231
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 11 Feb 2003 01:51:35 -0500
-
-maxima (5.6b-56) unstable; urgency=low
-
-  * gcl updates
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 24 Jan 2003 13:43:30 -0500
-
-maxima (5.6b-55) unstable; urgency=low
-
-  * pdftex/texinfo fix take 2
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 13 Dec 2002 00:02:04 -0500
-
-maxima (5.6b-54) unstable; urgency=low
-
-  * Remove old texinfo.tex from TEXINPUTS path to fix pdftex build of
-    docs
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 12 Dec 2002 20:50:08 -0500
-
-maxima (5.6b-53) unstable; urgency=low
-
-  * Go back to pdftex for documentation until dvipdfm/libs gets fixed
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 12 Dec 2002 17:18:25 -0500
-
-maxima (5.6b-52) unstable; urgency=low
-
-  * Rerelease to build against (hopefully) fixed build-depends
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 11 Dec 2002 18:32:56 -0500
-
-maxima (5.6b-51) unstable; urgency=low
-
-  * gcl updates
-
- -- Camm Maguire <camm@enhanced.com>  Thu,  5 Dec 2002 17:52:34 -0500
-
-maxima (5.6b-50) unstable; urgency=low
-
-  * GCL fixes to reenable arm build
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 31 Oct 2002 21:37:28 -0500
-
-maxima (5.6b-49) unstable; urgency=low
-
-  * gcl fixes
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 23 Oct 2002 00:43:40 -0400
-
-maxima (5.6b-48) unstable; urgency=low
-
-  * gcl fixes
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 16 Oct 2002 11:41:58 -0400
-
-maxima (5.6b-47) unstable; urgency=low
-
-  * gcl fixes
-  * Build-depend on autotools.dev, Closes: #164340
-  * Suggests texmacs, Closes: #164604
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 15 Oct 2002 14:55:37 -0400
-
-maxima (5.6b-46) unstable; urgency=low
-
-  * tk8.2 -> tk8.3
-  * Set compile variables before saving saved_maxima, Closes: #163433
-  * gcl fixes
-
- -- Camm Maguire <camm@enhanced.com>  Wed,  9 Oct 2002 14:43:01 -0400
-
-maxima (5.6b-45) unstable; urgency=low
-
-  * Argh -- one remaining typo fixed in m68k tests
-
- -- Camm Maguire <camm@enhanced.com>  Sun,  6 Oct 2002 22:37:45 -0400
-
-maxima (5.6b-44) unstable; urgency=low
-
-  * Fixed typo in rtest8.mac override for m68k
-  * gcl fixes
-
- -- Camm Maguire <camm@enhanced.com>  Sat,  5 Oct 2002 15:10:56 -0400
-
-maxima (5.6b-43) unstable; urgency=low
-
-  * gcl fixes
-  * override floating point tests on m68k
-
- -- Camm Maguire <camm@enhanced.com>  Thu,  3 Oct 2002 01:51:27 -0400
-
-maxima (5.6b-42) unstable; urgency=low
-
-  * Fix delete et. al. :from-end error; typo in gbc.c
-  * character and string-char equal in type hierarchy
-  * concatenate/make-sequence fixes
-  * merge takes nil key argument
-  * make-sequence checks size against result type
-  * install endp macro for dotted list support
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 24 Sep 2002 15:05:00 -0400
-
-maxima (5.6b-41) unstable; urgency=low
-
-  * Sleep with (in principle) microsecond precision
-  * nth-value macro added
-  * \-ffloat\-store and warning cleanups for m68k
-  * m68k build restored, Closes: #155796
-  * Added link to local documentation in xmaxima startup file, Closes:
-    #155260
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 20 Sep 2002 10:56:31 -0400
-
-maxima (5.6b-40) unstable; urgency=low
-
-  * Fixed gcc version bug in debian/rules
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 12 Sep 2002 18:01:27 -0400
-
-maxima (5.6b-39) unstable; urgency=low
-
-  * static gmp for m68k
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 12 Sep 2002 09:35:29 -0400
-
-maxima (5.6b-38) unstable; urgency=low
-
-  * Reworked static gmp target for new libgcl.a;gcc-3.2 for
-    hppa,ia64,and arm;libgmp2-dev for m68k;no rsym with
-    dynsysbfd;build_symbol_table earlier to shrink table size;
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 12 Sep 2002 00:42:30 -0400
-
-maxima (5.6b-37) unstable; urgency=low
-
-  * Rework build and install so that custom images can be made without
-    the source tree, even when using dlopen
-  * Use old gmp for m68k until can pin down test failure with gmp3
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 10 Sep 2002 00:39:04 -0400
-
-maxima (5.6b-36) unstable; urgency=low
-
-  * Install cmpinclude.h in system include directory
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 29 Aug 2002 23:34:33 -0400
-
-maxima (5.6b-35) unstable; urgency=low
-
-  * Keep a *much* smaller piece of gmp.h in cmpinclude.h, reducing image
-    size by almost 100k
-  * Check for _SHORT_LIMB and _LONG_LONG_LIMB in configure
-  * Remove build specific include directories from compile command in
-    final executable
-  * Include local regexp.h explicitly in cmpinclude.h, to eliminate
-    intereference with system regexp.h, and to fix bug in which gcl
-    compilation depended on existing build directories
-  * Correctly add directory paths to extra gmp file targets in
-    unixport/makefile for m68k
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 29 Aug 2002 22:14:50 -0400
-
-maxima (5.6b-34) unstable; urgency=low
-
-  * Fix typo in rshift target for m68k
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 28 Aug 2002 18:03:05 -0400
-
-maxima (5.6b-33) unstable; urgency=low
-
-  * Larger ihs stack;fix array-total-size-limit;check negative
-    fillp;allow #P
-  * don't make common_lisp package when not configuring with --enable-
-    ansi
-  * Patch gmp3/mpn/m68k/{l,r}shift.asm, restore gmp3 to m68k build
-  * Dynamic libgmp support, overriding with patched functions from local
-    source where necessary
-
- -- Camm Maguire <camm@enhanced.com>  Sun, 18 Aug 2002 12:17:58 -0400
-
-maxima (5.6b-32) unstable; urgency=low
-
-  * copy ansidecl.h and symcat.h in h/ for local bfd builds
-  * localize bfd.h includes to sfaslbfd.c
-  * take bfd/po out of the build loop
-  * import xgcl-2, but don't build by default
-  * oldgmp configure option, and made default for m68k as temporary
-    workaround
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 13 Aug 2002 00:04:45 -0400
-
-maxima (5.6b-31) unstable; urgency=low
-
-  * Minor rules revision for i164
-  * maxima build depend gcc-3.1 for ia64
-
- -- Camm Maguire <camm@enhanced.com>  Sun, 11 Aug 2002 13:51:05 -0400
-
-maxima (5.6b-30) unstable; urgency=low
-
-  * gcc-3.1 for ia64 fixes a compilation bug in num_co.c for -O3 and
-    higher -- code takes address of a variable kept in a register
-  * compile num_log.c with -O only on ia64 to work around compiler bug
-
- -- Camm Maguire <camm@enhanced.com>  Sun, 11 Aug 2002 10:07:57 -0400
-
-maxima (5.6b-29) unstable; urgency=low
-
-  * check for long c statck addresses, fixing NULL_OR_ON_C_STACK macro
-    for ia64
-  * Remove error in clean target
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 10 Aug 2002 15:35:57 -0400
-
-maxima (5.6b-28) unstable; urgency=low
-
-  * NEWS file patch from 5.6.1
-  * Fix build deps line
-  * Replace tmpnam and mktemp with less dangerous mkstemp
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  9 Aug 2002 21:10:02 -0400
-
-maxima (5.6b-27) unstable; urgency=low
-
-  * Build depend on automake and gettext
-  * Fix rsym compilation when not using bfd
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  9 Aug 2002 19:12:19 -0400
-
-maxima (5.6b-26) unstable; urgency=low
-
-  * Don't build bfd/po subdir
-  * Build-depend on automake and gettext
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  9 Aug 2002 14:49:08 -0400
-
-maxima (5.6b-25) unstable; urgency=low
-
-  * fix zero length array support
-  * reverse configure order for bfd and libiberty
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  9 Aug 2002 12:12:51 -0400
-
-maxima (5.6b-24) unstable; urgency=low
-
-  * chmod +x for subconfigures
-  * dlopen for appropriate arches in debian/rules
-  * add custreloc configure option
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  9 Aug 2002 10:29:10 -0400
-
-maxima (5.6b-23) unstable; urgency=low
-
-  * Local bfd build option to prepare for arch-specific patches
-  * Try default gmp3 build on m68k
-  * Fix merge-pathnames
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  9 Aug 2002 01:05:51 -0400
-
-maxima (5.6b-22) unstable; urgency=low
-
-  * fix bug in cmpif.lsp and recompile compiler
-  * \-O6 \-fomit\-frame\-pointer for Linux, speed gain of ~ 10%
-  * clean saved_gcl_pcl
-
- -- Camm Maguire <camm@enhanced.com>  Mon,  5 Aug 2002 17:07:05 -0400
-
-maxima (5.6b-21) unstable; urgency=low
-
-  * Back out of hppa assembler register flush for hppa, apparently issue
-    is cleared by long/object function declaration fix
-  * Remove ansi2knr.1 man page, Closes: #155067
-  * hppa still has gc leak, possibly due to faulty setjmp.  Try Lamont
-    Jones' latest assembler to flush regs
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  2 Aug 2002 21:05:57 -0400
-
-maxima (5.6b-20) unstable; urgency=low
-
-  * SGC support for alpha
-  * generic gmp3 build for m68k
-  * compiler changes to declare all functions as returning object, with
-    functions that actually return long being cast appropriately
-  * back out of m68k hack in eval.c and funlink.c
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  2 Aug 2002 18:28:43 -0400
-
-maxima (5.6b-19) unstable; urgency=low
-
-  * Use generic lshift.c in gmp3 for m68k
-  * use SGC for ia64
-  * m68k workaround, cast (object(*)()) to (long(*)()) in funlink.c and
-    eval.c
-  * GBC register spiil asm for hppa
-  * fix hash_equal declaration error in hash.d
-
- -- Camm Maguire <camm@enhanced.com>  Thu,  1 Aug 2002 18:19:22 -0400
-
-maxima (5.6b-18) unstable; urgency=low
-
-  * Remove extra load of tkl.o in install target of main makefile
-  * gcc-3.1 for hppa
-  * Remove gcc version spec for m68k
-  * \-fPIC for hppa, needed for dlopen
-  * cleanup gcc 3.1 warning in funlink.c
-  * cc instead of ld for -shared linking in fasldlsym.c (needed for
-    hppa)
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 31 Jul 2002 18:50:56 -0400
-
-maxima (5.6b-17) unstable; urgency=low
-
-  * Move chmod +x gmp3/* into debian/rules
-  * Build-Depend on autoconf
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 31 Jul 2002 09:48:53 -0400
-
-maxima (5.6b-16) unstable; urgency=low
-
-  * Move chmod +x gmp3/* into debian/rules
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 31 Jul 2002 09:34:06 -0400
-
-maxima (5.6b-15) unstable; urgency=low
-
-  * chmod +x gmp3/configure
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 31 Jul 2002 07:57:30 -0400
-
-maxima (5.6b-14) unstable; urgency=low
-
-  * 64bit SGC support
-  * SGC on by default for sparc-linux and mips(el)-linux
-  * Optimized logxor funtion
-  * Check for MP_LIMB_SIZE in fasdump.c, for 64bit support
-  * gbc fix for ia64
-  * gmp3 import for ia64
-  * system bzero, bcmp, and bcopy function prototypes
-  * ensure tests pass without error in build
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 30 Jul 2002 23:29:55 -0400
-
-maxima (5.6b-13) unstable; urgency=low
-
-  * ElfW macros in rsym*.c for 64bit
-  * Allow for 8 byte gmp mp_limbs
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 25 Jul 2002 18:53:58 -0400
-
-maxima (5.6b-12) unstable; urgency=low
-
-  * Support for dlopen object loading where bfd is not yet working --
-    ./configure --enable-dlopen
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 25 Jul 2002 15:09:41 -0400
-
-maxima (5.6b-11) unstable; urgency=low
-
-  * 64bit fixes
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 24 Jul 2002 12:18:02 -0400
-
-maxima (5.6b-10) unstable; urgency=low
-
-  * misc. lintian cleanups, mostly for 64 bit
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 23 Jul 2002 23:35:58 -0400
-
-maxima (5.6b-9) unstable; urgency=low
-
-  * Fixed typeo in error.c preventing arm compilation
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 22 Jul 2002 17:19:52 -0400
-
-maxima (5.6b-8) unstable; urgency=low
-
-  * Fix bad on_stack_vector_list args
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 22 Jul 2002 16:12:37 -0400
-
-maxima (5.6b-7) unstable; urgency=low
-
-  * Fixed bug in Iapply_ap; more lint changes for sundry arches
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 20 Jul 2002 23:42:01 -0400
-
-maxima (5.6b-6) unstable; urgency=low
-
-  * include stdarg.h when defining GNU_SOURCE
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 20 Jul 2002 18:51:12 -0400
-
-maxima (5.6b-5) unstable; urgency=low
-
-  * Proper va_dcl declarations
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 20 Jul 2002 10:41:22 -0400
-
-maxima (5.6b-4) unstable; urgency=low
-
-  * cvs updates for missing ptrdiff_t
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 20 Jul 2002 08:42:20 -0400
-
-maxima (5.6b-3) unstable; urgency=low
-
-  * gcl cvs updates to compile with -Wall
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 20 Jul 2002 02:42:20 -0400
-
-maxima (5.6b-2) unstable; urgency=low
-
-  * architecture any, though still have some issues
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 12 Jul 2002 19:03:56 -0400
-
-maxima (5.6b-1) unstable; urgency=low
-
-  * preliminary cvs updates for 64bit support
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 12 Jul 2002 18:04:00 -0400
-
-maxima (5.6a-7) unstable; urgency=low
-
-  * m68k fix
-  * Add gcl's readline.o as a loadable maxima module, need to revisit
-    this
-  * README.Debian on how to activate readline support
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 12 Jul 2002 16:01:01 -0400
-
-maxima (5.6a-6) unstable; urgency=low
-
-  * cvs updates for arm
-  * Fix for Larry Bates integration bug: Closes: #151416
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 10 Jul 2002 18:17:27 -0400
-
-maxima (5.6a-5) unstable; urgency=low
-
-  * gcl cvs updates for arm build
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  9 Jul 2002 16:11:41 -0400
-
-maxima (5.6a-4) unstable; urgency=low
-
-  * Remove gcl.1 from shipped manpages, Closes: #151110
-
- -- Camm Maguire <camm@enhanced.com>  Sun,  7 Jul 2002 13:22:07 -0400
-
-maxima (5.6a-3) unstable; urgency=low
-
-  * Use dvipdfm instead of pdftex for now to make pdf doc file.  Need to
-    revisit this in the future, as this approach does not preserve cross
-    reference functionality in the pdf file.  Closes: #141258
-  * readline support now active with new underlying gcl.  Closes:
-    #140465
-  * gcl cvs updates
-  * Merged gcl build-depends with maxima's, Closes: #151828
-
- -- Camm Maguire <camm@enhanced.com>  Sun,  7 Jul 2002 12:59:03 -0400
-
-maxima (5.6a-2) unstable; urgency=low
-
-  * gcc-3.0 for arm
-  * cachectl header for m68k
-
- -- Camm Maguire <camm@enhanced.com>  Mon,  1 Jul 2002 15:49:58 -0400
-
-maxima (5.6a-1) unstable; urgency=low
-
-  * New gcl version, more supported architectures
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 25 Jun 2002 19:36:48 -0400
-
-maxima (5.6-17) unstable; urgency=low
-
-  * Patch to maxima-mode.el to make 'run-maxima' work in xemacs
-  * Closes: #140267
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 28 Mar 2002 07:54:37 -0500
-
-maxima (5.6-16) unstable; urgency=low
-
-  * Newer standards
-  * Build-Depends on texi2html, Closes: #137015
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  5 Mar 2002 21:30:20 -0500
-
-maxima (5.6-15) unstable; urgency=low
-
-  * flavor ->debian-emacs-flavor in emacsen-startup
-
- -- Camm Maguire <camm@enhanced.com>  Mon,  4 Mar 2002 14:29:09 -0500
-
-maxima (5.6-14) unstable; urgency=low
-
-  * Emacs startup file as conffile, Closes: #132811
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 11 Feb 2002 14:33:41 -0500
-
-maxima (5.6-13) unstable; urgency=low
-
-  * Added share et. al. .mac files to search path, Closes: #131653
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 31 Jan 2002 09:42:45 -0500
-
-maxima (5.6-12) unstable; urgency=low
-
-  * Fixed bug in gamma() with negative args (csimp2.lisp)
-  * tk8.2 alternative depend, closing lintian error
-  * xmaxima man page, clears lintian error
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 18 Sep 2001 17:36:10 -0400
-
-maxima (5.6-11) unstable; urgency=low
-
-  * Replaced all instances of 'exec wish8.0' with 'exec wish', Closes:
-    #105424
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 16 Jul 2001 21:03:56 -0400
-
-maxima (5.6-10) unstable; urgency=low
-
-  * reworked build-depends from dpkg-genbuilddeps output
-
- -- Camm Maguire <camm@enhanced.com>  Mon,  9 Jul 2001 15:47:47 -0400
-
-maxima (5.6-9) unstable; urgency=low
-
-  * Added dependency on autoconf, Closes: #104011
-
- -- Camm Maguire <camm@enhanced.com>  Sun,  8 Jul 2001 23:24:48 -0400
-
-maxima (5.6-8) unstable; urgency=low
-
-  * Made clean target work on freshly unpacked source, Closes: #103783,
-    (Thanks for your report!)
-
- -- Camm Maguire <camm@enhanced.com>  Sat,  7 Jul 2001 23:52:49 -0400
-
-maxima (5.6-7) unstable; urgency=low
-
-  * Added displa.lisp from cvs fixing summation displays -- Closes:
-    #99447
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  5 Jun 2001 09:38:37 -0400
-
-maxima (5.6-6) unstable; urgency=low
-
-  * New xmaxima properly shuts down child saved_maxima on selection of
-    either exit menu or receipt of delete signal; destroy signal or
-    killing xmaxima from terminal still leave saved_maxima running for
-    now; Closes: #98793
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 31 May 2001 09:50:54 -0400
-
-maxima (5.6-5) unstable; urgency=low
-
-  * Updated doc-base to refer to correct directory
-
- -- Camm Maguire <camm@enhanced.com>  Wed,  9 May 2001 16:43:48 -0400
-
-maxima (5.6-4) unstable; urgency=low
-
-  * Build gcl gmp code for i486 to run on all x86 subarches, though not
-    optimally
-
- -- Camm Maguire <camm@enhanced.com>  Wed,  9 May 2001 14:16:31 -0400
-
-maxima (5.6-3) unstable; urgency=low
-
-  * Made doc symlink relative clearing lintian error
-
- -- Camm Maguire <camm@enhanced.com>  Wed,  9 May 2001 00:12:31 -0400
-
-maxima (5.6-2) unstable; urgency=low
-
-  * Reworked documentation layout
-  * Fixed emacsen startup to correctly autoload run-maxima function
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  8 May 2001 21:42:25 -0400
-
-maxima (5.6-1) unstable; urgency=low
-
-  * New upstream release
-
- -- Camm Maguire <camm@enhanced.com>  Mon,  7 May 2001 14:33:31 -0400
-
-maxima (5.5-beta-10) unstable; urgency=low
-
-  * Partial sync with upstream fixes, Add trigrat.lisp, specifically
-    install share/*.lisp, fix file search paths to find share/*.lisp,
-    fix auto-mexpr bug triggered by trigrat, sync with cvs on
-    src/askp.lisp, src/autol.lisp src/mload.lisp, and
-    share/trigrat.lisp; backport minimal changes from cvs in makefile
-    and src/init_max1.lisp, Closes: #93129
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  6 Apr 2001 18:26:19 -0400
-
-maxima (5.5-beta-9) unstable; urgency=low
-
-  * Changed Architecture in control to i386, since gcl cannot easily be
-    ported at present, Closes: #89896, #83079, #66395, #78694
-
- -- Camm Maguire <camm@enhanced.com>  Wed,  4 Apr 2001 10:13:15 -0400
-
-maxima (5.5-beta-8) unstable; urgency=low
-
-  * Put maxima info documentation in Math category, Closes: #90868
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 26 Mar 2001 09:52:06 -0500
-
-maxima (5.5-beta-7) unstable; urgency=low
-
-  * Included file mactex.lisp in maxima-5.5 tree to enable TeX output
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 23 Mar 2001 23:14:11 -0500
-
-maxima (5.5-beta-6) unstable; urgency=low
-
-  * Watch file updates
-  * Patch from upstream to fix parsing bug for prefixes greater than two
-    chars long, (see src/nparse.lisp, read-command-token-aux)
-
- -- Camm Maguire <camm@enhanced.com>  Thu, 22 Mar 2001 15:02:56 -0500
-
-maxima (5.5-beta-5) unstable; urgency=low
-
-  * Autoload instead of load in emacsen startup
-
- -- Camm Maguire <camm@enhanced.com>  Wed,  7 Mar 2001 10:31:45 -0500
-
-maxima (5.5-beta-4) unstable; urgency=low
-
-  * Renamed split-string to split-string-gcl in smart-complete.el,
-    Closes: #88293
-  * Added menu for xmaxima
-
- -- Camm Maguire <camm@enhanced.com>  Tue,  6 Mar 2001 13:09:46 -0500
-
-maxima (5.5-beta-3) unstable; urgency=low
-
-  * Fixed error in emacsen-startup, bad load-path construction
-
- -- Camm Maguire <camm@enhanced.com>  Fri,  2 Mar 2001 20:28:50 -0500
-
-maxima (5.5-beta-2) unstable; urgency=low
-
-  * New unexelf.c from emacs20.7 to enable stripping the binaries, as
-    suggested by upstream
-  * Edited 'fatal' macro in new unexelf.c to take variable arguments,
-    as it is used thus in the file.
-  * Updated emacs startup to automatically load maxima-mode, 
-    Closes: #86695
-  * Updated emacs startup to place elc path before el
-  * Updated README.Debian
-
- -- Camm Maguire <camm@enhanced.com>  Wed, 28 Feb 2001 18:55:23 -0500
-
-maxima (5.5-beta-1) unstable; urgency=low
-
-  * New upstream version
-  * Added dynamic lib dependencies for newly shared-lib executables
-  * Added build depends line, Closes: #84833
-  * Newest config.sub from subversions.gnu.org, as requested in #78694
-  * Added defines to 386-linux.h to attempt dynamic shared lib linking
-    again (as suggested by upstream, this appears to work!)
-  * Changed file search path in init_max1.lisp as directed by upstream,
-    so that load(ctensr) works.
-  * Added configure option for alpha into gcl configue.in, together with
-    initial .h and .defs files in gcl-2.3.8-beta/h, in attempt at
-    #83079
-  * Upgrade responds to spacebar in demos, Closes: #69488
-  * New shared links should clear up segfault in 85621, Closes: #85621
-  * Upgrade has 'example(integrate)' working without the need for
-    manual.demo, Closes: #85622
-  * Registered missing manpage for xmaxima as undoumented
-  * Dependencies on tcl/tk collapsed into one on tk8.2-dev
-  * Edited info/makefiles to clean and build all docs on each run.  Edited
-    gcl-2.3.8-beta/gcl-si.texi to input generic texinfo file on system,
-    and then the makefile to build the dvi from this file with
-    --interaction=nonstopmode to step around the unbalanced parentheses
-    issue mentioned in the file.
-  * Added '.' after xrefs in gcl's control.texi to suppress warnings
-  * Todo: sort out duplication of info and html files
-
- -- Camm Maguire <camm@enhanced.com>  Sat, 24 Feb 2001 18:11:13 -0500
-
-maxima (5.4-7) unstable; urgency=low
-
-  * Fixed doc-base index reference.  Closes #69366.
-
- -- Camm Maguire <camm@enhanced.com>  Sun, 20 Aug 2000 19:57:31 +0200
-
-maxima (5.4-6) unstable; urgency=low
-
-  * Release a static build to temporarily cure segfault issue while
-    shared lib linkage is being worked out upstream
-
- -- Camm Maguire <camm@enhanced.com>  Wed,  9 Aug 2000 18:58:36 +0200
-
-maxima (5.4-5) unstable; urgency=low
-
-  * Fix accidental deletion of gcl-2.3/configure.in
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 26 Jun 2000 09:52:24 -0400
-
-maxima (5.4-4) unstable; urgency=low
-
-  * Applied patch to enable configuration and building on m68k.  Closes
-    #65680
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 23 Jun 2000 10:50:55 -0400
-
-maxima (5.4-3) unstable; urgency=low
-
-  * Fixed minor typo in texi document source
-  * Added .el files from gcl-2.3, including dbl.el for lisp code
-    debugging, and lisp-complete.el for history-based command completion
-
- -- Camm Maguire <camm@enhanced.com>  Mon, 19 Jun 2000 12:46:37 -0400
-
-maxima (5.4-2) unstable; urgency=low
-
-  * Rebuild under new libraries as a quick fix to segfaulting bug.  I'll
-    be investigating further why -1 worked with libc6 2.1.3-7 and ldso
-    1.9.11-5, but not with the current potato versions.  Closes
-    #65733,#65710, and #65697
-
- -- Camm Maguire <camm@enhanced.com>  Fri, 16 Jun 2000 12:36:29 -0400
-
-maxima (5.4-1) unstable; urgency=low
-
-  * Initial Release.
-
- -- Camm Maguire <camm@enhanced.com>  Tue, 25 Apr 2000 14:54:56 -0400
-
-
+ -- Marco Presi (Zufus) <zufus@debian.org>  Wed,  5 Oct 2005 00:38:43 -0400
