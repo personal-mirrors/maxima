@@ -24,7 +24,7 @@ update-po:
 update-translations: maxima_manual.mo
 	for i in ${info_posource}; do ../texi2xml.pl ../`basename $$i .xml`.texi >$$i;done
 	itstool -i ../itstool_rules.xml -m maxima_manual.mo  ${info_posource}
-	for i in ${info_posource}; do xsltproc ../xml2texi.xslt $$i> `basename $$i .xml`.texi;done
+	for i in ${info_posource}; do xsltproc ../xml2texi.xslt $$i> `basename $$i .xml`.$(lang).texi;done
 	rm ${info_posource}
 
 all-local: maxima-index.lisp maxima.html contents.hhc $(MAXIMA_CHM)
