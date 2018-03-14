@@ -5,6 +5,28 @@ UNINSTALL_CHM = uninstall-chm
 CLEAN_CHM = clean-chm
 endif
 
+
+SUFFIXES= .mo .po .xml
+
+.po.mo:
+	msgfmt -o $@ $<
+
+# Compile the .texi file to a .pot one
+update-po:
+	for i in ${info_posource}; do ../texi2xml.pl ../`basename $$i .xml`.texi >$$i;done
+	itstool -i ../itstool_rules.xml -o maxima_manual.pot ${info_posource}
+	rm ${info_posource}
+	msgmerge maxima_manual.po maxima_manual.pot >tmp
+	rm maxima_manual.pot
+	mv tmp maxima_manual.po
+
+# Compile the translations from the .po file to the .texi files again
+update-translations: maxima_manual.mo
+	for i in ${info_posource}; do ../texi2xml.pl ../`basename $$i .xml`.texi >$$i;done
+	itstool -i ../itstool_rules.xml -m maxima_manual.mo  ${info_posource}
+	for i in ${info_posource}; do xsltproc ../xml2texi.xslt $$i> `basename $$i .xml`.texi;done
+	rm ${info_posource}
+
 all-local: maxima-index.lisp maxima.html contents.hhc $(MAXIMA_CHM)
 
 install-data-local: $(INSTALL_CHM)

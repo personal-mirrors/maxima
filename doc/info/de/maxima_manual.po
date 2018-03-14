@@ -1,0 +1,226 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-03-14 20:11+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:7
+#, no-wrap
+msgid ""
+"@menu\n"
+"* Introduction to celine::\n"
+"@end menu\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:11
+#, no-wrap
+msgid ""
+"@node Introduction to celine\n"
+"@section Introduction to celine\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:14
+#, no-wrap
+msgid "Maxima implementation of Sister Celine's method. Barton Willis wrote this code. It is released under the @uref{https://creativecommons.org/about/cc0,Creative Commons CC0 license}.\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:16
+#, no-wrap
+msgid ""
+"Celine's method is described in Sections 4.1--4.4 of the book \"A=B\", by Marko Petkovsek, Herbert S. Wilf, and Doron Zeilberger.\n"
+"This book is available at @uref{http://www.math.rutgers.edu/~zeilberg/AeqB.pdf}\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:19
+#, no-wrap
+msgid "Let f = F(n,k). The function celine returns a set of recursion relations for F of the form\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:21
+#, no-wrap
+msgid "    p_0(n) * fff(n,k) + p_1(n) * fff(n+1,k) + ... +  p_p(n) * fff(n+p,k+q),\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:23
+#, no-wrap
+msgid ""
+"where p_0 through p_p are polynomials. If Maxima is unable to determine that sum(sum(a(i,j) * F(n+i,k+j),i,0,p),j,0,q) / F(n,k) \n"
+"is a rational function of n and k, celine returns the empty set. When f involves parameters (variables other than n or k), celine\n"
+"might make assumptions about these parameters. Using 'put' with a key of 'proviso,' Maxima saves these assumptions on the input \n"
+"label.\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:28
+#, no-wrap
+msgid "To use this function, first load the package integer_sequence, opsubst, and to_poly_solve.\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:30
+#, no-wrap
+msgid "Examples:\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:32
+#, no-wrap
+msgid ""
+"@c ===beg===\n"
+"@c load(\"integer_sequence\")$\n"
+"@c load(\"opsubst\")$\n"
+"@c load(\"to_poly_solve\")$\n"
+"@c load(\"celine\")$\n"
+"@c celine(n!,n,k,1,0);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(\"integer_sequence\")$\n"
+"(%i2) load(\"opsubst\")$\n"
+"(%i3) load(\"to_poly_solve\")$\n"
+"(%i4) load(\"celine\")$\n"
+"@group\n"
+"(%i5) celine(n!,n,k,1,0);\n"
+"(%o5)       @{fff(n + 1, k) - n fff(n, k) - fff(n, k)@}\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:50
+#, no-wrap
+msgid ""
+"Verification that this result is correct:\n"
+"@c ===beg===\n"
+"@c load(\"integer_sequence\")$\n"
+"@c load(\"opsubst\")$\n"
+"@c load(\"to_poly_solve\")$\n"
+"@c load(\"celine\")$\n"
+"@c g1:{fff(n+1,k)-n*fff(n,k)-fff(n,k)};\n"
+"@c ratsimp(minfactorial(first(g1))),fff(n,k) := n!;\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(\"integer_sequence\")$\n"
+"(%i2) load(\"opsubst\")$\n"
+"(%i3) load(\"to_poly_solve\")$\n"
+"(%i4) load(\"celine\")$\n"
+"@group\n"
+"(%i5) g1:@{fff(n+1,k)-n*fff(n,k)-fff(n,k)@};\n"
+"(%o5)       @{fff(n + 1, k) - n fff(n, k) - fff(n, k)@}\n"
+"@end group\n"
+"@group\n"
+"(%i6) ratsimp(minfactorial(first(g1))),fff(n,k) := n!;\n"
+"(%o6)                           0\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:74
+#, no-wrap
+msgid ""
+"An example with parameters including the test that the result of the example\n"
+"is correct:\n"
+"@c ===beg===\n"
+"@c load(\"integer_sequence\")$\n"
+"@c load(\"opsubst\")$\n"
+"@c load(\"to_poly_solve\")$\n"
+"@c load(\"celine\")$\n"
+"@c e : pochhammer(a,k) * pochhammer(-k,n) / (pochhammer(b,k));\n"
+"@c recur : celine(e,n,k,2,1);\n"
+"@c /* Test this result for correctness */\n"
+"@c first(%), fff(n,k) := ''(e)$\n"
+"@c makefact(makegamma(%))$\n"
+"@c minfactorial(factor(minfactorial(factor(%))));\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(\"integer_sequence\")$\n"
+"(%i2) load(\"opsubst\")$\n"
+"(%i3) load(\"to_poly_solve\")$\n"
+"(%i4) load(\"celine\")$\n"
+"@group\n"
+"(%i5) e : pochhammer(a,k) * pochhammer(-k,n) / (pochhammer(b,k));\n"
+"                           (a)  (- k)\n"
+"                              k      n\n"
+"(%o5)                      -----------\n"
+"                              (b)\n"
+"                                 k\n"
+"@end group\n"
+"@group\n"
+"(%i6) recur : celine(e,n,k,2,1);\n"
+"(%o6) @{fff(n + 2, k + 1) - fff(n + 2, k) - b fff(n + 1, k + 1)\n"
+" + n ((- fff(n + 1, k + 1)) + 2 fff(n + 1, k) - a fff(n, k)\n"
+" - fff(n, k)) + a (fff(n + 1, k) - fff(n, k)) + 2 fff(n + 1, k)\n"
+"    2\n"
+" - n  fff(n, k)@}\n"
+"@end group\n"
+"(%i7) /* Test this result for correctness */\n"
+"(%i8) first(%), fff(n,k) := ''(e)$\n"
+"@group\n"
+"(%i9) makefact(makegamma(%))$\n"
+"(%o9)                           0\n"
+"@end group\n"
+"(%i10) minfactorial(factor(minfactorial(factor(%))));\n"
+"@end example\n"
+msgstr ""
+
+#. (itstool) path: texifile/paragraph
+#: celine.xml:118
+#, no-wrap
+msgid ""
+"The proviso data suggests that setting a = b may result in a lower order recursion\n"
+"which is shown by the following example:\n"
+"@c ===beg===\n"
+"@c load(\"integer_sequence\")$\n"
+"@c load(\"opsubst\")$\n"
+"@c load(\"to_poly_solve\")$\n"
+"@c load(\"celine\")$\n"
+"@c e : pochhammer(a,k) * pochhammer(-k,n) / (pochhammer(b,k));\n"
+"@c recur : celine(e,n,k,2,1);\n"
+"@c get('%,'proviso);\n"
+"@c celine(subst(b=a,e),n,k,1,1);\n"
+"@c ===end===\n"
+"@example\n"
+"(%i1) load(\"integer_sequence\")$\n"
+"(%i2) load(\"opsubst\")$\n"
+"(%i3) load(\"to_poly_solve\")$\n"
+"(%i4) load(\"celine\")$\n"
+"@group\n"
+"(%i5) e : pochhammer(a,k) * pochhammer(-k,n) / (pochhammer(b,k));\n"
+"                           (a)  (- k)\n"
+"                              k      n\n"
+"(%o5)                      -----------\n"
+"                              (b)\n"
+"                                 k\n"
+"@end group\n"
+"@group\n"
+"(%i6) recur : celine(e,n,k,2,1);\n"
+"(%o6) @{fff(n + 2, k + 1) - fff(n + 2, k) - b fff(n + 1, k + 1)\n"
+" + n ((- fff(n + 1, k + 1)) + 2 fff(n + 1, k) - a fff(n, k)\n"
+" - fff(n, k)) + a (fff(n + 1, k) - fff(n, k)) + 2 fff(n + 1, k)\n"
+"    2\n"
+" - n  fff(n, k)@}\n"
+"@end group\n"
+"@group\n"
+"(%i7) get('%,'proviso);\n"
+"(%o7)                         false\n"
+"@end group\n"
+"@group\n"
+"(%i8) celine(subst(b=a,e),n,k,1,1);\n"
+"(%o8) @{fff(n + 1, k + 1) - fff(n + 1, k) + n fff(n, k)\n"
+"                                                     + fff(n, k)@}\n"
+"@end group\n"
+"@end example\n"
+msgstr ""
