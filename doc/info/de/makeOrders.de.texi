@@ -1,23 +1,13 @@
-@c -----------------------------------------------------------------------------
-@c File     : makeOrders.de.texi
-@c License  : GNU General Public License (GPL)
-@c Language : German
-@c Date     : 08.11.2010
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Functions and Variables for makeOrders::
 @end menu
 
-@c -----------------------------------------------------------------------------
-@node Functions and Variables for makeOrders,  , makeOrders, makeOrders
+@node Functions and Variables for makeOrders,  , makeOrders-pkg, makeOrders-pkg
 @section Functions and Variables for makeOrders
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} makeOrders (@var{indvarlist}, @var{orderlist})
-
+@anchor{makeOrders_func}
+@deffn {Function} makeOrders (@var{indvarlist},@var{orderlist})
 Returns a list of all powers for a polynomial up to and including the arguments. 
 
 @example
@@ -32,16 +22,13 @@ Returns a list of all powers for a polynomial up to and including the arguments.
                                                   2
                                            + b + a  + a + 1
 @end example
-
-where @code{[0, 1]} is associated with the term @math{b} and @code{[2, 3]} with 
-@math{a^2 b^3}.
+where @code{[0, 1]} is associated with the term @math{b} and @code{[2, 3]} with @math{a^2 b^3}.
 
 To use this function write first @code{load("makeOrders")}.
 
-@c @opencatbox
-@c @category{Polynomials} @category{Share packages} @category{Package makeOrders}
-@c @closecatbox
-@end deffn
+@opencatbox
+@category{Polynomials} @category{Share packages} @category{Package makeOrders}
+@closecatbox
 
-@c --- End of file makeOrders.de.texi ------------------------------------------
+@end deffn
 

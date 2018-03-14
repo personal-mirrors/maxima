@@ -1,35 +1,25 @@
-@c -----------------------------------------------------------------------------
-@c File     : lapack.de.texi
-@c License  : GNU General Public License (GPL)
-@c Language : German
-@c Original : lapack.texi revision 15.07.2011
-@c Date     : 08.11.2010
-@c Revision : 15.07.2011
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Introduction to lapack::
 * Functions and Variables for lapack::
 @end menu
 
-@c -----------------------------------------------------------------------------
-@node Introduction to lapack, Functions and Variables for lapack, lapack, lapack
+@node Introduction to lapack, Functions and Variables for lapack, lapack-pkg, lapack-pkg
 @section Introduction to lapack
-@c -----------------------------------------------------------------------------
 
-@code{lapack} is a Common Lisp translation (via the program @code{f2c}) of the 
-Fortran library LAPACK, as obtained from the SLATEC project.
+@code{lapack} is a Common Lisp translation (via the program @code{f2cl}) of the Fortran library LAPACK,
+as obtained from the SLATEC project.
 
-@c -----------------------------------------------------------------------------
-@node Functions and Variables for lapack, , Introduction to lapack, lapack
+@opencatbox
+@category{Numerical methods} @category{Share packages} @category{Package lapack}
+@closecatbox
+
+@node Functions and Variables for lapack, , Introduction to lapack, lapack-pkg
 @section Functions and Variables for lapack
-@c -----------------------------------------------------------------------------
 
-@c -----------------------------------------------------------------------------
-@deffn  {Function} dgeev (@var{A})
-@deffnx {Function} dgeev (@var{A}, @var{right_p}, @var{left_p})
+@deffn {Function} dgeev @
+@fname{dgeev} (@var{A}) @
+@fname{dgeev} (@var{A}, @var{right_p}, @var{left_p})
 
 Computes the eigenvalues and, optionally, the eigenvectors of a matrix @var{A}.
 All elements of @var{A} must be integer or floating point numbers.
@@ -37,8 +27,8 @@ All elements of @var{A} must be integer or floating point numbers.
 @var{A} might or might not be symmetric.
 
 @code{dgeev(@var{A})} computes only the eigenvalues of @var{A}.
-@code{dgeev(@var{A}, @var{right_p}, @var{left_p})} computes the eigenvalues of
-@var{A} and the right eigenvectors when @math{@var{right_p} = @code{true}}
+@code{dgeev(@var{A}, @var{right_p}, @var{left_p})} computes the eigenvalues of @var{A}
+and the right eigenvectors when @math{@var{right_p} = @code{true}}
 and the left eigenvectors when @math{@var{left_p} = @code{true}}.
 
 A list of three items is returned.
@@ -46,14 +36,12 @@ The first item is a list of the eigenvalues.
 The second item is @code{false} or the matrix of right eigenvectors.
 The third item is @code{false} or the matrix of left eigenvectors.
 
-The right eigenvector @math{v(j)} (the @math{j}-th column of the right
-eigenvector matrix) satisfies
+The right eigenvector @math{v(j)} (the @math{j}-th column of the right eigenvector matrix) satisfies
 
 @math{A . v(j) = lambda(j) . v(j)}
 
 where @math{lambda(j)} is the corresponding eigenvalue.
-The left eigenvector @math{u(j)} (the @math{j}-th column of the left eigenvector
-matrix) satisfies
+The left eigenvector @math{u(j)} (the @math{j}-th column of the left eigenvector matrix) satisfies
 
 @math{u(j)**H . A = lambda(j) . u(j)**H}
 
@@ -65,8 +53,18 @@ equal to 1, and largest component has imaginary part equal to zero.
 
 Example:
 
+@c ===beg===
+@c load ("lapack")$
+@c fpprintprec : 6;
+@c M : matrix ([9.5, 1.75], [3.25, 10.45]);
+@c dgeev (M);
+@c [L, v, u] : dgeev (M, true, true);
+@c D : apply (diag_matrix, L);
+@c M . v - v . D;
+@c transpose (u) . M - D . transpose (u);
+@c ===end===
 @example
-(%i1) load (lapack)$
+(%i1) load ("lapack")$
 (%i2) fpprintprec : 6;
 (%o2)                           6
 (%i3) M : matrix ([9.5, 1.75], [3.25, 10.45]);
@@ -77,13 +75,11 @@ Example:
 (%o4)          [[7.54331, 12.4067], false, false]
 (%i5) [L, v, u] : dgeev (M, true, true);
                            [ - .666642  - .515792 ]
-@group
 (%o5) [[7.54331, 12.4067], [                      ], 
                            [  .745378   - .856714 ]
                                         [ - .856714  - .745378 ]
                                         [                      ]]
                                         [  .515792   - .666642 ]
-@end group
 (%i6) D : apply (diag_matrix, L);
                       [ 7.54331     0    ]
 (%o6)                 [                  ]
@@ -97,9 +93,13 @@ Example:
 (%o8)                [                    ]
                      [ 0.0       0.0      ]
 @end example
+
+@opencatbox
+@category{Package lapack}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
 @deffn {Function} dgeqrf (@var{A})
 
 Computes the QR decomposition of the matrix @var{A}.
@@ -111,14 +111,19 @@ The first item is the matrix @var{Q}, which is a square, orthonormal matrix
 which has the same number of rows as @var{A}.
 The second item is the matrix @var{R}, which is the same size as @var{A},
 and which has all elements equal to zero below the diagonal.
-The product @code{@var{Q} . @var{R}}, where "." is the noncommutative
-multiplication operator, is equal to @var{A} (ignoring floating point round-off
-errors).
+The product @code{@var{Q} . @var{R}}, where "." is the noncommutative multiplication operator,
+is equal to @var{A} (ignoring floating point round-off errors).
 
-Examples:
-
+@c ===beg===
+@c load ("lapack")$
+@c fpprintprec : 6;
+@c M : matrix ([1, -3.2, 8], [-11, 2.7, 5.9]);
+@c [q, r] : dgeqrf (M);
+@c q . r - M;
+@c mat_norm (%);
+@c ===end===
 @example
-(%i1) load (lapack) $
+(%i1) load ("lapack") $
 (%i2) fpprintprec : 6 $
 (%i3) M : matrix ([1, -3.2, 8], [-11, 2.7, 5.9]) $
 (%i4) [q, r] : dgeqrf (M);
@@ -135,19 +140,22 @@ Examples:
 (%i6) mat_norm (%, 1);
 (%o6)                      3.10862E-15
 @end example
+
+@opencatbox
+@category{Package lapack}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
 @deffn {Function} dgesv (@var{A}, @var{b})
 
-Computes the solution @var{x} of the linear equation @math{@var{A} @var{x} =
-@var{b}}, where @var{A} is a square matrix, and @var{b} is a matrix of the same
-number of rows as @var{A} and any number of columns.
+Computes the solution @var{x} of the linear equation @math{@var{A} @var{x} = @var{b}},
+where @var{A} is a square matrix, and @var{b} is a matrix of the same number of rows
+as @var{A} and any number of columns.
 The return value @var{x} is the same size as @var{b}.
 
-The elements of @var{A} and @var{b} must evaluate to real floating point numbers
-via @code{float}; thus elements may be any numeric type, symbolic numerical
-constants, or expressions which evaluate to floats.
+The elements of @var{A} and @var{b} must evaluate to real floating point numbers via @code{float};
+thus elements may be any numeric type, symbolic numerical constants, or expressions which evaluate to floats.
 The elements of @var{x} are always floating point numbers.
 All arithmetic is carried out as floating point operations.
 
@@ -155,9 +163,14 @@ All arithmetic is carried out as floating point operations.
 
 Examples:
 
-@code{dgesv} computes the solution of the linear equation @math{@var{A}
-@var{x} = @var{b}}.
+@code{dgesv} computes the solution of the linear equation @math{@var{A} @var{x} = @var{b}}.
 
+@c ===beg===
+@c A : matrix ([1, -2.5], [0.375, 5]);
+@c b : matrix ([1.75], [-0.625]);
+@c x : dgesv (A, b);
+@c dlange (inf_norm, b - A . x);
+@c ===end===
 @example
 (%i1) A : matrix ([1, -2.5], [0.375, 5]);
                                [   1    - 2.5 ]
@@ -175,9 +188,15 @@ Examples:
 (%o4)                                 0.0
 @end example
 
-@var{b} is a matrix with the same number of rows as @var{A} and any number of
-columns.  @var{x} is the same size as @var{b}.
+@var{b} is a matrix with the same number of rows as @var{A} and any number of columns.
+@var{x} is the same size as @var{b}.
 
+@c ===beg===
+@c A : matrix ([1, -0.15], [1.82, 2]);
+@c b : matrix ([3.7, 1, 8], [-2.3, 5, -3.9]);
+@c x : dgesv (A, b);
+@c dlange (inf_norm, b - A . x);
+@c ===end===
 @example
 (%i1) A : matrix ([1, -0.15], [1.82, 2]);
                                [  1    - 0.15 ]
@@ -195,18 +214,21 @@ columns.  @var{x} is the same size as @var{b}.
 (%o4)                       1.1102230246251565E-15
 @end example
 
-The elements of @var{A} and @var{b} must evaluate to real floating point
-numbers.
+The elements of @var{A} and @var{b} must evaluate to real floating point numbers.
 
+@c ===beg===
+@c A : matrix ([5, -%pi], [1b0, 11/17]);
+@c b : matrix ([%e], [sin(1)]);
+@c x : dgesv (A, b);
+@c dlange (inf_norm, b - A . x);
+@c ===end===
 @example
 (%i1) A : matrix ([5, -%pi], [1b0, 11/17]);
-@group
                                [   5    - %pi ]
                                [              ]
 (%o1)                          [         11   ]
                                [ 1.0b0   --   ]
                                [         17   ]
-@end group
 (%i2) b : matrix ([%e], [sin(1)]);
                                   [   %e   ]
 (%o2)                             [        ]
@@ -218,20 +240,26 @@ numbers.
 (%i4) dlange (inf_norm, b - A . x);
 (%o4)                        2.220446049250313E-16
 @end example
+
+@opencatbox
+@category{Package lapack} @category{Linear equations}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn  {Function} dgesvd (@var{A})
-@deffnx {Function} dgesvd (@var{A}, @var{left_p}, @var{right_p})
+@deffn {Function} dgesvd @
+@fname{dgesvd} (@var{A}) @
+@fname{dgesvd} (@var{A}, @var{left_p}, @var{right_p})
 
-Computes the singular value decomposition (SVD) of a matrix @var{A}, comprising
-the singular values and, optionally, the left and right singular vectors.
+Computes the singular value decomposition (SVD) of a matrix @var{A},
+comprising the singular values and, optionally, the left and right singular vectors.
 All elements of @var{A} must be integer or floating point numbers.
 @var{A} might or might not be square (same number of rows and columns).
 
-Let @math{m} be the number of rows, and @math{n} the number of columns of
-@var{A}.  The singular value decomposition of @var{A} comprises three matrices,
-@var{U}, @var{Sigma}, and @var{V^T}, such that
+Let @math{m} be the number of rows, and @math{n} the number of columns of @var{A}.
+The singular value decomposition of @var{A} comprises three matrices,
+@var{U}, @var{Sigma}, and @var{V^T},
+such that
 
 @c this code breaks texi2pdf: @math{@var{A} = @var{U} . @var{Sigma} . @var{V^T}}
 @math{@var{A} = @var{U} . @var{Sigma} . @var{V}^T}
@@ -249,8 +277,8 @@ the left and right singular vectors of @var{A}.
 Note that @code{dgesvd} returns the transpose of @var{V}, not @var{V} itself.
 
 @code{dgesvd(@var{A})} computes only the singular values of @var{A}.
-@code{dgesvd(@var{A}, @var{left_p}, @var{right_p})} computes the singular values
-of @var{A} and the left singular vectors when @math{@var{left_p} = @code{true}}
+@code{dgesvd(@var{A}, @var{left_p}, @var{right_p})} computes the singular values of @var{A}
+and the left singular vectors when @math{@var{left_p} = @code{true}}
 and the right singular vectors when @math{@var{right_p} = @code{true}}.
 
 A list of three items is returned.
@@ -260,12 +288,26 @@ The third item is @code{false} or the matrix of right singular vectors.
 
 Example:
 
+@c ===beg===
+@c load ("lapack")$
+@c fpprintprec : 6;
+@c M: matrix([1, 2, 3], [3.5, 0.5, 8], [-1, 2, -3], [4, 9, 7]);
+@c dgesvd (M);
+@c [sigma, U, VT] : dgesvd (M, true, true);
+@c m : length (U);
+@c n : length (VT);
+@c Sigma:
+@c   genmatrix(lambda ([i, j], if i=j then sigma[i] else 0),
+@c             m, n);
+@c U . Sigma . VT - M;
+@c transpose (U) . U;
+@c VT . transpose (VT);
+@c ===end===
 @example
-(%i1) load (lapack)$
+(%i1) load ("lapack")$
 (%i2) fpprintprec : 6;
 (%o2)                           6
 (%i3) M: matrix([1, 2, 3], [3.5, 0.5, 8], [-1, 2, -3], [4, 9, 7]);
-@group
                         [  1    2    3  ]
                         [               ]
                         [ 3.5  0.5   8  ]
@@ -273,7 +315,6 @@ Example:
                         [ - 1   2   - 3 ]
                         [               ]
                         [  4    9    7  ]
-@end group
 (%i4) dgesvd (M);
 (%o4)      [[14.4744, 6.38637, .452547], false, false]
 (%i5) [sigma, U, VT] : dgesvd (M, true, true);
@@ -313,7 +354,6 @@ Example:
           [                                           ]
           [  8.88178E-16    1.77636E-15   8.88178E-16 ]
 (%i10) transpose (U) . U;
-@group
        [     1.0      5.55112E-17    2.498E-16     2.77556E-17  ]
        [                                                        ]
        [ 5.55112E-17      1.0       5.55112E-17    4.16334E-17  ]
@@ -321,7 +361,6 @@ Example:
        [  2.498E-16   5.55112E-17       1.0       - 2.08167E-16 ]
        [                                                        ]
        [ 2.77556E-17  4.16334E-17  - 2.08167E-16       1.0      ]
-@end group
 (%i11) VT . transpose (VT);
           [      1.0           0.0      - 5.55112E-17 ]
           [                                           ]
@@ -329,10 +368,14 @@ Example:
           [                                           ]
           [ - 5.55112E-17  5.55112E-17       1.0      ]
 @end example
+
+@opencatbox
+@category{Package lapack}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn  {Function} dlange (@var{norm}, @var{A})
+@deffn {Function} dlange (@var{norm}, @var{A})
 @deffnx {Function} zlange (@var{norm}, @var{A})
 
 Computes a norm or norm-like function of the matrix @var{A}.
@@ -342,9 +385,9 @@ Computes a norm or norm-like function of the matrix @var{A}.
 Compute @math{max(abs(A(i, j)))} where @math{i} and @math{j} range over
 the rows and columns, respectively, of @var{A}.
 Note that this function is not a proper matrix norm.
-@item one_norm 
-Compute the @math{L[1]} norm of @var{A},that is, the maximum of the sum of the
-absolute value of elements in each column.
+@item one_norm
+Compute the @math{L[1]} norm of @var{A},
+that is, the maximum of the sum of the absolute value of elements in each column.
 @item inf_norm
 Compute the @math{L[inf]} norm of @var{A},
 that is, the maximum of the sum of the absolute value of elements in each row.
@@ -352,12 +395,16 @@ that is, the maximum of the sum of the absolute value of elements in each row.
 Compute the Frobenius norm of @var{A},
 that is, the square root of the sum of squares of the matrix elements.
 @end table
+
+@opencatbox
+@category{Package lapack}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn  {Function} dgemm (@var{A}, @var{B})
-@deffnx {Function} dgemm (@var{A}, @var{B}, @var{options})
-
+@deffn {Function} dgemm @
+@fname{dgemm} (@var{A}, @var{B}) @
+@fname{dgemm} (@var{A}, @var{B}, @var{options})
 Compute the product of two matrices and optionally add the product to
 a third matrix.
 
@@ -393,10 +440,21 @@ If @code{true}, the transpose of @var{B} is used instead of @var{B}
 for the product.  The default is @code{false}.
 @end table
 
-Examples:
-
+@c ===beg===
+@c load ("lapack")$
+@c A : matrix([1,2,3],[4,5,6],[7,8,9]);
+@c B : matrix([-1,-2,-3],[-4,-5,-6],[-7,-8,-9]);
+@c C : matrix([3,2,1],[6,5,4],[9,8,7]);
+@c dgemm(A,B);
+@c A . B;
+@c dgemm(A,B,transpose_a=true);
+@c transpose(A) . B;
+@c dgemm(A,B,c=C,beta=1);
+@c A . B + C;
+@c dgemm(A,B,c=C,beta=1, alpha=-1);
+@c -A . B + C
 @example
-(%i1) load (lapack)$
+(%i1) load ("lapack")$
 (%i2) A : matrix([1,2,3],[4,5,6],[7,8,9]);
                                   [ 1  2  3 ]
                                   [         ]
@@ -428,13 +486,11 @@ Examples:
                             [                     ]
                             [ - 102  - 126  - 150 ]
 (%i7) dgemm(A,B,transpose_a=true);
-@group
                          [ - 66.0  - 78.0   - 90.0  ]
                          [                          ]
 (%o7)                    [ - 78.0  - 93.0   - 108.0 ]
                          [                          ]
                          [ - 90.0  - 108.0  - 126.0 ]
-@end group
 (%i8) transpose(A) . B;
                            [ - 66  - 78   - 90  ]
                            [                    ]
@@ -467,7 +523,40 @@ Examples:
                                [ 111  134  157 ]
 
 @end example
+@opencatbox
+@category{Package lapack}
+@closecatbox
+
 @end deffn
 
-@c --- End of file lapack.de.texi ----------------------------------------------
+@deffn {Function} zgeev @
+@fname{zgeev} (@var{A}) @
+@fname{zgeev} (@var{A}, @var{right_p}, @var{left_p})
+
+Like @code{dgeev}, but the matrix @var{A} is complex.
+
+@opencatbox
+@category{Package lapack}
+@closecatbox
+
+@end deffn
+
+@deffn {Function} zheev @
+@fname{zheev} (@var{A}) @
+@fname{zheev} (@var{A}, @var{eigvec_p})
+
+Like @code{zheev}, but the matrix @var{A} is assumed to be a square
+complex Hermitian matrix. If @var{eigvec_p} is @code{true}, then the
+eigenvectors of the matrix are also computed.
+
+No check is made that the matrix @var{A} is, in fact, Hermitian.
+
+A list of two items is returned, as in @code{dgeev}: a list of
+eigenvalues, and @code{false} or the matrix of the eigenvectors.
+
+@opencatbox
+@category{Package lapack}
+@closecatbox
+
+@end deffn
 

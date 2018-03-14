@@ -1,36 +1,26 @@
-@c -----------------------------------------------------------------------------
-@c File     : lindstedt.de.texi
-@c License  : GNU General Public License (GPL)
-@c Language : German
-@c Date     : 08.11.2010
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Functions and Variables for lindstedt::
 @end menu
 
-@c -----------------------------------------------------------------------------
-@node Functions and Variables for lindstedt,  , lindstedt, lindstedt
+@node Functions and Variables for lindstedt,  , lindstedt-pkg, lindstedt-pkg
 @section Functions and Variables for lindstedt
 
-@c -----------------------------------------------------------------------------
+@anchor{Lindstedt}
 @deffn {Function} Lindstedt (@var{eq},@var{pvar},@var{torder},@var{ic})
+This is a first pass at a Lindstedt code.  It can solve problems
+with initial conditions entered, which can be arbitrary constants,
+(just not @var{%k1} and @var{%k2}) where the initial conditions on the perturbation
+equations are @math{z[i]=0, z'[i]=0} for @math{i>0}. @var{ic} is the list of 
+initial conditions.
 
-This is a first pass at a Lindstedt code.  It can solve problems with initial 
-conditions entered, which can be arbitrary constants, (just not @var{%k1} and 
-@var{%k2}) where the initial conditions on the perturbation equations are 
-@math{z[i]=0, z'[i]=0} for @math{i>0}. @var{ic} is the list of initial 
-conditions.
-
-Problems occur when initial conditions are not given, as the constants in the 
-perturbation equations are the same as the zero order equation solution. Also, 
-problems occur when the initial conditions for the perturbation equations are 
-not @math{z[i]=0, z'[i]=0} for @math{i>0}, such as the Van der Pol equation.
+Problems occur when initial conditions are not given, as the constants
+in the perturbation equations are the same as the zero order equation
+solution.  Also, problems occur when the initial conditions for the
+perturbation equations are not @math{z[i]=0, z'[i]=0} for @math{i>0}, such as the
+Van der Pol equation.
 
 Example:
-
 @example
 (%i1) load("makeOrders")$
 
@@ -50,13 +40,11 @@ T = (- ---- - -- + 1) t]]
        3072   16
 @end example
 
-To use this function write first @code{load("makeOrders")} and 
-@code{load("lindstedt")}.
+To use this function write first @code{load("makeOrders")} and @code{load("lindstedt")}.
 
-@c @opencatbox
-@c @category{Differential equations} @category{Share packages} @category{Package lindstedt}
-@c @closecatbox
+@opencatbox
+@category{Differential equations} @category{Share packages} @category{Package lindstedt}
+@closecatbox
+
 @end deffn
-
-@c --- End of file lindstedt.de.texi -------------------------------------------
 

@@ -4,7 +4,18 @@ lang = de
 langsdir = /de
 
 # All files that are translated using the .po file
-info_posource = celine.xml
+info_posource = celine.xml zeilberger.xml unit.xml Affine.xml asympa.xml
+info_posource += augmented_lagrangian.xml bernstein.xml bode.xml cobyla.xml contrib_ode.xml
+info_posource += Ctensor.xml diag.xml distrib.xml draw.xml drawdf.xml dynamics.xml ezunits.xml
+info_posource += f90.xml finance.xml fractals.xml ggf.xml graphs.xml grobner.xml Groups.xml
+info_posource += impdiff.xml interpol.xml lapack.xml lbfgs.xml lindstedt.xml linearalgebra.xml
+info_posource += lsquares.xml makeOrders.xml minpack.xml numericalio.xml opsubst.xml
+info_posource += orthopoly.xml romberg.xml simplex.xml simplifications.xml
+info_posource += solve_rec.xml stats.xml stirling.xml Symmetries.xml to_poly_solve.xml
+
+
+
+
 
 info_TEXINFOS = maxima.texi
 maxima_TEXINFOS = include-maxima.de.texi category-macros.de.texi \
@@ -18,18 +29,18 @@ Ctensor.de.texi Atensor.de.texi Special.de.texi Numerical.de.texi \
 Runtime.de.texi Rules.de.texi Function.de.texi Program.de.texi \
 Translator.de.texi Debugging.de.texi Miscellaneous.de.texi \
 abs_integrate.de.texi \
-affine.de.texi asympa.de.texi augmented_lagrangian.de.texi \
+Affine.de.texi asympa.de.texi augmented_lagrangian.de.texi \
 bernstein.de.texi bode.de.texi \
 cobyla.de.texi contrib_ode.de.texi descriptive.de.texi \
 diag.de.texi distrib.de.texi draw.de.texi drawdf.de.texi dynamics.de.texi \
 ezunits.de.texi f90.de.texi finance.de.texi fractals.de.texi ggf.de.texi \
 graphs.de.texi grobner.de.texi \
-groups.de.texi impdiff.de.texi interpol.de.texi lapack.de.texi lbfgs.de.texi \
+Groups.de.texi impdiff.de.texi interpol.de.texi lapack.de.texi lbfgs.de.texi \
 lindstedt.de.texi linearalgebra.de.texi lsquares.de.texi makeOrders.de.texi \
 minpack.de.texi mnewton.de.texi numericalio.de.texi opsubst.de.texi \
 orthopoly.de.texi plotdf.de.texi romberg.de.texi simplex.de.texi \
 simplifications.de.texi solve_rec.de.texi stats.de.texi stirling.de.texi \
-stringproc.de.texi symmetries.de.texi to_poly_solve.de.texi unit.de.texi \
+stringproc.de.texi Symmetries.de.texi to_poly_solve.de.texi unit.de.texi \
 zeilberger.de.texi \
 Glossary.de.texi Number.de.texi Indices.de.texi
 

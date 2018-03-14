@@ -1,20 +1,10 @@
-@c -----------------------------------------------------------------------------
-@c File     : drawdf.de.texi
-@c License  : GNU General Public License (GPL)
-@c Language : German
-@c Original : drawdf.texi revision 1.2
-@c Date     : 28.11.2010
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Introduction to drawdf::
 * Functions and Variables for drawdf::
 @end menu
 
-@c -----------------------------------------------------------------------------
-@node Introduction to drawdf, Functions and Variables for drawdf, drawdf, drawdf
+@node Introduction to drawdf, Functions and Variables for drawdf, drawdf-pkg, drawdf-pkg
 @section Introduction to drawdf
 
 The function @code{drawdf} draws the direction field of a first-order
@@ -22,7 +12,7 @@ Ordinary Differential Equation (ODE) or a system of two autonomous
 first-order ODE's.
 
 Since this is an additional package, in order to use it you must first
-load it with @code{load(drawdf)}.  Drawdf is built upon the @code{draw}
+load it with @code{load("drawdf")}.  Drawdf is built upon the @code{draw}
 package, which requires Gnuplot 4.2.
 
 To plot the direction field of a single ODE, the ODE must be written in
@@ -71,27 +61,24 @@ If only one ODE is given, @code{drawdf} will implicitly admit
 @code{x=t}, and @code{G(x,y)=1}, transforming the non-autonomous
 equation into a system of two autonomous equations.
 
-@c @opencatbox
-@c @category{Differential equations} @category{Plotting}
-@c @category{Share packages} @category{Package drawdf}
-@c @category{Package draw}
-@c @closecatbox
+@opencatbox
+@category{Differential equations} @category{Plotting}
+@category{Share packages} @category{Package drawdf}
+@category{Package draw}
+@closecatbox
 
-@c -----------------------------------------------------------------------------
-@node Functions and Variables for drawdf,  , Introduction to drawdf, drawdf
+@node Functions and Variables for drawdf,  , Introduction to drawdf, drawdf-pkg
 @section Functions and Variables for drawdf
 
-@c -----------------------------------------------------------------------------
 @subsection Functions
 
-@c -----------------------------------------------------------------------------
-@anchor{function_drawdf}
-@deffn  {Function} drawdf (@var{dydx}, ...options and objects...)
-@deffnx {Function} drawdf (@var{dvdu}, @code{[}@var{u},@var{v}@code{]}, ...options and objects...)
-@deffnx {Function} drawdf (@var{dvdu}, @code{[}@var{u},@var{umin},@var{umax}@code{]}, @code{[}@var{v},@var{vmin},@var{vmax}@code{]}, ...options and objects...)
-@deffnx {Function} drawdf (@code{[}@var{dxdt},@var{dydt}@code{]}, ...options and objects...)
-@deffnx {Function} drawdf (@code{[}@var{dudt},@var{dvdt}@code{]}, @code{[}@var{u},@var{v}@code{]}, ...options and objects...)
-@deffnx {Function} drawdf (@code{[}@var{dudt},@var{dvdt}@code{]}, @code{[}@var{u},@var{umin},@var{umax}@code{]}, @code{[}@var{v},@var{vmin},@var{vmax}@code{]}, ...options and objects...)
+@deffn {Function} drawdf @
+@fname{drawdf} (@var{dydx}, ...options and objects...) @
+@fname{drawdf} (@var{dvdu}, [@var{u},@var{v}], ...options and objects...) @
+@fname{drawdf} (@var{dvdu}, [@var{u},@var{umin},@var{umax}], [@var{v},@var{vmin},@var{vmax}], ...options and objects...) @
+@fname{drawdf} ([@var{dxdt},@var{dydt}], ...options and objects...) @
+@fname{drawdf} ([@var{dudt},@var{dvdt}], [@var{u},@var{v}], ...options and objects...) @
+@fname{drawdf} ([@var{dudt},@var{dvdt}], [@var{u},@var{umin},@var{umax}], [@var{v},@var{vmin},@var{vmax}], ...options and objects...)
 
 Function @code{drawdf} draws a 2D direction field with optional
 solution curves and other graphics using the @code{draw} package.
@@ -118,7 +105,7 @@ depth.  The set of graphic options and objects supported by
 The arguments are interpreted sequentially: @i{graphic options} affect
 all following @i{graphic objects}.  Furthermore, @i{graphic objects}
 are drawn on the canvas in order specified, and may obscure graphics
-drawn earlier.  Some @i{graphic options} affect the global appearence
+drawn earlier.  Some @i{graphic options} affect the global appearance
 of the scene.
 
 The additional @i{graphic objects} supported by @code{drawdf} include:
@@ -137,28 +124,26 @@ package include: @code{explicit}, @code{implicit}, @code{parametric},
 others supported by @code{draw2d} and @code{gr2d}.
 
 Commonly used @i{graphic options} inherited from the @code{draw}
-package include: 
-@flushleft
+package include:@*
 @code{points_joined}, @code{color},
 @code{point_type}, @code{point_size}, @code{line_width},
 @code{line_type}, @code{key}, @code{title}, @code{xlabel},
 @code{ylabel}, @code{user_preamble}, @code{terminal},
 @code{dimensions}, @code{file_name}, and all
 others supported by @code{draw2d} and @code{gr2d}.
-@end flushleft
 
-See also @code{draw2d}. 
+See also @mref{draw2d}. 
 
 Users of wxMaxima or Imaxima may optionally use @code{wxdrawdf}, which
 is identical to @code{drawdf} except that the graphics are drawn
 within the notebook using @code{wxdraw}.
 
-To make use of this function, write first @code{load(drawdf)}.
+To make use of this function, write first @code{load("drawdf")}.
 
 Examples:
 
 @example
-(%i1) load(drawdf)$
+(%i1) load("drawdf")$
 (%i2) drawdf(exp(-x)+y)$        /* default vars: x,y */
 (%i3) drawdf(exp(-t)+y, [t,y])$ /* default range: [-10,10] */
 (%i4) drawdf([y,-9*sin(x)-y/5], [x,1,5], [y,-2,2])$
@@ -287,10 +272,9 @@ generate graphics.
                        k,1,5))$
 @end example
 
-@c @opencatbox
-@c @category{Package drawdf}
-@c @closecatbox
-@end deffn
+@opencatbox
+@category{Package drawdf}
+@closecatbox
 
-@c --- End of file draw.de.texi ------------------------------------------------
+@end deffn
 

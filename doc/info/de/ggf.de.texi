@@ -1,21 +1,11 @@
-@c -----------------------------------------------------------------------------
-@c File     : ggf.de.texi
-@c License  : GNU General Public License (GPL)
-@c Language : German
-@c Date     : 08.11.2010
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Functions and Variables for ggf::
 @end menu
 
-@c -----------------------------------------------------------------------------
-@node Functions and Variables for ggf,  , ggf, ggf
+@node Functions and Variables for ggf,  , ggf-pkg, ggf-pkg
 @section Functions and Variables for ggf
 
-@c -----------------------------------------------------------------------------
 @defvr {Option variable} GGFINFINITY
 Default value: 3
 
@@ -30,15 +20,14 @@ partial quotients will be 0 or 1; if you use a greater value,
 then you should give enough terms in order to make the
 computation accurate enough.
 
+See also @mref{ggf}.
 
-See also @code{ggf}.
+@opencatbox
+@category{Package ggf}
+@closecatbox
 
-@c @opencatbox
-@c @category{Package ggf}
-@c @closecatbox
 @end defvr
 
-@c -----------------------------------------------------------------------------
 @defvr {Option variable} GGFCFMAX
 Default value: 3
 
@@ -52,16 +41,16 @@ not being a fraction of two polynomials and the function will
 exit. Put freely a greater value for more complicated
 generating functions.
 
-See also @code{ggf}.
+See also @mref{ggf}.
 
-@c @opencatbox
-@c @category{Package ggf}
-@c @closecatbox
+@opencatbox
+@category{Package ggf}
+@closecatbox
+
 @end defvr
 
-@c -----------------------------------------------------------------------------
+@anchor{ggf}
 @deffn {Function} ggf (@var{l})
-
 Compute the generating function (if it is a fraction of two
 polynomials) of a sequence, its first terms being given. @var{l}
 is a list of numbers.
@@ -69,15 +58,13 @@ is a list of numbers.
 The solution is returned as a fraction of two polynomials.
 If no solution has been found, it returns with @code{done}.
 
-This function is controlled by global variables @var{GGFINFINITY} and 
-@var{GGFCFMAX}. See also @var{GGFINFINITY} and @var{GGFCFMAX}.
+This function is controlled by global variables @var{GGFINFINITY} and @var{GGFCFMAX}. See also @var{GGFINFINITY} and @var{GGFCFMAX}.
 
 To use this function write first @code{load("ggf")}.
 
-@c @opencatbox
-@c @category{Generating functions} @category{Share packages} @category{Package ggf}
-@c @closecatbox
-@end deffn
+@opencatbox
+@category{Generating functions} @category{Share packages} @category{Package ggf}
+@closecatbox
 
-@c --- End of file ggf.de.texi -------------------------------------------------
+@end deffn
 

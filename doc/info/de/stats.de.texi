@@ -1,11 +1,3 @@
-@c -----------------------------------------------------------------------------
-@c File     : stats.de.texi
-@c License  : GNU General Public License (GPL)
-@c Language : German
-@c Date     : 08.11.2010
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Introduction to stats::
@@ -14,7 +6,6 @@
 * Functions and Variables for special distributions::
 @end menu
 
-@c -----------------------------------------------------------------------------
 @node Introduction to stats, Functions and Variables for inference_result, Top, Top
 @section Introduction to stats
 
@@ -40,15 +31,14 @@ For comments, bugs or suggestions, please contact the author at
 
 @var{'mario AT edu DOT xunta DOT es'}.
 
-@c @opencatbox
-@c @category{Statistical inference} @category{Share packages} @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Statistical inference} @category{Share packages} @category{Package stats}
+@closecatbox
 
-@c -----------------------------------------------------------------------------
 @node Functions and Variables for inference_result, Functions and Variables for stats, Introduction to stats, Top
 @section Functions and Variables for inference_result
 
-@c -----------------------------------------------------------------------------
+@anchor{inference_result}
 @deffn {Function} inference_result (@var{title}, @var{values}, @var{numbers})
 
 Constructs an @code{inference_result} object of the type returned by the
@@ -68,7 +58,7 @@ will be displayed. The @code{'diagonal} is stored in this object, but it is
 not displayed; to access its value, make use of function @code{take_inference}.
 
 @c ===beg===
-@c load (inference_result)$
+@c load ("inference_result")$
 @c b: 3$ h: 2$
 @c inference_result("Rectangle",
 @c                  ['base=b,
@@ -102,25 +92,27 @@ not displayed; to access its value, make use of function @code{take_inference}.
 (%o4)                        sqrt(13)
 @end example
 
-See also @code{take_inference}.
+See also @mrefdot{take_inference}
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
+@anchor{inferencep}
 @deffn {Function} inferencep (@var{obj})
 
 Returns @code{true} or @code{false}, depending on whether @var{obj} is an
 @code{inference_result} object or not.
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
+@anchor{items_inference}
 @deffn {Function} items_inference (@var{obj})
 
 Returns a list with the names of the items stored in @var{obj}, which must
@@ -133,7 +125,7 @@ but only the second is displayed. The @code{items_inference} function returns th
 of all items, no matter they are displayed or not.
 
 @c ===beg===
-@c load (inference_result)$
+@c load ("inference_result")$
 @c inference_result("Hi", ['pi=%pi,'e=%e],[2]);
 @c items_inference(%);
 @c ===end===
@@ -147,15 +139,17 @@ of all items, no matter they are displayed or not.
 (%o3)                        [pi, e]
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} take_inference (@var{n}, @var{obj})
-@deffnx {Function} take_inference (@var{name}, @var{obj})
-@deffnx {Function} take_inference (@var{list}, @var{obj})
+@anchor{take_inference}
+@deffn {Function} take_inference @
+@fname{take_inference} (@var{n}, @var{obj}) @
+@fname{take_inference} (@var{name}, @var{obj}) @
+@fname{take_inference} (@var{list}, @var{obj})
 
 Returns the @var{n}-th value stored in @var{obj} if @var{n} is a positive integer,
 or the item named @var{name} if this is the name of an item. If the first
@@ -168,7 +162,7 @@ Given an @code{inference_result} object, function @code{take_inference} is
 called in order to extract some information stored in it.
 
 @c ===beg===
-@c load (inference_result)$
+@c load ("inference_result")$
 @c b: 3$ h: 2$
 @c sol:inference_result("Rectangle",
 @c                      ['base=b,
@@ -211,18 +205,18 @@ called in order to extract some information stored in it.
 (%o7)                [3, 2, sqrt(13), 6, 10]
 @end example
 
-See also @code{inference_result} and @code{take_inference}.
+See also @mrefcomma{inference_result} and @mrefdot{take_inference}
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
 @node Functions and Variables for stats, Functions and Variables for special distributions, Functions and Variables for inference_result, Top
 @section Functions and Variables for stats
 
-@c -----------------------------------------------------------------------------
+@anchor{stats_numer}
 @defvr {Option variable} stats_numer
 Default value: @code{true}
 
@@ -230,14 +224,16 @@ If @code{stats_numer} is @code{true}, inference statistical functions
 return their results in floating point numbers. If it is @code{false},
 results are given in symbolic and rational format.
 
-@c @opencatbox
-@c @category{Package stats} @category{Numerical evaluation}
-@c @closecatbox
+@opencatbox
+@category{Package stats} @category{Numerical evaluation}
+@closecatbox
+
 @end defvr
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_mean (@var{x})
-@deffnx {Function} test_mean (@var{x}, @var{options} ...)
+@anchor{test_mean}
+@deffn {Function} test_mean @
+@fname{test_mean} (@var{x}) @
+@fname{test_mean} (@var{x}, @var{options} ...)
 
 This is the mean @var{t}-test. Argument @var{x} is a list or a column matrix
 containing a one dimensional sample. It also performs an asymptotic test
@@ -309,7 +305,7 @@ according to the results, the @math{p}-value is too great, there are no
 evidence for rejecting @math{H_0}.
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c data: [78,64,35,45,45,75,43,74,42,42]$
 @c test_mean(data,'conflevel=0.9,'alternative='less,'mean=50);
 @c ===end===
@@ -343,7 +339,7 @@ favor of the alternative @math{H_1}. Note that, as indicated by the @code{Method
 this procedure should be applied to large samples.
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c test_mean([36,118,52,87,35,256,56,178,57,57,89,34,25,98,35,
 @c         98,41,45,198,54,79,63,35,45,44,75,42,75,45,45,
 @c         45,51,123,54,151],
@@ -374,14 +370,16 @@ this procedure should be applied to large samples.
           |             p_value = .004471474652002261
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_means_difference (@var{x1}, @var{x2})
-@deffnx {Function} test_means_difference (@var{x1}, @var{x2}, @var{options} ...)
+@anchor{test_means_difference}
+@deffn {Function} test_means_difference @
+@fname{test_means_difference} (@var{x1}, @var{x2}) @
+@fname{test_means_difference} (@var{x1}, @var{x2}, @var{options} ...)
 
 This is the difference of means @var{t}-test for two samples.
 Arguments @var{x1} and @var{x2} are lists or column matrices
@@ -468,7 +466,7 @@ the populations means; variances are unknown and supposed to be different.
 @c t.test(x,y,alternative="greater")
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x: [20.4,62.5,61.3,44.2,11.1,23.7]$
 @c y: [1.2,6.9,38.7,20.4,17.2]$
 @c test_means_difference(x,y,'alternative='greater);
@@ -506,7 +504,7 @@ equal.
 @c t.test(x,y,var.equal=T,alternative="greater")
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x: [20.4,62.5,61.3,44.2,11.1,23.7]$
 @c y: [1.2,6.9,38.7,20.4,17.2]$
 @c test_means_difference(x,y,'alternative='greater,
@@ -537,14 +535,16 @@ equal.
             |            p_value = .05560320992529344
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_variance (@var{x})
-@deffnx {Function} test_variance (@var{x}, @var{options}, ...)
+@anchor{test_variance}
+@deffn {Function} test_variance @
+@fname{test_variance} (@var{x}) @
+@fname{test_variance} (@var{x}, @var{options}, ...)
 
 This is the variance @var{chi^2}-test. Argument @var{x} is a list or a column matrix
 containing a one dimensional sample taken from a normal population.
@@ -606,7 +606,7 @@ It is tested whether the variance of a population with unknown mean
 is equal to or greater than 200.
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x: [203,229,215,220,223,233,208,228,20]$
 @c test_variance(x,'alternative='greater,'variance=200);
 @c ===end===
@@ -633,14 +633,16 @@ is equal to or greater than 200.
              |           p_value = .8163948512777689
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_variance_ratio (@var{x1}, @var{x2})
-@deffnx {Function} test_variance_ratio (@var{x1}, @var{x2}, @var{options} ...)
+@anchor{test_variance_ratio}
+@deffn {Function} test_variance_ratio @
+@fname{test_variance_ratio} (@var{x1}, @var{x2}) @
+@fname{test_variance_ratio} (@var{x1}, @var{x2}, @var{options} ...)
 
 This is the variance ratio @var{F}-test for two normal populations.
 Arguments @var{x1} and @var{x2} are lists or column matrices
@@ -699,7 +701,6 @@ showing the following results:
 
 @end enumerate
 
-
 Examples:
 
 The equality of the variances of two normal populations is checked
@@ -711,7 +712,7 @@ against the alternative that the first is greater than the second.
 @c var.test(x,y,alternative="greater")
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x: [20.4,62.5,61.3,44.2,11.1,23.7]$
 @c y: [1.2,6.9,38.7,20.4,17.2]$
 @c test_variance_ratio(x,y,'alternative='greater);
@@ -740,14 +741,16 @@ against the alternative that the first is greater than the second.
               |          p_value = .2179269692254457
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_proportion (@var{x}, @var{n})
-@deffnx {Function} test_proportion (@var{x}, @var{n}, @var{options} ...)
+@anchor{test_proportion}
+@deffn {Function} test_proportion @
+@fname{test_proportion} (@var{x}, @var{n}) @
+@fname{test_proportion} (@var{x}, @var{n}, @var{options} ...)
 
 Inferences on a proportion. Argument @var{x} is the number of successes
 in @var{n} trials in a Bernoulli experiment with unknown probability.
@@ -814,7 +817,7 @@ Performs an exact test. The null hypothesis
 is @math{H_0: p=1/2} against the one sided alternative @math{H_1: p<1/2}.
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c test_proportion(45, 103, alternative = less);
 @c ===end===
 @example
@@ -842,7 +845,7 @@ is @math{H_0: p=1/2} against the one sided alternative @math{H_1: p<1/2}.
 A two sided asymptotic test. Confidence level is 99/100.
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c fpprintprec:7$
 @c test_proportion(45, 103, 
 @c               conflevel = 99/100, asymptotic=true);
@@ -871,14 +874,16 @@ A two sided asymptotic test. Confidence level is 99/100.
       |                p_value = .19662
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_proportions_difference (@var{x1}, @var{n1}, @var{x2}, @var{n2})
-@deffnx {Function} test_proportions_difference (@var{x1}, @var{n1}, @var{x2}, @var{n2}, @var{options} ...)
+@anchor{test_proportions_difference}
+@deffn {Function} test_proportions_difference @
+@fname{test_proportions_difference} (@var{x1}, @var{n1}, @var{x2}, @var{n2}) @
+@fname{test_proportions_difference} (@var{x1}, @var{n1}, @var{x2}, @var{n2}, @var{options} @dots{})
 
 Inferences on the difference of two proportions. Argument @var{x1} is the number of successes
 in @var{n1} trials in a Bernoulli experiment in the first population, and @var{x2} and @var{n2}
@@ -946,7 +951,7 @@ article to be defective before and after maintenance. According to
 the p value, there is not enough evidence to accept the alternative.
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c fpprintprec:7$
 @c test_proportions_difference(10, 250, 4, 150,
 @c                             alternative = greater);
@@ -996,14 +1001,16 @@ distribution when the data are unknown.
                            n2 + n1
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_sign (@var{x})
-@deffnx {Function} test_sign (@var{x}, @var{options} ...)
+@anchor{test_sign}
+@deffn {Function} test_sign @
+@fname{test_sign} (@var{x}) @
+@fname{test_sign} (@var{x}, @var{options} @dots{})
 
 This is the non parametric sign test for the median of a continuous population.
 Argument @var{x} is a list or a column matrix containing a one dimensional sample.
@@ -1052,7 +1059,7 @@ Checks whether the population from which the sample was taken has median 6,
 against the alternative @math{H_1: median > 6}.
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x: [2,0.1,7,1.8,4,2.3,5.6,7.4,5.1,6.1,6]$
 @c test_sign(x,'median=6,'alternative='greater);
 @c ===end===
@@ -1075,21 +1082,24 @@ against the alternative @math{H_1: median > 6}.
                |         p_value = .05468749999999989
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_signed_rank (@var{x})
-@deffnx {Function} test_signed_rank (@var{x}, @var{options} ...)
+@anchor{test_signed_rank}
+@deffn {Function} test_signed_rank @
+@fname{test_signed_rank} (@var{x}) @
+@fname{test_signed_rank} (@var{x}, @var{options} @dots{})
 
 This is the Wilcoxon signed rank test to make inferences about the median of a
 continuous population. Argument @var{x} is a list or a column matrix
 containing a one dimensional sample. Performs normal approximation if the
 sample size is greater than 20, or if there are zeroes or ties.
 
-See also @code{pdf_rank_test} and @code{cdf_rank_test}.
+@c TODO: These two variables/functions aren't documented
+See also @code{pdf_rank_test} and @code{cdf_rank_test}
 
 Options:
 
@@ -1140,7 +1150,7 @@ there are no ties.
 @c wilcox.test(x,mu=15,alternative="greater")
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x: [17.1,15.9,13.7,13.4,15.5,17.6]$
 @c test_signed_rank(x,median=15,alternative=greater);
 @c ===end===
@@ -1172,7 +1182,7 @@ since there are ties.
 @c wilcox.test(y,mu=2.5)
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c y:[1.9,2.3,2.6,1.9,1.6,3.3,4.2,4,2.4,2.9,1.5,3,2.9,4.2,3.1]$
 @c test_signed_rank(y,median=2.5);
 @c ===end===
@@ -1195,14 +1205,16 @@ since there are ties.
              |           p_value = .3628097734643669
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} test_rank_sum (@var{x1}, @var{x2})
-@deffnx {Function} test_rank_sum (@var{x1}, @var{x2}, @var{option})
+@anchor{test_rank_sum}
+@deffn {Function} test_rank_sum @
+@fname{test_rank_sum} (@var{x1}, @var{x2}) @
+@fname{test_rank_sum} (@var{x1}, @var{x2}, @var{option})
 
 This is the Wilcoxon-Mann-Whitney test for comparing the medians of two
 continuous populations. The first two arguments @var{x1} and @var{x2} are lists
@@ -1252,7 +1264,7 @@ are small and an exact test is made.
 @c wilcox.test(x,y)
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x:[12,15,17,38,42,10,23,35,28]$
 @c y:[21,18,25,14,52,65,40,43]$
 @c test_rank_sum(x,y);
@@ -1285,7 +1297,7 @@ normal approximation. The alternative hypothesis is
 @c wilcox.test(x,y,alternative="less")
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x: [39,42,35,13,10,23,15,20,17,27]$
 @c y: [20,52,66,19,41,32,44,25,14,39,43,35,19,56,27,15]$
 @c test_rank_sum(x,y,'alternative='less);
@@ -1308,12 +1320,13 @@ normal approximation. The alternative hypothesis is
              |           p_value = .05096985666598441
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
+@anchor{test_normality}
 @deffn {Function} test_normality (@var{x})
 
 Shapiro-Wilk test for normality. Argument @var{x} is a list of numbers, and sample
@@ -1346,7 +1359,7 @@ Checks for the normality of a population, based on a sample of size 9.
 @c shapiro.test(x)
 
 @c ===beg===
-@c load (stats)$
+@c load ("stats")$
 @c x:[12,15,17,38,42,10,23,35,28]$
 @c test_normality(x);
 @c ===end===
@@ -1361,209 +1374,212 @@ Checks for the normality of a population, based on a sample of size 9.
                        |  p_value = .4361763918860381
 @end example
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} simple_linear_regression (@var{x})
-@deffnx {Function} simple_linear_regression (@var{x} @var{option})
+@anchor{linear_regression}
+@deffn {Function} linear_regression @
+@fname{linear_regression} (@var{x}) @
+@fname{linear_regression} (@var{x} @var{option})
 
-Simple linear regression, @math{y_i=a+b x_i+e_i}, where @math{e_i} are @math{N(0,sigma)}
-independent random variables. Argument @var{x} must be a two column matrix or a list of
-pairs.
+Multivariate linear regression, 
+@math{y_i = b0 + b1*x_1i + b2*x_2i + ... + bk*x_ki + u_i},
+where @math{u_i} are @math{N(0,sigma)} independent random variables.
+Argument @var{x} must be a matrix with more than one column. The
+last column is considered as the responses (@math{y_i}).
 
-Options:
+Option:
 
 @itemize @bullet
 
 @item
-@code{'conflevel}, default @code{95/100}, confidence level for the confidence interval; it must
-be an expression which takes a value in (0,1).
-
-@item
-@code{'regressor}, default @code{'x}, name of the independent variable.
-
+@code{'conflevel}, default @code{95/100}, confidence level for the
+confidence intervals; it must be an expression which takes a value
+in (0,1).
 @end itemize
 
-The output of function @code{simple_linear_regression} is an @code{inference_result} Maxima object
-with the following results:
+The output of function @code{linear_regression} is an 
+@code{inference_result} Maxima object with the following results:
 
 @enumerate
 
 @item
-@code{'model}: the fitted equation. Useful to make new predictions. See examples bellow.
+@code{'b_estimation}: regression coefficients estimates.
 
 @item
-@code{'means}: bivariate mean.
+@code{'b_covariances}: covariance matrix of the regression 
+coefficients estimates.
 
 @item
-@code{'variances}: variances of both variables.
+@code{b_conf_int}: confidence intervals of the regression coefficients.
 
 @item
-@code{'correlation}: correlation coefficient.
+@code{b_statistics}: statistics for testing coefficient.
 
 @item
-@code{'adc}: adjusted determination coefficient.
+@code{b_p_values}: p-values for coefficient tests.
 
 @item
-@code{'a_estimation}: estimation of parameter @var{a}.
+@code{b_distribution}: probability distribution for coefficient tests.
 
 @item
-@code{'a_conf_int}: confidence interval of parameter @var{a}.
+@code{v_estimation}: unbiased variance estimator.
 
 @item
-@code{'b_estimation}: estimation of parameter @var{b}.
+@code{v_conf_int}: variance confidence interval.
 
 @item
-@code{'b_conf_int}: confidence interval of parameter @var{b}.
+@code{v_distribution}: probability distribution for variance test.
 
 @item
-@code{'hypotheses}: null and alternative hypotheses about parameter @var{b}.
+@code{residuals}: residuals.
 
 @item
-@code{'statistic}: value of the sample statistic used for testing the null hypothesis.
+@code{adc}: adjusted determination coefficient.
 
 @item
-@code{'distribution}: distribution of the sample statistic, together with its parameter.
+@code{aic}: Akaike's information criterion.
 
 @item
-@code{'p_value}: @math{p}-value of the test about @var{b}.
-
-@item
-@code{'v_estimation}: unbiased variance estimation, or residual variance.
-
-@item
-@code{'v_conf_int}: variance confidence interval.
-
-@item
-@code{'cond_mean_conf_int}: confidence interval for the conditioned mean. See examples bellow.
-
-@item
-@code{'new_pred_conf_int}: confidence interval for a new prediction. See examples bellow.
-
-@item
-@code{'residuals}: list of pairs (prediction, residual), ordered with respect to predictions.
-This is useful for goodness of fit analysis. See examples bellow.
+@code{bic}: Bayes's information criterion.
 
 @end enumerate
 
-Only items 1, 4, 14, 9, 10, 11, 12, and 13 above, in this order, are shown by default. The rest remain
-hidden until the user makes use of functions @code{items_inference} and @code{take_inference}.
+Only items 1, 4, 5, 6, 7, 8, 9 and 11 above, in this order, 
+are shown by default. The rest remain hidden until the user
+makes use of functions @code{items_inference} and @code{take_inference}.
 
 Example:
 
-Fitting a linear model to a bivariate sample. Input @code{%i4} plots
-the sample together with the regression line; input @code{%i5}
-computes @code{y} given @code{x=113}; the means and the 
-confidence interval for a new prediction when @code{x=113} are also calculated.
+Fitting a linear model to a trivariate sample. The
+last column is considered as the responses (@math{y_i}).
 
 @c ===beg===
-@c load (stats)$
-@c s:[[125,140.7], [130,155.1], [135,160.3], [140,167.2],
-@c                                                 [145,169.8]]$
-@c z:simple_linear_regression(s,conflevel=0.99);
-@c plot2d([[discrete, s], take_inference(model,z)],
-@c           [x,120,150],
-@c           [gnuplot_curve_styles, ["with points","with lines"]] )$
-@c take_inference(model,z), x=133;
-@c take_inference(means,z);
-@c take_inference(new_pred_conf_int,z), x=133;
+@c load ("stats")$
+@c X:matrix(
+@c    [58,111,64],[84,131,78],[78,158,83],
+@c    [81,147,88],[82,121,89],[102,165,99],
+@c    [85,174,101],[102,169,102])$
+@c fpprintprec: 4$
+@c res: linear_regression(X);
+@c items_inference(res);
+@c take_inference('b_covariances, res);
+@c take_inference('bic, res);
+@c load("draw")$
+@c draw2d(
+@c    points_joined = true,
+@c    grid = true,
+@c    points(take_inference('residuals, res)) )$
 @c ===end===
 @example
-(%i1) load("stats")$
-(%i2) s:[[125,140.7], [130,155.1], [135,160.3], [140,167.2],
-                                                [145,169.8]]$
-(%i3) z:simple_linear_regression(s,conflevel=0.99);
-           |               SIMPLE LINEAR REGRESSION
-           |
-           |   model = 1.405999999999985 x - 31.18999999999804
-           |
-           |           correlation = .9611685255255155
-           |
-           |           v_estimation = 13.57966666666665
-           |
-(%o3)      | b_conf_int = [.04469633662525263, 2.767303663374718]
-           |
-           |          hypotheses = H0: b = 0 ,H1: b # 0
-           |
-           |            statistic = 6.032686683658114
-           |
-           |            distribution = [student_t, 3]
-           |
-           |             p_value = 0.0038059549413203
-(%i4) plot2d([[discrete, s], take_inference(model,z)],
-        [x,120,150],
-        [gnuplot_curve_styles, ["with points","with lines"]] )$
-(%i5) take_inference(model,z), x=133;
-(%o5)                         155.808
-(%i6) take_inference(means,z);
-(%o6)                     [135.0, 158.62]
-(%i7) take_inference(new_pred_conf_int,z), x=133;
-(%o7)              [132.0728595995113, 179.5431404004887]
+(%i2) load("stats")$
+(%i3) X:matrix(
+    [58,111,64],[84,131,78],[78,158,83],
+    [81,147,88],[82,121,89],[102,165,99],
+    [85,174,101],[102,169,102])$
+(%i4) fpprintprec: 4$
+(%i5) res: linear_regression(X);
+             |       LINEAR REGRESSION MODEL         
+             |                                       
+             | b_estimation = [9.054, .5203, .2397]  
+             |                                       
+             | b_statistics = [.6051, 2.246, 1.74]   
+             |                                       
+             | b_p_values = [.5715, .07466, .1423]   
+             |                                       
+(%o5)        |   b_distribution = [student_t, 5]     
+             |                                       
+             |         v_estimation = 35.27          
+             |                                       
+             |     v_conf_int = [13.74, 212.2]       
+             |                                       
+             |      v_distribution = [chi2, 5]       
+             |                                       
+             |             adc = .7922               
+(%i6) items_inference(res);
+(%o6) [b_estimation, b_covariances, b_conf_int, b_statistics, 
+b_p_values, b_distribution, v_estimation, v_conf_int, 
+v_distribution, residuals, adc, aic, bic]
+(%i7) take_inference('b_covariances, res);
+                  [  223.9    - 1.12   - .8532  ]
+                  [                             ]
+(%o7)             [ - 1.12    .05367   - .02305 ]
+                  [                             ]
+                  [ - .8532  - .02305   .01898  ]
+(%i8) take_inference('bic, res);
+(%o8)                          30.98
+(%i9) load("draw")$
+(%i10) draw2d(
+    points_joined = true,
+    grid = true,
+    points(take_inference('residuals, res)) )$
 @end example
 
-@c @opencatbox
-@c @category{Package stats} @category{Statistical estimation}
-@c @closecatbox
+@opencatbox
+@category{Package stats} @category{Statistical estimation}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
 @node Functions and Variables for special distributions, , Functions and Variables for stats, Top
 @section Functions and Variables for special distributions
 
-@c -----------------------------------------------------------------------------
+@anchor{pdf_signed_rank}
 @deffn {Function} pdf_signed_rank (@var{x}, @var{n})
 Probability density function of the exact distribution of the
 signed rank statistic. Argument @var{x} is a real
 number and @var{n} a positive integer.
 
-See also @code{test_signed_rank}.
+See also @mrefdot{test_signed_rank}
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
+@anchor{cdf_signed_rank}
 @deffn {Function} cdf_signed_rank (@var{x}, @var{n})
 Cumulative density function of the exact distribution of the
 signed rank statistic. Argument @var{x} is a real
 number and @var{n} a positive integer. 
 
-See also @code{test_signed_rank}.
+See also @mrefdot{test_signed_rank}
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
+@anchor{pdf_rank_sum}
 @deffn {Function} pdf_rank_sum (@var{x}, @var{n}, @var{m})
 Probability density function of the exact distribution of the
 rank sum statistic. Argument @var{x} is a real
 number and @var{n} and @var{m} are both positive integers. 
 
-See also @code{test_rank_sum}.
+See also @mrefdot{test_rank_sum}
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
+@anchor{cdf_rank_sum}
 @deffn {Function} cdf_rank_sum (@var{x}, @var{n}, @var{m})
 Cumulative density function of the exact distribution of the
 rank sum statistic. Argument @var{x} is a real
 number and @var{n} and @var{m} are both positive integers. 
 
-See also @code{test_rank_sum}.
+See also @mrefdot{test_rank_sum}
 
-@c @opencatbox
-@c @category{Package stats}
-@c @closecatbox
+@opencatbox
+@category{Package stats}
+@closecatbox
+
 @end deffn
-
-@c --- End of file stats.de.texi -----------------------------------------------
 

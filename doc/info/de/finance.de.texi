@@ -1,29 +1,17 @@
-@c -----------------------------------------------------------------------------
-@c File        : finance.de.texi
-@c License     : GNU General Public License (GPL)
-@c Language    : German
-@c Original    : fractals.texi revision 27.03.2011
-@c Date        : 19.04.2011
-@c Revision    : 19.04.2011
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Introduction to finance::
 * Functions and Variables for finance::
 @end menu
 
-@c -----------------------------------------------------------------------------
-@node Introduction to finance, Functions and Variables for finance, finance, finance
+@node Introduction to finance, Functions and Variables for finance, finance-pkg, finance-pkg
 @section Introduction to finance
-@c -----------------------------------------------------------------------------
 
 This is the Finance Package (Ver 0.1).
 
 In all the functions, @var{rate} is the compound interest
 rate, @var{num} is the number of periods and must be
-postivive and @var{flow} refers to cash flow so if you
+positive and @var{flow} refers to cash flow so if you
 have an Output the flow is negative and positive
 for Inputs.
 
@@ -32,59 +20,71 @@ package, you have to load it writing @code{load(finance)$}.
 
 Author: Nicolas Guarin Zapata.
 
-@c -----------------------------------------------------------------------------
-@node Functions and Variables for finance,  , Introduction to finance, finance
+@node Functions and Variables for finance,  , Introduction to finance, finance-pkg
 @section Functions and Variables for finance
-@c -----------------------------------------------------------------------------
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} days360 (@var{year1}, @var{month1}, @var{day1}, @var{year2}, @var{month2}, @var{day2})
+@anchor{days360}
+@deffn {Function} days360 (@var{year1},@var{month1},@var{day1},@var{year2},@var{month2},@var{day2})
 
-Calculates the distance between 2 dates, assuming 360 days years, 30 days
-months.
+Calculates the distance between 2 dates, assuming 360 days years, 30 days months.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) days360(2008,12,16,2007,3,25);
 (%o2)                      - 621
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} fv (@var{rate}, @var{PV}, @var{num})
+@anchor{fv}
+@deffn {Function} fv (@var{rate},@var{PV},@var{num})
 
-We can calculate the future value of a Present one given a certain interest
-rate.  @var{rate} is the interest rate, @var{PV} is the present value and
-@var{num} is the number of periods.
+We can calculate the future value of a Present one given a certain interest rate.
+@var{rate} is the interest rate, @var{PV} is the present value and @var{num} is
+the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) fv(0.12,1000,3);
 (%o2)                     1404.928
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} pv (@var{rate}, @var{FV}, @var{num})
+@anchor{pv}
+@deffn {Function} pv (@var{rate},@var{FV},@var{num})
 
-We can calculate the present value of a Future one given a certain interest
-rate.  @var{rate} is the interest rate, @var{FV} is the future value and
-@var{num} is the number of periods.
+We can calculate the present value of a Future one given a certain interest rate.
+@var{rate} is the interest rate, @var{FV} is the future value and @var{num} is
+the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) pv(0.12,1000,3);
 (%o2)                711.7802478134108
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
+@anchor{graph_flow}
 @deffn {Function} graph_flow (@var{val})
 
 Plots the money flow in a time line, the positive values are in blue
@@ -95,88 +95,111 @@ The direction of the flow is given by the sign of the value.
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) graph_flow([-5000,-3000,800,1300,1500,2000])$
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} annuity_pv (@var{rate}, @var{PV}, @var{num})
+@anchor{annuity_pv}
+@deffn {Function} annuity_pv (@var{rate},@var{PV},@var{num})
 
-We can calculate the annuity knowing the present value (like an ammount),
-it is a constant and periodic payment.  @var{rate} is the interest rate,
+We can calculate the annuity knowing the present value (like an amount),
+it is a constant and periodic payment. @var{rate} is the interest rate,
 @var{PV} is the present value and @var{num} is the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) annuity_pv(0.12,5000,10);
 (%o2)                884.9208207992202
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} annuity_fv (@var{rate}, @var{FV}, @var{num})
+@anchor{annuity_fv}
+@deffn {Function} annuity_fv (@var{rate},@var{FV},@var{num})
 
 We can calculate the annuity knowing the desired value (future value),
-it is a constant and periodic payment.  @var{rate} is the interest rate,
+it is a constant and periodic payment. @var{rate} is the interest rate,
 @var{FV} is the future value and @var{num} is the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) annuity_fv(0.12,65000,10);
 (%o2)                3703.970670389863
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} geo_annuity_pv (@var{rate}, @var{growing_rate}, @var{PV}, @var{num})
+@anchor{geo_annuity_pv}
+@deffn {Function} geo_annuity_pv (@var{rate},@var{growing_rate},@var{PV},@var{num})
 
-We can calculate the annuity knowing the present value (like an ammount),
-in a growing periodic payment.  @var{rate} is the interest rate,
-@var{growing_rate} is the growing rate, @var{PV} is the present value and
-@var{num} is the number of periods.
+We can calculate the annuity knowing the present value (like an amount),
+in a growing periodic payment. @var{rate} is the interest rate, @var{growing_rate}
+is the growing rate, @var{PV} is the present value and @var{num} is the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) geo_annuity_pv(0.14,0.05,5000,10);
 (%o2)                802.6888176505123
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} geo_annuity_fv (@var{rate}, @var{growing_rate}, @var{FV},@var{num})
+@anchor{geo_annuity_fv}
+@deffn {Function} geo_annuity_fv (@var{rate},@var{growing_rate},@var{FV},@var{num})
 
 We can calculate the annuity knowing the desired value (future value),
-in a growing periodic payment.  @var{rate} is the interest rate,
-@var{growing_rate} is the growing rate, @var{FV} is the future value and
-@var{num} is the number of periods.
+in a growing periodic payment. @var{rate} is the interest rate, @var{growing_rate}
+is the growing rate, @var{FV} is the future value and @var{num} is the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) geo_annuity_fv(0.14,0.05,5000,10);
 (%o2)                216.5203395312695
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} amortization (@var{rate}, @var{ammount}, @var{num})
+@anchor{amortization}
+@deffn {Function} amortization (@var{rate},@var{amount},@var{num})
 
-Amortization table determinated by a specific rate.
-@var{rate} is the interest rate, @var{ammount} is the ammount value,
+Amortization table determined by a specific rate.
+@var{rate} is the interest rate, @var{amount} is the amount value,
 and @var{num} is the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) amortization(0.05,56000,12)$
       "n"    "Balance"     "Interest"   "Amortization"  "Payment"      
      0.000     56000.000         0.000         0.000         0.000  
@@ -193,23 +216,28 @@ Example:
     11.000      6017.355       587.408      5730.814      6318.223  
     12.000         0.000       300.868      6017.355      6318.223
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} arit_amortization (@var{rate}, @var{increment}, @var{ammount}, @var{num})
+@anchor{arit_amortization}
+@deffn {Function} arit_amortization (@var{rate},@var{increment},@var{amount},@var{num})
 
-The amortization table determinated by a specific rate and with growing payment
+The amortization table determined by a specific rate and with growing payment
 can be claculated by @code{arit_amortization}.
 Notice that the payment is not constant, it presents
 an arithmetic growing, increment is then the difference between two
 consecutive rows in the "Payment" column.
-@var{rate} is the interest rate, @var{increment} is the increment, @var{ammount}
-is the ammount value, and @var{num} is the number of periods.
+@var{rate} is the interest rate, @var{increment} is the increment, @var{amount}
+is the amount value, and @var{num} is the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) arit_amortization(0.05,1000,56000,12)$
       "n"    "Balance"     "Interest"   "Amortization"  "Payment"      
      0.000     56000.000         0.000         0.000         0.000  
@@ -226,23 +254,28 @@ Example:
     11.000     11806.020      1104.873     10291.448     11396.321  
     12.000        -0.000       590.301     11806.020     12396.321
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} geo_amortization (@var{rate}, @var{growing_rate}, @var{ammount}, @var{num})
+@anchor{geo_amortization}
+@deffn {Function} geo_amortization (@var{rate},@var{growing_rate},@var{amount},@var{num})
 
-The amortization table determinated by rate, ammount,
+The amortization table determined by rate, amount,
 and number of periods can be found by @code{geo_amortization}.
 Notice that the payment is not constant, it presents
 a geometric growing, @var{growing_rate} is then the quotient between two
 consecutive rows in the "Payment" column.
-@var{rate} is the interest rate, @var{ammount}
-is the ammount value, and @var{num} is the number of periods.
+@var{rate} is the interest rate, @var{amount}
+is the amount value, and @var{num} is the number of periods.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) geo_amortization(0.05,0.03,56000,12)$
       "n"    "Balance"     "Interest"   "Amortization"  "Payment"      
      0.000     56000.000         0.000         0.000         0.000  
@@ -259,20 +292,25 @@ Example:
     11.000      7164.668       688.974      6614.813      7303.787  
     12.000         0.000       358.233      7164.668      7522.901
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} saving (@var{rate}, @var{ammount}, @var{num})
+@anchor{saving}
+@deffn {Function} saving (@var{rate},@var{amount},@var{num})
 
 The table that represents the values in a constant and periodic
 saving can be found by @code{saving}.
-@var{ammount} represents the desired quantity and num the number
+@var{amount} represents the desired quantity and num the number
 of periods to save.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) saving(0.15,12000,15)$
       "n"    "Balance"     "Interest"   "Payment"      
      0.000         0.000         0.000         0.000  
@@ -292,46 +330,61 @@ Example:
     14.000     10215.474      1299.557       252.205  
     15.000     12000.000      1532.321       252.205
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} npv (@var{rate}, @var{val})
+@anchor{npv}
+@deffn {Function} npv (@var{rate},@var{val})
 
-Calculates de present value of a value series to evaluate the viability in a
+Calculates the present value of a value series to evaluate the viability in a
 project.
-@var{flowValues} es una lista con los valores para cada periodo.
+@var{val} is a list of varying cash flows.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) npv(0.25,[100,500,323,124,300]);
 (%o2)                714.4703999999999
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} irr (@var{val}, @var{IO})
+@anchor{irr}
+@deffn {Function} irr (@var{val},@var{IO})
 
 IRR (Internal Rate of Return) is the value of rate which makes Net Present Value
 zero.
-@var{flowValues} los valores para cada periodo (para periodos mayores a 0) y
-@var{I0} el valor para el periodo cero.
+@var{flowValues} is a list of varying cash flows,
+@var{I0} is the initial investment.
 
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) res:irr([-5000,0,800,1300,1500,2000],0)$
 (%i3) rhs(res[1][1]);
 (%o3)                .03009250374237132
 @end example
+
+@opencatbox
+@category{Package finance}
+@closecatbox
+
 @end deffn
 
-@c -----------------------------------------------------------------------------
-@deffn {Function} benefit_cost (@var{rate}, @var{input}, @var{output})
+@anchor{benefit_cost}
+@deffn {Function} benefit_cost (@var{rate},@var{input},@var{output})
 
-Calculates the ratio Benefit/Cost.  Benefit is the Net Present Value (NPV)
+Calculates the ratio Benefit/Cost. Benefit is the Net Present Value (NPV)
 of the inputs, and Cost is the Net Present Value (NPV) of the outputs.
 Notice that if there is not an input or output value in a specific period,
 the input/output would be a zero for that period.
@@ -341,11 +394,14 @@ and @var{output} is a list of output values.
 Example:
 
 @example
-(%i1) load(finance)$
+(%i1) load("finance")$
 (%i2) benefit_cost(0.24,[0,300,500,150],[100,320,0,180]);
 (%o2)               1.427249324905784
 @end example
-@end deffn
 
-@c --- End of file finance.de.texi ---------------------------------------------
+@opencatbox
+@category{Package finance}
+@closecatbox
+
+@end deffn
 

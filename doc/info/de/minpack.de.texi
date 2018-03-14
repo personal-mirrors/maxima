@@ -1,33 +1,23 @@
-@c -----------------------------------------------------------------------------
-@c File     : minpack.de.texi
-@c License  : GNU General Public License (GPL)
-@c Language : German
-@c Date     : 08.11.2010
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Introduction to minpack::
 * Functions and Variables for minpack::
 @end menu
 
-@c -----------------------------------------------------------------------------
-@node Introduction to minpack, , , 
+@node Introduction to minpack, Functions and Variables for minpack, minpack-pkg, minpack-pkg
 @section Introduction to minpack
 
 @code{Minpack} is a Common Lisp translation (via @code{f2cl}) of the
 Fortran library MINPACK, as obtained from Netlib.
 
-@c @opencatbox
-@c @category{Numerical methods}  @category{Optimization} @category{Share packages} @category{Package minpack}
-@c @closecatbox
+@opencatbox
+@category{Numerical methods}  @category{Optimization} @category{Share packages} @category{Package minpack}
+@closecatbox
 
-@c -----------------------------------------------------------------------------
-@node Functions and Variables for minpack, , ,
+@node Functions and Variables for minpack,  , Introduction to minpack, minpack-pkg
 @section Functions and Variables for minpack
 
-@c -----------------------------------------------------------------------------
+@anchor{minpack_lsquares}
 @deffn {Function} minpack_lsquares (@var{flist}, @var{varlist}, @var{guess} [, @var{tolerance}, @var{jacobian}])
 
 Compute the point that minimizes the sum of the squares of the
@@ -94,9 +84,8 @@ is possible.
 
 @end deffn
 
-@c -----------------------------------------------------------------------------
+@anchor{minpack_solve}
 @deffn {Function} minpack_solve (@var{flist}, @var{varlist}, @var{guess} [, @var{tolerance}, @var{jacobian}])
-
 Solve a system of @code{n} equations in @code{n} unknowns.
 The @code{n} equations are given in the list @var{flist}, and the
 unknowns are in @var{varlist}.  An initial guess of the solution must
@@ -138,6 +127,4 @@ Iteration is not making good progress.
 @c mode: texinfo
 @c TeX-master: "include-maxima"
 @c End: 
-
-@c --- End of file minpack.de.texi ---------------------------------------------
 

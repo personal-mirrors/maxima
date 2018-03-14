@@ -1,20 +1,10 @@
-@c -----------------------------------------------------------------------------
-@c File     : f90.de.texi
-@c License  : GNU General Public License (GPL)
-@c Language : German
-@c Original : f90.texi revision 21.08.2011
-@c Date     : 08.11.2010
-@c Revision : 21.08.2011
-@c 
-@c This file is part of Maxima -- GPL CAS based on DOE-MACSYMA
-@c -----------------------------------------------------------------------------
 
 @menu
 * Functions and Variables for f90::
 @end menu
 
 @c -----------------------------------------------------------------------------
-@node Functions and Variables for f90,  , f90, f90
+@node Functions and Variables for f90,  , f90-pkg, f90-pkg
 @section Functions and Variables for f90
 @c -----------------------------------------------------------------------------
 
@@ -26,18 +16,22 @@ Prints one or more expressions @var{expr_1}, @dots{}, @var{expr_n}
 as a Fortran 90 program.
 Output is printed to the standard output.
 
-@code{f90} prints output in the so-called "free form" input format for 
-Fortran 90:
-there is no special attention to column positions.
-Long lines are split at a fixed width with the ampersand @code{&} continuation 
+@code{f90} prints output in the so-called "free form" input format for
+Fortran 90: there is no special attention to column positions.
+Long lines are split at a fixed width with the ampersand @code{&} continuation
 character.
 
-@code{load(f90)} loads this function.  See also the function @mrefdot{fortran}
+@code{load("f90")} loads this function.  See also the function @mrefdot{fortran}
 
 Examples:
 
+@c ===beg===
+@c load ("f90")$
+@c foo : expand ((xxx + yyy + 7)^4);
+@c f90 ('foo = foo);
+@c ===end===
 @example
-(%i1) load (f90)$
+(%i1) load ("f90")$
 (%i2) foo : expand ((xxx + yyy + 7)^4);
          4            3         3        2    2             2
 (%o2) yyy  + 4 xxx yyy  + 28 yyy  + 6 xxx  yyy  + 84 xxx yyy
@@ -55,11 +49,17 @@ foo = yyy**4+4*xxx*yyy**3+28*yyy**3+6*xxx**2*yyy**2+84*xxx*yyy**2&
 Multiple expressions.
 Capture standard output into a file via the @mref{with_stdout} function.
 
+@c ===beg===
+@c load ("f90")$
+@c foo : sin (3*x + 1) - cos (7*x - 2);
+@c with_stdout ("foo.f90", f90 (x = 0.25, y = 0.625, 'foo = foo, 'stop, 'end));
+@c printfile ("foo.f90");
+@c ===end===
 @example
-(%i1) load (f90)$
+(%i1) load ("f90")$
 (%i2) foo : sin (3*x + 1) - cos (7*x - 2);
 (%o2)              sin(3 x + 1) - cos(7 x - 2)
-(%i3) with_stdout ("foo.f90", 
+(%i3) with_stdout ("foo.f90",
                    f90 (x=0.25, y=0.625, 'foo=foo, 'stop, 'end));
 (%o3)                         false
 (%i4) printfile ("foo.f90");
@@ -70,7 +70,9 @@ stop
 end
 (%o4)                        foo.f90
 @end example
-@end deffn
 
-@c --- End of file f90.de.texi -------------------------------------------------
+@opencatbox
+@category{Translation and compilation} @category{Share packages} @category{Package f90}
+@closecatbox
+@end deffn
 
