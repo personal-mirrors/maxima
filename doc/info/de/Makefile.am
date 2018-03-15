@@ -6,7 +6,7 @@ langsdir = /de
 # All files that are translated using the .po file
 info_posource = celine.xml zeilberger.xml unit.xml Affine.xml asympa.xml
 info_posource += augmented_lagrangian.xml bernstein.xml bode.xml cobyla.xml contrib_ode.xml
-info_posource += Ctensor.xml diag.xml distrib.xml draw.xml drawdf.xml dynamics.xml ezunits.xml
+info_posource += diag.xml distrib.xml draw.xml drawdf.xml dynamics.xml ezunits.xml
 info_posource += f90.xml finance.xml fractals.xml ggf.xml graphs.xml grobner.xml Groups.xml
 info_posource += impdiff.xml interpol.xml lapack.xml lbfgs.xml lindstedt.xml linearalgebra.xml
 info_posource += lsquares.xml makeOrders.xml minpack.xml numericalio.xml opsubst.xml
