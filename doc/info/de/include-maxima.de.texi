@@ -456,7 +456,7 @@ contrib_ode
 * Test cases for contrib_ode::
 * References for contrib_ode::
 
-Package descriptive
+Package descriptive::
 * Introduction to descriptive::
 * Functions and Variables for data manipulation::
 * Functions and Variables for descriptive statistics::
@@ -516,7 +516,7 @@ grobner
 * Introduction to grobner::
 * Functions and Variables for grobner::
 
-groups
+Groups::
 * Functions and Variables for Groups::
 
 impdiff
@@ -576,7 +576,7 @@ orthopoly
 ratpow
 * Functions and Variables for ratpow::
 
-plotdf
+plotdf::
 * Introduction to plotdf::
 * Functions and Variables for plotdf::
 
@@ -940,15 +940,15 @@ Glossar
 @chapter opsubst
 @include opsubst.de.texi
 
-@node orthopoly-pkg, plotdf-pkg, opsubst-pkg, Top
+@node orthopoly-pkg, plotdf, opsubst-pkg, Top
 @chapter orthopoly
 @include orthopoly.de.texi
 
-@node plotdf-pkg, ratpow-pkg, orthopoly-pkg, Top
+@node plotdf, ratpow-pkg, orthopoly-pkg, Top
 @chapter plotdf
 @include plotdf.de.texi
 
-@node ratpow-pkg, romberg-pkg, plotdf-pkg, Top
+@node ratpow-pkg, romberg-pkg, plotdf, Top
 @chapter ratpow
 @include ratpow.de.texi
 
@@ -976,11 +976,15 @@ Glossar
 @chapter stirling
 @include stirling.de.texi
 
-@node stringproc-pkg, to_poly_solve-pkg, stirling-pkg, Top
+@node stringproc-pkg, symmetries-pkg, stirling-pkg, Top
 @chapter stringproc
 @include stringproc.de.texi
 
-@node to_poly_solve-pkg, unit-pkg, stringproc-pkg, Top
+@node symmetries-pkg, to_poly_solve-pkg, stringproc-pkg, Top
+@chapter stringproc
+@include stringproc.de.texi
+
+@node to_poly_solve-pkg, unit-pkg, symmetries-pkg, Top
 @chapter to_poly_solve
 @include to_poly_solve.de.texi
 
