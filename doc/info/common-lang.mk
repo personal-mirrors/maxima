@@ -24,6 +24,7 @@ update-po:
 update-translations: maxima_manual.mo
 	for i in ${info_posource}; do ../texi2xml.pl ../`basename $$i .xml`.texi >$$i;done
 	itstool -i ../itstool_rules.xml -m maxima_manual.mo  ${info_posource}
+	rm maxima_manual.mo
 	for i in ${info_posource}; do xsltproc ../xml2texi.xslt $$i> `basename $$i .xml`.$(lang).texi;done
 	rm ${info_posource}
 
