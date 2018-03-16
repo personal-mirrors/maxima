@@ -12,16 +12,31 @@ info_posource += impdiff.xml interpol.xml lapack.xml lbfgs.xml lindstedt.xml lin
 info_posource += lsquares.xml makeOrders.xml minpack.xml numericalio.xml opsubst.xml
 info_posource += orthopoly.xml romberg.xml simplex.xml simplifications.xml
 info_posource += solve_rec.xml stats.xml stirling.xml Symmetries.xml to_poly_solve.xml
+info_posource += Deleted.xml
+info_posource += Differential.xml
+info_posource += Differentiation.xml
+info_posource += Elliptic.xml
+info_posource += Integration.xml
+info_posource += Limits.xml
+info_posource += bitwise.xml
+info_posource += clebsch_gordan.xml
+info_posource += combinatorics.xml
+info_posource += defstruct.xml
+info_posource += engineering-format.xml
+info_posource += errormessages.xml
+info_posource += operatingsystem.xml
+info_posource += ratpow.xml
+info_posource += wrstcse.xml
 
-
-
-
+# The following line fails due to weird characters.
+#
+# info_posource += alt-display.xml
 
 info_TEXINFOS = maxima.texi
 maxima_TEXINFOS = include-maxima.de.texi category-macros.de.texi \
 Introduction.de.texi Bugs.de.texi Help.de.texi Command.de.texi \
 DataTypes.de.texi Constants.de.texi Lists.de.texi Arrays.de.texi \
-Defstruct.de.texi Expressions.de.texi Operators.de.texi Evaluation.de.texi \
+defstruct.de.texi Expressions.de.texi Operators.de.texi Evaluation.de.texi \
 Simplification.de.texi MathFunctions.de.texi Database.de.texi Plotting.de.texi \
 Input.de.texi Nset.de.texi Series.de.texi Calculus.de.texi \
 Polynomials.de.texi Equations.de.texi Matrices.de.texi Itensor.de.texi \
