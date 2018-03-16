@@ -20,39 +20,56 @@
 
 @c to update the menus do: 
 @c (texinfo-multiple-files-update "maxima.texi" t t)
-
+@c
 @c texinfo-multiple-files-update will delete the detailed node listing!
 
-@c %**start of header
+
+@c start of header
+@settitle Maxima 5.41.254.gb52b55564 Manual
+
+@synindex ky fn
 @synindex vr fn
 @synindex cp fn
-@settitle Maxima Manual
-@c %**end of header
 @setchapternewpage odd
+@c end of header
+
+@ifnothtml
+@c We want texinfo not to change quotes to backticks in the pdf and the
+@c info version of the examples.
+@c
+@c In the HTML output the quotes are automatically output The Right Way
+@c and setting codequoteundirected manually results in the warning that
+@c this command is unsupported => we leave out this command in HTML.
+@c
+@c @codequoteundirected on
+@c does the same - but requires texinfo 5. txicodequoteundirected requires only texinfo 4.
+@set txicodequoteundirected
+@end ifnothtml
+
 @ifinfo
-Das ist ein Texinfo Maxima Manual
+Dies ist ein Texinfo Maxima Manual
 
 Copyright 1994,2001 William F. Schelter
 
 @format
+INFO-DIR-SECTION Math
 START-INFO-DIR-ENTRY
 * Maxima: (maxima).     Ein Computer Algebra System.
 END-INFO-DIR-ENTRY
 @end format
-@end ifinfo
 
-@ifinfo 
 @macro var {expr}
 <\expr\>
 @end macro
 @end ifinfo
 
-@paragraphindent 0
+
 
 @include category-macros.de.texi
 
 @titlepage
 @sp 10
+@comment The title is printed in a large font.
 @center @titlefont{Maxima Manual}
 @c @center Version 5.29
 @sp 2
@@ -173,52 +190,57 @@ Zus@"atzliche Pakete (Englisch)
 
 * abs_integrate::               Integrals for the functions abs, signum, @dots{}
 * Affine::                      
-* asympa-pkg::                  Asymptotic analysis package
-* augmented_lagrangian-pkg::    augmented_lagrangian package.
-* Bernstein-pkg::               Bernstein polynomials.
-* bode-pkg::                    Bode gain and phase plots.
-* cobyla-pkg::                  Nonlinear optimization with inequality 
-                                constraints.
-* contrib_ode-pkg::             Additional routines for ODEs
-* Package descriptive::         Descriptive statistics.
-* diag-pkg::                    Jordan matrices.
-* distrib-pkg::                 Probability distributions.
-* draw-pkg::                    A Maxima-Gnuplot interface.
-* drawdf-pkg::                  Direction fields with Gnuplot.
-* dynamics-pkg::                Graphics for dynamical systems and fractals.
-* ezunits-pkg::                 Dimensional quantities.
-* f90-pkg::                     Maxima to fortran translator.
-* finance-pkg::                 Financial package.
-* fractals-pkg::                Fractals.
-* ggf-pkg::                     Generating function of sequences.
-* graphs-pkg::                  Graph theory package.
-* grobner::                     Functions for working with Groebner bases.
-* Groups::                      Abstract algebra.
-* impdiff-pkg::                 Implicit derivatives.
-* interpol-pkg::                Interpolation package.
-* lapack-pkg::                  LAPACK functions for linear algebra.
-* lbfgs-pkg::                   L-BFGS unconstrained minimization package.
-* lindstedt-pkg::               Lindstedt package.
-* linearalgebra-pkg::           Functions for linear algebra.
-* lsquares-pkg::                Least squares.
-* makeOrders-pkg::              Polynomial utility.
-* minpack-pkg::                 MINPACK functions for minimization and roots
-* mnewton::                     Newton-Verfahren
-* numericalio-pkg::             Reading and writing files.
-* opsubst-pkg::                 Substitutions utility.
-* orthopoly-pkg::               Orthogonal polynomials.
-* plotdf::                      Direction fields plots.
-* romberg::                     Romberg method for numerical integration.
-* simplex-pkg::                 Linear programming.
-* simplification-pkg::          Simplification rules and functions.
-* solve_rec-pkg::               Linear recurrences.
-* stats::                       Statistical inference package.
-* stirling-pkg::                Stirling formula.
-* stringproc::                  Verarbeitung von Zeichenketten.
-* Symmetries::                  
-* to_poly_solve-pkg::           to_poly_solve package.
-* unit-pkg::                    Units and dimensions package.
-* zeilberger-pkg::              Functions for hypergeometric summation.
+* alt-display-pkg::                 Alternative display package.
+* asympa-pkg::                      Asymptotic analysis package.
+* augmented_lagrangian-pkg::        augmented_lagrangian package.
+* Bernstein-pkg::                   Bernstein polynomials.
+* bitwise-pkg::                     Manipulate bits of integers.
+* bode-pkg::                        Bode gain and phase plots.
+* celine-pkg::                      Sister Celine's method 
+* clebsch_gordan-pkg::              Clebsch-Gordan and Wigner coefficients
+* cobyla-pkg::                      Nonlinear optimization with inequality constraints.
+* combinatorics-pkg::               Functions to work with permutations.
+* contrib_ode-pkg::                 Additional routines for ODEs
+* descriptive-pkg::                 Descriptive statistics.
+* diag-pkg::                        Jordan matrices.
+* distrib-pkg::                     Probability distributions.
+* draw-pkg::                        A Maxima-Gnuplot interface.
+* drawdf-pkg::                      Direction fields with Gnuplot.
+* dynamics-pkg::                    3D visualization, animations and dynamical systems.
+* engineering-format-pkg::          Display floats as a*10^b with b mod 3 = 0.
+* ezunits-pkg::                     Dimensional quantities.
+* f90-pkg::                         Maxima to fortran translator.
+* finance-pkg::                     Financial package.
+* fractals-pkg::                    Fractals.
+* ggf-pkg::                         Generating function of sequences.
+* graphs-pkg::                      Graph theory package.
+* grobner-pkg::                     Functions for working with Groebner bases.
+* impdiff-pkg::                     Implicit derivatives.
+* interpol-pkg::                    Interpolation package.
+* lapack-pkg::                      LAPACK functions for linear algebra.
+* lbfgs-pkg::                       L-BFGS unconstrained minimization package.
+* lindstedt-pkg::                   Lindstedt package.
+* linearalgebra-pkg::               Functions for linear algebra.
+* lsquares-pkg::                    Least squares.
+* makeOrders-pkg::                  Polynomial utility.
+* minpack-pkg::                     MINPACK functions for minimization and roots
+* mnewton-pkg::                     Newton's method.
+* numericalio-pkg::                 Reading and writing files.
+* operatingsystem-pkg::             Common operating system tasks (create/remove dirs+files,...).
+* opsubst-pkg::                     Substitutions utility.
+* orthopoly-pkg::                   Orthogonal polynomials.
+* ratpow-pkg::                      Determine the coefficients of polynoms.
+* romberg-pkg::                     Romberg method for numerical integration.
+* simplex-pkg::                     Linear programming.
+* simplification-pkg::              Simplification rules and functions.
+* solve_rec-pkg::                   Linear recurrences.
+* stats-pkg::                       Statistical inference package.
+* stirling-pkg::                    Stirling formula.
+* stringproc-pkg::                  String processing.
+* to_poly_solve-pkg::               to_poly_solve package.
+* unit-pkg::                        Units and dimensions package.
+* wrstcse-pkg::                     Worstcase calculations for engineering.
+* zeilberger-pkg::                  Functions for hypergeometric summation.
 @sp 1
 
 Glossar
@@ -526,6 +548,10 @@ lsquares
 makeOrders
 * Functions and Variables for makeOrders::
 
+minpack
+* Introduction to minpack::
+* Functions and Variables for minpack::
+
 mnewton
 * Einf@"uhrung in mnewton::
 * Funktionen und Variablen f@"ur mnewton::
@@ -535,12 +561,20 @@ numericalio
 * Functions and Variables for plain-text input and output::
 * Functions and Variables for binary input and output::
 
+operatingsystem
+* Introduction to operatingsystem::
+* Directory operations::
+* Environment operations::
+
 opsubst
 * Functions and Variables for opsubst::
 
 orthopoly
 * Introduction to orthogonal polynomials::
 * Functions and Variables for orthogonal polynomials::
+
+ratpow
+* Functions and Variables for ratpow::
 
 plotdf
 * Introduction to plotdf::
@@ -597,6 +631,11 @@ unit
 zeilberger
 * Introduction to zeilberger::
 * Functions and Variables for zeilberger::
+
+Understanding maxima's output
+* Error messages::
+* Warning messages::
+@comment @end detailmenu
 
 Glossar
 * Glossar::
@@ -741,11 +780,15 @@ Glossar
 @chapter abs_integrate
 @include abs_integrate.de.texi
 
-@node Affine, asympa-pkg, abs_integrate, Top
+@node Affine, alt-display-pkg, abs_integrate, Top
 @chapter affine
 @include Affine.de.texi
 
-@node asympa-pkg, augmented_lagrangian-pkg, Affine, Top
+@node alt-display-pkg, asympa-pkg, Affine, Top
+@chapter alt-display
+@include alt-display.de.texi
+
+@node asympa-pkg, augmented_lagrangian-pkg, alt-display-pkg, Top
 @chapter asympa
 @include asympa.de.texi
 
@@ -753,32 +796,48 @@ Glossar
 @chapter augmented_lagrangian
 @include augmented_lagrangian.de.texi
 
-@node Bernstein-pkg, bode-pkg, augmented_lagrangian-pkg, Top
-@chapter bernstein
+@node Bernstein-pkg, bitwise-pkg, augmented_lagrangian-pkg, Top
+@chapter Bernstein
 @include bernstein.de.texi
 
-@node bode-pkg, cobyla-pkg, Bernstein-pkg, Top
+@node bitwise-pkg, bode-pkg, Bernstein-pkg, Top
+@chapter bitwise
+@include bitwise.de.texi
+
+@node bode-pkg, celine-pkg, bitwise-pkg, Top
 @chapter bode
 @include bode.de.texi
 
-@node cobyla-pkg, contrib_ode-pkg, bode-pkg, Top
+@node celine-pkg, clebsch_gordan-pkg, bode-pkg, Top
+@chapter celine
+@include celine.de.texi
+
+@node clebsch_gordan-pkg, cobyla-pkg, celine-pkg, Top
+@chapter clebsch_gordan
+@include clebsch_gordan.de.texi
+
+@node cobyla-pkg, combinatorics-pkg, clebsch_gordan-pkg, Top
 @chapter cobyla
 @include cobyla.de.texi
 
-@node contrib_ode-pkg, Package descriptive, cobyla-pkg, Top
+@node combinatorics-pkg, contrib_ode-pkg, cobyla-pkg, Top
+@chapter combinatorics
+@include combinatorics.de.texi
+
+@node contrib_ode-pkg, descriptive-pkg, combinatorics-pkg, Top
 @chapter contrib_ode
 @include contrib_ode.de.texi
 
-@node Package descriptive, diag-pkg, contrib_ode-pkg, Top
-@chapter Package descriptive
+@node descriptive-pkg, diag-pkg, contrib_ode-pkg, Top
+@chapter descriptive
 @include descriptive.de.texi
 
-@node diag-pkg, distrib-pkg, Package descriptive, Top
+@node diag-pkg, distrib-pkg, descriptive-pkg, Top
 @chapter diag
 @include diag.de.texi
 
 @node distrib-pkg, draw-pkg, diag-pkg, Top
-@chapter Package distrib
+@chapter distrib
 @include distrib.de.texi
 
 @node draw-pkg, drawdf-pkg, distrib-pkg, Top
@@ -789,11 +848,15 @@ Glossar
 @chapter drawdf
 @include drawdf.de.texi
 
-@node dynamics-pkg, ezunits-pkg, drawdf-pkg, Top
+@node dynamics-pkg, engineering-format-pkg, drawdf-pkg, Top
 @chapter dynamics
 @include dynamics.de.texi
 
-@node ezunits-pkg, f90-pkg, dynamics-pkg, Top
+@node engineering-format-pkg, ezunits-pkg, dynamics-pkg, Top
+@chapter engineering-format
+@include engineering-format.de.texi
+
+@node ezunits-pkg, f90-pkg, engineering-format-pkg, Top
 @chapter ezunits
 @include ezunits.de.texi
 
@@ -813,19 +876,19 @@ Glossar
 @chapter ggf
 @include ggf.de.texi
 
-@node graphs-pkg, grobner, ggf-pkg, Top
+@node graphs-pkg, grobner-pkg, ggf-pkg, Top
 @chapter graphs
 @include graphs.de.texi
 
-@node grobner, Groups, graphs-pkg, Top
+@node grobner-pkg, groups-pkg, graphs-pkg, Top
 @chapter grobner
 @include grobner.de.texi
 
-@node Groups, impdiff-pkg, grobner, Top
-@chapter groups
+@node groups-pkg, impdiff-pkg, grobner-pkg, Top
+@chapter grobner
 @include Groups.de.texi
 
-@node impdiff-pkg, interpol-pkg, Groups, Top
+@node impdiff-pkg, interpol-pkg, groups-pkg, Top
 @chapter impdiff
 @include impdiff.de.texi
 
@@ -849,43 +912,51 @@ Glossar
 @chapter linearalgebra
 @include linearalgebra.de.texi
 
-@node lsquares-pkg, makeOrders-pkg, linearalgebra-pkg, Top
+@node lsquares-pkg, minpack-pkg, linearalgebra-pkg, Top
 @chapter lsquares
 @include lsquares.de.texi
 
-@node makeOrders-pkg, minpack-pkg, lsquares-pkg, Top
-@chapter makeOrders
-@include makeOrders.de.texi
-
-@node minpack-pkg, mnewton, makeOrders-pkg, Top
+@node minpack-pkg, makeOrders-pkg, lsquares-pkg, Top
 @chapter minpack
 @include minpack.de.texi
 
-@node mnewton, numericalio-pkg, minpack-pkg, Top
+@node makeOrders-pkg, mnewton-pkg, minpack-pkg, Top
+@chapter makeOrders
+@include makeOrders.de.texi
+
+@node mnewton-pkg, numericalio-pkg, makeOrders-pkg, Top
 @chapter mnewton
 @include mnewton.de.texi
 
-@node numericalio-pkg, opsubst-pkg, mnewton, Top
+@node numericalio-pkg, operatingsystem-pkg, mnewton-pkg, Top
 @chapter numericalio
 @include numericalio.de.texi
 
-@node opsubst-pkg, orthopoly-pkg, numericalio-pkg, Top
+@node operatingsystem-pkg, opsubst-pkg, numericalio-pkg, Top
+@chapter operatingsystem
+@include operatingsystem.de.texi
+
+@node opsubst-pkg, orthopoly-pkg, operatingsystem-pkg, Top
 @chapter opsubst
 @include opsubst.de.texi
 
-@node orthopoly-pkg, plotdf, opsubst-pkg, Top
+@node orthopoly-pkg, plotdf-pkg, opsubst-pkg, Top
 @chapter orthopoly
 @include orthopoly.de.texi
 
-@node plotdf, romberg, orthopoly-pkg, Top
+@node plotdf-pkg, ratpow-pkg, orthopoly-pkg, Top
 @chapter plotdf
 @include plotdf.de.texi
 
-@node romberg, simplex-pkg, plotdf, Top
+@node ratpow-pkg, romberg-pkg, plotdf-pkg, Top
+@chapter ratpow
+@include ratpow.de.texi
+
+@node romberg-pkg, simplex-pkg, ratpow-pkg, Top
 @chapter romberg
 @include romberg.de.texi
 
-@node simplex-pkg, simplification-pkg, romberg, Top
+@node simplex-pkg, simplification-pkg, romberg-pkg, Top
 @chapter simplex
 @include simplex.de.texi
 
@@ -893,37 +964,41 @@ Glossar
 @chapter simplification
 @include simplifications.de.texi
 
-@node solve_rec-pkg, stats, simplification-pkg, Top
+@node solve_rec-pkg, stats-pkg, simplification-pkg, Top
 @chapter solve_rec
 @include solve_rec.de.texi
 
-@node stats, stirling-pkg, solve_rec-pkg, Top
+@node stats-pkg, stirling-pkg, solve_rec-pkg, Top
 @chapter stats
 @include stats.de.texi
 
-@node stirling-pkg, stringproc, stats, Top
+@node stirling-pkg, stringproc-pkg, stats-pkg, Top
 @chapter stirling
 @include stirling.de.texi
 
-@node stringproc, Symmetries, stirling-pkg, Top
+@node stringproc-pkg, to_poly_solve-pkg, stirling-pkg, Top
 @chapter stringproc
 @include stringproc.de.texi
 
-@node Symmetries, to_poly_solve-pkg, stringproc, Top
-@chapter symmetries
-@include Symmetries.de.texi
-
-@node to_poly_solve-pkg, unit-pkg, Symmetries, Top
+@node to_poly_solve-pkg, unit-pkg, stringproc-pkg, Top
 @chapter to_poly_solve
 @include to_poly_solve.de.texi
 
-@node unit-pkg, zeilberger-pkg, to_poly_solve-pkg, Top
+@node unit-pkg, wrstcse-pkg, to_poly_solve-pkg, Top
 @chapter unit
 @include unit.de.texi
 
-@node zeilberger-pkg, Glossar, unit-pkg, Top
+@node wrstcse-pkg, zeilberger-pkg, unit-pkg, Top
+@chapter wrstcse
+@include wrstcse.de.texi
+
+@node zeilberger-pkg, Error and warning messages, wrstcse-pkg, Top
 @chapter zeilberger
 @include zeilberger.de.texi
+
+@node Error and warning messages, Function and Variable Index, zeilberger-pkg, Top
+@chapter Error and warning messages
+@include errormessages.de.texi
 
 @node Glossar, Index der Variablen und Funktionen, zeilberger-pkg, Top
 @chapter Glossar
