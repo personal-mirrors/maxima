@@ -2,7 +2,7 @@
 
 # Provide maxma with a writeable home directory so it can compile
 # packages while running the testbench.
-export MAXIMA_USERDIR=debian/tmp/tmp
+export MAXIMA_USERDIR=$PWD/debian/tmp
 
 # GCL comes in two flavours. We need the ANSI one.
 export GCL_ANSI=t
@@ -22,7 +22,7 @@ export GCL_ANSI=t
 # https://bugs.launchpad.net/ubuntu/+source/ecl/+bug/317827
 override_dh_auto_configure:
 	./bootstrap
-	dh_auto_configure -- --enable-clisp-exec --enable-gcl --enable-sbcl-exec LDFLAGS=""
+	dh_auto_configure -- --enable-clisp-exec --enable-ecl --enable-gcl --enable-sbcl-exec LDFLAGS=""
 
 # Tell the debhelper tools to include the index maxima needs in the
 # info directory.
