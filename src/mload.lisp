@@ -103,7 +103,8 @@
       (t
        ;; UNREACHABLE MESSAGE: DEFAULT TYPE IS '$OBJECT (SEE $FILE_TYPE BELOW)
        (merror "Maxima bug: Unknown file type ~M" type)))
-    searched-for))
+    searched-for)
+  #+gcl   (si::gbc t))
 
 
 (defmvar $file_type_lisp
@@ -371,6 +372,8 @@
     (cond (error-log
 	   (or (streamp *collect-errors*)
 	       (close error-log))))
+
+    #+gcl   (si::gbc t)
     (let*
       ((n-expected-errors (length expected-errors))
        (expected-errors-trailer
@@ -668,7 +671,8 @@
 					   "~&~:d test~p failed out of ~:d total tests.~%")
 					  error-count
 					  error-count
-					  total-count))))))
+					  total-count)))
+		       )))
 	    (time (testsuite)))))))
   '$done)
 

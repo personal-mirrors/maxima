@@ -259,6 +259,33 @@ DESTINATION is an actual stream (rather than nil for a string)."
 	(setq d-tag (makelabel $outchar))
 	(unless $nolabels (setf (symbol-value d-tag) $%))
 	(setq $_ $__)
+
+	;; Prevent memory fragmentation by hinting the garbage collector when to
+	;; run.
+	;;
+	;; background: 
+	;; gcl currently (04/2018) seems to run out of memory even in conditions that
+	;; aren't a problem with other lisps. One example:
+	;; Running the testsuite on a machine with 4GB of RAM. SBCL, ecl and clisp
+	;; stay below 5% of the machine's RAM under these conditions.
+	;;
+	;; The problem isn't that gcl actually uses more memory than the other lisps.
+	;; it is that after garbage-collecting most of the memory it has allocated
+	;; isn't in use. But the continuous blocks that are left might be too small
+	;; that anything reasonable fits into them.
+	;;
+	;; As a side note the garbage collector can only guess what we are up to and
+	;; gcl's garbage collector is run only seldomly in order to
+	;; optimize speed, which increases performance for other applications.
+	;; The fact that gcl's gc isn't ideally tuned for maxima therefore might not
+	;; even count as a bug.
+	;;
+	;; The question now is:
+	;; ECL and sbcl do also tend to run out of memory due to memory way earlier than
+	;; expected. Perhaps issuing a gc before the memory can get fragmented would be
+	;; a good idea here, too.	
+	#+gcl   (si::gbc t)
+
 	(when $showtime	;; we don't distinguish showtime:all?? /RJF
 	  (format t (intl:gettext "Evaluation took ~,4F seconds (~,4F elapsed)")
 		  time-used etime-used )
