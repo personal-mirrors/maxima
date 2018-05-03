@@ -45,7 +45,7 @@ Description: Computer algebra system
 
 Package: maxima-gcl
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, gcc, maxima-common (= ${binary:Version})
+Depends:  ${shlibs:Depends}, ${misc:Depends}, gcc, maxima-common
 Recommends: gnuplot-x11, wxmaxima, gnuplot
 Provides: maxima (= ${binary:Version})
 Replaces: maxima, maxima-doc
@@ -67,7 +67,7 @@ Description: Computer algebra system
 
 Package: maxima-sbcl
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, maxima-common (= ${binary:Version})
+Depends:  ${shlibs:Depends}, ${misc:Depends}, maxima-common
 Recommends: gnuplot-x11, wxmaxima, gnuplot
 Suggests: texmacs, wish 
 Replaces: maxima, maxima-doc
@@ -91,7 +91,7 @@ Description: Computer algebra system
 
 Package: maxima-clisp
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common (= ${binary:Version})
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common
 Recommends: gnuplot-x11, wxmaxima, gnuplot
 Suggests: texmacs, wish
 Replaces: maxima
@@ -114,7 +114,7 @@ Description: Computer algebra system
 
 Package: maxima-ecl
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common (= ${binary:Version})
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common
 Recommends: gnuplot-x11, wxmaxima, gnuplot
 Suggests: texmacs, wish
 Replaces: maxima, maxima-doc
