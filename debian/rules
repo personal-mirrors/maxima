@@ -1,5 +1,9 @@
 #!/usr/bin/make -f
 
+# Provide maxma with a writeable home directory so it can compile
+# packages while running the testbench.
+export MAXIMA_USERDIR=$PWD/debian/tmp
+
 # GCL comes in two flavours. We need the ANSI one.
 export GCL_ANSI=t
 
@@ -7,21 +11,36 @@ export GCL_ANSI=t
 %:
 	dh $@
 
-# Tell configure which lisps to build for.
-#
+# Tell configure to produce a build for three lisps.
+# ecl would be a fourth potential lisp. But (at least in Oct 2017)
+# https://bugs.launchpad.net/ubuntu/+source/ecl/+bug/317827
+# prevents creating ubuntu packages using ecl.
+# --enable-sbcl-exec tells the build system to create a maxima that
+# will work even if the corresponding sbcl version currently isn't
+# installed.
 # Emptying the LDFLAGS works around the following bug in Ubuntu:
 # https://bugs.launchpad.net/ubuntu/+source/ecl/+bug/317827
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-gcl --enable-clisp-exec --enable-sbcl-exec --enable-ecl LDFLAGS=""
+	./bootstrap
+	dh_auto_configure -- --enable-clisp-exec --enable-ecl --enable-gcl --enable-sbcl-exec LDFLAGS=""
 
-# In order to keep the packages small debhelper normally removes all
-# debug symbols and similar things. Unfortunately in the sbcl case
-# this includes most of maxima => we need an exception.
-override_dh_strip:
-
+# Tell the debhelper tools to include the index maxima needs in the
+# info directory.
 override_dh_installinfo:
 	dh_installinfo
 	dh_install usr/share/info/maxima-index.lisp
+
+# This rule isn't necessary in order to build any package. But it is
+# helpful when a build server is used as it causes the test suite
+# to output the full test log in case of a build server.
+override_dh_auto_test:
+	if make check; then true; else cat tests/test-suite.log;false;fi
+
+# In order to keep the packages small debhelper normally removes all
+# debug symbols and similar things. Unfortunately in the sbcl case
+# this removes maxima, as well so we end up with only the lisp runtime
+# instead => we need another override.
+override_dh_strip:
 
 get-orig-source:
 	uscan --force-download --repack --rename --destdir .
