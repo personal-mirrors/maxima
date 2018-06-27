@@ -1,27 +1,116 @@
-Source: wxmaxima
+Source: maxima
 Section: math
 Priority: optional
-Maintainer: Gunter Königsmann <wxmaxima@physikbuch.de>
-Build-Depends: debhelper (>= 10), cmake, libwxgtk3.0-dev, gettext
-Vcs-Browser: https://github.com/andrejv/wxmaxima
+Maintainer: Gunter Königsmann <gunter@physikbuch.de>
+Build-Depends: clisp, sbcl, ecl, gcl, texinfo, libreadline-dev, locales, automake, debhelper ( >=9 ), autoconf, gawk | awk, texlive-latex-recommended, texlive-latex-base, python, dh-autoreconf | debhelper (>= 9.20160403~)
+Vcs-Browser: https://sourceforge.net/p/maxima/code/ci/master/tree/
+Vcs-Git: https://peterpall@git.code.sf.net/p/maxima/code
+Homepage: https://maxima.sourceforge.net/
 Standards-Version: 3.9.8
-Vcs-Git: https://github.com/andrejv/wxmaxima.git -b DebianPackaging
-Homepage: http://andrejv.github.com/wxmaxima/
 
-Package: wxmaxima
+Package: maxima-common
+Architecture: all
+Depends:  ${misc:Depends}
+Recommends: gnuplot-x11, wxmaxima, gnuplot
+Replaces: maxima-share, xmaxima, maxima-emacs, maxima-doc
+Breaks: maxima-share, xmaxima, maxima-emacs, maxima-doc
+Suggests: texmacs, wish, python-vtk6, tcl-vtk6 
+Provides: maxima-share, xmaxima, maxima-emacs, maxima-doc (= ${binary:Version})
+Description: Computer algebra system
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with extensive
+ self tests.
+ This package contains the files all maxima flavours require.
+
+Package: maxima-sbcl
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ibus-gtk3, maxima
-Recommends: maxima-doc
-Suggests: fonts-jsmath, texlive-latex-extra
-Description: GUI for the computer algebra system Maxima
- wxMaxima is a graphical user interface for the computer algebra system
- Maxima. It eases the use of Maxima by making most of its commands available
- through a menu system and by providing input dialogs for commands that
- require more than one argument. It also implements its own display engine
- that outputs mathematical symbols directly instead of depicting them with
- ASCII characters.
- .
- wxMaxima also features 2D and 3D inline plots, simple animations, mixing of
- text and mathematical calculations to create documents, exporting of input
- and output to TeX, and a browser for Maxima's manual including command index
- and full text searching.
+Depends:  ${shlibs:Depends}, ${misc:Depends}, maxima-common
+Replaces: maxima
+Recommends: gnuplot-x11, wxmaxima, gnuplot
+Suggests: texmacs, wish 
+Provides: maxima (= ${binary:Version})
+Description: Computer algebra system
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with extensive
+ self tests.
+ This package contains a maxima that was compiled by sbcl: sbcl is
+ much faster for some tasks than gcl while being slower at others.
+ It also is able to create binaries that run on systems sbcl isn't
+ installed on.
+ If more than one maxima is installed at the same time this maxima
+ is run if maxima is called as "maxima -l sbcl"
+
+Package: maxima-clisp
+Architecture: any
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common
+Replaces: maxima
+Recommends: gnuplot-x11, wxmaxima, gnuplot
+Suggests: texmacs, wish
+Provides: maxima (= ${binary:Version})
+Description: Computer algebra system
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with extensive
+ self tests.
+ This package contains a maxima that was compiled by clisp.
+ Clisp typically is way slower than sbcl, but it contains fast bignum
+ arithmetics and tends to be extremely memory-efficient.
+ If more than one maxima is installed at the same time this maxima
+ is run if maxima is called as "maxima -l clisp"
+
+Package: maxima-ecl
+Architecture: any
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common, gcc
+Replaces: maxima
+Recommends: gnuplot-x11, wxmaxima, gnuplot
+Suggests: texmacs, wish
+Provides: maxima (= ${binary:Version})
+Description: Computer algebra system
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with extensive
+ self tests.
+ This package contains a maxima that was compiled by ecl which
+ performance-wise normally lies between sbcl and clisp.
+ If more than one maxima is installed at the same time this maxima
+ is run if maxima is called as "maxima -l ecl"
+
+Package: maxima-gcl
+Architecture: any
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common, gcc
+Replaces: maxima
+Recommends: gnuplot-x11, wxmaxima, gnuplot
+Suggests: texmacs, wish
+Provides: maxima (= ${binary:Version})
+Description: Computer algebra system
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with extensive
+ self tests.
+ This package contains a maxima that was compiled by gcl which
+ (depending on the task) might be considerably faster or slower than
+ sbcl.
+ If more than one maxima is installed at the same time this maxima
+ is run if maxima is called as "maxima -l gcl"

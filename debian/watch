@@ -1,2 +1,4 @@
-version=4
-https://github.com/andrejv/wxmaxima/tags .*/Version-(\d{2}.\d{2}.\d|\d{2}.\d.\d).tar.gz
+# This enables uscan to check if the version being build is the current one.
+version=2
+#opts=pasv ftp://ftp.sf.net/m/ma/maxima/maxima-?_?([\w+\d+\.]+|\d+).tar.gz debian uupdate
+http://sf.net/maxima/maxima-([^-]*)\.tar.gz debian uupdate
