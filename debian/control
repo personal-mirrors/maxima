@@ -89,7 +89,7 @@ Description: Computer algebra system
 
 Package: maxima-clisp
 Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common (= ${binary:Version})
+Depends:  ${shlibs:Depends}, ${misc:Depends}, clisp, maxima-common (= ${binary:Version}), libffi-dev
 Recommends: gnuplot-x11, wxmaxima, gnuplot
 Suggests: texmacs, wish
 Replaces: maxima
