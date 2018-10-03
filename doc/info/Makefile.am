@@ -528,24 +528,36 @@ maxima-index.lisp: maxima.info build_index.pl
 	perl ./build_index.pl maxima.info ':crlf' > maxima-index.lisp
 
 maxima.html: maxima.texi $(maxima_TEXINFOS) $(figurefiles) manual.css
-	rm -f maxima*.html 2>/dev/null
-	@: $(MAKEINFOHTML) $(AM_MAKEINFOHTMLFLAGS) $(MAKEINFOHTMLFLAGS) \
-	  -I $(LANGSRCDIR) -I $(LANGBUILDDIR) --init-file=$(srcdir)/texi2html.init \
-	   --split=chapter --output=. --css-include=../manual.css $<
-	perl $(srcdir)/texi2html --split_chapter --lang=es --output=. \
-	  --css-include=$(srcdir)/../manual.css \
-	  -I $(LANGSRCDIR) -I $(LANGBUILDDIR) \
+	@: sh $(srcdir)/extract_categories.sh maxima
+	$(MKDIR_P) tmp_html
+	$(file  > mk.sh,  cd tmp_html)
+	$(file >> mk.sh,  for f in $(filter-out maxima.texi, $(srcdir)/*.texi); do $(SED) \
+	  -e 's/^@\(deffn\|defvr\)  *{[^}]*}  *\([^[:blank:]]*\).*/@anchor{Item: \2}\n&/;' \
+	  -e 's/^@node  *\([^,]*\).*/@anchor{Item: \1}\n&/' \
+	  $$f > $$(basename $$f); done )
+	$(file >> mk.sh,  $(CAT) $(notdir $(filter-out maxima.texi, $(srcdir)/*.texi)) | \
+	$(AWK) -e '!/^@c / && !/^@c$$/ && (/^@deffn/ || /^@defvr/ || /^@end deffn/ \
+		   || /^@end defvr/ || /@category/ || /@node/)' | \
+	$(SED) -f $(srcdir)/extract_categories1.sed | \
+	$(AWK) -f $(srcdir)/extract_categories1.awk > make-categories.py )
+	$(file >> mk.sh,  $(PYTHON) make-categories.py )
+	$(file >> mk.sh,  $(SED) -e 's/^@bye/@node Documentation Categories\n@chapter Documentation Categories/' \
+	  $(srcdir)/maxima.texi > maxima.texi )
+	$(file >> mk.sh,  ( for f in Category-*.texi; do echo '@include' $$f; done ; echo @bye ) >> maxima.texi )
+	$(file >> mk.sh,  perl $(srcdir)/texi2html --split_chapter --lang=es --output=. \
+	  -I . -I .. -I $(srcdir) \
+	  --css-include=$(srcdir)/manual.css \
 	  --init-file $(srcdir)/texi2html.init \
-	  $<
-	for f in maxima*.html; do \
-	    if test x$(urecode) = xtrue ; then \
-	        recode $(fcharset)..$(tcharset) $$f ; \
-	    else \
-	        rm -f foo.$$f 2>/dev/null ; \
-	        iconv -f $(fcharset) -t $(tcharset) $$f > foo.$$f ; \
-	        mv -f foo.$$f $$f ; \
-	    fi; \
-	done
+	  maxima.texi )
+	$(file >> mk.sh,  for f in *.html; do $(SED) \
+	  -e 's/^&middot;$$//' \
+	  -e 's/<p>\(<a href=".*">Category: .*<\/a>\)/<p>Categories:\&nbsp;\&nbsp;\1/' \
+	  -e 's/<a href="\(.*\)">Category: \(.*\)<\/a>/<a href="\1">\2<\/a>/' \
+	  -e 's/<a href="\(.*\)">Item: \(.*\)<\/a>/<a href="\1">\2<\/a>/' \
+	  -i $$f && $(INSTALL) $$f .. ; done )
+	chmod +x mk.sh && ./mk.sh
+	$(RM) -r tmp_html
+
 
 maxima.epub: maxima.html
 	ebook-convert maxima_singlepage.html maxima.epub --breadth-first "--title=Maxima @manual_version@ Manual" "--authors=Maxima Team" --language=en
