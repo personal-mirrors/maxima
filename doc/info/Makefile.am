@@ -32,7 +32,7 @@ endif
 
 SUBDIRS = $(ES_DIR) $(ES_DIR_UTF8) $(PT_DIR) $(PT_DIR_UTF8) $(PT_BR_DIR) $(PT_BR_DIR_UTF8) $(DE_DIR) $(DE_DIR_UTF8)
 
-info_TEXINFOS = maxima.texi
+info_TEXINFOS = #maxima.texi
 maxima_TEXINFOS = include-maxima.texi category-macros.texi Introduction.texi \
  Bugs.texi Help.texi Command.texi DataTypes.texi Constants.texi Lists.texi \
  Arrays.texi defstruct.texi Expressions.texi Operators.texi Evaluation.texi \
@@ -515,8 +515,12 @@ endif
 # fails conflicting with a subsequent "make html".
 all-local: html maxima.info maxima-index.lisp $(MAXIMA_CHM)
 
-maxima.info: $(top_srcdir)/doc/info/maxima.texi
-	$(MAKEINFO) --split-size=1000000 $<
+infoname = maxima
+include $(top_srcdir)/common-info.mk
+maxima.info : maxima.texi $(maxima_TEXINFOS)
+	-$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
+	  --split-size=1000000 $(srcdir)/maxima.texi
+
 
 html: maxima.html contents.hhc
 
@@ -524,7 +528,24 @@ maxima-index.lisp: maxima.info build_index.pl
 	perl ./build_index.pl maxima.info ':crlf' > maxima-index.lisp
 
 maxima.html: maxima.texi $(maxima_TEXINFOS) $(figurefiles) manual.css
-	sh extract_categories.sh maxima
+	rm -f maxima*.html 2>/dev/null
+	@: $(MAKEINFOHTML) $(AM_MAKEINFOHTMLFLAGS) $(MAKEINFOHTMLFLAGS) \
+	  -I $(LANGSRCDIR) -I $(LANGBUILDDIR) --init-file=$(srcdir)/texi2html.init \
+	   --split=chapter --output=. --css-include=../manual.css $<
+	perl $(srcdir)/texi2html --split_chapter --lang=es --output=. \
+	  --css-include=$(srcdir)/../manual.css \
+	  -I $(LANGSRCDIR) -I $(LANGBUILDDIR) \
+	  --init-file $(srcdir)/texi2html.init \
+	  $<
+	for f in maxima*.html; do \
+	    if test x$(urecode) = xtrue ; then \
+	        recode $(fcharset)..$(tcharset) $$f ; \
+	    else \
+	        rm -f foo.$$f 2>/dev/null ; \
+	        iconv -f $(fcharset) -t $(tcharset) $$f > foo.$$f ; \
+	        mv -f foo.$$f $$f ; \
+	    fi; \
+	done
 
 maxima.epub: maxima.html
 	ebook-convert maxima_singlepage.html maxima.epub --breadth-first "--title=Maxima @manual_version@ Manual" "--authors=Maxima Team" --language=en
@@ -556,28 +577,29 @@ install-data-local: install-maxima-index $(INSTALL_CHM)
 uninstall-local: uninstall-maxima-index $(UNINSTALL_CHM)
 
 install-maxima-index: maxima-index.lisp
-	test -z "$(infodir)" || mkdir -p -- "$(DESTDIR)$(infodir)"
+	$(MKDIR_P) "$(DESTDIR)$(infodir)"
 	$(INSTALL_DATA) maxima-index.lisp "$(DESTDIR)$(infodir)/maxima-index.lisp"
 
 uninstall-maxima-index: maxima-index.lisp
 	rm -f "$(DESTDIR)$(infodir)/maxima-index.lisp"
 
-clean-local: clean-info clean-html $(CLEAN_CHM)
+clean-local: clean-info clean-html clean-texi $(CLEAN_CHM)
 
 clean-info:
-	rm -f maxima.info*
-	rm -f maxima-index.lisp
+	rm -f $(wildcard maxima.info* maxima-index.lisp) \
+	      $(wildcard $(addprefix $(srcdir),maxima.info* maxima-index.lisp))
 	rm -f maxima.fns
 
 clean-html:
-	rm -f maxima*.html
-	rm -f contents.hhc
-	rm -f index.hhk
-	rm -f maxima.chm
+	rm -f $(wildcard maxima*.html contents.hhc index.hhk maxima.chm) \
+	      $(wildcard $(addprefix $(srcdir),maxima*.html contents.hhc index.hhk maxima.chm))
+
+clean-texi:
+	rm -f $(wildcard *.texi)
 
 if CHM
 install-chm: maxima.chm
-	test -z "$(DESTDIR)$(docchmdir)" || mkdir -p -- "$(DESTDIR)$(docchmdir)"
+	$(MKDIR_P) "$(DESTDIR)$(docchmdir)"
 	$(INSTALL_DATA) maxima.chm "$(DESTDIR)$(docchmdir)/maxima.chm"
 
 uninstall-chm:
