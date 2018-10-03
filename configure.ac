@@ -1163,7 +1163,7 @@ dnl Remove the leading "share" part of the path, and add double-quotes
 dnl around it.
 
 #default_sharedirs=`find share -type d | sort | egrep -v 'share$|CVS|/fortran' | sed 's;share/\(.*\);        "\1" \\\\;' | sed '$s;\\\\;;'`
-default_sharedirs=`find share -type d | sort | egrep -v 'share$|CVS|/fortran|\.t2p' | sed 's;share/\(.*\);"\1";' | tr '\n' ' '`
+default_sharedirs=`cd $srcdir;find share -type d | sort | egrep -v 'share$|CVS|/fortran' | sed 's;share/\(.*\);"\1";' | tr '\n' ' '`
 
 AC_SUBST(expanded_top_srcdir)
 AC_SUBST(expanded_exec_prefix)
@@ -1185,6 +1185,7 @@ AC_PROG_AWK
 AM_PATH_PYTHON
 
 # Configure these files and make them executable
+AC_CONFIG_FILES([src/maxima], chmod +x src/maxima)
 AC_CONFIG_FILES([maxima-local], chmod +x maxima-local)
 AC_CONFIG_FILES([xmaxima-local], chmod +x xmaxima-local)
 
@@ -1195,7 +1196,7 @@ AC_CONFIG_FILES([xmaxima-local], chmod +x xmaxima-local)
 AC_CONFIG_FILES([src/maxima.bat], (perl -ne 'BEGIN{binmode(STDOUT,":crlf")};' -e 'print' < src/maxima.bat > src/maxima.bat.tmp; mv src/maxima.bat.tmp src/maxima.bat))
 
 AC_OUTPUT(Makefile maxima.spec maxima.iss \
-admin/Makefile src/Makefile src/maxima src/rmaxima src/autoconf-variables.lisp \
+admin/Makefile src/Makefile src/rmaxima src/autoconf-variables.lisp \
 src/share-subdirs.lisp \
 lisp-utils/Makefile tests/Makefile doc/Makefile \
 crosscompile-windows/Makefile \
