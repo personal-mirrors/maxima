@@ -1,5 +1,8 @@
 include $(top_srcdir)/common.mk
-MAXIMA = @POSIX_SHELL@ $(top_builddir)/maxima-local
+MAXIMA = $(abspath $(top_builddir)/../inst/usr/bin/maxima)
+MAXIMA_PREFIX = $(abspath $(top_builddir)/../inst/usr)
+MAXIMA_LAYOUT_AUTOTOOLS = true
+export
 
 TESTS =
 CLEANFILES = 
