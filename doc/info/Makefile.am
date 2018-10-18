@@ -544,7 +544,7 @@ maxima.html: maxima.texi $(maxima_TEXINFOS) $(figurefiles) manual.css
 	$(file >> mk.sh,  $(PYTHON) make-categories.py )
 	$(file >> mk.sh,  ( for f in Category-*.texi; do echo '@include' $$f; done ; echo @bye ) >> maxima.texi )
 	$(file >> mk.sh,  pwd)
-	$(file >> mk.sh,  perl $(srcdir)/../texi2html --split_chapter --lang=es --output=. \
+	$(file >> mk.sh,  perl ../$(srcdir)/texi2html --split_chapter --lang=es --output=. \
 	  -I . -I .. -I $(realpath $(srcdir)) \
 	  --css-include=$(realpath $(srcdir)/manual.css) \
 	  --init-file $(realpath $(srcdir)/texi2html.init) \
