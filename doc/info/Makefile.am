@@ -529,24 +529,24 @@ maxima-index.lisp: build_index.pl maxima.info
 maxima.html: maxima.texi $(maxima_TEXINFOS) $(figurefiles) manual.css
 	@: sh $(srcdir)/extract_categories.sh maxima
 	$(MKDIR_P) tmp_html
-	$(file  > mk.sh,  cd tmp_html)
-	$(file >> mk.sh,  for f in $(filter-out maxima.texi, $(srcdir)/*.texi); do $(SED) \
+	$(file >  mk.sh,  for f in $(filter-out maxima.texi, $(wildcard $(srcdir)/*.texi)); do $(SED) \
 	  -e 's/^@\(deffn\|defvr\)  *{[^}]*}  *\([^[:blank:]]*\).*/@anchor{Item: \2}\n&/;' \
 	  -e 's/^@node  *\([^,]*\).*/@anchor{Item: \1}\n&/' \
-	  $$f > $$(basename $$f); done )
-	$(file >> mk.sh,  $(CAT) $(notdir $(filter-out maxima.texi, $(srcdir)/*.texi)) | \
+	  $$f > tmp_html/$$(basename $$f); done )
+	$(file >> mk.sh,  $(SED) -e 's/^@bye/@node Documentation Categories\n@chapter Documentation Categories/' \
+	  $(srcdir)/maxima.texi > tmp_html/maxima.texi )
+	$(file >> mk.sh,  cd tmp_html)
+	$(file >> mk.sh,  $(CAT) *.texi | \
 	$(AWK) -e '!/^@c / && !/^@c$$/ && (/^@deffn/ || /^@defvr/ || /^@end deffn/ \
 		   || /^@end defvr/ || /@category/ || /@node/)' | \
-	$(SED) -f $(srcdir)/extract_categories1.sed | \
-	$(AWK) -f $(srcdir)/extract_categories1.awk > make-categories.py )
+	$(SED) -f $(realpath $(srcdir)/extract_categories1.sed) | \
+	$(AWK) -f $(realpath $(srcdir)/extract_categories1.awk) > make-categories.py )
 	$(file >> mk.sh,  $(PYTHON) make-categories.py )
-	$(file >> mk.sh,  $(SED) -e 's/^@bye/@node Documentation Categories\n@chapter Documentation Categories/' \
-	  $(srcdir)/maxima.texi > maxima.texi )
 	$(file >> mk.sh,  ( for f in Category-*.texi; do echo '@include' $$f; done ; echo @bye ) >> maxima.texi )
 	$(file >> mk.sh,  perl $(srcdir)/texi2html --split_chapter --lang=es --output=. \
-	  -I . -I .. -I $(srcdir) \
-	  --css-include=$(srcdir)/manual.css \
-	  --init-file $(srcdir)/texi2html.init \
+	  -I . -I .. -I $(realpath $(srcdir)) \
+	  --css-include=$(realpath $(srcdir)/manual.css) \
+	  --init-file $(realpath $(srcdir)/texi2html.init) \
 	  maxima.texi )
 	$(file >> mk.sh,  for f in *.html; do $(SED) \
 	  -e 's/^&middot;$$//' \
