@@ -88,26 +88,18 @@ MAKE_DEPENDS = '$(LOADDEFSYSTEM) $(LOADMAKEDEPENDS) (funcall (intern "CREATE-DEP
 ## CLISP #######################################################################
 if CLISP
 
-EXTRA_SCRIPTS += $(CLISP_MAXIMA)
+EXTRA_SCRIPTS += $(CLISP_MAXIMA:MEM)
+CLISP_MAXIMA_MEM = binary-clisp/maxima.mem
+clisplib_DATA = $(CLISP_MAXIMA_MEM)
+CLISP_MAXIMA =  $(CLISP_MAXIMA_MEM)
+ 
 
 if CLISP_EXEC
-CLISP_MAXIMA = binary-clisp/maxima$(EXEEXT)
-clisplib_SCRIPTS = $(CLISP_MAXIMA)
+CLISP_MAXIMA_EXE = binary-clisp/maxima$(EXEEXT)
+clisplib_SCRIPTS = $(CLISP_MAXIMA_EXE)
 clispexeflag = :EXECUTABLE t
-else
-CLISP_MAXIMA = binary-clisp/maxima.mem
-clisplib_DATA = $(CLISP_MAXIMA)
-clispexeflag =
-## Rather crazily, we install an extra copy of clisp. Maybe there's a
-## more sensible approach than this?!
-WEIRD_INSTALL_TARGETS += install-clisp-copy
-WEIRD_UNINSTALL_TARGETS += uninstall-clisp-copy
-install-clisp-copy:
-	$(mkinstalldirs) $(DESTDIR)$(clisplibdir)
-	$(INSTALL_PROGRAM) @CLISP_RUNTIME_PATH@ "$(DESTDIR)$(clisplibdir)/@CLISP_RUNTIME@"
-uninstall-clisp-copy:
-	rm -f "$(DESTDIR)$(clisplibdir)/@CLISP_RUNTIME@"
-endif
+CLISP_MAXIMA +=  $(CLISP_MAXIMA_EXE)
+endif CLISP_EXEC
 
 EXECUTECLISP = $(CLISP_NAME) -norc -q
 clisplibdir = $(verpkglibdir)/binary-clisp
@@ -117,16 +109,22 @@ CLEAN_TARGETS += clean-clisp
 
 clisp: $(CLISP_MAXIMA)
 
-$(CLISP_MAXIMA):
+$(CLISP_MAXIMA_MEM):
 	$(MAKE) bd
-	$(EXECUTECLISP) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE)
-	$(EXECUTECLISP) $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (ext:saveinitmem "$@" :init-function (function cl-user::run) $(clispexeflag))
+	$(EXECUTECLISP) '$(LOADDEFSYSTEM) (progn $(DEFSYSTEMCOMPILE))' && \
+	$(EXECUTECLISP) '$(LOADDEFSYSTEM) (progn $(DEFSYSTEMLOAD) (ext:saveinitmem "$@" :init-function (function cl-user::run)))'
+
+if CLISP_EXEC
+$(CLISP_MAXIMA_EXE): $(CLISP_MAXIMA_MEM)
+	$(EXECUTECLISP) '$(LOADDEFSYSTEM) (progn $(DEFSYSTEMLOAD) (ext:saveinitmem "$@" :init-function (function cl-user::run) $(clispexeflag)))'
+
+endif CLISP_EXEC
 
 clean-clisp:
 	rm -rf binary-clisp
 
 clisp-depends.mk: maxima.system
-	$(EXECUTECLISP) $(call MAKE_DEPENDS,"$(CLISP_MAXIMA)",clisp-depends.mk)
+	$(EXECUTECLISP) $(call MAKE_DEPENDS,"$(CLISP_MAXIMA_MEM)",clisp-depends.mk)
 
 -include clisp-depends.mk
 endif CLISP
