@@ -55,7 +55,7 @@ clean-local: $(CLEAN_TARGETS)
 ## Tell make clean to delete all the <foo>-depends.mk files.
 DEPENDS_FILES = \
   clisp-depends.mk cmucl-depends.mk scl-depends.mk acl-depends.mk \
-  sbcl-depends.mk gcl-depends.mk openmcl-depends.mk ecl-depends.mk
+  sbcl-depends.mk gcl-depends.mk openmcl-depends.mk ecl-depends.mk abcl-depends.mk
 CLEANFILES = $(DEPENDS_FILES) sys-proclaim.lisp
 
 ## Similarly, we do something hacky with the install rule. Most of the
@@ -488,7 +488,8 @@ abcl:binary-abcl/maxima
 
 binary-abcl/maxima:
 	$(MAKE) bd
-	echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (build-maxima-lib) (ext:quit)' | $(EXECUTEABCL)
+	echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (quit)' | $(EXECUTEABCL)
+	echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (quit)' | $(EXECUTEABCL)
 
 clean-abcl:
 	rm -rf binary-abcl libmaxima.a
