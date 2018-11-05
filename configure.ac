@@ -66,6 +66,39 @@ AM_CONDITIONAL([am__EXEEXT], [test -n "$EXEEXT"])
 explicit_lisp=false
 lisps_enabled=""
 
+dnl Compiling with abcl requires a jre and the path to abcl.jar
+AC_ARG_ENABLE(abcl,
+	[  --enable-abcl                Use abcl, requires --with-abcl-jar],
+     	[case "${enableval}" in
+       		yes) abcl=true 
+		     lisps_enabled="${lisps_enabled} abcl"
+                     explicit_lisp=true ;;
+       		no)  abcl=false ;;
+		*) AC_MSG_ERROR(bad value ${enableval} for --enable-abcl) ;;
+     	esac
+	explicit_lisp=true],
+	[abcl=false])
+ABCL_JAR=`pwd`/"abcl.jar"
+AC_ARG_WITH(abcl-jar,
+	[  --with-abcl-jar=<jarfile>    Use <jarfile> as abcl install (default ./abcl.jar)],
+	[abcl=true
+	lisps_enabled="${lisps_enabled} abcl"
+	explicit_lisp=true
+	ABCL_JAR="${withval}"])
+	
+AC_ARG_WITH(jre,
+ 	[  --with-jre=<jre>             When compiling with abcl: use <jre> as Java interpreter],
+ 	[JRE="${withval}"],
+ 	[JRE="java"])
+
+if test x"${abcl}" = xtrue ; then
+     if test -e "${ABCL_JAR}" ; then
+          echo Using abcl found in ${ABCL_JAR}
+     else
+        AC_MSG_ERROR(${ABCL_JAR} not found.)
+     fi
+fi
+
 dnl n.b. clisp_default_name is hardcoded in "with" message
 clisp_default_name=clisp
 AC_ARG_ENABLE(clisp,
@@ -859,14 +892,12 @@ if test x"${explicit_lisp}" = xfalse ; then
 	elif test x"${ecl_found}" = xtrue ; then
 		ecl=true
 		lisps_enabled="${lisps_enabled} ecl"
-        elif test x"${ccl64_found}" = xtrue; then
-                ccl64=true
-                lisps_enabled="${lisps_enabled} ccl64"
 	else
 		AC_MSG_ERROR(No lisp implementation specified and none of the default executables [${clisp_default_name}(clisp),${gcl_default_name}(GCL),${cmucl_default_name}(CMUCL),${scl_default_name}(SCL),${sbcl_default_name}(SBCL),${acl_default_name}(ACL),${openmcl_default_name}(OpenMCL),${ecl_default_name}(ECL)] were found in PATH)
 	fi
 fi
 
+AM_CONDITIONAL(ABCL, test x$abcl = xtrue)
 AM_CONDITIONAL(CLISP, test x$clisp = xtrue)
 AM_CONDITIONAL(CLISP_EXEC, test x$clisp_exec = xtrue)
 AM_CONDITIONAL(GCL, test x$gcl = xtrue)
@@ -1074,6 +1105,8 @@ AC_ARG_WITH(default-lisp,
 		DEFAULTLISP=ecl
 	elif test x"${ccl64}" = xtrue ; then
 		DEFAULTLISP=ccl64
+	elif test x"${abcl}" = xtrue ; then
+		DEFAULTLISP=abcl
 	else
 		AC_MSG_ERROR(Internal error. No lisp enabled. Please contact maintainer.)
 	fi])
@@ -1097,6 +1130,8 @@ AC_SUBST(CCL64_NAME)
 AC_SUBST(DEFAULTLISP)
 AC_SUBST(HHC)
 AC_SUBST(lisps_enabled)
+AC_SUBST(ABCL_JAR)
+AC_SUBST(JRE)
 
 AC_ARG_WITH(posix-shell,
 	[  --with-posix-shell=<path>    Use <shell> for maxima script (default /bin/sh)],

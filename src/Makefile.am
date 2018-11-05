@@ -471,5 +471,30 @@ ecl-depends.mk: maxima.system
 	echo $(call MAKE_DEPENDS,"binary-ecl/maxima",ecl-depends.mk,(quit)) | $(EXECUTEECL)
 
 -include ecl-depends.mk
+endif
 
+## ABCL ########################################################################
+if ABCL
+
+abcllibdir = $(verpkglibdir)/binary-abcl
+EXTRA_SCRIPTS += binary-abcl/maxima
+abcllib_SCRIPTS = binary-abcl/maxima
+
+EXECUTEABCL = $(JRE) -jar $(ABCL_JAR) --noinit
+BUILT_FILES += binary-abcl/maxima
+CLEAN_TARGETS += clean-abcl
+
+abcl:binary-abcl/maxima
+
+binary-abcl/maxima:
+	$(MAKE) bd
+	echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (build-maxima-lib) (ext:quit)' | $(EXECUTEABCL)
+
+clean-abcl:
+	rm -rf binary-abcl libmaxima.a
+
+abcl-depends.mk: maxima.system
+	echo $(call MAKE_DEPENDS,"binary-abcl/maxima",abcl-depends.mk,(quit)) | $(EXECUTEABCL)
+
+-include abcl-depends.mk
 endif
