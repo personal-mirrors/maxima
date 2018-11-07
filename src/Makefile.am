@@ -486,10 +486,25 @@ CLEAN_TARGETS += clean-abcl
 
 abcl:binary-abcl/maxima
 
-binary-abcl/maxima:
+
+binary-abcl/maxima: Makefile.am startmaxima_abcl.sh
 	$(MAKE) bd
-	echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (quit)' | $(EXECUTEABCL)
-	echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) (quit)' | $(EXECUTEABCL)
+if QUIET_BUILD
+	$(EXECUTEABCL) --eval (setf *compile-print* nil) --eval '(load "$(top_srcdir)/lisp-utils/defsystem.lisp")' --eval '(mk:add-registry-location "$(top_srcdir)/src/")' --eval '($(DS_OOS) :compile :verbose nil)' --eval '(quit)'
+else
+	$(EXECUTEABCL) --eval '(load "$(top_srcdir)/lisp-utils/defsystem.lisp")' --eval '(mk:add-registry-location "$(top_srcdir)/src/")' --eval '($(DS_OOS) :compile :verbose t)' --eval '(quit)'
+endif
+	cp $(srcdir)/maxima.system binary-abcl
+	cp $(srcdir)/maxima-package.lisp binary-abcl
+	cp $(srcdir)/autol.lisp binary-abcl
+	cp $(srcdir)/init-cl.lisp binary-abcl
+	cp $(srcdir)/max_ext.lisp binary-abcl
+	cp $(srcdir)/share-subdirs.lisp binary-abcl
+	cp $(srcdir)/autoconf-variables.lisp binary-abcl
+	cp $(ABCL_JAR) binary-abcl/abcl.jar
+	cp $(srcdir)/../lisp-utils/defsystem.lisp binary-abcl
+	cp -a startmaxima_abcl.sh binary-abcl/maxima
+	chmod +x binary-abcl/maxima
 
 clean-abcl:
 	rm -rf binary-abcl libmaxima.a

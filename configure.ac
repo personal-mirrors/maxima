@@ -1225,6 +1225,7 @@ AM_PATH_PYTHON
 
 # Configure these files and make them executable
 AC_CONFIG_FILES([maxima-local], chmod +x maxima-local)
+AC_CONFIG_FILES([src/startmaxima_abcl.sh], chmod +x src/startmaxima_abcl.sh)
 AC_CONFIG_FILES([xmaxima-local], chmod +x xmaxima-local)
 AC_CONFIG_FILES([tests/test.sh], chmod +x tests/test.sh)
 AC_CONFIG_FILES([doc/info/build_html.sh], chmod +x doc/info/build_html.sh)
