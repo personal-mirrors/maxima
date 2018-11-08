@@ -476,6 +476,11 @@ endif
 ## ABCL ########################################################################
 if ABCL
 
+# ABCL compiles the individual files maxima is comprised of. But they aren't 
+# compiled into a single .jar archive, but need to be loaded by abcl in the
+# right order => We need to copy all the stuff defsystem needs into the binary
+# folder and need to use defsystem for loading all the files in the Right Order.
+
 abcllibdir = $(verpkglibdir)/binary-abcl
 EXTRA_SCRIPTS += binary-abcl/maxima
 abcllib_SCRIPTS = binary-abcl/maxima
@@ -494,7 +499,7 @@ if QUIET_BUILD
 else
 	$(EXECUTEABCL) --eval '(load "$(top_srcdir)/lisp-utils/defsystem.lisp")' --eval '(mk:add-registry-location "$(top_srcdir)/src/")' --eval '($(DS_OOS) :compile :verbose t)' --eval '(quit)'
 endif
-	cp $(srcdir)/maxima.system binary-abcl
+	cat $(srcdir)/maxima.system | sed -e 's#"binary-abcl"#(ext:getenv "MAXIMA_IMAGESDIR_BIN")#g' > binary-abcl/maxima.system
 	cp $(srcdir)/maxima-package.lisp binary-abcl
 	cp $(srcdir)/autol.lisp binary-abcl
 	cp $(srcdir)/init-cl.lisp binary-abcl
