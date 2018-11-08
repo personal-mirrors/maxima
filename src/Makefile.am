@@ -509,6 +509,7 @@ endif
 	cp $(ABCL_JAR) binary-abcl/abcl.jar
 	cp $(srcdir)/../lisp-utils/defsystem.lisp binary-abcl
 	cp -a startmaxima_abcl.sh binary-abcl/maxima
+	touch binary-abcl/maxima
 	chmod +x binary-abcl/maxima
 
 clean-abcl:
