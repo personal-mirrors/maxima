@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 Start Maxima with the command "maxima".  Maxima will display version
 information and a prompt.  End each Maxima command with a semicolon.
 End the session with the command "quit();".  Here's a sample session:

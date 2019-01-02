@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to solve_rec::
 * Functions and Variables for solve_rec::

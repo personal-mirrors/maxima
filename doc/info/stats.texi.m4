@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to stats::
 * Functions and Variables for inference_result::

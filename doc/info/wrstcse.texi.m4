@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to wrstcse::
 * Functions and Variables for wrstcse::

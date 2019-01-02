@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction for Runtime Environment::  
 * Interrupts::                  

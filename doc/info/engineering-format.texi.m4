@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 Engineering-format changes the way maxima outputs floating-point numbers
 to the notation engineers are used to: @code{a*10^b} with @code{b} dividable by
 three.

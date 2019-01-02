@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @c -----------------------------------------------------------------------------
 @page
 @node Arrays, Structures, Lists, Data Types and Structures

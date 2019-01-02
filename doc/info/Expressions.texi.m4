@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to Expressions::
 * Nouns and Verbs::

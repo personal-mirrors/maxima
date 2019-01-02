@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to Rules and Patterns::  
 * Functions and Variables for Rules and Patterns::  

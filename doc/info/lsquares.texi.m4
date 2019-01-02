@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to lsquares::
 * Functions and Variables for lsquares::

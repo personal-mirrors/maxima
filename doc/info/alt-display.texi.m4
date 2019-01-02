@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to alt-display::
 * Functions and Variables for alt-display::

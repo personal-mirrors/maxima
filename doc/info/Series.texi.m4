@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Functions and Variables for Sums and Products::
 * Introduction to Series::

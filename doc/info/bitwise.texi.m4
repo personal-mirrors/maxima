@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 The package @code{bitwise} provides functions that allow to manipulate
 bits of integer constants. As always maxima attempts to simplify the result
 of the operation if the actual value of a constant isn't known considering

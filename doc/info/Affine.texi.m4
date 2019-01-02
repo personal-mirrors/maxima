@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @c end concepts Affine
 @menu
 * Introduction to Affine::

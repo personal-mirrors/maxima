@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to linearalgebra::
 * Functions and Variables for linearalgebra::

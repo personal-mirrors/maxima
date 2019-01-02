@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to contrib_ode::
 * Functions and Variables for contrib_ode::

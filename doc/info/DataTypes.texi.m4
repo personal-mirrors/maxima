@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Numbers::
 * Strings::

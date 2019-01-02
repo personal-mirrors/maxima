@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to Sets::       
 * Functions and Variables for Sets::       

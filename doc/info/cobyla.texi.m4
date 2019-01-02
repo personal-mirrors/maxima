@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to cobyla::
 * Functions and Variables for cobyla::

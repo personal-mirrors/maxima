@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to numericalio::
 * Functions and Variables for plain-text input and output::

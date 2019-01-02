@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to fast Fourier transform::                     
 * Functions and Variables for fast Fourier transform::

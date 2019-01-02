@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Functions and Variables for Bug Detection and Reporting::
 @end menu

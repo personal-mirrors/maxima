@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to zeilberger::
 * Functions and Variables for zeilberger::

@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to Differential Equations::  
 * Functions and Variables for Differential Equations::  

@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @c end concepts Symmetries
 
 @menu

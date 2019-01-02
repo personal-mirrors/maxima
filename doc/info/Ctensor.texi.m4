@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to ctensor::
 * Functions and Variables for ctensor::

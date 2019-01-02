@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to lbfgs::
 * Functions and Variables for lbfgs::

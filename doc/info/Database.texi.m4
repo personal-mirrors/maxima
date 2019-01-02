@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to Maximas Database::
 * Functions and Variables for Properties::

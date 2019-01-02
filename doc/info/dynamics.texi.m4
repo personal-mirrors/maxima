@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * The dynamics package::
 * Graphical analysis of discrete dynamical systems::

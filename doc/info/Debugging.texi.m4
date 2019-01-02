@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Source Level Debugging::
 * Keyword Commands::

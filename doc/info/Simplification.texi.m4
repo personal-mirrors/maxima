@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to Simplification::
 * Functions and Variables for Simplification::  

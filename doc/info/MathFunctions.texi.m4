@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Functions for Numbers::
 * Functions for Complex Numbers::

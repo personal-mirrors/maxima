@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to drawdf::
 * Functions and Variables for drawdf::

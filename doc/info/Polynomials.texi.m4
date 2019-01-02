@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @c FOR THE FUNCTIONS WHICH RETURN A CRE, BE SURE TO MENTION THAT
 @menu
 * Introduction to Polynomials::  

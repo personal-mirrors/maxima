@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to descriptive::
 * Functions and Variables for data manipulation::

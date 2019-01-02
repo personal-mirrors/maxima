@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to Command Line::
 * Functions and Variables for Command Line::

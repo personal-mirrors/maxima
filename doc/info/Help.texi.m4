@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu       
 * Documentation::               
 * Functions and Variables for Help::        

@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 The package @code{ratpow} provides functions that find the exponents
 of the denominator in a CRE polynomial. If the exponents in the denominator
 are needed instead @mref{ratdenom} can be used to extract this denominator

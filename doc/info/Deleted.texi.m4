@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Renamed or deleted functions::
 @end menu

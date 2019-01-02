@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to grobner ::
 * Functions and Variables for grobner ::

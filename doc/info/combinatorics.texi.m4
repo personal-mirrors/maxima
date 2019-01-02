@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Package combinatorics::
 * Functions and Variables for Combinatorics::       

@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Introduction to mnewton::
 * Functions and Variables for mnewton::

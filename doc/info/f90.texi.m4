@@ -1,3 +1,4 @@
+@c -*- Mode: texinfo -*-
 @menu
 * Package f90::
 @end menu
