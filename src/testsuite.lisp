@@ -59,9 +59,9 @@
 	;; bug #329. Fixed post-16.1.3.
 	;; Test 50 still sometimes fails in ecl 16.1.2
         ((mlist simp) "rtest16"
-	 ((mlist simp) 524 525)
-	 #+ecl ((mlist simp) 50 561)
-	 #+allegro ((mlist simp) 50 241))
+	 #-(or ecl allegro) ((mlist simp) 524 525)
+	 #+ecl ((mlist simp) 50 524 525 561)
+	 #+allegro ((mlist simp) 50 241 524 525))
         "rtestode"
 	"rtestode_zp"
         "rtest3"
@@ -95,7 +95,7 @@
 	 ((mlist simp) 157 160))
         "rtest_abs"
         ((mlist simp) "rtest_taylor"
-	 ((mlist simp) 88 91 94 100 124 125))
+	 ((mlist simp) 88 91 97 104 128 129))
         ((mlist simp) "rtest_dot")
         "rtest_mset"
         "rtest_boolean"
