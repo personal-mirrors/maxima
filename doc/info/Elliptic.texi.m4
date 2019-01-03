@@ -362,8 +362,7 @@ The incomplete elliptic integral of the first kind, defined as
 
 m4_mathjax(
 [{{[$$F(\phi|m) = \int_0^\phi {{d\theta}\over{\sqrt{1 - m\sin^2\theta}}}$$]}}],
-[{{[@math{integrate(1/sqrt(1 - m*sin(x)^2), x, 0, phi)}]}}],
-[{{[$$F(\phi|m) = \int_0^\phi {{d\theta}\over{\sqrt{1 - m\sin^2\theta}}}$$]}}])
+[{{[@math{integrate(1/sqrt(1 - m*sin(x)^2), x, 0, phi)}]}}])
 
 See also @ref{elliptic_e} and @ref{elliptic_kc}.
 
@@ -377,9 +376,8 @@ See also @ref{elliptic_e} and @ref{elliptic_kc}.
 The incomplete elliptic integral of the second kind, defined as
 
 m4_mathjax(
-[{{[$$E(\phi|m) = \int_0^\phi \sqrt{1 - m\sin^2\theta} d\theta$$]}}],
-[{{[@math{elliptic_e(phi, m) = integrate(sqrt(1 - m*sin(x)^2), x, 0, phi)}]}}],
-[{{[$$E(\phi|m) = \int_0^\phi \sqrt{1 - m\sin^2\theta} d\theta$$]}}])
+[{{[$$E(\phi|m) = \int_0^\phi \sqrt{1 - m\sin^2\theta}\,d\theta$$]}}],
+[{{[@math{elliptic_e(phi, m) = integrate(sqrt(1 - m*sin(x)^2), x, 0, phi)}]}}])
 
 See also @ref{elliptic_f} and @ref{elliptic_ec}.
 
@@ -393,9 +391,8 @@ See also @ref{elliptic_f} and @ref{elliptic_ec}.
 The incomplete elliptic integral of the second kind, defined as
 
 m4_mathjax(
-[{{[$$\int_0^u {\rm dn}(v, m) dv  = \int_0^\tau \sqrt{{1-m t^2}\over{1-t^2}} dt$$]}}],
-[{{[@math{integrate(dn(v,m)^2,v,0,u) = integrate(sqrt(1-m*t^2)/sqrt(1-t^2), t, 0, tau)}]}}],
-[{{[$$\int_0^u {\rm dn}(v, m) dv  = \int_0^\tau \sqrt{{1-m t^2}\over{1-t^2}} dt$$]}}])
+[{{[$$Eu(u,m) = \int_0^u {\rm dn}(v, m)\,dv  = \int_0^\tau \sqrt{{1-m t^2}\over{1-t^2}}\,dt$$]}}],
+[{{[@math{Eu(u,m) = integrate(dn(v,m)^2,v,0,u) = integrate(sqrt(1-m*t^2)/sqrt(1-t^2), t, 0, tau)}]}}])
 
 where
 m4_mathjax(
@@ -403,19 +400,12 @@ m4_mathjax(
 [{{[@math{tau = sn(u,m).}]}}],
 [{{[$\tau = {\rm sn}(u, m)$.]}}])
 
-This is related to @math{elliptic_e} by
+This is related to @code{elliptic_e} by
 
-@ifhtml
-@math{elliptic_eu(u, m) = elliptic_e(asin(sn(u,m)),m)}
-@end ifhtml
-@ifinfo
-@math{elliptic_eu(u, m) = elliptic_e(asin(sn(u,m)),m)}
-@end ifinfo
-@tex
-$$E(u,m) = E(\phi, m)$$
-
-where $\phi = \sin^{-1} {\rm sn}(u, m)$.
-@end tex
+m4_mathjax(
+[{{[$$\text{Eu}(u,m) = E(\sin^{-1} \text{sn}(u,m), m)$$]}}],
+[{{[@math{@code{elliptic_eu}(u, m) = @code{elliptic_e}(asin(sn(u,m)),m)}]}}],
+[{{[$${\rm Eu}(u,m) = E(\sin^{-1} {\rm sn}(u, m), m)$$]}}])
 
 See also @ref{elliptic_e}.
 @opencatbox
@@ -429,8 +419,7 @@ The incomplete elliptic integral of the third kind, defined as
 
 m4_mathjax(
 [{{[$$\Pi(n; u|m) = \int_0^\phi {{d\theta}\over{(1-n\sin^2 \theta)\sqrt{1 - m\sin^2\theta}}}$$]}}],
-[{{[@math{integrate(1/(1-n*sin(x)^2)/sqrt(1 - m*sin(x)^2), x, 0, phi)}]}}],
-[{{[$$\Pi(n; u|m) = \int_0^\phi {{d\theta}\over{(1-n\sin^2 \theta)\sqrt{1 - m\sin^2\theta}}}$$]}}])
+[{{[@math{integrate(1/(1-n*sin(x)^2)/sqrt(1 - m*sin(x)^2), x, 0, phi)}]}}])
 
 @opencatbox
 @category{Elliptic integrals}
@@ -443,8 +432,7 @@ The complete elliptic integral of the first kind, defined as
 
 m4_mathjax(
 [{{[$$K(m) = \int_0^{{\pi}\over{2}} {{d\theta}\over{\sqrt{1 - m\sin^2\theta}}}$$]}}],
-[{{[@math{integrate(1/sqrt(1 - m*sin(x)^2), x, 0, %pi/2)}]}}],
-[{{[$$K(m) = \int_0^{{\pi}\over{2}} {{d\theta}\over{\sqrt{1 - m\sin^2\theta}}}$$]}}])
+[{{[@math{integrate(1/sqrt(1 - m*sin(x)^2), x, 0, %pi/2)}]}}])
 
 For certain values of @math{m}, the value of the integral is known in
 terms of @math{Gamma} functions.  Use @code{makegamma} to evaluate them.
@@ -459,9 +447,8 @@ terms of @math{Gamma} functions.  Use @code{makegamma} to evaluate them.
 The complete elliptic integral of the second kind, defined as
 
 m4_mathjax(
-[{{[$$E(m) = \int_0^{{\pi}\over{2}} \sqrt{1 - m\sin^2\theta} d\theta$$]}}],
-[{{[@math{integrate(sqrt(1 - m*sin(x)^2), x, 0, %pi/2)}]}}],
-[{{[$$E(m) = \int_0^{{\pi}\over{2}} \sqrt{1 - m\sin^2\theta} d\theta$$]}}])
+[{{[$$E(m) = \int_0^{{\pi}\over{2}} \sqrt{1 - m\sin^2\theta}\,d\theta$$]}}],
+[{{[@math{E(m) = integrate(sqrt(1 - m*sin(x)^2), x, 0, %pi/2)}]}}])
 
 For certain values of @math{m}, the value of the integral is known in
 terms of @math{Gamma} functions.  Use @code{makegamma} to evaluate them.
