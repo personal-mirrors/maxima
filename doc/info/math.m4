@@ -22,8 +22,8 @@ $2
 $2
 @end ifinfo
 @tex
-m4_ifelse(`$#', `3', [{{[[{{[$3]}}]]}}], [{{[$1]}}])
+m4_ifelse(`$#', `3', <<<<<<$3>>>>>>, <<<$1>>>)
 @end tex')
 m4_dnl Change the quote characters to something that isn't likely to
 m4_dnl show up in the manual.
-m4_changequote(`[{{[', `]}}]')
+m4_changequote(`<<<', `>>>')
