@@ -233,6 +233,7 @@ differential or convolution integral equation or a set of them.
 @c laplace (%, t, s);
 @c linsolve ([%], ['laplace(f(t), t, s)]);
 @c ilt (rhs (first (%)), s, t);
+@c input:pos;
 @c ===end===
 @example
 @group
@@ -1695,6 +1696,7 @@ Examples:
 @c quad_qawo (x^(-1/2)*exp(-2^(-2)*x), x, 1d-8, 20*2^2, 1, cos);
 @c rectform (integrate (x^(-1/2)*exp(-2^(-alpha)*x) * cos(x),
       x, 0, inf));
+@c input:pos;
 @c ev (%, alpha=2, numer);
 @c ===end===
 @example
