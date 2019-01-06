@@ -40,6 +40,12 @@ Calculation of @code{abs} for real and complex numbers, including numerical
 constants and various infinities. The first example shows how @code{abs}
 distributes over the elements of a list.
 
+@c ===beg===
+@c abs([-4, 0, 1, 1+%i]);
+@c abs((1+%i)*(1-%i));
+@c abs(%e+%i);
+@c abs([inf, infinity, minf]);
+@c ===end===
 @example
 (%i1) abs([-4, 0, 1, 1+%i]);
 (%o1)                  [4, 0, 1, sqrt(2)]
@@ -55,6 +61,12 @@ distributes over the elements of a list.
 
 Simplification of expressions containing @code{abs}:
 
+@c ===beg===
+@c abs(x^2);
+@c abs(x^3);
+@c abs(abs(x));
+@c abs(conjugate(x));
+@c ===end===
 @example
 (%i5) abs(x^2);
                                 2
@@ -74,6 +86,15 @@ integrals involving the @code{abs} function can be performed, if the
 @code{abs_integrate} package is loaded. The last example shows the Laplace
 transform of @code{abs}: see @mrefdot{laplace}
 
+@c ===beg===
+@c diff(x*abs(x),x),expand;
+@c integrate(abs(x),x);
+@c integrate(x*abs(x),x);
+@c load("abs_integrate")$
+@c integrate(x*abs(x),x);
+@c integrate(abs(x),x,-2,%pi);
+@c laplace(abs(x),x,s);
+@c ===end===
 @example
 (%i9) diff(x*abs(x),x),expand;
 (%o9)                       2 abs(x)
@@ -608,6 +629,10 @@ Examples:
 
 Examples with @mref{sqrt} and @mrefdot{sin}
 
+@c ===beg===
+@c cabs(sqrt(1+%i*x));
+@c cabs(sin(x+%i*y));
+@c ===end===
 @example
 (%i1) cabs(sqrt(1+%i*x));
                              2     1/4
@@ -620,6 +645,9 @@ Examples with @mref{sqrt} and @mrefdot{sin}
 The error function, @mrefcomma{erf} has mirror symmetry, which is used here in
 the calculation of the absolute value with a complex argument:
 
+@c ===beg===
+@c cabs(erf(x+%i*y));
+@c ===end===
 @example
 (%i3) cabs(erf(x+%i*y));
                                           2
@@ -636,6 +664,9 @@ Maxima knows complex identities for the Bessel functions, which allow
 it to compute the absolute value for complex arguments.  Here is an
 example for @mrefdot{bessel_j}
 
+@c ===beg===
+@c cabs(bessel_j(1,%i));
+@c ===end===
 @example
 (%i4) cabs(bessel_j(1,%i));
 (%o4)                 abs(bessel_j(1, %i))
@@ -1133,7 +1164,7 @@ evaluated in float or bigfloat precision.
 @c factlim : 10;
 @c [0!, (7/2)!, 8!, 20!];
 @c [4,77!, (1.0+%i)!];
-@c [2.86b0!, 1.0b0+%i)!];
+@c [2.86b0!, (1.0b0+%i)!];
 @c ===end===
 @example
 @group
@@ -1297,6 +1328,10 @@ which differ by an integer.
 @c If exp involves binomial coefficients then they will be
 @c converted into ratios of factorials.
 
+@c ===beg===
+@c n!/(n+2)!;
+@c minfactorial (%);
+@c ===end===
 @example
 (%i1) n!/(n+2)!;
                                n!
