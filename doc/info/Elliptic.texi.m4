@@ -380,6 +380,7 @@ m4_mathjax(
 <<<$$E(\phi|m) = \int_0^\phi \sqrt{1 - m\sin^2\theta}\,d\theta$$>>>,
 <<<@math{elliptic_e(phi, m) = integrate(sqrt(1 - m*sin(x)^2), x, 0, phi)}>>>)
 
+This is Legendre's form for the elliptic integral of the second kind.
 See also @ref{elliptic_f} and @ref{elliptic_ec}.
 
 @opencatbox
@@ -400,6 +401,7 @@ m4_mathjax(
 <<<\(\tau = {\rm sn}(u, m)\).>>>,
 <<<@math{tau = sn(u,m).}>>>,
 <<<$\tau = {\rm sn}(u, m)$.>>>)
+This is Jacobi's epsilon function.
 
 This is related to @code{elliptic_e} by
 
