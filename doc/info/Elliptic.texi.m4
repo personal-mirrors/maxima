@@ -419,7 +419,7 @@ See also @ref{elliptic_e}.
 The incomplete elliptic integral of the third kind, defined as
 
 m4_mathjax(
-<<<$$\Pi(n; u|m) = \int_0^\phi {{d\theta}\over{(1-n\sin^2 \theta)\sqrt{1 - m\sin^2\theta}}}$$>>>,
+<<<$$\Pi(n; \phi|m) = \int_0^\phi {{d\theta}\over{(1-n\sin^2 \theta)\sqrt{1 - m\sin^2\theta}}}$$>>>,
 <<<@math{integrate(1/(1-n*sin(x)^2)/sqrt(1 - m*sin(x)^2), x, 0, phi)}>>>)
 
 @opencatbox
