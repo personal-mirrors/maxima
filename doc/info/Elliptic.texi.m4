@@ -135,9 +135,26 @@ that governs the distribution of Maxima.
 
 @section Functions and Variables for Elliptic Functions
 
+Elliptic functions can be defined in many different ways, including as
+inverses of elliptic functions and ratios of theta functions,  In the
+following, we express the elliptic functions as Fourier series where
+m4_mathjax(
+<<<$$q = e^{-\pi K'(m)/K(m)}$$>>>,
+<<<@math{q = exp(-\pi K'(m)/K(m))}>>>)
+and
+m4_mathjax(
+<<<$$v = {{\pi u}\over{2 K(m)}}$$>>>,
+<<<@math{v = \pi u / (2 K(m))}>>>)
+with @math{K(m)} being @ref{elliptic_kc, @code{elliptic_kc(m)}} and
+@math{K'(m)} being @code{elliptic_kc(1-m)}.
+
 @anchor{jacobi_sn}
 @deffn {Function} jacobi_sn (@var{u}, @var{m})
-The Jacobian elliptic function @math{sn(u,m)}.
+The Jacobian elliptic function @math{sn(u,m)}:
+m4_mathjax(
+<<<$${\rm sn}(u|m) = \frac{2\pi}{\sqrt{m} K} \sum_{n=0}^{\infty} \frac{q^{n+1/2}}{1-q^{2n+1}}\sin[(2n+1)v]$$>>>,
+<<<@math{sn(u|m) = 2 %pi/(sqrt(m)*K) sum(q^(n+1/2)/(1-q^(2*n+1)) sin((2*n+1)*v),n,0,inf)}>>>,
+<<<$${\rm sn}(u|m) = {{2\pi}\over{\sqrt{m} K}} \sum_{n=0}^{\infty} {q^{n+1/2}\over{1-q^{2n+1}}} \sin[(2n+1)v]$$>>>)
 
 @opencatbox
 @category{Elliptic functions}
@@ -245,7 +262,15 @@ The Jacobian elliptic function @math{dc(u,m) = dn(u,m)/cn(u,m)}.
 
 @anchor{inverse_jacobi_sn}
 @deffn {Function} inverse_jacobi_sn (@var{u}, @var{m})
-The inverse of the Jacobian elliptic function @math{sn(u,m)}.
+The inverse of the Jacobian elliptic function
+m4_mathjax(
+<<<\({\rm sn}(u,m)\).>>>,
+<<<@math{sn(u,m)}.>>>,
+<<<${\rm sn}(u,m)$.>>>)
+This can also be represented by
+m4_mathjax(
+<<<$${\rm sn}^{-1}(u, m) = \int_0^u {dt\over\sqrt{(1-t^2)(1-mt^2)}}$$>>>,
+<<<@math{sn(u,m) = integral(1/sqrt((1-t^2)(1-m*t^2)), t, 0, u)}>>>)
 
 @opencatbox
 @category{Elliptic functions}
