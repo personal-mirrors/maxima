@@ -22,15 +22,16 @@ we use the definitions and relationships given there.
 
 In particular, all elliptic functions and integrals use the parameter
 @math{m} instead of the modulus @math{k} or the modular angle
-@math{\alpha}.  This is one area where we differ from Abramowitz and
+m4_mathjax(
+<<<\(\alpha\).>>>,
+@math{\alpha}.,
+<<<$\alpha$.>>>)
+This is one area where we differ from Abramowitz and
 Stegun who use the modular angle for the elliptic functions.  The
 following relationships are true:
-@ifinfo
-@math{m = k^2} and @math{k = \sin(\alpha)}
-@end ifinfo
-@tex
-$$m = k^2$$ and $$k = \sin\alpha $$
-@end tex
+m4_mathjax(
+<<<$$m = k^2$$ and $$k = \sin \alpha$$>>>,
+<<<@math{m = k^2} and @math{k = \sin(\alpha)}>>>)
 
 The elliptic functions and integrals are primarily intended to support
 symbolic computation.  Therefore, most of derivatives of the functions
