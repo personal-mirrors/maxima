@@ -75,8 +75,10 @@ The Bessel function of the first kind of order @math{v} and argument @math{z}.
 
 @code{bessel_j} is defined as
 
-@ifnottex
-@example
+m4_mathjax(
+<<<$$J_\nu(z) = \sum_{k=0}^{\infty }{{{\left(-1\right)^{k}\,\left(z\over 2\right)^{v+2\,k}
+ }\over{k!\,\Gamma\left(v+k+1\right)}}}$$>>>,
+<<<@example
                 inf
                 ====       k  - v - 2 k  v + 2 k
                 \     (- 1)  2          z
@@ -85,12 +87,7 @@ The Bessel function of the first kind of order @math{v} and argument @math{z}.
                 ====
                 k = 0
 @end example
-@end ifnottex
-
-@tex
-$$\sum_{k=0}^{\infty }{{{\left(-1\right)^{k}\,\left(z\over 2\right)^{v+2\,k}
- }\over{k!\,\Gamma\left(v+k+1\right)}}}$$
-@end tex
+>>>)
 
 although the infinite series is not used for computations.
 
@@ -105,19 +102,15 @@ although the infinite series is not used for computations.
 
 The Bessel function of the second kind of order @math{v} and argument @math{z}.
 
-@code{bessel_y} is defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$$Y_\nu(z) = {{\cos \left(\pi\,v\right)\,J_{v}(z)-J_{-v}(z)}\over{
+ \sin \left(\pi\,v\right)}}$$>>>,
+<<<@example
               cos(%pi v) bessel_j(v, z) - bessel_j(-v, z)
               -------------------------------------------
                              sin(%pi v)
 @end example
-@end ifnottex
-
-@tex
-$${{\cos \left(\pi\,v\right)\,J_{v}(z)-J_{-v}(z)}\over{
- \sin \left(\pi\,v\right)}}$$
-@end tex
+>>>)
 
 when @math{v} is not an integer.  When @math{v} is an integer @math{n},
 the limit as @math{v} approaches @math{n} is taken.
@@ -135,8 +128,10 @@ The modified Bessel function of the first kind of order @math{v} and argument
 @math{z}.
 
 @code{bessel_i} is defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$$I_\nu(z) = \sum_{k=0}^{\infty } {{1\over{k!\,\Gamma
+ \left(v+k+1\right)}} {\left(z\over 2\right)^{v+2\,k}}}$$>>>,
+<<<@example
                     inf
                     ====   - v - 2 k  v + 2 k
                     \     2          z
@@ -145,12 +140,7 @@ The modified Bessel function of the first kind of order @math{v} and argument
                     ====
                     k = 0
 @end example
-@end ifnottex
-
-@tex
-$$\sum_{k=0}^{\infty } {{1\over{k!\,\Gamma
- \left(v+k+1\right)}} {\left(z\over 2\right)^{v+2\,k}}}$$
-@end tex
+>>>)
 
 although the infinite series is not used for computations.
 
@@ -167,16 +157,15 @@ The modified Bessel function of the second kind of order @math{v} and argument
 @math{z}.
 
 @code{bessel_k} is defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$$K_\nu(z) = {{\pi\,\csc
+\left(\pi\,v\right)\,\left(I_{-v}(z)-I_{v}(z)\right)}\over{2}}$$>>>,
+<<<@example
            %pi csc(%pi v) (bessel_i(-v, z) - bessel_i(v, z))
            -------------------------------------------------
                                   2
 @end example
-@end ifnottex
-@tex
-$${{\pi\,\csc \left(\pi\,v\right)\,\left(I_{-v}(z)-I_{v}(z)\right)}\over{2}}$$
-@end tex
+>>>)
 
 when @math{v} is not an integer.  If @math{v} is an integer @math{n},
 then the limit as @math{v} approaches @math{n} is taken.
@@ -511,8 +500,10 @@ Complex bigfloat factorial.
 
 The basic definition of the gamma function (A&S 6.1.1) is
 
-@ifnottex
-@example
+m4_mathjax(
+<<<$$\Gamma\left(z\right)=\int_{0}^{\infty }{t^{z-1}\,e^ {- t
+}\;dt}$$>>>,
+<<<@example
                          inf
                         /
                         [     z - 1   - t
@@ -521,10 +512,7 @@ The basic definition of the gamma function (A&S 6.1.1) is
                         /
                          0
 @end example
-@end ifnottex
-@tex
-$$\Gamma\left(z\right)=\int_{0}^{\infty }{t^{z-1}\,e^ {- t }\;dt}$$
-@end tex
+>>>)
 
 Maxima simplifies @code{gamma} for positive integer and positive and negative 
 rational numbers. For half integral values the result is a rational number times 
@@ -627,8 +615,10 @@ The natural logarithm of the gamma function.
 
 The lower incomplete gamma function (A&S 6.5.2):
 
-@ifnottex
-@example
+m4_mathjax(
+<<<$$\gamma\left(a , z\right)=\int_{0}^{z}{t^{a-1}\,e^ {- t
+}\;dt}$$>>>,
+<<<@example
                                     z
                                    /
                                    [  a - 1   - t
@@ -637,10 +627,7 @@ The lower incomplete gamma function (A&S 6.5.2):
                                    /
                                     0
 @end example
-@end ifnottex
-@tex
-$$\gamma\left(a , z\right)=\int_{0}^{z}{t^{a-1}\,e^ {- t }\;dt}$$
-@end tex
+>>>)
 
 See also @mref{gamma_incomplete} (upper incomplete gamma function).
 
@@ -655,8 +642,10 @@ See also @mref{gamma_incomplete} (upper incomplete gamma function).
 
 The incomplete upper gamma function (A&S 6.5.3):
 
-@ifnottex
-@example
+m4_mathjax(
+<<<$$\Gamma\left(a , z\right)=\int_{z}^{\infty }{t^{a-1}\,e^ {- t
+}\;dt}$$>>>,
+<<<@example
                               inf
                              /
                              [     a - 1   - t
@@ -665,10 +654,7 @@ The incomplete upper gamma function (A&S 6.5.3):
                              /
                               z
 @end example
-@end ifnottex
-@tex
-$$\Gamma\left(a , z\right)=\int_{z}^{\infty }{t^{a-1}\,e^ {- t }\;dt}$$
-@end tex
+>>>)
 
 See also @mref{gamma_expand} for controlling how
 @code{gamma_incomplete} is expressed in terms of elementary functions
@@ -687,17 +673,16 @@ Also see the related functions @code{gamma_incomplete_regularized} and
 
 The regularized incomplete upper gamma function (A&S 6.5.1):
 
-@ifnottex
-@example
+m4_mathjax(
+<<<$${\it Q}\left(a , z\right)={{\Gamma\left(a ,
+z\right)}\over{\Gamma\left(a\right)}}$$>>>,
+<<<@example
 gamma_incomplete_regularized(a, z) = 
                                         gamma_incomplete(a, z)
                                         ----------------------
                                                gamma(a)
 @end example
-@end ifnottex
-@tex
-$${\it Q}\left(a , z\right)={{\Gamma\left(a , z\right)}\over{\Gamma\left(a\right)}}$$
-@end tex
+>>>)
 
 See also @mref{gamma_expand} for controlling how
 @code{gamma_incomplete} is expressed in terms of elementary functions
@@ -715,8 +700,10 @@ Also see @code{gamma_incomplete}.
 
 The generalized incomplete gamma function.
 
-@ifnottex
-@example
+m4_mathjax(
+<<<$$\Gamma\left(a , z_{1},
+z_{2}\right)=\int_{z_{1}}^{z_{2}}{t^{a-1}\,e^ {- t }\;dt}$$>>>,
+<<<@example
 gamma_incomplete_generalized(a, z1, z2) = 
                                                z2
                                               /
@@ -726,10 +713,7 @@ gamma_incomplete_generalized(a, z1, z2) =
                                               /
                                                z1
 @end example
-@end ifnottex
-@tex
-$$\Gamma\left(a , z_{1}, z_{2}\right)=\int_{z_{1}}^{z_{2}}{t^{a-1}\,e^ {- t }\;dt}$$
-@end tex
+>>>)
 
 Also see @code{gamma_incomplete} and @code{gamma_incomplete_regularized}.
 
@@ -945,7 +929,9 @@ The derivative of the beta function wrt @code{a}:
 
 The basic definition of the incomplete beta function (A&S 6.6.1) is
 
-@example
+m4_mathjax(
+<<<$$I_z(a,b) = \int_0^z (1-t)^{b-1} t^{a-1}\, dt$$>>>,
+<<<@example
 @group
         z
        /
@@ -956,6 +942,7 @@ The basic definition of the incomplete beta function (A&S 6.6.1) is
         0
 @end group
 @end example
+>>>)
 
 This definition is possible for @math{realpart(a)>0} and @math{realpart(b)>0} 
 and @math{abs(z)<1}. For other values the incomplete beta function can be 
@@ -971,7 +958,9 @@ function.)
 For negative integers @math{a = -n} and positive integers @math{b=m} with 
 @math{m<=n} the incomplete beta function is defined through
 
-@example
+m4_mathjax(
+<<<$$z^{n-1}\sum_{k=0}^{m-1} {(1-m)_k z^k\over{k! (n-k)}}$$>>>,
+<<<@example
                             m - 1           k
                             ====  (1 - m)  z
                       n - 1 \            k
@@ -980,6 +969,7 @@ For negative integers @math{a = -n} and positive integers @math{b=m} with
                             ====
                             k = 0
 @end example
+>>>)
 
 Maxima uses this definition to simplify @code{beta_incomplete} for @var{a} a 
 negative integer.
@@ -1545,17 +1535,14 @@ Abramowitz and Stegun,
 @deffn {Function} expintegral_e1 (@var{z})
 The Exponential Integral E1(z) (A&S 5.1.1) defined as
 
-@ifnotinfo
-@tex
-$$E_1(z) = \int_z^\infty {e^{-t} \over t} dt$$
-
-with $|\arg\ z| < \pi$.
-@end tex
-@end ifnotinfo
-@ifinfo
-@math{integrate(exp(-t)/t, t, z, inf)}
-with @math{abs(arg z) < %pi}.
-@end ifinfo
+m4_mathjax(
+<<<$$E_1(z) = \int_z^\infty {e^{-t} \over t} dt$$>>>,
+<<<@math{integrate(exp(-t)/t, t, z, inf)}>>>)
+with
+m4_mathjax(
+<<<\(|\arg\ z| < \pi\).>>>,
+<<<@math{abs(arg z) < %pi}.>>>,
+<<<$|\arg\ z| < \pi$.>>>)
 
 @opencatbox
 @category{Exponential Integrals} @category{Special functions}
@@ -1581,16 +1568,13 @@ The Exponential Integral Li(z)  (A&S 5.1.3)
 @deffn {Function} expintegral_e (@var{n},@var{z})
 The Exponential Integral En(z)  (A&S 5.1.4) defined as
 
-@ifnotinfo
-@tex
-$$E_n(z) = \int_1^\infty {e^{-zt} \over t^n} dt$$
-with ${\rm Re}\ z > 0$ and $n = 0, 1, 2, \ldots$.
-@end tex
-@end ifnotinfo
-@ifinfo
-@math{integrate(exp(-z*t)/t^n, t, 1, inf)}
-with @math{real(x) > 1} and @math{n} a non-negative integer.
-@end ifinfo
+m4_mathjax(
+<<<$$E_n(z) = \int_1^\infty {e^{-zt} \over t^n} dt$$>>>,
+<<<@math{integrate(exp(-z*t)/t^n, t, 1, inf)}>>>)
+with
+m4_mathjax(
+<<<${\rm Re}\ z > 0$ and $n = 0, 1, 2, \ldots$.>>>,
+<<<@math{real(x) > 1} and @math{n} a non-negative integer.>>>)
 
 @opencatbox
 @category{Exponential Integrals} @category{Special functions}
@@ -1600,14 +1584,9 @@ with @math{real(x) > 1} and @math{n} a non-negative integer.
 @deffn {Function} expintegral_si (@var{z})
 The Exponential Integral Si(z) (A&S 5.2.1) defined as
 
-@ifnotinfo
-@tex
-$${\rm Si}(z) = \int_0^z {\sin t \over t} dt$$
-@end tex
-@end ifnotinfo
-@ifinfo
-@math{integrate(sin(t)/t, t, 0, z)}
-@end ifinfo
+m4_mathjax(
+<<<$${\rm Si}(z) = \int_0^z {\sin t \over t}\, dt$$>>>,
+<<<@math{integrate(sin(t)/t, t, 0, z)}>>>)
 
 @opencatbox
 @category{Exponential Integrals} @category{Special functions}
@@ -1617,18 +1596,15 @@ $${\rm Si}(z) = \int_0^z {\sin t \over t} dt$$
 @deffn {Function} expintegral_ci (@var{z})
 The Exponential Integral Ci(z) (A&S 5.2.2) defined as
 
-@ifnotinfo
-@tex
-$${\rm Ci}(z) = \gamma + \log z + \int_0^z {{\cos t - 1} \over t} dt$$
-
-with $|\arg\ z| < \pi$.
-@end tex
-@end ifnotinfo
-@ifinfo
-@math{%gamma + log(z) + integrate((cos(t) - 1)/t, t, 0, z)}
-
-with @math{abs(arg z) < %pi}
-@end ifinfo
+m4_mathjax(
+<<<$${\rm Ci}(z) = \gamma + \log z + \int_0^z {{\cos t - 1} \over t}
+dt$$>>>,
+<<<@math{%gamma + log(z) + integrate((cos(t) - 1)/t, t, 0, z)}>>>)
+with
+m4_mathjax(
+<<<\(|\arg\ z| < \pi\).>>>,
+<<<@math{abs(arg z) < %pi}>>>,
+<<<$|\arg\ z| < \pi$.>>>)
 
 @opencatbox
 @category{Exponential Integrals} @category{Special functions}
@@ -1638,15 +1614,9 @@ with @math{abs(arg z) < %pi}
 @deffn {Function} expintegral_shi (@var{z})
 The Exponential Integral Shi(z) (A&S 5.2.3) defined as
 
-@ifnotinfo
-@tex
-$${\rm Shi}(z) = \int_0^z {\sinh t \over t} dt$$
-@end tex
-@end ifnotinfo
-@ifinfo
-@math{integrate(sinh(t)/t, t, 0, z)}
-@end ifinfo
-
+m4_mathjax(
+<<<$${\rm Shi}(z) = \int_0^z {\sinh t \over t} dt$$>>>,
+<<<@math{integrate(sinh(t)/t, t, 0, z)}>>>)
 
 @opencatbox
 @category{Exponential Integrals} @category{Special functions}
@@ -1656,18 +1626,15 @@ $${\rm Shi}(z) = \int_0^z {\sinh t \over t} dt$$
 @deffn {Function} expintegral_chi (@var{z})
 The Exponential Integral Chi(z) (A&S 5.2.4) defined as
 
-@ifnotinfo
-@tex
-$${\rm Chi}(z) = \gamma + \log z + \int_0^z {{\cosh t - 1} \over t} dt$$
-
-with $|\arg\ z| < \pi$.
-@end tex
-@end ifnotinfo
-@ifinfo
-@math{%gamma + log(z) + integrate((cosh(t) - 1)/t, t, 0, z)}
-
-with @math{abs(arg z) < %pi}
-@end ifinfo
+m4_mathjax(
+<<<$${\rm Chi}(z) = \gamma + \log z + \int_0^z {{\cosh t - 1} \over t}
+dt$$>>>,
+<<<@math{%gamma + log(z) + integrate((cosh(t) - 1)/t, t, 0, z)}>>>)
+with
+m4_mathjax(
+<<<\(|\arg\ z| < \pi\).>>>,
+<<<@math{abs(arg z) < %pi}.>>>,
+<<<$|\arg\ z| < \pi$.>>>)
 
 @opencatbox
 @category{Exponential Integrals} @category{Special functions}
@@ -1754,7 +1721,10 @@ Generalized Error function Erf(z1,z2)
 @end deffn
 
 @deffn {Function} fresnel_c (@var{z})
-The Fresnel Integral C(z) = integrate(cos((%pi/2)*t^2),t,0,z). (A&S 7.3.1)
+The Fresnel Integral, A&S 7.3.1:
+m4_mathjax(
+<<<$$C(z) = \int_0^z \cos{\pi t^2\over{2}}\, dt$$>>>,
+<<<@math{C(z) = integrate(cos((%pi/2)*t^2),t,0,z)}>>>)
 
 The simplification fresnel_c(-x) = -fresnel_c(x) is applied when
 flag @code{trigsign} is true.
@@ -1769,7 +1739,10 @@ See flags @code{erf_representation} and @code{hypergeometric_representation}.
 @end deffn
 
 @deffn {Function} fresnel_s (@var{z})
-The Fresnel Integral S(z) = integrate(sin((%pi/2)*t^2),t,0,z). (A&S 7.3.2)
+The Fresnel Integral, A&S 7.3.2:
+m4_mathjax(
+<<<$$S(z) = \int_0^z \sin{\pi t^2\over{2}}\, dt$$>>>,
+<<<@math{S(z) = integrate(sin((%pi/2)*t^2),t,0,z)}>>>)
 
 The simplification fresnel_s(-x) = -fresnel_s(x) is applied when
 flag @code{trigsign} is true.
