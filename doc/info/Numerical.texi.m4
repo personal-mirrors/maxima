@@ -669,30 +669,27 @@ Examples:
 
 The Ordinary Differential Equations (ODE) solved by the functions in this
 section should have the form,
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{dy}\over{dx}} = F(x,y)$$>>>,
+<<<@example
        dy
        -- = F(x,y)
        dx
 @end example
-@end ifnottex
-@tex
-$${{dy}\over{dx}} = F(x,y)$$
-@end tex
+>>>)
 which is a first-order ODE. Higher order differential equations of order
 @var{n} must be written as a system of @var{n} first-order equations of that
 kind. For instance, a second-order ODE should be written as a system of two
 equations
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{dx}\over{dt}} = G(x,y,t) \qquad {{dy}\over{dt}} =
+F(x,y,t)$$>>>,
+<<<@example
        dx               dy
        -- = G(x,y,t)    -- = F(x,y,t) 
        dt               dt
 @end example
-@end ifnottex
-@tex
-$${{dx}\over{dt}} = G(x,y,t) \qquad {{dy}\over{dt}} = F(x,y,t)$$
-@end tex
+>>>)
 
 The first argument in the functions will be a list with the expressions on
 the right-side of the ODE's. The variables whose derivatives are represented
@@ -1055,14 +1052,12 @@ by the values of the dependent variables corresponding to that point.
 
 To solve numerically the differential equation
 
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{dx}\over{dt}} = t - x^2$$ >>>,
+<<<@example
           dx/dt = t - x^2
 @end example
-@end ifnottex
-@tex
-$${{dx}\over{dt}} = t - x^2$$ 
-@end tex
+>>>)
 
 With initial value x(t=0) = 1, in the interval of t from 0 to 8 and with
 increments of 0.1 for t, use:
@@ -1080,14 +1075,13 @@ the results will be saved in the list @code{results} and the plot will show the 
 
 To solve numerically the system:
 
-@ifnottex
-@example
+m4_mathjax(
+<<<$$\cases{{\displaystyle{dx}\over\displaystyle{dt}} = 4-x^2-4y^2
+&\cr &\cr {\displaystyle{dy}\over\displaystyle{dt}} = y^2-x^2+1}$$>>>,
+<<<@example
         dx/dt = 4-x^2-4*y^2     dy/dt = y^2-x^2+1
 @end example
-@end ifnottex
-@tex
-$$\cases{{\displaystyle{dx}\over\displaystyle{dt}} = 4-x^2-4y^2 &\cr &\cr {\displaystyle{dy}\over\displaystyle{dt}} = y^2-x^2+1}$$
-@end tex
+>>>)
 
 for t between 0 and 4, and with values of -1.25 and 0.75 for x and y at t=0:
 
