@@ -73,11 +73,10 @@ The return value is a big float (bfloat);
 
 The Hurwitz zeta function is defined as
 
-@tex
-$$\zeta \left(s,h\right) = \sum_{k=0}^\infty {1 \over \left(k+h\right)^{s}}$$
-@end tex
-@ifnottex
-@example
+m4_mathjax(
+<<<$$\zeta \left(s,h\right) = \sum_{k=0}^\infty {1 \over
+\left(k+h\right)^{s}}$$>>>,
+<<<@example
                         inf
                         ====
                         \        1
@@ -86,7 +85,7 @@ $$\zeta \left(s,h\right) = \sum_{k=0}^\infty {1 \over \left(k+h\right)^{s}}$$
                         ====  (k + h)
                         k = 0
 @end example
-@end ifnottex
+>>>)
 
 @code{load ("bffac")} loads this function.
 
