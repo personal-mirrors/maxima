@@ -130,11 +130,10 @@ top-level Maxima and then translated and compiled to machine code.
 Use @code{load ("dblint")} to access this package.  It uses the Simpson's rule
 method in both the x and y directions to calculate
 
-@tex
-$$\int_a^b \int_{r\left(x\right)}^{s\left(x\right)} f\left(x,y\right) \, dy \, dx.$$
-@end tex
-@ifnottex
-@example
+m4_mathjax(
+<<<$$\int_a^b \int_{r\left(x\right)}^{s\left(x\right)}
+f\left(x,y\right) \, dy \, dx.$$>>>,
+<<<@example
 @group
 /b /s(x)
 |  |
@@ -143,7 +142,7 @@ $$\int_a^b \int_{r\left(x\right)}^{s\left(x\right)} f\left(x,y\right) \, dy \, d
 /a /r(x)
 @end group
 @end example
-@end ifnottex
+>>>)
 
 The function @var{f} must be a translated or compiled function of two variables,
 and @var{r} and @var{s} must each be a translated or compiled function of one
@@ -1042,12 +1041,9 @@ are suitable for strongly oscillating integrands.
 
 @code{quad_qag} computes the integral
 
-@ifnottex
-@math{integrate (f(x), x, a, b)}
-@end ifnottex
-@tex
-$$\int_a^b {f(x) \, dx}$$
-@end tex
+m4_mathjax(
+<<<$$\int_a^b {f(x) \, dx}$$>>>,
+<<<@math{integrate (f(x), x, a, b)}>>>)
 
 The function to be integrated is @var{f(x)}, with dependent
 variable @var{x}, and the function is to be integrated between the
@@ -1146,12 +1142,9 @@ extrapolation (de Doncker, 1978) by the Epsilon algorithm (Wynn, 1956).
 
 @code{quad_qags} computes the integral
 
-@ifnottex
-@math{integrate (f(x), x, a, b)}
-@end ifnottex
-@tex
-$$\int_a^b {f(x) \, dx}$$
-@end tex
+m4_mathjax(
+<<<$$\int_a^b {f(x) \, dx}$$>>>,
+<<<@math{integrate (f(x), x, a, b)}>>>)
 
 The function to be integrated is @var{f(x)}, with
 dependent variable @var{x}, and the function is to be integrated
@@ -1241,26 +1234,17 @@ then the same strategy as in @code{quad_qags} is applied.
 
 @code{quad_qagi} evaluates one of the following integrals
 
-@ifnottex
-@math{integrate (f(x), x, a, inf)}
-@end ifnottex
-@tex
-$$\int_a^\infty {f(x) \, dx}$$
-@end tex
+m4_mathjax(
+<<<$$\int_a^\infty {f(x) \, dx}$$>>>,
+<<<@math{integrate (f(x), x, a, inf)}>>>)
 
-@ifnottex
-@math{integrate (f(x), x, minf, a)}
-@end ifnottex
-@tex
-$$\int_\infty^a {f(x) \, dx}$$
-@end tex
+m4_mathjax(
+<<<$$\int_\infty^a {f(x) \, dx}$$>>>,
+<<<@math{integrate (f(x), x, minf, a)}>>>)
 
-@ifnottex
-@math{integrate (f(x), x, minf, inf)}
-@end ifnottex
-@tex
-$$\int_{-\infty}^\infty {f(x) \, dx}$$
-@end tex
+m4_mathjax(
+<<<$$\int_{-\infty}^\infty {f(x) \, dx}$$>>>,
+<<<@math{integrate (f(x), x, minf, inf)}>>>)
 
 using the Quadpack QAGI routine.  The function to be integrated is
 @var{f(x)}, with dependent variable @var{x}, and the function is to
@@ -1360,12 +1344,9 @@ which contain the point @math{x = c}.
 
 @code{quad_qawc} computes the Cauchy principal value of
 
-@ifnottex
-@math{integrate (f(x)/(x - c), x, a, b)}
-@end ifnottex
-@tex
-$$\int_{a}^{b}{{{f\left(x\right)}\over{x-c}}\>dx}$$
-@end tex
+m4_mathjax(
+<<<$$\int_{a}^{b}{{{f\left(x\right)}\over{x-c}}\>dx}$$>>>,
+<<<@math{integrate (f(x)/(x - c), x, a, b)}>>>)
 
 using the Quadpack QAWC routine.  The function to be integrated is
 @code{@var{f(x)}/(@var{x} - @var{c})}, with dependent variable @var{x}, and the
@@ -1480,20 +1461,23 @@ series of the integral contributions.
 
 @code{quad_qawf} computes the integral
 
-@ifnottex
-@math{integrate (f(x)*w(x), x, a, inf)}
-@end ifnottex
-@tex
-$$\int_a^\infty f(x) \, w(x) \, dx$$
-@end tex
+m4_mathjax(
+<<<$$\int_a^\infty f(x) \, w(x) \, dx$$>>>,
+<<<@math{integrate (f(x)*w(x), x, a, inf)}>>>)
 
 The weight function @math{w} is selected by @var{trig}:
 
 @table @code
 @item cos
-@math{w(x) = cos (omega x)}
+m4_mathjax(
+<<<\(w(x) = \cos \omega x\)>>>,
+<<<@math{w(x) = cos (omega x)}>>>,
+<<<$w(x) = cos \omega x$>>>)
 @item sin
-@math{w(x) = sin (omega x)}
+m4_mathjax(
+<<<\(w(x) = \sin \omega x\)>>>,
+<<<@math{w(x) = sin (omega x)}>>>,
+<<<$w(x) = \sin \omega x$>>>)
 @end table
 
 The integrand may be specified as the name of a Maxima or Lisp function or
@@ -1585,27 +1569,21 @@ Examples:
 @fname{quad_qawo} (@var{f}, @var{x}, @var{a}, @var{b}, @var{omega}, @var{trig}, [@var{epsrel}, @var{epsabs}, @var{limit}, @var{maxp1}, @var{limlst}])
 
 Integration of
-@ifnottex
-@math{cos (omega x) f(x)}
-@end ifnottex
-@tex
-$\cos \left(\omega \, x\right) \, f\left(x\right)$
-@end tex
+m4_mathjax(
+<<<\(\cos \left(\omega \, x\right) \, f\left(x\right)\)>>>,
+<<<@math{cos (omega x) f(x)}>>>,
+<<<$\cos \left(\omega \, x\right) \, f\left(x\right)$>>>)
 or
-@ifnottex
-@math{sin (omega x) f(x)}
-@end ifnottex
-@tex
-$\sin \left(\omega \, x\right) \, f\left(x\right)$
-@end tex
+m4_mathjax(
+<<<\(\sin \left(\omega \, x\right) \, f\left(x\right)\)>>>,
+<<<@math{sin (omega x) f(x)}>>>,
+<<<$\sin \left(\omega \, x\right) \, f\left(x\right)$>>>)
 over a finite interval,
 where
-@ifnottex
-@math{omega}
-@end ifnottex
-@tex
-$\omega$
-@end tex
+m4_mathjax(
+<<<\(\omega\)>>>,
+<<<@math{omega}>>>,
+<<<$\omega$>>>)
 is a constant.  The rule evaluation component is based on the modified
 Clenshaw-Curtis technique.  @code{quad_qawo} applies adaptive subdivision with
 extrapolation, similar to @code{quad_qags}.
@@ -1613,30 +1591,23 @@ extrapolation, similar to @code{quad_qags}.
 @code{quad_qawo} computes the integral using the Quadpack QAWO
 routine:
 
-@ifnottex
-@math{integrate (f(x)*w(x), x, a, b)}
-@end ifnottex
-@tex
-$$\int_a^b f(x) \, w(x) \, dx$$
-@end tex
+m4_mathjax(
+<<<$$\int_a^b f(x) \, w(x) \, dx$$>>>,
+<<<@math{integrate (f(x)*w(x), x, a, b)}>>>)
 
 The weight function @math{w} is selected by @var{trig}:
 
 @table @code
 @item cos
-@ifnottex
-@math{w(x) = cos (omega x)}
-@end ifnottex
-@tex
-$w\left(x\right) = \cos \left(\omega \, x\right)$
-@end tex
+m4_mathjax(
+<<<\(w\left(x\right) = \cos \left(\omega \, x\right)\)>>>,
+<<<@math{w(x) = cos (omega x)}>>>,
+<<<$w\left(x\right) = \cos \left(\omega \, x\right)$>>>)
 @item sin
-@ifnottex
-@math{w(x) = sin (omega x)}
-@end ifnottex
-@tex
-$w\left(x\right) = \sin \left(\omega \, x\right)$
-@end tex
+m4_mathjax(
+<<<\(w\left(x\right) = \sin \left(\omega \, x\right)\)>>>,
+<<<@math{w(x) = sin (omega x)}>>>,
+<<<$w\left(x\right) = \sin \left(\omega \, x\right)$>>>)
 @end table
 
 The integrand may be specified as the name of a Maxima or Lisp function or
@@ -1740,44 +1711,37 @@ subintervals which contain the endpoints of the interval of integration.
 
 @code{quad_qaws} computes the integral using the Quadpack QAWS routine:
 
-@ifnottex
-@math{integrate (f(x)*w(x), x, a, b)}
-@end ifnottex
-@tex
-$$\int_a^b f(x) \, w(x) \, dx$$
-@end tex
+m4_mathjax(
+<<<$$\int_a^b f(x) \, w(x) \, dx$$>>>,
+<<<@math{integrate (f(x)*w(x), x, a, b)}>>>)
 
 The weight function @math{w} is selected by @var{wfun}:
 
 @table @code
 @item 1
-@ifnottex
-@math{w(x) = (x - a)^alpha (b - x)^beta}
-@end ifnottex
-@tex
-$w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta$
-@end tex
+m4_mathjax(
+<<<\(w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta\)>>>,
+<<<@math{w(x) = (x - a)^alpha (b - x)^beta}>>>,
+<<<$w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta$>>>)
 @item 2
-@ifnottex
-@math{w(x) = (x - a)^alpha (b - x)^beta log(x - a)}
-@end ifnottex
-@tex
-$w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta \, \log\left(x - a\right)$
-@end tex
+m4_mathjax(
+<<<\(w\left(x\right) = \left(x - a\right)^\alpha \, \left(b -
+x\right)^\beta \, \log\left(x - a\right)\)>>>,
+<<<@math{w(x) = (x - a)^alpha (b - x)^beta log(x - a)}>>>,
+<<<$w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta \, \log\left(x - a\right)$>>>)
 @item 3
-@ifnottex
-@math{w(x) = (x - a)^alpha (b - x)^beta log(b - x)}
-@end ifnottex
-@tex
-$w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta \, \log\left(b - x\right)$
-@end tex
+m4_mathjax(
+<<<\(w\left(x\right) = \left(x - a\right)^\alpha \, \left(b -
+x\right)^\beta \, \log\left(b - x\right)\)>>>,
+<<<@math{w(x) = (x - a)^alpha (b - x)^beta log(b - x)}>>>,
+<<<$w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta \, \log\left(b - x\right)$>>>)
 @item 4
-@ifnottex
-@math{w(x) = (x - a)^alpha (b - x)^beta log(x - a) log(b - x)}
-@end ifnottex
-@tex
-$w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta \, \log\left(x - a\right) \, \log\left(b - x\right)$
-@end tex
+m4_mathjax(
+<<<\(w\left(x\right) = \left(x - a\right)^\alpha \, \left(b -
+x\right)^\beta \, \log\left(x - a\right) \, \log\left(b -
+x\right)\)>>>,
+<<<@math{w(x) = (x - a)^alpha (b - x)^beta log(x - a) log(b - x)}>>>,
+<<<$w\left(x\right) = \left(x - a\right)^\alpha \, \left(b - x\right)^\beta \, \log\left(x - a\right) \, \log\left(b - x\right)$>>>)
 @end table
 
 The integrand may be specified as the name of a Maxima or Lisp function or
@@ -1878,12 +1842,9 @@ extrapolation (de Doncker, 1978) by the Epsilon algorithm (Wynn, 1956).
 
 @code{quad_qagp} computes the integral
 
-@ifnottex
-@math{integrate (f(x), x, a, b)}
-@end ifnottex
-@tex
-$$\int_a^b {f(x) \, dx}$$
-@end tex
+m4_mathjax(
+<<<$$\int_a^b {f(x) \, dx}$$>>>,
+<<<@math{integrate (f(x), x, a, b)}>>>)
 
 The function to be integrated is @var{f(x)}, with
 dependent variable @var{x}, and the function is to be integrated
