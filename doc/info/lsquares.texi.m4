@@ -451,8 +451,7 @@ Example:
            2             2
  + ((D + 1)  - C - B - A) )/5
 @end group
-@end example
-@example
+@group
 (%i3) mse : lsquares_mse (M, [z, x, y], (z + D)^2 = A*x + B*y + C);
            5
           ====
@@ -463,8 +462,8 @@ Example:
           i = 1
 (%o3)     ---------------------------------------------
                                 5
-@end example
-@example
+@end group
+@group
 (%i4) diff (mse, D);
          5
         ====
@@ -475,8 +474,8 @@ Example:
         i = 1
 (%o4) ----------------------------------------------------------
                                   5
-@end example
-@example
+@end group
+@group
 (%i5) ''mse, nouns;
 @group
                2                 2         9 2               2
@@ -487,6 +486,7 @@ Example:
                                      2
            2             2
  + ((D + 1)  - C - B - A) )/5
+@end group
 @end group
 @end example
 
