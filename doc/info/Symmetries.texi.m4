@@ -191,12 +191,11 @@ consisting of the @math{q} first rows and the columns @math{1 + i_1,
 This Schur function can be written in terms of monomials by using
 @code{treinat} and @code{kostka}.  The form returned is a symmetric
 polynomial in a contracted representation in the variables
-@tex
-$x_1,x_2,\ldots$
-@end tex
-@ifnottex
-@math{x_1,x_2,...}
-@end ifnottex
+m4_mathjax(
+<<<\(x_1,x_2,\ldots\)>>>,
+<<<@math{x_1,x_2,...}>>>,
+<<<$x_1,x_2,\ldots$>>>)
+
 
 @c GENERATED FROM THE FOLLOWING
 @c mon2schur ([1, 1, 1]);

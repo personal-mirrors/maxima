@@ -1628,11 +1628,9 @@ See @mrefdot{%emode}
 Represents the polylogarithm function of order @var{s} and argument @var{z},
 defined by the infinite series
 
-@tex
-$${\rm Li}_s \left(z\right) = \sum_{k=1}^\infty {z^k \over k^s}$$
-@end tex
-@ifnottex
-@example
+m4_mathjax(
+<<<$${\rm Li}_s \left(z\right) = \sum_{k=1}^\infty {z^k \over k^s}$$>>>,
+<<<@example
                                  inf
                                  ====   k
                                  \     z
@@ -1641,7 +1639,7 @@ $${\rm Li}_s \left(z\right) = \sum_{k=1}^\infty {z^k \over k^s}$$
                                  ====  k
                                  k = 1
 @end example
-@end ifnottex
+>>>)
 
 @code{li [1]} is @code{- log (1 - z)}.  @code{li [2]} and @code{li [3]} are the
 dilogarithm and trilogarithm functions, respectively.
@@ -2784,23 +2782,18 @@ arguments to trigonometric functions.  E.g., @code{sin(-x)} will become
 @anchor{trigsimp}
 @deffn {Function} trigsimp (@var{expr})
 
-@iftex
 Employs the identities
-@tex
-$\sin\left(x\right)^2 + \cos\left(x\right)^2 = 1$
-@end tex
+m4_mathjax(
+<<<\(\sin\left(x\right)^2 + \cos\left(x\right)^2 = 1\)>>>,
+<<<@math{sin(x)^2 + cos(x)^2 = 1}>>>,
+<<<$\sin\left(x\right)^2 + \cos\left(x\right)^2 = 1$>>>)
 and
-@tex
-$\cosh\left(x\right)^2 - \sinh\left(x\right)^2 = 1$
-@end tex
-to simplify expressions containing @code{tan}, @code{sec},
-etc., to @code{sin}, @code{cos}, @code{sinh}, @code{cosh}.
-@end iftex
-@ifnottex
-Employs the identities @math{sin(x)^2 + cos(x)^2 = 1} and
-@math{cosh(x)^2 - sinh(x)^2 = 1} to simplify expressions containing @code{tan},
+m4_mathjax(
+<<<\(\cosh\left(x\right)^2 - \sinh\left(x\right)^2 = 1\)>>>,
+<<<@math{cosh(x)^2 - sinh(x)^2 = 1}>>>,
+<<<$\cosh\left(x\right)^2 - \sinh\left(x\right)^2 = 1$>>>)
+to simplify expressions containing @code{tan},
 @code{sec}, etc., to @code{sin}, @code{cos}, @code{sinh}, @code{cosh}.
-@end ifnottex
 
 @code{trigreduce}, @code{ratsimp}, and @code{radcan} may be
 able to further simplify the result.

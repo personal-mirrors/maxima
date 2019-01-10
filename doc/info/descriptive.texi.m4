@@ -695,8 +695,9 @@ Add a constant column and remove the third variable.
 @fname{mean} (@var{matrix})
 
 This is the sample mean, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${\bar{x}={1\over{n}}{\sum_{i=1}^{n}{x_{i}}}}$$>>>,
+<<<@example
                        n
                      ====
              _   1   \
@@ -705,10 +706,7 @@ This is the sample mean, defined as
                      ====
                      i = 1
 @end example
-@end ifnottex
-@tex
-$${\bar{x}={1\over{n}}{\sum_{i=1}^{n}{x_{i}}}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -753,8 +751,9 @@ Example:
 @fname{var} (@var{matrix})
 
 This is the sample variance, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1}\over{n}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^2}}$$>>>,
+<<<@example
 @group
                      n
                    ====
@@ -765,10 +764,7 @@ This is the sample variance, defined as
                    i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1}\over{n}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^2}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -801,8 +797,9 @@ See also function @mrefdot{var1}
 @fname{var1} (@var{matrix})
 
 This is the sample variance, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1\over{n-1}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^2}}}$$>>>,
+<<<@example
 @group
                      n
                    ====
@@ -813,10 +810,7 @@ This is the sample variance, defined as
                    i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1\over{n-1}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^2}}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -937,8 +931,9 @@ See also functions @mref{var1} and @mrefdot{std}
 @fname{noncentral_moment} (@var{matrix}, @var{k})
 
 The non central moment of order @math{k}, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1\over{n}}{\sum_{i=1}^{n}{x_{i}^k}}}$$>>>,
+<<<@example
 @group
                        n
                      ====
@@ -949,10 +944,7 @@ The non central moment of order @math{k}, defined as
                      i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1\over{n}}{\sum_{i=1}^{n}{x_{i}^k}}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -995,8 +987,9 @@ See also function @mrefdot{central_moment}
 @fname{central_moment} (@var{matrix}, @var{k})
 
 The central moment of order @math{k}, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1\over{n}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^k}}}$$>>>,
+<<<@example
 @group
                     n
                   ====
@@ -1007,10 +1000,7 @@ The central moment of order @math{k}, defined as
                   i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1\over{n}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^k}}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -1329,8 +1319,9 @@ See also function @mrefdot{quantile}
 @fname{mean_deviation} (@var{matrix})
 
 The mean deviation, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1\over{n}}{\sum_{i=1}^{n}{|x_{i}-\bar{x}|}}}$$>>>,
+<<<@example
 @group
                      n
                    ====
@@ -1341,10 +1332,7 @@ The mean deviation, defined as
                    i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1\over{n}}{\sum_{i=1}^{n}{|x_{i}-\bar{x}|}}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -1387,8 +1375,9 @@ See also function @mrefdot{mean}
 @fname{median_deviation} (@var{matrix})
 
 The median deviation, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1\over{n}}{\sum_{i=1}^{n}{|x_{i}-med|}}}$$>>>,
+<<<@example
 @group
                  n
                ====
@@ -1399,10 +1388,7 @@ The median deviation, defined as
                i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1\over{n}}{\sum_{i=1}^{n}{|x_{i}-med|}}}$$
-@end tex
+>>>)
 where @code{med} is the median of @var{list}.
 
 Example:
@@ -1445,8 +1431,9 @@ See also function @mrefdot{mean}
 @fname{harmonic_mean} (@var{matrix})
 
 The harmonic mean, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{n}\over{\sum_{i=1}^{n}{{{1}\over{x_{i}}}}}}$$>>>,
+<<<@example
 @group
                   n
                --------
@@ -1459,10 +1446,7 @@ The harmonic mean, defined as
                i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{n}\over{\sum_{i=1}^{n}{{{1}\over{x_{i}}}}}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -1504,8 +1488,9 @@ See also functions @mref{mean} and @mrefdot{geometric_mean}
 @fname{geometric_mean} (@var{matrix})
 
 The geometric mean, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$$\left(\prod_{i=1}^{n}{x_{i}}\right)^{{{1}\over{n}}}$$>>>,
+<<<@example
 @group
                  /  n      \ 1/n
                  | /===\   |
@@ -1516,10 +1501,7 @@ The geometric mean, defined as
                  \         /
 @end group
 @end example
-@end ifnottex
-@tex
-$$\left(\prod_{i=1}^{n}{x_{i}}\right)^{{{1}\over{n}}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -1560,8 +1542,9 @@ See also functions @mref{mean} and @mrefdot{harmonic_mean}
 @fname{kurtosis} (@var{matrix})
 
 The kurtosis coefficient, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1\over{n s^4}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^4}}-3}$$>>>,
+<<<@example
 @group
                     n
                   ====
@@ -1572,10 +1555,7 @@ The kurtosis coefficient, defined as
                   i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1\over{n s^4}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^4}}-3}$$
-@end tex
+>>>)
 
 Example:
 
@@ -1616,8 +1596,9 @@ See also functions @mrefcomma{mean} @mref{var} and @mrefdot{skewness}
 @fname{skewness} (@var{matrix})
 
 The skewness coefficient, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1\over{n s^3}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^3}}}$$>>>,
+<<<@example
 @group
                     n
                   ====
@@ -1628,10 +1609,7 @@ The skewness coefficient, defined as
                   i = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1\over{n s^3}}{\sum_{i=1}^{n}{(x_{i}-\bar{x})^3}}}$$
-@end tex
+>>>)
 
 Example:
 
@@ -1672,8 +1650,9 @@ See also functions @mrefcomma{mean}, @mref{var} and @mrefdot{kurtosis}
 @fname{pearson_skewness} (@var{matrix})
 
 Pearson's skewness coefficient, defined as 
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{3\,\left(\bar{x}-med\right)}\over{s}}$$>>>,
+<<<@example
 @group
                 _
              3 (x - med)
@@ -1681,10 +1660,7 @@ Pearson's skewness coefficient, defined as
                   s
 @end group
 @end example
-@end ifnottex
-@tex
-$${{3\,\left(\bar{x}-med\right)}\over{s}}$$
-@end tex
+>>>)
 where @var{med} is the median of @var{list}.
 
 Example:
@@ -1726,8 +1702,10 @@ See also functions @mrefcomma{mean} @mref{var} and @mrefdot{median}
 @fname{quartile_skewness} (@var{matrix})
 
 The quartile skewness coefficient, defined as 
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{c_{{{3}\over{4}}}-2\,c_{{{1}\over{2}}}+c_{{{1}\over{4}}}}\over{c
+ _{{{3}\over{4}}}-c_{{{1}\over{4}}}}}$$>>>,
+<<<@example
 @group
                c    - 2 c    + c
                 3/4      1/2    1/4
@@ -1736,11 +1714,7 @@ The quartile skewness coefficient, defined as
                     3/4    1/4
 @end group
 @end example
-@end ifnottex
-@tex
-$${{c_{{{3}\over{4}}}-2\,c_{{{1}\over{2}}}+c_{{{1}\over{4}}}}\over{c
- _{{{3}\over{4}}}-c_{{{1}\over{4}}}}}$$
-@end tex
+>>>)
 where @math{c_p} is the @var{p}-quantile of sample @var{list}.
 
 Example:
@@ -1904,8 +1878,9 @@ Empirical distribution function.
 @anchor{cov}
 @deffn {Function} cov (@var{matrix})
 The covariance matrix of the multivariate sample, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${S={1\over{n}}{\sum_{j=1}^{n}{\left(X_{j}-\bar{X}\right)\,\left(X_{j}-\bar{X}\right)'}}}$$>>>,
+<<<@example
 @group
               n
              ====
@@ -1916,10 +1891,7 @@ The covariance matrix of the multivariate sample, defined as
              j = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${S={1\over{n}}{\sum_{j=1}^{n}{\left(X_{j}-\bar{X}\right)\,\left(X_{j}-\bar{X}\right)'}}}$$
-@end tex
+>>>)
 where @math{X_j} is the @math{j}-th row of the sample matrix.
 
 Example:
@@ -1960,8 +1932,9 @@ See also function @mrefdot{cov1}
 @anchor{cov1}
 @deffn {Function} cov1 (@var{matrix})
 The covariance matrix of the multivariate sample, defined as
-@ifnottex
-@example
+m4_mathjax(
+<<<$${{1\over{n-1}}{\sum_{j=1}^{n}{\left(X_{j}-\bar{X}\right)\,\left(X_{j}-\bar{X}\right)'}}}$$>>>,
+<<<@example
 @group
               n
              ====
@@ -1972,10 +1945,7 @@ The covariance matrix of the multivariate sample, defined as
              j = 1
 @end group
 @end example
-@end ifnottex
-@tex
-$${{1\over{n-1}}{\sum_{j=1}^{n}{\left(X_{j}-\bar{X}\right)\,\left(X_{j}-\bar{X}\right)'}}}$$
-@end tex
+>>>)
 where @math{X_j} is the @math{j}-th row of the sample matrix.
 
 Example:
@@ -2180,23 +2150,22 @@ Function @code{list_correlations} returns a list of correlation measures:
 
 @item
 @var{precision matrix}: the inverse of the covariance matrix @math{S_1},
-@ifnottex
-@example
+m4_mathjax(
+<<<$${S_{1}^{-1}}={\left(s^{ij}\right)_{i,j=1,2,\ldots, p}}$$>>>,
+<<<@example
 @group
        -1     ij
       S   = (s  )             
        1         i,j = 1,2,...,p
 @end group
 @end example
-@end ifnottex
-@tex
-$${S_{1}^{-1}}={\left(s^{ij}\right)_{i,j=1,2,\ldots, p}}$$
-@end tex
+>>>)
 
 @item
 @var{multiple correlation vector}:  @math{(R_1^2, R_2^2, ..., R_p^2)}, with 
-@ifnottex
-@example
+m4_mathjax(
+<<<$${R_{i}^{2}}={1-{{1}\over{s^{ii}s_{ii}}}}$$>>>,
+<<<@example
 @group
        2          1
       R  = 1 - -------
@@ -2205,16 +2174,14 @@ $${S_{1}^{-1}}={\left(s^{ij}\right)_{i,j=1,2,\ldots, p}}$$
                     ii
 @end group
 @end example
-@end ifnottex
-@tex
-$${R_{i}^{2}}={1-{{1}\over{s^{ii}s_{ii}}}}$$
-@end tex
+>>>)
 being an indicator of the goodness of fit of the linear multivariate regression model on @math{X_i} when the rest of variables are used as regressors.
 
 @item
 @var{partial correlation matrix}: with element @math{(i, j)} being
-@ifnottex
-@example
+m4_mathjax(
+<<<$${r_{ij.rest}}={-{{s^{ij}}\over \sqrt{s^{ii}s^{jj}}}}$$>>>,
+<<<@example
 @group
                          ij
                         s
@@ -2224,10 +2191,7 @@ being an indicator of the goodness of fit of the linear multivariate regression 
                    \       /
 @end group
 @end example
-@end ifnottex
-@tex
-$${r_{ij.rest}}={-{{s^{ij}}\over \sqrt{s^{ii}s^{jj}}}}$$
-@end tex
+>>>)
 
 @end itemize
 

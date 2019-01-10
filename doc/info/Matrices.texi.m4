@@ -1609,42 +1609,16 @@ matrix inverse, if it exists.
 @fname{matrixexp} (@var{M}, @var{V})
 
 Calculates the matrix exponential
-@ifnotinfo
-@tex
-@math{e^{MV}}
-@end tex
-@ifset mathjax
-@html
-$$e^{M\cdot V}$$
-@end html
-@end ifset
-@ifclear mathjax
-@math{e^(M*V)}
-@end ifclear
-@end ifnotinfo 
-@ifinfo
-@math{e^(M*V)}
-@end ifinfo
+m4_mathjax(
+<<<$$e^{M V}$$>>>,
+<<<@math{e^(M*V)}>>>)
 . Instead of the vector @var{V} a number @var{n} can be specified as the second
 argument. If this argument is omitted @code{matrixexp} replaces it by @code{1}.
 
 The matrix exponential of a matrix @var{M} can be expressed as a power series:
-@ifnotinfo
-@tex
-@math{e^M=\sum_{k=0}^\infty{{M^k}\over{k!}}}
-@end tex
-@ifset mathjax
-@html
-$$e^M=\sum_{k=0}^\infty{\left(\frac{M^k}{k!}\right)}$$
-@end html
-@end ifset
-@ifclear mathjax
-@math{e^M=sum(M^k/k!,0,inf)}
-@end ifclear
-@end ifnotinfo 
-@ifinfo
-@math{e^M=sum(M^k/k!,0,inf)}
-@end ifinfo
+m4_mathjax(
+<<<$$e^M=\sum_{k=0}^\infty{{M^k}\over{k!}}$$>>>,
+<<<@math{e^M=sum(M^k/k!,0,inf)}>>>)
 
 @c NEED EXAMPLE HERE
 @opencatbox
