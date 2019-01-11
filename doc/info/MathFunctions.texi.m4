@@ -2385,6 +2385,7 @@ Do @code{load("atrig1");} to use them.
 @end defvr
 
 @c -----------------------------------------------------------------------------
+@anchor{cos}
 @deffn {Function} cos (@var{x})
 
 -- Cosine.
@@ -2395,6 +2396,7 @@ Do @code{load("atrig1");} to use them.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{cosh}
 @deffn {Function} cosh (@var{x})
 
 -- Hyperbolic Cosine.
@@ -2571,6 +2573,7 @@ used to simplify trigonometric function whose arguments are of the form
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{sinh}
 @deffn {Function} sinh (@var{x})
 
 -- Hyperbolic Sine.
