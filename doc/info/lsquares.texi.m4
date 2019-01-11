@@ -13,7 +13,9 @@
 to estimate parameters for a model from numerical data.
 
 @opencatbox
-@category{Statistical estimation} @category{Share packages} @category{Package lsquares}
+@category{Statistical estimation}
+@category{Share packages}
+@category{Package lsquares}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -205,7 +207,8 @@ exponential function using an logarithm.
 @end example
 
 @opencatbox
-@category{Package lsquares} @category{Numerical methods}
+@category{Package lsquares}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn
@@ -359,7 +362,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package lsquares} @category{Numerical methods}
+@category{Package lsquares}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn
@@ -732,7 +736,8 @@ _Nor = a b - b - a + 1, _Nxor = 2 a b - b - a + 1]
 To use this function write first @code{load("lsquares")}.
 
 @opencatbox
-@category{Package lsquares} @category{Numerical methods}
+@category{Package lsquares}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn

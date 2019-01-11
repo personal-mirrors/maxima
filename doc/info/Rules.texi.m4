@@ -27,7 +27,8 @@ There are additional mechanisms for rules applied to polynomials by
 package.
 
 @opencatbox
-@category{Simplification} @category{Rules and patterns}
+@category{Simplification}
+@category{Rules and patterns}
 @closecatbox
 
 @c end concepts Rules and Patterns
@@ -409,7 +410,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Rules and patterns} @category{Display functions}
+@category{Rules and patterns}
+@category{Display functions}
 @closecatbox
 @end deffn
 
@@ -907,7 +909,8 @@ match variables.
 @end example
 
 @opencatbox
-@category{Rules and patterns} @category{Declarations and inferences}
+@category{Rules and patterns}
+@category{Declarations and inferences}
 @closecatbox
 @end deffn
 

@@ -69,7 +69,8 @@ this may lead to loss of precision).
 Returns @code{true} if @var{expr} is a bigfloat number, otherwise @code{false}.
 
 @opencatbox
-@category{Numerical evaluation} @category{Predicate functions}
+@category{Numerical evaluation}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -155,7 +156,8 @@ non-integral rational numbers and bigfloat numbers to be converted to floating
 point.
 
 @opencatbox
-@category{Numerical evaluation} @category{Evaluation flags}
+@category{Numerical evaluation}
+@category{Evaluation flags}
 @closecatbox
 @end deffn
 
@@ -181,7 +183,8 @@ Returns @code{true} if @var{expr} is a floating point number, otherwise
 @code{false}.
 
 @opencatbox
-@category{Numerical evaluation} @category{Predicate functions}
+@category{Numerical evaluation}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -229,7 +232,8 @@ if there are trailing zero digits.
 @code{fpprintprec} cannot be 1.
 
 @opencatbox
-@category{Numerical evaluation} @category{Display flags and variables}
+@category{Numerical evaluation}
+@category{Display flags and variables}
 @closecatbox
 @end defvr
 
@@ -305,7 +309,8 @@ m1pbranch:false          m1pbranch:true
 @end example
 
 @opencatbox
-@category{Expressions} @category{Global flags}
+@category{Expressions}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -315,7 +320,8 @@ m1pbranch:false          m1pbranch:true
 Return @code{true} if and only if @code{@var{n} >= 0} and @var{n} is an integer.
 
 @opencatbox
-@category{Package linearalgebra} @category{Predicate functions}
+@category{Package linearalgebra}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -402,7 +408,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Numerical evaluation} @category{Evaluation flags}
+@category{Numerical evaluation}
+@category{Evaluation flags}
 @closecatbox
 @end defvr
 
@@ -475,7 +482,8 @@ The expressions @code{expr_1}, @dots{}, @code{expr_n} can be any expressions,
 not necessarily numeric.
 
 @opencatbox
-@category{Declarations and inferences} @category{Numerical evaluation}
+@category{Declarations and inferences}
+@category{Numerical evaluation}
 @closecatbox
 @end deffn
 
@@ -505,7 +513,8 @@ of floating point numbers to rational numbers, when the option variable
 @mref{bftorat} has the value @code{false}.  See @code{bftorat} for an example.
 
 @opencatbox
-@category{Numerical evaluation} @category{Rational expressions}
+@category{Numerical evaluation}
+@category{Rational expressions}
 @closecatbox
 @end defvr
 
@@ -577,7 +586,8 @@ Returns @code{true} if @var{expr} is a literal integer or ratio of literal
 integers, otherwise @code{false}.
 
 @opencatbox
-@category{Predicate functions} @category{Rational expressions}
+@category{Predicate functions}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -758,7 +768,8 @@ Note that although @code{concat (1, 2)} looks like a number, it is a string.
 @end example
 
 @opencatbox
-@category{Expressions} @category{Strings}
+@category{Expressions}
+@category{Strings}
 @closecatbox
 @end deffn
 
@@ -799,7 +810,8 @@ Another purpose for @code{sconcat} is to convert arbitrary objects to strings.
 @end example
 
 @opencatbox
-@category{Expressions} @category{Strings}
+@category{Expressions}
+@category{Strings}
 @closecatbox
 @end deffn
 

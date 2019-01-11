@@ -19,7 +19,8 @@
 @c -----------------------------------------------------------------------------
 
 @opencatbox
-@category{Function definition} @category{Programming}
+@category{Function definition}
+@category{Programming}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -572,7 +573,8 @@ macro functions from the list.
 See also @mrefdot{infolists}
 
 @opencatbox
-@category{Function definition} @category{Global variables}
+@category{Function definition}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -839,7 +841,8 @@ See also @mref{return} and @mrefdot{go}
 @c Needs some examples.
 
 @opencatbox
-@category{Expressions} @category{Programming}
+@category{Expressions}
+@category{Programming}
 @closecatbox
 @end deffn
 
@@ -1433,7 +1436,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Function definition} @category{Display functions}
+@category{Function definition}
+@category{Display functions}
 @closecatbox
 @end deffn
 
@@ -1471,7 +1475,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Function application} @category{Expressions}
+@category{Function application}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1495,7 +1500,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Function application} @category{Expressions}
+@category{Function application}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1578,7 +1584,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Function definition} @category{Global variables}
+@category{Function definition}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -1785,7 +1792,8 @@ Maxima simplifies @code{funmake}'s return value.
 @end example
 
 @opencatbox
-@category{Function application} @category{Expressions}
+@category{Function application}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -2083,7 +2091,8 @@ A local function definition.
 @end example
 
 @opencatbox
-@category{Function definition} @category{Programming}
+@category{Function definition}
+@category{Programming}
 @closecatbox
 @end deffn
 
@@ -2309,7 +2318,8 @@ x + 99 is equal to x
 @end example
 
 @opencatbox
-@category{Function application} @category{Global flags}
+@category{Function application}
+@category{Global flags}
 @closecatbox
 @end defvr
 

@@ -120,7 +120,9 @@ y;
 @end example
 
 @opencatbox
-@category{Tensors} @category{Share packages} @category{Package ctensor}
+@category{Tensors}
+@category{Share packages}
+@category{Package ctensor}
 @closecatbox
 
 @c end concepts ctensor
@@ -1189,7 +1191,8 @@ Returns @code{true} if the first @var{n} rows and @var{n} columns of @var{M}
 form a diagonal matrix or (2D) array.
 
 @opencatbox
-@category{Package ctensor} @category{Predicate functions}
+@category{Package ctensor}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn
@@ -1204,7 +1207,8 @@ If @var{n} is less than the size of @var{M},
 comprising rows 1 through @var{n} and columns 1 through @var{n}.
 
 @opencatbox
-@category{Package ctensor} @category{Predicate functions}
+@category{Package ctensor}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn
@@ -1494,7 +1498,8 @@ Causes trigonometric simplifications to be used when tensors are computed. Prese
 @code{ctrgsimp} affects only computations involving a moving frame.
 
 @opencatbox
-@category{Package ctensor} @category{Simplification flags and variables}
+@category{Package ctensor}
+@category{Simplification flags and variables}
 @closecatbox
 
 @end defvr

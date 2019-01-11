@@ -150,7 +150,8 @@ A 2-dimensional integration, implemented by nested calls to @code{romberg}.
 @end example
 
 @opencatbox
-@category{Package romberg} @category{Numerical methods}
+@category{Package romberg}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn

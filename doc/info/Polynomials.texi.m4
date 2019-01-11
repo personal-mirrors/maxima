@@ -68,7 +68,8 @@ symbol @code{/T/} follows the line label of such expressions.
 @c TODO: An example of some code that yields the /T/ form.
 
 @opencatbox
-@category{Polynomials} @category{Rational expressions}
+@category{Polynomials}
+@category{Rational expressions}
 @closecatbox
 
 @c end concepts Polynomials
@@ -491,7 +492,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Polynomials} @category{Algebraic equations}
+@category{Polynomials}
+@category{Algebraic equations}
 @closecatbox
 @end deffn
 
@@ -941,7 +943,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Simplification functions} @category{Rational expressions}
+@category{Simplification functions}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -1107,7 +1110,8 @@ the polynomials divided by the greatest common divisor.
 @end example
 
 @opencatbox
-@category{Polynomials} @category{Rational expressions}
+@category{Polynomials}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -1177,7 +1181,8 @@ not the  @code{y+1} we would expect in @code{k[y, x]}.
 @end example
 
 @opencatbox
-@category{Polynomials} @category{Rational expressions}
+@category{Polynomials}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -1426,7 +1431,8 @@ equation may be given as first argument.
 @end example
 
 @opencatbox
-@category{Polynomials} @category{Rational expressions}
+@category{Polynomials}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -1828,7 +1834,8 @@ Example:
 @c NEED MORE EXAMPLES HERE
 
 @opencatbox
-@category{Polynomials} @category{Rational expressions}
+@category{Polynomials}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -1917,7 +1924,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Simplification flags and variables} @category{Rational expressions}
+@category{Simplification flags and variables}
+@category{Rational expressions}
 @closecatbox
 @end defvr
 
@@ -2143,7 +2151,8 @@ CRE are created by @code{rat} and related functions.
 Extended CRE are created by @code{taylor} and related functions.
 
 @opencatbox
-@category{Predicate functions} @category{Rational expressions}
+@category{Predicate functions}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -2156,7 +2165,9 @@ a message informing the user of the conversion of floating point numbers
 to rational numbers is displayed.
 
 @opencatbox
-@category{Rational expressions} @category{Numerical evaluation} @category{Console interaction}
+@category{Rational expressions}
+@category{Numerical evaluation}
+@category{Console interaction}
 @closecatbox
 @end defvr
 
@@ -2226,7 +2237,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Simplification functions} @category{Rational expressions}
+@category{Simplification functions}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -2239,7 +2251,8 @@ When @code{ratsimpexpons} is @code{true},
 
 @c NEED AN EXAMPLE HERE -- RECYCLE THE ratsimpexpons EXAMPLE FROM ratsimp ABOVE
 @opencatbox
-@category{Simplification flags and variables} @category{Rational expressions}
+@category{Simplification flags and variables}
+@category{Rational expressions}
 @closecatbox
 @end defvr
 
@@ -2430,7 +2443,8 @@ evaluation are still present.
 @end example
 
 @opencatbox
-@category{Rational expressions} @category{Global flags}
+@category{Rational expressions}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -2635,7 +2649,8 @@ expression @code{expr}.
 See also @mrefdot{ratvars}
 
 @opencatbox
-@category{Rational expressions} @category{Display functions}
+@category{Rational expressions}
+@category{Display functions}
 @closecatbox
 @end deffn
 
@@ -2746,7 +2761,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Polynomials} @category{Rational expressions}
+@category{Polynomials}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -2777,7 +2793,8 @@ Removes @code{tellrat} properties from @var{x_1}, @dots{}, @var{x_n}.
 
 @c NEED EXAMPLES HERE
 @opencatbox
-@category{Polynomials} @category{Rational expressions}
+@category{Polynomials}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 

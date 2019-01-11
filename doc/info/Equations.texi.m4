@@ -316,7 +316,8 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 @end example
 
 @opencatbox
-@category{Polynomials} @category{Numerical methods}
+@category{Polynomials}
+@category{Numerical methods}
 @closecatbox
 @end deffn
 
@@ -334,7 +335,8 @@ that @code{bfallroots} computes the roots using bigfloats.  See
 @mref{allroots} for more information.
 
 @opencatbox
-@category{Polynomials} @category{Numerical methods}
+@category{Polynomials}
+@category{Numerical methods}
 @closecatbox
 @end deffn
 
@@ -489,7 +491,8 @@ Termination of the @code{block} with a dollar sign, @code{$}, sets @code{dispfla
 @code{false}.
 
 @opencatbox
-@category{Algebraic equations} @category{Display flags and variables}
+@category{Algebraic equations}
+@category{Display flags and variables}
 @closecatbox
 @end defvr
 
@@ -883,7 +886,8 @@ solutions returned by @mref{solve} or @mrefdot{realroots}
 @c NEED AN EXAMPLE HERE
 
 @opencatbox
-@category{Algebraic equations} @category{Polynomials}
+@category{Algebraic equations}
+@category{Polynomials}
 @closecatbox
 @end defvr
 
@@ -908,7 +912,8 @@ interval may be @code{minf} or @code{inf}.
 @end example
 
 @opencatbox
-@category{Polynomials} @category{Numerical methods}
+@category{Polynomials}
+@category{Numerical methods}
 @closecatbox
 @end deffn
 
@@ -942,7 +947,8 @@ polynomial is complex.
 See @code{allroots} for an example.
 
 @opencatbox
-@category{Polynomials} @category{Numerical methods}
+@category{Polynomials}
+@category{Numerical methods}
 @closecatbox
 @end defvr
 
@@ -963,7 +969,8 @@ expression labels @code{%t1}, @code{%t2}, etc., and assign the solutions to them
 @c NEED AN EXAMPLE HERE
 
 @opencatbox
-@category{Algebraic equations} @category{Polynomials}
+@category{Algebraic equations}
+@category{Polynomials}
 @closecatbox
 @end defvr
 
@@ -1043,7 +1050,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Polynomials} @category{Numerical methods}
+@category{Polynomials}
+@category{Numerical methods}
 @closecatbox
 @end deffn
 
@@ -1126,7 +1134,8 @@ Default value: @code{true}
 See @mref{rootscontract} for details.
 
 @opencatbox
-@category{Expressions} @category{Simplification flags and variables}
+@category{Expressions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1231,7 +1240,8 @@ for the roots found by the @mref{realroots} function.
 @c NOTION ?? NEED EXAMPLE HERE
 
 @opencatbox
-@category{Polynomials} @category{Numerical methods}
+@category{Polynomials}
+@category{Numerical methods}
 @closecatbox
 @end defvr
 

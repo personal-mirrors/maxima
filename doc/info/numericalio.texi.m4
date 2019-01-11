@@ -20,7 +20,10 @@ Otherwise, @code{numericalio} can guess, to some degree, the structure of an obj
 to store the data, and return that object.
 
 @opencatbox
-@category{File input} @category{File output} @category{Share packages} @category{Package numericalio}
+@category{File input}
+@category{File output}
+@category{Share packages}
+@category{Package numericalio}
 @closecatbox
 
 @subsection Plain-text input and output
@@ -122,7 +125,8 @@ The recognized values of @var{separator_flag} are
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 
 @end deffn
@@ -143,7 +147,8 @@ The recognized values of @var{separator_flag} are
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 
 @end deffn
@@ -167,7 +172,8 @@ The recognized values of @var{separator_flag} are
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 
 @end deffn
@@ -188,7 +194,8 @@ The recognized values of @var{separator_flag} are
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 
 @end deffn
@@ -211,7 +218,8 @@ The recognized values of @var{separator_flag} are
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 
 @end deffn
@@ -249,7 +257,8 @@ The recognized values of @var{separator_flag} are
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @opencatbox
-@category{Package numericalio} @category{File output}
+@category{Package numericalio}
+@category{File output}
 @closecatbox
 
 @end deffn
@@ -274,7 +283,8 @@ If not specified, @code{numericalio} assumes the external byte order is most-sig
 Returns an input stream of 8-bit unsigned bytes to read the file named by @var{file_name}.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 @end deffn
 
@@ -282,7 +292,8 @@ Returns an input stream of 8-bit unsigned bytes to read the file named by @var{f
 Returns an output stream of 8-bit unsigned bytes to write the file named by @var{file_name}.
 
 @opencatbox
-@category{Package numericalio} @category{File output}
+@category{Package numericalio}
+@category{File output}
 @closecatbox
 @end deffn
 
@@ -290,7 +301,8 @@ Returns an output stream of 8-bit unsigned bytes to write the file named by @var
 Returns an output stream of 8-bit unsigned bytes to append the file named by @var{file_name}.
 
 @opencatbox
-@category{Package numericalio} @category{File output}
+@category{Package numericalio}
+@category{File output}
 @closecatbox
 @end deffn
 
@@ -304,7 +316,8 @@ The source @var{S} may be a file name or a stream.
 The byte order in elements of the source is specified by @code{assume_external_byte_order}.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 @end deffn
 
@@ -319,7 +332,8 @@ The source @var{S} may be a file name or a stream.
 The byte order in elements of the source is specified by @code{assume_external_byte_order}.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 @end deffn
 
@@ -337,7 +351,8 @@ from the source @var{S} until the list @var{L} is full, or the source is exhaust
 The byte order in elements of the source is specified by @code{assume_external_byte_order}.
 
 @opencatbox
-@category{Package numericalio} @category{File input}
+@category{Package numericalio}
+@category{File input}
 @closecatbox
 @end deffn
 
@@ -365,6 +380,7 @@ The byte order in elements of the destination
 is specified by @code{assume_external_byte_order}.
 
 @opencatbox
-@category{Package numericalio} @category{File output}
+@category{Package numericalio}
+@category{File output}
 @closecatbox
 @end deffn

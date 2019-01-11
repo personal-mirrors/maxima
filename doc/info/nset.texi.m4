@@ -492,7 +492,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Predicate functions}
+@category{Sets}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn
@@ -588,7 +589,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Predicate functions}
+@category{Sets}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn
@@ -612,7 +614,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Predicate functions}
+@category{Sets}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn
@@ -903,7 +906,8 @@ Wrong number of arguments to mod
 @end example
 
 @opencatbox
-@category{Sets} @category{Lists}
+@category{Sets}
+@category{Lists}
 @closecatbox
 
 @end deffn
@@ -1470,7 +1474,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Lists}
+@category{Sets}
+@category{Lists}
 @closecatbox
 
 @end deffn
@@ -1552,7 +1557,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Lists}
+@category{Sets}
+@category{Lists}
 @closecatbox
 
 @end deffn
@@ -1628,7 +1634,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Predicate functions}
+@category{Sets}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn
@@ -1693,7 +1700,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Predicate functions}
+@category{Sets}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn
@@ -1885,7 +1893,8 @@ are governed by the global flag @code{prederror}.
 @end example
 
 @opencatbox
-@category{Sets} @category{Lists}
+@category{Sets}
+@category{Lists}
 @closecatbox
 
 @end deffn
@@ -2052,7 +2061,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Predicate functions}
+@category{Sets}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn

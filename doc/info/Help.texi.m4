@@ -128,7 +128,9 @@ _
 @end example
 
 @opencatbox
-@category{Help} @category{Console interaction} @category{File input}
+@category{Help}
+@category{Console interaction}
+@category{File input}
 @closecatbox
 @end deffn
 
@@ -204,7 +206,8 @@ by @code{[...]}).  All or none of the items could have been selected by entering
 respectively.
 
 @opencatbox
-@category{Help} @category{Console interaction}
+@category{Help}
+@category{Console interaction}
 @closecatbox
 @end deffn
 
@@ -254,7 +257,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Help} @category{Console interaction}
+@category{Help}
+@category{Console interaction}
 @closecatbox
 @end deffn
 
@@ -267,7 +271,8 @@ Default value: @code{"manual.demo"}
 the function @code{example}.  See @mrefdot{example}
 
 @opencatbox
-@category{Help} @category{Global variables}
+@category{Help}
+@category{Global variables}
 @closecatbox
 @end defvr
 

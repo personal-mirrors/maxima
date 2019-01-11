@@ -197,7 +197,8 @@ quote.
 @end example
 
 @opencatbox
-@category{Evaluation} @category{Operators}
+@category{Evaluation}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -391,7 +392,8 @@ quote @code{'}.
 @end example
 
 @opencatbox
-@category{Evaluation} @category{Operators}
+@category{Evaluation}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -714,7 +716,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Evaluation flags} @category{Simplification flags and variables}
+@category{Evaluation flags}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -864,7 +867,8 @@ being @code{ev}'d to "verbs", i.e., evaluates them.  See also
 @mrefcomma{noun} @mrefcomma{nounify} @code{verb}, and @mrefdot{verbify}
 
 @opencatbox
-@category{Evaluation flags} @category{Nouns and verbs}
+@category{Evaluation flags}
+@category{Nouns and verbs}
 @closecatbox
 @end defvr
 

@@ -78,7 +78,9 @@ equations from the action of Brans-Dicke gravity theory, and also derives
 the Hamiltonian associated with the theory's scalar field.
 
 @opencatbox
-@category{Tensors} @category{Share packages} @category{Package itensor}
+@category{Tensors}
+@category{Share packages}
+@category{Package itensor}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -474,7 +476,8 @@ superscripts.  The derivative indices are displayed as subscripts,
 separated from the covariant indices by a comma.
 
 @opencatbox
-@category{Package itensor} @category{Display functions}
+@category{Package itensor}
+@category{Display functions}
 @closecatbox
 @end deffn
 
@@ -2319,7 +2322,8 @@ The behavior of the wedge product operator is controlled by the
 @end example
 
 @opencatbox
-@category{Package itensor} @category{Operators}
+@category{Package itensor}
+@category{Operators}
 @closecatbox
 @end defvr
 
@@ -2360,7 +2364,8 @@ declared totally antisymmetric in their covariant indices. Otherwise,
 the results will be incorrect.
 
 @opencatbox
-@category{Package itensor} @category{Operators}
+@category{Package itensor}
+@category{Operators}
 @closecatbox
 @end defvr
 
@@ -2532,7 +2537,8 @@ of the percent sign in the TeX expression, which may lead to compile errors.
 NB: This version of the @code{tentex} function is somewhat experimental.
 
 @opencatbox
-@category{Package itensor} @category{TeX output}
+@category{Package itensor}
+@category{TeX output}
 @closecatbox
 @end deffn
 
@@ -2610,7 +2616,8 @@ function.
 @end example
 
 @opencatbox
-@category{Package itensor} @category{Package ctensor}
+@category{Package itensor}
+@category{Package ctensor}
 @closecatbox
 @end deffn
 

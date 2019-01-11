@@ -177,7 +177,8 @@ Incorrect syntax: # is not a prefix operator
 @end example
 
 @opencatbox
-@category{Operators} @category{Syntax}
+@category{Operators}
+@category{Syntax}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -1025,7 +1026,8 @@ The values of @code{a} and @code{b} are exchanged in this example.
 @end example
 
 @opencatbox
-@category{Evaluation} @category{Operators}
+@category{Evaluation}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1074,7 +1076,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Evaluation} @category{Operators}
+@category{Evaluation}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1188,7 +1191,8 @@ x is equal to 1234 - 1729 w
 @end example
 
 @opencatbox
-@category{Function definition} @category{Operators}
+@category{Function definition}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1380,7 +1384,8 @@ the function defined by @code{:=} accepts a variable number of arguments.
 @end example
 
 @opencatbox
-@category{Function definition} @category{Operators}
+@category{Function definition}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1515,7 +1520,9 @@ if x ## y then
 @end example
 
 @opencatbox
-@category{Operators} @category{Declarations and inferences} @category{Syntax}
+@category{Operators}
+@category{Declarations and inferences}
+@category{Syntax}
 @closecatbox
 @end deffn
 
@@ -1651,7 +1658,8 @@ Matchfix operators are ordinary user-defined functions.
 @end example
 
 @opencatbox
-@category{Syntax} @category{Operators}
+@category{Syntax}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1671,7 +1679,8 @@ to be an @code{nary} operator.  Functions may be declared to be @code{nary}.  If
 See also @ref{Introduction to operators}.
 
 @opencatbox
-@category{Operators} @category{Syntax}
+@category{Operators}
+@category{Syntax}
 @closecatbox
 @end deffn
 
@@ -1691,7 +1700,8 @@ function which declares @code{x} to be a @code{nofix} operator.
 See also @ref{Introduction to operators}.
 
 @opencatbox
-@category{Operators} @category{Syntax}
+@category{Operators}
+@category{Syntax}
 @closecatbox
 @end deffn
 
@@ -1710,7 +1720,8 @@ to be a @code{postfix} operator.
 See also @ref{Introduction to operators}.
 
 @opencatbox
-@category{Operators} @category{Syntax}
+@category{Operators}
+@category{Syntax}
 @closecatbox
 @end deffn
 
@@ -1728,7 +1739,8 @@ which argument immediately follows an occurrence of the operator.
 See also @ref{Introduction to operators}.
 
 @opencatbox
-@category{Operators} @category{Syntax}
+@category{Operators}
+@category{Syntax}
 @closecatbox
 @end deffn
 

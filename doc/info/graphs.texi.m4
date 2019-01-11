@@ -27,7 +27,8 @@ from @url{http://www.graphviz.org}. @code{draw_graph} is based on the maxima
 To use the @code{graphs} package, first load it with @code{load("graphs")}.
 
 @opencatbox
-@category{Share packages} @category{Package graphs}
+@category{Share packages}
+@category{Package graphs}
 @closecatbox
 
 @node Functions and Variables for graphs, , Introduction to graphs, graphs-pkg
@@ -129,7 +130,8 @@ Adjacencies:
 Returns a copy of the graph @var{g}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -162,7 +164,8 @@ Adjacencies:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -171,7 +174,8 @@ Adjacencies:
 Returns the Clebsch graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -180,7 +184,8 @@ Returns the Clebsch graph.
 Returns the complement of the graph @var{g}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -189,7 +194,8 @@ Returns the complement of the graph @var{g}.
 Returns the complete bipartite graph on @var{n+m} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -198,7 +204,8 @@ Returns the complete bipartite graph on @var{n+m} vertices.
 Returns the complete graph on @var{n} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -207,7 +214,8 @@ Returns the complete graph on @var{n} vertices.
 Returns the directed cycle on @var{n} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -216,7 +224,8 @@ Returns the directed cycle on @var{n} vertices.
 Returns the cycle on @var{n} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -225,7 +234,8 @@ Returns the cycle on @var{n} vertices.
 Returns the cuboctahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -234,7 +244,8 @@ Returns the cuboctahedron graph.
 Returns the @var{n}-dimensional cube.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -243,7 +254,8 @@ Returns the @var{n}-dimensional cube.
 Returns the dodecahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -252,7 +264,8 @@ Returns the dodecahedron graph.
 Returns the empty graph on @var{n} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -274,7 +287,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -283,7 +297,8 @@ Example:
 Returns the graph represented by its adjacency matrix @var{A}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -292,7 +307,8 @@ Returns the graph represented by its adjacency matrix @var{A}.
 Returns the Frucht graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -313,7 +329,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -326,7 +343,8 @@ Example:
 Returns the union (sum) of graphs @var{g1} and @var{g2}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -335,7 +353,8 @@ Returns the union (sum) of graphs @var{g1} and @var{g2}.
 Returns the @var{n x m} grid.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -344,7 +363,8 @@ Returns the @var{n x m} grid.
 Returns the great rhombicosidodecahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -353,7 +373,8 @@ Returns the great rhombicosidodecahedron graph.
 Returns the great rhombicuboctahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -362,7 +383,8 @@ Returns the great rhombicuboctahedron graph.
 Returns the Grotzch graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -371,7 +393,8 @@ Returns the Grotzch graph.
 Returns the Heawood graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -380,7 +403,8 @@ Returns the Heawood graph.
 Returns the icosahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -389,7 +413,8 @@ Returns the icosahedron graph.
 Returns the icosidodecahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -422,7 +447,8 @@ Adjacencies:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -431,7 +457,8 @@ Adjacencies:
 Returns the line graph of the graph @var{g}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -486,7 +513,8 @@ Example 2:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -495,7 +523,8 @@ Example 2:
 Returns the mycielskian graph of the graph @var{g}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -504,7 +533,8 @@ Returns the mycielskian graph of the graph @var{g}.
 Returns the graph with no vertices and no edges.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -513,7 +543,8 @@ Returns the graph with no vertices and no edges.
 Returns the directed path on @var{n} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -522,7 +553,8 @@ Returns the directed path on @var{n} vertices.
 Returns the path on @var{n} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -535,7 +567,8 @@ Returns the petersen graph @var{P_@{n,d@}}. The default values for
 @var{n} and @var{d} are @code{n=5} and @code{d=2}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -545,7 +578,8 @@ Returns a random bipartite graph on @code{a+b} vertices. Each edge is
 present with probability @var{p}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -555,7 +589,8 @@ Returns a random directed graph on @var{n} vertices. Each arc is present
 with probability @var{p}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -568,7 +603,8 @@ Returns a random @var{d}-regular graph on @var{n} vertices. The default
 value for @var{d} is @code{d=3}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -578,7 +614,8 @@ Returns a random graph on @var{n} vertices. Each edge is present with
 probability @var{p}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -587,7 +624,8 @@ probability @var{p}.
 Returns a random graph on @var{n} vertices and random @var{m} edges.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -614,7 +652,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -623,7 +662,8 @@ Example:
 Returns a random tournament on @var{n} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -632,7 +672,8 @@ Returns a random tournament on @var{n} vertices.
 Returns a random tree on @var{n} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -641,7 +682,8 @@ Returns a random tree on @var{n} vertices.
 Returns the small rhombicosidodecahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -650,7 +692,8 @@ Returns the small rhombicosidodecahedron graph.
 Returns the small rhombicuboctahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -659,7 +702,8 @@ Returns the small rhombicuboctahedron graph.
 Returns the snub cube graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -668,7 +712,8 @@ Returns the snub cube graph.
 Returns the snub dodecahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -677,7 +722,8 @@ Returns the snub dodecahedron graph.
 Returns the truncated cube graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -686,7 +732,8 @@ Returns the truncated cube graph.
 Returns the truncated dodecahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -696,7 +743,8 @@ Returns the truncated dodecahedron graph.
 Returns the truncated icosahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -706,7 +754,8 @@ Returns the truncated icosahedron graph.
 Returns the truncated tetrahedron graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -715,7 +764,8 @@ Returns the truncated tetrahedron graph.
 Returns the Tutte graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -724,7 +774,8 @@ Returns the Tutte graph.
 Returns the underlying graph of the directed graph @var{g}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -733,7 +784,8 @@ Returns the underlying graph of the directed graph @var{g}.
 Returns the wheel graph on @var{n+1} vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - constructions}
+@category{Package graphs}
+@category{Package graphs - constructions}
 @closecatbox
 @end deffn
 
@@ -763,7 +815,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -785,7 +838,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -822,7 +876,8 @@ Example:
 @end ifhtml
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -848,7 +903,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -874,7 +930,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -897,7 +954,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -925,7 +983,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -953,7 +1012,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -975,7 +1035,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -995,7 +1056,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1029,7 +1091,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1049,7 +1112,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1060,7 +1124,8 @@ Returns the edge-connectivity of the graph @var{gr}.
 See also @mref{min_edge_cut}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1080,7 +1145,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1115,7 +1181,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1137,7 +1204,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1161,7 +1229,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1183,7 +1252,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1206,7 +1276,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1228,7 +1299,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1250,7 +1322,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1272,7 +1345,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1294,7 +1368,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1319,7 +1394,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1348,7 +1424,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1378,7 +1455,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1404,7 +1482,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1427,7 +1506,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1450,7 +1530,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1470,7 +1551,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1493,7 +1575,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1525,7 +1608,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1548,7 +1632,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1571,7 +1656,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1597,7 +1683,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1627,7 +1714,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1651,7 +1739,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1676,7 +1765,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1699,7 +1789,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1727,7 +1818,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1749,7 +1841,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1775,7 +1868,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1832,7 +1926,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1856,7 +1951,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1885,7 +1981,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1915,7 +2012,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1926,7 +2024,8 @@ Returns the minimum edge cut in the graph @var{gr}.
 See also @mrefdot{edge_connectivity}
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1935,7 +2034,8 @@ See also @mrefdot{edge_connectivity}
 Returns the minimum vertex cover of the graph @var{gr}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1946,7 +2046,8 @@ Returns the minimum vertex cut in the graph @var{gr}.
 See also @mrefdot{vertex_connectivity}
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1969,7 +2070,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -1995,7 +2097,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2020,7 +2123,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2046,7 +2150,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2074,7 +2179,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2136,7 +2242,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2164,7 +2271,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2192,7 +2300,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2216,7 +2325,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2249,7 +2359,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2274,7 +2385,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2310,7 +2422,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2321,7 +2434,8 @@ Returns the vertex connectivity of the graph @var{g}.
 See also @mrefdot{min_vertex_cut}
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2330,7 +2444,8 @@ See also @mrefdot{min_vertex_cut}
 Returns the degree of the vertex @var{v} in the graph @var{gr}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2356,7 +2471,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2379,7 +2495,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2413,7 +2530,8 @@ Adjacencies:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2438,7 +2556,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2458,7 +2577,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2484,7 +2604,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2503,7 +2624,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - properties}
+@category{Package graphs}
+@category{Package graphs - properties}
 @closecatbox
 @end deffn
 
@@ -2533,7 +2655,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - modifications}
+@category{Package graphs}
+@category{Package graphs - modifications}
 @closecatbox
 @end deffn
 
@@ -2561,7 +2684,8 @@ Adjacencies:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - modifications}
+@category{Package graphs}
+@category{Package graphs - modifications}
 @closecatbox
 @end deffn
 
@@ -2589,7 +2713,8 @@ Adjacencies:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - modifications}
+@category{Package graphs}
+@category{Package graphs - modifications}
 @closecatbox
 @end deffn
 
@@ -2598,7 +2723,8 @@ Adjacencies:
 Adds all vertices in the list @var{v_list} to the graph @var{gr}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - modifications}
+@category{Package graphs}
+@category{Package graphs - modifications}
 @closecatbox
 @end deffn
 
@@ -2631,7 +2757,8 @@ Adjacencies:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - modifications}
+@category{Package graphs}
+@category{Package graphs - modifications}
 @closecatbox
 @end deffn
 
@@ -2677,7 +2804,8 @@ Adjacencies:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - modifications}
+@category{Package graphs}
+@category{Package graphs - modifications}
 @closecatbox
 @end deffn
 
@@ -2705,7 +2833,8 @@ Adjacencies:
 @end example
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - modifications}
+@category{Package graphs}
+@category{Package graphs - modifications}
 @closecatbox
 @end deffn
 
@@ -2729,7 +2858,8 @@ Exports the graph into the file @var{fl} in the DIMACS format. Optional
 comments will be added to the top of the file.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2739,7 +2869,8 @@ comments will be added to the top of the file.
 Returns the graph from file @var{fl} in the DIMACS format.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2749,7 +2880,8 @@ Returns the graph from file @var{fl} in the DIMACS format.
 Returns the graph encoded in the graph6 format in the string @var{str}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2759,7 +2891,8 @@ Returns the graph encoded in the graph6 format in the string @var{str}.
 Returns a string which encodes the graph @var{gr} in the graph6 format.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2770,7 +2903,8 @@ Exports graphs in the list @var{gr_list} to the file @var{fl} in the
 graph6 format.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2780,7 +2914,8 @@ graph6 format.
 Returns a list of graphs from the file @var{fl} in the graph6 format.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2790,7 +2925,8 @@ Returns a list of graphs from the file @var{fl} in the graph6 format.
 Returns the graph encoded in the sparse6 format in the string @var{str}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2800,7 +2936,8 @@ Returns the graph encoded in the sparse6 format in the string @var{str}.
 Returns a string which encodes the graph @var{gr} in the sparse6 format.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2811,7 +2948,8 @@ Exports graphs in the list @var{gr_list} to the file @var{fl} in the
 sparse6 format.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -2821,7 +2959,8 @@ sparse6 format.
 Returns a list of graphs from the file @var{fl} in the sparse6 format.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - io}
+@category{Package graphs}
+@category{Package graphs - io}
 @closecatbox
 @end deffn
 
@@ -3067,7 +3206,8 @@ The default value for the program used to position vertices in
 @code{draw_graph} program.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3078,7 +3218,8 @@ Default value: @var{false}
 If @var{true} then ids of the vertices are displayed.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3089,7 +3230,8 @@ Default value: @var{false}
 If @var{true} then labels of the vertices are displayed.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3101,7 +3243,8 @@ Determines how to align the labels/ids of the vertices. Can
 be @code{left}, @code{center} or @code{right}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3112,7 +3255,8 @@ Default value: @var{false}
 If @var{true} then weights of the edges are displayed.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3124,7 +3268,8 @@ Defines how vertices are displayed. See the @var{point_type} option for
 the @code{draw} package for possible values.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3133,7 +3278,8 @@ the @code{draw} package for possible values.
 The size of vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3142,7 +3288,8 @@ The size of vertices.
 The color used for displaying vertices.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3153,7 +3300,8 @@ Default value: []
 Display selected vertices in the using a different color.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3164,7 +3312,8 @@ See the @var{point_type} option for the @code{draw} package for possible
 values.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3173,7 +3322,8 @@ values.
 The size of vertices in @var{show_vertices}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3182,7 +3332,8 @@ The size of vertices in @var{show_vertices}.
 The color used for displaying vertices in the @var{show_vertices} list.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3195,7 +3346,8 @@ graph. The vertices of each list in the partition will be drawn in a
 different color.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3205,7 +3357,8 @@ Specifies coloring of the vertices. The coloring @var{col} must be
 specified in the format as returned by @var{vertex_coloring}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3214,7 +3367,8 @@ specified in the format as returned by @var{vertex_coloring}.
 The color used for displaying edges.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3223,7 +3377,8 @@ The color used for displaying edges.
 The width of edges.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3233,7 +3388,8 @@ Defines how edges are displayed. See the @var{line_type} option for the
 @code{draw} package.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3243,7 +3399,8 @@ Display edges specified in the list @var{e_list} using a different
 color.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3252,7 +3409,8 @@ color.
 The color used for displaying edges in the @var{show_edges} list.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3261,7 +3419,8 @@ The color used for displaying edges in the @var{show_edges} list.
 The width of edges in @var{show_edges}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3271,7 +3430,8 @@ Defines how edges in @var{show_edges} are displayed. See the
 @var{line_type} option for the @code{draw} package.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3282,7 +3442,8 @@ graph. The edges of each list in the partition will be drawn using a
 different color.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3292,7 +3453,8 @@ The coloring of edges. The coloring must be specified in the
 format as returned by the function @var{edge_coloring}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3304,7 +3466,8 @@ If @code{true}, vertex positions are recomputed even if the positions
 have been saved from a previous drawing of the graph.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3315,7 +3478,8 @@ Default value: 15
 The angle for the arrows displayed on arcs (in directed graphs).
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3326,7 +3490,8 @@ Default value: 0.1
 The length for the arrows displayed on arcs (in directed graphs).
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3338,7 +3503,8 @@ The number of iterations in the spring embedding graph drawing
 algorithm.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3348,7 +3514,8 @@ The terminal used for drawing (see the @var{terminal} option in the
 @code{draw} package).
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3357,7 +3524,8 @@ The terminal used for drawing (see the @var{terminal} option in the
 The filename of the drawing if terminal is not screen.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3372,7 +3540,8 @@ of vertices with fixed position can be specified with the
 @var{fixed_vertices} option.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 
@@ -3382,7 +3551,8 @@ Specifies a list of vertices which will have positions fixed along a regular pol
 Can be used when @code{program=spring_embedding}.
 
 @opencatbox
-@category{Package graphs} @category{Package graphs - draw_graphs options}
+@category{Package graphs}
+@category{Package graphs - draw_graphs options}
 @closecatbox
 @end defvr
 

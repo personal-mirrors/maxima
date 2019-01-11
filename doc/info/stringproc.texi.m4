@@ -111,7 +111,9 @@ finally parsed by @ref{parse_string}.
 @end example
 
 @opencatbox
-@category{Strings} @category{Share packages} @category{Package stringproc}
+@category{Strings}
+@category{Share packages}
+@category{Package stringproc}
 @closecatbox
 
 
@@ -148,7 +150,9 @@ and an integer: ~20t~d~%"$
 Closes @var{stream} and returns @code{true} if @var{stream} had been open. 
 
 @opencatbox
-@category{File input} @category{File output} @category{Package stringproc}
+@category{File input}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -163,7 +167,9 @@ Closes @var{stream} and returns @code{true} if @var{stream} had been open.
 Example: See @ref{writebyte} .
 
 @opencatbox
-@category{File input} @category{File output} @category{Package stringproc}
+@category{File input}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -177,7 +183,8 @@ Flushes @var{stream} where @var{stream} has to be an output stream to a file.
 Example: See @ref{writebyte} .
 
 @opencatbox
-@category{File output} @category{Package stringproc}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -197,7 +204,9 @@ Positions in data streams are like in strings or lists 1-indexed,
 i.e. the first element in @var{stream} is in position 1.
 
 @opencatbox
-@category{File input} @category{File output} @category{Package stringproc}
+@category{File input}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -216,7 +225,8 @@ There are some cases, where @code{freshline()} does not work as expected.
 See also @ref{newline}.
 
 @opencatbox
-@category{File output} @category{Package stringproc}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -306,7 +316,8 @@ There are some cases, where @code{newline()} does not work as expected.
 See @ref{sprint} for an example of using @code{newline()}.
 
 @opencatbox
-@category{File output} @category{Package stringproc}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -321,7 +332,8 @@ If an existing file is opened, @code{opena} appends elements at the end of @var{
 For binary output see @ref{Functions and Variables for binary input and output, , opena_binary} .
 
 @opencatbox
-@category{File output} @category{Package stringproc}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -353,7 +365,8 @@ See also @mref{close} and @mrefdot{openw}
 
 
 @opencatbox
-@category{File input} @category{Package stringproc}
+@category{File input}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -371,7 +384,8 @@ For binary output see @ref{Functions and Variables for binary input and output, 
 See also @mref{close} and @mrefdot{openr}
 
 @opencatbox
-@category{File output} @category{Package stringproc}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -503,7 +517,8 @@ The directive ~h has been introduced to handle bigfloats.
 @end example
 
 @opencatbox
-@category{File output} @category{Package stringproc}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -533,7 +548,8 @@ Example: Read the first 16 bytes from a file encrypted with AES in OpenSSL.
 @end example
 
 @opencatbox
-@category{File input} @category{Package stringproc}
+@category{File input}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -548,7 +564,8 @@ If the end of file is encountered @code{readchar} returns @code{false}.
 Example: See @ref{make_string_input_stream}.
 
 @opencatbox
-@category{File input} @category{Package stringproc}
+@category{File input}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -562,7 +579,8 @@ in @var{stream} up to the end of the line or @code{false}
 if the end of the file is encountered.
 
 @opencatbox
-@category{File input} @category{Package stringproc}
+@category{File input}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -635,7 +653,8 @@ GNU/Linux
 @end example
 
 @opencatbox
-@category{File output} @category{Package stringproc}
+@category{File output}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -749,7 +768,8 @@ package stringproc: @"u cannot be converted into a Lisp character.
 @end example
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -764,7 +784,8 @@ Returns @code{true} if @var{char} is an alphabetic character or a digit
 Note: See remarks on @ref{alphacharp}. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -802,7 +823,8 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Returns @code{true} if @var{char_1} and @var{char_2} are the same character. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -816,7 +838,8 @@ characters when the underlying Lisp is able to recognize a character as an
 alphabetic character. See remarks on @ref{alphacharp}. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -829,7 +852,8 @@ Returns @code{true} if the code point of @var{char_1} is greater than the
 code point of @var{char_2}. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -843,7 +867,8 @@ characters when the underlying Lisp is able to recognize a character as an
 alphabetic character. See remarks on @ref{alphacharp}. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -856,7 +881,8 @@ Returns @code{true} if @var{obj} is a Maxima-character.
 See introduction for example.
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -916,7 +942,8 @@ Returns @code{true} if the code point of @var{char_1} is less than the
 code point of @var{char_2}. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -930,7 +957,8 @@ characters when the underlying Lisp is able to recognize a character as an
 alphabetic character. See remarks on @ref{alphacharp}. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -953,7 +981,8 @@ d e f g h i j k l m n o p q r s t u v w x y z @{ | @} ~
 @end example
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -964,7 +993,8 @@ d e f g h i j k l m n o p q r s t u v w x y z @{ | @} ~
 @c (You won't need it.)
 @c 
 @c @opencatbox
-@c @category{Package stringproc}
+@c
+@category{Package stringproc}
 @c @closecatbox
 @c 
 @c @end deffn
@@ -977,7 +1007,8 @@ Returns @code{true} if @var{char} is a digit where only the corresponding
 US-ASCII-character is regarded as a digit.
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -988,7 +1019,9 @@ US-ASCII-character is regarded as a digit.
 @c (You won't need it.)
 @c 
 @c @opencatbox
-@c @category{Predicate functions} @category{Package stringproc}
+@c
+@category{Predicate functions}
+@category{Package stringproc}
 @c @closecatbox
 @c 
 @c @end deffn
@@ -1002,7 +1035,8 @@ Returns @code{true} if @var{char} is a lowercase character.
 Note: See remarks on @ref{alphacharp}.
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -1014,7 +1048,8 @@ Note: See remarks on @ref{alphacharp}.
 The newline character (ASCII-character 10). 
 
 @opencatbox
-@category{Global variables} @category{Package stringproc}
+@category{Global variables}
+@category{Package stringproc}
 @closecatbox
 
 @end defvr
@@ -1026,7 +1061,8 @@ The newline character (ASCII-character 10).
 The space character.
 
 @opencatbox
-@category{Global variables} @category{Package stringproc}
+@category{Global variables}
+@category{Package stringproc}
 @closecatbox
 
 @end defvr
@@ -1038,7 +1074,8 @@ The space character.
 The tab character.
 
 @opencatbox
-@category{Global variables} @category{Package stringproc}
+@category{Global variables}
+@category{Package stringproc}
 @closecatbox
 
 @end defvr
@@ -1146,7 +1183,8 @@ Returns @code{true} if @var{char} is an uppercase character.
 Note: See remarks on @ref{alphacharp}.
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -1173,7 +1211,8 @@ used as arguments to string processing functions do not contain Non-US-ASCII cha
 Given that promise, Maxima avoids parsing UTF-8 and strings can be processed more efficiently.
 
 @opencatbox
-@category{Global variables} @category{Package stringproc}
+@category{Global variables}
+@category{Package stringproc}
 @closecatbox
 
 @end defvr
@@ -1328,7 +1367,8 @@ Returns @code{true} if @var{string_1} and @var{string_2} contain the same
 sequence of characters. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -1342,7 +1382,8 @@ characters when the underlying Lisp is able to recognize a character as an
 alphabetic character. See remarks on @ref{alphacharp}. 
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn
@@ -1741,7 +1782,8 @@ Returns @code{true} if @var{obj} is a string.
 See introduction for example.
 
 @opencatbox
-@category{Predicate functions} @category{Package stringproc}
+@category{Predicate functions}
+@category{Package stringproc}
 @closecatbox
 
 @end deffn

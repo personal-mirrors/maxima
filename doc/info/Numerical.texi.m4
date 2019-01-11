@@ -16,7 +16,10 @@ The @code{fft} package comprises functions for the numerical (not symbolic)
 computation of the fast Fourier transform.
 
 @opencatbox
-@category{Fourier transform} @category{Numerical methods} @category{Share packages} @category{Package fft}
+@category{Fourier transform}
+@category{Numerical methods}
+@category{Share packages}
+@category{Package fft}
 @closecatbox
 
 @c end concepts Numerical
@@ -49,7 +52,8 @@ b = r sin(t)
 @code{load(fft)} loads this function.  See also @mrefdot{fft}
 
 @opencatbox
-@category{Package fft} @category{Complex variables}
+@category{Package fft}
+@category{Complex variables}
 @closecatbox
 @end deffn
 
@@ -78,7 +82,8 @@ The computed angle is in the range @code{-%pi} to @code{%pi}.
 @code{load(fft)} loads this function.  See also @mrefdot{fft}
 
 @opencatbox
-@category{Package fft} @category{Complex variables}
+@category{Package fft}
+@category{Complex variables}
 @closecatbox
 @end deffn
 
@@ -607,7 +612,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Algebraic equations} @category{Numerical methods}
+@category{Algebraic equations}
+@category{Numerical methods}
 @closecatbox
 @end deffn
 
@@ -658,7 +664,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Algebraic equations} @category{Numerical methods}
+@category{Algebraic equations}
+@category{Numerical methods}
 @closecatbox
 @end deffn
 
@@ -700,7 +707,9 @@ given do not depend on that independent variable, the system is called
 autonomous.
 
 @opencatbox
-@category{Differential equations} @category{Numerical methods} @category{Plotting}
+@category{Differential equations}
+@category{Numerical methods}
+@category{Plotting}
 @closecatbox
 
 
@@ -965,7 +974,9 @@ the two state variables as a function of time:
 @end itemize
 
 @opencatbox
-@category{Differential equations} @category{Plotting} @category{Numerical methods}
+@category{Differential equations}
+@category{Plotting}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn
@@ -1002,7 +1013,9 @@ Clicking on a point will plot the equipotential curve that passes by that point
 (in red) and the orthogonal trajectory (in blue).
 
 @opencatbox
-@category{Differential equations} @category{Plotting} @category{Numerical methods}
+@category{Differential equations}
+@category{Plotting}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn
@@ -1097,7 +1110,8 @@ for t between 0 and 4, and with values of -1.25 and 0.75 for x and y at t=0:
 The plot will show the solution for variable @var{y} as a function of @var{t}.
 
 @opencatbox
-@category{Differential equations} @category{Numerical methods}
+@category{Differential equations}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn

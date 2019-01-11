@@ -106,7 +106,8 @@ This is reminiscent of @mrefcomma{apply} except the first argument is an array
 instead of a function.
 
 @opencatbox
-@category{Expressions} @category{Arrays}
+@category{Expressions}
+@category{Arrays}
 @closecatbox
 @end deffn
 
@@ -404,7 +405,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Expressions} @category{Arrays}
+@category{Expressions}
+@category{Arrays}
 @closecatbox
 @end deffn
 
@@ -462,7 +464,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Arrays} @category{Global variables}
+@category{Arrays}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -476,7 +479,8 @@ where @var{A} is an array and @var{i_1}, @dots{}, @var{i_n} are integers.
 @code{arraysetapply} evaluates its arguments.
 
 @opencatbox
-@category{Expressions} @category{Arrays}
+@category{Expressions}
+@category{Arrays}
 @closecatbox
 @end deffn
 
@@ -955,7 +959,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Expressions} @category{Arrays}
+@category{Expressions}
+@category{Arrays}
 @closecatbox
 @end deffn
 
@@ -993,7 +998,8 @@ than the default one; Arrays created by @mref{make_array} are not affected by
 See also @mrefdot{translate_fast_arrays}
 
 @opencatbox
-@category{Arrays} @category{Global flags}
+@category{Arrays}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -1011,6 +1017,7 @@ the Maxima-to-Lisp translator generates code that assumes arrays are properties,
 as if @code{use_fast_arrays} were @code{false}.
 
 @opencatbox
-@category{Arrays} @category{Translation flags and variables}
+@category{Arrays}
+@category{Translation flags and variables}
 @closecatbox
 @end defvr

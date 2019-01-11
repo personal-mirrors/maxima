@@ -43,7 +43,9 @@ mat.lisp
 See also @mref{fpprintprec} and @mrefdot{float}
 
 @opencatbox
-@category{Display functions} @category{Global flags} @category{Share packages}
+@category{Display functions}
+@category{Global flags}
+@category{Share packages}
 @closecatbox
 @end defvr
 
@@ -85,7 +87,9 @@ mat.lisp
 @end example
 
 @opencatbox
-@category{Display functions} @category{Global flags} @category{Share packages}
+@category{Display functions}
+@category{Global flags}
+@category{Share packages}
 @closecatbox
 @end defvr
 
@@ -98,7 +102,9 @@ The maximum absolute value that isn't automatically converted to the engineering
 See also @mref{engineering_format_min} and @mrefdot{engineering_format_floats}
 
 @opencatbox
-@category{Display functions} @category{Global flags} @category{Share packages}
+@category{Display functions}
+@category{Global flags}
+@category{Share packages}
 @closecatbox
 @end defvr
 

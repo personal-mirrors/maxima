@@ -34,7 +34,7 @@ normally used for the kind of graphic file selected.
 The @code{maxout_xxx.format} and @code{maxplot.extension} files are created
 in the directory specified by the system variable
 @mrefdot{maxima_tempdir} That location can be changed by assigning to
-that variable (or to the environment variable MAXIMA_TEMPDIR) a string
+that variable (or to the environment variable @env{MAXIMA_TEMPDIR}) a string
 that represents a valid directory where Maxima can create new files. The
 output of the Maxima plotting command will be a list with the names of
 the file(s) created, including their complete path.
@@ -341,7 +341,9 @@ Example:
 @end ifnotinfo
 
 @opencatbox
-@category{Plotting} @category{Share packages} @category{Package implicit_plot}
+@category{Plotting}
+@category{Share packages}
+@category{Package implicit_plot}
 @closecatbox
 @end deffn
 
@@ -393,7 +395,8 @@ corresponding the maximum 36 iterations would not be black.
 
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn
@@ -461,7 +464,8 @@ Example:
 @end ifnotinfo
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn

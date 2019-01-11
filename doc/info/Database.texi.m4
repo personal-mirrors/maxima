@@ -107,7 +107,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Declarations and inferences} @category{Constants}
+@category{Declarations and inferences}
+@category{Constants}
 @closecatbox
 @end deffn
 
@@ -159,7 +160,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Predicate functions} @category{Constants}
+@category{Predicate functions}
+@category{Constants}
 @closecatbox
 @end deffn
 
@@ -424,7 +426,8 @@ See also @mref{declare} and @mrefdot{features}
 @end example
 
 @opencatbox
-@category{Predicate functions} @category{Declarations and inferences}
+@category{Predicate functions}
+@category{Declarations and inferences}
 @closecatbox
 @end deffn
 
@@ -638,7 +641,9 @@ Makes atoms behave as does a list or matrix with respect to the dot operator.
 See also @mrefdot{declare}
 
 @opencatbox
-@category{Declarations and inferences} @category{Vectors} @category{Matrices}
+@category{Declarations and inferences}
+@category{Vectors}
+@category{Matrices}
 @closecatbox
 @end defvr
 
@@ -652,7 +657,9 @@ atoms declared as non-scalars, lists, or matrices.
 See also the predicate function @mref{scalarp} and @mrefdot{declare}
 
 @opencatbox
-@category{Predicate functions} @category{Vectors} @category{Matrices}
+@category{Predicate functions}
+@category{Vectors}
+@category{Matrices}
 @closecatbox
 @end deffn
 
@@ -668,7 +675,8 @@ See also the predicate function @mref{scalarp} and @mrefdot{declare}
 See also @mrefdot{declare}
 
 @opencatbox
-@category{Declarations and inferences} @category{Operators}
+@category{Declarations and inferences}
+@category{Operators}
 @closecatbox
 @end defvr
 
@@ -690,7 +698,8 @@ cannot otherwise be displayed, i.e.  for @mrefcomma{atvalue}@w{}
 @mrefcomma{atomgrad} @mrefcomma{gradef} and @mrefdot{matchdeclare}
 
 @opencatbox
-@category{Declarations and inferences} @category{Display functions}
+@category{Declarations and inferences}
+@category{Display functions}
 @closecatbox
 @end deffn
 
@@ -724,7 +733,8 @@ mentioned in @mrefcomma{infolists} such as specified by @mrefcomma{atvalue}@w{}
 @mref{declare} function.
 
 @opencatbox
-@category{Declarations and inferences} @category{Global variables}
+@category{Declarations and inferences}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -963,7 +973,9 @@ constants, and such variables, but not containing matrices or lists.
 See also the predicate function @mrefdot{nonscalarp}
 
 @opencatbox
-@category{Predicate functions} @category{Vectors} @category{Matrices}
+@category{Predicate functions}
+@category{Vectors}
+@category{Matrices}
 @closecatbox
 @end deffn
 
@@ -1477,7 +1489,8 @@ a > 0
 @end example
 
 @opencatbox
-@category{Predicate functions} @category{Declarations and inferences}
+@category{Predicate functions}
+@category{Declarations and inferences}
 @closecatbox
 @end deffn
 
@@ -1539,7 +1552,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Predicate functions} @category{Declarations and inferences}
+@category{Predicate functions}
+@category{Declarations and inferences}
 @closecatbox
 @end deffn
 
@@ -1904,7 +1918,8 @@ Returns @code{true} if and only if @var{expr} contains an operator or function
 not recognized by the Maxima simplifier.
 
 @opencatbox
-@category{Predicate functions} @category{Simplification functions}
+@category{Predicate functions}
+@category{Simplification functions}
 @closecatbox
 @end deffn
 

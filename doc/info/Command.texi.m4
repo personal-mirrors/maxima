@@ -174,7 +174,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Console interaction} @category{Global variables}
+@category{Console interaction}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -197,7 +198,8 @@ is not bound to output expressions in the file being processed.
 See also @mrefcomma{_} @mrefcomma{%%} and @mrefdot{%th}
 
 @opencatbox
-@category{Console interaction} @category{Global variables}
+@category{Console interaction}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -323,7 +325,8 @@ occur at the beginning of an input line; otherwise it is not recognized as a
 request for documentation.  See also @mrefdot{describe}
 
 @opencatbox
-@category{Help} @category{Console interaction}
+@category{Help}
+@category{Console interaction}
 @closecatbox
 @end deffn
 
@@ -340,7 +343,8 @@ at the beginning of an input line; otherwise it is not recognized as a request
 for documentation.  See also @mrefdot{describe}
 
 @opencatbox
-@category{Help} @category{Console interaction}
+@category{Help}
+@category{Console interaction}
 @closecatbox
 @end deffn
 
@@ -491,7 +495,8 @@ one is not explicitly set by the user.)
 @end table
 
 @opencatbox
-@category{Declarations and inferences} @category{Global variables}
+@category{Declarations and inferences}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -566,7 +571,9 @@ by @code{kill}.
 @code{kill} always returns @code{done}, even if an argument has no binding.
 
 @opencatbox
-@category{Evaluation} @category{Console interaction} @category{Session management}
+@category{Evaluation}
+@category{Console interaction}
+@category{Session management}
 @closecatbox
 @end deffn
 
@@ -596,7 +603,8 @@ See also @mrefcomma{inchar} @mrefcomma{outchar} @mrefcomma{linechar} and
 @mrefdot{infolists}
 
 @opencatbox
-@category{Display functions} @category{Console interaction}
+@category{Display functions}
+@category{Console interaction}
 @closecatbox
 @end deffn
 
@@ -607,7 +615,8 @@ expression labels, including all previous labels if @code{inchar},
 @code{outchar}, or @code{linechar} were redefined.
 
 @opencatbox
-@category{Display flags and variables} @category{Console interaction}
+@category{Display flags and variables}
+@category{Console interaction}
 @closecatbox
 @end defvr
 
@@ -643,7 +652,8 @@ See @mref{programmode} and @mrefdot{labels}
 The line number of the current pair of input and output expressions.
 
 @opencatbox
-@category{Display flags and variables} @category{Console interaction}
+@category{Display flags and variables}
+@category{Console interaction}
 @closecatbox
 @end defvr
 
@@ -658,7 +668,9 @@ Default value: @code{[]}
 whether or not they get reset to their default value.
 
 @opencatbox
-@category{Global variables} @category{Session management} @category{Console interaction}
+@category{Global variables}
+@category{Session management}
+@category{Console interaction}
 @closecatbox
 @end defvr
 
@@ -683,7 +695,8 @@ labels are bound and appended to the @code{labels} list.
 See also @mrefcomma{batch} @mrefcomma{load} and @mrefdot{labels}
 
 @opencatbox
-@category{Global flags} @category{Session management}
+@category{Global flags}
+@category{Session management}
 @closecatbox
 @end defvr
 
@@ -711,7 +724,9 @@ assignment: assigning to option gamma_expand
 @end example
 
 @opencatbox
-@category{Global flags} @category{Session management} @category{Console interaction}
+@category{Global flags}
+@category{Session management}
+@category{Console interaction}
 @closecatbox
 @end defvr
 
@@ -812,7 +827,8 @@ Arguments may be combined, e.g., @code{playback ([5, 10], grind, time, slow)}.
 @c APPEARS TO BE input INTERSECT (UNION OF ALL OTHER ARGUMENTS). CORRECT ???
 
 @opencatbox
-@category{Display functions} @category{Console interaction}
+@category{Display functions}
+@category{Console interaction}
 @closecatbox
 @end deffn
 
@@ -827,7 +843,8 @@ Default value: @code{_}
 @mref{break}).
 
 @opencatbox
-@category{Global variables} @category{Console interaction}
+@category{Global variables}
+@category{Console interaction}
 @closecatbox
 @end defvr
 
@@ -936,7 +953,8 @@ display the computation time even when @code{showtime} is @code{false}.
 See also @mrefdot{timer}
 
 @opencatbox
-@category{Display flags and variables} @category{Debugging}
+@category{Display flags and variables}
+@category{Debugging}
 @closecatbox
 @end defvr
 
@@ -1023,7 +1041,8 @@ The values are removed from the variables.  @code{values} is the empty list.
 @end example
 
 @opencatbox
-@category{Evaluation} @category{Global variables}
+@category{Evaluation}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -1065,7 +1084,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Display flags and variables}
+@category{Exponential and logarithm functions}
+@category{Display flags and variables}
 @closecatbox
 @end defvr
 
@@ -1343,7 +1363,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Expressions} @category{Display flags and variables}
+@category{Expressions}
+@category{Display flags and variables}
 @closecatbox
 @end defvr
 
@@ -1879,7 +1900,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Display flags and variables} @category{Console interaction}
+@category{Display flags and variables}
+@category{Console interaction}
 @closecatbox
 @end defvr
 
@@ -2002,7 +2024,8 @@ exponent 1/2.
 @c AND OTHERWISE ... ??
 
 @opencatbox
-@category{Mathematical functions} @category{Display flags and variables}
+@category{Mathematical functions}
+@category{Display flags and variables}
 @closecatbox
 @end defvr
 

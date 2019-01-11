@@ -234,7 +234,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Operators} @category{Declarations and inferences}
+@category{Operators}
+@category{Declarations and inferences}
 @closecatbox
 @end defvr
 
@@ -296,7 +297,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Operators} @category{Declarations and inferences}
+@category{Operators}
+@category{Declarations and inferences}
 @closecatbox
 @end defvr
 
@@ -378,7 +380,8 @@ Exemplo:
 @end example
 
 @opencatbox
-@category{Operators} @category{Declarations and inferences}
+@category{Operators}
+@category{Declarations and inferences}
 @closecatbox
 @end defvr
 
@@ -404,7 +407,9 @@ form.  @code{demoivre} and @code{exponentialize} cannot both be true at the same
 time.
 
 @opencatbox
-@category{Complex variables} @category{Trigonometric functions} @category{Hyperbolic functions}
+@category{Complex variables}
+@category{Trigonometric functions}
+@category{Hyperbolic functions}
 @closecatbox
 @end deffn
 
@@ -853,7 +858,9 @@ The default value is @code{false}.
 both be true at the same time.
 
 @opencatbox
-@category{Complex variables} @category{Trigonometric functions} @category{Hyperbolic functions}
+@category{Complex variables}
+@category{Trigonometric functions}
+@category{Hyperbolic functions}
 @closecatbox
 @end deffn
 
@@ -888,7 +895,9 @@ left-associative.  E.g., @code{g (g (a, b), g (c, d))} will simplify to
 @code{g (g (g (a, b), c), d)}.
 
 @opencatbox
-@category{Declarations and inferences} @category{Operators} @category{Simplification}
+@category{Declarations and inferences}
+@category{Operators}
+@category{Simplification}
 @closecatbox
 @end defvr
 
@@ -972,7 +981,9 @@ Example:
 @end example
 
 @opencatbox
-@category{Declarations and inferences} @category{Operators} @category{Simplification}
+@category{Declarations and inferences}
+@category{Operators}
+@category{Simplification}
 @closecatbox
 @end defvr
 
@@ -1084,7 +1095,9 @@ Example:
 @end example
 
 @opencatbox
-@category{Declarations and inferences} @category{Expressions} @category{Simplification}
+@category{Declarations and inferences}
+@category{Expressions}
+@category{Simplification}
 @closecatbox
 @end defvr
 
@@ -1254,7 +1267,9 @@ lassociative, rassociative]
 @end example
 
 @opencatbox
-@category{Global variables} @category{Operators} @category{Simplification}
+@category{Global variables}
+@category{Operators}
+@category{Simplification}
 @closecatbox
 @end defvr
 
@@ -1319,7 +1334,8 @@ Declare that @code{f} and @code{g} have the new property.
 @end example
 
 @opencatbox
-@category{Operators} @category{Simplification}
+@category{Operators}
+@category{Simplification}
 @closecatbox
 @end deffn
 
@@ -1378,7 +1394,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Declarations and inferences} @category{Operators}
+@category{Declarations and inferences}
+@category{Operators}
 @closecatbox
 @end defvr
 
@@ -1489,7 +1506,8 @@ simplifier that @code{g} is right-associative.  E.g.,
 @code{g(g(a, b), g(c, d))} simplifies to @code{g(a, g(b, g(c, d)))}.
 
 @opencatbox
-@category{Declarations and inferences} @category{Operators}
+@category{Declarations and inferences}
+@category{Operators}
 @closecatbox
 @end defvr
 
@@ -1599,7 +1617,8 @@ simplifies to @code{h (x, y, z)}.
 @code{commutative} is synonymous with @code{symmetric}.
 
 @opencatbox
-@category{Declarations and inferences} @category{Operators}
+@category{Declarations and inferences}
+@category{Operators}
 @closecatbox
 @end defvr
 

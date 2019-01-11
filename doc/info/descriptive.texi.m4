@@ -195,7 +195,9 @@ One must take care when working with categorical data. In the next example, symb
 @end example
 
 @opencatbox
-@category{Descriptive statistics} @category{Share packages} @category{Package descriptive}
+@category{Descriptive statistics}
+@category{Share packages}
+@category{Package descriptive}
 @closecatbox
 
 @node Functions and Variables for data manipulation, Functions and Variables for descriptive statistics, Introduction to descriptive, descriptive-pkg
@@ -2563,7 +2565,8 @@ For bars diagrams related options, see @mref{barsplot} of package @ref{draw-pkg}
 See also functions @mref{histogram} and @mrefdot{piechart}
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -2598,7 +2601,8 @@ Example: @code{barsplot} in a multiplot context.
 @end example
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -2750,7 +2754,8 @@ Option @var{range} can be used to handle outliers.
 @end example
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -2762,7 +2767,8 @@ suitable for creating complex scenes, together with other
 graphic objects. 
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -2902,7 +2908,8 @@ Freedmann - Diakonis robust method for optimal search of the number of classes.
 @end example
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -2931,7 +2938,8 @@ the @code{xrange} and adding an explicit curve into the scene:
 @end example
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -3001,7 +3009,8 @@ Example:
 See also function @mrefdot{barsplot}
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -3013,7 +3022,8 @@ suitable for creating complex scenes, together with other
 graphic objects.
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -3126,7 +3136,8 @@ For plotting isolated or line-joined points in two and three dimensions,
 see @code{points}. See also @mrefdot{histogram}
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -3138,7 +3149,8 @@ suitable for creating complex scenes, together with other
 graphic objects.
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -3216,7 +3228,8 @@ Location and radius defined by the user.
 @end example
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -3228,7 +3241,8 @@ suitable for creating complex scenes, together with other
 graphic objects. 
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 
@@ -3291,7 +3305,8 @@ key: 6|3 =  6.3
 @end example
 
 @opencatbox
-@category{Package descriptive} @category{Plotting}
+@category{Package descriptive}
+@category{Plotting}
 @closecatbox
 @end deffn
 

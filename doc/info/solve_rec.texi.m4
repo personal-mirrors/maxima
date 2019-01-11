@@ -27,7 +27,9 @@ Example:
 @end example
 
 @opencatbox
-@category{Linear recurrences} @category{Share packages} @category{Package solve_rec}
+@category{Linear recurrences}
+@category{Share packages}
+@category{Package solve_rec}
 @closecatbox
 
 @node Functions and Variables for solve_rec,  , Introduction to solve_rec, solve_rec-pkg
@@ -148,7 +150,9 @@ Example:
 @end example
 
 @opencatbox
-@category{Package solve_rec} @category{Sums and products} @category{Simplification functions}
+@category{Package solve_rec}
+@category{Sums and products}
+@category{Simplification functions}
 @closecatbox
 
 @end deffn

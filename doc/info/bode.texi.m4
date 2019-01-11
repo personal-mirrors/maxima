@@ -57,7 +57,8 @@ Examples (1 through 7 from
 To use this function write first @code{load("bode")}. See also @mrefdot{bode_phase}
 
 @opencatbox
-@category{Plotting} @category{Package bode}
+@category{Plotting}
+@category{Package bode}
 @closecatbox
 
 @end deffn
@@ -118,7 +119,8 @@ Examples (1 through 7 from
 To use this function write first @code{load("bode")}. See also @mrefdot{bode_gain}
 
 @opencatbox
-@category{Plotting} @category{Package bode}
+@category{Plotting}
+@category{Package bode}
 @closecatbox
 
 @end deffn

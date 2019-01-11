@@ -98,7 +98,8 @@ value is a product noun form which is a representation of the pi notation used
 in mathematics.
 
 @opencatbox
-@category{Sums and products} @category{Simplification flags and variables}
+@category{Sums and products}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -196,7 +197,8 @@ value is a sum noun form which is a representation of the sigma notation used
 in mathematics.
 
 @opencatbox
-@category{Sums and products} @category{Simplification flags and variables}
+@category{Sums and products}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -383,7 +385,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sums and products} @category{Simplification flags and variables}
+@category{Sums and products}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1117,7 +1120,8 @@ Returns @code{true} if @var{expr} is a Taylor series,
 and @code{false} otherwise.
 
 @opencatbox
-@category{Predicate functions} @category{Power series}
+@category{Predicate functions}
+@category{Power series}
 @closecatbox
 @end deffn
 
@@ -1141,7 +1145,8 @@ logarithms that occur is that necessary to obtain a formal power series.
 
 @c NEED EXAMPLES HERE
 @opencatbox
-@category{Power series} @category{Exponential and logarithm functions}
+@category{Power series}
+@category{Exponential and logarithm functions}
 @closecatbox
 @end defvr
 
@@ -1203,7 +1208,8 @@ Converts @var{expr} from @code{taylor} form to canonical rational expression
 faster.
 
 @opencatbox
-@category{Power series} @category{Rational expressions}
+@category{Power series}
+@category{Rational expressions}
 @closecatbox
 @end deffn
 
@@ -1302,7 +1308,9 @@ There are functions in the @code{fourie} package to calculate Fourier integral
 coefficients and some functions for manipulation of expressions.
 
 @opencatbox
-@category{Fourier transform} @category{Share packages} @category{Package fourie}
+@category{Fourier transform}
+@category{Share packages}
+@category{Package fourie}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -1386,7 +1394,8 @@ of @var{f} with respect to @var{x} from @var{a} to @var{b}.
 
 @c NEEDS EXAMPLES
 @opencatbox
-@category{Package fourie} @category{Integral calculus}
+@category{Package fourie}
+@category{Integral calculus}
 @closecatbox
 @end deffn
 
@@ -1416,7 +1425,9 @@ Simplifies @code{sin (n %pi)} to 0 if @code{sinnpiflag} is @code{true} and
 
 @c NEEDS EXAMPLES
 @opencatbox
-@category{Package fourie} @category{Trigonometric functions} @category{Simplification functions}
+@category{Package fourie}
+@category{Trigonometric functions}
+@category{Simplification functions}
 @closecatbox
 @end deffn
 
@@ -1766,7 +1777,8 @@ with @code{outofpois}, it will convert @var{a} into a Poisson encoding first, if
 necessary.
 
 @opencatbox
-@category{Poisson series} @category{Display functions}
+@category{Poisson series}
+@category{Display functions}
 @closecatbox
 @end deffn
 

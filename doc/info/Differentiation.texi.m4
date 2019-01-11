@@ -266,7 +266,8 @@ seen in the following example:
 
 
 @opencatbox
-@category{Evaluation} @category{Differential equations}
+@category{Evaluation}
+@category{Differential equations}
 @closecatbox
 @end deffn
 
@@ -370,7 +371,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Differential equations} @category{Declarations and inferences}
+@category{Differential equations}
+@category{Declarations and inferences}
 @closecatbox
 @end deffn
 
@@ -457,7 +459,8 @@ p;
 @end example
 
 @opencatbox
-@category{Mathematical functions} @category{Laplace transform}
+@category{Mathematical functions}
+@category{Laplace transform}
 @closecatbox
 @end deffn
 
@@ -528,7 +531,8 @@ See also @mref{depends} and @mrefdot{gradef}
 @end example
 
 @opencatbox
-@category{Declarations and inferences} @category{Global variables}
+@category{Declarations and inferences}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -613,7 +617,8 @@ For example, @mref{integrate} does not recognize the dependence of @code{f} on
 @end example
 
 @opencatbox
-@category{Differential calculus} @category{Declarations and inferences}
+@category{Differential calculus}
+@category{Declarations and inferences}
 @closecatbox
 @end deffn
 
@@ -628,7 +633,8 @@ Otherwise, derivatives are displayed in the Leibniz notation @code{dy/dx}.
 
 @c NEED EXAMPLES HERE
 @opencatbox
-@category{Differential calculus} @category{Global flags}
+@category{Differential calculus}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -660,7 +666,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Differential calculus} @category{Expressions}
+@category{Differential calculus}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -674,7 +681,8 @@ Causes only differentiations with respect to
 the indicated variables, within the @mref{ev} command.
 
 @opencatbox
-@category{Differential calculus} @category{Evaluation}
+@category{Differential calculus}
+@category{Evaluation}
 @closecatbox
 @end deffn
 
@@ -687,7 +695,8 @@ When @code{derivsubst} is @code{true}, a non-syntactic substitution such as
 @code{subst (x, 'diff (y, t), 'diff (y, t, 2))} yields @code{'diff (x, t)}.
 
 @opencatbox
-@category{Differential calculus} @category{Expressions}
+@category{Differential calculus}
+@category{Expressions}
 @closecatbox
 @end defvr
 
@@ -829,7 +838,8 @@ Applies the scalar d'Alembertian to the scalar function @var{f}.
 @c @end example
 
 @opencatbox
-@category{Differential calculus} @category{Package ctensor}
+@category{Differential calculus}
+@category{Package ctensor}
 @closecatbox
 @end deffn
 
@@ -926,7 +936,9 @@ Examples:
 @end example
 
 @opencatbox
-@category{Differential calculus} @category{Vectors} @category{Operators}
+@category{Differential calculus}
+@category{Vectors}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1003,7 +1015,8 @@ higher order derivatives.
 
 @c NEED EXAMPLES HERE
 @opencatbox
-@category{Differential calculus} @category{Declarations and inferences}
+@category{Differential calculus}
+@category{Declarations and inferences}
 @closecatbox
 @end deffn
 
@@ -1018,7 +1031,8 @@ for which partial derivatives have been defined by @code{gradef}.
 for which partial derivatives have been defined by @code{gradef}.
 
 @opencatbox
-@category{Differential calculus} @category{Declarations and inferences}
+@category{Differential calculus}
+@category{Declarations and inferences}
 @closecatbox
 @end defvr
 
@@ -1133,7 +1147,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Laplace transform} @category{Differential equations}
+@category{Laplace transform}
+@category{Differential equations}
 @closecatbox
 @end deffn
 

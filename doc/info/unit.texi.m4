@@ -76,7 +76,9 @@ showabbr and friends.  Show examples with addition of quantities containing
 units.
 
 @opencatbox
-@category{Physical units} @category{Share packages} @category{Package unit}
+@category{Physical units}
+@category{Share packages}
+@category{Package unit}
 @closecatbox
 
 

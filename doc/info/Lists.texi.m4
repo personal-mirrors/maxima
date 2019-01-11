@@ -133,7 +133,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Lists} @category{Operators}
+@category{Lists}
+@category{Operators}
 @closecatbox
 @end defvr
 
@@ -154,7 +155,8 @@ See also @mrefcomma{addrow} @mref{addcol} and @mrefdot{join}
 Do @code{example(append);} for an example.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -207,7 +209,8 @@ so @code{assoc} returns @code{false}.
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -266,7 +269,8 @@ to a nonlist sometimes gives a surprising result; for example
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -465,7 +469,8 @@ Arguments which are @code{equal} but not "=" are not removed.
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -477,7 +482,8 @@ Returns the 8'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -533,7 +539,8 @@ to a nonlist sometimes gives a surprising result; for example
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -546,7 +553,8 @@ Returns the 5'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -600,7 +608,8 @@ The functions @code{second} @dots{}
 See also @mref{firstn} and @mrefdot{part}
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -758,7 +767,8 @@ Note that @code{firstn(@var{expr}, 1)} is not the same as @code{first(@var{expr}
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -770,7 +780,8 @@ Returns the 4'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -829,7 +840,8 @@ Returns the last part (term, row, element, etc.) of the @var{expr}.
 See also @mrefdot{lastn}
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -989,7 +1001,8 @@ Note that @code{lastn(@var{expr}, 1)} is not the same as @code{last(@var{expr})}
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1013,7 +1026,8 @@ a loop it therefore might drastically increase the performance if the length
 is calculated outside the loop instead.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1028,7 +1042,8 @@ converted to matrices yielding a result which is always a matrix.  However,
 list-list operations should return lists.
 
 @opencatbox
-@category{Lists} @category{Global flags}
+@category{Lists}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -1038,7 +1053,8 @@ list-list operations should return lists.
 Returns @code{true} if @var{expr} is a list else @code{false}.
 
 @opencatbox
-@category{Lists} @category{Predicate functions}
+@category{Lists}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -1259,7 +1275,9 @@ Examples:
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions} @category{Predicate functions}
+@category{Lists}
+@category{Expressions}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -1271,7 +1289,8 @@ Returns the 9'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1284,7 +1303,8 @@ See @mref{first} for more details.
 not bound to a nonempty list, Maxima signals an error. For examples, see @mrefdot{push}
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1358,7 +1378,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1398,7 +1419,8 @@ See also @mref{firstn} and @mrefdot{lastn}
 @end example
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1414,7 +1436,8 @@ the members themselves).  @code{reverse} also works on general expressions,
 e.g.  @code{reverse(a=b);} gives @code{b=a}.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1504,7 +1527,8 @@ Returns the 2'nd item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1516,7 +1540,8 @@ Returns the 7'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1528,7 +1553,8 @@ Returns the 6'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1852,7 +1878,8 @@ Returns the 10'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1864,7 +1891,8 @@ Returns the 3'rd item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox
-@category{Lists} @category{Expressions}
+@category{Lists}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -1921,7 +1949,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Lists}
+@category{Sets}
+@category{Lists}
 @closecatbox
 
 @end deffn
@@ -2027,7 +2056,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Sets} @category{Lists}
+@category{Sets}
+@category{Lists}
 @closecatbox
 
 @end deffn

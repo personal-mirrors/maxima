@@ -218,7 +218,8 @@ Enabling @code{debugmode} will not catch Lisp errors.
 @c I'M NOT CONVINCED WE WANT TO OPEN THAT CAN OF WORMS !!!
 
 @opencatbox
-@category{Debugging} @category{Global flags}
+@category{Debugging}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -232,7 +233,9 @@ each time a bound variable is used for the first time in a
 computation.
 
 @opencatbox
-@category{Evaluation} @category{Console interaction} @category{Global flags}
+@category{Evaluation}
+@category{Console interaction}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -272,7 +275,8 @@ No printout is generated when a
 variable on the @code{setcheck} list is assigned to itself, e.g., @code{X: 'X}.
 
 @opencatbox
-@category{Console interaction} @category{Global flags}
+@category{Console interaction}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -292,7 +296,8 @@ Hence, one may assign a different value by assigning to @code{setval}.
 See also @mref{setcheck} and @mrefdot{setval}
 
 @opencatbox
-@category{Console interaction} @category{Global flags}
+@category{Console interaction}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -307,7 +312,8 @@ Hence, one may assign a different value by assigning to @mref{setval}.
 See also @mref{setcheck} and @mrefdot{setcheckbreak}
 
 @opencatbox
-@category{Console interaction} @category{Global variables}
+@category{Console interaction}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -384,7 +390,8 @@ total time.
 See also @mref{timer} and @mrefdot{timer_info}
 
 @opencatbox
-@category{Debugging} @category{Global flags}
+@category{Debugging}
+@category{Global flags}
 @closecatbox
 @end defvr
 

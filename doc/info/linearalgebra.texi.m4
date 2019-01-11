@@ -121,7 +121,9 @@ Example:
 @end example
 
 @opencatbox
-@category{Linear algebra} @category{Share packages} @category{Package linearalgebra}
+@category{Linear algebra}
+@category{Share packages}
+@category{Package linearalgebra}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -169,7 +171,8 @@ Return true if and only if @var{M} is a matrix and every entry of
 @var{M} is a matrix.
 
 @opencatbox
-@category{Package linearalgebra} @category{Predicate functions}
+@category{Package linearalgebra}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -223,7 +226,8 @@ matrix @var{M}.  The second argument defaults to 'generalring.' For a
 description of the possible values for @var{field}, see @code{lu_factor}.
 
 @opencatbox
-@category{Matrix decompositions} @category{Package linearalgebra}
+@category{Matrix decompositions}
+@category{Package linearalgebra}
 @closecatbox
 @end deffn
 
@@ -359,7 +363,8 @@ number of rotations: 1
 @end example
 
 @opencatbox
-@category{Matrix decompositions} @category{Package linearalgebra}
+@category{Matrix decompositions}
+@category{Package linearalgebra}
 @closecatbox
 @end deffn
 
@@ -429,7 +434,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Differential calculus} @category{Package linearalgebra}
+@category{Differential calculus}
+@category{Package linearalgebra}
 @closecatbox
 @end deffn
 
@@ -513,7 +519,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Differential calculus} @category{Package linearalgebra}
+@category{Differential calculus}
+@category{Package linearalgebra}
 @closecatbox
 @end deffn
 
@@ -540,7 +547,8 @@ list and @var{p} evaluates to @code{true} for every list element.  When
 is a Maxima list.  In all other cases, return @code{false}.
 
 @opencatbox
-@category{Package linearalgebra} @category{Predicate functions}
+@category{Package linearalgebra}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -806,7 +814,8 @@ Evaluation took 109.24 seconds (152.10 elapsed)
 @end example
 
 @opencatbox
-@category{Matrix decompositions} @category{Package linearalgebra}
+@category{Matrix decompositions}
+@category{Package linearalgebra}
 @closecatbox
 @end deffn
 
@@ -859,7 +868,8 @@ if @code{e} is a matrix.  In all other cases, return @code{false}.
 See also @mref{blockmatrixp}
 
 @opencatbox
-@category{Package linearalgebra} @category{Predicate functions}
+@category{Package linearalgebra}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -1050,7 +1060,8 @@ Polynomials with two variables:
 @end example
 
 @opencatbox
-@category{Package linearalgebra} @category{Predicate functions}
+@category{Package linearalgebra}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -1105,21 +1116,26 @@ row operation @code{R_i <- R_i - theta * R_j}.  If @var{M} doesn't have a row
 
 @end deffn
 
-@deffn {Function} rank (@var{M})
+@deffn {Function} linalg_rank (@var{M})
 
-Return the rank of that matrix @var{M}.  The rank is the dimension of the
-column space.  Example:
+Return the rank of the matrix @var{M}. This function is equivalent to
+function @mref{rank}, but it uses a different algorithm: it finds the
+@mref{columnspace} of the matrix and counts its elements, since the rank
+of a matrix is the dimension of its column space. 
 
 @c ===beg===
-@c rank(matrix([1,2],[2,4]));
-@c rank(matrix([1,b],[c,d]));
+@c linalg_rank(matrix([1,2],[2,4]));
+@c linalg_rank(matrix([1,b],[c,d]));
 @c ===end===
 @example
-(%i1) rank(matrix([1,2],[2,4]));
-(%o1)                                  1
-(%i2) rank(matrix([1,b],[c,d]));
-Proviso:  @{d - b c # 0@}
-(%o2)                                  2
+@group
+(%i1) linalg_rank(matrix([1,2],[2,4]));
+(%o1)                           1
+@end group
+@group
+(%i2) linalg_rank(matrix([1,b],[c,d]));
+(%o2)                           2
+@end group
 @end example
 
 @opencatbox
@@ -1219,7 +1235,8 @@ If @var{M} is not a block matrix, return @code{true} if
 evaluates to @code{true} for each element of @var{e}.
 
 @opencatbox
-@category{Package linearalgebra} @category{Predicate functions}
+@category{Package linearalgebra}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 

@@ -146,7 +146,9 @@ commutative operator.  To get a commutative dot operator @code{.}, the command
 @code{declare(".", commutative)} must be executed.
 
 @opencatbox
-@category{Vectors} @category{Share packages} @category{Package vect}
+@category{Vectors}
+@category{Share packages}
+@category{Package vect}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -172,7 +174,10 @@ The functions in the @code{eigen} package are:@*
 @mrefdot{similaritytransform}
 
 @opencatbox
-@category{Vectors} @category{Matrices} @category{Share packages} @category{Package eigen}
+@category{Vectors}
+@category{Matrices}
+@category{Share packages}
+@category{Package eigen}
 @closecatbox
 
 @c end concepts Matrices and Linear Algebra
@@ -241,7 +246,8 @@ terms not dependent upon @var{x_1}, @dots{}, @var{x_n}).
 @end example
 
 @opencatbox
-@category{Linear equations} @category{Matrices}
+@category{Linear equations}
+@category{Matrices}
 @closecatbox
 @end deffn
 
@@ -356,7 +362,8 @@ variables @var{x_1}, @dots{}, @var{x_n} of the system of linear equations
 @end example
 
 @opencatbox
-@category{Linear equations} @category{Matrices}
+@category{Linear equations}
+@category{Matrices}
 @closecatbox
 @end deffn
 
@@ -484,7 +491,8 @@ Example:
 @c IT APPEARS THAT doallmxops IS CRUCIAL HERE.
 
 @opencatbox
-@category{Matrices} @category{Evaluation flags}
+@category{Matrices}
+@category{Evaluation flags}
 @closecatbox
 @end defvr
 
@@ -826,7 +834,8 @@ triangularized matrices.
 @end example
 
 @opencatbox
-@category{Linear equations} @category{Matrices}
+@category{Linear equations}
+@category{Matrices}
 @closecatbox
 @end deffn
 
@@ -1088,7 +1097,8 @@ Matrix entered.
 @end example
 
 @opencatbox
-@category{Console interaction} @category{Matrices}
+@category{Console interaction}
+@category{Matrices}
 @closecatbox
 @end deffn
 
@@ -1397,7 +1407,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Display flags and variables} @category{Matrices}
+@category{Display flags and variables}
+@category{Matrices}
 @closecatbox
 @end defvr
 
@@ -1649,7 +1660,8 @@ See also @mrefcomma{map} @mrefcomma{fullmap} @mrefcomma{fullmapl} and
 Returns @code{true} if @var{expr} is a matrix, otherwise @code{false}.
 
 @opencatbox
-@category{Predicate functions} @category{Matrices}
+@category{Predicate functions}
+@category{Matrices}
 @closecatbox
 @end deffn
 
@@ -1821,7 +1833,8 @@ the square matrix @var{M}.
 @code{load ("nchrpl")} loads this function.
 
 @opencatbox
-@category{Matrices} @category{Package nchrpl}
+@category{Matrices}
+@category{Package nchrpl}
 @closecatbox
 @end deffn
 
@@ -1857,7 +1870,8 @@ with integers, since it avoids polynomial arithmetic altogether.
 @code{load ("nchrpl")} loads this file.
 
 @opencatbox
-@category{Matrices} @category{Package nchrpl}
+@category{Matrices}
+@category{Package nchrpl}
 @closecatbox
 @end deffn
 
@@ -1922,7 +1936,8 @@ cause the elements to be expanded (depending on the setting of @mref{ratfac})
 which might not always be desired.
 
 @opencatbox
-@category{Matrices} @category{Rational expressions}
+@category{Matrices}
+@category{Rational expressions}
 @closecatbox
 @end defvr
 
@@ -1968,7 +1983,8 @@ When @code{scalarmatrixp} is @code{false}, 1 x 1 matrices are not simplified
 to scalars.
 
 @opencatbox
-@category{Matrices} @category{Simplification flags and variables}
+@category{Matrices}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -2131,7 +2147,8 @@ triangularized matrices.
 @end example
 
 @opencatbox
-@category{Linear equations} @category{Matrices}
+@category{Linear equations}
+@category{Matrices}
 @closecatbox
 @end deffn
 
@@ -2255,7 +2272,8 @@ These flags have all been declared @code{evflag}.
 @c by the function invocation
 
 @opencatbox
-@category{Package vect} @category{Simplification functions}
+@category{Package vect}
+@category{Simplification functions}
 @closecatbox
 @end deffn
 
@@ -2269,7 +2287,8 @@ When @code{vect_cross} is @code{true}, it allows DIFF(X~Y,T) to work where
 ~ is defined in SHARE;VECT (where VECT_CROSS is set to @code{true}, anyway.)
 
 @opencatbox
-@category{Package vect} @category{Differential calculus}
+@category{Package vect}
+@category{Differential calculus}
 @closecatbox
 @end defvr
 

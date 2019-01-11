@@ -44,7 +44,9 @@ T = (- ---- - -- + 1) t]]
 To use this function write first @code{load("makeOrders")} and @code{load("lindstedt")}.
 
 @opencatbox
-@category{Differential equations} @category{Share packages} @category{Package lindstedt}
+@category{Differential equations}
+@category{Share packages}
+@category{Package lindstedt}
 @closecatbox
 
 @end deffn

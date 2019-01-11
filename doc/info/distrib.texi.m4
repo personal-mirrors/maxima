@@ -245,7 +245,9 @@ In order to make use of package @code{distrib} you need first to load it by typi
 For comments, bugs or suggestions, please contact the author at @var{'riotorto AT yahoo DOT com'}.
 
 @opencatbox
-@category{Statistical functions} @category{Share packages} @category{Package distrib}
+@category{Statistical functions}
+@category{Share packages}
+@category{Package distrib}
 @closecatbox
 
 
@@ -384,7 +386,8 @@ This is an implementation of the Box-Mueller algorithm, as described in Knuth, D
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -532,7 +535,8 @@ is a Student random variable with @var{n} degrees of freedom, @math{t(n)}.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -702,7 +706,8 @@ is a noncentral Student random variable with @var{n} degrees of freedom and nonc
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -915,7 +920,8 @@ The simulation is based on the Ahrens-Cheng algorithm. See @code{random_gamma} f
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -1020,7 +1026,8 @@ Returns a noncentral Chi-square random variate @math{nc_Chi^2(n,ncp)}, with @mat
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -1162,7 +1169,8 @@ is a F random variable with @var{m} and @var{n} degrees of freedom, @math{F(m,n)
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -1377,7 +1385,8 @@ The simulation algorithm is based on the general inverse method.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -1513,7 +1522,8 @@ Log-normal variates are simulated by means of random normal variates. See @code{
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -1636,7 +1646,8 @@ For @math{0<a<1}, Ahrens, J.H. and Dieter, U. (1974). @var{Computer methods for 
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -1756,7 +1767,8 @@ The implemented algorithm is defined in Cheng, R.C.H.  (1978). @var{Generating B
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -1859,7 +1871,8 @@ This is a direct application of the @code{random} built-in Maxima function.
 See also @mrefdot{random} To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -1964,7 +1977,8 @@ The implemented algorithm is based on the general inverse method.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -2069,7 +2083,8 @@ The implemented algorithm is based on the general inverse method.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -2174,7 +2189,8 @@ The implemented algorithm is based on the general inverse method.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -2407,7 +2423,8 @@ The implemented algorithm is based on the general inverse method.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -2513,7 +2530,8 @@ The implemented algorithm is based on the general inverse method.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -2564,7 +2582,8 @@ The implemented algorithm is based on the general inverse method.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -2679,7 +2698,8 @@ where @code{zeta} stands for the Riemann's zeta function.
 Returns the kurtosis coefficient of a @math{Gumbel(a,b)} random variable, with @math{b>0}. To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Package distrib}
+@category{Package distrib}
+@category{Package distrib}
 @closecatbox
 
 @end deffn
@@ -2696,7 +2716,8 @@ The implemented algorithm is based on the general inverse method.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -2869,7 +2890,8 @@ See @code{pdf_general_finite_discrete} for more details.
 @end example
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -2989,7 +3011,8 @@ The implemented algorithm is based on the one described in Kachitvichyanukul, V.
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -3107,7 +3130,8 @@ The implemented algorithm is the one described in Ahrens, J.H. and Dieter, U. (1
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -3288,7 +3312,8 @@ This is a direct application of the @code{random} built-in Maxima function.
 See also @mrefdot{random} To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -3494,7 +3519,8 @@ This is interpreted as the probability of @math{x} failures before the first suc
 
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -3599,7 +3625,8 @@ This is a direct application of the @code{random} built-in Maxima function.
 See also @mrefdot{random} To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -3714,7 +3741,8 @@ Algorithm described in Kachitvichyanukul, V., Schmeiser, B.W. (1985) @var{Comput
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn
@@ -3831,7 +3859,8 @@ Algorithm described in Devroye, L. (1986) @var{Non-Uniform Random Variate Genera
 To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox
-@category{Package distrib} @category{Random numbers}
+@category{Package distrib}
+@category{Random numbers}
 @closecatbox
 
 @end deffn

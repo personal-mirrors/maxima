@@ -112,7 +112,9 @@ consider setting @code{dotassoc} to @code{false}. In this case, however,
 simplifications.
 
 @opencatbox
-@category{Tensors} @category{Share packages} @category{Package atensor}
+@category{Tensors}
+@category{Share packages}
+@category{Package atensor}
 @closecatbox
 
 @c end concepts atensor
@@ -194,7 +196,8 @@ safeguard is used to ensure that the function always terminates, even
 for complex expressions.
 
 @opencatbox
-@category{Package atensor} @category{Simplification functions}
+@category{Package atensor}
+@category{Simplification functions}
 @closecatbox
 
 @end deffn
@@ -218,7 +221,8 @@ The dimensionality of the algebra. @code{atensor} uses the value of @code{adim}
 to determine if an indexed object is a valid base vector.  See @code{abasep}.
 
 @opencatbox
-@category{Package atensor} @category{Global variables}
+@category{Package atensor}
+@category{Global variables}
 @closecatbox
 
 @end defvr
@@ -231,7 +235,8 @@ Default values for the bilinear forms @code{sf}, @code{af}, and
 @code{av}. The default is the identity matrix @code{ident(3)}.
 
 @opencatbox
-@category{Package atensor} @category{Global variables}
+@category{Package atensor}
+@category{Global variables}
 @closecatbox
 
 @end defvr
@@ -243,7 +248,8 @@ Default value: @code{v}
 The symbol for base vectors.
 
 @opencatbox
-@category{Package atensor} @category{Global variables}
+@category{Package atensor}
+@category{Global variables}
 @closecatbox
 
 @end defvr
@@ -326,7 +332,8 @@ an indexed symbol, with the symbol being the same as the value of
 and @code{adim}.
 
 @opencatbox
-@category{Package atensor} @category{Predicate functions}
+@category{Package atensor}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn

@@ -82,7 +82,8 @@ This specifies the testsuite consists of the files "rtest13s" and
 and 63.
 
 @opencatbox
-@category{Debugging} @category{Global variables}
+@category{Debugging}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -93,7 +94,8 @@ directory that is run as a part of the test suite by
 @mrefdot{run_testsuite}.
 
 @opencatbox
-@category{Debugging} @category{Global variables}
+@category{Debugging}
+@category{Global variables}
 @closecatbox
 @end defvr
 

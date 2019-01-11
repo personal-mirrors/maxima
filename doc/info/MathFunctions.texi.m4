@@ -408,7 +408,9 @@ When @var{L} is not a list or a set, signal an error.
 See also @mref{lmin} and @mrefdot{max}
 
 @opencatbox
-@category{Mathematical functions} @category{Lists} @category{Sets}
+@category{Mathematical functions}
+@category{Lists}
+@category{Sets}
 @closecatbox
 @end deffn
 
@@ -421,7 +423,9 @@ When @var{L} is not a list or a set, signal an error.
 See also @mref{lmax} and @mrefdot{min}
 
 @opencatbox
-@category{Mathematical functions} @category{Lists} @category{Sets}
+@category{Mathematical functions}
+@category{Lists}
+@category{Sets}
 @closecatbox
 @end deffn
 
@@ -899,7 +903,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Complex variables} @category{Exponential and logarithm functions}
+@category{Complex variables}
+@category{Exponential and logarithm functions}
 @closecatbox
 @end deffn
 
@@ -1008,7 +1013,8 @@ yields a noun form @code{genfact (n, n/2, 2)}.
 @c -- MENTION THAT? OR TOO MUCH DETAIL ???
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Operators}
+@category{Gamma and factorial functions}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1266,7 +1272,8 @@ simplification of expressions with the factorial function.
 @end example
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Operators}
+@category{Gamma and factorial functions}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1401,7 +1408,8 @@ When @code{sumsplitfact} is @code{false},
 @end example
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Simplification flags and variables}
+@category{Gamma and factorial functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1422,7 +1430,8 @@ complicated transformations of this ilk as well.  The @code{logcontract}
 command "contracts" expressions containing @code{log}.
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Simplification flags and variables}
+@category{Exponential and logarithm functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1495,7 +1504,8 @@ When @code{%emode} is @code{false}, no special simplification of
 @end example
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Simplification flags and variables}
+@category{Exponential and logarithm functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1564,7 +1574,8 @@ See also @mref{ev} and @mrefdot{numer}
 @end example
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Evaluation flags}
+@category{Exponential and logarithm functions}
+@category{Evaluation flags}
 @closecatbox
 @end defvr
 
@@ -1777,7 +1788,9 @@ setting is used, because here "evaluation" of the indefinite integral at the
 endpoints is often needed.
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Integral calculus} @category{Global flags}
+@category{Exponential and logarithm functions}
+@category{Integral calculus}
+@category{Global flags}
 @closecatbox
 @end defvr
 
@@ -1798,7 +1811,9 @@ an expression @var{expr}
 without setting the global variable @code{logarc}.
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Simplification flags and variables} @category{Simplification functions}
+@category{Exponential and logarithm functions}
+@category{Simplification flags and variables}
+@category{Simplification functions}
 @closecatbox
 @end defvr
 
@@ -1815,7 +1830,8 @@ logconfun(m):=featurep(m,integer) or ratnump(m)$} .  Then
 @code{logcontract(1/2*log(x));} will give @code{log(sqrt(x))}.
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Simplification flags and variables}
+@category{Exponential and logarithm functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1971,7 +1987,8 @@ these simplifications are disabled.
 @end example
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Simplification flags and variables}
+@category{Exponential and logarithm functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1984,7 +2001,8 @@ If @code{true} implements the rule
 @code{log(-n)} -> @code{log(n)+%i*%pi} for @code{n} a positive integer.
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Simplification flags and variables}
+@category{Exponential and logarithm functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1997,7 +2015,8 @@ If @code{false} then no simplification of @code{%e} to a
 power containing @code{log}'s is done.
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Simplification flags and variables}
+@category{Exponential and logarithm functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -2009,7 +2028,8 @@ Represents the principal branch of the complex-valued natural
 logarithm with @code{-%pi} < @code{carg(@var{x})} <= @code{+%pi} .
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Complex variables}
+@category{Exponential and logarithm functions}
+@category{Complex variables}
 @closecatbox
 @end deffn
 
@@ -2163,7 +2183,8 @@ an integer variable.
 @end example
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification flags and variables}
+@category{Trigonometric functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -2230,11 +2251,14 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end example
 
 @opencatbox
-@category{Trigonometric functions} @category{Hyperbolic functions} @category{Simplification flags and variables}
+@category{Trigonometric functions}
+@category{Hyperbolic functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
 @c -----------------------------------------------------------------------------
+@anchor{acos}
 @deffn {Function} acos (@var{x})
 
 -- Arc Cosine.
@@ -2245,6 +2269,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{acosh}
 @deffn {Function} acosh (@var{x})
 
 -- Hyperbolic Arc Cosine.
@@ -2255,6 +2280,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{acot}
 @deffn {Function} acot (@var{x})
 
 -- Arc Cotangent.
@@ -2265,6 +2291,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{acoth}
 @deffn {Function} acoth (@var{x})
 
 -- Hyperbolic Arc Cotangent.
@@ -2275,6 +2302,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{acsc}
 @deffn {Function} acsc (@var{x})
 
 -- Arc Cosecant.
@@ -2285,6 +2313,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{acsch}
 @deffn {Function} acsch (@var{x})
 
 -- Hyperbolic Arc Cosecant.
@@ -2295,6 +2324,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{asec}
 @deffn {Function} asec (@var{x})
 
 -- Arc Secant.
@@ -2305,6 +2335,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{asech}
 @deffn {Function} asech (@var{x})
 
 -- Hyperbolic Arc Secant.
@@ -2315,6 +2346,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{asin}
 @deffn {Function} asin (@var{x})
 
 -- Arc Sine.
@@ -2325,6 +2357,7 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{asinh}
 @deffn {Function} asinh (@var{x})
 
 -- Hyperbolic Arc Sine.
@@ -2335,9 +2368,12 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{atan}
 @deffn {Function} atan (@var{x})
 
 -- Arc Tangent.
+
+See also @mref{atan2}.
 
 @opencatbox
 @category{Trigonometric functions}
@@ -2351,12 +2387,15 @@ Even when the argument is demonstrably real, the simplification is applied.
 -- yields the value of @code{atan(@var{y}/@var{x})} in the interval @code{-%pi}
 to @code{%pi}.
 
+See also @mref{atan}.
+
 @opencatbox
 @category{Trigonometric functions}
 @closecatbox
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{atanh}
 @deffn {Function} atanh (@var{x})
 
 -- Hyperbolic Arc Tangent.
@@ -2370,6 +2409,7 @@ to @code{%pi}.
 @c LET'S BE EXPLICIT ABOUT EXACTLY WHAT ARE THE RULES IMPLEMENTED BY THIS PACKAGE
 
 @c -----------------------------------------------------------------------------
+@anchor{atrig1}
 @defvr {Package} atrig1
 
 The @code{atrig1} package contains several additional simplification rules
@@ -2380,7 +2420,8 @@ Corresponding angles in the other three quadrants are also available.
 Do @code{load("atrig1");} to use them.
 
 @opencatbox
-@category{Trigonometric functions} @category{Package atrig1}
+@category{Trigonometric functions}
+@category{Package atrig1}
 @closecatbox
 @end defvr
 
@@ -2407,6 +2448,7 @@ Do @code{load("atrig1");} to use them.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{cot}
 @deffn {Function} cot (@var{x})
 
 -- Cotangent.
@@ -2417,6 +2459,7 @@ Do @code{load("atrig1");} to use them.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{coth}
 @deffn {Function} coth (@var{x})
 
 -- Hyperbolic Cotangent.
@@ -2427,6 +2470,7 @@ Do @code{load("atrig1");} to use them.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{csc}
 @deffn {Function} csc (@var{x})
 
 -- Cosecant.
@@ -2437,6 +2481,7 @@ Do @code{load("atrig1");} to use them.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{csch}
 @deffn {Function} csch (@var{x})
 
 -- Hyperbolic Cosecant.
@@ -2520,7 +2565,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification flags and variables}
+@category{Trigonometric functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -2537,11 +2583,13 @@ used to simplify trigonometric function whose arguments are of the form
 @c NEED TO LOAD THIS PACKAGE ??
 
 @opencatbox
-@category{Trigonometric functions} @category{Package ntrig}
+@category{Trigonometric functions}
+@category{Package ntrig}
 @closecatbox
 @end defvr
 
 @c -----------------------------------------------------------------------------
+@anchor{sec}
 @deffn {Function} sec (@var{x})
 
 -- Secant.
@@ -2552,6 +2600,7 @@ used to simplify trigonometric function whose arguments are of the form
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{sech}
 @deffn {Function} sech (@var{x})
 
 -- Hyperbolic Secant.
@@ -2584,6 +2633,7 @@ used to simplify trigonometric function whose arguments are of the form
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{tan}
 @deffn {Function} tan (@var{x})
 
 -- Tangent.
@@ -2594,6 +2644,7 @@ used to simplify trigonometric function whose arguments are of the form
 @end deffn
 
 @c -----------------------------------------------------------------------------
+@anchor{tanh}
 @deffn {Function} tanh (@var{x})
 
 -- Hyperbolic Tangent.
@@ -2654,7 +2705,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification functions}
+@category{Trigonometric functions}
+@category{Simplification functions}
 @closecatbox
 @end deffn
 
@@ -2670,7 +2722,8 @@ Default value: @code{true}
 @code{true}.
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification flags and variables}
+@category{Trigonometric functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -2685,7 +2738,8 @@ switch set to @code{true}, expansion of products (e.g. @code{sin(2*x)})
 will take place only if @code{trigexpandtimes} is @code{true}.
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification flags and variables}
+@category{Trigonometric functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -2710,7 +2764,8 @@ If @code{false}, both the
 simplifications are turned off.
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification flags and variables}
+@category{Trigonometric functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -2725,7 +2780,7 @@ and hyperbolic sin's and cos's of @var{x} into those of multiples of @var{x}.
 It also tries to eliminate these functions when they occur in
 denominators.  If @var{x} is omitted then all variables in @var{expr} are used.
 
-See also @code{poissimp}.
+See also @mref{poissimp}.
 
 @c ===beg===
 @c trigreduce(-sin(x)^2+3*cos(x)^2+x);
@@ -2763,7 +2818,8 @@ See also @code{poissimp}.
 @c @end example
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification functions}
+@category{Trigonometric functions}
+@category{Simplification functions}
 @closecatbox
 @end deffn
 
@@ -2777,7 +2833,8 @@ arguments to trigonometric functions.  E.g., @code{sin(-x)} will become
 @code{-sin(x)} only if @code{trigsign} is @code{true}.
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification flags and variables}
+@category{Trigonometric functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -2805,7 +2862,8 @@ able to further simplify the result.
 @c MERGE EXAMPLES INTO THIS ITEM
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification functions}
+@category{Trigonometric functions}
+@category{Simplification functions}
 @closecatbox
 @end deffn
 
@@ -2899,7 +2957,8 @@ Addison-Wesley), section 1.5.5, Morley theorem.
 @end example
 
 @opencatbox
-@category{Trigonometric functions} @category{Simplification functions}
+@category{Trigonometric functions}
+@category{Simplification functions}
 @closecatbox
 @end deffn
 
@@ -3041,7 +3100,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Random numbers} @category{Numerical methods}
+@category{Random numbers}
+@category{Numerical methods}
 @closecatbox
 @end deffn
 

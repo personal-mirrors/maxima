@@ -59,7 +59,9 @@ parabolic_cylinder_d (v,z)     Parabolic cylinder D function
 @end example
 
 @opencatbox
-@category{Bessel functions} @category{Airy functions} @category{Special functions}
+@category{Bessel functions}
+@category{Airy functions}
+@category{Special functions}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -92,7 +94,8 @@ m4_mathjax(
 although the infinite series is not used for computations.
 
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -116,7 +119,8 @@ when @math{v} is not an integer.  When @math{v} is an integer @math{n},
 the limit as @math{v} approaches @math{n} is taken.
 
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -145,7 +149,8 @@ m4_mathjax(
 although the infinite series is not used for computations.
 
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -171,7 +176,8 @@ when @math{v} is not an integer.  If @math{v} is an integer @math{n},
 then the limit as @math{v} approaches @math{n} is taken.
 
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -252,7 +258,8 @@ order @math{v} is not supported. Maxima returns a noun form:
 @end example
 
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -280,7 +287,8 @@ Maxima knows the derivative of @code{hankel_2} wrt the argument @math{z}.
 For examples see @code{hankel_1}.
 
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -312,7 +320,8 @@ the Bessel function is expanded.
 @end example
 
 @opencatbox
-@category{Bessel functions} @category{Simplification flags and variables} 
+@category{Bessel functions}
+@category{Simplification flags and variables} 
 @category{Special functions}
 @closecatbox
 @end defvr
@@ -340,7 +349,8 @@ symbolic work, it is probably preferable to work with the expression
 Identical to @code{scaled_bessel_i(0,z)}.
 
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -350,7 +360,8 @@ Identical to @code{scaled_bessel_i(0,z)}.
 
 Identical to @code{scaled_bessel_i(1,z)}.
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -359,7 +370,8 @@ Identical to @code{scaled_bessel_i(1,z)}.
 Lommel's little s[u,v](z) function.  
 Probably Gradshteyn & Ryzhik 8.570.1.
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -386,7 +398,8 @@ The derivative @code{diff (airy_ai(x), x)} is @code{airy_dai(x)}.
 See also @mrefcomma{airy_bi} @mrefcomma{airy_dai} @mrefdot{airy_dbi}
 
 @opencatbox
-@category{Airy functions} @category{Special functions}
+@category{Airy functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -398,7 +411,8 @@ The derivative of the Airy function Ai @code{airy_ai(x)}.
 See @code{airy_ai}.
 
 @opencatbox
-@category{Airy functions} @category{Special functions}
+@category{Airy functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -412,7 +426,8 @@ The derivative @code{diff (airy_bi(x), x)} is @code{airy_dbi(x)}.
 See @code{airy_ai}, @code{airy_dbi}.
 
 @opencatbox
-@category{Airy functions} @category{Special functions}
+@category{Airy functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -424,7 +439,8 @@ The derivative of the Airy Bi function @code{airy_bi(x)}.
 See @code{airy_ai} and @code{airy_bi}.
 
 @opencatbox
-@category{Airy functions} @category{Special functions}
+@category{Airy functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -456,7 +472,8 @@ function.  The second argument is how many digits to retain and return,
 it's a good idea to request a couple of extra.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Numerical evaluation}
+@category{Gamma and factorial functions}
+@category{Numerical evaluation}
 @closecatbox
 @end deffn
 
@@ -478,7 +495,8 @@ These functions return bigfloat values.
 @c Note @code{-bfpsi0 (1, fpprec)} provides @code{%gamma} (Euler's constant) as a bigfloat.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Numerical evaluation}
+@category{Gamma and factorial functions}
+@category{Numerical evaluation}
 @closecatbox
 @end deffn
 
@@ -490,7 +508,9 @@ Complex bigfloat factorial.
 @code{load ("bffac")} loads this function.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Complex variables} @category{Numerical evaluation}
+@category{Gamma and factorial functions}
+@category{Complex variables}
+@category{Numerical evaluation}
 @closecatbox
 @end deffn
 
@@ -596,7 +616,8 @@ See also @mrefdot{makegamma}
 The Euler-Mascheroni constant is @code{%gamma}.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Special functions}
+@category{Gamma and factorial functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -606,7 +627,8 @@ The Euler-Mascheroni constant is @code{%gamma}.
 The natural logarithm of the gamma function.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Special functions}
+@category{Gamma and factorial functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -632,7 +654,8 @@ m4_mathjax(
 See also @mref{gamma_incomplete} (upper incomplete gamma function).
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Special functions}
+@category{Gamma and factorial functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -664,7 +687,8 @@ Also see the related functions @code{gamma_incomplete_regularized} and
 @code{gamma_incomplete_generalized}.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Special functions}
+@category{Gamma and factorial functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -691,7 +715,8 @@ and @mrefdot{erfc}
 Also see @code{gamma_incomplete}.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Special functions}
+@category{Gamma and factorial functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -718,7 +743,8 @@ gamma_incomplete_generalized(a, z1, z2) =
 Also see @code{gamma_incomplete} and @code{gamma_incomplete_regularized}.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Special functions}
+@category{Gamma and factorial functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -750,7 +776,8 @@ is expanded in terms of
 @end example
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Simplification flags and variables}
+@category{Gamma and factorial functions}
+@category{Simplification flags and variables}
 @closecatbox
 
 @end defvr
@@ -767,7 +794,8 @@ simplification will occur.  Note that the @code{factlim} switch controls
 simplification of the result of @code{gamma} of an integer argument as well.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Simplification flags and variables}
+@category{Gamma and factorial functions}
+@category{Simplification flags and variables}
 @closecatbox
 
 @end defvr
@@ -1386,7 +1414,8 @@ functions are expanded for arguments like @math{a+n} or @math{a-n},
 where @math{n} is an integer.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Simplification flags and variables}
+@category{Gamma and factorial functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1397,7 +1426,8 @@ When @code{beta_args_sum_to_integer} is @code{true}, Maxima simplifies
 @code{beta(a,b)}, when the arguments @var{a} and @var{b} sum to an integer.
 
 @opencatbox
-@category{Gamma and factorial functions} @category{Simplification flags and variables}
+@category{Gamma and factorial functions}
+@category{Simplification flags and variables}
 @closecatbox
 @end defvr
 
@@ -1545,7 +1575,8 @@ m4_mathjax(
 <<<$|\arg\ z| < \pi$.>>>)
 
 @opencatbox
-@category{Exponential Integrals} @category{Special functions}
+@category{Exponential Integrals}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -1553,7 +1584,8 @@ m4_mathjax(
 The Exponential Integral Ei(z) (A&S 5.1.2)
 
 @opencatbox
-@category{Exponential Integrals} @category{Special functions}
+@category{Exponential Integrals}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -1561,7 +1593,8 @@ The Exponential Integral Ei(z) (A&S 5.1.2)
 The Exponential Integral Li(z)  (A&S 5.1.3)
 
 @opencatbox
-@category{Exponential Integrals} @category{Special functions}
+@category{Exponential Integrals}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -1577,7 +1610,8 @@ m4_mathjax(
 <<<@math{real(x) > 1} and @math{n} a non-negative integer.>>>)
 
 @opencatbox
-@category{Exponential Integrals} @category{Special functions}
+@category{Exponential Integrals}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -1589,7 +1623,8 @@ m4_mathjax(
 <<<@math{integrate(sin(t)/t, t, 0, z)}>>>)
 
 @opencatbox
-@category{Exponential Integrals} @category{Special functions}
+@category{Exponential Integrals}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -1607,7 +1642,8 @@ m4_mathjax(
 <<<$|\arg\ z| < \pi$.>>>)
 
 @opencatbox
-@category{Exponential Integrals} @category{Special functions}
+@category{Exponential Integrals}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -1619,7 +1655,8 @@ m4_mathjax(
 <<<@math{integrate(sinh(t)/t, t, 0, z)}>>>)
 
 @opencatbox
-@category{Exponential Integrals} @category{Special functions}
+@category{Exponential Integrals}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -1637,7 +1674,8 @@ m4_mathjax(
 <<<$|\arg\ z| < \pi$.>>>)
 
 @opencatbox
-@category{Exponential Integrals} @category{Special functions}
+@category{Exponential Integrals}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -1825,7 +1863,8 @@ The pFq(a1,a2,..ap;b1,b2,..bq;z) hypergeometric function,
 where @code{a} a list of length @code{p} and 
 @code{b} a list of length @code{q}.
 @opencatbox
-@category{Bessel functions} @category{Special functions}
+@category{Bessel functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 
@@ -2051,7 +2090,9 @@ Examples:
 @end example
 
 @opencatbox
-@category{Hypergeometric functions} @category{Simplification functions} @category{Special functions}
+@category{Hypergeometric functions}
+@category{Simplification functions}
+@category{Special functions}
 @closecatbox
 @end deffn
 

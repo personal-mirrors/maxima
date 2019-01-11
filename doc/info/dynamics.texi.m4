@@ -19,7 +19,9 @@ All the functions in this package will be loaded automatically the first
 time they are used.
 
 @opencatbox
-@category{Dynamical systems} @category{Share packages} @category{Package dynamics}
+@category{Dynamical systems}
+@category{Share packages}
+@category{Package dynamics}
 @closecatbox
 
 @node Graphical analysis of discrete dynamical systems,  Visualization with VTK, The dynamics package, dynamics-pkg
@@ -49,7 +51,8 @@ same as for @mrefdot{plot2d}
 @end ifnotinfo
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn
@@ -87,7 +90,8 @@ depend on @var{y}, but any other variable can be used),
 
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn
@@ -136,7 +140,8 @@ And an enlargement of a small region in that fractal:
 @end ifnotinfo
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn
@@ -177,7 +182,8 @@ options are the same as for @mrefdot{plot2d}
 @end ifnotinfo
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn
@@ -224,7 +230,8 @@ To enlarge the region around the lower bifurcation near x @code{=} -1.25 use:
 @end ifnotinfo
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn
@@ -263,7 +270,8 @@ reached. The options are the same as for @mrefdot{plot2d}
 @end ifnotinfo
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn
@@ -349,7 +357,8 @@ The accepted values for the colors are the same as for the @mref{color}
 option of plot2d. 
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 
 @end deffn
@@ -366,7 +375,8 @@ must be a real number; an angle of 0 means that the camera points in the
 direction of the y axis and the x axis will appear on the right.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -378,7 +388,8 @@ The color of the graphics window's background. It accepts color names or
 hexadecimal red-green-blue strings (see the @mref{color} option of plot2d).
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -392,7 +403,8 @@ and the default angle of 30 means that the camera is pointing 30 degrees
 down from the horizontal.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -404,7 +416,8 @@ The height, in pixels, of the graphics window. @var{pixels} must be a
 positive integer number.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -417,7 +430,8 @@ end of the list is reached. Writing just ``restart'' is equivalent to
 [restart, @var{true}].
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -429,7 +443,8 @@ The amount of time, in mili-seconds, between iterations among
 consecutive animation frames. @var{time} must be a real number.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -441,7 +456,8 @@ The width, in pixels, of the graphics window. @var{pixels} must be a
 positive integer number.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -454,7 +470,8 @@ window created by Xmaxima for the @code{scene} graphics. The default
 value @code{.scene} implies that a new top level window will be created.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -466,7 +483,8 @@ Default value: @code{Xmaxima: scene}
 window created by @code{scene}.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -496,7 +514,8 @@ axis when the play button is pressed.
 @end example
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -510,7 +529,8 @@ planes. The lengths of the three edges can be changed with options
 the faces can be rotated with option @mxrefdot{object_orientation,orientation}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -529,7 +549,8 @@ be at the origin; use options @mxref{object_orientation,orientation} and
 @mxref{object_center,center} to change those defaults.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -539,7 +560,8 @@ be at the origin; use options @mxref{object_orientation,orientation} and
 A sphere with default radius of 0.5 units and center at the origin. 
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -562,7 +584,8 @@ the animation restart after the play button is pressed again.
 See also @mxrefdot{object_track,track}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -575,7 +598,8 @@ shown. A value of 1 for @var{number} makes the base visible and a value
 of 0 makes it invisible.
  
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -589,7 +613,8 @@ real numbers, or 3 real numbers separated by commas. In a cylinder, cone
 or cube it will be at half its height and in a sphere at its center.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -601,7 +626,8 @@ The color of the object. It accepts color names or hexadecimal
 red-green-blue strings (see the @mref{color} option of plot2d).
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -619,7 +645,8 @@ See also @mxref{object_startphi,startphi} and
 @mxrefdot{object_phiresolution,phiresolution}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -637,7 +664,8 @@ See also @mxref{object_starttheta,starttheta} and
 @mxrefdot{object_thetaresolution,thetaresolution}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -649,7 +677,8 @@ Default value: @code{1}
 or a cylinder.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -661,7 +690,8 @@ The width of the lines, when option @mxref{object_wireframe,wireframe} is
 used. @var{value} must be a positive number.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -674,7 +704,8 @@ more transparent the object will become. The default value of 1 means a
 completely opaque object.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -688,7 +719,8 @@ numbers separated by commas. @strong{Example}: @code{[0, 0, 90]} rotates
 the x axis of the object to the y axis of the reference frame.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -701,7 +733,8 @@ other dimensions are defined. @var{point} can be a list with 3
 real numbers, or 3 real numbers separated by commas.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -717,7 +750,8 @@ See also @mxref{object_startphi,startphi} and
 @mxrefdot{object_endphi,endphi}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -731,7 +765,8 @@ See also @mxref{object_surface,surface} and
 @mxrefdot{object_wireframe,wireframe}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -743,7 +778,8 @@ The size of the points, when option @mxref{object_points,points} is
 used. @var{value} must be a positive number.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -755,7 +791,8 @@ The coordinates of the object's position. @var{point} can be a list with 3
 real numbers, or 3 real numbers separated by commas.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -767,7 +804,8 @@ The radius or a sphere or the distance from the axis to the base's
 vertices in a cylinder or a cone. @var{value} must be a positive number.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -779,7 +817,8 @@ Default value: @code{6}
 edges in the base of a cone or a cylinder.
  
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -795,7 +834,8 @@ dimensions in the y direction to half and leaves the z dimensions
 unchanged.
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -813,7 +853,8 @@ See also @mxref{object_endphi,endphi} and
 @mxrefdot{object_phiresolution,phiresolution}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -831,7 +872,8 @@ See also @mxref{object_endtheta,endtheta} and
 @mxrefdot{object_thetaresolution,thetaresolution}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -844,7 +886,8 @@ the default behavior, which can be changed using either the option
 @mxref{object_points,points} or @mxrefdot{object_wireframe,wireframe}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -860,7 +903,8 @@ See also @mxref{object_starttheta,starttheta} and
 @mxrefdot{object_endtheta,endtheta}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -894,7 +938,8 @@ See also @mxrefdot{object_animation,animation}
 
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -907,7 +952,8 @@ number. See also @mxref{object_ylength,ylength} and
 @mxrefdot{object_zlength,zlength}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -920,7 +966,8 @@ number. See also @mxref{object_xlength,xlength} and
 @mxrefdot{object_zlength,zlength}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -933,7 +980,8 @@ The height of a cube in z the direction. @var{length} must be a positive
  @mxrefdot{object_ylength,ylength}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr
 
@@ -947,6 +995,7 @@ See also @mxref{object_surface,surface} and
 @mxrefdot{object_points,points}
 
 @opencatbox
-@category{Package dynamics} @category{Plotting}
+@category{Package dynamics}
+@category{Plotting}
 @closecatbox
 @end defvr

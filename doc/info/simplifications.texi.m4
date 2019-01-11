@@ -67,7 +67,10 @@ Examples:
 @c elim.usg: "eliminate" already in doc/info/Polynomials.texi
 
 @opencatbox
-@category{Simplification functions} @category{Rules and patterns} @category{Share packages} @category{Package absimp}
+@category{Simplification functions}
+@category{Rules and patterns}
+@category{Share packages}
+@category{Package absimp}
 @closecatbox
 
 
@@ -110,7 +113,9 @@ useful when the expressions are very large.
 @code{demo ("facexp")} shows a demonstration of this package.
 
 @opencatbox
-@category{Expressions} @category{Share packages} @category{Package facexp}
+@category{Expressions}
+@category{Share packages}
+@category{Package facexp}
 @closecatbox
 
 
@@ -156,7 +161,8 @@ In  addition,  the  setting  of  the  switches   @code{facsum_combine}  and
 @code{nextlayerfactor} may affect the result of @code{facsum}.
 
 @opencatbox
-@category{Package facexp} @category{Expressions}
+@category{Package facexp}
+@category{Expressions}
 @closecatbox
 
 @end deffn
@@ -179,7 +185,8 @@ Since @code{nextlayerfactor} is  always bound to  either @code{true} or  @code{f
 must be presented single-quoted whenever it appears in the argument list of @code{facsum}.
 
 @opencatbox
-@category{Package facexp} @category{Expressions}
+@category{Package facexp}
+@category{Expressions}
 @closecatbox
 
 @end defvr
@@ -201,7 +208,8 @@ expression,  but  does not  want  the denominator  to  be multiplied
 through the terms of the numerator.
 
 @opencatbox
-@category{Package facexp} @category{Expressions}
+@category{Package facexp}
+@category{Expressions}
 @closecatbox
 
 @end defvr
@@ -214,7 +222,8 @@ arguments.  If any of the factors of @var{expr} is raised to a  power, both
 the factor and the exponent will be processed in this way.
 
 @opencatbox
-@category{Package facexp} @category{Expressions}
+@category{Package facexp}
+@category{Expressions}
 @closecatbox
 
 @end deffn
@@ -258,7 +267,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package facexp} @category{Expressions}
+@category{Package facexp}
+@category{Expressions}
 @closecatbox
 @end deffn
 
@@ -269,7 +279,8 @@ Example:
 @section Package functs
 
 @opencatbox
-@category{Share packages} @category{Package functs}
+@category{Share packages}
+@category{Package functs}
 @closecatbox
 
 @deffn {Function} rempart (@var{expr}, @var{n})
@@ -281,7 +292,8 @@ then parts @var{l} thru @var{m} are removed.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Expressions}
+@category{Package functs}
+@category{Expressions}
 @closecatbox
 
 @end deffn
@@ -309,7 +321,8 @@ To use @code{wronskian}, first @code{load(functs)}. Example:
 @end example
 
 @opencatbox
-@category{Package functs} @category{Differential calculus}
+@category{Package functs}
+@category{Differential calculus}
 @closecatbox
 
 @end deffn
@@ -322,7 +335,8 @@ Returns the trace (sum of the diagonal elements) of matrix @var{M}.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Matrices}
+@category{Package functs}
+@category{Matrices}
 @closecatbox
 
 @end deffn
@@ -335,7 +349,8 @@ Returns canonical rational expression (CRE) form if given one, else returns gene
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Expressions}
+@category{Package functs}
+@category{Expressions}
 @closecatbox
 
 @end deffn
@@ -351,7 +366,8 @@ Returns @code{false} otherwise.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Expressions}
+@category{Package functs}
+@category{Expressions}
 @closecatbox
 
 @end deffn
@@ -388,7 +404,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package antid} @category{Expressions}
+@category{Package antid}
+@category{Expressions}
 @closecatbox
 
 @end deffn
@@ -442,7 +459,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package functs} @category{Polynomials}
+@category{Package functs}
+@category{Polynomials}
 @closecatbox
 @end deffn
 
@@ -456,7 +474,8 @@ Returns the @var{n}-th term of the arithmetic series
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Sums and products}
+@category{Package functs}
+@category{Sums and products}
 @closecatbox
 
 @end deffn
@@ -469,7 +488,8 @@ Returns the @var{n}-th term of the geometric series
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Sums and products}
+@category{Package functs}
+@category{Sums and products}
 @closecatbox
 
 @end deffn
@@ -482,7 +502,8 @@ Returns the @var{n}-th term of the harmonic series
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Sums and products}
+@category{Package functs}
+@category{Sums and products}
 @closecatbox
 
 @end deffn
@@ -494,7 +515,8 @@ Returns the sum of the arithmetic series from 1 to @var{n}.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Sums and products}
+@category{Package functs}
+@category{Sums and products}
 @closecatbox
 
 @end deffn
@@ -508,7 +530,8 @@ of @var{r} is less than 1.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Sums and products}
+@category{Package functs}
+@category{Sums and products}
 @closecatbox
 
 @end deffn
@@ -521,7 +544,8 @@ Returns the Gaussian probability function
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -534,7 +558,8 @@ Returns the Gudermannian function
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -547,7 +572,8 @@ Returns the inverse Gudermannian function
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -559,7 +585,8 @@ Returns the versed sine @code{1 - cos (x)}.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -571,7 +598,8 @@ Returns the coversed sine @code{1 - sin (@var{x})}.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -583,7 +611,8 @@ Returns the exsecant @code{sec (@var{x}) - 1}.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -595,7 +624,8 @@ Returns the haversine @code{(1 - cos(x))/2}.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -609,7 +639,8 @@ taken @var{r} at a time.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -623,7 +654,8 @@ selected from a set of @var{n} objects.
 To use this function write first @code{load(functs)}.
 
 @opencatbox
-@category{Package functs} @category{Mathematical functions}
+@category{Package functs}
+@category{Mathematical functions}
 @closecatbox
 
 @end deffn
@@ -758,7 +790,10 @@ in @code{remrule ("+", "+rule1")} to specifically remove the first rule on @code
 or @code{disprule ("*rule2")} to display the definition of the second multiplicative rule.
 
 @opencatbox
-@category{Simplification functions} @category{Rules and patterns} @category{Share packages} @category{Package ineq}
+@category{Simplification functions}
+@category{Rules and patterns}
+@category{Share packages}
+@category{Package ineq}
 @closecatbox
 
 
@@ -770,7 +805,9 @@ or @code{disprule ("*rule2")} to display the definition of the second multiplica
 @section Package rducon
 
 @opencatbox
-@category{Expressions} @category{Share packages} @category{Package rducon}
+@category{Expressions}
+@category{Share packages}
+@category{Package rducon}
 @closecatbox
 
 
@@ -810,7 +847,8 @@ symbols to represent each constant subexpression found by @code{reduce_consts}.
 @code{demo ("rducon")} shows a demonstration of this function.
 
 @opencatbox
-@category{Package rducon} @category{Expressions}
+@category{Package rducon}
+@category{Expressions}
 @closecatbox
 
 @end deffn
@@ -822,7 +860,9 @@ symbols to represent each constant subexpression found by @code{reduce_consts}.
 @section Package scifac
 
 @opencatbox
-@category{Expressions} @category{Share packages} @category{Package scifac}
+@category{Expressions}
+@category{Share packages}
+@category{Package scifac}
 @closecatbox
 
 
@@ -854,7 +894,8 @@ compact pair-factored result.
 @code{demo ("scifac")} shows a demonstration of this function.
 
 @opencatbox
-@category{Package scifac} @category{Expressions}
+@category{Package scifac}
+@category{Expressions}
 @closecatbox
 
 @end deffn
@@ -900,7 +941,9 @@ Sometimes it helps to apply @code{sqrtdenest} more than once, on such as
 @code{load ("sqdnst")} loads this function.
 
 @opencatbox
-@category{Expressions} @category{Share packages} @category{Package sqdnst}
+@category{Expressions}
+@category{Share packages}
+@category{Package sqdnst}
 @closecatbox
 
 @end deffn

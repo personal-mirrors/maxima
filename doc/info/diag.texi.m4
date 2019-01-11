@@ -45,7 +45,9 @@ Example:
 To use this function write first @code{load("diag")}.
 
 @opencatbox
-@category{Matrices} @category{Share packages} @category{Package diag}
+@category{Matrices}
+@category{Share packages}
+@category{Package diag}
 @closecatbox
 
 @end deffn

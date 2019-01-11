@@ -845,7 +845,8 @@ variable @var{z} assumes the value @var{z_0}.  The residue is the coefficient of
 @end example
 
 @opencatbox
-@category{Integral calculus} @category{Complex variables}
+@category{Integral calculus}
+@category{Complex variables}
 @closecatbox
 @end deffn
 
@@ -1016,7 +1017,10 @@ for the integrator to produce a good solution.
 
 
 @opencatbox
-@category{Integral calculus} @category{Numerical methods} @category{Share packages} @category{Package quadpack}
+@category{Integral calculus}
+@category{Numerical methods}
+@category{Share packages}
+@category{Package quadpack}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -1123,7 +1127,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 
@@ -1215,7 +1220,8 @@ Examples:
 Note that @code{quad_qags} is more accurate and efficient than @code{quad_qag} for this integrand.
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 
@@ -1324,7 +1330,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 
@@ -1440,7 +1447,8 @@ Principal Value
 @end example
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 
@@ -1555,7 +1563,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 
@@ -1691,7 +1700,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 
@@ -1823,7 +1833,8 @@ pos;
 @end example
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 
@@ -1925,7 +1936,8 @@ these points to @code{quad_qagp}.  We also note that @code{quad_qagp} is
 more accurate and more efficient that @mrefdot{quad_qags}
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 
@@ -1951,7 +1963,8 @@ If @var{value} is not given, then the current value of the
 @var{parameter} is set to the given value.
 
 @opencatbox
-@category{Numerical methods} @category{Package quadpack}
+@category{Numerical methods}
+@category{Package quadpack}
 @closecatbox
 @end deffn
 

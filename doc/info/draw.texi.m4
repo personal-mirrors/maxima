@@ -65,7 +65,9 @@ replacements for draw that do the same as @mrefcomma{draw} @mref{draw2d} and
 @mref{draw3d} but embed the resulting plot in the worksheet.
 
 @opencatbox
-@category{Plotting} @category{Share packages} @category{Package draw}
+@category{Plotting}
+@category{Share packages}
+@category{Package draw}
 @closecatbox
 
 
@@ -238,7 +240,8 @@ End of animation sequence
 See also @mrefcomma{gr2d} @mrefcomma{gr3d} @mref{draw2d} and @mrefdot{draw3d}
 
 @opencatbox
-@category{Package draw} @category{File output}
+@category{Package draw}
+@category{File output}
 @closecatbox
 @end deffn
 
@@ -257,7 +260,8 @@ It can be used to plot a unique scene in 2d, as can be seen in most examples bel
 See also @mref{draw} and @mrefdot{gr2d}
 
 @opencatbox
-@category{Package draw} @category{File output}
+@category{Package draw}
+@category{File output}
 @closecatbox
 @end deffn
 
@@ -277,7 +281,8 @@ It can be used to plot a unique scene in 3d, as can be seen in many examples bel
 See also @mref{draw} and @mrefdot{gr3d}
 
 @opencatbox
-@category{Package draw} @category{File output}
+@category{Package draw}
+@category{File output}
 @closecatbox
 @end deffn
 
@@ -300,7 +305,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Package draw} @category{File output}
+@category{Package draw}
+@category{File output}
 @closecatbox
 @end deffn
 
@@ -342,7 +348,8 @@ Example:
 @figure{draw_multiplot}
 
 @opencatbox
-@category{Package draw} @category{File output}
+@category{Package draw}
+@category{File output}
 @closecatbox
 @end deffn
 
@@ -1518,7 +1525,7 @@ Option @code{font} can be given the complete path to the font file:
         terminal  = png)$
 @end example
 
-If environment variable @code{GDFONTPATH} is set to the
+If environment variable @env{GDFONTPATH} is set to the
 path where font files are allocated, it is possible to
 set graphic option @code{font} to the name of the font.
 @example
@@ -5582,7 +5589,8 @@ Returns the negative of a (@var{level} or @var{rgb}) picture.
 Returns @code{true} in case of equal pictures, and @code{false} otherwise.
 
 @opencatbox
-@category{Package draw} @category{Predicate functions}
+@category{Package draw}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn
@@ -5596,7 +5604,8 @@ Returns @code{true} if the argument is a well formed image,
 and @code{false} otherwise.
 
 @opencatbox
-@category{Package draw} @category{Predicate functions}
+@category{Package draw}
+@category{Predicate functions}
 @closecatbox
 
 @end deffn

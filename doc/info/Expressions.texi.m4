@@ -167,7 +167,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Evaluation} @category{Nouns and verbs}
+@category{Evaluation}
+@category{Nouns and verbs}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -309,7 +310,8 @@ the @mrefcomma{alias} @mrefcomma{ordergreat} @mref{orderless} functions or by
 declaring the atom a @mref{noun} with @mrefdot{declare})
 
 @opencatbox
-@category{Declarations and inferences} @category{Global variables}
+@category{Declarations and inferences}
+@category{Global variables}
 @closecatbox
 @end defvr
 
@@ -456,7 +458,8 @@ Returns @code{true} if @var{expr} is atomic (i.e. a number, name or string) else
 unbound).
 
 @opencatbox
-@category{Expressions} @category{Predicate functions}
+@category{Expressions}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -855,7 +858,8 @@ for @code{%e^x} in @code{%e^(a x)}.
 @end example
 
 @opencatbox
-@category{Exponential and logarithm functions} @category{Expressions}
+@category{Exponential and logarithm functions}
+@category{Expressions}
 @closecatbox
 @end defvr
 
@@ -1277,7 +1281,8 @@ necessary if cancellation is to occur.  Also, if you save an expression in which
 @code{x} is a @code{mainvar}, you probably should also save @code{x}.)
 
 @opencatbox
-@category{Declarations and inferences} @category{Expressions}
+@category{Declarations and inferences}
+@category{Expressions}
 @closecatbox
 @end defvr
 
@@ -1337,7 +1342,8 @@ a single quote.  This switch is always @code{true} when displaying function
 definitions.
 
 @opencatbox
-@category{Display flags and variables} @category{Nouns and verbs}
+@category{Display flags and variables}
+@category{Nouns and verbs}
 @closecatbox
 @end defvr
 
@@ -1470,7 +1476,8 @@ Examples:
 @end example
 
 @opencatbox
-@category{Expressions} @category{Operators}
+@category{Expressions}
+@category{Operators}
 @closecatbox
 @end deffn
 
@@ -1490,7 +1497,8 @@ if @var{op} is equal to the operator of @var{expr}.
 operator of @var{expr}.
 
 @opencatbox
-@category{Operators} @category{Predicate functions}
+@category{Operators}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -1743,7 +1751,8 @@ Ordering non-atomic expressions.
 @end example
 
 @opencatbox
-@category{Expressions} @category{Predicate functions}
+@category{Expressions}
+@category{Predicate functions}
 @closecatbox
 @end deffn
 
@@ -2185,7 +2194,8 @@ Example:
 @end example
 
 @opencatbox
-@category{Expressions} @category{Display functions}
+@category{Expressions}
+@category{Display functions}
 @closecatbox
 @end deffn
 

@@ -76,8 +76,10 @@ and develop DOE Macsyma, now called Maxima.
 
 @end titlepage
 
+@ifnothtml
 @summarycontents
 @contents
+@end ifnothtml
 
 @ifnottex
 @node Top, Introduction to Maxima, (dir), (dir)
@@ -208,6 +210,9 @@ and develop DOE Macsyma, now called Maxima.
 
 @b{Index}
 * Function and Variable Index:: Index.
+@ifhtml
+* Documentation Categories::        Docuemntation categories
+@end ifhtml
 
 @comment @detailmenu
 @b{ --- The Detailed Node Listing --- }
@@ -920,15 +925,15 @@ Understanding maxima's output
 @chapter mnewton
 @include mnewton.texi
 
-@node numericalio-pkg
+@node numericalio-pkg, odepack-pkg, mnewton-pkg, Top
 @chapter numericalio
 @include numericalio.texi
 
-@node odepack-pkg
+@node odepack-pkg, operatingsystem-pkg, numericalio-pkg, Top
 @chapter odepack
 @include odepack.texi
 
-@node operatingsystem-pkg
+@node operatingsystem-pkg, opsubst-pkg, odepack-pkg, Top
 @chapter operatingsystem
 @include operatingsystem.texi
 
@@ -994,7 +999,17 @@ Understanding maxima's output
 
 @c end includes
 
+@ifnothtml
 @node Function and Variable Index,  , Error and warning messages, Top
+@end ifnothtml
+@ifhtml
+@node Function and Variable Index, Documentation Categories , Error and warning messages, Top
+@end ifhtml
 @appendix Function and Variable Index
 
 @printindex fn
+
+@page
+@ifhtml
+@contents
+@end ifhtml

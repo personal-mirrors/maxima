@@ -11,7 +11,9 @@
 as obtained from the SLATEC project.
 
 @opencatbox
-@category{Numerical methods} @category{Share packages} @category{Package lapack}
+@category{Numerical methods}
+@category{Share packages}
+@category{Package lapack}
 @closecatbox
 
 
@@ -243,7 +245,8 @@ The elements of @var{A} and @var{b} must evaluate to real floating point numbers
 @end example
 
 @opencatbox
-@category{Package lapack} @category{Linear equations}
+@category{Package lapack}
+@category{Linear equations}
 @closecatbox
 
 @end deffn

@@ -8,7 +8,8 @@
 @section Package f90
 
 @opencatbox
-@category{Share packages} @category{Package f90}
+@category{Share packages}
+@category{Package f90}
 @closecatbox
 @c -----------------------------------------------------------------------------
 
@@ -61,7 +62,9 @@ foo = yyy**4+4*xxx*yyy**3+28*yyy**3+6*xx&
 @end example
 
 @opencatbox
-@category{Global variables} @category{Translation and compilation} @category{Package f90}
+@category{Global variables}
+@category{Translation and compilation}
+@category{Package f90}
 @closecatbox
 @end defvr
 
@@ -133,7 +136,8 @@ end
 @end example
 
 @opencatbox
-@category{Translation and compilation} @category{Package f90}
+@category{Translation and compilation}
+@category{Package f90}
 @closecatbox
 @end deffn
 

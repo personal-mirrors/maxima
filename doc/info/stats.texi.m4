@@ -33,7 +33,9 @@ For comments, bugs or suggestions, please contact the author at
 @var{'mario AT edu DOT xunta DOT es'}.
 
 @opencatbox
-@category{Statistical inference} @category{Share packages} @category{Package stats}
+@category{Statistical inference}
+@category{Share packages}
+@category{Package stats}
 @closecatbox
 
 @node Functions and Variables for inference_result, Functions and Variables for stats, Introduction to stats, Top
@@ -251,7 +253,8 @@ return their results in floating point numbers. If it is @code{false},
 results are given in symbolic and rational format.
 
 @opencatbox
-@category{Package stats} @category{Numerical evaluation}
+@category{Package stats}
+@category{Numerical evaluation}
 @closecatbox
 
 @end defvr
@@ -1573,7 +1576,8 @@ v_distribution, residuals, adc, aic, bic]
 @end example
 
 @opencatbox
-@category{Package stats} @category{Statistical estimation}
+@category{Package stats}
+@category{Statistical estimation}
 @closecatbox
 
 @end deffn

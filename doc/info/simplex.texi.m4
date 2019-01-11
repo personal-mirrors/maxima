@@ -24,7 +24,10 @@ Example:
 @end example
 
 @opencatbox
-@category{Numerical methods}  @category{Optimization} @category{Share packages} @category{Package simplex}
+@category{Numerical methods} 
+@category{Optimization}
+@category{Share packages}
+@category{Package simplex}
 @closecatbox
 
 @subsection Tests for simplex
@@ -170,7 +173,8 @@ Example:
 See also: @mref{minimize_lp}, @mref{scale_lp}, and @mref{epsilon_lp}.
 
 @opencatbox
-@category{Package simplex} @category{Numerical methods}
+@category{Package simplex}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn
@@ -186,7 +190,8 @@ description of arguments and return value.
 See also: @mref{minimize_lp}.
 
 @opencatbox
-@category{Package simplex} @category{Numerical methods}
+@category{Package simplex}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn
@@ -287,7 +292,8 @@ p;
 See also: @mref{maximize_lp}, @mref{nonnegative_lp}, @mref{epsilon_lp}.
 
 @opencatbox
-@category{Package simplex} @category{Numerical methods}
+@category{Package simplex}
+@category{Numerical methods}
 @closecatbox
 
 @end deffn
