@@ -14,8 +14,6 @@
 @settitle Maxima @manual_version@ Manual
 
 @synindex ky fn
-@synindex vr fn
-@synindex cp fn
 
 @setchapternewpage odd
 @c end of header
@@ -209,7 +207,9 @@ and develop DOE Macsyma, now called Maxima.
 * Error and warning messages::  Error and warning messages
 
 @b{Index}
-* Function and Variable Index:: Index.
+* Function Index:: Functions.
+* Variable Index:: Variables.
+* Concept Index:: Concepts.
 @ifhtml
 * Documentation Categories::        Docuemntation categories
 @end ifhtml
@@ -993,21 +993,31 @@ Understanding maxima's output
 @chapter zeilberger
 @include zeilberger.texi
 
-@node Error and warning messages, Function and Variable Index, zeilberger-pkg, Top
+@node Error and warning messages, Function Index, zeilberger-pkg, Top
 @chapter Error and warning messages
 @include errormessages.texi
 
 @c end includes
 
-@ifnothtml
-@node Function and Variable Index,  , Error and warning messages, Top
-@end ifnothtml
-@ifhtml
-@node Function and Variable Index, Documentation Categories , Error and warning messages, Top
-@end ifhtml
-@appendix Function and Variable Index
+@node Function Index,  , Error and warning messages, Top
+@appendix Function Index
 
 @printindex fn
+
+@node Variable Index
+@appendix Variable Index
+
+@printindex vr
+
+@ifnothtml
+@node Concept Index
+@end ifnothtml
+@ifhtml
+@node Concept Index, Documentation Categories
+@end ifhtml
+@appendix Concept Index
+
+@printindex cp
 
 @page
 @ifhtml
