@@ -623,4 +623,4 @@ distclean-local:
 .PHONY: check_texinfo warn_texinfo
 
 %.texi : math.m4 %.texi.m4
-	m4 --prefix-builtins $^ > $@
+	m4 --prefix-builtins --define m4_filename=$(basename $@) $^ > $@

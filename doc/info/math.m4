@@ -1,3 +1,17 @@
+m4_dnl Change the quote characters to something that isn't likely to
+m4_dnl show up in the manual.
+m4_changequote(`<<<', `>>>')
+m4_define(<<<m4_setcat>>>,
+<<<@c setcat $1
+@dcindex $1
+m4_define(<<<m4_cat>>>, $1)>>>)m4_dnl
+m4_define(<<<m4_deffn>>>,
+<<<@c m4_cat
+@anchor{$2}
+@anchor{Item-m4_filename(): $2}
+@dcindex m4_cat()!$2
+@deffn $1 $2 $3
+>>>)
 m4_dnl For writing formulas suitable for various output formats.  For
 m4_dnl simplicity two or three arguments are required:
 m4_dnl
@@ -7,8 +21,8 @@ m4_dnl 3:  If given, this is for TeX output.  If not, then use arg 1.
 m4_dnl
 m4_dnl If an arg contains a comma, you will need to quote the argument
 m4_dnl using `'.
-m4_define(`m4_mathjax', 
-`@ifhtml
+m4_define(<<<m4_mathjax>>>, 
+<<<@ifhtml
 @ifset mathjax
 @html
 $1
@@ -22,8 +36,5 @@ $2
 $2
 @end ifinfo
 @tex
-m4_ifelse(`$#', `3', <<<<<<$3>>>>>>, <<<$1>>>)
-@end tex')
-m4_dnl Change the quote characters to something that isn't likely to
-m4_dnl show up in the manual.
-m4_changequote(`<<<', `>>>')
+m4_ifelse(<<<$#>>>, <<<3>>>, <<<<<<$3>>>>>>, <<<$1>>>)
+@end tex>>>)
