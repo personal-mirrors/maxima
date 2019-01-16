@@ -223,11 +223,45 @@ function endfile(filename,    i, prev_initial, initial)
       print_initial(initial)
     }
 
-    # write the actual line \entry {...}{...}
-    printf("%centry {%s}{%s}\n",
-      Command_char,
-      Data[Keys[i], "text"],
-      Data[Keys[i], "pagenum"]) > Output_file
+    # An \entry can have 3 or 4 args:
+    #   \entry {key}{pagenum}{topic}
+    #   \entry {key}{pagenum}{topic}{subtopic}
+    #
+    # Then, Data[Keys[i], "text"] is either
+    #   topic
+    #   topic}{subtopic
+    #
+    # So look for a subtopic (4 args).  If there is, we want to print
+    #   \secondary {subtopic}{pagenum}
+    #
+    # If there is no subtopic (3 args), then print
+    #   \entry {topic}{pagenum}
+    printf("text = `%s'\n", Data[Keys[i], "text"])
+    isubtopic = match(Data[Keys[i], "text"], /}{(.*)/, subtopic)
+    printf("isubtopic = %d\n", isubtopic)
+    if (isubtopic != 0) {
+	itopic = match(Data[Keys[i], "text"], /([^}]+)}/, topic)
+    } else {
+	itopic = match(Data[Keys[i], "text"], /(.*)/, topic)
+    }
+    printf("topic = `%s'\n", topic[1])
+
+    if (isubtopic != 0) {
+	printf("subt  = `%s'\n", subtopic[1])
+    }
+
+    if (isubtopic == 0) {
+	# write the actual line \entry {...}{...}
+	printf("%centry {%s}{%s}\n",
+	       Command_char,
+	       Data[Keys[i], "text"],
+	       Data[Keys[i], "pagenum"]) > Output_file
+    } else {
+	printf("%csecondary {%s}{%s}\n",
+	       Command_char,
+	       subtopic[1],
+	       Data[Keys[i], "pagenum"]) > Output_file
+    }
   }
   close(Output_file)
 }
@@ -237,6 +271,7 @@ function endfile(filename,    i, prev_initial, initial)
     next
   Seen[$0] = TRUE
   $0 = substr($0, 7)  # remove leading \entry
+  print $0
   initial = extract_initial($0)
   numfields = field_split($0, fields, "{", "}", Command_char)
   if (numfields != 3)
@@ -245,6 +280,8 @@ function endfile(filename,    i, prev_initial, initial)
   key = fields[1]
   pagenum = fields[2]
   text = fields[3]
+  printf("Key: {%s}\n", key)
+  printf("text: {%s}\n", text)
   if (! ((key, "text") in Data)) {
     # first time we've seen this full line
     Keys[++Entries] = key
