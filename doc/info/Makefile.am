@@ -530,7 +530,7 @@ maxima-index.lisp: build_index.pl maxima.info
 
 DOLLAR_SIGN = $$
 
-maxima_1.html: maxima.texi $(maxima_TEXINFOS) $(figurefiles) manual.css
+maxima_1.html: maxima.pdf $(maxima_TEXINFOS) $(figurefiles) manual.css
 	@: sh $(srcdir)/extract_categories.sh maxima
 	./build_html.sh
 
@@ -538,9 +538,10 @@ maxima.epub: maxima_1.html
 	ebook-convert maxima_singlepage.html maxima.epub --breadth-first "--title=Maxima @manual_version@ Manual" "--authors=Maxima Team" --language=en
 
 maxima.pdf: maxima_pdf.texi $(maxima_TEXINFOS) $(pdffigures)
-	$(TEXI2PDF) $(AM_V_texinfo) -o maxima.pdf $<
-	rm -f maxima.fns maxima.vr maxima.tp maxima.pg maxima.ky maxima.cp \
-	maxima.toc maxima.fn maxima.aux maxima.log
+	make-pdf.sh $<
+	mv maxima_pdf.pdf maxima.pdf
+	rm -f maxima_pdf.fns maxima_pdf.vr maxima_pdf.tp maxima_pdf.pg maxima_pdf.ky maxima_pdf.cp \
+	maxima_pdf.toc maxima_pdf.fn maxima_pdf.aux maxima_pdf.log
 
 contents.hhc index.hhk: maxima_1.html
 	/usr/bin/env perl $(srcdir)/create_index `grep -l 'Table of Contents' maxima_*.html|grep -v singlepage`
