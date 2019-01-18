@@ -8,7 +8,7 @@ m4_define(<<<m4_cat>>>, $1)>>>)m4_dnl
 m4_define(<<<m4_deffn>>>,
 <<<@c m4_cat
 @anchor{$2}
-@anchor{Item-m4_filename(): $2}
+@anchor{m4_cat()-$2}
 @dcindex m4_cat()!$2
 @deffn $1 $2 $3
 >>>)
