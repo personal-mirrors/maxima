@@ -1,5 +1,25 @@
 #!/bin/sh
 
+usage () {
+    echo "make-pdf.sh [-Dh?] texifile"
+    echo "    -D   Enable simple debugging of this script"
+    echo "    -h   This help"
+    echo "    -?   This help too"
+    echo "  texifile  File to be converted to PDF"
+    echo ""
+    echo "Create a pdf file from the given texi file"
+    exit 1
+}
+
+while getopts "Dh?" arg
+do
+  case $arg in
+      D) DEBUG=yes ;;
+      h) usage ;;
+      \?) usage ;;
+  esac
+done
+
 TEXIFILE=$1
 BASEFILE=`basename $TEXIFILE .texi`
 INTERACTION="-interaction=nonstopmode"
@@ -9,10 +29,14 @@ build () {
 	exit 1
     fi
     @SED@ --in-place=bak -E 's/^(.*)\{([^!]+)!([^}]+)\}[ ]*$$/\1{\2}{\3}/' $BASEFILE.dc
-    ./texindex $BASEFILE.dc
+    ./texindex $BASEFILE.??
 }
 
+if [ "$DEBUG" = "yes" ]; then
 set -x
+fi
+
 build
-build
-build
+while ( grep 'Rerun to get cross' $BASEFILE.log ); do
+    build
+done
