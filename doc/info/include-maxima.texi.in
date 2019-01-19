@@ -1002,12 +1002,7 @@ Understanding maxima's output
 
 @c end includes
 
-@ifnothtml
-@node Function and Variable Index,  , Error and warning messages, Top
-@end ifnothtml
-@ifhtml
-@node Function and Variable Index, Documentation Categories , Error and warning messages, Top
-@end ifhtml
+@node Function and Variable Index
 @appendix Function and Variable Index
 
 @printindex fn
@@ -1015,7 +1010,13 @@ Understanding maxima's output
 @node Documentation Categories
 @appendix Documentation Categories
 
+@ifnothtml
 @printindex dc
+@end ifnothtml
+
+@ifhtml
+@include category.texi
+@end ifhtml
 
 @page
 @ifhtml

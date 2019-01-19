@@ -5,13 +5,31 @@ m4_define(<<<m4_setcat>>>,
 <<<@c setcat $1
 @dcindex $1
 m4_define(<<<m4_cat>>>, $1)>>>)m4_dnl
+m4_dnl
 m4_define(<<<m4_deffn>>>,
-<<<@c m4_cat
+<<<@c deffn
+m4_define(<<<m4_name>>>, $2)m4_dnl
 @anchor{$2}
 @anchor{m4_cat()-$2}
 @dcindex m4_cat()!$2
 @deffn $1 $2 $3
 >>>)
+m4_define(<<<m4_deffnx>>>,
+<<<@c deffnx
+@anchor{$2}
+@dcindex m4_cat()!$2
+@deffnx $1 $2 $3
+>>>)
+m4_define(<<<m4_defvr>>>,
+<<<@c defvr
+@anchor{$2}
+@defvr $1 $2
+>>>)
+
+m4_define(<<<m4_category>>>,
+<<<m4_dnl
+@category{$1}>>>)
+
 m4_dnl For writing formulas suitable for various output formats.  For
 m4_dnl simplicity two or three arguments are required:
 m4_dnl
