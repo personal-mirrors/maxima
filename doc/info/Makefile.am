@@ -531,7 +531,7 @@ maxima-index.lisp: build_index.pl maxima.info
 DOLLAR_SIGN = $$
 
 maxima_0.html: maxima.pdf $(maxima_TEXINFOS) $(figurefiles) manual.css
-	@: sh $(srcdir)/extract_categories.sh maxima
+	gawk -f build-cat.awk maxima_pdf.dcs > category.texi
 	./build_html.sh
 
 maxima.epub: maxima_0.html
