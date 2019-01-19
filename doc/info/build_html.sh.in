@@ -15,6 +15,8 @@ usage () {
 # Default to using makeinfo/texi2any
 TEXI2HTML=makeinfo
 
+DEBUG=yes
+
 while getopts "Hh?D" arg
 do
   case $arg in
