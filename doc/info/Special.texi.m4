@@ -1444,7 +1444,7 @@ m4_category(Gamma and factorial functions)
 @closecatbox
 @end deffn
 
-@defvr {Option variable} maxpsiposint
+m4_defvr({Option variable}, maxpsiposint)
 Default value: 20
 
 @code{maxpsiposint} is the largest positive value for which
@@ -1456,7 +1456,7 @@ m4_category(Gamma and factorial functions)
 
 @end defvr
 
-@defvr {Option variable} maxpsinegint
+m4_defvr({Option variable}, maxpsinegint)
 Default value: -10
 
 @code{maxpsinegint} is the most negative value for which
@@ -1470,7 +1470,7 @@ m4_category(Gamma and factorial functions)
 
 @end defvr
 
-@defvr {Option variable} maxpsifracnum
+m4_defvr({Option variable}, maxpsifracnum)
 Default value: 6
 
 Let @var{x} be a rational number less than one of the form @code{p/q}.
@@ -1484,7 +1484,7 @@ m4_category(Gamma and factorial functions)
 
 @end defvr
 
-@defvr {Option variable} maxpsifracdenom
+m4_defvr({Option variable}, maxpsifracdenom)
 Default value: 6
 
 Let @var{x} be a rational number less than one of the form @code{p/q}.
@@ -1500,8 +1500,7 @@ m4_category(Gamma and factorial functions)
 
 @c NEED CROSS REFS HERE
 @c NEED EXAMPLES HERE
-@anchor{makefact}
-@deffn {Function} makefact (@var{expr})
+m4_deffn({Function}, makefact, <<<(@var{expr})>>>)
 Transforms instances of binomial, gamma, and beta
 functions in @var{expr} into factorials.
 
@@ -1514,7 +1513,7 @@ m4_category(Gamma and factorial functions)
 
 
 @c AREN'T THERE OTHER FUNCTIONS THAT DO ESSENTIALLY THE SAME THING ??
-@deffn {Function} numfactor (@var{expr})
+m4_deffn({Function}, numfactor, <<<(@var{expr})>>>)
 Returns the numerical factor multiplying the expression
 @var{expr}, which should be a single term.
 
@@ -1545,7 +1544,7 @@ The Exponential Integral and related funtions are defined in
 Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Chapter 5
 
-@deffn {Function} expintegral_e1 (@var{z})
+m4_deffn({Function}, expintegral_e1, <<<(@var{z})>>>)
 The Exponential Integral E1(z) (A&S 5.1.1) defined as
 
 m4_mathjax(
@@ -1563,7 +1562,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} expintegral_ei (@var{z})
+m4_deffn({Function}, expintegral_ei, <<<(@var{z})>>>)
 The Exponential Integral Ei(z) (A&S 5.1.2)
 
 @opencatbox
@@ -1572,7 +1571,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} expintegral_li (@var{z})
+m4_deffn({Function}, expintegral_li, <<<(@var{z})>>>)
 The Exponential Integral Li(z)  (A&S 5.1.3)
 
 @opencatbox
@@ -1581,7 +1580,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} expintegral_e (@var{n},@var{z})
+m4_deffn({Function}, expintegral_e, <<<(@var{n},@var{z})>>>)
 The Exponential Integral En(z)  (A&S 5.1.4) defined as
 
 m4_mathjax(
@@ -1598,7 +1597,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} expintegral_si (@var{z})
+m4_deffn({Function}, expintegral_si, <<<(@var{z})>>>)
 The Exponential Integral Si(z) (A&S 5.2.1) defined as
 
 m4_mathjax(
@@ -1611,7 +1610,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} expintegral_ci (@var{z})
+m4_deffn({Function}, expintegral_ci, <<<(@var{z})>>>)
 The Exponential Integral Ci(z) (A&S 5.2.2) defined as
 
 m4_mathjax(
@@ -1630,7 +1629,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} expintegral_shi (@var{z})
+m4_deffn({Function}, expintegral_shi, <<<(@var{z})>>>)
 The Exponential Integral Shi(z) (A&S 5.2.3) defined as
 
 m4_mathjax(
@@ -1643,7 +1642,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} expintegral_chi (@var{z})
+m4_deffn({Function}, expintegral_chi, <<<(@var{z})>>>)
 The Exponential Integral Chi(z) (A&S 5.2.4) defined as
 
 m4_mathjax(
@@ -1662,7 +1661,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@defvr {Option variable} expintrep
+m4_defvr({Option variable}, expintrep)
 Default value: false
 
 Change the representation of one of the exponential integrals,
@@ -1685,7 +1684,7 @@ m4_category(Exponential Integrals)
 @closecatbox
 @end defvr
 
-@defvr {Option variable} expintexpand 
+m4_defvr({Option variable}, expintexpand )
 Default value: false
 
 Expand the Exponential Integral E[n](z)
@@ -1704,8 +1703,7 @@ Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Chapter 7
 
 @c -----------------------------------------------------------------------------
-@anchor{erf}
-@deffn {Function} erf (@var{z})
+m4_deffn({Function}, erf, <<<(@var{z})>>>)
 
 The Error Function erf(z) (A&S 7.1.1)
 
@@ -1715,8 +1713,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@anchor{erfc}
-@deffn {Function} erfc (@var{z})
+m4_deffn({Function}, erfc, <<<(@var{z})>>>)
 The Complementary Error Function erfc(z) (A&S 7.1.2)
 
 @code{erfc(z) = 1-erf(z)}
@@ -1725,7 +1722,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} erfi (@var{z})
+m4_deffn({Function}, erfi, <<<(@var{z})>>>)
 The Imaginary Error Function. 
 
 @code{erfi(z) = -%i*erf(%i*z)}
@@ -1734,14 +1731,14 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} erf_generalized (@var{z1},@var{z2})
+m4_deffn({Function}, erf_generalized, <<<(@var{z1},@var{z2})>>>)
 Generalized Error function Erf(z1,z2)
 @opencatbox
 m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} fresnel_c (@var{z})
+m4_deffn({Function}, fresnel_c, <<<(@var{z})>>>)
 The Fresnel Integral, A&S 7.3.1:
 m4_mathjax(
 <<<$$C(z) = \int_0^z \cos{\pi t^2\over{2}}\, dt$$>>>,
@@ -1759,7 +1756,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} fresnel_s (@var{z})
+m4_deffn({Function}, fresnel_s, <<<(@var{z})>>>)
 The Fresnel Integral, A&S 7.3.2:
 m4_mathjax(
 <<<$$S(z) = \int_0^z \sin{\pi t^2\over{2}}\, dt$$>>>,
@@ -1777,14 +1774,14 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@defvr {Option variable} erf_representation
+m4_defvr({Option variable}, erf_representation)
 Default value: false
 
 When T erfc, erfi, erf_generalized, fresnel_s 
 and fresnel_c are transformed to erf.
 @end defvr
 
-@defvr {Option variable} hypergeometric_representation
+m4_defvr({Option variable}, hypergeometric_representation)
 Default value: false
 
 Enables transformation to a Hypergeometric
@@ -1799,7 +1796,7 @@ The Struve functions are defined in Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Chapter 12.
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} struve_h (@var{v}, @var{z})
+m4_deffn({Function}, struve_h, <<<(@var{v}, @var{z})>>>)
 The Struve Function H of order v and argument z. (A&S 12.1.1)
 
 @opencatbox
@@ -1808,7 +1805,7 @@ m4_category(Special functions)
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} struve_l (@var{v}, @var{z})
+m4_deffn({Function}, struve_l, <<<(@var{v}, @var{z})>>>)
 The Modified Struve Function L of order v and argument z. (A&S 12.2.1)
 
 @opencatbox
@@ -1825,7 +1822,7 @@ The Hypergeometric Functions are defined in Abramowitz and Stegun,
 Maxima has very limited knowledge of these functions.  They
 can be returned from function @code{hgfred}.
 
-@deffn {Function} %m [@var{k},@var{u}] (@var{z}) 
+m4_deffn({Function}, %m, <<<[@var{k},@var{u}] (@var{z}) >>>)
 Whittaker M function
 @code{M[k,u](z) = exp(-z/2)*z^(1/2+u)*M(1/2+u-k,1+2*u,z)}.  
 (A&S 13.1.32)
@@ -1834,7 +1831,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} %w [@var{k},@var{u}] (@var{z}) 
+m4_deffn({Function}, %w, <<<[@var{k},@var{u}] (@var{z}) >>>)
 Whittaker W function.  (A&S 13.1.33)
 @opencatbox
 m4_category(Special functions)
@@ -1842,7 +1839,7 @@ m4_category(Special functions)
 @end deffn
 
 
-@deffn {Function} %f [@var{p},@var{q}] (@var{[a],[b],z}) 
+m4_deffn({Function}, %f, <<<[@var{p},@var{q}] (@var{[a],[b],z}) >>>)
 The pFq(a1,a2,..ap;b1,b2,..bq;z) hypergeometric function,
 where @code{a} a list of length @code{p} and 
 @code{b} a list of length @code{q}.
@@ -1852,7 +1849,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} hypergeometric ([@var{a1}, ..., @var{ap}],[@var{b1}, ... ,@var{bq}], x)
+m4_deffn({Function}, hypergeometric, <<<([@var{a1}, ..., @var{ap}],[@var{b1}, ... ,@var{bq}], x)>>>)
 The hypergeometric function. Unlike Maxima's @code{%f} hypergeometric
 function, the function @code{hypergeometric} is a simplifying
 function; also, @code{hypergeometric} supports complex double and
@@ -1905,7 +1902,7 @@ The Parabolic Cylinder Functions are defined in Abramowitz and Stegun,
 Maxima has very limited knowledge of these functions.  They
 can be returned from function @code{hgfred}.
 
-@deffn {Function} parabolic_cylinder_d (@var{v}, @var{z}) 
+m4_deffn({Function}, parabolic_cylinder_d, <<<(@var{v}, @var{z}) >>>)
 The parabolic cylinder function @code{parabolic_cylinder_d(v,z)}. (A&S 19.3.1)
 @opencatbox
 m4_category(Special functions)
@@ -1919,8 +1916,7 @@ m4_category(Special functions)
 @section Functions and Variables for Special Functions
 m4_setcat(Functions and variables for special functions)
 
-@anchor{specint}
-@deffn {Function} specint (exp(- s*@var{t}) * @var{expr}, @var{t})
+m4_deffn({Function}, specint, <<<(exp(- s*@var{t}) * @var{expr}, @var{t})>>>)
 
 Compute the Laplace transform of @var{expr} with respect to the variable @var{t}.
 The integrand @var{expr} may contain special functions. 
@@ -2032,7 +2028,7 @@ m4_category(Laplace transform)
 @closecatbox
 @end deffn
 
-@deffn {Function} hypergeometric_simp (@var{e})
+m4_deffn({Function}, hypergeometric_simp, <<<(@var{e})>>>)
 
 @code{hypergeometric_simp} simplifies hypergeometric functions
 by applying @code{hgfred}
@@ -2080,8 +2076,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@anchor{hgfred}
-@deffn {Function} hgfred (@var{a}, @var{b}, @var{t})
+m4_deffn({Function}, hgfred, <<<(@var{a}, @var{b}, @var{t})>>>)
 
 Simplify the generalized hypergeometric function in terms of other,
 simpler, forms.  @var{a} is a list of numerator parameters and @var{b}
@@ -2141,7 +2136,7 @@ shows.  Note that @var{L} is the generalized Laguerre polynomial.
 @end example
 @end deffn
 
-@deffn {Function} lambert_w (@var{z})
+m4_deffn({Function}, lambert_w, <<<(@var{z})>>>)
 The principal branch of Lambert's W function W(z), the solution of 
 @code{z = W(z) * exp(W(z))}.  (DLMF 4.13)
 @opencatbox
@@ -2149,7 +2144,7 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} generalized_lambert_w (@var{k}, @var{z})
+m4_deffn({Function}, generalized_lambert_w, <<<(@var{k}, @var{z})>>>)
 The @var{k}-th branch of Lambert's W function W(z), the solution of 
 @code{z = W(z) * exp(W(z))}. (DLMF 4.13)
 
@@ -2163,7 +2158,7 @@ m4_category(Special functions)
 
 
 
-@deffn {Function} nzeta (@var{z})
+m4_deffn({Function}, nzeta, <<<(@var{z})>>>)
 The Plasma Dispersion Function 
 @code{nzeta(z) = %i*sqrt(%pi)*exp(-z^2)*(1-erf(-%i*z))}
 @opencatbox
@@ -2171,14 +2166,14 @@ m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} nzetar (@var{z})
+m4_deffn({Function}, nzetar, <<<(@var{z})>>>)
 Returns @code{realpart(nzeta(z))}.
 @opencatbox
 m4_category(Special functions)
 @closecatbox
 @end deffn
 
-@deffn {Function} nzetai (@var{z})
+m4_deffn({Function}, nzetai, <<<(@var{z})>>>)
 Returns @code{imagpart(nzeta(z))}.
 @opencatbox
 m4_category(Special functions)
