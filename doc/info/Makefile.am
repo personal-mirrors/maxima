@@ -540,8 +540,6 @@ maxima.epub: maxima_0.html
 maxima.pdf: maxima_pdf.texi $(maxima_TEXINFOS) $(pdffigures)
 	make-pdf.sh $<
 	mv maxima_pdf.pdf maxima.pdf
-	rm -f maxima_pdf.fns maxima_pdf.vr maxima_pdf.tp maxima_pdf.pg maxima_pdf.ky maxima_pdf.cp \
-	maxima_pdf.toc maxima_pdf.fn maxima_pdf.aux maxima_pdf.log
 
 contents.hhc index.hhk: maxima_0.html
 	/usr/bin/env perl $(srcdir)/create_index `grep -l '<h2.*Table of Contents' maxima_[0-9]*.html`
