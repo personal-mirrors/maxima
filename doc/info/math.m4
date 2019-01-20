@@ -1,11 +1,22 @@
 m4_dnl Change the quote characters to something that isn't likely to
 m4_dnl show up in the manual.
 m4_changequote(`<<<', `>>>')
+m4_dnl
+m4_dnl Set the category to be used for all the following deffn and
+m4_dnl defvr entries.  We do this by adding the category to the DC
+m4_dnl index and defining the macro m4_cat to be the given category.
+m4_dnl This is used by m4_deffn/m4_defvr to produce the right entries.
 m4_define(<<<m4_setcat>>>,
 <<<@c setcat $1
 @dcindex $1
 m4_define(<<<m4_cat>>>, $1)>>>)m4_dnl
 m4_dnl
+
+m4_dnl Define a function entry.  Basically like @deffn, but we do
+m4_dnl more.  First, define an anchor with the function name, another
+m4_dnl with the label "m4_cat()-name" to provide an anchor for the
+m4_dnl category index to reference.  Add it to the DC index. and
+m4_dnl finally use @deffn to define the function for texinfo.
 m4_define(<<<m4_deffn>>>,
 <<<@c deffn
 m4_define(<<<m4_name>>>, $2)m4_dnl
@@ -14,15 +25,20 @@ m4_define(<<<m4_name>>>, $2)m4_dnl
 @dcindex m4_cat()!$2
 @deffn $1 $2 $3
 >>>)
+m4_dnl Like m4_deffn, but for @deffnx.
 m4_define(<<<m4_deffnx>>>,
 <<<@c deffnx
 @anchor{$2}
+@anchor{m4_cat()-$2}
 @dcindex m4_cat()!$2
 @deffnx $1 $2 $3
 >>>)
+m4_dnl Like deffn bug for @defvr
 m4_define(<<<m4_defvr>>>,
 <<<@c defvr
 @anchor{$2}
+@anchor{m4_cat()-$2}
+@dcindex m4_cat()!$2
 @defvr $1 $2
 >>>)
 
