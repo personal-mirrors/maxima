@@ -20,6 +20,8 @@ do
   esac
 done
 
+shift $((OPTIND-1))
+
 TEXIFILE=$1
 BASEFILE=`basename $TEXIFILE .texi`
 INTERACTION="-interaction=nonstopmode"
