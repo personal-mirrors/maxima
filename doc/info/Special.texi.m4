@@ -437,7 +437,7 @@ m4_category(Special functions)
 @node Gamma and factorial Functions, Exponential Integrals, Airy Functions, Special Functions
 @section Gamma and factorial Functions
 @c -----------------------------------------------------------------------------
-m4_setcat(Gamma and factorial Functions)
+m4_setcat(Gamma and factorial functions)
 The gamma function and the related beta, psi and incomplete gamma 
 functions are defined in Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Chapter 6.
