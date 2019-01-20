@@ -7,10 +7,22 @@ m4_dnl defvr entries.  We do this by adding the category to the DC
 m4_dnl index and defining the macro m4_cat to be the given category.
 m4_dnl This is used by m4_deffn/m4_defvr to produce the right entries.
 m4_define(<<<m4_setcat>>>,
-<<<@c setcat $1
-@dcindex $1
-m4_define(<<<m4_cat>>>, $1)>>>)m4_dnl
+<<<@c setcat $@
+m4_define(<<<m4_primarycat>>>, $1)m4_dnl
+m4_define(<<<m4_cat>>>, <<<$@>>>)>>>)m4_dnl
 m4_dnl
+
+m4_define(<<<m4_dcindex_entry>>>, <<<
+m4_ifelse(<<<$#>>>, <<<1>>>,
+<<<m4_ifelse(<<<$1>>>, <<<>>>, , @dcindex $1!m4_name)>>>,
+@dcindex $1!m4_name <<<m4_dcindex_entry(m4_shift($@))>>>)
+>>>)
+
+m4_define(<<<m4_catentry>>>,<<<
+m4_ifelse(<<<$#>>>, <<<1>>>,
+<<<m4_ifelse(<<<$1>>>, <<<>>>, , @category{$1})>>>,
+@category{$1} <<<m4_catentry(m4_shift($@))>>>)
+>>>)
 
 m4_dnl Define a function entry.  Basically like @deffn, but we do
 m4_dnl more.  First, define an anchor with the function name, another
@@ -21,23 +33,30 @@ m4_define(<<<m4_deffn>>>,
 <<<@c deffn
 m4_define(<<<m4_name>>>, $2)m4_dnl
 @anchor{$2}
-@anchor{m4_cat()-$2}
-@dcindex m4_cat()!$2
+@anchor{m4_primarycat()-$2}
+m4_dcindex_entry(m4_cat())
 @deffn $1 $2 $3
 >>>)
 m4_dnl Like m4_deffn, but for @deffnx.
 m4_define(<<<m4_deffnx>>>,
 <<<@c deffnx
 @anchor{$2}
-@anchor{m4_cat()-$2}
+@anchor{m4_primarycat()-$2}
 @dcindex m4_cat()!$2
 @deffnx $1 $2 $3
 >>>)
+m4_define(<<<m4_end_deffn>>>,<<<m4_dnl
+@opencatbox
+m4_catentry(m4_cat())
+@closecatbox
+@end deffn
+>>>)
+
 m4_dnl Like deffn bug for @defvr
 m4_define(<<<m4_defvr>>>,
 <<<@c defvr
 @anchor{$2}
-@anchor{m4_cat()-$2}
+@anchor{m4_primarycat()-$2}
 @dcindex m4_cat()!$2
 @defvr $1 $2
 >>>)
