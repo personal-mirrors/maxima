@@ -215,6 +215,8 @@ function endfile(filename,    i, prev_initial, initial)
   # sort the entries
   quicksort(Keys, 1, Entries)
 
+  last_entry = "";
+
   for (i = 1; i <= Entries; i++) {
     # deal with initial
     initial = Data[Keys[i], "initial"]
@@ -233,16 +235,28 @@ function endfile(filename,    i, prev_initial, initial)
     #
     # So look for a subtopic (4 args).  If there is, we want to print
     #   \secondary {subtopic}{pagenum}
+    # But if we haven't seen the topic, we first print out
+    #   \primary {topic}
+    # to establish the main topic for the following subtopics.  This
+    # depends on the topic entry (via \entry) to occur just before the
+    # entries with subtopics.  I think this is normal..
     #
     # If there is no subtopic (3 args), then print
     #   \entry {topic}{pagenum}
-    isubtopic = match(Data[Keys[i], "text"], /}{(.*)/, subtopic)
+    isubtopic = match(Data[Keys[i], "text"], /(.*)}{(.*)/, subtopic)
     if (isubtopic != 0) {
+	if (last_entry != subtopic[1]) {
+	    printf("%cprimary {%s}\n",
+		   Command_char,
+		   subtopic[1]) > Output_file;
+	}
 	printf("%csecondary {%s}{%s}\n",
 	       Command_char,
-	       subtopic[1],
+	       subtopic[2],
 	       Data[Keys[i], "pagenum"]) > Output_file
+	last_entry = subtopic[1];
     } else {
+	last_entry = Data[Keys[i], "text"];
 	# write the actual line \entry {...}{...}
 	printf("%centry {%s}{%s}\n",
 	       Command_char,
