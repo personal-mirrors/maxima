@@ -2,8 +2,8 @@ BEGIN {
     catboxopen = 0;
 }
 {
-    if (match($0, "entry {([^}]+)}", result)) {
-	topic = result[1]
+    if (match($0, "(entry|primary) {([^}]+)}", result)) {
+	topic = result[2]
 	printf("@c catboxopen = %d\n", catboxopen)
 	if (catboxopen) {
 	    printf("@closecatbox\n");
