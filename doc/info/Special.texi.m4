@@ -1794,9 +1794,8 @@ representation for fresnel_s and fresnel_c
 @end defvr
 
 @node Struve Functions, Hypergeometric Functions, Error Function, Special Functions
-@dcindex Struve function
 @section Struve Functions
-m4_setcat(Struve functions)
+m4_setcat(Special functions)
 
 The Struve functions are defined in Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Chapter 12.
