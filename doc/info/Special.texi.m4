@@ -456,7 +456,7 @@ functions are defined in Abramowitz and Stegun,
 @c bfpsi, bffac, cbffac !!!
 
 @c -----------------------------------------------------------------------------
-m4_setcat(Numerical evaluation)
+m4_setcat(Gamma and factorial functions, Numerical evaluation)
 m4_deffn({Function}, bffac, <<<(@var{expr}, @var{n})>>>)
 
 Bigfloat version of the factorial (shifted gamma)
@@ -492,6 +492,7 @@ These functions return bigfloat values.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions, Complex variables, Numerical evaluation)
 m4_deffn({Function}, cbffac, <<<(@var{z}, @var{fpprec})>>>)
 Complex bigfloat factorial.
 
@@ -612,6 +613,7 @@ The Euler-Mascheroni constant is @code{%gamma}.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions, Special functions)
 m4_deffn({Function}, log_gamma, (@var{z}))
 
 The natural logarithm of the gamma function.
