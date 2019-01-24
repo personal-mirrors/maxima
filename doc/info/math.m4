@@ -18,6 +18,12 @@ m4_ifelse(<<<$#>>>, <<<1>>>,
 @dcindex $1!m4_name <<<m4_dcindex_entry(m4_shift($@))>>>)
 >>>)
 
+m4_define(<<<m4_anchor_entry>>>, <<<
+m4_ifelse(<<<$#>>>, <<<1>>>,
+<<<m4_ifelse(<<<$1>>>, <<<>>>, , @anchor{$1-m4_name})>>>,
+@anchor{$1-m4_name} <<<m4_anchor_entry(m4_shift($@))>>>)
+>>>)
+
 m4_define(<<<m4_catentry>>>,<<<
 m4_ifelse(<<<$#>>>, <<<1>>>,
 <<<m4_ifelse(<<<$1>>>, <<<>>>, , @category{$1})>>>,
@@ -33,7 +39,7 @@ m4_define(<<<m4_deffn>>>,
 <<<@c deffn
 m4_define(<<<m4_name>>>, $2)m4_dnl
 @anchor{$2}
-@anchor{m4_primarycat()-$2}
+m4_anchor_entry(m4_cat())
 m4_dcindex_entry(m4_cat())
 @deffn $1 $2 $3
 >>>)
