@@ -46,9 +46,10 @@ m4_dcindex_entry(m4_cat())
 m4_dnl Like m4_deffn, but for @deffnx.
 m4_define(<<<m4_deffnx>>>,
 <<<@c deffnx
+m4_define(<<<m4_name>>>, $2)m4_dnl
 @anchor{$2}
-@anchor{m4_primarycat()-$2}
-@dcindex m4_cat()!$2
+m4_anchor_entry(m4_cat())
+m4_dcindex_entry(m4_cat())
 @deffnx $1 $2 $3
 >>>)
 m4_define(<<<m4_end_deffn>>>,<<<m4_dnl
