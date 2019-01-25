@@ -8,7 +8,6 @@ m4_dnl index and defining the macro m4_cat to be the given category.
 m4_dnl This is used by m4_deffn/m4_defvr to produce the right entries.
 m4_define(<<<m4_setcat>>>,
 <<<@c setcat $@
-m4_define(<<<m4_primarycat>>>, $1)m4_dnl
 m4_define(<<<m4_cat>>>, <<<$@>>>)>>>)m4_dnl
 m4_dnl
 
