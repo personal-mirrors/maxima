@@ -12,15 +12,15 @@ m4_define(<<<m4_cat>>>, <<<$@>>>)>>>)m4_dnl
 m4_dnl
 
 m4_define(<<<m4_dcindex_entry>>>, <<<
-m4_ifelse(<<<$#>>>, <<<1>>>,
-<<<m4_ifelse(<<<$1>>>, <<<>>>, , @dcindex $1!m4_name)>>>,
-@dcindex $1!m4_name <<<m4_dcindex_entry(m4_shift($@))>>>)
+m4_ifelse(<<<$#>>>, <<<2>>>,
+@dcindex $2!$1,
+@dcindex $2!$1 <<<m4_dcindex_entry($1, m4_shift(m4_shift($@)))>>>)
 >>>)
 
 m4_define(<<<m4_anchor_entry>>>, <<<
-m4_ifelse(<<<$#>>>, <<<1>>>,
-<<<m4_ifelse(<<<$1>>>, <<<>>>, , @anchor{$1-m4_name})>>>,
-@anchor{$1-m4_name} <<<m4_anchor_entry(m4_shift($@))>>>)
+m4_ifelse(<<<$#>>>, <<<2>>>,
+@anchor{$2-$1},
+@anchor{$2-$1} <<<m4_anchor_entry($1, m4_shift(m4_shift($@)))>>>)
 >>>)
 
 m4_define(<<<m4_catentry>>>,<<<
@@ -36,19 +36,17 @@ m4_dnl category index to reference.  Add it to the DC index. and
 m4_dnl finally use @deffn to define the function for texinfo.
 m4_define(<<<m4_deffn>>>,
 <<<@c deffn m4_cat()
-m4_define(<<<m4_name>>>, $2)m4_dnl
 @anchor{$2}
-m4_anchor_entry(m4_cat())
-m4_dcindex_entry(m4_cat())
+m4_anchor_entry($2, m4_cat())
+m4_dcindex_entry($2, m4_cat())
 @deffn $1 $2 $3
 >>>)
 m4_dnl Like m4_deffn, but for @deffnx.
 m4_define(<<<m4_deffnx>>>,
 <<<@c deffnx
-m4_define(<<<m4_name>>>, $2)m4_dnl
 @anchor{$2}
-m4_anchor_entry(m4_cat())
-m4_dcindex_entry(m4_cat())
+m4_anchor_entry($2, m4_cat())
+m4_dcindex_entry($2, m4_cat())
 @deffnx $1 $2 $3
 >>>)
 m4_define(<<<m4_end_deffn>>>,<<<m4_dnl
@@ -59,24 +57,23 @@ m4_catentry(m4_cat())
 >>>)
 
 m4_define(<<<m4_dcindex_var>>>, <<<
-m4_ifelse(<<<$#>>>, <<<1>>>,
-<<<m4_ifelse(<<<$1>>>, <<<>>>, , @dcindex $1!m4_name)>>>,
-@dcindex $1!m4_name <<<m4_dcindex_var(m4_shift($@))>>>)
+m4_ifelse(<<<$#>>>, <<<2>>>,
+@dcindex $2!$1,
+@dcindex $2!$1 <<<m4_dcindex_var($1, m4_shift(m4_shift($@)))>>>)
 >>>)
 
 m4_define(<<<m4_anchor_var>>>, <<<
-m4_ifelse(<<<$#>>>, <<<1>>>,
-<<<m4_ifelse(<<<$1>>>, <<<>>>, , @anchor{$1-m4_name})>>>,
-@anchor{$1-m4_name} <<<m4_anchor_var(m4_shift($@))>>>)
+m4_ifelse(<<<$#>>>, <<<2>>>,
+@anchor{$2-$1},
+@anchor{$2-$1} <<<m4_anchor_var($1, m4_shift(m4_shift($@)))>>>)
 >>>)
 
 m4_dnl Like deffn bug for @defvr
 m4_define(<<<m4_defvr>>>,
 <<<@c defvr m4_cat()
-m4_define(<<<m4_name>>>, $2)m4_dnl
 @anchor{$2}
-m4_anchor_var(m4_cat())
-m4_dcindex_var(m4_cat())
+m4_anchor_var($2, m4_cat())
+m4_dcindex_var($2, m4_cat())
 @defvr $1 $2
 >>>)
 
