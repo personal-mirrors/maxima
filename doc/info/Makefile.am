@@ -544,7 +544,7 @@ contents.hhc index.hhk: maxima_0.html
 	/usr/bin/env perl $(srcdir)/create_index `grep -l '<h2.*Table of Contents' maxima_[0-9]*.html`
 
 category.texi : maxima_pdf.dcs build-cat.awk
-	gawk -f build-cat.awk maxima_pdf.dcs > category.texi
+	@AWK@ -f build-cat.awk maxima_pdf.dcs > category.texi
 
 # Squash error on exit from hhc
 maxima.chm: maxima.hhp contents.hhc index.hhk
