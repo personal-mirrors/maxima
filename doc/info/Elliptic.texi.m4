@@ -357,9 +357,9 @@ The inverse of the Jacobian elliptic function @math{dc(u,m)}.
 @node Functions and Variables for Elliptic Integrals, , Functions and Variables for Elliptic Functions, Top
 @comment  node-name,  next,  previous,  up
 
-m4_setcat(Elliptic integrals)
 @section Functions and Variables for Elliptic Integrals
 
+m4_setcat(Elliptic integrals)
 m4_deffn(<<<{Function}>>>, <<<elliptic_f>>>, <<<(@var{phi}, @var{m})>>>)
 The incomplete elliptic integral of the first kind, defined as
 
