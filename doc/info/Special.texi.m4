@@ -70,7 +70,6 @@ parabolic_cylinder_d (v,z)     Parabolic cylinder D function
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
-@dcindex Bessel functions
 m4_setcat(Bessel functions, Special functions)
 m4_deffn(<<<{Function}>>>, <<<bessel_j>>>, <<<(@var{v}, @var{z})>>>)
 
@@ -291,6 +290,7 @@ For examples see @code{hankel_1}.
 @c -----------------------------------------------------------------------------
 @c @anchor{besselexpand}
 @c @defvr {Option variable} besselexpand
+m4_setcat(Bessel functions, Simplification flags and variables, Special functions)
 m4_defvr({Option variable}, besselexpand)
 Default value: @code{false}
 
@@ -324,6 +324,7 @@ the Bessel function is expanded.
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Bessel functions)
 m4_deffn({Function}, scaled_bessel_i, <<<(@var{v}, @var{z})>>>)
 
 The scaled modified Bessel function of the first kind of order
@@ -339,6 +340,7 @@ symbolic work, it is probably preferable to work with the expression
 @closecatbox
 @end deffn
 
+m4_setcat(Bessel functions, Special functions)
 m4_deffn({Function}, scaled_bessel_i0, (@var{z}))
 
 Identical to @code{scaled_bessel_i(0,z)}.
@@ -373,7 +375,6 @@ Probably Gradshteyn & Ryzhik 8.570.1.
 @node Airy Functions, Gamma and factorial Functions, Bessel Functions, Special Functions
 @section Airy Functions
 @c -----------------------------------------------------------------------------
-@dcindex Airy functions
 m4_setcat(Airy functions)
 The Airy functions Ai(x) and Bi(x) are defined in Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Section 10.4. 
@@ -384,6 +385,7 @@ of the Airy differential equation @code{diff (y(x), x, 2) - x y(x) = 0}.
 If the argument @code{x} is a real or complex floating point 
 number, the numerical value of the function is returned.
 
+m4_setcat(Airy functions, Special functions)
 m4_deffn({Function}, airy_ai, (@var{x}))
 The Airy function Ai(x).  (A&S 10.4.2)
 
@@ -439,7 +441,6 @@ See @code{airy_ai} and @code{airy_bi}.
 @node Gamma and factorial Functions, Exponential Integrals, Airy Functions, Special Functions
 @section Gamma and factorial Functions
 @c -----------------------------------------------------------------------------
-@dcindex Gamma and factorial functions
 m4_setcat(Gamma and factorial functions)
 The gamma function and the related beta, psi and incomplete gamma 
 functions are defined in Abramowitz and Stegun,
@@ -505,7 +506,7 @@ Complex bigfloat factorial.
 @closecatbox
 @end deffn
 
-m4_setcat(Gamma and factorial functions)
+m4_setcat(Gamma and factorial functions, Special functions)
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, gamma, (@var{z}))
 
@@ -741,6 +742,7 @@ Also see @code{gamma_incomplete} and @code{gamma_incomplete_regularized}.
 
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions, Simplification flags and variables)
 m4_defvr({Option variable}, gamma_expand)
 Default value: @code{false}
 
@@ -793,6 +795,7 @@ simplification of the result of @code{gamma} of an integer argument as well.
 @c NEED EXAMPLES HERE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions)
 m4_deffn({Function}, makegamma, (@var{expr}))
 Transforms instances of binomial, factorial, and beta
 functions in @var{expr} into gamma functions.
@@ -1394,6 +1397,7 @@ Derivative wrt the variable @var{z1} and integrals wrt @var{z1} and @var{z2}:
 @closecatbox
 @end deffn
 
+m4_setcat(Gamma and factorial functions, Simplification flags and variables)
 m4_defvr({Option variable}, beta_expand)
 Default value: false
 
@@ -1424,6 +1428,7 @@ When @code{beta_args_sum_to_integer} is @code{true}, Maxima simplifies
 @c I (rtoy) don't think there is a plain psi(x) function anymore.
 @c @deffn {Function} psi (@var{x})
 @c @deffnx {Function} psi [@var{n}](@var{x})
+m4_setcat(Gamma and factorial functions)
 m4_deffn({Function}, psi, <<<[@var{n}](@var{x})>>>)
 
 The derivative of @code{log (gamma (@var{x}))} of order @code{@var{n}+1}.
@@ -1518,6 +1523,7 @@ See also @mrefdot{makegamma}
 
 
 @c AREN'T THERE OTHER FUNCTIONS THAT DO ESSENTIALLY THE SAME THING ??
+m4_setcat(Expressions)
 m4_deffn({Function}, numfactor, <<<(@var{expr})>>>)
 Returns the numerical factor multiplying the expression
 @var{expr}, which should be a single term.
@@ -1544,12 +1550,12 @@ Returns the numerical factor multiplying the expression
 
 @node Exponential Integrals, Error Function, Gamma and factorial Functions, Special Functions
 @section Exponential Integrals
-@dcindex Exponential integrals
 m4_setcat(Exponential integrals)
 The Exponential Integral and related funtions are defined in 
 Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Chapter 5
 
+m4_setcat(Exponential Integrals, Special functions)
 m4_deffn({Function}, expintegral_e1, <<<(@var{z})>>>)
 The Exponential Integral E1(z) (A&S 5.1.1) defined as
 
@@ -1667,6 +1673,7 @@ m4_mathjax(
 @closecatbox
 @end deffn
 
+m4_setcat(Exponential Integrals)
 m4_defvr({Option variable}, expintrep)
 Default value: false
 
@@ -1703,13 +1710,13 @@ for positive integers in terms of Ei
 
 @node Error Function, Struve Functions, Exponential Integrals, Special Functions
 @section Error Function
-@dcindex Error function
 m4_setcat(Error function)
 The Error function and related funtions are defined in 
 Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Chapter 7
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Special functions)
 m4_deffn({Function}, erf, <<<(@var{z})>>>)
 
 The Error Function erf(z) (A&S 7.1.1)
@@ -1821,7 +1828,6 @@ The Modified Struve Function L of order v and argument z. (A&S 12.2.1)
 @end deffn
 
 @node Hypergeometric Functions, Parabolic Cylinder Functions, Struve Functions, Special Functions
-@dcindex Hypergeometric functions
 @section Hypergeometric Functions
 m4_setcat(Hypergeometric functions)
 The Hypergeometric Functions are defined in Abramowitz and Stegun,
@@ -1847,6 +1853,7 @@ Whittaker W function.  (A&S 13.1.33)
 @end deffn
 
 
+m4_setcat(Bessel functions, Special functions)
 m4_deffn({Function}, %f, <<<[@var{p},@var{q}] (@var{[a],[b],z}) >>>)
 The pFq(a1,a2,..ap;b1,b2,..bq;z) hypergeometric function,
 where @code{a} a list of length @code{p} and 
@@ -1902,7 +1909,6 @@ Both double float and big float evaluation is supported:
 @end deffn
 
 @node Parabolic Cylinder Functions, Functions and Variables for Special Functions, Hypergeometric Functions, Special Functions
-@dcindex Parabolic cylinder functions
 @section  Parabolic Cylinder Functions
 m4_setcat(Parabolic cylinder functions, Special functions)
 The Parabolic Cylinder Functions are defined in Abramowitz and Stegun,
@@ -1911,6 +1917,7 @@ The Parabolic Cylinder Functions are defined in Abramowitz and Stegun,
 Maxima has very limited knowledge of these functions.  They
 can be returned from function @code{hgfred}.
 
+m4_setcat(Special functions)
 m4_deffn({Function}, parabolic_cylinder_d, <<<(@var{v}, @var{z}) >>>)
 The parabolic cylinder function @code{parabolic_cylinder_d(v,z)}. (A&S 19.3.1)
 @opencatbox
@@ -1922,10 +1929,8 @@ The parabolic cylinder function @code{parabolic_cylinder_d(v,z)}. (A&S 19.3.1)
 
 
 @node Functions and Variables for Special Functions,  , Parabolic Cylinder Functions, Special Functions
-@dcindex Functions and variables for special functions
 @section Functions and Variables for Special Functions
-m4_setcat(Functions and variables for special functions, Laplace transform)
-
+m4_setcat(Laplace transform)
 m4_deffn({Function}, specint, <<<(exp(- s*@var{t}) * @var{expr}, @var{t})>>>)
 
 Compute the Laplace transform of @var{expr} with respect to the variable @var{t}.
@@ -2147,6 +2152,7 @@ shows.  Note that @var{L} is the generalized Laguerre polynomial.
 @end example
 @end deffn
 
+m4_setcat(Special functions)
 m4_deffn({Function}, lambert_w, <<<(@var{z})>>>)
 The principal branch of Lambert's W function W(z), the solution of 
 @code{z = W(z) * exp(W(z))}.  (DLMF 4.13)
