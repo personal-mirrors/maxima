@@ -93,11 +93,12 @@ m4_mathjax(
 
 although the infinite series is not used for computations.
 
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, bessel_y, <<<(@var{v}, @var{z})>>>)
@@ -117,11 +118,12 @@ m4_mathjax(
 when @math{v} is not an integer.  When @math{v} is an integer @math{n},
 the limit as @math{v} approaches @math{n} is taken.
 
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, bessel_i, <<<(@var{v}, @var{z})>>>)
@@ -146,11 +148,12 @@ m4_mathjax(
 
 although the infinite series is not used for computations.
 
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, bessel_k, <<<(@var{v}, @var{z})>>>)
@@ -172,11 +175,12 @@ m4_mathjax(
 when @math{v} is not an integer.  If @math{v} is an integer @math{n},
 then the limit as @math{v} approaches @math{n} is taken.
 
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, hankel_1, <<<(@var{v}, @var{z})>>>)
@@ -253,11 +257,12 @@ order @math{v} is not supported. Maxima returns a noun form:
 @end group
 @end example
 
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, hankel_2, <<<(@var{v}, @var{z})>>>)
@@ -281,11 +286,12 @@ Maxima knows the derivative of @code{hankel_2} wrt the argument @math{z}.
 
 For examples see @code{hankel_1}.
 
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @c @anchor{besselexpand}
@@ -335,41 +341,45 @@ However, maxima does not otherwise know much about this function.  For
 symbolic work, it is probably preferable to work with the expression
 @code{exp(-abs(z))*bessel_i(v, z)}.
 
-@opencatbox
-@category{Bessel functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_setcat(Bessel functions, Special functions)
 m4_deffn({Function}, scaled_bessel_i0, (@var{z}))
 
 Identical to @code{scaled_bessel_i(0,z)}.
 
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, scaled_bessel_i1, (@var{z}))
 
 Identical to @code{scaled_bessel_i(1,z)}.
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, %s, <<<[@var{u},@var{v}] (@var{z})>>>) 
 Lommel's little s[u,v](z) function.  
 Probably Gradshteyn & Ryzhik 8.570.1.
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Airy Functions, Gamma and factorial Functions, Bessel Functions, Special Functions
@@ -393,11 +403,12 @@ The derivative @code{diff (airy_ai(x), x)} is @code{airy_dai(x)}.
 
 See also @mrefcomma{airy_bi} @mrefcomma{airy_dai} @mrefdot{airy_dbi}
 
-@opencatbox
-@category{Airy functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Airy functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, airy_dai, (@var{x}))
@@ -405,11 +416,12 @@ The derivative of the Airy function Ai @code{airy_ai(x)}.
 
 See @code{airy_ai}.
 
-@opencatbox
-@category{Airy functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Airy functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, airy_bi, (@var{x}))
@@ -419,11 +431,12 @@ The derivative @code{diff (airy_bi(x), x)} is @code{airy_dbi(x)}.
 
 See @code{airy_ai}, @code{airy_dbi}.
 
-@opencatbox
-@category{Airy functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Airy functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, airy_dbi, (@var{x}))
@@ -431,11 +444,12 @@ The derivative of the Airy Bi function @code{airy_bi(x)}.
 
 See @code{airy_ai} and @code{airy_bi}.
 
-@opencatbox
-@category{Airy functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Airy functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Gamma and factorial Functions, Exponential Integrals, Airy Functions, Special Functions
@@ -464,11 +478,12 @@ Bigfloat version of the factorial (shifted gamma)
 function.  The second argument is how many digits to retain and return,
 it's a good idea to request a couple of extra.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Numerical evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, bfpsi, <<<(@var{n}, @var{z}, @var{fpprec})>>>)
@@ -486,11 +501,12 @@ These functions return bigfloat values.
 @c DISCUSSION OF THE PROPERTIES OF THIS FUNCTION, THIS STATEMENT SEEMS OUT OF PLACE.
 @c Note @code{-bfpsi0 (1, fpprec)} provides @code{%gamma} (Euler's constant) as a bigfloat.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Numerical evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Gamma and factorial functions, Complex variables, Numerical evaluation)
@@ -499,12 +515,13 @@ Complex bigfloat factorial.
 
 @code{load ("bffac")} loads this function.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Complex variables}
-@category{Numerical evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Complex variables}
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_setcat(Gamma and factorial functions, Special functions)
 @c -----------------------------------------------------------------------------
@@ -607,11 +624,12 @@ See also @mrefdot{makegamma}
 
 The Euler-Mascheroni constant is @code{%gamma}.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Gamma and factorial functions, Special functions)
@@ -619,11 +637,12 @@ m4_deffn({Function}, log_gamma, (@var{z}))
 
 The natural logarithm of the gamma function.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, gamma_incomplete_lower, <<<(@var{a}, @var{z})>>>)
@@ -646,11 +665,12 @@ m4_mathjax(
 
 See also @mref{gamma_incomplete} (upper incomplete gamma function).
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, gamma_incomplete, <<<(@var{a}, @var{z})>>>)
@@ -678,11 +698,12 @@ and @code{erfc}.
 Also see the related functions @code{gamma_incomplete_regularized} and
 @code{gamma_incomplete_generalized}.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, gamma_incomplete_regularized, <<<(@var{a}, @var{z})>>>)
@@ -706,11 +727,12 @@ and @mrefdot{erfc}
 
 Also see @code{gamma_incomplete}.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, gamma_incomplete_generalized, <<<(@var{a}, @var{z1}, @var{z1})>>>)
@@ -734,11 +756,12 @@ gamma_incomplete_generalized(a, z1, z2) =
 
 Also see @code{gamma_incomplete} and @code{gamma_incomplete_regularized}.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @c -----------------------------------------------------------------------------
@@ -802,10 +825,11 @@ functions in @var{expr} into gamma functions.
 
 See also @mrefdot{makefact}
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{beta}
 @c -----------------------------------------------------------------------------
@@ -938,10 +962,11 @@ The derivative of the beta function wrt @code{a}:
                                       0             0
 @end example
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, beta_incomplete, <<<(@var{a}, @var{b}, @var{z})>>>)
@@ -1130,10 +1155,11 @@ Derivative and integral for @code{beta_incomplete}:
 (%o36)              beta_incomplete(a, b, z)
 @end example
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, beta_incomplete_regularized, <<<(@var{a}, @var{b}, @var{z})>>>)
@@ -1247,10 +1273,11 @@ The derivative and the integral wrt @var{z}:
                                    b + a
 @end example
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, beta_incomplete_generalized, <<<(@var{a}, @var{b}, @var{z1}, @var{z2})>>>)
@@ -1392,10 +1419,11 @@ Derivative wrt the variable @var{z1} and integrals wrt @var{z1} and @var{z2}:
                                   - beta_incomplete(a + 1, b, z2)
 @end example
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_setcat(Gamma and factorial functions, Simplification flags and variables)
 m4_defvr({Option variable}, beta_expand)
@@ -1449,10 +1477,11 @@ will return an exact value.
 The function @code{bfpsi} in the @code{bffac} package can compute
 numerical values.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_defvr({Option variable}, maxpsiposint)
 Default value: 20
@@ -1516,10 +1545,11 @@ functions in @var{expr} into factorials.
 
 See also @mrefdot{makegamma}
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @c AREN'T THERE OTHER FUNCTIONS THAT DO ESSENTIALLY THE SAME THING ??
@@ -1542,10 +1572,11 @@ Returns the numerical factor multiplying the expression
                                8
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @node Exponential Integrals, Error Function, Gamma and factorial Functions, Special Functions
@@ -1568,29 +1599,32 @@ m4_mathjax(
 <<<@math{abs(arg z) < %pi}.>>>,
 <<<$|\arg\ z| < \pi$.>>>)
 
-@opencatbox
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, expintegral_ei, <<<(@var{z})>>>)
 The Exponential Integral Ei(z) (A&S 5.1.2)
 
-@opencatbox
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, expintegral_li, <<<(@var{z})>>>)
 The Exponential Integral Li(z)  (A&S 5.1.3)
 
-@opencatbox
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, expintegral_e, <<<(@var{n},@var{z})>>>)
 The Exponential Integral En(z)  (A&S 5.1.4) defined as
@@ -1603,11 +1637,12 @@ m4_mathjax(
 <<<${\rm Re}\ z > 0$ and $n = 0, 1, 2, \ldots$.>>>,
 <<<@math{real(x) > 1} and @math{n} a non-negative integer.>>>)
 
-@opencatbox
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, expintegral_si, <<<(@var{z})>>>)
 The Exponential Integral Si(z) (A&S 5.2.1) defined as
@@ -1616,11 +1651,12 @@ m4_mathjax(
 <<<$${\rm Si}(z) = \int_0^z {\sin t \over t}\, dt$$>>>,
 <<<@math{integrate(sin(t)/t, t, 0, z)}>>>)
 
-@opencatbox
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, expintegral_ci, <<<(@var{z})>>>)
 The Exponential Integral Ci(z) (A&S 5.2.2) defined as
@@ -1635,11 +1671,12 @@ m4_mathjax(
 <<<@math{abs(arg z) < %pi}>>>,
 <<<$|\arg\ z| < \pi$.>>>)
 
-@opencatbox
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, expintegral_shi, <<<(@var{z})>>>)
 The Exponential Integral Shi(z) (A&S 5.2.3) defined as
@@ -1648,11 +1685,12 @@ m4_mathjax(
 <<<$${\rm Shi}(z) = \int_0^z {\sinh t \over t} dt$$>>>,
 <<<@math{integrate(sinh(t)/t, t, 0, z)}>>>)
 
-@opencatbox
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, expintegral_chi, <<<(@var{z})>>>)
 The Exponential Integral Chi(z) (A&S 5.2.4) defined as
@@ -1667,11 +1705,12 @@ m4_mathjax(
 <<<@math{abs(arg z) < %pi}.>>>,
 <<<$|\arg\ z| < \pi$.>>>)
 
-@opencatbox
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_setcat(Exponential Integrals)
 m4_defvr({Option variable}, expintrep)
@@ -1722,35 +1761,39 @@ m4_deffn({Function}, erf, <<<(@var{z})>>>)
 The Error Function erf(z) (A&S 7.1.1)
 
 See also flag @mrefdot{erfflag}
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, erfc, <<<(@var{z})>>>)
 The Complementary Error Function erfc(z) (A&S 7.1.2)
 
 @code{erfc(z) = 1-erf(z)}
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, erfi, <<<(@var{z})>>>)
 The Imaginary Error Function. 
 
 @code{erfi(z) = -%i*erf(%i*z)}
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, erf_generalized, <<<(@var{z1},@var{z2})>>>)
 Generalized Error function Erf(z1,z2)
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, fresnel_c, <<<(@var{z})>>>)
 The Fresnel Integral, A&S 7.3.1:
@@ -1765,10 +1808,11 @@ The simplification fresnel_c(%i*x) =  %i*fresnel_c(x) is applied when
 flag @code{%iargs} is true.
 
 See flags @code{erf_representation} and @code{hypergeometric_representation}.
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, fresnel_s, <<<(@var{z})>>>)
 The Fresnel Integral, A&S 7.3.2:
@@ -1783,10 +1827,11 @@ The simplification fresnel_s(%i*x) =  -%i*fresnel_s(x) is applied when
 flag @code{%iargs} is true.
 
 See flags @code{erf_representation} and @code{hypergeometric_representation}.
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_defvr({Option variable}, erf_representation)
 Default value: false
@@ -1813,19 +1858,21 @@ The Struve functions are defined in Abramowitz and Stegun,
 m4_deffn({Function}, struve_h, <<<(@var{v}, @var{z})>>>)
 The Struve Function H of order v and argument z. (A&S 12.1.1)
 
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_deffn({Function}, struve_l, <<<(@var{v}, @var{z})>>>)
 The Modified Struve Function L of order v and argument z. (A&S 12.2.1)
 
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @node Hypergeometric Functions, Parabolic Cylinder Functions, Struve Functions, Special Functions
 @section Hypergeometric Functions
@@ -1840,17 +1887,19 @@ m4_deffn({Function}, %m, <<<[@var{k},@var{u}] (@var{z}) >>>)
 Whittaker M function
 @code{M[k,u](z) = exp(-z/2)*z^(1/2+u)*M(1/2+u-k,1+2*u,z)}.  
 (A&S 13.1.32)
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, %w, <<<[@var{k},@var{u}] (@var{z}) >>>)
 Whittaker W function.  (A&S 13.1.33)
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 m4_setcat(Bessel functions, Special functions)
@@ -1858,11 +1907,12 @@ m4_deffn({Function}, %f, <<<[@var{p},@var{q}] (@var{[a],[b],z}) >>>)
 The pFq(a1,a2,..ap;b1,b2,..bq;z) hypergeometric function,
 where @code{a} a list of length @code{p} and 
 @code{b} a list of length @code{q}.
-@opencatbox
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, hypergeometric, <<<([@var{a1}, ..., @var{ap}],[@var{b1}, ... ,@var{bq}], x)>>>)
 The hypergeometric function. Unlike Maxima's @code{%f} hypergeometric
@@ -1920,10 +1970,11 @@ can be returned from function @code{hgfred}.
 m4_setcat(Special functions)
 m4_deffn({Function}, parabolic_cylinder_d, <<<(@var{v}, @var{z}) >>>)
 The parabolic cylinder function @code{parabolic_cylinder_d(v,z)}. (A&S 19.3.1)
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -2038,10 +2089,11 @@ the representation to @code{expintegral_e1}:
                                         a
 @end example
 
-@opencatbox
-@category{Laplace transform}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Laplace transform}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_setcat(Hypergeometric functions, Simplification functions, Special functions)
 m4_deffn({Function}, hypergeometric_simp, <<<(@var{e})>>>)
@@ -2085,12 +2137,13 @@ Examples:
 (%o5)            hypergeometric([n], [m], z + 1)
 @end example
 
-@opencatbox
-@category{Hypergeometric functions}
-@category{Simplification functions}
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hypergeometric functions}
+@c @category{Simplification functions}
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, hgfred, <<<(@var{a}, @var{b}, @var{t})>>>)
 
@@ -2156,10 +2209,11 @@ m4_setcat(Special functions)
 m4_deffn({Function}, lambert_w, <<<(@var{z})>>>)
 The principal branch of Lambert's W function W(z), the solution of 
 @code{z = W(z) * exp(W(z))}.  (DLMF 4.13)
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, generalized_lambert_w, <<<(@var{k}, @var{z})>>>)
 The @var{k}-th branch of Lambert's W function W(z), the solution of 
@@ -2168,32 +2222,36 @@ The @var{k}-th branch of Lambert's W function W(z), the solution of
 The principal branch, denoted Wp(z) in DLMF, is @code{lambert_w(z) = generalized_lambert_w(0,z)}.
 
 The other branch with real values, denoted Wm(z) in DLMF, is @code{generalized_lambert_w(-1,z)}.
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 m4_deffn({Function}, nzeta, <<<(@var{z})>>>)
 The Plasma Dispersion Function 
 @code{nzeta(z) = %i*sqrt(%pi)*exp(-z^2)*(1-erf(-%i*z))}
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, nzetar, <<<(@var{z})>>>)
 Returns @code{realpart(nzeta(z))}.
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_deffn({Function}, nzetai, <<<(@var{z})>>>)
 Returns @code{imagpart(nzeta(z))}.
-@opencatbox
-@category{Special functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Special functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
