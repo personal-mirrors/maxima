@@ -59,12 +59,24 @@ m4_catentry(m4_cat())
 @end deffn
 >>>)
 
+m4_define(<<<m4_dcindex_var>>>, <<<
+m4_ifelse(<<<$#>>>, <<<1>>>,
+<<<m4_ifelse(<<<$1>>>, <<<>>>, , @dcindex $1!m4_name)>>>,
+@dcindex $1!m4_name <<<m4_dcindex_var(m4_shift($@))>>>)
+>>>)
+
+m4_define(<<<m4_anchor_var>>>, <<<
+m4_ifelse(<<<$#>>>, <<<1>>>,
+<<<m4_ifelse(<<<$1>>>, <<<>>>, , @anchor{$1-m4_name})>>>,
+@anchor{$1-m4_name} <<<m4_anchor_var(m4_shift($@))>>>)
+>>>)
+
 m4_dnl Like deffn bug for @defvr
 m4_define(<<<m4_defvr>>>,
 <<<@c defvr
 @anchor{$2}
-@anchor{m4_primarycat()-$2}
-@dcindex m4_cat()!$2
+m4_anchor_var{m4_cat()}
+m4_dcindex_var(m4_cat())
 @defvr $1 $2
 >>>)
 
