@@ -573,7 +573,7 @@ install-maxima-index: maxima-index.lisp
 uninstall-maxima-index: maxima-index.lisp
 	rm -f "$(DESTDIR)$(infodir)/maxima-index.lisp"
 
-clean-local: clean-info clean-html $(CLEAN_CHM)
+clean-local: clean-info clean-html clean-pdf $(CLEAN_CHM)
 
 clean-info:
 	rm -f $(wildcard maxima.info* maxima-index.lisp) \
@@ -583,6 +583,9 @@ clean-info:
 clean-html:
 	rm -f $(wildcard maxima*.html contents.hhc index.hhk maxima.chm) \
 	      $(wildcard $(addprefix $(srcdir),maxima*.html contents.hhc index.hhk maxima.chm))
+
+clean-pdf:
+	rm -f maxima.pdf maxima_pdf.pdf maxima_pdf.?? maxima_pdf.??? maxima_pdf.dcbak
 
 if CHM
 install-chm: maxima.chm
