@@ -62,7 +62,6 @@ m4_dnl category index to reference.  Add it to the DC index. and
 m4_dnl finally use @deffn to define the function for texinfo.
 m4_define(<<<m4_deffn>>>,
 <<<@c deffn m4_cat()
-@anchor{$2}
 m4_anchor_entry($2, m4_cat())
 m4_dcindex_entry($2, m4_cat())
 @deffn $1 $2 $3
@@ -70,7 +69,6 @@ m4_dcindex_entry($2, m4_cat())
 m4_dnl Like m4_deffn, but for @deffnx.
 m4_define(<<<m4_deffnx>>>,
 <<<@c deffnx
-@anchor{$2}
 m4_anchor_entry($2, m4_cat())
 m4_dcindex_entry($2, m4_cat())
 @deffnx $1 $2 $3
@@ -104,7 +102,6 @@ m4_ifelse(<<<$#>>>, <<<2>>>,
 m4_dnl Like deffn bug for @defvr
 m4_define(<<<m4_defvr>>>,
 <<<@c defvr m4_cat()
-@anchor{$2}
 m4_anchor_var($2, m4_cat())
 m4_dcindex_var($2, m4_cat())
 @defvr $1 $2
