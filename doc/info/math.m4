@@ -107,9 +107,12 @@ m4_dcindex_var($2, m4_cat())
 @defvr $1 $2
 >>>)
 
-m4_define(<<<m4_category>>>,
-<<<m4_dnl
-@category{$1}>>>)
+m4_define(<<<m4_end_defvr>>>,<<<m4_dnl
+@opencatbox
+m4_catentry(m4_cat())
+@closecatbox
+@end defvr
+>>>)
 
 m4_dnl For writing formulas suitable for various output formats.  For
 m4_dnl simplicity two or three arguments are required:

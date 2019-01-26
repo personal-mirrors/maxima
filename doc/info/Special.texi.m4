@@ -322,12 +322,13 @@ the Bessel function is expanded.
                                    sqrt(%pi)
 @end example
 
-@opencatbox
-@category{Bessel functions}
-@category{Simplification flags and variables} 
-@category{Special functions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Bessel functions}
+@c @category{Simplification flags and variables} 
+@c @category{Special functions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Bessel functions)
@@ -790,12 +791,13 @@ is expanded in terms of
 @end group
 @end example
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Simplification flags and variables}
-@closecatbox
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
 m4_defvr({Option variable}, gammalim)
 Default value: 10000
@@ -807,12 +809,13 @@ value of the argument is not greater than @code{gammalim}, then
 simplification will occur.  Note that the @code{factlim} switch controls
 simplification of the result of @code{gamma} of an integer argument as well.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Simplification flags and variables}
-@closecatbox
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @c NEED CROSS REFS HERE
 @c NEED EXAMPLES HERE
@@ -1433,11 +1436,12 @@ When @code{beta_expand} is @code{true}, @code{beta(a,b)} and related
 functions are expanded for arguments like @math{a+n} or @math{a-n}, 
 where @math{n} is an integer.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 m4_defvr({Option variable}, beta_args_sum_to_integer)
 Default value: false
@@ -1445,11 +1449,12 @@ Default value: false
 When @code{beta_args_sum_to_integer} is @code{true}, Maxima simplifies 
 @code{beta(a,b)}, when the arguments @var{a} and @var{b} sum to an integer.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 
 @c NEED INFO HERE ABOUT THE SUBSCRIPTED FORM psi[n](x)
@@ -1489,11 +1494,12 @@ Default value: 20
 @code{maxpsiposint} is the largest positive value for which
 @code{psi[n](x)} will try to compute an exact value.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 m4_defvr({Option variable}, maxpsinegint)
 Default value: -10
@@ -1503,11 +1509,12 @@ Default value: -10
 @var{x} is less than @code{maxnegint}, @code{psi[n](@var{x})} will not
 return simplified answer, even if it could.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 m4_defvr({Option variable}, maxpsifracnum)
 Default value: 6
@@ -1517,11 +1524,12 @@ If @code{p} is greater than @code{maxpsifracnum}, then
 @code{psi[@var{n}](@var{x})} will not try to return a simplified
 value.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 m4_defvr({Option variable}, maxpsifracdenom)
 Default value: 6
@@ -1531,11 +1539,12 @@ If @code{q} is greater than @code{maxpsifracdenom}, then
 @code{psi[@var{n}](@var{x})} will not try to return a simplified
 value.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @c NEED CROSS REFS HERE
 @c NEED EXAMPLES HERE
@@ -1731,10 +1740,11 @@ function specified where @var{expintegral_trig} means
 @var{expintegral_si}, @var{expintegral_ci}, and @var{expintegral_hyp}
 means @var{expintegral_shi} or @var{expintegral_chi}.
 
-@opencatbox
-@category{Exponential Integrals}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 m4_defvr({Option variable}, expintexpand )
 Default value: false
@@ -1742,10 +1752,11 @@ Default value: false
 Expand the Exponential Integral E[n](z)
 for half integral values in terms of Erfc or Erf and
 for positive integers in terms of Ei 
-@opencatbox
-@category{Exponential Integrals}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential Integrals}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @node Error Function, Struve Functions, Exponential Integrals, Special Functions
 @section Error Function
