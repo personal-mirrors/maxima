@@ -384,6 +384,7 @@ m4_end_deffn()
 @section Functions and Variables for Elliptic Integrals
 
 m4_setcat(Elliptic integrals)
+@anchor{elliptic_f}
 m4_deffn(<<<{Function}>>>, <<<elliptic_f>>>, <<<(@var{phi}, @var{m})>>>)
 The incomplete elliptic integral of the first kind, defined as
 
@@ -399,6 +400,7 @@ See also @ref{elliptic_e} and @ref{elliptic_kc}.
 @c @end deffn
 m4_end_deffn()
 
+@anchor{elliptic_e}
 m4_deffn(<<<{Function}>>>, <<<elliptic_e>>>, <<<(@var{phi}, @var{m})>>>)
 The incomplete elliptic integral of the second kind, defined as
 
@@ -456,6 +458,7 @@ m4_mathjax(
 @c @end deffn
 m4_end_deffn()
 
+@anchor{elliptic_kc}
 m4_deffn(<<<{Function}>>>, <<<elliptic_kc>>>, <<<(@var{m})>>>)
 The complete elliptic integral of the first kind, defined as
 
@@ -472,6 +475,7 @@ terms of @math{Gamma} functions.  Use @code{makegamma} to evaluate them.
 @c @end deffn
 m4_end_deffn()
 
+@anchor{elliptic_ec}
 m4_deffn(<<<{Function}>>>, <<<elliptic_ec>>>, <<<(@var{m})>>>)
 The complete elliptic integral of the second kind, defined as
 
