@@ -39,6 +39,6 @@ set -x
 fi
 
 build
-while ( grep 'Rerun to get cross' $BASEFILE.log ); do
+while ( grep 'you must run TeX again' $BASEFILE.log ); do
     build
 done
