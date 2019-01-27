@@ -16,7 +16,9 @@
 
 @c -----------------------------------------------------------------------------
 @anchor{%e}
-@defvr {Constant} %e
+m4_setcat(Constants)
+@c @defvr {Constant} %e
+m4_defvr({Constant}, %e)
 @ifinfo
 @vrindex e
 @vrindex Euler's number
@@ -27,14 +29,16 @@
 number.  The numeric value of @code{%e} is the double-precision floating-point
 value 2.718281828459045d0.
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{%i}
-@defvr {Constant} %i
+@c @defvr {Constant} %i
+m4_defvr({Constant}, %i)
 @ifinfo
 @vrindex i
 @vrindex Imaginary unit
@@ -49,19 +53,22 @@ value 2.718281828459045d0.
 
 @c -----------------------------------------------------------------------------
 @anchor{false}
-@defvr {Constant} false
+@c @defvr {Constant} false
+m4_defvr({Constant}, false)
 
 @code{false} represents the Boolean constant of the same name.
 Maxima implements @code{false} by the value @code{NIL} in Lisp.
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{%gamma}
-@defvr {Constant} %gamma
+@c @defvr {Constant} %gamma
+m4_defvr({Constant}, %gamma)
 @ifinfo
 @vrindex Euler-Mascheroni constant
 @end ifinfo
@@ -69,14 +76,16 @@ Maxima implements @code{false} by the value @code{NIL} in Lisp.
 The Euler-Mascheroni constant, 0.5772156649015329 ....
 @c DOUBTLESS THERE IS MORE TO SAY HERE.
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ind}
-@defvr {Constant} ind
+@c @defvr {Constant} ind
+m4_defvr({Constant}, ind)
 @ifinfo
 @vrindex Indeterminate
 @end ifinfo
@@ -95,42 +104,47 @@ Example:
 (%o1)                          ind
 @end example
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{inf}
-@defvr {Constant} inf
+@c @defvr {Constant} inf
+m4_defvr({Constant}, inf)
 @ifinfo
 @vrindex Real infinity
 @end ifinfo
 
 @code{inf} represents real positive infinity.
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{infinity}
-@defvr {Constant}  infinity
+@c @defvr {Constant}  infinity
+m4_defvr({Constant},  infinity)
 @ifinfo
 @vrindex Complex infinity
 @end ifinfo
 
 @code{infinity} represents complex infinity.
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{minf}
-@defvr {Constant} minf
+@c @defvr {Constant} minf
+m4_defvr({Constant}, minf)
 @ifinfo
 @vrindex Minus infinity
 @vrindex Negative infinity
@@ -138,14 +152,16 @@ Example:
 
 @code{minf} represents real minus (i.e., negative) infinity.
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{%phi}
-@defvr {Constant} %phi
+@c @defvr {Constant} %phi
+m4_defvr({Constant}, %phi)
 @ifinfo
 @vrindex phi
 @vrindex Golden mean
@@ -220,14 +236,16 @@ After evaluating @code{tellrat (%phi^2 - %phi - 1)} and @code{algebraic: true},
 (%o5)                           0
 @end example
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{%pi}
-@defvr {Constant} %pi
+@c @defvr {Constant} %pi
+m4_defvr({Constant}, %pi)
 @ifinfo
 @vrindex pi
 @end ifinfo
@@ -236,26 +254,30 @@ After evaluating @code{tellrat (%phi^2 - %phi - 1)} and @code{algebraic: true},
 The numeric value of @code{%pi} is the double-precision floating-point value
 3.141592653589793d0.
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{true}
-@defvr {Constant} true
+@c @defvr {Constant} true
+m4_defvr({Constant}, true)
 
 @code{true} represents the Boolean constant of the same name.
 Maxima implements @code{true} by the value @code{T} in Lisp.
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{und}
-@defvr {Constant} und
+@c @defvr {Constant} und
+m4_defvr({Constant}, und)
 @ifinfo
 @vrindex Undefined
 @end ifinfo
@@ -274,14 +296,16 @@ Example:
 (%o1)                          und
 @end example
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{zeroa}
-@defvr {Constant} zeroa
+@c @defvr {Constant} zeroa
+m4_defvr({Constant}, zeroa)
 
 @code{zeroa} represents an infinitesimal above zero.  @code{zeroa} can be used
 in expressions.  @code{limit} simplifies expressions which contain
@@ -304,14 +328,16 @@ Example:
 (%o2)                           x
 @end example
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{zerob}
-@defvr {Constant} zerob
+@c @defvr {Constant} zerob
+m4_defvr({Constant}, zerob)
 
 @code{zerob} represents an infinitesimal below zero.  @code{zerob} can be used
 in expressions.  @code{limit} simplifies expressions which contain
@@ -319,8 +345,9 @@ infinitesimals.
 
 See also @mref{zeroa} and @mrefdot{limit}
 
-@opencatbox
-@category{Constants}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Constants}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
