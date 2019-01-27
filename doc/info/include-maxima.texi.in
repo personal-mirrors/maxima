@@ -17,8 +17,14 @@
 @synindex vr fn
 @synindex cp fn
 
-@c Documentation Category index
-@defindex dc
+@c Documentation Category index for functions (df) and variables
+@c (dv).  We need separate indices because maxima is a lisp2 so we cah
+@c have functions and variables with the same name.  We can't
+@c distinguish these when auto-creating links for these, so we use
+@c different indicies.  This also means there will be two separate
+@c appendices for the categories.
+@defindex df
+@defindex dv
 
 @setchapternewpage odd
 @c end of header
@@ -1008,15 +1014,28 @@ Understanding maxima's output
 @printindex fn
 
 @ifnotinfo
-@node Documentation Categories
-@appendix Documentation Categories
+@node Documentation Categories for Functions
+@appendix Documentation Categories for Functions
 
 @ifnothtml
-@printindex dc
+@printindex df
 @end ifnothtml
 
 @ifhtml
-@include category.texi
+@include category-fn.texi
+@end ifhtml
+@end ifnotinfo
+
+@ifnotinfo
+@node Documentation Categories for Variables
+@appendix Documentation Categories for Variables
+
+@ifnothtml
+@printindex dv
+@end ifnothtml
+
+@ifhtml
+@include category-vr.texi
 @end ifhtml
 @end ifnotinfo
 

@@ -530,21 +530,24 @@ maxima-index.lisp: build_index.pl maxima.info
 
 DOLLAR_SIGN = $$
 
-maxima_0.html: maxima.pdf $(maxima_TEXINFOS) $(figurefiles) manual.css category.texi
+maxima_0.html: maxima.pdf $(maxima_TEXINFOS) $(figurefiles) manual.css category-fn.texi category-vr.texi
 	./build_html.sh
 
 maxima.epub: maxima_0.html
 	ebook-convert maxima_singlepage.html maxima.epub --breadth-first "--title=Maxima @manual_version@ Manual" "--authors=Maxima Team" --language=en
 
-maxima.pdf maxima_pdf.dcs : maxima_pdf.texi $(maxima_TEXINFOS) $(pdffigures)
+maxima.pdf maxima_pdf.dfs maxima_pdf.dvs : maxima_pdf.texi $(maxima_TEXINFOS) $(pdffigures)
 	make-pdf.sh $<
 	mv maxima_pdf.pdf maxima.pdf
 
 contents.hhc index.hhk: maxima_0.html
 	/usr/bin/env perl $(srcdir)/create_index `grep -l '<h2.*Table of Contents' maxima_[0-9]*.html`
 
-category.texi : maxima_pdf.dcs build-cat.awk
-	@AWK@ -f build-cat.awk maxima_pdf.dcs > category.texi
+category-fn.texi : maxima_pdf.dfs build-cat.awk
+	@AWK@ -v idxname=fn -f build-cat.awk maxima_pdf.dfs > category-fn.texi
+
+category-vr.texi : maxima_pdf.dvs build-cat.awk
+	@AWK@ -v idxname=vr -f build-cat.awk maxima_pdf.dvs > category-vr.texi
 
 # Squash error on exit from hhc
 maxima.chm: maxima.hhp contents.hhc index.hhk

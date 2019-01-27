@@ -30,7 +30,8 @@ build () {
     if [ $? -ne 0 ]; then
 	exit 1
     fi
-    @SED@ --in-place=bak -E 's/^(.*)\{([^!]+)!([^}]+)\}[ ]*$$/\1{\2}{\3}/' $BASEFILE.dc
+    @SED@ --in-place=bak -E 's/^(.*)\{([^!]+)!([^}]+)\}[ ]*$$/\1{\2}{\3}/' $BASEFILE.df
+    @SED@ --in-place=bak -E 's/^(.*)\{([^!]+)!([^}]+)\}[ ]*$$/\1{\2}{\3}/' $BASEFILE.dv
     ./texindex $BASEFILE.??
 }
 

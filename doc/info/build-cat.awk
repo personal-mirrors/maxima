@@ -25,7 +25,7 @@ BEGIN {
 	    printf("@html\n&middot;\n@end html\n");
 	}
 	first_item = 0
-	printf("@ref{%s-%s, %s}\n", topic, subtopic, subtopic)
+	printf("@ref{%s-%s-%s, %s}\n", topic, idxname, subtopic, subtopic)
     }
     next
 }
