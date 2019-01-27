@@ -97,7 +97,9 @@ See also @mrefcomma{arraymake} @mref{arrayinfo} and @mrefdot{make_array}
 
 @c -----------------------------------------------------------------------------
 @anchor{arrayapply}
-@deffn {Function} arrayapply (@var{A}, [@var{i_1}, @dots{}, @var{i_n}])
+m4_setcat(Expressions,Arrays)
+@c @deffn {Function} arrayapply (@var{A}, [@var{i_1}, @dots{}, @var{i_n}])
+m4_deffn( {Function}, arrayapply, <<<(@var{A}, [@var{i_1}, @dots{}, @var{i_n}])>>>)
 
 Evaluates @code{@var{A} [@var{i_1}, ..., @var{i_n}]},
 where @var{A} is an array and @var{i_1}, @dots{}, @var{i_n} are integers.
@@ -105,15 +107,18 @@ where @var{A} is an array and @var{i_1}, @dots{}, @var{i_n} are integers.
 This is reminiscent of @mrefcomma{apply} except the first argument is an array
 instead of a function.
 
-@opencatbox
-@category{Expressions}
-@category{Arrays}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Arrays)
 @anchor{arrayinfo}
-@deffn {Function} arrayinfo (@var{A})
+@c @deffn {Function} arrayinfo (@var{A})
+m4_deffn( {Function}, arrayinfo, <<<(@var{A})>>>)
 
 Returns information about the array @var{A}.
 The argument @var{A} may be a declared array, a @mrefcomma{hashed array}
@@ -307,14 +312,16 @@ Using @code{arrayinfo} in order to convert an undeclared array to a declared arr
 @end group
 @end example
 
-@opencatbox
-@category{Arrays}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Arrays)
 @anchor{arraymake}
-@deffn {Function} arraymake (@var{A}, [@var{i_1}, @dots{}, @var{i_n}])
+@c @deffn {Function} arraymake (@var{A}, [@var{i_1}, @dots{}, @var{i_n}])
+m4_deffn( {Function}, arraymake, <<<(@var{A}, [@var{i_1}, @dots{}, @var{i_n}])>>>)
 
 Returns the expression @code{@var{A}[@var{i_1}, ..., @var{i_n}]}.
 The result is an unevaluated array reference.
@@ -404,15 +411,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Arrays}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Arrays, Global variables)
 @anchor{arrays}
-@defvr {System variable} arrays
+@c @defvr {System variable} arrays
+m4_defvr( {System variable}, arrays)
 Default value: @code{[]}
 
 @code{arrays} is a list of arrays that have been allocated.
@@ -463,30 +473,34 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Arrays}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Arrays}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{arraysetapply}
-@deffn {Function} arraysetapply (@var{A}, [@var{i_1}, @dots{}, @var{i_n}], @var{x})
+@c @deffn {Function} arraysetapply (@var{A}, [@var{i_1}, @dots{}, @var{i_n}], @var{x})
+m4_deffn( {Function}, arraysetapply, <<<(@var{A}, [@var{i_1}, @dots{}, @var{i_n}], @var{x})>>>)
 
 Assigns @var{x} to @code{@var{A}[@var{i_1}, ..., @var{i_n}]},
 where @var{A} is an array and @var{i_1}, @dots{}, @var{i_n} are integers.
 
 @code{arraysetapply} evaluates its arguments.
 
-@opencatbox
-@category{Expressions}
-@category{Arrays}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
+m4_setcat(Arrays)
 @anchor{fillarray}
-@deffn {Function} fillarray (@var{A}, @var{B})
+@c @deffn {Function} fillarray (@var{A}, @var{B})
+m4_deffn( {Function}, fillarray, <<<(@var{A}, @var{B})>>>)
 
 Fills array @var{A} from @var{B}, which is a list or an array.
 
@@ -587,14 +601,15 @@ Multiple-dimension arrays are filled in row-major order.
 @end group
 @end example
 
-@opencatbox
-@category{Arrays}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
 @anchor{listarray}
-@deffn {Function} listarray (@var{A})
+@c @deffn {Function} listarray (@var{A})
+m4_deffn( {Function}, listarray, <<<(@var{A})>>>)
 
 Returns a list of the elements of the array @var{A}.
 The argument @var{A} may be an array, an undeclared array (@mref{hashed array}),
@@ -757,16 +772,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Arrays}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
 @anchor{make_array}
-@deffn {Function} make_array (@var{type}, @var{dim_1}, @dots{}, @var{dim_n})
+@c @deffn {Function} make_array (@var{type}, @var{dim_1}, @dots{}, @var{dim_n})
+m4_deffn( {Function}, make_array, <<<(@var{type}, @var{dim_1}, @dots{}, @var{dim_n})>>>)
 
 Creates and returns a Lisp array.  @var{type} may
 be @code{any}, @code{flonum}, @code{fixnum}, @code{hashed} or 
@@ -864,16 +881,17 @@ IMP) -1 $Z))
 @end group
 @end example
 
-@opencatbox
-@category{Arrays}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c DOES THIS MODIFY A OR DOES IT CREATE A NEW ARRAY ??
 
 @c -----------------------------------------------------------------------------
 @anchor{rearray}
-@deffn {Function} rearray (@var{A}, @var{dim_1}, @dots{}, @var{dim_n})
+@c @deffn {Function} rearray (@var{A}, @var{dim_1}, @dots{}, @var{dim_n})
+m4_deffn( {Function}, rearray, <<<(@var{A}, @var{dim_1}, @dots{}, @var{dim_n})>>>)
 
 Changes the dimensions of an array.
 The new array will be filled with the elements of the old one in
@@ -883,11 +901,11 @@ the remaining elements are filled with
 depending on the type of the array.  The type of the array cannot be
 changed.
 
-@opencatbox
-@category{Arrays}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
 @anchor{remarray}
 @deffn  {Function} remarray @
@@ -913,8 +931,10 @@ desired to clear the cache of a @mrefdot{memoizing function}
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Arrays)
 @anchor{subvar}
-@deffn {Function} subvar (@var{x}, @var{i})
+@c @deffn {Function} subvar (@var{x}, @var{i})
+m4_deffn( {Function}, subvar, <<<(@var{x}, @var{i})>>>)
 
 Evaluates the subscripted expression @code{@var{x}[@var{i}]}.
 
@@ -958,29 +978,35 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Arrays}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Arrays}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions)
 @anchor{subvarp}
-@deffn {Function} subvarp (@var{expr})
+@c @deffn {Function} subvarp (@var{expr})
+m4_deffn( {Function}, subvarp, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a subscripted variable, for example
 @code{a[i]}.
 
-@opencatbox
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Arrays, Global flags)
 @anchor{use_fast_arrays}
-@defvr {Option variable} use_fast_arrays
+@c @defvr {Option variable} use_fast_arrays
+m4_defvr( {Option variable}, use_fast_arrays)
 Default value: @code{false}
 
 When @code{use_fast_arrays} is @code{true},
@@ -997,15 +1023,18 @@ than the default one; Arrays created by @mref{make_array} are not affected by
 
 See also @mrefdot{translate_fast_arrays}
 
-@opencatbox
-@category{Arrays}
-@category{Global flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Arrays}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Arrays, Translation flags and variables)
 @anchor{translate_fast_arrays}
-@defvr {Option variable} translate_fast_arrays
+@c @defvr {Option variable} translate_fast_arrays
+m4_defvr( {Option variable}, translate_fast_arrays)
 Default value: @code{false}
 
 When @code{translate_fast_arrays} is @code{true},
@@ -1016,8 +1045,9 @@ When @code{translate_fast_arrays} is @code{false},
 the Maxima-to-Lisp translator generates code that assumes arrays are properties,
 as if @code{use_fast_arrays} were @code{false}.
 
-@opencatbox
-@category{Arrays}
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Arrays}
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()

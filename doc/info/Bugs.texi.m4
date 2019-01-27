@@ -9,8 +9,10 @@
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging)
 @anchor{run_testsuite}
-@deffn {Function} run_testsuite ([@var{options}])
+@c @deffn {Function} run_testsuite ([@var{options}])
+m4_deffn( {Function}, run_testsuite, <<<([@var{options}])>>>)
 
 Run the Maxima test suite.  Tests producing the desired answer are
 considered ``passes,'' as are tests that do not produce the desired
@@ -56,14 +58,17 @@ and then defines functions and variables appropriate to the test.
 
 @code{run_testsuite} returns @code{done}.
 
-@opencatbox
-@category{Debugging}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Debugging}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging, Global variables)
 @anchor{testsuite_files}
-@defvr {Option variable} testsuite_files
+@c @defvr {Option variable} testsuite_files
+m4_defvr( {Option variable}, testsuite_files)
 
 @code{testsuite_files} is the set of tests to be run by
 @mrefdot{run_testsuite}  It is a list of names of the files containing
@@ -81,27 +86,32 @@ This specifies the testsuite consists of the files "rtest13s" and
 "rtest14", but "rtest14" contains two tests that are known to fail: 57
 and 63.
 
-@opencatbox
-@category{Debugging}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Debugging}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
-@defvr {Option variable} share_testsuite_files
+@c @defvr {Option variable} share_testsuite_files
+m4_defvr( {Option variable}, share_testsuite_files)
 
 @code{share_testsuite_files} is the set of tests from the @code{share}
 directory that is run as a part of the test suite by
 @mrefdot{run_testsuite}.
 
-@opencatbox
-@category{Debugging}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Debugging}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging)
 @anchor{bug_report}
-@deffn {Function} bug_report ()
+@c @deffn {Function} bug_report ()
+m4_deffn( {Function}, bug_report, <<<()>>>)
 
 Prints out Maxima and Lisp version numbers, and gives a link
 to the Maxima project bug report web page.
@@ -112,14 +122,16 @@ and Lisp version information into the bug report.
 
 @code{bug_report} returns an empty string @code{""}.
 
-@opencatbox
-@category{Debugging}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Debugging}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{build_info}
-@deffn {Function} build_info ()
+@c @deffn {Function} build_info ()
+m4_deffn( {Function}, build_info, <<<()>>>)
 
 Returns a summary of the parameters of the Maxima build,
 as a Maxima structure (defined by @code{defstruct}).
@@ -205,8 +217,8 @@ In the example, the checkout is 331 commits after the latest GIT tag
 (usually a Maxima (major) release (5.37 in our example)) and the 
 abbreviated commit hash of the last commit was "8322940".
 
-@opencatbox
-@category{Debugging}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Debugging}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()

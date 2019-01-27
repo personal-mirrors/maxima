@@ -185,8 +185,10 @@ Cl(3,1). A call to @code{init_atensor(dirac)} is equivalent to
 @end deffn
 
 
+m4_setcat(Package atensor, Simplification functions)
 @anchor{atensimp}
-@deffn {Function} atensimp (@var{expr})
+@c @deffn {Function} atensimp (@var{expr})
+m4_deffn( {Function}, atensimp, <<<(@var{expr})>>>)
 
 Simplifies an algebraic tensor expression @var{expr} according to the rules
 configured by a call to @code{init_atensor}. Simplification includes
@@ -195,12 +197,13 @@ to @code{sf}, @code{af}, and @code{av} where applicable. A
 safeguard is used to ensure that the function always terminates, even
 for complex expressions.
 
-@opencatbox
-@category{Package atensor}
-@category{Simplification functions}
-@closecatbox
+@c @opencatbox
+@c @category{Package atensor}
+@c @category{Simplification functions}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{alg_type}
 @deffn {Function} alg_type
@@ -213,8 +216,10 @@ The algebra type. Valid values are @code{universal}, @code{grassmann},
 
 @end deffn
 
+m4_setcat(Package atensor, Global variables)
 @anchor{adim}
-@defvr {Variable} adim
+@c @defvr {Variable} adim
+m4_defvr( {Variable}, adim)
 Default value: 0
 
 The dimensionality of the algebra. @code{atensor} uses the value of @code{adim}
@@ -228,61 +233,71 @@ to determine if an indexed object is a valid base vector.  See @code{abasep}.
 @end defvr
 
 @anchor{aform}
-@defvr {Variable} aform
+@c @defvr {Variable} aform
+m4_defvr( {Variable}, aform)
 Default value: @code{ident(3)}
 
 Default values for the bilinear forms @code{sf}, @code{af}, and
 @code{av}. The default is the identity matrix @code{ident(3)}.
 
-@opencatbox
-@category{Package atensor}
-@category{Global variables}
-@closecatbox
+@c @opencatbox
+@c @category{Package atensor}
+@c @category{Global variables}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @anchor{asymbol}
-@defvr {Variable} asymbol
+@c @defvr {Variable} asymbol
+m4_defvr( {Variable}, asymbol)
 Default value: @code{v}
 
 The symbol for base vectors.
 
-@opencatbox
-@category{Package atensor}
-@category{Global variables}
-@closecatbox
+@c @opencatbox
+@c @category{Package atensor}
+@c @category{Global variables}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
-@deffn {Function} sf (@var{u}, @var{v})
+m4_setcat(Package atensor)
+@c @deffn {Function} sf (@var{u}, @var{v})
+m4_deffn( {Function}, sf, <<<(@var{u}, @var{v})>>>)
 
 A symmetric scalar function that is used in commutation relations.
 The default implementation checks if both arguments are base vectors
 using @code{abasep} and if that is the case, substitutes the
 corresponding value from the matrix @code{aform}.
 
-@opencatbox
-@category{Package atensor}
-@closecatbox
+@c @opencatbox
+@c @category{Package atensor}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{af}
-@deffn {Function} af (@var{u}, @var{v})
+@c @deffn {Function} af (@var{u}, @var{v})
+m4_deffn( {Function}, af, <<<(@var{u}, @var{v})>>>)
 
 An antisymmetric scalar function that is used in commutation relations.
 The default implementation checks if both arguments are base vectors
 using @code{abasep} and if that is the case, substitutes the
 corresponding value from the matrix @code{aform}.
 
-@opencatbox
-@category{Package atensor}
-@closecatbox
+@c @opencatbox
+@c @category{Package atensor}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{av}
-@deffn {Function} av (@var{u}, @var{v})
+@c @deffn {Function} av (@var{u}, @var{v})
+m4_deffn( {Function}, av, <<<(@var{u}, @var{v})>>>)
 
 An antisymmetric function that is used in commutation relations.
 The default implementation checks if both arguments are base vectors
@@ -316,24 +331,27 @@ For instance:
                                        3
 @end example
 
-@opencatbox
-@category{Package atensor}
-@closecatbox
+@c @opencatbox
+@c @category{Package atensor}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-
+m4_setcat(Package atensor, Predicate functions)
 @anchor{abasep}
-@deffn {Function} abasep (@var{v})
+@c @deffn {Function} abasep (@var{v})
+m4_deffn( {Function}, abasep, <<<(@var{v})>>>)
 
 Checks if its argument is an @code{atensor} base vector. That is, if it is
 an indexed symbol, with the symbol being the same as the value of
 @code{asymbol}, and the index having a numeric value between 1
 and @code{adim}.
 
-@opencatbox
-@category{Package atensor}
-@category{Predicate functions}
-@closecatbox
+@c @opencatbox
+@c @category{Package atensor}
+@c @category{Predicate functions}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()

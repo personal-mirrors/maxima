@@ -18,8 +18,10 @@
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global variables)
 @anchor{__}
-@defvr {System variable} __
+@c @defvr {System variable} __
+m4_defvr( {System variable}, <<<__>>>)
 @ifinfo
 @vrindex Current input expression
 @end ifinfo
@@ -80,14 +82,17 @@ Current input expression = --------------
 @end group
 @end example
 
-@opencatbox
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Console interaction, Global variables)
 @anchor{_}
-@defvr {System variable} _
+@c @defvr {System variable} _
+m4_defvr( {System variable}, <<<_>>>)
 @ifinfo
 @vrindex Previous input
 @end ifinfo
@@ -173,15 +178,17 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Console interaction}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Console interaction}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{%}
-@defvr {System variable} %
+@c @defvr {System variable} %
+m4_defvr( {System variable}, <<<%>>>)
 @ifinfo
 @vrindex Previous output
 @end ifinfo
@@ -197,15 +204,18 @@ is not bound to output expressions in the file being processed.
 
 See also @mrefcomma{_} @mrefcomma{%%} and @mrefdot{%th}
 
-@opencatbox
-@category{Console interaction}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Console interaction}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global variables)
 @anchor{%%}
-@defvr {System variable} %%
+@c @defvr {System variable} %%
+m4_defvr( {System variable}, <<<%%>>>)
 @ifinfo
 @vrindex Previous result in compound expression
 @end ifinfo
@@ -262,14 +272,17 @@ _%%;
 _
 @end example
 
-@opencatbox
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Console interaction)
 @anchor{%th}
-@deffn {Function} %th (@var{i})
+@c @deffn {Function} %th (@var{i})
+m4_deffn( {Function}, %th, <<<(@var{i})>>>)
 @ifinfo
 @fnindex N'th previous output
 @end ifinfo
@@ -303,10 +316,11 @@ output expressions.
 (%o6)                          15
 @end example
 
-@opencatbox
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{?}
@@ -405,8 +419,10 @@ Example:
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{inchar}
-@defvr {Option variable} inchar
+@c @defvr {Option variable} inchar
+m4_defvr( {Option variable}, inchar)
 Default value: @code{%i}
 
 @code{inchar} is the prefix of the labels of expressions entered by the user.
@@ -439,14 +455,17 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Global variables)
 @anchor{infolists}
-@defvr {System variable} infolists
+@c @defvr {System variable} infolists
+m4_defvr( {System variable}, infolists)
 Default value: @code{[]}
 
 @code{infolists} is a list of the names of all of the information
@@ -494,11 +513,12 @@ plus the special package @mrefdot{default_let_rule_package}
 one is not explicitly set by the user.)
 @end table
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c REVIEW FOR ACCURACY AND COMPLETENESS
 @c THIS ITEM IS VERY IMPORTANT !!
@@ -578,8 +598,10 @@ by @code{kill}.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display functions, Console interaction)
 @anchor{labels}
-@deffn  {Function} labels (@var{symbol})
+@c @deffn  {Function} labels (@var{symbol})
+m4_deffn(  {Function}, labels, <<<(@var{symbol})>>>)
 
 Returns the list of input, output, or intermediate expression labels which begin
 with @var{symbol}.  Typically @var{symbol} is the value of
@@ -602,12 +624,14 @@ intermediate expression labels.
 See also @mrefcomma{inchar} @mrefcomma{outchar} @mrefcomma{linechar} and
 @mrefdot{infolists}
 
-@opencatbox
-@category{Display functions}
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Display functions}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
+m4_setcat(Display flags and variables, Console interaction)
 @defvr {System variable} labels
 
 The variable @code{labels} is the list of input, output, and intermediate
@@ -621,8 +645,10 @@ expression labels, including all previous labels if @code{inchar},
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{linechar}
-@defvr {Option variable} linechar
+@c @defvr {Option variable} linechar
+m4_defvr( {Option variable}, linechar)
 Default value: @code{%t}
 
 @code{linechar} is the prefix of the labels of intermediate expressions 
@@ -638,45 +664,54 @@ like @code{kill(inlabels)} do not work as expected.
 Intermediate expressions might or might not be displayed.
 See @mref{programmode} and @mrefdot{labels}
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c EXPAND; SHOW WHAT HAPPENS WHEN linenum IS ASSIGNED A VALUE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables, Console interaction)
 @anchor{linenum}
-@defvr {System variable} linenum
+@c @defvr {System variable} linenum
+m4_defvr( {System variable}, linenum)
 
 The line number of the current pair of input and output expressions.
 
-@opencatbox
-@category{Display flags and variables}
-@category{Console interaction}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global variables, Session management, Console interaction)
 @anchor{myoptions}
-@defvr {System variable} myoptions
+@c @defvr {System variable} myoptions
+m4_defvr( {System variable}, myoptions)
 Default value: @code{[]}
 
 @code{myoptions} is the list of all options ever reset by the user,
 whether or not they get reset to their default value.
 
-@opencatbox
-@category{Global variables}
-@category{Session management}
-@category{Console interaction}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global variables}
+@c @category{Session management}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global flags, Session management)
 @anchor{nolabels}
-@defvr {Option variable} nolabels
+@c @defvr {Option variable} nolabels
+m4_defvr( {Option variable}, nolabels)
 Default value: @code{false}
 
 When @code{nolabels} is @code{true}, input and output result labels (@code{%i}
@@ -694,17 +729,20 @@ labels are bound and appended to the @code{labels} list.
 
 See also @mrefcomma{batch} @mrefcomma{load} and @mrefdot{labels}
 
-@opencatbox
-@category{Global flags}
-@category{Session management}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global flags}
+@c @category{Session management}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global flags, Session management, Console interaction)
 @anchor{optionset}
-@defvr {Option variable} optionset
+@c @defvr {Option variable} optionset
+m4_defvr( {Option variable}, optionset)
 Default value: @code{false}
 
 When @code{optionset} is @code{true}, Maxima prints out a message whenever a
@@ -723,17 +761,20 @@ assignment: assigning to option gamma_expand
 (%o2)                         true
 @end example
 
-@opencatbox
-@category{Global flags}
-@category{Session management}
-@category{Console interaction}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global flags}
+@c @category{Session management}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @need 800
 @anchor{outchar}
-@defvr {Option variable} outchar
+@c @defvr {Option variable} outchar
+m4_defvr( {Option variable}, outchar)
 Default value: @code{%o}
 
 @code{outchar} is the prefix of the labels of expressions computed by Maxima.
@@ -766,10 +807,11 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{playback}
@@ -833,24 +875,29 @@ Arguments may be combined, e.g., @code{playback ([5, 10], grind, time, slow)}.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global variables, Console interaction)
 @need 800
 @anchor{prompt}
-@defvr {Option variable} prompt
+@c @defvr {Option variable} prompt
+m4_defvr( {Option variable}, prompt)
 Default value: @code{_}
 
 @code{prompt} is the prompt symbol of the @mref{demo} function,
 @code{playback (slow)} mode, and the Maxima break loop (as invoked by
 @mref{break}).
 
-@opencatbox
-@category{Global variables}
-@category{Console interaction}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global variables}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Console interaction)
 @anchor{quit}
-@deffn {Function} quit ()
+@c @deffn {Function} quit ()
+m4_deffn( {Function}, quit, <<<()>>>)
 
 Terminates the Maxima session.  Note that the function must be invoked as
 @code{quit();} or @code{quit()$}, not @code{quit} by itself.
@@ -859,14 +906,16 @@ To stop a lengthy computation, type @code{control-C}.  The default action is to
 return to the Maxima prompt.  If @code{*debugger-hook*} is @code{nil},
 @code{control-C} opens the Lisp debugger.  See also @ref{Debugging}.
 
-@opencatbox
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{read}
-@deffn {Function} read (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} read (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn( {Function}, read, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Prints @var{expr_1}, @dots{}, @var{expr_n}, then reads one expression from the
 console and returns the evaluated expression.  The expression is terminated with
@@ -886,14 +935,16 @@ foo is 42  -- enter new value.
 (%o3)                         (b + a)
 @end example
 
-@opencatbox
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{readonly}
-@deffn {Function} readonly (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} readonly (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn( {Function}, readonly, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Prints @var{expr_1}, @dots{}, @var{expr_n}, then reads one expression from the
 console and returns the expression (without evaluation).  The expression is
@@ -916,14 +967,17 @@ Enter an expression:
 (%o3)                            128
 @end example
 
-@opencatbox
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Session management)
 @anchor{reset}
-@deffn {Function} reset ()
+@c @deffn {Function} reset ()
+m4_deffn( {Function}, reset, <<<()>>>)
 
 Resets many global variables and options, and some other variables, to their
 default values.
@@ -934,14 +988,17 @@ on this list (among other actions).  Many, but not all, global variables and
 options are defined by @code{defmvar}, and some variables defined by
 @code{defmvar} are not global variables or options.
 
-@opencatbox
-@category{Session management}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Session management}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables, Debugging)
 @anchor{showtime}
-@defvr {Option variable} showtime
+@c @defvr {Option variable} showtime
+m4_defvr( {Option variable}, showtime)
 Default value: @code{false}
 
 When @code{showtime} is @code{true}, the computation time and elapsed time is
@@ -952,15 +1009,18 @@ display the computation time even when @code{showtime} is @code{false}.
 
 See also @mrefdot{timer}
 
-@opencatbox
-@category{Display flags and variables}
-@category{Debugging}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @category{Debugging}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Console interaction)
 @anchor{to_lisp}
-@deffn {Function} to_lisp ()
+@c @deffn {Function} to_lisp ()
+m4_deffn( {Function}, to_lisp, <<<()>>>)
 
 Enters the Lisp system under Maxima.  @code{(to-maxima)} returns to Maxima.
 
@@ -989,14 +1049,17 @@ Returning to Maxima
 (%o3)                       x (x + 1)
 @end example
 
-@opencatbox
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation, Global variables)
 @anchor{values}
-@defvr {System variable} values
+@c @defvr {System variable} values
+m4_defvr( {System variable}, values)
 Initial value: @code{[]}
 
 @code{values} is a list of all bound user variables (not Maxima options or
@@ -1040,11 +1103,12 @@ The values are removed from the variables.  @code{values} is the empty list.
 @end group
 @end example
 
-@opencatbox
-@category{Evaluation}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Evaluation}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @node Functions and Variables for Display, , Functions and Variables for Command Line, Command Line
@@ -1052,8 +1116,10 @@ The values are removed from the variables.  @code{values} is the empty list.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions, Display flags and variables)
 @anchor{%edispflag}
-@defvr {Option variable} %edispflag
+@c @defvr {Option variable} %edispflag
+m4_defvr( {Option variable}, %edispflag)
 Default value: @code{false}
 
 When @code{%edispflag} is @code{true}, Maxima displays @code{%e} to a negative
@@ -1083,15 +1149,18 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{absboxchar}
-@defvr {Option variable} absboxchar
+@c @defvr {Option variable} absboxchar
+m4_defvr( {Option variable}, absboxchar)
 Default value: @code{!}
 
 @code{absboxchar} is the character used to draw absolute value
@@ -1105,10 +1174,11 @@ Example:
 (%o1)                       !x  + 1!
 @end example
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c AFTER REVIEWING src/displa.lisp, IT LOOKS LIKE THIS VARIABLE HAS NO EFFECT
 @c CUT IT ON THE NEXT PASS
@@ -1126,8 +1196,10 @@ Example:
 @c @end defvar
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display functions)
 @anchor{disp}
-@deffn {Function} disp (@var{expr_1}, @var{expr_2}, @dots{})
+@c @deffn {Function} disp (@var{expr_1}, @var{expr_2}, @dots{})
+m4_deffn( {Function}, disp, <<<(@var{expr_1}, @var{expr_2}, @dots{})>>>)
 
 is like @mref{display} but only the value of the arguments are displayed rather
 than equations.  This is useful for complicated arguments which don't have names 
@@ -1158,14 +1230,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{display}
-@deffn {Function} display (@var{expr_1}, @var{expr_2}, @dots{})
+@c @deffn {Function} display (@var{expr_1}, @var{expr_2}, @dots{})
+m4_deffn( {Function}, display, <<<(@var{expr_1}, @var{expr_2}, @dots{})>>>)
 
 Displays equations whose left side is @var{expr_i} unevaluated, and whose right
 side is the value of the expression centered on the line.  This function is 
@@ -1203,8 +1277,10 @@ Example:
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{display2d}
-@defvr {Option variable} display2d
+@c @defvr {Option variable} display2d
+m4_defvr( {Option variable}, display2d)
 Default value: @code{true}
 
 When @code{display2d} is @code{true},
@@ -1246,14 +1322,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{display_format_internal}
-@defvr {Option variable} display_format_internal
+@c @defvr {Option variable} display_format_internal
+m4_defvr( {Option variable}, display_format_internal)
 Default value: @code{false}
 
 When @code{display_format_internal} is @code{true}, expressions are displayed
@@ -1287,8 +1365,10 @@ X*4/3;    ---        - X
 @c REPHRASE, NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display functions)
 @anchor{dispterms}
-@deffn {Function} dispterms (@var{expr})
+@c @deffn {Function} dispterms (@var{expr})
+m4_deffn( {Function}, dispterms, <<<(@var{expr})>>>)
 
 Displays @var{expr} in parts one below the other.  That is, first the operator
 of @var{expr} is displayed, then each term in a sum, or factor in a product, or
@@ -1316,17 +1396,20 @@ Example:
 (%o1)                         done
 @end example
 
-@opencatbox
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{expt}
 @anchor{ncexpt}
-@deffn  {Special symbol} expt (@var{a}, @var{b})
-@deffnx {Special symbol} ncexpt (@var{a}, @var{b})
-
+@c @deffn  {Special symbol} expt (@var{a}, @var{b})
+m4_deffn(  {Special symbol}, expt, <<<(@var{a}, @var{b})>>>)
+@c @deffnx {Special symbol} ncexpt (@var{a}, @var{b})
+m4_deffnx({Special symbol}, ncexpt, <<<(@var{a}, @var{b})>>>)
 If an exponential expression is too wide to be displayed as
 @code{@var{a}^@var{b}} it appears as @code{expt (@var{a}, @var{b})} (or as
 @code{ncexpt (@var{a}, @var{b})} in the case of @code{@var{a}^^@var{b}}).
@@ -1338,8 +1421,10 @@ If an exponential expression is too wide to be displayed as
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Display flags and variables)
 @anchor{exptdispflag}
-@defvr {Option variable} exptdispflag
+@c @defvr {Option variable} exptdispflag
+m4_defvr( {Option variable}, exptdispflag)
 Default value: @code{true}
 
 When @code{exptdispflag} is @code{true}, Maxima displays expressions
@@ -1362,15 +1447,18 @@ Example:
 (%o4)                         10
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display functions)
 @anchor{grind}
-@deffn  {Function} grind (@var{expr})
+@c @deffn  {Function} grind (@var{expr})
+m4_deffn(  {Function}, grind, <<<(@var{expr})>>>)
 
 The function @code{grind} prints @var{expr} to the console in a form suitable
 for input to Maxima.  @code{grind} always returns @code{done}.
@@ -1516,12 +1604,15 @@ n do (for j from i+1 thru n do L[i,j]:0),L)
 @end group
 @end example
 
-@opencatbox
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
-@defvr {Option variable} grind
+m4_setcat(Display flags and variables)
+@c @defvr {Option variable} grind
+m4_defvr( {Option variable}, grind)
 
 When the variable @code{grind} is @code{true}, the output of @code{string} and
 @mref{stringout} has the same format as that of @code{grind}; otherwise no
@@ -1533,14 +1624,17 @@ value of the variable @code{grind} is @code{false}.
 format as the @code{grind} function.  Otherwise, no attempt is made to specially
 format input expressions.
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Console interaction)
 @anchor{ibase}
-@defvr {Option variable} ibase
+@c @defvr {Option variable} ibase
+m4_defvr( {Option variable}, ibase)
 Default value: @code{10}
 
 @code{ibase} is the base for integers read by Maxima.
@@ -1650,14 +1744,17 @@ it is interpreted in base 10.
 @end group
 @end example
 
-@opencatbox
-@category{Console interaction}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Console interaction}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display functions)
 @anchor{ldisp}
-@deffn {Function} ldisp (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} ldisp (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn( {Function}, ldisp, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Displays expressions @var{expr_1}, @dots{}, @var{expr_n} to the console as
 printed output.  @code{ldisp} assigns an intermediate expression label to each
@@ -1690,14 +1787,16 @@ Examples:
 (%o5)               b  + 3 a b  + 3 a  b + a
 @end example
 
-@opencatbox
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ldisplay}
-@deffn {Function} ldisplay (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} ldisplay (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn( {Function}, ldisplay, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Displays expressions @var{expr_1}, @dots{}, @var{expr_n} to the console as
 printed output.  Each expression is printed as an equation of the form
@@ -1739,8 +1838,10 @@ Examples:
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{leftjust}
-@defvr {Option variable} leftjust
+@c @defvr {Option variable} leftjust
+m4_defvr( {Option variable}, leftjust)
 Default value: @code{false}
 
 When @code{leftjust} is @code{true}, equations in 2D-display are drawn left
@@ -1760,14 +1861,16 @@ Example:
 (%o3) x  + 3 x  + 3 x + 1
 @end example
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{linel}
-@defvr {Option variable} linel
+@c @defvr {Option variable} linel
+m4_defvr( {Option variable}, linel)
 Default value: @code{79}
 
 @code{linel} is the assumed width (in characters) of the console display for the
@@ -1776,15 +1879,17 @@ the user, although very small or very large values may be impractical.  Text
 printed by built-in Maxima functions, such as error messages and the output of
 @mrefcomma{describe} is not affected by @code{linel}.
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @need 800
 @anchor{lispdisp}
-@defvr {Option variable} lispdisp
+@c @defvr {Option variable} lispdisp
+m4_defvr( {Option variable}, lispdisp)
 Default value: @code{false}
 
 When @code{lispdisp} is @code{true}, Lisp symbols are displayed with a leading
@@ -1812,16 +1917,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{negsumdispflag}
-@defvr {Option variable} negsumdispflag
+@c @defvr {Option variable} negsumdispflag
+m4_defvr( {Option variable}, negsumdispflag)
 Default value: @code{true}
 
 When @code{negsumdispflag} is @code{true}, @code{x - y} displays as @code{x - y}
@@ -1830,14 +1937,17 @@ check in display for the difference of two expressions to not be done.  One
 application is that thus @code{a + %i*b} and @code{a - %i*b} may both be
 displayed the same way.
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables, Console interaction)
 @anchor{obase}
-@defvr {Option variable} obase
+@c @defvr {Option variable} obase
+m4_defvr( {Option variable}, obase)
 Default value: @code{10}
 
 @code{obase} is the base for integers displayed by Maxima.
@@ -1899,15 +2009,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Display flags and variables}
-@category{Console interaction}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{pfeformat}
-@defvr {Option variable} pfeformat
+@c @defvr {Option variable} pfeformat
+m4_defvr( {Option variable}, pfeformat)
 Default value: @code{false}
 
 When @code{pfeformat} is @code{true}, a ratio of integers is displayed with the
@@ -1933,14 +2046,16 @@ Examples:
 (%o6)                      1/8 (b + a)
 @end example
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{powerdisp}
-@defvr {Option variable} powerdisp
+@c @defvr {Option variable} powerdisp
+m4_defvr( {Option variable}, powerdisp)
 Default value: @code{false}
 
 When @code{powerdisp} is @code{true},
@@ -1971,8 +2086,10 @@ Example:
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display functions)
 @anchor{print}
-@deffn {Function} print (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} print (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn( {Function}, print, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Evaluates and displays @var{expr_1}, @dots{}, @var{expr_n} one after another,
 from left to right, starting at the left edge of the console display.
@@ -2009,42 +2126,50 @@ Examples:
                        10 log(a) - log(b)
 @end example
 
-@opencatbox
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Mathematical functions, Display flags and variables)
 @anchor{sqrtdispflag}
-@defvr {Option variable} sqrtdispflag
+@c @defvr {Option variable} sqrtdispflag
+m4_defvr( {Option variable}, sqrtdispflag)
 Default value: @code{true}
 
 When @code{sqrtdispflag} is @code{false}, causes @code{sqrt} to display with
 exponent 1/2.
 @c AND OTHERWISE ... ??
 
-@opencatbox
-@category{Mathematical functions}
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{stardisp}
-@defvr {Option variable} stardisp
+@c @defvr {Option variable} stardisp
+m4_defvr( {Option variable}, stardisp)
 Default value: @code{false}
 
 When @code{stardisp} is @code{true}, multiplication is
 displayed with an asterisk @code{*} between operands.
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ttyoff}
-@defvr {Option variable} ttyoff
+@c @defvr {Option variable} ttyoff
+m4_defvr( {Option variable}, ttyoff)
 Default value: @code{false}
 
 When @code{ttyoff} is @code{true}, output expressions are not displayed.
@@ -2053,8 +2178,8 @@ Output expressions are still computed and assigned labels.  See @mrefdot{labels}
 Text printed by built-in Maxima functions, such as error messages and the output
 of @mrefcomma{describe} is not affected by @code{ttyoff}.
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
