@@ -64,6 +64,13 @@
 @ref{Category: \name\}
 @end macro
 
+@macro catentries {idx, name}
+@html
+&middot;
+@end html
+@ref{Category: \idx\-\name\, Category: \name\}
+@end macro
+
 @macro closecatbox {}
 @html
 </div>
@@ -110,6 +117,9 @@
 @end macro
 
 @macro category {name}
+@end macro
+
+@macro catentries {idx, name}
 @end macro
 
 @macro closecatbox {}

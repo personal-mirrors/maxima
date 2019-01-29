@@ -50,9 +50,9 @@ m4_ifelse(<<<$#>>>, <<<2>>>,
 >>>)
 
 m4_define(<<<m4_catentry>>>,<<<
-m4_ifelse(<<<$#>>>, <<<1>>>,
-<<<m4_ifelse(<<<$1>>>, <<<>>>, , @category{$1})>>>,
-@category{$1} <<<m4_catentry(m4_shift($@))>>>)
+m4_ifelse(<<<$#>>>, <<<2>>>,
+<<<@catentries{$1,$2}>>>,
+<<<@catentries{$1,$2}>>> <<<m4_catentry($1, m4_shift(m4_shift($@)))>>>)
 >>>)
 
 m4_dnl Define a function entry.  Basically like @deffn, but we do
@@ -75,7 +75,7 @@ m4_dfindex_entry($2, m4_cat())
 >>>)
 m4_define(<<<m4_end_deffn>>>,<<<m4_dnl
 @opencatbox
-m4_catentry(m4_cat())
+m4_catentry(<<<fn>>>, m4_cat())
 @closecatbox
 @end deffn
 >>>)
@@ -109,7 +109,7 @@ m4_dvindex_var($2, m4_cat())
 
 m4_define(<<<m4_end_defvr>>>,<<<m4_dnl
 @opencatbox
-m4_catentry(m4_cat())
+m4_catentry(<<<vr>>>, m4_cat())
 @closecatbox
 @end defvr
 >>>)

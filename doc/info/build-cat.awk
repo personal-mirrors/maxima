@@ -9,7 +9,7 @@ BEGIN {
 	if (catboxopen) {
 	    printf("@closecatbox\n");
 	}
-	printf("@anchor{Category: %s}\n", topic)
+	printf("@anchor{Category: %s-%s}\n", idxname, topic)
 	printf("@opencatbox\n");
 	catboxopen = 1
 	first_item = 1
