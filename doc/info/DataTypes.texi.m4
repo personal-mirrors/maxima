@@ -46,8 +46,10 @@ functions.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation)
 @anchor{bfloat}
-@deffn {Function} bfloat (@var{expr})
+@c @deffn {Function} bfloat (@var{expr})
+m4_deffn({Function}, bfloat, <<<(@var{expr})>>>)
 
 Converts all numbers and functions of numbers in @var{expr} to bigfloat numbers.
 The number of significant digits in the resulting bigfloats is specified by the
@@ -57,26 +59,32 @@ When @mref{float2bf} is @code{false} a warning message is printed when
 a floating point number is converted into a bigfloat number (since
 this may lead to loss of precision).
 
-@opencatbox
-@category{Numerical evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation, Predicate functions)
 @anchor{bfloatp}
-@deffn {Function} bfloatp (@var{expr})
+@c @deffn {Function} bfloatp (@var{expr})
+m4_deffn({Function}, bfloatp, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a bigfloat number, otherwise @code{false}.
 
-@opencatbox
-@category{Numerical evaluation}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c --- 03.11.2011 --------------------------------------------------------------
+m4_setcat(Numerical evaluation)
 @anchor{bftorat}
-@defvr {Option variable} bftorat
+@c @defvr {Option variable} bftorat
+m4_defvr({Option variable}, bftorat)
 Default value: @code{false}
 
 @code{bftorat} controls the conversion of bfloats to rational numbers.  When
@@ -110,14 +118,16 @@ Example:
                              111111
 @end example
 
-@opencatbox
-@category{Numerical evaluation}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{bftrunc}
-@defvr {Option variable} bftrunc
+@c @defvr {Option variable} bftrunc
+m4_defvr({Option variable}, bftrunc)
 Default value: @code{true}
 
 @code{bftrunc} causes trailing zeroes in non-zero bigfloat numbers not to be
@@ -125,14 +135,17 @@ displayed.  Thus, if @code{bftrunc} is @code{false}, @code{bfloat (1)}
 displays as @code{1.000000000000000B0}.  Otherwise, this is displayed as
 @code{1.0B0}.
 
-@opencatbox
-@category{Numerical evaluation}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions)
 @anchor{evenp}
-@deffn {Function} evenp (@var{expr})
+@c @deffn {Function} evenp (@var{expr})
+m4_deffn({Function}, evenp, <<<(@var{expr})>>>)
 
 @c THIS IS STRANGE -- SHOULD RETURN NOUN FORM IF INDETERMINATE
 Returns @code{true} if @var{expr} is a literal even integer, otherwise
@@ -141,56 +154,68 @@ Returns @code{true} if @var{expr} is a literal even integer, otherwise
 @code{evenp} returns @code{false} if @var{expr} is a symbol, even if @var{expr}
 is declared @code{even}.
 
-@opencatbox
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation, Evaluation flags)
 @anchor{float}
-@deffn {Function} float (@var{expr})
+@c @deffn {Function} float (@var{expr})
+m4_deffn({Function}, float, <<<(@var{expr})>>>)
 
 Converts integers, rational numbers and bigfloats in @var{expr} to floating
 point numbers.  It is also an @mrefcomma{evflag} @code{float} causes
 non-integral rational numbers and bigfloat numbers to be converted to floating
 point.
 
-@opencatbox
-@category{Numerical evaluation}
-@category{Evaluation flags}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @category{Evaluation flags}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c --- 08.10.2010 DK -----------------------------------------------------------
+m4_setcat(Numerical evaluation)
 @anchor{float2bf}
-@defvr {Option variable} float2bf
+@c @defvr {Option variable} float2bf
+m4_defvr({Option variable}, float2bf)
 Default value: @code{true}
  
 When @code{float2bf} is @code{false}, a warning message is printed when
 a floating point number is converted into a bigfloat number (since
 this may lead to loss of precision).
 
-@opencatbox
-@category{Numerical evaluation}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation, Predicate functions)
 @anchor{floatnump}
-@deffn {Function} floatnump (@var{expr})
+@c @deffn {Function} floatnump (@var{expr})
+m4_deffn({Function}, floatnump, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a floating point number, otherwise
 @code{false}.
 
-@opencatbox
-@category{Numerical evaluation}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation)
 @anchor{fpprec}
-@defvr {Option variable} fpprec
+@c @defvr {Option variable} fpprec
+m4_defvr({Option variable}, fpprec)
 Default value: 16
 
 @code{fpprec} is the number of significant digits for arithmetic on bigfloat
@@ -199,14 +224,17 @@ numbers.
 
 See also @mref{bfloat} and @mrefdot{fpprintprec}
 
-@opencatbox
-@category{Numerical evaluation}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation, Display flags and variables)
 @anchor{fpprintprec}
-@defvr {Option variable} fpprintprec
+@c @defvr {Option variable} fpprintprec
+m4_defvr({Option variable}, fpprintprec)
 Default value: 0
 
 @code{fpprintprec} is the number of digits to print when printing an ordinary
@@ -231,15 +259,18 @@ if there are trailing zero digits.
 
 @code{fpprintprec} cannot be 1.
 
-@opencatbox
-@category{Numerical evaluation}
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions)
 @anchor{integerp}
-@deffn {Function} integerp (@var{expr})
+@c @deffn {Function} integerp (@var{expr})
+m4_deffn({Function}, integerp, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a literal numeric integer, otherwise
 @code{false}.
@@ -281,14 +312,17 @@ Examples:
 (%o9)                         false
 @end example
 
-@opencatbox
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Global flags)
 @anchor{m1pbranch}
-@defvr {Option variable} m1pbranch
+@c @defvr {Option variable} m1pbranch
+m4_defvr({Option variable},  m1pbranch)
 Default value: @code{false}
 
 @code{m1pbranch} is the principal branch for @code{-1} to a power.
@@ -308,26 +342,32 @@ m1pbranch:false          m1pbranch:true
 (-1)^(1/4)              sqrt(2)/2+%i*sqrt(2)/2
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Global flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} nonnegintegerp (@var{n})
+m4_setcat(Package linearalgebra, Predicate functions)
+@c @deffn {Function} nonnegintegerp (@var{n})
+m4_deffn({Function}, nonnegintegerp, <<<(@var{n})>>>)
 
 Return @code{true} if and only if @code{@var{n} >= 0} and @var{n} is an integer.
 
-@opencatbox
-@category{Package linearalgebra}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package linearalgebra}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions)
 @anchor{numberp}
-@deffn {Function} numberp (@var{expr})
+@c @deffn {Function} numberp (@var{expr})
+m4_deffn({Function}, numberp, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a literal integer, rational number, 
 floating point number, or bigfloat, otherwise @code{false}.
@@ -367,10 +407,11 @@ Examples:
 (%o7) [false, false, false, false, false, false, false, false]
 @end example
 
-@opencatbox
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 @c WHAT ARE THE FUNCTIONS WHICH ARE EVALUATED IN FLOATING POINT ??
@@ -378,8 +419,10 @@ Examples:
 @c NEED TO MENTION THIS IS AN evflag
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation, Evaluation flags)
 @anchor{numer}
-@defvr {Option variable} numer
+@c @defvr {Option variable} numer
+m4_defvr({Option variable}, numer)
 
 @code{numer} causes some mathematical functions (including exponentiation)
 with numerical arguments to be evaluated in floating point.  It causes
@@ -414,8 +457,10 @@ Examples:
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation)
 @anchor{numer_pbranch}
-@defvr {Option variable} numer_pbranch
+@c @defvr {Option variable} numer_pbranch
+m4_defvr({Option variable}, numer_pbranch)
 Default value: @code{false}
 
 The option variable @code{numer_pbranch} controls the numerical evaluation of 
@@ -460,17 +505,20 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Numerical evaluation}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 @c HOW TO FIND ALL VARIABLES WHICH HAVE NUMERVALS ??
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Numerical evaluation)
 @anchor{numerval}
-@deffn {Function} numerval (@var{x_1}, @var{expr_1}, @dots{}, @var{var_n}, @var{expr_n})
+@c @deffn {Function} numerval (@var{x_1}, @var{expr_1}, @dots{}, @var{var_n}, @var{expr_n})
+m4_deffn({Function}, numerval, <<<(@var{x_1}, @var{expr_1}, @dots{}, @var{var_n}, @var{expr_n})>>>)
 
 Declares the variables @code{x_1}, @dots{}, @var{x_n} to have
 numeric values equal to @code{expr_1}, @dots{}, @code{expr_n}.
@@ -481,15 +529,18 @@ in any expressions in which the variable occurs if the @code{numer} flag is
 The expressions @code{expr_1}, @dots{}, @code{expr_n} can be any expressions,
 not necessarily numeric.
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Numerical evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions)
 @anchor{oddp}
-@deffn {Function} oddp (@var{expr})
+@c @deffn {Function} oddp (@var{expr})
+m4_deffn({Function}, oddp, <<<(@var{expr})>>>)
 
 @c THIS IS STRANGE -- SHOULD RETURN NOUN FORM IF INDETERMINATE
 Returns @code{true} if @var{expr} is a literal odd integer, otherwise
@@ -498,29 +549,35 @@ Returns @code{true} if @var{expr} is a literal odd integer, otherwise
 @code{oddp} returns @code{false} if @var{expr} is a symbol, even if @var{expr}
 is declared @code{odd}.
 
-@opencatbox
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c --- 03.11.2011 --------------------------------------------------------------
+m4_setcat(Numerical evaluation, Rational expressions)
 @anchor{ratepsilon}
-@defvr {Option variable} ratepsilon
+@c @defvr {Option variable} ratepsilon
+m4_defvr({Option variable}, ratepsilon)
 Default value: @code{2.0e-15}
 
 @code{ratepsilon} is the tolerance used in the conversion
 of floating point numbers to rational numbers, when the option variable
 @mref{bftorat} has the value @code{false}.  See @code{bftorat} for an example.
 
-@opencatbox
-@category{Numerical evaluation}
-@category{Rational expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical evaluation)
 @anchor{rationalize}
-@deffn {Function} rationalize (@var{expr})
+@c @deffn {Function} rationalize (@var{expr})
+m4_deffn({Function}, rationalize, <<<(@var{expr})>>>)
 
 Convert all double floats and big floats in the Maxima expression @var{expr} to
 their exact rational equivalents.  If you are not familiar with the binary
@@ -573,24 +630,27 @@ representation.
 @end group
 @end example
 
-@opencatbox
-@category{Numerical evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions, Rational expressions)
 @anchor{ratnump}
-@deffn {Function} ratnump (@var{expr})
+@c @deffn {Function} ratnump (@var{expr})
+m4_deffn({Function}, ratnump, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a literal integer or ratio of literal
 integers, otherwise @code{false}.
 
-@opencatbox
-@category{Predicate functions}
-@category{Rational expressions}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Predicate functions}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @page
@@ -703,8 +763,10 @@ in this string.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Strings)
 @anchor{concat}
-@deffn {Function} concat (@var{arg_1}, @var{arg_2}, @dots{})
+@c @deffn {Function} concat (@var{arg_1}, @var{arg_2}, @dots{})
+m4_deffn({Function}, concat, <<<(@var{arg_1}, @var{arg_2}, @dots{})>>>)
 
 Concatenates its arguments.  The arguments must evaluate to atoms.  The return
 value is a symbol if the first argument is a symbol and a string otherwise.
@@ -767,15 +829,17 @@ Note that although @code{concat (1, 2)} looks like a number, it is a string.
 (%o10)                       12 + 3
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Strings}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Strings}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{sconcat}
-@deffn {Function} sconcat (@var{arg_1}, @var{arg_2}, @dots{})
+@c @deffn {Function} sconcat (@var{arg_1}, @var{arg_2}, @dots{})
+m4_deffn({Function}, sconcat, <<<(@var{arg_1}, @var{arg_2}, @dots{})>>>)
 
 Concatenates its arguments into a string.  Unlike @mrefcomma{concat} the
 arguments do @i{not} need to be atoms.
@@ -809,17 +873,20 @@ Another purpose for @code{sconcat} is to convert arbitrary objects to strings.
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Strings}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Strings}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Strings)
 @anchor{string}
-@deffn {Function} string (@var{expr})
+@c @deffn {Function} string (@var{expr})
+m4_deffn({Function}, string, <<<(@var{expr})>>>)
 
 Converts @code{expr} to Maxima's linear notation just as if it had been typed
 in.
@@ -827,16 +894,19 @@ in.
 The return value of @code{string} is a string, and thus it cannot be used in a
 computation.
 
-@opencatbox
-@category{Strings}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Strings}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c SHOULD BE WRITTEN WITH LEADING ? BUT THAT CONFUSES CL-INFO SO WORK AROUND
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{stringdisp}
-@defvr {Option variable} stringdisp
+@c @defvr {Option variable} stringdisp
+m4_defvr({Option variable}, stringdisp)
 Default value: @code{false}
 
 When @code{stringdisp} is @code{true}, strings are displayed enclosed in double
