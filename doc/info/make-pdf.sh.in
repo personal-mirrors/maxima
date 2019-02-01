@@ -26,12 +26,25 @@ TEXIFILE=$1
 BASEFILE=`basename $TEXIFILE .texi`
 INTERACTION="-interaction=nonstopmode"
 build () {
-    pdftex -etex $INTERACTION $TEXIFILE
+    pdftex $INTERACTION $TEXIFILE
     if [ $? -ne 0 ]; then
 	exit 1
     fi
+
+    # The manual creates index entries with subtopics using the syntax
+    # topic!subtopic.  But we want to convert these entries into a
+    # four-argument \entry so that texindex can generate the
+    # appropriate TeX macros to lay out the index with topics and
+    # subtopics nicely.
+    #
+    # Thus, the sed pattern searches for things like
+    #   \entry {key}{page}{topic!subtopic}
+    # and converts it to
+    #   \entry {key}{page}{topic}{subtopic}
     @SED@ --in-place=bak -E 's/^(.*)\{([^!]+)!([^}]+)\}[ ]*$$/\1{\2}{\3}/' $BASEFILE.df
     @SED@ --in-place=bak -E 's/^(.*)\{([^!]+)!([^}]+)\}[ ]*$$/\1{\2}{\3}/' $BASEFILE.dv
+    # Specify the awk to use via TEXINDEX_AWK.  But texindex expects
+    # that to be the full path, so use which to give the full path.
     TEXINDEX_AWK=`which "@AWK@"` ./texindex $BASEFILE.??
 }
 
@@ -39,6 +52,8 @@ if [ "$DEBUG" = "yes" ]; then
 set -x
 fi
 
+# Run pdftex at least once.  Search for the log to see if we need to
+# run TeX again and build it again until we don't need to.
 build
 while ( grep 'you must run TeX again' $BASEFILE.log ); do
     build
