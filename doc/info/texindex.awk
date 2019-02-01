@@ -243,18 +243,22 @@ function endfile(filename,    i, prev_initial, initial)
     #
     # If there is no subtopic (3 args), then print
     #   \entry {topic}{pagenum}
-    isubtopic = match(Data[Keys[i], "text"], /(.*)}{(.*)/, subtopic)
+    isubtopic = match(Data[Keys[i], "text"], "}{.*")
     if (isubtopic != 0) {
-	if (last_entry != subtopic[1]) {
+	subtopic = substr(Data[Keys[i], "text"], RSTART + 2, RLENGTH);
+	match(Data[Keys[i], "text"], ".*}{")
+	topic = substr(Data[Keys[i], "text"], RSTART, RLENGTH - 2);
+	# printf("sub = <%s>, top = <%s>\n", subtopic, topic);
+	if (last_entry != topic) {
 	    printf("%cprimary {%s}\n",
 		   Command_char,
-		   subtopic[1]) > Output_file;
+		   topic) > Output_file;
 	}
 	printf("%csecondary {%s}{%s}\n",
 	       Command_char,
-	       subtopic[2],
+	       subtopic,
 	       Data[Keys[i], "pagenum"]) > Output_file
-	last_entry = subtopic[1];
+	last_entry = topic;
     } else {
 	last_entry = Data[Keys[i], "text"];
 	# write the actual line \entry {...}{...}
