@@ -204,8 +204,10 @@ completing the computation
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging, Global flags)
 @anchor{debugmode}
-@defvr {Option variable} debugmode
+@c @defvr {Option variable} debugmode
+m4_defvr({Option variable}, debugmode)
 Default value: @code{false}
 
 When a Maxima error occurs, Maxima will start the debugger if @code{debugmode}
@@ -217,31 +219,35 @@ Enabling @code{debugmode} will not catch Lisp errors.
 @c DO WE WANT TO SAY MORE ABOUT DEBUGGING LISP ERRORS ???
 @c I'M NOT CONVINCED WE WANT TO OPEN THAT CAN OF WORMS !!!
 
-@opencatbox
-@category{Debugging}
-@category{Global flags}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Debugging}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation, Console interaction, Global flags)
 @anchor{refcheck}
-@defvr {Option variable} refcheck
+@c @defvr {Option variable} refcheck
+m4_defvr({Option variable}, refcheck)
 Default value: @code{false}
 
 When @code{refcheck} is @code{true}, Maxima prints a message
 each time a bound variable is used for the first time in a
 computation.
 
-@opencatbox
-@category{Evaluation}
-@category{Console interaction}
-@category{Global flags}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Evaluation}
+@c @category{Console interaction}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
+m4_setcat(Console interaction, Global flags)
 @anchor{setcheck}
-@defvr {Option variable} setcheck
+@c @defvr {Option variable} setcheck
+m4_defvr({Option variable}, setcheck)
 Default value: @code{false}
 
 If @code{setcheck} is set to a list of variables (which can
@@ -274,15 +280,16 @@ to put them on the list of variables to check.
 No printout is generated when a
 variable on the @code{setcheck} list is assigned to itself, e.g., @code{X: 'X}.
 
-@opencatbox
-@category{Console interaction}
-@category{Global flags}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Console interaction}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{setcheckbreak}
-@defvr {Option variable} setcheckbreak
+@c @defvr {Option variable} setcheckbreak
+m4_defvr({Option variable}, setcheckbreak)
 Default value: @code{false}
 
 When @code{setcheckbreak} is @code{true},
@@ -295,15 +302,16 @@ Hence, one may assign a different value by assigning to @code{setval}.
 
 See also @mref{setcheck} and @mrefdot{setval}
 
-@opencatbox
-@category{Console interaction}
-@category{Global flags}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Console interaction}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{setval}
-@defvr {System variable} setval
+@c @defvr {System variable} setval
+m4_defvr({System variable}, setval)
 
 Holds the value to which a variable is about to be set when
 a @mref{setcheckbreak} occurs.
@@ -311,12 +319,12 @@ Hence, one may assign a different value by assigning to @mref{setval}.
 
 See also @mref{setcheck} and @mrefdot{setcheckbreak}
 
-@opencatbox
-@category{Console interaction}
-@category{Global variables}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Console interaction}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{timer}
 @deffn  {Function} timer (@var{f_1}, @dots{}, @var{f_n}) @
@@ -377,8 +385,10 @@ and puts @code{f} on the timer list again.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging, Global flags)
 @anchor{timer_devalue}
-@defvr {Option variable} timer_devalue
+@c @defvr {Option variable} timer_devalue
+m4_defvr({Option variable}, timer_devalue)
 Default value: @code{false}
 
 When @code{timer_devalue} is @code{true}, Maxima subtracts from each timed
@@ -389,12 +399,12 @@ total time.
 
 See also @mref{timer} and @mrefdot{timer_info}
 
-@opencatbox
-@category{Debugging}
-@category{Global flags}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Debugging}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{timer_info}
 @deffn {Function} timer_info (@var{f_1}, ..., @var{f_n}) @
