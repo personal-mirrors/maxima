@@ -9,8 +9,10 @@
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Integral calculus)
 @anchor{antid}
-@deffn {Function} antid (@var{expr}, @var{x}, @var{u(x)}) 
+@c @deffn {Function} antid (@var{expr}, @var{x}, @var{u(x)}) 
+m4_deffn({Function}, antid, <<<(@var{expr}, @var{x}, @var{u(x)}) >>>)
 
 @c TODO: The antid package is currently undocumented except of this function.
 Returns a two-element list, such that an antiderivative of @var{expr} with
@@ -78,14 +80,15 @@ Examples:
                   /
 @end example
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
 @anchor{antidiff}
-@deffn {Function} antidiff (@var{expr}, @var{x}, @var{u}(@var{x}))
+@c @deffn {Function} antidiff (@var{expr}, @var{x}, @var{u}(@var{x}))
+m4_deffn({Function}, antidiff, <<<(@var{expr}, @var{x}, @var{u}(@var{x}))>>>)
 
 Returns an antiderivative of @var{expr} with respect to @var{x}.
 The expression @var{expr} may contain an unknown function @var{u} and its
@@ -152,11 +155,11 @@ Examples:
                   /
 @end example
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
 @anchor{at}
 @deffn  {Function} at @
@@ -276,18 +279,20 @@ seen in the following example:
 @c Me, too: Where is desolve, for example?
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus)
 @anchor{atomgrad}
-@defvr {Property} atomgrad
+@c @defvr {Property} atomgrad
+m4_defvr({Property}, atomgrad)
 
 @code{atomgrad} is the atomic gradient property of an expression.
 This property is assigned by @code{gradef}.
 
 @c NEED EXAMPLE HERE
-@opencatbox
-@category{Differential calculus}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{atvalue}
 @deffn  {Function} atvalue @
@@ -402,8 +407,10 @@ description of these commands along with examples.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus)
 @anchor{del}
-@deffn {Function} del (@var{x})
+@c @deffn {Function} del (@var{x})
+m4_deffn({Function}, del, <<<(@var{x})>>>)
 
 @code{del (@var{x})} represents the differential of the variable @math{x}.
 
@@ -430,14 +437,16 @@ Examples:
 (%o3)         x y del(z) + x z del(y) + y z del(x)
 @end example
 
-@opencatbox
-@category{Differential calculus}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
+m4_setcat(Mathematical functions, Laplace transform)
 @anchor{delta}
-@deffn {Function} delta (@var{t})
+@c @deffn {Function} delta (@var{t})
+m4_deffn({Function}, delta, <<<(@var{t})>>>)
 
 The Dirac Delta function.
 
@@ -458,15 +467,17 @@ p;
 (%o1)                   sin(a b) %e
 @end example
 
-@opencatbox
-@category{Mathematical functions}
-@category{Laplace transform}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @category{Laplace transform}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Global variables)
 @anchor{dependencies}
-@defvr {System variable} dependencies
+@c @defvr {System variable} dependencies
+m4_defvr({System variable}, dependencies)
 @defvrx {Function} dependencies (@var{f_1}, @dots{}, @var{f_n})
 
 The variable @code{dependencies} is the list of atoms which have functional
@@ -530,15 +541,17 @@ See also @mref{depends} and @mrefdot{gradef}
 @end group
 @end example
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Global variables}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus, Declarations and inferences)
 @anchor{depends}
-@deffn {Function} depends (@var{f_1}, @var{x_1}, @dots{}, @var{f_n}, @var{x_n})
+@c @deffn {Function} depends (@var{f_1}, @var{x_1}, @dots{}, @var{f_n}, @var{x_n})
+m4_deffn({Function}, depends, <<<(@var{f_1}, @var{x_1}, @dots{}, @var{f_n}, @var{x_n})>>>)
 
 Declares functional dependencies among variables for the purpose of computing
 derivatives.  In the absence of declared dependence, @code{diff (f, x)} yields
@@ -616,15 +629,17 @@ For example, @mref{integrate} does not recognize the dependence of @code{f} on
                                 du dt
 @end example
 
-@opencatbox
-@category{Differential calculus}
-@category{Declarations and inferences}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @category{Declarations and inferences}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus, Global flags)
 @anchor{derivabrev}
-@defvr {Option variable} derivabbrev
+@c @defvr {Option variable} derivabbrev
+m4_defvr({Option variable}, derivabbrev)
 Default value: @code{false}
 
 When @code{derivabbrev} is @code{true},
@@ -632,17 +647,19 @@ symbolic derivatives (that is, @code{diff} nouns) are displayed as subscripts.
 Otherwise, derivatives are displayed in the Leibniz notation @code{dy/dx}.
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Differential calculus}
-@category{Global flags}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c SEEMS LIKE THIS STATEMENT COULD BE LESS CLUMSY
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus, Expressions)
 @anchor{derivdegree}
-@deffn {Function} derivdegree (@var{expr}, @var{y}, @var{x})
+@c @deffn {Function} derivdegree (@var{expr}, @var{y}, @var{x})
+m4_deffn({Function}, derivdegree, <<<(@var{expr}, @var{y}, @var{x})>>>)
 
 Returns the highest degree of the derivative
 of the dependent variable @var{y} with respect to the independent variable
@@ -665,41 +682,45 @@ Example:
 (%o2)                           2
 @end example
 
-@opencatbox
-@category{Differential calculus}
-@category{Expressions}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c I HAVE NO IDEA WHAT THIS DOES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus, Evaluation)
 @anchor{derivlist}
-@deffn {Function} derivlist (@var{var_1}, @dots{}, @var{var_k})
+@c @deffn {Function} derivlist (@var{var_1}, @dots{}, @var{var_k})
+m4_deffn({Function}, derivlist, <<<(@var{var_1}, @dots{}, @var{var_k})>>>)
 
 Causes only differentiations with respect to
 the indicated variables, within the @mref{ev} command.
 
-@opencatbox
-@category{Differential calculus}
-@category{Evaluation}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @category{Evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus, Expressions)
 @anchor{derivsubst}
-@defvr {Option variable} derivsubst
+@c @defvr {Option variable} derivsubst
+m4_defvr({Option variable}, derivsubst)
 Default value: @code{false}
 
 When @code{derivsubst} is @code{true}, a non-syntactic substitution such as
 @code{subst (x, 'diff (y, t), 'diff (y, t, 2))} yields @code{'diff (x, t)}.
 
-@opencatbox
-@category{Differential calculus}
-@category{Expressions}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{diff}
 @deffn  {Function} diff @
@@ -798,8 +819,10 @@ treated as in (1) above.
 @c MERGE THIS INTO @defun diff
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{symbol_diff}
-@defvr {Special symbol} diff
+@c @defvr {Special symbol} diff
+m4_defvr({Special symbol}, diff)
 
 When @code{diff} is present as an @code{evflag} in call to @code{ev},
 all differentiations indicated in @code{expr} are carried out.
@@ -810,8 +833,10 @@ all differentiations indicated in @code{expr} are carried out.
 @c NOT SURE HOW THIS IS SUPPOSED TO WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus, Package ctensor)
 @anchor{dscalar}
-@deffn {Function} dscalar (@var{f})
+@c @deffn {Function} dscalar (@var{f})
+m4_deffn({Function}, dscalar, <<<(@var{f})>>>)
 
 Applies the scalar d'Alembertian to the scalar function @var{f}.
 
@@ -837,15 +862,17 @@ Applies the scalar d'Alembertian to the scalar function @var{f}.
 @c                              2 r
 @c @end example
 
-@opencatbox
-@category{Differential calculus}
-@category{Package ctensor}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @category{Package ctensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus, Vectors, Operators)
 @anchor{express}
-@deffn {Function} express (@var{expr})
+@c @deffn {Function} express (@var{expr})
+m4_deffn({Function}, express, <<<(@var{expr})>>>)
 
 @c HERE IS THE PREVIOUS TEXT. WHAT IS THE POINT ABOUT depends ?? I'M NOT GETTING IT
 @c The result uses the noun form of any
@@ -935,13 +962,13 @@ Examples:
 (%o15)          [b z - c y, c x - a z, a y - b x]
 @end example
 
-@opencatbox
-@category{Differential calculus}
-@category{Vectors}
-@category{Operators}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @category{Vectors}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 @c COMMENTING OUT THIS TEXT PENDING RESOLUTION OF BUG REPORT # 836704:
 @c "gendiff is all bugs: should be deprecated"
 @c @defun gendiff
@@ -1021,8 +1048,10 @@ higher order derivatives.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Differential calculus, Declarations and inferences)
 @anchor{gradefs}
-@defvr {System variable} gradefs
+@c @defvr {System variable} gradefs
+m4_defvr({System variable}, gradefs)
 Default value: @code{[]}
 
 @code{gradefs} is the list of the functions
@@ -1030,15 +1059,17 @@ for which partial derivatives have been defined by @code{gradef}.
 @code{gradefs} does not include any variables
 for which partial derivatives have been defined by @code{gradef}.
 
-@opencatbox
-@category{Differential calculus}
-@category{Declarations and inferences}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Differential calculus}
+@c @category{Declarations and inferences}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 @c -----------------------------------------------------------------------------
+m4_setcat(Laplace transform, Differential equations)
 @anchor{laplace}
-@deffn {Function} laplace (@var{expr}, @var{t}, @var{s})
+@c @deffn {Function} laplace (@var{expr}, @var{t}, @var{s})
+m4_deffn({Function}, laplace, <<<(@var{expr}, @var{t}, @var{s})>>>)
 
 Attempts to compute the Laplace transform of @var{expr} with respect to the 
 variable @var{t} and transform parameter @var{s}.
@@ -1146,9 +1177,9 @@ Examples:
 
 @end example
 
-@opencatbox
-@category{Laplace transform}
-@category{Differential equations}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Laplace transform}
+@c @category{Differential equations}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
