@@ -10,6 +10,7 @@ BEGIN {
 	    printf("@closecatbox\n");
 	}
 	printf("@anchor{Category: %s-%s}\n", idxname, topic)
+	printf("@sp 1\n")
 	printf("@opencatbox\n");
 	catboxopen = 1
 	first_item = 1
