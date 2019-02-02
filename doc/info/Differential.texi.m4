@@ -17,8 +17,10 @@ representations in phase space, see the additional package
 @node Functions and Variables for Differential Equations,  , Introduction to Differential Equations, Differential Equations
 @section Functions and Variables for Differential Equations
 
+m4_setcat(Differential equations)
 @anchor{bc2}
-@deffn {Function} bc2 (@var{solution}, @var{xval1}, @var{yval1}, @var{xval2}, @var{yval2})
+@c @deffn {Function} bc2 (@var{solution}, @var{xval1}, @var{yval1}, @var{xval2}, @var{yval2})
+m4_deffn({Function}, bc2, <<<(@var{solution}, @var{xval1}, @var{yval1}, @var{xval2}, @var{yval2})>>>)
 Solves a boundary value problem for a second order differential equation.
 Here: @var{solution} is a general solution to the equation, as found by
 @code{ode2}; @var{xval1} specifies the value of the independent variable
@@ -113,7 +115,8 @@ If @code{desolve} cannot obtain a solution, it returns @code{false}.
 @closecatbox
 @end deffn
 @anchor{ic1}
-@deffn {Function} ic1 (@var{solution}, @var{xval}, @var{yval})
+@c @deffn {Function} ic1 (@var{solution}, @var{xval}, @var{yval})
+m4_deffn({Function}, ic1, <<<(@var{solution}, @var{xval}, @var{yval})>>>)
 Solves initial value problems for first order differential equations.
 Here @var{solution} is a general solution to the equation, as found by
 @mref{ode2}, @var{xval} gives an initial value for the independent
@@ -128,7 +131,8 @@ See @mref{ode2} for an example of its usage.
 @closecatbox
 @end deffn
 @anchor{ic2}
-@deffn {Function} ic2 (@var{solution}, @var{xval}, @var{yval}, @var{dval})
+@c @deffn {Function} ic2 (@var{solution}, @var{xval}, @var{yval}, @var{dval})
+m4_deffn({Function}, ic2, <<<(@var{solution}, @var{xval}, @var{yval}, @var{dval})>>>)
 Solves initial value problems for second-order differential equations.
 Here @var{solution} is a general solution to the equation, as found by
 @code{ode2}, @var{xval} gives the initial value for the independent
@@ -147,7 +151,8 @@ See @mref{ode2} for an example of its usage.
 @end deffn
 
 @anchor{ode2}
-@deffn {Function} ode2 (@var{eqn}, @var{dvar}, @var{ivar})
+@c @deffn {Function} ode2 (@var{eqn}, @var{dvar}, @var{ivar})
+m4_deffn({Function}, ode2, <<<(@var{eqn}, @var{dvar}, @var{ivar})>>>)
 The function @code{ode2} solves an ordinary differential equation (ODE)
 of first or second order. It takes three arguments: an ODE given by
 @var{eqn}, the dependent variable @var{dvar}, and the independent
