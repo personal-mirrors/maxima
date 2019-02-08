@@ -830,44 +830,6 @@ all differentiations indicated in @code{expr} are carried out.
 @c NEED EXAMPLE HERE
 @end defvr
 
-@c NOT SURE HOW THIS IS SUPPOSED TO WORK
-
-@c -----------------------------------------------------------------------------
-m4_setcat(Differential calculus, Package ctensor)
-@anchor{dscalar}
-@c @deffn {Function} dscalar (@var{f})
-m4_deffn({Function}, dscalar, <<<(@var{f})>>>)
-
-Applies the scalar d'Alembertian to the scalar function @var{f}.
-
-@c APPARENTLY dscalar DOESN'T EXIST IN THE CORE FILES ANYMORE
-@c ctensor HAS THE ONLY DEFN I FOUND (OUTSIDE OF archive/)
-@code{load ("ctensor")} loads this function.
-
-@c FOLLOWING EXAMPLE DOESN'T WORK; I GET dscalar (field) ==> 0
-@c (I GET 0 FOR THE ctensor VERSION OF dscalar, AND SAME FOR
-@c THE DEFN OF dscalar GIVEN IN archive/share/lisp/ctensr.trl)
-@c INCIDENTALLY dependencies IS DOCUMENTED ONLY AS A VARIABLE
-
-@c @example
-@c (%i41) dependencies(field(r));
-@c (%o41)                           [field(r)]
-@c (%i42) dscalar(field);
-@c (%o43)
-@c     -m
-@c   %e  ((field  n - field  m + 2 field   ) r + 4 field )
-@c              r  r       r  r         r r             r
-@c 
-@c - -----------------------------------------------------
-@c                              2 r
-@c @end example
-
-@c @opencatbox
-@c @category{Differential calculus}
-@c @category{Package ctensor}
-@c @closecatbox
-@c @end deffn
-m4_end_deffn()
 @c -----------------------------------------------------------------------------
 m4_setcat(Differential calculus, Vectors, Operators)
 @anchor{express}
