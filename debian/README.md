@@ -13,10 +13,12 @@ documentation but a vital file.
 
 The rest of the more important files are:
 
+
 debian/rules
 ============
 
 contains the info how the program is built and installed
+
 
 debian/control
 ==============
@@ -24,8 +26,22 @@ debian/control
 declares the dependencies of the program, where to obtain it from
 and most of the metadata.
 
+
 debian/watch
 ============
 
 Where to automatically download the file from and where to look
 in order to look if this is the latest upstream version.
+
+
+upstream/signing-key.asc
+========================
+
+A minimal export of key the release is signed with, see
+https://wiki.debian.org/Creating%20signed%20GitHub%20releases
+
+
+upstream/metadata
+=================
+
+Can be used in order to create a bibtex reference.
