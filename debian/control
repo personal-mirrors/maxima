@@ -1,0 +1,24 @@
+Source: maxima-jupyter
+Section: math
+Priority: optional
+Maintainer: Gunter Königsmann <gunter@physikbuch.de>
+Build-Depends: jupyter, debhelper ( >=9 ), python3, dh-autoreconf | debhelper (>= 9.20160403~)
+Vcs-Browser: https://github.com/robert-dodier/maxima-jupyter
+Vcs-Git: https://github.com/robert-dodier/maxima-jupyter.git
+Homepage: https://github.com/robert-dodier/maxima-jupyter
+Standards-Version: 3.9.8
+
+Package: maxima-jupyter
+Architecture: all
+Depends: jupyter
+Description: A Frontend for maxima
+ Maxima is a fully symbolic computation program.  It is full featured
+ doing symbolic manipulation of polynomials, matrices, rational
+ functions, integration, Todd-coxeter methods for finite group
+ analysis, graphing, multiple precision floating point computation.
+ It has a symbolic source level debugger for maxima code.  Maxima is
+ based on the original Macsyma developed at MIT in the 1970s.  It is
+ quite versatile, reasonably powerful and comes with extensive
+ self tests.
+ maxima-jupyter is a graphical front-end for maxima that provides
+ many unique features.

@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+# The standard rule.
+%:
+	dh $@
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+override_dh_auto_install:
+	python3 ./install-maxima-jupyter.py --root=debian/tmp
