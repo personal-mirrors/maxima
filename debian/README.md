@@ -34,14 +34,14 @@ Where to automatically download the file from and where to look
 in order to look if this is the latest upstream version.
 
 
-upstream/signing-key.asc
-========================
+debian/upstream/signing-key.asc
+===============================
 
 A minimal export of key the release is signed with, see
 https://wiki.debian.org/Creating%20signed%20GitHub%20releases
 
 
-upstream/metadata
-=================
+debian/upstream/metadata
+========================
 
 Can be used in order to create a bibtex reference.
