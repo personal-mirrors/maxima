@@ -13,4 +13,4 @@ override_dh_auto_test:
 override_dh_auto_clean:
 
 override_dh_auto_install:
-	python3 ./install-maxima-jupyter.py --root=debian/tmp
+	python3 ./install-maxima-jupyter.py --root=debian/tmp --prefix debian/tmp
