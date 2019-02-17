@@ -289,16 +289,19 @@ expressions.
 @c NEEDS WORK, ESPECIALLY EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences)
 @anchor{alias}
-@deffn {Function} alias (@var{new_name_1}, @var{old_name_1}, @dots{}, @var{new_name_n}, @var{old_name_n})
+@c @deffn {Function} alias (@var{new_name_1}, @var{old_name_1}, @dots{}, @var{new_name_n}, @var{old_name_n})
+m4_deffn({Function}, alias, <<<(@var{new_name_1}, @var{old_name_1}, @dots{}, @var{new_name_n}, @var{old_name_n})>>>)
 
 provides an alternate name for a (user or system) function, variable, array,
 etc.  Any even number of arguments may be used.
 
-@opencatbox
-@category{Declarations and inferences}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{aliases}
@@ -387,8 +390,10 @@ while
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{args}
-@deffn {Function} args (@var{expr})
+@c @deffn {Function} args (@var{expr})
+m4_deffn({Function}, args, <<<(@var{expr})>>>)
 
 Returns the list of arguments of @code{expr}, which may be any kind of
 expression other than an atom.  Only the arguments of the top-level operator
@@ -440,32 +445,38 @@ with @code{n} arguments args() can extract the list of terms in a sum:
 
 
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c REPHRASE
 @c SPLIT OFF EXAMPLES INTO EXAMPLE SECTION
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Predicate functions)
 @anchor{atom}
-@deffn {Function} atom (@var{expr})
+@c @deffn {Function} atom (@var{expr})
+m4_deffn({Function}, atom, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is atomic (i.e. a number, name or string) else
 @code{false}.  Thus @code{atom(5)} is @code{true} while @code{atom(a[1])} and
 @code{atom(sin(x))} are @code{false} (assuming @code{a[1]} and @code{x} are
 unbound).
 
-@opencatbox
-@category{Expressions}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{box}
-@deffn {Function} box @
+@c @deffn {Function} box @
+m4_deffn({Function}, box, <<<>>>) @
 @fname{box} (@var{expr}) @
 @fname{box} (@var{expr}, @var{a})
 
@@ -546,10 +557,11 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{boxchar}
@@ -570,8 +582,10 @@ the drawing character is not stored with the box expression.
 @c NEEDS CLARIFICATION !!!
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{collapse}
-@deffn {Function} collapse (@var{expr})
+@c @deffn {Function} collapse (@var{expr})
+m4_deffn({Function}, collapse, <<<(@var{expr})>>>)
 
 Collapses @var{expr} by causing all of its common (i.e., equal) subexpressions
 to share (i.e., use the same cells), thereby saving space.  (@code{collapse} is
@@ -582,14 +596,16 @@ collapse several expressions together by using
 collapse the elements of the array @code{A} by doing
 @code{collapse (listarray ('A))}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{copy}
-@deffn {Function} copy (@var{e})
+@c @deffn {Function} copy (@var{e})
+m4_deffn({Function}, copy, <<<(@var{e})>>>)
 
 Return a copy of the Maxima expression @var{e}.  Although @var{e} can be any
 Maxima expression, the copy function is the most useful when @var{e} is either 
@@ -641,16 +657,18 @@ Let's try the same experiment, but this time let @var{mm} be a copy of @var{m}
 
 This time, the assignment to @var{mm} does not change the value of @var{m}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
 @anchor{disolate}
-@deffn {Function} disolate (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
+@c @deffn {Function} disolate (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
+m4_deffn({Function}, disolate, <<<(@var{expr}, @var{x_1}, @dots{}, @var{x_n})>>>)
 
 is similar to @mref{isolate}@code{ (@var{expr}, @var{x})} except that it enables the
 user to isolate more than one variable simultaneously.  This might be useful,
@@ -659,14 +677,16 @@ integration, and that variable change involved two or more of the integration
 variables.  This function is autoloaded from @file{simplification/disol.mac}.
 A demo is available by @code{demo("disol")$}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{dispform}
-@deffn  {Function} dispform @
+@c @deffn  {Function} dispform @
+m4_deffn({Function}, dispform, <<<>>>) @
 @fname{dispform} (@var{expr}) @
 @fname{dispform} (@var{expr}, all)
 
@@ -767,16 +787,18 @@ Use of the optional argument @code{all}.
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
 @anchor{dpart}
-@deffn {Function} dpart (@var{expr}, @var{n_1}, @dots{}, @var{n_k})
+@c @deffn {Function} dpart (@var{expr}, @var{n_1}, @dots{}, @var{n_k})
+m4_deffn({Function}, dpart, <<<(@var{expr}, @var{n_1}, @dots{}, @var{n_k})>>>)
 
 Selects the same subexpression as @mrefcomma{part} but instead of just returning
 that subexpression as its value, it returns the whole expression with the
@@ -796,10 +818,11 @@ expression.
                             """
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{exptisolate}
@@ -865,7 +888,8 @@ for @code{%e^x} in @code{%e^(a x)}.
 
 @c -----------------------------------------------------------------------------
 @anchor{freeof}
-@deffn {Function} freeof (@var{x_1}, @dots{}, @var{x_n}, @var{expr})
+@c @deffn {Function} freeof (@var{x_1}, @dots{}, @var{x_n}, @var{expr})
+m4_deffn({Function}, freeof, <<<(@var{x_1}, @dots{}, @var{x_n}, @var{expr})>>>)
 
 @code{freeof (@var{x_1}, @var{expr})} returns @code{true} if no subexpression of
 @var{expr} is equal to @var{x_1} or if @var{x_1} occurs only as a dummy variable
@@ -991,10 +1015,11 @@ An indefinite integral is not free of its variable of integration.
 (%o3)                         false
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{inflag}
@@ -1027,7 +1052,8 @@ Functions affected by the setting of @code{inflag} are: @mrefcomma{part}@w{}
 
 @c -----------------------------------------------------------------------------
 @anchor{inpart}
-@deffn {Function} inpart (@var{expr}, @var{n_1}, @dots{}, @var{n_k})
+@c @deffn {Function} inpart (@var{expr}, @var{n_1}, @dots{}, @var{n_k})
+m4_deffn({Function}, inpart, <<<(@var{expr}, @var{n_1}, @dots{}, @var{n_k})>>>)
 
 is similar to @mref{part} but works on the internal representation of the
 expression rather than the displayed form and thus may be faster since no
@@ -1063,16 +1089,18 @@ Examples:
 (%o5)                       g(x + 1)
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
 @anchor{isolate}
-@deffn {Function} isolate (@var{expr}, @var{x})
+@c @deffn {Function} isolate (@var{expr}, @var{x})
+m4_deffn({Function}, isolate, <<<(@var{expr}, @var{x})>>>)
 
 Returns @var{expr} with subexpressions which are sums and which do not contain
 @var{var} replaced by intermediate expression labels (these being atomic symbols
@@ -1091,10 +1119,11 @@ with respect to products.  See @mrefdot{isolate_wrt_times} See also @mrefdot{dis
 
 Do @code{example (isolate)} for examples.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
@@ -1188,7 +1217,8 @@ Example:
 
 @c -----------------------------------------------------------------------------
 @anchor{listofvars}
-@deffn {Function} listofvars (@var{expr})
+@c @deffn {Function} listofvars (@var{expr})
+m4_deffn({Function}, listofvars, <<<(@var{expr})>>>)
 
 Returns a list of the variables in @var{expr}.
 
@@ -1208,16 +1238,18 @@ See also the option variable @mref{listdummyvars} to exclude or include
                                   1
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
 @anchor{lfreeof}
-@deffn {Function} lfreeof (@var{list}, @var{expr})
+@c @deffn {Function} lfreeof (@var{list}, @var{expr})
+m4_deffn({Function}, lfreeof, <<<(@var{list}, @var{expr})>>>)
 
 For each member @var{m} of @var{list}, calls
 @code{freeof (@var{m}, @var{expr})}.  It returns @code{false} if any call to
@@ -1245,24 +1277,27 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
 @anchor{lpart}
-@deffn {Function} lpart (@var{label}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})
+@c @deffn {Function} lpart (@var{label}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})
+m4_deffn({Function}, lpart, <<<(@var{label}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})>>>)
 
 is similar to @mref{dpart} but uses a labelled box.  A labelled box is similar
 to the one produced by @code{dpart} but it has a name in the top line.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
@@ -1350,8 +1385,10 @@ definitions.
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Nouns and verbs)
 @anchor{nounify}
-@deffn {Function} nounify (@var{f})
+@c @deffn {Function} nounify (@var{f})
+m4_deffn({Function}, nounify, <<<(@var{f})>>>)
 
 Returns the noun form of the function name @var{f}.  This is
 needed if one wishes to refer to the name of a verb function as if it
@@ -1361,16 +1398,19 @@ the form returned if a function call is preceded by a quote.
 
 See also @mrefdot{verbify}
 
-@opencatbox
-@category{Nouns and verbs}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Nouns and verbs}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{nterms}
-@deffn {Function} nterms (@var{expr})
+@c @deffn {Function} nterms (@var{expr})
+m4_deffn({Function}, nterms, <<<(@var{expr})>>>)
 
 Returns the number of terms that @var{expr} would have if it were fully
 expanded out and no cancellations or combination of terms occurred.
@@ -1378,16 +1418,19 @@ Note that expressions like @code{sin (@var{expr})}, @code{sqrt (@var{expr})},
 @code{exp (@var{expr})}, etc. count as just one term regardless of how many
 terms @var{expr} has (if it is a sum).
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Operators)
 @anchor{op}
-@deffn {Function} op (@var{expr})
+@c @deffn {Function} op (@var{expr})
+m4_deffn({Function}, op, <<<(@var{expr})>>>)
 
 Returns the main operator of the expression @var{expr}.
 @code{op (@var{expr})} is equivalent to @code{part (@var{expr}, 0)}.
@@ -1475,17 +1518,20 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Operators, Predicate functions)
 @anchor{operatorp}
-@deffn  {Function} operatorp @
+@c @deffn  {Function} operatorp @
+m4_deffn({Function}, operatorp, <<<>>>) @
 @fname{operatorp} (@var{expr}, @var{op}) @
 @fname{operatorp} (@var{expr}, [@var{op_1}, @dots{}, @var{op_n}])
 
@@ -1496,11 +1542,12 @@ if @var{op} is equal to the operator of @var{expr}.
 @code{true} if some element @var{op_1}, @dots{}, @var{op_n} is equal to the
 operator of @var{expr}.
 
-@opencatbox
-@category{Operators}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
@@ -1556,8 +1603,10 @@ substitute into the operator of an expression.  E.g.,
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{optimize}
-@deffn {Function} optimize (@var{expr})
+@c @deffn {Function} optimize (@var{expr})
+m4_deffn({Function}, optimize, <<<(@var{expr})>>>)
 
 Returns an expression that produces the same value and
 side effects as @var{expr} but does so more efficiently by avoiding the
@@ -1565,11 +1614,11 @@ recomputation of common subexpressions.  @code{optimize} also has the side
 effect of "collapsing" its argument so that all common subexpressions
 are shared.  Do @code{example (optimize)} for examples.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{optimprefix}
@@ -1585,10 +1634,12 @@ the @mref{optimize} command.
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{ordergreat}
 @anchor{orderless}
-@deffn  {Function} ordergreat (@var{v_1}, @dots{}, @var{v_n})
-@deffnx {Function} orderless (@var{v_1}, @dots{}, @var{v_n})
+@c @deffn  {Function} ordergreat (@var{v_1}, @dots{}, @var{v_n})
+m4_deffn({Function}, ordergreat <<<(@var{v_1}, @dots{}, @var{v_n})>>>)
+m4_deffnx({Function}, orderless, <<<(@var{v_1}, @dots{}, @var{v_n})>>>)
 
 @code{ordergreat} changes the canonical ordering of Maxima expressions
 such that @var{v_1} succeeds @var{v_2} succeeds @dots{}  succeeds @var{v_n},
@@ -1605,16 +1656,19 @@ once each, unless @code{unorder} is called; only the last call to
 
 See also @mrefdot{ordergreatp}
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Predicate functions)
 @anchor{ordergreatp}
 @anchor{orderlessp}
-@deffn  {Function} ordergreatp (@var{expr_1}, @var{expr_2})
-@deffnx {Function} orderlessp (@var{expr_1}, @var{expr_2})
+@c @deffn  {Function} ordergreatp (@var{expr_1}, @var{expr_2})
+m4_deffn( {Function}, ordergreatp, <<<(@var{expr_1}, @var{expr_2})>>>)
+m4_deffnx({Function}, orderlessp, <<<(@var{expr_1}, @var{expr_2})>>>)
 
 @code{ordergreatp} returns @code{true} if @var{expr_1} succeeds @var{expr_2} in
 the canonical ordering of Maxima expressions, and @code{false} otherwise.
@@ -1750,17 +1804,20 @@ Ordering non-atomic expressions.
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{part}
-@deffn {Function} part (@var{expr}, @var{n_1}, @dots{}, @var{n_k})
+@c @deffn {Function} part (@var{expr}, @var{n_1}, @dots{}, @var{n_k})
+m4_deffn({Function}, part, <<<(@var{expr}, @var{n_1}, @dots{}, @var{n_k})>>>)
 
 Returns parts of the displayed form of @code{expr}.  It obtains the part of
 @code{expr} as specified by the indices @var{n_1}, @dots{}, @var{n_k}.  First
@@ -1811,16 +1868,18 @@ Examples:
 
 @code{example (part)} displays additional examples.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
 @anchor{partition}
-@deffn {Function} partition (@var{expr}, @var{x})
+@c @deffn {Function} partition (@var{expr}, @var{x})
+m4_deffn({Function}, partition, <<<(@var{expr}, @var{x})>>>)
 
 Returns a list of two expressions.  They are (1) the factors of @var{expr}
 (if it is a product), the terms of @var{expr} (if it is a sum), or the list
@@ -1843,10 +1902,11 @@ Examples:
 (%o3)                  [[b, c], [a, f(a)]]
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLE
 
@@ -1866,7 +1926,8 @@ error message is given.
 
 @c -----------------------------------------------------------------------------
 @anchor{pickapart}
-@deffn {Function} pickapart (@var{expr}, @var{n})
+@c @deffn {Function} pickapart (@var{expr}, @var{n})
+m4_deffn({Function}, pickapart, <<<(@var{expr}, @var{n})>>>)
 
 Assigns intermediate expression labels to subexpressions of @var{expr} at depth
 @var{n}, an integer.  Subexpressions at greater or lesser depths are not
@@ -1957,10 +2018,11 @@ Examples:
                 3        2
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
@@ -1982,7 +2044,8 @@ the function itself.
 
 @c -----------------------------------------------------------------------------
 @anchor{psubst}
-@deffn  {Function} psubst @
+@c @deffn  {Function} psubst @
+m4_deffn( {Function}, psubst, <<<>>>) @
 @fname{psubst} (@var{list}, @var{expr}) @
 @fname{psubst} (@var{a}, @var{b}, @var{expr})
 
@@ -2016,14 +2079,16 @@ substitution.
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{rembox}
-@deffn  {Function} rembox @
+@c @deffn  {Function} rembox @
+m4_deffn( {Function}, rembox, <<<>>>) @
 @fname{rembox} (@var{expr}, unlabelled) @
 @fname{rembox} (@var{expr}, @var{label}) @
 @fname{rembox} (@var{expr})
@@ -2107,14 +2172,17 @@ dpart: fell off the end.
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Display functions)
 @anchor{reveal}
-@deffn {Function} reveal (@var{expr}, @var{depth})
+@c @deffn {Function} reveal (@var{expr}, @var{depth})
+m4_deffn({Function}, reveal, <<<(@var{expr}, @var{depth})>>>)
 
 Replaces parts of @var{expr} at the specified integer @var{depth}
 with descriptive summaries.
@@ -2193,17 +2261,20 @@ Example:
                     2 %e      + %e    + %e
 @end example
 
-@opencatbox
-@category{Expressions}
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION, CLARIFICATION, MORE EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{sublis}
-@deffn {Function} sublis (@var{list}, @var{expr})
+@c @deffn {Function} sublis (@var{list}, @var{expr})
+m4_deffn({Function}, sublis, <<<(@var{list}, @var{expr})>>>)
 
 Makes multiple parallel substitutions into an expression.  @var{list} is a list
 of equations.  The left hand side of the equations must be an atom.
@@ -2225,10 +2296,11 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{sublis_apply_lambda}
@@ -2278,8 +2350,10 @@ subst: cannot substitute 100 for operator g in expression g
 @c NEEDS CLARIFICATION, MORE EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{subst}
-@deffn {Function} subst (@var{a}, @var{b}, @var{c})
+@c @deffn {Function} subst (@var{a}, @var{b}, @var{c})
+m4_deffn({Function}, subst, <<<(@var{a}, @var{b}, @var{c})>>>)
 
 Substitutes @var{a} for @var{b} in @var{c}.  @var{b} must be an atom or a
 complete subexpression of @var{c}.  For example, @code{x+y+z} is a complete
@@ -2397,16 +2471,18 @@ following example:
 @noindent
 For further examples, do @code{example (subst)}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 
 @c ----------------------------------------------------------------------------
 @anchor{substinpart}
-@deffn {Function} substinpart (@var{x}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})
+@c @deffn {Function} substinpart (@var{x}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})
+m4_deffn({Function}, substinpart, <<<(@var{x}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})>>>)
 
 Similar to @mrefcomma{substpart} but @code{substinpart} works on the
 internal representation of @var{expr}.
@@ -2504,16 +2580,18 @@ message is given.
 Also, setting the option @mref{inflag} to @code{true} and calling @mref{part}
 or @mref{substpart} is the same as calling @mref{inpart} or @code{substinpart}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
 @anchor{substpart}
-@deffn {Function} substpart (@var{x}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})
+@c @deffn {Function} substpart (@var{x}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})
+m4_deffn({Function}, substpart, <<<(@var{x}, @var{expr}, @var{n_1}, @dots{}, @var{n_k})>>>)
 
 Substitutes @var{x} for the subexpression picked out by the rest of the
 arguments as in @mrefdot{part}  It returns the new value of @var{expr}.  @var{x}
@@ -2558,14 +2636,17 @@ Also, setting the option @mref{inflag} to @code{true} and calling @mref{part}
 or @code{substpart} is the same as calling @code{inpart} or
 @mrefdot{substinpart}
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions)
 @anchor{symbolp}
-@deffn {Function} symbolp (@var{expr})
+@c @deffn {Function} symbolp (@var{expr})
+m4_deffn({Function}, symbolp, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a symbol, else @code{false}.
 
@@ -2573,14 +2654,17 @@ Returns @code{true} if @var{expr} is a symbol, else @code{false}.
 @c LEAVES THE UNPLEASANT RESIDUE *Note ...:: IN THE OUTPUT OF describe
 See also @ref{Identifiers}.
 
-@opencatbox
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{unorder}
-@deffn {Function} unorder ()
+@c @deffn {Function} unorder ()
+m4_deffn({Function}, unorder, <<<()>>>)
 
 Disables the aliasing created by the last use of the ordering commands 
 @code{ordergreat} and @code{orderless}.  @code{ordergreat} and @code{orderless} 
@@ -2638,14 +2722,17 @@ output @code{%o7}.
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Nouns and verbs)
 @anchor{verbify}
-@deffn {Function} verbify (@var{f})
+@c @deffn {Function} verbify (@var{f})
+m4_deffn({Function}, verbify, <<<(@var{f})>>>)
 
 Returns the verb form of the function name @var{f}.
 See also @code{verb}, @code{noun}, and @code{nounify}.
@@ -2677,8 +2764,8 @@ $FOO
 @end group
 @end example
 
-@opencatbox
-@category{Nouns and verbs}
-@closecatbox
-@end deffn
-
+@c @opencatbox
+@c @category{Nouns and verbs}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
