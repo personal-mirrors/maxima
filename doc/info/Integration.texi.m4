@@ -35,8 +35,10 @@ integrals in terms of unknown functions such as @code{g(x)} and @code{h(x)}.
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Integral calculus)
 @anchor{changevar}
-@deffn {Function} changevar (@var{expr}, @var{f(x,y)}, @var{y}, @var{x})
+@c @deffn {Function} changevar (@var{expr}, @var{f(x,y)}, @var{y}, @var{x})
+m4_deffn({Function}, changevar, <<<(@var{expr}, @var{f(x,y)}, @var{y}, @var{x})>>>)
 
 Makes the change of variable given by @code{@var{f(x,y)} = 0} in all integrals
 occurring in @var{expr} with integration with respect to @var{x}.
@@ -113,17 +115,19 @@ higher degree function.  E.g.,
 @end group
 @end example
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THIS ITEM IS A MESS, BUT DON'T BOTHER TO CLEAN IT UP:
 @c THE GAUSS-KRONROD FUNCTIONS (QUADPACK) MAKE THIS OBSOLETE
 
 @c -----------------------------------------------------------------------------
 @anchor{dblint}
-@deffn {Function} dblint (@var{f}, @var{r}, @var{s}, @var{a}, @var{b})
+@c @deffn {Function} dblint (@var{f}, @var{r}, @var{s}, @var{a}, @var{b})
+m4_deffn({Function}, dblint, <<<(@var{f}, @var{r}, @var{s}, @var{a}, @var{b})>>>)
 
 A double-integral routine which was written in
 top-level Maxima and then translated and compiled to machine code.
@@ -175,14 +179,16 @@ example problem.
 @c demo (dblint_1) FAILS WITH Could not find `fltdfnk.mc' -- DON'T BOTHER TO MENTION IT. !!!
 @c @code{demo (dblint_1)} executes another demonstration.
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{defint}
-@deffn {Function} defint (@var{expr}, @var{x}, @var{a}, @var{b})
+@c @deffn {Function} defint (@var{expr}, @var{x}, @var{a}, @var{b})
+m4_deffn({Function}, defint, <<<(@var{expr}, @var{x}, @var{a}, @var{b})>>>)
 
 Attempts to compute a definite integral.  @code{defint} is called by
 @code{integrate} when limits of integration are specified, i.e., when
@@ -195,30 +201,35 @@ Thus from the user's point of view, it is sufficient to call @code{integrate}.
 noun form of the integral.  See @mref{quad_qag} and related functions for
 numerical approximation of definite integrals.
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{erfflag}
-@defvr {Option variable} erfflag
+@c @defvr {Option variable} erfflag
+m4_defvr({Option variable}, erfflag)
 Default value: @code{true}
 
 When @code{erfflag} is @code{false}, prevents @code{risch} from introducing the
 @code{erf} function in the answer if there were none in the integrand to
 begin with.
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Laplace transform)
 @anchor{ilt}
-@deffn {Function} ilt (@var{expr}, @var{s}, @var{t})
+@c @deffn {Function} ilt (@var{expr}, @var{s}, @var{t})
+m4_deffn({Function}, ilt, <<<(@var{expr}, @var{s}, @var{t})>>>)
 
 Computes the inverse Laplace transform of @var{expr} with
 respect to @var{s} and parameter @var{t}.  @var{expr} must be a ratio of
@@ -279,14 +290,16 @@ pos;
 @end group
 @end example
 
-@opencatbox
-@category{Laplace transform}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Laplace transform}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{intanalysis}
-@defvr {Option variable} intanalysis
+@c @defvr {Option variable} intanalysis
+m4_defvr({Option variable}, intanalysis)
 Default value: @code{true}
 
 When @code{true}, definite integration tries to find poles in the integrand in 
@@ -332,14 +345,17 @@ The number 1 isn't in the domain of atanh
                                        2
 @end example
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Integral calculus)
 @anchor{integrate}
-@deffn  {Function} integrate @
+@c @deffn  {Function} integrate @
+m4_deffn( {Function}, integrate, <<<>>>) @
 @fname{integrate} (@var{expr}, @var{x}) @
 @fname{integrate} (@var{expr}, @var{x}, @var{a}, @var{b})
 
@@ -589,14 +605,16 @@ body of @code{f_2}.
 @end example
 @end itemize
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{integration_constant}
-@defvr {System variable} integration_constant
+@c @defvr {System variable} integration_constant
+m4_defvr({System variable}, integration_constant)
 Default value: @code{%c}
 
 When a constant of integration is introduced by indefinite integration of an
@@ -633,14 +651,16 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{integration_constant_counter}
-@defvr {System variable} integration_constant_counter
+@c @defvr {System variable} integration_constant_counter
+m4_defvr({System variable}, integration_constant_counter)
 Default value: 0
 
 When a constant of integration is introduced by indefinite integration of an
@@ -694,14 +714,16 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{integrate_use_rootsof}
-@defvr {Option variable} integrate_use_rootsof
+@c @defvr {Option variable} integrate_use_rootsof
+m4_defvr({Option variable}, integrate_use_rootsof)
 Default value: @code{false}
 
 When @code{integrate_use_rootsof} is @code{true} and the denominator of
@@ -766,16 +788,18 @@ and then express the integrand in terms of these roots, e.g.,
 if the denominator is a cubic polynomial.
 Sometimes this will help Maxima obtain a more useful result.
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{ldefint}
-@deffn {Function} ldefint (@var{expr}, @var{x}, @var{a}, @var{b})
+@c @deffn {Function} ldefint (@var{expr}, @var{x}, @var{a}, @var{b})
+m4_deffn({Function}, ldefint, <<<(@var{expr}, @var{x}, @var{a}, @var{b})>>>)
 
 Attempts to compute the definite integral of @var{expr} by using @mref{limit}
 to evaluate the indefinite integral of @var{expr} with respect to @var{x}
@@ -790,17 +814,19 @@ result than @code{integrate (@var{expr}, @var{x}, @var{a}, @var{b})}.
 while @code{integrate} may employ various heuristics and may recognize some
 special cases.
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c UMM, IS THERE SOME TEXT MISSING HERE ???
 @c WHAT IS THIS ABOUT EXACTLY ??
 
 @c -----------------------------------------------------------------------------
 @anchor{potential}
-@deffn {Function} potential (@var{givengradient})
+@c @deffn {Function} potential (@var{givengradient})
+m4_deffn({Function}, potential, <<<(@var{givengradient})>>>)
 
 The calculation makes use of the global variable @code{potentialzeroloc[0]}
 which must be @code{nonlist} or of the form
@@ -814,11 +840,14 @@ sides in the latter.  The indicated right-hand sides are used as the
 lower limit of integration.  The success of the integrations may
 depend upon their values and order.  @code{potentialzeroloc} is initially set
 to 0.
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Integral calculus, Complex variables)
 @anchor{residue}
-@deffn {Function} residue (@var{expr}, @var{z}, @var{z_0})
+@c @deffn {Function} residue (@var{expr}, @var{z}, @var{z_0})
+m4_deffn({Function}, residue, <<<(@var{expr}, @var{z}, @var{z_0})>>>)
 
 Computes the residue in the complex plane of the expression @var{expr} when the
 variable @var{z} assumes the value @var{z_0}.  The residue is the coefficient of
@@ -844,15 +873,18 @@ variable @var{z} assumes the value @var{z_0}.  The residue is the coefficient of
 @end group
 @end example
 
-@opencatbox
-@category{Integral calculus}
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral calculus}
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Integral calculus)
 @anchor{risch}
-@deffn {Function} risch (@var{expr}, @var{x})
+@c @deffn {Function} risch (@var{expr}, @var{x})
+m4_deffn({Function}, risch, <<<(@var{expr}, @var{x})>>>)
 
 Integrates @var{expr} with respect to @var{x} using the
 transcendental case of the Risch algorithm.  (The algebraic case of
@@ -885,23 +917,26 @@ with.
 @end group
 @end example
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION, CLARIFICATION, AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{tldefint}
-@deffn {Function} tldefint (@var{expr}, @var{x}, @var{a}, @var{b})
+@c @deffn {Function} tldefint (@var{expr}, @var{x}, @var{a}, @var{b})
+m4_deffn({Function}, tldefint, <<<(@var{expr}, @var{x}, @var{a}, @var{b})>>>)
 
 Equivalent to @code{ldefint} with @code{tlimswitch} set to @code{true}.
 
-@opencatbox
-@category{Integral calculus}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @footnotestyle end
 
@@ -1032,8 +1067,10 @@ for the integrator to produce a good solution.
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Numerical methods, Package quadpack)
 @anchor{quad_qag}
-@deffn  {Function} quad_qag @
+@c @deffn  {Function} quad_qag @
+m4_deffn( {Function}, quad_qag, <<<>>>) @
 @fname{quad_qag} (@var{f(x)}, @var{x}, @var{a}, @var{b}, @var{key}, [@var{epsrel}, @var{epsabs}, @var{limit}]) @
 @fname{quad_qag} (@var{f}, @var{x}, @var{a}, @var{b}, @var{key}, [@var{epsrel}, @var{epsabs}, @var{limit}])
 
@@ -1126,18 +1163,20 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
 
 @c -----------------------------------------------------------------------------
 @anchor{quad_qags}
-@deffn  {Function} quad_qags @
+@c @deffn  {Function} quad_qags @
+m4_deffn( {Function}, quad_qags, <<<>>>) @
 @fname{quad_qags} (@var{f(x)}, @var{x}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}]) @
 @fname{quad_qags} (@var{f}, @var{x}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}])
 
@@ -1219,18 +1258,20 @@ Examples:
 
 Note that @code{quad_qags} is more accurate and efficient than @code{quad_qag} for this integrand.
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
 
 @c -----------------------------------------------------------------------------
 @anchor{quad_qagi}
-@deffn  {Function} quad_qagi @
+@c @deffn  {Function} quad_qagi @
+m4_deffn( {Function}, quad_qagi, <<<>>>) @
 @fname{quad_qagi} (@var{f(x)}, @var{x}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}]) @
 @fname{quad_qagi} (@var{f}, @var{x}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}])
 
@@ -1329,18 +1370,20 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
 
 @c -----------------------------------------------------------------------------
 @anchor{quad_qawc}
-@deffn  {Function} quad_qawc @
+@c @deffn  {Function} quad_qawc @
+m4_deffn( {Function}, quad_qawc, <<<>>>) @
 @fname{quad_qawc} (@var{f(x)}, @var{x}, @var{c}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}]) @
 @fname{quad_qawc} (@var{f}, @var{x}, @var{c}, @var{a}, @var{b}, [@var{epsrel}, @var{epsabs}, @var{limit}])
 
@@ -1446,18 +1489,20 @@ Principal Value
 @end group
 @end example
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
 
 @c -----------------------------------------------------------------------------
 @anchor{quad_qawf}
-@deffn  {Function} quad_qawf @
+@c @deffn  {Function} quad_qawf @
+m4_deffn( {Function}, quad_qawf, <<<>>>) @
 @fname{quad_qawf} (@var{f(x)}, @var{x}, @var{a}, @var{omega}, @var{trig}, [@var{epsabs}, @var{limit}, @var{maxp1}, @var{limlst}]) @
 @fname{quad_qawf} (@var{f}, @var{x}, @var{a}, @var{omega}, @var{trig}, [@var{epsabs}, @var{limit}, @var{maxp1}, @var{limlst}])
 
@@ -1562,18 +1607,20 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
 
 @c -----------------------------------------------------------------------------
 @anchor{quad_qawo}
-@deffn  {Function} quad_qawo @
+@c @deffn  {Function} quad_qawo @
+m4_deffn( {Function}, quad_qawo, <<<>>>) @
 @fname{quad_qawo} (@var{f(x)}, @var{x}, @var{a}, @var{b}, @var{omega}, @var{trig}, [@var{epsrel}, @var{epsabs}, @var{limit}, @var{maxp1}, @var{limlst}]) @
 @fname{quad_qawo} (@var{f}, @var{x}, @var{a}, @var{b}, @var{omega}, @var{trig}, [@var{epsrel}, @var{epsabs}, @var{limit}, @var{maxp1}, @var{limlst}])
 
@@ -1699,18 +1746,20 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
 
 @c -----------------------------------------------------------------------------
 @anchor{quad_qaws}
-@deffn  {Function} quad_qaws @
+@c @deffn  {Function} quad_qaws @
+m4_deffn( {Function}, quad_qaws, <<<>>>) @
 @fname{quad_qaws} (@var{f(x)}, @var{x}, @var{a}, @var{b}, @var{alpha}, @var{beta}, @var{wfun}, [@var{epsrel}, @var{epsabs}, @var{limit}]) @
 @fname{quad_qaws} (@var{f}, @var{x}, @var{a}, @var{b}, @var{alpha}, @var{beta}, @var{wfun}, [@var{epsrel}, @var{epsabs}, @var{limit}])
 
@@ -1832,18 +1881,20 @@ pos;
 @end group
 @end example
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THERE ARE OPTIONAL ARGUMENTS WHICH MAKES LISTING THE VARIANTS A LITTLE TEDIOUS
 @c NEED A MORE CONVENIENT (AND NONAMBIGUOUS) NOTATION FOR OPTIONAL ARGUMENTS
 
 @c -----------------------------------------------------------------------------
 @anchor{quad_qagp}
-@deffn  {Function} quad_qagp @
+@c @deffn  {Function} quad_qagp @
+m4_deffn( {Function}, quad_qagp, <<<>>>) @
 @fname{quad_qagp} (@var{f(x)}, @var{x}, @var{a}, @var{b}, @var{points}, [@var{epsrel}, @var{epsabs}, @var{limit}]) @
 @fname{quad_qagp} (@var{f}, @var{x}, @var{a}, @var{b}, @var{points}, [@var{epsrel}, @var{epsabs}, @var{limit}])
 
@@ -1935,15 +1986,17 @@ The integrand has singularities at @code{1} and @code{sqrt(2)} so we supply
 these points to @code{quad_qagp}.  We also note that @code{quad_qagp} is
 more accurate and more efficient that @mrefdot{quad_qags}
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{quad_control}
-@deffn  {Function} quad_control (@var{parameter}, [@var{value}])
+@c @deffn  {Function} quad_control (@var{parameter}, [@var{value}])
+m4_deffn( {Function}, quad_control, <<<(@var{parameter}, [@var{value}])>>>)
 
 Control error handling for quadpack.  The parameter should be one of
 the following symbols:
@@ -1962,9 +2015,10 @@ If @var{value} is not given, then the current value of the
 @var{parameter} is returned.  If @var{value} is given, the value of
 @var{parameter} is set to the given value.
 
-@opencatbox
-@category{Numerical methods}
-@category{Package quadpack}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Package quadpack}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
