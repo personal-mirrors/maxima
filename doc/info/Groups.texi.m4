@@ -6,8 +6,10 @@
 @node Functions and Variables for Groups,  , Groups, Groups
 @section Functions and Variables for Groups
 
+m4_setcat(Group theory)
 @anchor{todd_coxeter}
-@deffn {Function} todd_coxeter @
+@c @deffn {Function} todd_coxeter @
+m4_deffn({Function}, todd_coxeter, <<<>>>) @
 @fname{todd_coxeter} (@var{relations}, @var{subgroup}) @
 @fname{todd_coxeter} (@var{relations})
 
@@ -64,7 +66,8 @@ Rows tried 213
 Rows tried 71
 (%o6)                          20
 @end example
-@opencatbox
-@category{Group theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Group theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
