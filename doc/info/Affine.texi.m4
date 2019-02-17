@@ -23,8 +23,8 @@
 
 m4_setcat(Package affine)
 @anchor{fast_linsolve}
-@c @deffn {Function} fast_linsolve ([@var{expr_1}, @dots{}, @c @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}])
-m4_deffn({Function}, fast_linsolve, <<<([@var{expr_1}, @dots{}, @c @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}])>>>)
+@c @deffn {Function} fast_linsolve ([@var{expr_1}, @dots{}, @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}])
+m4_deffn({Function}, fast_linsolve, <<<([@var{expr_1}, @dots{}, @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}])>>>)
 Solves the simultaneous linear equations @var{expr_1}, @dots{}, @var{expr_m}
 for the variables @var{x_1}, @dots{}, @var{x_n}.
 Each @var{expr_i} may be an equation or a general expression;
