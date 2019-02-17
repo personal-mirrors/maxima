@@ -72,8 +72,10 @@ if and only if @var{f} is a polynomial combination of the elements of
 m4_end_deffn()
 
 @c NEEDS CLARIFICATION IN A SERIOUS WAY
+m4_setcat(Package affine)
 @anchor{set_up_dot_simplifications}
-@deffn {Function} set_up_dot_simplifications @
+@c @deffn {Function} set_up_dot_simplifications @
+m4_deffn({Function}, set_up_dot_simplifications, <<<>>>) @
 @fname{set_up_dot_simplifications} (@var{eqns}, @var{check_through_degree}) @
 @fname{set_up_dot_simplifications} (@var{eqns})
 
@@ -94,10 +96,11 @@ the weights of individual variables.
 
 @code{load("affine")} loads this function.
 
-@opencatbox
-@category{Package affine}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package affine}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{declare_weights}
 @c @deffn {Function} declare_weights (@var{x_1}, @var{w_1}, @dots{}, @var{x_n}, @var{w_n})
@@ -229,7 +232,8 @@ monomials.
 m4_end_deffn()
 
 @anchor{list_nc_monomials}
-@deffn {Function} list_nc_monomials @
+@c @deffn {Function} list_nc_monomials @
+m4_deffn({Function}, list_nc_monomials, <<<>>>) @
 @fname{list_nc_monomials} ([@var{p_1}, @dots{}, @var{p_n}]) @
 @fname{list_nc_monomials} (@var{p})
 
@@ -238,10 +242,11 @@ or a list of polynomials @var{p_1}, @dots{}, @var{p_n}.
 
 @code{load("affine")} loads this function.
 
-@opencatbox
-@category{Package affine}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package affine}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THIS FUNCTION DOESN'T SEEM TO BE APPROPRIATE IN USER-LEVEL DOCUMENTATION
 @c PRESERVE THIS DESCRIPTION PENDING FURTHER DECISION
