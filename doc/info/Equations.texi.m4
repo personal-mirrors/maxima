@@ -517,8 +517,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 m4_setcat(Algebraic equations)
 @anchor{funcsolve}
-@deffn {Function} funcsolve (@var{eqn}, @var{g}(@var{t}))
-
+@c @deffn {Function} funcsolve (@var{eqn}, @var{g}(@var{t}))
+m4_deffn({Function}, funcsolve, <<<(@var{eqn}, @var{g}(@var{t}))>>>)
 Returns @code{[@var{g}(@var{t}) = ...]}  or @code{[]}, depending on whether
 or not there exists a rational function @code{@var{g}(@var{t})} satisfying
 @var{eqn}, which must be a first order, linear polynomial in (for this case)
@@ -546,10 +546,11 @@ Dependent equations eliminated:  (4 3)
 Warning: this is a very rudimentary implementation -- many safety checks
 and obvious generalizations are missing.
 
-@opencatbox
-@category{Algebraic equations}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Algebraic equations}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Linear equations)
@@ -637,8 +638,10 @@ m4_end_defvr()
 @c are handled correctly by ieqn.
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Integral equations)
 @anchor{ieqn}
-@deffn {Function} ieqn (@var{ie}, @var{unk}, @var{tech}, @var{n}, @var{guess})
+@c @deffn {Function} ieqn (@var{ie}, @var{unk}, @var{tech}, @var{n}, @var{guess})
+m4_deffn({Function}, ieqn, <<<(@var{ie}, @var{unk}, @var{tech}, @var{n}, @var{guess})>>>)
 
 @code{inteqn} is a package for solving integral equations.
 @code{load ("inteqn")} loads this package.
@@ -669,10 +672,11 @@ n: 1
 guess: @code{none} which will cause @code{neumann} and @code{firstkindseries}
 to use @code{@var{f}(@var{x})} as an initial guess.
 
-@opencatbox
-@category{Integral equations}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integral equations}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Integral equations)
@@ -701,8 +705,10 @@ the n given to @code{ieqn} if an error prevented generation of further terms).
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{lhs}
-@deffn {Function} lhs (@var{expr})
+@c @deffn {Function} lhs (@var{expr})
+m4_deffn({Function}, lhs, <<<(@var{expr})>>>)
 
 Returns the left-hand side (that is, the first argument) of the expression
 @var{expr}, when the operator of @var{expr} is one of the relational operators
@@ -763,16 +769,19 @@ Examples:
 (%o12)                         aa
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c REVISIT -- THERE'S PROBABLY MORE TO SAY HERE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Linear equations)
 @anchor{linsolve}
-@deffn {Function} linsolve ([@var{expr_1}, @dots{}, @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}])
+@c @deffn {Function} linsolve ([@var{expr_1}, @dots{}, @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}])
+m4_deffn({Function}, linsolve, <<<([@var{expr_1}, @dots{}, @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}])>>>)
 
 Solves the list of simultaneous linear equations for the list of variables.
 The expressions must each be polynomials in the variables and may be equations.
@@ -863,10 +872,11 @@ Solution
 (%o17)                 [a + 1, 2 a, a - 1]
 @end example
 
-@opencatbox
-@category{Linear equations}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Linear equations}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c DO ANY FUNCTIONS OTHER THAN linsolve RESPECT linsolvewarn ??
 
@@ -923,8 +933,10 @@ solutions returned by @mref{solve} or @mrefdot{realroots}
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials, Numerical methods)
 @anchor{nroots}
-@deffn {Function} nroots (@var{p}, @var{low}, @var{high})
+@c @deffn {Function} nroots (@var{p}, @var{low}, @var{high})
+m4_deffn({Function}, nroots, <<<(@var{p}, @var{low}, @var{high})>>>)
 
 Returns the number of real roots of the real univariate polynomial @var{p} in
 the half-open interval @code{(@var{low}, @var{high}]}.  The endpoints of the
@@ -942,17 +954,20 @@ interval may be @code{minf} or @code{inf}.
 (%o2)                           4
 @end example
 
-@opencatbox
-@category{Polynomials}
-@category{Numerical methods}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Numerical methods}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials)
 @anchor{nthroot}
-@deffn {Function} nthroot (@var{p}, @var{n})
+@c @deffn {Function} nthroot (@var{p}, @var{n})
+m4_deffn({Function}, nthroot, <<<(@var{p}, @var{n})>>>)
 
 where @var{p} is a polynomial with integer coefficients and @var{n} is a
 positive integer returns @code{q}, a polynomial over the integers, such that
@@ -960,10 +975,11 @@ positive integer returns @code{q}, a polynomial over the integers, such that
 perfect nth power.  This routine is much faster than @mref{factor} or even
 @mrefdot{sqfr}
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Polynomials, Numerical methods)
@@ -1096,8 +1112,10 @@ Examples:
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{rhs}
-@deffn {Function} rhs (@var{expr})
+@c @deffn {Function} rhs (@var{expr})
+m4_deffn({Function}, rhs, <<<(@var{expr})>>>)
 
 Returns the right-hand side (that is, the second argument) of the expression
 @var{expr}, when the operator of @var{expr} is one of the relational operators
@@ -1160,10 +1178,11 @@ Examples:
 (%o12)                         bb
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Expressions, Simplification flags and variables)
@@ -1185,8 +1204,10 @@ m4_end_defvr()
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification functions)
 @anchor{rootscontract}
-@deffn {Function} rootscontract (@var{expr})
+@c  @deffn {Function} rootscontract (@var{expr})
+m4_deffn({Function}, rootscontract, <<<(@var{expr})>>>)
 
 Converts products of roots into roots of products.  For example,
 @code{rootscontract (sqrt(x)*y^(3/2))} yields @code{sqrt(x*y^3)}.
@@ -1267,10 +1288,11 @@ Examples:
 (%o13)                          0
 @end example
 
-@opencatbox
-@category{Simplification functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Polynomials, Numerical methods)
