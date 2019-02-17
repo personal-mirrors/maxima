@@ -107,12 +107,19 @@ m4_ifelse(<<<$#>>>, <<<2>>>,
 @anchor{$2-$1} <<<m4_anchor_var($1, m4_shift(m4_shift($@)))>>>)
 >>>)
 
-m4_dnl Like deffn bug for @defvr
+m4_dnl Like deffn but for @defvr
 m4_define(<<<m4_defvr>>>,
 <<<@c defvr m4_cat()
 m4_anchor_var(vr-$2, m4_cat())
 m4_dvindex_var($2, m4_cat())
 @defvr $1 $2
+>>>)
+m4_dnl Like deffnx but for @defvrx
+m4_define(<<<m4_defvrx>>>,
+<<<@c defvrx m4_cat()
+m4_anchor_var(vr-$2, m4_cat())
+m4_dvindex_var($2, m4_cat())
+@defvrx $1 $2
 >>>)
 
 m4_define(<<<m4_end_defvr>>>,<<<m4_dnl
