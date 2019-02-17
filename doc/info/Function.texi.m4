@@ -569,8 +569,10 @@ Examples
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition, Global variables)
 @anchor{macros}
-@defvr {Global variable} macros
+@c @defvr {Global variable} macros
+m4_defvr({Global variable}, macros)
 Default value: @code{[]}
 
 @code{macros} is the list of user-defined macro functions.
@@ -580,11 +582,12 @@ macro functions from the list.
 
 See also @mrefdot{infolists}
 
-@opencatbox
-@category{Function definition}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Function definition}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Function definition)
@@ -1549,8 +1552,10 @@ Example:
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition, Global variables)
 @anchor{functions}
-@defvr {System variable} functions
+@c @defvr {System variable} functions
+m4_defvr({System variable}, functions)
 Default value: @code{[]}
 
 @code{functions} is the list of ordinary Maxima functions
@@ -1626,11 +1631,12 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Function definition}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Function definition}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Function definition)
@@ -2152,8 +2158,10 @@ A local function definition.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application, Global flags)
 @anchor{macroexpansion}
-@defvr {Option variable} macroexpansion
+@c @defvr {Option variable} macroexpansion
+m4_defvr({Option variable}, macroexpansion)
 Default value: @code{false}
 
 @code{macroexpansion} controls whether the expansion (that is, the return value)
@@ -2372,11 +2380,12 @@ x + 99 is equal to x
 @end group
 @end example
 
-@opencatbox
-@category{Function application}
-@category{Global flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Function application}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Translation and compilation)
@@ -2496,8 +2505,10 @@ m4_end_deffn()
 @c NEEDS MORE EXAMPLES?
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation flags and variables)
 @anchor{mode_checkp}
-@defvr {Option variable} mode_checkp
+@c @defvr {Option variable} mode_checkp
+m4_defvr({Option variable}, mode_checkp)
 Default value: @code{true}
 
 When @code{mode_checkp} is @code{true}, @mref{mode_declare} does not only define
@@ -2549,28 +2560,32 @@ To enable the Lisp debugger set *debugger-hook* to nil.
 @end group
 @end example
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{mode_check_errorp}
-@defvr {Option variable} mode_check_errorp
+@c @defvr {Option variable} mode_check_errorp
+m4_defvr({Option variable}, mode_check_errorp)
 Default value: @code{false}
 
 When @code{mode_check_errorp} is @code{true}, @code{mode_declare} calls
 error.
 @c NEED SOME EXAMPLES HERE.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{mode_check_warnp}
-@defvr {Option variable} mode_check_warnp
+@c @defvr {Option variable} mode_check_warnp
+m4_defvr({Option variable}, mode_check_warnp)
 Default value: @code{true}
 
 @c WHAT DOES THIS MEAN ??
@@ -2578,10 +2593,11 @@ When @code{mode_check_warnp} is @code{true}, mode errors are
 described.
 @c NEED SOME EXAMPLES HERE.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS AN EXAMPLE FOR DECLARING THE RETURN TYPE
 
@@ -2661,8 +2677,10 @@ m4_end_deffn()
 @c NEEDS MORE WORK !!!
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation flags and variables)
 @anchor{savedef}
-@defvr {Option variable} savedef
+@c @defvr {Option variable} savedef
+m4_defvr({Option variable}, savedef)
 Default value: @code{true}
 
 When @code{savedef} is @code{true}, the Maxima version of a user function is
@@ -2672,17 +2690,19 @@ displayed by @code{dispfun} and allows the function to be edited.
 When @code{savedef} is @code{false}, the names of translated functions are
 removed from the @code{functions} list.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c IS THERE ANY REASON TO SET transcompile: false ??
 @c MAYBE THIS VARIABLE COULD BE PERMANENTLY SET TO true AND STRUCK FROM THE DOCUMENTATION.
 
 @c -----------------------------------------------------------------------------
 @anchor{transcompile}
-@defvr {Option variable} transcompile
+@c @defvr {Option variable} transcompile
+m4_defvr({Option variable}, transcompile)
 Default value: @code{true}
 
 When @code{transcompile} is @code{true}, @code{translate} and
@@ -2692,10 +2712,11 @@ suitable for compilation.
 
 @code{compfile} sets @code{transcompile: true} for the duration.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Translation and compilation)
@@ -2846,25 +2867,30 @@ and @mrefdot{tr_warn_undefined_variable}
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation flags and variables)
 @anchor{transrun}
-@defvr {Option variable} transrun
+@c @defvr {Option variable} transrun
+m4_defvr({Option variable}, transrun)
 Default value: @code{true}
 
 When @code{transrun} is @code{false} will cause the interpreted
 version of all functions to be run (provided they are still around)
 rather than the translated version.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c IN WHAT CONTEXT IS tr_array_as_ref: false APPROPRIATE ??? NOT SEEING THE USEFULNESS HERE.
 @c ALSO, I GUESS WE SHOULD HAVE AN ITEM FOR translate_fast_arrays, ANOTHER CONFUSING FLAG ...
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation flags and variables)
 @anchor{tr_array_as_ref}
-@defvr {Option variable} tr_array_as_ref
+@c @defvr {Option variable} tr_array_as_ref
+m4_defvr({Option variable}, tr_array_as_ref)
 Default value: @code{true}
 
 If @code{translate_fast_arrays} is @code{false}, array references in Lisp code
@@ -2876,17 +2902,20 @@ otherwise array names appear as literal symbols in translated code.
 @code{tr_array_as_ref} has no effect if @code{translate_fast_arrays} is
 @code{true}.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c WHY IS THIS FLAG NEEDED ??? UNDER WHAT CIRCUMSTANCES CAN TRANSLATION
 @c OF A BOUND VARIABLE USED AS A FUNCTION GO WRONG ???
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation flags and variables)
 @anchor{tr_bound_function_applyp}
-@defvr {Option variable} tr_bound_function_applyp
+@c @defvr {Option variable} tr_bound_function_applyp
+m4_defvr({Option variable}, tr_bound_function_applyp)
 Default value: @code{true}
 
 When @code{tr_bound_function_applyp} is @code{true}, Maxima gives a warning if a
@@ -2898,14 +2927,16 @@ cases.
 For example, an expression such as @code{g (f, x) := f (x+1)} will trigger
 the warning message.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_file_tty_messagesp}
-@defvr {Option variable} tr_file_tty_messagesp
+@c @defvr {Option variable} tr_file_tty_messagesp
+m4_defvr({Option variable}, tr_file_tty_messagesp)
 Default value: @code{false}
 
 When @code{tr_file_tty_messagesp} is @code{true}, messages generated by
@@ -2913,10 +2944,11 @@ When @code{tr_file_tty_messagesp} is @code{true}, messages generated by
 and inserted into the UNLISP file.  When @code{false}, messages about
 translation of the file are only inserted into the UNLISP file.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c THIS FLAG APPEARS TO HAVE NO EFFECT. SHOULD CUT OUT THIS ITEM AND RELATED CODE.
 @c NOTE THAT THERE IS CODE IN src/transf.lisp WHICH USES THIS FLAG BUT THE MODE
@@ -2924,7 +2956,8 @@ translation of the file are only inserted into the UNLISP file.
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_float_can_branch_complex}
-@defvr {Option variable} tr_float_can_branch_complex
+@c @defvr {Option variable} tr_float_can_branch_complex
+m4_defvr({Option variable}, tr_float_can_branch_complex)
 Default value: @code{true}
 
 Tells the Maxima-to-Lisp translator to assume that the functions 
@@ -2938,14 +2971,16 @@ even if @code{x} is of mode @code{float} (as set by @code{mode_declare}).
 When @code{false} then @code{acos(x)} is of mode
 @code{float} if and only if @code{x} is of mode @code{float}.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_function_call_default}
-@defvr {Option variable} tr_function_call_default
+@c @defvr {Option variable} tr_function_call_default
+m4_defvr({Option variable}, tr_function_call_default)
 Default value: @code{general}
 
 @code{false} means give up and call @code{meval}, @code{expr} means assume Lisp
@@ -2958,27 +2993,31 @@ There is no need to turn this off.  With the default settings, no warning
 messages implies full compatibility of translated and compiled code with the
 Maxima interpreter.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_numer}
-@defvr {Option variable} tr_numer
+@c @defvr {Option variable} tr_numer
+m4_defvr({Option variable}, tr_numer)
 Default value: @code{false}
 
 When @code{tr_numer} is @code{true}, @code{numer} properties are used for
 atoms which have them, e.g. @code{%pi}.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_optimize_max_loop}
-@defvr {Option variable} tr_optimize_max_loop
+@c @defvr {Option variable} tr_optimize_max_loop
+m4_defvr({Option variable}, tr_optimize_max_loop)
 Default value: 100
 
 @code{tr_optimize_max_loop} is the maximum number of times the
@@ -2986,30 +3025,34 @@ macro-expansion and optimization pass of the translator will loop in
 considering a form.  This is to catch macro expansion errors, and
 non-terminating optimization properties.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_semicompile}
-@defvr {Option variable} tr_semicompile
+@c @defvr {Option variable} tr_semicompile
+m4_defvr({Option variable}, tr_semicompile)
 Default value: @code{false}
 
 When @code{tr_semicompile} is @code{true}, @code{translate_file} and
 @code{compfile} output forms which will be macroexpanded but not compiled into
 machine code by the Lisp compiler.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c ARE ANY OF THESE OBSOLETE ??
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_state_vars}
-@defvr {System variable} tr_state_vars
+@c @defvr {System variable} tr_state_vars
+m4_defvr({System variable}, tr_state_vars)
 Default value:
 @example
 [transcompile, tr_semicompile, tr_warn_undeclared, tr_warn_meval,
@@ -3025,10 +3068,11 @@ trying to debug the translator.  By comparing the translated product
 to what should have been produced for a given state, it is possible to
 track down bugs.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c tr_warnings_get EXISTS AND FUNCTIONS AS ADVERTISED (SORT OF) -- RETURNS *tr-runtime-warned*
 @c WHICH HAS ONLY A FEW KINDS OF WARNINGS PUSHED ONTO IT; IT'S CERTAINLY NOT COMPREHENSIVE
@@ -3050,83 +3094,96 @@ the translator during the current translation.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} tr_warn_bad_function_calls
+m4_setcat(Translation flags and variables)
+@c @defvr {Option variable} tr_warn_bad_function_calls
+m4_defvr({Option variable}, tr_warn_bad_function_calls)
 Default value: @code{true}
 
 - Gives a warning when
 when function calls are being made which may not be correct due to
 improper declarations that were made at translate time.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_warn_fexpr}
-@defvr {Option variable} tr_warn_fexpr
+@c @defvr {Option variable} tr_warn_fexpr
+m4_defvr({Option variable}, tr_warn_fexpr)
 Default value: @code{compfile}
 
 - Gives a warning if any FEXPRs are
 encountered.  FEXPRs should not normally be output in translated code,
 all legitimate special program forms are translated.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_warn_meval}
-@defvr {Option variable} tr_warn_meval
+@c @defvr {Option variable} tr_warn_meval
+m4_defvr({Option variable}, tr_warn_meval)
 Default value: @code{compfile}
 
 - Gives a warning if the function @code{meval} gets called.  If @code{meval} is
 called that indicates problems in the translation.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_warn_mode}
-@defvr {Option variable} tr_warn_mode
+@c @defvr {Option variable} tr_warn_mode
+m4_defvr({Option variable}, tr_warn_mode)
 Default value: @code{all}
 
 - Gives a warning when variables are
 assigned values inappropriate for their mode.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_warn_undeclared}
-@defvr {Option variable} tr_warn_undeclared
+@c @defvr {Option variable} tr_warn_undeclared
+m4_defvr({Option variable}, tr_warn_undeclared)
 Default value: @code{compile}
 
 - Determines when to send
 warnings about undeclared variables to the TTY.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tr_warn_undefined_variable}
-@defvr {Option variable} tr_warn_undefined_variable
+@c @defvr {Option variable} tr_warn_undefined_variable
+m4_defvr({Option variable}, tr_warn_undefined_variable)
 Default value: @code{all}
 
 - Gives a warning when
 undefined global variables are seen.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Translation and compilation)
