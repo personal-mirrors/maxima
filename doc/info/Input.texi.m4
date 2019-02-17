@@ -83,8 +83,10 @@ directory depends on the system like Windows or Linux and on the installation.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File output, Console interaction)
 @anchor{appendfile}
-@deffn {Function} appendfile (@var{filename})
+@c @deffn {Function} appendfile (@var{filename})
+m4_deffn({Function}, appendfile, <<<(@var{filename})>>>)
 
 Appends a console transcript to @var{filename}.  @code{appendfile} is the same
 as @mrefcomma{writefile} except that the transcript file, if it exists, is
@@ -93,15 +95,18 @@ always appended.
 @mref{closefile} closes the transcript file opened by @code{appendfile} or
 @code{writefile}.
 
-@opencatbox
-@category{File output}
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File output}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Session management, File input)
 @anchor{batch}
-@deffn  {Function} batch @
+@c @deffn  {Function} batch @
+m4_deffn( {Function}, batch, <<<>>>) @
 @fname{batch} (@var{filename}) @
 @fname{batch} (@var{filename}, @code{option})
 
@@ -155,17 +160,19 @@ the tests which have failed.
 
 See also @mrefcomma{load} @mrefcomma{batchload} and @mrefdot{demo}
 
-@opencatbox
-@category{Session management}
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Session management}
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c RECOMMEND CUTTING THIS ITEM, AS THE load SUBSUMES FUNCTIONALITY OF batchload
 
 @c -----------------------------------------------------------------------------
 @anchor{batchload}
-@deffn {Function} batchload (@var{filename})
+@c @deffn {Function} batchload (@var{filename})
+m4_deffn({Function}, batchload, <<<(@var{filename})>>>)
 
 Reads Maxima expressions from @var{filename} and evaluates them, without
 displaying the input or output expressions and without assigning labels to
@@ -183,27 +190,33 @@ See also @mrefcomma{batch} and @mrefdot{load}
 @c batchload APPEARS TO HAVE THE SAME EFFECT AS load.
 @c WHY NOT GET RID OF batchload ???
 
-@opencatbox
-@category{Session management}
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Session management}
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File output, Console interaction)
 @anchor{closefile}
-@deffn {Function} closefile ()
+@c @deffn {Function} closefile ()
+m4_deffn({Function}, closefile, <<<()>>>)
 
 Closes the transcript file opened by @mref{writefile} or @mrefdot{appendfile}
 
-@opencatbox
-@category{File output}
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File output}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File output, Global flags)
 @anchor{file_output_append}
-@defvr {Option variable} file_output_append
+@c @defvr {Option variable} file_output_append
+m4_defvr({Option variable}, file_output_append)
 Default value: @code{false}
 
 @code{file_output_append} governs whether file output functions append or
@@ -217,17 +230,20 @@ functions always truncate their output file, and @mref{tex} and
 @mref{appendfile} always append.
 @c WHAT ABOUT WRITEFILE ??
 
-@opencatbox
-@category{File output}
-@category{Global flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{File output}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input, File output)
 @anchor{filename_merge}
-@deffn {Function} filename_merge (@var{path}, @var{filename})
+@c @deffn {Function} filename_merge (@var{path}, @var{filename})
+m4_deffn({Function}, filename_merge, <<<(@var{path}, @var{filename})>>>)
 
 Constructs a modified path from @var{path} and @var{filename}.  If the final
 component of @var{path} is of the form @code{###.@var{something}}, the component
@@ -236,15 +252,18 @@ component is simply replaced by @var{filename}.
 
 The result is a Lisp pathname object.
 
-@opencatbox
-@category{File input}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File input}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input)
 @anchor{file_search}
-@deffn  {Function} file_search @
+@c @deffn  {Function} file_search @
+m4_deffn( {Function}, file_search, <<<>>>) @
 @fname{file_search} (@var{filename}) @
 @fname{file_search} (@var{filename}, @var{pathlist})
 
@@ -285,22 +304,29 @@ See @mrefdot{file_search_maxima}
 @code{file_search} is invoked by @mref{load} with @code{file_search_maxima} and
 @mref{file_search_lisp} as the search directories.
 
-@opencatbox
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input, Global variables)
 @anchor{file_search_maxima}
 @anchor{file_search_lisp}
 @anchor{file_search_demo}
 @anchor{file_search_usage}
 @anchor{file_search_tests}
-@defvr  {Option variable} file_search_maxima
-@defvrx {Option variable} file_search_lisp
-@defvrx {Option variable} file_search_demo
-@defvrx {Option variable} file_search_usage
-@defvrx {Option variable} file_search_tests
+@c @defvr  {Option variable} file_search_maxima
+m4_defvr(  {Option variable}, file_search_maxima)
+@c @defvrx {Option variable} file_search_lisp
+m4_defvrx( {Option variable}, file_search_lisp)
+@c @defvrx {Option variable} file_search_demo
+m4_defvrx( {Option variable}, file_search_demo)
+@c @defvrx {Option variable} file_search_usage
+m4_defvrx( {Option variable}, file_search_usage)
+@c @defvrx {Option variable} file_search_tests
+m4_defvrx( {Option variable}, file_search_tests)
 
 These variables specify lists of directories to be searched by
 @mrefcomma{load} @mrefcomma{demo} and some other Maxima functions.  The default
@@ -341,15 +367,18 @@ expands into @code{/home/wfs/neumann.lisp}, @code{/home/gcj/neumann.lisp},
 @code{/home/wfs/neumann.mac}, and @code{/home/gcj/neumann.mac}.
 @end flushleft
 
-@opencatbox
-@category{File input}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{File input}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input)
 @anchor{file_type}
-@deffn {Function} file_type (@var{filename})
+@c @deffn {Function} file_type (@var{filename})
+m4_deffn({Function}, file_type, <<<(@var{filename})>>>)
 
 Returns a guess about the content of @var{filename}, based on the filename 
 extension.  @var{filename} need not refer to an actual file; no attempt is made 
@@ -378,36 +407,44 @@ Examples:
 (%o2)            [lisp, maxima, maxima, object]
 @end example
 
-@opencatbox
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{file_type_lisp}
-@defvr {Option variable} file_type_lisp
+@c @defvr {Option variable} file_type_lisp
+m4_defvr( {Option variable}, file_type_lisp)
 Default value:  @code{[l, lsp, lisp]}
 
 @code{file_type_lisp} is a list of file extensions that maxima recognizes
 as denoting a Lisp source file.
 
 See also @mrefdot{file_type}
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{file_type_maxima}
-@defvr {Option variable} file_type_maxima
+@c @defvr {Option variable} file_type_maxima
+m4_defvr( {Option variable}, file_type_maxima)
 Default value:  @code{[mac, mc, demo, dem, dm1, dm2, dm3, dmt, wxm]}
 
 @code{file_type_maxima} is a list of file extensions that maxima recognizes
 as denoting a Maxima source file.
 
 See also @mrefdot{file_type}
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Session management, File input)
 @anchor{load}
-@deffn {Function} load (@var{filename})
+@c @deffn {Function} load (@var{filename})
+m4_deffn({Function}, load, <<<(@var{filename})>>>)
 
 Evaluates expressions in @var{filename}, thus bringing variables, functions, and
 other objects into Maxima.  The binding of any existing object is clobbered by
@@ -439,15 +476,18 @@ See @mref{file_search} for more detail about the file search mechanism.
 
 @code{load} evaluates its argument.
 
-@opencatbox
-@category{Session management}
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Session management}
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input)
 @anchor{load_pathname}
-@defvr {System variable} load_pathname
+@c @defvr {System variable} load_pathname
+m4_defvr( {System variable}, load_pathname)
 Default value: @code{false}
 
 When a file is loaded with the functions @mrefcomma{load} @mref{loadfile} or
@@ -478,16 +518,19 @@ The value of load_pathname is:
 End of batchfile
 @end example
 
-@opencatbox
-@category{File input}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{File input}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c RECOMMEND CUTTING THIS ITEM, AS THE load SUBSUMES FUNCTIONALITY OF loadfile
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Session management, File input)
 @anchor{loadfile}
-@deffn {Function} loadfile (@var{filename})
+@c @deffn {Function} loadfile (@var{filename})
+m4_deffn({Function}, loadfile, <<<(@var{filename})>>>)
 
 Evaluates Lisp expressions in @var{filename}.  @code{loadfile} does not invoke
 @mrefcomma{file_search} so @code{filename} must include the file extension and
@@ -497,18 +540,21 @@ as much of the path as needed to find the file.
 @mrefcomma{translate_file} and @mrefdot{compile_file}  The user may find it
 more convenient to use @mref{load} instead of @code{loadfile}.
 
-@opencatbox
-@category{Session management}
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Session management}
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c loadprint DOESN'T EXACTLY WORK LIKE THIS, BUT IT HARDLY SEEMS WORTH FIXING
 @c I GUESS THIS COULD BE UPDATED TO DESCRIBE THE WAY IT ACTUALLY WORKS
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input, Global flags)
 @anchor{loadprint}
-@defvr {Option variable} loadprint
+@c @defvr {Option variable} loadprint
+m4_defvr( {Option variable}, loadprint)
 Default value: @code{true}
 
 @code{loadprint} tells whether to print a message when a file is loaded.
@@ -527,15 +573,18 @@ See @mrefdot{setup_autoload}
 When @code{loadprint} is @code{false}, never print a message.
 @end itemize
 
-@opencatbox
-@category{File input}
-@category{Global flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{File input}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input)
 @anchor{directory}
-@deffn {Function} directory (@var{path})
+@c @deffn {Function} directory (@var{path})
+m4_deffn({Function}, directory, <<<(@var{path})>>>)
 
 Returns a list of the files and directories found in @var{path}
 in the file system.
@@ -548,18 +597,23 @@ and possibly other characters, depending on the system.
 @code{directory} relies on the Lisp function DIRECTORY,
 which may have implementation-specific behavior.
 
-@opencatbox
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input)
 @anchor{pathname_directory}
 @anchor{pathname_name}
 @anchor{pathname_type}
-@deffn  {Function} pathname_directory (@var{pathname})
-@deffnx {Function} pathname_name (@var{pathname})
-@deffnx {Function} pathname_type (@var{pathname})
+@c @deffn  {Function} pathname_directory (@var{pathname})
+@c @deffnx {Function} pathname_type (@var{pathname})
+@c @deffnx {Function} pathname_name (@var{pathname})
+m4_deffn( {Function}, pathname_directory, <<<(@var{pathname})>>>)
+m4_deffnx({Function}, pathname_name, <<<(@var{pathname})>>>)
+m4_deffnx({Function}, pathname_type, <<<(@var{pathname})>>>)
 
 These functions return the components of @var{pathname}.
 
@@ -579,14 +633,17 @@ Examples:
 (%o3)                          txt
 @end example
 
-@opencatbox
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File input, Console interaction)
 @anchor{printfile}
-@deffn {Function} printfile (@var{path})
+@c @deffn {Function} printfile (@var{path})
+m4_deffn({Function}, printfile, <<<(@var{path})>>>)
 
 Prints the file named by @var{path} to the console.  @var{path} may be a string
 or a symbol; if it is a symbol, it is converted to a string.
@@ -599,17 +656,20 @@ attempts to locate the file by appending @var{path} to each of the elements of
 @code{printfile} returns @var{path} if it names an existing file,
 or otherwise the result of a successful filename merge.
 
-@opencatbox
-@category{File input}
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File input}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Session management, File output)
 @anchor{save}
-@deffn  {Function} save @
+@c @deffn  {Function} save @
+m4_deffn( {Function}, save, <<<>>>) @
 @fname{save} (@var{filename}, @var{name_1}, @var{name_2}, @var{name_3}, @dots{}) @
 @fname{save} (@var{filename}, values, functions, labels, @dots{}) @
 @fname{save} (@var{filename}, [@var{m}, @var{n}]) @
@@ -665,15 +725,17 @@ have been assigned new values by the user; see @mrefdot{myoptions}
 
 @code{save} evaluates @var{filename} and quotes all other arguments.
 
-@opencatbox
-@category{Session management}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Session management}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{stringout}
-@deffn  {Function} stringout @
+@c @deffn  {Function} stringout @
+m4_deffn( {Function}, stringout, <<<>>>) @
 @fname{stringout} (@var{filename}, @var{expr_1}, @var{expr_2}, @var{expr_3}, @dots{}) @
 @fname{stringout} (@var{filename}, [@var{m}, @var{n}]) @
 @fname{stringout} (@var{filename}, input) @
@@ -718,15 +780,18 @@ Each variable is printed as an assignment statement, with the name of the
 variable, a colon, and its value.  Note that the general form of
 @code{stringout} does not print variables as assignment statements.
 
-@opencatbox
-@category{Session management}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Session management}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File output)
 @anchor{with_stdout}
-@deffn  {Function} with_stdout @
+@c @deffn  {Function} with_stdout @
+m4_deffn( {Function}, with_stdout, <<<>>>) @
 @fname{with_stdout} (@var{f}, @var{expr_1}, @var{expr_2}, @var{expr_3}, @dots{}) @
 @fname{with_stdout} (@var{s}, @var{expr_1}, @var{expr_2}, @var{expr_3}, @dots{})
 
@@ -772,14 +837,17 @@ See also @mrefdot{writefile}
 10 ! yields 3628800
 @end example
 
-@opencatbox
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(File output, Console interaction)
 @anchor{writefile}
-@deffn {Function} writefile (@var{filename})
+@c @deffn {Function} writefile (@var{filename})
+m4_deffn({Function}, writefile, <<<(@var{filename})>>>)
 
 Begins writing a transcript of the Maxima session to @var{filename}.
 All interaction between the user and Maxima is then recorded in this file,
@@ -805,11 +873,12 @@ displayed by @code{playback}.
 @mref{closefile} closes the transcript file opened by @code{writefile} or
 @code{appendfile}.
 
-@opencatbox
-@category{File output}
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{File output}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Functions and Variables for TeX Output, Functions and Variables for Fortran Output, Functions and Variables for File Input and Output, File Input and Output
@@ -821,8 +890,10 @@ displayed by @code{playback}.
 Note that the built-in TeX output functionality of wxMaxima makes no use of
 the functions described here but uses its own implementation instead.
 
+m4_setcat(TeX output, File output)
 @anchor{tex}
-@deffn  {Function} tex @
+@c @deffn  {Function} tex @
+m4_deffn( {Function}, tex, <<<>>>) @
 @fname{tex} (@var{expr}) @
 @fname{tex} (@var{expr}, @var{destination}) @
 @fname{tex} (@var{expr}, false) @
@@ -888,15 +959,18 @@ $$-\cos x$$
 (%o2) $$x\,y\,z$$
 @end example
 
-@opencatbox
-@category{TeX output}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{TeX output}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(TeX output)
 @anchor{tex1}
-@deffn {Function} tex1 (@var{e})
+@c @deffn {Function} tex1 (@var{e})
+m4_deffn({Function}, tex1, <<<(@var{e})>>>)
 
 Returns a string which represents the TeX output for the expressions @var{e}.
 The TeX output is not enclosed in delimiters for an equation or any other
@@ -911,11 +985,14 @@ Examples:
 (%i1) tex1 (sin(x) + cos(x));
 (%o1)                     \sin x+\cos x
 @end example
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(TeX output)
 @anchor{texput}
-@deffn  {Function} texput @
+@c @deffn  {Function} texput @
+m4_deffn( {Function}, texput, <<<>>>) @
 @fname{texput} (@var{a}, @var{s}) @
 @fname{texput} (@var{a}, @var{f}) @
 @fname{texput} (@var{a}, @var{s}, @var{operator_type}) @
@@ -1117,15 +1194,18 @@ $$ \langle a \, | \,b \rangle $$
 (%o7)                         false
 @end example
 
-@opencatbox
-@category{TeX output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{TeX output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{get_tex_environment}
-@deffn  {Function} get_tex_environment (@var{op})
-@deffnx {Function} set_tex_environment (@var{op}, @var{before}, @var{after})
+@c @deffn  {Function} get_tex_environment (@var{op})
+@c @deffnx {Function} set_tex_environment (@var{op}, @var{before}, @var{after})
+m4_deffn( {Function}, get_tex_environment, <<<(@var{op})>>>)
+m4_deffnx({Function}, set_tex_environment, <<<(@var{op}, @var{before}, @var{after})>>>)
 
 Customize the TeX environment output by @code{tex}.
 As maintained by these functions, the TeX environment comprises two strings:
@@ -1170,15 +1250,18 @@ $$f(x):=1-x$$
 (%o4)                         false
 @end example
 
-@opencatbox
-@category{TeX output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{TeX output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{get_tex_enviroment_default}
-@deffn  {Function} get_tex_environment_default ()
-@deffnx {Function} set_tex_environment_default (@var{before}, @var{after})
+@c @deffn  {Function} get_tex_environment_default ()
+@c @deffnx {Function} set_tex_environment_default (@var{before}, @var{after})
+m4_deffn( {Function}, get_tex_environment_default, <<<()>>>)
+m4_deffnx({Function}, set_tex_environment_default, <<<(@var{before}, @var{after})>>>)
 
 Customize the TeX environment output by @code{tex}.
 As maintained by these functions, the TeX environment comprises two strings:
@@ -1219,10 +1302,11 @@ g\left(x\right)+f\left(x\right)
 (%o4)                         false
 @end example
 
-@opencatbox
-@category{TeX output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{TeX output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Functions and Variables for Fortran Output, , Functions and Variables for TeX Output, File Input and Output
@@ -1230,8 +1314,10 @@ g\left(x\right)+f\left(x\right)
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{fortindent}
-@defvr {Option variable} fortindent
+@c @defvr {Option variable} fortindent
+m4_defvr( {Option variable}, fortindent)
 Default value: @code{0}
 
 @code{fortindent} controls the left margin indentation of
@@ -1239,14 +1325,17 @@ expressions printed out by the @mref{fortran} command.  @code{0} gives normal
 printout (i.e., 6 spaces), and positive values will causes the
 expressions to be printed farther to the right.
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{fortran}
-@deffn {Function} fortran (@var{expr})
+@c @deffn {Function} fortran (@var{expr})
+m4_deffn({Function}, fortran, <<<(@var{expr})>>>)
 
 Prints @var{expr} as a Fortran statement.
 The output line is indented with spaces.
@@ -1304,21 +1393,24 @@ Examples:
 (%o8)                         done
 @end verbatim
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{fortspaces}
-@defvr {Option variable} fortspaces
+@c @defvr {Option variable} fortspaces
+m4_defvr( {Option variable}, fortspaces)
 Default value: @code{false}
 
 When @code{fortspaces} is @code{true}, @code{fortran} fills out
 each printed line with spaces to 80 columns.
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
