@@ -127,8 +127,10 @@ only yield approximations when all else fails.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Algebraic equations)
 @anchor{algsys}
-@deffn  {Function} algsys @
+@c @deffn  {Function} algsys @
+m4_deffn({Function}, algsys, <<<>>>) @
 @fname{algsys} ([@var{expr_1}, @dots{}, @var{expr_m}], [@var{x_1}, @dots{}, @var{x_n}]) @
 @fname{algsys} ([@var{eqn_1}, @dots{}, @var{eqn_m}], [@var{x_1}, @dots{}, @var{x_n}])
 
@@ -247,14 +249,17 @@ Examples:
      sqrt(3)        sqrt(3)          3        3
 @end example
 
-@opencatbox
-@category{Algebraic equations}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Algebraic equations}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials, Numerical methods)
 @anchor{allroots}
-@deffn  {Function} allroots @
+@c @deffn  {Function} allroots @
+m4_deffn({Function}, allroots, <<<>>>) @
 @fname{allroots} (@var{expr}) @
 @fname{allroots} (@var{eqn})
 
@@ -324,15 +329,18 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
  + 1.098699797110288)
 @end example
 
-@opencatbox
-@category{Polynomials}
-@category{Numerical methods}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Numerical methods}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials, Numerical methods)
 @anchor{bfallroots}
-@deffn  {Function} bfallroots @
+@c @deffn  {Function} bfallroots @
+m4_deffn({Function}, bfallroots, <<<>>>) @
 @fname{bfallroots} (@var{expr}) @
 @fname{bfallroots} (@var{eqn})
 
@@ -343,11 +351,12 @@ In all respects, @code{bfallroots} is identical to @code{allroots} except
 that @code{bfallroots} computes the roots using bigfloats.  See 
 @mref{allroots} for more information.
 
-@opencatbox
-@category{Polynomials}
-@category{Numerical methods}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Numerical methods}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{backsubst}
@@ -477,8 +486,10 @@ Solution:
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Share packages)
 @anchor{dimension}
-@deffn  {Function} dimension @
+@c @deffn  {Function} dimension @
+m4_deffn({Function}, dimension, <<<>>>) @
 @fname{dimension} (@var{eqn}) @
 @fname{dimension} (@var{eqn_1}, @dots{}, @var{eqn_n})
 
@@ -487,10 +498,11 @@ m4_end_defvr()
 @code{demo ("dimen")} displays a short demonstration.
 @c I GUESS THIS SHOULD BE EXPANDED TO COVER EACH FUNCTION IN THE PACKAGE
 
-@opencatbox
-@category{Share packages}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Share packages}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Algebraic equations, Display flags and variables)
@@ -1044,8 +1056,10 @@ which are free of @code{%i}.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials, Numerical methods)
 @anchor{realroots}
-@deffn  {Function} realroots @
+@c @deffn  {Function} realroots @
+m4_deffn({Function}, realroots, <<<>>>) @
 @fname{realroots} (@var{expr}, @var{bound}) @
 @fname{realroots} (@var{eqn}, @var{bound}) @
 @fname{realroots} (@var{expr}) @
@@ -1105,11 +1119,12 @@ Examples:
 (%o2)                       [5, 3, 1]
 @end example
 
-@opencatbox
-@category{Polynomials}
-@category{Numerical methods}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Numerical methods}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Expressions)
@@ -1316,8 +1331,10 @@ m4_end_defvr()
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Algebraic equations)
 @anchor{solve}
-@deffn  {Function} solve @
+@c @deffn  {Function} solve @
+m4_deffn({Function}, solve, <<<>>>) @
 @fname{solve} (@var{expr}, @var{x}) @
 @fname{solve} (@var{expr}) @
 @fname{solve} ([@var{eqn_1}, @dots{}, @var{eqn_n}], [@var{x_1}, @dots{}, @var{x_n}])
@@ -1503,10 +1520,11 @@ solve: dependent equations eliminated: (2)
 
 See @mref{algsys} and @mref{%rnum_list} for more information.
 
-@opencatbox
-@category{Algebraic equations}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Algebraic equations}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Algebraic equations)
