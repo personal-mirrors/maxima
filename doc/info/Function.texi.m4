@@ -269,8 +269,10 @@ for values that are already cached:
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition)
 @anchor{buildq}
-@deffn {Function} buildq (@var{L}, @var{expr})
+@c @deffn {Function} buildq (@var{L}, @var{expr})
+m4_deffn({Function}, buildq, <<<(@var{L}, @var{expr})>>>)
 
 Substitutes variables named by the list @var{L} into the expression @var{expr},
 in parallel, without evaluating @var{expr}.  The resulting expression is
@@ -437,14 +439,17 @@ create another function for which some of the arguments are fixed.
 @end group
 @end example
 
-@opencatbox
-@category{Function definition}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application)
 @anchor{macroexpand}
-@deffn {Function} macroexpand (@var{expr})
+@c @deffn {Function} macroexpand (@var{expr})
+m4_deffn({Function}, macroexpand, <<<(@var{expr})>>>)
 
 Returns the macro expansion of @var{expr} without evaluating it,
 when @code{expr} is a macro function call.
@@ -497,14 +502,16 @@ Examples
 @end group
 @end example
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{macroexpand1}
-@deffn {Function} macroexpand1 (@var{expr})
+@c @deffn {Function} macroexpand1 (@var{expr})
+m4_deffn({Function}, macroexpand1, <<<(@var{expr})>>>)
 
 Returns the macro expansion of @var{expr} without evaluating it,
 when @code{expr} is a macro function call.
@@ -555,10 +562,11 @@ Examples
 @end group
 @end example
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{macros}
@@ -579,8 +587,10 @@ See also @mrefdot{infolists}
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition)
 @anchor{splice}
-@deffn {Function} splice (@var{a})
+@c @deffn {Function} splice (@var{a})
+m4_deffn({Function}, splice, <<<(@var{a})>>>)
 
 Splices (interpolates) the list named by the atom @var{a} into an expression,
 but only if @code{splice} appears within @code{buildq};
@@ -629,10 +639,11 @@ Examples
 @end group
 @end example
 
-@opencatbox
-@category{Function definition}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c end concepts Function Definition
 
@@ -642,8 +653,10 @@ Examples
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application)
 @anchor{apply}
-@deffn {Function} apply (@var{F}, [@var{x_1}, @dots{}, @var{x_n}])
+@c @deffn {Function} apply (@var{F}, [@var{x_1}, @dots{}, @var{x_n}])
+m4_deffn({Function}, apply, <<<(@var{F}, [@var{x_1}, @dots{}, @var{x_n}])>>>)
 
 Constructs and evaluates an expression @code{@var{F}(@var{arg_1}, ...,
 @var{arg_n})}.
@@ -769,14 +782,17 @@ How to convert a nested list into a matrix:
 @end example
 
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions, Programming)
 @anchor{block}
-@deffn  {Function} block @
+@c @deffn  {Function} block @
+m4_deffn( {Function}, block, <<<>>>) @
 @fname{block} ([@var{v_1}, @dots{}, @var{v_m}], @var{expr_1}, @dots{}, @var{expr_n}) @
 @fname{block} (@var{expr_1}, @dots{}, @var{expr_n})
 
@@ -840,33 +856,39 @@ See also @mref{return} and @mrefdot{go}
 
 @c Needs some examples.
 
-@opencatbox
-@category{Expressions}
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c REPHRASE, NEEDS EXAMPLE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging)
 @anchor{break}
-@deffn {Function} break (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} break (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn({Function}, break, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Evaluates and prints @var{expr_1}, @dots{}, @var{expr_n} and then
 causes a Maxima break at which point the user can examine and change
 his environment.  Upon typing @code{exit;} the computation resumes.
 
-@opencatbox
-@category{Debugging}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Debugging}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c FOR SOME REASON throw IS IN SOME OTHER FILE. MOVE throw INTO THIS FILE.
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming)
 @anchor{catch}
-@deffn {Function} catch (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} catch (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn({Function}, catch, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Evaluates @var{expr_1}, @dots{}, @var{expr_n} one by one; if any
 leads to the evaluation of an expression of the
@@ -899,14 +921,17 @@ The function @code{g} returns a list of @code{f} of each element of @code{l} if
 @code{l} consists only of non-negative numbers; otherwise, @code{g} "catches"
 the first negative element of @code{l} and "throws" it up.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{compfile}
-@deffn  {Function} compfile @
+@c @deffn  {Function} compfile @
+m4_deffn( {Function}, compfile, <<<>>>) @
 @fname{compfile} (@var{filename}, @var{f_1}, @dots{}, @var{f_n}) @
 @fname{compfile} (@var{filename}, functions) @
 @fname{compfile} (@var{filename}, all)
@@ -926,10 +951,11 @@ translates Maxima into Lisp, and then executes the Lisp compiler.
 
 See also @mrefcomma{translate} @mrefcomma{translate_file} and @mrefdot{compile_file}
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THIS VARIABLE IS OBSOLETE: ASSIGNING compgrind: true CAUSES compfile
 @c TO EVENTUALLY CALL AN OBSOLETE FUNCTION SPRIN1.
@@ -944,7 +970,8 @@ See also @mrefcomma{translate} @mrefcomma{translate_file} and @mrefdot{compile_f
 
 @c -----------------------------------------------------------------------------
 @anchor{compile}
-@deffn  {Function} compile @
+@c @deffn  {Function} compile @
+m4_deffn( {Function}, compile, <<<>>>) @
 @fname{compile} (@var{f_1}, @dots{}, @var{f_n}) @
 @fname{compile} (functions) @
 @fname{compile} (all)
@@ -976,14 +1003,17 @@ to limit the code's functionality are the following:
       tells the compiler that the text is meant as an option.
 @end itemize
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition)
 @anchor{define}
-@deffn  {Function} define @
+@c @deffn  {Function} define @
+m4_deffn( {Function}, define, <<<>>>) @
 @fname{define} (@var{f}(@var{x_1}, @dots{}, @var{x_n}), @var{expr}) @
 @fname{define} (@var{f}[@var{x_1}, @dots{}, @var{x_n}], @var{expr}) @
 @fname{define} (@var{f}[@var{x_1}, @dots{}, @var{x_n}](@var{y_1}, @dots{}, @var{y_m}), @var{expr}) @
@@ -1134,17 +1164,20 @@ When the first argument is an expression with operator @code{funmake},
 @end group
 @end example
 
-@opencatbox
-@category{Function definition}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c SEE NOTE BELOW ABOUT THE DOCUMENTATION STRING
 @c @deffn {Function} define_variable (@var{name}, @var{default_value}, @var{mode}, @var{documentation})
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{define_variable}
-@deffn {Function} define_variable (@var{name}, @var{default_value}, @var{mode})
+@c @deffn {Function} define_variable (@var{name}, @var{default_value}, @var{mode})
+m4_deffn({Function}, define_variable, <<<(@var{name}, @var{default_value}, @var{mode})>>>)
 
 Introduces a global variable into the Maxima environment.
 @code{define_variable} is useful in user-written packages, which are often
@@ -1317,14 +1350,17 @@ Cannot assign to `baz_quux'.
 @end group
 @end example
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition, Display functions)
 @anchor{dispfun}
-@deffn  {Function} dispfun @
+@c @deffn  {Function} dispfun @
+m4_deffn( {Function}, dispfun, <<<>>>) @
 @fname{dispfun} (@var{f_1}, @dots{}, @var{f_n}) @
 @fname{dispfun} (all)
 
@@ -1435,15 +1471,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Function definition}
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application, Expressions)
 @anchor{fullmap}
-@deffn {Function} fullmap (@var{f}, @var{expr_1}, @dots{})
+@c @deffn {Function} fullmap (@var{f}, @var{expr_1}, @dots{})
+m4_deffn({Function}, fullmap, <<<(@var{f}, @var{expr_1}, @dots{})>>>)
 
 Similar to @code{map}, but @code{fullmap} keeps mapping down all subexpressions
 until the main operators are no longer the same.
@@ -1474,15 +1513,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Function application}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application, Expressions)
 @anchor{fullmapl}
-@deffn {Function} fullmapl (@var{f}, @var{list_1}, @dots{})
+@c @deffn {Function} fullmapl (@var{f}, @var{list_1}, @dots{})
+m4_deffn({Function}, fullmapl, <<<(@var{f}, @var{list_1}, @dots{})>>>)
 
 Similar to @code{fullmap}, but @code{fullmapl} only maps onto lists and
 matrices.
@@ -1499,11 +1541,12 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Function application}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{functions}
@@ -1590,8 +1633,10 @@ Examples:
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition)
 @anchor{fundef}
-@deffn {Function} fundef (@var{f})
+@c @deffn {Function} fundef (@var{f})
+m4_deffn({Function}, fundef, <<<(@var{f})>>>)
 
 Returns the definition of the function @var{f}.
 
@@ -1616,14 +1661,17 @@ In contrast, @code{dispfun (@var{f})} creates an intermediate expression label
 and assigns the definition to the label.
 
 @c PROBABLY NEED SOME EXAMPLES HERE
-@opencatbox
-@category{Function definition}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application, Expressions)
 @anchor{funmake}
-@deffn {Function} funmake (@var{F}, [@var{arg_1}, @dots{}, @var{arg_n}])
+@c @deffn {Function} funmake (@var{F}, [@var{arg_1}, @dots{}, @var{arg_n}])
+m4_deffn({Function}, funmake, <<<(@var{F}, [@var{arg_1}, @dots{}, @var{arg_n}])>>>)
 
 Returns an expression @code{@var{F}(@var{arg_1}, ..., @var{arg_n})}.
 The return value is simplified, but not evaluated,
@@ -1791,15 +1839,18 @@ Maxima simplifies @code{funmake}'s return value.
 @end group
 @end example
 
-@opencatbox
-@category{Function application}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition)
 @anchor{lambda}
-@deffn  {Function} lambda @
+@c @deffn  {Function} lambda @
+m4_deffn( {Function}, lambda, <<<>>>) @
 @fname{lambda} ([@var{x_1}, @dots{}, @var{x_m}], @var{expr_1}, @dots{}, @var{expr_n}) @
 @fname{lambda} ([[@var{L}]], @var{expr_1}, @dots{}, @var{expr_n}) @
 @fname{lambda} ([@var{x_1}, @dots{}, @var{x_m}, [@var{L}]], @var{expr_1}, @dots{}, @var{expr_n})
@@ -2031,16 +2082,19 @@ The arguments appear within the function body as a list.
 @end group
 @end example
 
-@opencatbox
-@category{Function definition}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition, Programming)
 @anchor{local}
-@deffn {Function} local (@var{v_1}, @dots{}, @var{v_n})
+@c @deffn {Function} local (@var{v_1}, @dots{}, @var{v_n})
+m4_deffn({Function}, local, <<<(@var{v_1}, @dots{}, @var{v_n})>>>)
 
 Saves the properties associated with the symbols @var{v_1}, @dots{}, @var{v_n},
 removes any properties before evaluating other expressions,
@@ -2090,11 +2144,12 @@ A local function definition.
 @end group
 @end example
 
-@opencatbox
-@category{Function definition}
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{macroexpansion}
@@ -2324,9 +2379,11 @@ x + 99 is equal to x
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{mode_declare}
 @anchor{modedeclare}
-@deffn {Function} mode_declare (@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n})
+@c @deffn {Function} mode_declare (@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n})
+m4_deffn({Function}, mode_declare, <<<(@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n})>>>)
 
 A @code{mode_declare} informs the compiler which type (lisp programmers name the type:
 ``mode'') a function parameter or its return value will be of. This can greatly
@@ -2430,10 +2487,11 @@ Example:
 @end example
 
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS MORE EXAMPLES?
 
@@ -2528,8 +2586,10 @@ described.
 @c NEEDS AN EXAMPLE FOR DECLARING THE RETURN TYPE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{mode_identity}
-@deffn {Function} mode_identity (@var{arg_1}, @var{arg_2})
+@c @deffn {Function} mode_identity (@var{arg_1}, @var{arg_2})
+m4_deffn({Function}, mode_identity, <<<(@var{arg_1}, @var{arg_2})>>>)
 
 @code{mode_identity} works similar to @mref{mode_declare}, but is used for
 informing the compiler that a thing like a @code{macro} or a list operation
@@ -2563,14 +2623,17 @@ compile(firstnumb)
 @end example
 @code{firstnumb} now can be used every time you need the first element
 of a list that is guaranteed to be filled with numbers.
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition)
 @anchor{remfunction}
-@deffn  {Function} remfunction @
+@c @deffn  {Function} remfunction @
+m4_deffn( {Function}, remfunction, <<<>>>) @
 @fname{remfunction} (@var{f_1}, @dots{}, @var{f_n}) @
 @fname{remfunction} (all)
 
@@ -2589,10 +2652,11 @@ which there is no function definition.
 @code{remfunction} does not apply to @mref{memoizing functions} or subscripted functions.
 @mref{remarray} applies to those types of functions.
 
-@opencatbox
-@category{Function definition}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS MORE WORK !!!
 
@@ -2634,8 +2698,10 @@ suitable for compilation.
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{translate}
-@deffn  {Function} translate @
+@c @deffn  {Function} translate @
+m4_deffn( {Function}, translate, <<<>>>) @
 @fname{translate} (@var{f_1}, @dots{}, @var{f_n}) @
 @fname{translate} (functions) @
 @fname{translate} (all)
@@ -2694,14 +2760,16 @@ translated version.
 The result returned by @code{translate} is a list of the names of the
 functions translated.
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{translate_file}
-@deffn  {Function} translate_file @
+@c @deffn  {Function} translate_file @
+m4_deffn( {Function}, translate_file, <<<>>>) @
 @fname{translate_file} (@var{maxima_filename}) @
 @fname{translate_file} (@var{maxima_filename}, @var{lisp_filename})
 
@@ -2771,10 +2839,11 @@ See also
 and @mrefdot{tr_warn_undefined_variable}
 @end flushleft
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{transrun}
@@ -2966,16 +3035,19 @@ track down bugs.
 @c DO WE REALLY NEED THIS SLIGHTLY WORKING FUNCTION ??
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{tr_warnings_get}
-@deffn {Function} tr_warnings_get ()
+@c @deffn {Function} tr_warnings_get ()
+m4_deffn({Function}, tr_warnings_get, <<<()>>>)
 
 Prints a list of warnings which have been given by
 the translator during the current translation.
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @defvr {Option variable} tr_warn_bad_function_calls
@@ -3057,8 +3129,10 @@ undefined global variables are seen.
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation)
 @anchor{compile_file}
-@deffn  {Function} compile_file @
+@c @deffn  {Function} compile_file @
+m4_deffn( {Function}, compile_file, <<<>>>) @
 @fname{compile_file} (@var{filename}) @
 @fname{compile_file} (@var{filename}, @var{compiled_filename}) @
 @fname{compile_file} (@var{filename}, @var{compiled_filename}, @var{lisp_filename})
@@ -3096,16 +3170,18 @@ flags (@code{tr_numer}, etc.) have no effect on the translation.
 
 @code{compile_file} evaluates its arguments.
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
 @anchor{declare_translated}
-@deffn {Function} declare_translated (@var{f_1}, @var{f_2}, @dots{})
+@c @deffn {Function} declare_translated (@var{f_1}, @var{f_2}, @dots{})
+m4_deffn({Function}, declare_translated, <<<(@var{f_1}, @var{f_2}, @dots{})>>>)
 
 When translating a file of Maxima code
 to Lisp, it is important for the translator to know which functions it
@@ -3116,8 +3192,9 @@ does which does not yet have a Lisp function value, will have one at
 call time.  @code{(MFUNCTION-CALL fn arg1 arg2 ...)} is generated when
 the translator does not know @code{fn} is going to be a Lisp function.
 
-@opencatbox
-@category{Translation and compilation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
