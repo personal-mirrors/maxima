@@ -401,9 +401,10 @@ quote @code{'}.
 @c VERY IMPORTANT !!
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation)
 @anchor{ev}
-@deffn {Function} ev (@var{expr}, @var{arg_1}, @dots{}, @var{arg_n})
-
+@c @deffn {Function} ev (@var{expr}, @var{arg_1}, @dots{}, @var{arg_n})
+m4_deffn({Function}, ev, <<<(@var{expr}, @var{arg_1}, @dots{}, @var{arg_n})>>>)
 Evaluates the expression @var{expr} in the environment specified by the
 arguments @var{arg_1}, @dots{}, @var{arg_n}.  The arguments are switches
 (Boolean flags), assignments, equations, and functions.  @code{ev} returns the
@@ -591,15 +592,17 @@ Solution
 (%o11)                               true
 @end example
 
-@opencatbox
-@category{Evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation flags)
 @anchor{eval}
-@defvr {Special symbol} eval
-
+@c @defvr {Special symbol} eval
+m4_defvr({Special symbol}, eval)
 As an argument in a call to @code{ev (@var{expr})}, @code{eval} causes an extra
 evaluation of @var{expr}.  See @mrefdot{ev}
 
@@ -631,8 +634,10 @@ Example:
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation flags, Simplification flags and variables)
 @anchor{evflag}
-@defvr {Property} evflag
+@c @defvr {Property} evflag
+m4_defvr({Property}, evflag)
 
 When a symbol @var{x} has the @code{evflag} property, the expressions
 @code{ev(@var{expr}, @var{x})} and @code{@var{expr}, @var{x}} (at the
@@ -715,15 +720,18 @@ Examples:
 (%o12)                         YES
 @end example
 
-@opencatbox
-@category{Evaluation flags}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Evaluation flags}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation flags)
 @anchor{evfun}
-@defvr {Property} evfun
+@c @defvr {Property} evfun
+m4_defvr({Property}, evfun)
 
 When a function @var{F} has the @code{evfun} property, the expressions
 @code{ev(@var{expr}, @var{F})} and @code{@var{expr}, @var{F}} (at the
@@ -817,16 +825,19 @@ Examples:
 (%o15)                      G(F(cc))
 @end example
 
-@opencatbox
-@category{Evaluation flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Evaluation flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation flags)
 @anchor{infeval}
-@defvr {Option variable} infeval
+@c @defvr {Option variable} infeval
+m4_defvr({Option variable}, infeval)
 
 Enables "infinite evaluation" mode.  @mref{ev} repeatedly evaluates an
 expression until it stops changing.  To prevent a variable, say @code{X}, from
@@ -834,47 +845,55 @@ being evaluated away in this mode, simply include @code{X='X} as an argument to
 @code{ev}.  Of course expressions such as @code{ev (X, X=X+1, infeval)} will
 generate an infinite loop.
 
-@opencatbox
-@category{Evaluation flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Evaluation flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 @c NEED TO MENTION THIS IS AN evflag
 
 @c -----------------------------------------------------------------------------
 @anchor{noeval}
-@defvr {Special symbol} noeval
+@c @defvr {Special symbol} noeval
+m4_defvr({Special symbol}, noeval)
 
 @code{noeval} suppresses the evaluation phase of @mrefdot{ev}  This is useful in
 conjunction with other switches and in causing expressions      
 to be resimplified without being reevaluated.
 
-@opencatbox
-@category{Evaluation flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Evaluation flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation flags, Nouns and verbs)
 @anchor{nouns}
-@defvr {Special symbol} nouns
+@c @defvr {Special symbol} nouns
+m4_defvr({Special symbol}, nouns)
 
 @code{nouns} is an @mrefdot{evflag}  When used as an option to the @mref{ev}@w{}
 command, @code{nouns} converts all "noun" forms occurring in the expression
 being @code{ev}'d to "verbs", i.e., evaluates them.  See also
 @mrefcomma{noun} @mrefcomma{nounify} @code{verb}, and @mrefdot{verbify}
 
-@opencatbox
-@category{Evaluation flags}
-@category{Nouns and verbs}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Evaluation flags}
+@c @category{Nouns and verbs}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation flags)
 @anchor{pred}
-@defvr {Special symbol} pred
+@c @defvr {Special symbol} pred
+m4_defvr({Special symbol}, pred)
 
 As an argument in a call to @code{ev (@var{expr})}, @code{pred} causes 
 predicates (expressions which evaluate to @code{true} or @code{false}) to be 
@@ -893,8 +912,8 @@ Example:
 (%o2)                                true
 @end example
 
-@opencatbox
-@category{Evaluation flags}
-@closecatbox
-@end defvr
-
+@c @opencatbox
+@c @category{Evaluation flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
