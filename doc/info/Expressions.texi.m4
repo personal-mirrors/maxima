@@ -304,26 +304,31 @@ etc.  Any even number of arguments may be used.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Global variables)
 @anchor{aliases}
-@defvr {System variable} aliases
+@c @defvr {System variable} aliases
+m4_defvr({System variable}, aliases)
 Default value: @code{[]}
 
 @code{aliases} is the list of atoms which have a user defined alias (set up by
 the @mrefcomma{alias} @mrefcomma{ordergreat} @mref{orderless} functions or by
 declaring the atom a @mref{noun} with @mrefdot{declare})
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS TO BE REWORKED.  NOT CONVINCED THIS SYMBOL NEEDS ITS OWN ITEM
 @c (SHOULD BE DESCRIBED IN CONTEXT OF EACH FUNCTION WHICH RECOGNIZES IT)
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{allbut}
-@defvr {Keyword} allbut
+@c @defvr {Keyword} allbut
+m4_defvr({Keyword}, allbut)
 
 works with the @code{part} commands (i.e.  @mrefcomma{part}@w{}
 @mrefcomma{inpart} @mrefcomma{substpart} @mrefcomma{substinpart}@w{}
@@ -387,7 +392,8 @@ while
 @code{kill(allbut(@var{a_1}, @var{a_2}, ...))} has the effect of
 @code{kill(all)} except that it does not kill the symbols @var{a_1}, @var{a_2},
 @dots{}
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Expressions)
@@ -564,8 +570,10 @@ Examples:
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{boxchar}
-@defvr {Option variable} boxchar
+@c @defvr {Option variable} boxchar
+m4_defvr({Option variable}, boxchar)
 Default value: @code{"}
 
 @code{boxchar} is the character used to draw the box in the @mref{box}@w{}
@@ -574,10 +582,11 @@ and in the @mref{dpart} and @mref{lpart} functions.
 All boxes in an expression are drawn with the current value of @code{boxchar};
 the drawing character is not stored with the box expression.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION !!!
 
@@ -826,7 +835,8 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{exptisolate}
-@defvr {Option variable} exptisolate
+@c @defvr {Option variable} exptisolate
+m4_defvr({Option variable}, exptisolate)
 Default value: @code{false}
 
 @c WHAT DOES THIS MEAN EXACTLY ??
@@ -834,14 +844,17 @@ Default value: @code{false}
 examine exponents of atoms (such as @code{%e}) which contain @code{var}.
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions, Expressions)
 @anchor{exptsubst}
-@defvr {Option variable} exptsubst
+@c @defvr {Option variable} exptsubst
+m4_defvr({Option variable}, exptsubst)
 Default value: @code{false}
 
 @code{exptsubst}, when @code{true}, permits substitutions such as @code{y}
@@ -880,11 +893,12 @@ for @code{%e^x} in @code{%e^(a x)}.
 @end group
 @end example
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{freeof}
@@ -1022,8 +1036,10 @@ An indefinite integral is not free of its variable of integration.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{inflag}
-@defvr {Option variable} inflag
+@c @defvr {Option variable} inflag
+m4_defvr({Option variable}, inflag)
 Default value: @code{false}
 
 When @code{inflag} is @code{true}, functions for part extraction inspect the
@@ -1043,10 +1059,11 @@ Functions affected by the setting of @code{inflag} are: @mrefcomma{part}@w{}
 @mrefdot{pickapart}
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
@@ -1129,7 +1146,8 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{isolate_wrt_times}
-@defvr {Option variable} isolate_wrt_times
+@c @defvr {Option variable} isolate_wrt_times
+m4_defvr({Option variable}, isolate_wrt_times)
 Default value: @code{false}
 
 When @code{isolate_wrt_times} is @code{true}, @code{isolate} will also isolate
@@ -1155,16 +1173,18 @@ with respect to products.  E.g. compare both settings of the switch on
 (%o5)               c  + 2 b c + 2 a c + %t4
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{listconstvars}
-@defvr {Option variable} listconstvars
+@c @defvr {Option variable} listconstvars
+m4_defvr({Option variable}, listconstvars)
 Default value: @code{false}
 
 When @code{listconstvars} is @code{true} the list returned by
@@ -1175,14 +1195,16 @@ type via @mref{declare}, and @mref{constantp} returns @code{true}
 for all variables declared as @code{constant}. The default is to
 omit constant variables from @code{listofvars} return value.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{listdummyvars}
-@defvr {Option variable} listdummyvars
+@c @defvr {Option variable} listdummyvars
+m4_defvr({Option variable}, listdummyvars)
 Default value: @code{true}
 
 When @code{listdummyvars} is @code{false}, "dummy variables" in the expression
@@ -1208,10 +1230,11 @@ Example:
 (%o4)                          [n]
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
@@ -1302,8 +1325,10 @@ m4_end_deffn()
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Expressions)
 @anchor{mainvar}
-@defvr {Property} mainvar
+@c @defvr {Property} mainvar
+m4_defvr({Property}, mainvar)
 
 You may declare variables to be @code{mainvar}.  The ordering scale for atoms is
 essentially: numbers < constants (e.g., @code{%e}, @code{%pi}) < scalars < other
@@ -1315,17 +1340,20 @@ which @code{x} is a @code{mainvar} from one in which @code{x} isn't a
 necessary if cancellation is to occur.  Also, if you save an expression in which
 @code{x} is a @code{mainvar}, you probably should also save @code{x}.)
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Nouns and verbs)
 @anchor{noun}
-@defvr {Property} noun
+@c @defvr {Property} noun
+m4_defvr({Property}, noun)
 
 @code{noun} is one of the options of the @mref{declare} command.  It makes a
 function so declared a "noun", meaning that it won't be evaluated
@@ -1360,27 +1388,31 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Nouns and verbs}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Nouns and verbs}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables, Nouns and verbs)
 @anchor{noundisp}
-@defvr {Option variable} noundisp
+@c @defvr {Option variable} noundisp
+m4_defvr({Option variable}, noundisp)
 Default value: @code{false}
 
 When @code{noundisp} is @code{true}, nouns display with
 a single quote.  This switch is always @code{true} when displaying function
 definitions.
 
-@opencatbox
-@category{Display flags and variables}
-@category{Nouns and verbs}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @category{Nouns and verbs}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
@@ -1552,8 +1584,10 @@ m4_end_deffn()
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{option_opsubst}
-@defvr {Option variable} opsubst
+@c @defvr {Option variable} opsubst
+m4_defvr({Option variable}, opsubst)
 Default value: @code{true}
 
 When @code{opsubst} is @code{false}, @mref{subst} does not attempt to
@@ -1595,10 +1629,11 @@ substitute into the operator of an expression.  E.g.,
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
@@ -1622,16 +1657,18 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{optimprefix}
-@defvr {Option variable} optimprefix
+@c @defvr {Option variable} optimprefix
+m4_defvr({Option variable}, optimprefix)
 Default value: @code{%}
 
 @code{optimprefix} is the prefix used for generated symbols by
 the @mref{optimize} command.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Expressions)
@@ -1912,17 +1949,19 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{partswitch}
-@defvr {Option variable} partswitch
+@c @defvr {Option variable} partswitch
+m4_defvr({Option variable}, partswitch)
 Default value: @code{false}
 
 When @code{partswitch} is @code{true}, @code{end} is returned
 when a selected part of an expression doesn't exist, otherwise an
 error message is given.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{pickapart}
@@ -2028,7 +2067,8 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{piece}
-@defvr {System variable} piece
+@c @defvr {System variable} piece
+m4_defvr({System variable}, piece)
 
 Holds the last expression selected when using the @mref{part} functions.
 @c WHAT DOES THIS MEAN EXACTLY ??
@@ -2037,10 +2077,11 @@ the function itself.
 
 @c NEED "SEE ALSO" TO POINT TO LIST OF ALL RELEVANT FUNCTIONS
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{psubst}
@@ -2304,21 +2345,24 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{sublis_apply_lambda}
-@defvr {Option variable} sublis_apply_lambda
+@c @defvr {Option variable} sublis_apply_lambda
+m4_defvr({Option variable}, sublis_apply_lambda)
 Default value: @code{true}
 
 Controls whether @code{lambda}'s substituted are applied in simplification after
 @code{sublis} is used or whether you have to do an @mref{ev} to get things to
 apply.  @code{true} means do the application.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{subnumsimp}
-@defvr {Option variable} subnumsimp
+@c @defvr {Option variable} subnumsimp
+m4_defvr({Option variable}, subnumsimp)
 Default value: @code{false}
 
 If @code{true} then the functions @mref{subst} and @mref{psubst} can substitute
@@ -2342,10 +2386,11 @@ subst: cannot substitute 100 for operator g in expression g
 (%o2)                          102
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, MORE EXAMPLES
 
