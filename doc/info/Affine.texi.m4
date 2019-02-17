@@ -73,13 +73,10 @@ m4_end_deffn()
 
 @c NEEDS CLARIFICATION IN A SERIOUS WAY
 @anchor{set_up_dot_simplifications}
-@c @deffn {Function} set_up_dot_simplifications @
-@c @fname{set_up_dot_simplifications} (@var{eqns}, @var{check_through_degree}) @
-@c @fname{set_up_dot_simplifications} (@var{eqns})
-@c @deffn {Function} set_up_dot_simplifications (@var{eqns}, @var{check_through_degree})
-@c @deffnx {Function} set_up_dot_simplifications (@var{eqns})
-m4_deffn({Function}, set_up_dot_simplifications, <<<(@var{eqns}, @var{check_through_degree})>>>)
-m4_deffnx({Function}, set_up_dot_simplifications <<<(@var{eqns})>>>)
+@deffn {Function} set_up_dot_simplifications @
+@fname{set_up_dot_simplifications} (@var{eqns}, @var{check_through_degree}) @
+@fname{set_up_dot_simplifications} (@var{eqns})
+
 The @var{eqns} are polynomial equations in non commutative variables.
 The value of @code{current_variables} is the
 list of variables used for computing degrees.  The equations must be
