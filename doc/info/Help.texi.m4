@@ -49,8 +49,10 @@ and additional output.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Help)
 @anchor{apropos}
-@deffn {Function} apropos (@var{string})
+@c @deffn {Function} apropos (@var{string})
+m4_deffn({Function}, apropos, <<<(@var{string})>>>)
 
 Searches for Maxima names which have @var{string} appearing anywhere within
 them.  Thus, @code{apropos (exp)} returns a list of all the flags and functions
@@ -82,14 +84,17 @@ gamma_incomplete_generalized_regularized]
 @end group
 @end example
 
-@opencatbox
-@category{Help}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Help}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Help, Console interaction, File input)
 @anchor{demo}
-@deffn {Function} demo (@var{filename})
+@c @deffn {Function} demo (@var{filename})
+m4_deffn({Function}, demo, <<<(@var{filename})>>>)
 
 Evaluates Maxima expressions in @var{filename} and displays the results.
 @code{demo} pauses after evaluating each expression and continues after the
@@ -127,17 +132,20 @@ _
 _
 @end example
 
-@opencatbox
-@category{Help}
-@category{Console interaction}
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Help}
+@c @category{Console interaction}
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Help, Console interaction)
 @anchor{describe}
 @fnindex Help
-@deffn  {Function} describe @
+@c @deffn  {Function} describe @
+m4_deffn( {Function}, describe, <<<>>>) @
 @fname{describe} (@var{string}) @
 @fname{describe} (@var{string}, exact) @
 @fname{describe} (@var{string}, inexact)
@@ -205,15 +213,18 @@ by @code{[...]}).  All or none of the items could have been selected by entering
 @code{all} or @code{none}, which can be abbreviated @code{a} or @code{n},
 respectively.
 
-@opencatbox
-@category{Help}
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Help}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Help, Console interaction)
 @anchor{example}
-@deffn  {Function} example @
+@c @deffn  {Function} example @
+m4_deffn( {Function}, example, <<<>>>) @
 @fname{example} (@var{topic}) @
 @fname{example} ()
 
@@ -256,23 +267,27 @@ Examples:
 (%o6)                         done
 @end example
 
-@opencatbox
-@category{Help}
-@category{Console interaction}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Help}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Help, Global variables)
 @anchor{manual_demo}
-@defvr {Option variable} manual_demo
+@c @defvr {Option variable} manual_demo
+m4_defvr({Option variable}, manual_demo)
 Default value: @code{"manual.demo"}
 
 @code{manual_demo} specifies the name of the file containing the examples for 
 the function @code{example}.  See @mrefdot{example}
 
-@opencatbox
-@category{Help}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Help}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
