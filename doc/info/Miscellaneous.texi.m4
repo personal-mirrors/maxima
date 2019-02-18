@@ -42,8 +42,10 @@ system browser.
 @c What should we do about askexp ???
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences)
 @anchor{askexp}
-@defvr {System variable} askexp
+@c @defvr {System variable} askexp
+m4_defvr({System variable}, askexp)
 
 When @code{asksign} is called,
 @code{askexp} is the expression @code{asksign} is testing.
@@ -51,40 +53,48 @@ When @code{asksign} is called,
 At one time, it was possible for a user to inspect @code{askexp}
 by entering a Maxima break with control-A.
 
-@opencatbox
-@category{Declarations and inferences}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{genindex}
-@defvr {Option variable} genindex
+@c @defvr {Option variable} genindex
+m4_defvr({Option variable}, genindex)
 Default value: @code{i}
 
 @code{genindex} is the alphabetic prefix used to generate the
 next variable of summation when necessary.
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{gensumnum}
-@defvr {Option variable} gensumnum
+@c @defvr {Option variable} gensumnum
+m4_defvr({Option variable}, gensumnum)
 Default value: 0
 
 @code{gensumnum} is the numeric suffix used to generate the next variable
 of summation.  If it is set to @code{false} then the index will consist only
 of @code{genindex} with no numeric suffix.
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{gensym}
-@deffn  {Function} gensym @
+@c @deffn  {Function} gensym @
+m4_deffn( {Function}, gensym, <<<>>>) @
 @fname{gensym} () @
 @fname{gensym} (@var{x})
 
@@ -119,13 +129,16 @@ Examples:
 (%i3) gensym(123);
 (%o3)                         g123
 @end example
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c STILL EXISTS, NEEDS CLARIFICATION !!!
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation flags and variables)
 @anchor{packagefile}
-@defvr {Option variable} packagefile
+@c @defvr {Option variable} packagefile
+m4_defvr({Option variable}, packagefile)
 Default value: @code{false}
 
 Package designers who use @mref{save} or @mref{translate} to create packages
@@ -138,17 +151,20 @@ possible name conflicts.  Also note that the flag simply affects what is output
 to the package file.  Setting the flag to @code{true} is also useful for
 creating Maxima init files.
 
-@opencatbox
-@category{Translation flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Translation flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation)
 @anchor{remvalue}
-@deffn  {Function} remvalue @
+@c @deffn  {Function} remvalue @
+m4_deffn( {Function}, remvalue, <<<>>>) @
 @fname{remvalue} (@var{name_1}, @dots{}, @var{name_n}) @
 @fname{remvalue} remvalue (all)
 
@@ -161,16 +177,19 @@ the list of all variables given names by the user
 
 See also @mrefdot{values}
 
-@opencatbox
-@category{Evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{rncombine}
-@deffn {Function} rncombine (@var{expr})
+@c @deffn {Function} rncombine (@var{expr})
+m4_deffn({Function}, rncombine, <<<(@var{expr})>>>)
 
 Transforms @var{expr} by combining all terms of @var{expr} that have
 identical denominators or denominators that differ from each other by
@@ -185,14 +204,17 @@ cancellations.
 
 @code{load(rncomb)} loads this function.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition, File input)
 @anchor{setup_autoload}
-@deffn {Function} setup_autoload (@var{filename}, @var{function_1}, @dots{}, @var{function_n})
+@c @deffn {Function} setup_autoload (@var{filename}, @var{function_1}, @dots{}, @var{function_n})
+m4_deffn({Function}, setup,_autoload <<<(@var{filename}, @var{function_1}, @dots{}, @var{function_n})>>>)
 
 Specifies that if any of @var{function_1}, @dots{}, @var{function_n} are
 referenced and not yet defined, @var{filename} is loaded via @code{load}.
@@ -233,11 +255,12 @@ Warning - you are redefining the Macsyma function legendre_p
                              2
 @end example
 
-@opencatbox
-@category{Function definition}
-@category{File input}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @category{File input}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c RECOMMEND CUTTING THIS ITEM AND CUTTING $tcl_output IN src/plot.lisp
 @c THIS REALLY, REALLY SEEMS LIKE CRUFT:
@@ -246,8 +269,10 @@ Warning - you are redefining the Macsyma function legendre_p
 @c AND IT'S BROKEN: INCORRECT OUTPUT FOR CLISP, DIES ON GCL
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{tcl_output}
-@deffn  {Function} tcl_output @
+@c @deffn  {Function} tcl_output @
+m4_deffn( {Function}, tcl_output, <<<>>>) @
 @fname{tcl_output} (@var{list}, @var{i0}, @var{skip}) @
 @fname{tcl_output} (@var{list}, @var{i0}) @
 @fname{tcl_output} ([@var{list_1}, @dots{}, @var{list_n}], @var{i})
@@ -299,5 +324,6 @@ Examples:
  @{SIMP 1.000000000     11.00000000     
  @}
 @end example
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
