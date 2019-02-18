@@ -278,8 +278,10 @@ specify the name of the metric, and perform some simple calculations.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display functions)
 @anchor{dispcon}
-@deffn {Function} dispcon @
+@c @deffn {Function} dispcon @
+m4_deffn({Function}, dispcon, <<<>>>) @
 @fname{dispcon} (@var{tensor_1}, @var{tensor_2}, @dots{}) @
 @fname{dispcon} (all)
 
@@ -287,28 +289,33 @@ Displays the contraction properties of its arguments as were given to
 @code{defcon}.  @code{dispcon (all)} displays all the contraction properties
 which were defined.
 
-@opencatbox
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package itensor)
 @anchor{entertensor}
-@deffn {Function} entertensor (@var{name})
+@c @deffn {Function} entertensor (@var{name})
+m4_deffn({Function}, entertensor, <<<(@var{name})>>>)
 
 is a function which, by prompting, allows one to create an indexed
 object called @var{name} with any number of tensorial and derivative
 indices. Either a single index or a list of indices (which may be
 null) is acceptable input (see the example under @mref{covdiff}).
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{changename}
-@deffn {Function} changename (@var{old}, @var{new}, @var{expr})
+@c @deffn {Function} changename (@var{old}, @var{new}, @var{expr})
+m4_deffn({Function}, changename, <<<(@var{old}, @var{new}, @var{expr})>>>)
 
 will change the name of all indexed objects called @var{old} to @var{new}
 in @var{expr}. @var{old} may be either a symbol or a list of the form
@@ -316,14 +323,15 @@ in @var{expr}. @var{old} may be either a symbol or a list of the form
 @var{name} with @var{m} covariant and @var{n} contravariant indices will be
 renamed to @var{new}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} listoftens
-
+@c @deffn {Function} listoftens
+m4_deffn({Function}, listoftens, <<<>>>))
 @anchor{listoftens}
 
 Lists all tensors in a tensorial expression, complete with their indices. E.g.,
@@ -341,14 +349,16 @@ Lists all tensors in a tensorial expression, complete with their indices. E.g.,
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ishow}
-@deffn {Function} ishow (@var{expr})
+@c @deffn {Function} ishow (@var{expr})
+m4_deffn({Function}, ishow, <<<(@var{expr})>>>)
 
 displays @var{expr} with the indexed objects in it shown having their
 covariant indices as subscripts and contravariant indices as
@@ -356,14 +366,16 @@ superscripts. The derivative indices are displayed as subscripts,
 separated from the covariant indices by a comma (see the examples
 throughout this document).
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{indices}
-@deffn {Function} indices (@var{expr})
+@c @deffn {Function} indices (@var{expr})
+m4_deffn({Function}, indices, <<<(@var{expr})>>>)
 
 Returns a list of two elements.  The first is a list of the free
 indices in @var{expr} (those that occur only once). The second is the
@@ -388,14 +400,16 @@ illegal. @code{indices} attempts to deal with these expressions in a
 reasonable manner; however, when it is called to operate upon such an
 illegal expression, its behavior should be considered undefined.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{rename}
-@deffn {Function} rename @
+@c @deffn {Function} rename @
+m4_deffn({Function}, rename, <<<>>>) @
 @fname{rename} (@var{expr}) @
 @fname{rename} (@var{expr}, @var{count})
 
@@ -458,32 +472,36 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
                           %1 %3      %2 %6      %4 r      %5 %7
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THIS FUNCTION IS IN THE SHARE PACKAGE itensor.lisp
 @c MOVE THIS DESCRIPTION TO Itensor.texi
 
 @c -----------------------------------------------------------------------------
 @anchor{show}
-@deffn {Function} show (@var{expr})
+@c @deffn {Function} show (@var{expr})
+m4_deffn({Function}, show, <<<(@var{expr})>>>)
 
 Displays @code{expr} with the indexed objects in it shown
 having covariant indices as subscripts, contravariant indices as
 superscripts.  The derivative indices are displayed as subscripts,
 separated from the covariant indices by a comma.
 
-@opencatbox
-@category{Package itensor}
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{flipflag}
-@defvr {Option variable} flipflag
+@c @defvr {Option variable} flipflag
+m4_defvr({Option variable}, flipflag)
 Default value: @code{false}
 
 If @code{false} then the indices will be
@@ -497,14 +515,16 @@ index in the list is renamed to @code{%1}, the next to @code{%2}, etc.
 Then sorting occurs after the @code{rename}-ing (see the example
 under @code{rename}).
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{defcon}
-@deffn {Function} defcon @
+@c @deffn {Function} defcon @
+m4_deffn({Function}, defcon, <<<>>>) @
 @fname{defcon} (@var{tensor_1}) @
 @fname{defcon} (@var{tensor_1}, @var{tensor_2}, @var{tensor_3})
 
@@ -524,14 +544,16 @@ used.
 @code{contractions} is a list of those indexed objects which have been given
 contraction properties with @code{defcon}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{remcon}
-@deffn {Function} remcon @
+@c @deffn {Function} remcon @
+m4_deffn({Function}, remcon, <<<>>>) @
 @fname{remcon} (@var{tensor_1}, ..., @var{tensor_n}) @
 @fname{remcon} (all)
 
@@ -539,14 +561,16 @@ Removes all the contraction properties
 from the (@var{tensor_1}, ..., @var{tensor_n}). @code{remcon(all)} removes all contraction
 properties from all indexed objects.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{contract_Itensor}
-@deffn {Function} contract (@var{expr})
+@c @deffn {Function} contract (@var{expr})
+m4_deffn({Function}, contract, <<<(@var{expr})>>>)
 
 Carries out the tensorial contractions in @var{expr} which may be any
 combination of sums and products. This function uses the information
@@ -556,27 +580,31 @@ products and powers of sums if there are no variables in the denominators
 of the terms. The @mref{gcd} switch should be @code{false} if GCD
 cancellations are unnecessary.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{indexed_tensor}
-@deffn {Function} indexed_tensor (@var{tensor})
+@c @deffn {Function} indexed_tensor (@var{tensor})
+m4_deffn({Function}, indexed_tensor, <<<(@var{tensor})>>>)
 
 Must be executed before assigning components to a @var{tensor} for which
 a built in value already exists as with @code{ichr1}, @code{ichr2},
 @code{icurvature}. See the example under @mref{icurvature}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{components}
-@deffn {Function} components (@var{tensor}, @var{expr})
+@c @deffn {Function} components (@var{tensor}, @var{expr})
+m4_deffn({Function}, components, <<<(@var{tensor}, @var{expr})>>>)
 
 permits one to assign an indicial value to an expression
 @var{expr} giving the values of the components of @var{tensor}. These
@@ -680,27 +708,31 @@ of covariant and contravariant indices and no derivative indices, and
                                          %1  %2  %3 n
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{remcomps}
-@deffn {Function} remcomps (@var{tensor})
+@c @deffn {Function} remcomps (@var{tensor})
+m4_deffn({Function}, remcomps, <<<(@var{tensor})>>>)
 
 Unbinds all values from @var{tensor} which were assigned with the
 @mref{components} function.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEED LIST OF ARGUMENTS HERE
 
 @c -----------------------------------------------------------------------------
 @anchor{showcomps}
-@deffn {Function} showcomps (@var{tensor})
+@c @deffn {Function} showcomps (@var{tensor})
+m4_deffn({Function}, showcomps, <<<(@var{tensor})>>>)
 
 Shows component assignments of a tensor, as made using the @mref{components}
 command. This function can be particularly useful when a matrix is assigned
@@ -747,53 +779,61 @@ following example:
 The @code{showcomps} command can also display components of a tensor of
 rank higher than 2.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{idummy}
-@deffn {Function} idummy ()
+@c @deffn {Function} idummy ()
+m4_deffn({Function}, idummy, <<<()>>>)
 
 Increments @mref{icounter} and returns as its value an index of the form
 @code{%n} where n is a positive integer.  This guarantees that dummy indices
 which are needed in forming expressions will not conflict with indices
 already in use (see the example under @mref{indices}).
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{idummyx}
-@defvr {Option variable} idummyx
+@c @defvr {Option variable} idummyx
+m4_defvr({Option variable}, idummyx)
 Default value: @code{%}
 
 Is the prefix for dummy indices (see the example under @mref{indices}).
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{icounter}
-@defvr {Option variable} icounter
+@c @defvr {Option variable} icounter
+m4_defvr({Option variable}, icounter)
 Default value: @code{1}
 
 Determines the numerical suffix to be used in
 generating the next dummy index in the tensor package.  The prefix is
 determined by the option @mref{idummy} (default: @code{%}).
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{kdelta}
-@deffn {Function} kdelta (@var{L1}, @var{L2})
+@c @deffn {Function} kdelta (@var{L1}, @var{L2})
+m4_deffn({Function}, kdelta, <<<(@var{L1}, @var{L2})>>>)
 is the generalized Kronecker delta function defined in
 the @code{itensor} package with @var{L1} the list of covariant indices and @var{L2}
 the list of contravariant indices.  @code{kdelta([i],[j])} returns the ordinary
@@ -807,14 +847,16 @@ and no covariant indices, in effect providing a co(ntra)variant "unit matrix"
 capability. This is strictly considered a programming aid and not meant to
 imply that @code{kdelta([i,j],[])} is a valid tensorial object.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{kdels}
-@deffn {Function} kdels (@var{L1}, @var{L2})
+@c @deffn {Function} kdels (@var{L1}, @var{L2})
+m4_deffn({Function}, kdels, <<<(@var{L1}, @var{L2})>>>)
 
 Symmetrized Kronecker delta, used in some calculations. For instance:
 
@@ -837,27 +879,31 @@ Symmetrized Kronecker delta, used in some calculations. For instance:
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{levi_civita}
-@deffn {Function} levi_civita (@var{L})
+@c @deffn {Function} levi_civita (@var{L})
+m4_deffn({Function}, levi_civita, <<<(@var{L})>>>)
 is the permutation (or Levi-Civita) tensor which yields 1 if
 the list @var{L} consists of an even permutation of integers, -1 if it
 consists of an odd permutation, and 0 if some indices in @var{L} are
 repeated.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{lc2kdt}
-@deffn {Function} lc2kdt (@var{expr})
+@c @deffn {Function} lc2kdt (@var{expr})
+m4_deffn({Function}, lc2kdt, <<<(@var{expr})>>>)
 Simplifies expressions containing the Levi-Civita symbol, converting these
 to Kronecker-delta expressions when possible. The main difference between
 this function and simply evaluating the Levi-Civita symbol is that direct
@@ -934,16 +980,18 @@ To reenable the Lisp debugger set *debugger-hook* to nil.
 @end example
 
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c HMM, WHICH CATEGORY DOES THIS FALL INTO -- FUNCTION, VARIABLE, OTHER ??
 
 @c -----------------------------------------------------------------------------
 @anchor{lc_l}
-@deffn {Function} lc_l
+@c @deffn {Function} lc_l
+m4_deffn({Function}, lc_l, <<<>>>)
 Simplification rule used for expressions containing the unevaluated Levi-Civita
 symbol (@mref{levi_civita}). Along with @mref{lc_u}, it can be used to simplify
 many expressions more efficiently than the evaluation of @code{levi_civita}.
@@ -968,29 +1016,33 @@ For example:
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c HMM, WHICH CATEGORY DOES THIS FALL INTO -- FUNCTION, VARIABLE, OTHER ??
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} lc_u
+@c @deffn {Function} lc_u
+m4_deffn({Function}, lc_u, <<<>>>)
 
 Simplification rule used for expressions containing the unevaluated Levi-Civita
 symbol (@mref{levi_civita}). Along with @code{lc_u}, it can be used to simplify
 many expressions more efficiently than the evaluation of @code{levi_civita}.
 For details, see @mref{lc_l}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{canten}
-@deffn {Function} canten (@var{expr})
+@c @deffn {Function} canten (@var{expr})
+m4_deffn({Function}, canten, <<<(@var{expr})>>>)
 Simplifies @var{expr} by renaming (see @mref{rename})
 and permuting dummy indices. @code{rename} is restricted to sums of tensor
 products in which no derivatives are present. As such it is limited
@@ -1002,20 +1054,23 @@ if its argument is an expression that is fully symmetric in its indices.
 For this reason, @code{canten} returns an error if @mref{allsym} is not
 set to @code{true}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{concan}
-@deffn {Function} concan (@var{expr})
+@c @deffn {Function} concan (@var{expr})
+m4_deffn({Function}, concan, <<<(@var{expr})>>>)
 Similar to @mref{canten} but also performs index contraction.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @subsection Tensor symmetries
@@ -1023,7 +1078,8 @@ Similar to @mref{canten} but also performs index contraction.
 
 @c -----------------------------------------------------------------------------
 @anchor{allsym}
-@defvr {Option variable} allsym
+@c @defvr {Option variable} allsym
+m4_defvr({Option variable}, allsym)
 Default value: @code{false}
 
 If @code{true} then all indexed objects
@@ -1032,14 +1088,16 @@ indices. If @code{false} then no symmetries of any kind are assumed
 in these indices. Derivative indices are always taken to be symmetric
 unless @code{iframe_flag} is set to @code{true}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{decsym}
-@deffn {Function} decsym (@var{tensor}, @var{m}, @var{n}, [@var{cov_1}, @var{cov_2}, ...], [@var{contr_1}, @var{contr_2}, ...])
+@c @deffn {Function} decsym (@var{tensor}, @var{m}, @var{n}, [@var{cov_1}, @var{cov_2}, ...], [@var{contr_1}, @var{contr_2}, ...])
+m4_deffn({Function}, decsym, <<<(@var{tensor}, @var{m}, @var{n}, [@var{cov_1}, @var{cov_2}, ...], [@var{contr_1}, @var{contr_2}, ...])>>>)
 
 Declares symmetry properties for @var{tensor} of @var{m} covariant and
 @var{n} contravariant indices. The @var{cov_i} and @var{contr_i} are
@@ -1093,25 +1151,29 @@ illustrates.
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{remsym}
-@deffn {Function} remsym (@var{tensor}, @var{m}, @var{n})
+@c @deffn {Function} remsym (@var{tensor}, @var{m}, @var{n})
+m4_deffn({Function}, remsym, <<<(@var{tensor}, @var{m}, @var{n})>>>)
 Removes all symmetry properties from @var{tensor} which has @var{m}
 covariant indices and @var{n} contravariant indices.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{canform}
-@deffn {Function} canform @
+@c @deffn {Function} canform @
+m4_deffn({Function}, canform, <<<>>>) @
 @fname{canform} (@var{expr}) @
 @fname{canform} (@var{expr}, @var{rename})
 
@@ -1129,10 +1191,11 @@ always return a mathematically correct result.
 
 The optional second parameter @var{rename}, if set to @code{false}, suppresses renaming.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @subsection Indicial tensor calculus
@@ -1140,7 +1203,8 @@ The optional second parameter @var{rename}, if set to @code{false}, suppresses r
 
 @c -----------------------------------------------------------------------------
 @anchor{itensor_diff}
-@deffn {Function} diff (@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])
+@c @deffn {Function} diff (@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])
+m4_deffn({Function}, diff, <<<(@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])>>>)
 
 is the usual Maxima differentiation function which has been expanded
 in its abilities for @code{itensor}. It takes the derivative of @var{expr} with
@@ -1162,14 +1226,16 @@ second derivatives. This capability is particularly useful when considering
 Lagrangian formulations of a gravitational theory, allowing one to derive
 the Einstein tensor and field equations from the action principle.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{idiff}
-@deffn {Function} idiff (@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])
+@c @deffn {Function} idiff (@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])
+m4_deffn({Function}, idiff, <<<(@var{expr}, @var{v_1}, [@var{n_1}, [@var{v_2}, @var{n_2}] ...])>>>)
 Indicial differentiation. Unlike @code{diff}, which differentiates
 with respect to an independent variable, @code{idiff)} can be used
 to differentiate with respect to a coordinate. For an indexed object,
@@ -1183,14 +1249,16 @@ tensor. Thus, if @code{imetric} has been bound to @code{G} then
 @code{2 * determinant(g) * ichr2([%i,k],[%i])} where the dummy index @code{%i}
 is chosen appropriately.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{liediff}
-@deffn {Function} liediff (@var{v}, @var{ten})
+@c @deffn {Function} liediff (@var{v}, @var{ten})
+m4_deffn({Function}, liediff, <<<(@var{v}, @var{ten})>>>)
 
 Computes the Lie-derivative of the tensorial expression @var{ten} with
 respect to the vector field @var{v}. @var{ten} should be any indexed
@@ -1212,26 +1280,30 @@ field. For example:
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{rediff}
-@deffn {Function} rediff (@var{ten})
+@c @deffn {Function} rediff (@var{ten})
+m4_deffn({Function}, rediff, <<<(@var{ten})>>>)
 
 Evaluates all occurrences of the @mref{idiff} command in the tensorial
 expression @var{ten}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{undiff}
-@deffn {Function} undiff (@var{expr})
+@c @deffn {Function} undiff (@var{expr})
+m4_deffn({Function}, undiff, <<<(@var{expr})>>>)
 
 Returns an expression equivalent to @var{expr} but with all derivatives
 of indexed objects replaced by the noun form of the @mref{idiff} function. Its
@@ -1241,14 +1313,16 @@ differentiated indexed object with some function definition resulting
 in @var{expr} and then carry out the differentiation by saying
 @code{ev(@var{expr}, idiff)}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{evundiff}
-@deffn {Function} evundiff (@var{expr})
+@c @deffn {Function} evundiff (@var{expr})
+m4_deffn({Function}, evundiff, <<<(@var{expr})>>>)
 
 Equivalent to the execution of @mref{undiff}, followed by @mref{ev} and
 @mref{rediff}.
@@ -1309,36 +1383,42 @@ so @code{evundiff} is no longer necessary for expressions like this:
                                          2
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{flush}
-@deffn {Function} flush (@var{expr}, @var{tensor_1}, @var{tensor_2}, ...)
+@c @deffn {Function} flush (@var{expr}, @var{tensor_1}, @var{tensor_2}, ...)
+m4_deffn({Function}, flush, <<<(@var{expr}, @var{tensor_1}, @var{tensor_2}, ...)>>>)
 Set to zero, in
 @var{expr}, all occurrences of the @var{tensor_i} that have no derivative indices.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{flushd}
-@deffn {Function} flushd (@var{expr}, @var{tensor_1}, @var{tensor_2}, ...)
+@c @deffn {Function} flushd (@var{expr}, @var{tensor_1}, @var{tensor_2}, ...)
+m4_deffn({Function}, flushd, <<<(@var{expr}, @var{tensor_1}, @var{tensor_2}, ...)>>>)
 Set to zero, in
 @var{expr}, all occurrences of the @var{tensor_i} that have derivative indices.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{flushnd}
-@deffn {Function} flushnd (@var{expr}, @var{tensor}, @var{n})
+@c @deffn {Function} flushnd (@var{expr}, @var{tensor}, @var{n})
+m4_deffn({Function}, flushnd, <<<(@var{expr}, @var{tensor}, @var{n})>>>)
 Set to zero, in @var{expr}, all
 occurrences of the differentiated object @var{tensor} that have @var{n} or more
 derivative indices as the following example demonstrates.
@@ -1356,14 +1436,16 @@ derivative indices as the following example demonstrates.
                                      i,k r
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{coord}
-@deffn {Function} coord (@var{tensor_1}, @var{tensor_2}, ...)
+@c @deffn {Function} coord (@var{tensor_1}, @var{tensor_2}, ...)
+m4_deffn({Function}, coord, <<<(@var{tensor_1}, @var{tensor_2}, ...)>>>)
 
 Gives @var{tensor_i} the coordinate differentiation property that the
 derivative of contravariant vector whose name is one of the
@@ -1371,14 +1453,16 @@ derivative of contravariant vector whose name is one of the
 been done then @code{idiff(x([],[i]),j)} gives @code{kdelta([i],[j])}.
 @code{coord} is a list of all indexed objects having this property.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{remcoord}
-@deffn {Function} remcoord @
+@c @deffn {Function} remcoord @
+m4_deffn({Function}, remcoord, <<<>>>) @
 @fname{remcoord} (@var{tensor_1}, @var{tensor_2}, ...) @
 @fname{remcoord} (all)
 
@@ -1386,27 +1470,31 @@ Removes the coordinate differentiation property from the @code{tensor_i}
 that was established by the function @code{coord}.  @code{remcoord(all)}
 removes this property from all indexed objects.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{makebox}
-@deffn {Function} makebox (@var{expr})
+@c @deffn {Function} makebox (@var{expr})
+m4_deffn({Function}, makebox, <<<(@var{expr})>>>)
 Display @var{expr} in the same manner as @mref{show}; however,
 any tensor d'Alembertian occurring in @var{expr} will be indicated using the
 symbol @code{[]}.  For example, @code{[]p([m],[n])} represents
 @code{g([],[i,j])*p([m],[n],i,j)}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{conmetderiv}
-@deffn {Function} conmetderiv (@var{expr}, @var{tensor})
+@c @deffn {Function} conmetderiv (@var{expr}, @var{tensor})
+m4_deffn({Function}, conmetderiv, <<<(@var{expr}, @var{tensor})>>>)
 
 Simplifies expressions containing ordinary derivatives of
 both covariant and con@-tra@-va@-ri@-ant forms of the metric tensor (the
@@ -1428,14 +1516,16 @@ symbols as seen from the following:
                                    %1 c              %1 c
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{simpmetderiv}
-@deffn {Function} simpmetderiv @
+@c @deffn {Function} simpmetderiv @
+m4_deffn({Function}, simpmetderiv, <<<@>>>) @
 @fname{simpmetderiv} (@var{expr}) @
 @fname{simpmetderiv} (@var{expr}[, @var{stop}])
 
@@ -1523,22 +1613,25 @@ errexp1 has improper indices
 See also @code{weyl.dem} for an example that uses @mref{simpmetderiv}
 and @mref{conmetderiv} together to simplify contractions of the Weyl tensor.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------}
 @anchor{flush1deriv}
-@deffn {Function} flush1deriv (@var{expr}, @var{tensor})
+@c @deffn {Function} flush1deriv (@var{expr}, @var{tensor})
+m4_deffn({Function}, flush1deriv, <<<(@var{expr}, @var{tensor})>>>)
 
 Set to zero, in @code{expr}, all occurrences of @code{tensor} that have
 exactly one derivative index.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @subsection Tensors in curved spaces
@@ -1546,8 +1639,10 @@ exactly one derivative index.
 
 @c -----------------------------------------------------------------------------
 @anchor{imetric}
-@deffn {Function} imetric (@var{g})
-@deffnx {System variable} imetric
+@c @deffn {Function} imetric (@var{g})
+m4_deffn({Function}, imetric, <<<(@var{g})>>>)
+@c @deffnx {System variable} imetric ()
+m4_deffnx({System variable}, imetric, <<<()>>>)
 
 Specifies the metric by assigning the variable @code{imetric:@var{g}} in
 addition, the con@-trac@-tion properties of the metric @var{g} are set up by
@@ -1555,25 +1650,29 @@ executing the commands @code{defcon(@var{g}), defcon(@var{g}, @var{g}, kdelta)}.
 The variable @code{imetric} (unbound by default), is bound to the metric, assigned by
 the @code{imetric(@var{g})} command.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{idim}
-@deffn {Function} idim (@var{n})
+@c @deffn {Function} idim (@var{n})
+m4_deffn({Function}, idim, <<<(@var{n})>>>)
 Sets the dimensions of the metric. Also initializes the antisymmetry
 properties of the Levi-Civita symbols for the given dimension.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ichr1}
-@deffn {Function} ichr1 ([@var{i}, @var{j}, @var{k}])
+@c @deffn {Function} ichr1 ([@var{i}, @var{j}, @var{k}])
+m4_deffn({Function}, ichr1, <<<([@var{i}, @var{j}, @var{k}])>>>)
 Yields the Christoffel symbol of the first kind via the
 definition
 @example
@@ -1584,14 +1683,16 @@ definition
 To evaluate the Christoffel symbols for a particular metric, the
 variable @code{imetric} must be assigned a name as in the example under @code{chr2}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ichr2}
-@deffn {Function} ichr2 ([@var{i}, @var{j}], [@var{k}])
+@c @deffn {Function} ichr2 ([@var{i}, @var{j}], [@var{k}])
+m4_deffn({Function}, ichr2, <<<([@var{i}, @var{j}], [@var{k}])>>>)
 Yields the Christoffel symbol of the second kind
 defined by the relation
 @example
@@ -1600,14 +1701,16 @@ defined by the relation
                              is,j     js,i     ij,s
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{icurvature}
-@deffn {Function} icurvature ([@var{i}, @var{j}, @var{k}], [@var{h}])
+@c @deffn {Function} icurvature ([@var{i}, @var{j}, @var{k}], [@var{h}])
+m4_deffn({Function}, icurvature, <<<([@var{i}, @var{j}, @var{k}], [@var{h}])>>>)
 Yields the Riemann
 curvature tensor in terms of the Christoffel symbols of the second
 kind (@code{ichr2}).  The following notation is used:
@@ -1620,14 +1723,16 @@ kind (@code{ichr2}).  The following notation is used:
                             %1 k       i j
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{covdiff}
-@deffn {Function} covdiff (@var{expr}, @var{v_1}, @var{v_2}, ...)
+@c @deffn {Function} covdiff (@var{expr}, @var{v_1}, @var{v_2}, ...)
+m4_deffn({Function}, covdiff, <<<(@var{expr}, @var{v_1}, @var{v_2}, ...)>>>)
 Yields the covariant derivative of @var{expr} with
 respect to the variables @var{v_i} in terms of the Christoffel symbols of the
 second kind (@code{ichr2}).  In order to evaluate these, one should use
@@ -1676,26 +1781,30 @@ Enter a list of the derivative indices: [];
 (%i6)
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{lorentz}
-@deffn {Function} lorentz_gauge (@var{expr})
+@c @deffn {Function} lorentz_gauge (@var{expr})
+m4_deffn({Function}, lorentz_gauge, <<<(@var{expr})>>>)
 Imposes the Lorentz condition by substituting 0 for all
 indexed objects in @var{expr} that have a derivative index identical to a
 contravariant index.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{igeodesic}
-@deffn {Function} igeodesic_coords (@var{expr}, @var{name})
+@c @deffn {Function} igeodesic_coords (@var{expr}, @var{name})
+m4_deffn({Function}, igeodesic_coords, <<<(@var{expr}, @var{name})>>>)
 
 Causes undifferentiated Christoffel symbols and
 first derivatives of the metric tensor vanish in @var{expr}. The @var{name}
@@ -1736,10 +1845,11 @@ curvature tensor using the @code{igeodesic_coords} function.
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @subsection Moving frames
@@ -1822,20 +1932,23 @@ the @code{iframe_bracket_form} flag is set to @code{false}:
 
 @c -----------------------------------------------------------------------------}
 @anchor{iframes}
-@deffn {Function} iframes ()
+@c @deffn {Function} iframes ()
+m4_deffn({Function}, iframes, <<<()>>>)
 
 Since in this version of Maxima, contraction identities for @mref{ifr} and
 @mref{ifri} are always defined, as is the frame bracket (@mref{ifb}), this
 function does nothing.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ifb}
-@defvr {Variable} ifb
+@c @defvr {Variable} ifb
+m4_defvr({Variable}, ifb)
 
 The frame bracket. The contribution of the frame metric to the connection
 coefficients is expressed using the frame bracket:
@@ -1873,14 +1986,16 @@ ifb    = (ifr    ifr    - ifr    ifr   ) ifri
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{icc1}
-@defvr {Variable} icc1
+@c @defvr {Variable} icc1
+m4_defvr({Variable}, icc1)
 
 Connection coefficients of the first kind. In @code{itensor}, defined as
 
@@ -1899,14 +2014,16 @@ torsion is already calculated as part of the frame bracket.
 Lastly, of @code{inonmet_flag} is @code{false},
 @mref{inmc1} will not be present.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{icc2}
-@defvr {Variable} icc2
+@c @defvr {Variable} icc2
+m4_defvr({Variable}, icc2)
 
 Connection coefficients of the second kind. In @code{itensor}, defined as
 
@@ -1926,14 +2043,16 @@ torsion is already calculated as part of the frame bracket.
 Lastly, of @code{inonmet_flag} is @code{false},
 @mref{inmc2} will not be present.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ifc1}
-@defvr {Variable} ifc1
+@c @defvr {Variable} ifc1
+m4_defvr({Variable}, ifc1)
 
 Frame coefficient of the first kind (also known as Ricci-rotation
 coefficients.) This tensor represents the contribution
@@ -1950,14 +2069,16 @@ ifc1    = --------------------------------
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ifc2}
-@defvr {Variable} ifc2
+@c @defvr {Variable} ifc2
+m4_defvr({Variable}, ifc2)
 
 Frame coefficient of the second kind. This tensor represents the contribution
 of the frame metric to the connection coefficient of the second kind. Defined
@@ -1972,71 +2093,82 @@ ifc2   = ifg   ifc1
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ifr}
-@defvr {Variable} ifr
+@c @defvr {Variable} ifr
+m4_defvr({Variable}, ifr)
 
 The frame field. Contracts with the inverse frame field (@mref{ifri}) to
 form the frame metric (@mref{ifg}).
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ifri}
-@defvr {Variable} ifri
+@c @defvr {Variable} ifri
+m4_defvr({Variable}, ifri)
 
 The inverse frame field. Specifies the frame base (dual basis vectors). Along
 with the frame metric, it forms the basis of all calculations based on
 frames.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ifg}
-@defvr {Variable} ifg
+@c @defvr {Variable} ifg
+m4_defvr({Variable}, ifg)
 
 The frame metric. Defaults to @mref{kdelta}, but can be changed using
 @mref{components}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ifgi}
-@defvr {Variable} ifgi
+@c @defvr {Variable} ifgi
+m4_defvr({Variable}, ifgi)
 
 The inverse frame metric. Contracts with the frame metric (@mref{ifg})
 to @mref{kdelta}.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{iframe_bracket_form}
-@defvr {Option variable} iframe_bracket_form
+@c @defvr {Option variable} iframe_bracket_form
+m4_defvr({Option variable}, iframe_bracket_form)
 Default value: @code{true}
 
 Specifies how the frame bracket (@mref{ifb}) is computed.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @subsection Torsion and nonmetricity
@@ -2049,7 +2181,8 @@ is added to the connection coefficients. Similarly, when the flag
 
 @c -----------------------------------------------------------------------------
 @anchor{inm}
-@defvr {Variable} inm
+@c @defvr {Variable} inm
+m4_defvr({Variable}, inm)
 
 The nonmetricity vector. Conformal nonmetricity is defined through the
 covariant derivative of the metric tensor. Normally zero, the metric
@@ -2063,14 +2196,16 @@ g     =- g  inm
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{inmc1}
-@defvr {Variable} inmc1
+@c @defvr {Variable} inmc1
+m4_defvr({Variable}, inmc1)
 
 Covariant permutation of the nonmetricity vector components. Defined as
 
@@ -2085,14 +2220,16 @@ inmc1    = ------------------------------
 
 (Substitute @mref{ifg} in place of @code{g} if a frame metric is used.)
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{inmc2}
-@defvr {Variable} inmc2
+@c @defvr {Variable} inmc2
+m4_defvr({Variable}, inmc2)
 
 Contravariant permutation of the nonmetricity vector components. Used
 in the connection coefficients if @code{inonmet_flag} is @code{true}. Defined
@@ -2110,14 +2247,16 @@ inmc2   = -------------------------------------------
 
 (Substitute @mref{ifg} in place of @code{g} if a frame metric is used.)
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ikt1}
-@defvr {Variable} ikt1
+@c @defvr {Variable} ikt1
+m4_defvr({Variable}, ikt1)
 
 Covariant permutation of the torsion tensor (also known as contorsion).
 Defined as:
@@ -2134,14 +2273,16 @@ ikt1    = ----------------------------------
 
 (Substitute @mref{ifg} in place of @code{g} if a frame metric is used.)
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ikt2}
-@defvr {Variable} ikt2
+@c @defvr {Variable} ikt2
+m4_defvr({Variable}, ikt2)
 
 Contravariant permutation of the torsion tensor (also known as contorsion).
 Defined as:
@@ -2156,14 +2297,16 @@ ikt2   = g   ikt1
 
 (Substitute @mref{ifg} in place of @code{g} if a frame metric is used.)
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{itr}
-@defvr {Variable} itr
+@c @defvr {Variable} itr
+m4_defvr({Variable}, itr)
 
 The torsion tensor. For a metric with torsion, repeated covariant
 differentiation on a scalar function will not commute, as demonstrated
@@ -2221,10 +2364,11 @@ by the following example:
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @subsection Exterior algebra
@@ -2282,8 +2426,10 @@ implemented that controls the behavior of the wedge product: if
 definition is used, otherwise the second, "geometric" definition will
 be applied.
 
+m4_setcat(Package itensor, Operators)
 @anchor{~}
-@defvr {Operator} ~
+@c @defvr {Operator} ~
+m4_defvr({Operator}, ~)
 @ifinfo
 @fnindex Wedge product
 @end ifinfo
@@ -2321,15 +2467,17 @@ The behavior of the wedge product operator is controlled by the
                            i j  k    i  j k    i k  j
 @end example
 
-@opencatbox
-@category{Package itensor}
-@category{Operators}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @category{Operators}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{|}
-@defvr {Operator} |
+@c @defvr {Operator} |
+m4_defvr({Operator}, |)
 @ifinfo
 @fnindex Contraction with a vector
 @end ifinfo
@@ -2363,15 +2511,17 @@ Note that it is essential that the tensors used with the @code{|} operator be
 declared totally antisymmetric in their covariant indices. Otherwise,
 the results will be incorrect.
 
-@opencatbox
-@category{Package itensor}
-@category{Operators}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @category{Operators}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{extdiff}
-@deffn {Function} extdiff (@var{expr}, @var{i})
+@c @deffn {Function} extdiff (@var{expr}, @var{i})
+m4_deffn({Function}, extdiff, <<<(@var{expr}, @var{i})>>>)
 
 Computes the exterior derivative of @var{expr} with respect to the index
 @var{i}. The exterior derivative is formally defined as the wedge
@@ -2405,14 +2555,16 @@ For instance:
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{hodge}
-@deffn {Function} hodge (@var{expr})
+@c @deffn {Function} hodge (@var{expr})
+m4_deffn({Function}, hodge, <<<(@var{expr})>>>)
 
 Compute the Hodge-dual of @var{expr}. For instance:
 
@@ -2466,14 +2618,16 @@ Compute the Hodge-dual of @var{expr}. For instance:
 
 @end example
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{igeowedge_flag}
-@defvr {Option variable} igeowedge_flag
+@c @defvr {Option variable} igeowedge_flag
+m4_defvr({Option variable}, igeowedge_flag)
 Default value: @code{false}
 
 Controls the behavior of the wedge product and exterior derivative. When
@@ -2482,10 +2636,11 @@ correspond with that of a totally antisymmetric covariant tensor field.
 When set to @code{true}, differential forms will agree with the notion
 of the volume element.
 
-@opencatbox
-@category{Package itensor}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package itensor}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @subsection Exporting TeX expressions
@@ -2498,8 +2653,10 @@ output. You can try instead the @mref{tentex} command, which attempts
 to translate tensor expressions into appropriately indexed TeX objects.
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package itensor, TeX output)
 @anchor{tentex}
-@deffn {Function} tentex (@var{expr})
+@c @deffn {Function} tentex (@var{expr})
+m4_deffn({Function}, tentex, <<<(@var{expr})>>>)
 
 To use the @code{tentex} function, you must first load @code{tentex},
 as in the following example:
@@ -2536,11 +2693,12 @@ of the percent sign in the TeX expression, which may lead to compile errors.
 
 NB: This version of the @code{tentex} function is somewhat experimental.
 
-@opencatbox
-@category{Package itensor}
-@category{TeX output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @category{TeX output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @subsection Interfacing with ctensor
@@ -2551,8 +2709,10 @@ then be executed in the context of the @code{ctensor} package. The function that
 this task is @mref{ic_convert}.
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package itensor, Package ctensor)
 @anchor{ic_convert}
-@deffn {Function} ic_convert (@var{eqn})
+@c @deffn {Function} ic_convert (@var{eqn})
+m4_deffn({Function}, ic_convert, <<<(@var{eqn})>>>)
 
 Converts the @code{itensor} equation @var{eqn} to a @code{ctensor} assignment statement.
 Implied sums over dummy indices are made explicit while indexed
@@ -2615,11 +2775,12 @@ function.
    l, m
 @end example
 
-@opencatbox
-@category{Package itensor}
-@category{Package ctensor}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package itensor}
+@c @category{Package ctensor}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @subsection Reserved words
