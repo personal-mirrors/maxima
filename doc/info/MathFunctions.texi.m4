@@ -1280,31 +1280,36 @@ simplification of expressions with the factorial function.
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions)
 @anchor{factlim}
-@defvr {Option variable} factlim
+@c @defvr {Option variable} factlim
+m4_defvr({Option variable}, factlim)
 Default value: 100000
 
 @code{factlim} specifies the highest factorial which is
 automatically expanded.  If it is -1 then all integers are expanded.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{factorial_expand}
-@defvr {Option variable} factorial_expand
+@c @defvr {Option variable} factorial_expand
+m4_defvr({Option variable}, factorial_expand)
 Default value: false
 
 The option variable @code{factorial_expand} controls the simplification of 
 expressions like @code{(n+1)!}, where @code{n} is an integer.
 See @mref{factorial} for an example.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c IS THIS DEFINITION CORRECT ??
 
@@ -1356,8 +1361,10 @@ which differ by an integer.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions, Simplification flags and variables)
 @anchor{sumsplitfact}
-@defvr {Option variable} sumsplitfact
+@c @defvr {Option variable} sumsplitfact
+m4_defvr({Option variable}, sumsplitfact)
 Default value: @code{true}
 
 When @code{sumsplitfact} is @code{false},
@@ -1407,11 +1414,12 @@ When @code{sumsplitfact} is @code{false},
 @end group
 @end example
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @node Root Exponential and Logarithmic Functions, Trigonometric Functions, Combinatorial Functions, Mathematical Functions
@@ -1419,8 +1427,10 @@ When @code{sumsplitfact} is @code{false},
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions, Simplification flags and variables)
 @anchor{%e_to_numlog}
-@defvr {Option variable} %e_to_numlog
+@c @defvr {Option variable} %e_to_numlog
+m4_defvr({Option variable}, %e_to_numlog)
 Default value: @code{false}
 
 When @code{true}, @code{r} some rational number, and @code{x} some expression,
@@ -1429,15 +1439,17 @@ that the @code{radcan} command also does this transformation, and more
 complicated transformations of this ilk as well.  The @code{logcontract}
 command "contracts" expressions containing @code{log}.
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{%emode}
-@defvr {Option variable} %emode
+@c @defvr {Option variable} %emode
+m4_defvr({Option variable}, %emode)
 Default value: @code{true}
 
 When @code{%emode} is @code{true}, @code{%e^(%pi %i x)} is simplified as
@@ -1503,15 +1515,18 @@ When @code{%emode} is @code{false}, no special simplification of
 @end group
 @end example
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions, Evaluation flags)
 @anchor{%enumer}
-@defvr {Option variable} %enumer
+@c @defvr {Option variable} %enumer
+m4_defvr({Option variable}, %enumer)
 Default value: @code{false}
 
 When @code{%enumer} is @code{true}, @code{%e} is replaced by its numeric value
@@ -1573,11 +1588,12 @@ See also @mref{ev} and @mrefdot{numer}
 @end group
 @end example
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Evaluation flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Evaluation flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c PROBABLY MORE TO BE SAID HERE
 
@@ -1776,8 +1792,10 @@ command "contracts" expressions containing @code{log}.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions,  Integral calculus, Global flags)
 @anchor{logabs}
-@defvr {Option variable} logabs
+@c @defvr {Option variable} logabs
+m4_defvr({Option variable}, logabs)
 Default value: @code{false}
 
 When doing indefinite integration where logs are generated, e.g.
@@ -1787,19 +1805,23 @@ if @code{logabs} is @code{true}, but in terms of @code{log(...)} if
 setting is used, because here "evaluation" of the indefinite integral at the
 endpoints is often needed.
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Integral calculus}
-@category{Global flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Integral calculus}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions, Simplification flags and variables, Simplification functions)
 @anchor{logarc}
-@defvr  {Option variable} logarc
-@defvrx {Function} logarc (@var{expr})
+@c @defvr  {Option variable} logarc
+m4_defvr( {Option variable}, logarc)
+@c @defvrx {Function} logarc (@var{expr})
+m4_defvrx({Function}, logarc (@var{expr}))
 
 When the global variable @code{logarc} is @code{true},
 inverse circular and hyperbolic functions are replaced by
@@ -1810,16 +1832,19 @@ The function @code{logarc(@var{expr})} carries out that replacement for
 an expression @var{expr}
 without setting the global variable @code{logarc}.
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Simplification flags and variables}
-@category{Simplification functions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Simplification flags and variables}
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions, Simplification flags and variables)
 @anchor{logconcoeffp}
-@defvr {Option variable} logconcoeffp
+@c @defvr {Option variable} logconcoeffp
+m4_defvr({Option variable}, logconcoeffp)
 Default value: @code{false}
 
 Controls which coefficients are
@@ -1829,11 +1854,12 @@ SQRTs, you can do @code{logconcoeffp:'logconfun$
 logconfun(m):=featurep(m,integer) or ratnump(m)$} .  Then
 @code{logcontract(1/2*log(x));} will give @code{log(sqrt(x))}.
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{logcontract}
@@ -1872,8 +1898,10 @@ logconfun(m):=featurep(m,integer) or ratnump(m)$} .  Then
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions, Simplification flags and variables)
 @anchor{logexpand}
-@defvr {Option variable} logexpand
+@c @defvr {Option variable} logexpand
+m4_defvr({Option variable}, logexpand)
 Default value: @code{true}
 
 If @code{true}, that is the default value, causes @code{log(a^b)} to become
@@ -1986,39 +2014,44 @@ these simplifications are disabled.
                              i = 1
 @end example
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{lognegint}
-@defvr {Option variable} lognegint
+@c @defvr {Option variable} lognegint
+m4_defvr({Option variable}, lognegint)
 Default value: @code{false}
 
 If @code{true} implements the rule
 @code{log(-n)} -> @code{log(n)+%i*%pi} for @code{n} a positive integer.
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{logsimp}
-@defvr {Option variable} logsimp
+@c @defvr {Option variable} logsimp
+m4_defvr({Option variable}, logsimp)
 Default value: @code{true}
 
 If @code{false} then no simplification of @code{%e} to a
 power containing @code{log}'s is done.
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{plog}
@@ -2087,8 +2120,10 @@ for details.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions, Simplification flags and variables)
 @anchor{%piargs}
-@defvr {Option variable} %piargs
+@c @defvr {Option variable} %piargs
+m4_defvr({Option variable}, %piargs)
 Default value: @code{true}
 
 When @code{%piargs} is @code{true},
@@ -2182,15 +2217,18 @@ an integer variable.
 @end group
 @end example
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions, Hyperbolic functions, Simplification flags and variables)
 @anchor{%iargs}
-@defvr {Option variable} %iargs
+@c @defvr {Option variable} %iargs
+m4_defvr({Option variable}, %iargs)
 Default value: @code{true}
 
 When @code{%iargs} is @code{true},
@@ -2250,12 +2288,13 @@ Even when the argument is demonstrably real, the simplification is applied.
 @end group
 @end example
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Hyperbolic functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Hyperbolic functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{acos}
@@ -2409,8 +2448,10 @@ See also @mref{atan}.
 @c LET'S BE EXPLICIT ABOUT EXACTLY WHAT ARE THE RULES IMPLEMENTED BY THIS PACKAGE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions, Package atrig1)
 @anchor{atrig1}
-@defvr {Package} atrig1
+@c @defvr {Package} atrig1
+m4_defvr({Package}, atrig1)
 
 The @code{atrig1} package contains several additional simplification rules
 for inverse trigonometric functions.  Together with rules
@@ -2419,11 +2460,12 @@ already known to Maxima, the following angles are fully implemented:
 Corresponding angles in the other three quadrants are also available.
 Do @code{load("atrig1");} to use them.
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Package atrig1}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Package atrig1}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{cos}
@@ -2492,8 +2534,10 @@ Do @code{load("atrig1");} to use them.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions,  Simplification flags and variables)
 @anchor{halfangles}
-@defvr {Option variable} halfangles
+@c @defvr {Option variable} halfangles
+m4_defvr({Option variable}, halfangles)
 Default value: @code{false}
 
 When @code{halfangles} is @code{true}, trigonometric functions of arguments 
@@ -2564,17 +2608,20 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c IS THIS DESCRIPTION ACCURATE ??
 @c LET'S BE EXPLICIT ABOUT EXACTLY WHAT ARE THE RULES IMPLEMENTED BY THIS PACKAGE
 
 @c -----------------------------------------------------------------------------
-@defvr {Package} ntrig
+m4_setcat(Trigonometric functions, Package ntrig)
+@c @defvr {Package} ntrig
+m4_defvr({Package}, ntrig)
 
 The @code{ntrig} package contains a set of simplification rules that are
 used to simplify trigonometric function whose arguments are of the form
@@ -2582,11 +2629,12 @@ used to simplify trigonometric function whose arguments are of the form
 @code{sin}, @code{cos}, @code{tan}, @code{csc}, @code{sec} and @code{cot}.
 @c NEED TO LOAD THIS PACKAGE ??
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Package ntrig}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Package ntrig}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{sec}
@@ -2712,7 +2760,8 @@ Examples:
 
 @c -----------------------------------------------------------------------------
 @anchor{trigexpandplus}
-@defvr {Option variable} trigexpandplus
+@c @defvr {Option variable} trigexpandplus
+m4_defvr({Option variable}, trigexpandplus)
 Default value: @code{true}
 
 @code{trigexpandplus} controls the "sum" rule for
@@ -2721,15 +2770,17 @@ Default value: @code{true}
 (e.g. @code{sin(x+y))} will take place only if @code{trigexpandplus} is
 @code{true}.
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{trigexpandtimes}
-@defvr {Option variable} trigexpandtimes
+@c @defvr {Option variable} trigexpandtimes
+m4_defvr({Option variable}, trigexpandtimes)
 Default value: @code{true}
 
 @code{trigexpandtimes} controls the "product" rule for @code{trigexpand}.
@@ -2737,15 +2788,17 @@ Thus, when the @code{trigexpand} command is used or the @code{trigexpand}
 switch set to @code{true}, expansion of products (e.g. @code{sin(2*x)})
 will take place only if @code{trigexpandtimes} is @code{true}.
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{triginverses}
-@defvr {Option variable} triginverses
+@c @defvr {Option variable} triginverses
+m4_defvr({Option variable}, triginverses)
 Default value: @code{true}
 
 @code{triginverses} controls the simplification of the
@@ -2763,11 +2816,12 @@ If @code{false}, both the
 @code{@var{fun}(@var{arcfun}(@var{x}))}
 simplifications are turned off.
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{trigreduce}
@@ -2825,18 +2879,20 @@ See also @mref{poissimp}.
 
 @c -----------------------------------------------------------------------------
 @anchor{trigsign}
-@defvr {Option variable} trigsign
+@c @defvr {Option variable} trigsign
+m4_defvr({Option variable}, trigsign)
 Default value: @code{true}
 
 When @code{trigsign} is @code{true}, it permits simplification of negative
 arguments to trigonometric functions.  E.g., @code{sin(-x)} will become
 @code{-sin(x)} only if @code{trigsign} is @code{true}.
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{trigsimp}
