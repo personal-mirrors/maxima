@@ -30,8 +30,10 @@ computation of the fast Fourier transform.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package fft, Complex variables)
 @anchor{polartorect}
-@deffn {Function} polartorect (@var{r}, @var{t})
+@c @deffn {Function} polartorect (@var{r}, @var{t})
+m4_deffn({Function}, polartorect, <<<(@var{r}, @var{t})>>>)
 
 Translates complex values of the form @code{r %e^(%i t)} to the form
 @code{a + b %i}, where @var{r} is the magnitude and @var{t} is the phase.
@@ -51,15 +53,17 @@ b = r sin(t)
 
 @code{load(fft)} loads this function.  See also @mrefdot{fft}
 
-@opencatbox
-@category{Package fft}
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{recttopolar}
-@deffn {Function} recttopolar (@var{a}, @var{b})
+@c @deffn {Function} recttopolar (@var{a}, @var{b})
+m4_deffn({Function}, recttopolar, <<<(@var{a}, @var{b})>>>)
 
 Translates complex values of the form @code{a + b %i} to the form
 @code{r %e^(%i t)}, where @var{a} is the real part and @var{b} is the imaginary
@@ -81,15 +85,18 @@ The computed angle is in the range @code{-%pi} to @code{%pi}.
 
 @code{load(fft)} loads this function.  See also @mrefdot{fft}
 
-@opencatbox
-@category{Package fft}
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package fft)
 @anchor{inverse_fft}
-@deffn {Function} inverse_fft (@var{y})
+@c @deffn {Function} inverse_fft (@var{y})
+m4_deffn({Function}, inverse_fft, <<<(@var{y})>>>)
 
 Computes the inverse complex fast Fourier transform.
 @var{y} is a list or array (named or unnamed) which contains the data to
@@ -176,14 +183,16 @@ Complex data.
 (%o6)                       6.841L-17
 @end example
 
-@opencatbox
-@category{Package fft}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{fft}
-@deffn {Function} fft (@var{x})
+@c @deffn {Function} fft (@var{x})
+m4_deffn({Function}, fft, <<<(@var{x})>>>)
 
 Computes the complex fast Fourier transform.
 @var{x} is a list or array (named or unnamed) which contains the data to
@@ -354,14 +363,16 @@ Computation of sine and cosine coefficients.
 (%o18)      [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0]
 @end example
 
-@opencatbox
-@category{Package fft}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{real_fft}
-@deffn {Function} real_fft (@var{x})
+@c @deffn {Function} real_fft (@var{x})
+m4_deffn({Function}, real_fft, <<<(@var{x})>>>)
 
 Computes the fast Fourier transform of a real-valued sequence
 @var{x}.  This is equivalent to performing @code{fft(x)}, except that
@@ -377,14 +388,16 @@ may be computed more quickly than @code{fft}.
 
 Since the output length is short, the normal @mref{inverse_fft} cannot
 be directly used.  Use @mref{inverse_real_fft} to compute the inverse.
-@opencatbox
-@category{Package fft}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{inverse_real_fft}
-@deffn {Function} inverse_real_fft (@var{y})
+@c @deffn {Function} inverse_real_fft (@var{y})
+m4_deffn({Function}, inverse_real_fft, <<<(@var{y})>>>)
 Computes the inverse Fourier transfrom of @var{y}, which must have a
 length of @code{N/2+1} where @code{N} is a power of two.  That is, the
 input @var{x} is expected to be the output of @code{real_fft}.
@@ -392,63 +405,74 @@ input @var{x} is expected to be the output of @code{real_fft}.
 No check is made to ensure that the input has the correct format.
 (The first and last elements must be purely real.)
 
-@opencatbox
-@category{Package fft}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{bf_inverse_fft}
-@deffn {Function} bf_inverse_fft (@var{y})
+@c @deffn {Function} bf_inverse_fft (@var{y})
+m4_deffn({Function}, bf_inverse_fft, <<<(@var{y})>>>)
 
 Computes the inverse complex fast Fourier transform.  This is the
 bigfloat version of @mref{inverse_fft} that converts the input to
 bigfloats and returns a bigfloat result.
-@opencatbox
-@category{Package fft}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bf_fft}
-@deffn {Function} bf_fft (@var{y})
+@c @deffn {Function} bf_fft (@var{y})
+m4_deffn({Function}, bf_fft, <<<(@var{y})>>>)
 
 Computes the forward complex fast Fourier transform.  This is the
 bigfloat version of @mref{fft} that converts the input to
 bigfloats and returns a bigfloat result.
-@opencatbox
-@category{Package fft}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bf_real_fft}
-@deffn {Function} bf_real_fft (@var{x})
+@c @deffn {Function} bf_real_fft (@var{x})
+m4_deffn({Function}, bf_real_fft, <<<(@var{x})>>>)
 
 Computes the forward fast Fourier transform of a real-valued input
 returning a bigfloat result.  This is the bigfloat version of
 @code{real_fft}.
 
-@opencatbox
-@category{Package fft}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bf_inverse_real_fft}
-@deffn {Function} bf_inverse_real_fft (@var{y})
+@c @deffn {Function} bf_inverse_real_fft (@var{y})
+m4_deffn({Function}, bf_inverse_real_fft, <<<(@var{y})>>>)
 Computes the inverse fast Fourier transfrom with a real-valued
 bigfloat output.  This is the bigfloat version of @code{inverse_real_fft}.
 
-@opencatbox
-@category{Package fft}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fft}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Functions for numerical solution of equations, Introduction to numerical solution of differential equations, Functions and Variables for fast Fourier transform, Numerical
 @section Functions for numerical solution of equations
 @c -----------------------------------------------------------------------------
 
+m4_setcat(Numerical methods)
 @anchor{horner}
-@deffn  {Function} horner @
+@c @deffn  {Function} horner @
+m4_deffn( {Function}, horner, <<<>>>) @
 @fname{horner} (@var{expr}, @var{x}) @
 @fname{horner} (@var{expr})
 
@@ -484,24 +508,33 @@ To enable the Lisp debugger set *debugger-hook* to nil.
 (%o4)                 7.00000000000001e+154
 @end example
 
-@opencatbox
-@category{Numerical methods}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Numerical methods}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Algebraic equations, Numerical methods)
 @anchor{find_root}
 @anchor{bf_find_root}
 @anchor{find_root_error}
 @anchor{find_root_abs}
 @anchor{find_root_rel}
-@deffn  {Function} find_root (@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
-@deffnx {Function} find_root (@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
-@deffnx {Function} bf_find_root (@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
-@deffnx {Function} bf_find_root (@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
-@deffnx {Option variable} find_root_error
-@deffnx {Option variable} find_root_abs
-@deffnx {Option variable} find_root_rel
+@c @deffn  {Function} find_root (@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
+m4_deffn( {Function}, find_root, <<<(@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
+@c @deffnx {Function} find_root (@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
+m4_deffnx({Function}, find_root, <<<(@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
+@c @deffnx {Function} bf_find_root (@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
+m4_deffnx({Function}, bf_find_root, <<<(@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
+@c @deffnx {Function} bf_find_root (@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
+m4_deffnx({Function}, bf_find_root, <<<(@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
+@c @deffnx {Option variable} find_root_error
+@c @deffnx {Option variable} find_root_abs
+@c @deffnx {Option variable} find_root_rel
+m4_deffnx({Option variable}, find_root_error, <<<>>>)
+m4_deffnx({Option variable}, find_root_abs, <<<>>>)
+m4_deffnx({Option variable}, find_root_rel, <<<>>>)
 
 Finds a root of the expression @var{expr} or the function @var{f} over the
 closed interval @math{[@var{a}, @var{b}]}.  The expression @var{expr} may be an
@@ -611,15 +644,17 @@ Examples:
 (%o11)                  2.3025850929940456840179914546844b0
 @end example
 
-@opencatbox
-@category{Algebraic equations}
-@category{Numerical methods}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Algebraic equations}
+@c @category{Numerical methods}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{newton}
-@deffn {Function} newton (@var{expr}, @var{x}, @var{x_0}, @var{eps})
+@c @deffn {Function} newton (@var{expr}, @var{x}, @var{x_0}, @var{eps})
+m4_deffn({Function}, newton, <<<(@var{expr}, @var{x}, @var{x_0}, @var{eps})>>>)
 
 Returns an approximate solution of @code{@var{expr} = 0} by Newton's method,
 considering @var{expr} to be a function of one variable, @var{x}.
@@ -663,11 +698,12 @@ Examples:
 (%o6)                6.098490481853958e-4 a
 @end example
 
-@opencatbox
-@category{Algebraic equations}
-@category{Numerical methods}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Algebraic equations}
+@c @category{Numerical methods}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Introduction to numerical solution of differential equations, Functions for numerical solution of differential equations, Functions for numerical solution of equations, Numerical
@@ -717,7 +753,9 @@ autonomous.
 @node Functions for numerical solution of differential equations, , Introduction to numerical solution of differential equations, Numerical
 @section Functions for numerical solution of differential equations
 @c -----------------------------------------------------------------------------
-@deffn {Function} plotdf @
+m4_setcat(Differential equations, Plotting, Numerical methods)
+@c @deffn {Function} plotdf @
+m4_deffn({Function}, plotdf, <<<>>>) @
 @fname{plotdf} (@var{dydx}, options@dots{}) @
 @fname{plotdf} (@var{dvdu}, [@var{u},@var{v}], options@dots{}) @
 @fname{plotdf} ([@var{dxdt},c@var{dydt}], options@dots{}) @
@@ -973,15 +1011,17 @@ the two state variables as a function of time:
 
 @end itemize
 
-@opencatbox
-@category{Differential equations}
-@category{Plotting}
-@category{Numerical methods}
-@closecatbox
+@c @opencatbox
+@c @category{Differential equations}
+@c @category{Plotting}
+@c @category{Numerical methods}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Function} ploteq (@var{exp}, ...options...)
+@c @deffn {Function} ploteq (@var{exp}, ...options...)
+m4_deffn({Function}, ploteq, <<<(@var{exp}, ...options...)>>>)
 
 Plots equipotential curves for @var{exp}, which should be an expression
 depending on two variables. The curves are obtained by integrating the
@@ -1012,15 +1052,18 @@ Example:
 Clicking on a point will plot the equipotential curve that passes by that point
 (in red) and the orthogonal trajectory (in blue).
 
-@opencatbox
-@category{Differential equations}
-@category{Plotting}
-@category{Numerical methods}
-@closecatbox
+@c @opencatbox
+@c @category{Differential equations}
+@c @category{Plotting}
+@c @category{Numerical methods}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Function} rk @
+m4_setcat(Differential equations, Numerical methods)
+@c @deffn {Function} rk @
+m4_deffn({Function}, rk, <<<>>>) @
 @fname{rk} (@var{ODE}, @var{var}, @var{initial}, @var{domain}) @
 @fname{rk} ([@var{ODE1}, @dots{}, @var{ODEm}], [@var{v1}, @dots{}, @var{vm}], [@var{init1}, @dots{}, @var{initm}], @var{domain})
 
@@ -1109,9 +1152,10 @@ for t between 0 and 4, and with values of -1.25 and 0.75 for x and y at t=0:
 
 The plot will show the solution for variable @var{y} as a function of @var{t}.
 
-@opencatbox
-@category{Differential equations}
-@category{Numerical methods}
-@closecatbox
+@c @opencatbox
+@c @category{Differential equations}
+@c @category{Numerical methods}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
