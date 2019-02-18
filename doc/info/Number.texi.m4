@@ -9,8 +9,10 @@
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{bern}
-@deffn {Function} bern (@var{n})
+@c @deffn {Function} bern (@var{n})
+m4_deffn({Function}, bern, <<<(@var{n})>>>)
 
 Returns the @var{n}'th Bernoulli number for integer @var{n}.
 @c WELL, ACTUALLY bern SIMPLIFIES, LIKE FACTORIAL -- DO WE WANT TO GET INTO THAT ???
@@ -33,40 +35,48 @@ See also @mrefdot{burn}
                       2  6    30  42    30  66    2730  6
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{bernpoly}
-@deffn {Function} bernpoly (@var{x}, @var{n})
+@c @deffn {Function} bernpoly (@var{x}, @var{n})
+m4_deffn({Function}, bernpoly, <<<(@var{x}, @var{n})>>>)
 
 Returns the @var{n}'th Bernoulli polynomial in the
 variable @var{x}.
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory, Numerical evaluation)
 @anchor{bfzeta}
-@deffn {Function} bfzeta (@var{s}, @var{n})
+@c @deffn {Function} bfzeta (@var{s}, @var{n})
+m4_deffn({Function}, bfzeta, <<<(@var{s}, @var{n})>>>)
 
 Returns the Riemann zeta function for the argument @var{s}.
 The return value is a big float (bfloat);
 @var{n} is the number of digits in the return value.
 
-@opencatbox
-@category{Number theory}
-@category{Numerical evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory, Numerical evaluation)
 @anchor{bfhzeta}
-@deffn {Function} bfhzeta (@var{s}, @var{h}, @var{n})
+@c @deffn {Function} bfhzeta (@var{s}, @var{h}, @var{n})
+m4_deffn({Function}, bfhzeta, <<<(@var{s}, @var{h}, @var{n})>>>)
 
 Returns the Hurwitz zeta function for the arguments @var{s} and @var{h}.
 The return value is a big float (bfloat);
@@ -90,15 +100,18 @@ m4_mathjax(
 
 @code{load ("bffac")} loads this function.
 
-@opencatbox
-@category{Number theory}
-@category{Numerical evaluation}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{burn}
-@deffn {Function} burn (@var{n})
+@c @deffn {Function} burn (@var{n})
+m4_deffn({Function}, burn, <<<(@var{n})>>>)
 
 Returns a rational number, which is an approximation of the @var{n}'th Bernoulli
 number for integer @var{n}.  @code{burn} exploits the observation that
@@ -120,14 +133,17 @@ returning.  @code{burn} invokes the approximation for even integers @var{n} >
 
 @code{load ("bffac")} loads this function.  See also @mrefdot{bern}
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{chinese}
-@deffn {Function} chinese ([@var{r_1}, @dots{}, @var{r_n}], [@var{m_1}, @dots{}, @var{m_n}])
+@c @deffn {Function} chinese ([@var{r_1}, @dots{}, @var{r_n}], [@var{m_1}, @dots{}, @var{m_n}])
+m4_deffn({Function}, chinese, <<<([@var{r_1}, @dots{}, @var{r_n}], [@var{m_1}, @dots{}, @var{m_n}])>>>)
 
 Solves the system of congruences @code{x = r_1 mod m_1}, @dots{}, @code{x = r_n mod m_n}.
 The remainders @var{r_n} may be arbitrary integers while the moduli @var{m_n} have to be 
@@ -150,14 +166,17 @@ positive and pairwise coprime integers.
 (%o7)                              10
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Continued fractions)
 @anchor{cf}
-@deffn {Function} cf (@var{expr})
+@c @deffn {Function} cf (@var{expr})
+m4_deffn({Function}, cf, <<<(@var{expr})>>>)
 
 Computes a continued fraction approximation.
 @var{expr} is an expression comprising continued fractions,
@@ -241,17 +260,19 @@ Maxima does not know about operations on continued fractions outside of
 
 @end itemize
 
-@opencatbox
-@category{Continued fractions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Continued fractions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION -- MAKE EXPLICIT HOW list IS RELATED TO a, b, c, ...
 @c ALSO, CAN list CONTAIN ANYTHING OTHER THAN LITERAL INTEGERS ??
 
 @c -----------------------------------------------------------------------------
 @anchor{cfdisrep}
-@deffn {Function} cfdisrep (@var{list})
+@c @deffn {Function} cfdisrep (@var{list})
+m4_deffn({Function}, cfdisrep, <<<(@var{list})>>>)
 
 Constructs and returns an ordinary arithmetic expression
 of the form @code{a + 1/(b + 1/(c + ...))}
@@ -270,14 +291,16 @@ from the list representation of a continued fraction @code{[a, b, c, ...]}.
                                       2
 @end example
 
-@opencatbox
-@category{Continued fractions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Continued fractions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{cfexpand}
-@deffn {Function} cfexpand (@var{x})
+@c @deffn {Function} cfexpand (@var{x})
+m4_deffn({Function}, cfexpand, <<<(@var{x})>>>)
 
 Returns a matrix of the numerators and denominators of the last (column 1) and
 next-to-last (column 2) convergents of the continued fraction @var{x}.
@@ -295,14 +318,17 @@ next-to-last (column 2) convergents of the continued fraction @var{x}.
 (%o3)                   3.141592653011902
 @end example
 
-@opencatbox
-@category{Continued fractions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Continued fractions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Continued fractions)
 @anchor{cflength}
-@defvr {Option variable} cflength
+@c @defvr {Option variable} cflength
+m4_defvr({Option variable}, cflength)
 Default value: 1
 
 @code{cflength} controls the number of terms of the continued fraction the
@@ -321,14 +347,17 @@ Thus the default is to give one period.
 (%o6)           [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2]
 @end example
 
-@opencatbox
-@category{Continued fractions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Continued fractions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{divsum}
-@deffn  {Function} divsum @
+@c @deffn  {Function} divsum @
+m4_deffn( {Function}, divsum, <<<>>>) @
 @fname{divsum} (@var{n}, @var{k}) @
 @fname{divsum} (@var{n})
 
@@ -348,14 +377,16 @@ raised to the @var{k}'th power.
 (%o4)                          210
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{euler}
-@deffn {Function} euler (@var{n})
+@c @deffn {Function} euler (@var{n})
+m4_deffn({Function}, euler, <<<(@var{n})>>>)
 
 Returns the @var{n}'th Euler number for nonnegative integer @var{n}.
 Euler numbers equal to zero are suppressed if @code{zerobern} is
@@ -372,14 +403,17 @@ For the Euler-Mascheroni constant, see @code{%gamma}.
 (%o4)               [1, - 1, 5, - 61, 1385, - 50521, 2702765]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{factors_only}
-@defvr {Option variable} factors_only
+@c @defvr {Option variable} factors_only
+m4_defvr({Option variable}, factors_only)
 Default value: @code{false}
 
 Controls the value returned by @mrefdot{ifactors} The default @code{false} 
@@ -389,14 +423,16 @@ computed prime factors. If @code{factors_only} is set to @code{true},
 
 Example: See @mrefdot{ifactors}
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{fib}
-@deffn {Function} fib (@var{n})
+@c @deffn {Function} fib (@var{n})
+m4_deffn({Function}, fib, <<<(@var{n})>>>)
 
 Returns the @var{n}'th Fibonacci number.
 @code{fib(0)} is equal to 0 and @code{fib(1)} equal to 1, and 
@@ -411,14 +447,16 @@ the Fibonacci number preceding the last one computed.
 (%o1)           [- 3, 2, - 1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{fibtophi}
-@deffn {Function} fibtophi (@var{expr})
+@c @deffn {Function} fibtophi (@var{expr})
+m4_deffn({Function}, fibtophi, <<<(@var{expr})>>>)
 
 Expresses Fibonacci numbers in @var{expr} in terms of the constant @code{%phi},
 which is @code{(1 + sqrt(5))/2}, approximately 1.61803399.
@@ -452,14 +490,16 @@ Examples:
 (%o4)                           0
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ifactors}
-@deffn {Function} ifactors (@var{n})
+@c @deffn {Function} ifactors (@var{n})
+m4_deffn({Function}, ifactors, <<<(@var{n})>>>)
 
 For a positive integer @var{n} returns the factorization of @var{n}.  If
 @code{n=p1^e1..pk^nk} is the decomposition of @var{n} into prime
@@ -487,14 +527,16 @@ prime factors.
 (%o3)                   [2, 3, 5, 1583, 9050207]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{igcdex}
-@deffn {Function} igcdex (@var{n}, @var{k})
+@c @deffn {Function} igcdex (@var{n}, @var{k})
+m4_deffn({Function}, igcdex, <<<(@var{n}, @var{k})>>>)
 
 Returns a list @code{[@var{a}, @var{b}, @var{u}]} where @var{u} is the greatest
 common divisor of @var{n} and @var{k}, and @var{u} is equal to
@@ -518,14 +560,16 @@ Examples:
 (%o4)                   [4181, - 2584, 1]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{inrt}
-@deffn {Function} inrt (@var{x}, @var{n})
+@c @deffn {Function} inrt (@var{x}, @var{n})
+m4_deffn({Function}, inrt, <<<(@var{x}, @var{n})>>>)
 
 Returns the integer @var{n}'th root of the absolute value of @var{x}.
 
@@ -535,14 +579,16 @@ Returns the integer @var{n}'th root of the absolute value of @var{x}.
 (%o2) [2, 4, 10, 21, 46, 100, 215, 464, 1000, 2154, 4641, 10000]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{inv_mod}
-@deffn {Function} inv_mod (@var{n}, @var{m})
+@c @deffn {Function} inv_mod (@var{n}, @var{m})
+m4_deffn({Function}, inv_mod, <<<(@var{n}, @var{m})>>>)
 
 Computes the inverse of @var{n} modulo @var{m}.
 @code{inv_mod (n,m)} returns @code{false}, 
@@ -557,26 +603,32 @@ if @var{n} is a zero divisor modulo @var{m}.
 (%o3)                          false
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Mathematical functions)
 @anchor{isqrt}
-@deffn {Function} isqrt (@var{x})
+@c @deffn {Function} isqrt (@var{x})
+m4_deffn({Function}, isqrt, <<<(@var{x})>>>)
 
 Returns the "integer square root" of the absolute value of @var{x}, which is an
 integer.
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{jacobi}
-@deffn {Function} jacobi (@var{p}, @var{q})
+@c @deffn {Function} jacobi (@var{p}, @var{q})
+m4_deffn({Function}, jacobi, <<<(@var{p}, @var{q})>>>)
 
 Returns the Jacobi symbol of @var{p} and @var{q}.
 
@@ -586,28 +638,32 @@ Returns the Jacobi symbol of @var{p} and @var{q}.
 (%o2)         [1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{lcm}
-@deffn {Function} lcm (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} lcm (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn({Function}, lcm, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Returns the least common multiple of its arguments.
 The arguments may be general expressions as well as integers.
 
 @code{load ("functs")} loads this function.
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{lucas}
-@deffn {Function} lucas (@var{n})
+@c @deffn {Function} lucas (@var{n})
+m4_deffn({Function}, lucas, <<<(@var{n})>>>)
 
 Returns the @var{n}'th Lucas number.
 @code{lucas(0)} is equal to 2 and @code{lucas(1)} equal to 1, and 
@@ -631,14 +687,17 @@ how Fibonacci numbers can be computed via @code{lucas} and @code{next_lucas}.
 (%o2)             [- 3, 2, - 1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Mathematical functions)
 @anchor{mod}
-@deffn {Function} mod (@var{x}, @var{y})
+@c @deffn {Function} mod (@var{x}, @var{y})
+m4_deffn({Function}, mod, <<<(@var{x}, @var{y})>>>)
 
 If @var{x} and @var{y} are real numbers and @var{y} is nonzero, return
 @code{@var{x} - @var{y} * floor(@var{x} / @var{y})}.  Further for all real
@@ -675,14 +734,17 @@ simplification rules:
 (%o3)                           0
 @end example
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{next_prime}
-@deffn {Function} next_prime (@var{n})
+@c @deffn {Function} next_prime (@var{n})
+m4_deffn({Function}, next_prime, <<<(@var{n})>>>)
 
 Returns the smallest prime bigger than @var{n}.
 
@@ -691,14 +753,17 @@ Returns the smallest prime bigger than @var{n}.
 (%o1)                       29
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{partfrac}
-@deffn {Function} partfrac (@var{expr}, @var{var})
+@c @deffn {Function} partfrac (@var{expr}, @var{var})
+m4_deffn({Function}, partfrac, <<<(@var{expr}, @var{var})>>>)
 
 Expands the expression @var{expr} in partial fractions
 with respect to the main variable @var{var}.  @code{partfrac} does a complete
@@ -728,11 +793,14 @@ the expansion falls out.
                     x + 2   x + 1          2
                                     (x + 1)
 @end example
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{power_mod}
-@deffn {Function} power_mod (@var{a}, @var{n}, @var{m})
+@c @deffn {Function} power_mod (@var{a}, @var{n}, @var{m})
+m4_deffn({Function}, power_mod, <<<(@var{a}, @var{n}, @var{m})>>>)
 
 Uses a modular algorithm to compute @code{a^n mod m} 
 where @var{a} and @var{n} are integers and @var{m} is a positive integer.
@@ -749,14 +817,17 @@ If @var{n} is negative, @code{inv_mod} is used to find the modular inverse.
 (%o4)                          3
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions, Number theory)
 @anchor{primep}
-@deffn {Function} primep (@var{n})
+@c @deffn {Function} primep (@var{n})
+m4_deffn({Function}, primep, <<<(@var{n})>>>)
 
 Primality test.  If @code{primep (@var{n})} returns @code{false}, @var{n} is a
 composite number and if it returns @code{true}, @var{n} is a prime number
@@ -773,27 +844,33 @@ pass one Miller-Rabin test is less than 1/4.  Using the default value 25 for
 @code{primep_number_of_tests}, the probability of @var{n} being
 composite is much smaller that 10^-15.
 
-@opencatbox
-@category{Predicate functions}
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{primep_number_of_tests}
-@defvr {Option variable} primep_number_of_tests
+@c @defvr {Option variable} primep_number_of_tests
+m4_defvr({Option variable}, primep_number_of_tests)
 Default value: 25
 
 Number of Miller-Rabin's tests used in @code{primep}.
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{primes}
-@deffn {Function} primes (@var{start}, @var{end})
+@c @deffn {Function} primes (@var{start}, @var{end})
+m4_deffn({Function}, primes, <<<(@var{start}, @var{end})>>>)
 
 Returns the list of all primes from @var{start} to @var{end}.
 
@@ -802,14 +879,16 @@ Returns the list of all primes from @var{start} to @var{end}.
 (%o1)                     [3, 5, 7]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{prev_time}
-@deffn {Function} prev_prime (@var{n})
+@c @deffn {Function} prev_prime (@var{n})
+m4_deffn({Function}, prev_prime, <<<(@var{n})>>>)
 
 Returns the greatest prime smaller than @var{n}.
 
@@ -818,14 +897,16 @@ Returns the greatest prime smaller than @var{n}.
 (%o1)                       23
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{qunit}
-@deffn {Function} qunit (@var{n})
+@c @deffn {Function} qunit (@var{n})
+m4_deffn({Function}, qunit, <<<(@var{n})>>>)
 
 Returns the principal unit of the real quadratic number field
 @code{sqrt (@var{n})} where @var{n} is an integer,
@@ -839,39 +920,46 @@ This amounts to solving Pell's equation @code{a^2 - @var{n} b^2 = 1}.
 (%o2)                           1
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{totient}
-@deffn {Function} totient (@var{n})
+@c @deffn {Function} totient (@var{n})
+m4_deffn({Function}, totient, <<<(@var{n})>>>)
 
 Returns the number of integers less than or equal to @var{n} which
 are relatively prime to @var{n}.
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} zerobern
+m4_setcat(Number theory)
+@c @defvr {Option variable} zerobern
+m4_defvr({Option variable}, zerobern)
 Default value: @code{true}
 
 When @code{zerobern} is @code{false}, @code{bern} excludes the Bernoulli numbers
 and @code{euler} excludes the Euler numbers which are equal to zero.
 See @code{bern} and @code{euler}.
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{pNumber theory}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{zeta}
-@deffn {Function} zeta (@var{n})
+@c @deffn {Function} zeta (@var{n})
+m4_deffn({Function}, zeta, <<<(@var{n})>>>)
 
 Returns the Riemann zeta function.  If @var{n} is a negative integer, 0, or a
 positive even integer, the Riemann zeta function simplifies to an exact value.
@@ -909,14 +997,17 @@ Examples:
 (%o3)                         minf
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{zeta%pi}
-@defvr {Option variable} zeta%pi
+@c @defvr {Option variable} zeta%pi
+m4_defvr({Option variable}, zeta%pi)
 Default value: @mref{true}
 
 When @code{zeta%pi} is @code{true}, @code{zeta} returns an expression 
@@ -943,27 +1034,31 @@ Examples:
 (%o4)                        zeta(4)
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_add_table}
-@deffn {Function} zn_add_table (@var{n}) 
+@c @deffn {Function} zn_add_table (@var{n}) 
+m4_deffn({Function}, zn_add_table, <<<(@var{n})>>>) 
 
 Shows an addition table of all elements in (Z/@var{n}Z).
 
 See also @mrefcomma{zn_mult_table}  @mrefdot{zn_power_table}
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_characteristic_factors}
-@deffn {Function} zn_characteristic_factors (@var{n}) 
+@c @deffn {Function} zn_characteristic_factors (@var{n}) 
+m4_deffn({Function}, zn_characteristic_factors, <<<(@var{n})>>>) 
 
 Returns a list containing the characteristic factors of the totient of @var{n}.
 
@@ -1042,28 +1137,32 @@ and each of these has @code{2^2} square roots.
 (%o7)                   [[1, 4, 11, 14], [2, 7, 8, 13]]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_carmichael_lambda}
-@deffn {Function} zn_carmichael_lambda (@var{n}) 
+@c @deffn {Function} zn_carmichael_lambda (@var{n}) 
+m4_deffn({Function}, zn_carmichael_lambda, <<<(@var{n})>>>) 
 
 Returns @code{1} if @var{n} is @code{1} and otherwise 
 the greatest characteristic factor of the totient of @var{n}.
 
 For remarks and examples see @mrefdot{zn_characteristic_factors}
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_determinant}
-@deffn {Function} zn_determinant (@var{matrix}, @var{p}) 
+@c @deffn {Function} zn_determinant (@var{matrix}, @var{p}) 
+m4_deffn({Function}, zn_determinant, <<<(@var{matrix}, @var{p})>>>) 
 
 Uses the technique of LU-decomposition to compute the determinant of @var{matrix} 
 over (Z/@var{p}Z). @var{p} must be a prime. 
@@ -1093,28 +1192,32 @@ Examples:
 (%o4)                               0
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_factor_generators}
-@deffn {Function} zn_factor_generators (@var{n}) 
+@c @deffn {Function} zn_factor_generators (@var{n}) 
+m4_deffn({Function}, zn_factor_generators, <<<(@var{n})>>>) 
 
 Returns a list containing factor generators corresponding to the 
 characteristic factors of the totient of @var{n}.
 
 For remarks and examples see @mrefdot{zn_characteristic_factors}
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_invert_by_lu}
-@deffn {Function} zn_invert_by_lu (@var{matrix}, @var{p}) 
+@c @deffn {Function} zn_invert_by_lu (@var{matrix}, @var{p}) 
+m4_deffn({Function}, zn_invert_by_lu, <<<(@var{matrix}, @var{p})>>>) 
 
 Uses the technique of LU-decomposition to compute the modular inverse of 
 @var{matrix} over (Z/@var{p}Z). @var{p} must be a prime and @var{matrix} 
@@ -1142,14 +1245,16 @@ Example:
                                 [ 0  1 ]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_log}
-@deffn {Function} zn_log @
+@c @deffn {Function} zn_log @
+m4_deffn({Function}, zn_log, <<<>>>) @
 @fname{zn_log} (@var{a}, @var{g}, @var{n})  @
 @fname{zn_log} (@var{a}, @var{g}, @var{n}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])
 
@@ -1208,14 +1313,16 @@ The run time primarily depends on the bitlength of the totient's greatest prime 
 (%o8)                              37
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_mult_table}
-@deffn {Function} zn_mult_table @
+@c @deffn {Function} zn_mult_table @
+m4_deffn({Function}, zn_mult_table, <<<>>>) @
 @fname{zn_mult_table} (@var{n})  @
 @fname{zn_mult_table} (@var{n}, @var{gcd})
 
@@ -1322,14 +1429,16 @@ the top left corner, just like in table @code{T9}.
                           [ 8   16  32  4   20  28 ]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_nth_root}
-@deffn {Function} zn_nth_root @
+@c @deffn {Function} zn_nth_root @
+m4_deffn({Function}, zn_nth_root, <<<>>>) @
 @fname{zn_nth_root} (@var{x}, @var{n}, @var{m})  @
 @fname{zn_nth_root} (@var{x}, @var{n}, @var{m}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])
 
@@ -1445,14 +1554,16 @@ and passed as the fourth argument.
 (%o7)               [11223344556677889900aabbccddeeff]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_order}
-@deffn {Function} zn_order @
+@c @deffn {Function} zn_order @
+m4_deffn({Function}, zn_order, <<<>>>) @
 @fname{zn_order} (@var{x}, @var{n})  @
 @fname{zn_order} (@var{x}, @var{n}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])
 
@@ -1504,14 +1615,16 @@ The optional third argument must be of the same form as the list returned by
 (%o5)        [22, 1, 44, 10, 5, 2, 22, 2, 8, 2, 1, 1, 20, 1]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_power_table}
-@deffn {Function} zn_power_table @
+@c @deffn {Function} zn_power_table @
+m4_deffn({Function}, zn_power_table, <<<>>>) @
 @fname{zn_power_table} (@var{n})  @
 @fname{zn_power_table} (@var{n}, @var{gcd})  @
 @fname{zn_power_table} (@var{n}, @var{gcd}, @var{max_exp})
@@ -1607,14 +1720,16 @@ The following table shows a very small example of RSA.
        [ 9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9  1  9 ]
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{zn_primroot}
-@deffn {Function} zn_primroot @
+@c @deffn {Function} zn_primroot @
+m4_deffn({Function}, zn_primroot, <<<>>>) @
 @fname{zn_primroot} (@var{n})  @
 @fname{zn_primroot} (@var{n}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])
 
@@ -1674,28 +1789,34 @@ The optional second argument must be of the same form as the list returned by
 (%o8)                             false
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{zn_primroot_limit}
-@defvr {Option variable} zn_primroot_limit
+@c @defvr {Option variable} zn_primroot_limit
+m4_defvr({Option variable}, zn_primroot_limit)
 Default value: @code{1000} 
 
 If @mref{zn_primroot} cannot find a primitve root, it stops at this upper bound. 
 If the option variable @mref{zn_primroot_verbose} (default: @code{false}) is 
 set to @code{true}, a message will be printed when @code{zn_primroot_limit} is reached. 
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions, Number theory)
 @anchor{zn_primroot_p}
-@deffn {Function} zn_primroot_p @
+@c @deffn {Function} zn_primroot_p @
+m4_deffn({Function}, zn_primroot_p, <<<>>>) @
 @fname{zn_primroot_p} (@var{x}, @var{n})  @
 @fname{zn_primroot_p} (@var{x}, @var{n}, [[@var{p1}, @var{e1}], @dots{}, [@var{pk}, @var{ek}]])
 
@@ -1739,15 +1860,18 @@ The optional third argument must be of the same form as the list returned by
 (%o4)                   [[7.748484], [0.036002]]
 @end example
 
-@opencatbox
-@category{Predicate functions}
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{zn_primroot_pretest}
-@defvr {Option variable} zn_primroot_pretest
+@c @defvr {Option variable} zn_primroot_pretest
+m4_defvr({Option variable}, zn_primroot_pretest)
 Default value: @code{false} 
 
 The multiplicative group (Z/@var{n}Z)* is cyclic if @var{n} is equal to 
@@ -1759,21 +1883,25 @@ if one of these cases occur before it computes the smallest primitive root.
 Only if @code{zn_primroot_pretest} is set to @code{true} this pretest will be 
 performed.
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{zn_primroot_verbose}
-@defvr {Option variable} zn_primroot_verbose
+@c @defvr {Option variable} zn_primroot_verbose
+m4_defvr({Option variable}, zn_primroot_verbose)
 Default value: @code{false} 
 
 Controls whether @mref{zn_primroot} prints a message when reaching 
 @mrefdot{zn_primroot_limit}
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
