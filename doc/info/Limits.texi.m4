@@ -9,22 +9,26 @@
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Limits)
 @anchor{lhospitallim}
-@defvr {Option variable} lhospitallim
+@c @defvr {Option variable} lhospitallim
+m4_defvr({Option variable}, lhospitallim)
 Default value: 4
 
 @code{lhospitallim} is the maximum number of times L'Hospital's
 rule is used in @mref{limit}.  This prevents infinite looping in cases like
 @code{limit (cot(x)/csc(x), x, 0)}.
 
-@opencatbox
-@category{Limits}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Limits}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{limit}
-@deffn  {Function} limit @
+@c @deffn  {Function} limit @
+m4_deffn( {Function}, limit, <<<>>>) @
 @fname{limit} (@var{expr}, @var{x}, @var{val}, @var{dir}) @
 @fname{limit} (@var{expr}, @var{x}, @var{val}) @
 @fname{limit} (@var{expr})
@@ -70,28 +74,32 @@ expressions, for example, @code{limit (inf-1)}.
 For the method see Wang, P., "Evaluation of Definite Integrals by Symbolic
 Manipulation", Ph.D. thesis, MAC TR-92, October 1971.
 
-@opencatbox
-@category{Limits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Limits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{limsubst}
-@defvr {Option variable} limsubst
+@c @defvr {Option variable} limsubst
+m4_defvr({Option variable}, limsubst)
 Default value: @code{false}
 
 prevents @mref{limit} from attempting substitutions on unknown forms.  This is
 to avoid bugs like @code{limit (f(n)/f(n+1), n, inf)} giving 1.  Setting
 @code{limsubst} to @code{true} will allow such substitutions.
 
-@opencatbox
-@category{Limits}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Limits}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{tlimit}
-@deffn  {Function} tlimit @
+@c @deffn  {Function} tlimit @
+m4_deffn( {Function}, tlimit, <<<>>>) @
 @fname{tlimit} (@var{expr}, @var{x}, @var{val}, @var{dir}) @
 @fname{tlimit} (@var{expr}, @var{x}, @var{val}) @
 @fname{tlimit} (@var{expr})
@@ -99,14 +107,16 @@ to avoid bugs like @code{limit (f(n)/f(n+1), n, inf)} giving 1.  Setting
 Take the limit of the Taylor series expansion of @code{expr} in @code{x}
 at @code{val} from direction @code{dir}.
 
-@opencatbox
-@category{Limits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Limits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{tlimswitch}
-@defvr {Option variable} tlimswitch
+@c @defvr {Option variable} tlimswitch
+m4_defvr({Option variable}, tlimswitch)
 Default value: @code{true}
 
 When @code{tlimswitch} is @code{true}, the @mref{limit} command will use a
@@ -116,8 +126,9 @@ directly.  This allows evaluation of limits such as
 and the limit of input expression cannot be computed directly, @code{limit} will
 return an unevaluated limit expression.
 
-@opencatbox
-@category{Limits}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Limits}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
