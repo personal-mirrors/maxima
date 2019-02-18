@@ -55,13 +55,16 @@ itself, since after it has been through the simplifier the list would become
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Operators)
 @anchor{[}
 @anchor{]}
 @fnindex List delimiters
 @fnindex Subscript operator
 
-@defvr  {Operator} [
-@defvrx {Operator} ]
+@c @defvr  {Operator} [
+m4_defvr( {Operator}, <<<[>>>)
+@c @defvrx {Operator} ]
+m4_defvrx({Operator}, <<<]>>>)
 
 @code{[} and @code{]} mark the beginning and end, respectively, of a list.
 
@@ -132,11 +135,12 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Operators}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Lists}
+@c @category{Operators}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEED ANOTHER deffn FOR GENERAL EXPRESSIONS ARGUMENTS
 @c NEEDS CLARIFICATION AND EXAMPLES
@@ -1069,8 +1073,10 @@ is calculated outside the loop instead.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Global flags)
 @anchor{listarith}
-@defvr {Option variable} listarith
+@c @defvr {Option variable} listarith
+m4_defvr({Option variable}, listarith)
 Default value: @code{true} 
 
 If @code{false} causes any arithmetic operations with lists to be suppressed;
@@ -1078,11 +1084,12 @@ when @code{true}, list-matrix operations are contagious causing lists to be
 converted to matrices yielding a result which is always a matrix.  However,
 list-list operations should return lists.
 
-@opencatbox
-@category{Lists}
-@category{Global flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Lists}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Lists, Predicate functions)
