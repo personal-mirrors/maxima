@@ -14,8 +14,10 @@
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Mathematical functions)
 @anchor{abs}
-@deffn {Function} abs (@var{z})
+@c @deffn {Function} abs (@var{z})
+m4_deffn({Function}, abs, <<<(@var{z})>>>)
 
 The @code{abs} function represents the mathematical absolute value function and
 works for both numerical and symbolic values. If the argument, @var{z}, is a
@@ -131,14 +133,16 @@ transform of @code{abs}: see @mrefdot{laplace}
                                s
 @end example
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ceiling}
-@deffn {Function} ceiling (@var{x})
+@c @deffn {Function} ceiling (@var{x})
+m4_deffn({Function}, ceiling, <<<(@var{x})>>>)
 
 When @var{x} is a real number, return the least integer that 
 is greater than or equal to @var{x}.
@@ -286,27 +290,31 @@ reverse(uf))
 @end group
 @end example
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{entier}
-@deffn {Function} entier (@var{x})
+@c @deffn {Function} entier (@var{x})
+m4_deffn({Function}, entier, <<<(@var{x})>>>)
 
 Returns the largest integer less than or equal to @var{x} where @var{x} is
 numeric.  @mref{fix} (as in @code{fixnum}) is a synonym for this, so
 @code{fix(@var{x})} is precisely the same.
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{floor}
-@deffn {Function} floor (@var{x})
+@c @deffn {Function} floor (@var{x})
+m4_deffn({Function}, floor, <<<(@var{x})>>>)
 
 When @var{x} is a real number, return the largest integer that is less than or
 equal to @var{x}.
@@ -383,55 +391,65 @@ can use this information; for example:
 @end group
 @end example
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{fix}
-@deffn {Function} fix (@var{x})
+@c @deffn {Function} fix (@var{x})
+m4_deffn({Function}, fix, <<<(@var{x})>>>)
 
 A synonym for @code{entier (@var{x})}.
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Mathematical functions, Lists, Sets)
 @anchor{lmax}
-@deffn {Function} lmax (@var{L})
+@c @deffn {Function} lmax (@var{L})
+m4_deffn({Function}, lmax, <<<(@var{L})>>>)
 
 When @var{L} is a list or a set, return @code{apply ('max, args (@var{L}))}.
 When @var{L} is not a list or a set, signal an error.
 See also @mref{lmin} and @mrefdot{max}
 
-@opencatbox
-@category{Mathematical functions}
-@category{Lists}
-@category{Sets}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @category{Lists}
+@c @category{Sets}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{lmin}
-@deffn {Function} lmin (@var{L})
+@c @deffn {Function} lmin (@var{L})
+m4_deffn({Function}, lmin, <<<(@var{L})>>>)
 
 When @var{L} is a list or a set, return @code{apply ('min, args (@var{L}))}.
 When @var{L} is not a list or a set, signal an error.
 See also @mref{lmax} and @mrefdot{min}
 
-@opencatbox
-@category{Mathematical functions}
-@category{Lists}
-@category{Sets}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @category{Lists}
+@c @category{Sets}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Mathematical functions)
 @anchor{max}
-@deffn {Function} max (@var{x_1}, @dots{}, @var{x_n})
+@c @deffn {Function} max (@var{x_1}, @dots{}, @var{x_n})
+m4_deffn({Function}, max, <<<(@var{x_1}, @dots{}, @var{x_n})>>>)
 
 Return a simplified value for the maximum of the expressions @var{x_1} through
 @var{x_n}.  When @code{get (trylevel, maxmin)}, is 2 or greater, @code{max}
@@ -443,14 +461,16 @@ to 2, use @code{put (trylevel, 2, maxmin)}.
 
 See also @mref{min} and @mrefdot{lmax}
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{min}
-@deffn {Function} min (@var{x_1}, @dots{}, @var{x_n})
+@c @deffn {Function} min (@var{x_1}, @dots{}, @var{x_n})
+m4_deffn({Function}, min, <<<(@var{x_1}, @dots{}, @var{x_n})>>>)
 
 Return a simplified value for the minimum of the expressions @code{x_1} through
 @code{x_n}.  When @code{get (trylevel, maxmin)}, is 2 or greater, @code{min}
@@ -462,14 +482,16 @@ to 2, use @code{put (trylevel, 2, maxmin)}.
 
 See also @mref{max} and @mrefdot{lmin}
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{round}
-@deffn {Function} round (@var{x})
+@c @deffn {Function} round (@var{x})
+m4_deffn({Function}, round, <<<(@var{x})>>>)
 
 When @var{x} is a real number, returns the closest integer to @var{x}.
 Multiples of 1/2 are rounded to the nearest even integer.  Evaluation of
@@ -478,14 +500,16 @@ Multiples of 1/2 are rounded to the nearest even integer.  Evaluation of
 The @code{round} function distributes over lists, matrices and equations.
 See @mrefdot{distribute_over}
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{signum}
-@deffn {Function} signum (@var{x})
+@c @deffn {Function} signum (@var{x})
+m4_deffn({Function}, signum, <<<(@var{x})>>>)
 
 For either real or complex numbers @var{x}, the signum function returns
 0 if @var{x} is zero; for a nonzero numeric input @var{x}, the signum function
@@ -501,14 +525,16 @@ gives @code{-signum(x)}) and multiplicative identity (@code{signum(x*y)} gives
 The @code{signum} function distributes over a list, a matrix, or an
 equation.  See @mrefdot{distribute_over}
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{truncate}
-@deffn {Function} truncate (@var{x})
+@c @deffn {Function} truncate (@var{x})
+m4_deffn({Function}, truncate, <<<(@var{x})>>>)
 
 When @var{x} is a real number, return the closest integer to @var{x} not
 greater in absolute value than @var{x}.  Evaluation of @var{x} is similar
@@ -517,10 +543,11 @@ to @mref{floor} and @mrefdot{ceiling}
 The @code{truncate} function distributes over lists, matrices and equations.
 See @mrefdot{distribute_over}
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Functions for Complex Numbers, Combinatorial Functions, Functions for Numbers, Mathematical Functions
@@ -528,8 +555,10 @@ See @mrefdot{distribute_over}
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Complex variables)
 @anchor{cabs}
-@deffn {Function} cabs (@var{expr})
+@c @deffn {Function} cabs (@var{expr})
+m4_deffn({Function}, cabs, <<<(@var{expr})>>>)
 
 Calculates the absolute value of an expression representing a complex
 number.  Unlike the function @mrefcomma{abs} the @code{cabs} function always
@@ -676,14 +705,16 @@ example for @mrefdot{bessel_j}
 (%o4)                 abs(bessel_j(1, %i))
 @end example
 
-@opencatbox
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{carg}
-@deffn {Function} carg (@var{z})
+@c @deffn {Function} carg (@var{z})
+m4_deffn({Function}, carg, <<<(@var{z})>>>)
 
 Returns the complex argument of @var{z}.  The complex argument is an angle
 @code{theta} in @code{(-%pi, %pi]} such that @code{r exp (theta %i) = @var{z}}
@@ -775,14 +806,16 @@ some properties of the variables involved not being known:
 @end group
 @end example
 
-@opencatbox
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{conjugate}
-@deffn {Function} conjugate (@var{x})
+@c @deffn {Function} conjugate (@var{x})
+m4_deffn({Function}, conjugate, <<<(@var{x})>>>)
 
 Returns the complex conjugate of @var{x}.
 
@@ -816,14 +849,16 @@ Returns the complex conjugate of @var{x}.
 @end group
 @end example
 
-@opencatbox
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{imagpart}
-@deffn {Function} imagpart (@var{expr})
+@c @deffn {Function} imagpart (@var{expr})
+m4_deffn({Function}, imagpart, <<<(@var{expr})>>>)
 
 Returns the imaginary part of the expression @var{expr}.
 
@@ -861,16 +896,19 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Complex variables, Exponential and logarithm functions)
 @anchor{polarform}
-@deffn {Function} polarform (@var{expr})
+@c @deffn {Function} polarform (@var{expr})
+m4_deffn({Function}, polarform, <<<(@var{expr})>>>)
 
 Returns an expression @code{r %e^(%i theta)} equivalent to @var{expr},
 such that @code{r} and @code{theta} are purely real.
@@ -902,15 +940,18 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Complex variables}
-@category{Exponential and logarithm functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @category{Exponential and logarithm functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Complex variables)
 @anchor{realpart}
-@deffn {Function} realpart (@var{expr})
+@c @deffn {Function} realpart (@var{expr})
+m4_deffn({Function}, realpart, <<<(@var{expr})>>>)
 
 Returns the real part of @var{expr}.  @code{realpart} and @mref{imagpart} will
 work on expressions involving trigonometric and hyperbolic functions,
@@ -943,14 +984,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{rectform}
-@deffn {Function} rectform (@var{expr})
+@c @deffn {Function} rectform (@var{expr})
+m4_deffn({Function}, rectform, <<<(@var{expr})>>>)
 
 Returns an expression @code{a + b %i} equivalent to @var{expr},
 such that @var{a} and @var{b} are purely real.
@@ -977,10 +1020,11 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Combinatorial Functions, Root Exponential and Logarithmic Functions, Functions for Complex Numbers, Mathematical Functions
@@ -988,8 +1032,10 @@ Example:
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions, Operators)
 @anchor{!!}
-@deffn {Operator} !!
+@c @deffn {Operator} !!
+m4_deffn({Operator}, !!, <<<>>>)
 @ifinfo
 @fnindex Double factorial
 @end ifinfo
@@ -1012,15 +1058,18 @@ yields a noun form @code{genfact (n, n/2, 2)}.
 @c n!! IS NEITHER SIMPLIFIED NOR EVALUATED IN THIS CASE 
 @c -- MENTION THAT? OR TOO MUCH DETAIL ???
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{binomial}
-@deffn {Function} binomial (@var{x}, @var{y})
+@c @deffn {Function} binomial (@var{x}, @var{y})
+m4_deffn({Function}, binomial, <<<(@var{x}, @var{y})>>>)
 
 The binomial coefficient @code{@var{x}!/(@var{y}! (@var{x} - @var{y})!)}.
 If @var{x} and @var{y} are integers, then the numerical value of the binomial
@@ -1063,12 +1112,14 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions)
 @anchor{factcomb}
 @deffn {Function} factcomb (@var{expr})
 
@@ -1118,16 +1169,20 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions, Operators)
 @anchor{!}
 @anchor{factorial}
-@deffn  {Function} factorial
-@deffnx {Operator} !
+@c @deffn  {Function} factorial
+m4_deffn({Function}, factorial, <<<(x)>>>)
+@c @deffnx {Operator} !
+m4_deffnx({Operator}, !, <<<>>>)
 
 Represents the factorial function.  Maxima treats @code{factorial (@var{x})}
 the same as @code{@var{x}!}.
@@ -1271,11 +1326,12 @@ simplification of expressions with the factorial function.
 @end group
 @end example
 
-@opencatbox
-@category{Gamma and factorial functions}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
@@ -1314,21 +1370,26 @@ m4_end_defvr()
 @c IS THIS DEFINITION CORRECT ??
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Gamma and factorial functions)
 @anchor{genfact}
-@deffn {Function} genfact (@var{x}, @var{y}, @var{z})
+@c @deffn {Function} genfact (@var{x}, @var{y}, @var{z})
+m4_deffn({Function}, genfact, <<<(@var{x}, @var{y}, @var{z})>>>)
 
 Returns the generalized factorial, defined as
 @code{x (x-z) (x - 2 z) ... (x - (y - 1) z)}.  Thus, when @var{x} is an integer,
 @code{genfact (x, x, 1) = x!} and @code{genfact (x, x/2, 2) = x!!}.
 
-@opencatbox
-@category{Gamma and factorial functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Gamma and factorial functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Number theory)
 @anchor{minfactorial}
-@deffn {Function} minfactorial (@var{expr})
+@c @deffn {Function} minfactorial (@var{expr})
+m4_deffn({Function}, minfactorial, <<<(@var{expr})>>>)
 
 Examines @var{expr} for occurrences of two factorials
 which differ by an integer.
@@ -1355,10 +1416,11 @@ which differ by an integer.
                          (n + 1) (n + 2)
 @end example
 
-@opencatbox
-@category{Number theory}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Gamma and factorial functions, Simplification flags and variables)
@@ -1598,8 +1660,10 @@ m4_end_defvr()
 @c PROBABLY MORE TO BE SAID HERE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions)
 @anchor{exp}
-@deffn {Function} exp (@var{x})
+@c @deffn {Function} exp (@var{x})
+m4_deffn({Function}, exp, <<<(@var{x})>>>)
 
 Represents the exponential function.  Instances of @code{exp (@var{x})} in input
 are simplified to @code{%e^@var{x}}; @code{exp} does not appear in simplified
@@ -1642,16 +1706,18 @@ See @mrefdot{%emode}
 @end group
 @end example
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions)
 @anchor{li}
-@deffn {Function} li [@var{s}] (@var{z})
-
+@c @deffn {Function} li [@var{s}] (@var{z})
+m4_deffn({Function}, li, <<<[@var{s}], (@var{z})>>>)
 Represents the polylogarithm function of order @var{s} and argument @var{z},
 defined by the infinite series
 
@@ -1745,14 +1811,17 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions)
 @anchor{log}
-@deffn {Function} log (@var{x})
+@c @deffn {Function} log (@var{x})
+m4_deffn({Function}, log, <<<(@var{x})>>>)
 
 Represents the natural (base @math{e}) logarithm of @var{x}.
 
@@ -1786,10 +1855,11 @@ and more complicated transformations of this as well. The @code{logcontract}
 command "contracts" expressions containing @code{log}.
 @end table
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Exponential and logarithm functions,  Integral calculus, Global flags)
@@ -1862,8 +1932,10 @@ logconfun(m):=featurep(m,integer) or ratnump(m)$} .  Then
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions)
 @anchor{logcontract}
-@deffn {Function} logcontract (@var{expr})
+@c @deffn {Function} logcontract (@var{expr})
+m4_deffn({Function}, logcontract, <<<(@var{expr})>>>)
 
 Recursively scans the expression @var{expr}, transforming
 subexpressions of the form @code{a1*log(b1) + a2*log(b2) + c} into
@@ -1892,10 +1964,11 @@ E.g. if you like to generate SQRTs, you can do @code{logconcoeffp:'logconfun$
 logconfun(m):=featurep(m,integer) or ratnump(m)$} .  Then
 @code{logcontract(1/2*log(x));} will give @code{log(sqrt(x))}.
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Exponential and logarithm functions, Simplification flags and variables)
@@ -2054,29 +2127,35 @@ power containing @code{log}'s is done.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Exponential and logarithm functions, Complex variables)
 @anchor{plog}
-@deffn {Function} plog (@var{x})
+@c @deffn {Function} plog (@var{x})
+m4_deffn({Function}, plog, <<<(@var{x})>>>)
 
 Represents the principal branch of the complex-valued natural
 logarithm with @code{-%pi} < @code{carg(@var{x})} <= @code{+%pi} .
 
-@opencatbox
-@category{Exponential and logarithm functions}
-@category{Complex variables}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Complex variables}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Mathematical functions)
 @anchor{sqrt}
-@deffn {Function} sqrt (@var{x})
+@c @deffn {Function} sqrt (@var{x})
+m4_deffn({Function}, sqrt, <<<(@var{x})>>>)
 
 The square root of @var{x}.  It is represented internally by
 @code{@var{x}^(1/2)}.  See also @mref{rootscontract} and @mrefdot{radexpand}
 
-@opencatbox
-@category{Mathematical functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Mathematical functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @page
@@ -2297,152 +2376,191 @@ Even when the argument is demonstrably real, the simplification is applied.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{acos}
-@deffn {Function} acos (@var{x})
+@c @deffn {Function} acos (@var{x})
+m4_deffn({Function}, acos, <<<(@var{x})>>>)
 
 -- Arc Cosine.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{acosh}
-@deffn {Function} acosh (@var{x})
+@c @deffn {Function} acosh (@var{x})
+m4_deffn({Function}, acosh, <<<(@var{x})>>>)
 
 -- Hyperbolic Arc Cosine.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{acot}
-@deffn {Function} acot (@var{x})
+@c @deffn {Function} acot (@var{x})
+m4_deffn({Function}, acot, <<<(@var{x})>>>)
 
 -- Arc Cotangent.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{acoth}
-@deffn {Function} acoth (@var{x})
+@c @deffn {Function} acoth (@var{x})
+m4_deffn({Function}, acoth, <<<(@var{x})>>>)
 
 -- Hyperbolic Arc Cotangent.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{acsc}
-@deffn {Function} acsc (@var{x})
+@c @deffn {Function} acsc (@var{x})
+m4_deffn({Function}, acsc, <<<(@var{x})>>>)
 
 -- Arc Cosecant.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{acsch}
-@deffn {Function} acsch (@var{x})
+@c @deffn {Function} acsch (@var{x})
+m4_deffn({Function}, acsch, <<<(@var{x})>>>)
 
 -- Hyperbolic Arc Cosecant.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{asec}
-@deffn {Function} asec (@var{x})
+@c @deffn {Function} asec (@var{x})
+m4_deffn({Function}, asec, <<<(@var{x})>>>)
 
 -- Arc Secant.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{asech}
-@deffn {Function} asech (@var{x})
+@c @deffn {Function} asech (@var{x})
+m4_deffn({Function}, asech, <<<(@var{x})>>>)
 
 -- Hyperbolic Arc Secant.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{pHyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{asin}
-@deffn {Function} asin (@var{x})
+@c @deffn {Function} asin (@var{x})
+m4_deffn({Function}, asin, <<<(@var{x})>>>)
 
 -- Arc Sine.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{asinh}
-@deffn {Function} asinh (@var{x})
+@c @deffn {Function} asinh (@var{x})
+m4_deffn({Function}, asinh, <<<(@var{x})>>>)
 
 -- Hyperbolic Arc Sine.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{atan}
-@deffn {Function} atan (@var{x})
+@c @deffn {Function} atan (@var{x})
+m4_deffn({Function}, atan, <<<(@var{x})>>>)
 
 -- Arc Tangent.
 
 See also @mref{atan2}.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{atan2}
-@deffn {Function} atan2 (@var{y}, @var{x})
+@c @deffn {Function} atan2 (@var{y}, @var{x})
+m4_deffn({Function}, atan2, <<<(@var{y}, @var{x})>>>)
 
 -- yields the value of @code{atan(@var{y}/@var{x})} in the interval @code{-%pi}
 to @code{%pi}.
 
 See also @mref{atan}.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{atanh}
-@deffn {Function} atanh (@var{x})
+@c @deffn {Function} atanh (@var{x})
+m4_deffn({Function}, atanh, <<<(@var{x})>>>)
 
 -- Hyperbolic Arc Tangent.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c IS THIS DESCRIPTION ACCURATE ??
 @c LET'S BE EXPLICIT ABOUT EXACTLY WHAT ARE THE RULES IMPLEMENTED BY THIS PACKAGE
@@ -2468,70 +2586,88 @@ Do @code{load("atrig1");} to use them.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{cos}
-@deffn {Function} cos (@var{x})
+@c @deffn {Function} cos (@var{x})
+m4_deffn({Function}, cos, <<<(@var{x})>>>)
 
 -- Cosine.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{cosh}
-@deffn {Function} cosh (@var{x})
+@c @deffn {Function} cosh (@var{x})
+m4_deffn({Function}, cosh, <<<(@var{x})>>>)
 
 -- Hyperbolic Cosine.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{cot}
-@deffn {Function} cot (@var{x})
+@c @deffn {Function} cot (@var{x})
+m4_deffn({Function}, cot, <<<(@var{x})>>>)
 
 -- Cotangent.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{coth}
-@deffn {Function} coth (@var{x})
+@c @deffn {Function} coth (@var{x})
+m4_deffn({Function}, coth, <<<(@var{x})>>>)
 
 -- Hyperbolic Cotangent.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{csc}
-@deffn {Function} csc (@var{x})
+@c @deffn {Function} csc (@var{x})
+m4_deffn({Function}, csc, <<<(@var{x})>>>)
 
 -- Cosecant.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{csch}
-@deffn {Function} csch (@var{x})
+@c @deffn {Function} csch (@var{x})
+m4_deffn({Function}, csch, <<<(@var{x})>>>)
 
 -- Hyperbolic Cosecant.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Trigonometric functions,  Simplification flags and variables)
@@ -2637,76 +2773,96 @@ used to simplify trigonometric function whose arguments are of the form
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{sec}
-@deffn {Function} sec (@var{x})
+@c @deffn {Function} sec (@var{x})
+m4_deffn({Function}, sec, <<<(@var{x})>>>)
 
 -- Secant.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{sech}
-@deffn {Function} sech (@var{x})
+@c @deffn {Function} sech (@var{x})
+m4_deffn({Function}, sech, <<<(@var{x})>>>)
 
 -- Hyperbolic Secant.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{sin}
-@deffn {Function} sin (@var{x})
+@c @deffn {Function} sin (@var{x})
+m4_deffn({Function}, sin, <<<(@var{x})>>>)
 
 -- Sine.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{sinh}
-@deffn {Function} sinh (@var{x})
+@c @deffn {Function} sinh (@var{x})
+m4_deffn({Function}, sinh, <<<(@var{x})>>>)
 
 -- Hyperbolic Sine.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions)
 @anchor{tan}
-@deffn {Function} tan (@var{x})
+@c @deffn {Function} tan (@var{x})
+m4_deffn({Function}, tan, <<<(@var{x})>>>)
 
 -- Tangent.
 
-@opencatbox
-@category{Trigonometric functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Hyperbolic functions)
 @anchor{tanh}
-@deffn {Function} tanh (@var{x})
+@c @deffn {Function} tanh (@var{x})
+m4_deffn({Function}, tanh, <<<(@var{x})>>>)
 
 -- Hyperbolic Tangent.
 
-@opencatbox
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions, Simplification functions)
 @anchor{trigexpand}
-@deffn {Function} trigexpand (@var{expr})
+@c @deffn {Function} trigexpand (@var{expr})
+m4_deffn({Function}, trigexpand, <<<(@var{expr})>>>)
 
 Expands trigonometric and hyperbolic functions of
 sums of angles and of multiple angles occurring in @var{expr}.  For best
@@ -2752,11 +2908,12 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{trigexpandplus}
@@ -2824,8 +2981,10 @@ simplifications are turned off.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions, Simplification functions)
 @anchor{trigreduce}
-@deffn  {Function} trigreduce @
+@c @deffn  {Function} trigreduce @
+m4_deffn( {Function}, trigreduce, <<<>>>) @
 @fname{trigreduce} (@var{expr}, @var{x}) @
 @fname{trigreduce} (@var{expr})
 
@@ -2871,11 +3030,12 @@ See also @mref{poissimp}.
 @c (%o3)                       - cos(x)
 @c @end example
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{trigsign}
@@ -2895,8 +3055,10 @@ arguments to trigonometric functions.  E.g., @code{sin(-x)} will become
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Trigonometric functions, Simplification functions)
 @anchor{trigsimp}
-@deffn {Function} trigsimp (@var{expr})
+@c @deffn {Function} trigsimp (@var{expr})
+m4_deffn({Function}, trigsimp, <<<(@var{expr})>>>)
 
 Employs the identities
 m4_mathjax(
@@ -2917,17 +3079,19 @@ able to further simplify the result.
 @code{demo ("trgsmp.dem")} displays some examples of @code{trigsimp}.
 @c MERGE EXAMPLES INTO THIS ITEM
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
 @anchor{trigrat}
-@deffn {Function} trigrat (@var{expr})
+@c @deffn {Function} trigrat (@var{expr})
+m4_deffn({Function}, trigrat, <<<(@var{expr})>>>)
 
 Gives a canonical simplified quasilinear form of a trigonometrical expression;
 @var{expr} is a rational fraction of several @code{sin}, @code{cos} or
@@ -3012,11 +3176,12 @@ Addison-Wesley), section 1.5.5, Morley theorem.
 @end group
 @end example
 
-@opencatbox
-@category{Trigonometric functions}
-@category{Simplification functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Trigonometric functions}
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @page
@@ -3025,8 +3190,10 @@ Addison-Wesley), section 1.5.5, Morley theorem.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Random numbers)
 @anchor{make_random_state}
-@deffn  {Function} make_random_state @
+@c @deffn  {Function} make_random_state @
+m4_deffn( {Function}, make_random_state, <<<>>>) @
 @fname{make_random_state} (@var{n}) @
 @fname{make_random_state} (@var{s}) @
 @fname{make_random_state} (true) @
@@ -3054,27 +3221,32 @@ using the current computer clock time as the seed.
 @code{make_random_state (false)} returns a copy of the current state
 of the random number generator.
 
-@opencatbox
-@category{Random numbers}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Random numbers}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{set_random_state}
-@deffn {Function} set_random_state (@var{s})
+@c @deffn {Function} set_random_state (@var{s})
+m4_deffn({Function}, set_random_state, <<<(@var{s})>>>)
 
 Copies @var{s} to the random number generator state.
 
 @code{set_random_state} always returns @code{done}.
 
-@opencatbox
-@category{Random numbers}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Random numbers}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Random numbers, Numerical methods)
 @anchor{random}
-@deffn {Function} random (@var{x})
+@c @deffn {Function} random (@var{x})
+m4_deffn({Function}, random, <<<(@var{x})>>>)
 
 Returns a pseudorandom number.  If @var{x} is an integer,
 @code{random (@var{x})} returns an integer from 0 through @code{@var{x} - 1}
@@ -3155,9 +3327,10 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Random numbers}
-@category{Numerical methods}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Random numbers}
+@c @category{Numerical methods}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
