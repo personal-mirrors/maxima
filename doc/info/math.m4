@@ -46,7 +46,7 @@ m4_dnl
 m4_define(<<<m4_anchor_entry>>>, <<<
 m4_ifelse(<<<$#>>>, <<<2>>>,
 @anchor{$2-$1},
-@anchor{$2-$1} <<<m4_anchor_entry($1, m4_shift(m4_shift($@)))>>>)
+@anchor{$2-$1} <<<m4_anchor_entry($1, m4_shift(m4_shift($@)))>>>)m4_dnl
 >>>)
 
 m4_define(<<<m4_catentry>>>,<<<
