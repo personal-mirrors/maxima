@@ -142,8 +142,10 @@ Examples:
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Expressions)
 @anchor{append}
-@deffn {Function} append (@var{list_1}, @dots{}, @var{list_n})
+@c @deffn {Function} append (@var{list_1}, @dots{}, @var{list_n})
+m4_deffn({Function}, append, <<<(@var{list_1}, @dots{}, @var{list_n})>>>)
 
 Returns a single list of the elements of @var{list_1} followed
 by the elements of @var{list_2}, @dots{}  @code{append} also works on
@@ -154,17 +156,19 @@ See also @mrefcomma{addrow} @mref{addcol} and @mrefdot{join}
 
 Do @code{example(append);} for an example.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{assoc}
-@deffn {Function} assoc @
+@c @deffn {Function} assoc @
+m4_deffn({Function}, assoc, <<<>>>) @
 @fname{assoc} (@var{key}, @var{list}, @var{default}) @
 @fname{assoc} (@var{key}, @var{list})
 
@@ -208,16 +212,18 @@ so @code{assoc} returns @code{false}.
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @c -----------------------------------------------------------------------------
 @anchor{cons}
-@deffn {Function} cons @
+@c @deffn {Function} cons @
+m4_deffn({Function}, cons, <<<>>>) @
 @fname{cons} (@var{expr}, @var{list}) @
 @fname{cons} (@var{expr_1}, @var{expr_2})
 
@@ -268,26 +274,31 @@ to a nonlist sometimes gives a surprising result; for example
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists)
 @anchor{copylist}
-@deffn {Function} copylist (@var{list})
+@c @deffn {Function} copylist (@var{list})
+m4_deffn({Function}, copylist, <<<(@var{list})>>>)
 
 Returns a copy of the list @var{list}.
 
-@opencatbox
-@category{Lists}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{create_list}
-@deffn {Function} create_list (@var{form}, @var{x_1}, @var{list_1}, @dots{}, @var{x_n}, @var{list_n})
+@c @deffn {Function} create_list (@var{form}, @var{x_1}, @var{list_1}, @dots{}, @var{x_n}, @var{list_n})
+m4_deffn({Function}, create_list, <<<(@var{form}, @var{x_1}, @var{list_1}, @dots{}, @var{x_n}, @var{list_n})>>>)
 
 Create a list by evaluating @var{form} with @var{x_1} bound to
 each element of @var{list_1}, and for each such binding bind @var{x_2}
@@ -339,14 +350,17 @@ upper bounds for the iteration.
 Note that the limits or list for the @code{j} variable can
 depend on the current value of @code{i}.
 
-@opencatbox
-@category{Lists}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Expressions)
 @anchor{delete}
-@deffn  {Function} delete @
+@c @deffn  {Function} delete @
+m4_deffn( {Function}, delete, <<<>>>) @
 @fname{delete} (@var{expr_1}, @var{expr_2}) @
 @fname{delete} (@var{expr_1}, @var{expr_2}, @var{n})
 
@@ -468,29 +482,33 @@ Arguments which are @code{equal} but not "=" are not removed.
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{eighth}
-@deffn {Function} eighth (@var{expr})
+@c @deffn {Function} eighth (@var{expr})
+m4_deffn({Function}, eighth, <<<(@var{expr})>>>)
 
 Returns the 8'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @c -----------------------------------------------------------------------------
 @anchor{endcons}
-@deffn  {Function} endcons @
+@c @deffn  {Function} endcons @
+m4_deffn( {Function}, endcons, <<<>>>) @
 @fname{endcons} (@var{expr}, @var{list}) @
 @fname{endcons} (@var{expr_1}, @var{expr_2})
 
@@ -538,29 +556,33 @@ to a nonlist sometimes gives a surprising result; for example
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @c -----------------------------------------------------------------------------
 @anchor{fifth}
-@deffn {Function} fifth (@var{expr})
+@c @deffn {Function} fifth (@var{expr})
+m4_deffn({Function}, fifth, <<<(@var{expr})>>>)
 
 Returns the 5'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{first}
-@deffn {Function} first (@var{expr})
+@c @deffn {Function} first (@var{expr})
+m4_deffn({Function}, first, <<<(@var{expr})>>>)
 
 Returns the first part of @var{expr} which may result in the first element of a
 list, the first row of a matrix, the first term of a sum, etc.:
@@ -607,15 +629,17 @@ The functions @code{second} @dots{}
 
 See also @mref{firstn} and @mrefdot{part}
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{firstn}
-@deffn {Function} firstn (@var{expr}, @var{count})
+@c @deffn {Function} firstn (@var{expr}, @var{count})
+m4_deffn({Function}, firstn, <<<(@var{expr}, @var{count})>>>)
 
 Returns the first @var{count} arguments of @var{expr}, if @var{expr} has at least @var{count} arguments.
 Returns @var{expr} if @var{expr} has less than @var{count} arguments.
@@ -766,28 +790,33 @@ Note that @code{firstn(@var{expr}, 1)} is not the same as @code{first(@var{expr}
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{fourth}
-@deffn {Function} fourth (@var{expr})
+@c @deffn {Function} fourth (@var{expr})
+m4_deffn({Function}, fourth, <<<(@var{expr})>>>)
 
 Returns the 4'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists)
 @anchor{join}
-@deffn {Function} join (@var{l}, @var{m})
+@c @deffn {Function} join (@var{l}, @var{m})
+m4_deffn({Function}, join, <<<(@var{l}, @var{m})>>>)
 
 Creates a new list containing the elements of lists @var{l} and @var{m},
 interspersed.  The result has elements @code{[@var{l}[1], @var{m}[1],
@@ -823,33 +852,38 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 @c HOW IS "LAST" PART DETERMINED ??
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Expressions)
 @anchor{last}
-@deffn {Function} last (@var{expr})
+@c @deffn {Function} last (@var{expr})
+m4_deffn({Function}, last, <<<(@var{expr})>>>)
 
 Returns the last part (term, row, element, etc.) of the @var{expr}.
 
 See also @mrefdot{lastn}
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{lastn}
-@deffn {Function} lastn (@var{expr}, @var{count})
+@c @deffn {Function} lastn (@var{expr}, @var{count})
+m4_deffn({Function}, lastn, <<<(@var{expr}, @var{count})>>>)
 
 Returns the last @var{count} arguments of @var{expr}, if @var{expr} has at least @var{count} arguments.
 Returns @var{expr} if @var{expr} has less than @var{count} arguments.
@@ -1000,15 +1034,17 @@ Note that @code{lastn(@var{expr}, 1)} is not the same as @code{last(@var{expr})}
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{length}
-@deffn {Function} length (@var{expr})
+@c @deffn {Function} length (@var{expr})
+m4_deffn({Function}, length, <<<(@var{expr})>>>)
 
 Returns (by default) the number of parts in the external
 (displayed) form of @var{expr}.  For lists this is the number of elements,
@@ -1025,11 +1061,12 @@ to the number of elements in the list. If the length of a list is used inside
 a loop it therefore might drastically increase the performance if the length
 is calculated outside the loop instead.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{listarith}
@@ -1048,19 +1085,24 @@ list-list operations should return lists.
 @end defvr
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} listp (@var{expr})
+m4_setcat(Lists, Predicate functions)
+@c @deffn {Function} listp (@var{expr})
+m4_deffn({Function}, listp, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a list else @code{false}.
 
-@opencatbox
-@category{Lists}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists)
 @anchor{lreduce}
-@deffn {Function} lreduce @
+@c @deffn {Function} lreduce @
+m4_deffn({Function}, lreduce, <<<>>>) @
 @fname{lreduce} (@var{F}, @var{s}) @
 @fname{lreduce} (@var{F}, @var{s}, @var{s_0})
 
@@ -1128,15 +1170,17 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@closecatbox
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{makelist}
-@deffn  {Function} makelist @
+@c @deffn  {Function} makelist @
+m4_deffn( {Function}, makelist, <<<>>>) @
 @fname{makelist} () @
 @fname{makelist} (@var{expr}, @var{n}) @
 @fname{makelist} (@var{expr}, @var{i}, @var{i_max}) @
@@ -1202,14 +1246,17 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Expressions, Predicate functions)
 @anchor{member}
-@deffn {Function} member (@var{expr_1}, @var{expr_2})
+@c @deffn {Function} member (@var{expr_1}, @var{expr_2})
+m4_deffn({Function}, member, <<<(@var{expr_1}, @var{expr_2})>>>)
 
 Returns @code{true} if @code{is(@var{expr_1} = @var{a})}
 for some element @var{a} in @code{args(@var{expr_2})},
@@ -1274,43 +1321,50 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Expressions)
 @anchor{ninth}
-@deffn {Function} ninth (@var{expr})
+@c @deffn {Function} ninth (@var{expr})
+m4_deffn({Function}, ninth, <<<(@var{expr})>>>)
 
 Returns the 9'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{pop}
-@deffn {Function} pop (@var{list})
+@c @deffn {Function} pop (@var{list})
+m4_deffn({Function}, pop, <<<(@var{list})>>>)
 
 @code{pop} removes and returns the first element from the list @var{list}. The argument
 @var{list} must be a mapatom that is bound to a nonempty list. If the argument @var{list} is 
 not bound to a nonempty list, Maxima signals an error. For examples, see @mrefdot{push}
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{push}
-@deffn {Function} push (@var{item}, @var{list})
+@c @deffn {Function} push (@var{item}, @var{list})
+m4_deffn({Function}, push, <<<(@var{item}, @var{list})>>>)
 
 @code{push} prepends the item @var{item} to the list @var{list} and returns a copy of the new list. 
 The second argument @var{list} must be a mapatom that is bound to a list. The first argument @var{item} 
@@ -1377,15 +1431,17 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{rest}
-@deffn  {Function} rest @
+@c @deffn  {Function} rest @
+m4_deffn( {Function}, rest, <<<>>>) @
 @fname{rest} (@var{expr}, @var{n}) @
 @fname{rest} (@var{expr})
 
@@ -1418,32 +1474,37 @@ See also @mref{firstn} and @mrefdot{lastn}
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEED ANOTHER deffn FOR GENERAL EXPRESSIONS ARGUMENTS
 @c SPLIT OFF EXAMPLES INTO EXAMPLE SECTION
 
 @c -----------------------------------------------------------------------------
 @anchor{reverse}
-@deffn {Function} reverse (@var{list})
+@c @deffn {Function} reverse (@var{list})
+m4_deffn({Function}, reverse, <<<(@var{list})>>>)
 
 Reverses the order of the members of the @var{list} (not
 the members themselves).  @code{reverse} also works on general expressions,
 e.g.  @code{reverse(a=b);} gives @code{b=a}.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists)
 @anchor{rreduce}
-@deffn {Function} rreduce @
+@c @deffn {Function} rreduce @
+m4_deffn({Function}, rreduce, <<<>>>) @
 @fname{rreduce} (@var{F}, @var{s}) @
 @fname{rreduce} (@var{F}, @var{s}, @var{s_@{n + 1@}})
 
@@ -1513,54 +1574,64 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@closecatbox
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Expressions)
 @anchor{second}
-@deffn {Function} second (@var{expr})
+@c @deffn {Function} second (@var{expr})
+m4_deffn({Function}, second, <<<(@var{expr})>>>)
 
 Returns the 2'nd item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{seventh}
-@deffn {Function} seventh (@var{expr})
+@c @deffn {Function} seventh (@var{expr})
+m4_deffn({Function}, seventh, <<<(@var{expr})>>>)
 
 Returns the 7'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{sixth}
-@deffn {Function} sixth (@var{expr})
+@c @deffn {Function} sixth (@var{expr})
+m4_deffn({Function}, sixth, <<<(@var{expr})>>>)
 
 Returns the 6'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists)
 @anchor{sort}
-@deffn  {Function} sort @
+@c @deffn  {Function} sort @
+m4_deffn( {Function}, sort, <<<>>>) @
 @fname{sort} (@var{L}, @var{P}) @
 @fname{sort} (@var{L})
 
@@ -1780,14 +1851,16 @@ and all other elements the same as @code{orderlessp}.
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{sublist}
-@deffn {Function} sublist (@var{list}, @var{p})
+@c @deffn {Function} sublist (@var{list}, @var{p})
+m4_deffn({Function}, sublist, <<<(@var{list}, @var{p})>>>)
 
 Returns the list of elements of @var{list} for which the predicate @code{p}
 returns @code{true}.
@@ -1809,14 +1882,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{sublist_indices}
-@deffn {Function} sublist_indices (@var{L}, @var{P})
+@c @deffn {Function} sublist_indices (@var{L}, @var{P})
+m4_deffn({Function}, sublist_indices, <<<(@var{L}, @var{P})>>>)
 
 Returns the indices of the elements @code{x} of the list @var{L} for which
 the predicate @code{maybe(@var{P}(x))} returns @code{true};
@@ -1865,41 +1940,49 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Lists}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists, Expressions)
 @anchor{tenth}
-@deffn {Function} tenth (@var{expr})
+@c @deffn {Function} tenth (@var{expr})
+m4_deffn({Function}, tenth, <<<(@var{expr})>>>)
 
 Returns the 10'th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{third}
-@deffn {Function} third (@var{expr})
+@c @deffn {Function} third (@var{expr})
+m4_deffn({Function}, third, <<<(@var{expr})>>>)
 
 Returns the 3'rd item of expression or list @var{expr}.
 See @mref{first} for more details.
 
-@opencatbox
-@category{Lists}
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Lists}
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @c TREE_REDUCE ACCEPTS A SET OR LIST AS AN ARGUMENT, BUT RREDUCE AND LREDUCE WANT ONLY LISTS; STRANGE
+m4_setcat(Sets, Lists)
 @anchor{tree_reduce}
-@deffn {Function} tree_reduce @
+@c @deffn {Function} tree_reduce @
+m4_deffn({Function}, tree_reduce, <<<>>>) @
 @fname{tree_reduce} (@var{F}, @var{s}) @
 @fname{tree_reduce} (@var{F}, @var{s}, @var{s_0})
 
@@ -1948,16 +2031,19 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Sets}
-@category{Lists}
-@closecatbox
+@c @opencatbox
+@c @category{Sets}
+@c @category{Lists}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Lists)
 @anchor{unique}
-@deffn {Function} unique (@var{L})
+@c @deffn {Function} unique (@var{L})
+m4_deffn({Function}, unique, <<<(@var{L})>>>)
 
 Returns the unique elements of the list @var{L}.
 
@@ -1978,12 +2064,15 @@ Example:
 (%o1)              [1, 2, %e, %pi, [1], b + a]
 @end group
 @end example
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @c XREDUCE ACCEPTS A SET OR LIST AS AN ARGUMENT, BUT RREDUCE AND LREDUCE WANT ONLY LISTS; STRANGE
+m4_setcat(Sets, Lists)
 @anchor{xreduce}
-@deffn {Function} xreduce @
+@c @deffn {Function} xreduce @
+m4_deffn({Function}, xreduce, <<<>>>) @
 @fname{xreduce} (@var{F}, @var{s}) @
 @fname{xreduce} (@var{F}, @var{s}, @var{s_0})
 
@@ -2055,12 +2144,13 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Sets}
-@category{Lists}
-@closecatbox
+@c @opencatbox
+@c @category{Sets}
+@c @category{Lists}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c h-----------------------------------------------------------------------------
 @node Performance considerations for Lists, ,Functions and Variables for Lists, Lists
