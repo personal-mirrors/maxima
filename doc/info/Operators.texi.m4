@@ -187,6 +187,7 @@ Incorrect syntax: # is not a prefix operator
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Operators)
 @anchor{+}
 @anchor{-}
 @anchor{*}
@@ -198,11 +199,16 @@ Incorrect syntax: # is not a prefix operator
 @fnindex Division
 @fnindex Exponentiation
 
-@deffn {Operator} +
-@deffnx {Operator} -
-@deffnx {Operator} *
-@deffnx {Operator} /
-@deffnx {Operator} ^
+@c @deffn {Operator} +
+@c @deffnx {Operator} -
+@c @deffnx {Operator} *
+@c @deffnx {Operator} /
+@c @deffnx {Operator} ^
+m4_deffn({Operator}, +, <<<>>>)
+m4_deffnx({Operator}, -, <<<>>>)
+m4_deffnx({Operator}, *, <<<>>>)
+m4_deffnx({Operator}, /, <<<>>>)
+m4_deffnx({Operator}, ^, <<<>>>)
 
 The symbols @code{+} @code{*} @code{/} and @code{^} represent addition,
 multiplication, division, and exponentiation, respectively.  The names of these
@@ -402,15 +408,16 @@ Arithmetic is carried out element-by-element for lists (depending on
 (%o8)                   [a , c , m , t ]
 @end example
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{**}
-@deffn {Operator} **
-
+@c @deffn {Operator} **
+m4_deffn({Operator}, **, <<<>>>)
 Exponentiation operator.
 Maxima recognizes @code{**} as the same operator as @mref{^} in input,
 and it is displayed as @code{^} in 1-dimensional output,
@@ -440,14 +447,16 @@ Examples:
 (%o4)                         done
 @end example
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{^^}
-@deffn {Operator} ^^
+@c @deffn {Operator} ^^
+m4_deffn({Operator}, ^^, <<<>>>)
 @ifinfo
 @fnindex Noncommutative exponentiation
 @end ifinfo
@@ -475,14 +484,16 @@ Examples:
 (%o2)                  a^3*b^2+a^^2 . b^^3
 @end example
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{.}
-@deffn {Operator} .
+@c @deffn {Operator} .
+m4_deffn({Operator}, ., <<<>>>)
 @ifinfo
 @fnindex Noncommutative multiplication
 @end ifinfo
@@ -505,10 +516,11 @@ See also
 and
 @mrefdot{dotscrules}
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Relational operators, Logical operators, Arithmetic operators, Operators
@@ -525,11 +537,14 @@ and
 @fnindex Greater than or equal
 @fnindex Greater than
 
-@deffn {Operator} <
-@deffnx {Operator} <=
-@deffnx {Operator} >=
-@deffnx {Operator} >
-
+@c @deffn {Operator} <
+@c @deffnx {Operator} <=
+@c @deffnx {Operator} >=
+@c @deffnx {Operator} >
+m4_deffn({Operator}, <, <<<>>>)
+m4_deffnx({Operator}, <=, <<<>>>)
+m4_deffnx({Operator}, >=, <<<>>>)
+m4_deffnx({Operator}, >, <<<>>>)
 The symbols @code{<} @code{<=} @code{>=} and @code{>} represent less than, less
 than or equal, greater than or equal, and greater than, respectively.  The names
 of these operators are @code{"<"} @code{"<="} @code{">="} and @code{">"}, which
@@ -603,10 +618,11 @@ values, although the arguments of relational expressions are evaluated.
 (%o3)               [true, true, true, false]
 @end example
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Logical operators, Operators for Equations, Relational operators, Operators
@@ -617,7 +633,8 @@ values, although the arguments of relational expressions are evaluated.
 
 @c -----------------------------------------------------------------------------
 @anchor{and}
-@deffn {Operator} and
+@c @deffn {Operator} and
+m4_deffn({Operator}, and, <<<>>>)
 @ifinfo
 @fnindex Logical conjunction
 @end ifinfo
@@ -642,16 +659,18 @@ accepted, and the result is a Boolean expression.
 @code{and} is not commutative: @code{a and b} might not be equal to
 @code{b and a} due to the treatment of indeterminate operands.
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{not}
-@deffn {Operator} not
+@c @deffn {Operator} not
+m4_deffn({Operator}, not, <<<>>>)
 @ifinfo
 @fnindex Logical negation
 @end ifinfo
@@ -667,16 +686,18 @@ prints an error message when @code{prederror} is @code{true}.  Otherwise,
 operands which do not evaluate to @code{true} or @code{false} are accepted,
 and the result is a Boolean expression.
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{or}
-@deffn {Operator} or
+@c @deffn {Operator} or
+m4_deffn({Operator}, or, <<<>>>)
 @ifinfo
 @fnindex Logical disjunction
 @end ifinfo
@@ -701,10 +722,11 @@ accepted, and the result is a Boolean expression.
 @code{or} is not commutative: @code{a or b} might not be equal to @code{b or a}
 due to the treatment of indeterminate operands.
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Operators for Equations, Assignment operators, Logical operators, Operators
@@ -713,7 +735,8 @@ due to the treatment of indeterminate operands.
 
 @c -----------------------------------------------------------------------------
 @anchor{#}
-@deffn {Operator} #
+@c @deffn {Operator} #
+m4_deffn({Operator}, #, <<<>>>)
 @ifinfo
 @fnindex Not equal (syntactic inequality)
 @end ifinfo
@@ -750,14 +773,16 @@ Examples:
 (%o6)                         true
 @end example
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{=}
-@deffn {Operator} =
+@c @deffn {Operator} =
+m4_deffn({Operator}, =, <<<>>>)
 @ifinfo
 @fnindex Equation operator
 @fnindex Equal (syntactic equality)
@@ -891,10 +916,11 @@ Because @code{not @var{expr}} causes evaluation of @var{expr},
 (%o2)                         true
 @end example
 
-@opencatbox
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Assignment operators, User defined operators, Operators for Equations, Operators
@@ -902,8 +928,10 @@ Because @code{not @var{expr}} causes evaluation of @var{expr},
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation, Operators)
 @anchor{:}
-@deffn {Operator} :
+@c @deffn {Operator} :
+m4_deffn({Operator}, :, <<<>>>)
 @ifinfo
 @fnindex Assignment operator
 @end ifinfo
@@ -1025,16 +1053,18 @@ The values of @code{a} and @code{b} are exchanged in this example.
 (%o4)                          33
 @end example
 
-@opencatbox
-@category{Evaluation}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Evaluation}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @need 900
 @anchor{::}
-@deffn {Operator} ::
+@c @deffn {Operator} ::
+m4_deffn({Operator}, ::, <<<>>>)
 @ifinfo
 @fnindex Assignment operator (evaluates left-hand side)
 @end ifinfo
@@ -1075,15 +1105,18 @@ Examples:
 (%o8)                          33
 @end example
 
-@opencatbox
-@category{Evaluation}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Evaluation}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function definition, Operators)
 @anchor{::=}
-@deffn {Operator} ::=
+@c @deffn {Operator} ::=
+m4_deffn({Operator}, ::=, <<<>>>)
 @ifinfo
 @fnindex Macro function definition operator
 @end ifinfo
@@ -1190,15 +1223,17 @@ x is equal to 1234 - 1729 w
 (%o7)                            1234 - 1729 w
 @end example
 
-@opencatbox
-@category{Function definition}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{:=}
-@deffn {Operator} :=
+@c @deffn {Operator} :=
+m4_deffn({Operator}, :=, <<<>>>)
 @ifinfo
 @fnindex Function definition operator
 @end ifinfo
@@ -1383,11 +1418,12 @@ the function defined by @code{:=} accepts a variable number of arguments.
 (%o4)                         - 99
 @end example
 
-@opencatbox
-@category{Function definition}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function definition}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node User defined operators, , Assignment operators, Operators
@@ -1395,8 +1431,10 @@ the function defined by @code{:=} accepts a variable number of arguments.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Operators, Declarations and inferences, Syntax)
 @anchor{infix}
-@deffn  {Function} infix @
+@c @deffn  {Function} infix @
+m4_deffn({Function}, infix, <<<>>>) @
 @fname{infix} (@var{op}) @
 @fname{infix} (@var{op}, @var{lbp}, @var{rbp}) @
 @fname{infix} (@var{op}, @var{lbp}, @var{rbp}, @var{lpos}, @var{rpos}, @var{pos})
@@ -1519,16 +1557,19 @@ if x ## y then
 (%o3)                if x ## y then 1 else 0
 @end example
 
-@opencatbox
-@category{Operators}
-@category{Declarations and inferences}
-@category{Syntax}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @category{Declarations and inferences}
+@c @category{Syntax}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Syntax, Operators)
 @anchor{matchfix}
-@deffn  {Function} matchfix @
+@c @deffn  {Function} matchfix @
+m4_deffn( {Function}, matchfix, <<<>>>) @
 @fname{matchfix} (@var{ldelimiter}, @var{rdelimiter}) @
 @fname{matchfix} (@var{ldelimiter}, @var{rdelimiter}, @var{arg_pos}, @var{pos})
 
@@ -1657,15 +1698,18 @@ Matchfix operators are ordinary user-defined functions.
                                 15
 @end example
 
-@opencatbox
-@category{Syntax}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Syntax}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Operators, Syntax)
 @anchor{function_nary}
-@deffn  {Function} nary @
+@c @deffn  {Function} nary @
+m4_deffn( {Function}, nary, <<<>>>) @
 @fname{nary} (@var{op}) @
 @fname{nary} (@var{op}, @var{bp}, @var{arg_pos}, @var{pos})
 
@@ -1678,15 +1722,17 @@ to be an @code{nary} operator.  Functions may be declared to be @code{nary}.  If
 
 See also @ref{Introduction to operators}.
 
-@opencatbox
-@category{Operators}
-@category{Syntax}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @category{Syntax}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{nofix}
-@deffn  {Function} nofix @
+@c @deffn  {Function} nofix @
+m4_deffn( {Function}, nofix, <<<>>>) @
 @fname{nofix} (@var{op}) @
 @fname{nofix} (@var{op}, @var{pos})
 
@@ -1699,15 +1745,17 @@ function which declares @code{x} to be a @code{nofix} operator.
 
 See also @ref{Introduction to operators}.
 
-@opencatbox
-@category{Operators}
-@category{Syntax}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @category{Syntax}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{postfix}
-@deffn  {Function} postfix @
+@c @deffn  {Function} postfix @
+m4_deffn( {Function}, postfix, <<<>>>) @
 @fname{postfix} (@var{op}) @
 @fname{postfix} (@var{op}, @var{lbp}, @var{lpos}, @var{pos})
 
@@ -1719,15 +1767,17 @@ to be a @code{postfix} operator.
 
 See also @ref{Introduction to operators}.
 
-@opencatbox
-@category{Operators}
-@category{Syntax}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @category{Syntax}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{prefix}
-@deffn  {Function} prefix @
+@c @deffn  {Function} prefix @
+m4_deffn( {Function}, prefix, <<<>>>) @
 @fname{prefix} (@var{op}) @
 @fname{prefix} (@var{op}, @var{rbp}, @var{rpos}, @var{pos})
 
@@ -1738,9 +1788,10 @@ which argument immediately follows an occurrence of the operator.
 
 See also @ref{Introduction to operators}.
 
-@opencatbox
-@category{Operators}
-@category{Syntax}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @category{Syntax}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
