@@ -142,8 +142,10 @@ the geomview program must be installed.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Plotting)
 @anchor{contour_plot}
-@deffn {Function} contour_plot (@var{expr}, @var{x_range}, @var{y_range}, @var{options}, @dots{})
+@c @deffn {Function} contour_plot (@var{expr}, @var{x_range}, @var{y_range}, @var{options}, @dots{})
+m4_deffn({Function}, contour_plot, <<<(@var{expr}, @var{x_range}, @var{y_range}, @var{options}, @dots{})>>>)
 
 It plots the contours (curves of equal value) of @var{expr}
 over the region @var{x_range} by @var{y_range}.
@@ -190,10 +192,11 @@ number of contours, it is necessary to use a custom
 @image{figures/plotting2,8cm}
 @end ifnotinfo
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{geomview_command}
@@ -219,7 +222,8 @@ you may change the value of this variable. For instance,
 
 @c -----------------------------------------------------------------------------
 @anchor{get_plot_option}
-@deffn {Function} get_plot_option (@var{keyword}, @var{index})
+@c @deffn {Function} get_plot_option (@var{keyword}, @var{index})
+m4_deffn({Function}, get_plot_option, <<<(@var{keyword}, @var{index})>>>)
 
 Returns the current default value of the option named @var{keyword},
 which is a list. The optional argument @var{index} must be a positive
@@ -228,7 +232,8 @@ integer which can be used to extract only one element from the list
 
 See also @mrefcomma{set_plot_option} @mref{remove_plot_option} and the
 section on Plotting Options.
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_command}
@@ -308,8 +313,10 @@ of @code{gnuplot_view_args}.
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Plotting, Share packages, Package implicit_plot)
 @anchor{implicit_plot}
-@deffn  {Function} implicit_plot @
+@c @deffn  {Function} implicit_plot @
+m4_deffn( {Function}, implicit_plot, <<<>>>) @
 @fname{implicit_plot} (@var{expr}, @var{x_range}, @var{y_range}) @
 @fname{implicit_plot} ([@var{expr_1}, @dots{}, @var{expr_n}], @var{x_range}, @var{y_range})
 
@@ -340,16 +347,19 @@ Example:
 @image{figures/plotting3,8cm}
 @end ifnotinfo
 
-@opencatbox
-@category{Plotting}
-@category{Share packages}
-@category{Package implicit_plot}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @category{Share packages}
+@c @category{Package implicit_plot}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package dynamics,Plotting)
 @anchor{julia}
-@deffn {Function} julia (@var{x}, @var{y}, ...@var{options}...)
+@c @deffn {Function} julia (@var{x}, @var{y}, ...@var{options}...)
+m4_deffn({Function}, julia, <<<(@var{x}, @var{y}, ...@var{options}...)>>>)
 
 Creates a graphic representation of the Julia set for the complex number
 (@var{x} + i @var{y}). The two mandatory parameters @var{x} and @var{y}
@@ -394,17 +404,20 @@ corresponding the maximum 36 iterations would not be black.
 @end ifnotinfo
 
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Plotting)
 @anchor{make_transform}
-@deffn {Function} make_transform ([@var{var1}, @var{var2}, @var{var3}], @var{fx}, @var{fy}, @var{fz})
+@c @deffn {Function} make_transform ([@var{var1}, @var{var2}, @var{var3}], @var{fx}, @var{fy}, @var{fz})
+m4_deffn({Function}, make_transform, <<<([@var{var1}, @var{var2}, @var{var3}], @var{fx}, @var{fy}, @var{fz})>>>)
 
 Returns a function suitable to be used in the option @mref{transform_xy}@w{}
 of plot3d.  The three variables @var{var1}, @var{var2}, @var{var3} are
@@ -417,14 +430,17 @@ plotted.  There are two transformations defined by default:
 @mref{polar_to_xy} and @mrefdot{spherical_to_xyz} See the documentation
 for those two transformations.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package dynamics, Plotting)
 @anchor{mandelbrot}
-@deffn {Function} mandelbrot (@var{options})
+@c @deffn {Function} mandelbrot (@var{options})
+m4_deffn({Function}, mandelbrot, <<<(@var{options})>>>)
 
 Creates a graphic representation of the Mandelbrot set. This program is
 part of the additional package @code{dynamics}, but that package does
@@ -463,30 +479,34 @@ Example:
 @image{figures/plotting5,8cm}
 @end ifnotinfo
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Plotting)
 @anchor{polar_to_xy}
-@deffn {System function} polar_to_xy
-
+@c @deffn {System function} polar_to_xy
+m4_deffn({System function}, polar_to_xy, <<<>>>)
 It can be given as value for the @mref{transform_xy} option of
 plot3d.  Its effect will be to interpret the two independent variables in
 plot3d as the distance from the z axis and the azimuthal angle (polar
 coordinates), and transform them into x and y coordinates.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{plot2d}
-@deffn  {Function} plot2d @
+@c @deffn  {Function} plot2d @
+m4_deffn( {Function}, plot2d, <<<>>>) @
 @fname{plot2d} (@var{plot}, @var{x_range}, @dots{}, @var{options}, @dots{}) @
 @fname{plot2d} ([@var{plot_1}, @dots{}, @var{plot_n}], @dots{}, @var{options}, @dots{}) @
 @fname{plot2d} ([@var{plot_1}, @dots{}, @var{plot_n}], @var{x_range}, @dots{}, @var{options}, @dots{})
@@ -754,14 +774,16 @@ A plot of discrete data points together with a continuous function:
 
 See also the section about Plotting Options.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{plot3d}
-@deffn {Function} plot3d @
+@c @deffn {Function} plot3d @
+m4_deffn({Function}, plot3d, <<<>>>) @
 @fname{plot3d} (@var{expr}, @var{x_range}, @var{y_range}, @dots{}, @var{options}, @dots{}) @
 @fname{plot3d} ([@var{expr_1}, @dots{}, @var{expr_n}], @var{x_range}, @var{y_range}, @dots{}, @var{options}, @dots{})
 
@@ -989,10 +1011,11 @@ in which each color represents a different level.
 
 See also the section about Plotting Options.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{plot_options}
@@ -1010,20 +1033,24 @@ values or remove options, use @mrefcomma{set_plot_option}
 
 @c -----------------------------------------------------------------------------
 @anchor{remove_plot_option}
-@deffn {Function} remove_plot_option (@var{name})
+@c @deffn {Function} remove_plot_option (@var{name})
+m4_deffn({Function}, remove_plot_option, <<<(@var{name})>>>)
 
 Removes the default value of an option. The name of the option must be given.
 
 See also @mrefcomma{set_plot_option} @mref{get_plot_option} and the section
 on Plotting Options.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
+
 @c -----------------------------------------------------------------------------
 @anchor{set_plot_option}
-@deffn {Function} set_plot_option (@var{option})
+@c @deffn {Function} set_plot_option (@var{option})
+m4_deffn({Function}, set_plot_option, <<<(@var{option})>>>)
 
 Accepts any of the options listed in the section Plotting Options, and
 saves them for use in plotting commands. The values of the options set
@@ -1055,15 +1082,16 @@ Modification of the @mref{grid} values.
 red, brown, black]], [gnuplot_preamble, ], [gnuplot_term, default]]
 @end example
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{spherical_to_xyz}
-@deffn {System function} spherical_to_xyz
-
+@c @deffn {System function} spherical_to_xyz
+m4_deffn({System function}, spherical_to_xyz, <<<>>>)
 It can be given as value for the @mref{transform_xy} option of
 @mrefdot{plot3d} Its effect will be to interpret the two independent
 variables and the function in @code{plot3d} as the spherical coordinates
@@ -1071,10 +1099,11 @@ of a point (first, the angle with the z axis, then the angle of the xy
 projection with the x axis and finally the distance from the origin) and
 transform them into x, y and z coordinates.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Plotting Options, Gnuplot Options, Functions and Variables for Plotting, Plotting
@@ -2058,42 +2087,49 @@ This is an obsolete option that has been replaced by @mrefdot{style}
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_start}
-@deffn {Function} gnuplot_start ()
+@c @deffn {Function} gnuplot_start ()
+m4_deffn({Function}, gnuplot_start, <<<()>>>)
 
 Opens the pipe to gnuplot used for plotting with the @code{gnuplot_pipes}
 format.  Is not necessary to manually open the pipe before plotting.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_close}
-@deffn {Function} gnuplot_close ()
+@c @deffn {Function} gnuplot_close ()
+m4_deffn({Function}, gnuplot_close, <<<()>>>)
 
 Closes the pipe to gnuplot which is used with the @code{gnuplot_pipes} format.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_restart}
-@deffn {Function} gnuplot_restart ()
+@c @deffn {Function} gnuplot_restart ()
+m4_deffn({Function}, gnuplot_restart, <<<()>>>)
 
 Closes the pipe to gnuplot which is used with the @code{gnuplot_pipes}
 format and opens a new pipe.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_replot}
-@deffn  {Function} gnuplot_replot @
+@c @deffn  {Function} gnuplot_replot @
+m4_deffn( {Function}, gnuplot_replot, <<<>>>) @
 @fname{gnuplot_replot} () @
 @fname{gnuplot_replot} (@var{s})
 
@@ -2101,20 +2137,23 @@ Updates the gnuplot window.  If @code{gnuplot_replot} is called with a
 gnuplot command in a string @var{s}, then @code{s} is sent to gnuplot
 before reploting the window.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_reset}
-@deffn {Function} gnuplot_reset ()
+@c @deffn {Function} gnuplot_reset ()
+m4_deffn({Function}, gnuplot_reset, <<<()>>>)
 
 Resets the state of gnuplot used with the @code{gnuplot_pipes} format.  To
 update the gnuplot window call @mref{gnuplot_replot} after @code{gnuplot_reset}.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
