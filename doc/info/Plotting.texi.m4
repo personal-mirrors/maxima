@@ -200,7 +200,8 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{geomview_command}
-@defvr {System variable} geomview_command
+@c @defvr {System variable} geomview_command
+m4_defvr({System variable}, geomview_command)
 
 This variable stores the name of the command used to run the geomview
 program when the plot format is @code{geomview}. Its default value is
@@ -215,10 +216,11 @@ you may change the value of this variable. For instance,
 (%i1) geomview_command: "/usr/local/bin/my_geomview"$
 @end example
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{get_plot_option}
@@ -237,7 +239,8 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_command}
-@defvr {System variable} gnuplot_command
+@c @defvr {System variable} gnuplot_command
+m4_defvr({System variable}, gnuplot_command)
 
 This variable stores the name of the command used to run the gnuplot
 program when the plot format is @code{gnuplot}. Its default value is
@@ -252,14 +255,16 @@ may change the value of this variable. For instance,
 (%i1) gnuplot_command: "/usr/local/bin/my_gnuplot"$
 @end example
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_file_args}
-@defvr {System variable} gnuplot_file_args
+@c @defvr {System variable} gnuplot_file_args
+m4_defvr({System variable}, gnuplot_file_args)
 
 When a graphic file is going to be created using @code{gnuplot}, this
 variable is used to specify the way the file name should be passed to
@@ -268,14 +273,16 @@ file will be passed directly. The contents of this variable can be
 changed in order to add options for the gnuplot program, adding those
 options before the format directive "~s".
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_view_args}
-@defvr {System variable} gnuplot_view_args
+@c @defvr {System variable} gnuplot_view_args
+m4_defvr({System variable}, gnuplot_view_args)
 
 This variable is used to parse the argument that will be passed to the
 gnuplot program when the plot format is @code{gnuplot}. Its default
@@ -307,10 +314,11 @@ gnuplot shell keeping the plot window. Therefore, when older gnuplot
 versions are used in Windows, it might be necessary to adjust the value
 of @code{gnuplot_view_args}.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Plotting, Share packages, Package implicit_plot)
@@ -1019,17 +1027,19 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{plot_options}
-@defvr {System variable} plot_options
+@c @defvr {System variable} plot_options
+m4_defvr({System variable}, plot_options)
 
 This option is being kept for compatibility with older versions, but its
 use is deprecated. To set global plotting options, see their current
 values or remove options, use @mrefcomma{set_plot_option}
 @mref{get_plot_option} and @mrefdot{remove_plot_option}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{remove_plot_option}
@@ -1121,19 +1131,22 @@ names. For instance, typing logx as an option is equivalent to writing
 
 @c -----------------------------------------------------------------------------
 @anchor{adapt_depth}
-@defvr {Plot option} adapt_depth [adapt_depth, @var{integer}]
+@c @defvr {Plot option} adapt_depth [adapt_depth, @var{integer}]
+m4_defvr({Plot option}, adapt_depth [adapt_depth, @var{integer}])
 Default value: @code{5}
 
 The maximum number of splittings used by the adaptive plotting routine.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{axes}
-@defvr {Plot option} axes [axes, @var{symbol}] 
+@c @defvr {Plot option} axes [axes, @var{symbol}] 
+m4_defvr({Plot option}, axes [axes, @var{symbol}] )
 Default value: @code{true}
 
 Where @var{symbol} can be either @code{true}, @code{false}, @code{x},
@@ -1143,14 +1156,16 @@ equal to @code{true}, both axes will be shown and @code{solid} will show
 the two axes with a solid line, rather than the default broken
 line. This option does not have any effect in the 3 dimensional plots.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{azimuth}
-@defvr {Plot option} azimuth [azimuth, @var{number}]
+@c @defvr {Plot option} azimuth [azimuth, @var{number}]
+m4_defvr({Plot option}, azimuth [azimuth, @var{number}])
 Default value: @code{30}
 
 A plot3d plot can be thought of as starting with the x and y axis in the
@@ -1162,27 +1177,31 @@ the value for the azimuth, in degrees.
 
 See also @mrefdot{elevation}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{option_box}
-@defvr {Plot option} box [box, @var{symbol}]
+@c @defvr {Plot option} box [box, @var{symbol}]
+m4_defvr({Plot option}, box [box, @var{symbol}])
 Default value: @code{true}
 
 If set to @code{true}, a bounding box will be drawn for the plot; if set
 to @code{false}, no box will be drawn.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{color}
-@defvr {Plot option} color [color, @var{color_1}, @dots{}, @var{color_n}]
+@c @defvr {Plot option} color [color, @var{color_1}, @dots{}, @var{color_n}]
+m4_defvr({Plot option}, color [color, @var{color_1}, @dots{}, @var{color_n}])
 
 In 2d plots it defines the color (or colors) for the various curves.  In
 @mrefcomma{plot3d} it defines the colors used for the mesh lines of the
@@ -1197,14 +1216,16 @@ digits: two for the red component, two for green component and two for
 the blue component. If the name of a given color is unknown color, black
 will be used instead.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{color_bar}
-@defvr {Plot option} color_bar [color_bar, @var{symbol}]
+@c @defvr {Plot option} color_bar [color_bar, @var{symbol}]
+m4_defvr({Plot option}, color_bar [color_bar, @var{symbol}])
 Default value: @code{false} in plot3d, @code{true} in mandelbrot and julia
 
 Where @var{symbol} can be either @code{true} or @code{false}.  If
@@ -1212,14 +1233,16 @@ Where @var{symbol} can be either @code{true} or @code{false}.  If
 @mref{julia} use a palette to represent different values, a box will be
 shown on the right, showing the corresponding between colors and values.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{color_bar_tics}
-@defvr {Plot option} color_bar_tics [color_bar_tics, @var{x1}, @var{x2}, @var{x3}]
+@c @defvr {Plot option} color_bar_tics [color_bar_tics, @var{x1}, @var{x2}, @var{x3}]
+m4_defvr({Plot option}, color_bar_tics [color_bar_tics, @var{x1}, @var{x2}, @var{x3}])
 
 Defines the values at which a mark and a number will be placed in the
 color bar. The first number is the initial value, the second the
@@ -1228,14 +1251,16 @@ second and third numbers can be omitted. When only one number is given,
 it will be used as the increment from an initial value that will be
 chosen automatically.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{elevation}
-@defvr {Plot option} elevation [elevation, @var{number}]
+@c @defvr {Plot option} elevation [elevation, @var{number}]
+m4_defvr({Plot option}, elevation [elevation, @var{number}])
 Default value: @code{60}
 
 A plot3d plot can be thought of as starting with the x and y axis in the
@@ -1247,14 +1272,16 @@ the value for the azimuth, in degrees.
 
 See also @mrefdot{azimuth}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{grid}
-@defvr {Plot option} grid [grid, @var{integer}, @var{integer}]
+@c @defvr {Plot option} grid [grid, @var{integer}, @var{integer}]
+m4_defvr({Plot option}, grid [grid, @var{integer}, @var{integer}])
 Default value: @code{30}, @code{30}
 
 Sets the number of grid points to use in the x- and y-directions for
@@ -1263,14 +1290,16 @@ programs.
 
 For a way to actually draw a grid See @mrefdot{grid2d}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{grid2d}
-@defvr {Plot option} grid2d [grid, @var{value}]
+@c @defvr {Plot option} grid2d [grid, @var{value}]
+m4_defvr({Plot option}, grid2d [grid, @var{value}])
 Default value: @code{false}
 
 Shows a grid of lines on the xy plane. The points where the grid lines
@@ -1280,38 +1309,44 @@ options.
 
 See also @mrefdot{grid}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{iterations}
-@defvr {Plot option} iterations [grid, @var{value}]
+@c @defvr {Plot option} iterations [grid, @var{value}]
+m4_defvr({Plot option}, iterations [grid, @var{value}])
 Default value: @code{9}
 
 Number of iterations made by the programs mandelbrot and julia.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{label}
-@defvr  {Plot option} label [label, [@var{string}, @var{x}, @var{y}], @dots{}]
+@c @defvr  {Plot option} label [label, [@var{string}, @var{x}, @var{y}], @dots{}]
+m4_defvr( {Plot option}, label [label, [@var{string}, @var{x}, @var{y}], @dots{}])
 
 Writes one or several labels in the points with @var{x}, @var{y}
 coordinates indicated after each label.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{legend}
-@defvr {Plot option} legend @
+@c @defvr {Plot option} legend @
+m4_defvr({Plot option}, legend) @
 @fname{legend} [legend, @var{string_1}, @dots{}, @var{string_n}] @
 @fname{legend} [legend, @var{false}]
 
@@ -1321,38 +1356,45 @@ repeated.  If given the value @code{false}, no legends will be shown.  By
 default, the names of the expressions or functions will be used, or the
 words discrete1, discrete2, @dots{}, for discrete sets of points.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
+
 
 @c -----------------------------------------------------------------------------
 @anchor{logx}
-@defvr {Plot option} logx [logx, @var{value}]
+@c @defvr {Plot option} logx [logx, @var{value}]
+m4_defvr({Plot option}, logx [logx, @var{value}])
 
 Makes the horizontal axes to be scaled logarithmically. It can be either
 true or false.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{logy}
-@defvr {Plot option} logy [logy, @var{value}]
+@c @defvr {Plot option} logy [logy, @var{value}]
+m4_defvr({Plot option}, logy [logy, @var{value}])
 
 Makes the vertical axes to be scaled logarithmically. It can be either
 true or false.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{mesh_lines_color}
-@defvr {Plot option} mesh_lines_color [mesh_lines_color, @var{color}]
+@c @defvr {Plot option} mesh_lines_color [mesh_lines_color, @var{color}]
+m4_defvr({Plot option}, mesh_lines_color [mesh_lines_color, @var{color}])
 Default value: @code{black}
 
 It sets the color used by plot3d to draw the mesh lines, when a palette is
@@ -1360,14 +1402,16 @@ being used.  It accepts the same colors as for the option @mref{color}@w{}
 (see the list of allowed colors in @mref{color}).  It can also be given a
 value @code{false} to eliminate completely the mesh lines.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{nticks}
-@defvr {Plot option} nticks [nticks, @var{integer}]
+@c @defvr {Plot option} nticks [nticks, @var{integer}]
+m4_defvr({Plot option}, nticks [nticks, @var{integer}])
 Default value: @code{29}
 
 When plotting functions with @mrefcomma{plot2d} it is gives the initial
@@ -1375,14 +1419,16 @@ number of points used by the adaptive plotting routine for plotting
 functions.  When plotting parametric functions with @mrefcomma{plot3d}
 it sets the number of points that will be shown for the plot.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{palette}
-@defvr  {Plot option} palette @
+@c @defvr  {Plot option} palette @
+m4_defvr( {Plot option}, palette) @
 @fname{palette} [palette, [@var{palette_1}], @dots{}, [@var{palette_n}]] @
 @fname{palette} [palette, @var{false}]
 
@@ -1410,14 +1456,16 @@ The color of the mesh lines will be given by the option
 mesh of curves only.  In that case, the colors of the lines will be
 determined by the option @mrefdot{color}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{plot_format}
-@defvr {Plot option} plot_format [plot_format, @var{format}]
+@c @defvr {Plot option} plot_format [plot_format, @var{format}]
+m4_defvr({Plot option}, plot_format [plot_format, @var{format}])
 Default value: @code{gnuplot}, in Windows systems, or @code{gnuplot_pipes} in
 other systems.
 
@@ -1426,14 +1474,16 @@ gnuplot_pipes or geomview.
 
 It sets the format to be used for plotting.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{plot_real_part}
-@defvr {Plot option} plot_realpart [plot_realpart, @var{symbol}]
+@c @defvr {Plot option} plot_realpart [plot_realpart, @var{symbol}]
+m4_defvr({Plot option}, plot_realpart [plot_realpart, @var{symbol}])
 Default value: @code{false}
 
 If set to @code{true}, the functions to be plotted will be considered
@@ -1446,14 +1496,16 @@ a complex value, with real value equal to @code{log(abs(x))}; if
 as @code{log(5)}, while nothing would be plotted if
 @code{plot_realpart} were @code{false}.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{point_type}
-@defvr {Plot option} point_type [point_type, @var{type_1}, @dots{}, @var{type_n}]
+@c @defvr {Plot option} point_type [point_type, @var{type_1}, @dots{}, @var{type_n}]
+m4_defvr({Plot option}, point_type [point_type, @var{type_1}, @dots{}, @var{type_n}])
 
 In gnuplot, each set of points to be plotted with the style ``points''
 or ``linespoints'' will be represented with objects taken from this
@@ -1464,14 +1516,16 @@ The possible objects that can be used are: @code{bullet}, @code{circle},
 @code{triangle}, @code{delta}, @code{wedge}, @code{nabla}, @code{diamond},
 @code{lozenge}.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{pdf_file}
-@defvr {Plot option} pdf_file [pdf_file, @var{file_name}]
+@c @defvr {Plot option} pdf_file [pdf_file, @var{file_name}]
+m4_defvr({Plot option}, pdf_file [pdf_file, @var{file_name}])
 
 Saves the plot into a PDF file with name equal to @var{file_name},
 rather than showing it in the screen.  By default, the file will be
@@ -1485,14 +1539,16 @@ Gnuplot's PDF terminal; otherwise, Gnuplot's pdfcairo terminal
 will be used with solid colored lines of width 3, plot
 size of 17.2 cm by 12.9 cm and font of 18 points.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{png_file}
-@defvr {Plot option} png_file [png_file, @var{file_name}]
+@c @defvr {Plot option} png_file [png_file, @var{file_name}]
+m4_defvr({Plot option}, png_file [png_file, @var{file_name}])
 
 Saves the plot into a PNG graphics file with name equal to @var{file_name},
 rather than showing it in the screen. By default, the file will be
@@ -1505,14 +1561,16 @@ to save the file in a different directory. When the option
 Gnuplot's PNG terminal; otherwise, Gnuplot's pngcairo terminal
 will be used, with a font of size 12. 
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ps_file}
-@defvr {Plot option} ps_file [ps_file, @var{file_name}]
+@c @defvr {Plot option} ps_file [ps_file, @var{file_name}]
+m4_defvr({Plot option}, ps_file [ps_file, @var{file_name}])
 
 Saves the plot into a Postscript file with name equal to @var{file_name},
 rather than showing it in the screen.  By default, the file will be
@@ -1526,14 +1584,16 @@ Gnuplot's Postscript terminal; otherwise, Gnuplot's postscript terminal
 will be used with the EPS option, solid colored lines of width 2, plot
 size of 16.4 cm by 12.3 cm and font of 24 points.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{run_viewer}
-@defvr {Plot option} run_viewer [run_viewer, @var{symbol}]
+@c @defvr {Plot option} run_viewer [run_viewer, @var{symbol}]
+m4_defvr({Plot option}, run_viewer [run_viewer, @var{symbol}])
 
 This option is only used when the plot format is @code{gnuplot} and the
 terminal is @code{default} or when the Gnuplot terminal is set to
@@ -1556,38 +1616,44 @@ in the Maxima or Xmaxima console.
 The default value for this option is true, making the plots to be shown
 in either the console or a separate graphics window.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{same_xy}
-@defvr {Plot option} same_xy [same_xy , @var{value}]
+@c @defvr {Plot option} same_xy [same_xy , @var{value}]
+m4_defvr({Plot option}, same_xy [same_xy , @var{value}])
 
 It can be either true or false. If true, the scales used in the x and y
 axes will be the same, in either 2d or 3d plots. See also @mrefdot{yx_ratio}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{same_xyz}
-@defvr {Plot option} same_xyz [same_xyz , @var{value}]
+@c @defvr {Plot option} same_xyz [same_xyz , @var{value}]
+m4_defvr({Plot option}, same_xyz [same_xyz , @var{value}])
 
 It can be either true or false. If true, the scales used in the 3 axes of
 a 3d plot will be the same.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{style}
-@defvr  {Plot option} style @
+@c @defvr  {Plot option} style @
+m4_defvr( {Plot option}, style) @
 @fname{style} [style, @var{type_1}, @dots{}, @var{type_n}] @
 @fname{style} [style, [@var{style_1}], @dots{}, [@var{style_n}]]
 
@@ -1623,14 +1689,16 @@ radius, color and type of object to replace the points.
 
 See also @mref{color} and @mrefdot{point_type}
  
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{svg_file}
-@defvr {Plot option} svg_file [svg_file, @var{file_name}]
+@c @defvr {Plot option} svg_file [svg_file, @var{file_name}]
+m4_defvr({Plot option}, svg_file [svg_file, @var{file_name}])
 
 Saves the plot into an SVG file with name equal to @var{file_name},
 rather than showing it in the screen.  By default, the file will be
@@ -1643,36 +1711,42 @@ to save the file in a different directory. When the option
 Gnuplot's SVG terminal; otherwise, Gnuplot's svg terminal
 will be used with font of 14 points.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{t}
-@defvr {Plot option} t [t, @var{min}, @var{max}]
+@c @defvr {Plot option} t [t, @var{min}, @var{max}]
+m4_defvr({Plot option}, t [t, @var{min}, @var{max}])
 
 Default range for parametric plots.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{title}
-@defvr {Plot option} title [title, @var{text}]
+@c @defvr {Plot option} title [title, @var{text}]
+m4_defvr({Plot option}, title [title, @var{text}])
 
 Defines a title that will be written at the top of the plot.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{transform_xy}
-@defvr {Plot option} transform_xy [transform_xy, @var{symbol}]
+@c @defvr {Plot option} transform_xy [transform_xy, @var{symbol}]
+m4_defvr({Plot option}, transform_xy [transform_xy, @var{symbol}])
 
 Where @var{symbol} is either @code{false} or the result obtained by
 using the function @code{transform_xy}.  If different from @code{false},
@@ -1681,14 +1755,16 @@ it will be used to transform the 3 coordinates in plot3d.
 See @mrefcomma{make_transform} @mref{polar_to_xy} and
 @mrefdot{spherical_to_xyz}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{x}
-@defvr {Plot option} x [x, @var{min}, @var{max}]
+@c @defvr {Plot option} x [x, @var{min}, @var{max}]
+m4_defvr({Plot option}, x [x, @var{min}, @var{max}])
 
 When used as the first option in a @mref{plot2d} command (or any of the
 first two in @mref{plot3d}), it indicates that the first independent variable
@@ -1696,14 +1772,16 @@ is x and it sets its range.  It can also be used again after the first
 option (or after the second option in plot3d) to define the effective
 horizontal domain that will be shown in the plot.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{xlabel}
-@defvr {Plot option} xlabel [xlabel, @var{string}]
+@c @defvr {Plot option} xlabel [xlabel, @var{string}]
+m4_defvr({Plot option}, xlabel [xlabel, @var{string}])
 
 Specifies the @var{string} that will label the first axis; if this option is
 not used, that label will be the name of the independent variable, when plotting
@@ -1712,14 +1790,16 @@ first variable, when plotting surfaces with @mref{plot3d} or contours with
 @mrefcomma{contour_plot} or the first expression in the case of a parametric
 plot.  It can not be used with @mrefdot{set_plot_option}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{xtics}
-@defvr {Plot option} xtics [xtics, @var{x1}, @var{x2}, @var{x3}]
+@c @defvr {Plot option} xtics [xtics, @var{x1}, @var{x2}, @var{x3}]
+m4_defvr({Plot option}, xtics [xtics, @var{x1}, @var{x2}, @var{x3}])
 
 Defines the values at which a mark and a number will be placed in the x
 axis. The first number is the initial value, the second the increments
@@ -1728,14 +1808,16 @@ third numbers can be omitted. When only one number is given, it will be
 used as the increment from an initial value that will be chosen
 automatically.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{xy_scale}
-@defvr {Plot option} xy_scale [xy_scale, @var{sx}, @var{sy}]
+@c @defvr {Plot option} xy_scale [xy_scale, @var{sx}, @var{sy}]
+m4_defvr({Plot option}, xy_scale [xy_scale, @var{sx}, @var{sy}])
 
 In a 2d plot, it defines the ratio of the total size of the Window to
 the size that will be used for the plot. The two numbers given as
@@ -1746,28 +1828,32 @@ of the graph in the window. If you want to change the aspect ratio of the
 plot, it is better to use option @mrefdot{yx_ratio} For instance,
 @code{[yx_ratio, 10]} instead of @code{[xy_scale, 0.1, 1]}.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{y}
-@defvr {Plot option} y [y, @var{min}, @var{max}]
+@c @defvr {Plot option} y [y, @var{min}, @var{max}]
+m4_defvr({Plot option}, y [y, @var{min}, @var{max}])
 
 When used as one of the first two options in @mrefcomma{plot3d} it indicates
 that one of the independent variables is y and it sets its range.  Otherwise,
 it defines the effective domain of the second variable that will be
 shown in the plot.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ylabel}
-@defvr {Plot option} ylabel [ylabel, @var{string}]
+@c @defvr {Plot option} ylabel [ylabel, @var{string}]
+m4_defvr({Plot option}, ylabel [ylabel, @var{string}])
 
 Specifies the @var{string} that will label the second axis; if this
 option is not used, that label will be ``y'', when plotting functions
@@ -1776,14 +1862,16 @@ variable, when plotting surfaces with @mref{plot3d} or contours with
 @mrefcomma{contour_plot} or the second expression in the case of a parametric
 plot.  It can not be used with @mrefdot{set_plot_option}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ytics}
-@defvr {Plot option} ytics [ytics, @var{y1}, @var{y2}, @var{y3}]
+@c @defvr {Plot option} ytics [ytics, @var{y1}, @var{y2}, @var{y3}]
+m4_defvr({Plot option}, ytics [ytics, @var{y1}, @var{y2}, @var{y3}])
 
 Defines the values at which a mark and a number will be placed in the y
 axis. The first number is the initial value, the second the increments
@@ -1792,37 +1880,44 @@ third numbers can be omitted. When only one number is given, it will be
 used as the increment from an initial value that will be chosen
 automatically
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
+
 @c -----------------------------------------------------------------------------
 @anchor{yx_ratio}
-@defvr {Plot option} yx_ratio [yx_ratio, @var{r}]
+@c @defvr {Plot option} yx_ratio [yx_ratio, @var{r}]
+m4_defvr({Plot option}, yx_ratio [yx_ratio, @var{r}])
 
 In a 2d plot, the ratio between the vertical and the horizontal sides of
 the rectangle used to make the plot. See also @mrefdot{same_xy}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{z}
-@defvr {Plot option} z [z, @var{min}, @var{max}]
+@c @defvr {Plot option} z [z, @var{min}, @var{max}]
+m4_defvr({Plot option}, z [z, @var{min}, @var{max}])
 
 Used in @mref{plot3d} to set the effective range of values of z that will be
 shown in the plot.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{zlabel}
-@defvr {Plot option} zlabel [zlabel, @var{string}]
+@c @defvr {Plot option} zlabel [zlabel, @var{string}]
+m4_defvr({Plot option}, zlabel [zlabel, @var{string}])
 
 Specifies the @var{string} that will label the third axis, when using
 @mrefdot{plot3d}  If this option is not used, that label will be ``z'', when
@@ -1830,21 +1925,24 @@ plotting surfaces, or the third expression in the case of a parametric
 plot.  It can not be used with @mref{set_plot_option} and it will be
 ignored by @mref{plot2d} and @mrefdot{implicit_plot}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{zmin}
-@defvr {Plot option} zmin [zmin, @var{z}]
+@c @defvr {Plot option} zmin [zmin, @var{z}]
+m4_defvr({Plot option}, zmin [zmin, @var{z}])
 
 In 3d plots, the value of z that will be at the bottom of the plot box.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @node Gnuplot Options, Gnuplot_pipes Format Functions, Plotting Options, Plotting
@@ -1860,7 +1958,8 @@ specific option.
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_term}
-@defvr {Plot option} gnuplot_term [gnuplot_term, @var{terminal_name}]
+@c @defvr {Plot option} gnuplot_term [gnuplot_term, @var{terminal_name}]
+m4_defvr({Plot option}, gnuplot_term [gnuplot_term, @var{terminal_name}])
 
 Sets the output terminal type for gnuplot. The argument @var{terminal_name}
 can be a string or one of the following 3 special symbols
@@ -1908,14 +2007,16 @@ output to @var{filename}.  Otherwise, it is saved as
 name.
 @end itemize
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_out_file}
-@defvr {Plot option} gnuplot_out_file [gnuplot_out_file, @var{file_name}]
+@c @defvr {Plot option} gnuplot_out_file [gnuplot_out_file, @var{file_name}]
+m4_defvr({Plot option}, gnuplot_out_file [gnuplot_out_file, @var{file_name}])
 
 It can be used to replace the default name for the file that contains
 the commands that will interpreted by gnuplot, when the terminal is set
@@ -1933,152 +2034,175 @@ by Gnuplot. To create PNG, PDF, Postscript or SVG, it is easier to use
 options @mrefcomma{png_file} @mrefcomma{pdf_file} @mrefcomma{ps_file}
 or @mrefdot{svg_file}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_pm3d}
-@defvr {Plot option} gnuplot_pm3d [gnuplot_pm3d, @var{value}]
+@c @defvr {Plot option} gnuplot_pm3d [gnuplot_pm3d, @var{value}]
+m4_defvr({Plot option}, gnuplot_pm3d [gnuplot_pm3d, @var{value}])
 
 With a value of @code{false}, it can be used to disable the use of PM3D
 mode, which is enabled by default.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_preamble}
-@defvr {Plot option} gnuplot_preamble [gnuplot_preamble, @var{string}]
+@c @defvr {Plot option} gnuplot_preamble [gnuplot_preamble, @var{string}]
+m4_defvr({Plot option}, gnuplot_preamble [gnuplot_preamble, @var{string}])
 
 This option inserts gnuplot commands before any other commands sent to
 Gnuplot. Any valid gnuplot commands may be used. Multiple commands should
 be separated with a semi-colon. See also @mrefdot{gnuplot_postamble}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_postamble}
-@defvr {Plot option} gnuplot_postamble [gnuplot_postamble, @var{string}]
+@c @defvr {Plot option} gnuplot_postamble [gnuplot_postamble, @var{string}]
+m4_defvr({Plot option}, gnuplot_postamble [gnuplot_postamble, @var{string}])
 
 This option inserts gnuplot commands after other commands sent to
 Gnuplot and right before the plot command is sent. Any valid gnuplot
 commands may be used. Multiple commands should be separated with a
 semi-colon. See also @mrefdot{gnuplot_preamble}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_default_term_command}
-@defvr {Plot option} gnuplot_default_term_command
+@c @defvr {Plot option} gnuplot_default_term_command
+m4_defvr({Plot option}, gnuplot_default_term_command)
 [gnuplot_default_term_command, @var{command}]
 
 The gnuplot command to set the terminal type for the default
 terminal. It this option is not set, the command used will be: @code{"set term wxt size 640,480 font \",12\"; set term pop"}.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_dumb_term_command}
-@defvr {Plot option} gnuplot_dumb_term_command
+@c @defvr {Plot option} gnuplot_dumb_term_command
+m4_defvr({Plot option}, gnuplot_dumb_term_command)
 [gnuplot_dumb_term_command, @var{command}]
 
 The gnuplot command to set the terminal type for the dumb terminal.  It
 this option is not set, the command used will be: @code{"set term dumb
 79 22"}, which makes the text output 79 characters by 22 characters.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_pdf_term_command}
-@defvr {Plot option} gnuplot_pdf_term_command [gnuplot_pdf_term_command, @var{command}]
+@c @defvr {Plot option} gnuplot_pdf_term_command [gnuplot_pdf_term_command, @var{command}]
+m4_defvr({Plot option}, gnuplot_pdf_term_command [gnuplot_pdf_term_command, @var{command}])
 
 The gnuplot command to set the terminal type for the PDF
 terminal.  If this option is not set, the command used will be: @code{"set term pdfcairo color solid lw 3 size 17.2 cm, 12.9 cm font \",18\""}. See the gnuplot documentation for more information.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_png_term_command}
-@defvr {Plot option} gnuplot_png_term_command [gnuplot_png_term_command, @var{command}]
+@c @defvr {Plot option} gnuplot_png_term_command [gnuplot_png_term_command, @var{command}]
+m4_defvr({Plot option}, <<<gnuplot_png_term_command [gnuplot_png_term_command, @var{command}]>>>)
 
 The gnuplot command to set the terminal type for the PNG terminal.  If
 this option is not set, the command used will be:
 @code{"set term pngcairo font \",12\""}. See the gnuplot documentation
 for more information.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_ps_term_command}
-@defvr {Plot option} gnuplot_ps_term_command [gnuplot_ps_term_command, @var{command}]
+@c @defvr {Plot option} gnuplot_ps_term_command [gnuplot_ps_term_command, @var{command}]
+m4_defvr({Plot option}, <<<gnuplot_ps_term_command [gnuplot_ps_term_command, @var{command}]>>>)
 
 The gnuplot command to set the terminal type for the PostScript
 terminal.  If this option is not set, the command used will be: @code{"set term postscript eps color solid lw 2 size 16.4 cm, 12.3 cm font \",24\""}. See the gnuplot documentation for @code{set term postscript} for
 more information.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_svg_term_command}
-@defvr {Plot option} gnuplot_svg_term_command [gnuplot_svg_term_command, @var{command}]
+@c @defvr {Plot option} gnuplot_svg_term_command [gnuplot_svg_term_command, @var{command}]
+m4_defvr({Plot option}, <<<gnuplot_svg_term_command [gnuplot_svg_term_command, @var{command}]>>>)
 
 The gnuplot command to set the terminal type for the SVG
 terminal.  If this option is not set, the command used will be:
 @code{"set term svg font \",14\""}. See the gnuplot documentation for
 more information.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_curve_titles}
-@defvr {Plot option} gnuplot_curve_titles
+@c @defvr {Plot option} gnuplot_curve_titles
+m4_defvr({Plot option}, <<<gnuplot_curve_titles>>>)
 
 This is an obsolete option that has been replaced @mref{legend} described
 above.
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_curve_styles}
-@defvr {Plot option} gnuplot_curve_styles
+@c @defvr {Plot option} gnuplot_curve_styles
+m4_defvr({Plot option}, <<<gnuplot_curve_styles>>>)
 
 This is an obsolete option that has been replaced by @mrefdot{style}
 
-@opencatbox
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @node Gnuplot_pipes Format Functions,  , Gnuplot Options, Plotting
