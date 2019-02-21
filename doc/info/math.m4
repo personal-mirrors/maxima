@@ -1,3 +1,6 @@
+m4_dnl Maxima has an # operator, so disable comment delimiters completely so 
+m4_dnl we don't accidentally comment out text
+m4_changecom()
 m4_dnl Change the quote characters to something that isn't likely to
 m4_dnl show up in the manual.
 m4_changequote(`<<<', `>>>')
