@@ -13,12 +13,14 @@ New items in core:
    preceeding command.
  * garbage_collect() which manually triggers the lisp's garbage collector 
    or returns false.
+ * newdet: An determinant algorithm that is optimized on sparse matrices
 
 New items in share:
 -------------------
  * Many improvements to the simplex algorithm including the ability to handle
    symbolic inputs
  * The ode package now has a testbench.
+ * killing.dem, a demo for Killing vector fields.
 
 Changes in core:
 ----------------
@@ -83,7 +85,9 @@ Changes in core:
      integrate((log((2-x)/2)+log(2))/(1-x), x, 0, 1);   /* rtestint 232 */
  * float_approx_equal now does what the comments in the code say.
  * an ecl-based maxima no more enters an endless loop if the front-end dies.
-
+ * maxima-sbcl now supports non-ascii user names and install dirs on MacOs 
+   and MS Windows
+ 
 Changes in share:
 --------------
  *  The the arguments to Krylov matrix are now checked for being of the 
@@ -108,11 +112,13 @@ Changes in share:
 Bug fixes:
 ----------
  * #3470: 
-     -Replace the option variable nonegative_lp with nonnegative_lp; the
+    -Replace the option variable nonegative_lp with nonnegative_lp; the
       former is retained as an alias.
     -Correct spelling of non-negative in documentation.
     -Document the undocumented optional input <all> to min/maximize_lp.
  * #3463: mention epsilon_lp more explicitly in minimize_lp
+ * #3497: Resolved an error in demos concerning the Ricci tensor
+ * #3497: ctensor documentation on the Ricci tensor is inconsistent
  
 Unnumbered bugs:
 ----------------
@@ -123,7 +129,7 @@ Additional improvements:
 ------------------------
  * Updated the external utilities for the Windows installer
  * Updated the wxMaxima version the Windows installer comes with
-   to version 19.01.3
+   to version 19.02.1
  * Nightly Test: A summary of the share tests
  * Crosscompiling: Add 'maxima_longnames.c' to automake
  * Documentation Updates

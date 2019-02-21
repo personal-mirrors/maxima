@@ -1824,7 +1824,7 @@ m4_end_defvr()
 @c @defvr {Variable} ric
 m4_defvr({Variable}, ric)
 
-The mixed Ricci-tensor. Computed by @code{ricci}.
+The covariant Ricci-tensor. Computed by @code{ricci}.
 
 @c @opencatbox
 @c @category{Package ctensor}
@@ -1837,7 +1837,7 @@ m4_end_defvr()
 @c @defvr {Variable} uric
 m4_defvr({Variable}, uric)
 
-The contravariant Ricci-tensor. Computed by @code{uricci}.
+The mixed-index Ricci-tensor. Computed by @code{uricci}.
 
 @c @opencatbox
 @c @category{Package ctensor}
