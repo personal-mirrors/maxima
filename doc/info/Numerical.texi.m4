@@ -525,16 +525,6 @@ m4_setcat(Algebraic equations, Numerical methods)
 m4_deffn( {Function}, find_root, <<<(@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
 @c @deffnx {Function} find_root (@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
 m4_deffnx({Function}, find_root, <<<(@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
-@c @deffnx {Function} bf_find_root (@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
-m4_deffnx({Function}, bf_find_root, <<<(@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
-@c @deffnx {Function} bf_find_root (@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
-m4_deffnx({Function}, bf_find_root, <<<(@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
-@c @deffnx {Option variable} find_root_error
-@c @deffnx {Option variable} find_root_abs
-@c @deffnx {Option variable} find_root_rel
-m4_deffnx({Option variable}, find_root_error, <<<>>>)
-m4_deffnx({Option variable}, find_root_abs, <<<>>>)
-m4_deffnx({Option variable}, find_root_rel, <<<>>>)
 
 Finds a root of the expression @var{expr} or the function @var{f} over the
 closed interval @math{[@var{a}, @var{b}]}.  The expression @var{expr} may be an
@@ -550,12 +540,6 @@ or one of the roots if there is more than one.
 If the function in question appears to be smooth enough,
 @code{find_root} applies linear interpolation instead.
 
-@code{bf_find_root} is a bigfloat version of @code{find_root}.  The
-function is computed using bigfloat arithmetic and a bigfloat result
-is returned.  Otherwise, @code{bf_find_root} is identical to
-@code{find_root}, and the following description is equally applicable
-to @code{bf_find_root}.
-
 The accuracy of @code{find_root} is governed by @code{abserr} and
 @code{relerr}, which are optional keyword arguments to
 @code{find_root}.  These keyword arguments take the form
@@ -568,7 +552,6 @@ Desired absolute error of function value at root.  Default is
 @item relerr
 Desired relative error of root.  Default is @code{find_root_rel}.
 @end table
-
 @code{find_root} stops when the function in question evaluates to
 something less than or equal to @code{abserr}, or if successive
 approximants @var{x_0}, @var{x_1} differ by no more than @code{relerr
@@ -611,10 +594,6 @@ Examples:
 @c find_root (exp(x) = y, x, 0, 100);
 @c find_root (exp(x) = y, x, 0, 100), y = 10;
 @c log (10.0);
-@c fpprec:32;
-@c 32;
-@c bf_find_root (exp(x) = y, x, 0, 100), y = 10;
-@c log(10b0);
 @c ===end===
 @example
 (%i1) f(x) := sin(x) - x/2;
@@ -636,12 +615,6 @@ Examples:
 (%o7)                   2.302585092994046
 (%i8) log (10.0);
 (%o8)                   2.302585092994046
-(%i9) fpprec:32;
-(%o9)                           32
-(%i10) bf_find_root (exp(x) = y, x, 0, 100), y = 10;
-(%o10)                  2.3025850929940456840179914546844b0
-(%i11) log(10b0);
-(%o11)                  2.3025850929940456840179914546844b0
 @end example
 
 @c @opencatbox
@@ -650,6 +623,55 @@ Examples:
 @c @closecatbox
 @c @end deffn
 m4_end_deffn()
+
+@c @deffnx {Function} bf_find_root (@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
+m4_deffn({Function}, bf_find_root, <<<(@var{expr}, @var{x}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
+@c @deffnx {Function} bf_find_root (@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])
+m4_deffnx({Function}, bf_find_root, <<<(@var{f}, @var{a}, @var{b}, [@var{abserr}, @var{relerr}])>>>)
+
+@code{bf_find_root} is a bigfloat version of @code{find_root}.  The
+function is computed using bigfloat arithmetic and a bigfloat result
+is returned.  Otherwise, @code{bf_find_root} is identical to
+@code{find_root}, and the description for @code{find_root}  is equally applicable
+to @code{bf_find_root}.
+
+Examples:
+@c ===beg===
+@c fpprec:32;
+@c 32;
+@c bf_find_root (exp(x) = y, x, 0, 100), y = 10;
+@c log(10b0);
+@c ===end===
+@example
+(%i1) fpprec:32;
+(%o1)                           32
+(%i2) bf_find_root (exp(x) = y, x, 0, 100), y = 10;
+(%o2)                  2.3025850929940456840179914546844b0
+(%i3) log(10b0);
+(%o3)                  2.3025850929940456840179914546844b0
+@end example
+
+m4_end_deffn()
+
+@c @deffnx {Option variable} find_root_error
+@c @deffnx {Option variable} find_root_abs
+@c @deffnx {Option variable} find_root_rel
+m4_defvr({Option variable}, find_root_error)
+m4_defvrx({Option variable}, find_root_abs)
+m4_defvrx({Option variable}, find_root_rel)
+
+The behavior of @code{find_root} and @code{bf_find_root} is governed by @code{find_root_error}.
+When @code{find_root_error} is @code{true},
+@code{find_root} prints an error message.
+Otherwise @code{find_root} returns the value of @code{find_root_error}.
+The default value of @code{find_root_error} is @code{true}.
+
+@code{find_root_abs} and @code{find_root_rel} are the default values
+for the keyword arguments @code{abserr} and @code{relerr},
+respectively for @code{find_root} and @code{bf_find_root}.  The default values of
+@code{find_root_abs} and @code{find_root_rel} are both zero.
+
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{newton}
