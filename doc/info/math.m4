@@ -77,7 +77,7 @@ m4_dnl as the previous m4_deffn, then we don't produce the anchor and
 m4_dnl entries because we already have.
 m4_define(<<<m4_deffnx>>>,
 <<<@c deffnx
-m4_ifelse(<<<m4_deffn_name()>>>, <<<$2>>>, <<<>>>, <<<
+m4_ifelse(m4_deffn_name(), <<<$2>>>, <<<>>>, <<<
 m4_anchor_entry(fn-$2, m4_cat())
 m4_dfindex_entry($2, m4_cat())
 >>>)
