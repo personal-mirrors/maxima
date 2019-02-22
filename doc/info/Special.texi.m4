@@ -71,6 +71,7 @@ parabolic_cylinder_d (v,z)     Parabolic cylinder D function
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Bessel functions, Special functions)
+@anchor{bessel_j}
 m4_deffn(<<<{Function}>>>, <<<bessel_j>>>, <<<(@var{v}, @var{z})>>>)
 
 The Bessel function of the first kind of order @math{v} and argument @math{z}.
@@ -126,6 +127,7 @@ the limit as @math{v} approaches @math{n} is taken.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+@anchor{bessel_i}
 m4_deffn({Function}, bessel_i, <<<(@var{v}, @var{z})>>>)
 
 The modified Bessel function of the first kind of order @math{v} and argument
@@ -412,6 +414,7 @@ See also @mrefcomma{airy_bi} @mrefcomma{airy_dai} @mrefdot{airy_dbi}
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+@anchor{airy_dai}
 m4_deffn({Function}, airy_dai, (@var{x}))
 The derivative of the Airy function Ai @code{airy_ai(x)}. 
 
@@ -425,6 +428,7 @@ See @code{airy_ai}.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+@anchor{airy_bi}
 m4_deffn({Function}, airy_bi, (@var{x}))
 The Airy function Bi(x).  (A&S 10.4.3)
 
@@ -440,6 +444,7 @@ See @code{airy_ai}, @code{airy_dbi}.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+@anchor{airy_dbi}
 m4_deffn({Function}, airy_dbi, (@var{x}))
 The derivative of the Airy Bi function @code{airy_bi(x)}.
 
@@ -473,6 +478,7 @@ functions are defined in Abramowitz and Stegun,
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Gamma and factorial functions, Numerical evaluation)
+@anchor{bffac}
 m4_deffn({Function}, bffac, <<<(@var{expr}, @var{n})>>>)
 
 Bigfloat version of the factorial (shifted gamma)
@@ -511,6 +517,7 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Gamma and factorial functions, Complex variables, Numerical evaluation)
+@anchor{cbffac}
 m4_deffn({Function}, cbffac, <<<(@var{z}, @var{fpprec})>>>)
 Complex bigfloat factorial.
 
@@ -526,6 +533,7 @@ m4_end_deffn()
 
 m4_setcat(Gamma and factorial functions, Special functions)
 @c -----------------------------------------------------------------------------
+@anchor{gamma}
 m4_deffn({Function}, gamma, (@var{z}))
 
 The basic definition of the gamma function (A&S 6.1.1) is
@@ -674,6 +682,7 @@ See also @mref{gamma_incomplete} (upper incomplete gamma function).
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+@anchor{gamma_incomplete}
 m4_deffn({Function}, gamma_incomplete, <<<(@var{a}, @var{z})>>>)
 
 The incomplete upper gamma function (A&S 6.5.3):
@@ -767,6 +776,7 @@ m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Gamma and factorial functions, Simplification flags and variables)
+@anchor{gamma_expand}
 m4_defvr({Option variable}, gamma_expand)
 Default value: @code{false}
 
@@ -799,6 +809,7 @@ is expanded in terms of
 @c @end defvr
 m4_end_defvr()
 @c -----------------------------------------------------------------------------
+@anchor{gammalim}
 m4_defvr({Option variable}, gammalim)
 Default value: 10000
 
@@ -822,6 +833,7 @@ m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Gamma and factorial functions)
+@anchor{makegamma}
 m4_deffn({Function}, makegamma, (@var{expr}))
 Transforms instances of binomial, factorial, and beta
 functions in @var{expr} into gamma functions.
@@ -1548,6 +1560,7 @@ m4_end_defvr()
 
 @c NEED CROSS REFS HERE
 @c NEED EXAMPLES HERE
+@anchor{makefact}
 m4_deffn({Function}, makefact, <<<(@var{expr})>>>)
 Transforms instances of binomial, gamma, and beta
 functions in @var{expr} into factorials.
@@ -1767,6 +1780,7 @@ Abramowitz and Stegun,
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Special functions)
+@anchor{erf}
 m4_deffn({Function}, erf, <<<(@var{z})>>>)
 
 The Error Function erf(z) (A&S 7.1.1)
@@ -1778,6 +1792,7 @@ See also flag @mrefdot{erfflag}
 @c @end deffn
 m4_end_deffn()
 
+@anchor{erfc}
 m4_deffn({Function}, erfc, <<<(@var{z})>>>)
 The Complementary Error Function erfc(z) (A&S 7.1.2)
 
@@ -1993,6 +2008,7 @@ m4_end_deffn()
 @node Functions and Variables for Special Functions,  , Parabolic Cylinder Functions, Special Functions
 @section Functions and Variables for Special Functions
 m4_setcat(Laplace transform)
+@anchor{specint}
 m4_deffn({Function}, specint, <<<(exp(- s*@var{t}) * @var{expr}, @var{t})>>>)
 
 Compute the Laplace transform of @var{expr} with respect to the variable @var{t}.
@@ -2159,6 +2175,7 @@ Examples:
 @c @end deffn
 m4_end_deffn()
 
+@anchor{hgfred}
 m4_deffn({Function}, hgfred, <<<(@var{a}, @var{b}, @var{t})>>>)
 
 Simplify the generalized hypergeometric function in terms of other,
