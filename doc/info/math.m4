@@ -115,8 +115,7 @@ m4_define(<<<m4_defvr>>>,
 <<<@c defvr m4_cat()
 m4_anchor_var(vr-$2, m4_cat())
 m4_dvindex_var($2, m4_cat())
-@defvr $1 $2
->>>)
+@defvr $1 $2 >>>)
 m4_dnl Like deffnx but for @defvrx
 m4_define(<<<m4_defvrx>>>,
 <<<@c defvrx m4_cat()
