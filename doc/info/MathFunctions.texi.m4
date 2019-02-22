@@ -1887,7 +1887,6 @@ m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Exponential and logarithm functions, Simplification functions)
-@anchor{logarc}
 @c @deffn {Function} logarc (@var{expr})
 m4_deffn({Function}, logarc, <<<(@var{expr})>>>)
 
