@@ -1675,7 +1675,7 @@ m4_setcat(Expressions)
 @anchor{ordergreat}
 @anchor{orderless}
 @c @deffn  {Function} ordergreat (@var{v_1}, @dots{}, @var{v_n})
-m4_deffn({Function}, ordergreat <<<(@var{v_1}, @dots{}, @var{v_n})>>>)
+m4_deffn({Function}, ordergreat, <<<(@var{v_1}, @dots{}, @var{v_n})>>>)
 m4_deffnx({Function}, orderless, <<<(@var{v_1}, @dots{}, @var{v_n})>>>)
 
 @code{ordergreat} changes the canonical ordering of Maxima expressions

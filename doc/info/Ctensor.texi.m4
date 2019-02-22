@@ -1507,7 +1507,7 @@ m4_end_deffn()
 
 @anchor{deleten}
 @c @deffn {Function} deleten (@var{L}, @var{n})
-m4_deffn({Function}, deleten (@var{L}, @var{n}))
+m4_deffn({Function}, deleten, (@var{L}, @var{n}))
 Returns a new list consisting of @var{L} with the @var{n}'th element
 deleted.
 
