@@ -80,31 +80,37 @@ symbol @code{/T/} follows the line label of such expressions.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification flags and variables)
 @anchor{algebraic}
-@defvr {Option variable} algebraic
+@c @defvr {Option variable} algebraic
+m4_defvr({Option variable}, algebraic)
 Default value: @code{false}
 
 @code{algebraic} must be set to @code{true} in order for the simplification of
 algebraic integers to take effect.
 
-@opencatbox
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
-@anchor{berlefact}
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} berlefact
+m4_setcat(Polynomials)
+@anchor{berlefact}
+@c @defvr {Option variable} berlefact
+m4_defvr({Option variable}, berlefact)
 Default value: @code{true}
 
 When @code{berlefact} is @code{false} then the Kronecker factoring
 algorithm will be used otherwise the Berlekamp algorithm, which is the
 default, will be used.
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c WHAT IS THIS ABOUT EXACTLY ??
 
@@ -547,7 +553,8 @@ gcd is first calculated with the function @code{gcd} and then with the function
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} facexpand
+@c @defvr {Option variable} facexpand
+m4_defvr({Option variable}, facexpand)
 Default value: @code{true}
 
 @code{facexpand} controls whether the irreducible factors returned by
@@ -733,7 +740,8 @@ Examples:
 
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} factor_max_degree
+@c @defvr {Option variable} factor_max_degree
+m4_defvr({Option variable}, factor_max_degree)
 Default value: @code{1000}
 
 When factor_max_degree is set to a positive integer @code{n}, it will prevent
@@ -776,14 +784,16 @@ Refusing to factor polynomial x    - 1
 
 See also: @mref{factor_max_degree_print_warning}
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{factor_max_degree_print_warning}
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} factor_max_degree_print_warning
+@c @defvr {Option variable} factor_max_degree_print_warning
+m4_defvr({Option variable}, factor_max_degree_print_warning)
 Default value: @code{true}
 
 When factor_max_degree_print_warning is true, then Maxima will print a
@@ -792,24 +802,27 @@ its degree exceeds the value of factor_max_degree.
 
 See also: @mref{factor_max_degree}
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end defvr 
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end defvr 
+m4_end_defvr()
 
 @anchor{factorflag}
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} factorflag
+@c @defvr {Option variable} factorflag
+m4_defvr({Option variable}, factorflag)
 Default value: @code{false}
 
 @c WHAT IS THIS ABOUT EXACTLY ??
 When @code{factorflag} is @code{false}, suppresses the factoring of
 integer factors of rational expressions.
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @deffn {Function} factorout (@var{expr}, @var{x_1}, @var{x_2}, @dots{})
@@ -1283,9 +1296,11 @@ Examples:
 
 @c I SUSPECT THE FOLLOWING TEXT IS OUTDATED DUE TO CHANGES IN INTEGER FACTORING CODE
 
-@anchor{intfaclim}
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} intfaclim
+m4_setcat(Integers)
+@anchor{intfaclim}
+@c @defvr {Option variable} intfaclim
+m4_defvr({Option variable}, intfaclim)
 Default value: true
 
 If @code{true}, maxima will give up factorization of
@@ -1304,13 +1319,16 @@ Internal calls to @code{factor} respect the user-specified value of
 the time spent factoring large integers.
 @c NEED EXAMPLES HERE
 
-@opencatbox
-@category{Integers}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Integers}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} keepfloat
+m4_setcat(Numerical evaluation)
+@c @defvr {Option variable} keepfloat
+m4_defvr({Option variable}, keepfloat)
 Default value: @code{false}
 
 When @code{keepfloat} is @code{true}, prevents floating
@@ -1356,10 +1374,11 @@ rat: replaced 1.0 by 1/1 = 1.0
 @end group
 @end example
 
-@opencatbox
-@category{Numerical evaluation}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Numerical evaluation}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{lowpow}
@@ -1437,8 +1456,10 @@ equation may be given as first argument.
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Integers)
 @anchor{modulus}
-@defvr {Option variable} modulus
+@c @defvr {Option variable} modulus
+m4_defvr({Option variable}, modulus)
 Default value: @code{false}
 
 When @code{modulus} is a positive number @var{p}, operations on canonical rational
@@ -1495,10 +1516,11 @@ Examples:
                             6    2
 (%o8)                      x  + x  + 1
 @end example
-@opencatbox
-@category{Integers}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Integers}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c APPARENTLY OBSOLETE: ONLY EFFECT OF $newfac COULD BE TO CAUSE NONEXISTENT FUNCTION NMULTFACT
 @c TO BE CALLED (IN FUNCTION FACTOR72 IN src/factor.lisp CIRCA LINE 1400)
@@ -1773,17 +1795,20 @@ Examples:
 @closecatbox
 @end deffn
 
-@defvr {Option variable} ratalgdenom
+m4_setcat(Simplification flags and variables)
+@c @defvr {Option variable} ratalgdenom
+m4_defvr({Option variable}, ratalgdenom)
 Default value: @code{true}
 
 When @code{ratalgdenom} is @code{true}, allows rationalization of denominators
 with respect to radicals to take effect.  @code{ratalgdenom} has an effect only
 when canonical rational expressions (CRE) are used in algebraic mode.
 
-@opencatbox
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c THIS ITEM NEEDS MORE WORK
 
@@ -1865,7 +1890,9 @@ denominator, and thus some expressions which are considered ratios by
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} ratdenomdivide
+m4_setcat(Simplification flags and variables, Rational expressions)
+@c @defvr {Option variable} ratdenomdivide
+m4_defvr({Option variable}, ratdenomdivide)
 Default value: @code{true}
 
 When @code{ratdenomdivide} is @code{true},
@@ -1923,11 +1950,12 @@ Examples:
                              b  + 3
 @end example
 
-@opencatbox
-@category{Simplification flags and variables}
-@category{Rational expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @deffn {Function} ratdiff (@var{expr}, @var{x})
@@ -2087,8 +2115,10 @@ Examples:
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rational expressions)
 @anchor{ratfac}
-@defvr {Option variable} ratfac
+@c @defvr {Option variable} ratfac
+m4_defvr({Option variable}, ratfac)
 Default value: @code{false}
 
 When @code{ratfac} is @code{true}, canonical rational expressions (CRE) are
@@ -2112,10 +2142,11 @@ The @code{ratfac} and @code{ratweight} schemes are incompatible and may not
 both be used at the same time.
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @deffn {Function} ratnumer (@var{expr})
@@ -2157,19 +2188,22 @@ Extended CRE are created by @code{taylor} and related functions.
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} ratprint
+m4_setcat(Rational expressions, Numerical evaluation, Console interaction)
+@c @defvr {Option variable} ratprint
+m4_defvr({Option variable}, ratprint)
 Default value: @code{true}
 
 When @code{ratprint} is @code{true},
 a message informing the user of the conversion of floating point numbers
 to rational numbers is displayed.
 
-@opencatbox
-@category{Rational expressions}
-@category{Numerical evaluation}
-@category{Console interaction}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rational expressions}
+@c @category{Numerical evaluation}
+@c @category{Console interaction}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ratsimp}
@@ -2243,31 +2277,37 @@ Examples:
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} ratsimpexpons
+m4_setcat(Simplification flags and variables, Rational expressions)
+@c @defvr {Option variable} ratsimpexpons
+m4_defvr({Option variable}, ratsimpexpons)
 Default value: @code{false}
 
 When @code{ratsimpexpons} is @code{true},
 @code{ratsimp} is applied to the exponents of expressions during simplification.
 
 @c NEED AN EXAMPLE HERE -- RECYCLE THE ratsimpexpons EXAMPLE FROM ratsimp ABOVE
-@opencatbox
-@category{Simplification flags and variables}
-@category{Rational expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification flags and variables)
 @anchor{radsubstflag}
-@defvr {Option variable} radsubstflag
+@c @defvr {Option variable} radsubstflag
+m4_defvr({Option variable}, radsubstflag)
 Default value: @code{false}
 
 @code{radsubstflag}, if @code{true}, permits @code{ratsubst} to make
 substitutions such as @code{u} for @code{sqrt (x)} in @code{x}.
 
-@opencatbox
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{ratsubst}
@@ -2374,7 +2414,9 @@ Each call to the function @code{ratvars} resets the list.
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} ratvarswitch
+m4_setcat(Rational expressions, Global flags)
+@c @defvr {Option variable} ratvarswitch
+m4_defvr({Option variable}, ratvarswitch)
 Default value: @code{true}
 
 Maxima keeps an internal list in the Lisp variable @code{VARLIST} of the main
@@ -2442,11 +2484,12 @@ evaluation are still present.
 ($A $B $X $Y)
 @end example
 
-@opencatbox
-@category{Rational expressions}
-@category{Global flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rational expressions}
+@c @category{Global flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @deffn  {Function} ratweight @
@@ -2494,7 +2537,9 @@ Examples:
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@defvr {System variable} ratweights
+m4_setcat(Rational expressions)
+@c @defvr {System variable} ratweights
+m4_defvr({System variable}, ratweights)
 Default value: @code{[]}
 
 @code{ratweights} is the list of weights assigned by @code{ratweight}.
@@ -2504,24 +2549,27 @@ each call to @code{ratweight} places additional items in the list.
 @c DO WE REALLY NEED TO MENTION THIS ??
 @code{kill (ratweights)} and @code{save (ratweights)} both work as expected.
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @need 1000
-@defvr {Option variable} ratwtlvl
+@c @defvr {Option variable} ratwtlvl
+m4_defvr({Option variable}, ratwtlvl)
 Default value: @code{false}
 
 @code{ratwtlvl} is used in combination with the @code{ratweight}
 function to control the truncation of canonical rational expressions (CRE).
 For the default value of @code{false}, no truncation occurs.
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @deffn  {Function} remainder @
@@ -2597,8 +2645,10 @@ Examples:
 @end deffn
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials)
 @anchor{option_resultant}
-@defvr {Option variable} resultant
+@c @defvr {Option variable} resultant
+m4_defvr({Option variable}, resultant)
 Default value: @code{subres}
 
 The option variable @code{resultant} controls which algorithm will be used to
@@ -2618,14 +2668,16 @@ On most problems the default value @code{subres} should be best.
 @c On some large degree univariate or bivariate problems @code{mod}
 @c may be better.
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{savefactors}
 @c -----------------------------------------------------------------------------
-@defvr {Option variable} savefactors
+@c @defvr {Option variable} savefactors
+m4_defvr({Option variable}, savefactors)
 Default value: @code{false}
 
 @c "certain functions" -- WHICH ONES ??
@@ -2634,10 +2686,11 @@ expression which is a product of factors to be saved by certain
 functions in order to speed up later factorizations of expressions
 containing some of the same factors.
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{showratvars}
