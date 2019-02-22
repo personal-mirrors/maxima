@@ -1132,7 +1132,9 @@ names. For instance, typing logx as an option is equivalent to writing
 @c -----------------------------------------------------------------------------
 @anchor{adapt_depth}
 @c @defvr {Plot option} adapt_depth [adapt_depth, @var{integer}]
-m4_defvr({Plot option}, adapt_depth [adapt_depth, @var{integer}])
+m4_defvr({Plot option}, adapt_depth) @
+@fname{[adapt_depth, @var{integer}]}
+
 Default value: @code{5}
 
 The maximum number of splittings used by the adaptive plotting routine.
@@ -1146,7 +1148,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{axes}
 @c @defvr {Plot option} axes [axes, @var{symbol}] 
-m4_defvr({Plot option}, axes [axes, @var{symbol}] )
+m4_defvr({Plot option}, axes) @
+@fname{[axes, @var{symbol}]}
 Default value: @code{true}
 
 Where @var{symbol} can be either @code{true}, @code{false}, @code{x},
@@ -1165,7 +1168,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{azimuth}
 @c @defvr {Plot option} azimuth [azimuth, @var{number}]
-m4_defvr({Plot option}, azimuth [azimuth, @var{number}])
+m4_defvr({Plot option}, azimuth) @
+@fname{[azimuth, @var{number}]}
 Default value: @code{30}
 
 A plot3d plot can be thought of as starting with the x and y axis in the
@@ -1186,7 +1190,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{option_box}
 @c @defvr {Plot option} box [box, @var{symbol}]
-m4_defvr({Plot option}, box [box, @var{symbol}])
+m4_defvr({Plot option}, box) @
+@fname{[box, @var{symbol}]}
 Default value: @code{true}
 
 If set to @code{true}, a bounding box will be drawn for the plot; if set
@@ -1201,7 +1206,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{color}
 @c @defvr {Plot option} color [color, @var{color_1}, @dots{}, @var{color_n}]
-m4_defvr({Plot option}, color [color, @var{color_1}, @dots{}, @var{color_n}])
+m4_defvr({Plot option}, color) @
+@fname{[color, @var{color_1}, @dots{}, @var{color_n}]}
 
 In 2d plots it defines the color (or colors) for the various curves.  In
 @mrefcomma{plot3d} it defines the colors used for the mesh lines of the
@@ -1225,7 +1231,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{color_bar}
 @c @defvr {Plot option} color_bar [color_bar, @var{symbol}]
-m4_defvr({Plot option}, color_bar [color_bar, @var{symbol}])
+m4_defvr({Plot option}, color_bar) @
+@fname{[color_bar, @var{symbol}]}
 Default value: @code{false} in plot3d, @code{true} in mandelbrot and julia
 
 Where @var{symbol} can be either @code{true} or @code{false}.  If
@@ -1242,7 +1249,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{color_bar_tics}
 @c @defvr {Plot option} color_bar_tics [color_bar_tics, @var{x1}, @var{x2}, @var{x3}]
-m4_defvr({Plot option}, color_bar_tics [color_bar_tics, @var{x1}, @var{x2}, @var{x3}])
+m4_defvr({Plot option}, color_bar_tics) @
+@fname{[color_bar_tics, @var{x1}, @var{x2}, @var{x3}]}
 
 Defines the values at which a mark and a number will be placed in the
 color bar. The first number is the initial value, the second the
@@ -1260,7 +1268,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{elevation}
 @c @defvr {Plot option} elevation [elevation, @var{number}]
-m4_defvr({Plot option}, elevation [elevation, @var{number}])
+m4_defvr({Plot option}, elevation) @
+@fname{[elevation, @var{number}]}
 Default value: @code{60}
 
 A plot3d plot can be thought of as starting with the x and y axis in the
@@ -1281,7 +1290,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{grid}
 @c @defvr {Plot option} grid [grid, @var{integer}, @var{integer}]
-m4_defvr({Plot option}, grid [grid, @var{integer}, @var{integer}])
+m4_defvr({Plot option}, grid) @
+@fname{[grid, @var{integer}, @var{integer}]}
 Default value: @code{30}, @code{30}
 
 Sets the number of grid points to use in the x- and y-directions for
@@ -1299,7 +1309,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{grid2d}
 @c @defvr {Plot option} grid2d [grid, @var{value}]
-m4_defvr({Plot option}, grid2d [grid, @var{value}])
+m4_defvr({Plot option}, grid2d) @
+@fname{[grid, @var{value}]}
 Default value: @code{false}
 
 Shows a grid of lines on the xy plane. The points where the grid lines
@@ -1318,7 +1329,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{iterations}
 @c @defvr {Plot option} iterations [grid, @var{value}]
-m4_defvr({Plot option}, iterations [grid, @var{value}])
+m4_defvr({Plot option}, iterations) @
+@fname{[grid, @var{value}]}
 Default value: @code{9}
 
 Number of iterations made by the programs mandelbrot and julia.
@@ -1332,7 +1344,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{label}
 @c @defvr  {Plot option} label [label, [@var{string}, @var{x}, @var{y}], @dots{}]
-m4_defvr( {Plot option}, label [label, [@var{string}, @var{x}, @var{y}], @dots{}])
+m4_defvr( {Plot option}, label) @
+@fname{[label, [@var{string}, @var{x}, @var{y}], @dots{}]}
 
 Writes one or several labels in the points with @var{x}, @var{y}
 coordinates indicated after each label.
@@ -1366,7 +1379,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{logx}
 @c @defvr {Plot option} logx [logx, @var{value}]
-m4_defvr({Plot option}, logx [logx, @var{value}])
+m4_defvr({Plot option}, logx) @
+@fname{[logx, @var{value}]}
 
 Makes the horizontal axes to be scaled logarithmically. It can be either
 true or false.
@@ -1380,7 +1394,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{logy}
 @c @defvr {Plot option} logy [logy, @var{value}]
-m4_defvr({Plot option}, logy [logy, @var{value}])
+m4_defvr({Plot option}, logy) @
+@fname{[logy, @var{value}]}
 
 Makes the vertical axes to be scaled logarithmically. It can be either
 true or false.
@@ -1394,7 +1409,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{mesh_lines_color}
 @c @defvr {Plot option} mesh_lines_color [mesh_lines_color, @var{color}]
-m4_defvr({Plot option}, mesh_lines_color [mesh_lines_color, @var{color}])
+m4_defvr({Plot option}, mesh_lines_color) @
+@fname{[mesh_lines_color, @var{color}]}
 Default value: @code{black}
 
 It sets the color used by plot3d to draw the mesh lines, when a palette is
@@ -1411,7 +1427,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{nticks}
 @c @defvr {Plot option} nticks [nticks, @var{integer}]
-m4_defvr({Plot option}, nticks [nticks, @var{integer}])
+m4_defvr({Plot option}, nticks) @
+@fname{[nticks, @var{integer}]}
 Default value: @code{29}
 
 When plotting functions with @mrefcomma{plot2d} it is gives the initial
@@ -1465,7 +1482,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{plot_format}
 @c @defvr {Plot option} plot_format [plot_format, @var{format}]
-m4_defvr({Plot option}, plot_format [plot_format, @var{format}])
+m4_defvr({Plot option}, plot_format) @
+@fname{[plot_format, @var{format}]}
 Default value: @code{gnuplot}, in Windows systems, or @code{gnuplot_pipes} in
 other systems.
 
@@ -1483,7 +1501,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{plot_real_part}
 @c @defvr {Plot option} plot_realpart [plot_realpart, @var{symbol}]
-m4_defvr({Plot option}, plot_realpart [plot_realpart, @var{symbol}])
+m4_defvr({Plot option}, plot_realpart) @
+@fname{[plot_realpart, @var{symbol}]}
 Default value: @code{false}
 
 If set to @code{true}, the functions to be plotted will be considered
@@ -1505,7 +1524,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{point_type}
 @c @defvr {Plot option} point_type [point_type, @var{type_1}, @dots{}, @var{type_n}]
-m4_defvr({Plot option}, point_type [point_type, @var{type_1}, @dots{}, @var{type_n}])
+m4_defvr({Plot option}, point_type) @
+@fname{[point_type, @var{type_1}, @dots{}, @var{type_n}]}
 
 In gnuplot, each set of points to be plotted with the style ``points''
 or ``linespoints'' will be represented with objects taken from this
@@ -1525,7 +1545,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{pdf_file}
 @c @defvr {Plot option} pdf_file [pdf_file, @var{file_name}]
-m4_defvr({Plot option}, pdf_file [pdf_file, @var{file_name}])
+m4_defvr({Plot option}, pdf_file) @
+@fname{[pdf_file, @var{file_name}]}
 
 Saves the plot into a PDF file with name equal to @var{file_name},
 rather than showing it in the screen.  By default, the file will be
@@ -1548,7 +1569,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{png_file}
 @c @defvr {Plot option} png_file [png_file, @var{file_name}]
-m4_defvr({Plot option}, png_file [png_file, @var{file_name}])
+m4_defvr({Plot option}, png_file) @
+@fname{[png_file, @var{file_name}]}
 
 Saves the plot into a PNG graphics file with name equal to @var{file_name},
 rather than showing it in the screen. By default, the file will be
@@ -1570,7 +1592,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{ps_file}
 @c @defvr {Plot option} ps_file [ps_file, @var{file_name}]
-m4_defvr({Plot option}, ps_file [ps_file, @var{file_name}])
+m4_defvr({Plot option}, ps_file) @
+@fname{[ps_file, @var{file_name}]}
 
 Saves the plot into a Postscript file with name equal to @var{file_name},
 rather than showing it in the screen.  By default, the file will be
@@ -1593,7 +1616,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{run_viewer}
 @c @defvr {Plot option} run_viewer [run_viewer, @var{symbol}]
-m4_defvr({Plot option}, run_viewer [run_viewer, @var{symbol}])
+m4_defvr({Plot option}, run_viewer) @
+@fname{[run_viewer, @var{symbol}]}
 
 This option is only used when the plot format is @code{gnuplot} and the
 terminal is @code{default} or when the Gnuplot terminal is set to
@@ -1625,7 +1649,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{same_xy}
 @c @defvr {Plot option} same_xy [same_xy , @var{value}]
-m4_defvr({Plot option}, same_xy [same_xy , @var{value}])
+m4_defvr({Plot option}, same_xy) @
+@fname{[same_xy , @var{value}]}
 
 It can be either true or false. If true, the scales used in the x and y
 axes will be the same, in either 2d or 3d plots. See also @mrefdot{yx_ratio}
@@ -1639,7 +1664,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{same_xyz}
 @c @defvr {Plot option} same_xyz [same_xyz , @var{value}]
-m4_defvr({Plot option}, same_xyz [same_xyz , @var{value}])
+m4_defvr({Plot option}, same_xyz) @
+@fname{[same_xyz , @var{value}]}
 
 It can be either true or false. If true, the scales used in the 3 axes of
 a 3d plot will be the same.
@@ -1698,7 +1724,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{svg_file}
 @c @defvr {Plot option} svg_file [svg_file, @var{file_name}]
-m4_defvr({Plot option}, svg_file [svg_file, @var{file_name}])
+m4_defvr({Plot option}, svg_file) @
+@fname{[svg_file, @var{file_name}]}
 
 Saves the plot into an SVG file with name equal to @var{file_name},
 rather than showing it in the screen.  By default, the file will be
@@ -1720,7 +1747,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{t}
 @c @defvr {Plot option} t [t, @var{min}, @var{max}]
-m4_defvr({Plot option}, t [t, @var{min}, @var{max}])
+m4_defvr({Plot option}, t) @
+@fname{[t, @var{min}, @var{max}]}
 
 Default range for parametric plots.
 
@@ -1733,7 +1761,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{title}
 @c @defvr {Plot option} title [title, @var{text}]
-m4_defvr({Plot option}, title [title, @var{text}])
+m4_defvr({Plot option}, title) @
+@fname{[title, @var{text}]}
 
 Defines a title that will be written at the top of the plot.
 
@@ -1746,7 +1775,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{transform_xy}
 @c @defvr {Plot option} transform_xy [transform_xy, @var{symbol}]
-m4_defvr({Plot option}, transform_xy [transform_xy, @var{symbol}])
+m4_defvr({Plot option}, transform_xy) @
+@fname{[transform_xy, @var{symbol}]}
 
 Where @var{symbol} is either @code{false} or the result obtained by
 using the function @code{transform_xy}.  If different from @code{false},
@@ -1764,7 +1794,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{x}
 @c @defvr {Plot option} x [x, @var{min}, @var{max}]
-m4_defvr({Plot option}, x [x, @var{min}, @var{max}])
+m4_defvr({Plot option}, x) @
+@fname{[x, @var{min}, @var{max}]}
 
 When used as the first option in a @mref{plot2d} command (or any of the
 first two in @mref{plot3d}), it indicates that the first independent variable
@@ -1781,7 +1812,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{xlabel}
 @c @defvr {Plot option} xlabel [xlabel, @var{string}]
-m4_defvr({Plot option}, xlabel [xlabel, @var{string}])
+m4_defvr({Plot option}, xlabel) @
+@fname{[xlabel, @var{string}]}
 
 Specifies the @var{string} that will label the first axis; if this option is
 not used, that label will be the name of the independent variable, when plotting
@@ -1799,7 +1831,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{xtics}
 @c @defvr {Plot option} xtics [xtics, @var{x1}, @var{x2}, @var{x3}]
-m4_defvr({Plot option}, xtics [xtics, @var{x1}, @var{x2}, @var{x3}])
+m4_defvr({Plot option}, xtics) @
+@fname{[xtics, @var{x1}, @var{x2}, @var{x3}]}
 
 Defines the values at which a mark and a number will be placed in the x
 axis. The first number is the initial value, the second the increments
@@ -1817,7 +1850,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{xy_scale}
 @c @defvr {Plot option} xy_scale [xy_scale, @var{sx}, @var{sy}]
-m4_defvr({Plot option}, xy_scale [xy_scale, @var{sx}, @var{sy}])
+m4_defvr({Plot option}, xy_scale) @
+@fname{[xy_scale, @var{sx}, @var{sy}]}
 
 In a 2d plot, it defines the ratio of the total size of the Window to
 the size that will be used for the plot. The two numbers given as
@@ -1837,7 +1871,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{y}
 @c @defvr {Plot option} y [y, @var{min}, @var{max}]
-m4_defvr({Plot option}, y [y, @var{min}, @var{max}])
+m4_defvr({Plot option}, y) @
+@fname{[y, @var{min}, @var{max}]}
 
 When used as one of the first two options in @mrefcomma{plot3d} it indicates
 that one of the independent variables is y and it sets its range.  Otherwise,
@@ -1853,7 +1888,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{ylabel}
 @c @defvr {Plot option} ylabel [ylabel, @var{string}]
-m4_defvr({Plot option}, ylabel [ylabel, @var{string}])
+m4_defvr({Plot option}, ylabel) @
+@fname{[ylabel, @var{string}]}
 
 Specifies the @var{string} that will label the second axis; if this
 option is not used, that label will be ``y'', when plotting functions
@@ -1871,7 +1907,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{ytics}
 @c @defvr {Plot option} ytics [ytics, @var{y1}, @var{y2}, @var{y3}]
-m4_defvr({Plot option}, ytics [ytics, @var{y1}, @var{y2}, @var{y3}])
+m4_defvr({Plot option}, ytics) @
+@fname{[ytics, @var{y1}, @var{y2}, @var{y3}]}
 
 Defines the values at which a mark and a number will be placed in the y
 axis. The first number is the initial value, the second the increments
@@ -1889,7 +1926,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{yx_ratio}
 @c @defvr {Plot option} yx_ratio [yx_ratio, @var{r}]
-m4_defvr({Plot option}, yx_ratio [yx_ratio, @var{r}])
+m4_defvr({Plot option}, yx_ratio) @
+@fname{[yx_ratio, @var{r}]}
 
 In a 2d plot, the ratio between the vertical and the horizontal sides of
 the rectangle used to make the plot. See also @mrefdot{same_xy}
@@ -1903,7 +1941,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{z}
 @c @defvr {Plot option} z [z, @var{min}, @var{max}]
-m4_defvr({Plot option}, z [z, @var{min}, @var{max}])
+m4_defvr({Plot option}, z) @
+@fname{[z, @var{min}, @var{max}]}
 
 Used in @mref{plot3d} to set the effective range of values of z that will be
 shown in the plot.
@@ -1917,7 +1956,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{zlabel}
 @c @defvr {Plot option} zlabel [zlabel, @var{string}]
-m4_defvr({Plot option}, zlabel [zlabel, @var{string}])
+m4_defvr({Plot option}, zlabel) @
+@fname{[zlabel, @var{string}]}
 
 Specifies the @var{string} that will label the third axis, when using
 @mrefdot{plot3d}  If this option is not used, that label will be ``z'', when
@@ -1934,7 +1974,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{zmin}
 @c @defvr {Plot option} zmin [zmin, @var{z}]
-m4_defvr({Plot option}, zmin [zmin, @var{z}])
+m4_defvr({Plot option}, zmin) @
+@fname{[zmin, @var{z}]}
 
 In 3d plots, the value of z that will be at the bottom of the plot box.
 
@@ -1959,7 +2000,8 @@ specific option.
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_term}
 @c @defvr {Plot option} gnuplot_term [gnuplot_term, @var{terminal_name}]
-m4_defvr({Plot option}, gnuplot_term [gnuplot_term, @var{terminal_name}])
+m4_defvr({Plot option}, gnuplot_term) @
+@fname{[gnuplot_term, @var{terminal_name}]}
 
 Sets the output terminal type for gnuplot. The argument @var{terminal_name}
 can be a string or one of the following 3 special symbols
@@ -2016,7 +2058,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_out_file}
 @c @defvr {Plot option} gnuplot_out_file [gnuplot_out_file, @var{file_name}]
-m4_defvr({Plot option}, gnuplot_out_file [gnuplot_out_file, @var{file_name}])
+m4_defvr({Plot option}, gnuplot_out_file) @
+@fname{[gnuplot_out_file, @var{file_name}]}
 
 It can be used to replace the default name for the file that contains
 the commands that will interpreted by gnuplot, when the terminal is set
@@ -2043,7 +2086,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_pm3d}
 @c @defvr {Plot option} gnuplot_pm3d [gnuplot_pm3d, @var{value}]
-m4_defvr({Plot option}, gnuplot_pm3d [gnuplot_pm3d, @var{value}])
+m4_defvr({Plot option}, gnuplot_pm3d) @
+@fname{[gnuplot_pm3d, @var{value}]}
 
 With a value of @code{false}, it can be used to disable the use of PM3D
 mode, which is enabled by default.
@@ -2057,7 +2101,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_preamble}
 @c @defvr {Plot option} gnuplot_preamble [gnuplot_preamble, @var{string}]
-m4_defvr({Plot option}, gnuplot_preamble [gnuplot_preamble, @var{string}])
+m4_defvr({Plot option}, gnuplot_preamble) @
+@fname{[gnuplot_preamble, @var{string}]}
 
 This option inserts gnuplot commands before any other commands sent to
 Gnuplot. Any valid gnuplot commands may be used. Multiple commands should
@@ -2072,7 +2117,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_postamble}
 @c @defvr {Plot option} gnuplot_postamble [gnuplot_postamble, @var{string}]
-m4_defvr({Plot option}, gnuplot_postamble [gnuplot_postamble, @var{string}])
+m4_defvr({Plot option}, gnuplot_postamble) @
+@fname{[gnuplot_postamble, @var{string}]}
 
 This option inserts gnuplot commands after other commands sent to
 Gnuplot and right before the plot command is sent. Any valid gnuplot
@@ -2088,8 +2134,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_default_term_command}
 @c @defvr {Plot option} gnuplot_default_term_command
-m4_defvr({Plot option}, gnuplot_default_term_command)
-[gnuplot_default_term_command, @var{command}]
+m4_defvr({Plot option}, gnuplot_default_term_command) @
+@fname{[gnuplot_default_term_command, @var{command}]}
 
 The gnuplot command to set the terminal type for the default
 terminal. It this option is not set, the command used will be: @code{"set term wxt size 640,480 font \",12\"; set term pop"}.
@@ -2103,8 +2149,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_dumb_term_command}
 @c @defvr {Plot option} gnuplot_dumb_term_command
-m4_defvr({Plot option}, gnuplot_dumb_term_command)
-[gnuplot_dumb_term_command, @var{command}]
+m4_defvr({Plot option}, gnuplot_dumb_term_command) @
+@fname{[gnuplot_dumb_term_command, @var{command}]}
 
 The gnuplot command to set the terminal type for the dumb terminal.  It
 this option is not set, the command used will be: @code{"set term dumb
@@ -2119,7 +2165,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_pdf_term_command}
 @c @defvr {Plot option} gnuplot_pdf_term_command [gnuplot_pdf_term_command, @var{command}]
-m4_defvr({Plot option}, gnuplot_pdf_term_command [gnuplot_pdf_term_command, @var{command}])
+m4_defvr({Plot option}, gnuplot_pdf_term_command) @
+@fname{[gnuplot_pdf_term_command, @var{command}]}
 
 The gnuplot command to set the terminal type for the PDF
 terminal.  If this option is not set, the command used will be: @code{"set term pdfcairo color solid lw 3 size 17.2 cm, 12.9 cm font \",18\""}. See the gnuplot documentation for more information.
@@ -2133,7 +2180,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_png_term_command}
 @c @defvr {Plot option} gnuplot_png_term_command [gnuplot_png_term_command, @var{command}]
-m4_defvr({Plot option}, <<<gnuplot_png_term_command [gnuplot_png_term_command, @var{command}]>>>)
+m4_defvr({Plot option}, gnuplot_png_term_command) @
+@fname{[gnuplot_png_term_command, @var{command}]}
 
 The gnuplot command to set the terminal type for the PNG terminal.  If
 this option is not set, the command used will be:
@@ -2149,7 +2197,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_ps_term_command}
 @c @defvr {Plot option} gnuplot_ps_term_command [gnuplot_ps_term_command, @var{command}]
-m4_defvr({Plot option}, <<<gnuplot_ps_term_command [gnuplot_ps_term_command, @var{command}]>>>)
+m4_defvr({Plot option}, gnuplot_ps_term_command) @
+@fname{[gnuplot_ps_term_command, @var{command}]}
 
 The gnuplot command to set the terminal type for the PostScript
 terminal.  If this option is not set, the command used will be: @code{"set term postscript eps color solid lw 2 size 16.4 cm, 12.3 cm font \",24\""}. See the gnuplot documentation for @code{set term postscript} for
@@ -2164,7 +2213,8 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_svg_term_command}
 @c @defvr {Plot option} gnuplot_svg_term_command [gnuplot_svg_term_command, @var{command}]
-m4_defvr({Plot option}, <<<gnuplot_svg_term_command [gnuplot_svg_term_command, @var{command}]>>>)
+m4_defvr({Plot option}, gnuplot_svg_term_command) @
+@fname{[gnuplot_svg_term_command, @var{command}]}
 
 The gnuplot command to set the terminal type for the SVG
 terminal.  If this option is not set, the command used will be:
@@ -2180,7 +2230,7 @@ m4_end_defvr()
 @c -----------------------------------------------------------------------------
 @anchor{gnuplot_curve_titles}
 @c @defvr {Plot option} gnuplot_curve_titles
-m4_defvr({Plot option}, <<<gnuplot_curve_titles>>>)
+m4_defvr({Plot option}, gnuplot_curve_titles)
 
 This is an obsolete option that has been replaced @mref{legend} described
 above.
