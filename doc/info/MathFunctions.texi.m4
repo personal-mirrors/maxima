@@ -1886,21 +1886,32 @@ m4_end_defvr()
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
-m4_setcat(Exponential and logarithm functions, Simplification flags and variables, Simplification functions)
+m4_setcat(Exponential and logarithm functions, Simplification functions)
+@anchor{logarc}
+@c @deffn {Function} logarc (@var{expr})
+m4_deffn({Function}, logarc, <<<(@var{expr})>>>)
+
+The function @code{logarc(@var{expr})} carries out the replacement of
+inverse circular and hyperbolic functions with equivalent logarithmic
+functions for an expression @var{expr} without setting the global
+variable @code{logarc}.
+
+@c @opencatbox
+@c @category{Exponential and logarithm functions}
+@c @category{Simplification flags and variables}
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
+
 @anchor{logarc}
 @c @defvr  {Option variable} logarc
-m4_defvr( {Option variable}, logarc)
-@c @defvrx {Function} logarc (@var{expr})
-m4_defvrx({Function}, logarc (@var{expr}))
+m4_defvr({Option variable}, logarc)
 
 When the global variable @code{logarc} is @code{true},
 inverse circular and hyperbolic functions are replaced by
 equivalent logarithmic functions.
 The default value of @code{logarc} is @code{false}.
-
-The function @code{logarc(@var{expr})} carries out that replacement for
-an expression @var{expr}
-without setting the global variable @code{logarc}.
 
 @c @opencatbox
 @c @category{Exponential and logarithm functions}
