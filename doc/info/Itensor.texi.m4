@@ -1025,6 +1025,7 @@ m4_end_deffn()
 @c HMM, WHICH CATEGORY DOES THIS FALL INTO -- FUNCTION, VARIABLE, OTHER ??
 
 @c -----------------------------------------------------------------------------
+@anchor{lc_u}
 @c @deffn {Function} lc_u
 m4_deffn({Function}, lc_u, <<<>>>)
 
@@ -1802,7 +1803,7 @@ contravariant index.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@anchor{igeodesic}
+@anchor{igeodesic_coords}
 @c @deffn {Function} igeodesic_coords (@var{expr}, @var{name})
 m4_deffn({Function}, igeodesic_coords, <<<(@var{expr}, @var{name})>>>)
 
