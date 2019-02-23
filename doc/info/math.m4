@@ -10,11 +10,13 @@ m4_dnl defvr entries.  This accepts any number of arguments.  To
 m4_dnl retrieve the categories, use m4_cat() which returns the comma-
 m4_dnl separated list of categories.
 m4_dnl
+m4_dnl Use m4_setcat() to clear out any categories.
 m4_define(<<<m4_setcat>>>,
-<<<@c setcat $@
-m4_define(<<<m4_cat>>>, <<<$@>>>)>>>)m4_dnl
+<<<m4_ifelse(<<<$*>>>, <<<>>>,
+<<<@c no categories m4_undefine(<<<m4_cat>>>)>>>,
+<<<@c setcat $@ m4_define(<<<m4_cat>>>, <<<$@>>>)>>>)m4_dnl
+>>>)
 m4_dnl
-
 m4_dnl Create index entries given the name and the list of categories.
 m4_dnl The call should look like
 m4_dnl   m4_dfindex_entry(name, cat1, cat2, cat3, ...)
@@ -72,7 +74,7 @@ m4_dnl index entry
 m4_define(<<<m4_deffn>>>,
 <<<@c deffn m4_cat()
 m4_define(<<<m4_deffn_name>>>, <<<$2>>>)m4_dnl
-m4_ifelse(m4_cat(), <<<>>>,,<<<
+m4_ifdef(<<<m4_cat>>>,<<<
 m4_anchor_entry(fn-$2, m4_cat())m4_dnl
 m4_dfindex_entry($2, m4_cat())m4_dnl
 >>>)m4_dnl
@@ -83,14 +85,15 @@ m4_dnl as the previous m4_deffn, then we don't produce the anchor and
 m4_dnl entries because we already have.
 m4_define(<<<m4_deffnx>>>,
 <<<@c deffnx
-m4_ifelse(m4_deffn_name(), <<<$2>>>, <<<>>>, <<<
+m4_ifelse(m4_deffn_name(), <<<$2>>>, <<<>>>, <<<m4_dnl
+m4_ifdef(<<<m4_cat>>>, <<<m4_dnl
 m4_anchor_entry(fn-$2, m4_cat())
 m4_dfindex_entry($2, m4_cat())
->>>)
+>>>)>>>)
 @deffnx $1 $2 $3
 >>>)
 m4_define(<<<m4_end_deffn>>>,<<<m4_dnl
-m4_ifelse(m4_cat(), <<<>>>,,<<<
+m4_ifdef(<<<m4_cat>>>, <<<
 @opencatbox
 m4_catentry(<<<fn>>>, m4_cat())
 @closecatbox
@@ -120,9 +123,10 @@ m4_ifelse(<<<$#>>>, <<<2>>>,
 
 m4_dnl Like deffn but for @defvr
 m4_define(<<<m4_defvr>>>,
+<<<m4_ifdef(<<<m4_cat>>>,
 <<<@c defvr m4_cat()
 m4_anchor_var(vr-$2, m4_cat())
-m4_dvindex_var($2, m4_cat())
+m4_dvindex_var($2, m4_cat())>>>)
 @defvr $1 $2 >>>)
 m4_dnl Like deffnx but for @defvrx
 m4_define(<<<m4_defvrx>>>,
@@ -133,9 +137,10 @@ m4_dvindex_var($2, m4_cat())
 >>>)
 
 m4_define(<<<m4_end_defvr>>>,<<<m4_dnl
+m4_ifdef(<<<m4_cat>>>, <<<m4_dnl
 @opencatbox
 m4_catentry(<<<vr>>>, m4_cat())
-@closecatbox
+@closecatbox>>>)
 @end defvr
 >>>)
 
