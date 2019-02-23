@@ -2131,7 +2131,6 @@ m4_setcat(Rational expressions)
 @anchor{ratexpand}
 @c @deffn  {Function} ratexpand (@var{expr})
 m4_deffn( {Function}, ratexpand, <<<(@var{expr})>>>)
-@deffnx {Option variable} ratexpand
 
 Expands @var{expr} by multiplying out products of sums and
 exponentiated sums, combining fractions over a common denominator,
@@ -2141,13 +2140,6 @@ respective terms divided by the denominator.
 
 The return value of @code{ratexpand} is a general expression,
 even if @var{expr} is a canonical rational expression (CRE).
-
-@c WHAT DOES THE FOLLOWING MEAN EXACTLY ??
-The switch @code{ratexpand} if @code{true} will cause CRE
-expressions to be fully expanded when they are converted back to
-general form or displayed, while if it is @code{false} then they will be put
-into a recursive form.
-See also @mrefdot{ratsimp}
 
 When @code{ratdenomdivide} is @code{true},
 @code{ratexpand} expands a ratio in which the numerator is a sum 
@@ -2197,6 +2189,19 @@ Examples:
 @c @closecatbox
 @c @end deffn
 m4_end_deffn()
+
+@c @deffnx {Option variable} ratexpand
+m4_defvr({Option variable}, ratexpand)
+Default value: @code{true}
+
+@c WHAT DOES THE FOLLOWING MEAN EXACTLY ??
+The switch @code{ratexpand} if @code{true} will cause CRE
+expressions to be fully expanded when they are converted back to
+general form or displayed, while if it is @code{false} then they will be put
+into a recursive form.
+See also @mrefdot{ratsimp}
+
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Rational expressions)
