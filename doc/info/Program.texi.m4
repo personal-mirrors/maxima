@@ -147,9 +147,10 @@ Garbage Collection avoids many errors frequently found in C programs (memory
 being freed too early, multiple times or not at all).
 
 @c -----------------------------------------------------------------------------
-
+m4_setcat(Programming)
 @anchor{garbage_collect}
-@deffn {Function} garbage_collect ()
+@c @deffn {Function} garbage_collect ()
+m4_deffn({Function}, garbage_collect, <<<()>>>)
 
 Tries to manually trigger the lisp's garbage collection. This rarely is necessary
 as the lisp will employ an excellent algorithm for determining when to start
@@ -158,10 +159,11 @@ garbage collection.
 If maxima knows how to do manually trigger the garbage collection for the
 current lisp @code{garbage_collect} returns @code{true}, else @code{false}.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @node Introduction to Program Flow, Functions and Variables for Program Flow, Garbage Collection, Program Flow
@@ -179,8 +181,10 @@ constructs such as @code{go}.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging)
 @anchor{backtrace}
-@deffn  {Function} backtrace @
+@c @deffn  {Function} backtrace @
+m4_deffn( {Function}, backtrace, <<<>>>) @
 @fname{backtrace} () @
 @fname{backtrace} (@var{n})
 
@@ -240,12 +244,14 @@ functions, including the currently active function.
 @end example
 @end itemize
 
-@opencatbox
-@category{Debugging}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Debugging}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming)
 @anchor{do}
 @anchor{while}
 @anchor{unless}
@@ -255,15 +261,24 @@ functions, including the currently active function.
 @anchor{step}
 @anchor{next}
 @anchor{in}
-@deffn {Special operator} do
-@deffnx {Special operator} while
-@deffnx {Special operator} unless
-@deffnx {Special operator} for
-@deffnx {Special operator} from
-@deffnx {Special operator} thru
-@deffnx {Special operator} step
-@deffnx {Special operator} next
-@deffnx {Special operator} in
+@c @deffn {Special operator} do
+@c @deffnx {Special operator} while
+@c @deffnx {Special operator} unless
+@c @deffnx {Special operator} for
+@c @deffnx {Special operator} from
+@c @deffnx {Special operator} thru
+@c @deffnx {Special operator} step
+@c @deffnx {Special operator} next
+@c @deffnx {Special operator} in
+m4_deffn({Special operator}, do)
+m4_deffnx({Special operator}, while)
+m4_deffnx({Special operator}, unless)
+m4_deffnx({Special operator}, for)
+m4_deffnx({Special operator}, from)
+m4_deffnx({Special operator}, thru)
+m4_deffnx({Special operator}, step)
+m4_deffnx({Special operator}, next)
+m4_deffnx({Special operator}, in)
 
 The @code{do} statement is used for performing iteration. The general
 form of the @code{do} statements maxima supports is:
@@ -518,14 +533,16 @@ non-atomic expression, and successive parts are taken.)
 (%o4)                             0.78539816
 @end example
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{errcatch}
-@deffn {Function} errcatch (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} errcatch (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn({Function}, errcatch, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Evaluates @var{expr_1}, @dots{}, @var{expr_n} one by one and
 returns @code{[@var{expr_n}]} (a list) if no error occurs.  If an
@@ -539,14 +556,16 @@ would terminate the @code{batch} if the error weren't caught.
 
 See also @mrefdot{errormsg}
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{error}
-@deffn  {Function} error (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn  {Function} error (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn( {Function}, error, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 @deffnx {System variable} error
 
 Evaluates and prints @var{expr_1}, @dots{}, @var{expr_n},
@@ -561,14 +580,16 @@ and the remaining elements are the values of any non-string arguments.
 @code{errormsg()} formats and prints @code{error}.
 This is effectively reprinting the most recent error message.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{warning}
-@deffn  {Function} warning (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn  {Function} warning (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn( {Function}, warning, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Evaluates and prints @var{expr_1}, @dots{}, @var{expr_n},
 as a warning message that is formatted in a standard way so a maxima front-end
@@ -576,10 +597,11 @@ may be able to recognize the warning and to format it accordingly.
 
 The function @code{warning} always returns false.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{error_size}
@@ -664,17 +686,20 @@ See also @mref{error} and @mrefdot{error_size}
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming)
 @anchor{errormsg_fn}
-@deffn {Function} errormsg ()
+@c @deffn {Function} errormsg ()
+m4_deffn({Function}, errormsg, <<<()>>>)
 
 Reprints the most recent error message.
 The variable @code{error} holds the message,
 and @mref{errormsg} formats and prints it.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{errormsg}
@@ -750,7 +775,8 @@ value of errormsg is false
 
 @c -----------------------------------------------------------------------------
 @anchor{go}
-@deffn {Function} go (@var{tag})
+@c @deffn {Function} go (@var{tag})
+m4_deffn({Function}, go, <<<(@var{tag})>>>)
 
 is used within a @mref{block} to transfer control to the statement
 of the block which is tagged with the argument to @code{go}.  To tag a
@@ -765,17 +791,20 @@ The argument to @code{go} must be the name of a tag appearing in the same
 @code{block}.  One cannot use @code{go} to transfer to tag in a @code{block}
 other than the one containing the @code{go}.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION, EXPANSION, EXAMPLES
 @c THIS ITEM IS IMPORTANT
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming, Predicate functions)
 @anchor{if}
-@deffn {Special operator} if
+@c @deffn {Special operator} if
+m4_deffn({Special operator}, if)
 
 Represents conditional evaluation.  Various forms of @code{if} expressions are
 recognized.
@@ -834,18 +863,21 @@ or                   or          logical infix
 not                  not         logical prefix
 @end example
 
-@opencatbox
-@category{Programming}
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 @c THIS ITEM IS IMPORTANT
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application)
 @anchor{map}
-@deffn {Function} map (@var{f}, @var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} map (@var{f}, @var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn({Function}, map, <<<(@var{f}, @var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Returns an expression whose leading operator is the same as that of the
 expressions @var{expr_1}, @dots{}, @var{expr_n} but whose subparts are the
@@ -895,24 +927,28 @@ See also @mrefcomma{scanmap} @mrefcomma{maplist} @mrefcomma{outermap} @mref{matr
 
 @end example
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions)
 @anchor{mapatom}
-@deffn {Function} mapatom (@var{expr})
+@c @deffn {Function} mapatom (@var{expr})
+m4_deffn({Function}, mapatom, <<<(@var{expr})>>>)
 
 Returns @code{true} if and only if @var{expr} is treated by the mapping
 routines as an atom.  "Mapatoms" are atoms, numbers
 (including rational numbers), and subscripted variables.
 @c WHAT ARE "THE MAPPING ROUTINES", AND WHY DO THEY HAVE A SPECIALIZED NOTION OF ATOMS ??
 
-@opencatbox
-@category{Predicate functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 
@@ -961,8 +997,10 @@ If @mref{mapprint} is @code{false}, these messages are suppressed.
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application)
 @anchor{maplist}
-@deffn {Function} maplist (@var{f}, @var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} maplist (@var{f}, @var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn({Function}, maplist, <<<(@var{f}, @var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Returns a list of the applications of @var{f} to the parts of the expressions
 @var{expr_1}, @dots{}, @var{expr_n}.  @var{f} is the name of a function, or a
@@ -972,10 +1010,11 @@ lambda expression.
 which returns an expression with the same main operator as @var{expr_i} has
 (except for simplifications and the case where @mref{map} does an @mref{apply}).
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 
@@ -1002,8 +1041,10 @@ See also @mref{is} and @mrefdot{maybe}
 
 @end defvr
 
+m4_setcat(Programming)
 @anchor{return}
-@deffn {Function} return (@var{value})
+@c @deffn {Function} return (@var{value})
+m4_deffn({Function}, return, <<<(@var{value})>>>)
 May be used to exit explicitly from the current @mrefcomma{block} @mrefcomma{while}
 @mref{for} or @mref{do} loop bringing its argument. It therefore can be compared
 with the @code{return} statement found in other programming languages but it yields
@@ -1067,14 +1108,17 @@ statement from C.
 
 See also @mrefcomma{for} @mrefcomma{while} @mref{do} and @mref{block}.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
+m4_setcat(Function application)
 @anchor{scanmap}
-@deffn {Function} scanmap @
+@c @deffn {Function} scanmap @
+m4_deffn({Function}, scanmap, <<<>>>) @
 @fname{scanmap} (@var{f}, @var{expr}) @
 @fname{scanmap} (@var{f}, @var{expr}, bottomup)
 
@@ -1125,27 +1169,33 @@ scanmap(f,a*x+b,bottomup) -> f(a)*f(x)+f(b)
 In this case, you get the same answer both
 ways.
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming)
 @anchor{throw}
-@deffn {Function} throw (@var{expr})
+@c @deffn {Function} throw (@var{expr})
+m4_deffn({Function}, throw, <<<(@var{expr})>>>)
 
 Evaluates @var{expr} and throws the value back to the most recent
 @mref{catch}.  @code{throw} is used with @code{catch} as a nonlocal return
 mechanism.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application)
 @anchor{outermap}
-@deffn {Function} outermap (@var{f}, @var{a_1}, @dots{}, @var{a_n})
+@c @deffn {Function} outermap (@var{f}, @var{a_1}, @dots{}, @var{a_n})
+m4_deffn({Function}, outermap, <<<(@var{f}, @var{a_1}, @dots{}, @var{a_n})>>>)
 
 Applies the function @var{f} to each one of the elements of the outer product
 @var{a_1} cross @var{a_2} @dots{} cross @var{a_n}.
@@ -1335,8 +1385,9 @@ while @code{cartesian_product} does not.
 @end group
 @end example
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
