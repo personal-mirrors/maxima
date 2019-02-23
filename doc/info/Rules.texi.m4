@@ -41,8 +41,10 @@ package.
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rules and patterns)
 @anchor{apply1}
-@deffn {Function} apply1 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})
+@c @deffn {Function} apply1 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})
+m4_deffn({Function}, apply1, <<<(@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})>>>)
 
 Repeatedly applies @var{rule_1} to
 @var{expr} until it fails, then repeatedly applies the same rule to all
@@ -57,16 +59,18 @@ subexpression, the result is returned.
 
 See also @mrefcomma{applyb1} @mref{apply2} and @mrefdot{let}
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{apply2}
-@deffn {Function} apply2 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})
+@c @deffn {Function} apply2 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})
+m4_deffn({Function}, apply2, <<<(@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})>>>)
 
 If @var{rule_1} fails on a given subexpression, then @var{rule_2} is
 repeatedly applied, etc.  Only if all rules fail on a given
@@ -79,16 +83,18 @@ subexpression is reprocessed, starting with the first rule.
 
 See also @mref{apply1} and @mrefdot{let}
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{applyb1}
-@deffn {Function} applyb1 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})
+@c @deffn {Function} applyb1 (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})
+m4_deffn({Function}, applyb1, <<<(@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})>>>)
 
 Repeatedly applies @var{rule_1} to the deepest subexpression of @var{expr}
 until it fails, then repeatedly applies the same rule one level higher (i.e.,
@@ -105,14 +111,17 @@ before giving up.
 
 See also @mrefcomma{apply1} @mref{apply2} and @mrefdot{let}
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rules and patterns)
 @anchor{current_let_rule_package}
-@defvr {Option variable} current_let_rule_package
+@c @defvr {Option variable} current_let_rule_package
+m4_defvr({Option variable}, current_let_rule_package)
 Default value: @code{default_let_rule_package}
 
 @code{current_let_rule_package} is the name of the rule package that is used by
@@ -125,14 +134,16 @@ If a call such as @code{letsimp (expr, rule_pkg_name)} is made,
 the rule package @code{rule_pkg_name} is used for that function call only,
 and the value of @code{current_let_rule_package} is not changed.
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{default_let_rule_package}
-@defvr {Option variable} default_let_rule_package
+@c @defvr {Option variable} default_let_rule_package
+m4_defvr({Option variable}, default_let_rule_package)
 @c DEFAULT BINDING OF default_let_rule_package IS default_let_rule_package (BOUND TO ITSELF)
 Default value: @code{default_let_rule_package}
 
@@ -141,14 +152,16 @@ Default value: @code{default_let_rule_package}
 is not explicitly set by the user with @code{let} or by changing the value of
 @code{current_let_rule_package}.
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{defmatch}
-@deffn  {Function} defmatch @
+@c @deffn  {Function} defmatch @
+m4_deffn( {Function}, defmatch, <<<>>>) @
 @fname{defmatch} (@var{progname}, @var{pattern}, @var{x_1}, @dots{}, @var{x_n}) @
 @fname{defmatch} (@var{progname}, @var{pattern})
 
@@ -321,16 +334,18 @@ to see if it is a definite integral.
 @end group
 @end example
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{defrule}
-@deffn {Function} defrule (@var{rulename}, @var{pattern}, @var{replacement})
+@c @deffn {Function} defrule (@var{rulename}, @var{pattern}, @var{replacement})
+m4_deffn({Function}, defrule, <<<(@var{rulename}, @var{pattern}, @var{replacement})>>>)
 
 Defines and names a replacement rule for the given pattern.  If the rule named
 @var{rulename} is applied to an expression (by @code{apply1}, @code{applyb1}, or
@@ -344,16 +359,19 @@ treated as functions which transform an expression by one
 operation of the pattern match and replacement.
 If the match fails, the rule function returns @code{false}.
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rules and patterns, Display functions)
 @anchor{disprule}
-@deffn  {Function} disprule @
+@c @deffn  {Function} disprule @
+m4_deffn( {Function}, disprule, <<<>>>) @
 @fname{disprule} (@var{rulename_1}, @dots{}, @var{rulename_2}) @
 @fname{disprule} (all)
 
@@ -409,15 +427,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Rules and patterns}
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rules and patterns)
 @anchor{let}
-@deffn  {Function} let @
+@c @deffn  {Function} let @
+m4_deffn( {Function}, let, <<<>>>) @
 @fname{let} (@var{prod}, @var{repl}, @var{predname}, @var{arg_1}, @dots{}, @var{arg_n}) @
 @fname{let} ([@var{prod}, @var{repl}, @var{predname}, @var{arg_1}, @dots{}, @var{arg_n}], @var{package_name})
 
@@ -503,14 +524,16 @@ named by @code{current_let_rule_package} is used.  If a call such as
 @end example
 
 @c NEEDS ADDITIONAL EXAMPLES
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{letrat}
-@defvr {Option variable} letrat
+@c @defvr {Option variable} letrat
+m4_defvr({Option variable}, letrat)
 Default value: @code{false}
 
 When @code{letrat} is @code{false}, @code{letsimp} simplifies the
@@ -536,16 +559,18 @@ the numerator, denominator, and their quotient are simplified in that order.
 (%o6)                       (a - 1)!
 @end example
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{letrules}
-@deffn  {Function} letrules @
+@c @deffn  {Function} letrules @
+m4_deffn( {Function}, letrules, <<<>>>) @
 @fname{letrules} () @
 @fname{letrules} (@var{package_name})
 
@@ -561,14 +586,16 @@ See also @mrefcomma{disprule} which displays rules defined by @mref{tellsimp} an
 @mrefdot{tellsimpafter}
 @c WHAT ABOUT defmatch AND defrule ??
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{letsimp}
-@deffn  {Function} letsimp @
+@c @deffn  {Function} letsimp @
+m4_deffn( {Function}, letsimp, <<<>>>) @
 @fname{letsimp} (@var{expr}) @
 @fname{letsimp} (@var{expr}, @var{package_name}) @
 @fname{letsimp} (@var{expr}, @var{package_name_1}, @dots{}, @var{package_name_n})
@@ -632,27 +659,32 @@ For other ways to do substitutions see also @mrefcomma{subst}
                                           5               5
 @end group
 @end example
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{let_rule_packages}
-@defvr {Option variable} let_rule_packages
+@c @defvr {Option variable} let_rule_packages
+m4_defvr({Option variable}, let_rule_packages)
 Default value: @code{[default_let_rule_package]}
 
 @code{let_rule_packages} is a list of all user-defined let rule packages
 plus the default package @code{default_let_rule_package}.
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rules and patterns, Declarations and inferences)
 @anchor{matchdeclare}
-@deffn {Function} matchdeclare (@var{a_1}, @var{pred_1}, @dots{}, @var{a_n}, @var{pred_n})
+@c @deffn {Function} matchdeclare (@var{a_1}, @var{pred_1}, @dots{}, @var{a_n}, @var{pred_n})
+m4_deffn({Function}, matchdeclare, <<<(@var{a_1}, @var{pred_1}, @dots{}, @var{a_n}, @var{pred_n})>>>)
 
 Associates a predicate @var{pred_k} 
 with a variable or list of variables @var{a_k}
@@ -908,47 +940,55 @@ match variables.
 @end group
 @end example
 
-@opencatbox
-@category{Rules and patterns}
-@category{Declarations and inferences}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @category{Declarations and inferences}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application)
 @anchor{maxapplydepth}
-@defvr {Option variable} maxapplydepth
+@c @defvr {Option variable} maxapplydepth
+m4_defvr({Option variable}, maxapplydepth)
 Default value: 10000
 
 @code{maxapplydepth} is the maximum depth to which @code{apply1}
 and @code{apply2} will delve.
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{maxapplyheight}
-@defvr {Option variable} maxapplyheight
+@c @defvr {Option variable} maxapplyheight
+m4_defvr({Option variable}, maxapplyheight)
 Default value: 10000
 
 @code{maxapplyheight} is the maximum height to which @code{applyb1}
 will reach before giving up.
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rules and patterns)
 @anchor{remlet}
-@deffn  {Function} remlet @
+@c @deffn  {Function} remlet @
+m4_deffn( {Function}, remlet, <<<>>>) @
 @fname{remlet} (@var{prod}, @var{name}) @
 @fname{remlet} () @
 @fname{remlet} (all) @
@@ -971,14 +1011,16 @@ called the original substitution rule is revived.
 See also @mrefcomma{remrule} which removes a rule defined by @mref{tellsimp} or
 @mrefdot{tellsimpafter}
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{remrule}
-@deffn  {Function} remrule @
+@c @deffn  {Function} remrule @
+m4_deffn( {Function}, remrule, <<<>>>) @
 @fname{remrule} (@var{op}, @var{rulename}) @
 @fname{remrule} (@var{op}, all)
 
@@ -1068,16 +1110,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION OR MAYBE JUST APPROPRIATE REFS TO tellsimpafter
 
 @c -----------------------------------------------------------------------------
 @anchor{tellsimp}
-@deffn {Function} tellsimp (@var{pattern}, @var{replacement})
+@c @deffn {Function} tellsimp (@var{pattern}, @var{replacement})
+m4_deffn({Function}, tellsimp, <<<(@var{pattern}, @var{replacement})>>>)
 
 is similar to @code{tellsimpafter} but places
 new information before old so that it is applied before the built-in
@@ -1140,14 +1184,16 @@ Examples:
 (%o17)                     1 - cos (y)
 @end example
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{tellsimpafter}
-@deffn {Function} tellsimpafter (@var{pattern}, @var{replacement})
+@c @deffn {Function} tellsimpafter (@var{pattern}, @var{replacement})
+m4_deffn({Function}, tellsimpafter, <<<(@var{pattern}, @var{replacement})>>>)
 
 Defines a simplification rule which the Maxima simplifier applies after built-in
 simplification rules.  @var{pattern} is an expression, comprising pattern
@@ -1489,20 +1535,23 @@ A worked example: anticommutative multiplication.
 @end group
 @end example
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{clear_rules}
-@deffn {Function} clear_rules ()
+@c @deffn {Function} clear_rules ()
+m4_deffn({Function}, clear_rules,  <<<()>>>)
 
 Executes @code{kill (rules)} and then resets the next rule number to 1
 for addition @code{+}, multiplication @code{*}, and exponentiation @code{^}.
 
-@opencatbox
-@category{Rules and patterns}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rules and patterns}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
