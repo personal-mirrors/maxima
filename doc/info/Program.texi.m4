@@ -604,8 +604,10 @@ The function @code{warning} always returns false.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging, Display flags and variables)
 @anchor{error_size}
-@defvr {Option variable} error_size
+@c @defvr {Option variable} error_size
+m4_defvr({Option variable}, error_size)
 Default value: 10
 
 @code{error_size} modifies error messages according to the size of expressions
@@ -657,15 +659,17 @@ Example expression is --------------
  -- an error.  Quitting.  To debug this try debugmode(true);
 @end example
 
-@opencatbox
-@category{Debugging}
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Debugging}
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{error_syms}
-@defvr {Option variable} error_syms
+@c @defvr {Option variable} error_syms
+m4_defvr({Option variable}, error_syms)
 Default value: @code{[errexp1, errexp2, errexp3]}
 
 In error messages, expressions larger than @mref{error_size} are replaced by
@@ -679,11 +683,12 @@ symbol equivalent to @code{concat ('errexp, @var{n})}.
 
 See also @mref{error} and @mrefdot{error_size}
 
-@opencatbox
-@category{Debugging}
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Debugging}
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Programming)
@@ -702,8 +707,10 @@ and @mref{errormsg} formats and prints it.
 m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming)
 @anchor{errormsg}
-@defvr {Option variable} errormsg
+@c @defvr {Option variable} errormsg
+m4_defvr({Option variable}, errormsg)
 Default value: @code{true}
 
 When @code{false} the output of error messages is suppressed.
@@ -768,10 +775,11 @@ value of errormsg is false
 @end group
 @end example
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{go}
@@ -953,8 +961,10 @@ m4_end_deffn()
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Function application)
 @anchor{maperror}
-@defvr {Option variable} maperror
+@c @defvr {Option variable} maperror
+m4_defvr({Option variable}, maperror)
 Default value: @code{true}
 
 When @code{maperror} is @code{false}, causes all of the mapping functions,
@@ -972,14 +982,16 @@ not all the same type of object.
 If @code{maperror} is @code{true} then an error message
 is displayed in the above two instances.
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{mapprint}
-@defvr {Option variable} mapprint
+@c @defvr {Option variable} mapprint
+m4_defvr({Option variable}, mapprint)
 Default value: @code{true}
 
 When @code{mapprint} is @code{true}, various information messages from
@@ -989,10 +1001,11 @@ situations.  These include situations where @code{map} would use
 
 If @mref{mapprint} is @code{false}, these messages are suppressed.
 
-@opencatbox
-@category{Function application}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Function application}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION
 
@@ -1019,8 +1032,10 @@ m4_end_deffn()
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming, Predicate functions)
 @anchor{prederror}
-@defvr {Option variable} prederror
+@c @defvr {Option variable} prederror
+m4_defvr({Option variable}, prederror)
 Default value: @code{false}
 
 When @code{prederror} is @code{true}, an error message is displayed whenever the
@@ -1034,12 +1049,13 @@ however, @code{maybe} is supported in translated code.
 
 See also @mref{is} and @mrefdot{maybe}
 
-@opencatbox
-@category{Programming}
-@category{Predicate functions}
-@closecatbox
+@c @opencatbox
+@c @category{Programming}
+@c @category{Predicate functions}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 m4_setcat(Programming)
 @anchor{return}
