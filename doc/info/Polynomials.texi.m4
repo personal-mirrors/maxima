@@ -115,8 +115,10 @@ m4_end_defvr()
 @c WHAT IS THIS ABOUT EXACTLY ??
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials)
 @anchor{bezout}
-@deffn {Function} bezout (@var{p1}, @var{p2}, @var{x})
+@c @deffn {Function} bezout (@var{p1}, @var{p2}, @var{x})
+m4_deffn({Function}, bezout, <<<(@var{p1}, @var{p2}, @var{x})>>>)
 
 an alternative to the @mref{resultant} command.  It
 returns a matrix.  @code{determinant} of this matrix is the desired resultant.
@@ -140,15 +142,17 @@ Examples:
                             2      2
 (%o3)                      a  d + b  c
 @end example
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c REWORD THIS ITEM -- COULD BE MORE CONCISE
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} bothcoef (@var{expr}, @var{x})
+@c @deffn {Function} bothcoef (@var{expr}, @var{x})
+m4_deffn({Function}, bothcoef, <<<(@var{expr}, @var{x})>>>)
 
 Returns a list whose first member is the coefficient of @var{x} in @var{expr}
 (as found by @code{ratcoef} if @var{expr} is in CRE form
@@ -171,13 +175,15 @@ Example:
 (%o2)                         true
 @end example
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn  {Function} coeff @
+@c @deffn  {Function} coeff @
+m4_deffn({Function}, coeff, <<<@>>>)
 @fname{coeff} (@var{expr}, @var{x}, @var{n}) @
 @fname{coeff} (@var{expr}, @var{x})
 
@@ -349,13 +355,15 @@ function.
 @end group
 @end example
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} content (@var{p_1}, @var{x_1}, @dots{}, @var{x_n})
+@c @deffn {Function} content (@var{p_1}, @var{x_1}, @dots{}, @var{x_n})
+m4_deffn({Function}, content, <<<(@var{p_1}, @var{x_1}, @dots{}, @var{x_n})>>>)
 
 Returns a list whose first element is
 the greatest common divisor of the coefficients of the terms of the
@@ -377,14 +385,16 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{denom}
-@deffn {Function} denom (@var{expr})
+@c @deffn {Function} denom (@var{expr})
+m4_deffn({Function}, denom, <<<(@var{expr})>>>)
 
 Returns the denominator of the rational expression @var{expr}.
 
@@ -421,14 +431,16 @@ See also @mref{num}
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{divide}
-@deffn {Function} divide (@var{p_1}, @var{p_2}, @var{x_1}, @dots{}, @var{x_n})
+@c @deffn {Function} divide (@var{p_1}, @var{p_2}, @var{x_1}, @dots{}, @var{x_n})
+m4_deffn({Function}, divide, <<<(@var{p_1}, @var{p_2}, @var{x_1}, @dots{}, @var{x_n})>>>)
 
 computes the quotient and remainder
 of the polynomial @var{p_1} divided by the polynomial @var{p_2}, in a main
@@ -454,14 +466,17 @@ Examples:
 @noindent
 Note that @code{y} is the main variable in the second example.
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
-@anchor{eliminate}
 @c -----------------------------------------------------------------------------
-@deffn {Function} eliminate ([@var{eqn_1}, @dots{}, @var{eqn_n}], [@var{x_1}, @dots{}, @var{x_k}])
+m4_setcat(Polynomials, Algebraic equations)
+@anchor{eliminate}
+@c @deffn {Function} eliminate ([@var{eqn_1}, @dots{}, @var{eqn_n}], [@var{x_1}, @dots{}, @var{x_k}])
+m4_deffn({Function}, eliminate, <<<([@var{eqn_1}, @dots{}, @var{eqn_n}], [@var{x_1}, @dots{}, @var{x_k}])>>>)
 
 Eliminates variables from equations (or expressions assumed equal to zero) by
 taking successive resultants. This returns a list of @code{@var{n} - @var{k}}
@@ -497,15 +512,18 @@ Example:
                             - 5154 x  - 1291 x  + 7688 x + 15376]
 @end example
 
-@opencatbox
-@category{Polynomials}
-@category{Algebraic equations}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Algebraic equations}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials)
 @anchor{ezgcd}
-@deffn {Function} ezgcd (@var{p_1}, @var{p_2}, @var{p_3}, @dots{})
+@c @deffn {Function} ezgcd (@var{p_1}, @var{p_2}, @var{p_3}, @dots{})
+m4_deffn({Function}, ezgcd, <<<(@var{p_1}, @var{p_2}, @var{p_3}, @dots{})>>>)
 
 Returns a list whose first element is the greatest common divisor of the
 polynomials @var{p_1}, @var{p_2}, @var{p_3}, @dots{} and whose remaining
@@ -547,10 +565,11 @@ gcd is first calculated with the function @code{gcd} and then with the function
 (%o5) [2 x - 3, 3 x  - 4 x + 1, 2 x  - 4 x  + 1, - 4 x  + x + 1]
 @end example
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @c @defvr {Option variable} facexpand
@@ -567,7 +586,8 @@ Default value: @code{true}
 
 @c -----------------------------------------------------------------------------
 @anchor{factor}
-@deffn  {Function} factor @
+@c @deffn  {Function} factor @
+m4_deffn({Function}, factor, <<<>>>) @
 @fname{factor} (@var{expr}) @
 @fname{factor} (@var{expr}, @var{p})
 
@@ -731,10 +751,11 @@ Examples:
  - x   - x   + x   + x   - x   - x  + x  + 1)
 @end example
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{factor_max_degree}
 
@@ -825,7 +846,9 @@ integer factors of rational expressions.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} factorout (@var{expr}, @var{x_1}, @var{x_2}, @dots{})
+m4_setcat(Expressions)
+@c @deffn {Function} factorout (@var{expr}, @var{x_1}, @var{x_2}, @dots{})
+m4_deffn({Function}, factorout, <<<(@var{expr}, @var{x_1}, @var{x_2}, @dots{})>>>)
 
 Rearranges the sum @var{expr} into a sum of terms of the form 
 @code{f (@var{x_1}, @var{x_2}, @dots{})*g} where @code{g} is a product of 
@@ -853,13 +876,15 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} factorsum (@var{expr})
+@c @deffn {Function} factorsum (@var{expr})
+m4_deffn({Function}, factorsum, <<<(@var{expr})>>>)
 
 Tries to group terms in factors of @var{expr} which are sums into groups of
 terms such that their sum is factorable.  @code{factorsum} can recover the
@@ -885,13 +910,15 @@ Example:
 (%o2)            (x + 1) (a (z + w)  + (v + u) )
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} fasttimes (@var{p_1}, @var{p_2})
+@c @deffn {Function} fasttimes (@var{p_1}, @var{p_2})
+m4_deffn({Function}, fasttimes, <<<(@var{p_1}, @var{p_2})>>>)
 
 Returns the product of the polynomials @var{p_1} and @var{p_2} by using a
 special algorithm for multiplication of polynomials.  @code{p_1} and @code{p_2}
@@ -901,13 +928,16 @@ multiplication is of order @code{n_1 n_2} where
 and @code{n_2} is the degree of @code{p_2}.
 @code{fasttimes} is of order @code{max (n_1, n_2)^1.585}.
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} fullratsimp (@var{expr})
+m4_setcat(Simplification functions, Rational expressions)
+@c @deffn {Function} fullratsimp (@var{expr})
+m4_deffn({Function}, fullratsimp, <<<(@var{expr})>>>)
 
 @code{fullratsimp} repeatedly
 applies @code{ratsimp} followed by non-rational simplification to an
@@ -955,17 +985,20 @@ Example:
                              x  - 1
 @end example
 
-@opencatbox
-@category{Simplification functions}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Simplification functions}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c SPELL OUT WHAT fullratsubst DOES INSTEAD OF ALLUDING TO ratsubst AND lratsubst
 @c THIS ITEM NEEDS MORE WORK
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} fullratsubst (@var{a}, @var{b}, @var{c})
+m4_setcat(Rational expressions)
+@c @deffn {Function} fullratsubst (@var{a}, @var{b}, @var{c})
+m4_deffn({Function}, fullratsubst, <<<(@var{a}, @var{b}, @var{c})>>>)
 
 is the same as @code{ratsubst} except that it calls
 itself recursively on its result until that result stops changing.
@@ -1050,17 +1083,20 @@ equation as first argument.
 *** - Lisp stack overflow. RESET
 @end example
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c GCD IS A VARIABLE AND A FUNCTION
 @c THIS ITEM NEEDS A LOT OF WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials, Rational expressions)
 @anchor{gcd}
-@deffn {Function} gcd (@var{p_1}, @var{p_2}, @var{x_1}, @dots{})
+@c @deffn {Function} gcd (@var{p_1}, @var{p_2}, @var{x_1}, @dots{})
+m4_deffn({Function}, gcd, <<<(@var{p_1}, @var{p_2}, @var{x_1}, @dots{})>>>)
 
 Returns the greatest common divisor of @var{p_1} and @var{p_2}.  The flag
 @code{gcd} determines which algorithm is employed.  Setting @code{gcd} to
@@ -1122,17 +1158,19 @@ the polynomials divided by the greatest common divisor.
 (%o6)           [6 x  + 13 x + 6, x + 1, x  + x]
 @end example
 
-@opencatbox
-@category{Polynomials}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c IN NEED OF SERIOUS CLARIFICATION HERE
 
 @c -----------------------------------------------------------------------------
 @anchor{gcdex}
-@deffn  {Function} gcdex @
+@c @deffn  {Function} gcdex @
+m4_deffn({Function}, gcdex, <<<>>>) @
 @fname{gcdex} (@var{f}, @var{g}) @
 @fname{gcdex} (@var{f}, @var{g}, @var{x})
 
@@ -1193,16 +1231,19 @@ not the  @code{y+1} we would expect in @code{k[y, x]}.
 @end group
 @end example
 
-@opencatbox
-@category{Polynomials}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c CHOOSE ONE CHARACTERIZATION OF "GAUSSIAN INTEGERS" AND USE IT WHERE GAUSSIAN INTEGERS ARE REFERENCED
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} gcfactor (@var{n})
+m4_setcat(Integers)
+@c @deffn {Function} gcfactor (@var{n})
+m4_deffn({Function}, gcfactor, <<<(@var{n})>>>)
 
 Factors the Gaussian integer @var{n} over the Gaussian integers, i.e., numbers
 of the form @code{@var{a} + @var{b} @code{%i}} where @var{a} and @var{b} are
@@ -1210,15 +1251,18 @@ rational integers (i.e.,  ordinary integers).  Factors are normalized by making
 @var{a} and @var{b} non-negative.
 @c NEED EXAMPLES HERE
 
-@opencatbox
-@category{Integers}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Integers}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c CHOOSE ONE CHARACTERIZATION OF "GAUSSIAN INTEGERS" AND USE IT WHERE GAUSSIAN INTEGERS ARE REFERENCED
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} gfactor (@var{expr})
+m4_setcat(Polynomials)
+@c @deffn {Function} gfactor (@var{expr})
+m4_deffn({Function}, gfactor, <<<(@var{expr})>>>)
 
 Factors the polynomial @var{expr} over the Gaussian integers
 (that is, the integers with the imaginary unit @code{%i} adjoined).
@@ -1235,27 +1279,33 @@ Example:
 (%o1)           (x - 1) (x + 1) (x - %i) (x + %i)
 @end example
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c DESCRIBE THIS INDEPENDENTLY OF factorsum
 @c THIS ITEM NEEDS MORE WORK
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} gfactorsum (@var{expr})
+m4_setcat(Expressions)
+@c @deffn {Function} gfactorsum (@var{expr})
+m4_deffn({Function}, gfactorsum, <<<(@var{expr})>>>)
 
 is similar to @code{factorsum} but applies @code{gfactor} instead
 of @code{factor}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} hipow (@var{expr}, @var{x})
+m4_setcat(Expressions)
+@c @deffn {Function} hipow (@var{expr}, @var{x})
+m4_deffn({Function}, hipow, <<<(@var{expr}, @var{x})>>>)
 
 Returns the highest explicit exponent of @var{x} in @var{expr}.
 @var{x} may be a variable or a general expression.
@@ -1289,10 +1339,11 @@ Examples:
 (%o5)                           0
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c I SUSPECT THE FOLLOWING TEXT IS OUTDATED DUE TO CHANGES IN INTEGER FACTORING CODE
 
@@ -1381,8 +1432,10 @@ rat: replaced 1.0 by 1/1 = 1.0
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{lowpow}
-@deffn {Function} lopow (@var{expr}, @var{x})
+@c @deffn {Function} lopow (@var{expr}, @var{x})
+m4_deffn({Function}, lopow, <<<(@var{expr}, @var{x})>>>)
 
 Returns the lowest exponent of @var{x} which explicitly appears in
 @var{expr}.  Thus
@@ -1395,16 +1448,19 @@ Returns the lowest exponent of @var{x} which explicitly appears in
 (%o1)                       min(a, 2)
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c DESCRIBE lratsubst INDEPENDENTLY OF subst
 @c THIS ITEM NEEDS MORE WORK
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} lratsubst (@var{L}, @var{expr})
+m4_setcat(Polynomials, Rational expressions)
+@c @deffn {Function} lratsubst (@var{L}, @var{expr})
+m4_deffn({Function}, lratsubst, <<<(@var{L}, @var{expr})>>>)
 
 is analogous to @code{subst (@var{L}, @var{expr})}
 except that it uses @code{ratsubst} instead of @code{subst}.
@@ -1449,11 +1505,12 @@ equation may be given as first argument.
 (%o4)                          a b
 @end example
 
-@opencatbox
-@category{Polynomials}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Integers)
@@ -1535,8 +1592,10 @@ m4_end_defvr()
 @c @end defvar
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{num}
-@deffn {Function} num (@var{expr})
+@c @deffn {Function} num (@var{expr})
+m4_deffn({Function}, num, <<<(@var{expr})>>>)
 
 Returns the numerator of @var{expr} if it is a ratio.
 If @var{expr} is not a ratio, @var{expr} is returned.
@@ -1576,14 +1635,17 @@ See also @mref{denom}
 @end example
 
 @c NEED SOME EXAMPLES HERE
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials)
 @anchor{polydecomp}
-@deffn {Function} polydecomp (@var{p}, @var{x})
+@c @deffn {Function} polydecomp (@var{p}, @var{x})
+m4_deffn({Function}, polydecomp, <<<(@var{p}, @var{x})>>>)
 
 Decomposes the polynomial @var{p} in the variable @var{x}
 into the functional composition of polynomials in @var{x}.
@@ -1673,14 +1735,16 @@ returns @var{p} (unexpanded), @code{polydecomp (compose ([@var{p_1}, ...,
 @end group
 @end example
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{polymod}
-@deffn  {Function} polymod @
+@c @deffn  {Function} polymod @
+m4_deffn({Function}, polymod, <<<>>>) @
 @fname{polymod} (@var{p}) @
 @fname{polymod} (@var{p}, @var{m})
 
@@ -1692,17 +1756,19 @@ instead of the current value of @code{modulus}.
 
 See @mrefdot{modulus}
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c ISN'T THERE AN EQUIVALENT FUNCTION SOMEWHERE ??
 @c NEEDS WORK (IF KEPT)
 
 @c -----------------------------------------------------------------------------
 @anchor{quotient}
-@deffn  {Function} quotient @
+@c @deffn  {Function} quotient @
+m4_deffn({Function}, quotient, <<<>>>) @
 @fname{quotient} (@var{p_1}, @var{p_2}) @
 @fname{quotient} (@var{p_1}, @var{p_2}, @var{x_1}, @dots{}, @var{x_n})
 
@@ -1713,16 +1779,19 @@ arguments @var{x_1}, @dots{}, @var{x_n} are interpreted as in @code{ratvars}.
 @mref{divide}.
 
 @c NEED SOME EXAMPLES HERE
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THIS ITEM CAN PROBABLY BE IMPROVED
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rational expressions)
 @anchor{rat}
-@deffn  {Function} rat @
+@c @deffn  {Function} rat @
+m4_deffn({Function}, rat, <<<>>>) @
 @fname{rat} (@var{expr}) @
 @fname{rat} (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
 
@@ -1790,10 +1859,11 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 m4_setcat(Simplification flags and variables)
 @c @defvr {Option variable} ratalgdenom
@@ -1813,8 +1883,10 @@ m4_end_defvr()
 @c THIS ITEM NEEDS MORE WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials, Rational expressions)
 @anchor{ratcoef}
-@deffn  {Function} ratcoef @
+@c @deffn  {Function} ratcoef @
+m4_deffn({Function}, ratcoef, <<<>>>) @
 @fname{ratcoef} (@var{expr}, @var{x}, @var{n}) @
 @fname{ratcoef} (@var{expr}, @var{x})
 
@@ -1858,15 +1930,18 @@ Example:
 @end example
 @c NEED MORE EXAMPLES HERE
 
-@opencatbox
-@category{Polynomials}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rational expressions)
 @anchor{ratdenom}
-@deffn {Function} ratdenom (@var{expr})
+@c @deffn {Function} ratdenom (@var{expr})
+m4_deffn({Function}, ratdenom, <<<(@var{expr})>>>)
 
 Returns the denominator of @var{expr},
 after coercing @var{expr} to a canonical rational expression (CRE).
@@ -1884,10 +1959,11 @@ denominator, and thus some expressions which are considered ratios by
 @code{ratdenom} are not considered ratios by @code{denom}.
 
 @c NEEDS AN EXAMPLE HERE
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Simplification flags and variables, Rational expressions)
@@ -1958,7 +2034,9 @@ Examples:
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} ratdiff (@var{expr}, @var{x})
+m4_setcat(Rational expressions)
+@c @deffn {Function} ratdiff (@var{expr}, @var{x})
+m4_deffn({Function}, ratdiff, <<<(@var{expr}, @var{x})>>>)
 
 Differentiates the rational expression @var{expr} with respect to @var{x}.
 @var{expr} must be a ratio of polynomials or a polynomial in @var{x}.
@@ -2020,14 +2098,16 @@ Example:
 (%o6)            3 b  + (6 a + 2) b + 3 a  + 2 a
 @end example
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ratdisrep}
-@deffn {Function} ratdisrep (@var{expr})
+@c @deffn {Function} ratdisrep (@var{expr})
+m4_deffn({Function}, ratdisrep, <<<(@var{expr})>>>)
 
 Returns its argument as a general expression.
 If @var{expr} is a general expression, it is returned unchanged.
@@ -2040,14 +2120,17 @@ use rational functions in non-rational contexts.
 
 See also @mrefdot{totaldisrep}
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rational expressions)
 @anchor{ratexpand}
-@deffn  {Function} ratexpand (@var{expr})
+@c @deffn  {Function} ratexpand (@var{expr})
+m4_deffn( {Function}, ratexpand, <<<(@var{expr})>>>)
 @deffnx {Option variable} ratexpand
 
 Expands @var{expr} by multiplying out products of sums and
@@ -2109,10 +2192,11 @@ Examples:
                 x  + x  - x - 1   x  + x  - x - 1
 @end example
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Rational expressions)
@@ -2149,7 +2233,8 @@ both be used at the same time.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} ratnumer (@var{expr})
+@c @deffn {Function} ratnumer (@var{expr})
+m4_deffn({Function}, ratnumer, <<<(@var{expr})>>>)
 
 Returns the numerator of @var{expr},
 after coercing @var{expr} to a canonical rational expression (CRE).
@@ -2167,13 +2252,16 @@ and thus some expressions which are considered ratios by @code{ratnumer}
 are not considered ratios by @code{num}.
 
 @c NEEDS AN EXAMPLE HERE
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} ratp (@var{expr})
+m4_setcat(Predicate functions, Rational expressions)
+@c @deffn {Function} ratp (@var{expr})
+m4_deffn({Function}, ratp, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a canonical rational expression (CRE) or
 extended CRE, otherwise @code{false}.
@@ -2181,11 +2269,12 @@ extended CRE, otherwise @code{false}.
 CRE are created by @code{rat} and related functions.
 Extended CRE are created by @code{taylor} and related functions.
 
-@opencatbox
-@category{Predicate functions}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Rational expressions, Numerical evaluation, Console interaction)
@@ -2206,9 +2295,12 @@ to rational numbers is displayed.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification functions, Rational expressions)
 @anchor{ratsimp}
-@deffn  {Function} ratsimp (@var{expr})
-@deffnx {Function} ratsimp (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
+@c @deffn  {Function} ratsimp (@var{expr})
+m4_deffn( {Function}, ratsimp, <<<(@var{expr})>>>)
+@c @deffnx {Function} ratsimp (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
+m4_deffnx({Function}, ratsimp, <<<(@var{expr}, @var{x_1}, @dots{}, @var{x_n})>>>)
 
 Simplifies the expression @var{expr} and all of its subexpressions, including
 the arguments to non-rational functions.  The result is returned as the quotient
@@ -2270,11 +2362,12 @@ Examples:
 (%o5)                        x
 @end example
 
-@opencatbox
-@category{Simplification functions}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Simplification functions}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Simplification flags and variables, Rational expressions)
@@ -2310,8 +2403,10 @@ substitutions such as @code{u} for @code{sqrt (x)} in @code{x}.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rational expressions)
 @anchor{ratsubst}
-@deffn {Function} ratsubst (@var{a}, @var{b}, @var{c})
+@c @deffn {Function} ratsubst (@var{a}, @var{b}, @var{c})
+m4_deffn({Function}, ratsubst, <<<(@var{a}, @var{b}, @var{c})>>>)
 
 Substitutes @var{a} for @var{b} in @var{c} and returns the resulting expression.
 @c "ETC" SUGGESTS THE READER KNOWS WHAT ELSE GOES THERE -- NOT LIKELY THE CASE
@@ -2379,15 +2474,18 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{ratvars}
-@deffn  {Function} ratvars (@var{x_1}, @dots{}, @var{x_n})
-@deffnx {Function} ratvars ()
+@c @deffn  {Function} ratvars (@var{x_1}, @dots{}, @var{x_n})
+m4_deffn( {Function}, ratvars, <<<(@var{x_1}, @dots{}, @var{x_n})>>>)
+@c @deffnx {Function} ratvars ()
+m4_deffnx({Function}, ratvars, <<<()>>>)
 @deffnx {System variable} ratvars
 
 Declares main variables @var{x_1}, @dots{}, @var{x_n} for rational expressions.
@@ -2408,10 +2506,11 @@ Each call to the function @code{ratvars} resets the list.
 @code{ratvars ()} clears the list.
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Rational expressions, Global flags)
@@ -2492,7 +2591,9 @@ evaluation are still present.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-@deffn  {Function} ratweight @
+m4_setcat(Rational expressions)
+@c @deffn  {Function} ratweight @
+m4_deffn( {Function}, ratweight, <<<>>>) @
 @fname{ratweight} (@var{x_1}, @var{w_1}, @dots{}, @var{x_n}, @var{w_n}) @
 @fname{ratweight} ()
 
@@ -2531,10 +2632,11 @@ Examples:
 (%o5)/R/                  2 b + 2 a + 1
 @end example
 
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Rational expressions)
@@ -2572,7 +2674,9 @@ For the default value of @code{false}, no truncation occurs.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-@deffn  {Function} remainder @
+m4_setcat(Polynomials)
+@c @deffn  {Function} remainder @
+m4_deffn( {Function}, remainder, <<<@>>>)
 @fname{remainder} (@var{p_1}, @var{p_2}) @
 @fname{remainder} (@var{p_1}, @var{p_2}, @var{x_1}, @dots{}, @var{x_n})
 
@@ -2584,14 +2688,17 @@ Returns the remainder of the polynomial @var{p_1} divided by the polynomial
 of the two-element list returned by @code{divide}.
 
 @c NEED SOME EXAMPLES HERE
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials)
 @anchor{resultant}
-@deffn {Function} resultant (@var{p_1}, @var{p_2}, @var{x})
+@c @deffn {Function} resultant (@var{p_1}, @var{p_2}, @var{x})
+m4_deffn({Function}, resultant, <<<(@var{p_1}, @var{p_2}, @var{x})>>>)
 
 The function @code{resultant} computes the resultant of the two polynomials
 @var{p_1} and @var{p_2}, eliminating the variable @var{x}.  The resultant is a
@@ -2639,10 +2746,11 @@ Examples:
 (%i6) determinant(%);
 (%o6)                   4 a - (2 b - c) c
 @end example
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Polynomials)
@@ -2693,25 +2801,30 @@ containing some of the same factors.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rational expressions, Display functions)
 @anchor{showratvars}
-@deffn {Function} showratvars (@var{expr})
+@c @deffn {Function} showratvars (@var{expr})
+m4_deffn({Function}, showratvars, <<<(@var{expr})>>>)
 
 Returns a list of the canonical rational expression (CRE) variables in
 expression @code{expr}.
 
 See also @mrefdot{ratvars}
 
-@opencatbox
-@category{Rational expressions}
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c I CAN'T TELL WHAT THIS IS SUPPOSED TO BE ABOUT
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials)
 @anchor{sqfr}
-@deffn {Function} sqfr (@var{expr})
+@c @deffn {Function} sqfr (@var{expr})
+m4_deffn({Function}, sqfr, <<<(@var{expr})>>>)
 
 is similar to @mref{factor} except that the polynomial factors are
 "square-free."  That is, they have factors only of degree one.
@@ -2733,15 +2846,18 @@ Example:
 (%o1)                  (2 x + 1)  (x  - 1)
 @end example
 
-@opencatbox
-@category{Polynomials}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THIS ITEM STILL NEEDS WORK
 
 @c -----------------------------------------------------------------------------
-@deffn  {Function} tellrat @
+m4_setcat(Polynomials, Rational expressions)
+@c @deffn  {Function} tellrat @
+m4_deffn( {Function}, tellrat, <<<>>>) @
 @fname{tellrat} (@var{p_1}, @dots{}, @var{p_n}) @
 @fname{tellrat} ()
 
@@ -2813,15 +2929,18 @@ Examples:
 (%o6)                 [y  - x , a  + a + 1]
 @end example
 
-@opencatbox
-@category{Polynomials}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Rational expressions)
 @anchor{totaldisrep}
-@deffn {Function} totaldisrep (@var{expr})
+@c @deffn {Function} totaldisrep (@var{expr})
+m4_deffn({Function}, totaldisrep, <<<(@var{expr})>>>)
 
 Converts every subexpression of @var{expr} from canonical rational expressions
 (CRE) to general form and returns the result.
@@ -2833,21 +2952,25 @@ ratdisrepping expressions such as equations, lists, matrices, etc., which
 have some subexpressions in CRE form.
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Polynomials, Rational expressions)
 @anchor{untelltat}
-@deffn {Function} untellrat (@var{x_1}, @dots{}, @var{x_n})
+@c @deffn {Function} untellrat (@var{x_1}, @dots{}, @var{x_n})
+m4_deffn({Function}, untellrat, <<<(@var{x_1}, @dots{}, @var{x_n})>>>)
 
 Removes @code{tellrat} properties from @var{x_1}, @dots{}, @var{x_n}.
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Polynomials}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Polynomials}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
