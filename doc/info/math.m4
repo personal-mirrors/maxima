@@ -66,12 +66,18 @@ m4_dnl finally use @deffn to define the function for texinfo.
 m4_dnl
 m4_dnl We also define a new macro, m4_deffn_name, which is set to the name
 m4_dnl of the function, the second arg.  This is used by m4_deffnx
+m4_dnl
+m4_dnl If no category is set, don't output any category anchors or an
+m4_dnl index entry
 m4_define(<<<m4_deffn>>>,
 <<<@c deffn m4_cat()
 m4_define(<<<m4_deffn_name>>>, <<<$2>>>)m4_dnl
+m4_ifelse(m4_cat(), <<<>>>,,<<<
 m4_anchor_entry(fn-$2, m4_cat())m4_dnl
 m4_dfindex_entry($2, m4_cat())m4_dnl
+>>>)m4_dnl
 @deffn $1 $2 $3 >>>)
+m4_dnl
 m4_dnl Like m4_deffn, but for @deffnx.  If the function name is the same
 m4_dnl as the previous m4_deffn, then we don't produce the anchor and
 m4_dnl entries because we already have.
@@ -84,12 +90,14 @@ m4_dfindex_entry($2, m4_cat())
 @deffnx $1 $2 $3
 >>>)
 m4_define(<<<m4_end_deffn>>>,<<<m4_dnl
-
+m4_ifelse(m4_cat(), <<<>>>,,<<<
 @opencatbox
 m4_catentry(<<<fn>>>, m4_cat())
 @closecatbox
+>>>)m4_dnl
 @end deffn
 >>>)
+
 
 m4_dnl m4_dvindex_var and m4_anchor_var are the same as 
 
