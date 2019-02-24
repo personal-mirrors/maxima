@@ -82,8 +82,10 @@ to resume from the point at which it was stopped.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global variables)
 @anchor{maxima_tempdir}
-@defvr {System variable} maxima_tempdir
+@c @defvr {System variable} maxima_tempdir
+m4_defvr({System variable}, maxima_tempdir)
 
 @code{maxima_tempdir} names the directory in which Maxima creates some temporary
 files.  In particular, temporary files for plotting are created in
@@ -94,14 +96,16 @@ Maxima can locate it; otherwise Maxima makes a guess about a suitable directory.
 
 @code{maxima_tempdir} may be assigned a string which names a directory.
 
-@opencatbox
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{maxima_userdir}
-@defvr {System variable} maxima_userdir
+@c @defvr {System variable} maxima_userdir
+m4_defvr({System variable}, maxima_userdir)
 
 @code{maxima_userdir} names a directory which Maxima searches to find Maxima and
 Lisp files.  (Maxima searches some other directories as well;
@@ -116,14 +120,17 @@ However, assigning to @code{maxima_userdir} does not automatically change
 @code{file_search_maxima} and @code{file_search_lisp};
 those variables must be changed separately.
 
-@opencatbox
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging)
 @anchor{room}
-@deffn  {Function} room @
+@c @deffn  {Function} room @
+m4_deffn( {Function}, room) @
 @fname{room} () @
 @fname{room} (true) @
 @fname{room} (false)
@@ -141,14 +148,17 @@ the same name.
 @code{room (false)} prints out a terse description.
 @end itemize
 
-@opencatbox
-@category{Debugging}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Debugging}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming)
 @anchor{sstatus}
-@deffn {Function} sstatus (@var{keyword}, @var{item})
+@c @deffn {Function} sstatus (@var{keyword}, @var{item})
+m4_deffn({Function}, sstatus,  <<<(@var{keyword}, @var{item})>>>)
 
 When @var{keyword} is the symbol @code{feature}, @var{item} is put on the list
 of system features.  After @code{sstatus (keyword, item)} is executed,
@@ -159,14 +169,17 @@ loaded in.
 
 See also @mrefdot{status}
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Programming)
 @anchor{status}
-@deffn  {Function} status @
+@c @deffn  {Function} status @
+m4_deffn( {Function}, status, <<<>>>) @
 @fname{status} (@code{feature}) @
 @fname{status} (@code{feature}, @var{item})
 
@@ -194,16 +207,19 @@ The variable @code{features} contains a list of features which apply to
 mathematical expressions. See @code{features} and @code{featurep} for more 
 information.
 
-@opencatbox
-@category{Programming}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Programming}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{system}
-@deffn {Function} system (@var{command})
+@c @deffn {Function} system (@var{command})
+m4_deffn({Function}, system, <<<(@var{command})>>>)
 
 Executes @var{command} as a separate process.  The command is passed to the
 default shell for execution.  @code{system} is not supported by all operating
@@ -225,11 +241,14 @@ Maxima) and remove the temporary file after it is done do:
 @example
 system("(xgraph -bar -brw .7 -nl < _hist.out;  rm -f _hist.out)&")
 @end example
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Debugging)
 @anchor{time}
-@deffn {Function} time (%o1, %o2, %o3, @dots{})
+@c @deffn {Function} time (%o1, %o2, %o3, @dots{})
+m4_deffn({Function}, time, <<<(%o1, %o2, %o3, @dots{})>>>)
 
 Returns a list of the times, in seconds, taken to compute the output lines
 @code{%o1}, @code{%o2}, @code{%o3}, @dots{} The time returned is Maxima's
@@ -240,10 +259,11 @@ can only be applied to output line variables; for any other variables,
 Set @code{showtime: true} to make Maxima print out the computation time 
 and elapsed time with each output line.
 
-@opencatbox
-@category{Debugging}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Debugging}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{timedate}
