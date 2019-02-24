@@ -14,8 +14,10 @@
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{bashindices}
-@deffn {Function} bashindices (@var{expr})
+@c @deffn {Function} bashindices (@var{expr})
+m4_deffn({Function}, bashindices, <<<(@var{expr})>>>)
 
 Transforms the expression @var{expr} by giving each summation and product a
 unique index.  This gives @code{changevar} greater precision when it is working
@@ -24,14 +26,16 @@ with summations or products.  The form of the unique index is
 @code{gensumnum}, which can be changed by the user.  For example,
 @code{gensumnum:0$} resets it.
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{lsum}
-@deffn {Function} lsum (@var{expr}, @var{x}, @var{L})
+@c @deffn {Function} lsum (@var{expr}, @var{x}, @var{L})
+m4_deffn({Function}, lsum, <<<(@var{expr}, @var{x}, @var{L})>>>)
 
 Represents the sum of @var{expr} for each element @var{x} in @var{L}.
 A noun form @code{'lsum} is returned if the argument @var{L} does not evaluate
@@ -59,16 +63,19 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{intosum}
-@deffn {Function} intosum (@var{expr})
+@c @deffn {Function} intosum (@var{expr})
+m4_deffn({Function}, intosum, <<<(@var{expr})>>>)
 
 Moves multiplicative factors outside a summation to inside.
 If the index is used in the
@@ -81,14 +88,17 @@ does not remove this property, it only bypasses it.
 In some cases, a @code{scanmap (multthru, @var{expr})} may be necessary before
 the @code{intosum}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products, Simplification flags and variables)
 @anchor{simpproduct}
-@defvr {Option variable} simpproduct
+@c @defvr {Option variable} simpproduct
+m4_defvr({Option variable}, simpproduct)
 Default value: @code{false}
 
 When @code{simpproduct} is @code{true}, the result of a @code{product} is simplified.
@@ -97,15 +107,18 @@ This simplification may sometimes be able to produce a closed form.  If
 value is a product noun form which is a representation of the pi notation used
 in mathematics.
 
-@opencatbox
-@category{Sums and products}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Sums and products}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{product}
-@deffn {Function} product (@var{expr}, @var{i}, @var{i_0}, @var{i_1})
+@c @deffn {Function} product (@var{expr}, @var{i}, @var{i_0}, @var{i_1})
+m4_deffn({Function}, product, <<<(@var{expr}, @var{i}, @var{i_0}, @var{i_1})>>>)
 
 Represents a product of the values of @var{expr} as
 the index @var{i} varies from @var{i_0} to @var{i_1}.
@@ -178,16 +191,19 @@ Examples:
 (%o9)                        a   b
 @end example
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products, Simplification flags and variables)
 @anchor{simpsum}
-@defvr {Option variable} simpsum
+@c @defvr {Option variable} simpsum
+m4_defvr({Option variable}, simpsum)
 Default value: @code{false}
 
 When @code{simpsum} is @code{true}, the result of a @code{sum} is simplified.
@@ -196,15 +212,18 @@ This simplification may sometimes be able to produce a closed form.  If
 value is a sum noun form which is a representation of the sigma notation used
 in mathematics.
 
-@opencatbox
-@category{Sums and products}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Sums and products}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{sum}
-@deffn {Function} sum (@var{expr}, @var{i}, @var{i_0}, @var{i_1})
+@c @deffn {Function} sum (@var{expr}, @var{i}, @var{i_0}, @var{i_1})
+m4_deffn({Function}, sum, <<<(@var{expr}, @var{i}, @var{i_0}, @var{i_1})>>>)
 
 Represents a summation of the values of @var{expr} as
 the index @var{i} varies from @var{i_0} to @var{i_1}.
@@ -322,16 +341,19 @@ Examples:
 (%o12)   b   + b  + b  + b  + b  + a  + a  + a  + a  + a
 @end example
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{sumcontract}
-@deffn {Function} sumcontract (@var{expr})
+@c @deffn {Function} sumcontract (@var{expr})
+m4_deffn({Function}, sumcontract, <<<(@var{expr})>>>)
 
 Combines all sums of an addition that have
 upper and lower bounds that differ by constants.  The result is an
@@ -345,14 +367,17 @@ reasonable index if it cannot use any supplied.
 It may be necessary to do an @code{intosum (@var{expr})} before the
 @code{sumcontract}.
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products, Simplification flags and variables)
 @anchor{sumexpand}
-@defvr {Option variable} sumexpand
+@c @defvr {Option variable} sumexpand
+m4_defvr({Option variable}, sumexpand)
 Default value: @code{false}
 
 When @code{sumexpand} is @code{true}, products of sums and
@@ -384,11 +409,12 @@ Examples:
                     i3 = 0 i4 = 0
 @end example
 
-@opencatbox
-@category{Sums and products}
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Sums and products}
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @node Introduction to Series, Functions and Variables for Series, Functions and Variables for Sums and Products, Sums Products and Series
@@ -409,8 +435,10 @@ variables which control the expansion.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{cauchysum}
-@defvr {Option variable} cauchysum
+@c @defvr {Option variable} cauchysum
+m4_defvr({Option variable}, cauchysum)
 Default value: @code{false}
 
 @c REPHRASE
@@ -459,14 +487,17 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{deftaylor}
-@deffn {Function} deftaylor (@var{f_1}(@var{x_1}), @var{expr_1}, @dots{}, @var{f_n}(@var{x_n}), @var{expr_n})
+@c @deffn {Function} deftaylor (@var{f_1}(@var{x_1}), @var{expr_1}, @dots{}, @var{f_n}(@var{x_n}), @var{expr_n})
+m4_deffn({Function}, deftaylor, <<<(@var{f_1}(@var{x_1}), @var{expr_1}, @dots{}, @var{f_n}(@var{x_n}), @var{expr_n})>>>)
 
 For each function @var{f_i} of one variable @var{x_i}, 
 @code{deftaylor} defines @var{expr_i} as the Taylor series about zero.
@@ -499,14 +530,17 @@ Example:
                      2     18432     307200
 @end example
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{maxtayorder}
-@defvr {Option variable} maxtayorder
+@c @defvr {Option variable} maxtayorder
+m4_defvr({Option variable}, maxtayorder)
 Default value: @code{true}
 
 @c REPHRASE
@@ -514,14 +548,17 @@ When @code{maxtayorder} is @code{true}, then during algebraic
 manipulation of (truncated) Taylor series, @code{taylor} tries to retain
 as many terms as are known to be correct.
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{niceindices}
-@deffn {Function} niceindices (@var{expr})
+@c @deffn {Function} niceindices (@var{expr})
+m4_deffn({Function}, niceindices, <<<(@var{expr})>>>)
 
 Renames the indices of sums and products in @var{expr}.  @code{niceindices}
 attempts to rename each index to the value of @code{niceindicespref[1]}, unless
@@ -559,14 +596,17 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{niceindicespref}
-@defvr {Option variable} niceindicespref
+@c @defvr {Option variable} niceindicespref
+m4_defvr({Option variable}, niceindicespref)
 Default value: @code{[i, j, k, l, m, n]}
 
 @code{niceindicespref} is the list from which @code{niceindices}
@@ -597,14 +637,16 @@ Example:
                           p = 1
 @end example
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{nusum}
-@deffn {Function} nusum (@var{expr}, @var{x}, @var{i_0}, @var{i_1})
+@c @deffn {Function} nusum (@var{expr}, @var{x}, @var{i_0}, @var{i_1})
+m4_deffn({Function}, nusum, <<<(@var{expr}, @var{x}, @var{i_0}, @var{i_1})>>>)
 
 Carries out indefinite hypergeometric summation of @var{expr} with
 respect to @var{x} using a decision procedure due to R.W. Gosper.
@@ -659,16 +701,19 @@ Dependent equations eliminated:  (2 3)
                           i = 1
 @end example
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c THIS ITEM NEEDS SERIOUS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{pade}
-@deffn {Function} pade (@var{taylor_series}, @var{numer_deg_bound}, @var{denom_deg_bound})
+@c @deffn {Function} pade (@var{taylor_series}, @var{numer_deg_bound}, @var{denom_deg_bound})
+m4_deffn({Function}, pade, <<<(@var{taylor_series}, @var{numer_deg_bound}, @var{denom_deg_bound})>>>)
 
 Returns a list of
 all rational functions which have the given Taylor series expansion
@@ -736,14 +781,16 @@ in order to have enough unknown coefficients to solve.
  + 2856700692480 x  + 3370143559680 x + 2386516803584)]
 @end example
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{powerseries}
-@deffn {Function} powerseries (@var{expr}, @var{x}, @var{a})
+@c @deffn {Function} powerseries (@var{expr}, @var{x}, @var{a})
+m4_deffn({Function}, powerseries, <<<(@var{expr}, @var{x}, @var{a})>>>)
 
 Returns the general form of the power series expansion for @var{expr} in the 
 variable @var{x} about the point @var{a} (which may be @code{inf} for infinity):
@@ -794,14 +841,17 @@ in the first simplification we have returned:
                                       2
 @end example
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Display flags and variables)
 @anchor{psexpand}
-@defvr {Option variable} psexpand
+@c @defvr {Option variable} psexpand
+m4_defvr({Option variable}, psexpand)
 Default value: @code{false}
 
 When @code{psexpand} is @code{true},
@@ -816,15 +866,19 @@ a multivariate expression is displayed just as in the rational function package.
 When @code{psexpand} is  @code{multi},
 then terms with the same total degree in the variables are grouped together.
 
-@opencatbox
-@category{Display flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Display flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{revert}
-@deffn  {Function} revert (@var{expr}, @var{x})
-@deffnx {Function} revert2 (@var{expr}, @var{x}, @var{n})
+@c @deffn  {Function} revert (@var{expr}, @var{x})
+m4_deffn( {Function}, revert, <<<(@var{expr}, @var{x})>>>)
+@c @deffnx {Function} revert2 (@var{expr}, @var{x}, @var{n})
+m4_deffnx({Function}, revert2, <<<(@var{expr}, @var{x}, @var{n})>>>)
 
 These functions return the reversion of @var{expr}, a Taylor series about zero
 in the variable @var{x}.  @code{revert} returns a polynomial of degree equal to
@@ -867,14 +921,17 @@ Examples:
                          4    3    2
 @end example
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{taylor}
-@deffn  {Function} taylor @
+@c @deffn  {Function} taylor @
+m4_deffn( {Function}, taylor, <<<>>>) @
 @fname{taylor} (@var{expr}, @var{x}, @var{a}, @var{n}) @
 @fname{taylor} (@var{expr}, [@var{x_1}, @var{x_2}, @dots{}], @var{a}, @var{n}) @
 @fname{taylor} (@var{expr}, [@var{x}, @var{a}, @var{n}, 'asymp]) @
@@ -1057,14 +1114,16 @@ Examples:
           x + y     6                   360
 @end example
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{taylordepth}
-@defvr {Option variable} taylordepth
+@c @defvr {Option variable} taylordepth
+m4_defvr({Option variable}, taylordepth)
 Default value: 3
 
 @c UM, THE CONTEXT FOR THIS REMARK NEEDS TO BE ESTABLISHED
@@ -1072,14 +1131,17 @@ If there are still no nonzero terms, @code{taylor} doubles the degree of the
 expansion of @code{@var{g}(@var{x})} so long as the degree of the expansion is
 less than or equal to @code{@var{n} 2^taylordepth}.
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{taylorinfo}
-@deffn {Function} taylorinfo (@var{expr})
+@c @deffn {Function} taylorinfo (@var{expr})
+m4_deffn({Function}, taylorinfo, <<<(@var{expr})>>>)
 
 Returns information about the Taylor series @var{expr}.
 The return value is a list of lists.
@@ -1107,29 +1169,35 @@ Example:
 (%o2)               [[y, a, inf], [x, 0, 3]]
 @end example
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Predicate functions, Power series)
 @anchor{taylorp}
-@deffn {Function} taylorp (@var{expr})
+@c @deffn {Function} taylorp (@var{expr})
+m4_deffn({Function}, taylorp, <<<(@var{expr})>>>)
 
 Returns @code{true} if @var{expr} is a Taylor series,
 and @code{false} otherwise.
 
-@opencatbox
-@category{Predicate functions}
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Predicate functions}
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c WHAT IS THIS ABOUT EXACTLY ??
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series, Exponential and logarithm functions)
 @anchor{taylor_logexpand}
-@defvr {Option variable} taylor_logexpand
+@c @defvr {Option variable} taylor_logexpand
+m4_defvr({Option variable}, taylor_logexpand)
 Default value: @code{true}
 
 @code{taylor_logexpand} controls expansions of logarithms in
@@ -1144,15 +1212,18 @@ When @code{taylor_logexpand} is set to @code{false}, then the only expansion of
 logarithms that occur is that necessary to obtain a formal power series.
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Power series}
-@category{Exponential and logarithm functions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Power series}
+@c @category{Exponential and logarithm functions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{taylor_order_coefficients}
-@defvr {Option variable} taylor_order_coefficients
+@c @defvr {Option variable} taylor_order_coefficients
+m4_defvr({Option variable}, taylor_order_coefficients)
 Default value: @code{true}
 
 @code{taylor_order_coefficients} controls the ordering of
@@ -1164,26 +1235,31 @@ coefficients of taylor series are ordered canonically.
 @c AND WHAT HAPPENS WHEN IT IS FALSE ??
 
 @c NEED EXAMPLES HERE
-@opencatbox
-@category{Power series}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{taylor_simplifier}
-@deffn {Function} taylor_simplifier (@var{expr})
+@c @deffn {Function} taylor_simplifier (@var{expr})
+m4_deffn({Function}, taylor_simplifier, <<<(@var{expr})>>>)
 
 Simplifies coefficients of the power series @var{expr}.
 @code{taylor} calls this function.
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{taylor_truncate_polynomials}
-@defvr {Option variable} taylor_truncate_polynomials
+@c @defvr {Option variable} taylor_truncate_polynomials
+m4_defvr({Option variable}, taylor_truncate_polynomials)
 Default value: @code{true}
 
 @c WHAT IS THE "INPUT TRUNCATION LEVEL" ?? THE ARGUMENT n OF taylor ??
@@ -1194,28 +1270,34 @@ Otherwise,
 polynomials input to @code{taylor} are considered to have infinite precison.
 @c WHAT IS "INFINITE PRECISION" IN THIS CONTEXT ??
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series, Rational expressions)
 @anchor{taytorat}
-@deffn {Function} taytorat (@var{expr})
+@c @deffn {Function} taytorat (@var{expr})
+m4_deffn({Function}, taytorat, <<<(@var{expr})>>>)
 
 Converts @var{expr} from @code{taylor} form to canonical rational expression
 (CRE) form.  The effect is the same as @code{rat (ratdisrep (@var{expr}))}, but
 faster.
 
-@opencatbox
-@category{Power series}
-@category{Rational expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @category{Rational expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Power series)
 @anchor{trunc}
-@deffn {Function} trunc (@var{expr})
+@c @deffn {Function} trunc (@var{expr})
+m4_deffn({Function}, trunc, <<<(@var{expr})>>>)
 
 Annotates the internal representation of the general expression @var{expr}
 so that it is displayed as if its sums were truncated Taylor series.
@@ -1234,14 +1316,17 @@ Example:
 (%o3)                         true
 @end example
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Sums and products)
 @anchor{unsum}
-@deffn {Function} unsum (@var{f}, @var{n})
+@c @deffn {Function} unsum (@var{f}, @var{n})
+m4_deffn({Function}, unsum, <<<(@var{f}, @var{n})>>>)
 
 Returns the first backward difference
 @code{@var{f}(@var{n}) - @var{f}(@var{n} - 1)}.
@@ -1279,23 +1364,26 @@ Examples:
                         binomial(2 n, n)
 @end example
 
-@opencatbox
-@category{Sums and products}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Sums and products}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{verbose}
-@defvr {Option variable} verbose
+@c @defvr {Option variable} verbose
+m4_defvr({Option variable}, verbose)
 Default value: @code{false}
 
 When @code{verbose} is @code{true},
 @code{powerseries} prints progress messages.
 
-@opencatbox
-@category{Power series}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Power series}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @node Introduction to Fourier series, Functions and Variables for Fourier series, Functions and Variables for Series, Sums Products and Series
@@ -1321,21 +1409,25 @@ coefficients and some functions for manipulation of expressions.
 @c REPHRASE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package fourie)
 @anchor{equalp}
-@deffn {Function} equalp (@var{x}, @var{y})
+@c @deffn {Function} equalp (@var{x}, @var{y})
+m4_deffn({Function}, equalp, <<<(@var{x}, @var{y})>>>)
 
 Returns @code{true} if @code{equal (@var{x}, @var{y})} otherwise @code{false}
 (doesn't give an error message like @code{equal (x, y)} would do in this case).
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{remfun}
-@deffn  {Function} remfun @
+@c @deffn  {Function} remfun @
+m4_deffn( {Function}, remfun, <<<>>>) @
 @fname{remfun} (@var{f}, @var{expr}) @
 @fname{remfun} (@var{f}, @var{expr}, @var{x})
 
@@ -1347,14 +1439,16 @@ Returns @code{true} if @code{equal (@var{x}, @var{y})} otherwise @code{false}
 the variable @var{x}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{funp}
-@deffn  {Function} funp @
+@c @deffn  {Function} funp @
+m4_deffn( {Function}, funp, <<<>>>) @
 @fname{funp} (@var{f}, @var{expr}) @
 @fname{funp} (@var{f}, @var{expr}, @var{x})
 
@@ -1366,14 +1460,17 @@ returns @code{true} if @var{expr} contains the function @var{f} and the variable
 @var{x} is somewhere in the argument of one of the instances of @var{f}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package fourie, Integral calculus)
 @anchor{absint}
-@deffn  {Function} absint @
+@c @deffn  {Function} absint @
+m4_deffn( {Function}, absint, <<<>>>) @
 @fname{absint} (@var{f}, @var{x}, @var{halfplane}) @
 @fname{absint} (@var{f}, @var{x}) @
 @fname{absint} (@var{f}, @var{x}, @var{a}, @var{b})
@@ -1393,173 +1490,200 @@ of @var{f} with respect to @var{x} from @var{a} to @var{b}.
 @var{f} may include absolute values.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@category{Integral calculus}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @category{Integral calculus}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package fourie)
 @anchor{fourier}
-@deffn {Function} fourier (@var{f}, @var{x}, @var{p})
+@c @deffn {Function} fourier (@var{f}, @var{x}, @var{p})
+m4_deffn({Function}, fourier, <<<(@var{f}, @var{x}, @var{p})>>>)
 
 Returns a list of the Fourier coefficients of @code{@var{f}(@var{x})} defined
 on the interval @code{[-p, p]}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEES EXPANSION. WHAT IS THE ARGUMENT l ??
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package fourie, Trigonometric functions, Simplification functions)
 @anchor{foursimp}
-@deffn {Function} foursimp (@var{l})
+@c @deffn {Function} foursimp (@var{l})
+m4_deffn({Function}, foursimp, <<<(@var{l})>>>)
 
 Simplifies @code{sin (n %pi)} to 0 if @code{sinnpiflag} is @code{true} and
 @code{cos (n %pi)} to @code{(-1)^n} if @code{cosnpiflag} is @code{true}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@category{Trigonometric functions}
-@category{Simplification functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @category{Trigonometric functions}
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package fourie)
 @anchor{sinnpiflag}
-@defvr {Option variable} sinnpiflag
+@c @defvr {Option variable} sinnpiflag
+m4_defvr({Option variable}, sinnpiflag)
 Default value: @code{true}
 
 See @code{foursimp}.
 
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{cosnpiflag}
-@defvr {Option variable} cosnpiflag
+@c @defvr {Option variable} cosnpiflag
+m4_defvr({Option variable}, cosnpiflag)
 Default value: @code{true}
 
 See @code{foursimp}.
 
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXPANSION. EXPLAIN x AND p HERE (DO NOT REFER SOMEWHERE ELSE)
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Package fourie)
 @anchor{fourexpand}
-@deffn {Function} fourexpand (@var{l}, @var{x}, @var{p}, @var{limit})
+@c @deffn {Function} fourexpand (@var{l}, @var{x}, @var{p}, @var{limit})
+m4_deffn({Function}, fourexpand, <<<(@var{l}, @var{x}, @var{p}, @var{limit})>>>)
 
 Constructs and returns the Fourier series from the list of Fourier coefficients
 @var{l} up through @var{limit} terms (@var{limit} may be @code{inf}).  @var{x}
 and @var{p} have same meaning as in @code{fourier}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION
 
 @c -----------------------------------------------------------------------------
 @anchor{fourcos}
-@deffn {Function} fourcos (@var{f}, @var{x}, @var{p})
+@c @deffn {Function} fourcos (@var{f}, @var{x}, @var{p})
+m4_deffn({Function}, fourcos, <<<(@var{f}, @var{x}, @var{p})>>>)
 
 Returns the Fourier cosine coefficients for @code{@var{f}(@var{x})} defined on
 @code{[0, @var{p}]}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION
 
 @c -----------------------------------------------------------------------------
 @anchor{foursin}
-@deffn {Function} foursin (@var{f}, @var{x}, @var{p})
+@c @deffn {Function} foursin (@var{f}, @var{x}, @var{p})
+m4_deffn({Function}, foursin, <<<(@var{f}, @var{x}, @var{p})>>>)
 
 Returns the Fourier sine coefficients for @code{@var{f}(@var{x})} defined on
 @code{[0, @var{p}]}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION
 
 @c -----------------------------------------------------------------------------
 @anchor{totalfourier}
-@deffn {Function} totalfourier (@var{f}, @var{x}, @var{p})
+@c @deffn {Function} totalfourier (@var{f}, @var{x}, @var{p})
+m4_deffn({Function}, totalfourier, <<<(@var{f}, @var{x}, @var{p})>>>)
 
 Returns @code{fourexpand (foursimp (fourier (@var{f}, @var{x}, @var{p})),
 @var{x}, @var{p}, 'inf)}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION
 
 @c -----------------------------------------------------------------------------
 @anchor{fourint}
-@deffn {Function} fourint (@var{f}, @var{x})
+@c @deffn {Function} fourint (@var{f}, @var{x})
+m4_deffn({Function}, fourint, <<<(@var{f}, @var{x})>>>)
 
 Constructs and returns a list of the Fourier integral coefficients of
 @code{@var{f}(@var{x})} defined on @code{[minf, inf]}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION
 
 @c -----------------------------------------------------------------------------
 @anchor{fourintcos}
-@deffn {Function} fourintcos (@var{f}, @var{x})
+@c @deffn {Function} fourintcos (@var{f}, @var{x})
+m4_deffn({Function}, fourintcos, <<<(@var{f}, @var{x})>>>)
 
 Returns the Fourier cosine integral coefficients for @code{@var{f}(@var{x})}
 on @code{[0, inf]}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXPANSION
 
 @c -----------------------------------------------------------------------------
 @anchor{forintsin}
-@deffn {Function} fourintsin (@var{f}, @var{x})
+@c @deffn {Function} fourintsin (@var{f}, @var{x})
+m4_deffn({Function}, fourintsin, <<<(@var{f}, @var{x})>>>)
 
 Returns the Fourier sine integral coefficients for @code{@var{f}(@var{x})} on
 @code{[0, inf]}.
 
 @c NEEDS EXAMPLES
-@opencatbox
-@category{Package fourie}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package fourie}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @c -----------------------------------------------------------------------------
@@ -1570,20 +1694,24 @@ Returns the Fourier sine integral coefficients for @code{@var{f}(@var{x})} on
 @c NEED EXAMPLES HERE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Poisson series)
 @anchor{intopois}
-@deffn {Function} intopois (@var{a})
+@c @deffn {Function} intopois (@var{a})
+m4_deffn({Function}, intopois, <<<(@var{a})>>>)
 Converts @var{a} into a Poisson encoding.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEED EXAMPLES HERE
 
 @c -----------------------------------------------------------------------------
 @anchor{outopois}
-@deffn {Function} outofpois (@var{a})
+@c @deffn {Function} outofpois (@var{a})
+m4_deffn({Function}, outofpois, <<<(@var{a})>>>)
 
 Converts @var{a} from Poisson encoding to general representation.  If @var{a} is
 not in Poisson form, @code{outofpois} carries out the conversion,
@@ -1591,25 +1719,28 @@ i.e., the return value is @code{outofpois (intopois (@var{a}))}.
 This function is thus a canonical simplifier
 for sums of powers of sine and cosine terms of a particular type.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEED MORE INFO HERE
 @c NEED EXAMPLES HERE
 
 @c -----------------------------------------------------------------------------
 @anchor{poisdiff}
-@deffn {Function} poisdiff (@var{a}, @var{b})
+@c @deffn {Function} poisdiff (@var{a}, @var{b})
+m4_deffn({Function}, poisdiff, <<<(@var{a}, @var{b})>>>)
 
 Differentiates @var{a} with respect to @var{b}. @var{b} must occur only
 in the trig arguments or only in the coefficients.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c LOOKING AT THE CODE IN src/pois3.lisp, THIS FCN SEEMS TO COMPUTE THE EXPONENT
 @c BY MULTIPLYING IN A LOOP DUNNO HOW WE WANT TO EXPLAIN THAT
@@ -1617,33 +1748,38 @@ in the trig arguments or only in the coefficients.
 
 @c -----------------------------------------------------------------------------
 @anchor{poisexpt}
-@deffn {Function} poisexpt (@var{a}, @var{b})
+@c @deffn {Function} poisexpt (@var{a}, @var{b})
+m4_deffn({Function}, poisexpt, <<<(@var{a}, @var{b})>>>)
 
 Functionally identical to @code{intopois (@var{a}^@var{b})}.
 @var{b} must be a positive integer.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c WHAT IS THIS ABOUT ??
 
 @c -----------------------------------------------------------------------------
 @anchor{poisint}
-@deffn {Function} poisint (@var{a}, @var{b})
+@c @deffn {Function} poisint (@var{a}, @var{b})
+m4_deffn({Function}, poisint, <<<(@var{a}, @var{b})>>>)
 
 Integrates in a similarly restricted sense (to @code{poisdiff}).  Non-periodic
 terms in @var{b} are dropped if @var{b} is in the trig arguments.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{poislim}
-@defvr {Option variable} poislim
+@c @defvr {Option variable} poislim
+m4_defvr({Option variable}, poislim)
 Default value: 5
 
 @code{poislim} determines the domain of the coefficients in
@@ -1651,69 +1787,80 @@ the arguments of the trig functions.  The initial value of 5
 corresponds to the interval [-2^(5-1)+1,2^(5-1)], or [-15,16], but it
 can be set to [-2^(n-1)+1, 2^(n-1)].
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c UMM, WHAT IS THIS ABOUT EXACTLY ?? EXAMPLES NEEDED
 
 @c -----------------------------------------------------------------------------
 @anchor{poismap}
-@deffn {Function} poismap (@var{series}, @var{sinfn}, @var{cosfn})
+@c @deffn {Function} poismap (@var{series}, @var{sinfn}, @var{cosfn})
+m4_deffn({Function}, poismap, <<<(@var{series}, @var{sinfn}, @var{cosfn})>>>)
 
 will map the functions @var{sinfn} on the sine terms and @var{cosfn} on the
 cosine terms of the Poisson series given.  @var{sinfn} and @var{cosfn} are
 functions of two arguments which are a coefficient and a trigonometric part of
 a term in series respectively.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c REPHRASE WITHOUT USING THE TERM "FUNCTIONALLY IDENTICAL"
 
 @c -----------------------------------------------------------------------------
 @anchor{poisplus}
-@deffn {Function} poisplus (@var{a}, @var{b})
+@c @deffn {Function} poisplus (@var{a}, @var{b})
+m4_deffn({Function}, poisplus, <<<(@var{a}, @var{b})>>>)
 
 Is functionally identical to @code{intopois (a + b)}.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{poissimp}
-@deffn {Function} poissimp (@var{a})
+@c @deffn {Function} poissimp (@var{a})
+m4_deffn({Function}, poissimp, <<<(@var{a})>>>)
 
 Converts @var{a} into a Poisson series for @var{a} in general
 representation.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c MORE INFO NEEDED HERE
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Poisson series)
 @anchor{poisson}
-@defvr {Special symbol} poisson
+@c @defvr {Special symbol} poisson
+m4_defvr({Special symbol}, poisson)
 
 The symbol @code{/P/} follows the line label of Poisson series
 expressions.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{poissubst}
-@deffn {Function} poissubst (@var{a}, @var{b}, @var{c})
+@c @deffn {Function} poissubst (@var{a}, @var{b}, @var{c})
+m4_deffn({Function}, poissubst, <<<(@var{a}, @var{b}, @var{c})>>>)
 
 Substitutes @var{a} for @var{b} in @var{c}.  @var{c} is a Poisson series.
 
@@ -1733,29 +1880,33 @@ expansion in terms of a small parameter.  For example,
 @code{poissubst (u, v, cos(v), %e, 3)} yields
 @code{cos(u)*(1 - %e^2/2) - sin(u)*(%e - %e^3/6)}.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c REPHRASE WITHOUT USING THE TERM "FUNCTIONALLY IDENTICAL"
 
 @c -----------------------------------------------------------------------------
 @anchor{poistimes}
-@deffn {Function} poistimes (@var{a}, @var{b})
+@c @deffn {Function} poistimes (@var{a}, @var{b})
+m4_deffn({Function}, poistimes, <<<(@var{a}, @var{b})>>>)
 
 Is functionally identical to @code{intopois (@var{a}*@var{b})}.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c HOW DOES THIS WORK ?? NEED MORE INFO AND EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{poistrim}
-@deffn {Function} poistrim ()
+@c @deffn {Function} poistrim ()
+m4_deffn({Function}, poistrim, <<<()>>>)
 
 is a reserved function name which (if the user has defined
 it) gets applied during Poisson multiplication.  It is a predicate
@@ -1763,22 +1914,26 @@ function of 6 arguments which are the coefficients of the @var{u}, @var{v}, ...,
 in a term.  Terms for which @code{poistrim} is @code{true} (for the coefficients of
 that term) are eliminated during multiplication.
 
-@opencatbox
-@category{Poisson series}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Poisson series, Display functions)
 @anchor{printpois}
-@deffn {Function} printpois (@var{a})
+@c @deffn {Function} printpois (@var{a})
+m4_deffn({Function}, printpois, <<<(@var{a})>>>)
 
 Prints a Poisson series in a readable format.  In common
 with @code{outofpois}, it will convert @var{a} into a Poisson encoding first, if
 necessary.
 
-@opencatbox
-@category{Poisson series}
-@category{Display functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Poisson series}
+@c @category{Display functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
