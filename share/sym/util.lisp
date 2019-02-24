@@ -102,7 +102,7 @@
     (t (lvar_lettre (1- nb)
            (cons (flet ((franz.concat (&rest args)
                             "equivalent to Franz Lisp 'concat'."
-                            (values (intern (format nil "~{~A~}" args)))))
+                            (values (maxima-intern (format nil "~{~A~}" args)))))
                    (franz.concat lettre nb))
                  lvar)
            lettre))))

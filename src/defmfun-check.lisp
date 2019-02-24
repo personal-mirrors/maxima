@@ -275,23 +275,23 @@
 
 	 (let* ((required-len (length required-args))
 		(optional-len (length optional-args))
-		(impl-name (intern (concatenate 'string
-						(string name)
-						"-IMPL")))
+		(impl-name (maxima-intern (concatenate 'string
+						       (string name)
+						       "-IMPL")))
 		(impl-doc (format nil "Implementation for ~S" name))
 		(nargs (gensym "NARGS-"))
 		(args (gensym "REST-ARG-"))
 		(rest-name (gensym "REST-ARGS"))
 		(pretty-fname
-		 (cond (optional-args
-			;; Can't do much with optional args, so just use the function name.
-			name)
-		       (restp
-			;; Use maxima syntax for rest args: foo(a,b,[c]);
-			`((,name) ,@required-args ((mlist) ,rest-arg)))
-		       (t
-			;; Just have required args: foo(a,b)
-			`((,name) ,@required-args)))))
+		  (cond (optional-args
+			 ;; Can't do much with optional args, so just use the function name.
+			 name)
+		        (restp
+			 ;; Use maxima syntax for rest args: foo(a,b,[c]);
+			 `((,name) ,@required-args ((mlist) ,rest-arg)))
+		        (t
+			 ;; Just have required args: foo(a,b)
+			 `((,name) ,@required-args)))))
 
 	   (multiple-value-bind (forms decls doc-string)
 	       (parse-body body nil t)

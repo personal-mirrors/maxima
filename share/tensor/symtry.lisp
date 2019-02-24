@@ -304,7 +304,7 @@
 	    (l)
 	    (dumx))
 	   ((null b) l)
-	 (setq dumx (intern (format nil "~a~d" $idummyx n)))
+	 (setq dumx (maxima-intern (format nil "~a~d" $idummyx n)))
 	   (cond ((not (eq dumx (car b)))
 		  (setq l (cons (cons (car b) dumx) l))))))
 

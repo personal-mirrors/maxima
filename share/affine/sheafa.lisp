@@ -164,7 +164,7 @@
 
 (defvar *xxx*
   (let ((*nopoint t))
-    (loop for i from 1 to 30 collecting (add-newvar (intern (format nil "$X~A" i))))))
+    (loop for i from 1 to 30 collecting (add-newvar (maxima-intern (format nil "$X~A" i))))))
 
 ;(defun describe-open (open &aux tem)
 ;  (format t "~%It is ~D space coordinatized by ~A "
@@ -194,7 +194,7 @@
        (loop for v in a for w in b
 	     collecting (cons v w)))
 
-(defvar *vvv* (loop for i from 0 for u in *xxx* collecting (intern (format nil "$VV~A" i))))
+(defvar *vvv* (loop for i from 0 for u in *xxx* collecting (maxima-intern (format nil "$VV~A" i))))
 (defvar *vforx* (zl-pairlis *xxx* *vvv*))
 (defvar *xforv* (zl-pairlis *vvv* *xxx*))
 

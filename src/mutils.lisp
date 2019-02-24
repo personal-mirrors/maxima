@@ -101,14 +101,14 @@
 (defmfun $gensym (&optional x)
   (typecase x
     (null
-     (intern (symbol-name (gensym "$G")) :maxima))
+     (maxima-intern (symbol-name (gensym "$G"))))
     (string
      (intern
        (symbol-name (gensym (format nil "$~a" (maybe-invert-string-case x))))
        :maxima))
     ((integer 0)
      (let ((*gensym-counter* x))
-       (intern (symbol-name (gensym "$G")) :maxima)))
+       (maxima-intern (symbol-name (gensym "$G")))))
     (t
      (merror
        (intl:gettext

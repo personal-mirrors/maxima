@@ -17,7 +17,7 @@
        (setq *xxx*
 	     (let ((*nopoint t) *print-radix*)
 	       (loop for i from 1 to 30 collecting
-		      (add-newvar (intern (format nil "$X~A" i))))))
+		      (add-newvar (maxima-intern (format nil "$X~A" i))))))
        'done)
 
 

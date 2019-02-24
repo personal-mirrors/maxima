@@ -106,7 +106,7 @@
             while (or (alphanumericp c) (eql c #\-))
           finally (setf (domain-entry-encoding domain)
 		      (intern (nstring-upcase (subseq header charset i))
-			      :keyword))))))
+			      "KEYWORD"))))))
   domain)
 
 (defun parse-plurals (domain)

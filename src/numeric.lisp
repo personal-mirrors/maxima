@@ -779,7 +779,7 @@
 ;;; Compare against zero (zerop, minusp, plusp)
 (macrolet
     ((frob (name)
-       (let ((cl-name (intern (symbol-name name) :cl)))
+       (let ((cl-name (intern (symbol-name name) "CL")))
 	 `(progn
 	    (defmethod ,name ((x cl:float))
 	      (,cl-name x))
@@ -861,9 +861,9 @@
 ;;; Comparison operations
 (macrolet
     ((frob (op)
-       (let ((method (intern (concatenate 'string
-					  (string '#:two-arg-)
-					  (symbol-name op))))
+       (let ((method (maxima::maxima-intern (concatenate 'string
+					                 (string '#:two-arg-)
+					                 (symbol-name op))))
 	     (cl-fun (find-symbol (symbol-name op) :cl)))
 	 `(progn
 	    (defmethod ,method ((a cl:float) (b cl:float))
@@ -986,7 +986,7 @@
 ;;; Special functions for real-valued arguments
 (macrolet
     ((frob (name)
-       (let ((cl-name (intern (symbol-name name) :cl)))
+       (let ((cl-name (intern (symbol-name name) "CL")))
 	 `(progn
 	    (defmethod ,name ((x number))
 	      (,cl-name x))))))
@@ -1134,15 +1134,14 @@
 (macrolet
     ((frob (name &optional big-float-op-p)
        (if big-float-op-p
-	   (let ((big-op (intern (concatenate 'string
-					      (string '#:big-float-)
-					      (string name))
-				 '#:maxima)))
+	   (let ((big-op (maxima::maxima-intern (concatenate 'string
+					                     (string '#:big-float-)
+					                     (string name)))))
 	     `(defmethod ,name ((a complex-bigfloat))
 		(let ((res (,big-op (real-value a)
 				    (imag-value a))))
 		  (to res))))
-	   (let ((max-op (intern (concatenate 'string "$" (string name)) '#:maxima)))
+	   (let ((max-op (maxima::maxima-intern (concatenate 'string "$" (string name)))))
 	     `(defmethod ,name ((a complex-bigfloat))
 		;; We should do something better than calling mevalp
 		(let* ((arg (maxima::add (real-value a)
@@ -1239,7 +1238,7 @@
 
 (macrolet
     ((frob (name)
-       (let ((cl-name (intern (string name) '#:cl)))
+       (let ((cl-name (intern (string name) "CL")))
 	 `(defmethod ,name ((a number))
 	    (,cl-name a)))))
   (frob realpart)
@@ -1249,7 +1248,7 @@
 
 (macrolet
     ((frob (name)
-       (let ((cl-name (intern (string name) '#:cl)))
+       (let ((cl-name (intern (string name) "CL")))
 	 `(defmethod ,name ((a number) &optional (divisor 1))
 	    (,cl-name a divisor)))))
   (frob floor)
@@ -1745,9 +1744,9 @@
 ;; the corresponding two-arg-<foo> function.
 (macrolet
     ((frob (op)
-       (let ((method (intern (concatenate 'string
-					  (string '#:two-arg-)
-					  (symbol-name op)))))
+       (let ((method (maxima::maxima-intern (concatenate 'string
+                                                         (string '#:two-arg-)
+                                                         (symbol-name op)))))
 	 `(define-compiler-macro ,op (number &rest more-numbers)
 	    (do* ((n number (car nlist))
 		  (nlist more-numbers (cdr nlist))

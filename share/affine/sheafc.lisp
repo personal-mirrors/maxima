@@ -838,12 +838,12 @@
 	 cont2))
   (and cont cont2))
 
-(defmacro sim-hom (x)`(setq  ,(intern (string-append "SIMP-" (string x)))
-	  (simplify-svar-homogeneous ,x)))
+(defmacro sim-hom (x)`(setq  ,(maxima-intern (string-append "SIMP-" (string x)))
+	                     (simplify-svar-homogeneous ,x)))
 
-(defmacro sim-ld (x)`(setq  ,(intern (string-append "RED-" (string-trim "SIMP-"
-									(string x))))
-	  (simplify-svar-ldata ,x)))
+(defmacro sim-ld (x)`(setq  ,(maxima-intern (string-append "RED-" (string-trim "SIMP-"
+									       (string x))))
+	                    (simplify-svar-ldata ,x)))
 
 (defun sub-scheme (pls op-number ld-number)
   (construct-pre-ldata-sheaves :opens (list (nth op-number
@@ -884,7 +884,7 @@
     (loop for v in obj
 	  for i from 1
 	  do
-	  (setq me `(setq ,(intern (format nil "PART~A" i)) (rerat ',v)))
+	  (setq me `(setq ,(maxima-intern (format nil "PART~A" i)) (rerat ',v)))
 	  (format st "~%;;next part ~%~S" me))
     (send st :pathname))))
 
@@ -895,7 +895,7 @@
     (loop for v in *blew-up*
 	  for i from 1
 	  do
-	  (setq me	      `(setq ,(intern (format nil "PART~A" i)) (rerat ',v)))
+	  (setq me `(setq ,(maxima-intern (format nil "PART~A" i)) (rerat ',v)))
 	  (format st "~%;;next part ~%~S" me))
     (send st :pathname))))
 
@@ -1233,7 +1233,7 @@
 (defmacro alter-ldata (ldat &rest keys)
   (loop for (key repl)  on keys by #'cddr
 	with u = '.ldat.
-	collecting `(setf (,(intern (format nil "LDATA-~A" key)) .ldat.) ,repl) into body
+	collecting `(setf (,(maxima-intern (format nil "LDATA-~A" key)) .ldat.) ,repl) into body
 	finally (cond (body (return `(let ((.ldat. ,ldat)) ,@body .ldat.)))
 		      (t (return `(progn ,ldat))))))
 

@@ -1267,7 +1267,7 @@ and modulo-p not prime gives false answer"
   (loop for v in b collecting
 	(format nil "~A" v) into tem
 	finally (setq me (apply 'string-append tem))
-	(return (intern (format nil "~A~A" a me) 'maxima))))
+	(return (maxima-intern (format nil "~A~A" a me)))))
 
 
 (defun $list_sublis (a-list b-list expr)

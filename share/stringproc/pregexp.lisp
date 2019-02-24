@@ -149,7 +149,7 @@
               (t (error "pregexp-read-posix-char-class")))))
     (let ((posix-class
             (intern (string-upcase (concatenate 'string (nreverse r)))
-                    :keyword)))
+                    "KEYWORD")))
       (values
         (if negp (list :neg-char posix-class) posix-class)
         i))))

@@ -64,7 +64,7 @@
 
 (defmacro status (option &optional item)
   (cond ((equal (symbol-name option) (symbol-name '#:feature))
-	 `(member ,(intern (string item) (find-package 'keyword)) *features*))
+	 `(member ,(intern (string item) "KEYWORD") *features*))
 	((equal option 'gctime) 0)))
 
 #+(or scl allegro)

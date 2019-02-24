@@ -208,7 +208,7 @@
 	(cond ((floatp num)
 	       (setq dnum (append (explode num) '(d 0)))
 	       (return (apply #'symbolconc dnum)))
-	      (t (return (intern (format nil "~a.D0" num)))))))
+	      (t (return (maxima-intern (format nil "~a.D0" num)))))))
 
 (defun gcomplex (num)
     (prog (cnum)
@@ -216,7 +216,7 @@
 	       (setq cnum (append (explode num) '( |,| 0 |.| 0 |)|)))
 	       (setq cnum (cons '|(| cnum ))
 	       (return (apply #'symbolconc cnum)))
-	      (t (return (intern (format nil "(~a.0,0.0)" num)))))))
+	      (t (return (maxima-intern (format nil "(~a.0,0.0)" num)))))))
 
 (defun simptimes1 (terms fp)
   (declare (ignore fp))

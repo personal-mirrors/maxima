@@ -59,7 +59,7 @@
 		 do (setq tem  (car w))
 		 else do (setq tem  (caar w))
 		 when (eq (car v) '&key)
-		 collecting (intern (string-upcase (string tem)) 'keyword) into opts
+		 collecting (intern (string-upcase (string tem)) "KEYWORD") into opts
 		 collecting tem into opts
 		 finally
 		 (setq args (append (subseq args 0 i)  opts (cdr w)))(return 'done))
@@ -219,8 +219,8 @@
     (cond ((atom defb)
 	   (setq defb `(defun ,(string-append defb (symbol-name '#:-compare)) (&rest .l.)
 			 (apply ',defb .l.)))))
-    (setq .fa. (intern (string-append (second defa) (symbol-name '#:-a))))
-    (setq .fb. (intern (string-append (second defb) (symbol-name '#:-b))))
+    (setq .fa. (maxima-intern (string-append (second defa) (symbol-name '#:-a))))
+    (setq .fb. (maxima-intern (string-append (second defb) (symbol-name '#:-b))))
     (setq .boda. (subst .fa. (second defa) (cdddr defa)))
     (setq .bodb. (subst .fb. (second defb) (cdddr defb)))
     `(progn 'compile
@@ -246,8 +246,8 @@
 	 ,fn-a
 	 ,fn-b
   , `(compare-functions
-	(defun ,(intern (string-append (second fn-a) (symbol-name '#:-compare))) ,@ (cddr fn-a))
-	(defun ,(intern (string-append (second fn-b) (symbol-name '#:-compare))) ,@ (cddr fn-b))
+	(defun ,(maxima-intern (string-append (second fn-a) (symbol-name '#:-compare))) ,@ (cddr fn-a))
+	(defun ,(maxima-intern (string-append (second fn-b) (symbol-name '#:-compare))) ,@ (cddr fn-b))
 	,@ assertions)))
 
 ;;sample usage of compare-recursive-functions
@@ -291,7 +291,7 @@
 
 (defmacro set-slots (struct conc-prefix &rest alt-list)
   (loop for v on alt-list by #'cddr
-	collecting `(setf ( ,(intern (format nil "~a~a" conc-prefix (car v))) ,struct) ,(second v))
+	collecting `(setf ( ,(maxima-intern (format nil "~a~a" conc-prefix (car v))) ,struct) ,(second v))
 	into tem
 	finally (return (cons 'progn tem))))
 

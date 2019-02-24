@@ -104,6 +104,10 @@
 	 name)
 	(t (error "~S is illegal first arg for *array" name))))
 
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (defun maxima-intern (string)
+    (intern string "MAXIMA")))
+
 ;;;    Change maclisp array referencing.
 ;;;   Idea1: Make changes in the code which will allow the code to still run in maclisp,
 ;;;yet will allow, with the appropriate macro definitions of array,arraycall, etc,
@@ -131,7 +135,7 @@
 	 finally (return `(progn ,@ tem))))
 
 (defmacro defquote  (fn (aa . oth) &body rest &aux help ans)
-  (setq help (intern (format nil "~a-~a" fn '#:aux)))
+  (setq help (maxima-intern (format nil "~a-~a" fn '#:aux)))
   (cond ((eq aa '&rest)
 	 (setq ans
 	       (list
@@ -239,7 +243,7 @@ values")
 
 (defmfun $mkey (variable)
   "($mkey '$demo)==>:demo"
-  (intern (string-left-trim "$" (string variable)) 'keyword))
+  (intern (string-left-trim "$" (string variable)) "KEYWORD"))
 
 (defmacro arg (x)
   `(narg1 ,x narg-rest-argument))
@@ -420,7 +424,7 @@ values")
 
 (defun explodec (symb)		;is called for symbols and numbers
   (loop for v in (coerce (print-invert-case symb) 'list)
-     collect (intern (string v))))
+     collect (maxima-intern (string v))))
 
 ;;; If the 'string is all the same case, invert the case.  Otherwise,
 ;;; do nothing.
@@ -468,8 +472,7 @@ values")
   ;; Like read-from-string with readtable-case :invert
   ;; Supply package argument in case this function is called
   ;; from outside the :maxima package.
-  (intern (maybe-invert-string-case string) :maxima))
-
+  (maxima-intern (maybe-invert-string-case string)))
 
 #-(or gcl scl allegro)
 (let ((local-table (copy-readtable nil)))
@@ -528,7 +531,7 @@ values")
 ;; Note:  symb can also be a number, not just a symbol.
 (defun explode (symb)
   (declare (optimize (speed 3)))
-  (map 'list #'(lambda (v) (intern (string v))) (format nil "~a" symb)))
+  (map 'list #'(lambda (v) (maxima-intern (string v))) (format nil "~a" symb)))
 
 ;;; return the first character of the name of a symbol or a string or char
 (defun get-first-char (symb)
@@ -538,11 +541,11 @@ values")
 (defun getchar (symb i)
   (let ((str (string symb)))
     (if (<= 1 i (length str))
-	(intern (string (char str (1- i))))
+	(maxima-intern (string (char str (1- i))))
 	nil)))
 
 (defun ascii (n)
-  (intern (string n)))
+  (maxima-intern (string n)))
 
 (defun maknam (lis)
   (loop for v in lis

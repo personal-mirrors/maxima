@@ -235,7 +235,7 @@ list of lists call this function on each of the lists independently."
 		(loop for v on (cdr x)
 		   for term in (cdr x)
 		   for i from 1
-		   do (setf (car v) (intern (format nil "~a~d" term i)))))
+		   do (setf (car v) (maxima-intern (format nil "~a~d" term i)))))
 	       (t (cons ($linearize_nc (car x)) ($linearize_nc (cdr x))))))
 	(t x)))
 
@@ -245,7 +245,7 @@ list of lists call this function on each of the lists independently."
 		(loop for v on (cdr x)
 		   for term in (cdr x)
 		   for i from 1
-		   do (setf (car v) (intern (format nil "~a~d" term i)))))
+		   do (setf (car v) (maxima-intern (format nil "~a~d" term i)))))
 	       (t (cons ($linearize_nc_to_nc (car x)) ($linearize_nc_to_nc (cdr x)))))
 	 x)
 	(t x)))

@@ -80,7 +80,7 @@
 		     (append (list '(mtext) pat '| --> | )
 			     (cond ((cddr l)
 				    (list (cadr l)
-					  '#.(intern (format nil " ~A " 'where))
+					  '#.(maxima-intern (format nil " ~A " 'where))
 					  (cons (list (caddr l))
 						(cdddr l))))
 				   (t replacement))))

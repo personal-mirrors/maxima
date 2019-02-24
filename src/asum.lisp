@@ -714,7 +714,7 @@ summation when necessary."
 ;; multiplication of sums
 
 (defun gensumindex ()
-  (intern (format nil "~S~D" $genindex (incf $gensumnum))))
+  (maxima-intern (format nil "~S~D" $genindex (incf $gensumnum))))
 
 (defun sumtimes (x y)
   (cond ((null x) y)

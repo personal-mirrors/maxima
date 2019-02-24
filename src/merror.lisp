@@ -141,8 +141,8 @@
 	       (cond (sym
 		      (setq sym (car sym)))
 		     (t
-		      (setq sym (intern (format nil "~A~D" '$errexp
-						symbol-number)))
+		      (setq sym (maxima-intern (format nil "~A~D" '$errexp
+                                                       symbol-number)))
 		      (tuchus $error_syms sym)))
 	       (push sym error-symbols)
 	       (push form error-values)

@@ -572,7 +572,7 @@
 	((null x) 'false)
 	((eq x t) 'true)
         ((member (get-first-char x) '(#\$ #\%) :test #'char=)
-         (intern (subseq (string x) 1)))
+         (maxima-intern (subseq (string x) 1)))
 	(t x)))
 
 (defun fullstrip (x)
@@ -838,7 +838,7 @@
                       ((member (intern (if (stringp feature)
                                            (maybe-invert-string-case feature)
                                            (symbol-name (fullstrip1 feature)))
-                                       'keyword)
+                                       "KEYWORD")
                                *features* :test #'equal) t)))
       (t (merror (intl:gettext "status: unknown argument: ~M") keyword)))))
 

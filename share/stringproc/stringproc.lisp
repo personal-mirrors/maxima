@@ -297,7 +297,7 @@ See comments to $adjust_external_format below for a detailed description.
       ;; All Lisps must recognize :default, per CLHS.
       (when (string= enc "DEFAULT") (return-from get-encoding :default))
 
-      (setq enc (intern (string-upcase enc) :keyword))
+      (setq enc (intern (string-upcase enc) "KEYWORD"))
       ;;
       #+ccl (progn
         #+unix enc

@@ -162,21 +162,21 @@
 	 (list (foreach e in exp conc (preproc1 e))))))
 
 (defun preprocdec (arg)
-  ; $var  -->  var                           ;
-  ; |$implicit type|  -->  implicit\ type    ;
-  ; ((mtimes) $type int)  -->  type*int      ;
-  ; ((mplus) $v1 ((mminus) $v2))  -->  v1-v2 ;
+  ;; $var  -->  var
+  ;; |$implicit type|  -->  implicit\ type
+  ;; ((mtimes) $type int)  -->  type*int
+  ;; ((mplus) $v1 ((mminus) $v2))  -->  v1-v2
   (cond ((atom arg)
 	 (stripdollar1 arg))
 	((atom (car arg))
 	 (foreach a in arg collect (preprocdec a)))
 	((equal (caar arg) 'mtimes)
-	 (intern (compress (append (append (explode (stripdollar1 (cadr arg)))
-					   (explode '*))
-				   (explode (caddr arg))))))
+	 (maxima-intern (compress (append (append (explode (stripdollar1 (cadr arg)))
+					          (explode '*))
+				          (explode (caddr arg))))))
 	((equal (caar arg) 'mplus)
-	 (intern (compress (append (append (explode (stripdollar1 (cadr arg)))
-					   (explode '-))
-				   (explode (stripdollar1 (cadaddr arg)))))))
+	 (maxima-intern (compress (append (append (explode (stripdollar1 (cadr arg)))
+					          (explode '-))
+				          (explode (stripdollar1 (cadaddr arg)))))))
 	(t
 	 (foreach a in arg collect (preprocdec a)))))

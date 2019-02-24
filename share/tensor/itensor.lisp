@@ -74,7 +74,7 @@
 (defmfun $idummy ()                              ;Sets arguments to dummy indices
   (progn
     (incf $icounter)
-    (intern (format nil "~a~d" $idummyx $icounter))))
+    (maxima-intern (format nil "~a~d" $idummyx $icounter))))
 
 (defprop $kdelta ((/  . / )) contractions)
 

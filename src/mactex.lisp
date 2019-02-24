@@ -286,7 +286,7 @@
     ((nn-list (extract-trailing-digits (symbol-name sym))))
     (if nn-list
       ;; SYM matches foo_mm_nn.
-      (apply #'concatenate 'string (tex-array `((,(intern (first nn-list)) 'array) ,@(rest nn-list)) nil nil))
+      (apply #'concatenate 'string (tex-array `((,(maxima-intern (first nn-list)) 'array) ,@(rest nn-list)) nil nil))
       ;; SYM is a simple symbol.
       (let ((s (maybe-invert-string-case (quote-% (stripdollar sym)))))
         (if (> (length s) 1)
@@ -1057,7 +1057,7 @@
 ;; This stuff handles setting of LET rules
 
 (defprop | --> | "\\longrightarrow " texsym)
-(defprop #.(intern (format nil " ~A " 'where)) "\\;\\mathbf{where}\\;" texsym)
+(defprop #.(maxima-intern (format nil " ~A " 'where)) "\\;\\mathbf{where}\\;" texsym)
 
 ;; end of additions by Marek Rychlik
 

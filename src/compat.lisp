@@ -16,12 +16,12 @@
 
 (defun symbolconc (&rest args)
   "make a symbol out of the printed representations of all args"
-  (intern (apply #'concatenate 'string
-		 (mapcar #'(lambda (s)
-                             (typecase s
-                               (integer (format nil "~d" s))
-                               (symbol (symbol-name s))
-                               (string s)
-                               (t (format nil "~a" s))))
-			 args))))
+  (maxima-intern (apply #'concatenate 'string
+		        (mapcar #'(lambda (s)
+                                    (typecase s
+                                      (integer (format nil "~d" s))
+                                      (symbol (symbol-name s))
+                                      (string s)
+                                      (t (format nil "~a" s))))
+			        args))))
 

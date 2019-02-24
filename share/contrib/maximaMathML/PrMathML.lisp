@@ -48,9 +48,9 @@
            (cond
              ((member mexpress $labels :test #'eq)
               (setq mexplabel
-                    (intern (concatenate 'string "("
-                                (princ-to-string (fullstrip1 mexpress))
-                                ")")))
+                    (maxima-intern (concatenate 'string "("
+                                                (princ-to-string (fullstrip1 mexpress))
+                                                ")")))
               (setq mexpress (eval mexpress)))
              (t (setq mexplabel nil)
                 (when $mPrevaluate (setq mexpress (meval mexpress)))))
