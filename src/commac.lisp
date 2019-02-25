@@ -107,6 +107,9 @@
 (defun maxima-intern (string)
   (intern string "MAXIMA"))
 
+(defun maxima-find-symbol (string)
+  (find-symbol string "MAXIMA"))
+
 ;;;    Change maclisp array referencing.
 ;;;   Idea1: Make changes in the code which will allow the code to still run in maclisp,
 ;;;yet will allow, with the appropriate macro definitions of array,arraycall, etc,

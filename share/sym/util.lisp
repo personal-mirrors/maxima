@@ -466,7 +466,7 @@
 
 (defun $card_stab_init ($part $egal)
   (card_stab (cdr $part)
-             (find-symbol (string $egal))))
+             (maxima-find-symbol (string $egal))))
 
 (defun card_stab (s egal)
   (let ((lmultip (sort (multiplicites s egal) '<)))
