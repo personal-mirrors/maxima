@@ -1071,7 +1071,7 @@
 ;; Rather than try to modify mformat for ~:R, use the quoted symbol
 
 (macrolet ((make-nth (si i)
-	     (let ((sim (maxima-intern (concatenate 'string "$" (symbol-name si)))))
+	     (let ((sim (intern (concatenate 'string "$" (symbol-name si)))))
 	       `(defun ,sim (e)
 		  (atomchk (setq e (format1 e)) ',sim nil)
 		  (if (< (length (margs e)) ,i)

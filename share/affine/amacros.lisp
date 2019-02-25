@@ -219,8 +219,8 @@
     (cond ((atom defb)
 	   (setq defb `(defun ,(string-append defb (symbol-name '#:-compare)) (&rest .l.)
 			 (apply ',defb .l.)))))
-    (setq .fa. (maxima-intern (string-append (second defa) (symbol-name '#:-a))))
-    (setq .fb. (maxima-intern (string-append (second defb) (symbol-name '#:-b))))
+    (setq .fa. (intern (string-append (second defa) (symbol-name '#:-a))))
+    (setq .fb. (intern (string-append (second defb) (symbol-name '#:-b))))
     (setq .boda. (subst .fa. (second defa) (cdddr defa)))
     (setq .bodb. (subst .fb. (second defb) (cdddr defb)))
     `(progn 'compile
@@ -246,8 +246,8 @@
 	 ,fn-a
 	 ,fn-b
   , `(compare-functions
-	(defun ,(maxima-intern (string-append (second fn-a) (symbol-name '#:-compare))) ,@ (cddr fn-a))
-	(defun ,(maxima-intern (string-append (second fn-b) (symbol-name '#:-compare))) ,@ (cddr fn-b))
+	(defun ,(intern (string-append (second fn-a) (symbol-name '#:-compare))) ,@ (cddr fn-a))
+	(defun ,(intern (string-append (second fn-b) (symbol-name '#:-compare))) ,@ (cddr fn-b))
 	,@ assertions)))
 
 ;;sample usage of compare-recursive-functions
@@ -291,7 +291,7 @@
 
 (defmacro set-slots (struct conc-prefix &rest alt-list)
   (loop for v on alt-list by #'cddr
-	collecting `(setf ( ,(maxima-intern (format nil "~a~a" conc-prefix (car v))) ,struct) ,(second v))
+	collecting `(setf ( ,(intern (format nil "~a~a" conc-prefix (car v))) ,struct) ,(second v))
 	into tem
 	finally (return (cons 'progn tem))))
 

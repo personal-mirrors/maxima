@@ -838,11 +838,11 @@
 	 cont2))
   (and cont cont2))
 
-(defmacro sim-hom (x)`(setq  ,(maxima-intern (string-append "SIMP-" (string x)))
+(defmacro sim-hom (x)`(setq  ,(intern (string-append "SIMP-" (string x)))
 	                     (simplify-svar-homogeneous ,x)))
 
-(defmacro sim-ld (x)`(setq  ,(maxima-intern (string-append "RED-" (string-trim "SIMP-"
-									       (string x))))
+(defmacro sim-ld (x)`(setq  ,(intern (string-append "RED-" (string-trim "SIMP-"
+									(string x))))
 	                    (simplify-svar-ldata ,x)))
 
 (defun sub-scheme (pls op-number ld-number)
@@ -1233,7 +1233,7 @@
 (defmacro alter-ldata (ldat &rest keys)
   (loop for (key repl)  on keys by #'cddr
 	with u = '.ldat.
-	collecting `(setf (,(maxima-intern (format nil "LDATA-~A" key)) .ldat.) ,repl) into body
+	collecting `(setf (,(intern (format nil "LDATA-~A" key)) .ldat.) ,repl) into body
 	finally (cond (body (return `(let ((.ldat. ,ldat)) ,@body .ldat.)))
 		      (t (return `(progn ,ldat))))))
 

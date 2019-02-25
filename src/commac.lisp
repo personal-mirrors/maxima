@@ -104,9 +104,8 @@
 	 name)
 	(t (error "~S is illegal first arg for *array" name))))
 
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (defun maxima-intern (string)
-    (intern string "MAXIMA")))
+(defun maxima-intern (string)
+  (intern string "MAXIMA"))
 
 ;;;    Change maclisp array referencing.
 ;;;   Idea1: Make changes in the code which will allow the code to still run in maclisp,
@@ -135,7 +134,7 @@
 	 finally (return `(progn ,@ tem))))
 
 (defmacro defquote  (fn (aa . oth) &body rest &aux help ans)
-  (setq help (maxima-intern (format nil "~a-~a" fn '#:aux)))
+  (setq help (intern (format nil "~a-~a" fn '#:aux)))
   (cond ((eq aa '&rest)
 	 (setq ans
 	       (list

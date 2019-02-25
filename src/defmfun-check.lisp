@@ -275,9 +275,9 @@
 
 	 (let* ((required-len (length required-args))
 		(optional-len (length optional-args))
-		(impl-name (maxima-intern (concatenate 'string
-						       (string name)
-						       "-IMPL")))
+		(impl-name (intern (concatenate 'string
+						(string name)
+						"-IMPL")))
 		(impl-doc (format nil "Implementation for ~S" name))
 		(nargs (gensym "NARGS-"))
 		(args (gensym "REST-ARG-"))

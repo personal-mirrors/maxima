@@ -1085,7 +1085,7 @@
 
 
 (defmacro def-test (f1 f2)
-  `(defun ,(maxima-intern (format nil "~A-~A" '#:test f1)) (&rest rest-args)
+  `(defun ,(intern (format nil "~A-~A" '#:test f1)) (&rest rest-args)
      (let (empty (*print-level* 2)(*print-length* 3) ansa ansb)
 
 

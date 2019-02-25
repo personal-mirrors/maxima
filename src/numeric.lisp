@@ -861,9 +861,9 @@
 ;;; Comparison operations
 (macrolet
     ((frob (op)
-       (let ((method (maxima::maxima-intern (concatenate 'string
-					                 (string '#:two-arg-)
-					                 (symbol-name op))))
+       (let ((method (intern (concatenate 'string
+                                          (string '#:two-arg-)
+                                          (symbol-name op))))
 	     (cl-fun (find-symbol (symbol-name op) :cl)))
 	 `(progn
 	    (defmethod ,method ((a cl:float) (b cl:float))
@@ -1134,14 +1134,15 @@
 (macrolet
     ((frob (name &optional big-float-op-p)
        (if big-float-op-p
-	   (let ((big-op (maxima::maxima-intern (concatenate 'string
-					                     (string '#:big-float-)
-					                     (string name)))))
+	   (let ((big-op (intern (concatenate 'string
+                                              (string '#:big-float-)
+                                              (string name))
+                                 "MAXIMA")))
 	     `(defmethod ,name ((a complex-bigfloat))
 		(let ((res (,big-op (real-value a)
 				    (imag-value a))))
 		  (to res))))
-	   (let ((max-op (maxima::maxima-intern (concatenate 'string "$" (string name)))))
+	   (let ((max-op (intern (concatenate 'string "$" (string name)) "MAXIMA")))
 	     `(defmethod ,name ((a complex-bigfloat))
 		;; We should do something better than calling mevalp
 		(let* ((arg (maxima::add (real-value a)
@@ -1744,9 +1745,9 @@
 ;; the corresponding two-arg-<foo> function.
 (macrolet
     ((frob (op)
-       (let ((method (maxima::maxima-intern (concatenate 'string
-                                                         (string '#:two-arg-)
-                                                         (symbol-name op)))))
+       (let ((method (intern (concatenate 'string
+                                          (string '#:two-arg-)
+                                          (symbol-name op)))))
 	 `(define-compiler-macro ,op (number &rest more-numbers)
 	    (do* ((n number (car nlist))
 		  (nlist more-numbers (cdr nlist))
