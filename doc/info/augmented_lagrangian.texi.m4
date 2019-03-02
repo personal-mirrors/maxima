@@ -6,7 +6,9 @@
 @node Functions and Variables for augmented_lagrangian,  , augmented_lagrangian-pkg, augmented_lagrangian-pkg
 @section Functions and Variables for augmented_lagrangian
 
-@deffn  {Function} augmented_lagrangian_method @
+m4_setcat(Numerical methods, Optimization, Share packages, Package augmented_lagrangian)
+@c @deffn  {Function} augmented_lagrangian_method @
+m4_deffn( {Function}, augmented_lagrangian_method, <<<>>>) @
 @fname{augmented_lagrangian_method} (@var{FOM}, @var{xx}, @var{C}, @var{yy}) @
 @fname{augmented_lagrangian_method} (@var{FOM}, @var{xx}, @var{C}, @var{yy}, optional_args) @
 @fname{augmented_lagrangian_method} ([@var{FOM}, @var{grad}], @var{xx}, @var{C}, @var{yy}) @
@@ -146,12 +148,12 @@ Same example as before, but this time the gradient is supplied as an argument.
 @end group
 @end example
 
-@opencatbox
-@category{Numerical methods}
-@category{Optimization}
-@category{Share packages}
-@category{Package augmented_lagrangian} 
-@closecatbox
+@c @opencatbox
+@c @category{Numerical methods}
+@c @category{Optimization}
+@c @category{Share packages}
+@c @category{Package augmented_lagrangian} 
+@c @closecatbox
 
-@end deffn
-
+@c @end deffn
+m4_end_deffn()
