@@ -196,8 +196,10 @@ from the maxima package.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Operators, Declarations and inferences)
 @anchor{additive}
-@defvr {Property} additive
+@c @defvr {Property} additive
+m4_defvr({Property}, additive)
 
 If @code{declare(f,additive)} has been executed, then:
 
@@ -233,15 +235,17 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Operators}
-@category{Declarations and inferences}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Operators}
+@c @category{Declarations and inferences}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{antisymmetric}
-@defvr {Property} antisymmetric
+@c @defvr {Property} antisymmetric
+m4_defvr({Property}, antisymmetric)
 
 If @code{declare(h,antisymmetric)} is done, this tells the simplifier that
 @code{h} is antisymmetric.  E.g.  @code{h(x,z,y)} will simplify to 
@@ -296,14 +300,17 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Operators}
-@category{Declarations and inferences}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Operators}
+@c @category{Declarations and inferences}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-@deffn {Function} combine (@var{expr})
+m4_setcat(Expressions)
+@c @deffn {Function} combine (@var{expr})
+m4_deffn({Function}, combine, <<<(@var{expr})>>>)
 
 Simplifies the sum @var{expr} by combining terms with the same
 denominator into a single term.
@@ -329,14 +336,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{commutative}
-@defvr {Property} commutative
+@c @defvr {Property} commutative
+m4_defvr({Property}, commutative)
 
 If @code{declare(h, commutative)} is done, this tells the simplifier that
 @code{h} is a commutative function.  E.g.  @code{h(x, z, y)} will simplify to
@@ -379,17 +388,20 @@ Exemplo:
 @end group
 @end example
 
-@opencatbox
-@category{Operators}
-@category{Declarations and inferences}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Operators}
+@c @category{Declarations and inferences}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Complex variables, Trigonometric functions, Hyperbolic functions)
 @anchor{demoivre}
-@deffn  {Function} demoivre (@var{expr})
+@c @deffn  {Function} demoivre (@var{expr})
+m4_deffn( {Function}, demoivre, <<<(@var{expr})>>>)
 @deffnx {Option variable} demoivre
 
 The function @code{demoivre (expr)} converts one expression
@@ -406,18 +418,21 @@ The default value of @code{demoivre} is @code{false}.
 form.  @code{demoivre} and @code{exponentialize} cannot both be true at the same
 time.
 
-@opencatbox
-@category{Complex variables}
-@category{Trigonometric functions}
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @category{Trigonometric functions}
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{function_distrib}
-@deffn {Function} distrib (@var{expr})
+@c @deffn {Function} distrib (@var{expr})
+m4_deffn({Function}, distrib, <<<(@var{expr})>>>)
 
 Distributes sums over products.  It differs from @code{expand} in that it works
 at only the top level of an expression, i.e., it doesn't recurse and it is
@@ -447,14 +462,17 @@ Examples:
                       b d + a d + b c + a c
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification flags and variables)
 @anchor{distribute_over}
-@defvr {Option variable} distribute_over
+@c @defvr {Option variable} distribute_over
+m4_defvr({Option variable}, distribute_over)
 Default value: @code{true}
 
 @code{distribute_over} controls the mapping of functions over bags like lists, 
@@ -571,14 +589,16 @@ to the value @code{false}.
 @end group
 @end example
 
-@opencatbox
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 @anchor{domain}
-@defvr {Option variable} domain
+@c @defvr {Option variable} domain
+m4_defvr({Option variable}, domain)
 Default value: @code{real}
 
 When @code{domain} is set to @code{complex}, @code{sqrt (x^2)} will remain
@@ -588,16 +608,20 @@ When @code{domain} is set to @code{complex}, @code{sqrt (x^2)} will remain
 @c The notion of a "domain" of simplification is still in its infancy,
 @c and controls little more than this at the moment.
 
-@opencatbox
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{evenfun}
 @anchor{oddfun}
-@defvr  {Property} evenfun
-@defvrx {Property} oddfun
+@c @defvr  {Property} evenfun
+m4_defvr( {Property}, evenfun)
+@c @defvrx {Property} oddfun
+m4_defvrx({Property}, oddfun)
 
 @code{declare(f, evenfun)} or @code{declare(f, oddfun)} tells Maxima to recognize
 the function @code{f} as an even or odd function.
@@ -629,8 +653,10 @@ Examples:
 @end defvr
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{expand}
-@deffn  {Function} expand @
+@c @deffn  {Function} expand @
+m4_deffn( {Function}, expand, <<<>>>) @
 @fname{expand} (@var{expr}) @
 @fname{expand} (@var{expr}, @var{p}, @var{n})
 
@@ -761,16 +787,18 @@ Resimplify an expression without expansion:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{expandwrt}
-@deffn {Function} expandwrt (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
+@c @deffn {Function} expandwrt (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
+m4_deffn({Function}, expandwrt, <<<(@var{expr}, @var{x_1}, @dots{}, @var{x_n})>>>)
 
 Expands expression @code{expr} with respect to the 
 variables @var{x_1}, @dots{}, @var{x_n}.
@@ -785,14 +813,17 @@ means of the switch @code{expandwrt_denom}.
 This function is autoloaded from
 @file{simplification/stopex.mac}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{expandwert_denom}
-@defvr {Option variable} expandwrt_denom
+@c @defvr {Option variable} expandwrt_denom
+m4_defvr({Option variable}, expandwrt_denom)
 Default value: @code{false}
 
 @code{expandwrt_denom} controls the treatment of rational
@@ -801,17 +832,19 @@ denominator of the expression will be expanded according to the
 arguments of @code{expandwrt}, but if @code{expandwrt_denom} is @code{false},
 then only the numerator will be expanded in that way.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS A STAND-ALONE DESCRIPTION (NOT "IS SIMILAR TO")
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{expandwrt_factored}
-@deffn {Function} expandwrt_factored (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
+@c @deffn {Function} expandwrt_factored (@var{expr}, @var{x_1}, @dots{}, @var{x_n})
+m4_deffn({Function}, expandwrt_factored, <<<(@var{expr}, @var{x_1}, @dots{}, @var{x_n})>>>)
 
 is similar to @code{expandwrt}, but treats expressions that are products
 somewhat differently.  @code{expandwrt_factored} expands only on those factors
@@ -820,14 +853,16 @@ of @code{expr} that contain the variables @var{x_1}, @dots{}, @var{x_n}.
 @c NOT SURE WHY WE SHOULD MENTION THIS HERE
 This function is autoloaded from @file{simplification/stopex.mac}.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{expon}
-@defvr {Option variable} expon
+@c @defvr {Option variable} expon
+m4_defvr({Option variable}, expon)
 Default value: 0
 
 @code{expon} is the exponent of the largest negative power which
@@ -835,14 +870,17 @@ is automatically expanded (independent of calls to @code{expand}).  For
 example, if @code{expon} is 4 then @code{(x+1)^(-5)} will not be automatically
 expanded.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Complex variables, Trigonometric functions, Hyperbolic functions)
 @anchor{exponentialize}
-@deffn  {Function} exponentialize (@var{expr})
+@c @deffn  {Function} exponentialize (@var{expr})
+m4_deffn( {Function}, exponentialize, <<<(@var{expr})>>>)
 @deffnx {Option variable} exponentialize
 
 The function @code{exponentialize (expr)} converts 
@@ -857,19 +895,22 @@ The default value is @code{false}.
 @code{exponentialize} and @code{demoivre} cannot
 both be true at the same time.
 
-@opencatbox
-@category{Complex variables}
-@category{Trigonometric functions}
-@category{Hyperbolic functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Complex variables}
+@c @category{Trigonometric functions}
+@c @category{Hyperbolic functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{expop}
-@defvr {Option variable} expop
+@c @defvr {Option variable} expop
+m4_defvr({Option variable}, expop)
 Default value: 0
 
 @code{expop} is the highest positive exponent which is automatically expanded.
@@ -879,34 +920,40 @@ Thus @code{(x + 1)^3}, when typed, will be automatically expanded only if
 executing @code{expand ((x + 1)^n)} will work only if @code{maxposex} is not
 less than n.
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Operators, Simplification)
 @anchor{lassociative}
-@defvr {Property} lassociative
+@c @defvr {Property} lassociative
+m4_defvr({Property}, lassociative)
 
 @code{declare (g, lassociative)} tells the Maxima simplifier that @code{g} is
 left-associative.  E.g., @code{g (g (a, b), g (c, d))} will simplify to
 @code{g (g (g (a, b), c), d)}.
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Operators}
-@category{Simplification}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Operators}
+@c @category{Simplification}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 @c WHAT'S UP WITH THE QUOTE MARKS ??
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Operators, Simplification)
 @anchor{linear}
-@defvr {Property} linear
+@c @defvr {Property} linear
+m4_defvr({Property}, linear)
 
 One of Maxima's operator properties.  For univariate @code{f} so
 declared, "expansion" @code{f(x + y)} yields @code{f(x) + f(y)},
@@ -980,48 +1027,56 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Operators}
-@category{Simplification}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Operators}
+@c @category{Simplification}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{maxnegex}
-@defvr {Option variable} maxnegex
+@c @defvr {Option variable} maxnegex
+m4_defvr({Option variable}, maxnegex)
 Default value: 1000
 
 @code{maxnegex} is the largest negative exponent which will
 be expanded by the @code{expand} command, see also @mrefdot{maxposex}
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
 @anchor{maxposex}
-@defvr {Option variable} maxposex
+@c @defvr {Option variable} maxposex
+m4_defvr({Option variable}, maxposex)
 Default value: 1000
 
 @code{maxposex} is the largest exponent which will be
 expanded with the @code{expand} command, see also @mrefdot{maxnegex}
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Expressions, Simplification)
 @anchor{multiplicative}
-@defvr {Property} multiplicative
+@c @defvr {Property} multiplicative
+m4_defvr({Property}, multiplicative)
 
 @code{declare(f, multiplicative)} tells the Maxima simplifier that @code{f}
 is multiplicative.
@@ -1094,18 +1149,21 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Expressions}
-@category{Simplification}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Expressions}
+@c @category{Simplification}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS WORK
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{multthru}
-@deffn  {Function} multthru @
+@c @deffn  {Function} multthru @
+m4_deffn( {Function}, multthru, <<<>>>) @
 @fname{multthru} (@var{expr}) @
 @fname{multthru} (@var{expr_1}, @var{expr_2})
 
@@ -1162,14 +1220,17 @@ noncommutative) over sums.  Since quotients are represented as products
 (%o7)         a . f + a . c . e + a . c . d + a . b
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat()
 @anchor{property_nary}
-@defvr {Property} nary
+@c @defvr {Property} nary
+m4_defvr({Property}, nary)
 
 @code{declare(f, nary)} tells Maxima to recognize the function @code{f} as an
 n-ary function.
@@ -1200,8 +1261,10 @@ Example:
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification flags and variables)
 @anchor{negdistrib}
-@defvr {Option variable} negdistrib
+@c @defvr {Option variable} negdistrib
+m4_defvr({Option variable}, negdistrib)
 Default value: @code{true}
 
 When @code{negdistrib} is @code{true}, -1 distributes over an expression.
@@ -1238,14 +1301,17 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global variables, Operators, Simplification)
 @anchor{opproperties}
-@defvr {System variable} opproperties
+@c @defvr {System variable} opproperties
+m4_defvr({System variable}, opproperties)
 
 @code{opproperties} is the list of the special operator properties recognized
 by the Maxima simplifier.
@@ -1266,18 +1332,21 @@ lassociative, rassociative]
 @end group
 @end example
 
-@opencatbox
-@category{Global variables}
-@category{Operators}
-@category{Simplification}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global variables}
+@c @category{Operators}
+@c @category{Simplification}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Operators, Simplification)
 @anchor{define_opproperty}
-@deffn {Function} define_opproperty (@var{property_name}, @var{simplifier_fn})
+@c @deffn {Function} define_opproperty (@var{property_name}, @var{simplifier_fn})
+m4_deffn({Function}, define_opproperty, <<<(@var{property_name}, @var{simplifier_fn})>>>)
 
 Declares the symbol @var{property_name} to be an operator property,
 which is simplified by @var{simplifier_fn},
@@ -1333,15 +1402,18 @@ Declare that @code{f} and @code{g} have the new property.
 @end group
 @end example
 
-@opencatbox
-@category{Operators}
-@category{Simplification}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Operators}
+@c @category{Simplification}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Operators)
 @anchor{outative}
-@defvr {Property} outative
+@c @defvr {Property} outative
+m4_defvr({Property}, outative)
 
 @code{declare(f, outative)} tells the Maxima simplifier that constant factors
 in the argument of @code{f} can be pulled out.
@@ -1393,15 +1465,18 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Operators}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Operators}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification functions)
 @anchor{radcan}
-@deffn {Function} radcan (@var{expr})
+@c @deffn {Function} radcan (@var{expr})
+m4_deffn({Function}, radcan, <<<(@var{expr})>>>)
 
 Simplifies @var{expr}, which can contain logs, exponentials, and radicals, by 
 converting it into a form which is canonical over a large class of expressions 
@@ -1455,16 +1530,19 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Simplification functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification flags and variables)
 @anchor{radexpand}
-@defvr {Option variable} radexpand
+@c @defvr {Option variable} radexpand
+m4_defvr({Option variable}, radexpand)
 Default value: @code{true}
 
 @code{radexpand} controls some simplifications of radicals.
@@ -1490,32 +1568,38 @@ If @code{radexpand} is @code{false}, or @code{radexpand} is @code{true} and
 @c CORRECT STATEMENT HERE ???
 Note that @code{domain} only matters when @code{radexpand} is @code{true}.
 
-@opencatbox
-@category{Simplification flags and variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Simplification flags and variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Operators)
 @anchor{rassociative}
-@defvr {Property} rassociative
+@c @defvr {Property} rassociative
+m4_defvr({Property}, rassociative)
 
 @code{declare (g, rassociative)} tells the Maxima
 simplifier that @code{g} is right-associative.  E.g.,
 @code{g(g(a, b), g(c, d))} simplifies to @code{g(a, g(b, g(c, d)))}.
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Operators}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Operators}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Simplification functions)
 @anchor{scsimp}
-@deffn {Function} scsimp (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})
+@c @deffn {Function} scsimp (@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})
+m4_deffn({Function}, scsimp, <<<(@var{expr}, @var{rule_1}, @dots{}, @var{rule_n})>>>)
 
 Sequential Comparative Simplification (method due to Stoute).
 @code{scsimp} attempts to simplify @var{expr}
@@ -1526,14 +1610,17 @@ simplifications are tried, it returns the original answer.
 @c MERGE EXAMPLES INTO THIS FILE
 @code{example (scsimp)} displays some examples.
 
-@opencatbox
-@category{Simplification functions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Simplification functions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Evaluation flags)
 @anchor{simp}
-@defvr {Option variable} simp
+@c @defvr {Option variable} simp
+m4_defvr({Option variable}, simp)
 Default value: @code{true}
 
 @code{simp} enables simplification.  This is the default.  @code{simp} is also
@@ -1599,16 +1686,19 @@ assignment has occurred during the evaluation phase of the expression.
 @end group
 @end example
 
-@opencatbox
-@category{Evaluation flags}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Evaluation flags}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c NEEDS CLARIFICATION, EXAMPLES
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Declarations and inferences, Operators)
 @anchor{symmetric}
-@defvr {Property} symmetric
+@c @defvr {Property} symmetric
+m4_defvr({Property}, symmetric)
 
 @code{declare (h, symmetric)} tells the Maxima
 simplifier that @code{h} is a symmetric function.  E.g., @code{h (x, z, y)} 
@@ -1616,15 +1706,18 @@ simplifies to @code{h (x, y, z)}.
 
 @code{commutative} is synonymous with @code{symmetric}.
 
-@opencatbox
-@category{Declarations and inferences}
-@category{Operators}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Declarations and inferences}
+@c @category{Operators}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Expressions)
 @anchor{xthru}
-@deffn {Function} xthru (@var{expr})
+@c @deffn {Function} xthru (@var{expr})
+m4_deffn({Function}, xthru, <<<(@var{expr})>>>)
 
 Combines all terms of @var{expr} (which should be a sum) over a common
 denominator without expanding products and exponentiated sums as @code{ratsimp}
@@ -1662,8 +1755,9 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Expressions}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Expressions}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
