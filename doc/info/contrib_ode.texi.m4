@@ -240,18 +240,22 @@ Extensive debugging traces and messages are displayed if the command
 @node Functions and Variables for contrib_ode, Possible improvements to contrib_ode, Introduction to contrib_ode, contrib_ode-pkg
 @section Functions and Variables for contrib_ode
 
-@deffn {Function} contrib_ode (@var{eqn}, @var{y}, @var{x})
+m4_setcat(Package contrib_ode)
+@c @deffn {Function} contrib_ode (@var{eqn}, @var{y}, @var{x})
+m4_deffn({Function}, contrib_ode, <<<(@var{eqn}, @var{y}, @var{x})>>>)
 
 Returns a list of solutions of the ODE @var{eqn} with 
 independent variable @var{x} and dependent variable @var{y}.
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Function} odelin (@var{eqn}, @var{y}, @var{x})
+@c @deffn {Function} odelin (@var{eqn}, @var{y}, @var{x})
+m4_deffn({Function}, odelin, <<<(@var{eqn}, @var{y}, @var{x})>>>)
 
 @code{odelin} solves linear homogeneous ODEs of first and 
 second order with 
@@ -277,13 +281,15 @@ special functions.
 @end group
 @end example
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Function} ode_check (@var{eqn}, @var{soln})
+@c @deffn {Function} ode_check (@var{eqn}, @var{soln})
+m4_deffn({Function}, ode_check, <<<(@var{eqn}, @var{soln})>>>)
 
 Returns the value of ODE @var{eqn} after substituting a
 possible solution @var{soln}.  The value is equivalent to 
@@ -322,55 +328,65 @@ zero if @var{soln} is a solution of @var{eqn}.
 @end group
 @end example
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@defvr {System variable} method
+@c @defvr {System variable} method
+m4_defvr({System variable}, method)
 
 The variable @code{method} is set to the successful solution
 method. 
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
-@defvr {Variable} %c
+@c @defvr {Variable} %c
+m4_defvr({Variable}, %c)
 
 @code{%c} is the integration constant for first order ODEs.
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
-@defvr {Variable} %k1
+@c @defvr {Variable} %k1
+m4_defvr({Variable}, %k1)
 
 @code{%k1} is the first integration constant for second order ODEs.
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
-@defvr {Variable} %k2
+@c @defvr {Variable} %k2
+m4_defvr({Variable}, %k2)
 
 @code{%k2} is the second integration constant for second order ODEs.
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @anchor{gauss_a}
-@deffn {Function} gauss_a (@var{a}, @var{b}, @var{c}, @var{x})
+@c @deffn {Function} gauss_a (@var{a}, @var{b}, @var{c}, @var{x})
+m4_deffn({Function}, gauss_a, <<<(@var{a}, @var{b}, @var{c}, @var{x})>>>)
 
 @code{gauss_a(a,b,c,x)} and @code{gauss_b(a,b,c,x)} are 2F1 
 geometric functions.  They represent any two independent
@@ -383,44 +399,52 @@ functions may change in future releases of Maxima.
 
 See also @mrefcomma{gauss_b} @mref{dgauss_a} and @mrefdot{gauss_b}
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{gauss_b}
-@deffn {Function} gauss_b (@var{a}, @var{b}, @var{c}, @var{x})
+@c @deffn {Function} gauss_b (@var{a}, @var{b}, @var{c}, @var{x})
+m4_deffn({Function}, gauss_b, <<<(@var{a}, @var{b}, @var{c}, @var{x})>>>)
 See @mrefdot{gauss_a}
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{dgauss_a}
-@deffn {Function} dgauss_a (@var{a}, @var{b}, @var{c}, @var{x})
+@c @deffn {Function} dgauss_a (@var{a}, @var{b}, @var{c}, @var{x})
+m4_deffn({Function}, dgauss_a, <<<(@var{a}, @var{b}, @var{c}, @var{x})>>>)
 The derivative with respect to @var{x} of @code{gauss_a(@var{a}, @var{b}, @var{c}, @var{x})}.
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Function} dgauss_b (@var{a}, @var{b}, @var{c}, @var{x})
+@c @deffn {Function} dgauss_b (@var{a}, @var{b}, @var{c}, @var{x})
+m4_deffn({Function}, dgauss_b, <<<(@var{a}, @var{b}, @var{c}, @var{x})>>>)
 The derivative with respect to @var{x} of @code{gauss_b(@var{a}, @var{b}, @var{c}, @var{x})}.
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{kummer_m}
-@deffn {Function} kummer_m (@var{a}, @var{b}, @var{x})
+@c @deffn {Function} kummer_m (@var{a}, @var{b}, @var{x})
+m4_deffn({Function}, kummer_m, <<<(@var{a}, @var{b}, @var{x})>>>)
 
 Kummer's M function, as defined in Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Section 13.1.2.
@@ -431,47 +455,56 @@ function may change in future releases of Maxima.
 
 See also @mrefcomma{kummer_u} @mrefcomma{dkummer_m} and @mrefdot{dkummer_u}
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{kummer_u}
-@deffn {Function} kummer_u (@var{a}, @var{b}, @var{x})
+@c @deffn {Function} kummer_u (@var{a}, @var{b}, @var{x})
+m4_deffn({Function}, kummer_u, <<<(@var{a}, @var{b}, @var{x})>>>)
 
 Kummer's U function, as defined in Abramowitz and Stegun,
 @i{Handbook of Mathematical Functions}, Section 13.1.3.
 
 See @mrefdot{kummer_m}
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{dkummer_m}
-@deffn {Function} dkummer_m (@var{a}, @var{b}, @var{x})
+@c @deffn {Function} dkummer_m (@var{a}, @var{b}, @var{x})
+m4_deffn({Function}, dkummer_m, <<<(@var{a}, @var{b}, @var{x})>>>)
 The derivative with respect to @var{x} of @code{kummer_m(@var{a}, @var{b}, @var{x})}.
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{dkummer_u}
-@deffn {Function} dkummer_u (@var{a}, @var{b}, @var{x})
+@c @deffn {Function} dkummer_u (@var{a}, @var{b}, @var{x})
+m4_deffn({Function}, dkummer_u, <<<(@var{a}, @var{b}, @var{x})>>>)
 The derivative with respect to @var{x} of @code{kummer_u(@var{a}, @var{b}, @var{x})}.
 
-@opencatbox
-@category{Package contrib_ode}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Function} bessel_simplify (@var{expr})
+m4_setcat(Package contrib_ode, Bessel functions, Special functions)
+@c @deffn {Function} bessel_simplify (@var{expr})
+m4_deffn({Function}, bessel_simplify, <<<(@var{expr})>>>)
 Simplifies expressions containing Bessel functions bessel_j, bessel_y,
 bessel_i, bessel_k, hankel_1, hankel_2, strauve_h and strauve_l.
 Recurrence relations (given in Abramowitz and Stegun,
@@ -511,28 +544,32 @@ differ by less than 2.
 @end group
 @end example
 
-@opencatbox
-@category{Package contrib_ode}
-@category{Bessel functions}
-@category{Special functions}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @category{Bessel functions}
+@c @category{Special functions}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Function} expintegral_e_simplify (@var{expr})
+m4_setcat(Package contrib_ode, Exponential Integrals, Special functions)
+@c @deffn {Function} expintegral_e_simplify (@var{expr})
+m4_deffn({Function}, expintegral_e_simplify, <<<(@var{expr})>>>)
 Simplify expressions containing exponential integral expintegral_e
 using the recurrence (A&S 5.1.14).
 
    expintegral_e(n+1,z) 
         = (1/n) * (exp(-z)-z*expintegral_e(n,z))      n = 1,2,3 ....
 
-@opencatbox
-@category{Package contrib_ode}
-@category{Exponential Integrals}
-@category{Special functions}
-@closecatbox
+@c @opencatbox
+@c @category{Package contrib_ode}
+@c @category{Exponential Integrals}
+@c @category{Special functions}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @node Possible improvements to contrib_ode, Test cases for contrib_ode, Functions and Variables for contrib_ode, contrib_ode-pkg
