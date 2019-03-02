@@ -90,7 +90,9 @@ Messge: Condition designator ((MLABEL) $%O9 $X) is not of type (OR SYMBOL STRING
 @node Functions and Variables for alt-display,  , Introduction to alt-display, alt-display-pkg
 @section Functions and Variables for alt-display
 
-@deffn {Function} define_alt_display (@var{function}(@var{input}), @var{expr})
+m4_setcat(Package alt-display)
+@c @deffn {Function} define_alt_display (@var{function}(@var{input}), @var{expr})
+m4_deffn({Function}, define_alt_display, <<<(@var{function}(@var{input}), @var{expr})>>>)
 This function is similar to @code{define}: it evaluates its arguments
 and expands into a function definition. The @var{function} is a
 function of a single input @var{input}. For convenience, a substitution
@@ -129,14 +131,16 @@ The display variables @code{alt_display1d} and @code{alt_display2d} are
 both bound to @code{false} in the body of @code{time_stamp} to prevent
 an infinite recursion in @code{displa}.
 
-@opencatbox
-@category{Package alt-display}
-@closecatbox
+@c @opencatbox
+@c @category{Package alt-display}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{info_display}
-@deffn {Function} info_display (@var{form})
+@c @deffn {Function} info_display (@var{form})
+m4_deffn({Function}, info_display, <<<(@var{form})>>>)
 This is an alias for the default 1-d display function. It may be used as
 an alternative 1-d or 2-d display function.
 
@@ -151,14 +155,16 @@ an alternative 1-d or 2-d display function.
 (%o3) x/y
 @end example
 
-@opencatbox
-@category{Package alt-display}
-@closecatbox
+@c @opencatbox
+@c @category{Package alt-display}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{mathml_display}
-@deffn {Function} mathml_display (@var{form})
+@c @deffn {Function} mathml_display (@var{form})
+m4_deffn({Function}, mathml_display, <<<(@var{form})>>>)
 Produces MathML output.
 
 @example
@@ -170,14 +176,16 @@ Produces MathML output.
  <mo>,</mo><mi>done</mi> </mfenced> </math>
 @end example
 
-@opencatbox
-@category{Package alt-display}
-@closecatbox
+@c @opencatbox
+@c @category{Package alt-display}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{tex_display}
-@deffn {Function} tex_display (@var{form})
+@c @deffn {Function} tex_display (@var{form})
+m4_deffn({Function}, tex_display, <<<(@var{form})>>>)
 Produces TeX output.
 
 @example
@@ -187,13 +195,15 @@ Produces TeX output.
 \mbox@{\tt\red(@{\it \%o_3@}) \black@}$$@{@{x@}\over@{y^2+x^2@}@}$$
 @end example
 
-@opencatbox
-@category{Package alt-display}
-@closecatbox
+@c @opencatbox
+@c @category{Package alt-display}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Function} multi_display_for_texinfo (@var{form})
+@c @deffn {Function} multi_display_for_texinfo (@var{form})
+m4_deffn({Function}, multi_display_for_texinfo, <<<(@var{form})>>>)
 Produces Texinfo output using all three display functions.
 
 @example
@@ -223,24 +233,28 @@ Produces Texinfo output using all three display functions.
 @@end ifinfo
 @end example
 
-@opencatbox
-@category{Package alt-display}
-@closecatbox
+@c @opencatbox
+@c @category{Package alt-display}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Functions} reset_displays ()
+@c @deffn {Functions} reset_displays ()
+m4_deffn({Functions}, reset_displays, <<<()>>>)
 Resets the prompt prefix and suffix to the empty string, and sets both
 1-d and 2-d display functions to the default.
 
-@opencatbox
-@category{Package alt-display}
-@closecatbox
+@c @opencatbox
+@c @category{Package alt-display}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{set_alt_display}
-@deffn {Function} set_alt_display (@var{num}, @var{display-function})
+@c @deffn {Function} set_alt_display (@var{num}, @var{display-function})
+m4_deffn({Function}, set_alt_display, <<<(@var{num}, @var{display-function})>>>)
 The input @var{num} is the display to set; it may be either 1 or 2. The
 second input @var{display-function} is the display function to use. The
 display function may be either a Maxima function or a @code{lambda}
@@ -261,14 +275,16 @@ A user-defined display function should take care that it @emph{prints}
 its output. A display function that returns a string will appear to
 display nothing, nor cause any errors.
 
-@opencatbox
-@category{Package alt-display}
-@closecatbox
+@c @opencatbox
+@c @category{Package alt-display}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{set_prompt}
-@deffn {Function} set_prompt (@var{fix}, @var{expr})
+@c @deffn {Function} set_prompt (@var{fix}, @var{expr})
+m4_deffn({Function}, set_prompt, <<<(@var{fix}, @var{expr})>>>)
 Set the prompt prefix or suffix to @var{expr}. The input @var{fix} must
 evaluate to one of @code{prefix}, @code{suffix}, @code{general},
 @code{prolog} or @code{epilog}. The input @var{expr} must evaluate to
@@ -340,11 +356,12 @@ by an open square bracket (91); each string ends with a lower-case m
 @url{http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html} provide
 information on how to use control strings to set the terminal colors.
 
-@opencatbox
-@category{Package alt-display}
-@closecatbox
+@c @opencatbox
+@c @category{Package alt-display}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c Local Variables: 
 @c mode: texinfo
