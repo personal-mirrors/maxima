@@ -667,7 +667,7 @@
       ($complbase base
           (cons (flet ((franz.concat (&rest args)
                            "equivalent to Franz Lisp 'concat'."
-                           (values (maxima-intern (format nil "~{~A~}" args)))))
+                           (values (intern (format nil "~{~A~}" args) "MAXIMA"))))
                   (franz.concat base i))
                 rlist)
           (1+ i)
@@ -679,7 +679,7 @@
         (list card
               (flet ((franz.concat (&rest args)
                          "equivalent to Franz Lisp 'concat'."
-                         (values (maxima-intern (format nil "~{~A~}" args)))))
+                         (values (intern (format nil "~{~A~}" args) "MAXIMA"))))
                 (franz.concat base 1)))
         (cons card (cdr list)))))
 

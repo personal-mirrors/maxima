@@ -345,7 +345,7 @@
 
  ;;;CREATES UNIQUE NAMES FOR VARIABLE OF INTEGRATION
 (defun createname (head tail)
-  (maxima-intern (format nil "~S~S" head tail)))
+  (intern (format nil "~S~S" head tail) "MAXIMA"))
 
 ;;;REDUCES LAPLACE(F(T)/T**N,T,S) CASE TO LAPLACE(F(T)/T**(N-1),T,S) CASE
 (defun hackit (exponent rest parm)

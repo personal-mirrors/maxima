@@ -391,8 +391,9 @@
   (prog (hlang flag exp)
 	(setq hlang *gentranlang)
 	(setq *gentranlang lang)
-	(setq flag (maxima-intern (compress (append (explode '*)
-					            (explode lang)))))
+	(setq flag (intern (compress (append (explode '*)
+					     (explode lang)))
+                           "MAXIMA"))
 	(while (eval flag)
 	       (progn
 		(setq exp (gentranswitch1 (list (readvexp (cons nil *currin*))

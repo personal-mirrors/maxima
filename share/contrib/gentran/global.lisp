@@ -516,6 +516,6 @@
 	((numberp x)
 	 x)
 	((member (char (string x) 0) '(#\$ #\% #\&))
-	 (maxima-intern (subseq (string x) 1)))
+	 (intern (subseq (string x) 1) "MAXIMA"))
 	(t
 	 x)))

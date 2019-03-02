@@ -884,7 +884,7 @@
     (loop for v in obj
 	  for i from 1
 	  do
-	  (setq me `(setq ,(maxima-intern (format nil "PART~A" i)) (rerat ',v)))
+	  (setq me `(setq ,(intern (format nil "PART~A" i) "MAXIMA") (rerat ',v)))
 	  (format st "~%;;next part ~%~S" me))
     (send st :pathname))))
 
@@ -895,7 +895,7 @@
     (loop for v in *blew-up*
 	  for i from 1
 	  do
-	  (setq me `(setq ,(maxima-intern (format nil "PART~A" i)) (rerat ',v)))
+	  (setq me `(setq ,(intern (format nil "PART~A" i) "MAXIMA") (rerat ',v)))
 	  (format st "~%;;next part ~%~S" me))
     (send st :pathname))))
 

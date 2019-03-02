@@ -374,7 +374,7 @@
 		;;;corresponding-variables-column
 		when tem
 		do
-		(cond ($solution_parameter (setq parameter (maxima-intern (format nil "~a~d" $solution_parameter ii))))
+		(cond ($solution_parameter (setq parameter (intern (format nil "~a~d" $solution_parameter ii) "MAXIMA")))
 		      (t
 		       (error "unexpected case")
 		       (setq parameter

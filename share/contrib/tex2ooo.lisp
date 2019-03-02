@@ -136,7 +136,7 @@
 	   finally
 	   (cond ((eql begin-sub t)
 		  (vector-push #\} tem))))
-    (maxima-intern tem)))
+    (intern tem "MAXIMA")))
 
 (defun texnumformat(atom)
   (let (r firstpart exponent)

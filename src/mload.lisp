@@ -560,13 +560,13 @@
 				(multiple-value-list (get-decoded-time)))))
 		      (format nil "~a:~a:~a" (car tem) (cadr tem) (caadr tem))))
     (loop for i in a-list
-	   when (and c-lines (boundp (setq input-symbol (maxima-intern (format nil "$~A~A" '#:c i)))))
+	   when (and c-lines (boundp (setq input-symbol (intern (format nil "$~A~A" '#:c i) "MAXIMA"))))
 	   do
 	   (format st "~% C~3A;  "   i)
 	   (mgrind (symbol-value input-symbol) st)
 	   (format st ";")
 	   when (and d-lines
-		     (boundp (setq input-symbol (maxima-intern (format nil "$~A~A" '#:d i)))))
+		     (boundp (setq input-symbol (intern (format nil "$~A~A" '#:d i) "MAXIMA"))))
 	   do
 	   (format st "~% D~3A:  "   i)
 	   (mgrind (symbol-value input-symbol) st)

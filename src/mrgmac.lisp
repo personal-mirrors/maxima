@@ -46,9 +46,9 @@
     `',(second x)))
 
 (defun define-mode (name desc)
-  (let ((c (maxima-intern (format nil "C-~A" name)))
-	(s (maxima-intern (format nil "S-~A" name)))
-	(a (maxima-intern (format nil "A-~A" name))))
+  (let ((c (intern (format nil "C-~A" name) "MAXIMA"))
+	(s (intern (format nil "S-~A" name) "MAXIMA"))
+	(a (intern (format nil "A-~A" name) "MAXIMA")))
     (define-macro c (defc desc))
     (define-macro s (defs desc))
     (define-macro a (defa desc))

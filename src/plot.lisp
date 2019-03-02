@@ -191,7 +191,7 @@ sin(y)*(10.0+6*cos(x)),
 	  (key (first list) (first list))
 	  (value (second list) (second list)))
 	 ((endp list))
-      (let ((max-key (maxima-intern (concatenate 'string "$" (symbol-name key)))))
+      (let ((max-key (intern (concatenate 'string "$" (symbol-name key)) "MAXIMA")))
 	(if (consp value)
 	    (push (cons '(mlist) (cons max-key value)) options)
 	    (push (list '(mlist) max-key value) options))))

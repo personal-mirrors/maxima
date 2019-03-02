@@ -299,7 +299,7 @@
 ;; I don't know how to detect :uses :maxima, maybe that is easy.
 
 (defun intern-invert-case (string)
-  (maxima-intern (maybe-invert-string-case string)))
+  (intern (maybe-invert-string-case string) "MAXIMA"))
 
 (defun stripdollar-string (x)
   (if (and (stringp x) (equal (car (exploden x)) #\$))

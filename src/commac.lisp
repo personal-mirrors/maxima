@@ -104,12 +104,6 @@
 	 name)
 	(t (error "~S is illegal first arg for *array" name))))
 
-(defun maxima-intern (string)
-  (intern string "MAXIMA"))
-
-(defun maxima-find-symbol (string)
-  (find-symbol string "MAXIMA"))
-
 ;;;    Change maclisp array referencing.
 ;;;   Idea1: Make changes in the code which will allow the code to still run in maclisp,
 ;;;yet will allow, with the appropriate macro definitions of array,arraycall, etc,
@@ -426,7 +420,7 @@ values")
 
 (defun explodec (symb)		;is called for symbols and numbers
   (loop for v in (coerce (print-invert-case symb) 'list)
-     collect (maxima-intern (string v))))
+     collect (intern (string v) "MAXIMA")))
 
 ;;; If the 'string is all the same case, invert the case.  Otherwise,
 ;;; do nothing.
@@ -474,7 +468,7 @@ values")
   ;; Like read-from-string with readtable-case :invert
   ;; Supply package argument in case this function is called
   ;; from outside the :maxima package.
-  (maxima-intern (maybe-invert-string-case string)))
+  (intern (maybe-invert-string-case string) "MAXIMA"))
 
 #-(or gcl scl allegro)
 (let ((local-table (copy-readtable nil)))
@@ -533,7 +527,7 @@ values")
 ;; Note:  symb can also be a number, not just a symbol.
 (defun explode (symb)
   (declare (optimize (speed 3)))
-  (map 'list #'(lambda (v) (maxima-intern (string v))) (format nil "~a" symb)))
+  (map 'list #'(lambda (v) (intern (string v) "MAXIMA")) (format nil "~a" symb)))
 
 ;;; return the first character of the name of a symbol or a string or char
 (defun get-first-char (symb)
@@ -543,11 +537,11 @@ values")
 (defun getchar (symb i)
   (let ((str (string symb)))
     (if (<= 1 i (length str))
-	(maxima-intern (string (char str (1- i))))
+	(intern (string (char str (1- i))) "MAXIMA")
 	nil)))
 
 (defun ascii (n)
-  (maxima-intern (string n)))
+  (intern (string n) "MAXIMA"))
 
 (defun maknam (lis)
   (loop for v in lis

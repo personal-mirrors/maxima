@@ -44,9 +44,10 @@
   (defmacro def-lisp-shadow (root-name)
     "Create a maxima variable $root_name that is an alias for the lisp name *root-name*.
 When one changes, the other does too."
-    (let ((maxima-name (maxima-intern (concatenate 'string "$"
-					           (substitute #\_ #\- (string root-name)))))
-	  (lisp-name (maxima-intern (concatenate 'string "*" (string root-name) "*"))))
+    (let ((maxima-name (intern (concatenate 'string "$"
+                                            (substitute #\_ #\- (string root-name)))
+                               "MAXIMA"))
+	  (lisp-name (intern (concatenate 'string "*" (string root-name) "*") "MAXIMA")))
       `(progn
 	 (defmvar ,maxima-name)
 	 (putprop ',maxima-name 'shadow-string-assignment 'assign)

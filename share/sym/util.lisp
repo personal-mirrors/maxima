@@ -102,7 +102,7 @@
     (t (lvar_lettre (1- nb)
            (cons (flet ((franz.concat (&rest args)
                             "equivalent to Franz Lisp 'concat'."
-                            (values (maxima-intern (format nil "~{~A~}" args)))))
+                            (values (intern (format nil "~{~A~}" args) "MAXIMA"))))
                    (franz.concat lettre nb))
                  lvar)
            lettre))))
@@ -466,7 +466,7 @@
 
 (defun $card_stab_init ($part $egal)
   (card_stab (cdr $part)
-             (maxima-find-symbol (string $egal))))
+             (find-symbol (string $egal) "MAXIMA")))
 
 (defun card_stab (s egal)
   (let ((lmultip (sort (multiplicites s egal) '<)))

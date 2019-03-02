@@ -631,7 +631,7 @@
   (cond (strin (setq strin  (concatenate 'string (string strin) "NEW")))
 	(t (setq strin "NEW")))
   (loop for i from 1 to n
-	collecting (add-newvar (maxima-intern (format nil "$~A~A" strin i)))))
+	collecting (add-newvar (intern (format nil "$~A~A" strin i) "MAXIMA"))))
 
 ;(defun apply-rmap (rmap  fns &key (coords-for-fn *xxx*) subs
 ;		   &aux (the-denom (rmap-denom rmap)))
@@ -1435,7 +1435,7 @@
 	((and (symbolp form)
 	      (not (member form '(ldata s-var zopens rmap zopen pre-ldata-sheaves
 				  quote inequality eqns) :test #'eq)))
-	 (add-newvar (maxima-intern (string-append "$" (string form)))))
+	 (add-newvar (intern (string-append "$" (string form)) "MAXIMA")))
 	(t (do ((r form (cdr r)))
 	       ((not (consp r)) form)
 	     (setf (car r) (rerat (car r)))))))

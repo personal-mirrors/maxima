@@ -137,7 +137,7 @@
         (i 1))
      (cons (flet ((franz.ascii (charcode)
                      "equivalent to Franz Lisp 'ascii'."
-                     (maxima-intern (string (code-char charcode)))))
+                     (intern (string (code-char charcode)) "MAXIMA")))
             (franz.ascii (car hj)))
           (apply '+
                  (mapcar #'(lambda (nbascii)

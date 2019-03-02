@@ -26,7 +26,7 @@
     ((symbolp a)
      (meval
        `(($array)
-         ,(maxima-intern (symbol-name (gensym "$G")))
+         ,(intern (symbol-name (gensym "$G")) "MAXIMA")
          $float
          ,(1- (length (mgetarray a))))))))
 
@@ -153,7 +153,7 @@
 	  #'(lambda (array)
 	      (let ((ar (complex-cl-vector->vector array))
 		    (sym (meval `(($array)
-				  ,(maxima-intern (symbol-name (gensym "$G")))
+				  ,(intern (symbol-name (gensym "$G")) "MAXIMA")
 				  $float
 				  ,(1- (length array))))))
 		(setf (symbol-array (mget sym 'maxima::array))
@@ -293,7 +293,7 @@
 	    #'(lambda (array)
 		(let ((ar (complex-cl-vector->vector array))
 		      (sym (meval `(($array)
-				    ,(maxima-intern (symbol-name (gensym "$G")))
+				    ,(intern (symbol-name (gensym "$G")) "MAXIMA")
 				    $float
 				    ,(1- (length array))))))
 		  (setf (symbol-array (mget sym 'maxima::array))
@@ -368,7 +368,7 @@
   "Outputs a Maxima array as does Maxima's 'array()' function."
   (let ((lisp-array (bfft-vector->lisp-array arr))
         (maxima-symbol (meval `(($array)
-                                ,(maxima-intern (symbol-name (gensym "$G")))
+                                ,(intern (symbol-name (gensym "$G")) "MAXIMA")
                                 $float
                                 ,(1- (length arr))))))
     (setf (symbol-array (mget maxima-symbol 'maxima::array)) lisp-array)
@@ -426,7 +426,7 @@
 	  #'(lambda (array)
 	      (let ((ar (bfft-vector->lisp-array array))
 		    (sym (meval `(($array)
-				  ,(maxima-intern (symbol-name (gensym "$G")))
+				  ,(intern (symbol-name (gensym "$G")) "MAXIMA")
 				  $float
 				  ,(1- (length array))))))
 		(setf (symbol-array (mget sym 'maxima::array))

@@ -115,7 +115,7 @@
 (defmvar $%rnum 0)
 
 (defun make-param ()
-  (let ((param (maxima-intern (format nil "~A~D" '$%r (incf $%rnum)))))
+  (let ((param (intern (format nil "~A~D" '$%r (incf $%rnum)) "MAXIMA")))
     (tuchus $%rnum_list param)
     param))
 

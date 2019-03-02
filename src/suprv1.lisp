@@ -572,7 +572,7 @@
 	((null x) 'false)
 	((eq x t) 'true)
         ((member (get-first-char x) '(#\$ #\%) :test #'char=)
-         (maxima-intern (subseq (string x) 1)))
+         (intern (subseq (string x) 1) "MAXIMA"))
 	(t x)))
 
 (defun fullstrip (x)
