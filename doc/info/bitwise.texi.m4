@@ -12,8 +12,10 @@ mechanism.
 @node Functions and Variables for bitwise, , Top, Top
 @section Functions and Variables for bitwise
 
+m4_setcat(Number theory, Binary operations, Package bitwise)
 @anchor{bit_not}
-@deffn {Function} bit_not (@var{int})
+@c @deffn {Function} bit_not (@var{int})
+m4_deffn({Function}, bit_not, <<<(@var{int})>>>)
 
 Inverts all bits of a signed integer. The result of this action reads
 @code{-int - 1}.
@@ -50,15 +52,17 @@ Inverts all bits of a signed integer. The result of this action reads
 @end group
 @end example
 
-@opencatbox
-@category{Number theory}
-@category{Binary operations}
-@category{Package bitwise}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Binary operations}
+@c @category{Package bitwise}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bit_and}
-@deffn {Function} bit_and (@var{int1}, ...)
+@c @deffn {Function} bit_and (@var{int1}, ...)
+m4_deffn({Function}, bit_and, <<<(@var{int1}, ...)>>>)
 
 This function calculates a bitwise @code{and} of two or more signed integers.
 
@@ -113,15 +117,17 @@ is taken into consideration by the function.
 @end group
 @end example
 
-@opencatbox
-@category{Number theory}
-@category{Binary operations}
-@category{Package bitwise}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Binary operations}
+@c @category{Package bitwise}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bit_or}
-@deffn {Function} bit_or (@var{int1}, ...)
+@c @deffn {Function} bit_or (@var{int1}, ...)
+m4_deffn({Function}, bit_or, <<<(@var{int1}, ...)>>>)
 
 This function calculates a bitwise @code{or} of two or more signed integers.
 
@@ -176,15 +182,17 @@ is taken into consideration by the function.
 @end group
 @end example
 
-@opencatbox
-@category{Number theory}
-@category{Binary operations}
-@category{Package bitwise}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Binary operations}
+@c @category{Package bitwise}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bit_xor}
-@deffn {Function} bit_xor (@var{int1}, ...)
+@c @deffn {Function} bit_xor (@var{int1}, ...)
+m4_deffn({Function}, bit_xor, <<<(@var{int1}, ...)>>>)
 
 This function calculates a bitwise @code{or} of two or more signed integers.
 
@@ -239,16 +247,18 @@ is taken into consideration by the function.
 @end group
 @end example
 
-@opencatbox
-@category{Number theory}
-@category{Binary operations}
-@category{Package bitwise}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Binary operations}
+@c @category{Package bitwise}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{bit_lsh}
-@deffn {Function} bit_lsh (@var{int}, @var{nBits})
+@c @deffn {Function} bit_lsh (@var{int}, @var{nBits})
+m4_deffn({Function}, bit_lsh, <<<(@var{int}, @var{nBits})>>>)
 
 This function shifts all bits of the signed integer @code{int} to the left by
 @code{nBits} bits. The width of the integer is extended by @code{nBits} for
@@ -290,16 +300,18 @@ this process. The result of @code{bit_lsh} therefore is @code{int * 2}.
 (%o7)                          - 4
 @end group
 @end example
-@opencatbox
-@category{Number theory}
-@category{Binary operations}
-@category{Package bitwise}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Binary operations}
+@c @category{Package bitwise}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{bit_rsh}
-@deffn {Function} bit_rsh (@var{int}, @var{nBits})
+@c @deffn {Function} bit_rsh (@var{int}, @var{nBits})
+m4_deffn({Function}, bit_rsh, <<<(@var{int}, @var{nBits})>>>)
 
 This function shifts all bits of the signed integer @code{int} to the right by
 @code{nBits} bits. The width of the integer is reduced by @code{nBits} for
@@ -346,15 +358,17 @@ this process.
 (%o8)                          - 1
 @end group
 @end example
-@opencatbox
-@category{Number theory}
-@category{Binary operations}
-@category{Package bitwise}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Binary operations}
+@c @category{Package bitwise}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bit_length}
-@deffn {Function} bit_length (@var{int})
+@c @deffn {Function} bit_length (@var{int})
+m4_deffn({Function}, bit_length, <<<(@var{int})>>>)
 
 determines how many bits a variable needs to be long in order to store the
 number @code{int}. This function only operates on positive numbers.
@@ -385,15 +399,17 @@ number @code{int}. This function only operates on positive numbers.
 (%o5)                           4
 @end group
 @end example
-@opencatbox
-@category{Number theory}
-@category{Binary operations}
-@category{Package bitwise}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Binary operations}
+@c @category{Package bitwise}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bit_onep}
-@deffn {Function} bit_onep (@var{int}, @var{nBit})
+@c @deffn {Function} bit_onep (@var{int}, @var{nBit})
+m4_deffn({Function}, bit_onep, <<<(@var{int}, @var{nBit})>>>)
 
 determines if bits @code{nBit} is set in the signed integer @code{int}.
 
@@ -493,9 +509,10 @@ is taken into consideration by the function.
 @end group
 @end example
 
-@opencatbox
-@category{Number theory}
-@category{Binary operations}
-@category{Package bitwise}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Number theory}
+@c @category{Binary operations}
+@c @category{Package bitwise}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
