@@ -7,8 +7,10 @@
 @section Functions and Variables for bode
 
 
+m4_setcat(Plotting, Package bode)
 @anchor{bode_gain}
-@deffn {Function} bode_gain (@var{H}, @var{range}, ...@var{plot_opts}...)
+@c @deffn {Function} bode_gain (@var{H}, @var{range}, ...@var{plot_opts}...)
+m4_deffn({Function}, bode_gain, <<<(@var{H}, @var{range}, ...@var{plot_opts}...)>>>)
 Function to draw Bode gain plots.
 
 Examples (1 through 7 from 
@@ -56,15 +58,17 @@ Examples (1 through 7 from
 
 To use this function write first @code{load("bode")}. See also @mrefdot{bode_phase}
 
-@opencatbox
-@category{Plotting}
-@category{Package bode}
-@closecatbox
+@c @opencatbox
+@c @category{Plotting}
+@c @category{Package bode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bode_phase}
-@deffn {Function} bode_phase (@var{H}, @var{range}, ...@var{plot_opts}...)
+@c @deffn {Function} bode_phase (@var{H}, @var{range}, ...@var{plot_opts}...)
+m4_deffn({Function}, bode_phase, <<<(@var{H}, @var{range}, ...@var{plot_opts}...)>>>)
 Function to draw Bode phase plots.
 
 Examples (1 through 7 from 
@@ -118,10 +122,11 @@ Examples (1 through 7 from
 
 To use this function write first @code{load("bode")}. See also @mrefdot{bode_gain}
 
-@opencatbox
-@category{Plotting}
-@category{Package bode}
-@closecatbox
+@c @opencatbox
+@c @category{Plotting}
+@c @category{Package bode}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
