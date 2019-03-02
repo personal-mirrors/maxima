@@ -56,7 +56,8 @@ References:
 @section Functions and Variables for cobyla
 
 @anchor{fmin_cobyla}
-@deffn {Function} fmin_cobyla @
+@c @deffn {Function} fmin_cobyla @
+m4_deffn({Function}, fmin_cobyla, <<<>>>) @
 @fname{fmin_cobyla} (@var{F}, @var{X}, @var{Y}) @
 @fname{fmin_cobyla} (@var{F}, @var{X}, @var{Y}, optional_args)
 
@@ -124,10 +125,12 @@ Return code with the following meanings
 
 @code{load("fmin_cobyla")} loads this function.
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bf_fmin_cobyla}
-@deffn {Function} bf_fmin_cobyla @
+@c @deffn {Function} bf_fmin_cobyla @
+m4_deffn({Function}, bf_fmin_cobyla, <<<>>>) @
 @fname{bf_fmin_cobyla} (@var{F}, @var{X}, @var{Y}) @
 @fname{bf_fmin_cobyla} (@var{F}, @var{X}, @var{Y}, optional_args)
 
@@ -139,7 +142,8 @@ See @mref{fmin_cobyla} for more information.
 
 @code{load("bf_fmin_cobyla")} loads this function.
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @node Examples for cobyla, , Functions and Variables for cobyla, cobyla-pkg
 @section Examples for cobyla
