@@ -49,8 +49,10 @@ with the command @code{load("combinatorics")}.
 @node Functions and Variables for Combinatorics,  , Package combinatorics, combinatorics-pkg
 @section Functions and Variables for Combinatorics
 
+m4_setcat(Package combinatorics)
 @anchor{apply_cycles}
-@deffn {Function} apply_cycles (@var{cl},@var{l})
+@c @deffn {Function} apply_cycles (@var{cl},@var{l})
+m4_deffn({Function}, apply_cycles, <<<(@var{cl},@var{l})>>>)
 
 Permutes the list or set @var{l} applying to it the list of cycles
 @var{cl}. The cycles at the end of the list are applied first and the
@@ -81,14 +83,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{cyclep}
-@deffn {Function} cyclep (@var{c}, @var{n})
+@c @deffn {Function} cyclep (@var{c}, @var{n})
+m4_deffn({Function}, cyclep, <<<(@var{c}, @var{n})>>>)
 
 Returns true if @var{c} is a valid cycle of order @var{n} namely, a list
 of non-repeated positive integers less or equal to @var{n}. Otherwise,
@@ -125,14 +129,16 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_cycles}
-@deffn {Function} perm_cycles (@var{p})
+@c @deffn {Function} perm_cycles (@var{p})
+m4_deffn({Function}, perm_cycles, <<<(@var{p})>>>)
 
 Returns permutation @var{p} as a product of cycles. The cycles are
 written in a canonical form, in which the lowest index in the cycle is
@@ -154,14 +160,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_decomp}
-@deffn {Function} perm_decomp (@var{p})
+@c @deffn {Function} perm_decomp (@var{p})
+m4_deffn({Function}, perm_decomp, <<<(@var{p})>>>)
 
 Returns the minimum set of adjacent transpositions whose product equals
 the given permutation @var{p}.
@@ -183,14 +191,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_inverse}
-@deffn {Function} perm_inverse (@var{p})
+@c @deffn {Function} perm_inverse (@var{p})
+m4_deffn({Function}, perm_inverse, <<<(@var{p})>>>)
 
 Returns the inverse of a permutation of @var{p}, namely, a permutation
 @var{q} such that the products @var{pq} and @var{qp} are equal to the
@@ -213,14 +223,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_length}
-@deffn {Function} perm_length (@var{p})
+@c @deffn {Function} perm_length (@var{p})
+m4_deffn({Function}, perm_length, <<<(@var{p})>>>)
 
 Determines the minimum number of adjacent transpositions necessary to
 write permutation @var{p} as a product of adjacent transpositions. An
@@ -243,14 +255,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_lex_next}
-@deffn {Function} perm_lex_next (@var{p})
+@c @deffn {Function} perm_lex_next (@var{p})
+m4_deffn({Function}, perm_lex_next, <<<(@var{p})>>>)
 
 Returns the permutation that comes after the given permutation @var{p},
 in the sequence of permutations in lexicographic order.
@@ -269,14 +283,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_lex_rank}
-@deffn {Function} perm_lex_rank (@var{p})
+@c @deffn {Function} perm_lex_rank (@var{p})
+m4_deffn({Function}, perm_lex_rank, <<<(@var{p})>>>)
 
 Finds the position of permutation @var{p}, an integer from 1 to the
 degree @var{n} of the permutation, in the sequence of permutations in
@@ -298,14 +314,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_lex_unrank}
-@deffn {Function} perm_lex_unrank (@var{n}, @var{i})
+@c @deffn {Function} perm_lex_unrank (@var{n}, @var{i})
+m4_deffn({Function}, perm_lex_unrank, <<<(@var{n}, @var{i})>>>)
 
 Returns the @emph{n}-degree permutation at position @var{i} (from 1 to
 @emph{n}!) in the lexicographic ordering of permutations.
@@ -326,14 +344,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_next}
-@deffn {Function} perm_next (@var{p})
+@c @deffn {Function} perm_next (@var{p})
+m4_deffn({Function}, perm_next, <<<(@var{p})>>>)
 
 Returns the permutation that comes after the given permutation @var{p},
 in the sequence of permutations in Trotter-Johnson order.
@@ -354,14 +374,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_parity}
-@deffn {Function} perm_parity (@var{p})
+@c @deffn {Function} perm_parity (@var{p})
+m4_deffn({Function}, perm_parity, <<<(@var{p})>>>)
 
 Finds the parity of permutation @var{p}: 0 if the minimum number of
 adjacent transpositions necessary to write permutation @var{p} as a
@@ -383,14 +405,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_rank}
-@deffn {Function} perm_rank (@var{p})
+@c @deffn {Function} perm_rank (@var{p})
+m4_deffn({Function}, perm_rank, <<<(@var{p})>>>)
 
 Finds the position of permutation @var{p}, an integer from 1 to the
 degree @var{n} of the permutation, in the sequence of permutations in
@@ -412,14 +436,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_undecomp}
-@deffn {Function} perm_undecomp (@var{cl}, @var{n})
+@c @deffn {Function} perm_undecomp (@var{cl}, @var{n})
+m4_deffn({Function}, perm_undecomp, <<<(@var{cl}, @var{n})>>>)
 
 Converts the list of cycles @var{cl} of degree @var{n} into an @var{n}
 degree permutation, equal to their product.
@@ -440,14 +466,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perm_unrank}
-@deffn {Function} perm_unrank (@var{n}, @var{i})
+@c @deffn {Function} perm_unrank (@var{n}, @var{i})
+m4_deffn({Function}, perm_unrank, <<<(@var{n}, @var{i})>>>)
 
 Returns the @emph{n}-degree permutation at position @var{i} (from 1 to
 @emph{n}!) in the Trotter-Johnson ordering of permutations.
@@ -468,14 +496,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{permp}
-@deffn {Function} permp (@var{p})
+@c @deffn {Function} permp (@var{p})
+m4_deffn({Function}, permp, <<<(@var{p})>>>)
 
 Returns true if @var{p} is a valid permutation namely, a list of length
 @var{n}, whose elements are all the positive integers from 1 to @var{n},
@@ -500,14 +530,16 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perms}
-@deffn {Function} perms @
+@c @deffn {Function} perms @
+m4_deffn({Function}, perms, <<<>>>) @
 @fname{perms} (@var{n}) @
 @fname{perms} (@var{n}, @var{i}) @
 @fname{perms} (@var{n}, @var{i}, @var{j})
@@ -558,14 +590,16 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{perms_lex}
-@deffn {Function} perms_lex @
+@c @deffn {Function} perms_lex @
+m4_deffn({Function}, perms_lex, <<<>>>) @
 @fname{perms_lex} (@var{n}) @
 @fname{perms_lex} (@var{n}, @var{i}) @
 @fname{perms_lex} (@var{n}, @var{i}, @var{j})
@@ -621,14 +655,16 @@ Examples:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{permult}
-@deffn {Function} permult (@var{p_1}, @dots{}, @var{p_m})
+@c @deffn {Function} permult (@var{p_1}, @dots{}, @var{p_m})
+m4_deffn({Function}, permult, <<<(@var{p_1}, @dots{}, @var{p_m})>>>)
 
 Returns the product of two or more permutations @var{p_1}, @dots{}, @var{p_m}.
 
@@ -646,14 +682,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{permute}
-@deffn {Function} permute (@var{p}, @var{l})
+@c @deffn {Function} permute (@var{p}, @var{l})
+m4_deffn({Function}, permute, <<<(@var{p}, @var{l})>>>)
 
 Applies the permutation @var{p} to the elements of the list (or set)
 @var{l}.
@@ -681,14 +719,16 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{random_perm}
-@deffn {Function} random_perm (@var{n})
+@c @deffn {Function} random_perm (@var{n})
+m4_deffn({Function}, random_perm, <<<(@var{n})>>>)
 
 Returns a random permutation of degree @var{n}.
 
@@ -708,9 +748,10 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package combinatorics}
-@closecatbox
+@c @opencatbox
+@c @category{Package combinatorics}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
