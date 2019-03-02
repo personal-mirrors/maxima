@@ -6,8 +6,10 @@
 @node Functions and Variables for Bernstein,  , Bernstein-pkg, Bernstein-pkg
 @section Functions and Variables for Bernstein
 
+m4_setcat()
 @anchor{bernstein_poly}
-@deffn {Function} bernstein_poly (@var{k}, @var{n}, @var{x})
+@c @deffn {Function} bernstein_poly (@var{k}, @var{n}, @var{x})
+m4_deffn({Function}, bernstein_poly, <<<(@var{k}, @var{n}, @var{x})>>>)
 
 Provided @code{k} is not a negative integer, the Bernstein polynomials
 are defined by @code{bernstein_poly(k,n,x) = binomial(n,k) x^k
@@ -55,11 +57,13 @@ to a numeric result:
 
 To use @code{bernstein_poly}, first @code{load("bernstein")}.
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{bernstein_explicit}
-@defvr {Variable} bernstein_explicit
+@c @defvr {Variable} bernstein_explicit
+m4_defvr({Variable}, bernstein_explicit)
 Default value: @code{false}
 
 When either @code{k} or @code{n} are non integers, the option variable 
@@ -76,11 +80,13 @@ into its explicit form; example:
 When both @code{k} and @code{n} are explicitly integers, @code{bernstein(k,n,x)} 
 @emph{always} expands to its explicit form.
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 @anchor{multibernstein_poly}
-@deffn {Function} multibernstein_poly (@var{[k1,k2,@dots{}, kp]}, @var{[n1,n2,@dots{}, np]}, @var{[x1,x2,@dots{}, xp]})
+@c @deffn {Function} multibernstein_poly (@var{[k1,k2,@dots{}, kp]}, @var{[n1,n2,@dots{}, np]}, @var{[x1,x2,@dots{}, xp]})
+m4_deffn({Function}, multibernstein_poly, <<<(@var{[k1,k2,@dots{}, kp]}, @var{[n1,n2,@dots{}, np]}, @var{[x1,x2,@dots{}, xp]})>>>)
 
 The multibernstein polynomial @code{multibernstein_poly (@var{[k1, k2, ..., 
 kp]}, @var{[n1, n2, ..., np]}, @var{[x1, x2, ..., xp]})} is the product of
@@ -89,10 +95,12 @@ bernstein_poly(k2, n2, x2) ... bernstein_poly(kp, np, xp)}.
 
 To use @code{multibernstein_poly}, first @code{load("bernstein")}.
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bernstein_approx}
-@deffn {Function} bernstein_approx (@var{f}, @var{[x1, x1, @dots{}, xn]}, n)
+@c @deffn {Function} bernstein_approx (@var{f}, @var{[x1, x1, @dots{}, xn]}, n)
+m4_deffn({Function}, bernstein_approx, <<<(@var{f}, @var{[x1, x1, @dots{}, xn]}, n)>>>)
 
 Return the @code{n}-th order uniform Bernstein polynomial approximation for the
 function @code{(x1, x2, ..., xn) |--> f}.
@@ -122,10 +130,12 @@ Examples
 
 To use @code{bernstein_approx}, first @code{load("bernstein")}.
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{bernstein_expand}
-@deffn {Function} bernstein_expand (@var{e}, @var{[x1, x1, @dots{}, xn]})
+@c @deffn {Function} bernstein_expand (@var{e}, @var{[x1, x1, @dots{}, xn]})
+m4_deffn({Function}, bernstein_expand, <<<(@var{e}, @var{[x1, x1, @dots{}, xn]})>>>)
 
 Express the @emph{polynomial} @code{e} exactly as a linear combination of multi-variable
 Bernstein polynomials.
@@ -141,5 +151,6 @@ Maxima signals an error when the first argument isn't a polynomial.
 
 To use @code{bernstein_expand}, first @code{load("bernstein")}.
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
