@@ -5879,6 +5879,7 @@ m4_end_deffn()
 
 
 
+m4_setcat(Package draw, Predicate functions)
 @anchor{picture_equalp}
 @c @deffn  {Function} picture_equalp (@var{x},@var{y})
 m4_deffn( {Function}, picture_equalp, <<<(@var{x},@var{y})>>>)
@@ -5911,6 +5912,7 @@ m4_end_deffn()
 
 
 
+m4_setcat(Package draw)
 @anchor{read_xpm}
 @c @deffn  {Function} read_xpm (@var{xpm_file})
 m4_deffn( {Function}, read_xpm, <<<(@var{xpm_file})>>>)
