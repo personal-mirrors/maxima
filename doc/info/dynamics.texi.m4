@@ -27,8 +27,10 @@ time they are used.
 @node Graphical analysis of discrete dynamical systems,  Visualization with VTK, The dynamics package, dynamics-pkg
 @section Graphical analysis of discrete dynamical systems
 
+m4_setcat(Package dynamics, Plotting)
 @anchor{chaosgame}
-@deffn {Function} chaosgame ([[@var{x1}, @var{y1}]@dots{}[@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{b}, @var{n}, @var{options}, @dots{});
+@c @deffn {Function} chaosgame ([[@var{x1}, @var{y1}]@dots{}[@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{b}, @var{n}, @var{options}, @dots{});
+m4_deffn({Function}, chaosgame ([[@var{x1}, @var{y1}]@dots{}[@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{b}, @var{n}, @var{options}, @dots{}))
 
 Implements the so-called chaos game: the initial point (@var{x0},
 @var{y0}) is plotted and then one of the @var{m} points
@@ -50,15 +52,17 @@ same as for @mrefdot{plot2d}
 @figure{dynamics7}
 @end ifnotinfo
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{evolution}
-@deffn {Function} evolution (@var{F}, @var{y0}, @var{n},  @dots{}, @var{options}, @dots{});
+@c @deffn {Function} evolution (@var{F}, @var{y0}, @var{n},  @dots{}, @var{options}, @dots{});
+m4_deffn({Function}, evolution (@var{F}, @var{y0}, @var{n},  @dots{}, @var{options}, @dots{}))
 
 Draws @var{n+1} points in a two-dimensional graph, where the horizontal
 coordinates of the points are the integers 0, 1, 2, ..., @var{n}, and
@@ -89,15 +93,17 @@ depend on @var{y}, but any other variable can be used),
 @end ifnotinfo
 
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{evolution2d}
-@deffn {Function} evolution2d ([@var{F}, @var{G}], [@var{u}, @var{v}], [@var{u0}, @var{y0}], @var{n}, @var{options}, @dots{});
+@c @deffn {Function} evolution2d ([@var{F}, @var{G}], [@var{u}, @var{v}], [@var{u0}, @var{y0}], @var{n}, @var{options}, @dots{});
+m4_deffn({Function}, evolution2d ([@var{F}, @var{G}], [@var{u}, @var{v}], [@var{u0}, @var{y0}], @var{n}, @var{options}, @dots{}))
 
 Shows, in a two-dimensional plot, the first @var{n+1} points in the
 sequence of points defined by the two-dimensional discrete dynamical
@@ -139,15 +145,17 @@ And an enlargement of a small region in that fractal:
 @figure{dynamics6}
 @end ifnotinfo
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{ifs}
-@deffn {Function} ifs ([@var{r1}, @dots{}, @var{rm}], [@var{A1},@dots{}, @var{Am}], [[@var{x1}, @var{y1}], @dots{}, [@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{n}, @var{options}, @dots{});
+@c @deffn {Function} ifs ([@var{r1}, @dots{}, @var{rm}], [@var{A1},@dots{}, @var{Am}], [[@var{x1}, @var{y1}], @dots{}, [@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{n}, @var{options}, @dots{});
+m4_deffn({Function}, ifs ([@var{r1}, @dots{}, @var{rm}], [@var{A1},@dots{}, @var{Am}], [[@var{x1}, @var{y1}], @dots{}, [@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{n}, @var{options}, @dots{}))
 
 Implements the Iterated Function System method. This method is similar
 to the method described in the function @mrefdot{chaosgame} but instead of
@@ -181,15 +189,17 @@ options are the same as for @mrefdot{plot2d}
 @figure{dynamics8}
 @end ifnotinfo
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{orbits}
-@deffn {Function} orbits (@var{F}, @var{y0}, @var{n1}, @var{n2}, [@var{x}, @var{x0}, @var{xf}, @var{xstep}], @var{options}, @dots{});
+@c @deffn {Function} orbits (@var{F}, @var{y0}, @var{n1}, @var{n2}, [@var{x}, @var{x0}, @var{xf}, @var{xstep}], @var{options}, @dots{});
+m4_deffn({Function}, orbits (@var{F}, @var{y0}, @var{n1}, @var{n2}, [@var{x}, @var{x0}, @var{xf}, @var{xstep}], @var{options}, @dots{}))
 
 Draws the orbits diagram for a family of one-dimensional
 discrete dynamical systems, with one parameter @var{x}; that kind of
@@ -229,15 +239,17 @@ To enlarge the region around the lower bifurcation near x @code{=} -1.25 use:
 @figure{dynamics4}
 @end ifnotinfo
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{staircase}
-@deffn {Function} staircase (@var{F}, @var{y0}, @var{n},@var{options},@dots{});
+@c @deffn {Function} staircase (@var{F}, @var{y0}, @var{n},@var{options},@dots{});
+m4_deffn({Function}, staircase (@var{F}, @var{y0}, @var{n},@var{options},@dots{}))
 
 Draws a staircase diagram for the sequence defined by the recurrence
 relation
@@ -269,12 +281,13 @@ reached. The options are the same as for @mrefdot{plot2d}
 @figure{dynamics2}
 @end ifnotinfo
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @node Visualization with VTK, , Graphical analysis of discrete dynamical systems, dynamics-pkg
 @section Visualization with VTK
@@ -285,7 +298,8 @@ installed in your system (including the TCL bindings of VTK, which in
 some system might come in a separate package).
 
 @anchor{scene}
-@deffn {Function} scene (@var{objects}, @dots{}, @var{options}, @dots{});
+@c @deffn {Function} scene (@var{objects}, @dots{}, @var{options}, @dots{});
+m4_deffn({Function}, scene (@var{objects}, @dots{}, @var{options}, @dots{}))
 
 Accepts an empty list or a list of several @mxref{scene_objects,objects}
 and @mxrefdot{scene_options,options} The program launches Xmaxima, which
@@ -356,45 +370,54 @@ automatically every time the last point in the position list is reached.
 The accepted values for the colors are the same as for the @mref{color}
 option of plot2d. 
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{scene_options}
 @subsection Scene options
 
 @anchor{scene_azimuth}
-@defvr {Scene option} azimuth [azimuth, @var{angle}]
+@c @defvr {Scene option} azimuth [azimuth, @var{angle}]
+m4_defvr({Scene option}, azimuth) @
+@fname{[azimuth, @var{angle}]}
 Default value: @code{135}
 
 The rotation of the camera on the horizontal (x, y) plane. @var{angle}
 must be a real number; an angle of 0 means that the camera points in the
 direction of the y axis and the x axis will appear on the right.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_background}
-@defvr {Scene option} background [background, @var{color}]
+@c @defvr {Scene option} background [background, @var{color}]
+m4_defvr({Scene option} background) @
+@fname{[background, @var{color}]}
 Default value: @code{black}
 
 The color of the graphics window's background. It accepts color names or
 hexadecimal red-green-blue strings (see the @mref{color} option of plot2d).
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_elevation}
-@defvr {Scene option} elevation [elevation, @var{angle}]
+@c @defvr {Scene option} elevation [elevation, @var{angle}]
+m4_defvr({Scene option} elevation) @
+@fname{[elevation, @var{angle}]}
 Default value: @code{30}
 
 The vertical rotation of the camera. The @var{angle} must be a real
@@ -402,97 +425,118 @@ number; an angle of 0 means that the camera points on the horizontal,
 and the default angle of 30 means that the camera is pointing 30 degrees
 down from the horizontal.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_height}
-@defvr {Scene option} height [height, @var{pixels}]
+@c @defvr {Scene option} height [height, @var{pixels}]
+m4_defvr({Scene option} height) @
+@fname{[height, @var{pixels}]}
 Default value: @code{500}
 
 The height, in pixels, of the graphics window. @var{pixels} must be a
 positive integer number.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_restart}
-@defvr {Scene option} restart [restart, @var{value}]
+@c @defvr {Scene option} restart [restart, @var{value}]
+m4_defvr({Scene option} restart) @
+@fname{[restart, @var{value}]}
 Default value: @code{false}
 
 A true value means that animations will restart automatically when the
 end of the list is reached. Writing just ``restart'' is equivalent to
 [restart, @var{true}].
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_tstep}
-@defvr {Scene option} tstep [tstep, @var{time}]
+@c @defvr {Scene option} tstep [tstep, @var{time}]
+m4_defvr({Scene option} tstep) @
+@fname{[tstep, @var{time}]}
 Default value: @code{10}
 
 The amount of time, in mili-seconds, between iterations among
 consecutive animation frames. @var{time} must be a real number.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_width}
-@defvr {Scene option} width [width, @var{pixels}]
+@c @defvr {Scene option} width [width, @var{pixels}]
+m4_defvr({Scene option} width) @
+@fname{[width, @var{pixels}]}
 Default value: @code{500}
 
 The width, in pixels, of the graphics window. @var{pixels} must be a
 positive integer number.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_windowname}
-@defvr {Scene option} windowname [windowtitle, @var{name}]
+@c @defvr {Scene option} windowname [windowtitle, @var{name}]
+m4_defvr({Scene option} windowname) @
+@fname{[windowtitle, @var{name}]}
 Default value: @code{.scene}
 
 @var{name} must be a string that can be used as the name of the Tk
 window created by Xmaxima for the @code{scene} graphics. The default
 value @code{.scene} implies that a new top level window will be created.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_windowtitle}
-@defvr {Scene option} windowtitle [windowtitle, @var{name}]
+@c @defvr {Scene option} windowtitle [windowtitle, @var{name}]
+m4_defvr({Scene option} windowtitle) @
+@fname{[windowtitle, @var{name}]}
 Default value: @code{Xmaxima: scene}
 
 @var{name} must be a string that will be written in the title of the
 window created by @code{scene}.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{scene_objects}
 @subsection Scene objects
 
 @anchor{cone}
-@defvr {Scene object} cone [cone, @var{options}]
+@c @defvr {Scene object} cone [cone, @var{options}]
+m4_defvr({Scene object} cone) @
+@fname{ [cone, @var{options}]}
 
 Creates a regular pyramid with height equal to 1 and a hexagonal base
 with vertices 0.5 units away from the axis. Options
@@ -513,14 +557,17 @@ axis when the play button is pressed.
    [animate,orientation,makelist([0,30,i],i,5,360,5)]], restart)$
 @end example
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{cube}
-@defvr {Scene object} cube [cube, @var{options}]
+@c @defvr {Scene object} cube [cube, @var{options}]
+m4_defvr({Scene object} cube) @
+@fname{[cube, @var{options}]}
 
 A cube with edges of 1 unit and faces parallel to the xy, xz and yz
 planes. The lengths of the three edges can be changed with options
@@ -528,14 +575,17 @@ planes. The lengths of the three edges can be changed with options
 @mxref{object_zlength,zlength}, turning it into a rectangular box and
 the faces can be rotated with option @mxrefdot{object_orientation,orientation}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{cylinder}
-@defvr {Scene object} cylinder [cylinder, @var{options}]
+@c @defvr {Scene object} cylinder [cylinder, @var{options}]
+m4_defvr({Scene object} cylinder) @
+@fname{[cylinder, @var{options}]}
 
 Creates a regular prism with height equal to 1 and a hexagonal base with
 vertices 0.5 units away from the axis. Options
@@ -548,28 +598,34 @@ the axis will be along the x axis and the middle point of the axis will
 be at the origin; use options @mxref{object_orientation,orientation} and
 @mxref{object_center,center} to change those defaults.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{sphere}
-@defvr {Scene object} sphere [sphere, @var{options}]
+@c @defvr {Scene object} sphere [sphere, @var{options}]
+m4_defvr({Scene object} sphere) @
+@fname{[sphere, @var{options}]}
 
 A sphere with default radius of 0.5 units and center at the origin. 
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_options}
 @subsection Scene object's options
 
 @anchor{object_animation}
-@defvr {Object option} animation [animation, @var{property}, @var{positions}]
+@c @defvr {Object option} animation [animation, @var{property}, @var{positions}]
+m4_defvr({Object option} animation) @
+@fname{[animation, @var{property}, @var{positions}]}
 
 @var{property} should be one of the following 4 object's properties:
 @mxrefcomma{object_origin,origin} @mxrefcomma{object_scale,scale}
@@ -583,28 +639,34 @@ the animation restart after the play button is pressed again.
 
 See also @mxrefdot{object_track,track}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_capping}
-@defvr {Object option} capping [capping, @var{number}]
+@c @defvr {Object option} capping [capping, @var{number}]
+m4_defvr({Object option}, capping) @
+@fname{[capping, @var{number}]}
 Default value: @code{1}
 
 In a cone or a cylinder, it defines whether the base (or bases) will be
 shown. A value of 1 for @var{number} makes the base visible and a value
 of 0 makes it invisible.
  
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_center}
-@defvr {Object option} center [center, @var{point}]
+@c @defvr {Object option} center [center, @var{point}]
+m4_defvr({Object option}, center) @
+@fname{[center, @var{point}]}
 Default value: @code{[0, 0, 0]}
 
 The coordinates of the object's geometric center, with respect to its
@@ -612,27 +674,33 @@ The coordinates of the object's geometric center, with respect to its
 real numbers, or 3 real numbers separated by commas. In a cylinder, cone
 or cube it will be at half its height and in a sphere at its center.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_color}
-@defvr {Object option} color [color, @var{colorname}]
+@c @defvr {Object option} color [color, @var{colorname}]
+m4_defvr({Object option}, color) @
+@fname{[color, @var{colorname}]}
 Default value: @code{white}
 
 The color of the object. It accepts color names or hexadecimal
 red-green-blue strings (see the @mref{color} option of plot2d).
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_endphi}
-@defvr {Object option} endphi [endphi, @var{angle}]
+@c @defvr {Object option} endphi [endphi, @var{angle}]
+m4_defvr({Object option}, endphi) @
+@fname{[endphi, @var{angle}]}
 Default value: @code{180}
 
 In a sphere phi is the angle on the vertical plane that passes through
@@ -644,14 +712,17 @@ part of the sphere's surface.
 See also @mxref{object_startphi,startphi} and
 @mxrefdot{object_phiresolution,phiresolution}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_endtheta}
-@defvr {Object option} endtheta [endtheta, @var{angle}]
+@c @defvr {Object option} endtheta [endtheta, @var{angle}]
+m4_defvr({Object option}, endtheta) @
+@fname{[endtheta, @var{angle}]}
 Default value: @code{360}
 
 In a sphere theta is the angle on the horizontal plane (longitude),
@@ -663,54 +734,66 @@ the sphere's surface.
 See also @mxref{object_starttheta,starttheta} and
 @mxrefdot{object_thetaresolution,thetaresolution}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_height}
-@defvr {Object option} height [height, @var{value}]
+@c @defvr {Object option} height [height, @var{value}]
+m4_defvr({Object option}, height) @
+@fname{[height, @var{value}]}
 Default value: @code{1}
 
 @var{value} must be a positive number which sets the height of a cone
 or a cylinder.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_linewidth}
-@defvr {Object option} linewidth [linewidth, @var{value}]
+@c @defvr {Object option} linewidth [linewidth, @var{value}]
+m4_defvr({Object option}, linewidth) @
+@fname{[linewidth, @var{value}]}
 Default value: @code{1}
 
 The width of the lines, when option @mxref{object_wireframe,wireframe} is
 used. @var{value} must be a positive number.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_opacity}
-@defvr {Object option} opacity [opacity, @var{value}]
+@c @defvr {Object option} opacity [opacity, @var{value}]
+m4_defvr({Object option}, opacity) @
+@fname{[opacity, @var{value}]}
 Default value: @code{1}
 
 @var{value} must be a number between 0 and 1. The lower the number, the
 more transparent the object will become. The default value of 1 means a
 completely opaque object.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_orientation}
-@defvr {Object option} orientation [orientation, @var{angles}]
+@c @defvr {Object option} orientation [orientation, @var{angles}]
+m4_defvr({Object option}, orientation) @
+@fname{[orientation, @var{angles}]}
 Default value: @code{[0, 0, 0]}
 
 Three angles by which the object will be rotated with respect to the
@@ -718,28 +801,34 @@ three axis. @var{angles} can be a list with 3 real numbers, or 3 real
 numbers separated by commas. @strong{Example}: @code{[0, 0, 90]} rotates
 the x axis of the object to the y axis of the reference frame.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_origin}
-@defvr {Object option} origin [origin, @var{point}]
+@c @defvr {Object option} origin [origin, @var{point}]
+m4_defvr({Object option}, origin) @
+@fname{[origin, @var{point}]}
 Default value: @code{[0, 0, 0]}
 
 The coordinates of the object's origin, with respect to which its
 other dimensions are defined. @var{point} can be a list with 3
 real numbers, or 3 real numbers separated by commas.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_phiresolution}
-@defvr {Object option} phiresolution [phiresolution, @var{num}]
+@c @defvr {Object option} phiresolution [phiresolution, @var{num}]
+m4_defvr({Object option}, phiresolution) @
+@fname{[phiresolution, @var{num}]}
 Default value: @code{}
 
 The number of sub-intervals into which the phi angle interval from
@@ -749,14 +838,17 @@ will be divided. @var{num} must be a positive integer.
 See also @mxref{object_startphi,startphi} and
 @mxrefdot{object_endphi,endphi}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_points}
-@defvr {Object option} points  [points]
+@c @defvr {Object option} points  [points]
+m4_defvr({Object option}, points) @
+@fname{ [points]}
 
 Only the vertices of the triangulation used to render the surface will
 be shown. @strong{Example}: @code{[sphere, [points]]}
@@ -764,66 +856,81 @@ be shown. @strong{Example}: @code{[sphere, [points]]}
 See also @mxref{object_surface,surface} and
 @mxrefdot{object_wireframe,wireframe}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_pointsize}
-@defvr {Object option} pointsize [pointsize, @var{value}]
+@c @defvr {Object option} pointsize [pointsize, @var{value}]
+m4_defvr({Object option}, pointsize) @
+@fname{[pointsize, @var{value}]}
 Default value: @code{1}
 
 The size of the points, when option @mxref{object_points,points} is
 used. @var{value} must be a positive number.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_position}
-@defvr {Object option} position [position, @var{point}]
+@c @defvr {Object option} position [position, @var{point}]
+m4_defvr({Object option}, position) @
+@fname{[position, @var{point}]}
 Default value: @code{[0, 0, 0]}
 
 The coordinates of the object's position. @var{point} can be a list with 3
 real numbers, or 3 real numbers separated by commas.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_radius}
-@defvr {Object option} radius [radius, @var{value}]
+@c @defvr {Object option} radius [radius, @var{value}]
+m4_defvr({Object option}, radius) @
+@fname{[radius, @var{value}]}
 Default value: @code{0.5}
 
 The radius or a sphere or the distance from the axis to the base's
 vertices in a cylinder or a cone. @var{value} must be a positive number.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_resolution}
-@defvr {Object option} resolution [resolution, @var{number}]
+@c @defvr {Object option} resolution [resolution, @var{number}]
+m4_defvr({Object option}, resolution) @
+@fname{[resolution, @var{number}]}
 Default value: @code{6}
 
 @var{number} must be a integer greater than 2 that sets the number of
 edges in the base of a cone or a cylinder.
  
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_scale}
-@defvr {Object option} scale [scale, @var{factors}]
+@c @defvr {Object option} scale [scale, @var{factors}]
+m4_defvr({Object option}, scale) @
+@fname{[scale, @var{factors}]}
 Default value: @code{[1, 1, 1]}
 
 Three numbers by which the object will be scaled with respect to the
@@ -833,14 +940,17 @@ enlarges the object to twice its size in the x direction, reduces the
 dimensions in the y direction to half and leaves the z dimensions
 unchanged.
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_startphi}
-@defvr {Object option} startphi [startphi, @var{angle}]
+@c @defvr {Object option} startphi [startphi, @var{angle}]
+m4_defvr({Object option}, startphi) @
+@fname{[startphi, @var{angle}]}
 Default value: @code{0}
 
 In a sphere phi is the angle on the vertical plane that passes through
@@ -852,14 +962,17 @@ part of the sphere's surface.
 See also @mxref{object_endphi,endphi} and
 @mxrefdot{object_phiresolution,phiresolution}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_starttheta}
-@defvr {Object option} starttheta [starttheta, @var{angle}]
+@c @defvr {Object option} starttheta [starttheta, @var{angle}]
+m4_defvr({Object option}, starttheta) @
+@fname{[starttheta, @var{angle}]}
 Default value: @code{0}
 
 In a sphere theta is the angle on the horizontal plane (longitude),
@@ -871,28 +984,34 @@ the sphere's surface.
 See also @mxref{object_endtheta,endtheta} and
 @mxrefdot{object_thetaresolution,thetaresolution}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_surface}
-@defvr {Object option} surface [surface]
+@c @defvr {Object option} surface [surface]
+m4_defvr({Object option}, surface) @
+@fname{[surface]}
 
 The surfaces of the object will be rendered and the lines and points of
 the triangulation used to build the surface will not be shown. This is
 the default behavior, which can be changed using either the option
 @mxref{object_points,points} or @mxrefdot{object_wireframe,wireframe}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_thetaresolution}
-@defvr {Object option} thetaresolution [thetaresolution, @var{num}]
+@c @defvr {Object option} thetaresolution [thetaresolution, @var{num}]
+m4_defvr({Object option}, thetaresolution) @
+@fname{[thetaresolution, @var{num}]}
 Default value: @code{}
 
 The number of sub-intervals into which the theta angle interval from
@@ -902,14 +1021,17 @@ will be divided. @var{num} must be a positive integer.
 See also @mxref{object_starttheta,starttheta} and
 @mxrefdot{object_endtheta,endtheta}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_track}
-@defvr {Object option} track [track, @var{positions}]
+@c @defvr {Object option} track [track, @var{positions}]
+m4_defvr({Object option}, track) @
+@fname{[track, @var{positions}]}
 
 @var{positions} should be a list of points. When the play button is
 pressed, the object position will be changed sequentially through all
@@ -937,56 +1059,68 @@ be neglected:
 See also @mxrefdot{object_animation,animation}
 
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_xlength}
-@defvr {Object option} xlength [xlength, @var{length}]
+@c @defvr {Object option} xlength [xlength, @var{length}]
+m4_defvr({Object option}, xlength) @
+@fname{[xlength, @var{length}]}
 Default value: @code{1}
 
 The height of a cube in the x direction. @var{length} must be a positive
 number. See also @mxref{object_ylength,ylength} and
 @mxrefdot{object_zlength,zlength}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_ylength}
-@defvr {Object option} ylength [ylength, @var{length}]
+@c @defvr {Object option} ylength [ylength, @var{length}]
+m4_defvr({Object option}, ylength) @
+@fname{[ylength, @var{length}]}
 Default value: @code{1}
 
 The height of a cube in the y direction. @var{length} must be a positive
 number. See also @mxref{object_xlength,xlength} and
 @mxrefdot{object_zlength,zlength}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_zlength}
-@defvr {Object option} zlength [zlength, @var{length}]
+@c @defvr {Object option} zlength [zlength, @var{length}]
+m4_defvr({Object option}, zlength) @
+@fname{[zlength, @var{length}]}
 Default value: @code{1}
 
 The height of a cube in z the direction. @var{length} must be a positive
  number.  See also @mxref{object_xlength,xlength} and
  @mxrefdot{object_ylength,ylength}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @anchor{object_wireframe}
-@defvr {Object option} wireframe  [wireframe]
+@c @defvr {Object option} wireframe  [wireframe]
+m4_defvr({Object option}, wireframe) @
+@fname{ [wireframe]}
 
 Only the edges of the triangulation used to render the surface will be
 shown. @strong{Example}: @code{[cube, [wireframe]]}
@@ -994,8 +1128,9 @@ shown. @strong{Example}: @code{[cube, [wireframe]]}
 See also @mxref{object_surface,surface} and
 @mxrefdot{object_points,points}
 
-@opencatbox
-@category{Package dynamics}
-@category{Plotting}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package dynamics}
+@c @category{Plotting}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
