@@ -30,7 +30,7 @@ time they are used.
 m4_setcat(Package dynamics, Plotting)
 @anchor{chaosgame}
 @c @deffn {Function} chaosgame ([[@var{x1}, @var{y1}]@dots{}[@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{b}, @var{n}, @var{options}, @dots{});
-m4_deffn({Function}, chaosgame ([[@var{x1}, @var{y1}]@dots{}[@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{b}, @var{n}, @var{options}, @dots{}))
+m4_deffn({Function}, chaosgame, ([[@var{x1}, @var{y1}]@dots{}[@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{b}, @var{n}, @var{options}, @dots{}))
 
 Implements the so-called chaos game: the initial point (@var{x0},
 @var{y0}) is plotted and then one of the @var{m} points
@@ -62,7 +62,7 @@ m4_end_deffn()
 
 @anchor{evolution}
 @c @deffn {Function} evolution (@var{F}, @var{y0}, @var{n},  @dots{}, @var{options}, @dots{});
-m4_deffn({Function}, evolution (@var{F}, @var{y0}, @var{n},  @dots{}, @var{options}, @dots{}))
+m4_deffn({Function}, evolution, (@var{F}, @var{y0}, @var{n},  @dots{}, @var{options}, @dots{}))
 
 Draws @var{n+1} points in a two-dimensional graph, where the horizontal
 coordinates of the points are the integers 0, 1, 2, ..., @var{n}, and
@@ -103,7 +103,7 @@ m4_end_deffn()
 
 @anchor{evolution2d}
 @c @deffn {Function} evolution2d ([@var{F}, @var{G}], [@var{u}, @var{v}], [@var{u0}, @var{y0}], @var{n}, @var{options}, @dots{});
-m4_deffn({Function}, evolution2d ([@var{F}, @var{G}], [@var{u}, @var{v}], [@var{u0}, @var{y0}], @var{n}, @var{options}, @dots{}))
+m4_deffn({Function}, evolution2d, ([@var{F}, @var{G}], [@var{u}, @var{v}], [@var{u0}, @var{y0}], @var{n}, @var{options}, @dots{}))
 
 Shows, in a two-dimensional plot, the first @var{n+1} points in the
 sequence of points defined by the two-dimensional discrete dynamical
@@ -155,7 +155,7 @@ m4_end_deffn()
 
 @anchor{ifs}
 @c @deffn {Function} ifs ([@var{r1}, @dots{}, @var{rm}], [@var{A1},@dots{}, @var{Am}], [[@var{x1}, @var{y1}], @dots{}, [@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{n}, @var{options}, @dots{});
-m4_deffn({Function}, ifs ([@var{r1}, @dots{}, @var{rm}], [@var{A1},@dots{}, @var{Am}], [[@var{x1}, @var{y1}], @dots{}, [@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{n}, @var{options}, @dots{}))
+m4_deffn({Function}, ifs, ([@var{r1}, @dots{}, @var{rm}], [@var{A1},@dots{}, @var{Am}], [[@var{x1}, @var{y1}], @dots{}, [@var{xm}, @var{ym}]], [@var{x0}, @var{y0}], @var{n}, @var{options}, @dots{}))
 
 Implements the Iterated Function System method. This method is similar
 to the method described in the function @mrefdot{chaosgame} but instead of
@@ -199,7 +199,7 @@ m4_end_deffn()
 
 @anchor{orbits}
 @c @deffn {Function} orbits (@var{F}, @var{y0}, @var{n1}, @var{n2}, [@var{x}, @var{x0}, @var{xf}, @var{xstep}], @var{options}, @dots{});
-m4_deffn({Function}, orbits (@var{F}, @var{y0}, @var{n1}, @var{n2}, [@var{x}, @var{x0}, @var{xf}, @var{xstep}], @var{options}, @dots{}))
+m4_deffn({Function}, orbits, (@var{F}, @var{y0}, @var{n1}, @var{n2}, [@var{x}, @var{x0}, @var{xf}, @var{xstep}], @var{options}, @dots{}))
 
 Draws the orbits diagram for a family of one-dimensional
 discrete dynamical systems, with one parameter @var{x}; that kind of
@@ -249,7 +249,7 @@ m4_end_deffn()
 
 @anchor{staircase}
 @c @deffn {Function} staircase (@var{F}, @var{y0}, @var{n},@var{options},@dots{});
-m4_deffn({Function}, staircase (@var{F}, @var{y0}, @var{n},@var{options},@dots{}))
+m4_deffn({Function}, staircase, (@var{F}, @var{y0}, @var{n},@var{options},@dots{}))
 
 Draws a staircase diagram for the sequence defined by the recurrence
 relation
@@ -299,7 +299,7 @@ some system might come in a separate package).
 
 @anchor{scene}
 @c @deffn {Function} scene (@var{objects}, @dots{}, @var{options}, @dots{});
-m4_deffn({Function}, scene (@var{objects}, @dots{}, @var{options}, @dots{}))
+m4_deffn({Function}, scene, (@var{objects}, @dots{}, @var{options}, @dots{}))
 
 Accepts an empty list or a list of several @mxref{scene_objects,objects}
 and @mxrefdot{scene_options,options} The program launches Xmaxima, which
