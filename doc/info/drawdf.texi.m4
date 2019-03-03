@@ -75,7 +75,9 @@ equation into a system of two autonomous equations.
 
 @subsection Functions
 
-@deffn {Function} drawdf @
+m4_setcat(Package drawdf)
+@c @deffn {Function} drawdf @
+m4_deffn({Function}, drawdf, <<<>>>) @
 @fname{drawdf} (@var{dydx}, ...options and objects...) @
 @fname{drawdf} (@var{dvdu}, [@var{u},@var{v}], ...options and objects...) @
 @fname{drawdf} (@var{dvdu}, [@var{u},@var{umin},@var{umax}], [@var{v},@var{vmin},@var{vmax}], ...options and objects...) @
@@ -275,9 +277,10 @@ generate graphics.
                        k,1,5))$
 @end example
 
-@opencatbox
-@category{Package drawdf}
-@closecatbox
+@c @opencatbox
+@c @category{Package drawdf}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
