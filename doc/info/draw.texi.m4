@@ -80,8 +80,10 @@ replacements for draw that do the same as @mrefcomma{draw} @mref{draw2d} and
 @subsection Scenes
 
 
+m4_setcat(Package draw)
 @anchor{gr2d}
-@deffn {Scene constructor} gr2d (@var{argument_1}, ...)
+@c @deffn {Scene constructor} gr2d (@var{argument_1}, ...)
+m4_deffn({Scene constructor}, gr2d, <<<(@var{argument_1}, ...)>>>)
 
 Function @code{gr2d} builds an object describing a 2D scene. Arguments are
 @i{graphic options}, @i{graphic objects}, or lists containing both graphic options and objects.
@@ -137,15 +139,17 @@ and @mrefdot{draw2d}
 @figure{draw_scene}
 
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{gr3d}
-@deffn {Scene constructor} gr3d (@var{argument_1}, ...)
+@c @deffn {Scene constructor} gr3d (@var{argument_1}, ...)
+m4_deffn({Scene constructor}, gr3d, <<<(@var{argument_1}, ...)>>>)
 
 Function @code{gr3d} builds an object describing a 3d scene. Arguments are
 @i{graphic options}, @i{graphic objects}, or lists containing both graphic options
@@ -163,11 +167,12 @@ dimensions:@*
 
 See also @mref{draw} and @mrefdot{draw3d}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -176,8 +181,10 @@ See also @mref{draw} and @mrefdot{draw3d}
 
 
 
+m4_setcat(Package draw, File output)
 @anchor{draw}
-@deffn {Function} draw (<arg_1>, ...)
+@c @deffn {Function} draw (<arg_1>, ...)
+m4_deffn({Function}, draw, <<<(<arg_1>, ...)>>>)
 
 Plots a series of scenes; its arguments are @code{gr2d} and/or @code{gr3d} 
 objects, together with some options, or lists of scenes and options.
@@ -239,18 +246,20 @@ End of animation sequence
 @figure{draw_equiv}
 See also @mrefcomma{gr2d} @mrefcomma{gr3d} @mref{draw2d} and @mrefdot{draw3d}
 
-@opencatbox
-@category{Package draw}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package draw}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 
 @anchor{draw2d}
-@deffn {Function} draw2d (@var{argument_1}, ...)
+@c @deffn {Function} draw2d (@var{argument_1}, ...)
+m4_deffn({Function}, draw2d, <<<(@var{argument_1}, ...)>>>)
 
 This function is a shortcut for
 @code{draw(gr2d(@var{options}, ..., @var{graphic_object}, ...))}.
@@ -259,11 +268,12 @@ It can be used to plot a unique scene in 2d, as can be seen in most examples bel
 
 See also @mref{draw} and @mrefdot{gr2d}
 
-@opencatbox
-@category{Package draw}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package draw}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -271,7 +281,8 @@ See also @mref{draw} and @mrefdot{gr2d}
 
 
 @anchor{draw3d}
-@deffn {Function} draw3d (@var{argument_1}, ...)
+@c @deffn {Function} draw3d (@var{argument_1}, ...)
+m4_deffn({Function}, draw3d, <<<(@var{argument_1}, ...)>>>)
 
 This function is a shortcut for
 @code{draw(gr3d(@var{options}, ..., @var{graphic_object}, ...))}.
@@ -280,16 +291,18 @@ It can be used to plot a unique scene in 3d, as can be seen in many examples bel
 
 See also @mref{draw} and @mrefdot{gr3d}
 
-@opencatbox
-@category{Package draw}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package draw}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{draw_file}
-@deffn {Function} draw_file (@var{graphic option}, ..., @var{graphic object}, ...)
+@c @deffn {Function} draw_file (@var{graphic option}, ..., @var{graphic object}, ...)
+m4_deffn({Function}, draw_file, <<<(@var{graphic option}, ..., @var{graphic object}, ...)>>>)
 
 Saves the current plot into a file. Accepted graphics options are:
 @code{terminal}, @code{dimensions} and @code{file_name}. 
@@ -304,16 +317,18 @@ Example:
                 dimensions = [5,5]) $
 @end example
 
-@opencatbox
-@category{Package draw}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package draw}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{multiplot_mode}
-@deffn {Function} multiplot_mode (@var{term})
+@c @deffn {Function} multiplot_mode (@var{term})
+m4_deffn({Function}, multiplot_mode, <<<(@var{term})>>>)
 
 This function enables Maxima to work in one-window multiplot mode with terminal
 @var{term}; accepted arguments for this function are @code{screen}, 
@@ -347,18 +362,21 @@ Example:
 @end example
 @figure{draw_multiplot}
 
-@opencatbox
-@category{Package draw}
-@category{File output}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package draw}
+@c @category{File output}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 
+m4_setcat(Package draw)
 @anchor{set_draw_defaults}
-@deffn {Function} set_draw_defaults (@var{graphic option}, ..., @var{graphic object}, ...)
+@c @deffn {Function} set_draw_defaults (@var{graphic option}, ..., @var{graphic object}, ...)
+m4_deffn({Function}, set_draw_defaults, <<<(@var{graphic option}, ..., @var{graphic object}, ...)>>>)
 
 Sets user graphics options. This function is useful for plotting a sequence
 of graphics with common graphics options. Calling this function without
@@ -379,11 +397,12 @@ Example:
       draw2d(explicit(((1+x)**2/(1+x*x))-1,x,-10,10))$
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -392,7 +411,8 @@ Example:
 
 
 @anchor{adapt_depth_draw}
-@defvr {Graphic option} adapt_depth
+@c @defvr {Graphic option} adapt_depth
+m4_defvr({Graphic option}, adapt_depth)
 Default value: 10
 
 @code{adapt_depth} is the maximum number of splittings used by the adaptive plotting routine.
@@ -401,15 +421,17 @@ This option is relevant only for 2d @code{explicit} functions.
 
 See also @code{nticks}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 @anchor{allocation}
-@defvr {Graphic option} allocation
+@c @defvr {Graphic option} allocation
+m4_defvr({Graphic option}, allocation)
 Default value: @code{false}
 
 With option @code{allocation} it is possible to place a scene in the
@@ -452,15 +474,17 @@ Multiplot with selected dimensions.
 
 See also option @mrefdot{columns}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 @anchor{axis_3d}
-@defvr {Graphic option} axis_3d
+@c @defvr {Graphic option} axis_3d
+m4_defvr({Graphic option}, axis_3d)
 Default value: @code{true}
 
 If @code{axis_3d} is @code{true}, the @var{x}, @var{y} and @var{z} axis are shown in 3d scenes.
@@ -478,16 +502,18 @@ Example:
 
 See also @mrefcomma{axis_bottom}  @mrefcomma{axis_left} @mrefcomma{axis_top} and @mref{axis_right} for axis in 2d.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{axis_bottom}
-@defvr {Graphic option} axis_bottom
+@c @defvr {Graphic option} axis_bottom
+m4_defvr({Graphic option}, axis_bottom)
 Default value: @code{true}
 
 If @code{axis_bottom} is @code{true}, the bottom axis is shown in 2d scenes.
@@ -505,16 +531,18 @@ Example:
 
 See also @mrefcomma{axis_left}  @mrefcomma{axis_top} @mref{axis_right} and @mrefdot{axis_3d}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{axis_left}
-@defvr {Graphic option} axis_left
+@c @defvr {Graphic option} axis_left
+m4_defvr({Graphic option}, axis_left)
 Default value: @code{true}
 
 If @code{axis_left} is @code{true}, the left axis is shown in 2d scenes.
@@ -531,16 +559,18 @@ Example:
 
 See also @mrefcomma{axis_bottom}  @mrefcomma{axis_top} @mref{axis_right} and @mrefdot{axis_3d}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{axis_right}
-@defvr {Graphic option} axis_right
+@c @defvr {Graphic option} axis_right
+m4_defvr({Graphic option}, axis_right)
 Default value: @code{true}
 
 If @code{axis_right} is @code{true}, the right axis is shown in 2d scenes.
@@ -557,16 +587,18 @@ Example:
 
 See also @mrefcomma{axis_bottom}  @mrefcomma{axis_left} @mref{axis_top} and @mrefdot{axis_3d}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{axis_top}
-@defvr {Graphic option} axis_top
+@c @defvr {Graphic option} axis_top
+m4_defvr({Graphic option}, axis_top)
 Default value: @code{true}
 
 If @code{axis_top} is @code{true}, the top axis is shown in 2d scenes.
@@ -583,16 +615,18 @@ Example:
 
 See also @mrefcomma{axis_bottom}   @mrefcomma{axis_left}  @mrefcomma{axis_right}  and @mrefdot{axis_3d}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{background_color}
-@defvr {Graphic option} background_color
+@c @defvr {Graphic option} background_color
+m4_defvr({Graphic option}, background_color)
 Default value: @code{white}
 
 Sets the background color for terminals. Default background color is white.
@@ -604,16 +638,18 @@ This option das not work with terminals @code{epslatex} and @code{epslatex_stand
 
 See also @code{color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{border}
-@defvr {Graphic option} border
+@c @defvr {Graphic option} border
+m4_defvr({Graphic option}, border)
 Default value: @code{true}
 
 If @code{border} is @code{true}, borders of polygons are painted
@@ -638,16 +674,18 @@ Example:
 @end example
 @figure{draw_border}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{capping}
-@defvr {Graphic option} capping
+@c @defvr {Graphic option} capping
+m4_defvr({Graphic option}, capping)
 Default value: @code{[false, false]}
 
 A list with two possible elements, @code{true} and @code{false},
@@ -667,16 +705,18 @@ Example:
 @end example
 @figure{draw_tube_extremes}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{cbrange}
-@defvr {Graphic option} cbrange
+@c @defvr {Graphic option} cbrange
+m4_defvr({Graphic option}, cbrange)
 Default value: @code{auto}
 
 If @code{cbrange} is @code{auto}, the range for the values which are
@@ -706,15 +746,17 @@ Example:
 
 See also @mrefcomma{enhanced3d}  @mref{colorbox} and @mrefdot{cbtics}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{cbtics}
-@defvr {Graphic option} cbtics
+@c @defvr {Graphic option} cbtics
+m4_defvr({Graphic option}, cbtics)
 Default value: @code{auto}
 
 This graphic option controls the way tic marks are drawn on the colorbox
@@ -739,14 +781,16 @@ Example :
 
 See also @mrefcomma{enhanced3d}  @mref{colorbox} and @mrefdot{cbrange}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @anchor{color_draw}
-@defvr {Graphic option} color
+@c @defvr {Graphic option} color
+m4_defvr({Graphic option}, color)
 Default value: @code{blue}
 
 @code{color} specifies the color for plotting lines, points, borders of
@@ -834,16 +878,18 @@ Example:
 
 See also @mrefdot{fill_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{colorbox}
-@defvr {Graphic option} colorbox
+@c @defvr {Graphic option} colorbox
+m4_defvr({Graphic option}, colorbox)
 Default value: @code{true}
 
 If @code{colorbox} is @code{true}, a color scale without label is drawn together with 
@@ -878,17 +924,19 @@ Color scale and 3D coloured object.
 
 See also @mrefdot{palette_draw}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{columns}
-@defvr {Graphic option} columns
+@c @defvr {Graphic option} columns
+m4_defvr({Graphic option}, columns)
 Default value: 1
 
 @code{columns} is the number of columns in multiple plots.
@@ -908,16 +956,18 @@ Example:
 @end example
 @figure{draw_columns}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{contour}
-@defvr {Graphic option} contour
+@c @defvr {Graphic option} contour
+m4_defvr({Graphic option}, contour)
 Default value: @code{none}
 
 Option @code{contour} enables the user to select where to plot contour lines.
@@ -969,16 +1019,18 @@ Example:
 @end example
 @figure{draw_contour2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{contour_levels}
-@defvr {Graphic option} contour_levels
+@c @defvr {Graphic option} contour_levels
+m4_defvr({Graphic option}, contour_levels)
 Default value: 5
 
 This graphic option controls the way contours are drawn. 
@@ -1038,16 +1090,18 @@ Isolines at levels -7, -6, 0.8 and 5.
 
 See also @mrefdot{contour}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{data_file_name}
-@defvr {Graphic option} data_file_name
+@c @defvr {Graphic option} data_file_name
+m4_defvr({Graphic option}, data_file_name)
 Default value: @code{"data.gnuplot"}
 
 This is the name of the file with the numeric data needed
@@ -1058,16 +1112,18 @@ does not matter. It can be also used as an argument of function @code{draw}.
 
 See example in @code{gnuplot_file_name}.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{delay}
-@defvr {Graphic option} delay
+@c @defvr {Graphic option} delay
+m4_defvr({Graphic option}, delay)
 Default value: 5
 
 This is the delay in 1/100 seconds of frames in animated gif files.
@@ -1094,16 +1150,18 @@ any other case.
 
 See also @mrefcomma{terminal} and @code{dimensions}.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{dimensions_draw}
-@defvr {Graphic option} dimensions
+@c @defvr {Graphic option} dimensions
+m4_defvr({Graphic option}, dimensions)
 Default value: @code{[600,500]}
 
 Dimensions of the output terminal. Its value is a list formed by
@@ -1150,16 +1208,18 @@ We want an eps file with A4 portrait dimensions.
         explicit(x^2-y^2,x,-2,2,y,-2,2)) $
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{draw_realpart}
-@defvr {Graphic option} draw_realpart
+@c @defvr {Graphic option} draw_realpart
+m4_defvr({Graphic option}, draw_realpart)
 Default value: @code{true}
 
 When @code{true}, functions to be drawn are considered as complex functions whose
@@ -1179,16 +1239,18 @@ Example:
         parametric(x,sqrt(x^2  - 4*x) - x + 1, x, -1, 5) );
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{enhanced3d}
-@defvr {Graphic option} enhanced3d
+@c @defvr {Graphic option} enhanced3d
+m4_defvr({Graphic option}, enhanced3d)
 Default value: @code{none}
 
 If @code{enhanced3d} is @code{none}, surfaces are not colored in 3D plots.
@@ -1340,17 +1402,19 @@ being @code{k} an ordering parameter.
 @end example
 @figure{draw_enhanced3d11}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{error_type}
-@defvr {Graphic option} error_type
+@c @defvr {Graphic option} error_type
+m4_defvr({Graphic option}, error_type)
 Default value: @code{y}
 
 Depending on its value, which can be @code{x}, @code{y}, or @code{xy},
@@ -1359,12 +1423,14 @@ or both, error bars. When @code{error_type=boxes}, boxes will be drawn
 instead of crosses.
 
 See also @mrefdot{errors}
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{file_name}
-@defvr {Graphic option} file_name
+@c @defvr {Graphic option} file_name
+m4_defvr({Graphic option}, file_name)
 Default value: @code{"maxima_out"}
 
 This is the name of the file where terminals @code{png}, @code{jpg}, @code{gif},
@@ -1384,16 +1450,18 @@ Example:
 
 See also @mrefcomma{terminal}  @mrefdot{dimensions_draw}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{fill_color}
-@defvr {Graphic option} fill_color
+@c @defvr {Graphic option} fill_color
+m4_defvr({Graphic option}, fill_color)
 Default value: @code{"red"}
 
 @code{fill_color} specifies the color for filling polygons and
@@ -1401,30 +1469,34 @@ Default value: @code{"red"}
 
 See @code{color} to learn how colors are specified.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{fill_density}
-@defvr {Graphic option} fill_density
+@c @defvr {Graphic option} fill_density
+m4_defvr({Graphic option}, fill_density)
 Default value: 0
 
 @code{fill_density} is a number between 0 and 1 that specifies
 the intensity of the @code{fill_color} in @code{bars} objects.
 
 See @code{bars} for examples.
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{filled_func}
-@defvr {Graphic option} filled_func
+@c @defvr {Graphic option} filled_func
+m4_defvr({Graphic option}, filled_func)
 Default value: @code{false}
 
 Option @code{filled_func} controls how regions limited by functions
@@ -1462,16 +1534,18 @@ defined by option @code{filled_func}. Note that the variable in
 @figure{draw_filledfunc2}
 See also @mref{fill_color} and @mrefdot{explicit}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{font}
-@defvr {Graphic option} font
+@c @defvr {Graphic option} font
+m4_defvr({Graphic option}, font)
 Default value: @code{""} (empty string)
 
 This option can be used to set the font face to be used by the terminal.
@@ -1575,16 +1649,18 @@ Default is @code{"Times-Roman"}.
 
 The gnuplot documentation is an important source of information about terminals and fonts.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{font_size}
-@defvr {Graphic option} font_size
+@c @defvr {Graphic option} font_size
+m4_defvr({Graphic option}, font_size)
 Default value: 10
 
 This option can be used to set the font size to be used by the terminal.
@@ -1596,16 +1672,18 @@ does not matter.
 
 See also @mrefdot{font}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{gnuplot_file_name}
-@defvr {Graphic option} gnuplot_file_name
+@c @defvr {Graphic option} gnuplot_file_name
+m4_defvr({Graphic option}, gnuplot_file_name)
 Default value: @code{"maxout_xxx.gnuplot"} with @code{"xxx"}
 being a number that is unique to each concurrently-running
 maxima process.
@@ -1629,16 +1707,18 @@ Example:
 
 See also @mrefdot{data_file_name}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{grid_draw}
-@defvr {Graphic option} grid
+@c @defvr {Graphic option} grid
+m4_defvr({Graphic option}, grid)
 Default value: @code{false}
 
 If @code{grid} is @code{not false}, a grid will be drawn on the @var{xy} plane.
@@ -1664,16 +1744,18 @@ Example:
 @end example
 @figure{draw_grid2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{head_angle}
-@defvr {Graphic option} head_angle
+@c @defvr {Graphic option} head_angle
+m4_defvr({Graphic option}, head_angle)
 Default value: 45
 
 @code{head_angle} indicates the angle, in degrees, between the arrow heads and
@@ -1710,16 +1792,18 @@ Example:
 
 See also @mrefcomma{head_both}  @mrefcomma{head_length}  and @mrefdot{head_type} 
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{head_both}
-@defvr {Graphic option} head_both
+@c @defvr {Graphic option} head_both
+m4_defvr({Graphic option}, head_both)
 Default value: @code{false}
 
 If @code{head_both} is @code{true}, vectors are plotted with two arrow heads.
@@ -1741,16 +1825,18 @@ Example:
 
 See also @mrefcomma{head_length}  @mrefcomma{head_angle}  and @mrefdot{head_type} 
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{head_length}
-@defvr {Graphic option} head_length
+@c @defvr {Graphic option} head_length
+m4_defvr({Graphic option}, head_length)
 Default value: 2
 
 @code{head_length} indicates, in @var{x}-axis units, the length of arrow heads.
@@ -1774,18 +1860,20 @@ Example:
 
 See also @mrefcomma{head_both}  @mrefcomma{head_angle}  and @mrefdot{head_type} 
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 
 @anchor{head_type}
-@defvr {Graphic option} head_type
+@c @defvr {Graphic option} head_type
+m4_defvr({Graphic option}, head_type)
 Default value: @code{filled}
 
 @code{head_type} is used to specify how arrow heads are plotted. Possible
@@ -1810,16 +1898,18 @@ Example:
 
 See also @mrefcomma{head_both}  @mrefcomma{head_angle}  and @mrefdot{head_length} 
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{interpolate_color}
-@defvr {Graphic option} interpolate_color
+@c @defvr {Graphic option} interpolate_color
+m4_defvr({Graphic option}, interpolate_color)
 Default value: @code{false}
 
 This option is relevant only when @code{enhanced3d} is not @code{false}.
@@ -1897,48 +1987,54 @@ Interpolating colors in parametric surfaces can give unexpected results.
 
 See also @mrefdot{enhanced3d} 
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ip_grid}
-@defvr {Graphic option} ip_grid
+@c @defvr {Graphic option} ip_grid
+m4_defvr({Graphic option}, ip_grid)
 Default value: @code{[50, 50]}
 
 @code{ip_grid} sets the grid for the first sampling in implicit plots.
 
 This option is relevant only for @code{implicit} objects.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ip_grid_in}
-@defvr {Graphic option} ip_grid_in
+@c @defvr {Graphic option} ip_grid_in
+m4_defvr({Graphic option}, ip_grid_in)
 Default value: @code{[5, 5]}
 
 @code{ip_grid_in} sets the grid for the second sampling in implicit plots.
 
 This option is relevant only for @code{implicit} objects.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{key}
-@defvr {Graphic option} key
+@c @defvr {Graphic option} key
+m4_defvr({Graphic option}, key)
 Default value: @code{""} (empty string)
 
 @code{key} is the name of a function in the legend. If @code{key} is an
@@ -1966,17 +2062,19 @@ Example:
              explicit(cos(x),x,0,10) )$
 @end example
 @figure{draw_key}
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{key_pos}
-@defvr {Graphic option} key_pos
+@c @defvr {Graphic option} key_pos
+m4_defvr({Graphic option}, key_pos)
 Default value: @code{""} (empty string)
 
 @code{key_pos} defines at which position the legend will be drawn. If @code{key} is an
@@ -2008,16 +2106,18 @@ Example:
 @end example
 @figure{draw_key_pos}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{label_alignment}
-@defvr {Graphic option} label_alignment
+@c @defvr {Graphic option} label_alignment
+m4_defvr({Graphic option}, label_alignment)
 Default value: @code{center}
 
 @code{label_alignment} is used to specify where to write labels with
@@ -2044,16 +2144,18 @@ Example:
 
 See also @mrefcomma{label_orientation}  and @code{color} 
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{label_orientation}
-@defvr {Graphic option} label_orientation
+@c @defvr {Graphic option} label_orientation
+m4_defvr({Graphic option}, label_orientation)
 Default value: @code{horizontal}
 
 @code{label_orientation} is used to specify orientation of labels.
@@ -2080,16 +2182,18 @@ Package @code{draw} needs always data to draw an scene.
 
 See also @mref{label_alignment} and @code{color} 
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{line_type}
-@defvr {Graphic option} line_type
+@c @defvr {Graphic option} line_type
+m4_defvr({Graphic option}, line_type)
 Default value: @code{solid}
 
 @code{line_type} indicates how lines are displayed; possible values are
@@ -2120,16 +2224,18 @@ Example:
 
 See also @mrefdot{line_width}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{line_width}
-@defvr {Graphic option} line_width
+@c @defvr {Graphic option} line_width
+m4_defvr({Graphic option}, line_width)
 Default value: 1
 
 @code{line_width} is the width of plotted lines.
@@ -2159,16 +2265,18 @@ Example:
 
 See also @mrefdot{line_type}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{logcb}
-@defvr {Graphic option} logcb
+@c @defvr {Graphic option} logcb
+m4_defvr({Graphic option}, logcb)
 Default value: @code{false}
 
 If @mref{logcb} is @code{true}, the tics in the colorbox will be drawn in the
@@ -2195,16 +2303,18 @@ Example:
 
 See also @mrefcomma{enhanced3d}  @mref{colorbox} and @mrefdot{cbrange}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{logx_draw}
-@defvr {Graphic option} logx
+@c @defvr {Graphic option} logx
+m4_defvr({Graphic option}, logx)
 Default value: @code{false}
 
 If @code{logx} is @code{true}, the @var{x} axis will be drawn in the
@@ -2223,16 +2333,18 @@ Example:
 
 See also @mrefcomma{logy}  @mrefcomma{logx_secondary}  @mrefcomma{logy_secondary}  and @mrefdot{logz}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{logx_secondary}
-@defvr {Graphic option} logx_secondary
+@c @defvr {Graphic option} logx_secondary
+m4_defvr({Graphic option}, logx_secondary)
 Default value: @code{false}
 
 If @code{logx_secondary} is @code{true}, the secondary @var{x} axis 
@@ -2262,16 +2374,18 @@ Example:
 
 See also @mrefcomma{logx_draw}  @mrefcomma{logy_draw}  @mrefcomma{logy_secondary}  and @mrefdot{logz}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{logy_draw}
-@defvr {Graphic option} logy
+@c @defvr {Graphic option} logy
+m4_defvr({Graphic option}, logy)
 Default value: @code{false}
 
 If @code{logy} is @code{true}, the @var{y} axis will be drawn in the
@@ -2289,16 +2403,18 @@ Example:
 
 See also @mrefcomma{logx_draw}  @mrefcomma{logx_secondary}  @mrefcomma{logy_secondary}  and @mrefdot{logz}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{logy_secondary}
-@defvr {Graphic option} logy_secondary
+@c @defvr {Graphic option} logy_secondary
+m4_defvr({Graphic option}, logy_secondary)
 Default value: @code{false}
 
 If @code{logy_secondary} is @code{true}, the secondary @var{y} axis 
@@ -2327,16 +2443,18 @@ Example:
 
 See also @mrefcomma{logx_draw}  @mrefcomma{logy_draw}  @mrefcomma{logx_secondary}  and @mrefdot{logz}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{logz}
-@defvr {Graphic option} logz
+@c @defvr {Graphic option} logz
+m4_defvr({Graphic option}, logz)
 Default value: @code{false}
 
 If @code{logz} is @code{true}, the @var{z} axis will be drawn in the
@@ -2354,15 +2472,17 @@ Example:
 
 See also @mref{logx_draw} and @mrefdot{logy_draw}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
-@defvr {Graphic option} nticks
+@c @defvr {Graphic option} nticks
+m4_defvr({Graphic option}, nticks)
 Default value: 29
 
 In 2d, @code{nticks} gives the initial number of points used by the
@@ -2390,16 +2510,18 @@ Example:
 @end example
 @figure{draw_nticks}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{palette_draw}
-@defvr {Graphic option} palette
+@c @defvr {Graphic option} palette
+m4_defvr({Graphic option}, palette)
 Default value: @code{color}
 
 @code{palette} indicates how to map gray levels onto color components.
@@ -2482,16 +2604,18 @@ in red, and higher values in yellow.
 
 See also @mref{colorbox} and @mrefdot{enhanced3d}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{point_size}
-@defvr {Graphic option} point_size
+@c @defvr {Graphic option} point_size
+m4_defvr({Graphic option}, point_size)
 Default value: 1
 
 @code{point_size} sets the size for plotted points. It must be a
@@ -2518,16 +2642,18 @@ Example:
 @end example
 @figure{draw_point_size}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{point_type_draw}
-@defvr {Graphic option} point_type
+@c @defvr {Graphic option} point_type
+m4_defvr({Graphic option}, point_type)
 Default value: 1
 
 @code{point_type} indicates how isolated points are displayed; the value of this
@@ -2574,16 +2700,18 @@ Example:
 @end example
 @figure{draw_point_type}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{points_joined}
-@defvr {Graphic option} points_joined
+@c @defvr {Graphic option} points_joined
+m4_defvr({Graphic option}, points_joined)
 Default value: @code{false}
 
 When @code{points_joined} is @code{true}, points are joined by lines; when @code{false},
@@ -2620,16 +2748,18 @@ Example:
 @end example
 @figure{draw_points_joined}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{proportional_axes}
-@defvr {Graphic option} proportional_axes
+@c @defvr {Graphic option} proportional_axes
+m4_defvr({Graphic option}, proportional_axes)
 Default value: @code{none}
 
 When @code{proportional_axes} is equal to @code{xy} or @code{xyz},
@@ -2671,16 +2801,18 @@ Multiplot.
 @end example
 @figure{draw_proportional_axis2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{surface_hide}
-@defvr {Graphic option} surface_hide
+@c @defvr {Graphic option} surface_hide
+m4_defvr({Graphic option}, surface_hide)
 Default value: @code{false}
 
 If @code{surface_hide} is @code{true}, hidden parts are not plotted in 3d surfaces.
@@ -2698,16 +2830,18 @@ Example:
 @end example
 @figure{draw_surface_hide}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{terminal}
-@defvr {Graphic option} terminal
+@c @defvr {Graphic option} terminal
+m4_defvr({Graphic option}, terminal)
 Default value: @code{screen}
 
 Selects the terminal to be used by Gnuplot; possible values are:
@@ -2790,16 +2924,18 @@ Multipage output in eps format.
 
 See also @mrefcomma{file_name}  @mref{dimensions_draw} and @mrefdot{delay}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{title_draw}
-@defvr {Graphic option} title
+@c @defvr {Graphic option} title
+m4_defvr({Graphic option}, title)
 Default value: @code{""} (empty string)
 
 Option @code{title}, a string, is the main title for the scene.
@@ -2816,16 +2952,18 @@ Example:
 @end example
 @figure{draw_title}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{transform}
-@defvr {Graphic option} transform
+@c @defvr {Graphic option} transform
+m4_defvr({Graphic option}, transform)
 Default value: @code{none}
 
 If @code{transform} is @code{none}, the space is not transformed and
@@ -2868,15 +3006,17 @@ Translation in 3D.
         explicit(20*exp(-x^2-y^2)-10,x,-3,3,y,-3,3) )$
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{transparent}
-@defvr {Graphic option} transparent
+@c @defvr {Graphic option} transparent
+m4_defvr({Graphic option}, transparent)
 Default value: @code{false}
 
 If @code{transparent} is @code{false}, interior regions of polygons are 
@@ -2898,16 +3038,18 @@ Example:
 @end example
 @figure{draw_transparent}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{unit_vectors}
-@defvr {Graphic option} unit_vectors
+@c @defvr {Graphic option} unit_vectors
+m4_defvr({Graphic option}, unit_vectors)
 Default value: @code{false}
 
 If @code{unit_vectors} is @code{true}, vectors are plotted with module 1.
@@ -2929,16 +3071,18 @@ Example:
 @end example
 @figure{draw_unit_vectors}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{user_preamble}
-@defvr {Graphic option} user_preamble
+@c @defvr {Graphic option} user_preamble
+m4_defvr({Graphic option}, user_preamble)
 Default value: @code{""} (empty string)
 
 Expert Gnuplot users can make use of this option to fine tune Gnuplot's
@@ -2975,17 +3119,19 @@ Tell gnuplot to draw all contour lines in black
 @end example
 @figure{draw_user_preamble2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{view}
-@defvr {Graphic option} view
+@c @defvr {Graphic option} view
+m4_defvr({Graphic option}, view)
 Default value: @code{[60,30]}
 
 A pair of angles, measured in degrees, indicating the view direction in a 
@@ -3014,17 +3160,19 @@ Example:
 @end example
 @figure{draw_view2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{wired_surface}
-@defvr {Graphic option} wired_surface
+@c @defvr {Graphic option} wired_surface
+m4_defvr({Graphic option}, wired_surface)
 Default value: @code{false}
 
 Indicates whether 3D surfaces in @code{enhanced3d} mode show the grid joinning
@@ -3043,17 +3191,19 @@ Example:
 @end example
 @figure{draw_wired_surface}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{x_voxel}
-@defvr {Graphic option} x_voxel
+@c @defvr {Graphic option} x_voxel
+m4_defvr({Graphic option}, x_voxel)
 Default value: 10
 
 @code{x_voxel} is the number of voxels in the x direction to
@@ -3061,17 +3211,19 @@ be used by the @i{marching cubes algorithm} implemented
 by the 3d @code{implicit} object. It is also used by graphic
 object @mrefdot{region}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{xaxis}
-@defvr {Graphic option} xaxis
+@c @defvr {Graphic option} xaxis
+m4_defvr({Graphic option}, xaxis)
 Default value: @code{false}
 
 If @code{xaxis} is @code{true}, the @var{x} axis is drawn.
@@ -3090,17 +3242,19 @@ Example:
 
 See also @mrefcomma{xaxis_width}  @mref{xaxis_type} and @mrefdot{xaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{xaxis_color}
-@defvr {Graphic option} xaxis_color
+@c @defvr {Graphic option} xaxis_color
+m4_defvr({Graphic option}, xaxis_color)
 Default value: @code{"black"}
 
 @code{xaxis_color} specifies the color for the @var{x} axis. See
@@ -3119,16 +3273,18 @@ Example:
 
 See also @mrefcomma{xaxis}  @mref{xaxis_width} and @mrefdot{xaxis_type}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xaxis_secondary}
-@defvr {Graphic option} xaxis_secondary
+@c @defvr {Graphic option} xaxis_secondary
+m4_defvr({Graphic option}, xaxis_secondary)
 Default value: @code{false}
 
 If @code{xaxis_secondary} is @code{true}, function values can be plotted with 
@@ -3153,17 +3309,19 @@ Example:
 See also @mrefcomma{xrange_secondary}  @mrefcomma{xtics_secondary}  @mrefcomma{xtics_rotate_secondary} 
 @code{xtics_axis_secondary} and @mrefdot{xaxis_secondary}
 @c TODO: Document xtics_axis_secondary
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{xaxis_type}
-@defvr {Graphic option} xaxis_type
+@c @defvr {Graphic option} xaxis_type
+m4_defvr({Graphic option}, xaxis_type)
 Default value: @code{dots}
 
 @code{xaxis_type} indicates how the @var{x} axis is displayed; 
@@ -3182,16 +3340,18 @@ Example:
 
 See also @mrefcomma{xaxis}  @mref{xaxis_width} and @mrefdot{xaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xaxis_width}
-@defvr {Graphic option} xaxis_width
+@c @defvr {Graphic option} xaxis_width
+m4_defvr({Graphic option}, xaxis_width)
 Default value: 1
 
 @code{xaxis_width} is the width of the @var{x} axis.
@@ -3210,16 +3370,18 @@ Example:
 
 See also @mrefcomma{xaxis}  @mref{xaxis_type} and @mrefdot{xaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xlabel_draw}
-@defvr {Graphic option} xlabel
+@c @defvr {Graphic option} xlabel
+m4_defvr({Graphic option}, xlabel)
 Default value: @code{""}
 
 Option @code{xlabel}, a string, is the label for the @var{x} axis.
@@ -3238,16 +3400,18 @@ Example:
 
 See also @mrefcomma{xlabel_secondary}  @mrefcomma{ylabel}  @mref{ylabel_secondary} and @mrefdot{zlabel_draw}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xlabel_secondary}
-@defvr {Graphic option} xlabel_secondary
+@c @defvr {Graphic option} xlabel_secondary
+m4_defvr({Graphic option}, xlabel_secondary)
 Default value: @code{""} (empty string)
 
 Option @code{xlabel_secondary}, a string, is the label for the secondary @var{x} axis.
@@ -3270,16 +3434,18 @@ Example:
 
 See also @mrefcomma{xlabel_draw}  @mrefcomma{ylabel_draw}  @mref{ylabel_secondary} and @mrefdot{zlabel_draw}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xrange}
-@defvr {Graphic option} xrange
+@c @defvr {Graphic option} xrange
+m4_defvr({Graphic option}, xrange)
 Default value: @code{auto}
 
 If @code{xrange} is @code{auto}, the range for the @var{x} coordinate is
@@ -3300,16 +3466,18 @@ Example:
 
 See also @mref{yrange} and @mrefdot{zrange}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xrange_secondary}
-@defvr {Graphic option} xrange_secondary
+@c @defvr {Graphic option} xrange_secondary
+m4_defvr({Graphic option}, xrange_secondary)
 Default value: @code{auto}
 
 If @code{xrange_secondary} is @code{auto}, the range for the second @var{x} axis is
@@ -3323,16 +3491,18 @@ does not matter.
 
 See also @mrefcomma{xrange}  @mrefcomma{yrange}  @mref{zrange} and @mrefdot{yrange_secondary}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{xtics_draw}
-@defvr {Graphic option} xtics
+@c @defvr {Graphic option} xtics
+m4_defvr({Graphic option}, xtics)
 Default value: @code{true}
 
 This graphic option controls the way tic marks are drawn on the @var{x} axis.
@@ -3403,16 +3573,18 @@ Labeled tics.
 
 See also @mrefcomma{ytics}  and @mrefdot{ztics}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xtics_axis}
-@defvr {Graphic option} xtics_axis
+@c @defvr {Graphic option} xtics_axis
+m4_defvr({Graphic option}, xtics_axis)
 Default value: @code{false}
 
 If @code{xtics_axis} is @code{true}, tic marks and their labels are plotted just
@@ -3421,16 +3593,18 @@ along the @var{x} axis, if it is @code{false} tics are plotted on the border.
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xtics_rotate}
-@defvr {Graphic option} xtics_rotate
+@c @defvr {Graphic option} xtics_rotate
+m4_defvr({Graphic option}, xtics_rotate)
 Default value: @code{false}
 
 If @code{xtics_rotate} is @code{true}, tic marks on the @var{x} axis are rotated 
@@ -3439,15 +3613,17 @@ If @code{xtics_rotate} is @code{true}, tic marks on the @var{x} axis are rotated
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 @anchor{xtics_rotate_secondary}
-@defvr {Graphic option} xtics_rotate_secondary
+@c @defvr {Graphic option} xtics_rotate_secondary
+m4_defvr({Graphic option}, xtics_rotate_secondary)
 Default value: @code{false}
 
 If @code{xtics_rotate_secondary} is @code{true}, tic marks on the secondary @var{x} axis are rotated 
@@ -3456,32 +3632,36 @@ If @code{xtics_rotate_secondary} is @code{true}, tic marks on the secondary @var
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xtics_secondary}
-@defvr {Graphic option} xtics_secondary
+@c @defvr {Graphic option} xtics_secondary
+m4_defvr({Graphic option}, xtics_secondary)
 Default value: @code{auto}
 
 This graphic option controls the way tic marks are drawn on the second @var{x} axis.
 
 See @code{xtics} for a complete description.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xtics_secondary_axis}
-@defvr {Graphic option} xtics_secondary_axis
+@c @defvr {Graphic option} xtics_secondary_axis
+m4_defvr({Graphic option}, xtics_secondary_axis)
 Default value: @code{false}
 
 If @code{xtics_secondary_axis} is @code{true}, tic marks and their labels are plotted just
@@ -3490,16 +3670,18 @@ along the secondary @var{x} axis, if it is @code{false} tics are plotted on the 
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{xu_grid}
-@defvr {Graphic option} xu_grid
+@c @defvr {Graphic option} xu_grid
+m4_defvr({Graphic option}, xu_grid)
 Default value: 30
 
 @code{xu_grid} is the number of coordinates of the first variable
@@ -3522,17 +3704,19 @@ Example:
 
 See also @mrefdot{yv_grid}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{xy_file}
-@defvr {Graphic option} xy_file
+@c @defvr {Graphic option} xy_file
+m4_defvr({Graphic option}, xy_file)
 Default value: @code{""} (empty string)
 
 @code{xy_file} is the name of the file where the coordinates will be saved
@@ -3542,17 +3726,19 @@ no coordinates are saved.
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{xyplane}
-@defvr {Graphic option} xyplane
+@c @defvr {Graphic option} xyplane
+m4_defvr({Graphic option}, xyplane)
 Default value: @code{false}
 
 Allocates the xy-plane in 3D scenes. When @code{xyplane} is
@@ -3570,17 +3756,19 @@ Example:
              explicit(x^2+y^2,x,-1,1,y,-1,1))$
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{y_voxel}
-@defvr {Graphic option} y_voxel
+@c @defvr {Graphic option} y_voxel
+m4_defvr({Graphic option}, y_voxel)
 Default value: 10
 
 @code{y_voxel} is the number of voxels in the y direction to
@@ -3588,16 +3776,18 @@ be used by the @i{marching cubes algorithm} implemented
 by the 3d @code{implicit} object. It is also used by graphic
 object @mrefdot{region}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{yaxis}
-@defvr {Graphic option} yaxis
+@c @defvr {Graphic option} yaxis
+m4_defvr({Graphic option}, yaxis)
 Default value: @code{false}
 
 If @code{yaxis} is @code{true}, the @var{y} axis is drawn.
@@ -3615,16 +3805,18 @@ Example:
 
 See also @mrefcomma{yaxis_width}  @mref{yaxis_type} and @mrefdot{yaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{yaxis_color}
-@defvr {Graphic option} yaxis_color
+@c @defvr {Graphic option} yaxis_color
+m4_defvr({Graphic option}, yaxis_color)
 Default value: @code{"black"}
 
 @code{yaxis_color} specifies the color for the @var{y} axis. See
@@ -3643,16 +3835,18 @@ Example:
 
 See also @mrefcomma{yaxis}  @mref{yaxis_width} and @mrefdot{yaxis_type}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{yaxis_secondary}
-@defvr {Graphic option} yaxis_secondary
+@c @defvr {Graphic option} yaxis_secondary
+m4_defvr({Graphic option}, yaxis_secondary)
 Default value: @code{false}
 
 If @code{yaxis_secondary} is @code{true}, function values can be plotted with 
@@ -3676,16 +3870,18 @@ See also @mrefcomma{yrange_secondary}  @mrefcomma{ytics_secondary}  @mref{ytics_
 and @code{ytics_axis_secondary}
 @c TODO: Document ytics_axis_secondary
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{yaxis_type}
-@defvr {Graphic option} yaxis_type
+@c @defvr {Graphic option} yaxis_type
+m4_defvr({Graphic option}, yaxis_type)
 Default value: @code{dots}
 
 @code{yaxis_type} indicates how the @var{y} axis is displayed; 
@@ -3704,16 +3900,18 @@ Example:
 
 See also @mrefcomma{yaxis}  @mref{yaxis_width} and @mrefdot{yaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{yaxis_width}
-@defvr {Graphic option} yaxis_width
+@c @defvr {Graphic option} yaxis_width
+m4_defvr({Graphic option}, yaxis_width)
 Default value: 1
 
 @code{yaxis_width} is the width of the @var{y} axis.
@@ -3732,16 +3930,18 @@ Example:
 
 See also @mrefcomma{yaxis}  @mref{yaxis_type} and @mrefdot{yaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ylabel_draw}
-@defvr {Graphic option} ylabel
+@c @defvr {Graphic option} ylabel
+m4_defvr({Graphic option}, ylabel)
 Default value: @code{""}
 
 Option @code{ylabel}, a string, is the label for the @var{y} axis.
@@ -3760,16 +3960,18 @@ Example:
 
 See also @mrefcomma{xlabel_draw}  @mrefcomma{xlabel_secondary}  @mrefcomma{ylabel_secondary}  and @mrefdot{zlabel_draw}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ylabel_secondary}
-@defvr {Graphic option} ylabel_secondary
+@c @defvr {Graphic option} ylabel_secondary
+m4_defvr({Graphic option}, ylabel_secondary)
 Default value: @code{""} (empty string)
 
 Option @code{ylabel_secondary}, a string, is the label for the secondary @var{y} axis.
@@ -3796,16 +3998,18 @@ Example:
 
 See also @mrefcomma{xlabel_draw}  @mrefcomma{xlabel_secondary}  @mref{ylabel_draw} and @mrefdot{zlabel_draw}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{yrange}
-@defvr {Graphic option} yrange
+@c @defvr {Graphic option} yrange
+m4_defvr({Graphic option}, yrange)
 Default value: @code{auto}
 
 If @code{yrange} is @code{auto}, the range for the @var{y} coordinate is
@@ -3827,16 +4031,18 @@ Example:
 
 See also @mrefcomma{xrange}  @mref{yrange_secondary} and @mrefdot{zrange}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{yrange_secondary}
-@defvr {Graphic option} yrange_secondary
+@c @defvr {Graphic option} yrange_secondary
+m4_defvr({Graphic option}, yrange_secondary)
 Default value: @code{auto}
 
 If @code{yrange_secondary} is @code{auto}, the range for the second @var{y} axis is
@@ -3863,31 +4069,35 @@ Example:
 
 See also @mrefcomma{xrange}  @mref{yrange} and @mrefdot{zrange}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ytics_draw}
-@defvr {Graphic option} ytics
+@c @defvr {Graphic option} ytics
+m4_defvr({Graphic option}, ytics)
 Default value: @code{true}
 
 This graphic option controls the way tic marks are drawn on the @var{y} axis.
 
 See @code{xtics} for a complete description.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ytics_axis}
-@defvr {Graphic option} ytics_axis
+@c @defvr {Graphic option} ytics_axis
+m4_defvr({Graphic option}, ytics_axis)
 Default value: @code{false}
 
 If @code{ytics_axis} is @code{true}, tic marks and their labels are plotted just
@@ -3896,17 +4106,19 @@ along the @var{y} axis, if it is @code{false} tics are plotted on the border.
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{ytics_rotate}
-@defvr {Graphic option} ytics_rotate
+@c @defvr {Graphic option} ytics_rotate
+m4_defvr({Graphic option}, ytics_rotate)
 Default value: @code{false}
 
 If @code{ytics_rotate} is @code{true}, tic marks on the @var{y} axis are rotated 
@@ -3915,16 +4127,18 @@ If @code{ytics_rotate} is @code{true}, tic marks on the @var{y} axis are rotated
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ytics_rotate_secondary}
-@defvr {Graphic option} ytics_rotate_secondary
+@c @defvr {Graphic option} ytics_rotate_secondary
+m4_defvr({Graphic option}, ytics_rotate_secondary)
 Default value: @code{false}
 
 If @code{ytics_rotate_secondary} is @code{true}, tic marks on the secondary @var{y} axis are rotated 
@@ -3933,32 +4147,36 @@ If @code{ytics_rotate_secondary} is @code{true}, tic marks on the secondary @var
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ytics_secondary}
-@defvr {Graphic option} ytics_secondary
+@c @defvr {Graphic option} ytics_secondary
+m4_defvr({Graphic option}, ytics_secondary)
 Default value: @code{auto}
 
 This graphic option controls the way tic marks are drawn on the second @var{y} axis.
 
 See @code{xtics} for a complete description.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{ytics_secondary_axis}
-@defvr {Graphic option} ytics_secondary_axis
+@c @defvr {Graphic option} ytics_secondary_axis
+m4_defvr({Graphic option}, ytics_secondary_axis)
 Default value: @code{false}
 
 If @code{ytics_secondary_axis} is @code{true}, tic marks and their labels are plotted just
@@ -3967,16 +4185,18 @@ along the secondary @var{y} axis, if it is @code{false} tics are plotted on the 
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{yv_grid}
-@defvr {Graphic option} yv_grid
+@c @defvr {Graphic option} yv_grid
+m4_defvr({Graphic option}, yv_grid)
 Default value: 30
 
 @code{yv_grid} is the number of coordinates of the second variable
@@ -4000,30 +4220,34 @@ Example:
 
 See also @mrefdot{xu_grid}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 @anchor{z_voxel}
-@defvr {Graphic option} z_voxel
+@c @defvr {Graphic option} z_voxel
+m4_defvr({Graphic option}, z_voxel)
 Default value: 10
 
 @code{z_voxel} is the number of voxels in the z direction to
 be used by the @i{marching cubes algorithm} implemented
 by the 3d @code{implicit} object.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 @anchor{zaxis}
-@defvr {Graphic option} zaxis
+@c @defvr {Graphic option} zaxis
+m4_defvr({Graphic option}, zaxis)
 Default value: @code{false}
 
 If @code{zaxis} is @code{true}, the @var{z} axis is drawn in 3D plots.
@@ -4043,16 +4267,18 @@ Example:
 
 See also @mrefcomma{zaxis_width}  @mref{zaxis_type} and @mrefdot{zaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{zaxis_color}
-@defvr {Graphic option} zaxis_color
+@c @defvr {Graphic option} zaxis_color
+m4_defvr({Graphic option}, zaxis_color)
 Default value: @code{"black"}
 
 @code{zaxis_color} specifies the color for the @var{z} axis. See
@@ -4073,16 +4299,18 @@ Example:
 
 See also @mrefcomma{zaxis}  @mref{zaxis_width} and @mrefdot{zaxis_type}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{zaxis_type}
-@defvr {Graphic option} zaxis_type
+@c @defvr {Graphic option} zaxis_type
+m4_defvr({Graphic option}, zaxis_type)
 Default value: @code{dots}
 
 @code{zaxis_type} indicates how the @var{z} axis is displayed; 
@@ -4102,17 +4330,19 @@ Example:
 
 See also @mrefcomma{zaxis}  @mref{zaxis_width} and @mrefdot{zaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{zaxis_width}
-@defvr {Graphic option} zaxis_width
+@c @defvr {Graphic option} zaxis_width
+m4_defvr({Graphic option}, zaxis_width)
 Default value: 1
 
 @code{zaxis_width} is the width of the @var{z} axis.
@@ -4132,16 +4362,18 @@ Example:
 
 See also @mrefcomma{zaxis}  @mref{zaxis_type} and @mrefdot{zaxis_color}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 @anchor{zlabel_draw}
-@defvr {Graphic option} zlabel
+@c @defvr {Graphic option} zlabel
+m4_defvr({Graphic option}, zlabel)
 Default value: @code{""}
 
 Option @code{zlabel}, a string, is the label for the @var{z} axis.
@@ -4161,17 +4393,19 @@ Example:
 
 See also @mrefcomma{xlabel_draw}  @mrefcomma{ylabel_draw}  and @mrefdot{zlabel_rotate}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{zlabel_rotate}
-@defvr {Graphic option} zlabel_rotate
+@c @defvr {Graphic option} zlabel_rotate
+m4_defvr({Graphic option}, zlabel_rotate)
 Default value: @code{"auto"}
 
 This graphics option allows to choose if the z axis label of 3d plots is
@@ -4193,17 +4427,19 @@ Example:
 
 See also @mrefdot{zlabel_draw}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{zrange}
-@defvr {Graphic option} zrange
+@c @defvr {Graphic option} zrange
+m4_defvr({Graphic option}, zrange)
 Default value: @code{auto}
 
 If @code{zrange} is @code{auto}, the range for the @var{z} coordinate is
@@ -4226,31 +4462,35 @@ Example:
 
 See also @mref{xrange} and @mrefdot{yrange}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 
 @anchor{ztics}
-@defvr {Graphic option} ztics
+@c @defvr {Graphic option} ztics
+m4_defvr({Graphic option}, ztics)
 Default value: @code{true}
 
 This graphic option controls the way tic marks are drawn on the @var{z} axis.
 
 See @code{xtics} for a complete description.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 @anchor{ztics_axis}
-@defvr {Graphic option} ztics_axis
+@c @defvr {Graphic option} ztics_axis
+m4_defvr({Graphic option}, ztics_axis)
 Default value: @code{false}
 
 If @code{ztics_axis} is @code{true}, tic marks and their labels are plotted just
@@ -4259,15 +4499,17 @@ along the @var{z} axis, if it is @code{false} tics are plotted on the border.
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 @anchor{ztics_rotate}
-@defvr {Graphic option} ztics_rotate
+@c @defvr {Graphic option} ztics_rotate
+m4_defvr({Graphic option}, ztics_rotate)
 Default value: @code{false}
 
 If @code{ztics_rotate} is @code{true}, tic marks on the @var{z} axis are rotated 
@@ -4276,11 +4518,12 @@ If @code{ztics_rotate} is @code{true}, tic marks on the @var{z} axis are rotated
 Since this is a global graphics option, its position in the scene description
 does not matter.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
@@ -4290,7 +4533,8 @@ does not matter.
 
 
 @anchor{bars}
-@deffn  {Graphic object} bars ([@var{x1},@var{h1},@var{w1}], [@var{x2},@var{h2},@var{w2}, ...])
+@c @deffn  {Graphic object} bars ([@var{x1},@var{h1},@var{w1}], [@var{x2},@var{h2},@var{w2}, ...])
+m4_deffn( {Graphic object}, bars, <<<([@var{x1},@var{h1},@var{w1}], [@var{x2},@var{h2},@var{w2}, ...])>>>)
 Draws vertical bars in 2D.
 
 @b{2D}
@@ -4319,16 +4563,18 @@ Example:
 @end example
 @figure{draw_bars}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{cylindrical}
-@deffn  {Graphic object} cylindrical (@var{radius}, @var{z}, @var{minz}, @var{maxz}, @var{azi}, @var{minazi}, @var{maxazi})
+@c @deffn  {Graphic object} cylindrical (@var{radius}, @var{z}, @var{minz}, @var{maxz}, @var{azi}, @var{minazi}, @var{maxazi})
+m4_deffn( {Graphic object}, cylindrical, <<<(@var{radius}, @var{z}, @var{minz}, @var{maxz}, @var{azi}, @var{minazi}, @var{maxazi})>>>)
 Draws 3D functions defined in cylindrical coordinates.
 
 @b{3D}
@@ -4349,17 +4595,19 @@ Example:
 @end example
 @figure{draw_cylindrical}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{elevation_grid}
-@deffn  {Graphic object} elevation_grid (@var{mat},@var{x0},@var{y0},@var{width},@var{height})
+@c @deffn  {Graphic object} elevation_grid (@var{mat},@var{x0},@var{y0},@var{width},@var{height})
+m4_deffn( {Graphic object}, elevation_grid, <<<(@var{mat},@var{x0},@var{y0},@var{width},@var{height})>>>)
 Draws matrix @var{mat} in 3D space. @var{z} values are taken from @var{mat},
 the abscissas range from @var{x0} to @math{@var{x0} + @var{width}}
 and ordinates from @var{y0} to @math{@var{y0} + @var{height}}. Element @math{a(1,1)}
@@ -4387,17 +4635,19 @@ Example:
 @end example
 @figure{draw_elevation_grid}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{ellipse}
-@deffn  {Graphic object} ellipse (@var{xc}, @var{yc}, @var{a}, @var{b}, @var{ang1}, @var{ang2})
+@c @deffn  {Graphic object} ellipse (@var{xc}, @var{yc}, @var{a}, @var{b}, @var{ang1}, @var{ang2})
+m4_deffn( {Graphic object}, ellipse, <<<(@var{xc}, @var{yc}, @var{a}, @var{b}, @var{ang1}, @var{ang2})>>>)
 Draws ellipses and circles in 2D.
 
 
@@ -4431,15 +4681,17 @@ Example:
 @end example
 @figure{draw_ellipse}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{errors}
-@deffn  {Graphic object} errors ([@var{x1}, @var{x2}, @dots{}], [@var{y1}, @var{y2}, @dots{}])
+@c @deffn  {Graphic object} errors ([@var{x1}, @var{x2}, @dots{}], [@var{y1}, @var{y2}, @dots{}])
+m4_deffn( {Graphic object}, errors, <<<([@var{x1}, @var{x2}, @dots{}], [@var{y1}, @var{y2}, @dots{}])>>>)
 Draws points with error bars, horizontally, vertically or both, depending on the
 value of option @code{error_type}.
 
@@ -4482,15 +4734,17 @@ Vertical and horizontal error bars.
 @end example
 @figure{draw_errors2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{explicit}
-@deffn  {Graphic object} explicit @
+@c @deffn  {Graphic object} explicit @
+m4_deffn( {Graphic object}, explicit, <<<>>>) @
 @fname{explicit} (@var{expr},@var{var},@var{minval},@var{maxval}) @
 @fname{explicit} (@var{fcn},@var{var},@var{minval},@var{maxval}) @
 @fname{explicit} (@var{expr},@var{var1},@var{minval1},@var{maxval1},@var{var2},@var{minval2},@var{maxval2}) @
@@ -4549,16 +4803,18 @@ Example:
 
 See also @mref{filled_func} for filled functions.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{image}
-@deffn  {Graphic object} image (@var{im},@var{x0},@var{y0},@var{width},@var{height})
+@c @deffn  {Graphic object} image (@var{im},@var{x0},@var{y0},@var{width},@var{height})
+m4_deffn( {Graphic object}, image, <<<(@var{im},@var{x0},@var{y0},@var{width},@var{height})>>>)
 Renders images in 2D.
 
 @b{2D}
@@ -4662,17 +4918,19 @@ See also @mrefcomma{make_level_picture}  @mref{make_rgb_picture} and @mrefdot{re
 @url{http://www.telefonica.net/web2/biomates/maxima/gpdraw/image}@*
 contains more elaborated examples.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{implicit}
-@deffn  {Graphic object} implicit @
+@c @deffn  {Graphic object} implicit @
+m4_deffn( {Graphic object}, implicit, <<<>>>) @
 @fname{implicit} (@var{fcn},@var{x},@var{xmin},@var{xmax},@var{y},@var{ymin},@var{ymax}) @
 @fname{implicit} (@var{fcn},@var{x},@var{xmin},@var{xmax},@var{y},@var{ymin},@var{ymax},@var{z},@var{zmin},@var{zmax})
 
@@ -4725,15 +4983,17 @@ Example:
 @end example
 @figure{draw_implicit2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{label_draw}
-@deffn  {Graphic object} label @
+@c @deffn  {Graphic object} label @
+m4_deffn( {Graphic object}, label, <<<>>>) @
 @fname{label} ([@var{string},@var{x},@var{y}],...) @
 @fname{label} ([@var{string},@var{x},@var{y},@var{z}],...)
 
@@ -4779,15 +5039,17 @@ Example:
 @end example
 @figure{draw_label2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{mesh}
-@deffn  {Graphic object} mesh (@var{row_1},@var{row_2},...)
+@c @deffn  {Graphic object} mesh (@var{row_1},@var{row_2},...)
+m4_deffn( {Graphic object}, mesh, <<<(@var{row_1},@var{row_2},...)>>>)
 Draws a quadrangular mesh in 3D.
 
 @b{3D}
@@ -4837,15 +5099,17 @@ Two quadrilaterals.
 @end example
 @figure{draw_mesh3}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{parametric}
-@deffn  {Graphic object} parametric @
+@c @deffn  {Graphic object} parametric @
+m4_deffn( {Graphic object}, parametric, <<<>>>) @
 @fname{parametric} (@var{xfun},@var{yfun},@var{par},@var{parmin},@var{parmax}) @
 @fname{parametric} (@var{xfun},@var{yfun},@var{zfun},@var{par},@var{parmin},@var{parmax})
 
@@ -4891,16 +5155,18 @@ Example:
 @end example
 @figure{draw_parametric2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{parametric_surface}
-@deffn  {Graphic object} parametric_surface (@var{xfun}, @var{yfun}, @var{zfun}, @var{par1}, @var{par1min}, @var{par1max}, @var{par2}, @var{par2min}, @var{par2max})
+@c @deffn  {Graphic object} parametric_surface (@var{xfun}, @var{yfun}, @var{zfun}, @var{par1}, @var{par1min}, @var{par1max}, @var{par2}, @var{par2min}, @var{par2max})
+m4_deffn( {Graphic object}, parametric_surface, <<<(@var{xfun}, @var{yfun}, @var{zfun}, @var{par1}, @var{par1min}, @var{par1max}, @var{par2}, @var{par2min}, @var{par2max})>>>)
 Draws parametric surfaces in 3D.
 
 @b{3D}
@@ -4931,16 +5197,18 @@ Example:
 @end example
 @figure{draw_parametric3}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{points}
-@deffn  {Graphic object} points @
+@c @deffn  {Graphic object} points @
+m4_deffn( {Graphic object}, points, <<<>>>) @
 @fname{points} ([[@var{x1},@var{y1}], [@var{x2},@var{y2}],...]) @
 @fname{points} ([@var{x1},@var{x2},...], [@var{y1},@var{y2},...]) @
 @fname{points} ([@var{y1},@var{y2},...]) @
@@ -5118,16 +5386,18 @@ Color numbers explicitly specified by the user.
 @end example
 @figure{draw_points8}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{polar}
-@deffn  {Graphic object} polar (@var{radius},@var{ang},@var{minang},@var{maxang})
+@c @deffn  {Graphic object} polar (@var{radius},@var{ang},@var{minang},@var{maxang})
+m4_deffn( {Graphic object}, polar, <<<(@var{radius},@var{ang},@var{minang},@var{maxang})>>>)
 Draws 2D functions defined in polar coordinates.
 
 @b{2D}
@@ -5154,17 +5424,19 @@ Example:
 @end example
 @figure{draw_polar}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{polygon}
-@deffn  {Graphic object} polygon @
+@c @deffn  {Graphic object} polygon @
+m4_deffn( {Graphic object}, polygon, <<<>>>) R
 @fname{polygon} ([[@var{x1}, @var{y1}], [@var{x2}, @var{y2}], @dots{}]) @
 @fname{polygon} ([@var{x1}, @var{x2}, @dots{}], [@var{y1}, @var{y2}, @dots{}])
 
@@ -5193,15 +5465,17 @@ Example:
 @end example
 @figure{draw_polygon}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{quadrilateral}
-@deffn  {Graphic object} quadrilateral (@var{point_1}, @var{point_2}, @var{point_3}, @var{point_4})
+@c @deffn  {Graphic object} quadrilateral (@var{point_1}, @var{point_2}, @var{point_3}, @var{point_4})
+m4_deffn( {Graphic object}, quadrilateral, <<<(@var{point_1}, @var{point_2}, @var{point_3}, @var{point_4})>>>)
 Draws a quadrilateral.
 
 @b{2D}
@@ -5236,13 +5510,15 @@ This object is affected by the following @i{graphic options}: @mrefcomma{line_ty
 @mrefcomma{line_width} @mrefcomma{color} @mrefcomma{key} @mref{enhanced3d} and
 @mrefdot{transform}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{rectangle}
-@deffn  {Graphic object} rectangle ([@var{x1},@var{y1}], [@var{x2},@var{y2}])
+@c @deffn  {Graphic object} rectangle ([@var{x1},@var{y1}], [@var{x2},@var{y2}])
+m4_deffn( {Graphic object}, rectangle, <<<([@var{x1},@var{y1}], [@var{x2},@var{y2}])>>>)
 Draws rectangles in 2D.
 
 @b{2D}
@@ -5272,17 +5548,19 @@ Example:
 @end example
 @figure{draw_rectangle}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{region}
-@deffn  {Graphic object} region (@var{expr},@var{var1},@var{minval1},@var{maxval1},@var{var2},@var{minval2},@var{maxval2})
+@c @deffn  {Graphic object} region (@var{expr},@var{var1},@var{minval1},@var{maxval1},@var{var2},@var{minval2},@var{maxval2})
+m4_deffn( {Graphic object}, region, <<<(@var{expr},@var{var1},@var{minval1},@var{maxval1},@var{var2},@var{minval2},@var{maxval2})>>>)
 Plots a region on the plane defined by inequalities.
 
 @b{2D}
@@ -5302,12 +5580,14 @@ Example:
         region(x^2+y^2<1 and x^2+y^2 > 1/2,
                x, -1.5, 1.5, y, -1.5, 1.5));
 @end example
-@end deffn
+@c @end deffn
+m4_end_deffn()
 @figure{draw_region}
 
 
 @anchor{spherical}
-@deffn  {Graphic object} spherical (@var{radius}, @var{azi}, @var{minazi}, @var{maxazi}, @var{zen}, @var{minzen}, @var{maxzen})
+@c @deffn  {Graphic object} spherical (@var{radius}, @var{azi}, @var{minazi}, @var{maxazi}, @var{zen}, @var{minzen}, @var{maxzen})
+m4_deffn( {Graphic object}, spherical, <<<(@var{radius}, @var{azi}, @var{minazi}, @var{maxazi}, @var{zen}, @var{minzen}, @var{maxzen})>>>)
 Draws 3D functions defined in spherical coordinates.
 
 @b{3D}
@@ -5328,15 +5608,17 @@ Example:
 @end example
 @figure{draw_spherical}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{triangle}
-@deffn  {Graphic object} triangle (@var{point_1}, @var{point_2}, @var{point_3})
+@c @deffn  {Graphic object} triangle (@var{point_1}, @var{point_2}, @var{point_3})
+m4_deffn( {Graphic object}, triangle, <<<(@var{point_1}, @var{point_2}, @var{point_3})>>>)
 Draws a triangle.
 
 @b{2D}
@@ -5365,15 +5647,17 @@ Example:
 This object is affected by the following @i{graphic options}: @mrefcomma{line_type} 
 @mrefcomma{line_width} @mrefcomma{color} @mrefcomma{key} @mref{enhanced3d} and @mrefdot{transform}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{tube}
-@deffn  {Graphic object} tube (@var{xfun},@var{yfun},@var{zfun},@var{rfun},@var{p},@var{pmin},@var{pmax})
+@c @deffn  {Graphic object} tube (@var{xfun},@var{yfun},@var{zfun},@var{rfun},@var{p},@var{pmin},@var{pmax})
+m4_deffn( {Graphic object}, tube, <<<(@var{xfun},@var{yfun},@var{zfun},@var{rfun},@var{p},@var{pmin},@var{pmax})>>>)
 Draws a tube in 3D with varying diameter.
 
 @b{3D}
@@ -5398,16 +5682,18 @@ Example:
 @end example
 @figure{draw_tube}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{vector}
-@deffn  {Graphic object} vector @
+@c @deffn  {Graphic object} vector @
+m4_deffn( {Graphic object}, vector, <<<>>>) @
 @fname{vector} ([@var{x},@var{y}], [@var{dx},@var{dy}]) @
 @fname{vector} ([@var{x},@var{y},@var{z}], [@var{dx},@var{dy},@var{dz}])
 
@@ -5454,11 +5740,12 @@ Example:
 @end example
 @figure{draw_vector2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -5470,21 +5757,24 @@ Example:
 
 
 @anchor{get_pixel}
-@deffn  {Function} get_pixel (@var{pic},@var{x},@var{y})
+@c @deffn  {Function} get_pixel (@var{pic},@var{x},@var{y})
+m4_deffn( {Function}, get_pixel, <<<(@var{pic},@var{x},@var{y})>>>)
 Returns pixel from picture. Coordinates @var{x} and @var{y} range from 0 to
 @code{width-1} and @code{height-1}, respectively.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{make_level_picture}
-@deffn  {Function} make_level_picture @
+@c @deffn  {Function} make_level_picture @
+m4_deffn( {Function}, make_level_picture, <<<>>>) @
 @fname{make_level_picture} (@var{data}) @
 @fname{make_level_picture} (@var{data},@var{width},@var{height})
 
@@ -5521,17 +5811,19 @@ Level picture from numeric list.
 (%o1)            picture(level, 2, 2, @{Array:  #(0 0 54 3)@})
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{make_rgb_picture}
-@deffn  {Function} make_rgb_picture (@var{redlevel},@var{greenlevel},@var{bluelevel})
+@c @deffn  {Function} make_rgb_picture (@var{redlevel},@var{greenlevel},@var{bluelevel})
+m4_deffn( {Function}, make_rgb_picture, <<<(@var{redlevel},@var{greenlevel},@var{bluelevel})>>>)
 Returns an rgb-coloured @var{picture} object. All three arguments must
 be levels picture; with red, green and blue levels.
 
@@ -5561,86 +5853,98 @@ Example:
               @{Array:  #(3 54 123 2 23 82 7 73 45 255 0 33)@})
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 
 @anchor{negative_picture}
-@deffn  {Function} negative_picture (@var{pic})
+@c @deffn  {Function} negative_picture (@var{pic})
+m4_deffn( {Function}, negative_picture, <<<(@var{pic})>>>)
 Returns the negative of a (@var{level} or @var{rgb}) picture.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 
 @anchor{picture_equalp}
-@deffn  {Function} picture_equalp (@var{x},@var{y})
+@c @deffn  {Function} picture_equalp (@var{x},@var{y})
+m4_deffn( {Function}, picture_equalp, <<<(@var{x},@var{y})>>>)
 Returns @code{true} in case of equal pictures, and @code{false} otherwise.
 
-@opencatbox
-@category{Package draw}
-@category{Predicate functions}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @category{Predicate functions}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{picturep}
-@deffn  {Function} picturep (@var{x})
+@c @deffn  {Function} picturep (@var{x})
+m4_deffn( {Function}, picturep, <<<(@var{x})>>>)
 Returns @code{true} if the argument is a well formed image,
 and @code{false} otherwise.
 
-@opencatbox
-@category{Package draw}
-@category{Predicate functions}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @category{Predicate functions}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{read_xpm}
-@deffn  {Function} read_xpm (@var{xpm_file})
+@c @deffn  {Function} read_xpm (@var{xpm_file})
+m4_deffn( {Function}, read_xpm, <<<(@var{xpm_file})>>>)
 Reads a file in xpm and returns a picture object.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{rgb2level}
-@deffn  {Function} rgb2level (@var{pic})
+@c @deffn  {Function} rgb2level (@var{pic})
+m4_deffn( {Function}, rgb2level, <<<(@var{pic})>>>)
 Transforms an @var{rgb} picture into a @var{level} one by
 averaging the red, green and blue channels.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{take_channel}
-@deffn  {Function} take_channel (@var{im},@var{color})
+@c @deffn  {Function} take_channel (@var{im},@var{color})
+m4_deffn( {Function}, take_channel, <<<(@var{im},@var{color})>>>)
 If argument @var{color} is @code{red}, @code{green} or @code{blue},
 function @code{take_channel} returns the corresponding color channel of
 picture @var{im}.
@@ -5660,11 +5964,12 @@ Example:
 (%o5)           picture(level, 2, 2, @{Array:  #(54 23 73 0)@})
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -5678,7 +5983,8 @@ Example:
 
 
 @anchor{boundaries_array}
-@defvr {Global variable} boundaries_array
+@c @defvr {Global variable} boundaries_array
+m4_defvr({Global variable}, boundaries_array)
 Default value: @code{false}
 
 @code{boundaries_array} is where the graphic object @code{geomap} looks
@@ -5689,18 +5995,20 @@ point quantities, the coordinates of a polygonal segment or map boundary.
 
 See also @mrefdot{geomap}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
 
 
 
 @anchor{numbered_boundaries}
-@deffn  {Function} numbered_boundaries (@var{nlist})
+@c @deffn  {Function} numbered_boundaries (@var{nlist})
+m4_deffn( {Function}, numbered_boundaries, <<<(@var{nlist})>>>)
 Draws a list of polygonal segments (boundaries), labeled by
 its numbers (@code{boundaries_array} coordinates). This is of great
 help when building new geographical entities.
@@ -5716,17 +6024,19 @@ Map of Europe labeling borders with their component number in
 (%i3) numbered_boundaries(european_borders)$
 @end example
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{make_poly_continent}
-@deffn  {Function} make_poly_continent @
+@c @deffn  {Function} make_poly_continent @
+m4_deffn( {Function}, make_poly_continent, <<<>>>) @
 @fname{make_poly_continent} (@var{continent_name}) @
 @fname{make_poly_continent} (@var{country_list})
 
@@ -5749,18 +6059,20 @@ Example:
 @end example
 @figure{worldmap_make_poly_continent2}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 
 @anchor{make_poly_country}
-@deffn  {Function} make_poly_country (@var{country_name})
+@c @deffn  {Function} make_poly_country (@var{country_name})
+m4_deffn( {Function}, make_poly_country, <<<(@var{country_name})>>>)
 Makes the necessary polygons to draw a colored country.
 If islands exist, one country can be defined with more than
 just one polygon.
@@ -5774,18 +6086,20 @@ Example:
 @end example
 @figure{worldmap_make_poly_country}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 
 @anchor{make_polygon}
-@deffn  {Function} make_polygon (@var{nlist})
+@c @deffn  {Function} make_polygon (@var{nlist})
+m4_deffn( {Function}, make_polygon, <<<(@var{nlist})>>>)
 Returns a @code{polygon} object from boundary indices. Argument
 @var{nlist} is a list of components of @code{boundaries_array}.
 
@@ -5843,18 +6157,20 @@ polygon can be drawn.
 @end example
 @figure{worldmap_make_polygon}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 
 @anchor{region_boundaries}
-@deffn  {Function} region_boundaries (@var{x1},@var{y1},@var{x2},@var{y2})
+@c @deffn  {Function} region_boundaries (@var{x1},@var{y1},@var{x2},@var{y2})
+m4_deffn( {Function}, region_boundaries, <<<(@var{x1},@var{y1},@var{x2},@var{y2})>>>)
 Detects polygonal segments of global variable @code{boundaries_array}
 fully contained in the rectangle with vertices (@var{x1},@var{y1}) -upper left- 
 and (@var{x2},@var{y2}) -bottom right-.
@@ -5870,16 +6186,18 @@ Returns segment numbers for plotting southern Italy.
 @end example
 @figure{worldmap_region_boundaries}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{region_boundaries_plus}
-@deffn  {Function} region_boundaries_plus (@var{x1},@var{y1},@var{x2},@var{y2})
+@c @deffn  {Function} region_boundaries_plus (@var{x1},@var{y1},@var{x2},@var{y2})
+m4_deffn( {Function}, region_boundaries_plus, <<<(@var{x1},@var{y1},@var{x2},@var{y2})>>>)
 Detects polygonal segments of global variable @code{boundaries_array}
 containing at least one vertex in the rectangle defined by vertices (@var{x1},@var{y1})
 -upper left- and (@var{x2},@var{y2}) -bottom right-.
@@ -5895,11 +6213,12 @@ Example:
 @end example
 @figure{worldmap_region_boundaries_plus}
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -5908,7 +6227,8 @@ Example:
 
 
 @anchor{geomap}
-@deffn  {Graphic object} geomap @
+@c @deffn  {Graphic object} geomap @
+m4_deffn( {Graphic object}, geomap, <<<>>>) @
 @fname{geomap} (@var{numlist}) @
 @fname{geomap} (@var{numlist},@var{3Dprojection})
 
@@ -6054,9 +6374,10 @@ the northern and southern cones are tangent to sphere.
 See also @url{http://riotorto.users.sf.net/gnuplot/geomap}
 for more elaborated examples.
 
-@opencatbox
-@category{Package draw}
-@closecatbox
+@c @opencatbox
+@c @category{Package draw}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
