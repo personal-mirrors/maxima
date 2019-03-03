@@ -292,7 +292,9 @@ Computing conversions to base units; may take a moment.
 @node Functions and Variables for ezunits, , Introduction to physical_constants, ezunits-pkg
 @section Functions and Variables for ezunits
 
-@deffn {Operator} `
+m4_setcat(Package ezunits)
+@c @deffn {Operator} `
+m4_deffn({Operator}, <<<`>>>)
 
 The dimensional quantity operator.
 An expression @math{a ` b} represents a dimensional quantity,
@@ -415,13 +417,15 @@ Arithmetic operations on dimensional quantities.
 (%o6)                        a  ` m
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
-@deffn {Operator} `@w{}`
+@c @deffn {Operator} `@w{}`
+m4_deffn({Operator}, <<<`@w{}`>>>)
 
 The unit conversion operator.
 An expression @math{a ` b `@w{}` c} converts from unit @code{b} to unit @code{c}.
@@ -636,14 +640,16 @@ Computing conversions to base units; may take a moment.
                                    bell ft
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{constvalue}
-@deffn {Function} constvalue (@var{x})
+@c @deffn {Function} constvalue (@var{x})
+m4_deffn({Function}, constvalue, <<<(@var{x})>>>)
 
 Shows the value and the units of one of the constants declared by package
 @code{physical_constants}, which includes a list of physical constants, or
@@ -673,13 +679,15 @@ Example:
 (%o3)           Newtonian constant of gravitation
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{declare_constvalue}
-@deffn {Function} declare_constvalue (@var{a}, @var{x})
+@c @deffn {Function} declare_constvalue (@var{a}, @var{x})
+m4_deffn({Function}, declare_constvalue, <<<(@var{a}, @var{x})>>>)
 
 Declares the value of a constant to be used in package @code{ezunits}. This
 function should be loaded with @code{load ("ezunits")}. 
@@ -704,24 +712,28 @@ Example:
 (%o4)                      5000 ` lbm
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{remove_constvalue}
-@deffn {Function} remove_constvalue (@var{a})
+@c @deffn {Function} remove_constvalue (@var{a})
+m4_deffn({Function}, remove_constvalue, <<<(@var{a})>>>)
 
 Reverts the effect of @mrefdot{declare_constvalue} This function should be
 loaded with @code{load ("ezunits")}.
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{units}
-@deffn {Function} units (@var{x})
+@c @deffn {Function} units (@var{x})
+m4_deffn({Function}, units, <<<(@var{x})>>>)
 
 Returns the units of a dimensional quantity @var{x},
 or returns 1 if @var{x} is nondimensional.
@@ -771,13 +783,15 @@ Example:
 (%o8)                          kg
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{declare_units}
-@deffn {Function} declare_units (@var{a}, @var{u})
+@c @deffn {Function} declare_units (@var{a}, @var{u})
+m4_deffn({Function}, declare_units, <<<(@var{a}, @var{u})>>>)
 
 Declares that @mref{units} should return units @var{u} for @var{a},
 where @var{u} is an expression. This function should be loaded with
@@ -811,13 +825,15 @@ Example:
 (%o7)                         kg J
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{qty}
-@deffn {Function} qty (@var{x})
+@c @deffn {Function} qty (@var{x})
+m4_deffn({Function}, qty, <<<(@var{x})>>>)
 
 Returns the nondimensional part of a dimensional quantity @var{x},
 or returns @var{x} if @var{x} is nondimensional.
@@ -855,13 +871,15 @@ Example:
 (%o6)                         100 v
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{declare_qty}
-@deffn {Function} declare_qty (@var{a}, @var{x})
+@c @deffn {Function} declare_qty (@var{a}, @var{x})
+m4_deffn({Function}, declare_qty, <<<(@var{a}, @var{x})>>>)
 
 Declares that @mref{qty} should return @var{x} for symbol @var{a}, where
 @var{x} is a nondimensional quantity. This function should be loaded
@@ -892,14 +910,16 @@ Example:
 (%o6)                        100 xx
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c PROBABLY SHOULD RENAME THIS TO DIMENSIONALP !!
 @anchor{unitp}
-@deffn {Function} unitp (@var{x})
+@c @deffn {Function} unitp (@var{x})
+m4_deffn({Function}, unitp, <<<(@var{x})>>>)
 
 Returns @code{true} if @var{x} is a literal dimensional expression,
 a symbol declared dimensional,
@@ -958,14 +978,16 @@ Examples:
 (%o4)                         true
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{declare_unit_conversion}
-@deffn {Function} declare_unit_conversion (@var{u} = @var{v}, ...)
+@c @deffn {Function} declare_unit_conversion (@var{u} = @var{v}, ...)
+m4_deffn({Function}, declare_unit_conversion, <<<(@var{u} = @var{v}, ...)>>>)
 
 Appends equations @var{u} = @var{v}, ... to the list of unit conversions
 known to the unit conversion operator @math{`@w{}`}.
@@ -1025,14 +1047,16 @@ Computing conversions to base units; may take a moment.
 (%o4)                     90 ` teaspoon
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{declare_dimensions}
-@deffn {Function} declare_dimensions (@var{a_1}, @var{d_1}, ..., @var{a_n}, @var{d_n})
+@c @deffn {Function} declare_dimensions (@var{a_1}, @var{d_1}, ..., @var{a_n}, @var{d_n})
+m4_deffn({Function}, declare_dimensions, <<<(@var{a_1}, @var{d_1}, ..., @var{a_n}, @var{d_n})>>>)
 
 Declares @var{a_1}, ..., @var{a_n} to have dimensions @var{d_1}, ...,
 @var{d_n}, respectively.
@@ -1067,26 +1091,31 @@ Examples:
                                s
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{remove_dimensions}
-@deffn {Function} remove_dimensions (@var{a_1}, ..., @var{a_n})
+@c @deffn {Function} remove_dimensions (@var{a_1}, ..., @var{a_n})
+m4_deffn({Function}, remove_dimensions, <<<(@var{a_1}, ..., @var{a_n})>>>)
 
 Reverts the effect of @code{declare_dimensions}. This function should be
 loaded with @code{load ("ezunits")}.
 
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{declare_fundamental_dimensions}
-@deffn {Function} declare_fundamental_dimensions (@var{d_1}, @var{d_2}, @var{d_3}, ...)
-@deffnx {Function} remove_fundamental_dimensions (@var{d_1}, @var{d_2}, @var{d_3}, ...)
+@c @deffn {Function} declare_fundamental_dimensions (@var{d_1}, @var{d_2}, @var{d_3}, ...)
+m4_deffn({Function}, declare_fundamental_dimensions, <<<(@var{d_1}, @var{d_2}, @var{d_3}, ...)>>>)
+@c @deffnx {Function} remove_fundamental_dimensions (@var{d_1}, @var{d_2}, @var{d_3}, ...)
+m4_deffnx({Function}, remove_fundamental_dimensions, <<<(@var{d_1}, @var{d_2}, @var{d_3}, ...)>>>)
 @deffnx {Global variable} fundamental_dimensions
 
 @code{declare_fundamental_dimensions} declares fundamental dimensions.
@@ -1125,15 +1154,18 @@ Examples:
 (%o6) [length, mass, time, current, temperature, quantity, money]
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{declare_fundamental_units}
-@deffn {Function} declare_fundamental_units (@var{u_1}, @var{d_1}, ..., @var{u_n}, @var{d_n})
-@deffnx {Function} remove_fundamental_units (@var{u_1}, ..., @var{u_n})
+@c @deffn {Function} declare_fundamental_units (@var{u_1}, @var{d_1}, ..., @var{u_n}, @var{d_n})
+m4_deffn({Function}, declare_fundamental_units, <<<(@var{u_1}, @var{d_1}, ..., @var{u_n}, @var{d_n})>>>)
+@c @deffnx {Function} remove_fundamental_units (@var{u_1}, ..., @var{u_n})
+m4_deffnx({Function}, remove_fundamental_units, <<<(@var{u_1}, ..., @var{u_n})>>>)
 
 @code{declare_fundamental_units} declares @var{u_1}, ..., @var{u_n}
 to have dimensions @var{d_1}, ..., @var{d_n}, respectively.
@@ -1181,15 +1213,18 @@ Examples:
                               smile
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{dimensions}
-@deffn {Function} dimensions (@var{x})
-@deffnx {Function} dimensions_as_list (@var{x})
+@c @deffn {Function} dimensions (@var{x})
+m4_deffn({Function}, dimensions, <<<(@var{x})>>>)
+@c @deffnx {Function} dimensions_as_list (@var{x})
+m4_deffnx({Function}, dimensions_as_list, <<<(@var{x})>>>)
 
 @code{dimensions} returns the dimensions of the dimensional quantity @var{x}
 as an expression comprising products and powers of base dimensions.
@@ -1248,14 +1283,16 @@ Examples:
 (%o5)                 [3, 0, - 1, 0, 0, 0]
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{fundamental_units}
-@deffn {Function} fundamental_units @
+@c @deffn {Function} fundamental_units @
+m4_deffn({Function}, fundamental_units, <<<>>>) @
 @fname{fundamental_units} (@var{x}) @
 @fname{fundamental_units} ()
 
@@ -1301,14 +1338,16 @@ Examples:
                                m
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{dimensionless}
-@deffn {Function} dimensionless (@var{L})
+@c @deffn {Function} dimensionless (@var{L})
+m4_deffn({Function}, dimensionless, <<<(@var{L})>>>)
 
 Returns a basis for the dimensionless quantities which can be formed
 from a list @var{L} of dimensional quantities.
@@ -1352,15 +1391,17 @@ is proportional to the fine-structure constant.
                       %c %e_0 %h_bar  %m_P
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @c NEED TO FILL IN !!
 @anchor{natural_unit}
-@deffn {Function} natural_unit (@var{expr}, [@var{v_1}, ..., @var{v_n}])
+@c @deffn {Function} natural_unit (@var{expr}, [@var{v_1}, ..., @var{v_n}])
+m4_deffn({Function}, natural_unit, <<<(@var{expr}, [@var{v_1}, ..., @var{v_n}])>>>)
 
 Finds exponents @var{e_1}, ..., @var{e_n} such that
 @code{dimension(@var{expr}) = dimension(@var{v_1}^@var{e_1} ... @var{v_n}^@var{e_n})}.
@@ -1374,10 +1415,11 @@ Examples:
 @example
 @end example
 
-@opencatbox
-@category{Package ezunits}
-@closecatbox
+@c @opencatbox
+@c @category{Package ezunits}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
