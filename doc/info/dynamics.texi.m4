@@ -400,7 +400,7 @@ m4_end_defvr()
 
 @anchor{scene_background}
 @c @defvr {Scene option} background [background, @var{color}]
-m4_defvr({Scene option} background) @
+m4_defvr({Scene option}, background) @
 @fname{[background, @var{color}]}
 Default value: @code{black}
 
@@ -416,7 +416,7 @@ m4_end_defvr()
 
 @anchor{scene_elevation}
 @c @defvr {Scene option} elevation [elevation, @var{angle}]
-m4_defvr({Scene option} elevation) @
+m4_defvr({Scene option}, elevation) @
 @fname{[elevation, @var{angle}]}
 Default value: @code{30}
 
@@ -434,7 +434,7 @@ m4_end_defvr()
 
 @anchor{scene_height}
 @c @defvr {Scene option} height [height, @var{pixels}]
-m4_defvr({Scene option} height) @
+m4_defvr({Scene option}, height) @
 @fname{[height, @var{pixels}]}
 Default value: @code{500}
 
@@ -450,7 +450,7 @@ m4_end_defvr()
 
 @anchor{scene_restart}
 @c @defvr {Scene option} restart [restart, @var{value}]
-m4_defvr({Scene option} restart) @
+m4_defvr({Scene option}, restart) @
 @fname{[restart, @var{value}]}
 Default value: @code{false}
 
@@ -467,7 +467,7 @@ m4_end_defvr()
 
 @anchor{scene_tstep}
 @c @defvr {Scene option} tstep [tstep, @var{time}]
-m4_defvr({Scene option} tstep) @
+m4_defvr({Scene option}, tstep) @
 @fname{[tstep, @var{time}]}
 Default value: @code{10}
 
@@ -483,7 +483,7 @@ m4_end_defvr()
 
 @anchor{scene_width}
 @c @defvr {Scene option} width [width, @var{pixels}]
-m4_defvr({Scene option} width) @
+m4_defvr({Scene option}, width) @
 @fname{[width, @var{pixels}]}
 Default value: @code{500}
 
@@ -499,7 +499,7 @@ m4_end_defvr()
 
 @anchor{scene_windowname}
 @c @defvr {Scene option} windowname [windowtitle, @var{name}]
-m4_defvr({Scene option} windowname) @
+m4_defvr({Scene option}, windowname) @
 @fname{[windowtitle, @var{name}]}
 Default value: @code{.scene}
 
@@ -516,7 +516,7 @@ m4_end_defvr()
 
 @anchor{scene_windowtitle}
 @c @defvr {Scene option} windowtitle [windowtitle, @var{name}]
-m4_defvr({Scene option} windowtitle) @
+m4_defvr({Scene option}, windowtitle) @
 @fname{[windowtitle, @var{name}]}
 Default value: @code{Xmaxima: scene}
 
@@ -535,7 +535,7 @@ m4_end_defvr()
 
 @anchor{cone}
 @c @defvr {Scene object} cone [cone, @var{options}]
-m4_defvr({Scene object} cone) @
+m4_defvr({Scene object}, cone) @
 @fname{ [cone, @var{options}]}
 
 Creates a regular pyramid with height equal to 1 and a hexagonal base
@@ -566,7 +566,7 @@ m4_end_defvr()
 
 @anchor{cube}
 @c @defvr {Scene object} cube [cube, @var{options}]
-m4_defvr({Scene object} cube) @
+m4_defvr({Scene object}, cube) @
 @fname{[cube, @var{options}]}
 
 A cube with edges of 1 unit and faces parallel to the xy, xz and yz
@@ -584,7 +584,7 @@ m4_end_defvr()
 
 @anchor{cylinder}
 @c @defvr {Scene object} cylinder [cylinder, @var{options}]
-m4_defvr({Scene object} cylinder) @
+m4_defvr({Scene object}, cylinder) @
 @fname{[cylinder, @var{options}]}
 
 Creates a regular prism with height equal to 1 and a hexagonal base with
@@ -607,7 +607,7 @@ m4_end_defvr()
 
 @anchor{sphere}
 @c @defvr {Scene object} sphere [sphere, @var{options}]
-m4_defvr({Scene object} sphere) @
+m4_defvr({Scene object}, sphere) @
 @fname{[sphere, @var{options}]}
 
 A sphere with default radius of 0.5 units and center at the origin. 
@@ -624,7 +624,7 @@ m4_end_defvr()
 
 @anchor{object_animation}
 @c @defvr {Object option} animation [animation, @var{property}, @var{positions}]
-m4_defvr({Object option} animation) @
+m4_defvr({Object option}, animation) @
 @fname{[animation, @var{property}, @var{positions}]}
 
 @var{property} should be one of the following 4 object's properties:
