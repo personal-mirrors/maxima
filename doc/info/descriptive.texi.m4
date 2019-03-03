@@ -205,8 +205,10 @@ One must take care when working with categorical data. In the next example, symb
 
 
 
+m4_setcat(Package descriptive)
 @anchor{build_sample}
-@deffn {Function} build_sample @
+@c @deffn {Function} build_sample @
+m4_deffn({Function}, build_sample, <<<>>>) @
 @fname{build_sample} (@var{list}) @
 @fname{build_sample} (@var{matrix})
 
@@ -278,15 +280,17 @@ Multivariate frequency table.
 (%i4) barsplot(sam2, grouping=stacked) $
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{continuous_freq}
-@deffn {Function} continuous_freq @
+@c @deffn {Function} continuous_freq @
+m4_deffn({Function}, continuous_freq, <<<>>>) @
 @fname{continuous_freq} (@var{data}) @
 @fname{continuous_freq} (@var{data}, @var{m})
 
@@ -379,15 +383,17 @@ The first argument may be an array.
                              [8, 8, 12, 12, 10, 8, 9, 8, 12, 13]]
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{discrete_freq}
-@deffn {Function} discrete_freq (@var{data})
+@c @deffn {Function} discrete_freq (@var{data})
+m4_deffn({Function}, discrete_freq, <<<(@var{data})>>>)
 Counts absolute frequencies in discrete samples, both numeric and categorical. Its unique argument is a list,
 or 1-dimensional array (as created by @code{make_array}).
 
@@ -432,16 +438,18 @@ The argument may be an array.
                              [8, 8, 12, 12, 10, 8, 9, 8, 12, 13]]
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{standardize}
-@deffn {Function} standardize @
+@c @deffn {Function} standardize @
+m4_deffn({Function}, standardize, <<<>>>) @
 @fname{standardize} (@var{list}) @
 @fname{standardize} (@var{matrix})
 
@@ -450,16 +458,18 @@ the result by the standard deviation. When the input is a matrix,
 @code{standardize} subtracts to each row the multivariate mean, and then
 divides each component by the corresponding standard deviation.
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{subsample}
-@deffn {Function} subsample @
+@c @deffn {Function} subsample @
+m4_deffn({Function}, subsample, <<<>>>) @
 @fname{subsample} (@var{data_matrix}, @var{predicate_function}) @
 @fname{subsample} (@var{data_matrix}, @var{predicate_function}, @var{col_num1}, @var{col_num2}, ...)
 
@@ -623,17 +633,19 @@ Here, the first component is meaningless, since @code{A} and @code{B} are catego
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 
 @anchor{transform_sample}
-@deffn {Function} transform_sample (@var{matrix}, @var{varlist}, @var{exprlist})
+@c @deffn {Function} transform_sample (@var{matrix}, @var{varlist}, @var{exprlist})
+m4_deffn({Function}, transform_sample, <<<(@var{matrix}, @var{varlist}, @var{exprlist})>>>)
 
 Transforms the sample @var{matrix}, where each column is called according to
 @var{varlist}, following expressions in @var{exprlist}.
@@ -675,10 +687,11 @@ Add a constant column and remove the third variable.
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -692,7 +705,8 @@ Add a constant column and remove the third variable.
 
 
 @anchor{mean}
-@deffn {Function} mean @
+@c @deffn {Function} mean @
+m4_deffn({Function}, mean, <<<>>>) @
 @fname{mean} (@var{list}) @
 @fname{mean} (@var{matrix})
 
@@ -740,15 +754,17 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{var}
-@deffn {Function} var @
+@c @deffn {Function} var @
+m4_deffn({Function}, var, <<<>>>) @
 @fname{var} (@var{list}) @
 @fname{var} (@var{matrix})
 
@@ -786,15 +802,17 @@ Example:
 
 See also function @mrefdot{var1}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{var1}
-@deffn {Function} var1 @
+@c @deffn {Function} var1 @
+m4_deffn({Function}, var1, <<<>>>) @
 @fname{var1} (@var{list}) @
 @fname{var1} (@var{matrix})
 
@@ -840,15 +858,17 @@ Example:
 
 See also function @mrefdot{var}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{std}
-@deffn {Function} std @
+@c @deffn {Function} std @
+m4_deffn({Function}, std, <<<>>>) @
 @fname{std} (@var{list}) @
 @fname{std} (@var{matrix})
 
@@ -880,15 +900,17 @@ Example:
 
 See also functions @mref{var} and @mrefdot{std1}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{std1}
-@deffn {Function} std1 @
+@c @deffn {Function} std1 @
+m4_deffn({Function}, std1, <<<>>>) @
 @fname{std1} (@var{list}) @
 @fname{std1} (@var{matrix})
 
@@ -920,15 +942,17 @@ Example:
 
 See also functions @mref{var1} and @mrefdot{std}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{noncentral_moment}
-@deffn {Function} noncentral_moment @
+@c @deffn {Function} noncentral_moment @
+m4_deffn({Function}, noncentral_moment, <<<>>>) @
 @fname{noncentral_moment} (@var{list}, @var{k}) @
 @fname{noncentral_moment} (@var{matrix}, @var{k})
 
@@ -976,15 +1000,17 @@ Example:
 
 See also function @mrefdot{central_moment}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{central_moment}
-@deffn {Function} central_moment @
+@c @deffn {Function} central_moment @
+m4_deffn({Function}, central_moment, <<<>>>) @
 @fname{central_moment} (@var{list}, @var{k}) @
 @fname{central_moment} (@var{matrix}, @var{k})
 
@@ -1030,15 +1056,17 @@ Example:
 
 See also functions @mref{central_moment} and @mrefdot{mean}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{cv}
-@deffn {Function} cv @
+@c @deffn {Function} cv @
+m4_deffn({Function}, cv, <<<>>>) @
 @fname{cv} (@var{list}) @
 @fname{cv} (@var{matrix})
 
@@ -1068,15 +1096,17 @@ The variation coefficient is the quotient between the sample standard deviation 
 
 See also functions @mref{std} and @mrefdot{mean}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{smin}
-@deffn {Function} smin @
+@c @deffn {Function} smin @
+m4_deffn({Function}, smin, <<<>>>) @
 @fname{smin} (@var{list}) @
 @fname{smin} (@var{matrix})
 
@@ -1108,15 +1138,17 @@ which are associated to statistical variables.
 
 See also function @mrefdot{smax}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{smax}
-@deffn {Function} smax @
+@c @deffn {Function} smax @
+m4_deffn({Function}, smax, <<<>>>) @
 @fname{smax} (@var{list}) @
 @fname{smax} (@var{matrix})
 
@@ -1148,15 +1180,17 @@ which are associated to statistical variables.
 
 See also function @mrefdot{smin}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{range}
-@deffn {Function} range @
+@c @deffn {Function} range @
+m4_deffn({Function}, range, <<<>>>) @
 @fname{range} (@var{list}) @
 @fname{range} (@var{matrix})
 
@@ -1185,15 +1219,17 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{quantile}
-@deffn {Function} quantile @
+@c @deffn {Function} quantile @
+m4_deffn({Function}, quantile, <<<>>>) @
 @fname{quantile} (@var{list}, @var{p}) @
 @fname{quantile} (@var{matrix}, @var{p})
 
@@ -1225,15 +1261,17 @@ Example:
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{median}
-@deffn {Function} median @
+@c @deffn {Function} median @
+m4_deffn({Function}, median, <<<>>>) @
 @fname{median} (@var{list}) @
 @fname{median} (@var{matrix})
 
@@ -1268,15 +1306,17 @@ The median is the 1/2-quantile.
 
 See also function @mrefdot{quantile}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{qrange}
-@deffn {Function} qrange @
+@c @deffn {Function} qrange @
+m4_deffn({Function}, qrange, <<<>>>) @
 @fname{qrange} (@var{list}) @
 @fname{qrange} (@var{matrix})
 
@@ -1308,15 +1348,17 @@ The interquartilic range is the difference between the third and first quartiles
 
 See also function @mrefdot{quantile}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{mean_deviation}
-@deffn {Function} mean_deviation @
+@c @deffn {Function} mean_deviation @
+m4_deffn({Function}, mean_deviation, <<<>>>) @
 @fname{mean_deviation} (@var{list}) @
 @fname{mean_deviation} (@var{matrix})
 
@@ -1364,15 +1406,17 @@ Example:
 
 See also function @mrefdot{mean}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{median_deviation}
-@deffn {Function} median_deviation @
+@c @deffn {Function} median_deviation @
+m4_deffn({Function}, median_deviation, <<<>>>) @
 @fname{median_deviation} (@var{list}) @
 @fname{median_deviation} (@var{matrix})
 
@@ -1420,15 +1464,17 @@ Example:
 
 See also function @mrefdot{mean}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{harmonic_mean}
-@deffn {Function} harmonic_mean @
+@c @deffn {Function} harmonic_mean @
+m4_deffn({Function}, harmonic_mean, <<<>>>) @
 @fname{harmonic_mean} (@var{list}) @
 @fname{harmonic_mean} (@var{matrix})
 
@@ -1476,16 +1522,18 @@ Example:
 
 See also functions @mref{mean} and @mrefdot{geometric_mean}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{geometric_mean}
-@deffn {Function} geometric_mean @
+@c @deffn {Function} geometric_mean @
+m4_deffn({Function}, geometric_mean, <<<>>>) @
 @fname{geometric_mean} (@var{list}) @
 @fname{geometric_mean} (@var{matrix})
 
@@ -1531,15 +1579,17 @@ Example:
 
 See also functions @mref{mean} and @mrefdot{harmonic_mean}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{kurtosis}
-@deffn {Function} kurtosis @
+@c @deffn {Function} kurtosis @
+m4_deffn({Function}, kurtosis, <<<>>>) @
 @fname{kurtosis} (@var{list}) @
 @fname{kurtosis} (@var{matrix})
 
@@ -1585,15 +1635,17 @@ Example:
 
 See also functions @mrefcomma{mean} @mref{var} and @mrefdot{skewness}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{skewness}
-@deffn {Function} skewness @
+@c @deffn {Function} skewness @
+m4_deffn({Function}, skewness, <<<>>>) @
 @fname{skewness} (@var{list}) @
 @fname{skewness} (@var{matrix})
 
@@ -1639,15 +1691,17 @@ Example:
 
 See also functions @mrefcomma{mean}, @mref{var} and @mrefdot{kurtosis}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{pearson_skewness}
-@deffn {Function} pearson_skewness @
+@c @deffn {Function} pearson_skewness @
+m4_deffn({Function}, pearson_skewness, <<<>>>) @
 @fname{pearson_skewness} (@var{list}) @
 @fname{pearson_skewness} (@var{matrix})
 
@@ -1691,15 +1745,17 @@ Example:
 
 See also functions @mrefcomma{mean} @mref{var} and @mrefdot{median}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{quartile_skewness}
-@deffn {Function} quartile_skewness @
+@c @deffn {Function} quartile_skewness @
+m4_deffn({Function}, quartile_skewness, <<<>>>) @
 @fname{quartile_skewness} (@var{list}) @
 @fname{quartile_skewness} (@var{matrix})
 
@@ -1745,15 +1801,17 @@ Example:
 
 See also function @mrefdot{quantile}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{km}
-@deffn {Function} km @
+@c @deffn {Function} km @
+m4_deffn({Function}, km, <<<>>>) @
 @fname{km} (@var{list}, @var{option} ...) @
 @fname{km} (@var{matrix}, @var{option} ...)
 
@@ -1816,15 +1874,17 @@ Estimate survival probabilities.
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{cdf_empirical}
-@deffn {Function} cdf_empirical @
+@c @deffn {Function} cdf_empirical @
+m4_deffn({Function}, cdf_empirical, <<<>>>) @
 @fname{cdf_empirical} (@var{list}, @var{option} ...) @
 @fname{cdf_empirical} (@var{matrix}, @var{option} ...)
 
@@ -1870,15 +1930,17 @@ Empirical distribution function.
         explicit(F(z), z, -2, 12)) $
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{cov}
-@deffn {Function} cov (@var{matrix})
+@c @deffn {Function} cov (@var{matrix})
+m4_deffn({Function}, cov, <<<(@var{matrix})>>>)
 The covariance matrix of the multivariate sample, defined as
 m4_mathjax(
 <<<$${S={1\over{n}}{\sum_{j=1}^{n}{\left(X_{j}-\bar{X}\right)\,\left(X_{j}-\bar{X}\right)'}}}$$>>>,
@@ -1924,15 +1986,17 @@ Example:
 
 See also function @mrefdot{cov1}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{cov1}
-@deffn {Function} cov1 (@var{matrix})
+@c @deffn {Function} cov1 (@var{matrix})
+m4_deffn({Function}, cov1, <<<(@var{matrix})>>>)
 The covariance matrix of the multivariate sample, defined as
 m4_mathjax(
 <<<$${{1\over{n-1}}{\sum_{j=1}^{n}{\left(X_{j}-\bar{X}\right)\,\left(X_{j}-\bar{X}\right)'}}}$$>>>,
@@ -1978,15 +2042,17 @@ Example:
 
 See also function @mrefdot{cov}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{global_variances}
-@deffn {Function} global_variances @
+@c @deffn {Function} global_variances @
+m4_deffn({Function}, global_variances, <<<>>>) @
 @fname{global_variances} (@var{matrix}) @
 @fname{global_variances} (@var{matrix}, @var{options} ...)
 
@@ -2055,15 +2121,17 @@ Calculate the @code{global_variances} from the covariance matrix.
 
 See also @mref{cov} and @mrefdot{cov1}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{cor}
-@deffn {Function} cor @
+@c @deffn {Function} cor @
+m4_deffn({Function}, cor, <<<>>>) @
 @fname{cor} (@var{matrix}) @
 @fname{cor} (@var{matrix}, @var{logical_value})
 
@@ -2134,15 +2202,17 @@ Calculate de correlation matrix from the covariance matrix.
 
 See also @mref{cov} and @mrefdot{cov1}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 @anchor{list_correlations}
-@deffn {Function} list_correlations @
+@c @deffn {Function} list_correlations @
+m4_deffn({Function}, list_correlations, <<<>>>) @
 @fname{list_correlations} (@var{matrix}) @
 @fname{list_correlations} (@var{matrix}, @var{options} ...)
 
@@ -2254,16 +2324,18 @@ Example:
 
 See also @mref{cov} and @mrefdot{cov1}
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
 
 @anchor{principal_components}
-@deffn {Function} principal_components @
+@c @deffn {Function} principal_components @
+m4_deffn({Function}, principal_components, <<<>>>) @
 @fname{principal_components} (@var{matrix}) @
 @fname{principal_components} (@var{matrix}, @var{options} ...)
 
@@ -2364,10 +2436,11 @@ but option @code{data=false} must be used.
              [ .9239 b2 - .3827 a2  1.0 c2  .3827 b2 + .9239 a2 ]
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 
 
@@ -2376,8 +2449,10 @@ but option @code{data=false} must be used.
 
 
 
+m4_setcat(Package descriptive, Plotting)
 @anchor{barsplot}
-@deffn {Function} barsplot (@var{data1}, @var{data2}, @dots{}, @var{option_1}, @var{option_2}, @dots{})
+@c @deffn {Function} barsplot (@var{data1}, @var{data2}, @dots{}, @var{option_1}, @var{option_2}, @dots{})
+m4_deffn({Function}, barsplot, <<<(@var{data1}, @var{data2}, @dots{}, @var{option_1}, @var{option_2}, @dots{})>>>)
 
 Plots bars diagrams for discrete statistical variables,
 both for one or multiple samples.
@@ -2564,14 +2639,16 @@ Stacked bars.
 For bars diagrams related options, see @mref{barsplot} of package @ref{draw-pkg}
 See also functions @mref{histogram} and @mrefdot{piechart}
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{barsplot_description}
-@deffn {Function} barsplot_description (@dots{})
+@c @deffn {Function} barsplot_description (@dots{})
+m4_deffn({Function}, barsplot_description, <<<(@dots{})>>>)
 
 Function @code{barsplot_description} creates a graphic object
 suitable for creating complex scenes, together with other
@@ -2600,14 +2677,16 @@ Example: @code{barsplot} in a multiplot context.
 (%i6) draw(gr2d(bp1), gr2d(bp2))$
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{boxplot}
-@deffn {Function} boxplot (@var{data}) @
+@c @deffn {Function} boxplot (@var{data}) @
+m4_deffn({Function}, boxplot, <<<(@var{data}) @>>>)
 @fname{boxplot} (@var{data}, @var{option_1}, @var{option_2}, @dots{})
 
 This function plots box-and-whisker diagrams. Argument @var{data} can be a list,
@@ -2753,27 +2832,31 @@ Option @var{range} can be used to handle outliers.
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{boxplot_description}
-@deffn {Function} boxplot_description (@dots{})
+@c @deffn {Function} boxplot_description (@dots{})
+m4_deffn({Function}, boxplot_description, <<<(@dots{})>>>)
 
 Function @code{boxplot_description} creates a graphic object
 suitable for creating complex scenes, together with other
 graphic objects. 
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{histogram}
-@deffn {Function} histogram @
+@c @deffn {Function} histogram @
+m4_deffn({Function}, histogram, <<<>>>) @
 @fname{histogram} (@var{list}) @
 @fname{histogram} (@var{list}, @var{option_1}, @var{option_2}, @dots{}) @
 @fname{histogram} (@var{one_column_matrix}) @
@@ -2907,14 +2990,16 @@ Freedmann - Diakonis robust method for optimal search of the number of classes.
 (%i3) histogram(s1, nclasses=fd) $
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{histogram_description}
-@deffn {Function} histogram_description (@dots{})
+@c @deffn {Function} histogram_description (@dots{})
+m4_deffn({Function}, histogram_description, <<<(@dots{})>>>)
 
 Function @code{histogram_description} creates a graphic object
 suitable for creating complex scenes, together with other
@@ -2937,14 +3022,16 @@ the @code{xrange} and adding an explicit curve into the scene:
         explicit(pdf_normal(x,m,s), x, m - 3*s, m + 3* s))$
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{piechart}
-@deffn {Function} piechart @
+@c @deffn {Function} piechart @
+m4_deffn({Function}, piechart, <<<>>>) @
 @fname{piechart} (@var{list}) @
 @fname{piechart} (@var{list}, @var{option_1}, @var{option_2}, @dots{}) @
 @fname{piechart} (@var{one_column_matrix}) @
@@ -3008,27 +3095,31 @@ Example:
 
 See also function @mrefdot{barsplot}
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{piechart_description}
-@deffn {Function} piechart_description (@dots{})
+@c @deffn {Function} piechart_description (@dots{})
+m4_deffn({Function}, piechart_description, <<<(@dots{})>>>)
 
 Function @code{piechart_description} creates a graphic object
 suitable for creating complex scenes, together with other
 graphic objects.
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{scatterplot}
-@deffn {Function} scatterplot @
+@c @deffn {Function} scatterplot @
+m4_deffn({Function}, scatterplot, <<<>>>) @
 @fname{scatterplot} (@var{list}) @
 @fname{scatterplot} (@var{list}, @var{option_1}, @var{option_2}, @dots{}) @
 @fname{scatterplot} (@var{matrix}) @
@@ -3135,27 +3226,31 @@ Five dimensional scatter plot, with five classes histograms.
 For plotting isolated or line-joined points in two and three dimensions,
 see @code{points}. See also @mrefdot{histogram}
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{scatterplot_description}
-@deffn {Function} scatterplot_description (@dots{})
+@c @deffn {Function} scatterplot_description (@dots{})
+m4_deffn({Function}, scatterplot_description, <<<(@dots{})>>>)
 
 Function @code{scatterplot_description} creates a graphic object
 suitable for creating complex scenes, together with other
 graphic objects.
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{starplot}
-@deffn {Function} starplot (@var{data1}, @var{data2}, @dots{}, @var{option_1}, @var{option_2}, @dots{})
+@c @deffn {Function} starplot (@var{data1}, @var{data2}, @dots{}, @var{option_1}, @var{option_2}, @dots{})
+m4_deffn({Function}, starplot, <<<(@var{data1}, @var{data2}, @dots{}, @var{option_1}, @var{option_2}, @dots{})>>>)
 
 Plots star diagrams for discrete statistical variables,
 both for one or multiple samples.
@@ -3227,27 +3322,31 @@ Location and radius defined by the user.
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{starplot_description}
-@deffn {Function} starplot_description (@dots{})
+@c @deffn {Function} starplot_description (@dots{})
+m4_deffn({Function}, starplot_description, <<<(@dots{})>>>)
 
 Function @code{starplot_description} creates a graphic object
 suitable for creating complex scenes, together with other
 graphic objects. 
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @anchor{stemplot}
-@deffn {Function} stemplot @
+@c @deffn {Function} stemplot @
+m4_deffn({Function}, stemplot, <<<>>>) @
 @fname{stemplot} (@var{data}) @
 @fname{stemplot} (@var{data}, @var{option})
 
@@ -3304,9 +3403,10 @@ key: 6|3 =  6.3
 @end group
 @end example
 
-@opencatbox
-@category{Package descriptive}
-@category{Plotting}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Package descriptive}
+@c @category{Plotting}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
