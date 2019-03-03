@@ -47,20 +47,25 @@ all fields are always visible.
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Structures, Global variables)
 @anchor{structures}
-@defvr {Global variable} structures
+@c @defvr {Global variable} structures
+m4_defvr({Global variable}, structures)
 
 @code{structures} is the list of user-defined structures defined by @code{defstruct}.
 
-@opencatbox
-@category{Structures}
-@category{Global variables}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Structures}
+@c @category{Global variables}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Structures)
 @anchor{defstruct}
-@deffn  {Function} defstruct @
+@c @deffn  {Function} defstruct @
+m4_deffn( {Function}, defstruct, <<<>>>) @
 @fname{defstruct} (@var{S}(@var{a_1}, @dots{}, @var{a_n})) @
 @fname{defstruct} (@var{S}(@var{a_1} = @var{v_1}, @dots{}, @var{a_n} = @var{v_n}))
 
@@ -111,14 +116,16 @@ Examples:
 (%o8)             [bar(v, w, x = 123, y = %pi)]
 @end example
 
-@opencatbox
-@category{Structures}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Structures}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
 @anchor{new}
-@deffn {Function} new @
+@c @deffn {Function} new @
+m4_deffn({Function}, new, <<<>>>) @
 @fname{new} (@var{S}) @
 @fname{new} (@var{S} (@var{v_1}, @dots{}, @var{v_n}))
 
@@ -147,13 +154,16 @@ Examples:
 (%o3)            foo(w = 1, x = 2, y = 4, z = 8)
 @end example
 
-@opencatbox
-@category{Structures}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Structures}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
 @c -----------------------------------------------------------------------------
-@deffn {Operator} @@
+m4_setcat(Structures, Operators)
+@c @deffn {Operator} @@ ()
+m4_deffn({Operator}, @@, <<<>>>)
 
 @code{@@} is the structure field access operator.
 The expression @code{@var{x}@@ @var{a}} refers to the value of field @var{a} of the structure instance @var{x}.
@@ -226,9 +236,10 @@ The field name is not evaluated.
 (%o8)                          123
 @end example
 
-@opencatbox
-@category{Structures}
-@category{Operators}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Structures}
+@c @category{Operators}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
 
