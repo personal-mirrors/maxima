@@ -7,8 +7,10 @@
 @section Functions and Variables for diag
 
 
+m4_setcat(Matrices, Share packages, Package diag)
 @anchor{diag_function}
-@deffn {Function} diag (@var{lm})
+@c @deffn {Function} diag (@var{lm})
+m4_deffn({Function}, diag, <<<(@var{lm})>>>)
 Constructs a matrix that is the block sum of the elements of
 @var{lm}. The elements of @var{lm} are assumed to be matrices; if an
 element is scalar, it treated as a 1 by 1 matrix.
@@ -44,17 +46,20 @@ Example:
 
 To use this function write first @code{load("diag")}.
 
-@opencatbox
-@category{Matrices}
-@category{Share packages}
-@category{Package diag}
-@closecatbox
+@c @opencatbox
+@c @category{Matrices}
+@c @category{Share packages}
+@c @category{Package diag}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
+m4_setcat(Package diag)
 @anchor{JF}
-@deffn {Function} JF (@var{lambda},@var{n})
+@c @deffn {Function} JF (@var{lambda},@var{n})
+m4_deffn({Function}, JF, <<<(@var{lambda},@var{n})>>>)
 Returns the Jordan cell of order @var{n} with eigenvalue @var{lambda}.
 
 Example:
@@ -79,15 +84,17 @@ Example:
 
 To use this function write first @code{load("diag")}.
 
-@opencatbox
-@category{Package diag}
-@closecatbox
+@c @opencatbox
+@c @category{Package diag}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{jordan}
-@deffn {Function} jordan (@var{mat})
+@c @deffn {Function} jordan (@var{mat})
+m4_deffn({Function}, jordan, <<<(@var{mat})>>>)
 Returns the Jordan form of matrix @var{mat}, encoded as a list in a
 particular format. To get the corresponding matrix, call the function
 @code{dispJordan} using the output of @code{jordan} as the argument.
@@ -155,15 +162,17 @@ Example:
 
 To use this function write first @code{load("diag")}. See also @mref{dispJordan} and @mrefdot{minimalPoly}
 
-@opencatbox
-@category{Package diag}
-@closecatbox
+@c @opencatbox
+@c @category{Package diag}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{dispJordan}
-@deffn {Function} dispJordan (@var{l})
+@c @deffn {Function} dispJordan (@var{l})
+m4_deffn({Function}, dispJordan, <<<(@var{l})>>>)
 Returns a matrix in Jordan canonical form (JCF) corresponding to the
 list of eigenvalues and multiplicities given by @var{l}. This list
 should be in the format given by the @mref{jordan} function. See
@@ -195,15 +204,17 @@ Example:
 
 To use this function write first @code{load("diag")}. See also @mref{jordan} and @mrefdot{minimalPoly}
 
-@opencatbox
-@category{Package diag}
-@closecatbox
+@c @opencatbox
+@c @category{Package diag}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{minimalPoly}
-@deffn {Function} minimalPoly (@var{l})
+@c @deffn {Function} minimalPoly (@var{l})
+m4_deffn({Function}, minimalPoly, <<<(@var{l})>>>)
 Returns the minimal polynomial of the matrix whose Jordan form is
 described by the list @var{l}. This list should be in the format given
 by the @mref{jordan} function. See @mref{jordan} for details of this
@@ -227,14 +238,16 @@ Example:
 
 To use this function write first @code{load("diag")}. See also @mref{jordan} and @mrefdot{dispJordan}
 
-@opencatbox
-@category{Package diag}
-@closecatbox
+@c @opencatbox
+@c @category{Package diag}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{ModeMatrix}
-@deffn {Function} ModeMatrix (@var{A}, [@var{jordan_info}])
+@c @deffn {Function} ModeMatrix (@var{A}, [@var{jordan_info}])
+m4_deffn({Function}, ModeMatrix, <<<(@var{A}, [@var{jordan_info}])>>>)
 Returns an invertible matrix @var{M} such that @math{(M^^-1).A.M} is
 the Jordan form of @var{A}.
 
@@ -282,15 +295,17 @@ twice. To avoid this, we could have stored the output of
 To use this function write first @code{load("diag")}. See also
 @mref{jordan} and @mrefdot{dispJordan}
 
-@opencatbox
-@category{Package diag}
-@closecatbox
+@c @opencatbox
+@c @category{Package diag}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{mat_function}
-@deffn {Function} mat_function (@var{f},@var{A})
+@c @deffn {Function} mat_function (@var{f},@var{A})
+m4_deffn({Function}, mat_function, <<<(@var{f},@var{A})>>>)
 Returns @math{f(A)}, where @var{f} is an analytic function and @var{A}
 a matrix. This computation is based on the Taylor expansion of
 @var{f}. It is not efficient for numerical evaluation, but can give
@@ -429,10 +444,11 @@ Power operations.
 
 To use this function write first @code{load("diag")}.
 
-@opencatbox
-@category{Package diag}
-@closecatbox
+@c @opencatbox
+@c @category{Package diag}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
