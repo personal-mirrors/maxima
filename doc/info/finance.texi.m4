@@ -24,8 +24,10 @@ Author: Nicolas Guarin Zapata.
 @section Functions and Variables for finance
 
 
+m4_setcat(Package finance)
 @anchor{days360}
-@deffn {Function} days360 (@var{year1},@var{month1},@var{day1},@var{year2},@var{month2},@var{day2})
+@c @deffn {Function} days360 (@var{year1},@var{month1},@var{day1},@var{year2},@var{month2},@var{day2})
+m4_deffn({Function}, days360, <<<(@var{year1},@var{month1},@var{day1},@var{year2},@var{month2},@var{day2})>>>)
 
 Calculates the distance between 2 dates, assuming 360 days years, 30 days months.
 
@@ -37,15 +39,17 @@ Example:
 (%o2)                      - 621
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{fv}
-@deffn {Function} fv (@var{rate},@var{PV},@var{num})
+@c @deffn {Function} fv (@var{rate},@var{PV},@var{num})
+m4_deffn({Function}, fv, <<<(@var{rate},@var{PV},@var{num})>>>)
 
 We can calculate the future value of a Present one given a certain interest rate.
 @var{rate} is the interest rate, @var{PV} is the present value and @var{num} is
@@ -59,15 +63,17 @@ Example:
 (%o2)                     1404.928
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{pv}
-@deffn {Function} pv (@var{rate},@var{FV},@var{num})
+@c @deffn {Function} pv (@var{rate},@var{FV},@var{num})
+m4_deffn({Function}, pv, <<<(@var{rate},@var{FV},@var{num})>>>)
 
 We can calculate the present value of a Future one given a certain interest rate.
 @var{rate} is the interest rate, @var{FV} is the future value and @var{num} is
@@ -81,15 +87,17 @@ Example:
 (%o2)                711.7802478134108
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{graph_flow}
-@deffn {Function} graph_flow (@var{val})
+@c @deffn {Function} graph_flow (@var{val})
+m4_deffn({Function}, graph_flow, <<<(@var{val})>>>)
 
 Plots the money flow in a time line, the positive values are in blue
 and upside; the negative ones are in red and downside.
@@ -103,15 +111,17 @@ Example:
 (%i2) graph_flow([-5000,-3000,800,1300,1500,2000])$
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{annuity_pv}
-@deffn {Function} annuity_pv (@var{rate},@var{PV},@var{num})
+@c @deffn {Function} annuity_pv (@var{rate},@var{PV},@var{num})
+m4_deffn({Function}, annuity_pv, <<<(@var{rate},@var{PV},@var{num})>>>)
 
 We can calculate the annuity knowing the present value (like an amount),
 it is a constant and periodic payment. @var{rate} is the interest rate,
@@ -125,15 +135,17 @@ Example:
 (%o2)                884.9208207992202
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{annuity_fv}
-@deffn {Function} annuity_fv (@var{rate},@var{FV},@var{num})
+@c @deffn {Function} annuity_fv (@var{rate},@var{FV},@var{num})
+m4_deffn({Function}, annuity_fv, <<<(@var{rate},@var{FV},@var{num})>>>)
 
 We can calculate the annuity knowing the desired value (future value),
 it is a constant and periodic payment. @var{rate} is the interest rate,
@@ -147,15 +159,17 @@ Example:
 (%o2)                3703.970670389863
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{geo_annuity_pv}
-@deffn {Function} geo_annuity_pv (@var{rate},@var{growing_rate},@var{PV},@var{num})
+@c @deffn {Function} geo_annuity_pv (@var{rate},@var{growing_rate},@var{PV},@var{num})
+m4_deffn({Function}, geo_annuity_pv, <<<(@var{rate},@var{growing_rate},@var{PV},@var{num})>>>)
 
 We can calculate the annuity knowing the present value (like an amount),
 in a growing periodic payment. @var{rate} is the interest rate, @var{growing_rate}
@@ -169,15 +183,17 @@ Example:
 (%o2)                802.6888176505123
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{geo_annuity_fv}
-@deffn {Function} geo_annuity_fv (@var{rate},@var{growing_rate},@var{FV},@var{num})
+@c @deffn {Function} geo_annuity_fv (@var{rate},@var{growing_rate},@var{FV},@var{num})
+m4_deffn({Function}, geo_annuity_fv, <<<(@var{rate},@var{growing_rate},@var{FV},@var{num})>>>)
 
 We can calculate the annuity knowing the desired value (future value),
 in a growing periodic payment. @var{rate} is the interest rate, @var{growing_rate}
@@ -191,14 +207,16 @@ Example:
 (%o2)                216.5203395312695
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 @anchor{amortization}
-@deffn {Function} amortization (@var{rate},@var{amount},@var{num})
+@c @deffn {Function} amortization (@var{rate},@var{amount},@var{num})
+m4_deffn({Function}, amortization, <<<(@var{rate},@var{amount},@var{num})>>>)
 
 Amortization table determined by a specific rate.
 @var{rate} is the interest rate, @var{amount} is the amount value,
@@ -225,15 +243,17 @@ Example:
     12.000         0.000       300.868      6017.355      6318.223
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{arit_amortization}
-@deffn {Function} arit_amortization (@var{rate},@var{increment},@var{amount},@var{num})
+@c @deffn {Function} arit_amortization (@var{rate},@var{increment},@var{amount},@var{num})
+m4_deffn({Function}, arit_amortization, <<<(@var{rate},@var{increment},@var{amount},@var{num})>>>)
 
 The amortization table determined by a specific rate and with growing payment
 can be claculated by @code{arit_amortization}.
@@ -264,15 +284,17 @@ Example:
     12.000        -0.000       590.301     11806.020     12396.321
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{geo_amortization}
-@deffn {Function} geo_amortization (@var{rate},@var{growing_rate},@var{amount},@var{num})
+@c @deffn {Function} geo_amortization (@var{rate},@var{growing_rate},@var{amount},@var{num})
+m4_deffn({Function}, geo_amortization, <<<(@var{rate},@var{growing_rate},@var{amount},@var{num})>>>)
 
 The amortization table determined by rate, amount,
 and number of periods can be found by @code{geo_amortization}.
@@ -303,15 +325,17 @@ Example:
     12.000         0.000       358.233      7164.668      7522.901
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{saving}
-@deffn {Function} saving (@var{rate},@var{amount},@var{num})
+@c @deffn {Function} saving (@var{rate},@var{amount},@var{num})
+m4_deffn({Function}, saving, <<<(@var{rate},@var{amount},@var{num})>>>)
 
 The table that represents the values in a constant and periodic
 saving can be found by @code{saving}.
@@ -342,15 +366,17 @@ Example:
     15.000     12000.000      1532.321       252.205
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{npv}
-@deffn {Function} npv (@var{rate},@var{val})
+@c @deffn {Function} npv (@var{rate},@var{val})
+m4_deffn({Function}, npv, <<<(@var{rate},@var{val})>>>)
 
 Calculates the present value of a value series to evaluate the viability in a
 project.
@@ -364,15 +390,17 @@ Example:
 (%o2)                714.4703999999999
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{irr}
-@deffn {Function} irr (@var{val},@var{IO})
+@c @deffn {Function} irr (@var{val},@var{IO})
+m4_deffn({Function}, irr, <<<(@var{val},@var{IO})>>>)
 
 IRR (Internal Rate of Return) is the value of rate which makes Net Present Value
 zero.
@@ -388,15 +416,17 @@ Example:
 (%o3)                .03009250374237132
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
+@c @end deffn
+m4_end_deffn()
 
 
 @anchor{benefit_cost}
-@deffn {Function} benefit_cost (@var{rate},@var{input},@var{output})
+@c @deffn {Function} benefit_cost (@var{rate},@var{input},@var{output})
+m4_deffn({Function}, benefit_cost, <<<(@var{rate},@var{input},@var{output})>>>)
 
 Calculates the ratio Benefit/Cost. Benefit is the Net Present Value (NPV)
 of the inputs, and Cost is the Net Present Value (NPV) of the outputs.
@@ -413,9 +443,9 @@ Example:
 (%o2)               1.427249324905784
 @end example
 
-@opencatbox
-@category{Package finance}
-@closecatbox
+@c @opencatbox
+@c @category{Package finance}
+@c @closecatbox
 
-@end deffn
-
+@c @end deffn
+m4_end_deffn()
