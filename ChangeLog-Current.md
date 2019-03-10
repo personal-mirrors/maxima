@@ -95,7 +95,12 @@ Changes in core:
  * translate() now temporarily sets prederror to true which produces an
    error message if the translator fails to translate a nested if() 
    correctly, see Bug #3412.
- 
+ * A workaround for a bug in GCL that makes $load_pathname work again
+ * "make clean" now removes the temporary files for lisps that aren't
+   currently configured.
+ * "make check" now runs the share and the core testsuite in the same
+   maxima session.
+
 Changes in share:
 --------------
  *  The the arguments to Krylov matrix are now checked for being of the 
@@ -116,7 +121,9 @@ Changes in share:
  *  The tests for the "sym" package are now part of the share testsuite.
  *  The tests for the "ode" package are now part of the share testsuite, too
     but have been disabled as they failed.
- 
+ *  Sarag no more overwrites the function resultant() which means the 
+    share test suite no more kills this function in a kill(all);
+
 Bug fixes:
 ----------
  * #3470: 
@@ -127,6 +134,7 @@ Bug fixes:
  * #3463: mention epsilon_lp more explicitly in minimize_lp
  * #3497: Resolved an error in demos concerning the Ricci tensor
  * #3497: ctensor documentation on the Ricci tensor is inconsistent
+ * #3532: Wrong substitution on integrating cos(x)*abs(cos(x))
  
 Unnumbered bugs:
 ----------------
