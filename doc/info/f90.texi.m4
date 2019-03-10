@@ -14,8 +14,10 @@
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Global variables, Translation and compilation, Package f90)
 @anchor{f90_output_line_length_max}
-@defvr {Option variable} f90_output_line_length_max
+@c @defvr {Option variable} f90_output_line_length_max
+m4_defvr({Option variable}, f90_output_line_length_max)
 Default value: 65
 
 @code{f90_output_line_length_max} is the maximum number of characters of Fortran code
@@ -61,16 +63,19 @@ foo = yyy**4+4*xxx*yyy**3+28*yyy**3+6*xx&
 (%o6)                         false
 @end example
 
-@opencatbox
-@category{Global variables}
-@category{Translation and compilation}
-@category{Package f90}
-@closecatbox
-@end defvr
+@c @opencatbox
+@c @category{Global variables}
+@c @category{Translation and compilation}
+@c @category{Package f90}
+@c @closecatbox
+@c @end defvr
+m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+m4_setcat(Translation and compilation, Package f90)
 @anchor{function_f90}
-@deffn {Function} f90 (@var{expr_1}, @dots{}, @var{expr_n})
+@c @deffn {Function} f90 (@var{expr_1}, @dots{}, @var{expr_n})
+m4_deffn({Function}, f90, <<<(@var{expr_1}, @dots{}, @var{expr_n})>>>)
 
 Prints one or more expressions @var{expr_1}, @dots{}, @var{expr_n}
 as a Fortran 90 program.
@@ -135,9 +140,11 @@ end
 (%o4)                        foo.f90
 @end example
 
-@opencatbox
-@category{Translation and compilation}
-@category{Package f90}
-@closecatbox
-@end deffn
+@c @opencatbox
+@c @category{Translation and compilation}
+@c @category{Package f90}
+@c @closecatbox
+@c @end deffn
+m4_end_deffn()
+
 
