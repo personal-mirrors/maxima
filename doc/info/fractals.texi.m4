@@ -48,7 +48,9 @@ with the contraction ratio.
 
 You can change the transformations and find another fractal
 
-@deffn {Function} sierpinskiale (@var{n})
+m4_setcat(Package fractals)
+@c @deffn {Function} sierpinskiale (@var{n})
+m4_deffn({Function}, sierpinskiale, <<<(@var{n})>>>)
 
 Sierpinski Triangle: 3 contractive maps; .5 contraction constant and translations;
 all maps have the same contraction ratio. Argument @var{n} must be great enougth, 10000 or greater.
@@ -67,7 +69,8 @@ Example:
 
 @end deffn
 
-@deffn {Function} treefale (@var{n})
+@c @deffn {Function} treefale (@var{n})
+m4_deffn({Function}, treefale, <<<(@var{n})>>>)
 
 3 contractive maps all with the same contraction ratio.
 Argument @var{n} must be great enougth, 10000 or greater.
@@ -86,7 +89,8 @@ Example:
 
 @end deffn
 
-@deffn {Function} fernfale (@var{n})
+@c @deffn {Function} fernfale (@var{n})
+m4_deffn({Function}, fernfale, <<<(@var{n})>>>)
 
 4 contractive maps, the probability to choice a transformation must be related 
 with the contraction ratio. Argument @var{n} must be great enougth, 10000 or greater.
@@ -108,7 +112,8 @@ Example:
 @node Definitions for complex fractals, Definitions for Koch snowflakes, Definitions for IFS fractals, Top
 @section Definitions for complex fractals
 
-@deffn {Function} mandelbrot_set (@var{x}, @var{y})
+@c @deffn {Function} mandelbrot_set (@var{x}, @var{y})
+m4_deffn({Function}, mandelbrot_set, <<<(@var{x}, @var{y})>>>)
 
 Mandelbrot set.
 
@@ -134,7 +139,8 @@ the computing time is also related with the number of grid points.
 
 
 
-@deffn {Function} julia_set (@var{x}, @var{y})
+@c @deffn {Function} julia_set (@var{x}, @var{y})
+m4_deffn({Function}, julia_set, <<<(@var{x}, @var{y})>>>)
 
 Julia sets.
 
@@ -162,7 +168,8 @@ See also @mref{julia_parameter}.
 
 
 @anchor{julia_parameter}
-@defvr {Optional variable} julia_parameter
+@c @defvr {Optional variable} julia_parameter
+m4_defvr({Optional variable}, julia_parameter)
 Default value: @mref{%i}
 
 Complex parameter for Julia fractals.
@@ -180,7 +187,8 @@ Its default value is @mref{%i}; we  suggest the  values @code{-.745+%i*.113002},
 
 
 
-@deffn {Function} julia_sin (@var{x}, @var{y})
+@c @deffn {Function} julia_sin (@var{x}, @var{y})
+m4_deffn({Function}, julia_sin, <<<(@var{x}, @var{y})>>>)
 
 While function @code{julia_set} implements the transformation @code{julia_parameter+z^2},
 function @code{julia_sin} implements @code{julia_parameter*sin(z)}. See source code
@@ -215,7 +223,8 @@ See also @mref{julia_parameter}.
 
 
 
-@deffn {Function} snowmap (@var{ent}, @var{nn})
+@c @deffn {Function} snowmap (@var{ent}, @var{nn})
+m4_deffn({Function}, snowmap, <<<(@var{ent}, @var{nn})>>>)
 
 Koch snowflake sets. Function @code{snowmap} plots the snow Koch map 
 over the vertex of an initial closed polygonal, in the complex plane. Here  
@@ -246,7 +255,8 @@ Examples:
 Continuous curves that cover an area. Warning: 
 the number of points exponentially grows with @var{n}.
 
-@deffn {Function} hilbertmap (@var{nn})
+@c @deffn {Function} hilbertmap (@var{nn})
+m4_deffn({Function}, hilbertmap, <<<(@var{nn})>>>)
 
 Hilbert map. Argument @var{nn} must be small (5, for example).
 Maxima can crash if @var{nn} is 7 or greater.
@@ -264,7 +274,8 @@ Example:
 
 @end deffn
 
-@deffn {Function} sierpinskimap (@var{nn})
+@c @deffn {Function} sierpinskimap (@var{nn})
+m4_deffn({Function}, sierpinskimap, <<<(@var{nn})>>>)
 
 Sierpinski map. Argument @var{nn} must be small (5, for example).
 Maxima can crash if @var{nn} is 7 or greater.
