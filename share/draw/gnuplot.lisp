@@ -2737,6 +2737,31 @@
 
 
 
+
+
+
+
+;; Object: 'raw_command'
+;; Usages:
+;;     raw_command("command")
+;;     raw_command(sconcat("set xran [0:",xran,"]"))
+(defun raw_command (arg)
+   (if (not (stringp arg))
+       (merror "draw (raw_command): The gnuplot command is expected to be a string!"))
+      (make-gr-object
+         :name 'raw_command
+         :command (format nil "~a"
+                              arg)))
+
+
+
+
+
+
+
+
+
+
 (defmacro write-palette-code ()
   '(let ((pal (get-option '$palette)))
      (cond
@@ -2770,38 +2795,40 @@
 (defvar *2d-graphic-objects* (make-hash-table))
 
 ; table of basic 2d graphic objects
-(setf (gethash '$points        *2d-graphic-objects*) 'points
-      (gethash '$errors        *2d-graphic-objects*) 'errors
-      (gethash '$polygon       *2d-graphic-objects*) 'polygon
-      (gethash '$ellipse       *2d-graphic-objects*) 'ellipse
-      (gethash '$triangle      *2d-graphic-objects*) 'triangle
-      (gethash '$rectangle     *2d-graphic-objects*) 'rectangle
-      (gethash '$quadrilateral *2d-graphic-objects*) 'quadrilateral
-      (gethash '$region        *2d-graphic-objects*) 'region
-      (gethash '$explicit      *2d-graphic-objects*) 'explicit
-      (gethash '$implicit      *2d-graphic-objects*) 'implicit
-      (gethash '$parametric    *2d-graphic-objects*) 'parametric
-      (gethash '$vector        *2d-graphic-objects*) 'vect
-      (gethash '$label         *2d-graphic-objects*) 'label
-      (gethash '$bars          *2d-graphic-objects*) 'bars
-      (gethash '$polar         *2d-graphic-objects*) 'polar
-      (gethash '$image         *2d-graphic-objects*) 'image
-      (gethash '%points        *2d-graphic-objects*) 'points
-      (gethash '%errors        *2d-graphic-objects*) 'errors
-      (gethash '%polygon       *2d-graphic-objects*) 'polygon
-      (gethash '%ellipse       *2d-graphic-objects*) 'ellipse
-      (gethash '%triangle      *2d-graphic-objects*) 'triangle
-      (gethash '%rectangle     *2d-graphic-objects*) 'rectangle
-      (gethash '%quadrilateral *2d-graphic-objects*) 'quadrilateral
-      (gethash '%region        *2d-graphic-objects*) 'region
-      (gethash '%explicit      *2d-graphic-objects*) 'explicit
-      (gethash '%implicit      *2d-graphic-objects*) 'implicit
-      (gethash '%parametric    *2d-graphic-objects*) 'parametric
-      (gethash '%vector        *2d-graphic-objects*) 'vect
-      (gethash '%label         *2d-graphic-objects*) 'label
-      (gethash '%bars          *2d-graphic-objects*) 'bars
-      (gethash '%polar         *2d-graphic-objects*) 'polar
-      (gethash '%image         *2d-graphic-objects*) 'image )
+(setf (gethash '$points         *2d-graphic-objects*) 'points
+      (gethash '$errors         *2d-graphic-objects*) 'errors
+      (gethash '$polygon        *2d-graphic-objects*) 'polygon
+      (gethash '$ellipse        *2d-graphic-objects*) 'ellipse
+      (gethash '$triangle       *2d-graphic-objects*) 'triangle
+      (gethash '$rectangle      *2d-graphic-objects*) 'rectangle
+      (gethash '$quadrilateral  *2d-graphic-objects*) 'quadrilateral
+      (gethash '$region         *2d-graphic-objects*) 'region
+      (gethash '$explicit       *2d-graphic-objects*) 'explicit
+      (gethash '$implicit       *2d-graphic-objects*) 'implicit
+      (gethash '$parametric     *2d-graphic-objects*) 'parametric
+      (gethash '$vector         *2d-graphic-objects*) 'vect
+      (gethash '$label          *2d-graphic-objects*) 'label
+      (gethash '$bars           *2d-graphic-objects*) 'bars
+      (gethash '$polar          *2d-graphic-objects*) 'polar
+      (gethash '$image          *2d-graphic-objects*) 'image
+      (gethash '$raw_command    *2d-graphic-objects*) 'raw_command
+      (gethash '%points         *2d-graphic-objects*) 'points
+      (gethash '%errors         *2d-graphic-objects*) 'errors
+      (gethash '%polygon        *2d-graphic-objects*) 'polygon
+      (gethash '%ellipse        *2d-graphic-objects*) 'ellipse
+      (gethash '%triangle       *2d-graphic-objects*) 'triangle
+      (gethash '%rectangle      *2d-graphic-objects*) 'rectangle
+      (gethash '%quadrilateral  *2d-graphic-objects*) 'quadrilateral
+      (gethash '%region         *2d-graphic-objects*) 'region
+      (gethash '%explicit       *2d-graphic-objects*) 'explicit
+      (gethash '%implicit       *2d-graphic-objects*) 'implicit
+      (gethash '%parametric     *2d-graphic-objects*) 'parametric
+      (gethash '%vector         *2d-graphic-objects*) 'vect
+      (gethash '%label          *2d-graphic-objects*) 'label
+      (gethash '%bars           *2d-graphic-objects*) 'bars
+      (gethash '%polar          *2d-graphic-objects*) 'polar
+      (gethash '%image          *2d-graphic-objects*) 'image
+      (gethash '%raw_command    *2d-graphic-objects*) 'raw_command )
 
 (defun make-scene-2d (args)
    (let ((objects nil)
@@ -2985,6 +3012,7 @@
       (gethash '$vector             *3d-graphic-objects*) 'vect3d
       (gethash '$label              *3d-graphic-objects*) 'label
       (gethash '$parametric_surface *3d-graphic-objects*) 'parametric_surface
+      (gethash '$raw_command        *3d-graphic-objects*) 'raw_command
       (gethash '$tube               *3d-graphic-objects*) 'tube
       (gethash '$spherical          *3d-graphic-objects*) 'spherical
       (gethash '$cylindrical        *3d-graphic-objects*) 'cylindrical
@@ -2999,9 +3027,10 @@
       (gethash '%vector             *3d-graphic-objects*) 'vect3d
       (gethash '%label              *3d-graphic-objects*) 'label
       (gethash '%parametric_surface *3d-graphic-objects*) 'parametric_surface
+      (gethash '%raw_command        *3d-graphic-objects*) 'raw_command
       (gethash '%tube               *3d-graphic-objects*) 'tube
       (gethash '%spherical          *3d-graphic-objects*) 'spherical
-      (gethash '%cylindrical        *3d-graphic-objects*) 'cylindrical  )
+      (gethash '%cylindrical        *3d-graphic-objects*) 'cylindrical )
 
 ;; This function builds a 3d scene by calling the 
 ;; graphic objects constructors.
