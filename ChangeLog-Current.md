@@ -17,6 +17,8 @@ New items in core:
  * garbage_collect() which manually triggers the lisp's garbage collector 
    or returns false.
  * newdet: An determinant algorithm that is optimized on sparse matrices
+ * load_directory: The name of the directory the current file is loaded 
+   from.
 
 New items in share:
 -------------------

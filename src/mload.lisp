@@ -57,6 +57,9 @@
 (defmvar $load_pathname nil
   "The full pathname of the file being loaded")
 
+(defmvar $load_directory nil
+  "The directory the file being loaded lies in")
+
 (defmfun $batchload (filename-or-stream &aux expr (*mread-prompt* ""))
   (declare (special *mread-prompt*))
   (if (streamp filename-or-stream)
@@ -75,7 +78,8 @@
        (in-stream-string-rep
         (if stream-truename
           (setq $load_pathname (cl:namestring stream-truename))
-          (format nil "~A" in-stream))))
+          (format nil "~A" in-stream)))
+       ($load_directory ($pathname_directory $load_pathname)))
       (declare (special *prompt-on-read-hang*))
       (when $loadprint
         (format t (intl:gettext "~&read and interpret ~A~&") in-stream-string-rep))
@@ -197,7 +201,8 @@
        (in-stream-string-rep
         (if stream-truename
           (setq $load_pathname (cl:namestring stream-truename))
-          (format nil "~A" in-stream))))
+          (format nil "~A" in-stream)))
+       ($load_directory ($pathname_directory $load_pathname)))
       (format t (intl:gettext "~%read and interpret ~A~%") in-stream-string-rep)
       (catch 'macsyma-quit (continue :stream in-stream :batch-or-demo-flag demo))
       in-stream-string-rep)))
