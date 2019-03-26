@@ -60,6 +60,34 @@
 (defmvar $load_directory nil
   "The directory the file being loaded lies in")
 
+(defun file_search_maxima ()
+    (if $load_directory
+	(let ((maxima-patterns "$$$.{mac,mc,wxm}"))
+	  ($append $file_search_maxima
+		   (list '(mlist simp) (combine-path $load_directory maxima-patterns))))
+      $file_search_maxima))
+
+(defun file_search_demo ()
+    (if $load_directory
+	(let ((demo-patterns "$$$.{dem,dm1,dm2,dm3,dmt}"))
+	  ($append $file_search_demo
+		   (list '(mlist simp) (combine-path $load_directory demo-patterns))))
+      $file_search_demo))
+
+(defun file_search_usage ()
+    (if $load_directory
+	(let ((usage-patterns "$$.{usg,texi}"))
+	  ($append $file_search_usage
+		   (list '(mlist simp) (combine-path $load_directory usage-patterns))))
+      $file_search_usage))
+
+(defun file_search_lisp ()
+    (if $load_directory
+	(let ((lisp-patterns (concatenate 'string "$$$.{" lispfile-extension ",lisp,lsp}")))
+	  ($append $file_search_lisp
+		   (list '(mlist simp) (combine-path $load_directory lisp-patterns))))
+      $file_search_lisp))
+
 (defmfun $batchload (filename-or-stream &aux expr (*mread-prompt* ""))
   (declare (special *mread-prompt*))
   (if (streamp filename-or-stream)
@@ -101,7 +129,9 @@
   (setq lis (apply '$append (mapcar 'symbol-value (cdr search-lists))))
   (let ((res ($file_search name lis)))
     (or res
-	(merror (intl:gettext "file_search1: ~M not found in ~A.")
+	(merror (if $load_directory
+		    (intl:gettext "file_search1: ~M not found in ~A nor in load_directory.")
+		    (intl:gettext "file_search1: ~M not found in ~A."))
 		name
 		(string-trim "[]" ($sconcat search-lists))))))
 

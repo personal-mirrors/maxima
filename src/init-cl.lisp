@@ -253,6 +253,20 @@ When one changes, the other does too."
   (defun maxima-version1 ()
     (sanitize-string *autoconf-version*)))
 
+(defvar lispfile-extension #+gcl "o"
+  #+(or cmu scl) (c::backend-fasl-file-type c::*target-backend*)
+  #+sbcl "fasl"
+  #+clisp "fas"
+  #+allegro "fasl"
+  #+openmcl (pathname-type ccl::*.fasl-pathname*)
+  #+lispworks (pathname-type (compile-file-pathname "foo.lisp"))
+  #+ecl "fas"
+  #+abcl "abcl"
+  #-(or gcl cmu scl sbcl clisp allegro openmcl lispworks ecl abcl)
+  ""
+  "The extension of lisp file names"
+  )
+
 (defun set-pathnames ()
   (let ((maxima-prefix-env (maxima-getenv "MAXIMA_PREFIX"))
 	(maxima-layout-autotools-env (maxima-getenv "MAXIMA_LAYOUT_AUTOTOOLS"))
@@ -313,26 +327,15 @@ When one changes, the other does too."
     (setq $maxima_objdir *maxima-objdir*)
     (setf (gethash '$maxima_objdir *variable-initial-values*) *maxima-objdir*))
 
-  (let* ((ext #+gcl "o"
-	      #+(or cmu scl) (c::backend-fasl-file-type c::*target-backend*)
-	      #+sbcl "fasl"
-	      #+clisp "fas"
-	      #+allegro "fasl"
-	      #+openmcl (pathname-type ccl::*.fasl-pathname*)
-	      #+lispworks (pathname-type (compile-file-pathname "foo.lisp"))
-	      #+ecl "fas"
-              #+abcl "abcl"
-	      #-(or gcl cmu scl sbcl clisp allegro openmcl lispworks ecl abcl)
-	      "")
-	 (lisp-patterns (concatenate 'string "$$$.{" ext ",lisp,lsp}"))
-	 (maxima-patterns "$$$.{mac,mc,wxm}")
-	 (lisp+maxima-patterns (concatenate 'string "$$$.{" ext ",lisp,lsp,mac,mc,wxm}"))
-	 (demo-patterns "$$$.{dem,dm1,dm2,dm3,dmt}")
-	 (usage-patterns "$$.{usg,texi}")
-	 (share-subdirs-list (share-subdirs-list))
-	 ;; Smash the list of share subdirs into a string of the form
-	 ;; "{affine,algebra,...,vector}" .
-	 (share-subdirs (format nil "{~{~A~^,~}}" share-subdirs-list)))
+  (let ((lisp-patterns (concatenate 'string "$$$.{" lispfile-extension ",lisp,lsp}"))
+	(maxima-patterns "$$$.{mac,mc,wxm}")
+	(lisp+maxima-patterns (concatenate 'string "$$$.{" lispfile-extension ",lisp,lsp,mac,mc,wxm}"))
+	(demo-patterns "$$$.{dem,dm1,dm2,dm3,dmt}")
+	(usage-patterns "$$.{usg,texi}")
+	(share-subdirs-list (share-subdirs-list))
+	;; Smash the list of share subdirs into a string of the form
+	;; "{affine,algebra,...,vector}" .
+	(share-subdirs (format nil "{~{~A~^,~}}" share-subdirs-list)))
 
     (setq $file_search_lisp
 	  (list '(mlist)
