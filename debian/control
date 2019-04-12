@@ -133,7 +133,7 @@ Description: Computer algebra system
 
 Package: maxima-emacs
 Architecture: any
-Depends:  maxima
+Depends:  maxima-sbcl | maxima-clisp | maxima-ecl | maxima-gcl | maxima
 Recommends: gnuplot-x11, gnuplot, auctex
 Suggests: texlive-base
 Description: Computer algebra system
