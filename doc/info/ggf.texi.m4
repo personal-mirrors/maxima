@@ -6,7 +6,8 @@
 @node Functions and Variables for ggf,  , ggf-pkg, ggf-pkg
 @section Functions and Variables for ggf
 
-@defvr {Option variable} GGFINFINITY
+@c @defvr {Option variable} GGFINFINITY
+m4_defvr({Option variable}, GGFINFINITY)
 Default value: 3
 
 This is an option variable for function @code{ggf}.
@@ -23,14 +24,16 @@ computation accurate enough.
 
 See also @mref{ggf}.
 
-@opencatbox
-@category{Package ggf}
-@closecatbox
+@c @opencatbox
+@c @category{Package ggf}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 
-@defvr {Option variable} GGFCFMAX
+@c @defvr {Option variable} GGFCFMAX
+m4_defvr({Option variable}, GGFCFMAX)
 Default value: 3
 
 This is an option variable for function @code{ggf}.
@@ -45,14 +48,16 @@ generating functions.
 
 See also @mref{ggf}.
 
-@opencatbox
-@category{Package ggf}
-@closecatbox
+@c @opencatbox
+@c @category{Package ggf}
+@c @closecatbox
 
-@end defvr
+@c @end defvr
+m4_end_defvr()
 
 @anchor{ggf}
-@deffn {Function} ggf (@var{l})
+@c @deffn {Function} ggf (@var{l})
+m4_deffn({Function}, ggf, <<<(@var{l})>>>)
 Compute the generating function (if it is a fraction of two
 polynomials) of a sequence, its first terms being given. @var{l}
 is a list of numbers.
@@ -64,10 +69,10 @@ This function is controlled by global variables @var{GGFINFINITY} and @var{GGFCF
 
 To use this function write first @code{load("ggf")}.
 
-@opencatbox
-@category{Generating functions}
-@category{Share packages}
-@category{Package ggf}
-@closecatbox
+@c @opencatbox
+@c @category{Generating functions}
+@c @category{Share packages}
+@c @category{Package ggf}
+@c @closecatbox
 
 @end deffn
