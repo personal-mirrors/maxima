@@ -774,7 +774,9 @@ value is a symbol if the first argument is a symbol and a string otherwise.
 @code{concat} evaluates its arguments.  The single quote @code{'} prevents
 evaluation.
 
-See also @mref{sconcat} and @mrefdot{eval_string}
+See also @mrefcomma{sconcat} that works on non-atoms, too, @mrefcomma{simplode}
+@mref{string} and @mrefdot{eval_string}
+For complex string conversions see also @mref{printf}.
 
 @c ===beg===
 @c y: 7$
@@ -844,7 +846,7 @@ m4_deffn({Function}, sconcat, <<<(@var{arg_1}, @var{arg_2}, @dots{})>>>)
 Concatenates its arguments into a string.  Unlike @mrefcomma{concat} the
 arguments do @i{not} need to be atoms.
 
-See also @mrefcomma{concat} and @mrefdot{eval_string}
+See also @mrefcomma{concat} @mrefcomma{simplode} @mref{string} and @mrefdot{eval_string}
 For complex string conversions see also @mref{printf}.
 
 @c ===beg===
@@ -893,6 +895,9 @@ in.
 
 The return value of @code{string} is a string, and thus it cannot be used in a
 computation.
+
+See also @mrefcomma{concat} @mrefcomma{sconcat} @mref{simplode} and
+@mrefdot{eval_string}
 
 @c @opencatbox
 @c @category{Strings}

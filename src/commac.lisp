@@ -89,7 +89,6 @@
 (defvar *maxima-arrays* nil
   "Trying to track down any functional arrays in maxima")
 
-;;only remaining calls are for maclisp-type = nil
 (defun *array (name maclisp-type &rest dimlist &aux aarray)
   (cond ((member maclisp-type '(readtable obarray) :test #'eq)
 	 (error " bad type ~S" maclisp-type)))
@@ -599,7 +598,7 @@ values")
 	(progn
 	  (when (and *prompt-on-read-hang* *read-hang-prompt*)
 	    (princ *read-hang-prompt*)
-	    (force-output *standard-output*))
+	    (finish-output *standard-output*))
 	  (read-char stream nil eof-option)))))
 
 (defun tyi (&optional (stream *standard-input*) eof-option)

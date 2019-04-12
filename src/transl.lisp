@@ -179,10 +179,6 @@ APPLY means like APPLY.")
 (defmvar $tr_numer nil
   "If `true' numer properties are used for atoms which have them, e.g. %pi")
 
-(defmvar $tr_predicate_brain_damage nil
-  "If TRUE, output possible multiple evaluations in an attempt
-  to interface to the COMPARE package.")
-
 (defvar boolean-object-table
   '(($true . ($boolean . t))
     ($false . ($boolean . nil))
@@ -209,7 +205,7 @@ APPLY means like APPLY.")
   (apply #'tr-format
 	 (nconc (list (intl:gettext "translator: internal error. Message: ~:M~%")) l))
   (cond (*transl-debug*
-	 (break "transl barfo ~S" t))
+	 (break "transl barfo"))
 	(t
 	 (setq tr-abort t)
 	 nil)))
@@ -249,7 +245,7 @@ APPLY means like APPLY.")
   " if in debug mode `warning's signaled go to lisp break loops ")
 
 (defmacro tr-warnbreak ()
-  `(and *transl-debug* *tr-warn-break* (break "transl ~S" t )))
+  `(and *transl-debug* *tr-warn-break* (break "transl")))
 
 (defun tr-warnp (val)
   (and val

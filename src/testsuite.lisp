@@ -32,9 +32,10 @@
                         (symbol-value '*autoconf-lisp-only-build*)
                         (list* '(mlist simp) (list 78 80))))
 	;; 46 = ECL bug #437: mishandling float format
-	;; 44 fails in ECL 15.3.7 and earlier
+	;; 45 sporadically fails in all tested ECL versions (15.3.7-16.1.3)
+	;; 43 fails in ECL up to version 15.3.7
         ((mlist simp) "rtest6"
-	 #+ecl ((mlist simp) 44 46))
+	 #+ecl ((mlist simp) 43 45 46))
         "rtest6a"
 	"rtest6b"
 	"rtest7"
@@ -51,8 +52,9 @@
 	;; ECL 16.1.2 still reliably fails in #307 + #310
 	;; and sporadically in 201, 234, 249, 250, 251, 252, 267, 297, 298, 312, 315
 	;; and 319
+	;; ECL 13.5.1 sporadically fails in 233
 	((mlist simp) "rtest14"
-	 #+ecl ((mlist simp) 145 201 234 249 250 251 252 267 297 298 307 310 312 315 319))
+	 #+ecl ((mlist simp) 145 201 233 234 249 250 251 252 267 297 298 307 310 312 315 319))
         "rtest15"
 	;; ccl versions 1.11 and earlier fail test 50.  Mark it as a
 	;; known failure.  Presumably 1.12 will have this fixed.

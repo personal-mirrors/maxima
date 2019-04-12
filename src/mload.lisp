@@ -20,7 +20,7 @@
        
 (defun errset-namestring (x)
   (let ((errset nil))
-    (errset (pathname x) nil)))
+    (errset (pathname x))))
 
 (defmfun $filename_merge (&rest file-specs)
   (when (or (null file-specs) (cddr file-specs))
@@ -57,7 +57,7 @@
 (defmvar $load_pathname nil
   "The full pathname of the file being loaded")
 
-(defmfun $batchload (filename-or-stream &aux expr (*mread-prompt* ""))
+(defmfun $batchload (filename-or-stream &aux (*mread-prompt* ""))
   (declare (special *mread-prompt*))
   (if (streamp filename-or-stream)
       (batchload-stream filename-or-stream)
@@ -75,7 +75,8 @@
        (in-stream-string-rep
         (if stream-truename
           (setq $load_pathname (cl:namestring stream-truename))
-          (format nil "~A" in-stream))))
+          (format nil "~A" in-stream)))
+       (expr nil))
       (declare (special *prompt-on-read-hang*))
       (when $loadprint
         (format t (intl:gettext "~&read and interpret ~A~&") in-stream-string-rep))

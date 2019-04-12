@@ -516,6 +516,9 @@ The directive ~h has been introduced to handle bigfloats.
 |++++++++++++++++++++|
 @end example
 
+For conversion of objects to strings also see @mrefcomma{concat} @mrefcomma{sconcat}
+@mref{string} and @mrefdot{simplode}
+
 @opencatbox
 @category{File output}
 @category{Package stringproc}
@@ -1407,6 +1410,8 @@ alphabetic character. See remarks on @ref{alphacharp}.
 @code{simplode} takes a list of expressions and concatenates them into a string.
 If no delimiter @var{delim} is specified, @code{simplode} uses no delimiter.
 @var{delim} can be any string.
+
+See also @mrefcomma{concat} @mrefcomma{sconcat} @mref{string} and @mrefdot{printf}
 
 Examples:
 

@@ -191,8 +191,7 @@ DESTINATION is an actual stream (rather than nil for a string)."
         (finish nil)
       (declare (ignorable area-before area-after))
       (catch 'return-from-debugger
-	(when (or (not (checklabel $inchar))
-		  (not (checklabel $outchar)))
+	(unless (checklabel $inchar)
 	  (incf $linenum))
 	(setq c-tag (makelabel $inchar))
 	(let ((*mread-prompt* (if batch-or-demo-flag nil (main-prompt)))
@@ -256,6 +255,8 @@ DESTINATION is an actual stream (rather than nil for a string)."
 			  (float (- etime-after etime-before))
 			  internal-time-units-per-second))
 	(incf accumulated-time time-used)
+	(unless (checklabel $outchar)
+	  (incf $linenum))
 	(setq d-tag (makelabel $outchar))
 	(unless $nolabels (setf (symbol-value d-tag) $%))
 	(setq $_ $__)
@@ -280,7 +281,7 @@ DESTINATION is an actual stream (rather than nil for a string)."
 		(gctime (- (caddr area-after) (caddr area-before))))
 	    (if (= 0 gctime) nil (format t (intl:gettext " including GC time ~s s,") (* 0.001 gctime)))
 	    (format t (intl:gettext " using ~s cons-cells and ~s other bytes.~%") conses other))
-	  (force-output))
+	  (finish-output))
 	(unless $nolabels
           (putprop '$% (cons time-used 0) 'time)
 	  (putprop d-tag (cons time-used  0) 'time))
@@ -288,7 +289,7 @@ DESTINATION is an actual stream (rather than nil for a string)."
 	    (displa `((mlabel) ,d-tag ,$%)))
 	(when (eq batch-or-demo-flag ':demo)
           (princ (break-prompt))
-          (force-output)
+          (finish-output)
 	  (let (quitting)
 	    (loop
 	      ;;those are common lisp characters you're reading here
@@ -297,7 +298,7 @@ DESTINATION is an actual stream (rather than nil for a string)."
                 ((#\page)
                  (fresh-line)
                  (princ (break-prompt))
-                 (force-output))
+                 (finish-output))
                 ((#\?)
                  (format t
                    (intl:gettext
@@ -337,7 +338,7 @@ DESTINATION is an actual stream (rather than nil for a string)."
 			 (mread *standard-input*))))
 	(case r
 	  (($exit) (throw 'break-exit t))
-	  (t (errset (displa (meval r)) t)))))))
+	  (t (errset (displa (meval r)))))))))
 
 (defun merrbreak (&optional arg)
   (format *debug-io* "~%Merrbreak:~A" arg)
@@ -715,7 +716,7 @@ DESTINATION is an actual stream (rather than nil for a string)."
     (progn
       (format t (intl:gettext "~&Maxima encountered a Lisp error:~%~% ~A") condition)
       (format t (intl:gettext "~&~%Automatically continuing.~%To enable the Lisp debugger set *debugger-hook* to nil.~%"))
-      (force-output)
+      (finish-output)
     )
     (error () (ignore-errors (bye))))
   (throw 'return-from-debugger t))

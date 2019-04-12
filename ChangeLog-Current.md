@@ -49,6 +49,8 @@ Changes in core:
  * Maxima.bat now autodetects 64-bit systems and does the necessary
    modifications for making lapack work in SBCL it this test is positive.
  * perl is now uniformly called as /usr/bin/env perl
+ * Resolved the "simplifya: I don't know how to simplify this operator: ~M"
+   error triggered by some array actions.
  * The Windows installer can now include ABCL
  * Corrected many markers that tell if an example can be updated using the 
    doc/info/update_example scripts.
@@ -100,7 +102,25 @@ Changes in core:
    currently configured.
  * "make check" now runs the share and the core testsuite in the same
    maxima session.
-
+ * Fix the error message for an invalid upper limit of integration
+   If the upper limit of integration was invalid, the error message
+   incorrectly printed the lower limit instead.
+ * The feature "nonscalar" was named "nonscalarp" in some places.
+   Now it is named "nonscalar" consistently. 
+ * Arraymake should now output an error if the result isn't a valid array
+ * interval(a,b) created an interval, but maxima lacked functions to do
+   anything with these intervals => this undocumented function was 
+   commented out.
+ * MRELATIONP now knows how to deal with the "not equal" operator.
+ * shipped around a clisp bug that caused broken output with fast front-ends
+ * '[x][1]; now is output as a list, too.
+ * The last output label of a batch file is no more clobbered with the file
+   name.
+ * emaxima now correctly expands tabs in emacs' comint buffer.
+ * "make install" now installs emaxima and imaxima in a place emacs will 
+   find by default.
+ * Code clean up.
+ 
 Changes in share:
 --------------
  *  The the arguments to Krylov matrix are now checked for being of the 
@@ -123,6 +143,9 @@ Changes in share:
     but have been disabled as they failed.
  *  Sarag no more overwrites the function resultant() which means the 
     share test suite no more kills this function in a kill(all);
+ *  Draw now accepts numbers as color specification besides the html-style
+    and the gnuplot-style color identifiers it already understood.
+ *  Draw now accepts plot titles even if they aren't strings.
 
 Bug fixes:
 ----------
