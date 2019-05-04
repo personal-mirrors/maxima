@@ -39,11 +39,11 @@ if(USE_WXMAXIMA_GIT)
     )
     install(DIRECTORY ${CMAKE_BINARY_DIR}/wxmaxima/wxmaxima-git-prefix/src/wxmaxima-git-build/${WINDOWS_DRIVELETTER}\:/maxima-${MAXIMAVERSION}/ DESTINATION . COMPONENT wxMaxima)
 else()
+    execute_process(COMMAND curl -s https://github.com/wxMaxima-developers/wxmaxima/releases/latest|grep "browser_download_url.*deb"|cut -d : -f 2,3|tr -d OUTPUT_VARIABLE WXMAXIMA_URL)
     externalproject_add(wxmaxima
         URL "${WXMAXIMA_URL}"
         DOWNLOAD_DIR ${CMAKE_SOURCE_DIR}/downloads
-        DOWNLOAD_NAME wxmaxima-${WXMAXIMAVERSION}.tar.gz
-        URL_MD5 ${WXMAXIMA_MD5}
+        DOWNLOAD_NAME wxmaxima.tar.gz
         DEPENDS wxwidgets
         # search wx-config here - do not use the host wx-config
         # had to set CMAKE_LIBRARY_PATH=/usr/${HOST}/lib - libraries for mingw are installed there, but CMake (>3.8)

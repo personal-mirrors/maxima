@@ -174,7 +174,8 @@ Unnumbered bugs:
 Additional improvements:
 ------------------------
  * Updated the external utilities for the Windows installer
- * Updated the wxMaxima version the Windows installer comes with
+ * The windows Installer now automatically uses the newest 
+   wxMaxima version that is available.
  * Nightly Test: A summary of the share tests
  * Crosscompiling: Add 'maxima_longnames.c' to automake
  * Documentation Updates
