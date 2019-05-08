@@ -193,4 +193,10 @@
 @tex
 \global\def\linkcolor{0 .5 0}
 \global\def\urlcolor{0 0 .5}
+
+\global\def\setpdfdestname#1{%
+ \turnoffactive
+ \def\pdfdestname{#1}%
+ \txiescapepdf\pdfdestname
+}
 @end tex

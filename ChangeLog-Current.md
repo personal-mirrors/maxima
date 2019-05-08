@@ -17,6 +17,8 @@ New items in core:
  * garbage_collect() which manually triggers the lisp's garbage collector 
    or returns false.
  * newdet: An determinant algorithm that is optimized on sparse matrices
+ * maxima_frontend and maxima_frontend_version: Two variables that can be
+   set in order to inform build_info() which frontend is in use.
 
 New items in share:
 -------------------
@@ -24,6 +26,8 @@ New items in share:
    symbolic inputs
  * The ode package now has a testbench.
  * killing.dem, a demo for Killing vector fields.
+ * The logic share package now provides logic_simplify that uses the
+   K-Map reduction method by Quine-Mccluskey, see merge-request #10.
 
 Changes in core:
 ----------------
@@ -118,7 +122,8 @@ Changes in core:
    name.
  * emaxima now correctly expands tabs in emacs' comint buffer.
  * "make install" now installs emaxima and imaxima in a place emacs will 
-   find by default.
+   find by default. configure's --emacs-prefix= option allows to choose
+   a different directory.
  * Code clean up.
  
 Changes in share:
@@ -146,6 +151,8 @@ Changes in share:
  *  Draw now accepts numbers as color specification besides the html-style
     and the gnuplot-style color identifiers it already understood.
  *  Draw now accepts plot titles even if they aren't strings.
+ *  wrstcse now gets the ranges and resolution of random numbers for monte
+    carlo analysis right.
 
 Bug fixes:
 ----------
@@ -168,7 +175,6 @@ Additional improvements:
 ------------------------
  * Updated the external utilities for the Windows installer
  * Updated the wxMaxima version the Windows installer comes with
-   to version 19.02.1
  * Nightly Test: A summary of the share tests
  * Crosscompiling: Add 'maxima_longnames.c' to automake
  * Documentation Updates

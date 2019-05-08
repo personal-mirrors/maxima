@@ -22,6 +22,7 @@
 (defmvar $prompt '_
   "Prompt symbol of the demo function, playback, and the Maxima break loop.")
 
+
 ;; A prefix and suffix that are wrapped around every prompt that Maxima
 ;; emits. This is designed for use with text-based interfaces that drive Maxima
 ;; through standard input and output and need to decorate prompts to make the
@@ -422,7 +423,8 @@ DESTINATION is an actual stream (rather than nil for a string)."
   "")
 
 ;; Declare a build_info structure, then remove it from the list of user-defined structures.
-(defstruct1 '((%build_info) $version $timestamp $host $lisp_name $lisp_version))
+(defstruct1 '((%build_info) $version $timestamp $host $lisp_name $lisp_version
+	      $maxima_userdir $maxima_tempdir $maxima_objdir $maxima_frontend $maxima_frontend_version))
 (let nil (declare (special $structures))
   (setq $structures (cons '(mlist) (remove-if #'(lambda (x) (eq (caar x) '%build_info)) (cdr $structures)))))
 
@@ -447,7 +449,12 @@ DESTINATION is an actual stream (rather than nil for a string)."
             ,(format nil "~4,'0d-~2,'0d-~2,'0d ~2,'0d:~2,'0d:~2,'0d" year month day hour minute seconds)
             ,*autoconf-host*
             ,#+sbcl (ensure-readably-printable-string (lisp-implementation-type)) #-sbcl (lisp-implementation-type)
-            ,#+sbcl (ensure-readably-printable-string (lisp-implementation-version)) #-sbcl (lisp-implementation-version)))))))
+            ,#+sbcl (ensure-readably-printable-string (lisp-implementation-version)) #-sbcl (lisp-implementation-version)
+	    ,$maxima_userdir
+	    ,$maxima_tempdir
+	    ,$maxima_objdir
+	    ,$maxima_frontend
+	    ,$maxima_frontend_version))))))
 
 ;; SBCL base strings aren't readably printable.
 ;; Attempt a work-around. Yes, this is terribly ugly.
@@ -469,6 +476,16 @@ DESTINATION is an actual stream (rather than nil for a string)."
        (coerce (mstring (mfuncall '$@ form '$lisp_name)) 'string)))
      (lisp-version-string (format nil (intl:gettext "Lisp implementation version: ~a")
        (coerce (mstring (mfuncall '$@ form '$lisp_version)) 'string)))
+     (maxima-userdir-string (format nil (intl:gettext "User dir: ~a")
+       (coerce (mstring (mfuncall '$@ form '$maxima_userdir)) 'string)))
+     (maxima-tempdir-string (format nil (intl:gettext "Temp dir: ~a")
+       (coerce (mstring (mfuncall '$@ form '$maxima_tempdir)) 'string)))
+     (maxima-objdir-string (format nil (intl:gettext "Object dir: ~a")
+       (coerce (mstring (mfuncall '$@ form '$maxima_objdir)) 'string)))
+     (maxima-frontend-string (format nil (intl:gettext "Frontend: ~a")
+       (coerce (mstring (mfuncall '$@ form '$maxima_frontend)) 'string)))
+     (maxima-frontend-version-string (format nil (intl:gettext "Frontend version: ~a")
+       (coerce (mstring (mfuncall '$@ form '$maxima_frontend_version)) 'string)))
      (bkptht 1)
      (bkptdp 1)
      (lines 0)
@@ -478,7 +495,12 @@ DESTINATION is an actual stream (rather than nil for a string)."
     (forcebreak (reverse (coerce timestamp-string 'list)) 0)
     (forcebreak (reverse (coerce host-string 'list)) 0)
     (forcebreak (reverse (coerce lisp-name-string 'list)) 0)
-    (forcebreak (reverse (coerce lisp-version-string 'list)) 0))
+    (forcebreak (reverse (coerce lisp-version-string 'list)) 0)
+    (forcebreak (reverse (coerce maxima-userdir-string 'list)) 0)
+    (forcebreak (reverse (coerce maxima-tempdir-string 'list)) 0)
+    (forcebreak (reverse (coerce maxima-objdir-string 'list)) 0)
+    (forcebreak (reverse (coerce maxima-frontend-string 'list)) 0)
+    (if $maxima_frontend (forcebreak (reverse (coerce maxima-frontend-version-string 'list)) 0)))
   nil)
 
 (setf (get '%build_info 'dimension) 'dimension-build-info)
