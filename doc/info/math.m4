@@ -35,8 +35,8 @@ m4_dnl document.
 m4_dnl
 m4_define(<<<m4_dfindex_entry>>>, <<<
 m4_ifelse(<<<$#>>>, <<<2>>>,
-@dfindex $2!$1,
-@dfindex $2!$1 <<<m4_dfindex_entry($1, m4_shift(m4_shift($@)))>>>)
+@dfindex $2 @subentry $1,
+@dfindex $2 @subentry $1 <<<m4_dfindex_entry($1, m4_shift(m4_shift($@)))>>>)
 >>>)
 m4_dnl
 m4_dnl Create anchor references given the name and the list of categories.
@@ -111,8 +111,8 @@ m4_dnl different index and anchor format?
 m4_dnl
 m4_define(<<<m4_dvindex_var>>>, <<<
 m4_ifelse(<<<$#>>>, <<<2>>>,
-@dvindex $2!$1,
-@dvindex $2!$1 <<<m4_dvindex_var($1, m4_shift(m4_shift($@)))>>>)
+@dvindex $2 @subentry $1,
+@dvindex $2 @subentry $1 <<<m4_dvindex_var($1, m4_shift(m4_shift($@)))>>>)
 >>>)
 
 m4_define(<<<m4_anchor_var>>>, <<<
