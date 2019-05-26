@@ -6,7 +6,7 @@ FROM ubuntu:trusty
 
 ARG ARCH=x86_64
 
-RUN apt-get update && apt-get -y install git build-essentials autoconf python binutils \
+RUN apt-get update && apt-get -y install git build-essential autoconf python binutils \
     texinfo gcc libtool desktop-file-utils sbcl clisp ecl libffi-dev gcl texinfo libreadline-dev locales automake debhelper autoconf gawk texlive-latex-recommended texlive-latex-base python debhelper  gnuplot
 
 RUN git clone https://git.code.sf.net/p/maxima/code maxima-code
