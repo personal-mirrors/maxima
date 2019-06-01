@@ -44,7 +44,7 @@ maxima_TEXINFOS = include-maxima.texi category-macros.texi Introduction.texi \
  Runtime.texi Miscellaneous.texi Rules.texi nset.texi Function.texi \
  Program.texi Debugging.texi alt-display.texi asympa.texi \
  augmented_lagrangian.texi bitwise.texi bernstein.texi bode.texi celine.texi \
- clebsch_gordan.texi combinatorics.texi \
+ clebsch_gordan.texi combinatorics.texi odepack.texi \
  cobyla.texi contrib_ode.texi descriptive.texi diag.texi distrib.texi \
  draw.texi drawdf.texi dynamics.texi engineering-format.texi \
  wrstcse.texi ezunits.texi f90.texi finance.texi \
@@ -150,6 +150,7 @@ figures/draw_colorbox.gif\
 figures/draw_color.gif\
 figures/draw_color2.gif\
 figures/draw_color3.gif\
+figures/draw_color4.gif\
 figures/draw_columns.gif\
 figures/draw_contour2.gif\
 figures/draw_contour.gif\
@@ -370,6 +371,7 @@ figures/draw_colorbox.pdf\
 figures/draw_color.pdf\
 figures/draw_color2.pdf\
 figures/draw_color3.pdf\
+figures/draw_color4.pdf\
 figures/draw_columns.pdf\
 figures/draw_contour2.pdf\
 figures/draw_contour.pdf\
