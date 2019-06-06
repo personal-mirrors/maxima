@@ -1223,7 +1223,7 @@ AC_SUBST(LDFLAGS)
 AC_SUBST(default_sharedirs)
 
 AC_ARG_WITH(emacs-prefix,
-	[  --emacs-prefix=<path>        Where to install the emacs modes to],
+	[  --with-emacs-prefix=<path>   Where to install the emacs modes to],
 	[EMACSDIR="$withval"],
 	[EMACSDIR="${datarootdir}/emacs/site-lisp"])
 AC_SUBST(EMACSDIR)
