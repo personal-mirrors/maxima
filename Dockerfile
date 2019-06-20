@@ -9,5 +9,5 @@ ARG ARCH=x86_64
 RUN apt-get update && apt-get -y install git build-essential devscripts autoconf python binutils \
     texinfo gcc libtool desktop-file-utils sbcl clisp ecl libffi-dev gcl texinfo libreadline-dev locales automake debhelper autoconf gawk texlive-latex-recommended texlive-latex-base python debhelper  gnuplot dh-autoreconf
 
-RUN git clone https://git.code.sf.net/p/maxima/code maxima-code
-RUN cd maxima-code && git checkout DebianPackaging_Release && git pull && uscan --download-current-version && tar  xf ../maxima_*orig.tar.gz --strip 1 && debuild
+RUN git clone https://git.code.sf.net/p/maxima/code maxima-code -b DebianPackaging_Release --single-branch
+RUN cd maxima-code && git checkout  && git pull && uscan --download-current-version && tar  xf ../maxima_*orig.tar.gz --strip 1 && debuild
