@@ -10,4 +10,4 @@ RUN apt-get update && apt-get -y install git build-essential devscripts autoconf
     texinfo gcc libtool desktop-file-utils sbcl clisp ecl libffi-dev gcl texinfo libreadline-dev locales automake debhelper autoconf gawk texlive-latex-recommended texlive-latex-base python debhelper  gnuplot dh-autoreconf
 
 RUN git clone https://git.code.sf.net/p/maxima/code maxima-code
-RUN cd maxima-code && git checkout DebianPackaging_Release && uscan --download-current-version && tar  xvf ../maxima_*orig.tar.gz && debuild
+RUN cd maxima-code && git checkout DebianPackaging_Release && uscan --download-current-version && tar  xf ../maxima_*orig.tar.gz && debuild
