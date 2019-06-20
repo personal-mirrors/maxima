@@ -1,3 +1,3 @@
 # This enables uscan to check if the version being build is the current one.
-version=2
-http://sf.net/maxima/maxima-([^-]*)\.tar.gz debian uupdate
+version=4
+http://sf.net/maxima/maxima-(\d\S+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
