@@ -1,18 +1,18 @@
 @c -*- Mode: texinfo -*-
 @menu
-* Introduction to Maximas Database::
+* Introduction to Maxima's Database::
 * Functions and Variables for Properties::
 * Functions and Variables for Facts::
 * Functions and Variables for Predicates::
 @end menu
 
 @c -----------------------------------------------------------------------------
-@node Introduction to Maximas Database, Functions and Variables for Properties, Maximas Database, Maximas Database
-@section Introduction to Maximas Database
+@node Introduction to Maxima's Database, Functions and Variables for Properties, Maxima's Database, Maxima's Database
+@section Introduction to Maxima's Database
 @c -----------------------------------------------------------------------------
 
 @c -----------------------------------------------------------------------------
-@node Functions and Variables for Properties, Functions and Variables for Facts, Introduction to Maximas Database, Maximas Database
+@node Functions and Variables for Properties, Functions and Variables for Facts, Introduction to Maxima's Database, Maxima's Database
 @section Functions and Variables for Properties
 @c -----------------------------------------------------------------------------
 
@@ -980,7 +980,7 @@ See also the predicate function @mrefdot{nonscalarp}
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@node Functions and Variables for Facts, Functions and Variables for Predicates, Functions and Variables for Properties, Maximas Database
+@node Functions and Variables for Facts, Functions and Variables for Predicates, Functions and Variables for Properties, Maxima's Database
 @section Functions and Variables for Facts
 @c -----------------------------------------------------------------------------
 
@@ -1587,6 +1587,8 @@ current data base.  It returns one of the following answers: @code{pos}
 @code{nz} (negative or zero), @code{pn} (positive or negative), or @code{pnz}
 (positive, negative, or zero, i.e. nothing known).
 
+See also @mrefdot{signum}
+
 @opencatbox
 @category{Declarations and inferences}
 @closecatbox
@@ -1615,7 +1617,7 @@ If @var{name} is not specified, a new name is created (via @code{gensym}) and re
 @end deffn
 
 @c -----------------------------------------------------------------------------
-@node Functions and Variables for Predicates, , Functions and Variables for Facts, Maximas Database
+@node Functions and Variables for Predicates, , Functions and Variables for Facts, Maxima's Database
 @section Functions and Variables for Predicates
 @c -----------------------------------------------------------------------------
 

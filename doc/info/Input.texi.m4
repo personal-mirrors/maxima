@@ -464,7 +464,7 @@ while processing @var{filename}, the global variables @code{_}, @code{__},
 @code{%}, and @code{%th} have whatever bindings they had when @code{load} was
 called.
 
-It is also to note that structures will only be read back as structures if
+Note also that structures will only be read back as structures if
 they have been defined by @code{defstruct} before the @code{load} command
 is called.
 
@@ -808,7 +808,7 @@ is @code{true}, @code{with_stdout} appends to the output file.  Otherwise,
 
 @code{with_stdout} returns the value of its final argument.
 
-See also @mrefdot{writefile}
+See also @mref{writefile} and @mrefdot{display2d}
 
 @c THIS DOESN'T SEEM VERY IMPORTANT TO MENTION ...
 @c Note the binding of display2d to be

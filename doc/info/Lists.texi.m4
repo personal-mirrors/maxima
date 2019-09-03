@@ -498,7 +498,7 @@ m4_end_deffn()
 @c @deffn {Function} eighth (@var{expr})
 m4_deffn({Function}, eighth, <<<(@var{expr})>>>)
 
-Returns the 8'th item of expression or list @var{expr}.
+Returns the 8th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -573,7 +573,7 @@ m4_end_deffn()
 @c @deffn {Function} fifth (@var{expr})
 m4_deffn({Function}, fifth, <<<(@var{expr})>>>)
 
-Returns the 5'th item of expression or list @var{expr}.
+Returns the 5th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -806,7 +806,7 @@ m4_end_deffn()
 @c @deffn {Function} fourth (@var{expr})
 m4_deffn({Function}, fourth, <<<(@var{expr})>>>)
 
-Returns the 4'th item of expression or list @var{expr}.
+Returns the 4th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -1212,7 +1212,7 @@ expression. If it is omitted, the default value 1 will be used. If both
 value of 1.
 
 @code{makelist (@var{expr}, @var{x}, @var{list})} returns a list, the
-@code{j}'th element of which is equal to
+@code{j}th element of which is equal to
 @code{ev (@var{expr}, @var{x}=@var{list}[j])} for @code{j} equal to 1 through
 @code{length (@var{list})}.
 
@@ -1342,7 +1342,7 @@ m4_setcat(Lists, Expressions)
 @c @deffn {Function} ninth (@var{expr})
 m4_deffn({Function}, ninth, <<<(@var{expr})>>>)
 
-Returns the 9'th item of expression or list @var{expr}.
+Returns the 9th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -1462,7 +1462,7 @@ list and @code{partswitch} is false, @code{rest} signals an error. When
 returns @code{end}.
 
 Applying @code{rest} to expression such as @code{f(a,b,c)} returns
-@code{f(b,c)}. In general, applying @code{rest} to an nonlist doesn't
+@code{f(b,c)}. In general, applying @code{rest} to a nonlist doesn't
 make sense. For example, because '^' requires two arguments,
 @code{rest(a^b)} results in an error message. The functions
 @code{args} and @code{op} may be useful as well, since @code{args(a^b)}
@@ -1594,7 +1594,7 @@ m4_setcat(Lists, Expressions)
 @c @deffn {Function} second (@var{expr})
 m4_deffn({Function}, second, <<<(@var{expr})>>>)
 
-Returns the 2'nd item of expression or list @var{expr}.
+Returns the 2nd item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -1609,7 +1609,7 @@ m4_end_deffn()
 @c @deffn {Function} seventh (@var{expr})
 m4_deffn({Function}, seventh, <<<(@var{expr})>>>)
 
-Returns the 7'th item of expression or list @var{expr}.
+Returns the 7th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -1624,7 +1624,7 @@ m4_end_deffn()
 @c @deffn {Function} sixth (@var{expr})
 m4_deffn({Function}, sixth, <<<(@var{expr})>>>)
 
-Returns the 6'th item of expression or list @var{expr}.
+Returns the 6th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -1959,7 +1959,7 @@ m4_setcat(Lists, Expressions)
 @c @deffn {Function} tenth (@var{expr})
 m4_deffn({Function}, tenth, <<<(@var{expr})>>>)
 
-Returns the 10'th item of expression or list @var{expr}.
+Returns the 10th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -1974,7 +1974,7 @@ m4_end_deffn()
 @c @deffn {Function} third (@var{expr})
 m4_deffn({Function}, third, <<<(@var{expr})>>>)
 
-Returns the 3'rd item of expression or list @var{expr}.
+Returns the 3rd item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @c @opencatbox
@@ -2230,7 +2230,7 @@ If the elements of a long list need to be processed in a different
 order performance might be increased by converting the list into a
 declared array first.
 
-It is also to note that the ending condition of @code{for} loops
+Note also that the ending condition of @code{for} loops
 is tested for every iteration which means that the result of a
 @code{length} should be cached if it is used in the ending
 condition:

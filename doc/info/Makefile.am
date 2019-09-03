@@ -44,7 +44,7 @@ maxima_TEXINFOS = include-maxima.texi category-macros.texi Introduction.texi \
  Runtime.texi Miscellaneous.texi Rules.texi nset.texi Function.texi \
  Program.texi Debugging.texi alt-display.texi asympa.texi \
  augmented_lagrangian.texi bitwise.texi bernstein.texi bode.texi celine.texi \
- clebsch_gordan.texi combinatorics.texi \
+ clebsch_gordan.texi combinatorics.texi odepack.texi \
  cobyla.texi contrib_ode.texi descriptive.texi diag.texi distrib.texi \
  draw.texi drawdf.texi dynamics.texi engineering-format.texi \
  wrstcse.texi ezunits.texi f90.texi finance.texi \
@@ -52,7 +52,7 @@ maxima_TEXINFOS = include-maxima.texi category-macros.texi Introduction.texi \
  lapack.texi lbfgs.texi lindstedt.texi linearalgebra.texi lsquares.texi \
  minpack.texi makeOrders.texi mnewton.texi numericalio.texi opsubst.texi \
  operatingsystem.texi \
- orthopoly.texi ratpow.texi romberg.texi simplex.texi simplifications.texi solve_rec.texi \
+ orthopoly.texi pytranslate.texi ratpow.texi romberg.texi simplex.texi simplifications.texi solve_rec.texi \
  stats.texi stirling.texi stringproc.texi to_poly_solve.texi unit.texi \
  zeilberger.texi errormessages.texi
 
@@ -150,6 +150,7 @@ figures/draw_colorbox.gif\
 figures/draw_color.gif\
 figures/draw_color2.gif\
 figures/draw_color3.gif\
+figures/draw_color4.gif\
 figures/draw_columns.gif\
 figures/draw_contour2.gif\
 figures/draw_contour.gif\
@@ -370,6 +371,7 @@ figures/draw_colorbox.pdf\
 figures/draw_color.pdf\
 figures/draw_color2.pdf\
 figures/draw_color3.pdf\
+figures/draw_color4.pdf\
 figures/draw_columns.pdf\
 figures/draw_contour2.pdf\
 figures/draw_contour.pdf\
@@ -523,25 +525,25 @@ maxima.info : maxima.texi $(maxima_TEXINFOS)
 	-$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
 	  --split-size=1000000 $(srcdir)/maxima.texi
 
-html: maxima_0.html contents.hhc
+html: maxima_toc.html contents.hhc
 
 maxima-index.lisp: build_index.pl maxima.info
 	/usr/bin/env perl $^ ':crlf' > $@
 
 DOLLAR_SIGN = $$
 
-maxima_0.html: maxima.pdf $(maxima_TEXINFOS) $(figurefiles) manual.css category-fn.texi category-vr.texi
+maxima_toc.html: maxima.texi $(maxima_TEXINFOS) $(figurefiles) manual.css texi2html.init
 	./build_html.sh
 
-maxima.epub: maxima_0.html
+maxima.epub: maxima_toc.html
 	ebook-convert maxima_singlepage.html maxima.epub --breadth-first "--title=Maxima @manual_version@ Manual" "--authors=Maxima Team" --language=en
 
 maxima.pdf maxima_pdf.dfs maxima_pdf.dvs : maxima_pdf.texi $(maxima_TEXINFOS) $(pdffigures)
 	make-pdf.sh $<
 	mv maxima_pdf.pdf maxima.pdf
 
-contents.hhc index.hhk: maxima_0.html
-	/usr/bin/env perl $(srcdir)/create_index `grep -l '<h2.*Table of Contents' maxima_[0-9]*.html`
+contents.hhc index.hhk: maxima_toc.html
+	/usr/bin/env perl $(srcdir)/create_index maxima_toc.html
 
 category-fn.texi : maxima_pdf.dfs build-cat.awk
 	@AWK@ -v idxname=fn -f build-cat.awk maxima_pdf.dfs > category-fn.texi
@@ -603,7 +605,7 @@ clean-chm:
 	rm -rf chm
 endif
 
-EXTRA_DIST = texi2html manual.css texi2html.init maxima.texi \
+EXTRA_DIST = texi2html manual.css texi2html.init maxima.texi maxima.html \
     $(genericdirDATA) $(pdffigures) $(macfiles) $(maxima_TEXINFOS) $(figurefiles) \
     create_index build_index.pl maxima-index.lisp docdraw.mac \
     extract_categories1.awk extract_categories1.sed extract_categories.sh check_tab fix_tab \

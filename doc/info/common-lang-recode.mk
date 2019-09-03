@@ -1,4 +1,4 @@
-TEXINFO_TEX=../texinfo.tex
+TEXINFO_TEX=$(srcdir)/../texinfo.tex
 info_TEXINFOS =
 if CHM
 genericdirDATA = \
@@ -49,7 +49,7 @@ maxima.info: $(LANGSRCDIR)/maxima.texi
 	done
 
 contents.hhc: maxima.html
-	/usr/bin/env perl $(top_srcdir)/doc/info/create_index
+	/usr/bin/env perl $(srcdir)/../create_index `grep -l name..SEC_Contents maxima*.html`
 
 infoname = maxima
 include $(top_srcdir)/common-info.mk
@@ -61,11 +61,11 @@ maxima.html: $(LANGSRCDIR)/maxima.texi
 	rm -f maxima*.html 2>/dev/null
 	@: $(MAKEINFOHTML) $(AM_MAKEINFOHTMLFLAGS) $(MAKEINFOHTMLFLAGS) \
 	  -I $(LANGSRCDIR) -I $(LANGBUILDDIR) --init-file=$(srcdir)/../texi2html.init \
-	   --split=chapter --output=. --css-include=../manual.css $<
+	   --split=chapter --output=. --css-include=$(srcdir)/../manual.css $<
 	/usr/bin/env perl $(srcdir)/../texi2html --split_chapter --lang=$(INFOLANGOPT) --output=. \
 	  --css-include=$(srcdir)/../manual.css \
 	  -I $(LANGSRCDIR) -I $(LANGBUILDDIR) \
-	  --init-file $(srcdir)/../texi2html.init \
+	  --init-file $(srcdir)/texi2html.init \
 	  $<
 	for f in maxima*.html; do \
 	    if test x$(urecode) = xtrue ; then \

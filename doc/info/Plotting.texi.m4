@@ -24,7 +24,7 @@ to every concurrently-running instance of Maxima and @code{format} is
 the name of the plotting format being used (@code{gnuplot},
 @code{xmaxima}, @code{mgnuplot}, @code{gnuplot_pipes} or @code{geomview}).
 
-There are to save the plot in a graphic format file. In those cases, the
+There are commands to save the plot in a graphic format file. In those cases, the
 file @code{maxout_xxx.format} created by Maxima includes commands that will
 make the external plotting program save the result in a graphic
 file. The default name for that graphic file is
@@ -530,7 +530,7 @@ Displays a plot of one or more expressions as a function of one
 variable or parameter.
 
 @code{plot2d} displays one or several plots in two dimensions.  When
-expressions or function name are used to define the plots,
+expressions or function names are used to define the plots,
 they should all depend on only one variable @var{var} and the use of
 @var{x_range} will be mandatory, to provide the name of the variable and
 its minimum and maximum values; the syntax for @var{x_range} is:
@@ -731,6 +731,7 @@ In the next example a table with three columns is saved in a file
 plotted on the two axes:
 
 @c ===beg===
+@c display2d:false$
 @c with_stdout ("data.txt", for x:0 thru 10 do
 @c                              print (x, x^2, x^3))$
 @c data: read_matrix ("data.txt")$
@@ -739,12 +740,15 @@ plotted on the two axes:
 @c ===end===
 @example
 @group
-(%i1) with_stdout ("data.txt", for x:0 thru 10 do
+(%i1) display2d:false$
+@end group
+@group
+(%i2) with_stdout ("data.txt", for x:0 thru 10 do
                              print (x, x^2, x^3))$
 @end group
-(%i2) data: read_matrix ("data.txt")$
+(%i3) data: read_matrix ("data.txt")$
 @group
-(%i3) plot2d ([discrete, transpose(data)[2], transpose(data)[3]],
+(%i4) plot2d ([discrete, transpose(data)[2], transpose(data)[3]],
   [style,points], [point_type,diamond], [color,red])$
 @end group
 @end example
@@ -866,7 +870,7 @@ include a color bar that relates colors to values of the z variable:
 
 Two surfaces in the same plot. Ranges specific to one of the surfaces can
 be given by placing each expression and its ranges in a separate list;
-global ranges for the complete plot are also given after the functions
+global ranges for the complete plot are also given after the function
 definitions.
 
 @c ===beg===
@@ -1277,7 +1281,7 @@ horizontal and vertical axis, as in plot2d, and the z axis coming out of
 the screen.  The z axis is then rotated around the x axis through an
 angle equal to @mref{elevation} and then the new xy plane is rotated
 around the new z axis through an angle @mrefdot{azimuth} This option sets
-the value for the azimuth, in degrees.
+the value for the elevation, in degrees.
 
 See also @mrefdot{azimuth}
 
@@ -2211,6 +2215,23 @@ more information.
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
+@anchor{gnuplot_strings}
+@defvr {Plot option} gnuplot_strings [gnuplot_strings, @var{value}]
+
+With a value of @code{true}, all strings used in labels and titles will
+be interpreted by gnuplot as ``enhanced'' text, if the terminal being used
+supports it. In enhanced mode, some characters such as ^ and _ are not
+printed, but interpreted as formatting characters. For a list of the
+formatting characters and their meaning, see the documentation for enhanced
+in Gnuplot. The default value for this option is @code{false}, which will
+not treat any characters as formatting characters.
+
+@opencatbox
+@category{Plotting}
+@closecatbox
+@end defvr
+
+@c -----------------------------------------------------------------------------
 @anchor{gnuplot_svg_term_command}
 @c @defvr {Plot option} gnuplot_svg_term_command [gnuplot_svg_term_command, @var{command}]
 m4_defvr({Plot option}, gnuplot_svg_term_command) @
@@ -2232,7 +2253,7 @@ m4_end_defvr()
 @c @defvr {Plot option} gnuplot_curve_titles
 m4_defvr({Plot option}, gnuplot_curve_titles)
 
-This is an obsolete option that has been replaced @mref{legend} described
+This is an obsolete option that has been replaced by @mref{legend} described
 above.
 
 @c @opencatbox

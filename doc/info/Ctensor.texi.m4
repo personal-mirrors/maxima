@@ -1903,7 +1903,7 @@ m4_end_defvr()
 @c @defvr {Variable} kinvariant
 m4_defvr({Variable}, kinvariant)
 
-The Kretchmann invariant. Computed by @code{rinvariant}.
+The Kretschmann invariant. Computed by @code{rinvariant}.
 
 @c @opencatbox
 @c @category{Package ctensor}
