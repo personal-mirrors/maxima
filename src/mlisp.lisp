@@ -26,7 +26,7 @@ or if apply is being used are printed.")
 (declare-top (special derivflag derivlist $labels $values $functions $arrays 
                       $rules $gradefs $dependencies $aliases
 		      $myoptions $props genvar $maxposex $maxnegex $expop $expon
-		      $numer *mdebug* *refchkl* *baktrcl*
+		      $numer *mdebug* *refchkl*
 		      $norepeat $detout $doallmxops $doscmxops opers
 		      *mopl* *alphabet* $%% %e-val
 		      $macros linel $ratfac $ratwtlvl
@@ -208,9 +208,6 @@ is EQ to FNNAME if the latter is non-NIL."
 	     (unless (> (array-total-size ar) (+ (fill-pointer ar) 10))
 	       (setq ar (adjust-array ar (+ (array-total-size ar) 50)	:fill-pointer (fill-pointer ar))))
 	     (vector-push bindlist ar)
-	     ;; rather than pushing all on *baktrcl* it might be good
-	     ;; to make a *last-form* global that is set in meval1
-	     ;; and is pushed here.
 	     (vector-push form ar)
 	     (vector-push params ar)
 	     (vector-push args ar)
@@ -292,7 +289,7 @@ is EQ to FNNAME if the latter is non-NIL."
     ((or (and (atom (car form))
               (setq form (cons (ncons (car form)) (cdr form))))
          (atom (caar form)))
-     (let ((*baktrcl* *baktrcl*) transp)
+     (let (transp)
        (prog (u aryp)
          (declare (special aryp))
          (setq *last-meval1-form* form)
@@ -301,8 +298,6 @@ is EQ to FNNAME if the latter is non-NIL."
                      (member (caar form)
                              '(mplus mtimes mexpt mnctimes) :test #'eq))
                 (go c))
-               ;; don't bother pushing mplus and friends on *baktrcl*
-               ;; should maybe even go below aryp.
                ((and *mdebug*
                      (progn
                        ;; if wanting to step, the *break-points*
@@ -1670,6 +1665,37 @@ wrapper for this."
 
 (defun mgetl (atom inds)
   (let ((props (get atom 'mprops))) (and props (getl props inds))))
+
+(defmspec $declare_index_properties (form)
+  (let ((a (rest form)))
+    (when (oddp (length a))
+      (merror (intl:gettext "declare_index_properties: number of arguments must be even; found: ~M") `((mlist) ,@a)))
+    (do ((l a (cddr l))) ((null l) '$done)
+      (declare-index-properties-1 (first l) (second l)))))
+
+(defun declare-index-properties-1 (x l)
+  (if (not (or (symbolp x) (and ($listp x) (every #'symbolp (cdr x)))))
+    (merror (intl:gettext "declare_index_properties: first argument must be a symbol or a list of symbols; found: ~M") x))
+  (if (not ($listp l))
+    (merror (intl:gettext "declare_index_properties: second argument must be a list; found: ~M") l))
+  (if (not (every #'(lambda (y) (member y (cdr $known_index_properties))) (cdr l)))
+    (merror (intl:gettext "declare_index_properties: unknown index property; found: ~M~%~
+                           declare_index_properties: known properties are: ~M") l $known_index_properties))
+  (if ($listp x)
+    (mapcar #'(lambda (x1) (mputprop x1 (cdr l) 'display-indices)) (cdr x))
+    (mputprop x (cdr l) 'display-indices)))
+
+(defmfun $get_index_properties (a)
+  (when (not (symbolp a))
+    (merror (intl:gettext "get_index_properties: argument must be a symbol; found: ~M") a))
+  `((mlist) ,@(mget a 'display-indices)))
+
+(defmspec $remove_index_properties (form)
+  (let ((a (rest form)))
+    (when (not (every #'symbolp a))
+      (merror (intl:gettext "remove_index_properties: every argument must be a symbol; found: ~M") a))
+    (do ((l a (cdr l))) ((null l) '$done)
+      (mremprop (first l) 'display-indices))))
 
 ;;; Define $matrix so that apply(matrix,...) does not need to use Lisp
 ;;; apply -- in GCL, apply is limited to 63 arguments.

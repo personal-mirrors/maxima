@@ -2392,7 +2392,9 @@ m4_setcat(Translation and compilation)
 @anchor{mode_declare}
 @anchor{modedeclare}
 @c @deffn {Function} mode_declare (@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n})
+@c @deffnx {Function} modedeclare (@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n})
 m4_deffn({Function}, mode_declare, <<<(@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n})>>>)
+m4_deffnx({Function}, modedeclare, <<<(@var{y_1}, @var{mode_1}, @dots{}, @var{y_n}, @var{mode_n}>>>)
 
 A @code{mode_declare} informs the compiler which type (lisp programmers name the type:
 ``mode'') a function parameter or its return value will be of. This can greatly
@@ -2404,16 +2406,12 @@ The arguments of @code{mode_declare} are pairs consisting of a variable (or a li
 of variables all having the same mode) and a mode. Available modes (``types'') are:
 @example
 array            an declared array (see the detailed description below)
-string           a string
 boolean          true or false
 integer          integers (including arbitrary-size integers)
 fixnum           integers (excluding arbitrary-size integers)
 float            machine-size floating-point numbers
 real             machine-size floating-point or integer
-@c DOES NUMBER, EVEN AND ODD INCLUDE BFLOATS AND ARBITRARY-SIZE INTS?
 number           Numbers
-even             Even integers
-odd              Odd integers
 any              any kind of object (useful for arrays of any)
 @end example
 

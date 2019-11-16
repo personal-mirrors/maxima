@@ -608,7 +608,7 @@ m4_setcat(Debugging, Display flags and variables)
 @anchor{error_size}
 @c @defvr {Option variable} error_size
 m4_defvr({Option variable}, error_size)
-Default value: 10
+Default value: 60
 
 @code{error_size} modifies error messages according to the size of expressions
 which appear in them.  If the size of an expression (as determined by the Lisp
