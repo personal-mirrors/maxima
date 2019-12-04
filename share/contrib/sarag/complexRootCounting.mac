@@ -1,0 +1,22 @@
+
+/* Winding Number */
+/* algorithm by Daniel Perrucci and Marie-Françoise Roy */
+/* coded by Fabrizio Caruso */
+/* For a given polynomial in z, it counts the number of complext roots */
+/* in the complex area defined by upper left corner (x0,y0) and lower right corner (x1,y1) */
+windingNumber(pol,z,x0,x1,y0,y1) :=
+    block(
+        [polxy, polxy0, polx1y, polxy1, polx0y, cxy0, cx1y, cxy1, cx0y ],
+        
+        polxy: expand(subst(x+%i*y,z,pol)),
+        polxy0: expand(subst(y0,y,polxy)),
+        polx1y: expand(subst(x1,x,polxy)),
+        polxy1: expand(subst(y1,y,polxy)),
+        polx0y: expand(subst(x0,x,polxy)),
+        cxy0: cauchyIndexBetween(realpart(polxy0),imagpart(polxy0),x,x0,x1),
+        cx1y: cauchyIndexBetween(realpart(polx1y),imagpart(polx1y),y,y0,y1),
+        cxy1: cauchyIndexBetween(realpart(polxy1),imagpart(polxy1),x,x1,x0),
+        cx0y: cauchyIndexBetween(realpart(polx0y),imagpart(polx0y),y,y1,y0),
+    return((1/2)*(cxy0+cx1y+cxy1+cx0y))
+    );
+
