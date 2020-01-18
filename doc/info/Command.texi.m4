@@ -1210,10 +1210,10 @@ m4_setcat(Display functions)
 @c @deffnx {Symbol} presubscript
 m4_deffn({Function}, declare_index_properties, <<<(@var{a}, [@var{p_1}, @var{p_2}, @var{p_3}, ...])>>>)
 m4_deffnx({Function}, declare_index_properties, <<<([@var{a}, @var{b}, @var{c}, ...], [@var{p_1}, @var{p_2}, @var{p_3}, ...])>>>)
-m4_defvr({Symbol}, postsubscript)
-m4_defvrx({Symbol}, postsuperscript)
-m4_defvrx({Symbol}, presuperscript)
-m4_defvrx({Symbol}, presubscript)
+m4_deffnx({Symbol}, postsubscript)
+m4_deffnx({Symbol}, postsuperscript)
+m4_deffnx({Symbol}, presuperscript)
+m4_deffnx({Symbol}, presubscript)
 
 Declares the properties of indices applied to the symbol @var{a}
 or each of the of symbols @var{a}, @var{b}, @var{c}, ....
