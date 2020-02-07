@@ -1255,7 +1255,6 @@ AC_CONFIG_FILES([src/startmaxima_abcl.sh], chmod +x src/startmaxima_abcl.sh)
 AC_CONFIG_FILES([xmaxima-local], chmod +x xmaxima-local)
 AC_CONFIG_FILES([tests/test.sh], chmod +x tests/test.sh)
 AC_CONFIG_FILES([doc/info/build_html.sh], chmod +x doc/info/build_html.sh)
-AC_CONFIG_FILES([doc/info/extract_categories.sh], chmod +x doc/info/extract_categories.sh)
 AC_CONFIG_FILES([doc/info/make-pdf.sh], chmod +x doc/info/make-pdf.sh)
 
 # Convert maxima.bat to DOS line ending

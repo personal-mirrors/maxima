@@ -27,7 +27,7 @@
 
 (defmvar transl-file nil "output stream of $compfile and $translate_file")
 
-(defmvar $compgrind nil "If `true' lisp output will be pretty-printed.")
+(defmvar $compgrind t "If `true' lisp output will be pretty-printed.")
 
 (defmvar $tr_true_name_of_file_being_translated nil
   "This is set by TRANSLATE_FILE for use by user macros
@@ -274,9 +274,8 @@ translated."
 	 (setq flag (and $tr_semicompile
 			 (not (eq (car p) 'eval-when))))
 	 (when flag (princ* #\() (princ* 'progn) (terpri*))
-	 (if $compgrind
-	     (prin1 p)
-	     (prin1 p transl-file))
+	 (let ((*print-pretty* (or $compgrind *print-pretty*)))
+	   (prin1 p transl-file))
 	 (when flag (princ* #\)))
 	 (terpri transl-file))))
 
@@ -288,7 +287,7 @@ translated."
 
 (defun print-abort-msg (fun from)
   (mformat *translation-msgs-files*
-	   (intl:gettext "compfile: failed to translate ~:@M.~
+	   (intl:gettext "compfile: failed to translate ~:@M.~%~
 	    ~A will continue, but file output will be aborted.~%") ;; WTF DOES THIS MEAN ???
 	   fun from))
 

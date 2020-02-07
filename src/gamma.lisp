@@ -736,6 +736,7 @@
                   index 0 (sub ratorder 1))))))))
 
       ((and $gamma_expand (mplusp a) (integerp (cadr a)))
+       ;; Handle gamma_incomplete(a+n, z), where n is a numerical integer
        (let ((n (cadr a))
              (a (simplify (cons '(mplus) (cddr a)))))
          (cond
@@ -757,7 +758,31 @@
                     index 0 (add n -1))))))
            ((< n 0)
             (setq n (- n))
+	    ;; See http://functions.wolfram.com/06.06.17.0004.01
+	    ;;
+	    ;;   gamma_incomplate(a,z) =
+	    ;;     (-1)^n*pochhammer(1-a,n)
+	    ;;     *[gamma_incomplete(a-n,z)
+	    ;;       + z^(a-n-1)*exp(-z)*sum(z^k/pochhammer(a-n,k),k,1,n)]
+	    ;;
+	    ;; Rerarrange this in terms of gamma_incomplete(a-n,z):
+	    ;;
+	    ;;   gamma_incomplete(a-n,z) =
+	    ;;     (-1)^n*gamma_incomplete(a,z)/pochhammer(1-a,n)
+	    ;;     -z^(a-n-1)*exp(-z)*sum(z^k/pochhammer(a-n,k),k,1,n)
+	    ;;
+	    ;; Change the summation index to go from k = 0 to n-1:
+	    ;;
+	    ;;   z^(a-n-1)*sum(z^k/pochhammer(a-n,k),k,1,n)
+	    ;;     = z^(a-n-1)*sum(z^(k+1)/pochhammer(a-n,k+1),k,0,n-1)
+	    ;;     = z^(a-n)*sum(z^k/pochhammer(a-n,k+1),k,0,n-1)
+	    ;;
+	    ;;  Thuus:
+	    ;;   gamma_incomplete(a-n,z) =
+	    ;;     (-1)^n*gamma_incomplete(a,z)/pochhammer(1-a,n)
+	    ;;     -z^(a-n)*sum(z^k/pochhammer(a-n,k+1),k,0,n-1)
             (sub
+	     ;; (-1)^n*gamma_incomplete(a,z)/pochhammer(1-a,n)
               (div
                 (mul
                   (power -1 n)
@@ -766,12 +791,32 @@
               (mul
                 (power '$%e (mul -1 z))
                 (power z (sub a n))
+		;; sum(z^k/pochhammer(a-n,k+1),k,0,n-1)
                 (let ((index (gensumindex)))
                   (simpsum1
                     (div
                       (power z index)
                       (simplify (list '($pochhammer) (sub a n) (add index 1))))
                     index 0 (sub n 1)))))))))
+      ((and $gamma_expand (consp a) (eq 'rat (caar a))
+	    (integerp (second a))
+	    (integerp (third a)))
+       ;; gamma_incomplete of (numeric) rational order.  Expand it out
+       ;; so that the resulting order is between 0 and 1.
+       (multiple-value-bind (n order)
+	   (floor (/ (second a) (third a)))
+	 ;; a = n + order where 0 <= order < 1.
+	 (let ((rat-order (rat (numerator order) (denominator order))))
+	   (cond
+	     ((zerop n)
+	      ;; Nothing to do if the order is already between 0 and 1
+	      (eqtest (list '(%gamma_incomplete) a z) expr))
+	     (t
+	      ;; Use gamma_incomplete(a+n,z) above. and then substitue
+	      ;; a=order.  This works for n positive or negative.
+	      (let* ((ord (gensym))
+		     (g (simplify (list '(%gamma_incomplete) (add ord n) z))))
+		($substitute rat-order ord g)))))))
 
       (t (eqtest (list '(%gamma_incomplete) a z) expr)))))
 

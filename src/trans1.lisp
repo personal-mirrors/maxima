@@ -161,20 +161,17 @@
 
 (def%tr $catch (form)
   (destructuring-let (((mode . body) (translate `((mprogn) . ,(cdr form)))))
-    `(,mode . ((lambda ()
-		 ((lambda (mcatch)
-		    (prog1
-			(catch
-			    'mcatch ,body)
-		      (errlfun1 mcatch)))
-		  (cons bindlist loclist)))))))
+    `(,mode . ((lambda (mcatch)
+                 (prog1
+                   (catch 'mcatch ,body)
+                   (errlfun1 mcatch)))
+               (cons bindlist loclist)))))
 
 (def%tr $throw (form)
   (destructuring-let (((mode . exp) (translate (cadr form))))
     `(,mode . ((lambda (x)
-		 (cond ((null mcatch)
-			(displa x)
-			(merror (intl:gettext "throw: not within 'catch'."))))
+		 (when (null mcatch)
+		   (merror (intl:gettext "throw: not within 'catch'; expression: ~M") x))
 		 (throw 'mcatch x))
 	       ,exp))))
 
@@ -197,15 +194,14 @@
       (setq n (dtranslate n))
       `($any .
              ((lambda (,nn)
-                (progn
-                  (setq ,nn ($float ,nn))
-                  (if (numberp ,nn)
-                      (do ((,|0| 1 (add 1 ,|0|)) (,sum nil))
-                          ((> ,|0| ,nn) (cons '(mlist) ,sum))
-                        (setq ,sum 
-                              (cons ,(cdr (tr-local-exp exp)) ,sum)))
-                      (merror
-                       (intl:gettext "makelist: second argument must evaluate to a number; found: ~M") ,nn))))
+                (setq ,nn ($float ,nn))
+                (if (numberp ,nn)
+                    (do ((,|0| 1 (add 1 ,|0|)) (,sum nil))
+                        ((> ,|0| ,nn) (cons '(mlist) ,sum))
+                      (setq ,sum
+                            (cons ,(cdr (tr-local-exp exp)) ,sum)))
+                    (merror
+                     (intl:gettext "makelist: second argument must evaluate to a number; found: ~M") ,nn)))
               ,n))))
     ((= (length form) 3)
      (destructuring-let
@@ -242,8 +238,7 @@
       (setq |0| (dtranslate |0|) n (dtranslate n))
       `($any .
              ((lambda (,|00| ,nn)
-                (progn
-                  (setq ,nn ($float (sub ,nn ,|00|)))
+                (setq ,nn ($float (sub ,nn ,|00|)))
                 (if (numberp ,nn)
                     (do ((,x ,|00| (add 1 ,x)) (,ii 0 (add 1 ,ii))
                          (,sum nil
@@ -254,7 +249,7 @@
                       (declare (special ,x)))
                     (merror
                      (intl:gettext "makelist: the fourth argument minus the third one must evaluate to a number; found: ~M")
-                     ,nn))))
+                     ,nn)))
               ,|0| ,n))))
     ((= (length form) 5)
      (destructuring-let
@@ -263,8 +258,7 @@
       (setq |0| (dtranslate |0|) n (dtranslate n) s (dtranslate s))
       `($any .
              ((lambda (,|00| ,nn ,ss)
-                (progn
-                  (setq ,nn ($float (div (sub ,nn ,|00|) ,ss)))
+                (setq ,nn ($float (div (sub ,nn ,|00|) ,ss)))
                 (if (numberp ,nn)
                     (do ((,x ,|00| (add ,ss ,x)) (,ii 0 (add 1 ,ii))
                          (,sum nil
@@ -275,7 +269,7 @@
                       (declare (special ,x)))
                     (merror
                      (intl:gettext "makelist: the fourth argument minus the third one, divided by the fifth one must evaluate to a number; found: ~M")
-                     ,nn))))
+                     ,nn)))
               ,|0| ,n ,s))))
     (t
      (mformat *translation-msgs-files*
@@ -341,66 +335,46 @@
 
 ;;; The following special forms do not call the evaluator.
 
-(def%tr $batcon (form)
+(def%tr $alias (form)
   `($any . (meval ',form)))  
 ;;most of these will lose in common since a local variable will not
 ;;have its value accessible to the mfexpr*.  They should
 ;;be redone as macros with any necessary info passed along.
 
-(def%tr $remarray           $batcon)
-(def%tr $rearray $batcon)
-(def%tr $alias $batcon)
-(def%tr $alloc $batcon)
-(def%tr $batch $batcon)
-(def%tr $batchload          $batcon)
-(def%tr $closefile $batcon)
-(def%tr $compfile           $batcon)
-(def%tr $delfile $batcon)
-(def%tr $demo $batcon)
-(def%tr $dependencies $batcon)
-(def%tr $describe           $batcon)
-(def%tr $diskfree $batcon)
-(def%tr $diskuse $batcon)
-(def%tr $dispfun $batcon)
-(def%tr $disprule $batcon)
-(def%tr $filelength $batcon)
-(def%tr $filelist $batcon)
-(def%tr $fundef $batcon)
-(def%tr $fulldiskuse $batcon)
-(def%tr $gradef $batcon)
-(def%tr $listfiles $batcon)
-(def%tr $loadfile $batcon)
-(def%tr $loadarrays         $batcon)
-(def%tr $loadplots $batcon)
-(def%tr $namefile $batcon)
-(def%tr $numerval           $batcon)
-(def%tr $options $batcon)
-(def%tr $ordergreat $batcon)
-(def%tr $orderless $batcon)
-(def%tr $plotmode $batcon)
-(def%tr $primer $batcon)
-(def%tr $printdiskuse $batcon)
-(def%tr $printfile $batcon)
-(def%tr $printprops $batcon)
-(def%tr $properties $batcon)
-(def%tr $propvars $batcon)
-(def%tr $qlistfiles $batcon)
-(def%tr $remfile            $batcon)
-(def%tr $remfunction $batcon)
-(def%tr $remove $batcon)
-(def%tr $remvalue           $batcon)
-(def%tr $renamefile $batcon)
-(def%tr $restore $batcon)
-(def%tr $translate          $batcon)
-(def%tr $writefile $batcon)
-(def%tr $hardcopy $batcon)
-(def%tr $labels $batcon)
-(def%tr $setup_autoload $batcon)
-(def%tr $tobreak $batcon  )
-
-;; Kill off the special code for translating sum and product.
-(def%tr $sum $batcon)
-(def%tr $product $batcon)
+(def%tr $batch $alias)
+(def%tr $batchload $alias)
+(def%tr $closefile $alias)
+(def%tr $compfile $alias)
+(def%tr $demo $alias)
+(def%tr $dependencies $alias)
+(def%tr $describe $alias)
+(def%tr $dispfun $alias)
+(def%tr $disprule $alias)
+(def%tr $fundef $alias)
+(def%tr $gradef $alias)
+(def%tr $labels $alias)
+(def%tr $loadarrays $alias)
+(def%tr $loadfile $alias)
+(def%tr $numerval $alias)
+(def%tr $options $alias)
+(def%tr $ordergreat $alias)
+(def%tr $orderless $alias)
+(def%tr $printfile $alias)
+(def%tr $printprops $alias)
+(def%tr $product $alias)
+(def%tr %product $alias)
+(def%tr $properties $alias)
+(def%tr $propvars $alias)
+(def%tr $rearray $alias)
+(def%tr $remarray $alias)
+(def%tr $remfunction $alias)
+(def%tr $remove $alias)
+(def%tr $remvalue $alias)
+(def%tr $setup_autoload $alias)
+(def%tr $sum $alias)
+(def%tr %sum $alias)
+(def%tr $translate $alias)
+(def%tr $writefile $alias)
 
 ;; Local Modes:
 ;; Mode: LISP

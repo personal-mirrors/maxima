@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# compiliation-script for nightly builds
-# should be copied to a private location (~/bin), so that
+# Compilation-script for nightly builds.
+# Should be copied to a private location (~/bin), so that
 # git changes to that script can be reviewed before.
 #
-# expects the git checkout in ~/maxima-code
+# Expects the Maxima git checkout in ~/maxima-code
 #
-# calling from a cronjob does not work (don't know why),
+# Calling from a cronjob does not work (don't know why),
 # so call it from a screen session (which you can detach)
-# and do everything in a loop
+# and do everything in a loop.
 
 
 buildinformation () {
@@ -27,7 +27,7 @@ buildinformation () {
     echo
 }
 
-# should be called as buildprocess win32  or buildprocess win64
+# Should be called as buildprocess win32 or buildprocess win64
 buildprocess () {
     rm -rf -- *
     echo "$1 build log:"
@@ -42,7 +42,7 @@ buildprocess () {
     echo
     echo
     buildinformation
-    cp "maxima-clisp-sbcl-current-$1.exe" ~
+    cp maxima-*-current-*.exe ~
 }
 
 # sleep until a given time
@@ -62,14 +62,14 @@ cd ~/maxima-code/crosscompile-windows/build || exit
 
 while true; do
 
-    rm -f ~/maxima-clisp-sbcl-current-win32.exe ~/maxima-clisp-sbcl-current-win64.exe ~/buildlog-win32 ~/buildlog-win64
+    rm -f ~/maxima-*-win32.exe ~/maxima-*-win64.exe ~/buildlog-win32 ~/buildlog-win64
     git pull
 
     buildprocess "win32" 2>&1 | tee ~/buildlog-win32
     buildprocess "win64" 2>&1 | tee ~/buildlog-win64
 
-    for i in ~/maxima-clisp-sbcl-current-win32.exe ~/maxima-clisp-sbcl-current-win64.exe ~/buildlog-win32 ~/buildlog-win64 ; do
-        test -r $i && scp -i ~/.ssh/maximakopierkey $i maxima@ns1.dautermann.at:/var/www/wolfgang.dautermann.at/maxima/nightlybuild/
+    for i in ~/maxima-*-current-win32.exe ~/maxima-*-current-win64.exe ~/buildlog-win32 ~/buildlog-win64 ; do
+        test -r $i && scp -i ~/.ssh/maximakopierkey $i maxima@ns3.dautermann.at:/var/www/wolfgang.dautermann.at/maxima/nightlybuild/
     done
     sleepuntil 23:00
 done

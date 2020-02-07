@@ -44,8 +44,7 @@ string(REPLACE "RequestExecutionLevel admin" "RequestExecutionLevel user
 !include LogicLib.nsh
 " MYNSISTEMPLATE "${MYNSISTEMPLATE}")
 
-string(REPLACE "Function .onInit" "
-Function .onInit
+string(REPLACE "Function .onInit" "Function .onInit
 \${GetParameters} \$0
 \${GetOptions} \$0 \"/no_vtk\" \$1
 \${IfNot} \${Errors}
@@ -59,6 +58,12 @@ Function .onInit
 \${IfNot} \${Errors}
     !insertmacro UnselectSection \${wxmaxima}
 \${EndIf}
+\${GetOptions} \$0 \"/?\" \$1
+\${IfNot} \${Errors}
+        MessageBox MB_OK \"Installer for Maxima\$\\n\$\\nThis installer allows the following command line options:\$\\n        /S - silent install\$\\n        /D=<path> - select the install path\$\\n        /no_vtk - do not select VTK\$\\n        /no_gnuplot - do not select Gnuplot\$\\n        /no_wxmaxima - do not select wxMaxima\$\\n        /? - this help message\$\\n\$\\nMaxima Website: http://maxima.sourceforge.net\"
+        Abort
+\${EndIf}
+
 " MYNSISTEMPLATE "${MYNSISTEMPLATE}")
 file(WRITE ${CMAKE_BINARY_DIR}/NSIS.template.in "${MYNSISTEMPLATE}")
 message(STATUS "Copied and patched ${CMAKE_ROOT}/Modules/NSIS.template.in to ${CMAKE_BINARY_DIR}/NSIS.template.in")
@@ -72,8 +77,6 @@ option(BUILD_CURRENT "Build a installer for current Maxima/wxMaxima." NO)
 
 option(WITH_ABCL "Include ABCL in the installer." NO)
 
-# another option (option() can not be used, it is only boolean...)
-#
 # SBCL and CLISP have both advantages and disadvantages:
 #  - SBCL is fast, but sometimes runs out of memory in places it really shouldn't
 #    (Loading LAPACK on IA32, for example) and isn't too happy with changing to
@@ -85,6 +88,7 @@ option(WITH_ABCL "Include ABCL in the installer." NO)
 #    receiving a batch of new autocompletion symbols. Since the libraries the
 #    front-ends use have evolved in the last years it has become easy to
 #    trigger this => Setting SBCL to be the default.
+#  - ABCL (optional) is a Java based Lisp.
 if(WITH_ABCL)
     set(WITH_DEFAULT_LISP "sbcl" CACHE STRING "Which Lisp should be used by default (clisp/sbcl/abcl)?")
     set_property(CACHE WITH_DEFAULT_LISP PROPERTY STRINGS "clisp" "sbcl" "abcl")
@@ -102,11 +106,11 @@ endif()
 # updated setup-file automatically.
 
 # current program versions
-set(CLISPVERSION       2.49)
+set(CLISPVERSION 2.49)
 
 
 # MD5 checksums for the current program versions.
-set(CLISP_MD5       "8d58d64f83dd7ad01c054aecc16c1f52")
+set(CLISP_MD5 "8d58d64f83dd7ad01c054aecc16c1f52")
 
 if(BUILD_CURRENT)
     set(USE_WXMAXIMA_GIT YES)
@@ -121,7 +125,7 @@ endif()
 
 
 # download URLs
-set(CLISP_URL     "http://downloads.sourceforge.net/project/clisp/clisp/${CLISPVERSION}/clisp-${CLISPVERSION}-win32-mingw-big.zip")
+set(CLISP_URL "http://downloads.sourceforge.net/project/clisp/clisp/${CLISPVERSION}/clisp-${CLISPVERSION}-win32-mingw-big.zip")
 
 
 # Where are libgcc and libstdc++?
@@ -180,9 +184,17 @@ endif()
 
 if(WITH_ABCL)
     add_subdirectory("abcl/")
+    set(ABCL_ENABLE "--enable-abcl")
+    set(ABCL_DEPENDS "abcl")
+    set(ABCL_JAR "--with-abcl-jar=${CMAKE_BINARY_DIR}/abcl/abcl-prefix/src/abcl/abcl.jar")
+    set(ABCL_INSTALLER "-abcl")
+else()
+    set(ABCL_ENABLE "")
+    set(ABCL_DEPENDS "")
+    set(ABCL_JAR "")
+    set(ABCL_INSTALLER "")
 endif()
 
-set(CLISPROOT "${CMAKE_BINARY_DIR}/clisp-prefix/src/clisp")
 configure_file("${CMAKE_SOURCE_DIR}/wine-clisp.sh.tmpl" "${CMAKE_BINARY_DIR}/wine-clisp.sh")
 configure_file("${CMAKE_SOURCE_DIR}/wine-lisp.sh.tmpl" "${CMAKE_BINARY_DIR}/wine-lisp.sh")
 configure_file("${CMAKE_SOURCE_DIR}/wine-sbcl.sh.tmpl" "${CMAKE_BINARY_DIR}/wine-sbcl.sh")
@@ -190,11 +202,10 @@ configure_file("${CMAKE_SOURCE_DIR}/wine-sbcl.sh.tmpl" "${CMAKE_BINARY_DIR}/wine
 externalproject_add(maxima
   # first copy the maxima source to a build directory, since out-of-source-builds do not work
   DOWNLOAD_COMMAND rsync -a --exclude=crosscompile-windows/build/ "${CMAKE_SOURCE_DIR}/../"  "${CMAKE_BINARY_DIR}/maxima-prefix/src/maxima"
-  DEPENDS clisp sbcl tcl tk
+  DEPENDS clisp sbcl tcl tk ${ABCL_DEPENDS}
   BUILD_IN_SOURCE 1
-  #PATCH_COMMAND sh -c "test \"${BUILD_64BIT}\" != \"OFF\" && patch --binary -p1 < ${CMAKE_SOURCE_DIR}/maxima.bat.in-patch || exit 0"
   CONFIGURE_COMMAND sh -c "test -x ./bootstrap && ./bootstrap || return 0"
-            COMMAND ./configure --host=${HOST} --enable-clisp --with-clisp=${CMAKE_BINARY_DIR}/wine-clisp.sh --with-clisp-runtime=${CMAKE_BINARY_DIR}/wine-lisp.sh --enable-sbcl --with-sbcl=${CMAKE_BINARY_DIR}/wine-sbcl.sh --with-default-lisp=${WITH_DEFAULT_LISP} --prefix=${WINDOWS_DRIVELETTER}:/maxima-${MAXIMAVERSION}
+            COMMAND ./configure --host=${HOST} --enable-clisp --with-clisp=${CMAKE_BINARY_DIR}/wine-clisp.sh --with-clisp-runtime=${CMAKE_BINARY_DIR}/wine-lisp.sh --enable-sbcl --with-sbcl=${CMAKE_BINARY_DIR}/wine-sbcl.sh ${ABCL_ENABLE} "${ABCL_JAR}" --with-default-lisp=${WITH_DEFAULT_LISP} --prefix=${WINDOWS_DRIVELETTER}:/maxima-${MAXIMAVERSION}
   # clisp-depends.mk is generated with "\" as path seperator, not "/" - correct that...
   BUILD_COMMAND LANG=C $(MAKE) -C src clisp-depends.mk
         COMMAND sed -i s+\\\\+/+g src/clisp-depends.mk
@@ -218,7 +229,13 @@ add_executable(maxima_longnames maxima_longnames.c)
 install(FILES "${CMAKE_BINARY_DIR}/maxima_longnames.exe" DESTINATION bin/ COMPONENT Maxima)
 
 
-install(DIRECTORY ${CMAKE_BINARY_DIR}/maxima-installroot/${WINDOWS_DRIVELETTER}:/maxima-${MAXIMAVERSION}/ DESTINATION . COMPONENT Maxima)
+install(DIRECTORY ${CMAKE_BINARY_DIR}/maxima-installroot/${WINDOWS_DRIVELETTER}:/maxima-${MAXIMAVERSION}/
+        DESTINATION . COMPONENT Maxima PATTERN "binary-abcl" EXCLUDE)
+if(WITH_ABCL)
+    install(DIRECTORY ${CMAKE_BINARY_DIR}/maxima-installroot/${WINDOWS_DRIVELETTER}:/maxima-${MAXIMAVERSION}/
+            DESTINATION . COMPONENT ABCL PATTERN "binary-abcl")
+endif()
+
 install(FILES "${CMAKE_SOURCE_DIR}/xmaxima.bat" DESTINATION bin/ COMPONENT Maxima)
 install(FILES "${CMAKE_BINARY_DIR}/maxima-prefix/src/maxima/doc/info/maxima.pdf" DESTINATION share/doc/ COMPONENT Maxima)
 configure_file("${CMAKE_SOURCE_DIR}/lispselector.tcl" "${CMAKE_BINARY_DIR}/lispselector.tcl")
@@ -249,7 +266,7 @@ set(CPACK_NSIS_MUI_UNIICON "${CPACK_NSIS_MUI_ICON}")
 set(CPACK_PACKAGE_EXECUTABLES "..\\\\bin\\\\wxmaxima" "wxMaxima (GUI for Maxima)")
 set(CPACK_NSIS_URL_INFO_ABOUT "http://maxima.sourceforge.net")
 set(CPACK_NSIS_MENU_LINKS "bin/maxima.bat" "Maxima (command line)" "bin/xmaxima.bat" "XMaxima (simple GUI)" "http://maxima.sourceforge.net" "About Maxima" "http://wxmaxima-developers.github.io/wxmaxima/" "About wxMaxima" "share/doc/maxima.pdf" "Maxima documentation"  "share/doc/licenses.html" "Maxima and included software licenses" "bin/lispselector.bat" "Configure default LISP for Maxima")
-set(CPACK_PACKAGE_FILE_NAME "maxima-clisp-sbcl-${CPACK_PACKAGE_VERSION}-${INSTALLERSUFFIX}")
+set(CPACK_PACKAGE_FILE_NAME "maxima-clisp-sbcl${ABCL_INSTALLER}-${CPACK_PACKAGE_VERSION}-${INSTALLERSUFFIX}")
 set(CPACK_NSIS_COMPRESSOR "/SOLID lzma")
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "wxMaxima")

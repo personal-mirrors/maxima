@@ -36,10 +36,18 @@ cd tmp_html
 
 for f in @abs_srcdir@/*.texi
 do
-  @SED@ -e 's/^@\(deffn\|defvr\)  *{[^}]*}  *\([^[:blank:]]*\).*/@anchor{Item: \2}\n&/;' -e 's/^@node  *\([^,]*\).*/@anchor{Item: \1}\n&/' $f > $(basename $f)
+  filenamebase=`echo $f | @SED@ -e 's/^.*\///;s/\.texi//'`
+  @SED@ -e "s/^@\(deffn\|defvr\)[x]*  *{[^}]*}  *\([^[:blank:]]*\).*/@anchor{Item: $filenamebase\/\1\/\2}\n&/;" -e "s/^@node  *\([^,]*\).*/@anchor{Item: $filenamebase\/node\/\1}\n&/" $f \
+  | @AWK@ 'BEGIN { iftex = 0; } /^@iftex/ {iftex = 1;} {if (!iftex) {print;}} /^@end iftex/ {iftex = 0;}' \
+  | @AWK@ '/@anchor/ {if (!(foo[$0])) {foo[$0] = 1; print;}} !/@anchor/' > $(basename $f)
 done 
 
-cat *.texi | @AWK@ '!/^@c / && !/^@c$/ && (/^@deffn/ || /^@defvr/ || /^@end deffn/ || /^@end defvr/ || /@category/ || /@node/)' | @SED@ -f @abs_srcdir@/extract_categories1.sed | @AWK@ -f @abs_srcdir@/extract_categories1.awk > make-categories.py 
+for f in *.texi
+do
+  filenamebase=`echo $f | @SED@ -e 's/^.*\///;s/\.texi//'`
+  echo "filenamebase = \"$filenamebase\""
+  cat $f
+done | @AWK@ '!/^@c / && !/^@c$/ && (/^@deffn/ || /^@defvr/ || /^@end deffn/ || /^@end defvr/ || /@category/ || /@node/ || /^filenamebase/)' | @SED@ -f @abs_srcdir@/extract_categories1.sed | @AWK@ -f @abs_srcdir@/extract_categories1.awk > make-categories.py 
 python make-categories.py 
 @SED@ -e 's/^@bye/@node Documentation Categories, , Function and Variable Index\n@chapter Documentation Categories/' @abs_srcdir@/maxima.texi > maxima.texi 
 ( for f in Category-*.texi; do echo '@include' $f; done ; echo @bye ) >> maxima.texi 
