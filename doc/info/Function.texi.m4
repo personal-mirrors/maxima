@@ -2948,10 +2948,6 @@ translation of the file are only inserted into the UNLISP file.
 @c @end defvr
 m4_end_defvr()
 
-@c THIS FLAG APPEARS TO HAVE NO EFFECT. SHOULD CUT OUT THIS ITEM AND RELATED CODE.
-@c NOTE THAT THERE IS CODE IN src/transf.lisp WHICH USES THIS FLAG BUT THE MODE
-@c FLAG IS LOST SOMEWHERE ALONG THE WAY TO THE LISP OUTPUT FILE.
-
 @c -----------------------------------------------------------------------------
 @anchor{tr_float_can_branch_complex}
 @c @defvr {Option variable} tr_float_can_branch_complex
