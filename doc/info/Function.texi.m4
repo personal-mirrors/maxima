@@ -2846,7 +2846,6 @@ See also
 @mrefcomma{tr_function_call_default}
 @mrefcomma{tr_numer}
 @mrefcomma{tr_optimize_max_loop}
-@mrefcomma{tr_semicompile}
 @mrefcomma{tr_state_vars}
 @mrefcomma{tr_warnings_get}
 @c Not documented
@@ -3022,22 +3021,6 @@ non-terminating optimization properties.
 @c @end defvr
 m4_end_defvr()
 
-@c -----------------------------------------------------------------------------
-@anchor{tr_semicompile}
-@c @defvr {Option variable} tr_semicompile
-m4_defvr({Option variable}, tr_semicompile)
-Default value: @code{false}
-
-When @code{tr_semicompile} is @code{true}, @code{translate_file} and
-@code{compfile} output forms which will be macroexpanded but not compiled into
-machine code by the Lisp compiler.
-
-@c @opencatbox
-@c @category{Translation flags and variables}
-@c @closecatbox
-@c @end defvr
-m4_end_defvr()
-
 @c ARE ANY OF THESE OBSOLETE ??
 
 @c -----------------------------------------------------------------------------
@@ -3046,7 +3029,7 @@ m4_end_defvr()
 m4_defvr({System variable}, tr_state_vars)
 Default value:
 @example
-[transcompile, tr_semicompile, tr_warn_undeclared, tr_warn_meval,
+[transcompile, tr_warn_undeclared, tr_warn_meval,
 tr_warn_fexpr, tr_warn_mode, tr_warn_undefined_variable,
 tr_function_call_default, tr_array_as_ref,tr_numer]
 @end example
