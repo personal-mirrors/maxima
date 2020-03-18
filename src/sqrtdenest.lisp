@@ -60,7 +60,7 @@
 ;;; which references Borodin et al (1985), Jeffrey and Rich (2009)
 ;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun sqrtdenest (e)
+(defmfun $sqrtdenest (e)
   "Denest square roots in expression e"
   (sqrtdenest1 e))
 
@@ -82,7 +82,7 @@
 ;;;     sqrt(X+Y) = sqrt(A) + sqrt(B)         (4.9)
 ;;;
 ;;; Squaring both sides
-;;;     X + Y = A + B + 2 sqrt(A+B)           (4.10)
+;;;     X + Y = A + B + 2 sqrt(AB)           (4.10)
 ;;;
 ;;; One way to satify this is to set X=A+B and Y^2=4AB
 ;;;

@@ -1626,6 +1626,8 @@ Like @code{sremove} except that only the first substring that matches @var{seq} 
 
 Returns a string with all the characters of @var{string} in reverse order. 
 
+See also @mrefdot{reverse}
+
 @opencatbox
 @category{Package stringproc}
 @closecatbox

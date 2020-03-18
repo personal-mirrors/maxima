@@ -1521,6 +1521,8 @@ Reverses the order of the members of the @var{list} (not
 the members themselves).  @code{reverse} also works on general expressions,
 e.g.  @code{reverse(a=b);} gives @code{b=a}.
 
+See also @mrefdot{sreverse}
+
 @c @opencatbox
 @c @category{Lists}
 @c @category{Expressions}
