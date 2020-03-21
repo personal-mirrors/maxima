@@ -91,6 +91,7 @@ Messge: Condition designator ((MLABEL) $%O9 $X) is not of type (OR SYMBOL STRING
 @section Functions and Variables for alt-display
 
 m4_setcat(Package alt-display)
+@anchor{define_alt_display}
 @c @deffn {Function} define_alt_display (@var{function}(@var{input}), @var{expr})
 m4_deffn({Function}, define_alt_display, <<<(@var{function}(@var{input}), @var{expr})>>>)
 This function is similar to @code{define}: it evaluates its arguments
@@ -202,6 +203,7 @@ Produces TeX output.
 @c @end deffn
 m4_end_deffn()
 
+@anchor{multi_display_for_texinfo}
 @c @deffn {Function} multi_display_for_texinfo (@var{form})
 m4_deffn({Function}, multi_display_for_texinfo, <<<(@var{form})>>>)
 Produces Texinfo output using all three display functions.
@@ -240,6 +242,7 @@ Produces Texinfo output using all three display functions.
 @c @end deffn
 m4_end_deffn()
 
+@anchor{reset_displays}
 @c @deffn {Functions} reset_displays ()
 m4_deffn({Functions}, reset_displays, <<<()>>>)
 Resets the prompt prefix and suffix to the empty string, and sets both

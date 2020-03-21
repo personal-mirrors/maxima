@@ -264,6 +264,7 @@ The symbol for base vectors.
 m4_end_defvr()
 
 m4_setcat(Package atensor)
+@anchor{sf}
 @c @deffn {Function} sf (@var{u}, @var{v})
 m4_deffn( {Function}, sf, <<<(@var{u}, @var{v})>>>)
 

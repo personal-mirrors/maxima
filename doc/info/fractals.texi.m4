@@ -48,6 +48,7 @@ with the contraction ratio.
 
 You can change the transformations and find another fractal
 
+@anchor{sierpinskiale}
 m4_setcat(Package fractals)
 @c @deffn {Function} sierpinskiale (@var{n})
 m4_deffn({Function}, sierpinskiale, <<<(@var{n})>>>)
@@ -69,6 +70,7 @@ Example:
 
 @end deffn
 
+@anchor{treefale}
 @c @deffn {Function} treefale (@var{n})
 m4_deffn({Function}, treefale, <<<(@var{n})>>>)
 
@@ -89,6 +91,7 @@ Example:
 
 @end deffn
 
+@anchor{fernfale}
 @c @deffn {Function} fernfale (@var{n})
 m4_deffn({Function}, fernfale, <<<(@var{n})>>>)
 
@@ -112,6 +115,7 @@ Example:
 @node Definitions for complex fractals, Definitions for Koch snowflakes, Definitions for IFS fractals, Top
 @section Definitions for complex fractals
 
+@anchor{mandelbrot_set}
 @c @deffn {Function} mandelbrot_set (@var{x}, @var{y})
 m4_deffn({Function}, mandelbrot_set, <<<(@var{x}, @var{y})>>>)
 
@@ -138,7 +142,7 @@ the computing time is also related with the number of grid points.
 
 
 
-
+@anchor{julia_set}
 @c @deffn {Function} julia_set (@var{x}, @var{y})
 m4_deffn({Function}, julia_set, <<<(@var{x}, @var{y})>>>)
 
@@ -186,7 +190,7 @@ Its default value is @mref{%i}; we  suggest the  values @code{-.745+%i*.113002},
 
 
 
-
+@anchor{julia_sin}
 @c @deffn {Function} julia_sin (@var{x}, @var{y})
 m4_deffn({Function}, julia_sin, <<<(@var{x}, @var{y})>>>)
 
@@ -223,6 +227,7 @@ See also @mref{julia_parameter}.
 
 
 
+@anchor{snowmap}
 @c @deffn {Function} snowmap (@var{ent}, @var{nn})
 m4_deffn({Function}, snowmap, <<<(@var{ent}, @var{nn})>>>)
 
@@ -255,6 +260,7 @@ Examples:
 Continuous curves that cover an area. Warning: 
 the number of points exponentially grows with @var{n}.
 
+@anchor{hilbertmap}
 @c @deffn {Function} hilbertmap (@var{nn})
 m4_deffn({Function}, hilbertmap, <<<(@var{nn})>>>)
 
@@ -274,6 +280,7 @@ Example:
 
 @end deffn
 
+@anchor{sierpinskimap}
 @c @deffn {Function} sierpinskimap (@var{nn})
 m4_deffn({Function}, sierpinskimap, <<<(@var{nn})>>>)
 

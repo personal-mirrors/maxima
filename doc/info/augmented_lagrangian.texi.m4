@@ -7,6 +7,7 @@
 @section Functions and Variables for augmented_lagrangian
 
 m4_setcat(Numerical methods, Optimization, Share packages, Package augmented_lagrangian)
+@anchor{augmented_lagrangian_method}
 @c @deffn  {Function} augmented_lagrangian_method @
 m4_deffn( {Function}, augmented_lagrangian_method, <<<>>>) @
 @fname{augmented_lagrangian_method} (@var{FOM}, @var{xx}, @var{C}, @var{yy}) @

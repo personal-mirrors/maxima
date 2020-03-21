@@ -202,7 +202,7 @@ consisting of the @math{q} first rows and the columns @math{1 + i_1,
 @end ifnottex
 
 This Schur function can be written in terms of monomials by using
-@code{treinat} and @code{kostka}.  The form returned is a symmetric
+@mref{treinat} and @mrefdot{kostka}  The form returned is a symmetric
 polynomial in a contracted representation in the variables
 m4_mathjax(
 <<<\(x_1,x_2,\ldots\)>>>,
@@ -992,7 +992,7 @@ returns the list of partitions of weight @var{n} and length @var{m}.
 @end group
 @end example
 @noindent
-Also see: @code{ltreillis}, @code{treillis} and @code{treinat}.
+Also see: @mrefcomma{ltreillis} @mref{treillis} and @mrefdot{treinat}
 
 @c @opencatbox
 @c @category{Package sym}
@@ -1016,7 +1016,7 @@ equal to @var{m}.
 @end group
 @end example
 @noindent
-Also see: @code{lgtreillis}, @code{treillis} and @code{treinat}.
+Also see: @mrefcomma{lgtreillis} @mref{treillis} and @mrefdot{treinat}
 
 @c @opencatbox
 @c @category{Package sym}

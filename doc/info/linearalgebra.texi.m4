@@ -1116,6 +1116,7 @@ row operation @code{R_i <- R_i - theta * R_j}.  If @var{M} doesn't have a row
 
 @end deffn
 
+@anchor{linalg_rank}
 @deffn {Function} linalg_rank (@var{M})
 
 Return the rank of the matrix @var{M}. This function is equivalent to

@@ -217,6 +217,7 @@ are the arithmetical operations on polynomials.
 These are performed using the internal representation, but the results are converted back to the
 @emph{maxima} general form.
 
+@anchor{poly_add}
 @deffn {Function} poly_add (@var{poly1}, @var{poly2}, @var{varlist})
 Adds two polynomials @var{poly1} and @var{poly2}.
 @example
@@ -232,6 +233,7 @@ Adds two polynomials @var{poly1} and @var{poly2}.
 
 @end deffn
 
+@anchor{poly_subtract}
 @deffn {Function} poly_subtract (@var{poly1}, @var{poly2}, @var{varlist})
 Subtracts a polynomial @var{poly2} from @var{poly1}.
 @example
@@ -247,6 +249,7 @@ Subtracts a polynomial @var{poly2} from @var{poly1}.
 
 @end deffn
 
+@anchor{poly_multiply}
 @deffn {Function} poly_multiply (@var{poly1}, @var{poly2}, @var{varlist})
 Returns the product of polynomials @var{poly1} and @var{poly2}.
 @example
@@ -261,6 +264,7 @@ Returns the product of polynomials @var{poly1} and @var{poly2}.
 
 @end deffn
 
+@anchor{poly_s_polynomial}
 @deffn {Function} poly_s_polynomial (@var{poly1}, @var{poly2}, @var{varlist})
 Returns the @emph{syzygy polynomial} (@emph{S-polynomial}) of two polynomials @var{poly1} and @var{poly2}.
 
@@ -270,6 +274,7 @@ Returns the @emph{syzygy polynomial} (@emph{S-polynomial}) of two polynomials @v
 
 @end deffn
 
+@anchor{poly_primitive_part}
 @deffn {Function} poly_primitive_part (@var{poly1}, @var{varlist})
 Returns the polynomial @var{poly} divided by the GCD of its coefficients. 
 
@@ -284,6 +289,7 @@ Returns the polynomial @var{poly} divided by the GCD of its coefficients.
 
 @end deffn
 
+@anchor{poly_normalize}
 @deffn {Function} poly_normalize (@var{poly}, @var{varlist})
 Returns the polynomial @var{poly} divided by the leading coefficient.
 It assumes that the division is possible, which may not always be the
@@ -297,6 +303,7 @@ case in rings which are not fields.
 
 @subsection Other functions in grobner
 
+@anchor{poly_expand}
 @deffn {Function} poly_expand (@var{poly}, @var{varlist})
 This function parses polynomials to internal form and back. It
 is equivalent to @code{expand(@var{poly})} if @var{poly} parses correctly to
@@ -334,6 +341,7 @@ indexed and transcendental function variables are allowed.
 
 @end deffn
 
+@anchor{poly_expt}
 @deffn {Function} poly_expt (@var{poly}, @var{number}, @var{varlist})
 exponentitates @var{poly} by a positive integer @var{number}. If @var{number} is not a positive integer number an error will be raised.
 @example
@@ -348,6 +356,7 @@ exponentitates @var{poly} by a positive integer @var{number}. If @var{number} is
 
 @end deffn
 
+@anchor{poly_content}
 @deffn {Function} poly_content (@var{poly}. @var{varlist})
 @code{poly_content} extracts the GCD of its coefficients
 @example
@@ -362,6 +371,7 @@ exponentitates @var{poly} by a positive integer @var{number}. If @var{number} is
 
 @end deffn
 
+@anchor{poly_pseudo_divide}
 @deffn {Function} poly_pseudo_divide (@var{poly}, @var{polylist}, @var{varlist})
 Pseudo-divide a polynomial @var{poly} by the list of @math{n} polynomials @var{polylist}. Return
 multiple values. The first value is a list of quotients @math{a}. The
@@ -386,6 +396,7 @@ $$c*poly=\sum_{i=1}^{n}({a}_{i}*{polylist}_{i})+r$$
 
 @end deffn
 
+@anchor{poly_exact_divide}
 @deffn {Function} poly_exact_divide (@var{poly1}, @var{poly2}, @var{varlist})
 Divide a polynomial @var{poly1} by another polynomial @var{poly2}. Assumes that exact
 division with no remainder is possible. Returns the quotient.
@@ -396,6 +407,7 @@ division with no remainder is possible. Returns the quotient.
 
 @end deffn
 
+@anchor{poly_normal_form}
 @deffn {Function} poly_normal_form (@var{poly}, @var{polylist}, @var{varlist})
 @code{poly_normal_form} finds the normal form of a polynomial @var{poly} with respect
 to a set of polynomials @var{polylist}.
@@ -406,6 +418,7 @@ to a set of polynomials @var{polylist}.
 
 @end deffn
 
+@anchor{poly_buchberger_criterion}
 @deffn {Function} poly_buchberger_criterion (@var{polylist}, @var{varlist})
 Returns @code{true} if @var{polylist} is a Groebner basis with respect to the current term
 order, by using the Buchberger
@@ -418,6 +431,7 @@ S-polynomial @math{S(h1,h2)} reduces to 0 @math{modulo} @var{polylist}.
 
 @end deffn
 
+@anchor{poly_buchberger}
 @deffn {Function} poly_buchberger (@var{polylist_fl} @var{varlist})
 @code{poly_buchberger} performs the Buchberger algorithm on a list of
 polynomials and returns the resulting Groebner basis.
@@ -467,6 +481,7 @@ The @emph{radical ideal} @math{sqrt(I)} is the ideal
 @end ifnottex
 
 @noindent
+@anchor{poly_reduction}
 @deffn {Function} poly_reduction (@var{polylist}, @var{varlist})
 @code{poly_reduction} reduces a list of polynomials @var{polylist}, so that
 each polynomial is fully reduced with respect to the other polynomials.
@@ -477,6 +492,7 @@ each polynomial is fully reduced with respect to the other polynomials.
 
 @end deffn
 
+@anchor{poly_minimization}
 @deffn {Function} poly_minimization (@var{polylist}, @var{varlist})
 Returns a sublist of the polynomial list @var{polylist} spanning the same
 monomial ideal as @var{polylist} but minimal, i.e. no leading monomial
@@ -490,6 +506,7 @@ of another polynomial.
 @end deffn
 
 
+@anchor{poly_normalize_list}
 @deffn {Function} poly_normalize_list (@var{polylist}, @var{varlist})
 @code{poly_normalize_list} applies @code{poly_normalize} to each polynomial in the list.
 That means it divides every polynomial in a list @var{polylist} by its leading coefficient.
@@ -500,6 +517,7 @@ That means it divides every polynomial in a list @var{polylist} by its leading c
 
 @end deffn
 
+@anchor{poly_grobner}
 @deffn {Function} poly_grobner (@var{polylist}, @var{varlist})
 Returns a Groebner basis of the ideal span by the polynomials @var{polylist}. Affected by the global flags.
 
@@ -509,6 +527,7 @@ Returns a Groebner basis of the ideal span by the polynomials @var{polylist}. Af
 
 @end deffn
 
+@anchor{poly_reduced_grobner}
 @deffn {Function} poly_reduced_grobner (@var{polylist}, @var{varlist})
 Returns a reduced Groebner basis of the ideal span by the polynomials @var{polylist}. Affected by the global flags.
 
@@ -519,6 +538,7 @@ Returns a reduced Groebner basis of the ideal span by the polynomials @var{polyl
 @end deffn
 
 
+@anchor{poly_depends_p}
 @deffn {Function} poly_depends_p (@var{poly}, @var{var}, @var{varlist})
 @code{poly_depends} tests whether a polynomial depends on a variable @var{var}.
 
@@ -530,6 +550,7 @@ Returns a reduced Groebner basis of the ideal span by the polynomials @var{polyl
 @end deffn
 
 
+@anchor{poly_elimination_ideal}
 @deffn {Function} poly_elimination_ideal (@var{polylist}, @var{number}, @var{varlist})
 
 
@@ -542,6 +563,7 @@ ideal specified as a list of generating polynomials (not necessarily Groebner ba
 
 @end deffn
 
+@anchor{poly_colon_ideal}
 @deffn {Function} poly_colon_ideal (@var{polylist1}, @var{polylist2}, @var{varlist})
 
 Returns the reduced Groebner basis of the colon ideal 
@@ -557,6 +579,7 @@ where @math{polylist1} and @math{polylist2} are two lists of polynomials.
 
 @end deffn
 
+@anchor{poly_ideal_intersection}
 @deffn {Function} poly_ideal_intersection (@var{polylist1}, @var{polylist2}, @var{varlist})
 
 @code{poly_ideal_intersection} returns the intersection of two ideals.
@@ -568,6 +591,7 @@ where @math{polylist1} and @math{polylist2} are two lists of polynomials.
 @end deffn
 
 
+@anchor{poly_lcm}
 @deffn {Function} poly_lcm (@var{poly1}, @var{poly2}, @var{varlist})
 Returns the lowest common multiple of @var{poly1} and @var{poly2}.
 
@@ -605,6 +629,7 @@ Example:
 @closecatbox
 @end deffn
 
+@anchor{poly_grobner_equal}
 @deffn {Function} poly_grobner_equal (@var{polylist1}, @var{polylist2}, @var{varlist})
 @code{poly_grobner_equal} tests whether two Groebner Bases generate the same ideal.
 Returns @code{true} if two lists of polynomials @var{polylist1} and @var{polylist2}, assumed to be Groebner Bases,
@@ -624,6 +649,7 @@ first list is not a Groebner basis, and thus the result is @code{false}.
 
 @end deffn
 
+@anchor{poly_grobner_subsetp}
 @deffn {Function} poly_grobner_subsetp (@var{polylist1}, @var{polylist2}, @var{varlist})
 
 @code{poly_grobner_subsetp} tests whether an ideal generated by @var{polylist1}
@@ -637,6 +663,7 @@ is contained in the ideal generated by @var{polylist2}. For this test to always 
 
 @end deffn
 
+@anchor{poly_grobner_member}
 @deffn {Function} poly_grobner_member (@var{poly}, @var{polylist}, @var{varlist})
 
 Returns @code{true} if a polynomial @var{poly} belongs to the ideal generated by the
@@ -651,6 +678,7 @@ which is assumed to be a Groebner basis. Equivalent to @code{normal_form} being 
 
 @end deffn
 
+@anchor{poly_ideal_saturation1}
 @deffn {Function} poly_ideal_saturation1 (@var{polylist}, @var{poly}, @var{varlist})
 Returns the reduced Groebner basis of the saturation of the ideal
 @iftex
@@ -674,6 +702,7 @@ vanish on the variety of @var{poly}.
 
 @end deffn
 
+@anchor{poly_ideal_saturation}
 @deffn {Function} poly_ideal_saturation (@var{polylist1}, @var{polylist2}, @var{varlist})
 Returns the reduced Groebner basis of the saturation of the ideal
 @iftex
@@ -697,6 +726,7 @@ variety of @var{polylist2}.
 
 @end deffn
 
+@anchor{poly_ideal_polysaturation1}
 @deffn {Function} poly_ideal_polysaturation1 (@var{polylist1}, @var{polylist2}, @var{varlist})
 @var{polylist2} ist a list of n polynomials @code{[poly1,...,polyn]}.
 Returns the reduced Groebner basis of the ideal
@@ -722,6 +752,7 @@ polynomial list @var{polylist1}.
 
 @end deffn
 
+@anchor{poly_ideal_polysaturation}
 @deffn {Function} poly_ideal_polysaturation (@var{polylist}, @var{polylistlist}, @var{varlist})
 @var{polylistlist} is a list of n list of polynomials @code{[polylist1,...,polylistn]}.
 Returns the reduced Groebner basis of the saturation of the ideal
@@ -741,6 +772,7 @@ I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf
 
 @end deffn
 
+@anchor{poly_saturation_extension}
 @deffn {Function} poly_saturation_extension (@var{poly}, @var{polylist}, @var{varlist1}, @var{varlist2})
 
 @code{poly_saturation_extension} implements the famous Rabinowitz trick.
@@ -751,6 +783,7 @@ I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf
 
 @end deffn
 
+@anchor{poly_polysaturation_extension}
 @deffn {Function} poly_polysaturation_extension (@var{poly}, @var{polylist}, @var{varlist1}, @var{varlist2})
 
 @opencatbox

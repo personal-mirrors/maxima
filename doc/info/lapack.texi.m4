@@ -20,6 +20,7 @@ as obtained from the SLATEC project.
 @node Functions and Variables for lapack, , Introduction to lapack, lapack-pkg
 @section Functions and Variables for lapack
 
+@anchor{dgeev}
 @deffn {Function} dgeev @
 @fname{dgeev} (@var{A}) @
 @fname{dgeev} (@var{A}, @var{right_p}, @var{left_p})
@@ -103,6 +104,7 @@ Example:
 
 @end deffn
 
+@anchor{dgeqrf}
 @deffn {Function} dgeqrf (@var{A})
 
 Computes the QR decomposition of the matrix @var{A}.
@@ -150,6 +152,7 @@ is equal to @var{A} (ignoring floating point round-off errors).
 
 @end deffn
 
+@anchor{dgesv}
 @deffn {Function} dgesv (@var{A}, @var{b})
 
 Computes the solution @var{x} of the linear equation @math{@var{A} @var{x} = @var{b}},
@@ -251,6 +254,7 @@ The elements of @var{A} and @var{b} must evaluate to real floating point numbers
 
 @end deffn
 
+@anchor{dgesvd}
 @deffn {Function} dgesvd @
 @fname{dgesvd} (@var{A}) @
 @fname{dgesvd} (@var{A}, @var{left_p}, @var{right_p})
@@ -379,6 +383,8 @@ Example:
 
 @end deffn
 
+@anchor{dlange}
+@anchor{zlange}
 @deffn {Function} dlange (@var{norm}, @var{A})
 @deffnx {Function} zlange (@var{norm}, @var{A})
 
@@ -406,6 +412,7 @@ that is, the square root of the sum of squares of the matrix elements.
 
 @end deffn
 
+@anchor{dgemm}
 @deffn {Function} dgemm @
 @fname{dgemm} (@var{A}, @var{B}) @
 @fname{dgemm} (@var{A}, @var{B}, @var{options})
@@ -534,6 +541,7 @@ for the product.  The default is @code{false}.
 
 @end deffn
 
+@anchor{zgeev}
 @deffn {Function} zgeev @
 @fname{zgeev} (@var{A}) @
 @fname{zgeev} (@var{A}, @var{right_p}, @var{left_p})
@@ -546,6 +554,7 @@ Like @code{dgeev}, but the matrix @var{A} is complex.
 
 @end deffn
 
+@anchor{zheev}
 @deffn {Function} zheev @
 @fname{zheev} (@var{A}) @
 @fname{zheev} (@var{A}, @var{eigvec_p})

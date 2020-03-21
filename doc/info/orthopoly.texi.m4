@@ -690,6 +690,7 @@ the half-integer Bessel functions are evaluated using the SLATEC code.
 @node Functions and Variables for orthogonal polynomials,  , Introduction to orthogonal polynomials, orthopoly-pkg
 @section Functions and Variables for orthogonal polynomials
 
+@anchor{assoc_legendre_p}
 @deffn {Function} assoc_legendre_p (@var{n}, @var{m}, @var{x})
 The associated Legendre function of the first kind of degree @var{n} and
 order @var{m}.
@@ -703,6 +704,7 @@ Reference: Abramowitz and Stegun, equations 22.5.37, page 779, 8.6.6
 
 @end deffn
 
+@anchor{assoc_legendre_q}
 @deffn {Function} assoc_legendre_q (@var{n}, @var{m}, @var{x})
 The associated Legendre function of the second kind of degree @var{n}
 and order @var{m}.
@@ -715,6 +717,7 @@ Reference: Abramowitz and Stegun, equation 8.5.3 and 8.1.8.
 
 @end deffn
 
+@anchor{chebyshev_t}
 @deffn {Function} chebyshev_t (@var{n}, @var{x})
 The Chebyshev polynomial of the first kind of degree @var{n}.
 
@@ -726,6 +729,7 @@ Reference: Abramowitz and Stegun, equation 22.5.47, page 779.
 
 @end deffn
 
+@anchor{chebyshev_u}
 @deffn {Function} chebyshev_u (@var{n}, @var{x})
 The Chebyshev polynomial of the second kind of degree @var{n}.
 
@@ -737,6 +741,7 @@ Reference: Abramowitz and Stegun, equation 22.5.48, page 779.
 
 @end deffn
 
+@anchor{gen_laguerre}
 @deffn {Function} gen_laguerre (@var{n}, @var{a}, @var{x})
 The generalized Laguerre polynomial of degree @var{n}.
 
@@ -748,6 +753,7 @@ Reference: Abramowitz and Stegun, equation 22.5.54, page 780.
 
 @end deffn
 
+@anchor{hermite}
 @deffn {Function} hermite (@var{n}, @var{x})
 The Hermite polynomial of degree @var{n}.
 
@@ -759,6 +765,7 @@ Reference: Abramowitz and Stegun, equation 22.5.55, page 780.
 
 @end deffn
 
+@anchor{intervalp}
 @deffn {Function} intervalp (@var{e})
 Return @code{true} if the input is an interval and return false if it isn't. 
 
@@ -769,6 +776,7 @@ Return @code{true} if the input is an interval and return false if it isn't.
 
 @end deffn
 
+@anchor{jacobi_p}
 @deffn {Function} jacobi_p (@var{n}, @var{a}, @var{b}, @var{x})
 The Jacobi polynomial.
 
@@ -785,6 +793,7 @@ Reference: Abramowitz and Stegun, equation 22.5.42, page 779.
 
 @end deffn
 
+@anchor{laguerre}
 @deffn {Function} laguerre (@var{n}, @var{x})
 The Laguerre polynomial of degree @var{n}.
 
@@ -796,6 +805,7 @@ Reference: Abramowitz and Stegun, equations 22.5.16 and 22.5.54, page 780.
 
 @end deffn
 
+@anchor{legendre_p}
 @deffn {Function} legendre_p (@var{n}, @var{x})
 The Legendre polynomial of the first kind of degree @var{n}.
 
@@ -807,6 +817,7 @@ Reference: Abramowitz and Stegun, equations 22.5.50 and 22.5.51, page 779.
 
 @end deffn
 
+@anchor{legendre_q}
 @deffn {Function} legendre_q (@var{n}, @var{x})
 The Legendre function of the second kind of degree @var{n}.
 
@@ -818,6 +829,7 @@ Reference: Abramowitz and Stegun, equations 8.5.3 and 8.1.8.
 
 @end deffn
 
+@anchor{orthopoly_recur}
 @deffn {Function} orthopoly_recur (@var{f}, @var{args})
 Returns a recursion relation for the orthogonal function family
 @var{f} with arguments @var{args}. The recursion is with 
@@ -881,6 +893,7 @@ case, the interval is a disk in the complex plane.
 
 @end defvr
 
+@anchor{orthopoly_weight}
 @deffn {Function} orthopoly_weight (@var{f}, @var{args})
 
 Returns a three element list; the first element is 
@@ -911,6 +924,7 @@ signals an error.
 
 @end deffn
 
+@anchor{pochhammer}
 @deffn {Function} pochhammer (@var{x}, @var{n})
 The Pochhammer symbol. For nonnegative integers @var{n} with
 @code{@var{n} <= pochhammer_max_index}, the expression @code{pochhammer (@var{x}, @var{n})} 
@@ -994,6 +1008,7 @@ Reference: Abramowitz and Stegun, equation 6.1.16, page 256.
 
 @end defvr
 
+@anchor{spherical_bessel_j}
 @deffn {Function} spherical_bessel_j (@var{n}, @var{x})
 The spherical Bessel function of the first kind.
 
@@ -1006,6 +1021,7 @@ Reference: Abramowitz and Stegun, equations 10.1.8, page 437 and 10.1.15, page 4
 
 @end deffn
 
+@anchor{spherical_bessel_y}
 @deffn {Function} spherical_bessel_y (@var{n}, @var{x})
 The spherical Bessel function of the second kind. 
 
@@ -1018,6 +1034,7 @@ Reference: Abramowitz and Stegun, equations 10.1.9, page 437 and 10.1.15, page 4
 
 @end deffn
 
+@anchor{spherical_hankel1}
 @deffn {Function} spherical_hankel1 (@var{n}, @var{x})
 The spherical Hankel function of the
 first kind.
@@ -1031,6 +1048,7 @@ Reference: Abramowitz and Stegun, equation 10.1.36, page 439.
 
 @end deffn
 
+@anchor{spherical_hankel2}
 @deffn {Function} spherical_hankel2 (@var{n}, @var{x})
 The spherical Hankel function of the second kind.
 
@@ -1043,6 +1061,7 @@ Reference: Abramowitz and Stegun, equation 10.1.17, page 439.
 
 @end deffn
 
+@anchor{spherical_harmonic}
 @deffn {Function} spherical_harmonic (@var{n}, @var{m}, @var{x}, @var{y})
 The spherical harmonic function.
 
@@ -1070,6 +1089,7 @@ takes on the value 1/2 at zero, use @code{(1 + signum (@var{x}))/2}.
 
 @end deffn
 
+@anchor{ultraspherical}
 @deffn {Function} ultraspherical (@var{n}, @var{a}, @var{x})
 The ultraspherical polynomial (also known as the Gegenbauer polynomial).
 

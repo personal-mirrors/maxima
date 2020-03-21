@@ -351,6 +351,7 @@ m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Package linearalgebra, Predicate functions)
+@anchor{nonnegintegerp}
 @c @deffn {Function} nonnegintegerp (@var{n})
 m4_deffn({Function}, nonnegintegerp, <<<(@var{n})>>>)
 

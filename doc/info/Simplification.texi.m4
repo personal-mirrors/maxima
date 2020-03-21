@@ -309,6 +309,7 @@ m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
 m4_setcat(Expressions)
+@anchor{combine}
 @c @deffn {Function} combine (@var{expr})
 m4_deffn({Function}, combine, <<<(@var{expr})>>>)
 

@@ -241,6 +241,7 @@ Extensive debugging traces and messages are displayed if the command
 @section Functions and Variables for contrib_ode
 
 m4_setcat(Package contrib_ode)
+@anchor{contrib_ode}
 @c @deffn {Function} contrib_ode (@var{eqn}, @var{y}, @var{x})
 m4_deffn({Function}, contrib_ode, <<<(@var{eqn}, @var{y}, @var{x})>>>)
 
@@ -254,6 +255,7 @@ independent variable @var{x} and dependent variable @var{y}.
 @c @end deffn
 m4_end_deffn()
 
+@anchor{odelin}
 @c @deffn {Function} odelin (@var{eqn}, @var{y}, @var{x})
 m4_deffn({Function}, odelin, <<<(@var{eqn}, @var{y}, @var{x})>>>)
 
@@ -288,6 +290,7 @@ special functions.
 @c @end deffn
 m4_end_deffn()
 
+@anchor{ode_check}
 @c @deffn {Function} ode_check (@var{eqn}, @var{soln})
 m4_deffn({Function}, ode_check, <<<(@var{eqn}, @var{soln})>>>)
 
@@ -430,6 +433,7 @@ The derivative with respect to @var{x} of @code{gauss_a(@var{a}, @var{b}, @var{c
 @c @end deffn
 m4_end_deffn()
 
+@anchor{dgauss_b}
 @c @deffn {Function} dgauss_b (@var{a}, @var{b}, @var{c}, @var{x})
 m4_deffn({Function}, dgauss_b, <<<(@var{a}, @var{b}, @var{c}, @var{x})>>>)
 The derivative with respect to @var{x} of @code{gauss_b(@var{a}, @var{b}, @var{c}, @var{x})}.
@@ -503,6 +507,7 @@ The derivative with respect to @var{x} of @code{kummer_u(@var{a}, @var{b}, @var{
 m4_end_deffn()
 
 m4_setcat(Package contrib_ode, Bessel functions, Special functions)
+@anchor{bessel_simplify}
 @c @deffn {Function} bessel_simplify (@var{expr})
 m4_deffn({Function}, bessel_simplify, <<<(@var{expr})>>>)
 Simplifies expressions containing Bessel functions bessel_j, bessel_y,
@@ -554,6 +559,7 @@ differ by less than 2.
 m4_end_deffn()
 
 m4_setcat(Package contrib_ode, Exponential Integrals, Special functions)
+@anchor{expintegral_e_simplify}
 @c @deffn {Function} expintegral_e_simplify (@var{expr})
 m4_deffn({Function}, expintegral_e_simplify, <<<(@var{expr})>>>)
 Simplify expressions containing exponential integral expintegral_e

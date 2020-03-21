@@ -1230,7 +1230,7 @@ to denote indices which are displayed, respectively,
 to the right and below, to the right and above, to the left and above, or to the left and below.
 
 Index properties apply only to the 2-dimensional display of indexed variables
-(i.e., when @code{display2d} is @code{true})
+(i.e., when @mref{display2d} is @code{true})
 and TeX output via @code{tex}.
 Otherwise, index properties are ignored.
 Index properties do not change the input of indexed variables,
@@ -1683,7 +1683,7 @@ the console display is a 1-dimensional or linear form
 which is the same as the output produced by @code{grind}.
 
 When @code{display2d} is @code{false},
-the value of @code{stringdisp} is ignored,
+the value of @mref{stringdisp} is ignored,
 and strings are always displayed with quote marks.
 
 See also @mref{leftjust} to switch between a left justified and a centered

@@ -76,6 +76,7 @@ equation into a system of two autonomous equations.
 @subsection Functions
 
 m4_setcat(Package drawdf)
+@anchor{drawdf}
 @c @deffn {Function} drawdf @
 m4_deffn({Function}, drawdf, <<<>>>) @
 @fname{drawdf} (@var{dydx}, ...options and objects...) @

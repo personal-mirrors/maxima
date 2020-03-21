@@ -5,6 +5,7 @@
 * Functions and Variables for binary input and output::
 @end menu
 
+@anchor{numericalio}
 @node Introduction to numericalio, Functions and Variables for plain-text input and output, mnewton-pkg, numericalio-pkg
 @section Introduction to numericalio
 
@@ -94,6 +95,7 @@ The effect of reading such values with @code{numericalio} is undefined.
 @node Functions and Variables for plain-text input and output, Functions and Variables for binary input and output, Introduction to numericalio, numericalio-pkg
 @section Functions and Variables for plain-text input and output
 
+@anchor{read_matrix}
 @deffn {Function} read_matrix @
 @fname{read_matrix} (@var{S}) @
 @fname{read_matrix} (@var{S}, @var{M}) @
@@ -124,6 +126,10 @@ The recognized values of @var{separator_flag} are
 @code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
+See also @mrefcomma{openr} @mrefcomma{read_array} @mrefcomma{read_hash_table}
+@mrefcomma{read_list} @mrefcomma{read_binary_matrix} @mref{write_data} and
+@mrefdot{read_nested_list}
+
 @opencatbox
 @category{Package numericalio}
 @category{File input}
@@ -131,6 +137,7 @@ If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @end deffn
 
+@anchor{read_array}
 @deffn {Function} read_array @
 @fname{read_array} (@var{S}, @var{A}) @
 @fname{read_array} (@var{S}, @var{A}, @var{separator_flag})
@@ -145,6 +152,9 @@ The source @var{S} may be a file name or a stream.
 The recognized values of @var{separator_flag} are
 @code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
+
+See also @mrefcomma{openr} @mrefcomma{read_matrix} @mrefcomma{read_hash_table}
+@mrefcomma{read_list} @mref{read_binary_array} and @mrefdot{read_nested_list}
 
 @opencatbox
 @category{Package numericalio}
@@ -171,6 +181,9 @@ The recognized values of @var{separator_flag} are
 @code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
+See also @mrefcomma{openr} @mrefcomma{read_matrix} @mrefcomma{read_array}
+@mref{read_list} and @mrefdot{read_nested_list}
+
 @opencatbox
 @category{Package numericalio}
 @category{File input}
@@ -178,6 +191,7 @@ If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @end deffn
 
+@anchor{read_nested_list}
 @deffn {Function} read_nested_list @
 @fname{read_nested_list} (@var{S}) @
 @fname{read_nested_list} (@var{S}, @var{separator_flag})
@@ -193,6 +207,9 @@ The recognized values of @var{separator_flag} are
 @code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
+See also @mrefcomma{openr} @mrefcomma{read_matrix} @mrefcomma{read_array}
+@mref{read_list} and @mrefdot{read_hash_table}
+
 @opencatbox
 @category{Package numericalio}
 @category{File input}
@@ -200,6 +217,7 @@ If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @end deffn
 
+@anchor{read_list}
 @deffn {Function} read_list @
 @fname{read_list} (@var{S}) @
 @fname{read_list} (@var{S}, @var{L}) @
@@ -217,6 +235,9 @@ The recognized values of @var{separator_flag} are
 @code{comma}, @code{pipe}, @code{semicolon}, and @code{space}.
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
+See also @mrefcomma{openr} @mrefcomma{read_matrix} @mrefcomma{read_array}
+@mrefcomma{read_nested_list} @mref{read_binary_list} and @mrefdot{read_hash_table}
+
 @opencatbox
 @category{Package numericalio}
 @category{File input}
@@ -224,6 +245,7 @@ If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
 @end deffn
 
+@anchor{write_data}
 @deffn {Function} write_data @
 @fname{write_data} (@var{X}, @var{D}) @
 @fname{write_data} (@var{X}, @var{D}, @var{separator_flag})
@@ -256,6 +278,8 @@ The recognized values of @var{separator_flag} are
 @code{comma}, @code{pipe}, @code{semicolon}, @code{space}, and @code{tab}.
 If @var{separator_flag} is not specified, the file is assumed space-delimited.
 
+See also @mref{openw} and @mrefdot{read_matrix}
+
 @opencatbox
 @category{Package numericalio}
 @category{File output}
@@ -266,6 +290,7 @@ If @var{separator_flag} is not specified, the file is assumed space-delimited.
 @node Functions and Variables for binary input and output, , Functions and Variables for plain-text input and output, numericalio-pkg
 @section Functions and Variables for binary input and output
 
+@anchor{assume_external_byte_order}
 @deffn {Function} assume_external_byte_order (@var{byte_order_flag})
 Tells @code{numericalio} the byte order for reading and writing binary data.
 Two values of @var{byte_order_flag} are recognized:
@@ -279,8 +304,11 @@ If not specified, @code{numericalio} assumes the external byte order is most-sig
 @closecatbox
 @end deffn
 
+@anchor{openr_binary}
 @deffn {Function} openr_binary (@var{file_name})
 Returns an input stream of 8-bit unsigned bytes to read the file named by @var{file_name}.
+
+See also @mref{openw_binary} and @mrefdot{openr}
 
 @opencatbox
 @category{Package numericalio}
@@ -288,8 +316,11 @@ Returns an input stream of 8-bit unsigned bytes to read the file named by @var{f
 @closecatbox
 @end deffn
 
+@anchor{openw_binary}
 @deffn {Function} openw_binary (@var{file_name})
 Returns an output stream of 8-bit unsigned bytes to write the file named by @var{file_name}.
+
+See also @mrefcomma{openr_binary} @mref{opena_binary} and @mrefdot{openw}
 
 @opencatbox
 @category{Package numericalio}
@@ -297,6 +328,7 @@ Returns an output stream of 8-bit unsigned bytes to write the file named by @var
 @closecatbox
 @end deffn
 
+@anchor{opena_binary}
 @deffn {Function} opena_binary (@var{file_name})
 Returns an output stream of 8-bit unsigned bytes to append the file named by @var{file_name}.
 
@@ -306,6 +338,7 @@ Returns an output stream of 8-bit unsigned bytes to append the file named by @va
 @closecatbox
 @end deffn
 
+@anchor{read_binary_matrix}
 @deffn {Function} read_binary_matrix (@var{S}, @var{M})
 Reads binary 8-byte floating point numbers from the source @var{S} into the matrix @var{M}
 until @var{M} is full, or the source is exhausted.
@@ -315,12 +348,15 @@ The source @var{S} may be a file name or a stream.
 
 The byte order in elements of the source is specified by @code{assume_external_byte_order}.
 
+See also @mrefdot{read_matrix}
+
 @opencatbox
 @category{Package numericalio}
 @category{File input}
 @closecatbox
 @end deffn
 
+@anchor{read_binary_array}
 @deffn {Function} read_binary_array (@var{S}, @var{A})
 Reads binary 8-byte floating point numbers from the source @var{S} into the array @var{A}
 until @var{A} is full, or the source is exhausted.
@@ -331,12 +367,15 @@ The source @var{S} may be a file name or a stream.
 
 The byte order in elements of the source is specified by @code{assume_external_byte_order}.
 
+See also @mrefdot{read_array}
+
 @opencatbox
 @category{Package numericalio}
 @category{File input}
 @closecatbox
 @end deffn
 
+@anchor{read_binary_list}
 @deffn {Function} read_binary_list @
 @fname{read_binary_list} (@var{S}) @
 @fname{read_binary_list} (@var{S}, @var{L})
@@ -350,12 +389,15 @@ from the source @var{S} until the list @var{L} is full, or the source is exhaust
 
 The byte order in elements of the source is specified by @code{assume_external_byte_order}.
 
+See also @mrefdot{read_list}
+
 @opencatbox
 @category{Package numericalio}
 @category{File input}
 @closecatbox
 @end deffn
 
+@anchor{write_binary_data}
 @deffn {Function} write_binary_data (@var{X}, @var{D})
 
 Writes the object @var{X}, comprising binary 8-byte IEEE 754 floating-point numbers,
@@ -378,6 +420,8 @@ in particular, the stream remains open.
 
 The byte order in elements of the destination
 is specified by @code{assume_external_byte_order}.
+
+See also @mrefdot{write_data}
 
 @opencatbox
 @category{Package numericalio}

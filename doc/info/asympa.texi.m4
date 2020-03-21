@@ -8,6 +8,7 @@
 @section Introduction to asympa
 
 m4_setcat(Package asympa)
+@anchor{asympa}
 @c @deffn {Function} asympa
 m4_deffn({Function}, asympa, <<<()>>>)
 @code{asympa} is a package for asymptotic analysis. The package contains
