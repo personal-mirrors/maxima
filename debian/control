@@ -43,27 +43,6 @@ Description: Computer algebra system
  self tests.
  This package contains the files all maxima flavours require.
 
-Package: maxima-gcl
-Architecture: any
-Depends:  ${shlibs:Depends}, ${misc:Depends}, gcc, maxima-common (= ${binary:Version})
-Recommends: gnuplot-x11, wxmaxima, gnuplot
-Provides: maxima (= ${binary:Version})
-Replaces: maxima
-Suggests: texmacs, wish
-Description: Computer algebra system
- Maxima is a fully symbolic computation program.  It is full featured
- doing symbolic manipulation of polynomials, matrices, rational
- functions, integration, Todd-coxeter methods for finite group
- analysis, graphing, multiple precision floating point computation.
- It has a symbolic source level debugger for maxima code.  Maxima is
- based on the original Macsyma developed at MIT in the 1970s.  It is
- quite versatile, reasonably powerful and comes with extensive
- self tests.
- This package contains a maxima that was compiled by gcl: gcl has
- fast bignum arithmetics and is reasonably fast.
- If more than one maxima is installed at the same time this maxima
- is run if maxima is called as "maxima -l gcl"
-
 Package: maxima-sbcl
 Architecture: any
 Depends:  ${shlibs:Depends}, ${misc:Depends}, maxima-common (= ${binary:Version})
