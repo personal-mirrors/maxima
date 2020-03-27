@@ -8,7 +8,8 @@ export MAXIMA_USERDIR=$PWD/debian/tmp
 export GCL_ANSI=t
 
 export LD_PRELOAD=$(shell gcc -print-file-name=libSegFault.so)
-
+export GCL_DISABLE_MULTIPROCESS_MEMORY_POOL=true
+export GCL_MEM_MULTIPLE=.4
 # The standard rule.
 %:
 	dh $@
