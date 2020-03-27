@@ -7,6 +7,9 @@ export MAXIMA_USERDIR=$PWD/debian/tmp
 # GCL comes in two flavours. We need the ANSI one.
 export GCL_ANSI=t
 
+export LD_PRELOAD=$(shell gcc -print-file-name=libSegFault.so)
+export GCL_DISABLE_MULTIPROCESS_MEMORY_POOL=true
+export GCL_MEM_MULTIPLE=.4
 # The standard rule.
 %:
 	dh $@
@@ -34,6 +37,7 @@ override_dh_installinfo:
 # helpful when a build server is used as it causes the test suite
 # to output the full test log in case of a build server.
 override_dh_auto_test:
+	if make check; then true; else cat tests/test-suite.log;false;fi
 
 # In order to keep the packages small debhelper normally removes all
 # debug symbols and similar things. Unfortunately in the sbcl case
