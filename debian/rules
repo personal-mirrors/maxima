@@ -7,7 +7,6 @@ export MAXIMA_USERDIR=$PWD/debian/tmp
 # GCL comes in two flavours. We need the ANSI one.
 export GCL_ANSI=t
 
-export LD_PRELOAD=$(shell gcc -print-file-name=libSegFault.so)
 export GCL_DISABLE_MULTIPROCESS_MEMORY_POOL=true
 export GCL_MEM_MULTIPLE=.4
 # The standard rule.
