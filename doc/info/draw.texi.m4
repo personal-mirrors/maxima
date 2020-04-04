@@ -37,7 +37,7 @@ A selection of useful objects a scene can be made up from are:
 
 A short description of all draw commands and options including example plots
 (in the html and pdf version of this manual) can be found in the section
-@xref{Functions and Variables for draw}. A online version of the html manual can be
+@xref{Functions and Variables for draw}. An online version of the html manual can be
 found at @url{maxima.sourceforge.net/docs/manual/maxima_singlepage.html#draw}. 
 More elaborated examples of this package can be found at the following locations:
 
@@ -264,7 +264,7 @@ m4_deffn({Function}, draw2d, <<<(@var{argument_1}, ...)>>>)
 This function is a shortcut for
 @code{draw(gr2d(@var{options}, ..., @var{graphic_object}, ...))}.
 
-It can be used to plot a unique scene in 2d, as can be seen in most examples below.
+It can be used to plot an unique scene in 2d, as can be seen in most examples below.
 
 See also @mref{draw} and @mrefdot{gr2d}
 
@@ -287,7 +287,7 @@ m4_deffn({Function}, draw3d, <<<(@var{argument_1}, ...)>>>)
 This function is a shortcut for
 @code{draw(gr3d(@var{options}, ..., @var{graphic_object}, ...))}.
 
-It can be used to plot a unique scene in 3d, as can be seen in many examples below.
+It can be used to plot an unique scene in 3d, as can be seen in many examples below.
 
 See also @mref{draw} and @mrefdot{gr3d}
 
@@ -1186,7 +1186,7 @@ the terminal you are working with.
 With terminals @code{gif}, @code{animated_gif}, @code{png}, @code{jpg},
 @code{svg}, @code{screen}, @code{wxt}, and @code{aquaterm},
 the integers represent the number of points in each direction. If they
-are not intergers, they are rounded.
+are not integers, they are rounded.
 
 With terminals @code{eps}, @code{eps_color}, @code{pdf}, and 
 @code{pdfcairo}, both numbers represent hundredths of cm, which
@@ -2568,7 +2568,7 @@ negative numbers mean negative colour component.
 @code{palette = gray} and @code{palette = color} are short cuts for
 @code{palette = [3,3,3]} and @code{palette = [7,5,15]}, respectively.
 
-Second, @code{palette} can be a user defined lookup table. In this case,
+Second, @code{palette} can be an user defined lookup table. In this case,
 the format for building a lookup table of length @code{n} is
 @code{palette=[color_1, color_2, ..., color_n]}, where @code{color_i} is
 a well formed color (see option @code{color}) such that @code{color_1} is
@@ -2605,7 +2605,7 @@ It also works with gray images.
 @end example
 @figure{draw_palette2}
 
-@code{palette} can be a user defined lookup table.
+@code{palette} can be an user defined lookup table.
 In this example, low values of @code{x} are colored
 in red, and higher values in yellow.
 
@@ -5250,7 +5250,7 @@ plots points @code{[x1,y1]}, @code{[x2,y2]}, etc. If abscissas
 are not given, they are set to consecutive positive integers, so that 
 @code{points ([@var{y1},@var{y2},...])} draws points @code{[1,@var{y1}]}, @code{[2,@var{y2}]}, etc.
 If @var{matrix} is a two-column or two-row matrix, @code{points (@var{matrix})}
-draws the associated points. If @var{matrix} is a one-column or one-row matrix,
+draws the associated points. If @var{matrix} is an one-column or one-row matrix,
 abscissas are assigned automatically.
 
 If @var{1d_y_array} is a 1D lisp array of numbers, @code{points (@var{1d_y_array})} plots them

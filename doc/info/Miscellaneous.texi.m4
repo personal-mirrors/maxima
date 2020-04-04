@@ -50,7 +50,7 @@ m4_defvr({System variable}, askexp)
 When @code{asksign} is called,
 @code{askexp} is the expression @code{asksign} is testing.
 
-At one time, it was possible for a user to inspect @code{askexp}
+At one time, it was possible for an user to inspect @code{askexp}
 by entering a Maxima break with control-A.
 
 @c @opencatbox

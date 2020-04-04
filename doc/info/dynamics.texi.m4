@@ -203,7 +203,7 @@ m4_deffn({Function}, orbits, (@var{F}, @var{y0}, @var{n1}, @var{n2}, [@var{x}, @
 
 Draws the orbits diagram for a family of one-dimensional
 discrete dynamical systems, with one parameter @var{x}; that kind of
-diagram is used to study the bifurcations of a one-dimensional discrete
+diagram is used to study the bifurcations of an one-dimensional discrete
 system.
 
 The function @var{F(y)} defines a sequence with a starting value of
@@ -917,7 +917,7 @@ m4_defvr({Object option}, resolution) @
 @fname{[resolution, @var{number}]}
 Default value: @code{6}
 
-@var{number} must be a integer greater than 2 that sets the number of
+@var{number} must be an integer greater than 2 that sets the number of
 edges in the base of a cone or a cylinder.
  
 @c @opencatbox

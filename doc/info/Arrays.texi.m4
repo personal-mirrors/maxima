@@ -181,7 +181,7 @@ Examples:
 @end group
 @end example
 
-@code{arrayinfo} and @mref{listarray} applied to a undeclared array (@mrefdot{hashed array}).
+@code{arrayinfo} and @mref{listarray} applied to an undeclared array (@mrefdot{hashed array}).
 
 @c ===beg===
 @c bb [FOO] : (a + b)^2;
@@ -665,7 +665,7 @@ Examples:
 @end group
 @end example
 
-@code{listarray} and @mref{arrayinfo} applied to a undeclared array (@mref{hashed array}).
+@code{listarray} and @mref{arrayinfo} applied to an undeclared array (@mref{hashed array}).
 
 @c ===beg===
 @c bb [FOO] : (a + b)^2;
@@ -695,7 +695,7 @@ Examples:
 @end group
 @end example
 
-@code{listarray} and @mref{arrayinfo} applied to an @mrefdot{memoizing function}
+@code{listarray} and @mref{arrayinfo} applied to a @mrefdot{memoizing function}
 
 @c ===beg===
 @c cc [x, y] := y / x;

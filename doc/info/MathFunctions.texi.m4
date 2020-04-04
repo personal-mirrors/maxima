@@ -1824,7 +1824,7 @@ m4_deffn({Function}, log, <<<(@var{x})>>>)
 Represents the natural (base @math{e}) logarithm of @var{x}.
 
 Maxima does not have a built-in function for the base 10 logarithm or other 
-bases. @code{log10(x) := log(x) / log(10)} is a useful definition.
+bases. @code{log10(x) := log(x) / log(10)} is an useful definition.
 
 Simplification and evaluation of logarithms is governed by several global flags:
 

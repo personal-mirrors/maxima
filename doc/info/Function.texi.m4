@@ -2681,7 +2681,7 @@ m4_setcat(Translation flags and variables)
 m4_defvr({Option variable}, savedef)
 Default value: @code{true}
 
-When @code{savedef} is @code{true}, the Maxima version of a user function is
+When @code{savedef} is @code{true}, the Maxima version of an user function is
 preserved when the function is translated.  This permits the definition to be
 displayed by @code{dispfun} and allows the function to be edited.
 
@@ -2755,7 +2755,7 @@ code gets generated.  Thus, the user should not set the @code{simp} switch to
 @code{false} which inhibits simplification of the expressions to be translated.
 
 The switch @code{translate}, if @code{true}, causes automatic
-translation of a user's function to Lisp.
+translation of an user's function to Lisp.
 
 Note that translated
 functions may not run identically to the way they did before
@@ -2767,7 +2767,7 @@ Also the @code{prederror: false} setting
 will not translate.
 @c WHAT ABOUT % AND %% ???
 
-@code{savedef} - if @code{true} will cause the Maxima version of a user
+@code{savedef} - if @code{true} will cause the Maxima version of an user
 function to remain when the function is @code{translate}'d.  This permits the
 definition to be displayed by @code{dispfun} and allows the function to be
 edited.

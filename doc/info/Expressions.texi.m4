@@ -310,7 +310,7 @@ m4_setcat(Declarations and inferences, Global variables)
 m4_defvr({System variable}, aliases)
 Default value: @code{[]}
 
-@code{aliases} is the list of atoms which have a user defined alias (set up by
+@code{aliases} is the list of atoms which have an user defined alias (set up by
 the @mrefcomma{alias} @mrefcomma{ordergreat} @mref{orderless} functions or by
 declaring the atom a @mref{noun} with @mrefdot{declare})
 

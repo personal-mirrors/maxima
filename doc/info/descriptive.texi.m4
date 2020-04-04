@@ -1890,7 +1890,7 @@ m4_deffn({Function}, cdf_empirical, <<<>>>) @
 
 Empirical distribution function @math{F(x)}.
 
-Data can be introduced as a list of numbers, or as a one column matrix.
+Data can be introduced as a list of numbers, or as an one column matrix.
 
 The optional argument is the name of the variable in the returned expression,
 which is @var{x} by default.
@@ -2865,7 +2865,7 @@ m4_deffn({Function}, histogram, <<<>>>) @
 @fname{histogram} (@var{one_row_matrix}, @var{option_1}, @var{option_2}, @dots{})
 
 This function plots an histogram from a continuous sample.
-Sample data must be stored in a list of numbers or a one dimensional matrix.
+Sample data must be stored in a list of numbers or an one dimensional matrix.
 
 Available options are:
 
