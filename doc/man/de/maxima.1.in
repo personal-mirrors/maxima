@@ -93,7 +93,7 @@ Verwendet \fIdirectory\fR als das Homedirectory (standardm\(:assig %USERPROFILE%
 Gibt zus\(:atzliche Informationen des Maxima Startskripts aus.
 .TP
 \fB\-\-version\fR
-Gibt die (Default) installierte Version aus.
+Gibt die (default) installierte Version aus.
 .TP
 \fB\-\-very\-quiet\fR
 Unterdr\(:uckt Ausdrucksmarken und Startmeldungen.
@@ -356,14 +356,15 @@ Version 10.
 January 1983.
 .LP
 Neuere Referenzen: 
-.I http://maxima.sourceforge.net
+.UR http://maxima.sourceforge.net/de/
+.UE
 
 .SH FEHLER
 Maxima ist ein komplexes System. Es beinhaltet sowohl bekannte als auch unbekannte Fehler.
 Verwenden Sie es auf eigenes Risiko. Die Maxima-Fehlerdatenbank ist verf\(:ugbar unter:
-.LP
-https://sourceforge.net/p/maxima/bugs/
-.LP
+.UR https://sourceforge.net/p/maxima/bugs/
+.UE
+
 Neue Fehlermeldungen (und -korrekturen) sind gern gesehen. Bitte inkludieren Sie die Ausgabe der Maxima-Funktion "build_info()" in die Meldung.
 Und sehen Sie zuvor nach, ob der Fehler nicht schon gemeldet wurde.
 
@@ -376,7 +377,7 @@ wurde unterst\(:utzt durch die Zusch\(:usse NSG 1323 der National Aeronautics an
 Space Administration, N00014-77-C-0641 des B\(:uros f\(:ur Naval
 Research, ET-78-C-02-4687 des U.S. Department of Energy, und
 F49620-79-C-020 der U.S. Air Force.  MACSYMA wurde weiterentwickelt, um 
-auf UNIX Betriebssystgemen verwendet zu werden (zur Verwendeung auf DEC VAX Computern
+auf UNIX Betriebssystemen verwendet zu werden (zur Verwendung auf DEC VAX Computern
 und Sun Workstations), durch Richard Fateman und Kollegen auf der
 University of California in Berkeley; diese Version von MACSYMA ist bekannt als
 VAXIMA.  Die derzeitige Version hat ihre Urspr\(:unge in den Weiterentwicklungen der 
@@ -388,7 +389,7 @@ Die urspr\(:ungliche Version dieser Manualseite wurde von R. P. C. Rodgers (UCSF
 James Amundson in 2002. Die deutsche \(:Ubersetzung stammt von Wolfgang Dautermann.
 
 Maxima wird nun entwickelt und betreut vom 
-.UR http://maxima.sourceforge.net
+.UR http://maxima.sourceforge.net/de/
 Maxima Projekt auf Sourceforge.
 .UE
 

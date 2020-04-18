@@ -925,7 +925,7 @@ return their TeX output as a string.
 label.  Quote-quote @code{''} forces evaluation of the argument, thereby
 defeating the test and preventing the label.
 
-See also @mrefdot{texput}
+See also @mref{tex1} and @mrefdot{texput}
 
 Examples:
 
@@ -978,6 +978,8 @@ Returns a string which represents the TeX output for the expressions @var{e}.
 The TeX output is not enclosed in delimiters for an equation or any other
 environment.
 
+See also @mref{tex} and @mrefdot{texput}
+
 Examples:
 
 @c ===beg===
@@ -1028,6 +1030,8 @@ separated by commas.
 @code{tex} function to interpolate @var{s_1} and @var{s_2} into the TeX output
 on either side of the arguments of @var{a}, with @var{s_3} separating the
 arguments.
+
+See also @mref{tex} and @mrefdot{tex1}
 
 Examples:
 

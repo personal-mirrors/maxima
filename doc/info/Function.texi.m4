@@ -2954,7 +2954,8 @@ m4_defvr({Option variable}, tr_float_can_branch_complex)
 Default value: @code{true}
 
 Tells the Maxima-to-Lisp translator to assume that the functions 
-@code{acos}, @code{asin}, @code{asec}, and @code{acsc} can return complex results.
+@code{acos}, @code{asin}, @code{asec}, @code{acsc}, @code{log}
+and @code{sqrt} can return complex results.
 
 When it is @code{true} then @code{acos(x)} is of mode @code{any}
 even if @code{x} is of mode @code{float} (as set by @code{mode_declare}).

@@ -194,7 +194,7 @@ m4_deffn({Function}, rncombine, <<<(@var{expr})>>>)
 Transforms @var{expr} by combining all terms of @var{expr} that have
 identical denominators or denominators that differ from each other by
 numerical factors only.  This is slightly different from the behavior
-of @code{combine}, which collects terms that have identical denominators.
+of @mrefcomma{combine} which collects terms that have identical denominators.
 
 Setting @code{pfeformat: true} and using @code{combine} yields results similar
 to those that can be obtained with @code{rncombine}, but @code{rncombine} takes

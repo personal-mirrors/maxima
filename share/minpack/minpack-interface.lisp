@@ -4,8 +4,32 @@
 
 (in-package #-gcl #:maxima #+gcl "MAXIMA")
 
-(defun least-squares (vars init-x fcns &key (jacobian t)
-		      (tolerance (sqrt double-float-epsilon)))
+(defmvar $debug_minpack nil
+  "Set to true to enable debugging messages from minpack routines")
+
+(defmfun $minpack_lsquares (fcns vars init-x
+				 &key
+				 (jacobian t)
+				 (tolerance (sqrt double-float-epsilon)))
+  "Minimize the sum of the squares of m functions in n unknowns (n <= m)
+
+   VARS    list of the variables
+   INIT-X  initial guess
+   FCNS    list of the m functions
+
+   Optional keyword args (key = val)
+   TOLERANCE  tolerance in solution 
+   JACOBIAN   If true, maxima computes the Jacobian directly from FCNS.
+              If false, the Jacobian is internally computed using a
+              forward-difference approximation.
+              Otherwise, it is a function returning the Jacobian"
+  (unless (and (listp fcns) (eq (caar fcns) 'mlist))
+    (merror "~M is not a list of functions" fcns))
+  (unless (and (listp vars) (eq (caar vars) 'mlist))
+    (merror "~M is not a list of variables" vars))
+  (unless (and (listp init-x) (eq (caar init-x) 'mlist))
+    (merror "~M is not a list of initial values" init-x))
+
   (let* ((n (length (cdr vars)))
 	 (m (length (cdr fcns)))
 	 (x (make-array n :element-type 'double-float
@@ -45,12 +69,22 @@
 		       ;; we're called with vector that is longer than
 		       ;; we want.  Perfectly valid Fortran, though.)
 		       (let ((val (apply 'funcall fv (subseq (coerce x 'list) 0 n))))
+			 (unless (consp val)
+			   (merror "Unable to evaluate function at the point ~M"
+				   (list* '(mlist) (subseq (coerce x 'list) 0 n))))
+			 (when $debug_minpack
+			   (format t "f(~{~A~^, ~}) =~%[~@<~{~A~^, ~:_~}~:>]~%"
+				   (coerce x 'list)
+				   (cdr val)))
 			 (replace fvec (mapcar #'(lambda (z)
 						   (cl:float z 1d0))
 					       (cdr val)))))
 		      (2
 		       ;; Compute Jacobian at point x, placing result in fjac
 		       (let ((j (apply 'funcall fj (subseq (coerce x 'list) 0 n))))
+			 (unless (consp j)
+			   (merror "Unable to evaluate Jacobian at the point ~M"
+				   (list* '(mlist) (subseq (coerce x 'list) 0 n))))
 			 ;; Extract out elements of Jacobian and place into
 			 ;; fjac, in column-major order.
 			 (let ((row-index 0))
@@ -92,6 +126,13 @@
 			     (type (cl:array double-float (*)) x fvec fjac))
 		    ;; Compute function at point x, placing result in fvec
 		    (let ((val (apply 'funcall fv (subseq (coerce x 'list) 0 n))))
+		      (unless (consp val)
+			(merror "Unable to evaluate function at the point ~M"
+				(list* '(mlist) (subseq (coerce x 'list) 0 n))))
+		      (when $debug_minpack
+			(format t "f(~{~A~^, ~}) =~%[~@<~{~A~^, ~:_~}~:>]~%"
+				(coerce x 'list)
+				(cdr val)))
 		      (replace fvec (mapcar #'(lambda (z)
 						(cl:float z 1d0))
 					    (cdr val))))
@@ -115,8 +156,29 @@
 		   (minpack:enorm m fvec)
 		   info))))))))
 
-(defun nonlinear-solve (vars init-x fcns &key (jacobian t)
-			(tolerance (sqrt double-float-epsilon)))
+(defun $minpack_solve (fcns vars init-x
+		       &key
+			 (jacobian t)
+			 (tolerance (sqrt double-float-epsilon)))
+  "Solve the system of n equations in n unknowns
+
+   VARS    list of the n variables
+   INIT-X  initial guess
+   FCNS    list of the n functions
+
+   Optional keyword args (key = val)
+   TOLERANCE  tolerance in solution 
+   JACOBIAN   If true, maxima computes the Jacobian directly from FCNS.
+              If false, the Jacobian is internally computed using a
+              forward-difference approximation.
+              Otherwise, it is a function returning the Jacobian"
+  (unless (and (listp fcns) (eq (caar fcns) 'mlist))
+    (merror "~M is not a list of functions" fcns))
+  (unless (and (listp vars) (eq (caar vars) 'mlist))
+    (merror "~M is not a list of variables" vars))
+  (unless (and (listp init-x) (eq (caar init-x) 'mlist))
+    (merror "~M is not a list of initial values" init-x))
+
   (let* ((n (length (cdr vars)))
 	 (x (make-array n :element-type 'double-float
 			:initial-contents (mapcar #'(lambda (z)
@@ -218,50 +280,3 @@
 		   (list* '(mlist) (coerce x 'list))
 		   (minpack:enorm n fvec)
 		   info))))))))
-
-
-(defun $minpack_lsquares (fcns vars init-x &rest options)
-  "Minimize the sum of the squares of m functions in n unknowns (n <= m)
-
-   VARS    list of the variables
-   INIT-X  initial guess
-   FCNS    list of the m functions
-
-   Optional keyword args (key = val)
-   TOLERANCE  tolerance in solution 
-   JACOBIAN   If true, maxima computes the Jacobian directly from FCNS.
-              If false, the Jacobian is internally computed using a
-              forward-difference approximation.
-              Otherwise, it is a function returning the Jacobian"
-  (unless (and (listp fcns) (eq (caar fcns) 'mlist))
-    (merror "~M is not a list of functions" fcns))
-  (unless (and (listp vars) (eq (caar vars) 'mlist))
-    (merror "~M is not a list of variables" vars))
-  (unless (and (listp init-x) (eq (caar init-x) 'mlist))
-    (merror "~M is not a list of initial values" init-x))
-  
-  (let ((args (lispify-maxima-keyword-options options '($jacobian $tolerance))))
-    (apply #'least-squares vars init-x fcns args)))
-
-(defun $minpack_solve (fcns vars init-x &rest options)
-  "Solve the system of n equations in n unknowns
-
-   VARS    list of the n variables
-   INIT-X  initial guess
-   FCNS    list of the n functions
-
-   Optional keyword args (key = val)
-   TOLERANCE  tolerance in solution 
-   JACOBIAN   If true, maxima computes the Jacobian directly from FCNS.
-              If false, the Jacobian is internally computed using a
-              forward-difference approximation.
-              Otherwise, it is a function returning the Jacobian"
-  (unless (and (listp fcns) (eq (caar fcns) 'mlist))
-    (merror "~M is not a list of functions" fcns))
-  (unless (and (listp vars) (eq (caar vars) 'mlist))
-    (merror "~M is not a list of variables" vars))
-  (unless (and (listp init-x) (eq (caar init-x) 'mlist))
-    (merror "~M is not a list of initial values" init-x))
-  
-  (let ((args (lispify-maxima-keyword-options options '($jacobian $tolerance))))
-    (apply #'nonlinear-solve vars init-x fcns args)))

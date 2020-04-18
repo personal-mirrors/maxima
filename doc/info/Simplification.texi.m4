@@ -316,6 +316,8 @@ m4_deffn({Function}, combine, <<<(@var{expr})>>>)
 Simplifies the sum @var{expr} by combining terms with the same
 denominator into a single term.
 
+See also: @mrefdot{rncombine}
+
 Example:
 
 @c ===beg===

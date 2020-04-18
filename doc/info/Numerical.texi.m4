@@ -692,7 +692,7 @@ Thus it is not necessary that @var{expr} evaluate to a number.
 @code{load(newton1)} loads this function.
 
 See also @mrefcomma{realroots} @mrefcomma{allroots} @mref{find_root} and
-@ref{mnewton-pkg}
+@mrefdot{mnewton}
 
 Examples:
 
@@ -1083,6 +1083,7 @@ Clicking on a point will plot the equipotential curve that passes by that point
 @c @end deffn
 m4_end_deffn()
 
+@anchor{rk}
 m4_setcat(Differential equations, Numerical methods)
 @c @deffn {Function} rk @
 m4_deffn({Function}, rk, <<<>>>) @
@@ -1127,6 +1128,10 @@ point. The result will be a list with as many elements as the number of
 iterations made. Each element in the results list is itself another list
 with @var{m}+1 elements: the value of the independent variable, followed
 by the values of the dependent variables corresponding to that point.
+
+See also @mrefcomma{drawdf} @mref{desolve} and @mrefdot{ode2}
+
+Examples:
 
 To solve numerically the differential equation
 
