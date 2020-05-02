@@ -90,7 +90,7 @@
 	  $taylor_logexpand
 	  $taylor_truncate_polynomials $timer $timer_devalue
 	  $trace $trace_break_arg $trace_max_indent
-	  $trace_safety $transcompile $translate $transrun
+	  $trace_safety $translate $transrun
 	  $trigexpand $trigexpandplus $trigexpandtimes $triginverses
 	  $trigsign $tr_array_as_ref $tr_bound_function_applyp
 	  $tr_file_tty_messagesp $tr_float_can_branch_complex
@@ -99,7 +99,7 @@
 	  $tr_state_vars
 	  $tr_true_name_of_file_being_translated $tr_warn_bad_function_calls
 	  $tr_warn_fexpr $tr_warn_meval $tr_warn_mode $tr_warn_undeclared
-	  $tr_warn_undefined_variable
+	  $tr_warn_undefined_variable $ttyoff
 	  $use_fast_arrays $values $vect_cross
 	  $zerobern %e-val %p%i %pi-val %pi//2 %pi//4 %pi2 *$any-modes*
 	  *alpha *const* *fnewvarsw *gcdl* *in *in-compile*
@@ -108,17 +108,17 @@
 	  *transl-debug* *warned-fexprs*
 	  *warned-mode-vars* *warned-un-declared-vars* *zexptsimp? |-1//2|
 	  -sqrt3//2 |1//2| adn* aexprp algfac* algnotexact
-	  alpha *alphabet* arrays aryp assigns *atp* atvars
+	  alpha *alphabet* aryp assigns *atp* atvars
 	  bfhalf bfmhalf bigfloat%e bigfloat%pi bigfloatone bigfloatzero
 	  bindlist *mdebug*
-	  declares defined_variables defintdebug derivflag derivlist
+	  defined_variables defintdebug derivflag derivlist
 	  derivsimp displayp dn* dosimp dsksetp dummy-variable-operators
 	  errorsw evarrp evp expandflag expandp
-	  exprs exptrlsw factlist featurel fexprs fmaplvl
+	  exptrlsw factlist featurel fmaplvl
 	  fourth%pi fr-factor gauss
 	  generate-atan2 genpairs genvar half%pi half%pi3
 	  implicit-real in-p infinitesimals infinities inratsimp inside-mprog
-	  integerl *islinp* lexprs limit-answers limitp linel
+	  integerl *islinp* limit-answers limitp linel
 	  *linelabel* local loclist low* maplp mdop
 	  meta-prop-l meta-prop-p mfexprp minpoly* mlocp mm* modulus *mopl*
 	  mplc* mprogp mproplist mspeclist msump munbindp

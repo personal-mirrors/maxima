@@ -34,7 +34,7 @@
 	 which want to know the name of the source file.")
 
 (defmvar $tr_state_vars
-    '((mlist) $transcompile
+    '((mlist)
       $translate_fast_arrays
       $tr_warn_undeclared
       $tr_warn_meval
@@ -47,15 +47,12 @@
       $tr_float_can_branch_complex
       $define_variable))
 
-(defvar declares nil)
-
 (defmspec $compfile (forms)
     (setq forms (cdr forms))
     (if (eql 1 (length forms))
       (merror (intl:gettext "compfile: no functions specified; I refuse to create an empty file.")))
     (bind-transl-state
-     (setq $transcompile t
-	   *in-compfile* t)
+     (setq *in-compfile* t)
      (let
        ((out-file-name (namestring (maxima-string (meval (car forms)))))
         (t-error nil)
@@ -68,11 +65,8 @@
 			 (member '$functions forms :test #'eq))
 		     (setq forms (mapcar #'caar (cdr $functions)))))
 	      (do ((l forms (cdr l))
-		   (declares nil nil)
 		   (tr-abort nil nil)
 		   (item)
-		   (lexprs nil nil)
-		   (fexprs nil nil)
 		   (t-item))		;
 		  ((null l))
 		(setq item (car l))
@@ -92,7 +86,7 @@
 	 (if t-error (delete-file transl-file))))))
 
 (defun compile-function (f)
-  (mformat  *translation-msgs-files* (intl:gettext "~%Translating ~:@M") f)
+  (tr-format (intl:gettext "~%Translating ~:@M") f)
   (let ((fun (tr-mfun f)))
     (cond (tr-abort  nil)
 	  (t fun))))
@@ -273,10 +267,9 @@ translated."
     (terpri transl-file)))
 
 (defun print-abort-msg (fun from)
-  (mformat *translation-msgs-files*
-	   (intl:gettext "compfile: failed to translate ~:@M.~%~
-	    ~A will continue, but file output will be aborted.~%") ;; WTF DOES THIS MEAN ???
-	   fun from))
+  (tr-format (intl:gettext "compfile: failed to translate ~:@M.~%~
+	     ~A will continue, but file output will be aborted.~%") ;; WTF DOES THIS MEAN ???
+	     fun from))
 
 (defmspec $translate (functs)
   (setq functs (cdr functs))

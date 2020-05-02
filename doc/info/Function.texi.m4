@@ -2694,28 +2694,6 @@ removed from the @code{functions} list.
 @c @end defvr
 m4_end_defvr()
 
-@c IS THERE ANY REASON TO SET transcompile: false ??
-@c MAYBE THIS VARIABLE COULD BE PERMANENTLY SET TO true AND STRUCK FROM THE DOCUMENTATION.
-
-@c -----------------------------------------------------------------------------
-@anchor{transcompile}
-@c @defvr {Option variable} transcompile
-m4_defvr({Option variable}, transcompile)
-Default value: @code{true}
-
-When @code{transcompile} is @code{true}, @code{translate} and
-@code{translate_file} generate declarations to make the translated code more
-suitable for compilation.
-@c BUT THE DECLARATIONS DON'T SEEM TO BE NECESSARY, SO WHAT'S THE POINT AGAIN ??
-
-@code{compfile} sets @code{transcompile: true} for the duration.
-
-@c @opencatbox
-@c @category{Translation flags and variables}
-@c @closecatbox
-@c @end defvr
-m4_end_defvr()
-
 @c -----------------------------------------------------------------------------
 m4_setcat(Translation and compilation)
 @anchor{translate}
@@ -3030,11 +3008,10 @@ m4_end_defvr()
 m4_defvr({System variable}, tr_state_vars)
 Default value:
 @example
-[transcompile, translate_fast_arrays, tr_warn_undeclared,
-tr_warn_meval, tr_warn_fexpr, tr_warn_mode,
-tr_warn_undefined_variable, tr_function_call_default,
-tr_array_as_ref, tr_numer, tr_float_can_branch_complex,
-define_variable]
+[translate_fast_arrays, tr_warn_undeclared, tr_warn_meval,
+tr_warn_fexpr, tr_warn_mode, tr_warn_undefined_variable,
+tr_function_call_default, tr_array_as_ref, tr_numer,
+tr_float_can_branch_complex, define_variable]
 @end example
 
 The list of the switches that affect the form of the

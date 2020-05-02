@@ -94,18 +94,9 @@
 (defmvar *declared-translated-functions* nil
          "List of functions which are believed to be translated.")
 
-(defmvar  $transcompile  t
-  "If TRUE TRANSLATE_FILE outputs declarations for the COMPLR.
-	  The only use of the switch is to save the space declarations take
-	  up in interpreted code.")
-
 (defmvar tstack nil " stack of local variable modes ")
 
 (defmvar local nil "T if a $local statement is in the body.")
-(defmvar arrays nil "arrays to declare to `complr'")
-(defmvar lexprs nil "Lexprs to declare.")
-(defmvar exprs nil "what else?")
-(defmvar fexprs nil "Fexprs to declare.")
 (defmvar tr-progret t)
 (defmvar inside-mprog nil)
 (defmvar returns nil "list of `translate'd return forms in the block.")
@@ -207,7 +198,7 @@ APPLY means like APPLY.")
 (defun specialp (var)
   (cond ((or (optionp var)
 	     (tr-get-special var))
-	 (if $transcompile (pushnew var specials :test #'eq))
+	 (pushnew var specials :test #'eq)
 	 t)))
 
 
@@ -336,7 +327,7 @@ APPLY means like APPLY.")
 			    (($modedeclare) ,@vars-modes)
 			    ,exp)))))
     (let ((mode (car loc))
-	  (exp (car (last loc)))) ;;; length varies with TRANSCOMPILE.
+	  (exp (car (last loc))))
       (cons mode exp))))
 
 (defun tr-args (form)
@@ -694,7 +685,7 @@ APPLY means like APPLY.")
 	(t
 	 (cond ((not (specialp form))
 		(warn-undefined-variable form)
-		(if $transcompile (pushnew form specials :test #'eq))))
+		(pushnew form specials :test #'eq)))
 	 ;; note that the lisp analysis code must know that
 	 ;; the TRD-MSYMEVAL form is a semantic variable.
 	 (let* ((mode (value-mode form))		
@@ -787,15 +778,9 @@ APPLY means like APPLY.")
 (defun tr-lisp-function-call (form type)
   (let ((op (caar form)) (mode) (args))
     (setq args (cond ((member type '(subr lsubr expr) :test #'eq)
-		      (if $transcompile
-			  (case type
-			    ((subr) (pushnew op exprs :test #'eq))
-			    ((lsubr) (pushnew op lexprs :test #'eq))
-			    (t nil)))
 		      (mapcar #'(lambda (llis) (dconvx (translate llis)))
 			      (cdr form)))
 		     (t
-		      (if $transcompile (pushnew op fexprs :test #'eq))
 		      (mapcar 'dtranslate (cdr form))))
 	  mode (function-mode op))
     (call-and-simp mode op args)))
@@ -855,12 +840,11 @@ APPLY means like APPLY.")
   (cond ((atom form)
 	 (cond ((or (numberp form) (member form '(t nil) :test #'eq)) form)
 	       ((tboundp form)
-		(if $transcompile
-		    (or (specialp form)
-			(pushnew form specials :test #'eq)))
+		(or (specialp form)
+		    (pushnew form specials :test #'eq))
 		form)
 	       (t
-		(if $transcompile (pushnew form specials :test #'eq))
+		(pushnew form specials :test #'eq)
 		form)))
 	((eq 'mquote (caar form)) form)
 	(t (cons (car form) (mapcar #'translate-atoms (cdr form))))))
@@ -989,28 +973,27 @@ APPLY means like APPLY.")
 
 
 (defun make-declares (varlist localp &aux (dl) (fx) (fl) specs)
-  (when $transcompile
-    (do ((l varlist (cdr l))
-	 (mode) (var))
-	((null l))
-      
-      ;; When a variable is declared special, be sure to declare it
-      ;; special here.
-      (when (and localp (tr-get-special (car l)))
-	(push (car l) specs))
-      
-      (when (or (not localp)
-		(not (tr-get-special (car l))))
-	;; don't output local declarations on special variables.
-	(setq var (teval (car l)) mode (value-mode var))
-	(setq specs (cons var specs))
-		
-	(cond ((eq '$fixnum mode) (pushnew var fx :test #'eq))
-	      ((eq '$float mode)  (pushnew var fl :test #'eq)))))
-    (if fx (pushnew `(fixnum  . ,fx) dl :test #'eq))
-    (if fl (pushnew `(type flonum  . ,fl) dl :test #'eq))
-    (if specs (pushnew `(special  . ,specs) dl :test #'eq))
-    (if dl `(declare . ,dl))))
+  (do ((l varlist (cdr l))
+       (mode) (var))
+      ((null l))
+
+    ;; When a variable is declared special, be sure to declare it
+    ;; special here.
+    (when (and localp (tr-get-special (car l)))
+      (push (car l) specs))
+
+    (when (or (not localp)
+	      (not (tr-get-special (car l))))
+      ;; don't output local declarations on special variables.
+      (setq var (teval (car l)) mode (value-mode var))
+      (setq specs (cons var specs))
+
+      (cond ((eq '$fixnum mode) (pushnew var fx :test #'eq))
+	    ((eq '$float mode)  (pushnew var fl :test #'eq)))))
+  (if fx (pushnew `(fixnum  . ,fx) dl :test #'eq))
+  (if fl (pushnew `(type flonum  . ,fl) dl :test #'eq))
+  (if specs (pushnew `(special  . ,specs) dl :test #'eq))
+  (if dl `(declare . ,dl)))
 
 (defun tr-seq (l)
   (do ((mode nil)
@@ -1139,7 +1122,7 @@ APPLY means like APPLY.")
     (cond ((atom fn) 
 	   ;; I'm guessing (ATOM FN) is a parser error or other Lisp error,
 	   ;; so don't bother to translate the following error message.
-	   (mformat *translation-msgs-files* "translator: MQAPPLY operator must be a cons; found: ~:M" form)
+	   (tr-format "translator: MQAPPLY operator must be a cons; found: ~:M" form)
 	   nil)
 	  ((eq (caar fn) 'mquote) 
 	   `($any list ',(cons (cadr fn) aryp) ,@(tr-args args)))

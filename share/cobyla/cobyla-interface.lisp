@@ -13,7 +13,7 @@
 ;; constraint equations.  But we want to be able to specify different
 ;; versions.  So, COBYLA calls CALCFC, which then calls *CALCFC* to
 ;; do the real compuation.
-(defun calcfc (n m x f con)
+(defun cobyla::calcfc (n m x f con)
   (declare (ignore f))
   (funcall maxima::*calcfc* n m x con))
 
@@ -90,18 +90,29 @@
 "
   (unless (listp vars)
     (merror "~M: vars must be a list of variables. Got: ~M"
-	    '$fmin_cobyla vars))
+	    %%pretty-fname vars))
   (unless (listp init-x)
     (merror "~M: Initial values must be a list of values. Got: ~M"
-	    '$fmin_cobyla init-x))
+	    %%pretty-fname init-x))
 
   (unless (= (length (cdr vars))
 	     (length (cdr init-x)))
     (merror
      "~M: Number of initial values (~M) does not match the number of variables ~M~%"
-     '$fmin_cobyla
+     %%pretty-fname
      (length (cdr init-x))
      (length (cdr vars))))
+
+  (unless (and (integerp iprint)
+	       (<= 0 iprint 3))
+    (merror
+     "~M: iprint must be an integer between 0 and 3, inclusive, not: ~M~%"
+     %%pretty-fname iprint))
+
+  (unless (and (integerp maxfun) (plusp maxfun))
+    (merror
+     "~M: maxfun must be a positive integer, not: ~M~%"
+     %%pretty-fname maxfun))
   
   ;; Go through constraints and convert f >= g to f - g, f <= g to g -
   ;; f, and f = g to f - g and g - f.  This is because cobyla expects
@@ -118,7 +129,7 @@
 	       (push (sub ($rhs c) ($lhs c)) normalized-constraints))
 	      (t
 	       (merror "~M: Constraint equation must be =, <= or >=: got ~M"
-		       '$fmin_coblya op)))))
+		       %%pretty-fname op)))))
 
     (setf normalized-constraints
 	  (list* '(mlist)
@@ -135,8 +146,8 @@
 				      (let ((r ($float z)))
 					(if (floatp r)
 					    r
-					    (merror "Does not evaluate to a float:  ~M"
-						    z))))
+					    (merror "~M: Does not evaluate to a float:  ~M"
+						    %%pretty-fname z))))
 				  (cdr init-x))))
 	   ;; Real work array for cobyla.
 	   (w (make-array (+ (* n (+ (* 3 n)
@@ -157,14 +168,13 @@
 		;; values are stored in cval.
 		(declare (fixnum nn mm)
 			 (type (cl:array cl:double-float (*)) xval cval))
-		(format t "eval calcfc")
 		(let* ((x-list (coerce xval 'list))
 		       (f (apply fv x-list))
 		       (c (apply cv x-list)))
 		  ;; Do we really need these checks?
 		  (unless (floatp f)
-		    (merror "The objective function did not evaluate to a number at ~M"
-			    (list* '(mlist) x-list)))
+		    (merror "~M: The objective function did not evaluate to a number at ~M"
+			    %%pretty-fname (list* '(mlist) x-list)))
 		  (unless (every #'floatp (cdr c))
 		    (let ((bad-cons
 			   (loop for cval in (cdr c)
@@ -175,7 +185,8 @@
 		      ;; evaluate to a number to make it easier
 		      ;; for the user to figure out which
 		      ;; constraints were bad.
-		      (mformat t "At the point ~M:~%" (list* '(mlist) x-list))
+		      (mformat t "~M: At the point ~M:~%"
+			       %%pretty-fname (list* '(mlist) x-list))
 		      (merror
 		       (with-output-to-string (msg)
 			 (loop for index in bad-cons

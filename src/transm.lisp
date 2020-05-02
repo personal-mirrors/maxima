@@ -50,7 +50,7 @@
 (defmacro bind-transl-state (&rest forms)
   ;; this binds all transl state variables to NIL.
   ;; and binds user-settable variables to themselves.
-  ;; $TRANSCOMPILE for example can be set to TRUE while translating
+  ;; $TR_NUMER for example can be set to TRUE while translating
   ;; a file, yet will only affect that file.
   ;; Called in 3 places, for compactness maybe this should be a PROGV
   ;; which references a list of variables?
@@ -64,13 +64,7 @@
 	 *in-translate-file*
 	 *in-translate*
 	 *pre-transl-forms*
-	 (arrays nil)
-	 (exprs nil)
-	 (lexprs nil)
-	 (fexprs nil)
 	 (specials nil)
-	 (declares nil)
-	 ($transcompile $transcompile)
 	 ($tr_numer $tr_numer)
 	 defined_variables)
     ,@forms))
