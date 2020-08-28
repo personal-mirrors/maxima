@@ -131,7 +131,7 @@ Build system:
    and MS Windows
 
  * "make install" now installs emaxima and imaxima in a place emacs will 
-   find by default. configure's --emacs-prefix= option allows to choose
+   find by default. configure's --with-emacs-prefix= option allows to choose
    a different directory.
 
 
