@@ -31,7 +31,7 @@
 	((and (symbolp f) (or (macro-function f) (special-operator-p f)))
 	 (eval (cons f l)))
 	(t
-	 (mapply f l nil))))
+	 (mapply f l f))))
 
 ;;; ((MQAPPLY ARRAY) X Y) is a strange form, meaning (X)[Y].
 
@@ -181,7 +181,7 @@
   (do ((argl argl (cdr argl))
        (lablist nil)
        (tim 0))
-      ((null argl) (if labelsp `((mlist) ,@lablist) '$done))
+      ((null argl) (if labelsp `((mlist) ,@(nreverse lablist)) '$done))
     (let ((ans (car argl)))
       (cond ((and equationsp
 		  ;; ((MEQUAL) FOO BAR)
@@ -201,7 +201,9 @@
 	(unless $nolabels
 	  (setf (symbol-value *linelabel*) ans)))
       (setq tim (get-internal-run-time))
-      (displa `((mlabel) ,(cond (labelsp *linelabel*)) ,ans))
+      (let ((*display-labels-p* (not (null lablist))))
+	(declare (special *display-labels-p*))
+	(displa `((mlabel) ,(cond (labelsp *linelabel*)) ,ans)))
       (mterpri)
       (timeorg tim))))
 

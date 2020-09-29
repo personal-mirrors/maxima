@@ -51,13 +51,66 @@ m4_setcat(Numerical evaluation)
 @c @deffn {Function} bfloat (@var{expr})
 m4_deffn({Function}, bfloat, <<<(@var{expr})>>>)
 
-Converts all numbers and functions of numbers in @var{expr} to bigfloat numbers.
+@code{bfloat} replaces integers, rationals, floating point numbers, and some symbolic constants
+in @var{expr} with bigfloat (variable-precision floating point) numbers.
+
+The constants @code{%e}, @code{%gamma}, @code{%phi}, and @code{%pi}
+are replaced by a numerical approximation.
+However, @code{%e} in @code{%e^x} is not replaced by a numeric value
+unless @code{bfloat(x)} is a number.
+
+@code{bfloat} also causes numerical evaluation of some built-in functions,
+namely trigonometric functions, exponential functions, @code{abs}, and @code{log}.
+@c ALSO ENTIER BUT LET'S NOT GO INTO IT.
+
 The number of significant digits in the resulting bigfloats is specified by the
 global variable @mrefdot{fpprec}
+Bigfloats already present in @var{expr} are replaced with values which have
+precision specified by the current value of @mref{fpprec}.
 
-When @mref{float2bf} is @code{false} a warning message is printed when
-a floating point number is converted into a bigfloat number (since
-this may lead to loss of precision).
+When @mref{float2bf} is @code{false}, a warning message is printed when
+a floating point number is replaced by a bigfloat number with less precision.
+
+Examples:
+
+@code{bfloat} replaces integers, rationals, floating point numbers, and some symbolic constants
+in @var{expr} with bigfloat numbers.
+
+@c ===beg===
+@c bfloat([123, 17/29, 1.75]);
+@c bfloat([%e, %gamma, %phi, %pi]);
+@c bfloat((f(123) + g(h(17/29)))/(x + %gamma));
+@c ===end===
+@example
+(%i1) bfloat([123, 17/29, 1.75]);
+(%o1)        [1.23b2, 5.862068965517241b-1, 1.75b0]
+(%i2) bfloat([%e, %gamma, %phi, %pi]);
+(%o2) [2.718281828459045b0, 5.772156649015329b-1, 
+                        1.618033988749895b0, 3.141592653589793b0]
+(%i3) bfloat((f(123) + g(h(17/29)))/(x + %gamma));
+         1.0b0 (g(h(5.862068965517241b-1)) + f(1.23b2))
+(%o3)    ----------------------------------------------
+                    x + 5.772156649015329b-1
+@end example
+
+@code{bfloat} also causes numerical evaluation of some built-in functions.
+
+@c ===beg===
+@c bfloat(sin(17/29));
+@c bfloat(exp(%pi));
+@c bfloat(abs(-%gamma));
+@c bfloat(log(%phi));
+@c ===end===
+@example
+(%i1) bfloat(sin(17/29));
+(%o1)                 5.532051841609784b-1
+(%i2) bfloat(exp(%pi));
+(%o2)                  2.314069263277927b1
+(%i3) bfloat(abs(-%gamma));
+(%o3)                 5.772156649015329b-1
+(%i4) bfloat(log(%phi));
+(%o4)                 4.812118250596035b-1
+@end example
 
 @c @opencatbox
 @c @category{Numerical evaluation}
@@ -185,9 +238,9 @@ m4_setcat(Numerical evaluation)
 m4_defvr({Option variable}, float2bf)
 Default value: @code{true}
  
-When @code{float2bf} is @code{false}, a warning message is printed when
-a floating point number is converted into a bigfloat number (since
-this may lead to loss of precision).
+When @mref{float2bf} is @code{false}, a warning message is printed when
+a floating point number is replaced by a bigfloat number with less precision.
+@c DOES THAT APPLY ONLY TO BFLOAT, OR DO OTHER FUNCTIONS CALL IT ??
 
 @c @opencatbox
 @c @category{Numerical evaluation}
@@ -350,7 +403,7 @@ m1pbranch:false          m1pbranch:true
 m4_end_defvr()
 
 @c -----------------------------------------------------------------------------
-m4_setcat(Package linearalgebra, Predicate functions)
+m4_setcat(Predicate functions)
 @anchor{nonnegintegerp}
 @c @deffn {Function} nonnegintegerp (@var{n})
 m4_deffn({Function}, nonnegintegerp, <<<(@var{n})>>>)
@@ -358,7 +411,6 @@ m4_deffn({Function}, nonnegintegerp, <<<(@var{n})>>>)
 Return @code{true} if and only if @code{@var{n} >= 0} and @var{n} is an integer.
 
 @c @opencatbox
-@c @category{Package linearalgebra}
 @c @category{Predicate functions}
 @c @closecatbox
 @c @end deffn

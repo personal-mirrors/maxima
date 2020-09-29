@@ -721,7 +721,7 @@ value.  The global value of @code{errormsg} is always present.
 @c ===beg===
 @c errormsg;
 @c sin(a,b);
-@c errormsg:false;
+@c errormsg: false;
 @c sin(a,b);
 @c ===end===
 @example
@@ -735,7 +735,7 @@ sin: wrong number of arguments.
  -- an error. To debug this try: debugmode(true);
 @end group
 @group
-(%i3) errormsg:false;
+(%i3) errormsg: false;
 (%o3)                         false
 @end group
 @group
@@ -747,14 +747,16 @@ sin: wrong number of arguments.
 The option variable @code{errormsg} can not be set in a block to a local value.
 
 @c ===beg===
-@c f(bool):=block([errormsg:bool], print ("value of errormsg is",errormsg))$
+@c f(bool):=block([errormsg:bool],
+@c                      print ("value of errormsg is",errormsg))$
 @c errormsg:true;
 @c f(false);
 @c errormsg:false;
 @c f(true);
 @c ===end===
 @example
-(%i1) f(bool):=block([errormsg:bool], print ("value of errormsg is",errormsg))$
+(%i1) f(bool):=block([errormsg:bool],
+                     print ("value of errormsg is",errormsg))$
 @group
 (%i2) errormsg:true;
 (%o2)                         true

@@ -36,12 +36,8 @@
 (defmvar $tr_state_vars
     '((mlist)
       $translate_fast_arrays
-      $tr_warn_undeclared
-      $tr_warn_meval
-      $tr_warn_fexpr
-      $tr_warn_mode
-      $tr_warn_undefined_variable
       $tr_function_call_default
+      $tr_bound_function_applyp
       $tr_array_as_ref
       $tr_numer
       $tr_float_can_branch_complex
@@ -80,7 +76,7 @@
 			      (when $compgrind
 				(mformat transl-file (intl:gettext "~2%;; Function ~:@M~%") item))
 			      (print* t-item))))))
-          (pathname out-file-name))
+          out-file-name)
 	 ;; unwind-protected
 	 (if transl-file (close transl-file))
 	 (if t-error (delete-file transl-file))))))
@@ -112,6 +108,8 @@
       (setq bin-file output-truename)))
   #-(or cmu scl sbcl clisp allegro openmcl lispworks ecl)
   (setq bin-file (compile-file input-file :output-file bin-file))
+  (when bin-file
+    (setq bin-file (namestring bin-file)))
   (append result (list bin-file)))
 
 (defun maxima-string (symb)
@@ -211,7 +209,7 @@ translated."
     (when (or hint *untranslated-functions-called*)
       (format t (intl:gettext "~&translator: see the 'unlisp' file for possible optimizations.~%")))))
 
-(defun translate-file (in-file-name out-file-name &optional (ttymsgsp $tr_file_tty_messagesp)
+(defun translate-file (in-file-name out-file-name
 		       &aux warn-file translated-file *translation-msgs-files*
 		       *untranslated-functions-called* *declared-translated-functions*)
   (bind-transl-state
@@ -222,7 +220,7 @@ translated."
      (with-open-file (out-stream translated-file :direction :output :if-exists :supersede)
        (with-open-file (warn-stream warn-file :direction :output :if-exists :supersede)
 	 (setq *translation-msgs-files* (list warn-stream))
-	 (if ttymsgsp
+	 (if $tr_file_tty_messagesp
 	     (setq *translation-msgs-files* (cons *standard-output* *translation-msgs-files*)))
 	 (format out-stream ";;; -*- Mode: Lisp; package:maxima; syntax:common-lisp ;Base: 10 -*- ;;;~%")
 	 (flet ((timezone-iso8601-name (dst tz)

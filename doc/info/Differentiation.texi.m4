@@ -418,6 +418,8 @@ m4_deffn({Function}, del, <<<(@var{x})>>>)
 if an independent variable is not specified.
 In this case, the return value is the so-called "total differential".
 
+See also @mrefcomma{diff} @mref{del} and @mrefdot{derivdegree}
+
 Examples:
 
 @c ===beg===
@@ -584,6 +586,9 @@ For example, @mref{integrate} does not recognize the dependence of @code{f} on
 
 @code{depends(@var{f}, [@var{x_1}, @dots{}, @var{x_n}])} is equivalent to @code{dependencies(@var{f}(@var{x_1}, @dots{}, @var{x_n}))}.
 
+See also @mrefcomma{diff} @mrefcomma{del} @mref{derivdegree} and
+@mrefdot{derivabbrev}
+
 @c ===beg===
 @c depends ([f, g], x);
 @c depends ([r, s], [u, v, w]);
@@ -640,6 +645,7 @@ m4_setcat(Differential calculus, Global flags)
 @anchor{derivabrev}
 @c @defvr {Option variable} derivabbrev
 m4_defvr({Option variable}, derivabbrev)
+=======
 Default value: @code{false}
 
 When @code{derivabbrev} is @code{true},
@@ -757,6 +763,9 @@ form instead of carrying out the differentiation.
 
 When @code{derivabbrev} is @code{true}, derivatives are displayed as subscripts.
 Otherwise, derivatives are displayed in the Leibniz notation, @code{dy/dx}.
+
+See also @mrefcomma{depends} @mrefcomma{del} @mref{derivdegree} and
+@mrefdot{derivabbrev}
 
 Examples:
 
@@ -1034,7 +1043,12 @@ m4_setcat(Laplace transform, Differential equations)
 m4_deffn({Function}, laplace, <<<(@var{expr}, @var{t}, @var{s})>>>)
 
 Attempts to compute the Laplace transform of @var{expr} with respect to the 
-variable @var{t} and transform parameter @var{s}.
+variable @var{t} and transform parameter @var{s}.  The Laplace
+transform of the function @code{f(t)} is the one-sided transform defined by
+m4_mathjax(
+<<<$$F(s) = \int_0^\infty f(t) e^{-st} dt$$>>>,
+<<<@math{F(s) = integrate(f(t) * exp(-s*t), t, 0, inf)}>>>)
+where @code{F(s)} is the transform of @code{f(t)}.
 
 @code{laplace} recognizes in @var{expr} the functions @mrefcomma{delta} @mrefcomma{exp}
 @mrefcomma{log} @mrefcomma{sin} @mrefcomma{cos} @mrefcomma{sinh} @mrefcomma{cosh} and @mrefcomma{erf}

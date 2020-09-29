@@ -28,7 +28,7 @@
 
 (def%tr $apply (form)
   (let* ((fun (dtranslate (cadr form)))
-	 (mode (cond ((atom fun)
+	 (mode (cond ((symbolp fun)
 		      (function-mode-@ fun))
 		     ((quoted-symbolp fun)
 		      (function-mode (cadr fun)))
@@ -96,10 +96,10 @@
 ;;; SUBSTPART("*",EXP,0) is.
 
 (def%tr $substpart (form)
-  (substpart-translation form t nil '$inflag))
+  (substpart-translation form t nil '$inflag '$substpart))
 
 (def%tr $substinpart (form)
-  (substpart-translation form t nil t))
+  (substpart-translation form t nil t '$substinpart))
 
 (defun for-eval-then-mquote-simp-argl (l)
   ;;       (MAPCAR #'(LAMBDA (U) ;;; consing not important here.
@@ -112,7 +112,7 @@
    (push `(list '(mquote simp) ,(pop l)) v)
    (go loop)))
 
-(defun  substpart-translation (form flag1 flag2 flag3)
+(defun substpart-translation (form flag1 flag2 flag3 fn)
   (let* ((subst-item (dtranslate (cadr form)))
 	 (freevars (free-lisp-vars subst-item))
 	 (argl (tr-args (cddr form))))
@@ -127,7 +127,7 @@
 		      (list  ,@(for-eval-then-mquote-simp-argl
 				(cons subst-item argl)))
 
-		      ,flag1 ,flag2 ,flag3))))
+		      ,flag1 ,flag2 ,flag3 ',fn))))
 	  (t
 	   (setq freevars (tbound-free-vars freevars))
 	   (side-effect-free-check (cadr freevars) (cadr form))
@@ -136,23 +136,24 @@
 				   ,(delete '$piece (car freevars) :test #'equal)
 				   ($piece) ,subst-item)
 				  ,@(for-eval-then-mquote-simp-argl argl))
-		      ,flag1 ,flag2 ,flag3)))))))
+		      ,flag1 ,flag2 ,flag3 ',fn)))))))
 
 ;;; This is could be done better on the LISPM
 
 (def%tr $errcatch (form)
-  (setq form (translate `((mprogn) ,@(cdr form))))
-  `(,(car form) . ((lambda (errcatch ret)
-		     (declare (special errcatch))
-		     ;; Very important to declare errcatch special
-		     ;; here because merror uses it to figure out if
-		     ;; someone is catching an error so it can be
-		     ;; signaled in a way that we can catch.
-		     (cond ((null (setq ret
-					(errset ,(cdr form))))
-			    (errlfun1 errcatch)))
-		     (cons '(mlist) ret))
-		   (cons bindlist loclist) nil)))
+  (let ((form (translate `((mprogn) ,@(cdr form))))
+        (ret (tr-gensym)))
+    `($any . ((lambda (errcatch ,ret)
+                (declare (special errcatch))
+                ;; Very important to declare errcatch special
+                ;; here because merror uses it to figure out if
+                ;; someone is catching an error so it can be
+                ;; signaled in a way that we can catch.
+                (cond ((null (setq ,ret
+                                   (errset ,(cdr form))))
+                       (errlfun1 errcatch)))
+                (cons '(mlist) ,ret))
+              (cons bindlist loclist) nil))))
 
 
 ;;; The MODE of a CATCH could either be the MODE of the last of the PROGN

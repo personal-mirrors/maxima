@@ -1344,7 +1344,8 @@ The mode @code{any_check} is like @code{any}, but @code{any_check} enables the
 @group
 (%i5) baz_quux: sqrt(2);
 Cannot assign to `baz_quux'.
-#0: lambda([y],if y # 'baz_quux then error("Cannot assign to `baz_quux'."))(y=sqrt(2))
+#0: lambda([y],if y # 'baz_quux then
+            error("Cannot assign to `baz_quux'."))(y=sqrt(2))
  -- an error. To debug this try: debugmode(true);
 @end group
 @group
@@ -2893,14 +2894,45 @@ m4_setcat(Translation flags and variables)
 m4_defvr({Option variable}, tr_bound_function_applyp)
 Default value: @code{true}
 
-When @code{tr_bound_function_applyp} is @code{true}, Maxima gives a warning if a
-bound variable (such as a function argument) is found being used as a function.
-@c WHAT DOES THIS MEAN ??
-@code{tr_bound_function_applyp} does not affect the code generated in such
-cases.
+When @code{tr_bound_function_applyp} is @code{true} and @code{tr_function_call_default}
+is @code{general}, if a bound variable (such as a function argument) is found being
+used as a function then Maxima will rewrite that function call using @code{apply} and
+print a warning message.
 
-For example, an expression such as @code{g (f, x) := f (x+1)} will trigger
-the warning message.
+For example, if @code{g} is defined by @code{g(f,x) := f(x+1)} then translating
+@code{g} will cause Maxima to print a warning and rewrite @code{f(x+1)} as
+@code{apply(f,[x+1])}.
+
+@c ===beg===
+@c f (x) := x^2$
+@c g (f) := f (3)$
+@c tr_bound_function_applyp : true$
+@c translate (g)$
+@c g (lambda ([x], x));
+@c tr_bound_function_applyp : false$
+@c translate (g)$
+@c g (lambda ([x], x));
+@c ===end===
+@example
+(%i1) f (x) := x^2$
+(%i2) g (f) := f (3)$
+(%i3) tr_bound_function_applyp : true$
+@group
+(%i4) translate (g)$
+warning: f is a bound variable in f(3), but it is used as a function.
+note: instead I'll translate it as: apply(f,[3])
+@end group
+@group
+(%i5) g (lambda ([x], x));
+(%o5)                           3
+@end group
+(%i6) tr_bound_function_applyp : false$
+(%i7) translate (g)$
+@group
+(%i8) g (lambda ([x], x));
+(%o8)                           9
+@end group
+@end example
 
 @c @opencatbox
 @c @category{Translation flags and variables}
@@ -2932,8 +2964,9 @@ m4_defvr({Option variable}, tr_float_can_branch_complex)
 Default value: @code{true}
 
 Tells the Maxima-to-Lisp translator to assume that the functions 
-@code{acos}, @code{asin}, @code{asec}, @code{acsc}, @code{log}
-and @code{sqrt} can return complex results.
+@code{acos}, @code{asin}, @code{asec}, @code{acsc}, @code{acosh},
+@code{asech}, @code{atanh}, @code{acoth}, @code{log} and @code{sqrt}
+can return complex results.
 
 When it is @code{true} then @code{acos(x)} is of mode @code{any}
 even if @code{x} is of mode @code{float} (as set by @code{mode_declare}).
@@ -3008,15 +3041,14 @@ m4_end_defvr()
 m4_defvr({System variable}, tr_state_vars)
 Default value:
 @example
-[translate_fast_arrays, tr_warn_undeclared, tr_warn_meval,
-tr_warn_fexpr, tr_warn_mode, tr_warn_undefined_variable,
-tr_function_call_default, tr_array_as_ref, tr_numer,
-tr_float_can_branch_complex, define_variable]
+[translate_fast_arrays, tr_function_call_default, tr_bound_function_applyp,
+tr_array_as_ref, tr_numer, tr_float_can_branch_complex, define_variable]
 @end example
 
 The list of the switches that affect the form of the
 translated output.
 @c DOES THE GENERAL USER REALLY CARE ABOUT DEBUGGING THE TRANSLATOR ???
+@c I doubt it.
 This information is useful to system people when
 trying to debug the translator.  By comparing the translated product
 to what should have been produced for a given state, it is possible to

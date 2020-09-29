@@ -136,6 +136,9 @@
                         (setq z (maxima-substitute (cdar l) (caar l) z))))))))))
 
 (defun maxima-substitute (x y z) ; The args to SUBSTITUTE are assumed to be simplified.
+;; Prevent replacing dependent variable with constant in derivative
+(cond ((and (not (atom z)) (eq (caar z) '%derivative) (eq (cadr z) y) (typep x 'number)) z)
+(t
   (let ((in-p t) (substp t))
     (if (and (mnump y) (= (signum1 y) 1))
 	(let ($sqrtdispflag ($pfeformat t)) (setq z (nformat-all z))))
@@ -157,6 +160,7 @@
 	       (timesp (if (eq (caar y) 'mtimes) (setq y (nformat y)))))
 	   (subst2 x y z negxpty timesp)))
      nil)))
+))
 
 ;;Remainder of page is update from F302 --gsb
 
@@ -855,16 +859,16 @@
   (let ((substp t))
     (mpart (cdr l) t nil t '$substinpart)))
 
-(defun part1 (arglist substflag dispflag inflag) ; called only by TRANSLATE
+(defun part1 (arglist substflag dispflag inflag fn) ; called only by TRANSLATE
   (let ((substp t))
-    (mpart arglist substflag dispflag inflag '$substpart)))
+    (mpart arglist substflag dispflag inflag fn)))
 
 (defun mpart (arglist substflag dispflag inflag fn)
   (prog (substitem arg arg1 exp exp1 exp* sevlist count prevcount n specp
 	 lastelem lastcount)
      (setq specp (or substflag dispflag))
      (if substflag (setq substitem (car arglist) arglist (cdr arglist)))
-     (if (null arglist) (wna-err '$part))
+     (if (null arglist) (wna-err fn))
      (setq exp (if substflag (meval (car arglist)) (car arglist)))
      (when (null (setq arglist (cdr arglist)))
        (setq $piece exp)

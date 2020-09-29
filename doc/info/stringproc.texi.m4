@@ -429,6 +429,10 @@ The Lisp function @code{format} is described in detail in many reference books.
 Of good help is e.g. the free available online-manual 
 "Common Lisp the Language" by Guy L. Steele. See chapter 22.3.3 there. 
 
+In addition, @code{printf} recognizes two format directives which are not known to Lisp @code{format}.
+The format directive @code{~m} indicates Maxima pretty printer output.
+The format directive @code{~h} indicates a bigfloat number.
+
 @example
    ~%       new line
    ~&       fresh line
@@ -446,6 +450,7 @@ Of good help is e.g. the free available online-manual
    ~g       ~f or ~e, depending upon magnitude
    ~h       bigfloat
    ~a       uses Maxima function string
+   ~m       Maxima pretty printer output
    ~s       like ~a, but output enclosed in "double quotes"
    ~~       ~
    ~<       justification, ~> terminates
@@ -453,8 +458,6 @@ Of good help is e.g. the free available online-manual
    ~[       selection, ~] terminates 
    ~@{       iteration, ~@} terminates
 @end example
-
-The directive ~h for bigfloat is no Lisp-standard and is therefore illustrated below. 
 
 Note that the directive ~* is not supported.
 
@@ -541,7 +544,8 @@ Example: Read the first 16 bytes from a file encrypted with AES in OpenSSL.
 (%i2) in: openr_binary("msg.bin");
 (%o2)                       #<input stream msg.bin>
 (%i3) (L:[],  thru 16. do push(readbyte(in), L),  L:reverse(L));
-(%o3) [53, 61, 6C, 74, 65, 64, 5F, 5F, 88, 56, 0DE, 8A, 74, 0FD, 0AD, 0F0]
+(%o3) [53, 61, 6C, 74, 65, 64, 5F, 5F, 88, 56, 0DE, 8A, 74, 0FD,
+       0AD, 0F0]
 (%i4) close(in);
 (%o4)                                true
 (%i5) map(ascii, rest(L,-8));

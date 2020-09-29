@@ -810,26 +810,25 @@
 (defmfun $num_partitions (n &optional lst)
   (cond ((equal n 0) 1)
 	((and (integerp n) (> n -1))
-	 (let ((p (make-array (+ n 1)))
-	       (s (make-array (+ n 1)))
-	       (sum) (i) (j))
-	   (setf (aref p 0) 1)
-	   (setf (aref p 1) 1)
-	   
-	   (setq i 0)
-	   (while (<= i n)
-	     (setf (aref s i) (mfuncall '$divsum i 1))
-	     (incf i))
-	   
-	  (setq i 2)
-	  (while (<= i n)
-	    (setq sum 0)
-	    (setq j 1)
-	    (while (<= j i)
-	       (setq sum (+ sum (* (aref s j) (aref p (- i j)))))
-	       (incf j))
-	    (setf (aref p i) (/ sum i))
-	    (incf i))
+	 (let ((p (make-array (+ n 1) :initial-element 0)))
+           (setf (aref p 0) 1)
+           (loop for i from 1 to n
+              do (loop with j = 0
+                    for k from 1
+                    if (oddp k) do
+                      (setf j (floor (* k (1- (* 3 k))) 2))
+                      (when (> j i) (return))
+                      (incf (aref p i) (aref p (- i j)))
+                      (setf j (floor (* k (1+ (* 3 k))) 2))
+                      (when (> j i) (return))
+                      (incf (aref p i) (aref p (- i j)))
+                    else do
+                      (setf j (floor (* k (1- (* 3 k))) 2))
+                      (when (> j i) (return))
+                      (decf (aref p i) (aref p (- i j)))
+                      (setf j (floor (* k (1+ (* 3 k))) 2))
+                      (when (> j i) (return))
+                      (decf (aref p i) (aref p (- i j)))))
 	  (cond ((eq lst '$list)
 		 (let ((acc))
 		   (incf n)
@@ -894,8 +893,8 @@
 ;; is an identity.
 
 (defprop %kron_delta simp-kron-delta operators)
-(setf (get '$kron_delta 'noun) '%kron_delta)
-(setf (get '%kron_delta 'verb) '$kron_delta)
+(setf (get '$kron_delta 'verb) '%kron_delta)
+(setf (get '%kron_delta 'noun) '$kron_delta)
 (setf (get '$kron_delta 'alias) '%kron_delta)
 (setf (get '%kron_delta 'reversealias) '$kron_delta)
 (defmfun $kron_delta (&rest x) (simplifya `((%kron_delta) ,@x) t))

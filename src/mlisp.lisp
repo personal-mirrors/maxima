@@ -1146,9 +1146,8 @@ wrapper for this."
 
 (defun msetchk (x y)
   (cond ((member x '(*read-base* *print-base*) :test #'eq)
-	 (cond ((eq y 'roman))
-	       ((or (not (fixnump y)) (< y 2) (> y 36)) (mseterr x y))
-	       ((eq x '*read-base*))))
+	 (unless (typep y '(integer 2 36))
+	   (mseterr x y)))
 	((member x '($linel $fortindent $gensumnum $fpprintprec $floatwidth
 		   $parsewindow) :test #'eq)
 	 (if (not (fixnump y)) (mseterr x y))
@@ -1263,8 +1262,11 @@ wrapper for this."
        (nreverse ans))))
 
 (defun mapatom (x)
-  (or (symbolp x) (mnump x) ($subvarp x) (stringp x)
-      (and (consp x) (eq (caar x) 'mminus) (mnump (cadr x)))))
+  (or ($atom x)
+      (mnump x)
+      (and (eq (caar x) 'mminus) (mnump (cadr x)))
+      ($subvarp x)
+      (op-equalp x '$@ '%@)))
 
 (defmfun $mapatom (x)
   (if (mapatom (specrepcheck x)) t))

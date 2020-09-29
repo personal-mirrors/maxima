@@ -1252,8 +1252,10 @@ There may be any number of index properties, in any order.
 
 @c ===beg===
 @c declare_index_properties (A, [presubscript, postsubscript]);
-@c declare_index_properties (B, [postsuperscript, postsuperscript, presuperscript]);
-@c declare_index_properties (C, [postsuperscript, presubscript, presubscript, presuperscript]);
+@c declare_index_properties (B, [postsuperscript, postsuperscript,
+@c  presuperscript]);
+@c declare_index_properties (C, [postsuperscript, presubscript,
+@c  presubscript, presuperscript]);
 @c A[w, x];
 @c B[w, x, y];
 @c C[w, x, y, z];
@@ -1264,11 +1266,13 @@ There may be any number of index properties, in any order.
 (%o1)                         done
 @end group
 @group
-(%i2) declare_index_properties (B, [postsuperscript, postsuperscript, presuperscript]);
+(%i2) declare_index_properties (B, [postsuperscript, postsuperscript,
+ presuperscript]);
 (%o2)                         done
 @end group
 @group
-(%i3) declare_index_properties (C, [postsuperscript, presubscript, presubscript, presuperscript]);
+(%i3) declare_index_properties (C, [postsuperscript, presubscript,
+ presubscript, presuperscript]);
 (%o3)                         done
 @end group
 @group
@@ -1401,13 +1405,15 @@ is the string or other expression which is displayed between indices.
 The value is assigned by @code{put(@var{A}, @var{S}, display_index_separator)},
 
 @c ===beg===
-@c declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+@c declare_index_properties (A, [postsuperscript, postsuperscript,
+@c  presubscript, presubscript]);
 @c put (A, ";", display_index_separator);
 @c A[w, x, y, z];
 @c ===end===
 @example
 @group
-(%i1) declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+(%i1) declare_index_properties (A, [postsuperscript, postsuperscript,
+ presubscript, presubscript]);
 (%o1)                         done
 @end group
 @group
@@ -1425,13 +1431,15 @@ The value is assigned by @code{put(@var{A}, @var{S}, display_index_separator)},
 The assigned value is retrieved by @code{get(@var{A}, display_index_separator)}.
 
 @c ===beg===
-@c declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+@c declare_index_properties (A, [postsuperscript, postsuperscript,
+@c  presubscript, presubscript]);
 @c put (A, ";", display_index_separator);
 @c get (A, display_index_separator);
 @c ===end===
 @example
 @group
-(%i1) declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+(%i1) declare_index_properties (A, [postsuperscript, postsuperscript,
+ presubscript, presubscript]);
 (%o1)                         done
 @end group
 @group
@@ -1448,7 +1456,8 @@ The display index separator @var{S} can be a string, including an empty string,
 or @code{false}, indicating the default separator, or any expression.
 
 @c ===beg===
-@c declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+@c declare_index_properties (A, [postsuperscript, postsuperscript,
+@c  presubscript, presubscript]);
 @c A[w, x, y, z];
 @c put (A, "-", display_index_separator);
 @c A[w, x, y, z];
@@ -1463,7 +1472,8 @@ or @code{false}, indicating the default separator, or any expression.
 @c ===end===
 @example
 @group
-(%i1) declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+(%i1) declare_index_properties (A, [postsuperscript, postsuperscript,
+ presubscript, presubscript]);
 (%o1)                         done
 @end group
 @group
@@ -1528,12 +1538,14 @@ If no display index separator is assigned, the default separator is used.
 The default separator is a comma.
 
 @c ===beg===
-@c declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+@c declare_index_properties (A, [postsuperscript, postsuperscript,
+@c  presubscript, presubscript]);
 @c A[w, x, y, z];
 @c ===end===
 @example
 @group
-(%i1) declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+(%i1) declare_index_properties (A, [postsuperscript, postsuperscript,
+ presubscript, presubscript]);
 (%o1)                         done
 @end group
 @group
@@ -1547,15 +1559,18 @@ The default separator is a comma.
 Each symbol has its own value of @code{display_index_separator}.
 
 @c ===beg===
-@c declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+@c declare_index_properties (A, [postsuperscript, postsuperscript,
+@c  presubscript, presubscript]);
 @c put (A, " ", display_index_separator);
-@c declare_index_properties (B, [presuperscript, presuperscript, postsubscript, postsubscript]);
+@c declare_index_properties (B, [presuperscript, presuperscript,
+@c  postsubscript, postsubscript]);
 @c put (B, ";", display_index_separator);
 @c A[w, x, y, z] + B[w, x, y, z];
 @c ===end===
 @example
 @group
-(%i1) declare_index_properties (A, [postsuperscript, postsuperscript, presubscript, presubscript]);
+(%i1) declare_index_properties (A, [postsuperscript, postsuperscript,
+ presubscript, presubscript]);
 (%o1)                         done
 @end group
 @group

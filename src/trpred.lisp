@@ -30,6 +30,7 @@
 
 (def-same%tr mequal    mnotequal)
 (def-same%tr $equal    mnotequal)
+(def-same%tr $notequal mnotequal)
 (def-same%tr mgreaterp mnotequal)
 (def-same%tr mgeqp     mnotequal)
 (def-same%tr mlessp    mnotequal)
@@ -59,6 +60,7 @@
 	((eq 'mnotequal (caar form)) (trp-mnotequal form))
 	((eq 'mequal (caar form)) (trp-mequal form))
 	((eq '$equal (caar form)) (trp-$equal form))
+	((eq '$notequal (caar form)) (trp-$notequal form))
 	((eq 'mgreaterp (caar form)) (trp-mgreaterp form))
 	((eq 'mgeqp (caar form)) (trp-mgeqp form))
 	((eq 'mlessp (caar form)) (trp-mlessp form))
@@ -132,15 +134,11 @@
 		       form)))))
 
 (defun trp-mequal (form) 
-  (let (mode arg1 arg2)
-    (setq arg1 (translate (cadr form)) arg2 (translate (caddr form))
-	  mode (*union-mode (car arg1) (car arg2)))
-    (cond
-      ((or (eq '$fixnum mode)
-	   (eq '$float mode))
-       `(eql ,(dconv arg1 mode) ,(dconv arg2 mode)))
-      ((eq '$number mode) `(equal ,(cdr arg1) ,(cdr arg2)))
-      (t `(like ,(dconv arg1 mode) ,(dconv arg2 mode))))))
+  (destructuring-let (((mode1 . arg1) (translate (cadr form)))
+                      ((mode2 . arg2) (translate (caddr form))))
+    (if (and (covers '$number mode1) (covers '$number mode2))
+        `(eql ,arg1 ,arg2)
+        `(like ,arg1 ,arg2))))
 
 (defun trp-$equal (form) 
   (let (mode arg1 arg2) 
@@ -158,7 +156,10 @@
     ((t) nil)
     ((nil) t)
     (otherwise val)))
-      
+
+(defun trp-$notequal (form)
+  (list 'trp-not (trp-$equal form)))
+
 (defun trp-mnotequal (form)
   (list 'trp-not (trp-mequal form)))
 
@@ -175,7 +176,9 @@
     (do ((nl))
 	((null x)
 	 `($any . (simplify (list '(mlist) ,@(nreverse nl)))))
-      (cond ((eq 'mand (caaar x))
+      (cond ((atom (car x))
+	     (setq nl (cons `(assume ,(dtranslate (car x))) nl)))
+	    ((eq 'mand (caaar x))
 	     (mapc #'(lambda (l) (setq nl (cons `(assume ,(dtranslate l)) nl)))
 		   (cdar x)))
 	    ((eq 'mnot (caaar x))
