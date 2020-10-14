@@ -71,15 +71,23 @@
 
 (defun info-exact (x)
   (let ((exact-matches (exact-topic-match x)))
-    (if (not (some-exact x exact-matches))
-      (progn
-        (format t (intl:gettext "  No exact match found for topic `~a'.~%  Try `?? ~a' (inexact match) instead.~%~%") x x)
-        nil)
-      (progn
-        (display-items exact-matches)
-        (if (some-inexact x (inexact-topic-match x))
-          (format t (intl:gettext "  There are also some inexact matches for `~a'.~%  Try `?? ~a' to see them.~%~%") x x))
-        t))))
+    (cond ((not (some-exact x exact-matches))
+	   (let* ((sym (let ((*read-eval* nil))
+			 (read-from-string (concatenate 'string "$" x))))
+		  (docstring (or (cl:documentation sym 'cl:variable)
+				 (cl:documentation sym 'cl:function))))
+	     (cond (docstring
+		    (format t (intl:gettext "  No exact match found for topic `~a' but docstring found:~%~S")
+			    x docstring)
+		    nil)
+		   (t
+		    (format t (intl:gettext "  No exact match found for topic `~a'.~%  Try `?? ~a' (inexact match) instead.~%~%") x x)
+		    nil))))
+	  (t
+	   (display-items exact-matches)
+	   (when (some-inexact x (inexact-topic-match x))
+	     (format t (intl:gettext "  There are also some inexact matches for `~a'.~%  Try `?? ~a' to see them.~%~%") x x))
+	   t))))
 
 (defun some-exact (x matches)
   (some #'identity (flatten-matches x matches)))
