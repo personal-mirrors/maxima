@@ -314,7 +314,49 @@
 (defmfun $hompack_fixpdf (fcns varlist
 			       &key
 			       (iflag -1) (arctol -1d0) (eps 1d-5) (trace 0) inita)
-  "hompack_fixpdf"
+  "hompack_fixpdf(fcns, varlist, [[iflag=-1], [arctol=-1], [eps=1d-5], [trace=0], inita])
+
+  Finds a fixed point or zero of the n-dimensional vector function.
+
+  Required arguments:
+    FCNS    list of n functions
+    VARLIST list of the names of the n variables
+
+  Optional keyword args
+   IFLAG   indicates the problem to be solved
+              0  for the fixed-point problem x = f(x)
+             -1  for f(x) = 0
+   ARCTOL  local error allowed in the ODE solver.  If ARCTOL <= 0, then
+           it is reset to 0.5*sqrt(eps).  Normally ARCTOL should be
+           considerably larger than eps.
+   EPS     local error allowed the ODE solver when very near the fixed
+           point or zero.  It is approximately the mixed absolute and
+           relative error in the computed fixed point (or zero).
+
+   TRACE   integer specifying the logical I/O unit for intermediate
+           output.  If TRACE > 0, the points computed on the zero
+           curve are written to I/O unit TRACE.
+   INITA
+
+  Output:
+   IFLAG   Return code
+             1 Normal return
+             2 Error tolerance cannot be met. EPS has been increased
+               to a suitable value
+             3 Internal function has been called 1000 times.
+             4 Jacobian matrix does not have full rank
+             5 EPS or ARCTOL is too large; use a smaller value.
+             6 I - DF(x) is nearly singular
+             7 Illegal input parameters
+   Y       
+   ARCTOL    = EPS after normal return
+   EPS       Updated value of EPS, if IFLAG = 2
+
+   NFE       Number of function evaluations (and also the number of Jacobian
+             evaluations)
+
+   ARCLEN    Length of the path followed
+"
 
   (let* ((n (length (cdr varlist)))
 	 (y (make-array (1+ n) :element-type 'double-float))
