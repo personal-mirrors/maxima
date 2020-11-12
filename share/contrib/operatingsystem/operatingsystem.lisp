@@ -71,7 +71,7 @@
   #+cormanlisp (ccl:get-current-directory)
   #+lispworks (hcl:get-working-directory)
   #+lucid (lcl:working-directory)
-  #+sbcl (sb-ext:parse-native-pathname (sb-unix:posix-getcwd/))
+  #+sbcl (sb-ext:parse-native-namestring (sb-unix:posix-getcwd/))
   #-(or allegro clisp cmu cormanlisp lispworks lucid sbcl) (truename ".")))
   
 ; The copy function below was written by StackOverflow user user224021 and is licensed
