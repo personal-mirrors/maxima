@@ -1,0 +1,258 @@
+;;;; -*-  Mode: Lisp; Package: Maxima; Syntax: Common-Lisp; Base: 10 -*- ;;;;
+
+(in-package :maxima)
+
+;;; Aberth method for solving roots of a polynomial
+;;; https://en.wikipedia.org/wiki/Aberth_method
+
+(defun aberth-roots-err (expr)
+  (merror (intl:gettext "aberth_roots: expected a polynomial; found ~M") expr))
+
+(defun cauchy-upper-bound (p)
+  "Find an upper bound of the roots of the polynomial where P is a
+  vector of the coefficients of the polynomial arranged in descending
+  powers"
+  ;; See https://en.wikipedia.org/wiki/Geometrical_properties_of_polynomial_roots#Lagrange's_and_Cauchy's_bounds.
+  ;;
+  ;; Let the polynomial be a[0] + a[1]*x + ... + a[n]*x^n.  Then the Cauchy upper bound is
+  ;;
+  ;;  1 + max(abs(a[n-1]/a[n]), abs(a[n-2]/a[n]), ..., abs(a[0]/a[n]))
+  ;;
+  (let ((degree (1- (length p)))
+	(an (aref p 0))
+	(bound 0))
+    (loop for k from 1 to degree
+	  do
+	     (setf bound (bigfloat:max bound (bigfloat:abs (bigfloat:/ (aref p k) an)))))
+    (bigfloat:+ 1 bound)))
+
+(defun cauchy-lower-bound (p)
+  "Find a lower bound of the roots of the polynomial where P is a
+  vector of the coefficients of the polynomial arranged in descending
+  powers"
+  ;; Find the lower bound by reversing the order of the coefficients
+  ;; and finding the upper bound of the new polynomial.  Then the
+  ;; lower bound is the reciprocal of this bound.
+  (bigfloat:/ (cauchy-upper-bound (reverse p))))
+
+(defun synthetic-div (p z)
+  "Compute the value of the polynomial at the point Z.  The polynomial
+  is represented as an array of coefficients in descending powers."
+  ;; Synthetic division: https://en.wikipedia.org/wiki/Synthetic_division
+  (let ((degree (1- (length p)))
+	(val (aref p 0)))
+    (loop for k from 1 to degree
+	  do
+	     (setf val (bigfloat:+ (bigfloat:* val z)
+				   (aref p k))))
+    val))
+
+(defun compute-offsets (p p1 roots degree)
+  "Compute the offsets according to the Aberth algorithm where P is
+  the vector of the coefficients of the polynomial, P1 is the vector
+  of coefficients of the derivative, ROOTS is the vector of the
+  estimated roots, and DEGREE is the degree of the polynomial.  All of
+  the coefficients are arranged in descending powers.  
+
+  We also return in the second value the value of the polynomial
+  evaluated at each root."
+  ;; As given in https://en.wikipedia.org/wiki/Aberth_method, the
+  ;; offset w is computed by
+  ;;
+  ;;   w[k] = pr(k) / (1 - pr(k) * sum(k))
+  ;;
+  ;; where, if p(x) is the polynomial and p1(x) is the derivative, then
+  ;;
+  ;;   pr(k) = p(z[k])/p1(z[k])
+  ;;
+  ;; and, if z[k] is the k'th root, then
+  ;;
+  ;;   sum(k) = sum 1/(z[k]-z[j]) for j /= k.
+  (let ((w (make-array degree))
+	(pz (make-array degree)))
+    (loop for k from 0 below degree
+	  do
+	     (setf (aref pz k) (synthetic-div p (aref roots k)))
+	     (let ((pz/p1z (bigfloat:/ (aref pz k)
+				       (synthetic-div p1 (aref roots k))))
+		   (s 0))
+	       ;; Compute sum 1/(zk-zj)
+	       (loop for j from 0 below degree
+		     unless (= k j)
+		       do
+			  (setf s (bigfloat:+ s (bigfloat:/ (bigfloat:- (aref roots k)
+									  (aref roots j))))))
+	       (setf (aref w k)
+		     (bigfloat:/ pz/p1z
+				 (bigfloat:- 1 (bigfloat:* pz/p1z s))))))
+    (values w pz)))
+
+(defvar *aberth-initialize-randomly*
+  nil
+  "If non-NIL, the initial root estimates are determined randomly.
+  Otherwise a deterministic scheme is used.")
+
+(defun initialize-roots (degree bnd-lo bnd-hi)
+  "Compute initial guess for roots"
+  (let ((roots (make-array degree)))
+    (cond (*aberth-initialize-randomly*
+	   ;; Randomly select n distinct complex numbers whose
+	   ;; absolute values are within the bounds.
+	   (let ((range (bigfloat:- bnd-hi bnd-lo)))
+	     (loop for k from 0 below degree
+		   do
+		      ;; root = (lo + random(hi-lo))*exp(%i*random(2*%pi))
+		      (setf (aref roots k)
+			    (bigfloat:*
+			     (bigfloat:+ bnd-lo (bigfloat:random range))
+			     (bigfloat:cis (random (* 2 pi))))))))
+	  (t
+	   ;; Make a spiral starting from the lower bound and going to the upper bound.
+	   (let ((mag-step (bigfloat:/ (bigfloat:- bnd-hi bnd-lo) degree))
+		 (arg-step (/ (* 2 pi) degree))
+		 (mag-val bnd-lo)
+		 ;; First point is at 94 degrees.  This is arbitrary,
+		 ;; but what allroots does.
+		 (arg-val (* 94 (/ (* 2 pi) 180))))
+	     (loop for k from 0 below degree
+		   do
+		      (setf (aref roots k)
+			    (bigfloat:* mag-val
+					(bigfloat:cis arg-val)))
+		      (bigfloat:incf mag-val mag-step)
+		      (bigfloat:incf arg-val arg-step)))))
+    roots))
+
+(defun aberth-converges-p (roots offsets pz)
+  (declare (ignorable pz))
+  ;; Converges if |w| <= eps * |root| for all roots.
+  ;;
+  ;; Consider maybe changing the criteria so that convergence happens
+  ;; if the value of the polynomial is as close to zero as we can get
+  ;; considering round-off.  allroots does this.
+  (loop for k from 0 below (length roots)
+	always (bigfloat:<= (bigfloat:abs (aref offsets k))
+			    (bigfloat:* (bigfloat:epsilon (aref roots k))
+					(bigfloat:abs (aref roots k))))))
+
+  
+(defmfun $aberth_roots (expr)
+  "Compute the roots of a polynomial in EXPR using Aberth's algorithm.
+  The variable of the polynomial is automatically determined."
+  ;; The setup part here is basically stolen from allroots to figure
+  ;; out the variable of the polynomial and the corresponding
+  ;; coefficients.
+  (let (degree *nn* var res $partswitch
+	       ($keepfloat t)
+	       $demoivre
+	       ($listconstvars t)
+	       ($algebraic t) complex $ratfac den expr1)
+     (setq expr1 (setq expr (meqhk expr)))
+     (setq var (delete '$%i (cdr ($listofvars expr)) :test #'eq))
+     (or var (setq var (list (gensym))))
+     (cond ((not (= (length var) 1))
+	    (merror (intl:gettext "expected a polynomial in one variable; found variables ~M")
+		    `((mlist) ,@var)))
+	   ((setq var (car var))))
+     (setq expr ($rat expr '$%i var)
+	   res (reverse (car (cdddar expr))))
+     (do ((i (- (length res)
+		(length (caddar expr)))
+	     (1- i)))
+	 ((= i 0))
+       (setq res (cdr res)))
+     (setq den (cddr expr)
+	   expr (cadr expr))
+     ;; Check denominator is a complex number
+     (cond ((numberp den) (setq den (list den 0)))
+	   ((eq (car den) (cadr res))
+	    (setq den (cddr den))
+	    (cond ((numberp (car den))
+		   (cond ((null (cddr den))
+			  (setq den (list 0 (car den))))
+			 ((numberp (caddr den))
+			  (setq den (list (caddr den) (car den))))
+			 (t
+			  (aberth-roots-err expr1))))
+		  (t
+		   (aberth-roots-err expr1))))
+	   (t
+	    (aberth-roots-err expr1)))
+     ;; If the name variable has disappeared, this is caught here
+     (setq *nn* 0)
+     (cond ((numberp expr)
+	    (setq expr (list expr 0)))
+	   ((eq (car expr) (car res))
+	    (setq *nn* 1))
+	   ((eq (car expr) (cadr res))
+	    (setq expr (cddr expr))
+	    (cond ((numberp (car expr))
+		   (cond ((null (cddr expr))
+			  (setq expr (list 0 (car expr))))
+			 ((numberp (caddr expr))
+			  (setq expr (list (caddr expr) (car expr))))
+			 (t
+			  (aberth-roots-err expr1))))
+		  (t
+		   (aberth-roots-err expr1))))
+	   (t
+	    (aberth-roots-err expr1)))
+     (setq degree (cadr expr) *nn* (1+ degree))
+     (let ((p  (make-array (1+ degree) :initial-element (bigfloat:bigfloat 0))))
+       (or (catch 'notpoly
+	     (errset (do ((expr (cdr expr) (cddr expr))
+			  (l)
+			  (%i (cadr res))
+			  (pr-sl 0)
+			  (pi-sl 0))
+			 ((null expr))
+		       (setq l (- degree (car expr))
+			     res (cadr expr))
+		       (cond ((numberp res)
+			      (setf pr-sl ($bfloat res)))
+			     (t
+			      (or (eq (car res) %i)
+				  (throw 'notpoly nil))
+			      (setq res (cddr res))
+			      (setf pi-sl ($bfloat (car res)))
+			      (setq res (caddr res))
+			      (and res (setf pr-sl ($bfloat res)))
+			      (setq complex t)))
+		       (setf (aref p l) (bigfloat:bigfloat pr-sl pi-sl)))))
+	   ;; This should catch expressions like sin(x)-x
+	   (aberth-roots-err expr1))
+       ;; Setup is done and we've determined polynomial and the coefficients.
+       ;;
+       ;; p is an array of the coefficients in descending order
+       #+nil
+       (format t "p = ~A~%" p)
+       (let ((p1 (make-array degree :initial-element (bigfloat:bigfloat 0))))
+	 ;; Compute derivative
+	 (loop for k from 0 below degree do
+	   (setf (aref p1 k) (bigfloat:* (aref p k)
+					      (- degree k))))
+	 #+nil
+	 (format t "p1 = ~A~%" p1)
+
+	 ;; Find upper and lower bounds for the roots of the polynomial.
+	 (let* ((bnd-hi (cauchy-upper-bound p))
+		(bnd-lo (cauchy-lower-bound p))
+		(roots (initialize-roots degree bnd-lo bnd-hi)))
+	   #+nil
+	   (format t "bounds ~A ~A~%" bnd-lo bnd-hi)
+
+	   ;; Run Aberth's algorithm until it converges or until we
+	   ;; tried enough times.
+	   (loop for k from 0 below 100
+		 do
+		    (multiple-value-bind (w pz)
+			(compute-offsets p p1 roots degree)
+		      (when (aberth-converges-p roots w pz)
+			(return t))
+		      (map-into roots #'bigfloat:-
+				roots w)))
+	   ;; Return the results
+	   (cons '(mlist)
+		 (map 'list #'(lambda (r)
+				(simplify (list '(mequal) var (to r))))
+		      roots)))))))
