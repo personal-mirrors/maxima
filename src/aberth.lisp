@@ -107,7 +107,8 @@
 			     (bigfloat:+ bnd-lo (bigfloat:random range))
 			     (bigfloat:cis (random (* 2 pi))))))))
 	  (t
-	   ;; Make a spiral starting from the lower bound and going to the upper bound.
+	   ;; Make a spiral starting from the lower bound and going to
+	   ;; the upper bound.
 	   (let ((mag-step (bigfloat:/ (bigfloat:- bnd-hi bnd-lo) degree))
 		 (arg-step (/ (* 2 pi) degree))
 		 (mag-val bnd-lo)
@@ -164,18 +165,19 @@
      (setq den (cddr expr)
 	   expr (cadr expr))
      ;; Check denominator is a complex number
-     (cond ((numberp den) (setq den (list den 0)))
-	   ((eq (car den) (cadr res))
-	    (setq den (cddr den))
-	    (cond ((numberp (car den))
-		   (cond ((null (cddr den))
-			  (setq den (list 0 (car den))))
-			 ((numberp (caddr den))
-			  (setq den (list (caddr den) (car den))))
-			 (t
-			  (aberth-roots-err expr1))))
-		  (t
-		   (aberth-roots-err expr1))))
+    (cond ((numberp den)
+	   (setq den (list den 0)))
+	  ((eq (car den) (cadr res))
+	   (setq den (cddr den))
+	   (cond ((numberp (car den))
+		  (cond ((null (cddr den))
+			 (setq den (list 0 (car den))))
+			((numberp (caddr den))
+			 (setq den (list (caddr den) (car den))))
+			(t
+			 (aberth-roots-err expr1))))
+		 (t
+		  (aberth-roots-err expr1))))
 	   (t
 	    (aberth-roots-err expr1)))
      ;; If the name variable has disappeared, this is caught here
@@ -223,7 +225,7 @@
 	   (aberth-roots-err expr1))
        ;; Setup is done and we've determined polynomial and the coefficients.
        ;;
-       ;; p is an array of the coefficients in descending order
+       ;; p is an array of the coefficients in descending order.
        #+nil
        (format t "p = ~A~%" p)
        (let ((p1 (make-array degree :initial-element (bigfloat:bigfloat 0))))
@@ -251,7 +253,7 @@
 			(return t))
 		      (map-into roots #'bigfloat:-
 				roots w)))
-	   ;; Return the results
+	   ;; Return the results in the form [x = r1, x = r2, ...].
 	   (cons '(mlist)
 		 (map 'list #'(lambda (r)
 				(simplify (list '(mequal) var (to r))))
