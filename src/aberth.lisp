@@ -137,7 +137,7 @@
 					(bigfloat:abs (aref roots k))))))
 
   
-(defmfun $aberth_roots (expr)
+(defun aberth-roots (expr float-fun)
   "Compute the roots of a polynomial in EXPR using Aberth's algorithm.
   The variable of the polynomial is automatically determined."
   ;; The setup part here is basically stolen from allroots to figure
@@ -211,14 +211,14 @@
 		       (setq l (- degree (car expr))
 			     res (cadr expr))
 		       (cond ((numberp res)
-			      (setf pr-sl ($bfloat res)))
+			      (setf pr-sl (funcall float-fun res)))
 			     (t
 			      (or (eq (car res) %i)
 				  (throw 'notpoly nil))
 			      (setq res (cddr res))
-			      (setf pi-sl ($bfloat (car res)))
+			      (setf pi-sl (funcall float-fun (car res)))
 			      (setq res (caddr res))
-			      (and res (setf pr-sl ($bfloat res)))
+			      (and res (setf pr-sl (funcall float-fun res)))
 			      (setq complex t)))
 		       (setf (aref p l) (bigfloat:bigfloat pr-sl pi-sl)))))
 	   ;; This should catch expressions like sin(x)-x
@@ -258,3 +258,9 @@
 		 (map 'list #'(lambda (r)
 				(simplify (list '(mequal) var (to r))))
 		      roots)))))))
+
+(defmfun $aberth_roots (expr)
+  (aberth-roots expr #'$float))
+
+(defmfun $bf_aberth_roots (expr)
+  (aberth-roots expr #'$bfloat))
