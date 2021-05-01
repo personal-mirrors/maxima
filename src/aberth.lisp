@@ -279,7 +279,7 @@
        ;; p is an array of the coefficients in descending order.
        #+nil
        (format t "p = ~A~%" p)
-       (let ((p1 (make-array degree :initial-element (bigfloat:bigfloat 0))))
+       (let ((p1 (make-array degree :initial-element 0d0)))
 	 ;; Compute derivative
 	 (loop for k from 0 below degree do
 	   (setf (aref p1 k) (bigfloat:* (aref p k)
