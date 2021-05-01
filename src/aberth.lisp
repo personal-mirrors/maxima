@@ -28,8 +28,7 @@
   (let ((degree (1- (length p)))
 	;; H is the polynomial with coefficents that are the absolute
 	;; value of coefficients of p.
-	(h (map 'vector #'bigfloat:abs p))
-	g g1)
+	(h (map 'vector #'bigfloat:abs p)))
     ;; Construct finel form of h:
     ;;
     ;;   h(x) = -|a[0]|*x^n + |a[1]|*x^(n-1) + ... + |a[n]|
@@ -44,36 +43,38 @@
     ;;   g(x)  = -|a[0]| + |a[1]|/x + ... |a[n-1]|/x^(n-1) + |a[n]|/x^n
     ;;
     ;;   g1(x) = -|a[1]|/x^2 - ... - (n-1)*|a[n-1]|/x^n - n*|a[n]|/x^(n+1)
-    ;;         = x^(-2)*(-|a[1]| - ... - (n-1)*|a[n-1]|/x^(n-1) - n*|a[n]|/x^n)
+    ;;         = x^(-2)*(-|a[1]| - ... - (n-1)*|a[n-1]|/x^(n-1) - n*|a[n]|/x^(n-1))
     ;;
     ;; Note that g(x) is a polynomial in x = 1/y, with the
     ;; coefficients in h in reverse order.  Likewise x^2*g1(x) is a
     ;; polynomial 1/y too.  Construct these polynomials.
-    (setf g (reverse h))
-    (setf g1 (make-array degree))
-    (loop for k from 1 to degree
-	  do
-	     (setf (aref g1 (- degree k))
-		   (bigfloat:- (bigfloat:* k
-					   (aref g (- degree k))))))
-    (format t "h = ~A~%" h)
-    (format t "g = ~A~%" g)
-    (format t "g1 = ~A~%" g1)
-    ;; Newton's algorithm for a root of g(x).
-    (let ((bnd (bigfloat:expt
-		(bigfloat:- (bigfloat:/ (aref h degree)
-					(aref h 0)))
-		(/ degree)))
-	  (eps 0.001))
-      (loop for delta = (bigfloat:/ (synthetic-div g (bigfloat:/ bnd))
-				    (bigfloat:/
-				     (synthetic-div g1 (bigfloat:/ bnd))
-				     bnd
-				     bnd))
-	    while (bigfloat:> (bigfloat:abs delta) eps)
+    (let ((g (reverse h))
+	  (g1 (make-array degree)))
+      (loop for k from 1 to degree
 	    do
-	       (setf bnd (bigfloat:- bnd delta)))
-      bnd)))
+	       (setf (aref g1 (- degree k))
+		     (bigfloat:- (bigfloat:* k
+					     (aref g (- degree k))))))
+      #+nil
+      (progn
+	(format t "h = ~A~%" h)
+	(format t "g = ~A~%" g)
+	(format t "g1 = ~A~%" g1))
+      ;; Newton's algorithm for a root of g(x).  We take advantage of the fact that g(x) is a polynomial in 1/x so we can use synthetic-div to compute the value.  Likewise g1(x) is a polyn
+      (let ((bnd (bigfloat:expt
+		  (bigfloat:- (bigfloat:/ (aref h degree)
+					  (aref h 0)))
+		  (/ degree)))
+	    (eps 0.001))
+	(loop for delta = (bigfloat:/ (synthetic-div g (bigfloat:/ bnd))
+				      (bigfloat:/
+				       (synthetic-div g1 (bigfloat:/ bnd))
+				       bnd
+				       bnd))
+	      while (bigfloat:> (bigfloat:abs delta) eps)
+	      do
+		 (setf bnd (bigfloat:- bnd delta)))
+	bnd))))
 
 (defun compute-bounds (p)
   "Compute an estimate of the lower and upper bounds of magnitude of
@@ -276,7 +277,6 @@
        ;; Setup is done and we've determined polynomial and the coefficients.
        ;;
        ;; p is an array of the coefficients in descending order.
-       #+nil
        (format t "p = ~A~%" p)
        (let ((p1 (make-array degree :initial-element (bigfloat:bigfloat 0))))
 	 ;; Compute derivative
