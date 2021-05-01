@@ -251,7 +251,7 @@
 	   (t
 	    (aberth-roots-err expr1)))
      (setq degree (cadr expr) *nn* (1+ degree))
-     (let ((p  (make-array (1+ degree) :initial-element (bigfloat:bigfloat 0))))
+     (let ((p (make-array (1+ degree) :initial-element 0d0)))
        (or (catch 'notpoly
 	     (errset (do ((expr (cdr expr) (cddr expr))
 			  (l)
@@ -271,12 +271,13 @@
 			      (setq res (caddr res))
 			      (and res (setf pr-sl (funcall float-fun res)))
 			      (setq complex t)))
-		       (setf (aref p l) (bigfloat:bigfloat pr-sl pi-sl)))))
+		       (setf (aref p l) (bigfloat:complex pr-sl pi-sl)))))
 	   ;; This should catch expressions like sin(x)-x
 	   (aberth-roots-err expr1))
        ;; Setup is done and we've determined polynomial and the coefficients.
        ;;
        ;; p is an array of the coefficients in descending order.
+       #+nil
        (format t "p = ~A~%" p)
        (let ((p1 (make-array degree :initial-element (bigfloat:bigfloat 0))))
 	 ;; Compute derivative
@@ -314,4 +315,4 @@
   (aberth-roots expr #'$float))
 
 (defmfun $bf_aberth_roots (expr)
-  (aberth-roots expr #'$bfloat))
+  (aberth-roots expr #'bigfloat:bigfloat))
