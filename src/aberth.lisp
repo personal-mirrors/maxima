@@ -8,33 +8,6 @@
 (defun aberth-roots-err (expr)
   (merror (intl:gettext "aberth_roots: expected a polynomial; found ~M") expr))
 
-(defun cauchy-upper-bound (p)
-  "Find an upper bound of the roots of the polynomial where P is a
-  vector of the coefficients of the polynomial arranged in descending
-  powers"
-  ;; See https://en.wikipedia.org/wiki/Geometrical_properties_of_polynomial_roots#Lagrange's_and_Cauchy's_bounds.
-  ;;
-  ;; Let the polynomial be a[0] + a[1]*x + ... + a[n]*x^n.  Then the Cauchy upper bound is
-  ;;
-  ;;  1 + max(abs(a[n-1]/a[n]), abs(a[n-2]/a[n]), ..., abs(a[0]/a[n]))
-  ;;
-  (let ((degree (1- (length p)))
-	(an (aref p 0))
-	(bound 0))
-    (loop for k from 1 to degree
-	  do
-	     (setf bound (bigfloat:max bound (bigfloat:abs (bigfloat:/ (aref p k) an)))))
-    (bigfloat:+ 1 bound)))
-
-(defun cauchy-lower-bound (p)
-  "Find a lower bound of the roots of the polynomial where P is a
-  vector of the coefficients of the polynomial arranged in descending
-  powers"
-  ;; Find the lower bound by reversing the order of the coefficients
-  ;; and finding the upper bound of the new polynomial.  Then the
-  ;; lower bound is the reciprocal of this bound.
-  (bigfloat:/ (cauchy-upper-bound (reverse p))))
-
 (defun synthetic-div (p z)
   "Compute the value of the polynomial at the point Z.  The polynomial
   is represented as an array of coefficients in descending powers."
@@ -47,6 +20,83 @@
 				   (aref p k))))
     val))
 
+(defun rouche-bound (p)
+  "Rouche upper bound for the polynomial P whose cofficients are
+  arranged in a vector in descending powers."
+  ;; See
+  ;; https://en.wikipedia.org/wiki/Geometrical_properties_of_polynomial_roots#From_Rouch%C3%A9_theorem
+  (let ((degree (1- (length p)))
+	;; H is the polynomial with coefficents that are the absolute
+	;; value of coefficients of p.
+	(h (map 'vector #'bigfloat:abs p))
+	g g1)
+    ;; Construct finel form of h:
+    ;;
+    ;;   h(x) = -|a[0]|*x^n + |a[1]|*x^(n-1) + ... + |a[n]|
+    ;;
+    (setf (aref h 0) (bigfloat:- (aref h 0)))
+
+    ;; We want to find the positive root of h using Newton's algorithm.  To do that, 
+    ;; define g(x) = h(x)/x^n with g1(x) = g'(x).
+    ;;
+    ;; Then
+    ;;
+    ;;   g(x)  = -|a[0]| + |a[1]|/x + ... |a[n-1]|/x^(n-1) + |a[n]|/x^n
+    ;;
+    ;;   g1(x) = -|a[1]|/x^2 - ... - (n-1)*|a[n-1]|/x^n - n*|a[n]|/x^(n+1)
+    ;;         = x^(-2)*(-|a[1]| - ... - (n-1)*|a[n-1]|/x^(n-1) - n*|a[n]|/x^n)
+    ;;
+    ;; Note that g(x) is a polynomial in x = 1/y, with the
+    ;; coefficients in h in reverse order.  Likewise x^2*g1(x) is a
+    ;; polynomial 1/y too.  Construct these polynomials.
+    (setf g (reverse h))
+    (setf g1 (make-array degree))
+    (loop for k from 1 to degree
+	  do
+	     (setf (aref g1 (- degree k))
+		   (bigfloat:- (bigfloat:* k
+					   (aref g (- degree k))))))
+    (format t "h = ~A~%" h)
+    (format t "g = ~A~%" g)
+    (format t "g1 = ~A~%" g1)
+    ;; Newton's algorithm for a root of g(x).
+    (let ((bnd (bigfloat:expt
+		(bigfloat:- (bigfloat:/ (aref h degree)
+					(aref h 0)))
+		(/ degree)))
+	  (eps 0.001))
+      (loop for delta = (bigfloat:/ (synthetic-div g (bigfloat:/ bnd))
+				    (bigfloat:/
+				     (synthetic-div g1 (bigfloat:/ bnd))
+				     bnd
+				     bnd))
+	    while (bigfloat:> (bigfloat:abs delta) eps)
+	    do
+	       (setf bnd (bigfloat:- bnd delta)))
+      bnd)))
+
+(defun compute-bounds (p)
+  "Compute an estimate of the lower and upper bounds of magnitude of
+  the roots of a polynomial.  The coefficients of the polynomial are
+  stored in the vector P in descending powers.  This returns two
+  values: the lower bound and the upper bound"
+  ;; Let the polynomial p(x) be
+  ;;
+  ;;  p(x) = p[0]*x^n + p[1]*x^(n-1) +  ... + a[1]*x + a[0].
+  ;;
+  ;; Consider the polynomial
+  ;;
+  ;;  x^n*p(1/x) = x^n*(p[0]/x^n + p[1]/x^(n-1) + ... + a[1]/x + a[0]
+  ;;             = p[0] + p[1]*x + ... + a[1]*x^(n-1) + a[0]*x^n
+  ;;
+  ;; If we found an upper bound, U, for x^n*p(1/x), then 1/U is a
+  ;; lower bound for p(x) since all the roots of x^n*p(1/x) are
+  ;; reciprocals of the roots of p(x).  The polynomial x^n*p(1/x) has
+  ;; the same form as p(x), except the coefficients are in reverse
+  ;; order.
+  (values (bigfloat:/ (rouche-bound (reverse p)))
+	  (rouche-bound p)))
+    
 (defun compute-offsets (p p1 roots degree)
   "Compute the offsets according to the Aberth algorithm where P is
   the vector of the coefficients of the polynomial, P1 is the vector
@@ -237,27 +287,28 @@
 	 (format t "p1 = ~A~%" p1)
 
 	 ;; Find upper and lower bounds for the roots of the polynomial.
-	 (let* ((bnd-hi (cauchy-upper-bound p))
-		(bnd-lo (cauchy-lower-bound p))
-		(roots (initialize-roots degree bnd-lo bnd-hi)))
-	   #+nil
-	   (format t "bounds ~A ~A~%" bnd-lo bnd-hi)
+	 (multiple-value-bind (bnd-lo bnd-hi)
+	     (compute-bounds p)
+	   (format t "bounds: ~A ~A~%" bnd-lo bnd-hi)
+	   (let* ((roots (initialize-roots degree bnd-lo bnd-hi)))
+	     #+nil
+	     (format t "bounds ~A ~A~%" bnd-lo bnd-hi)
 
-	   ;; Run Aberth's algorithm until it converges or until we
-	   ;; tried enough times.
-	   (loop for k from 0 below 100
-		 do
-		    (multiple-value-bind (w pz)
-			(compute-offsets p p1 roots degree)
-		      (when (aberth-converges-p roots w pz)
-			(return t))
-		      (map-into roots #'bigfloat:-
-				roots w)))
-	   ;; Return the results in the form [x = r1, x = r2, ...].
-	   (cons '(mlist)
-		 (map 'list #'(lambda (r)
-				(simplify (list '(mequal) var (to r))))
-		      roots)))))))
+	     ;; Run Aberth's algorithm until it converges or until we
+	     ;; tried enough times.
+	     (loop for k from 0 below 100
+		   do
+		      (multiple-value-bind (w pz)
+			  (compute-offsets p p1 roots degree)
+			(when (aberth-converges-p roots w pz)
+			  (return t))
+			(map-into roots #'bigfloat:-
+				  roots w)))
+	     ;; Return the results in the form [x = r1, x = r2, ...].
+	     (cons '(mlist)
+		   (map 'list #'(lambda (r)
+				  (simplify (list '(mequal) var (to r))))
+			roots))))))))
 
 (defmfun $aberth_roots (expr)
   (aberth-roots expr #'$float))
