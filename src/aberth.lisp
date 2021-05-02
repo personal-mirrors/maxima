@@ -309,7 +309,8 @@
     (loop for k from 0 below $aberth_laguerre_iterations
 	  for pv = (polyev p r q)
 	  unless (let ((v (bigfloat:abs pv)))
-		   (format t "pv ~A~%" v)
+		   ;; Arbitrary say we're done with the absolute value
+		   ;; of the polynomial is less than epsilon.
 		   (bigfloat:<= v (bigfloat:epsilon v)))
 			   
 	    do
