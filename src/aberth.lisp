@@ -130,6 +130,35 @@
 		 (setf bnd (bigfloat:- bnd delta)))
 	bnd))))
 
+(defun scale-poly (p)
+  "Compute a scaling of the roots of the polynomial and return the
+  scaling factor and the modified polynomial."
+  ;; Compute a scaling factor for the roots of the polynomial.  We
+  ;; know that |p[n]/p[0]| is the product of all the roots.  So set
+  ;; compute s:
+  ;;
+  ;;   s = |p[n]/p[0]|^(1/n)
+  ;;
+  ;; and the scaling factor f = -truncate(log2(s)).  We use a power of
+  ;; two so as not to introduce any additional rounding error.
+  (let* ((degree (1- (length p)))
+	 (f (- (truncate (bigfloat:/ (bigfloat:log 
+				      (bigfloat:/ (bigfloat:abs (aref p degree))
+						  (bigfloat:abs (aref p 0)))
+				      2)
+				     degree)))))
+    (loop for k from 1 to degree
+	  for c = (bigfloat:/ (aref p k) (aref p 0))
+	  do
+	     (setf (aref p k)
+		   (bigfloat:/
+		    (bigfloat:complex
+		     (bigfloat:scale-float (bigfloat:realpart (aref p k)) (* k f))
+		     (bigfloat:scale-float (bigfloat:imagpart (aref p k)) (* k f)))
+		    (aref p 0))))
+    (setf (aref p 0) (bigfloat:float 1 (bigfloat:realpart (aref p 0))))
+    f))
+    
 (defun compute-bounds (p)
   "Compute an estimate of the lower and upper bounds of magnitude of
   the roots of a polynomial.  The coefficients of the polynomial are
@@ -346,7 +375,12 @@
        (when (>= $aberth_debug_level 10)
 	 (format t "p = ~A~%" p))
 
-       (let ((p1 (make-array degree :initial-element 0d0)))
+       (let ((leading-coef (aref p 0))
+	     (scale (scale-poly p))
+	     (p1 (make-array degree :initial-element 0d0)))
+	 (when (>= $aberth_debug_level 10)
+	   (format t "scaled p = ~A~%" p))
+
 	 ;; Compute derivative
 	 (loop for k from 0 below degree do
 	   (setf (aref p1 k) (bigfloat:* (aref p k)
@@ -358,6 +392,7 @@
 	 (multiple-value-bind (bnd-lo bnd-hi)
 	     (compute-bounds p)
 	   (when (>= $aberth_debug_level 6)
+	     (format t "scale: ~A~%" scale)
 	     (format t "bounds: ~A ~A~%" bnd-lo bnd-hi))
 	   (let* ((roots (initialize-roots degree bnd-lo bnd-hi))
 		  (conv
@@ -381,6 +416,13 @@
 		       (>= $aberth_debug_level 1))
 	       (format t "~:[Failed to converge~;Converged~] after ~A iterations.~%"
 		       conv (or conv $aberth_max_iterations)))
+	     ;; Undo the scaling
+	     (map-into roots
+		       (lambda (r)
+			 (bigfloat:complex
+			  (bigfloat:scale-float (bigfloat:realpart r) (- scale))
+			  (bigfloat:scale-float (bigfloat:imagpart r) (- scale))))
+		       roots)
 	     (let ((res
 		     ;; If polyfactor is true, return a list of the
 		     ;; form (x - root) Otherwise, return a list of
@@ -398,7 +440,7 @@
 	       ;; then multiply by the leading coefficient of the
 	       ;; polynomial.  Otherwise, just make it a maxima list.
 	       (if $polyfactor
-		   (mul (to (aref p 0))
+		   (mul (to leading-coef)
 			(reduce #'mul res))
 		   (cons '(mlist) res)))))))))
 
