@@ -381,11 +381,26 @@
 		       (>= $aberth_debug_level 1))
 	       (format t "~:[Failed to converge~;Converged~] after ~A iterations.~%"
 		       conv (or conv $aberth_max_iterations)))
-	     ;; Return the results in the form [x = r1, x = r2, ...].
-	     (cons '(mlist)
-		   (map 'list #'(lambda (r)
-				  (simplify (list '(mequal) var (to r))))
-			roots))))))))
+	     (let ((res
+		     ;; If polyfactor is true, return a list of the
+		     ;; form (x - root) Otherwise, return a list of
+		     ;; the form x = root.
+		     (loop for k from 0 below degree
+			   if $polyfactor
+			     collect (if (bigfloat:zerop (bigfloat:imagpart (aref roots k)))
+					 (add var (mul -1 (to (bigfloat:realpart (aref roots k)))))
+					 (add var (mul -1
+						       (to (aref roots k)))))
+			   else
+			     ;; Return the results in the form [x = r1, x = r2, ...].
+			     collect (simplify (list '(mequal) var (to (aref roots k)))))))
+	       ;; If polyfactor, multiply all the terms together and
+	       ;; then multiply by the leading coefficient of the
+	       ;; polynomial.  Otherwise, just make it a maxima list.
+	       (if $polyfactor
+		   (mul (to (aref p 0))
+			(reduce #'mul res))
+		   (cons '(mlist) res)))))))))
 
 (defmfun $aberth_roots (expr)
   (aberth-roots expr #'$float))
