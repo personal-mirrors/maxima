@@ -9,6 +9,18 @@
   "Debug level.  Higher values produce more debugging output from
   various parts of the algorithm")
 
+;; What method to use for convergence.  Convergence can be determined
+;; if the change in the the root value is small enough or if the
+;; polnomial value is small enough.  If non-NIL, we use the change in
+;; the root value.
+(defvar *aberth-use-offsets-for-convergence* nil
+  "If non-NIL, use the computed root offsets to determine convergence
+  instead of using the polynomial value and error bound.")
+
+(defvar *aberth-max-iterations* 100
+  "Maximum number of iterations allowed.  If this is exceeded, the
+  algorithm did not appear to converge.")
+
 (defun aberth-roots-err (expr)
   (merror (intl:gettext "aberth_roots: expected a polynomial; found ~M") expr))
 
@@ -223,23 +235,23 @@
 		      (bigfloat:incf arg-val arg-step)))))
     roots))
 
-(defun aberth-converges-p (roots offsets p pz err)
-  (declare (ignorable offsets p pz))
-  ;; Converges if |w| <= eps * |root| for all roots.
-  ;;
-  ;; Consider maybe changing the criteria so that convergence happens
-  ;; if the value of the polynomial is as close to zero as we can get
-  ;; considering round-off.  allroots does this.
-  #+nil
-  (loop for k from 0 below (length roots)
-	always (bigfloat:<= (bigfloat:abs (aref offsets k))
-			    (bigfloat:* (bigfloat:epsilon (aref roots k))
-					(bigfloat:abs (aref roots k)))))
-  (let ((degree (length roots)))
-    (loop for k from 0 below degree
-	  always (bigfloat:<= (bigfloat:abs (aref pz k))
-			      (bigfloat:* 20 (aref err k))))
-    ))
+(defun aberth-converges-p (roots w pz err)
+  "Determine if the algorithm has converged based on the value of the
+  polynomial at each root and the corresponding error bound on the
+  value of the polynomial.  PZ is a vector of the polynomial values,
+  and ERR is a vector of the corresponding bound on the value."
+  ;; Convergence occurs if every polynomial value less than 20 times
+  ;; the error bound.  This comes from cpoly.
+  (let ((degree (length pz))
+	(eps (bigfloat:epsilon (aref pz 0))))
+    (if *aberth-use-offsets-for-convergence*
+	(loop for k from 0 below degree
+	      always (bigfloat:<= (bigfloat:abs (aref w k))
+				  (bigfloat:* eps
+					      (bigfloat:abs (aref roots k)))))
+	(loop for k from 0 below degree
+	      always (bigfloat:<= (bigfloat:abs (aref pz k))
+				  (bigfloat:* 1 (aref err k)))))))
 
   
 (defun aberth-roots (expr float-fun)
@@ -333,6 +345,7 @@
        ;; p is an array of the coefficients in descending order.
        (when (>= *aberth-debug-level* 10)
 	 (format t "p = ~A~%" p))
+
        (let ((p1 (make-array degree :initial-element 0d0)))
 	 ;; Compute derivative
 	 (loop for k from 0 below degree do
@@ -346,23 +359,28 @@
 	     (compute-bounds p)
 	   (when (>= *aberth-debug-level* 10)
 	     (format t "bounds: ~A ~A~%" bnd-lo bnd-hi))
-	   (let* ((roots (initialize-roots degree bnd-lo bnd-hi)))
-	     ;; Run Aberth's algorithm until it converges or until we
-	     ;; tried enough times.
-	     (loop for k from 0 below 100
-		   do
-		      (multiple-value-bind (w pz err)
-			  (compute-offsets p p1 roots degree)
-			(when (>= *aberth-debug-level* 1)
-			  (format t "~2D: r   ~A~%" k roots)
-			  (format t "     w   ~A~%" w)
-			  (format t "     pz  ~A~%" pz)
-			  (format t "     err ~A~%" err))
+	   (let* ((roots (initialize-roots degree bnd-lo bnd-hi))
+		  (conv
+		    ;; Run Aberth's algorithm until it converges or until we
+		    ;; tried enough times.
+		    (loop for k from 0 below *aberth-max-iterations*
+			  do
+			     (multiple-value-bind (w pz err)
+				 (compute-offsets p p1 roots degree)
+			       (when (>= *aberth-debug-level* 2)
+				 (format t "~2D: r   ~A~%" k roots)
+				 (format t "     w   ~A~%" w)
+				 (format t "     pz  ~A~%" pz)
+				 (format t "     err ~A~%" err))
 
-			(when (aberth-converges-p roots w p pz err)
-			  (return t))
-			(map-into roots #'bigfloat:-
-				  roots w)))
+			       (when (aberth-converges-p roots w pz err)
+				 (return k))
+			       (map-into roots #'bigfloat:-
+					 roots w)))))
+	     (when (or (not conv)
+		       (>= *aberth-debug-level* 1))
+	       (format t "~:[Failed to converge~;Converged~] after ~A iterations.~%"
+		       conv conv))
 	     ;; Return the results in the form [x = r1, x = r2, ...].
 	     (cons '(mlist)
 		   (map 'list #'(lambda (r)
