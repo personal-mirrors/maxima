@@ -141,6 +141,8 @@
   ;;
   ;; and the scaling factor f = -truncate(log2(s)).  We use a power of
   ;; two so as not to introduce any additional rounding error.
+  ;;
+  ;; See https://en.wikipedia.org/wiki/Polynomial_transformation#Scaling_the_roots.
   (let* ((degree (1- (length p)))
 	 (f (- (truncate (bigfloat:/ (bigfloat:log 
 				      (bigfloat:/ (bigfloat:abs (aref p degree))
