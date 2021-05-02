@@ -5,6 +5,10 @@
 ;;; Aberth method for solving roots of a polynomial
 ;;; https://en.wikipedia.org/wiki/Aberth_method
 
+(defvar *aberth-debug-level* 0
+  "Debug level.  Higher values produce more debugging output from
+  various parts of the algorithm")
+
 (defun aberth-roots-err (expr)
   (merror (intl:gettext "aberth_roots: expected a polynomial; found ~M") expr))
 
@@ -327,34 +331,33 @@
        ;; Setup is done and we've determined polynomial and the coefficients.
        ;;
        ;; p is an array of the coefficients in descending order.
-       #+nil
-       (format t "p = ~A~%" p)
+       (when (>= *aberth-debug-level* 10)
+	 (format t "p = ~A~%" p))
        (let ((p1 (make-array degree :initial-element 0d0)))
 	 ;; Compute derivative
 	 (loop for k from 0 below degree do
 	   (setf (aref p1 k) (bigfloat:* (aref p k)
 					      (- degree k))))
-	 #+nil
-	 (format t "p1 = ~A~%" p1)
+	 (when (>= *aberth-debug-level* 10)
+	   (format t "p1 = ~A~%" p1))
 
 	 ;; Find upper and lower bounds for the roots of the polynomial.
 	 (multiple-value-bind (bnd-lo bnd-hi)
 	     (compute-bounds p)
-	   (format t "bounds: ~A ~A~%" bnd-lo bnd-hi)
+	   (when (>= *aberth-debug-level* 10)
+	     (format t "bounds: ~A ~A~%" bnd-lo bnd-hi))
 	   (let* ((roots (initialize-roots degree bnd-lo bnd-hi)))
-	     #+nil
-	     (format t "bounds ~A ~A~%" bnd-lo bnd-hi)
-
 	     ;; Run Aberth's algorithm until it converges or until we
 	     ;; tried enough times.
 	     (loop for k from 0 below 100
 		   do
 		      (multiple-value-bind (w pz err)
 			  (compute-offsets p p1 roots degree)
-			(format t "~2D: r   ~A~%" k roots)
-			(format t "     w   ~A~%" w)
-			(format t "     pz  ~A~%" pz)
-			(format t "     err ~A~%" err)
+			(when (>= *aberth-debug-level* 1)
+			  (format t "~2D: r   ~A~%" k roots)
+			  (format t "     w   ~A~%" w)
+			  (format t "     pz  ~A~%" pz)
+			  (format t "     err ~A~%" err))
 
 			(when (aberth-converges-p roots w p pz err)
 			  (return t))
