@@ -21,6 +21,12 @@
   "Maximum number of iterations allowed.  If this is exceeded, the
   algorithm did not appear to converge.")
 
+(defmvar $aberth_laguerre_refine t
+  "Use Laguerre's method to refine the roots")
+
+(defmvar $aberth_laguerre_iterations 5
+  "Number of Laguerre steps to use")
+
 (defvar *aberth-initialize-randomly*
   nil
   "If non-NIL, the initial root estimates are determined randomly.
@@ -285,7 +291,63 @@
 	      always (bigfloat:<= (bigfloat:abs (aref pz k))
 				  (bigfloat:* 1 (aref err k)))))))
 
-  
+(defun laguerre-refine (p p1 r)
+  "Laguerre's method"
+  (let* ((degree (1- (length p)))
+	 (p2 (make-array (- degree 1)))
+	 (q (make-array (1+ degree))))
+    ;; Compute second derivative of p, or equivalently, the first
+    ;; derivate of p1.
+    (loop for k from 0 below (1- degree) do
+	   (setf (aref p2 k) (bigfloat:* (aref p1 k)
+					      (- degree 1 k))))
+    #+nil
+    (progn
+      (format t "p ~A~%" p)
+      (format t "p1 ~A~%" p1)
+      (format t "p2 ~A~%" p2))
+    (loop for k from 0 below $aberth_laguerre_iterations
+	  for pv = (polyev p r q)
+	  unless (let ((v (bigfloat:abs pv)))
+		   (format t "pv ~A~%" v)
+		   (bigfloat:<= v (bigfloat:epsilon v)))
+			   
+	    do
+	     (let* ((g (bigfloat:/ (synthetic-div p1 r)
+				   pv))
+		    (h (bigfloat:- (bigfloat:* g g)
+				   (bigfloat:/ (synthetic-div p2 r)
+					       pv)))
+		    (delta (bigfloat:/ degree
+				       (let* ((den (bigfloat:sqrt
+						   (bigfloat:* (1- degree)
+							       (bigfloat:- (bigfloat:* degree h)
+									   (bigfloat:* g g)))))
+					      (d+ (bigfloat:+ g den))
+					      (d- (bigfloat:- g den)))
+					 #+nil
+					 (progn
+					   (format t "g h ~A ~A~%" g h)
+					   (format t "den d+ d- ~A ~A ~A~%" den d+ d-))
+					 (if (bigfloat:>= (bigfloat:abs d+)
+							  (bigfloat:abs d-))
+					     d+
+					     d-)))))
+	       #+nil
+	       (progn
+		 (format t "pv p1, p2 ~A ~A ~A~%"
+			 pv
+			 (synthetic-div p1 r)
+			 (synthetic-div p2 r))
+		 (format t "pv, delta = ~A ~A~%" pv delta)
+		 (format t "r ~A~%" (bigfloat:- r delta))
+		 (format t "h ~A~%" h))
+	       (format t "delta = ~A~%" delta)
+	       (bigfloat:decf r delta)))
+    r))
+
+	       
+
 (defun aberth-roots (expr float-fun)
   "Compute the roots of a polynomial in EXPR using Aberth's algorithm.
   The variable of the polynomial is automatically determined."
@@ -419,6 +481,12 @@
 		       (>= $aberth_debug_level 1))
 	       (format t "~:[Failed to converge~;Converged~] after ~A iterations.~%"
 		       conv (or conv $aberth_max_iterations)))
+	     ;; Refine the roots a few times
+	     (when $aberth_laguerre_refine
+	       (map-into roots
+			 (lambda (r)
+			   (laguerre-refine p p1 r))
+			 roots))
 	     ;; Undo the scaling
 	     (map-into roots
 		       (lambda (r)
