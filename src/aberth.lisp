@@ -20,6 +20,39 @@
 				   (aref p k))))
     val))
 
+(defun polyev (p s q)
+  "Evaluate the polynomial P at the point S by the horner recurrence,
+  placing the partial sums in Q and returning the value of the
+  polynomial."
+  (setf (aref q 0) (aref p 0))
+  (let ((pv (aref p 0)))
+    (loop for k from 1 below (length p)
+	  do
+	     (setf pv (bigfloat:+ (aref p k)
+				  (bigfloat:* s pv)))
+	     (setf (aref q k) pv))
+    pv))
+
+(defun errev-poly (q ms mp are mre)
+  "Compute bounds in evaluating the polynomial by the horner recurrence.
+
+  Q    - a vector of the partial sums
+  ms   - modulus of the point
+  mp   - modulus of the polynomial value
+  are  - error bound on complex addition
+  mre  - error bound on complex multiplication"
+
+  (let ((e (bigfloat:/ (bigfloat:* (bigfloat:abs (aref q 0))
+				   mre)
+		       (bigfloat:+ are mre))))
+    (loop for k from 0 below (length q)
+	  do
+	     (bigfloat:incf e
+		 (bigfloat:+ (bigfloat:* e ms)
+			     (bigfloat:abs (aref q k)))))
+    (bigfloat:- (bigfloat:* e (bigfloat:+ are mre))
+		(bigfloat:* mp mre))))
+			    
 (defun rouche-bound (p)
   "Rouche upper bound for the polynomial P whose cofficients are
   arranged in a vector in descending powers."
@@ -119,11 +152,22 @@
   ;; and, if z[k] is the k'th root, then
   ;;
   ;;   sum(k) = sum 1/(z[k]-z[j]) for j /= k.
-  (let ((w (make-array degree))
-	(pz (make-array degree)))
+  (let* ((w (make-array degree))
+	 (pz (make-array degree))
+	 (err (make-array degree))
+	 (q (make-array (1+ degree)))
+	 (are (bigfloat:epsilon (aref p 0)))
+	 (mre (bigfloat:* 2
+			  (bigfloat:sqrt 2)
+			  are)))
     (loop for k from 0 below degree
 	  do
-	     (setf (aref pz k) (synthetic-div p (aref roots k)))
+	     (setf (aref pz k) (polyev p (aref roots k) q))
+	     (setf (aref err k) (errev-poly p
+					    (bigfloat:abs (aref roots k))
+					    (bigfloat:abs (aref pz k))
+					    are
+					    mre))
 	     (let ((pz/p1z (bigfloat:/ (aref pz k)
 				       (synthetic-div p1 (aref roots k))))
 		   (s 0))
@@ -136,7 +180,7 @@
 	       (setf (aref w k)
 		     (bigfloat:/ pz/p1z
 				 (bigfloat:- 1 (bigfloat:* pz/p1z s))))))
-    (values w pz)))
+    (values w pz err)))
 
 (defvar *aberth-initialize-randomly*
   nil
@@ -175,17 +219,23 @@
 		      (bigfloat:incf arg-val arg-step)))))
     roots))
 
-(defun aberth-converges-p (roots offsets pz)
-  (declare (ignorable pz))
+(defun aberth-converges-p (roots offsets p pz err)
+  (declare (ignorable offsets p pz))
   ;; Converges if |w| <= eps * |root| for all roots.
   ;;
   ;; Consider maybe changing the criteria so that convergence happens
   ;; if the value of the polynomial is as close to zero as we can get
   ;; considering round-off.  allroots does this.
+  #+nil
   (loop for k from 0 below (length roots)
 	always (bigfloat:<= (bigfloat:abs (aref offsets k))
 			    (bigfloat:* (bigfloat:epsilon (aref roots k))
-					(bigfloat:abs (aref roots k))))))
+					(bigfloat:abs (aref roots k)))))
+  (let ((degree (length roots)))
+    (loop for k from 0 below degree
+	  always (bigfloat:<= (bigfloat:abs (aref pz k))
+			      (bigfloat:* 20 (aref err k))))
+    ))
 
   
 (defun aberth-roots (expr float-fun)
@@ -299,9 +349,14 @@
 	     ;; tried enough times.
 	     (loop for k from 0 below 100
 		   do
-		      (multiple-value-bind (w pz)
+		      (multiple-value-bind (w pz err)
 			  (compute-offsets p p1 roots degree)
-			(when (aberth-converges-p roots w pz)
+			(format t "~2D: r   ~A~%" k roots)
+			(format t "     w   ~A~%" w)
+			(format t "     pz  ~A~%" pz)
+			(format t "     err ~A~%" err)
+
+			(when (aberth-converges-p roots w p pz err)
 			  (return t))
 			(map-into roots #'bigfloat:-
 				  roots w)))
