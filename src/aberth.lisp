@@ -380,7 +380,7 @@
 	     (when (or (not conv)
 		       (>= *aberth-debug-level* 1))
 	       (format t "~:[Failed to converge~;Converged~] after ~A iterations.~%"
-		       conv conv))
+		       conv (or conv *aberth-max-iterations*)))
 	     ;; Return the results in the form [x = r1, x = r2, ...].
 	     (cons '(mlist)
 		   (map 'list #'(lambda (r)
