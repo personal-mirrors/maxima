@@ -125,7 +125,7 @@
 				       (synthetic-div g1 (bigfloat:/ bnd))
 				       bnd
 				       bnd))
-	      while (bigfloat:> (bigfloat:abs delta) eps)
+	      while (bigfloat:> (bigfloat:abs delta) (bigfloat:* bnd eps))
 	      do
 		 (setf bnd (bigfloat:- bnd delta)))
 	bnd))))
@@ -357,7 +357,7 @@
 	 ;; Find upper and lower bounds for the roots of the polynomial.
 	 (multiple-value-bind (bnd-lo bnd-hi)
 	     (compute-bounds p)
-	   (when (>= $aberth_debug_level 10)
+	   (when (>= $aberth_debug_level 6)
 	     (format t "bounds: ~A ~A~%" bnd-lo bnd-hi))
 	   (let* ((roots (initialize-roots degree bnd-lo bnd-hi))
 		  (conv
