@@ -144,11 +144,12 @@
   ;;
   ;; See https://en.wikipedia.org/wiki/Polynomial_transformation#Scaling_the_roots.
   (let* ((degree (1- (length p)))
-	 (f (- (truncate (bigfloat:/ (bigfloat:log 
-				      (bigfloat:/ (bigfloat:abs (aref p degree))
-						  (bigfloat:abs (aref p 0)))
-				      2)
-				     degree)))))
+	 (f (- (bigfloat:truncate
+		(bigfloat:/ (bigfloat:log 
+			     (bigfloat:/ (bigfloat:abs (aref p degree))
+					 (bigfloat:abs (aref p 0)))
+			     2)
+			    degree)))))
     (loop for k from 1 to degree
 	  for c = (bigfloat:/ (aref p k) (aref p 0))
 	  do
