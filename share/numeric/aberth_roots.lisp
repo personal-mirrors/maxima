@@ -1,4 +1,10 @@
 ;;;; -*-  Mode: Lisp; Package: Maxima; Syntax: Common-Lisp; Base: 10 -*- ;;;;
+;;;;
+;;;;
+;;;; Copyright 2021, Raymond Toy
+;;;;
+;;; Written by Raymond Toy and contributed to Maxima.  This code is
+;;; placed under same license as Maxima itself.
 
 (in-package :maxima)
 
@@ -120,7 +126,10 @@
 	(format t "h = ~A~%" h)
 	(format t "g = ~A~%" g)
 	(format t "g1 = ~A~%" g1))
-      ;; Newton's algorithm for a root of g(x).  We take advantage of the fact that g(x) is a polynomial in 1/x so we can use synthetic-div to compute the value.  Likewise g1(x) is a polyn
+      ;; Newton's algorithm for a root of g(x).  We take advantage of
+      ;; the fact that g(x) is a polynomial in 1/x so we can use
+      ;; synthetic-div to compute the value.  Likewise g1(x) is a
+      ;; polyn
       (let ((bnd (bigfloat:expt
 		  (bigfloat:- (bigfloat:/ (aref h degree)
 					  (aref h 0)))
@@ -292,7 +301,12 @@
 				  (bigfloat:* 1 (aref err k)))))))
 
 (defun laguerre-refine (p p1 r)
-  "Laguerre's method"
+  "Laguerre's method where P is the polynomial and P1 is the
+  derivative.  R is the initial root we wish to refine.  The
+  polynomial is a vector of coefficients in descending powers.
+
+  See https://en.wikipedia.org/wiki/Laguerre%27s_method. "
+  
   (let* ((degree (1- (length p)))
 	 (p2 (make-array (- degree 1)))
 	 (q (make-array (1+ degree))))
@@ -570,10 +584,10 @@
        (%o1)              (2 x + 1)  = 13.5 (x  + 1)
        (%i2) soln: allroots (eqn);
        (%o2) [x = 2.537941837315649e-116 %i - 1.015755543828121, 
-x = (- 0.965962515219637 %i) - 0.4069597231924075, 
-x = 0.8296749902129362 - 3.944304526105059e-31 %i, 
-x = 7.888609052210118e-31 %i + 0.9999999999999999, 
-x = 0.965962515219637 %i - 0.4069597231924075]
+	      x = (- 0.965962515219637 %i) - 0.4069597231924075, 
+	      x = 0.8296749902129362 - 3.944304526105059e-31 %i, 
+	      x = 7.888609052210118e-31 %i + 0.9999999999999999, 
+	      x = 0.965962515219637 %i - 0.4069597231924075]
        (%i3) for e in soln
                do (e2: subst (e, eqn), disp (expand (lhs(e2) - rhs(e2))));
                5.329070518200751e-15 - 1.661628648384253e-114 %i
@@ -589,10 +603,10 @@ x = 0.965962515219637 %i - 0.4069597231924075]
        (%i4) polyfactor: true$
        (%i5) aberth_roots (eqn);
        (%o5) - 13.5 (x - 0.965962515219637 %i + 0.4069597231924075)
- (x - 7.888609052210118e-31 %i - 0.9999999999999999)
- (x - 2.537941837315649e-116 %i + 1.015755543828121)
- (x + 3.944304526105059e-31 %i - 0.8296749902129362)
- (x + 0.965962515219637 %i + 0.4069597231924075)"
+		(x - 7.888609052210118e-31 %i - 0.9999999999999999)
+		(x - 2.537941837315649e-116 %i + 1.015755543828121)
+		(x + 3.944304526105059e-31 %i - 0.8296749902129362)
+		(x + 0.965962515219637 %i + 0.4069597231924075)"
 
   (aberth-roots expr #'$float))
 
