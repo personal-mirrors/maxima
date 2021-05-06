@@ -610,7 +610,7 @@
 
   (aberth-roots expr #'$float))
 
-(dfemfun $bf_aberth_roots (expr)
+(defmfun $bf_aberth_roots (expr)
   "-- Function: bf_aberth_roots 
     bf_aberth_roots(<expr>)
     bf_aberth_roots(<eqn>)
