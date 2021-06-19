@@ -1,6 +1,13 @@
 Maxima 5.45.1 change log
 ========================
 
+Changes in core:
+----------------
+ * Reverts the changes made to plot3d to fix the mesh_lines_color option
+   in newer versions of Gnuplot, because it breaks plot3d for users of older
+   versions. In newer versions of Gnuplot the mesh lines will appear orange
+   and mesh_lines_color will not work.
+
 Changes in the Windows installer:
 ---------------------------------
  * Strip the included C programs (winkill, winkill_lib, maxima_longnames)
