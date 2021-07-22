@@ -2447,27 +2447,138 @@ first kind:
 ;; Define Carlson's elliptic integrals so we can test their
 ;; implementation.  We only support bigfloat
 
+(defprop %carlson_rc simp-%carlson_rc operators)
+
+(defun simp-%carlson_rc (form unused z)
+  (declare (ignore unused))
+  (let ((x (simpcheck (second form) z))
+	(y (simpcheck (third form) z))
+	args)
+    (flet ((calc (x y)
+	     (to (bigfloat::bf-rc (bigfloat:to x)
+				  (bigfloat:to y)))))
+      (cond ((float-numerical-eval-p x y)
+	     (calc ($float x) ($float y)))
+	    ((bigfloat-numerical-eval-p x y)
+	     (calc ($bfloat x) ($bfloat y)))
+	    ((setf args (complex-float-numerical-eval-p x y))
+	     (destructuring-bind (x y)
+		 args
+	       (calc ($float x) ($float y))))
+	    ((setf args (complex-bigfloat-numerical-eval-p x y))
+	     (destructuring-bind (x y)
+		 args
+	       (calc ($bfloat x) ($bfloat y))))
+	    (t
+	     (eqtest (list '(%carlson_rc) x y) form))))))
+
 (defmfun $carlson_rc (x y)
-  (to (bigfloat::bf-rc (bigfloat:bigfloat ($bfloat x))
-		       (bigfloat:bigfloat ($bfloat y)))))
+  (simplify (list '(%carlson_rc)
+		  (resimplify x)
+		  (resimplify y))))
+
+(defprop %carlson_rd simp-%carlson_rd operators)
+
+(defun simp-%carlson_rd (form unused z)
+  (declare (ignore unused))
+  (let ((x (simpcheck (second form) z))
+	(y (simpcheck (third form) z))
+	(z (simpcheck (fourth form) z))
+	args)
+    (flet ((calc (x y z)
+	     (to (bigfloat::bf-rd (bigfloat:to x)
+				  (bigfloat:to y)
+				  (bigfloat:to z)))))
+      (cond ((float-numerical-eval-p x y z)
+	     (calc ($float x) ($float y) ($float z)))
+	    ((bigfloat-numerical-eval-p x y z)
+	     (calc ($bfloat x) ($bfloat y) ($bfloat z)))
+	    ((setf args (complex-float-numerical-eval-p x y z))
+	     (destructuring-bind (x y z)
+		 args
+	       (calc ($float x) ($float y) ($float z))))
+	    ((setf args (complex-bigfloat-numerical-eval-p x y z))
+	     (destructuring-bind (x y z)
+		 args
+	       (calc ($bfloat x) ($bfloat y) ($bfloat z))))
+	    (t
+	     (eqtest (list '(%carlson_rd) x y z) form))))))
 
 (defmfun $carlson_rd (x y z)
-  (to (bigfloat::bf-rd (bigfloat:bigfloat ($bfloat x))
-		       (bigfloat:bigfloat ($bfloat y))
-		       (bigfloat:bigfloat ($bfloat z)))))
+  (simplify (list '(%carlson_rd)
+		  (resimplify x)
+		  (resimplify y)
+		  (resimplify z))))
+
+(defprop %carlson_rf simp-%carlson_rf operators)
+
+(defun simp-%carlson_rf (form unused z)
+  (declare (ignore unused))
+  (let ((x (simpcheck (second form) z))
+	(y (simpcheck (third form) z))
+	(z (simpcheck (fourth form) z))
+	args)
+    (flet ((calc (x y z)
+	     (to (bigfloat::bf-rf (bigfloat:to x)
+				  (bigfloat:to y)
+				  (bigfloat:to z)))))
+      (cond ((float-numerical-eval-p x y z)
+	     (calc ($float x) ($float y) ($float z)))
+	    ((bigfloat-numerical-eval-p x y z)
+	     (calc ($bfloat x) ($bfloat y) ($bfloat z)))
+	    ((setf args (complex-float-numerical-eval-p x y z))
+	     (destructuring-bind (x y z)
+		 args
+	       (calc ($float x) ($float y) ($float z))))
+	    ((setf args (complex-bigfloat-numerical-eval-p x y z))
+	     (destructuring-bind (x y z)
+		 args
+	       (calc ($bfloat x) ($bfloat y) ($bfloat z))))
+	    (t
+	     (eqtest (list '(%carlson_rf) x y z) form))))))
 
 (defmfun $carlson_rf (x y z)
-  (to (bigfloat::bf-rf (bigfloat:bigfloat ($bfloat x))
-		       (bigfloat:bigfloat ($bfloat y))
-		       (bigfloat:bigfloat ($bfloat z)))))
+  (simplify (list '(%carlson_rf)
+		  (resimplify x)
+		  (resimplify y)
+		  (resimplify z))))
+
+(defprop %carlson_rj simp-%carlson_rj operators)
+
+(defun simp-%carlson_rj (form unused z)
+  (declare (ignore unused))
+  (let ((x (simpcheck (second form) z))
+	(y (simpcheck (third form) z))
+	(z (simpcheck (fourth form) z))
+	(p (simpcheck (fifth form) z))
+	args)
+    (flet ((calc (x y z p)
+	     (to (bigfloat::bf-rj (bigfloat:to x)
+				  (bigfloat:to y)
+				  (bigfloat:to z)
+				  (bigfloat:to p)))))
+      (cond ((float-numerical-eval-p x y z p)
+	     (calc ($float x) ($float y) ($float z) ($float p)))
+	    ((bigfloat-numerical-eval-p x y z p)
+	     (calc ($bfloat x) ($bfloat y) ($bfloat z) ($bfloat p)))
+	    ((setf args (complex-float-numerical-eval-p x y z p))
+	     (destructuring-bind (x y z p)
+		 args
+	       (calc ($float x) ($float y) ($float z) ($float p))))
+	    ((setf args (complex-bigfloat-numerical-eval-p x y z p))
+	     (destructuring-bind (x y z p)
+		 args
+	       (calc ($bfloat x) ($bfloat y) ($bfloat z) ($bfloat p))))
+	    (t
+	     (eqtest (list '(%carlson_rj) x y z p) form))))))
 
 (defmfun $carlson_rj (x y z p)
-  (to (bigfloat::bf-rj (bigfloat:bigfloat ($bfloat x))
-		       (bigfloat:bigfloat ($bfloat y))
-		       (bigfloat:bigfloat ($bfloat z))
-		       (bigfloat:bigfloat ($bfloat p)))))
-  
-
+  (simplify (list '(%carlson_rj)
+		  (resimplify x)
+		  (resimplify y)
+		  (resimplify z)
+		  (resimplify p))))
+		  
 ;;; Other Jacobian elliptic functions
 
 ;; jacobi_ns(u,m) = 1/jacobi_sn(u,m)
