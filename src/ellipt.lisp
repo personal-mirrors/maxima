@@ -2466,6 +2466,7 @@ first kind:
     (flet ((calc (x y)
 	     (to (bigfloat::bf-rc (bigfloat:to x)
 				  (bigfloat:to y)))))
+      ;; See comments from bf-rc
       (cond ((float-numerical-eval-p x y)
 	     (calc ($float x) ($float y)))
 	    ((bigfloat-numerical-eval-p x y)
@@ -2478,6 +2479,14 @@ first kind:
 	     (destructuring-bind (x y)
 		 args
 	       (calc ($bfloat x) ($bfloat y))))
+	    ((and (eq ($asksign y) '$pos)
+		  (alike1 x (pow (div (add 1 y) 2) 2)))
+	     ;; Rc(((1+x)/2)^2,x) = log(x)/(x-1) for x > 0.
+	     ;;
+	     ;; This is done by looking at Rc(x,y) and seeing if
+	     ;; ((1+y)/2)^2 is the same as x.
+	     (div (take '(%log) y)
+		  (sub y 1)))
 	    (t
 	     (eqtest (list '(%carlson_rc) x y) form))))))
 
