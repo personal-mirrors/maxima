@@ -2099,14 +2099,18 @@ first kind:
 
 
 
-;; rd(x,y,z) = integrate(3/2/sqrt(t+x)/sqrt(t+y)/sqrt(t+z), t, 0, inf)
+;; See https://dlmf.nist.gov/19.16.E5:
+;; 
+;; rd(x,y,z) = integrate(3/2/sqrt(t+x)/sqrt(t+y)/sqrt(t+z)/(t+z), t, 0, inf)
 ;;
+;; rd(1,1,1) = 1
 ;; E(K) = rf(0, 1-K^2, 1) - (K^2/3)*rd(0,1-K^2,1)
 ;;
 ;; B = integrate(s^2/sqrt(1-s^4), s, 0 ,1)
 ;;   = beta(3/4,1/2)/4
 ;;   = sqrt(%pi)*gamma(3/4)/gamma(1/4)
 ;;   = 1/3*rd(0,2,1)
+
 (defun bf-rd (x y z)
   (let* ((xn x)
 	 (yn y)
@@ -2163,6 +2167,11 @@ first kind:
        (/ (* power4 s)
 	  (expt an 3/2))))))
 
+;; See https://dlmf.nist.gov/19.16.E1
+;;
+;; rf(x,y,z) = 1/2*integrate(1/(sqrt(t+x)*sqrt(t+y)*sqrt(t+z)), t, 0, inf);
+;;
+;; rf(1,1,1) = 1
 (defun bf-rf (x y z)
   (let* ((xn x)
 	 (yn y)
