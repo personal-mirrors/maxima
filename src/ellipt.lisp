@@ -2045,7 +2045,7 @@ first kind:
   ;; quite right, but it makes the routines more accurate as fpprec
   ;; increases.
   (sqrt (reduce #'min (mapcar #'(lambda (x)
-				  (if (rationalp x)
+				  (if (rationalp (realpart x))
 				      maxima::flonum-epsilon
 				      (epsilon x)))
 			      args))))
@@ -2479,6 +2479,10 @@ first kind:
 	     (destructuring-bind (x y)
 		 args
 	       (calc ($bfloat x) ($bfloat y))))
+	    ((alike1 x y)
+	     ;; carlson_rc(x,x) = 1/2*integrate(1/sqrt(t+x)/(t+x), t, 0, inf)
+	     ;;    = 1/sqrt(x)
+	     (pow x -1//2))
 	    ((and (eq ($asksign y) '$pos)
 		  (alike1 x (pow (div (add 1 y) 2) 2)))
 	     ;; Rc(((1+x)/2)^2,x) = log(x)/(x-1) for x > 0.
