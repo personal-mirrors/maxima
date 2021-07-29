@@ -2479,7 +2479,8 @@ first kind:
 	     (destructuring-bind (x y)
 		 args
 	       (calc ($bfloat x) ($bfloat y))))
-	    ((alike1 x y)
+	    ((and (alike1 x y)
+		  (eq ($asksign x) '$pos))
 	     ;; carlson_rc(x,x) = 1/2*integrate(1/sqrt(t+x)/(t+x), t, 0, inf)
 	     ;;    = 1/sqrt(x)
 	     (pow x -1//2))
