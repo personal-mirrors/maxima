@@ -911,24 +911,31 @@ done$
 carlson_rc(xp,xp);
 1/sqrt(xp)$
 
+/* log(x) = (x-1)*carlson_rc(((1+x)/2)^2,x) */
 closeto((2-1)*carlson_rc(((1+2)/2)^2,2.0) - log(2.0), 1e-16);
 true$
 
+/* asin(x) = x*carlson_rc(1-x^2,1) */
 closeto(1/2*carlson_rc(1-1/4,1.0) - asin(0.5), 1.1103e-16);
 true$
 
+/* acos(x) = sqrt(1-x^2)*carlson_rc(x^2,1) */
 closeto(sqrt(1.0-1/4)*carlson_rc(1/4,1.0) - acos(0.5), 2.2205e-16);
 true$
 
+/* atan(x) = x*carlson_rc(1,1+x^2) */
 closeto(1*carlson_rc(1.0,1+1^2) - atan(1.0), 1.1103e-16);
 true$
 
+/* asinh(x) = x*carlson_rc(1+x^2,1) */
 closeto(1*carlson_rc(1+1^2,1.0) - asinh(1.0), 1.1103e-16);
 true$
 
+/* acosh(x) = sqrt(x^2-1)*carlson_rc(x^2,1) */
 closeto(sqrt(2^2-1.0)*carlson_rc(2^2,1.0) - acosh(2.0), 2.2205e-16);
 true$
 
+/* atanh(x) = x*carlson_rc(1,1-x^2) */
 closeto(1/2*carlson_rc(1.0,1-(1/2)^2) - atanh(0.5), 1e-16);
 true$
 
