@@ -2464,8 +2464,19 @@ first kind:
 	(y (simpcheck (third form) z))
 	args)
     (flet ((calc (x y)
-	     (to (bigfloat::bf-rc (bigfloat:to x)
-				  (bigfloat:to y)))))
+	     (flet ((floatify (z)
+		      ;; If z is a complex rational, convert to a
+		      ;; complex double-float.  Otherwise, leave it as
+		      ;; is.  If we don't do this, %i is handled as
+		      ;; #c(0 1), which makes bf-rc use single-float
+		      ;; arithmetic instead of the desired
+		      ;; double-float.
+		      (if (and (complexp z) (rationalp (realpart z)))
+			  (complex (float (realpart z))
+				   (float (imagpart z)))
+			  z)))
+	       (to (bigfloat::bf-rc (floatify (bigfloat:to x))
+				    (floatify (bigfloat:to y)))))))
       ;; See comments from bf-rc
       (cond ((float-numerical-eval-p x y)
 	     (calc ($float x) ($float y)))
@@ -2480,11 +2491,11 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y))))
 	    ((and (alike1 x y)
-		  (eq ($asksign x) '$pos))
+		  (eq ($asksign ($realpart x)) '$pos))
 	     ;; carlson_rc(x,x) = 1/2*integrate(1/sqrt(t+x)/(t+x), t, 0, inf)
 	     ;;    = 1/sqrt(x)
 	     (pow x -1//2))
-	    ((and (eq ($asksign y) '$pos)
+	    ((and (eq ($asksign ($realpart y)) '$pos)
 		  (alike1 x (pow (div (add 1 y) 2) 2)))
 	     ;; Rc(((1+x)/2)^2,x) = log(x)/(x-1) for x > 0.
 	     ;;
