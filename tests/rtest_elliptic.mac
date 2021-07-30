@@ -224,10 +224,15 @@ block([badpoints : [],
 done;
 
 /* These test values come from http://getnet.net/~cherry/testrf.mac */
- 
-(mrf:[[[1,2,0],1.3110287771461b0],
-     [[%i,-%i,0],1.8540746773014b0],
-     [[0.5,1,0],1.8540746773014b0],
+
+/*
+ * rf(1,2,0) = (gamma(1/4)^2/4/sqrt(2*%pi)
+ * rf(%i,-%i,0) = 1/2*integrate(1/sqrt(t^2+1)/sqrt(t),t,0,inf) = beta(1/4,1/4)/4;
+ * rf(1/2,1,0) = 1/sqrt(1/2)*rf(1,2,0) (See https://dlmf.nist.gov/19.20.E1)
+ */
+(mrf:[[[1,2,0], gamma(1/4)^2/4/sqrt(2*%pi)],
+     [[%i,-%i,0], beta(1/4,1/4)/4],
+     [[0.5,1,0], gamma(1/4)^2/(4*sqrt(%pi))],
      [[%i-1,%i,0],0.79612586584234b0-%i*(1.2138566698365b0)],
      [[2,3,4],0.58408284167715b0],
      [[%i,-%i,2],1.0441445654064b0],
@@ -238,9 +243,37 @@ done;
 test_table('carlson_rf, mrf, 1.5b-13);
 [];
 
-(mrc:[[[0,1/4],bfloat(%pi)],
-      [[9/4,2],log(2b0)],
-      [[0,%i],(1-%i)*(1.1107207345396b0)],
+/*
+ * rc(0,1/4) = 1/2*integrate(1/sqrt(t)/(t+1/4), t, 0, inf)
+ *           = %pi
+ *
+ * rc(9/4,2) = 1/2*integrate(1/sqrt(t+9/4)/(t+2), t, 0, inf)
+ *           = log(2)
+ * After doing a logcontract.
+ *
+ * rc(0,%i) = 1/2*integrate(1/sqrt(t)/(t+%i), t, 0, inf);
+ *          = (1-%i)*%pi/2^(3/2)
+ *
+ * rc(2,1) = 1/2*integrate(1/sqrt(t+2)/(t+1), t, 0, inf)
+ *         = (log(sqrt(2)+1)-log(sqrt(2)-1))/2
+ *         = -log(sqrt(2)-1)
+ *
+ * After doing a logcontract, ratsimp/algebraic, and logcontract with
+ *  logconcoeffp, and a sqrtdenest
+ *
+ * rc(0,1) = 1/2*integrate(1/sqrt(t)/(t+1), t, 0, inf)
+ *         = %pi/2
+ * rc(%i, %i+1) = 1/2*integrate(1/sqrt(t+%i)/(t+%i+1), t, 0, inf)
+ *     = (%pi-2*atan((-1)^(1/4)))/2
+ *     = %pi/4+%i/2*log(sqrt(2)-1)
+ *
+ * After applying rectform, ratsimp, logcontract, then another
+ * logcontract with logconcoeffp set to featurep(m) or ratnump(m).
+ *
+ */
+(mrc:[[[0b0,1/4],bfloat(%pi)],
+      [[9/4,2b0],log(2b0)],
+      [[0b0,%i],(1-%i)*%pi/2^(3/2)],
       [[-%i,%i],1.2260849569072b0-%i*(0.34471136988768b0)],
       [[1/4,-2],log(2b0)/3],
       [[%i,-1],0.77778596920447b0+%i*(0.19832484993429b0)],
