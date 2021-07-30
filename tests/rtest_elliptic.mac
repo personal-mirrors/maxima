@@ -217,7 +217,7 @@ block([badpoints : [],
 	badpoints : cons ([z,result,answer,abserr],badpoints)
     ),
   if badpoints # [] then
-    cons(maxerr,badpoints)
+    cons(maxerr,reverse(badpoints))
   else
     badpoints
 ),done);
@@ -905,8 +905,11 @@ subst(u=1, diff(inverse_jacobi_dn(u,m),m));
 
 /* Carlson's integrals */
 
-carlson_rc(x,x);
-1/sqrt(x)$
+(assume(xp > 0), done);
+done$
+
+carlson_rc(xp,xp);
+1/sqrt(xp)$
 
 closeto((2-1)*carlson_rc(((1+2)/2)^2,2.0) - log(2.0), 1e-16);
 true$
