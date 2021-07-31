@@ -949,7 +949,7 @@ closeto(1*carlson_rc(1.0,1+1^2) - atan(1.0), 1.1103e-16);
 true$
 
 /* asinh(x) = x*carlson_rc(1+x^2,1) */
-closeto(1*carlson_rc(1+1^2,1.0) - asinh(1.0), 1.1103e-16);
+closeto(1*carlson_rc(1+1^2,1.0) - asinh(1.0), 2.2205e-16);
 true$
 
 /* acosh(x) = sqrt(x^2-1)*carlson_rc(x^2,1) */
@@ -957,7 +957,7 @@ closeto(sqrt(2^2-1.0)*carlson_rc(2^2,1.0) - acosh(2.0), 2.2205e-16);
 true$
 
 /* atanh(x) = x*carlson_rc(1,1-x^2) */
-closeto(1/2*carlson_rc(1.0,1-(1/2)^2) - atanh(0.5), 1e-16);
+closeto(1/2*carlson_rc(1.0,1-(1/2)^2) - atanh(0.5), 1.1103e-16);
 true$
 
 carlson_rd(x, x, x);
