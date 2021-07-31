@@ -1019,5 +1019,23 @@ gamma(1/4)^2/(4*sqrt(%pi))$
 carlson_rj(x,x,x,x);
 1/x^(3/2)$
 
+carlson_rj(x,y,z,z);
+carlson_rd(x,y,z)$
+
+(assume(pp>0,yp>0), done);
+done$
+
+carlson_rj(xp,xp,xp,pp);
+3*(1/sqrt(xp)-carlson_rc(xp,pp))/(pp-xp)$
+
+carlson_rj(0,yp,yp,pp);
+3*%pi/(2*(yp*sqrt(pp)+pp*sqrt(yp)))$
+
+carlson_rj(x,yp,yp,pp);
+3/(pp-yp)*(carlson_rc(x,yp) - carlson_rc(x,pp))$
+
+carlson_rj(x,yp,yp,yp);
+(3*(carlson_rc(x,yp)-sqrt(x)/yp))/(2*(yp-x))$
+
 (fpprec:oldfpprec,kill(l2,l3,test_deriv,oldfpprec),done);
 done;
