@@ -981,6 +981,12 @@ true$
 carlson_rd(x, x, x);
 1/x^(3/2)$
 
+carlson_rd(0,2,1);
+3*sqrt(%pi)*gamma(3/4)/gamma(1/4)$
+
+carlson_rd(2,0,1);
+3*sqrt(%pi)*gamma(3/4)/gamma(1/4)$
+
 closeto(carlson_rd(0, 2, 1.0) - float(3*sqrt(%pi)*gamma(3/4)/gamma(1/4)), 6.66134e-16);
 true$
 

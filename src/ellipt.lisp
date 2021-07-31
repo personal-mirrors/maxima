@@ -2598,11 +2598,20 @@ first kind:
 		      (and (eql x 2)
 			   (eql y 0))))
 	     ;; Rd(0,2,1) = 3*(gamma(3/4)^2)/sqrt(2*%pi)
-	     ;; and Rd(x,y,z) = Rd(y,x,z)
+	     ;; See https://dlmf.nist.gov/19.20.E22.
+	     ;;
+	     ;; But that's the same as
+	     ;; 3*sqrt(%pi)*gamma(3/4)/gamma(1/4).  We can see this by
+	     ;; taking the ratio to get
+	     ;; gamma(1/4)*gamma(3/4)/sqrt(2)*%pi.  But
+	     ;; gamma(1/4)*gamma(3/4) = beta(1/4,3/4) = sqrt(2)*%pi.
+	     ;; Hence, the ratio is 1.
+	     ;;
+	     ;; Note also that Rd(x,y,z) = Rd(y,x,z)
 	     (mul 3
-		  (div (pow (take '(%gamma) (div 3 4))
-			    2)
-		       (pow (mul 2 '$%pi) 1//2))))
+		  (pow '$%pi 1//2)
+		  (div (take '(%gamma) (div 3 4))
+		       (take '(%gamma) (div 1 4)))))
 	    ((float-numerical-eval-p x y z)
 	     (calc ($float x) ($float y) ($float z)))
 	    ((bigfloat-numerical-eval-p x y z)
