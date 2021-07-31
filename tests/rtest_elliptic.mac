@@ -987,6 +987,29 @@ true$
 carlson_rf(x,x,x);
 1/sqrt(x)$
 
+/*
+ * Rf(1,2,0) has an analytic solution.  Check some of the permutations too.
+ */
+carlson_rf(1,2,0);
+gamma(1/4)^2/(4*sqrt(2*%pi))$
+
+carlson_rf(2,1,0);
+gamma(1/4)^2/(4*sqrt(2*%pi))$
+
+carlson_rf(0, 1,2);
+gamma(1/4)^2/(4*sqrt(2*%pi))$
+
+/* Check permutations of Rf(%i, -%i, 0) too */
+carlson_rf(%i,-%i,0);
+gamma(1/4)^2/(4*sqrt(%pi))$
+
+carlson_rf(-%i,%i,0);
+gamma(1/4)^2/(4*sqrt(%pi))$
+
+carlson_rf(0, %i,-%i);
+gamma(1/4)^2/(4*sqrt(%pi))$
+
+
 carlson_rj(x,x,x,x);
 1/x^(3/2)$
 

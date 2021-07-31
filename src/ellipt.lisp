@@ -2663,10 +2663,31 @@ first kind:
 	     ;; Rf(0,1,2) = (gamma(1/4))^2/(4*sqrt(2*%pi))
 	     ;;
 	     ;; And Rf is symmetric in all the args, so check every
-	     ;; permutation too.  This could probably be simplified to
-	     ;; consing all the lists, but I'm lazy.
+	     ;; permutation too.  This could probably be simplified
+	     ;; without consing all the lists, but I'm lazy.
 	     (div (pow (take '(%gamma) (div 1 4)) 2)
 		  (mul 4 (pow (mul 2 '$%pi) 1//2))))
+	    ((some #'(lambda (args)
+			(destructuring-bind (x y z)
+			    args
+			  (and (alike1 x '$%i)
+			       (alike1 y (mul -1 '$%i))
+			       (eql z 0))))
+		    (list (list x y z)
+			  (list x z y)
+			  (list y x z)
+			  (list y z x)
+			  (list z x y)
+			  (list z y x)))
+	     ;; rf(%i, -%i, 0)
+	     ;;   = 1/2*integrate(1/sqrt(t^2+1)/sqrt(t),t,0,inf)
+	     ;;   = beta(1/4,1/4)/4;
+	     ;; makegamma(%)
+	     ;;   = gamma(1/4)^2/(4*sqrt(%pi))
+	     ;;
+	     ;; Rf is symmetric, so check all the permutations too.
+	     (div (pow (take '(%gamma) (div 1 4)) 2)
+		  (mul 4 (pow '$%pi 1//2))))	    
 	    ((float-numerical-eval-p x y z)
 	     (calc ($float x) ($float y) ($float z)))
 	    ((bigfloat-numerical-eval-p x y z)
