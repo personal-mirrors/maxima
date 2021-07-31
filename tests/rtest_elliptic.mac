@@ -932,6 +932,24 @@ done$
 carlson_rc(xp,xp);
 1/sqrt(xp)$
 
+carlson_rc(0,1);
+%pi/2$
+
+carlson_rc(0, 1/4);
+%pi$
+
+carlson_rc(2, 1);
+log(sqrt(2)+1)$
+
+carlson_rc(%i, %i+1);
+%pi/4 + %i*log(sqrt(2)-1)/2$
+
+carlson_rc(0, %i);
+((1-%i)*%pi)/2^(3/2)$
+
+carlson_rc(((1+xp)/2)^2, xp);
+log(xp)/(xp-1)$
+
 /* log(x) = (x-1)*carlson_rc(((1+x)/2)^2,x) */
 closeto((2-1)*carlson_rc(((1+2)/2)^2,2.0) - log(2.0), 1e-16);
 true$

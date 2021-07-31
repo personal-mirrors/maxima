@@ -2490,6 +2490,48 @@ first kind:
 	     (destructuring-bind (x y)
 		 args
 	       (calc ($bfloat x) ($bfloat y))))
+	    ((and (zerop1 x)
+		  (onep1 y))
+	     ;; rc(0, 1) = %pi/2
+	     (div '$%pi 2))
+	    ((and (zerop1 x)
+		  (alike1 y (div 1 4)))
+	     ;; rc(0,1/4) = %pi
+	     '$%pi)
+	    ((and (eql x 2)
+		  (onep1 y))
+	     ;; rc(2,1) = 1/2*integrate(1/sqrt(t+2)/(t+1), t, 0, inf)
+	     ;;   = (log(sqrt(2)+1)-log(sqrt(2)-1))/2
+	     ;; ratsimp(logcontract(%)),algebraic:
+	     ;;   = -log(3-2^(3/2))/2
+	     ;;   = -log(sqrt(3-2^(3/2)))
+	     ;;   = -log(sqrt(2)-1)
+	     ;;   = log(1/(sqrt(2)-1))
+	     ;; ratsimp(%),algebraic;
+	     ;;   = log(sqrt(2)+1)
+	     (take '(%log) (add 1 (pow 2 1//2))))
+	    ((and (alike x '$%i)
+		  (alike y (add 1 '$%i)))
+	     ;; rc(%i, %i+1) = 1/2*integrate(1/sqrt(t+%i)/(t+%i+1), t, 0, inf)
+	     ;;   = %pi/2-atan((-1)^(1/4))
+	     ;; ratsimp(logcontract(ratsimp(rectform(%o42)))),algebraic;
+	     ;;   = (%i*log(3-2^(3/2))+%pi)/4
+	     ;;   = (%i*log(3-2^(3/2)))/4+%pi/4
+	     ;;   = %i*log(sqrt(3-2^(3/2)))/2+%pi/4
+	     ;; sqrtdenest(%);
+	     ;;   = %pi/4 + %i*log(sqrt(2)-1)/2
+	     (add (div '$%pi 4)
+		  (mul '$%i
+		       1//2
+		       (take '(%log) (sub (pow 2 1//2) 1)))))
+	    ((and (zerop1 x)
+		  (alike1 y '$%i))
+	     ;; rc(0,%i) = 1/2*integrate(1/(sqrt(t)*(t+%i)), t, 0, inf)
+	     ;;   = -((sqrt(2)*%i-sqrt(2))*%pi)/4
+	     ;;   = ((1-%i)*%pi)/2^(3/2)
+	     (div (mul (sub 1 '$%i)
+		       '$%pi)
+		  (pow 2 3//2)))
 	    ((and (alike1 x y)
 		  (eq ($asksign ($realpart x)) '$pos))
 	     ;; carlson_rc(x,x) = 1/2*integrate(1/sqrt(t+x)/(t+x), t, 0, inf)
