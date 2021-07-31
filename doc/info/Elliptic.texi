@@ -745,7 +745,7 @@ $$
 @ifset mathjax
 @html
 $$
-R_J(x,y,z) = \frac{1}{2}\int_0^{\infty}\frac{1}{\sqrt{t+x}\sqrt{t+y}\sqrt{t+z}}\, dt
+R_J(x,y,z) = \frac{1}{2}\int_0^{\infty}\frac{1}{\sqrt{t+x}\sqrt{t+y}\sqrt{t+z}\,(t+p)}\, dt
 $$
 @end html
 @end ifset
