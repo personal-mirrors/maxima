@@ -2463,7 +2463,6 @@ first kind:
 	      (f-verb (intern (concatenate 'string "$" s)))
 	      (op (intern (concatenate 'string "SIMP-" (string f-noun)))))
 	 `(progn
-	    (defprop ,f-noun ,op operators)
 	    (defprop ,f-verb ,f-noun verb)
 	    (defprop ,f-noun ,f-verb noun)
 	    (defprop ,f-verb ,f-noun alias)
@@ -2474,11 +2473,8 @@ first kind:
   (frob carlson_rj))
 
 
-(defun simp-%carlson_rc (form unused z)
-  (declare (ignore unused))
-  (let ((x (simpcheck (second form) z))
-	(y (simpcheck (third form) z))
-	args)
+(defsimp %carlson_rc (x y)
+  (let (args)
     (flet ((calc (x y)
 	     (flet ((floatify (z)
 		      ;; If z is a complex rational, convert to a
@@ -2553,8 +2549,8 @@ first kind:
 	     ;; carlson_rc(x,x) = 1/2*integrate(1/sqrt(t+x)/(t+x), t, 0, inf)
 	     ;;    = 1/sqrt(x)
 	     (pow x -1//2))
-	    ((and (eq ($asksign ($realpart y)) '$pos)
-		  (alike1 x (pow (div (add 1 y) 2) 2)))
+	    ((and (alike1 x (pow (div (add 1 y) 2) 2))
+		  (eq ($asksign ($realpart y)) '$pos))
 	     ;; Rc(((1+x)/2)^2,x) = log(x)/(x-1) for x > 0.
 	     ;;
 	     ;; This is done by looking at Rc(x,y) and seeing if
@@ -2569,12 +2565,8 @@ first kind:
 		  (resimplify x)
 		  (resimplify y))))
 
-(defun simp-%carlson_rd (form unused z)
-  (declare (ignore unused))
-  (let ((x (simpcheck (second form) z))
-	(y (simpcheck (third form) z))
-	(z (simpcheck (fourth form) z))
-	args)
+(defsimp %carlson_rd (x y z)
+  (let (args)
     (flet ((calc (x y z)
 	     (to (bigfloat::bf-rd (bigfloat:to x)
 				  (bigfloat:to y)
@@ -2639,7 +2631,7 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z))))
 	    (t
-	     (eqtest (list '(%carlson_rd) x y z) form))))))
+	     (eqtest (list '(%carlson_rd) x y z) form))))))    
 
 (defmfun $carlson_rd (x y z)
   (simplify (list '(%carlson_rd)
@@ -2647,12 +2639,8 @@ first kind:
 		  (resimplify y)
 		  (resimplify z))))
 
-(defun simp-%carlson_rf (form unused z)
-  (declare (ignore unused))
-  (let ((x (simpcheck (second form) z))
-	(y (simpcheck (third form) z))
-	(z (simpcheck (fourth form) z))
-	args)
+(defsimp %carlson_rf (x y z)
+  (let (args)
     (flet ((calc (x y z)
 	     (to (bigfloat::bf-rf (bigfloat:to x)
 				  (bigfloat:to y)
@@ -2670,17 +2658,17 @@ first kind:
 	    ((alike1 y z)
 	     (take '(%carlson_rc) x y))
 	    ((some #'(lambda (args)
-			(destructuring-bind (x y z)
-			    args
-			  (and (zerop1 x)
-			       (eql y 1)
-			       (eql z 2))))
-		    (list (list x y z)
-			  (list x z y)
-			  (list y x z)
-			  (list y z x)
-			  (list z x y)
-			  (list z y x)))
+		       (destructuring-bind (x y z)
+			   args
+			 (and (zerop1 x)
+			      (eql y 1)
+			      (eql z 2))))
+		   (list (list x y z)
+			 (list x z y)
+			 (list y x z)
+			 (list y z x)
+			 (list z x y)
+			 (list z y x)))
 	     ;; Rf(0,1,2) = (gamma(1/4))^2/(4*sqrt(2*%pi))
 	     ;;
 	     ;; And Rf is symmetric in all the args, so check every
@@ -2689,17 +2677,17 @@ first kind:
 	     (div (pow (take '(%gamma) (div 1 4)) 2)
 		  (mul 4 (pow (mul 2 '$%pi) 1//2))))
 	    ((some #'(lambda (args)
-			(destructuring-bind (x y z)
-			    args
-			  (and (alike1 x '$%i)
-			       (alike1 y (mul -1 '$%i))
-			       (eql z 0))))
-		    (list (list x y z)
-			  (list x z y)
-			  (list y x z)
-			  (list y z x)
-			  (list z x y)
-			  (list z y x)))
+		       (destructuring-bind (x y z)
+			   args
+			 (and (alike1 x '$%i)
+			      (alike1 y (mul -1 '$%i))
+			      (eql z 0))))
+		   (list (list x y z)
+			 (list x z y)
+			 (list y x z)
+			 (list y z x)
+			 (list z x y)
+			 (list z y x)))
 	     ;; rf(%i, -%i, 0)
 	     ;;   = 1/2*integrate(1/sqrt(t^2+1)/sqrt(t),t,0,inf)
 	     ;;   = beta(1/4,1/4)/4;
@@ -2722,7 +2710,7 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z))))
 	    (t
-	     (eqtest (list '(%carlson_rf) x y z) form))))))
+	     (eqtest (list '(%carlson_rf) x y z) form))))))    
 
 (defmfun $carlson_rf (x y z)
   (simplify (list '(%carlson_rf)
@@ -2730,13 +2718,8 @@ first kind:
 		  (resimplify y)
 		  (resimplify z))))
 
-(defun simp-%carlson_rj (form unused z)
-  (declare (ignore unused))
-  (let ((x (simpcheck (second form) z))
-	(y (simpcheck (third form) z))
-	(z (simpcheck (fourth form) z))
-	(p (simpcheck (fifth form) z))
-	args)
+(defsimp %carlson_rj (x y z p)
+  (let (args)
     (flet ((calc (x y z p)
 	     (to (bigfloat::bf-rj (bigfloat:to x)
 				  (bigfloat:to y)
@@ -2780,7 +2763,7 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z) ($bfloat p))))
 	    (t
-	     (eqtest (list '(%carlson_rj) x y z p) form))))))
+	     (eqtest (list '(%carlson_rj) x y z p) form))))))    
 
 (defmfun $carlson_rj (x y z p)
   (simplify (list '(%carlson_rj)

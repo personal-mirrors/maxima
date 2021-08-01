@@ -467,3 +467,45 @@
 
 ;; This should produce compile errors
 ;; (defmfun $zot (a &optional c &key b) (list '(mlist) a b))
+
+;; Simple macro to define simplifiers for NAME taking LAMBDA-LIST for
+;; the args.  This macro generates some of the boilerplate used for
+;; simplifiers.
+;;
+;; For example, normally a hand-written simplifier for a function FUN
+;; of 2 args looks like:
+;;
+;; (defun simp-%fun (form unused z)
+;;   (declare (ignore unused))
+;;   (let ((x (simpcheck (second form) z))
+;;         (y (simpcheck (third form) z)))
+;;     (twoargcheck form)
+;;     <stuff>)
+;;
+;; This can be replaced with
+;;
+;; (defsimp %fun (x y)
+;;   <stuff>)
+;;
+;; Which expands to something like
+;;
+;; (defun simp-%fun (form #:unused-1 #:z-0)
+;;   (declare (ignore #:unused-1))
+;;   (let ((x (simpcheck (second form) #:z-0))
+;;         (y (simpcheck (third form) #:z-0)))
+;;     (arg-count-check 2 form)
+;;     <stuff>))
+(defmacro defsimp (name lambda-list &body body)
+  (let* ((simp-name (intern (concatenate 'string "SIMP-" (string name))))
+	 (z-arg (gensym "Z-"))
+	 (unused-arg (gensym "UNUSED-"))
+	 (arg-forms (loop for arg in lambda-list
+			  and count from 1
+			  collect (list arg `(simpcheck (nth ,count form) ,z-arg)))))
+    `(progn
+       (defprop ,name ,simp-name operators)
+       (defun ,simp-name (form ,unused-arg ,z-arg)
+       (declare (ignore ,unused-arg))
+       (let ,arg-forms
+	 (arg-count-check ,(length lambda-list) form)
+	 ,@body)))))
