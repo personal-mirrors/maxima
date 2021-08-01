@@ -2453,10 +2453,26 @@ first kind:
 
 (in-package :maxima)
 
-;; Define Carlson's elliptic integrals so we can test their
-;; implementation.  We only support bigfloat
+;; Define Carlson's elliptic integrals.
 
-(defprop %carlson_rc simp-%carlson_rc operators)
+;; Set up properties for the integrals
+(macrolet
+    ((frob (root)
+       (let* ((s (string root))
+	      (f-noun (intern (concatenate 'string "%" s)))
+	      (f-verb (intern (concatenate 'string "$" s)))
+	      (op (intern (concatenate 'string "SIMP-" (string f-noun)))))
+	 `(progn
+	    (defprop ,f-noun ,op operators)
+	    (defprop ,f-verb ,f-noun verb)
+	    (defprop ,f-noun ,f-verb noun)
+	    (defprop ,f-verb ,f-noun alias)
+	    (defprop ,f-noun ,f-verb reversealias)))))
+  (frob carlson_rc)
+  (frob carlson_rd)
+  (frob carlson_rf)
+  (frob carlson_rj))
+
 
 (defun simp-%carlson_rc (form unused z)
   (declare (ignore unused))
@@ -2553,8 +2569,6 @@ first kind:
 		  (resimplify x)
 		  (resimplify y))))
 
-(defprop %carlson_rd simp-%carlson_rd operators)
-
 (defun simp-%carlson_rd (form unused z)
   (declare (ignore unused))
   (let ((x (simpcheck (second form) z))
@@ -2632,8 +2646,6 @@ first kind:
 		  (resimplify x)
 		  (resimplify y)
 		  (resimplify z))))
-
-(defprop %carlson_rf simp-%carlson_rf operators)
 
 (defun simp-%carlson_rf (form unused z)
   (declare (ignore unused))
@@ -2717,8 +2729,6 @@ first kind:
 		  (resimplify x)
 		  (resimplify y)
 		  (resimplify z))))
-
-(defprop %carlson_rj simp-%carlson_rj operators)
 
 (defun simp-%carlson_rj (form unused z)
   (declare (ignore unused))
