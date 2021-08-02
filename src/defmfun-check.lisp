@@ -572,8 +572,8 @@
        ;; Define the simplifier
        (defun ,simp-name (form ,unused-arg ,z-arg)
 	 (declare (ignore ,unused-arg))
+	 (arg-count-check ,(length lambda-list) form)
 	 (let ,arg-forms
-	   (arg-count-check ,(length lambda-list) form)
 	   (macrolet ((give-up ()
 			`(eqtest (list '(,',noun-name) x y) form)))
 	     ,@body)))
