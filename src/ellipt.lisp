@@ -2455,25 +2455,7 @@ first kind:
 
 ;; Define Carlson's elliptic integrals.
 
-;; Set up properties for the integrals
-(macrolet
-    ((frob (root)
-       (let* ((s (string root))
-	      (f-noun (intern (concatenate 'string "%" s)))
-	      (f-verb (intern (concatenate 'string "$" s)))
-	      (op (intern (concatenate 'string "SIMP-" (string f-noun)))))
-	 `(progn
-	    (defprop ,f-verb ,f-noun verb)
-	    (defprop ,f-noun ,f-verb noun)
-	    (defprop ,f-verb ,f-noun alias)
-	    (defprop ,f-noun ,f-verb reversealias)))))
-  (frob carlson_rc)
-  (frob carlson_rd)
-  (frob carlson_rf)
-  (frob carlson_rj))
-
-
-(defsimp %carlson_rc (x y)
+(def-simplifying-fun carlson_rc (x y)
   (let (args)
     (flet ((calc (x y)
 	     (flet ((floatify (z)
@@ -2545,12 +2527,12 @@ first kind:
 		       '$%pi)
 		  (pow 2 3//2)))
 	    ((and (alike1 x y)
-		  (eq ($asksign ($realpart x)) '$pos))
+		  (eq ($sign ($realpart x)) '$pos))
 	     ;; carlson_rc(x,x) = 1/2*integrate(1/sqrt(t+x)/(t+x), t, 0, inf)
 	     ;;    = 1/sqrt(x)
 	     (pow x -1//2))
 	    ((and (alike1 x (pow (div (add 1 y) 2) 2))
-		  (eq ($asksign ($realpart y)) '$pos))
+		  (eq ($sign ($realpart y)) '$pos))
 	     ;; Rc(((1+x)/2)^2,x) = log(x)/(x-1) for x > 0.
 	     ;;
 	     ;; This is done by looking at Rc(x,y) and seeing if
@@ -2558,14 +2540,9 @@ first kind:
 	     (div (take '(%log) y)
 		  (sub y 1)))
 	    (t
-	     (eqtest (list '(%carlson_rc) x y) form))))))
-
-(defmfun $carlson_rc (x y)
-  (simplify (list '(%carlson_rc)
-		  (resimplify x)
-		  (resimplify y))))
-
-(defsimp %carlson_rd (x y z)
+	     (default-case))))))
+  
+(def-simplifying-fun carlson_rd (x y z)
   (let (args)
     (flet ((calc (x y z)
 	     (to (bigfloat::bf-rd (bigfloat:to x)
@@ -2657,15 +2634,9 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z))))
 	    (t
-	     (eqtest (list '(%carlson_rd) x y z) form))))))    
+	     (eqtest (list '(%carlson_rd) x y z) form))))))
 
-(defmfun $carlson_rd (x y z)
-  (simplify (list '(%carlson_rd)
-		  (resimplify x)
-		  (resimplify y)
-		  (resimplify z))))
-
-(defsimp %carlson_rf (x y z)
+(def-simplifying-fun carlson_rf (x y z)
   (let (args)
     (flet ((calc (x y z)
 	     (to (bigfloat::bf-rf (bigfloat:to x)
@@ -2775,15 +2746,9 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z))))
 	    (t
-	     (eqtest (list '(%carlson_rf) x y z) form))))))    
+	     (eqtest (list '(%carlson_rf) x y z) form))))))
 
-(defmfun $carlson_rf (x y z)
-  (simplify (list '(%carlson_rf)
-		  (resimplify x)
-		  (resimplify y)
-		  (resimplify z))))
-
-(defsimp %carlson_rj (x y z p)
+(def-simplifying-fun carlson_rj (x y z p)
   (let (args)
     (flet ((calc (x y z p)
 	     (to (bigfloat::bf-rj (bigfloat:to x)
@@ -2828,14 +2793,7 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z) ($bfloat p))))
 	    (t
-	     (eqtest (list '(%carlson_rj) x y z p) form))))))    
-
-(defmfun $carlson_rj (x y z p)
-  (simplify (list '(%carlson_rj)
-		  (resimplify x)
-		  (resimplify y)
-		  (resimplify z)
-		  (resimplify p))))
+	     (eqtest (list '(%carlson_rj) x y z p) form))))))  
 		  
 ;;; Other Jacobian elliptic functions
 
@@ -5220,3 +5178,4 @@ first kind:
 			     den)
 			(div (mul -1 (mul param (mul s (mul c s1))))
 			     den))))))))))
+
