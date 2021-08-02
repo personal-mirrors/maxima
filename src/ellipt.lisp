@@ -2618,6 +2618,32 @@ first kind:
 		  (pow '$%pi 1//2)
 		  (div (take '(%gamma) (div 3 4))
 		       (take '(%gamma) (div 1 4)))))
+	    ((and (or (eql x 0) (eql y 0))
+		  (eql z 1))
+	     ;; 1/3*m*Rd(0,1-m,1) = K(m) - E(m).
+	     ;; See https://dlmf.nist.gov/19.25.E1
+	     ;;
+	     ;; Thus, Rd(0,y,1) = 3/(1-y)*(K(1-y) - E(1-y))
+	     ;;
+	     ;; Note that Rd(x,y,z) = Rd(y,x,z).
+	     (let ((m (sub 1 y)))
+	       (mul (div 3 m)
+		    (sub (take '(%elliptic_kc) m)
+			 (take '(%elliptic_ec) m)))))
+	    ((or (and (eql x 0)
+		      (eql y 1))
+		 (and (eql x 1)
+		      (eql y 0)))
+	     ;; 1/3*m*(1-m)*Rd(0,1,1-m) = E(m) - (1-m)*K(m)
+	     ;; See https://dlmf.nist.gov/19.25.E1
+	     ;;
+	     ;; Thus
+	     ;;  Rd(0,1,z) = 3/(z*(1-z))*(E(1-z) - z*K(1-z))
+	     ;; Recall that Rd(x,y,z) = Rd(y,x,z).
+	     (mul (div 3 (mul z (sub 1 z)))
+		  (sub (take '(%elliptic_ec) (sub 1 z))
+		       (mul z
+			    (take '(%elliptic_kc) (sub 1 z))))))
 	    ((float-numerical-eval-p x y z)
 	     (calc ($float x) ($float y) ($float z)))
 	    ((bigfloat-numerical-eval-p x y z)
@@ -2696,7 +2722,46 @@ first kind:
 	     ;;
 	     ;; Rf is symmetric, so check all the permutations too.
 	     (div (pow (take '(%gamma) (div 1 4)) 2)
-		  (mul 4 (pow '$%pi 1//2))))	    
+		  (mul 4 (pow '$%pi 1//2))))
+	    ((setf args
+		   (some #'(lambda (args)
+			     (destructuring-bind (x y z)
+				 args
+			       ;; Check that x = 0 and z = 1, and
+			       ;; return y.
+			       (and (zerop1 x)
+				    (eql z 1)
+				    y)))
+			 (list (list x y z)
+			       (list x z y)
+			       (list y x z)
+			       (list y z x)
+			       (list z x y)
+			       (list z y x))))
+	     ;; Rf(0,1-m,1) = elliptic_kc(m).
+	     ;; See https://dlmf.nist.gov/19.25.E1
+	     (take '(%elliptic_kc) (sub 1 args)))
+	    ((some #'(lambda (args)
+		       (destructuring-bind (x y z)
+			   args
+			 (and (alike1 x '$%i)
+			      (alike1 y (mul -1 '$%i))
+			      (eql z 0))))
+		   (list (list x y z)
+			 (list x z y)
+			 (list y x z)
+			 (list y z x)
+			 (list z x y)
+			 (list z y x)))
+	     ;; rf(%i, -%i, 0)
+	     ;;   = 1/2*integrate(1/sqrt(t^2+1)/sqrt(t),t,0,inf)
+	     ;;   = beta(1/4,1/4)/4;
+	     ;; makegamma(%)
+	     ;;   = gamma(1/4)^2/(4*sqrt(%pi))
+	     ;;
+	     ;; Rf is symmetric, so check all the permutations too.
+	     (div (pow (take '(%gamma) (div 1 4)) 2)
+		  (mul 4 (pow '$%pi 1//2))))
 	    ((float-numerical-eval-p x y z)
 	     (calc ($float x) ($float y) ($float z)))
 	    ((bigfloat-numerical-eval-p x y z)
