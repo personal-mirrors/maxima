@@ -524,7 +524,7 @@
 ;;   (cond ((float-numerical-eval-p x y)
 ;;          (foo-eval x y))
 ;;         (t
-;;          (default-case))))
+;;          (give-up))))
 ;;
 ;; This expands to 
 ;;         
@@ -539,16 +539,16 @@
 ;;     (let ((x (simpcheck (nth 1 form) #:z-5229))
 ;;           (y (simpcheck (nth 2 form) #:z-5229)))
 ;;       (arg-count-check 2 form)
-;;       (macrolet ((default-case ()
+;;       (macrolet ((give-up ()
 ;;                    '(eqtest (list '(%foo) x y) form)))
 ;;         (cond
 ;;           ((float-numerical-eval-p x y)
 ;;            (foo-eval x y))
 ;;           (t
-;;            (default-case))))))
+;;            (give-up))))))
 ;;   (defmfun $foo (x y) (simplify (list '(%foo) (resimplify x) (resimplify y)))))
 ;;
-;; Note carefully that the expansion defines a macro DEFAULT-CASE to
+;; Note carefully that the expansion defines a macro GIVE-UP to
 ;; handle the default case of the simplifier when we can't do any
 ;; simplification.  Call this in the default case for the COND.
 
@@ -574,7 +574,7 @@
 	 (declare (ignore ,unused-arg))
 	 (let ,arg-forms
 	   (arg-count-check ,(length lambda-list) form)
-	   (macrolet ((default-case ()
+	   (macrolet ((give-up ()
 			`(eqtest (list '(,',noun-name) x y) form)))
 	     ,@body)))
 

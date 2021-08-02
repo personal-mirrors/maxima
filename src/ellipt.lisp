@@ -2540,7 +2540,7 @@ first kind:
 	     (div (take '(%log) y)
 		  (sub y 1)))
 	    (t
-	     (default-case))))))
+	     (give-up))))))
   
 (def-simplifying-fun carlson_rd (x y z)
   (let (args)
@@ -2634,7 +2634,7 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z))))
 	    (t
-	     (eqtest (list '(%carlson_rd) x y z) form))))))
+	     (give-up))))))
 
 (def-simplifying-fun carlson_rf (x y z)
   (let (args)
@@ -2746,7 +2746,7 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z))))
 	    (t
-	     (eqtest (list '(%carlson_rf) x y z) form))))))
+	     (give-up))))))
 
 (def-simplifying-fun carlson_rj (x y z p)
   (let (args)
@@ -2793,7 +2793,7 @@ first kind:
 		 args
 	       (calc ($bfloat x) ($bfloat y) ($bfloat z) ($bfloat p))))
 	    (t
-	     (eqtest (list '(%carlson_rj) x y z p) form))))))  
+	     (give-up))))))
 		  
 ;;; Other Jacobian elliptic functions
 
