@@ -116,6 +116,17 @@
 (defmacro take* (operator &rest args)
   `(simplifya (list ,operator ,@args) nil))
 
+;; Like TAKE, but you only need to specify then name.  So
+;;
+;; (ftake %name x y) => (take '(%name) x y)
+(defmacro ftake (name &rest args)
+  `(simplifya (list '(,name) ,@args)
+	      nil))
+
+(defmacro ftake* (name &rest args)
+  `(simplifya (list ',(name) ,@args)
+	      t))
+
 (declaim (inline simplify))
 (defun simplify (x)
   (simplifya x nil))

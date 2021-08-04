@@ -517,7 +517,7 @@
 
 ;; Define the actual functions for the user
 (defmfun $jacobi_sn (u m)
-  (simplify (list '(%jacobi_sn) (resimplify u) (resimplify m))))
+  (ftake %jacobi_sn u m))
 
 (defmfun $jacobi_cn (u m)
   (simplify (list '(%jacobi_cn) (resimplify u) (resimplify m))))
@@ -621,10 +621,10 @@
        0)
       ((zerop1 m)
        ;; A&S 16.6.1
-       `((%sin) ,u))
+       (ftake %sin u))
       ((onep1 m)
        ;; A&S 16.6.1
-       `((%tanh) ,u))
+       (ftake %tanh u))
       ((and $trigsign (mminusp* u))
        (neg (cons-exp '%jacobi_sn (neg u) m)))
       ((and $triginverses
@@ -696,51 +696,50 @@
        ;; A&S 16.8.1
        (destructuring-bind (lin const)
 	   coef
+	 (format t "A&S 16.8.1:  ~A ~A~%" lin const)
 	 (cond ((integerp lin)
 		(ecase (mod lin 4)
 		  (0
 		   ;; sn(4*m*K + u) = sn(u), sn(0) = 0
 		   (if (zerop1 const)
 		       0
-		       `((%jacobi_sn simp) ,const ,m)))
+		       (ftake %jacobi_sn const m)))
 		  (1
 		   ;; sn(4*m*K + K + u) = sn(K+u) = cd(u)
 		   ;; sn(K) = 1
 		   (if (zerop1 const)
 		       1
-		       `((%jacobi_cd simp) ,const ,m)))
+		       (ftake %jacobi_cd const m)))
 		  (2
 		   ;; sn(4*m*K+2*K + u) = sn(2*K+u) = -sn(u)
 		   ;; sn(2*K) = 0
 		   (if (zerop1 const)
 		       0
-		       (neg `((%jacobi_sn simp) ,const ,m))))
+		       (neg (ftake %jacobi_sn const m))))
 		  (3
 		   ;; sn(4*m*K+3*K+u) = sn(2*K + K + u) = -sn(K+u) = -cd(u)
 		   ;; sn(3*K) = -1
 		   (if (zerop1 const)
 		       -1
-		       (neg `((%jacobi_cd simp) ,const ,m))))))
+		       (neg (ftake %jacobi_cd const m))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
+		(format t "16.5.2~%")
 		;; A&S 16.5.2
 		;;
 		;; sn(1/2*K) = 1/sqrt(1+sqrt(1-m))
-		`((mexpt simp)
-		  ((mplus simp) 1
-		   ((mexpt simp)
-		    ((mplus simp) 1 ((mtimes simp) -1 ,m))
-		    ((rat simp) 1 2)))
-		  ((rat) -1 2)))
+		(div 1
+		     (pow (add 1 (pow (sub 1 m) 1//2))
+			  1//2)))
 	       ((and (alike1 lin 3//2)
 		     (zerop1 const))
+		(format t "16.5.2~%")
 		;; A&S 16.5.2
 		;;
 		;; sn(1/2*K + K) = cd(1/2*K,m)
-		(simplifya
-		 `((%jacobi_cd) ((mtimes) ((rat) 1 2) ((%elliptic_kc) ,m))
-		   ,m)
-		 nil))
+		(ftake %jacobi_cd (mul 1//2
+				      (ftake %elliptic_kc m))
+		       m))
 	       (t
 		(give-up)))))
       (t
@@ -811,23 +810,20 @@
 		   ;; cn(0) = 1
 		   (if (zerop1 const)
 		       1
-		       `((%jacobi_cn simp) ,const ,m)))
+		       (ftake %jacobi_cn const m)))
 		  (1
 		   ;; cn(4*m*K + K + u) = cn(K+u) = -sqrt(m1)*sd(u)
 		   ;; cn(K) = 0
 		   (if (zerop1 const)
 		       0
-		       (neg `((mtimes simp)
-			      ((mexpt simp)
-			       ((mplus simp) 1 ((mtimes simp) -1 ,m))
-			       ((rat simp) 1 2))
-			      ((%jacobi_sd simp) ,const ,m)))))
+		       (neg (mul (pow (sub 1 m) 1//2)
+				 (ftake %jacobi_sd const m)))))
 		  (2
 		   ;; cn(4*m*K + 2*K + u) = cn(2*K+u) = -cn(u)
 		   ;; cn(2*K) = -1
 		   (if (zerop1 const)
 		       -1
-		       (neg `((%jacobi_cn) ,const ,m))))
+		       (neg (ftake %jacobi_cn const m))))
 		  (3
 		   ;; cn(4*m*K + 3*K + u) = cn(2*K + K + u) =
 		   ;; -cn(K+u) = sqrt(m1)*sd(u)
@@ -835,26 +831,17 @@
 		   ;; cn(3*K) = 0
 		   (if (zerop1 const)
 		       0
-		       `((mtimes simp)
-			 ((mexpt simp)
-			  ((mplus simp) 1 ((mtimes simp) -1 ,m))
-			  ((rat simp) 1 2))
-			 ((%jacobi_sd simp) ,const ,m))))))
+		       (mul (pow (sub 1 m) 1//2)
+			    (ftake %jacobi_sd const m))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
 		;; A&S 16.5.2
 		;; cn(1/2*K) = (1-m)^(1/4)/sqrt(1+sqrt(1-m))
-		`((mtimes simp)
-		  ((mexpt simp) ((mplus simp) 1
-				 ((mtimes simp) -1 ,m))
-		   ((rat simp) 1 4))
-		  ((mexpt simp)
-		   ((mplus simp) 1
-		    ((mexpt simp)
-		     ((mplus simp) 1
-		      ((mtimes simp) -1 ,m))
-		     ((rat simp) 1 2)))
-		   ((rat simp) -1 2))))
+		(mul (pow (sub 1 m) (div 1 4))
+		     (pow (add 1
+			       (pow (sub 1 m)
+				    1//2))
+			  1//2)))
 	       (t
 		(give-up)))))
       (t
@@ -3313,49 +3300,39 @@ first kind:
 		   ;; sd(0) = 0
 		   (if (zerop1 const)
 		       0
-		       `((%jacobi_sd simp) ,const ,m)))
+		       (ftake %jacobi_sd const m)))
 		  (1
 		   ;; sd(4*m*K+K+u) = sd(K+u) = cn(u)/sqrt(1-m)
 		   ;; sd(K) = 1/sqrt(m1)
 		   (if (zerop1 const)
-		       `((mexpt) ((mplus) 1 ((mtimes) -1 ,m))
-			 ((rat) -1 2))
-		       `((mtimes simp)
-			 ((mexpt simp)
-			  ((mplus simp) 1 ((mtimes simp) -1 ,m))
-			  ((rat simp) -1 2))
-			 ((%jacobi_cn simp) ,const ,m))))
+		       (pow (sub 1 m) 1//2)
+		       (div (ftake %jacobi_cn const m)
+			    (pow (sub 1 m) 1//2))))
 		  (2
 		   ;; sd(4*m*K+2*K+u) = sd(2*K+u) = -sd(u)
 		   ;; sd(2*K) = 0
 		   (if (zerop1 const)
 		       0
-		       (neg `((%jacobi_sd) ,const ,m))))
+		       (neg (ftake %jacobi_sd const m))))
 		  (3
 		   ;; sd(4*m*K+3*K+u) = sd(3*K+u) = sd(2*K+K+u) =
 		   ;; -sd(K+u) = -cn(u)/sqrt(1-m)
 		   ;; sd(3*K) = -1/sqrt(m1)
 		   (if (zerop1 const)
-		       (neg `((mexpt)
-			      ((mplus simp) 1 ((mtimes simp) -1 ,m))
-			      ((rat) -1 2)))
-		       (neg `((mtimes simp)
-			      ((mexpt simp)
-			       ((mplus simp) 1 ((mtimes simp) -1 ,m))
-			       ((rat simp) -1 2))
-			      ((%jacobi_cn simp) ,const ,m)))))))
+		       (neg (pow (sub 1 m) -1//2))
+		       (neg (div (ftake %jacobi_cn const m)
+				 (pow (sub 1 m) 1//2)))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
 		;; jacobi_sn/jacobi_dn
-		`((mtimes)
-		  ((%jacobi_sn) ((mtimes) ((rat) 1 2)
-				 ((%elliptic_kc) ,m))
-		   ,m)
-		  ((mexpt)
-		   ((%jacobi_dn) ((mtimes) ((rat) 1 2)
-				  ((%elliptic_kc) ,m))
-		    ,m)
-		   -1)))
+		(div (ftake %jacobi_sn
+			    (mul 1//2
+				 (ftake %elliptic_kc m))
+			    m)
+		     (ftake %jacobi_dn
+			    (mul 1//2
+				 (ftake %elliptic_kc m))
+			    m)))
 	       (t
 		(give-up)))))
       (t
@@ -3614,38 +3591,37 @@ first kind:
 		   ;; cd(0) = 1
 		   (if (zerop1 const)
 		       1
-		       `((%jacobi_cd) ,const ,m)))
+		       (ftake %jacobi_cd const m)))
 		  (1
 		   ;; cd(4*m*K + K + u) = cd(K+u) = -sn(u)
 		   ;; cd(K) = 0
 		   (if (zerop1 const)
 		       0
-		       (neg `((%jacobi_sn) ,const ,m))))
+		       (neg (ftake %jacobi_sn const m))))
 		  (2
 		   ;; cd(4*m*K + 2*K + u) = cd(2*K+u) = -cd(u)
 		   ;; cd(2*K) = -1
 		   (if (zerop1 const)
 		       -1
-		       (neg `((%jacobi_cd) ,const ,m))))
+		       (neg (ftake %jacobi_cd const m))))
 		  (3
 		   ;; cd(4*m*K + 3*K + u) = cd(2*K + K + u) =
 		   ;; -cd(K+u) = sn(u)
 		   ;; cd(3*K) = 0
 		   (if (zerop1 const)
 		       0
-		       `((%jacobi_sn) ,const ,m)))))
+		       (ftake %jacobi_sn const m)))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
 		;; jacobi_cn/jacobi_dn
-		`((mtimes)
-		  ((%jacobi_cn) ((mtimes) ((rat) 1 2)
-				 ((%elliptic_kc) ,m))
-		   ,m)
-		  ((mexpt)
-		   ((%jacobi_dn) ((mtimes) ((rat) 1 2)
-				  ((%elliptic_kc) ,m))
-		    ,m)
-		   -1)))
+		(div (ftake %jacobi_cn
+			    (mul 1//2
+				 (ftake %elliptic_kc m))
+			    m)
+		     (ftake %jacobi_dn
+			    (mul 1//2
+				 (ftake %elliptic_kc m))
+			    m)))
 	       (t
 		;; Nothing to do
 		(give-up)))))
