@@ -118,14 +118,16 @@
 
 ;; Like TAKE, but you only need to specify then name.  So
 ;;
-;; (ftake %name x y) => (take '(%name) x y)
+;; (ftake name x y) => (take '(name) x y)
+;;
+;; The name should be the verb form, like %foo.
 (defmacro ftake (name &rest args)
   `(simplifya (list '(,name) ,@args)
-	      nil))
+	      t))
 
 (defmacro ftake* (name &rest args)
   `(simplifya (list ',(name) ,@args)
-	      t))
+	      nil))
 
 (declaim (inline simplify))
 (defun simplify (x)
