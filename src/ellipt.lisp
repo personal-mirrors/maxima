@@ -729,8 +729,8 @@
 		;;
 		;; sn(1/2*K) = 1/sqrt(1+sqrt(1-m))
 		(div 1
-		     (pow (add 1 (pow (sub 1 m) 1//2))
-			  1//2)))
+		     (power (add 1 (power (sub 1 m) 1//2))
+			    1//2)))
 	       ((and (alike1 lin 3//2)
 		     (zerop1 const))
 		(format t "16.5.2~%")
@@ -816,7 +816,7 @@
 		   ;; cn(K) = 0
 		   (if (zerop1 const)
 		       0
-		       (neg (mul (pow (sub 1 m) 1//2)
+		       (neg (mul (power (sub 1 m) 1//2)
 				 (ftake %jacobi_sd const m)))))
 		  (2
 		   ;; cn(4*m*K + 2*K + u) = cn(2*K+u) = -cn(u)
@@ -831,17 +831,17 @@
 		   ;; cn(3*K) = 0
 		   (if (zerop1 const)
 		       0
-		       (mul (pow (sub 1 m) 1//2)
+		       (mul (power (sub 1 m) 1//2)
 			    (ftake %jacobi_sd const m))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
 		;; A&S 16.5.2
 		;; cn(1/2*K) = (1-m)^(1/4)/sqrt(1+sqrt(1-m))
-		(mul (pow (sub 1 m) (div 1 4))
-		     (pow (add 1
-			       (pow (sub 1 m)
-				    1//2))
-			  1//2)))
+		(mul (power (sub 1 m) (div 1 4))
+		     (power (add 1
+				 (power (sub 1 m)
+					1//2))
+			    1//2)))
 	       (t
 		(give-up)))))
       (t
@@ -925,15 +925,15 @@
 		   ;; dn(2*m*K + K + u) = dn(K + u) = sqrt(1-m)*nd(u)
 		   ;; dn(K) = sqrt(1-m)
 		   (if (zerop1 const)
-		       (pow (sub 1 m) 1//2)
-		       (mul (pow (sub 1 m) 1//2)
+		       (power (sub 1 m) 1//2)
+		       (mul (power (sub 1 m) 1//2)
 			    (ftake %jacobi_nd const m))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
 		;; A&S 16.5.2
 		;; dn(1/2*K) = (1-m)^(1/4)
-		(pow (sub 1 m)
-		     (div 1 4)))
+		(power (sub 1 m)
+		       (div 1 4)))
 	       (t
 		(give-up)))))
       (t (give-up)))))
@@ -2381,7 +2381,7 @@ first kind:
 	     ;;   = log(1/(sqrt(2)-1))
 	     ;; ratsimp(%),algebraic;
 	     ;;   = log(sqrt(2)+1)
-	     (take '(%log) (add 1 (pow 2 1//2))))
+	     (take '(%log) (add 1 (power 2 1//2))))
 	    ((and (alike x '$%i)
 		  (alike y (add 1 '$%i)))
 	     ;; rc(%i, %i+1) = 1/2*integrate(1/sqrt(t+%i)/(t+%i+1), t, 0, inf)
@@ -2395,7 +2395,7 @@ first kind:
 	     (add (div '$%pi 4)
 		  (mul '$%i
 		       1//2
-		       (take '(%log) (sub (pow 2 1//2) 1)))))
+		       (take '(%log) (sub (power 2 1//2) 1)))))
 	    ((and (zerop1 x)
 		  (alike1 y '$%i))
 	     ;; rc(0,%i) = 1/2*integrate(1/(sqrt(t)*(t+%i)), t, 0, inf)
@@ -2403,13 +2403,13 @@ first kind:
 	     ;;   = ((1-%i)*%pi)/2^(3/2)
 	     (div (mul (sub 1 '$%i)
 		       '$%pi)
-		  (pow 2 3//2)))
+		  (power 2 3//2)))
 	    ((and (alike1 x y)
 		  (eq ($sign ($realpart x)) '$pos))
 	     ;; carlson_rc(x,x) = 1/2*integrate(1/sqrt(t+x)/(t+x), t, 0, inf)
 	     ;;    = 1/sqrt(x)
-	     (pow x -1//2))
-	    ((and (alike1 x (pow (div (add 1 y) 2) 2))
+	     (power x -1//2))
+	    ((and (alike1 x (power (div (add 1 y) 2) 2))
 		  (eq ($sign ($realpart y)) '$pos))
 	     ;; Rc(((1+x)/2)^2,x) = log(x)/(x-1) for x > 0.
 	     ;;
@@ -2435,24 +2435,24 @@ first kind:
 	    ((and (alike1 x y)
 		  (alike1 y z))
 	     ;; Rd(x,x,x) = x^(-3/2)
-	     (pow x (div -3 2)))
+	     (power x (div -3 2)))
 	    ((and (zerop1 x)
 		  (alike1 y z))
 	     ;; Rd(0,y,y) = 3/4*%pi*y^(-3/2)
 	     (mul (div 3 4)
 		  '$%pi
-		  (pow y (div -3 2))))
+		  (power y (div -3 2))))
 	    ((alike1 y z)
 	     ;; Rd(x,y,y) = 3/(2*(y-x))*(Rc(x, y) - sqrt(x)/y)
 	     (mul (div 3 (mul 2 (sub y x)))
 		  (sub (take '(%carlson_rc) x y)
-		       (div (pow x 1//2)
+		       (div (power x 1//2)
 			    y))))
 	    ((alike1 x y)
 	     ;; Rd(x,x,z) = 3/(z-x)*(Rc(z,x) - 1/sqrt(z))
 	     (mul (div 3 (sub z x))
 		  (sub (take '(%carlson_rc) z x)
-		       (div 1 (pow z 1//2)))))
+		       (div 1 (power z 1//2)))))
 	    ((and (eql z 1)
 		  (or (and (eql x 0)
 			   (eql y 2))
@@ -2470,7 +2470,7 @@ first kind:
 	     ;;
 	     ;; Note also that Rd(x,y,z) = Rd(y,x,z)
 	     (mul 3
-		  (pow '$%pi 1//2)
+		  (power '$%pi 1//2)
 		  (div (take '(%gamma) (div 3 4))
 		       (take '(%gamma) (div 1 4)))))
 	    ((and (or (eql x 0) (eql y 0))
@@ -2524,12 +2524,12 @@ first kind:
       (cond ((and (alike1 x y)
 		  (alike1 y z))
 	     ;; Rf(x,x,x) = x^(-1/2)
-	     (pow x -1//2))
+	     (power x -1//2))
 	    ((and (zerop1 x)
 		  (alike1 y z))
 	     ;; Rf(0,y,y) = 1/2*%pi*y^(-1/2)
 	     (mul 1//2 '$%pi
-		  (pow y -1//2)))
+		  (power y -1//2)))
 	    ((alike1 y z)
 	     (take '(%carlson_rc) x y))
 	    ((some #'(lambda (args)
@@ -2549,8 +2549,8 @@ first kind:
 	     ;; And Rf is symmetric in all the args, so check every
 	     ;; permutation too.  This could probably be simplified
 	     ;; without consing all the lists, but I'm lazy.
-	     (div (pow (take '(%gamma) (div 1 4)) 2)
-		  (mul 4 (pow (mul 2 '$%pi) 1//2))))
+	     (div (power (take '(%gamma) (div 1 4)) 2)
+		  (mul 4 (power (mul 2 '$%pi) 1//2))))
 	    ((some #'(lambda (args)
 		       (destructuring-bind (x y z)
 			   args
@@ -2570,8 +2570,8 @@ first kind:
 	     ;;   = gamma(1/4)^2/(4*sqrt(%pi))
 	     ;;
 	     ;; Rf is symmetric, so check all the permutations too.
-	     (div (pow (take '(%gamma) (div 1 4)) 2)
-		  (mul 4 (pow '$%pi 1//2))))
+	     (div (power (take '(%gamma) (div 1 4)) 2)
+		  (mul 4 (power '$%pi 1//2))))
 	    ((setf args
 		   (some #'(lambda (args)
 			     (destructuring-bind (x y z)
@@ -2609,8 +2609,8 @@ first kind:
 	     ;;   = gamma(1/4)^2/(4*sqrt(%pi))
 	     ;;
 	     ;; Rf is symmetric, so check all the permutations too.
-	     (div (pow (take '(%gamma) (div 1 4)) 2)
-		  (mul 4 (pow '$%pi 1//2))))
+	     (div (power (take '(%gamma) (div 1 4)) 2)
+		  (mul 4 (power '$%pi 1//2))))
 	    ((float-numerical-eval-p x y z)
 	     (calc ($float x) ($float y) ($float z)))
 	    ((bigfloat-numerical-eval-p x y z)
@@ -2638,7 +2638,7 @@ first kind:
 		  (alike1 y z)
 		  (alike1 z p))
 	     ;; Rj(x,x,x,x) = x^(-3/2)
-	     (pow x (div -3 2)))
+	     (power x (div -3 2)))
 	    ((alike1 z p)
 	     ;; Rj(x,y,z,z) = Rd(x,y,z)
 	     (take '(%carlson_rd) x y z))
@@ -2647,8 +2647,8 @@ first kind:
 	     ;; Rj(0,y,y,p) = 3*%pi/(2*(y*sqrt(p)+p*sqrt(y)))
 	     (div (mul 3 '$%pi)
 		  (mul 2
-		       (add (mul y (pow p 1//2))
-			    (mul p (pow y 1//2))))))
+		       (add (mul y (power p 1//2))
+			    (mul p (power y 1//2))))))
 	    ((alike1 y z)
 	     ;; Rj(x,y,y,p) = 3/(p-y)*(Rc(x,y) - Rc(x,p))
 	     (mul (div 3 (sub p y))
@@ -2901,7 +2901,7 @@ first kind:
 		       (if (zerop1 const)
 			   (dbz-err1 'jacobi_nc)
 			   (neg (div (ftake %jacobi_ds const m)
-				     (pow (sub 1 m) 1//2)))))
+				     (power (sub 1 m) 1//2)))))
 		      (2
 		       ;; nc(4*m*K+2*K+u) = nc(2*K+u) = -nc(u)
 		       ;; nc(2*K) = -1
@@ -2916,7 +2916,7 @@ first kind:
 		       (if (zerop1 const)
 			   (dbz-err1 'jacobi_nc)
 			   (div (ftake %jacobi_ds const m)
-				(pow (sub 1 m) 1//2))))))
+				(power (sub 1 m) 1//2))))))
 		   ((and (alike1 1//2 lin)
 			 (zerop1 const))
 		    (div 1 (ftake %jacobi_cn u m)))
@@ -3026,9 +3026,9 @@ first kind:
 		       ;; nd(2*m*K+K+u) = nd(K+u) = dn(u)/sqrt(1-m)
 		       ;; nd(K) = 1/sqrt(1-m)
 		       (if (zerop1 const)
-			   (pow (sub 1 m) -1//2)
+			   (power (sub 1 m) -1//2)
 			   (div (ftake %jacobi_nd const m)
-				(pow (sub 1 m) 1//2))))))
+				(power (sub 1 m) 1//2))))))
 		   (t
 		    (give-up)))))
 	  (t
@@ -3289,9 +3289,9 @@ first kind:
 		   ;; sd(4*m*K+K+u) = sd(K+u) = cn(u)/sqrt(1-m)
 		   ;; sd(K) = 1/sqrt(m1)
 		   (if (zerop1 const)
-		       (pow (sub 1 m) 1//2)
+		       (power (sub 1 m) 1//2)
 		       (div (ftake %jacobi_cn const m)
-			    (pow (sub 1 m) 1//2))))
+			    (power (sub 1 m) 1//2))))
 		  (2
 		   ;; sd(4*m*K+2*K+u) = sd(2*K+u) = -sd(u)
 		   ;; sd(2*K) = 0
@@ -3303,9 +3303,9 @@ first kind:
 		   ;; -sd(K+u) = -cn(u)/sqrt(1-m)
 		   ;; sd(3*K) = -1/sqrt(m1)
 		   (if (zerop1 const)
-		       (neg (pow (sub 1 m) -1//2))
+		       (neg (power (sub 1 m) -1//2))
 		       (neg (div (ftake %jacobi_cn const m)
-				 (pow (sub 1 m) 1//2)))))))
+				 (power (sub 1 m) 1//2)))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
 		;; jacobi_sn/jacobi_dn
@@ -3444,7 +3444,7 @@ first kind:
 		   ;; cs(K) = 0
 		   (if (zerop1 const)
 		       0
-		       (neg (mul (pow (sub 1 m) 1//2)
+		       (neg (mul (power (sub 1 m) 1//2)
 				 (ftake %jacobi_sc const m)))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
@@ -3727,8 +3727,8 @@ first kind:
 		   ;; ds(4*m*K + K + u) = ds(K+u) = sqrt(1-m)*nc(u)
 		   ;; ds(K) = sqrt(1-m)
 		   (if (zerop1 const)
-		       (pow (sub 1 m) 1//2)
-		       (mul (pow (sub 1 m) 1//2)
+		       (power (sub 1 m) 1//2)
+		       (mul (power (sub 1 m) 1//2)
 			    (ftake %jacobi_nc const m))))
 		  (2
 		   ;; ds(4*m*K + 2*K + u) = ds(2*K+u) = -ds(u)
@@ -3741,8 +3741,8 @@ first kind:
 		   ;; -ds(K+u) = -sqrt(1-m)*nc(u)
 		   ;; ds(3*K) = -sqrt(1-m)
 		   (if (zerop1 const)
-		       (neg (pow (sub 1 m) 1//2))
-		       (neg (mul (pow (sub 1 m) 1//2)
+		       (neg (power (sub 1 m) 1//2))
+		       (neg (mul (power (sub 1 m) 1//2)
 				 (ftake %jacobi_nc u m)))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
@@ -4430,17 +4430,17 @@ first kind:
 	      ;; A&S 17.4.43
 	      (ftake %elliptic_f
 		     (ftake %asin
-			    (mul (pow m -1//2)
+			    (mul (power m -1//2)
 				 (div 1 u)
-				 (pow (add -1 (mul u u))
-				      1//2)))
+				 (power (add -1 (mul u u))
+					1//2)))
 		     m))
 	     (%inverse_jacobi_dn
 	      ;; A&S 17.4.44
 	      (ftake %elliptic_f
 		     (ftake %asin (mul
-				   (pow m  -1//2)
-				   (pow (sub 1 (pow u 2)) 1//2)))
+				   (power m  -1//2)
+				   (power (sub 1 (power u 2)) 1//2)))
 		     m))
 	     (%inverse_jacobi_sn
 	      ;; A&S 17.4.45
@@ -4449,17 +4449,17 @@ first kind:
 	      ;; A&S 17.4.46
 	      (ftake %elliptic_f
 		     (ftake %asin
-			    (pow (mul (sub 1 (mul u u))
-				      (sub 1 (mul m u u)))
-				 1//2))
+			    (power (mul (sub 1 (mul u u))
+					(sub 1 (mul m u u)))
+				   1//2))
 		     m))
 	     (%inverse_jacobi_dc
 	      ;; A&S 17.4.47
 	      (ftake %elliptic_f
 		     (ftake %asin
-			    (pow (mul (sub (mul u u) 1)
-				      (sub (mul u u) m))
-				 1//2))
+			    (power (mul (sub (mul u u) 1)
+					(sub (mul u u) m))
+				   1//2))
 		     m))
 	     (%inverse_jacobi_ns
 	      ;; A&S 17.4.48
@@ -4471,16 +4471,16 @@ first kind:
 	      ;; A&S 17.4.50
 	      (ftake %elliptic_f
 		     (ftake %asin
-			    (pow (add m (mul u u))
-				 1//2)
+			    (power (add m (mul u u))
+				   1//2)
 			    m)))
 	     (%inverse_jacobi_sd
 	      ;; A&S 17.4.51
 	      (ftake %elliptic_f
 		     (ftake %asin
 			    (div u
-				 (pow (add 1 (mul m u u))
-				      1//2)))
+				 (power (add 1 (mul m u u))
+					1//2)))
 		     m))
 	     (%inverse_jacobi_cn
 	      ;; A&S 17.4.52
