@@ -126,7 +126,7 @@
 	      t))
 
 (defmacro ftake* (name &rest args)
-  `(simplifya (list ',(name) ,@args)
+  `(simplifya (list '(,name) ,@args)
 	      nil))
 
 (declaim (inline simplify))
