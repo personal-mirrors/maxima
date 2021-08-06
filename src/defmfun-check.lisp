@@ -523,9 +523,7 @@
        ;; Set up properties
        (defprop ,noun-name ,simp-name operators)
        (defprop ,verb-name ,noun-name verb)
-       (defprop ,noun-name ,verb-name noun)
        (defprop ,verb-name ,noun-name alias)
-       (defprop ,noun-name ,verb-name reversealias)
 
        ;; Define the simplifier
        (defun ,simp-name (form ,unused-arg ,z-arg)
