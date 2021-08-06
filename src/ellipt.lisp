@@ -652,21 +652,21 @@
 	    (div inv-arg (power (add 1 (mul inv-arg inv-arg)) 1//2)))
 	   (%inverse_jacobi_cs
 	    ;; inverse_jacobi_cs(u) = inverse_jacobi_sc(1/u)
-	    (ftake %jacobi_sn ($inverse_jacobi_sc (div 1 inv-arg) m)
+	    (ftake %jacobi_sn (ftake %inverse_jacobi_sc (div 1 inv-arg) m)
 		   m))
 	   (%inverse_jacobi_sd
 	    ;; See below for inverse_jacobi_sd
 	    (div inv-arg (power (add 1 (mul m (mul inv-arg inv-arg))) 1//2)))
 	   (%inverse_jacobi_ds
 	    ;; inverse_jacobi_ds(u) = inverse_jacobi_sd(1/u)
-	    (ftake %jacobi_sn ($inverse_jacobi_sd (div 1 inv-arg) m)
+	    (ftake %jacobi_sn (ftake %inverse_jacobi_sd (div 1 inv-arg) m)
 		   m))
 	   (%inverse_jacobi_cd
 	    ;; See below
 	    (div (power (sub 1 (mul inv-arg inv-arg)) 1//2)
 		 (power (sub 1 (mul m (mul inv-arg inv-arg))) 1//2)))
 	   (%inverse_jacobi_dc
-	    (ftake %jacobi_sn ($inverse_jacobi_cd (div 1 inv-arg) m) m)))))
+	    (ftake %jacobi_sn (ftake %inverse_jacobi_cd (div 1 inv-arg) m) m)))))
       ;; A&S 16.20.1 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        (mul '$%i
@@ -940,9 +940,13 @@
     ;; produces the correct value as verified by verifying
     ;; jacobi_sn(inverse_jacobi_sn(x,m),m) = x.
     (cond ((float-numerical-eval-p u m)
-	   (complexify (* u (bigfloat::bf-rf (bigfloat:to (float (- 1 (* u u))))
-					     (bigfloat:to (float (- 1 (* m u u))))
-					     1))))
+	   (let ((uu (bigfloat:to ($float u)))
+		 (mm (bigfloat:to ($float m))))
+	     (complexify
+	      (* uu
+		 (bigfloat::bf-rf (bigfloat:to (- 1 (* uu uu)))
+				  (bigfloat:to (- 1 (* mm uu uu)))
+				  1)))))
 	  ((setf args (complex-float-numerical-eval-p u m))
 	   (destructuring-bind (u m)
 	       args
@@ -3864,10 +3868,6 @@ first kind:
 ;; jacobi_sn(u) = 1/x
 ;;
 ;; so u = inverse_jacobi_sn(1/x)
-
-(defmfun $inverse_jacobi_ns (u m)
-  (simplify (list '(%inverse_jacobi_ns) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_ns
     ((x m)
      ;; Whittaker and Watson, example in 22.122
@@ -3930,10 +3930,6 @@ first kind:
 ;; jacobi_cn(u) = 1/x
 ;;
 ;; so u = inverse_jacobi_cn(1/x)
-
-(defmfun $inverse_jacobi_nc (u m)
-  (simplify (list '(%inverse_jacobi_nc) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_nc
     ((x m)
      ;; Whittaker and Watson, example in 22.122
@@ -3979,10 +3975,6 @@ first kind:
 ;; jacobi_dn(u) = 1/x
 ;;
 ;; so u = inverse_jacobi_dn(1/x)
-
-(defmfun $inverse_jacobi_nd (u m)
-  (simplify (list '(%inverse_jacobi_nd) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_nd
     ((x m)
      ;; Whittaker and Watson, example in 22.122
@@ -4038,10 +4030,6 @@ first kind:
 ;;
 ;; u = inverse_sn(x/sqrt(1+x^2))
 ;;
-
-(defmfun $inverse_jacobi_sc (u m)
-  (simplify (list '(%inverse_jacobi_sc) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_sc
     ((x m)
      ;; Whittaker and Watson, example in 22.122
@@ -4096,10 +4084,6 @@ first kind:
 ;;
 ;; u = inverse_sn(x/sqrt(1+m*x^2))
 ;;
-
-(defmfun $inverse_jacobi_sd (u m)
-  (simplify (list '(%inverse_jacobi_sd) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_sd
     ((x m)
      ;; Whittaker and Watson, example in 22.122
@@ -4150,10 +4134,6 @@ first kind:
 ;;
 ;; u = inverse_sc(1/x)
 ;;
-
-(defmfun $inverse_jacobi_cs (u m)
-  (simplify (list '(%inverse_jacobi_cs) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_cs
     ((x m)
      ;; Whittaker and Watson, example in 22.122
@@ -4176,7 +4156,7 @@ first kind:
 	     (complex-float-numerical-eval-p u m)
 	     (bigfloat-numerical-eval-p u m)
 	     (complex-bigfloat-numerical-eval-p u m))
-	 ($inverse_jacobi_sc ($rectform (div 1 u)) m))
+	 (ftake %inverse_jacobi_sc ($rectform (div 1 u)) m))
 	((zerop1 u)
 	 (ftake %elliptic_kc m))
 	(t
@@ -4199,10 +4179,6 @@ first kind:
 ;;
 ;; u = inverse_sn(sqrt(1-x^2)/sqrt(1-m*x^2))
 ;;
-
-(defmfun $inverse_jacobi_cd (u m)
-  (simplify (list '(%inverse_jacobi_cd) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_cd
     ((x m)
      ;; Whittaker and Watson, example in 22.122
@@ -4249,10 +4225,6 @@ first kind:
 ;;
 ;; u = inverse_sd(1/x)
 ;;
-
-(defmfun $inverse_jacobi_ds (u m)
-  (simplify (list '(%inverse_jacobi_ds) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_ds
     ((x m)
      ;; Whittaker and Watson, example in 22.122
@@ -4275,7 +4247,7 @@ first kind:
 	     (complex-float-numerical-eval-p u m)
 	     (bigfloat-numerical-eval-p u m)
 	     (complex-bigfloat-numerical-eval-p u m))
-	 ($inverse_jacobi_sd ($rectform (div 1 u)) m))
+	 (ftake %inverse_jacobi_sd ($rectform (div 1 u)) m))
 	((and $trigsign (mminusp* u))
 	 (neg (cons-exp '%inverse_jacobi_ds (neg u) m)))
 	((eql 0 ($ratsimp (sub u (power (sub 1 m) 1//2))))
@@ -4303,10 +4275,6 @@ first kind:
 ;;
 ;; u = inverse_cd(1/x)
 ;;
-
-(defmfun $inverse_jacobi_dc (u m)
-  (simplify (list '(%inverse_jacobi_dc) (resimplify u) (resimplify m))))
-
 (defprop %inverse_jacobi_dc
     ((x m)
      ;; Note: Whittaker and Watson, example in 22.122 says
@@ -4333,7 +4301,7 @@ first kind:
 (def-simplifier inverse_jacobi_dc (u m)
   (cond ((or (complex-float-numerical-eval-p u m)
 	     (complex-bigfloat-numerical-eval-p u m))
-	 ($inverse_jacobi_cd ($rectform (div 1 u)) m))
+	 (ftake %inverse_jacobi_cd ($rectform (div 1 u)) m))
 	((onep1 u)
 	 0)
 	((and (eq $triginverses '$all)
