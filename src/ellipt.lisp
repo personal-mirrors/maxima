@@ -515,25 +515,6 @@
   grad)
 
 
-;; Define the actual functions for the user
-(defmfun $jacobi_sn (u m)
-  (ftake %jacobi_sn u m))
-
-(defmfun $jacobi_cn (u m)
-  (simplify (list '(%jacobi_cn) (resimplify u) (resimplify m))))
-
-(defmfun $jacobi_dn (u m)
-  (simplify (list '(%jacobi_dn) (resimplify u) (resimplify m))))
-
-(defmfun $inverse_jacobi_sn (u m)
-  (simplify (list '(%inverse_jacobi_sn) (resimplify u) (resimplify m))))
-
-(defmfun $inverse_jacobi_cn (u m)
-  (simplify (list '(%inverse_jacobi_cn) (resimplify u) (resimplify m))))
-
-(defmfun $inverse_jacobi_dn (u m)
-  (simplify (list '(%inverse_jacobi_dn) (resimplify u) (resimplify m))))
-
 ;; Possible forms of a complex number:
 ;;
 ;; 2.3
@@ -655,8 +636,8 @@
 	    (power (sub 1 (mul inv-arg inv-arg)) 1//2))
 	   (%inverse_jacobi_nc
 	    ;; inverse_jacobi_nc(u) = inverse_jacobi_cn(1/u)
-	    ($jacobi_sn ($inverse_jacobi_cn (div 1 inv-arg) m)
-			m))
+	    (ftake %jacobi_sn (ftake %inverse_jacobi_cn (div 1 inv-arg) m)
+		   m))
 	   (%inverse_jacobi_dn
 	    ;; dn(x)^2 + m*sn(x)^2 = 1 so
 	    ;; sn(x) = 1/sqrt(m)*sqrt(1-dn(x)^2)
@@ -664,28 +645,28 @@
 		 (power (sub 1 (mul inv-arg inv-arg)) 1//2)))
 	   (%inverse_jacobi_nd
 	    ;; inverse_jacobi_nd(u) = inverse_jacobi_dn(1/u)
-	    ($jacobi_sn ($inverse_jacobi_dn (div 1 inv-arg) m)
-			m))
+	    (ftake %jacobi_sn (ftake %inverse_jacobi_dn (div 1 inv-arg) m)
+		   m))
 	   (%inverse_jacobi_sc
 	    ;; See below for inverse_jacobi_sc.
 	    (div inv-arg (power (add 1 (mul inv-arg inv-arg)) 1//2)))
 	   (%inverse_jacobi_cs
 	    ;; inverse_jacobi_cs(u) = inverse_jacobi_sc(1/u)
-	    ($jacobi_sn ($inverse_jacobi_sc (div 1 inv-arg) m)
-			m))
+	    (ftake %jacobi_sn ($inverse_jacobi_sc (div 1 inv-arg) m)
+		   m))
 	   (%inverse_jacobi_sd
 	    ;; See below for inverse_jacobi_sd
 	    (div inv-arg (power (add 1 (mul m (mul inv-arg inv-arg))) 1//2)))
 	   (%inverse_jacobi_ds
 	    ;; inverse_jacobi_ds(u) = inverse_jacobi_sd(1/u)
-	    ($jacobi_sn ($inverse_jacobi_sd (div 1 inv-arg) m)
-			m))
+	    (ftake %jacobi_sn ($inverse_jacobi_sd (div 1 inv-arg) m)
+		   m))
 	   (%inverse_jacobi_cd
 	    ;; See below
 	    (div (power (sub 1 (mul inv-arg inv-arg)) 1//2)
 		 (power (sub 1 (mul m (mul inv-arg inv-arg))) 1//2)))
 	   (%inverse_jacobi_dc
-	    ($jacobi_sn ($inverse_jacobi_cd (div 1 inv-arg) m) m)))))
+	    (ftake %jacobi_sn ($inverse_jacobi_cd (div 1 inv-arg) m) m)))))
       ;; A&S 16.20.1 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        (mul '$%i
@@ -738,7 +719,7 @@
 		;;
 		;; sn(1/2*K + K) = cd(1/2*K,m)
 		(ftake %jacobi_cd (mul 1//2
-				      (ftake %elliptic_kc m))
+				       (ftake %elliptic_kc m))
 		       m))
 	       (t
 		(give-up)))))
@@ -792,7 +773,7 @@
 	     (t
 	      ;; I'm lazy.  Use cn(x) = sqrt(1-sn(x)^2).  Hope
 	      ;; this is right.
-	      (power (sub 1 (power ($jacobi_sn u (third u)) 2))
+	      (power (sub 1 (power (ftake %jacobi_sn u (third u)) 2))
 		     1//2))))
       ;; A&S 16.20.2 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
@@ -895,7 +876,7 @@
 	      ;; Express in terms of sn:
 	      ;; dn(x) = sqrt(1-m*sn(x)^2)
 	      (power (sub 1 (mul m
-				 (power ($jacobi_sn u m) 2)))
+				 (power (ftake %jacobi_sn u m) 2)))
 		     1//2))))
       ((zerop1 ($ratsimp (sub u (power (sub 1 m) 1//2))))
        ;; A&S 16.5.3
@@ -2752,7 +2733,7 @@ first kind:
 		 (t
 		  ;; Express in terms of sn:
 		  ;; ns(x) = 1/sn(x)
-		  (div 1 ($jacobi_sn u m)))))
+		  (div 1 (ftake %jacobi_sn u m)))))
 	  ;; A&S 16.20 (Jacobi's Imaginary transformation)
 	  ((and $%iargs (multiplep u '$%i))
 	   ;; ns(i*u) = 1/sn(i*u) = -i/sc(u,m1) = -i*cs(u,m1)
@@ -2875,7 +2856,7 @@ first kind:
 		 (t
 		  ;; Express in terms of cn:
 		  ;; nc(x) = 1/cn(x)
-		  (div 1 ($jacobi_cn u m)))))
+		  (div 1 (ftake %jacobi_cn u m)))))
 	   ;; A&S 16.20 (Jacobi's Imaginary transformation)
 	  ((and $%iargs (multiplep u '$%i))
 	   ;; nc(i*u) = 1/cn(i*u) = 1/nc(u,1-m) = cn(u,1-m)
@@ -3003,7 +2984,7 @@ first kind:
 		 (t
 		  ;; Express in terms of dn:
 		  ;; nd(x) = 1/dn(x)
-		  (div 1 ($jacobi_dn u m)))))
+		  (div 1 (ftake %jacobi_dn u m)))))
 	   ;; A&S 16.20 (Jacobi's Imaginary transformation)
 	  ((and $%iargs (multiplep u '$%i))
 	   ;; nd(i*u) = 1/dn(i*u) = 1/dc(u,1-m) = cd(u,1-m)
@@ -3131,8 +3112,8 @@ first kind:
 	     (t
 	      ;; Express in terms of sn and cn
 	      ;; sc(x) = sn(x)/cn(x)
-	      (div ($jacobi_sn u m)
-		   ($jacobi_cn u m)))))
+	      (div (ftake %jacobi_sn u m)
+		   (ftake %jacobi_cn u m)))))
       ;; A&S 16.20 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        ;; sc(i*u) = sn(i*u)/cn(i*u) = i*sc(u,m1)/nc(u,m1) = i*sn(u,m1)
@@ -3265,8 +3246,8 @@ first kind:
 	      (second u))
 	     (t
 	      ;; Express in terms of sn and dn
-	      (div ($jacobi_sn u m)
-		   ($jacobi_dn u m)))))
+	      (div (ftake %jacobi_sn u m)
+		   (ftake %jacobi_dn u m)))))
       ;; A&S 16.20 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        ;; sd(i*u) = sn(i*u)/dn(i*u) = i*sc(u,m1)/dc(u,m1) = i*sd(u,m1)
@@ -3418,8 +3399,8 @@ first kind:
 	      (second u))
 	     (t
 	      ;; Express in terms of cn an sn
-	      (div ($jacobi_cn u m)
-		   ($jacobi_sn u m)))))
+	      (div (ftake %jacobi_cn u m)
+		   (ftake %jacobi_sn u m)))))
       ;; A&S 16.20 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        ;; cs(i*u) = cn(i*u)/sn(i*u) = -i*nc(u,m1)/sc(u,m1) = -i*ns(u,m1)
@@ -3554,8 +3535,8 @@ first kind:
 	      (second u))
 	     (t
 	      ;; Express in terms of cn and dn
-	      (div ($jacobi_cn u m)
-		   ($jacobi_dn u m)))))
+	      (div (ftake %jacobi_cn u m)
+		   (ftake %jacobi_dn u m)))))
       ;; A&S 16.20 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        ;; cd(i*u) = cn(i*u)/dn(i*u) = nc(u,m1)/dc(u,m1) = nd(u,m1)
@@ -3704,8 +3685,8 @@ first kind:
 	      (second u))
 	     (t
 	      ;; Express in terms of dn and sn
-	      (div ($jacobi_dn u m)
-		   ($jacobi_sn u m)))))
+	      (div (ftake %jacobi_dn u m)
+		   (ftake %jacobi_sn u m)))))
       ;; A&S 16.20 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        ;; ds(i*u) = dn(i*u)/sn(i*u) = -i*dc(u,m1)/sc(u,m1) = -i*ds(u,m1)
@@ -3856,8 +3837,8 @@ first kind:
 	      (second u))
 	     (t
 	      ;; Express in terms of dn and cn
-	      (div ($jacobi_dn u m)
-		   ($jacobi_cn u m)))))
+	      (div (ftake %jacobi_dn u m)
+		   (ftake %jacobi_cn u m)))))
       ;; A&S 16.20 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        ;; dc(i*u) = dn(i*u)/cn(i*u) = dc(u,m1)/nc(u,m1) = dn(u,m1)
@@ -4012,7 +3993,7 @@ first kind:
 	     (bigfloat-numerical-eval-p u m)
 	     (complex-bigfloat-numerical-eval-p u m))
 	 ;;
-	 ($inverse_jacobi_cn ($rectform (div 1 u)) m))
+	 (ftake %inverse_jacobi_cn ($rectform (div 1 u)) m))
 	((onep1 u)
 	 0)
 	((alike1 u -1)
@@ -4061,7 +4042,7 @@ first kind:
 	     (complex-float-numerical-eval-p u m)
 	     (bigfloat-numerical-eval-p u m)
 	     (complex-bigfloat-numerical-eval-p u m))
-	 ($inverse_jacobi_dn ($rectform (div 1 u)) m))
+	 (ftake %inverse_jacobi_dn ($rectform (div 1 u)) m))
 	((onep1 u)
 	 0)
 	((onep1 ($ratsimp (mul (power (sub 1 m) 1//2) u)))
@@ -4120,9 +4101,9 @@ first kind:
 	     (complex-float-numerical-eval-p u m)
 	     (bigfloat-numerical-eval-p u m)
 	     (complex-bigfloat-numerical-eval-p u m))
-	 ($inverse_jacobi_sn
-	  ($rectform (div u (power (add 1 (mul u u)) 1//2)))
-	  m))
+	 (ftake %inverse_jacobi_sn
+		($rectform (div u (power (add 1 (mul u u)) 1//2)))
+		m))
 	((zerop1 u)
 	 ;; jacobi_sc(0,m) = 0
 	 0)
@@ -4177,9 +4158,9 @@ first kind:
 	     (complex-float-numerical-eval-p u m)
 	     (bigfloat-numerical-eval-p u m)
 	     (complex-bigfloat-numerical-eval-p u m))
-	 ($inverse_jacobi_sn
-	  ($rectform (div u (power (add 1 (mul m (mul u u))) 1//2)))
-	  m))
+	 (ftake %inverse_jacobi_sn
+		($rectform (div u (power (add 1 (mul m (mul u u))) 1//2)))
+		m))
 	((zerop1 u)
 	 0)
 	((eql 0 ($ratsimp (sub u (div 1 (power (sub 1 m) 1//2)))))
@@ -4280,10 +4261,10 @@ first kind:
   (cond ((or (complex-float-numerical-eval-p u m)
 	     (complex-bigfloat-numerical-eval-p u m))
 	 (let (($numer t))
-	   ($inverse_jacobi_sn
-	    ($rectform (div (power (mul (sub 1 u) (add 1 u)) 1//2)
-			    (power (sub 1 (mul m (mul u u))) 1//2)))
-	    m)))
+	   (ftake %inverse_jacobi_sn
+		  ($rectform (div (power (mul (sub 1 u) (add 1 u)) 1//2)
+				  (power (sub 1 (mul m (mul u u))) 1//2)))
+		  m)))
 	((onep1 u)
 	 0)
 	((zerop1 u)
