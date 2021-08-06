@@ -881,7 +881,7 @@
       ((zerop1 ($ratsimp (sub u (power (sub 1 m) 1//2))))
        ;; A&S 16.5.3
        ;; dn(sqrt(1-m),m) = K(m)
-       ($elliptic_kc m))
+       (ftake %elliptic_kc m))
       ;; A&S 16.20.2 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        (cons-exp '%jacobi_dc (coeff u '$%i 1)
@@ -972,10 +972,10 @@
 	   0)
 	  ((onep1 u)
 	   ;; asn(1,m) = elliptic_kc(m)
-	   ($elliptic_kc m))
+	   (ftake %elliptic_kc m))
 	  ((and (numberp u) (onep1 (- u)))
 	   ;; asn(-1,m) = -elliptic_kc(m)
-	   (mul -1 ($elliptic_kc m)))
+	   (mul -1 (ftake %elliptic_kc m)))
 	  ((zerop1 m)
 	   ;; asn(x,0) = F(asin(x),0) = asin(x)
 	   (take '(%asin) u))
@@ -1060,7 +1060,7 @@
 	  ((zerop1 ($ratsimp (sub u (power (sub 1 m) 1//2))))
 	   ;; jacobi_dn(K(m),m) = sqrt(1-m) so
 	   ;; inverse_jacobi_dn(sqrt(1-m),m) = K(m)
-	   ($elliptic_kc m))
+	   (ftake %elliptic_kc m))
 	  ((and (eq $triginverses '$all)
 		(listp u)
 		(eq (caar u) '%jacobi_dn)
@@ -1553,10 +1553,6 @@ first kind:
 ;;
 ;; elliptic_ec(m) = elliptic_e(%pi/2, m)
 ;;
-(defmfun $elliptic_kc (m)
-  (simplify (list '(%elliptic_kc) (resimplify m))))
-(defmfun $elliptic_ec (m)
-  (simplify (list '(%elliptic_ec) (resimplify m))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -4048,7 +4044,7 @@ first kind:
 	((onep1 ($ratsimp (mul (power (sub 1 m) 1//2) u)))
 	 ;; jacobi_nd(1/sqrt(1-m),m) = K(m).  This follows from
 	 ;; jacobi_dn(sqrt(1-m),m) = K(m).
-	 ($elliptic_kc m))
+	 (ftake %elliptic_kc m))
 	((and (eq $triginverses '$all)
 	      (listp u)
 	      (eq (caar u) '%jacobi_nd)
@@ -4169,7 +4165,7 @@ first kind:
 	 ;; We can see this from inverse_jacobi_sd(x,m) =
 	 ;; inverse_jacobi_sn(x/sqrt(1+m*x^2), m).  So
 	 ;; inverse_jacobi_sd(1/sqrt(1-m),m) = inverse_jacobi_sn(1,m)
-	 ($elliptic_kc m))
+	 (ftake %elliptic_kc m))
 	((and (eq $triginverses '$all)
 	      (listp u)
 	      (eq (caar u) '%jacobi_sd)
@@ -4321,7 +4317,7 @@ first kind:
 	 ;; Since inverse_jacobi_ds(sqrt(1-m), m) =
 	 ;; inverse_jacobi_sd(1/sqrt(1-m),m).  And we know from
 	 ;; above that this is elliptic_kc(m)
-	 ($elliptic_kc m))
+	 (ftake %elliptic_kc m))
 	((and (eq $triginverses '$all)
 	      (listp u)
 	      (eq (caar u) '%jacobi_ds)
