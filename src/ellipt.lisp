@@ -1705,10 +1705,6 @@ first kind:
 ;; As with E and F, we do not use the modular angle alpha but the
 ;; parameter m = sin(alpha)^2.
 ;;
-(defmfun $elliptic_pi (n phi m)
-  (simplify (list '($elliptic_pi)
-		  (resimplify n) (resimplify phi) (resimplify m))))
-
 (def-simplifier elliptic_pi (n phi m)
   (let (args)
     (cond
@@ -2653,9 +2649,6 @@ first kind:
 ;;; Other Jacobian elliptic functions
 
 ;; jacobi_ns(u,m) = 1/jacobi_sn(u,m)
-(defmfun  $jacobi_ns (u m)
-  (simplify (list '(%jacobi_ns) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_ns
     ((u m)
      ;; diff wrt u
@@ -2778,10 +2771,6 @@ first kind:
 	   (give-up)))))
 
 ;; jacobi_nc(u,m) = 1/jacobi_cn(u,m)
-
-(defmfun $jacobi_nc (u m)
-  (simplify (list '(%jacobi_nc) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_nc
     ((u m)
      ;; wrt u
@@ -2904,9 +2893,6 @@ first kind:
 	   (give-up)))))
 
 ;; jacobi_nd(u,m) = 1/jacobi_dn(u,m)
-(defmfun $jacobi_nd (u m)
-  (simplify (list '(%jacobi_nd) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_nd
     ((u m)
      ;; wrt u
@@ -3013,9 +2999,6 @@ first kind:
 	   (give-up)))))
 
 ;; jacobi_sc(u,m) = jacobi_sn/jacobi_cn
-(defmfun $jacobi_sc (u m)
-  (simplify (list '(%jacobi_sc) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_sc
     ((u m)
      ;; wrt u
@@ -3148,9 +3131,6 @@ first kind:
        (give-up)))))
 
 ;; jacobi_sd(u,m) = jacobi_sn/jacobi_dn
-(defmfun $jacobi_sd (u m)
-  (simplify (list '(%jacobi_sd) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_sd
     ((u m)
      ;; wrt u
@@ -3301,9 +3281,6 @@ first kind:
        (give-up)))))
 
 ;; jacobi_cs(u,m) = jacobi_cn/jacobi_sn
-(defmfun $jacobi_cs (u m)
-  (simplify (list '(%jacobi_cs) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_cs
     ((u m)
      ;; wrt u
@@ -3437,10 +3414,6 @@ first kind:
        (give-up)))))
 
 ;; jacobi_cd(u,m) = jacobi_cn/jacobi_dn
-#+nil
-(defmfun $jacobi_cd (u m)
-  (simplify (list '(%jacobi_cd) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_cd
     ((u m)
      ;; wrt u
@@ -3588,9 +3561,6 @@ first kind:
        (give-up)))))  
 
 ;; jacobi_ds(u,m) = jacobi_dn/jacobi_sn
-(defmfun $jacobi_ds (u m)
-  (simplify (list '(%jacobi_ds) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_ds
     ((u m)
      ;; wrt u
@@ -3739,9 +3709,6 @@ first kind:
        (give-up)))))
 
 ;; jacobi_dc(u,m) = jacobi_dn/jacobi_cn
-(defmfun $jacobi_dc (u m)
-  (simplify (list '(%jacobi_dc) (resimplify u) (resimplify m))))
-
 (defprop %jacobi_dc
     ((u m)
      ;; wrt u
