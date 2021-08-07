@@ -677,7 +677,6 @@
        ;; A&S 16.8.1
        (destructuring-bind (lin const)
 	   coef
-	 (format t "A&S 16.8.1:  ~A ~A~%" lin const)
 	 (cond ((integerp lin)
 		(ecase (mod lin 4)
 		  (0
@@ -705,7 +704,6 @@
 		       (neg (ftake %jacobi_cd const m))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
-		(format t "16.5.2~%")
 		;; A&S 16.5.2
 		;;
 		;; sn(1/2*K) = 1/sqrt(1+sqrt(1-m))
@@ -714,7 +712,6 @@
 			    1//2)))
 	       ((and (alike1 lin 3//2)
 		     (zerop1 const))
-		(format t "16.5.2~%")
 		;; A&S 16.5.2
 		;;
 		;; sn(1/2*K + K) = cd(1/2*K,m)
@@ -851,7 +848,7 @@
        1)
       ((onep1 m)
        ;; A&S 16.6.3
-       (take '(%sech) u))
+       (ftake %sech u))
       ((and $trigsign (mminusp* u))
        (cons-exp '%jacobi_dn (neg u) m))
       ((and $triginverses
@@ -982,10 +979,10 @@
 	   (mul -1 (ftake %elliptic_kc m)))
 	  ((zerop1 m)
 	   ;; asn(x,0) = F(asin(x),0) = asin(x)
-	   (take '(%asin) u))
+	   (ftake %asin u))
 	  ((onep1 m)
 	   ;; asn(x,1) = F(asin(x),1) = log(tan(pi/4+asin(x)/2))
-	   (take '(%elliptic_f) (take '(%asin) u) 1))
+	   (ftake %elliptic_f (ftake %asin u) 1))
 	  ((and (eq $triginverses '$all)
 		(listp u)
 		(eq (caar u) '%jacobi_sn)
@@ -1525,10 +1522,10 @@ first kind:
 	   ;;
 	   ;; elliptic_e(x,1) = sin(phi) + 2*round(x/%pi)*elliptic_ec(m)
 	   ;;
-	   (add (take '(%sin) phi)
+	   (add (ftake %sin phi)
 		(mul 2
-		     (mul (take '(%round) (div phi '$%pi))
-			  (take '(%elliptic_ec) m)))))
+		     (mul (ftake %round (div phi '$%pi))
+			  (ftake %elliptic_ec m)))))
 	  ((alike1 phi '((mtimes) ((rat) 1 2) $%pi))
 	   ;; Complete elliptic integral
 	   (ftake %elliptic_ec m))
@@ -1539,14 +1536,14 @@ first kind:
 	   ;; Handle the case where phi is a number where we can apply
 	   ;; the periodicity property without blowing up the
 	   ;; expression.
-	   (add (take '($elliptic_e)
-		      (add phi
-			   (mul (mul -1 '$%pi)
-				(take '(%round) (div phi '$%pi))))
-		      m)
+	   (add (ftake $elliptic_e
+		       (add phi
+			    (mul (mul -1 '$%pi)
+				 (ftake %round (div phi '$%pi))))
+		       m)
 		(mul 2
-		     (mul (take '(%round) (div phi '$%pi))
-			  (take '(%elliptic_ec) m)))))
+		     (mul (ftake %round (div phi '$%pi))
+			  (ftake %elliptic_ec m)))))
 	  (t
 	   ;; Nothing to do
 	   (give-up)))))
@@ -1662,10 +1659,10 @@ first kind:
 	   ;;      = (2*%pi*gamma(3/4)^4+%pi^3)/(4*%pi^(3/2)*gamma(3/4)^2)
 	   ;;      = gamma(3/4)^2/(2*sqrt(%pi))+%pi^(3/2)/(4*gamma(3/4)^2)
 	   ;;
-	   (add (div (power (take '(%gamma) (div 3 4)) 2)
+	   (add (div (power (ftake %gamma (div 3 4)) 2)
 		     (mul 2 (power '$%pi 1//2)))
 		(div (power '$%pi (div 3 2))
-		     (mul 4 (power (take '(%gamma) (div 3 4)) 2)))))
+		     (mul 4 (power (ftake %gamma (div 3 4)) 2)))))
 	  ((zerop1 (add 1 m))
 	   ;; elliptic_ec(-1). Use the identity
 	   ;; http://functions.wolfram.com/08.01.17.0002.01
@@ -1679,7 +1676,7 @@ first kind:
 	   ;;
 	   ;; Should we expand out elliptic_ec(1/2) using the above result?
 	   (mul (power 2 1//2)
-		(take '(%elliptic_ec) 1//2)))
+		(ftake %elliptic_ec 1//2)))
 	  (t
 	   ;; Nothing to do
 	   (give-up)))))
@@ -1738,15 +1735,15 @@ first kind:
        (let ((s (asksign (add -1 n))))
 	 (case s
 	   ($positive
-	    (div (take '(%atanh) (mul (power (add n -1) 1//2)
-				      (take '(%tan) phi)))
+	    (div (ftake %atanh (mul (power (add n -1) 1//2)
+				    (ftake %tan phi)))
 		 (power (add n -1) 1//2)))
 	   ($negative
-	    (div (take '(%atan) (mul (power (sub 1 n) 1//2)
-				     (take '(%tan) phi)))
+	    (div (ftake %atan (mul (power (sub 1 n) 1//2)
+				   (ftake %tan phi)))
 		 (power (sub 1 n) 1//2)))
 	   ($zero
-	    (take '(%tan) phi)))))
+	    (ftake %tan phi)))))
 	  (t
 	   ;; Nothing to do
 	   (give-up)))))
@@ -2358,7 +2355,7 @@ first kind:
 	     ;;   = log(1/(sqrt(2)-1))
 	     ;; ratsimp(%),algebraic;
 	     ;;   = log(sqrt(2)+1)
-	     (take '(%log) (add 1 (power 2 1//2))))
+	     (ftake %log (add 1 (power 2 1//2))))
 	    ((and (alike x '$%i)
 		  (alike y (add 1 '$%i)))
 	     ;; rc(%i, %i+1) = 1/2*integrate(1/sqrt(t+%i)/(t+%i+1), t, 0, inf)
@@ -2372,7 +2369,7 @@ first kind:
 	     (add (div '$%pi 4)
 		  (mul '$%i
 		       1//2
-		       (take '(%log) (sub (power 2 1//2) 1)))))
+		       (ftake %log (sub (power 2 1//2) 1)))))
 	    ((and (zerop1 x)
 		  (alike1 y '$%i))
 	     ;; rc(0,%i) = 1/2*integrate(1/(sqrt(t)*(t+%i)), t, 0, inf)
@@ -2392,7 +2389,7 @@ first kind:
 	     ;;
 	     ;; This is done by looking at Rc(x,y) and seeing if
 	     ;; ((1+y)/2)^2 is the same as x.
-	     (div (take '(%log) y)
+	     (div (ftake %log y)
 		  (sub y 1)))
 	    (t
 	     (give-up))))))
@@ -2422,13 +2419,13 @@ first kind:
 	    ((alike1 y z)
 	     ;; Rd(x,y,y) = 3/(2*(y-x))*(Rc(x, y) - sqrt(x)/y)
 	     (mul (div 3 (mul 2 (sub y x)))
-		  (sub (take '(%carlson_rc) x y)
+		  (sub (ftake %carlson_rc x y)
 		       (div (power x 1//2)
 			    y))))
 	    ((alike1 x y)
 	     ;; Rd(x,x,z) = 3/(z-x)*(Rc(z,x) - 1/sqrt(z))
 	     (mul (div 3 (sub z x))
-		  (sub (take '(%carlson_rc) z x)
+		  (sub (ftake %carlson_rc z x)
 		       (div 1 (power z 1//2)))))
 	    ((and (eql z 1)
 		  (or (and (eql x 0)
@@ -2448,8 +2445,8 @@ first kind:
 	     ;; Note also that Rd(x,y,z) = Rd(y,x,z)
 	     (mul 3
 		  (power '$%pi 1//2)
-		  (div (take '(%gamma) (div 3 4))
-		       (take '(%gamma) (div 1 4)))))
+		  (div (ftake %gamma (div 3 4))
+		       (ftake %gamma (div 1 4)))))
 	    ((and (or (eql x 0) (eql y 0))
 		  (eql z 1))
 	     ;; 1/3*m*Rd(0,1-m,1) = K(m) - E(m).
@@ -2460,8 +2457,8 @@ first kind:
 	     ;; Note that Rd(x,y,z) = Rd(y,x,z).
 	     (let ((m (sub 1 y)))
 	       (mul (div 3 m)
-		    (sub (take '(%elliptic_kc) m)
-			 (take '(%elliptic_ec) m)))))
+		    (sub (ftake %elliptic_kc m)
+			 (ftake %elliptic_ec m)))))
 	    ((or (and (eql x 0)
 		      (eql y 1))
 		 (and (eql x 1)
@@ -2473,9 +2470,9 @@ first kind:
 	     ;;  Rd(0,1,z) = 3/(z*(1-z))*(E(1-z) - z*K(1-z))
 	     ;; Recall that Rd(x,y,z) = Rd(y,x,z).
 	     (mul (div 3 (mul z (sub 1 z)))
-		  (sub (take '(%elliptic_ec) (sub 1 z))
+		  (sub (ftake %elliptic_ec (sub 1 z))
 		       (mul z
-			    (take '(%elliptic_kc) (sub 1 z))))))
+			    (ftake %elliptic_kc (sub 1 z))))))
 	    ((float-numerical-eval-p x y z)
 	     (calc ($float x) ($float y) ($float z)))
 	    ((bigfloat-numerical-eval-p x y z)
@@ -2508,7 +2505,7 @@ first kind:
 	     (mul 1//2 '$%pi
 		  (power y -1//2)))
 	    ((alike1 y z)
-	     (take '(%carlson_rc) x y))
+	     (ftake %carlson_rc x y))
 	    ((some #'(lambda (args)
 		       (destructuring-bind (x y z)
 			   args
@@ -2526,7 +2523,7 @@ first kind:
 	     ;; And Rf is symmetric in all the args, so check every
 	     ;; permutation too.  This could probably be simplified
 	     ;; without consing all the lists, but I'm lazy.
-	     (div (power (take '(%gamma) (div 1 4)) 2)
+	     (div (power (ftake %gamma (div 1 4)) 2)
 		  (mul 4 (power (mul 2 '$%pi) 1//2))))
 	    ((some #'(lambda (args)
 		       (destructuring-bind (x y z)
@@ -2547,7 +2544,7 @@ first kind:
 	     ;;   = gamma(1/4)^2/(4*sqrt(%pi))
 	     ;;
 	     ;; Rf is symmetric, so check all the permutations too.
-	     (div (power (take '(%gamma) (div 1 4)) 2)
+	     (div (power (ftake %gamma (div 1 4)) 2)
 		  (mul 4 (power '$%pi 1//2))))
 	    ((setf args
 		   (some #'(lambda (args)
@@ -2566,7 +2563,7 @@ first kind:
 			       (list z y x))))
 	     ;; Rf(0,1-m,1) = elliptic_kc(m).
 	     ;; See https://dlmf.nist.gov/19.25.E1
-	     (take '(%elliptic_kc) (sub 1 args)))
+	     (ftake %elliptic_kc (sub 1 args)))
 	    ((some #'(lambda (args)
 		       (destructuring-bind (x y z)
 			   args
@@ -2586,7 +2583,7 @@ first kind:
 	     ;;   = gamma(1/4)^2/(4*sqrt(%pi))
 	     ;;
 	     ;; Rf is symmetric, so check all the permutations too.
-	     (div (power (take '(%gamma) (div 1 4)) 2)
+	     (div (power (ftake %gamma (div 1 4)) 2)
 		  (mul 4 (power '$%pi 1//2))))
 	    ((float-numerical-eval-p x y z)
 	     (calc ($float x) ($float y) ($float z)))
@@ -2618,7 +2615,7 @@ first kind:
 	     (power x (div -3 2)))
 	    ((alike1 z p)
 	     ;; Rj(x,y,z,z) = Rd(x,y,z)
-	     (take '(%carlson_rd) x y z))
+	     (ftake %carlson_rd x y z))
 	    ((and (zerop1 x)
 		  (alike1 y z))
 	     ;; Rj(0,y,y,p) = 3*%pi/(2*(y*sqrt(p)+p*sqrt(y)))
@@ -2629,12 +2626,12 @@ first kind:
 	    ((alike1 y z)
 	     ;; Rj(x,y,y,p) = 3/(p-y)*(Rc(x,y) - Rc(x,p))
 	     (mul (div 3 (sub p y))
-		  (sub (take '(%carlson_rc) x y)
-		       (take '(%carlson_rc) x p))))
+		  (sub (ftake %carlson_rc x y)
+		       (ftake %carlson_rc x p))))
 	    ((and (alike1 y z)
 		  (alike1 y p))
 	     ;; Rj(x,y,y,y) = Rd(x,y,y)
-	     (take '(%carlson_rd) x y y))
+	     (ftake %carlson_rd x y y))
 	    ((float-numerical-eval-p x y z p)
 	     (calc ($float x) ($float y) ($float z) ($float p)))
 	    ((bigfloat-numerical-eval-p x y z p)
@@ -2697,10 +2694,10 @@ first kind:
 	       (to (bigfloat:/ (bigfloat::sn uu mm))))))
 	  ((zerop1 m)
 	   ;; A&S 16.6.10
-	   (take '(%csc) u))
+	   (ftake %csc u))
 	  ((onep1 m)
 	   ;; A&S 16.6.10
-	   (take '(%coth) u))
+	   (ftake %coth u))
 	  ((zerop1 u)
 	   (dbz-err1 'jacobi_ns))
 	  ((and $trigsign (mminusp* u))
@@ -2818,7 +2815,7 @@ first kind:
 	   1)
 	  ((zerop1 m)
 	   ;; A&S 16.6.8
-	   (take '(%sec) u))
+	   (ftake %sec u))
 	  ((onep1 m)
 	   ;; A&S 16.6.8
 	   (ftake %cosh u))
@@ -3348,10 +3345,10 @@ first kind:
 			   (bigfloat::sn uu mm))))))
       ((zerop1 m)
        ;; A&S 16.6.12
-       (take '(%cot) u))
+       (ftake %cot u))
       ((onep1 m)
        ;; A&S 16.6.12
-       (take '(%csch) u))
+       (ftake %csch u))
       ((zerop1 u)
        (dbz-err1 'jacobi_cs))
       ((and $trigsign (mminusp* u))
@@ -3628,10 +3625,10 @@ first kind:
 			   (bigfloat::sn uu mm))))))
       ((zerop1 m)
        ;; A&S 16.6.11
-       (take '(%csc) u))
+       (ftake %csc u))
       ((onep1 m)
        ;; A&S 16.6.11
-       (take '(%csch) u))
+       (ftake %csch u))
       ((zerop1 u)
        (dbz-err1 'jacobi_ds))
       ((and $trigsign (mminusp* u))
@@ -3779,7 +3776,7 @@ first kind:
        1)
       ((zerop1 m)
        ;; A&S 16.6.7
-       (take '(%sec) u))
+       (ftake %sec u))
       ((onep1 m)
        ;; A&S 16.6.7
        1)
@@ -4755,12 +4752,12 @@ first kind:
 	     (cons (take (first expr) arg-r param)
 		   0))
 	    (t
-	     (let* ((s (take '(%jacobi_sn) arg-r param))
-		    (c (take '(%jacobi_cn) arg-r param))
-		    (d (take '(%jacobi_dn) arg-r param))
-		    (s1 (take '(%jacobi_sn) arg-i (sub 1 param)))
-		    (c1 (take '(%jacobi_cn) arg-i (sub 1 param)))
-		    (d1 (take '(%jacobi_dn) arg-i (sub 1 param)))
+	     (let* ((s (ftake %jacobi_sn arg-r param))
+		    (c (ftake %jacobi_cn arg-r param))
+		    (d (ftake %jacobi_dn arg-r param))
+		    (s1 (ftake %jacobi_sn arg-i (sub 1 param)))
+		    (c1 (ftake %jacobi_cn arg-i (sub 1 param)))
+		    (d1 (ftake %jacobi_dn arg-i (sub 1 param)))
 		    (den (add (mul c1 c1)
 			      (mul param
 				   (mul (mul s s)
