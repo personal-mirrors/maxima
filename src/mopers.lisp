@@ -90,6 +90,11 @@
       `(ncmuln (list ,@factors) t)))
 
 ;; (TAKE '(%TAN) X) = tan(x)
+;;
+;; Stavros says it's named take:
+;;   "Take as in 'take the sine of ...'.  call or apply might imply
+;;   it's a function call, which it isn't."
+;;
 ;; This syntax really loses.  Not only does this syntax lose, but this macro
 ;; has to look like a subr.  Otherwise, the definition would look like
 ;; (DEFMACRO TAKE ((NIL (OPERATOR)) . ARGS) ...)
