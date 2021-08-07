@@ -242,13 +242,6 @@
 
 (in-package :maxima)
 
-;;
-;; How this works, I think.
-;;
-;; $jacobi_sn is the user visible function JACOBI_SN.  We put
-;; properties on this symbol so maxima can figure out what to do with
-;; it.
-
 ;; Tell maxima what the derivatives are.
 ;;
 ;; Lawden says the derivative wrt to k but that's not what we want.
@@ -581,7 +574,7 @@
 	nil)))
 
 ;; Tell maxima how to simplify the functions
-;;
+
 (def-simplifier jacobi_sn (u m)
   (let (coef args)
     (cond
