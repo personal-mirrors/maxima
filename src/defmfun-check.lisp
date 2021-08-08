@@ -522,8 +522,15 @@
     `(progn
        ;; Set up properties
        (defprop ,noun-name ,simp-name operators)
+       ;; The verb and alias properties are needed to make things like
+       ;; quad_qags(jacobi_sn(x,.5)...) work.
        (defprop ,verb-name ,noun-name verb)
        (defprop ,verb-name ,noun-name alias)
+       ;; The reversealias property is needed by grind to print out
+       ;; the right thing.  Without it, grind(jacobi_sn(x,m)) prints
+       ;; '?%jacobi_sn(x,m)".  Also needed for labels in plots which
+       ;; would show up as %jacobi_sn instead of jacobi_sn.
+       (defprop ,noun-name ,verb-name reversealias)
 
        ;; Define the simplifier
        (defun ,simp-name (form ,unused-arg ,z-arg)
