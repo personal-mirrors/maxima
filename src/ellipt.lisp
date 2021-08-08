@@ -4488,12 +4488,6 @@ first kind:
     (t
      (give-up))))
 
-(defmfun $elliptic_eu (u m)
-  (simplify `(($elliptic_eu) ,(resimplify u) ,(resimplify m))))
-
-(defmfun $jacobi_am (u m)
-  (simplify `((%jacobi_am) ,(resimplify u) ,(resimplify m))))
-
 (def-simplifier jacobi_am (u m)
   (cond
     ;; as it stands, BIGFLOAT::SN can't handle bigfloats or complex bigfloats,
