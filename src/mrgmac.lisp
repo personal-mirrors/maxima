@@ -207,8 +207,12 @@
 	   (push (list (third (zl-get (first s) 'mode)) x (second s) (second l)) nl))
 	  (t (merror "STO: ~a" (car l))))))
 
+#+nil
 (defmacro cons-exp (op &rest args)
   `(simplify (list (list ,op) ,@args)))
+
+(defmacro cons-exp (op &rest args)
+  `(ftake* ,op ,@args))
 
 ;; Local Modes:
 ;; Mode: LISP
