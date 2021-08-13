@@ -600,7 +600,7 @@
        ;; A&S 16.6.1
        (ftake '%tanh u))
       ((and $trigsign (mminusp* u))
-       (neg (cons-exp '%jacobi_sn (neg u) m)))
+       (neg (ftake* '%jacobi_sn (neg u) m)))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -663,7 +663,7 @@
       ;; A&S 16.20.1 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        (mul '$%i
-	    (cons-exp '%jacobi_sc (coeff u '$%i 1) (add 1 (neg m)))))
+	    (ftake* '%jacobi_sc (coeff u '$%i 1) (add 1 (neg m)))))
       ((setq coef (kc-arg2 u m))
        ;; sn(m*K+u)
        ;;
@@ -742,7 +742,7 @@
        ;; A&S 16.6.2
        (ftake '%sech u))
       ((and $trigsign (mminusp* u))
-       (cons-exp '%jacobi_cn (neg u) m))
+       (ftake* '%jacobi_cn (neg u) m))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -767,7 +767,7 @@
 		     1//2))))
       ;; A&S 16.20.2 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
-       (cons-exp '%jacobi_nc (coeff u '$%i 1) (add 1 (neg m))))
+       (ftake* '%jacobi_nc (coeff u '$%i 1) (add 1 (neg m))))
       ((setq coef (kc-arg2 u m))
        ;; cn(m*K+u)
        ;;
@@ -843,7 +843,7 @@
        ;; A&S 16.6.3
        (ftake '%sech u))
       ((and $trigsign (mminusp* u))
-       (cons-exp '%jacobi_dn (neg u) m))
+       (ftake* '%jacobi_dn (neg u) m))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -874,7 +874,7 @@
        (ftake '%elliptic_kc m))
       ;; A&S 16.20.2 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
-       (cons-exp '%jacobi_dc (coeff u '$%i 1)
+       (ftake* '%jacobi_dc (coeff u '$%i 1)
 		 (add 1 (neg m))))
       ((setq coef (kc-arg2 u m))
        ;; A&S 16.8.3
@@ -2695,7 +2695,7 @@ first kind:
 	   (dbz-err1 'jacobi_ns))
 	  ((and $trigsign (mminusp* u))
 	   ;; ns is odd
-	   (neg (cons-exp '%jacobi_ns (neg u) m)))
+	   (neg (ftake* '%jacobi_ns (neg u) m)))
 	  ((and $triginverses
 		(listp u)
 		(member (caar u) '(%inverse_jacobi_sn
@@ -2721,7 +2721,7 @@ first kind:
 	  ((and $%iargs (multiplep u '$%i))
 	   ;; ns(i*u) = 1/sn(i*u) = -i/sc(u,m1) = -i*cs(u,m1)
 	   (neg (mul '$%i
-		     (cons-exp '%jacobi_cs (coeff u '$%i 1) (add 1 (neg m))))))
+		     (ftake* '%jacobi_cs (coeff u '$%i 1) (add 1 (neg m))))))
 	  ((setq coef (kc-arg2 u m))
 	   ;; A&S 16.8.10
 	   ;;
@@ -2814,7 +2814,7 @@ first kind:
 	   (ftake '%cosh u))
 	  ((and $trigsign (mminusp* u))
 	   ;; nc is even
-	   (cons-exp '%jacobi_nc (neg u) m))
+	   (ftake* '%jacobi_nc (neg u) m))
 	  ((and $triginverses
 		(listp u)
 		(member (caar u) '(%inverse_jacobi_sn
@@ -2839,7 +2839,7 @@ first kind:
 	   ;; A&S 16.20 (Jacobi's Imaginary transformation)
 	  ((and $%iargs (multiplep u '$%i))
 	   ;; nc(i*u) = 1/cn(i*u) = 1/nc(u,1-m) = cn(u,1-m)
-	   (cons-exp '%jacobi_cn (coeff u '$%i 1) (add 1 (neg m))))
+	   (ftake* '%jacobi_cn (coeff u '$%i 1) (add 1 (neg m))))
 	  ((setq coef (kc-arg2 u m))
 	   ;; A&S 16.8.8
 	   ;;
@@ -2939,7 +2939,7 @@ first kind:
 	   (ftake '%cosh u))
 	  ((and $trigsign (mminusp* u))
 	   ;; nd is even
-	   (cons-exp '%jacobi_nd (neg u) m))
+	   (ftake* '%jacobi_nd (neg u) m))
 	  ((and $triginverses
 		(listp u)
 		(member (caar u) '(%inverse_jacobi_sn
@@ -2964,7 +2964,7 @@ first kind:
 	   ;; A&S 16.20 (Jacobi's Imaginary transformation)
 	  ((and $%iargs (multiplep u '$%i))
 	   ;; nd(i*u) = 1/dn(i*u) = 1/dc(u,1-m) = cd(u,1-m)
-	   (cons-exp '%jacobi_cd (coeff u '$%i 1) (add 1 (neg m))))
+	   (ftake* '%jacobi_cd (coeff u '$%i 1) (add 1 (neg m))))
 	  ((setq coef (kc-arg2 u m))
 	   ;; A&S 16.8.6
 	   ;;
@@ -3064,7 +3064,7 @@ first kind:
        (ftake '%sinh u))
       ((and $trigsign (mminusp* u))
        ;; sc is odd
-       (neg (cons-exp '%jacobi_sc (neg u) m)))
+       (neg (ftake* '%jacobi_sc (neg u) m)))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -3091,7 +3091,7 @@ first kind:
       ((and $%iargs (multiplep u '$%i))
        ;; sc(i*u) = sn(i*u)/cn(i*u) = i*sc(u,m1)/nc(u,m1) = i*sn(u,m1)
        (mul '$%i
-	    (cons-exp '%jacobi_sn (coeff u '$%i 1) (add 1 (neg m)))))
+	    (ftake* '%jacobi_sn (coeff u '$%i 1) (add 1 (neg m)))))
       ((setq coef (kc-arg2 u m))
        ;; A&S 16.8.9
        ;; sc(2*m*K+u) = sc(u)
@@ -3111,7 +3111,7 @@ first kind:
 		   (if (zerop1 const)
 		       (dbz-err1 'jacobi_sc)
 		       (mul -1
-			    (div (cons-exp '%jacobi_cs const m)
+			    (div (ftake* '%jacobi_cs const m)
 				 (power (sub 1 m) 1//2)))))))
 	       ((and (alike1 lin 1//2)
 		     (zerop1 const))
@@ -3196,7 +3196,7 @@ first kind:
        (ftake '%sinh u))
       ((and $trigsign (mminusp* u))
        ;; sd is odd
-       (neg (cons-exp '%jacobi_sd (neg u) m)))
+       (neg (ftake* '%jacobi_sd (neg u) m)))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -3222,7 +3222,7 @@ first kind:
       ((and $%iargs (multiplep u '$%i))
        ;; sd(i*u) = sn(i*u)/dn(i*u) = i*sc(u,m1)/dc(u,m1) = i*sd(u,m1)
        (mul '$%i
-	    (cons-exp '%jacobi_sd (coeff u '$%i 1) (add 1 (neg m)))))
+	    (ftake* '%jacobi_sd (coeff u '$%i 1) (add 1 (neg m)))))
       ((setq coef (kc-arg2 u m))
        ;; A&S 16.8.5
        ;; sd(4*m*K+u) = sd(u)
@@ -3346,7 +3346,7 @@ first kind:
        (dbz-err1 'jacobi_cs))
       ((and $trigsign (mminusp* u))
        ;; cs is odd
-       (neg (cons-exp '%jacobi_cs (neg u) m)))
+       (neg (ftake* '%jacobi_cs (neg u) m)))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -3372,7 +3372,7 @@ first kind:
       ((and $%iargs (multiplep u '$%i))
        ;; cs(i*u) = cn(i*u)/sn(i*u) = -i*nc(u,m1)/sc(u,m1) = -i*ns(u,m1)
        (neg (mul '$%i
-		 (cons-exp '%jacobi_ns (coeff u '$%i 1) (add 1 (neg m))))))
+		 (ftake* '%jacobi_ns (coeff u '$%i 1) (add 1 (neg m))))))
       ((setq coef (kc-arg2 u m))
        ;; A&S 16.8.12
        ;; 
@@ -3478,7 +3478,7 @@ first kind:
        1)
       ((and $trigsign (mminusp* u))
        ;; cd is even
-       (cons-exp '%jacobi_cd (neg u) m))
+       (ftake* '%jacobi_cd (neg u) m))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -3503,7 +3503,7 @@ first kind:
       ;; A&S 16.20 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        ;; cd(i*u) = cn(i*u)/dn(i*u) = nc(u,m1)/dc(u,m1) = nd(u,m1)
-       (cons-exp '%jacobi_nd (coeff u '$%i 1) (add 1 (neg m))))
+       (ftake* '%jacobi_nd (coeff u '$%i 1) (add 1 (neg m))))
       ((setf coef (kc-arg2 u m))
        ;; A&S 16.8.4
        ;;
@@ -3625,7 +3625,7 @@ first kind:
       ((zerop1 u)
        (dbz-err1 'jacobi_ds))
       ((and $trigsign (mminusp* u))
-       (neg (cons-exp '%jacobi_ds (neg u) m)))
+       (neg (ftake* '%jacobi_ds (neg u) m)))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -3651,7 +3651,7 @@ first kind:
       ((and $%iargs (multiplep u '$%i))
        ;; ds(i*u) = dn(i*u)/sn(i*u) = -i*dc(u,m1)/sc(u,m1) = -i*ds(u,m1)
        (neg (mul '$%i
-		 (cons-exp '%jacobi_ds (coeff u '$%i 1) (add 1 (neg m))))))
+		 (ftake* '%jacobi_ds (coeff u '$%i 1) (add 1 (neg m))))))
       ((setf coef (kc-arg2 u m))
        ;; A&S 16.8.11
        (destructuring-bind (lin const)
@@ -3774,7 +3774,7 @@ first kind:
        ;; A&S 16.6.7
        1)
       ((and $trigsign (mminusp* u))
-       (cons-exp '%jacobi_dc (neg u) m))
+       (ftake* '%jacobi_dc (neg u) m))
       ((and $triginverses
 	    (listp u)
 	    (member (caar u) '(%inverse_jacobi_sn
@@ -3799,7 +3799,7 @@ first kind:
       ;; A&S 16.20 (Jacobi's Imaginary transformation)
       ((and $%iargs (multiplep u '$%i))
        ;; dc(i*u) = dn(i*u)/cn(i*u) = dc(u,m1)/nc(u,m1) = dn(u,m1)
-       (cons-exp '%jacobi_dn (coeff u '$%i 1) (add 1 (neg m))))
+       (ftake* '%jacobi_dn (coeff u '$%i 1) (add 1 (neg m))))
       ((setf coef (kc-arg2 u m))
        ;; See A&S 16.8.7
        (destructuring-bind (lin const)
@@ -4239,7 +4239,7 @@ first kind:
 	     (complex-bigfloat-numerical-eval-p u m))
 	 (ftake '%inverse_jacobi_sd ($rectform (div 1 u)) m))
 	((and $trigsign (mminusp* u))
-	 (neg (cons-exp '%inverse_jacobi_ds (neg u) m)))
+	 (neg (ftake* '%inverse_jacobi_ds (neg u) m)))
 	((eql 0 ($ratsimp (sub u (power (sub 1 m) 1//2))))
 	 ;; inverse_jacobi_ds(sqrt(1-m),m) = elliptic_kc(m)
 	 ;;
