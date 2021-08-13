@@ -207,10 +207,13 @@
 	   (push (list (third (zl-get (first s) 'mode)) x (second s) (second l)) nl))
 	  (t (merror "STO: ~a" (car l))))))
 
+;;; Remove both of these once we're sure all uses of cons-exp have
+;;; been replaced by ftake*.
 #+nil
 (defmacro cons-exp (op &rest args)
   `(simplify (list (list ,op) ,@args)))
 
+#+nil
 (defmacro cons-exp (op &rest args)
   `(ftake* ,op ,@args))
 
