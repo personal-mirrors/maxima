@@ -786,3 +786,68 @@ DESTINATION is an actual stream (rather than nil for a string)."
   (progn (ext:gc :full t) t)
   #-(or allegro clisp ecl gcl sbcl cmucl)
   nil)
+
+(defun featurep (x)
+  "If X is an atom, see if it is present in *FEATURES*.  Also
+  handle arbitrary combinations of atoms using NOT, AND, OR."
+  (if (consp x)
+      (case (car x)
+	((:not not) (not (featurep (cadr x))))
+	((:and and) (every #'featurep (cdr x)))
+	((:or or) (some #'featurep (cdr x)))
+	(t
+	 (error (intl:gettext "Unknown operator in feature expression: ~S.") x)))
+      (not (null (memq x *features*)))))
+
+(defun symbolicate (&rest things)
+  "Concatenate together the names of some strings and symbols,
+  producing a symbol in the current package."
+  (values (intern (reduce #'(lambda (x y)
+			      (concatenate 'string (string x) (string y)))
+			  things))))
+
+(defun add-lisp-version ()
+  "Determine a suitable version for the lisp implementation.  A
+  keyword is created based on that and added to *FEATURES*"
+
+  (let* ((impl-version (lisp-implementation-version))
+	 (version-string
+	   (cond
+	     ((featurep :ccl)
+	      ;; CCL returns "Version 1.12 (v1.12) LinuxX8664".
+	      ;; Let's grab the version number from the
+	      ;; parenthesized part.
+	      (subseq impl-version
+		      (+ 2 (position #\( impl-version))
+		      (position #\) impl-version)))
+	     ((featurep :clisp)
+	      ;; Clisp returns "2.49.93+ (2018-02-18) (built on
+	      ;; buildvm-x86-07.iad2.fedoraproject.org
+	      ;; [10.3.169.57])".  Let's use everything up to the
+	      ;; space.
+	      (subseq impl-version 0 (position #\space impl-version)))
+	     ((featurep :cmucl)
+	      ;; Cmucl produces "snapshot-2021-07 (21D Unicode)".
+	      ;; For the version, just take the snapshot part.
+	      (string-upcase (subseq impl-version 0 (1- (position #\( impl-version)))))
+	     ((featurep :ecl)
+	      ;; Ecl produces soemthing lik "20.4.24" so that good
+	      ;; enough for what we want.
+	      impl-version)
+	     ((featurep :gcl)
+	      ;; Gcl returns "GCL 2.6.12".  Drop the GCL part
+	      (subseq impl-version (1+ (position #\space impl-version))))
+	     ((featurep :sbcl)
+	      ;; Sbcl returns something like "2.0.1-4.fc33".
+	      ;; Let's leave off the "fc33" part to get the
+	      ;; version.
+	      (subseq impl-version 0 (position #\. impl-version :from-end t)))
+	     (t
+	      "unknown")))
+	 (version
+	   (let ((*package* (find-package :keyword)))
+	     (symbolicate "LISP-VERSION-" version-string))))
+    (pushnew version *features*)))
+
+;; We need to update *FEATURES* BEFORE testsuite.lisp is compiled.
+(add-lisp-version)
