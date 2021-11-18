@@ -1,0 +1,22 @@
+output_checksum (f, x) := with_stdout (f, printf (true, "~a~%", x));
+
+compute_checksum (f) :=
+    block ([S: openr_binary (f), x],
+           S: openr_binary (f),
+           x: md5sum (S),
+           close (S),
+           x);
+
+maintain_checksum (f) :=
+    block ([S, x, f_checksum],
+           x: compute_checksum (f),
+           f_checksum: sconcat (f, "-checksum"),
+           if errcatch (S: openr (f_checksum)) = []
+               then (printf (true, "maintain_checksum: apparently first time for ~a, output checksum ~a.~%", f, x),
+                     output_checksum (f_checksum, x))
+               else block ([y: readline (S)],
+                           close (S),
+                           if x # y
+                               then (printf (true, "maintain_checksum: update checksum of ~a to ~a.~%", f, x),
+                                     output_checksum (f_checksum, x))
+                               else printf (true, "maintain_checksum: checksum ~a of ~a is up to date.~%", x, f)));

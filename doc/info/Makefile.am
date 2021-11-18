@@ -33,7 +33,7 @@ endif
 SUBDIRS = $(ES_DIR) $(ES_DIR_UTF8) $(PT_DIR) $(PT_DIR_UTF8) $(PT_BR_DIR) $(PT_BR_DIR_UTF8) $(DE_DIR) $(DE_DIR_UTF8)
 
 info_TEXINFOS = #maxima.texi
-maxima_TEXINFOS = include-maxima.texi category-macros.texi Introduction.texi \
+maxima_TEXINFOS = category-macros.texi Introduction.texi \
  Bugs.texi Help.texi Command.texi DataTypes.texi Constants.texi Lists.texi \
  Arrays.texi defstruct.texi Expressions.texi Operators.texi Evaluation.texi \
  Simplification.texi MathFunctions.texi Database.texi Plotting.texi \
@@ -679,7 +679,11 @@ all-local: html maxima.info maxima-index.lisp $(MAXIMA_CHM)
 
 infoname = maxima
 include $(top_srcdir)/common-info.mk
-maxima.info : maxima.texi $(maxima_TEXINFOS)
+
+include-maxima.texi-checksum: include-maxima.texi
+	@top_builddir@/maxima-local --batch-string='load("maintain_checksum.mac"); maintain_checksum("include-maxima.texi");'
+
+maxima.info : maxima.texi include-maxima.texi-checksum $(maxima_TEXINFOS)
 	-$(MAKEINFO) $(AM_MAKEINFOFLAGS) $(MAKEINFOFLAGS) \
 	  --split-size=1000000 $(srcdir)/maxima.texi
 
@@ -690,13 +694,16 @@ maxima-index.lisp: build_index.pl maxima.info
 
 DOLLAR_SIGN = $$
 
-maxima_toc.html: maxima.texi $(maxima_TEXINFOS) $(figurefiles) manual.css texi2html.init
+texi2html.init-checksum: texi2html.init
+	@top_builddir@/maxima-local --batch-string='load("maintain_checksum.mac"); maintain_checksum("texi2html.init");'
+
+maxima_toc.html: maxima.texi include-maxima.texi-checksum $(maxima_TEXINFOS) $(figurefiles) manual.css texi2html.init-checksum
 	./build_html.sh
 
 maxima.epub: maxima_toc.html
 	ebook-convert maxima_singlepage.html maxima.epub --breadth-first "--title=Maxima @manual_version@ Manual" "--authors=Maxima Team" --language=en
 
-maxima.pdf: maxima.texi $(maxima_TEXINFOS) $(pdffigures)
+maxima.pdf: maxima.texi include-maxima.texi-checksum $(maxima_TEXINFOS) $(pdffigures)
 	$(TEXI2PDF) $(AM_V_texinfo) -o maxima.pdf $<
 	rm -f maxima.fns maxima.vr maxima.tp maxima.pg maxima.ky maxima.cp \
 	maxima.toc maxima.fn maxima.aux maxima.log
@@ -733,10 +740,12 @@ uninstall-maxima-index: maxima-index.lisp
 
 clean-local: clean-info clean-html $(CLEAN_CHM)
 
+# Maybe this next one could say rm *-checksum, but for now be careful and name each one.
 clean-info:
 	rm -f $(wildcard maxima.info* maxima-index.lisp) \
 	      $(wildcard $(addprefix $(srcdir),maxima.info* maxima-index.lisp))
 	rm -f maxima.fns
+	rm include-maxima.texi-checksum texi2html.init-checksum
 
 clean-html:
 	rm -f $(wildcard maxima*.html contents.hhc index.hhk maxima.chm) \
@@ -755,7 +764,8 @@ clean-chm:
 	rm -rf chm
 endif
 
-EXTRA_DIST = texi2html manual.css texi2html.init maxima.texi maxima.html \
+EXTRA_DIST = texi2html manual.css maxima.texi maxima.html \
+    include-maxima.texi include-maxima.texi-checksum texi2html.init texi2html.init-checksum \
     $(genericdirDATA) $(pdffigures) $(macfiles) $(maxima_TEXINFOS) $(figurefiles) \
     create_index build_index.pl maxima-index.lisp docdraw.mac \
     extract_categories1.awk extract_categories1.sed check_tab fix_tab \
