@@ -25,7 +25,7 @@ export GCL_MEM_MULTIPLE=.4
 # https://bugs.launchpad.net/ubuntu/+source/ecl/+bug/317827
 override_dh_auto_configure:
 	./bootstrap
-	dh_auto_configure -- --enable-clisp-exec --enable-ecl --enable-gcl --enable-sbcl-exec --enable-quiet-build LDFLAGS="" -enable-lang-de --enable-lang-de-utf8 --enable-lang-es --enable-lang-es-utf8 --enable-lang-pt --enable-lang-pt_BR --enable-lang-pt_BR-utf8 --enable-lang-pt-utf8
+	dh_auto_configure -- --enable-ecl --enable-gcl --enable-sbcl-exec --enable-quiet-build LDFLAGS="" -enable-lang-de --enable-lang-de-utf8 --enable-lang-es --enable-lang-es-utf8 --enable-lang-pt --enable-lang-pt_BR --enable-lang-pt_BR-utf8 --enable-lang-pt-utf8
 
 # Tell the debhelper tools to include the index maxima needs in the
 # info directory.
