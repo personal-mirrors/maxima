@@ -74,8 +74,11 @@ do
       then includedfile_absolute=$languagedir/$f
   else if [ -e @abs_srcdir@/$f ]
        then includedfile_absolute=@abs_srcdir@/$f
-       else
-	   includedfile_absolute=`pwd`/../$f
+       else if [ -e ../../$f ]
+       then includedfile_absolute=../../$f
+	    else
+		includedfile_absolute=`pwd`/../$f
+	    fi
        fi
   fi
 

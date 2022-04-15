@@ -1,4 +1,4 @@
-MAKEINFOFLAGS = --enable-encoding -I . -I ..
+MAKEINFOFLAGS = --enable-encoding -I . -I .. -I ../..
 
 TEXINFO_TEX = ../texinfo.tex
 lang = de
