@@ -1,4 +1,4 @@
-MAKEINFOFLAGS = --enable-encoding -I . -I .. -I ../..
+MAKEINFOFLAGS = --enable-encoding -I . -I .. -I ../.. $(srcdir) $(srcdir)/..
 
 TEXINFO_TEX = ../texinfo.tex
 

@@ -1,4 +1,4 @@
-MAKEINFOFLAGS = --enable-encoding -I . -I .. -I ../.. --force -e 20
+MAKEINFOFLAGS = --enable-encoding -I . -I .. -I ../.. $(srcdir) $(srcdir)/.. --force -e 20
 
 TEXINFO_TEX = ../texinfo.tex
 
