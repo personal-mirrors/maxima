@@ -1241,6 +1241,7 @@ doc/info/category-macros.texi \
 doc/info/texi2html.init \
 doc/info/figures/Makefile \
 doc/info/de/Makefile \
+doc/info/de/include-maxima.texi \
 doc/info/es/Makefile \
 doc/info/ja/Makefile \
 doc/info/ja/include-maxima.texi \
@@ -1248,6 +1249,7 @@ doc/info/pt/Makefile \
 doc/info/pt/include-maxima.texi \
 doc/info/pt_BR/Makefile \
 doc/info/ru/Makefile \
+doc/info/ru/include-maxima.texi \
 doc/intromax/Makefile doc/man/Makefile doc/man/maxima.1 doc/man/ru/Makefile doc/man/ru/maxima.1 doc/man/de/Makefile doc/man/de/maxima.1 \
 doc/share/Makefile interfaces/Makefile interfaces/emacs/Makefile \
 interfaces/emacs/emaxima/Makefile interfaces/emacs/imaxima/Makefile \
