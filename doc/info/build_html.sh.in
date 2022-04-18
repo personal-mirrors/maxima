@@ -76,8 +76,11 @@ do
        then includedfile_absolute=@abs_srcdir@/$f
        else if [ -e ../../$f ]
        then includedfile_absolute=../../$f
-	    else
-		includedfile_absolute=`pwd`/../$f
+	    else if [ -e ../$f ]
+		 then includedfile_absolute=../$f
+		 else
+		     includedfile_absolute=`pwd`/../$f
+		 fi
 	    fi
        fi
   fi
