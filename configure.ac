@@ -1245,7 +1245,7 @@ doc/info/de/include-maxima.texi \
 doc/info/es/Makefile \
 doc/info/ja/Makefile \
 doc/info/ja/include-maxima.texi \
-doc/info/pt_br/include-maxima.texi \
+doc/info/pt_BR/include-maxima.texi \
 doc/info/pt/Makefile \
 doc/info/pt/include-maxima.texi \
 doc/info/pt_BR/Makefile \
