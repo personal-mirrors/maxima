@@ -26,7 +26,8 @@ EXTRA_DIST = \
   numerical/slatec/fortran \
   maxima-build.lisp maxima-command.ico set_lang.vbs \
   lisp \
-  share-subdirs.lisp
+  share-subdirs.lisp \
+  $(real_lisp_sources)
 
 ## If we can, we use Automake's blah_SCRIPTS targets to install
 ## stuff. When doing this, we have to populate EXTRA_SCRIPTS, so we
