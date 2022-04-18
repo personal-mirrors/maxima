@@ -6,5 +6,5 @@ lang = pt_BR
 langsdir = /pt_BR
 
 include ../common-lang.mk
-EXTRA_DIST += *.update
+EXTRA_DIST += *.update include-maxima.texi.in
 
