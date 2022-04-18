@@ -36,7 +36,7 @@ uninstall-maxima-info:
 dist-hook: dist-maxima-info
 dist-maxima-info:
 	@srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`; \
-	list="$(srcdir)/$(infoname).info*" ; \
+	list="$(infoname).info*" ; \
 	for p in $$list; do \
 	  f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`; \
 	  test -f $(distdir)/$$f || cp -p $(srcdir)/$$f $(distdir)/$$f; \
