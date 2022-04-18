@@ -172,8 +172,8 @@ fi
 # --no-node-files so we don't have thousands of little html files
 # --force -e 10000 because the category stuff causes lots of errors.
 TEXIOPT="--html -c INLINE_CONTENTS=0 -c OUTPUT_ENCODING_NAME=UTF-8 --force -e 10000 --document-lang=$language -I . -I $languagedir -I ../.. --css-include=@abs_srcdir@/manual.css --init-file $texiinitfile"
-makeinfo -I . -I .. -I ../.. -I @abs_srcdir@/.. -I @abs_srcdir@ --split=chapter --no-node-files --output="$languagedestdir" $TEXIOPT maxima.texi 
-makeinfo -I . -I .. -I ../.. -I @abs_srcdir@/.. -I @abs_srcdir@ --no-split --output="$languagedestdir/maxima_singlepage.html" $TEXIOPT maxima.texi 
+makeinfo --split=chapter --no-node-files --output="$languagedestdir" $TEXIOPT maxima.texi 
+makeinfo --no-split --output="$languagedestdir/maxima_singlepage.html" $TEXIOPT maxima.texi 
 
 if [ "X$DEBUG" = "Xyes" ]; then
     set -x

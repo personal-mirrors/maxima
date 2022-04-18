@@ -7,4 +7,4 @@ langsdir = /ja
 
 include ../common-lang.mk
 
-EXTRA_DIST += include-maxima.texi
+EXTRA_DIST += include-maxima.texi build_html.sh
