@@ -6,4 +6,4 @@ langsdir = /de
 
 include ../common-lang.mk
 
-EXTRA_DIST += manual.css texi2html.init include-maxima.texi
+EXTRA_DIST += manual.css include-maxima.texi.in
