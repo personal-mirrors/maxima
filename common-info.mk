@@ -39,5 +39,5 @@ dist-maxima-info:
 	list="$(infoname).info*" ; \
 	for p in $$list; do \
 	  f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`; \
-	  test -f $(distdir)/$$f || cp -p $(srcdir)/$$f $(distdir)/$$f; \
+	  test -f $(distdir)/$$f || cp -p $(builddir)/$$f $(distdir)/$$f; \
 	done
