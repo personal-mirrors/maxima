@@ -85,7 +85,14 @@ do
        fi
   fi
 
-  echo "Taking the file $f from the path $includedfile_absolute"
+  if [ -e $includedfile_absolute ]
+  then
+      echo "Taking the file $f from the path $includedfile_absolute"
+  else
+      echo Error: File $f cannot be found.
+      exit -1
+  fi
+  
   filenamebase=`echo $includedfile_absolute | @SED@ -e 's/^.*\///;s/\.texi//'`
   @SED@ -e 's/^@deffnx*  *{[^}]*}  *\([^[:blank:]]*\).*/@anchor{Item: '$filenamebase'\/deffn\/\1}\
 &/' \
