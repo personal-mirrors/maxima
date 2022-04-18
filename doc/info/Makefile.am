@@ -719,8 +719,7 @@ uninstall-maxima-index: maxima-index.lisp
 clean-local: clean-info clean-html $(CLEAN_CHM)
 
 clean-info:
-	rm -f $(wildcard maxima.info* maxima-index.lisp) \
-	      $(wildcard $(addprefix $(srcdir),maxima.info* maxima-index.lisp))
+	rm -f $(wildcard maxima.info* maxima-index.lisp))
 	rm -f maxima.fns
 
 clean-html:
