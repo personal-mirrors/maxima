@@ -1515,6 +1515,8 @@ first kind:
 	   ;;
 	   ;; elliptic_e(x,1) = sin(phi) + 2*round(x/%pi)*elliptic_ec(m)
 	   ;;
+	   (with-maxima-expr "sin(?phi) + 2*round(?phi/%pi)*elliptic_ec(?m)")
+	   #+nil
 	   (add (ftake '%sin phi)
 		(mul 2
 		     (mul (ftake '%round (div phi '$%pi))
@@ -1529,6 +1531,8 @@ first kind:
 	   ;; Handle the case where phi is a number where we can apply
 	   ;; the periodicity property without blowing up the
 	   ;; expression.
+	   (with-maxima-expr "elliptic_e(?phi - %pi*round(?phi/%pi), ?m) + 2*round(?phi/%pi)*elliptic_ec(?m)")
+	   #+nil
 	   (add (ftake '%elliptic_e
 		       (add phi
 			    (mul (mul -1 '$%pi)
@@ -1585,37 +1589,27 @@ first kind:
 	       args
 	     (to (bigfloat::bf-elliptic-k (bigfloat:to ($bfloat m))))))
 	  ((zerop1 m)
-	   '((mtimes) ((rat) 1 2) $%pi))
+	   #$%pi/2$)
 	  ((alike1 m 1//2)
 	   ;; http://functions.wolfram.com/EllipticIntegrals/EllipticK/03/01/
 	   ;;
 	   ;; elliptic_kc(1/2) = 8*%pi^(3/2)/gamma(-1/4)^2
-	   (div (mul 8 (power '$%pi (div 3 2)))
-		(power (gm (div -1 4)) 2)))
+	   #$8*%pi^(3/2)/gamma(-1/4)^2$)
 	  ((eql -1 m)
 	   ;; elliptic_kc(-1) = gamma(1/4)^2/(4*sqrt(2*%pi))
-	   (div (power (gm (div 1 4)) 2)
-		(mul 4 (power (mul 2 '$%pi) 1//2))))
-	  ((alike1 m (add 17 (mul -12 (power 2 1//2))))
+	   #$gamma(1/4)^2/(4*sqrt(2*%pi))$)
+	  ((alike1 m #$17-12*sqrt(2)$)
 	   ;; elliptic_kc(17-12*sqrt(2)) = 2*(2+sqrt(2))*%pi^(3/2)/gamma(-1/4)^2
-	   (div (mul 2 (mul (add 2 (power 2 1//2))
-			    (power '$%pi (div 3 2))))
-		(power (gm (div -1 4)) 2)))
+	   #$2*(2+sqrt(2))*%pi^(3/2)/gamma(-1/4)^2$)
 	  (t
 	   ;; Nothing to do
 	   (give-up)))))
 
 (defprop %elliptic_kc
-    ((m)
+    (($m)
      ;; diff wrt m
-     ((mtimes)
-      ((rat) 1 2)
-      ((mplus) ((%elliptic_ec) m)
-       ((mtimes) -1
-	((%elliptic_kc) m)
-	((mplus) 1 ((mtimes) -1 m))))
-      ((mexpt) ((mplus) 1 ((mtimes) -1 m)) -1)
-      ((mexpt) m -1)))
+     #.#$(elliptic_ec(m)-(1-m)*elliptic_kc(m))/(2*(1-m)*m)$
+     )
   grad)
 
 (def-simplifier elliptic_ec (m)
@@ -1633,7 +1627,7 @@ first kind:
 	     (to (bigfloat::bf-elliptic-ec (bigfloat:to ($bfloat m))))))
 	  ;; Some special cases we know about.
 	  ((zerop1 m)
-	   '((mtimes) ((rat) 1 2) $%pi))
+	   #$%pi/2$)
 	  ((onep1 m)
 	   1)
 	  ((alike1 m 1//2)
@@ -1652,10 +1646,7 @@ first kind:
 	   ;;      = (2*%pi*gamma(3/4)^4+%pi^3)/(4*%pi^(3/2)*gamma(3/4)^2)
 	   ;;      = gamma(3/4)^2/(2*sqrt(%pi))+%pi^(3/2)/(4*gamma(3/4)^2)
 	   ;;
-	   (add (div (power (ftake '%gamma (div 3 4)) 2)
-		     (mul 2 (power '$%pi 1//2)))
-		(div (power '$%pi (div 3 2))
-		     (mul 4 (power (ftake '%gamma (div 3 4)) 2)))))
+	   #$gamma(3/4)^2/(2*sqrt(%pi))+%pi^(3/2)/(4*gamma(3/4)^2)$)
 	  ((zerop1 (add 1 m))
 	   ;; elliptic_ec(-1). Use the identity
 	   ;; http://functions.wolfram.com/08.01.17.0002.01
@@ -1667,20 +1658,14 @@ first kind:
 	   ;;
 	   ;;   elliptic_ec(-1) = sqrt(2)*elliptic_ec(1/2)
 	   ;;
-	   ;; Should we expand out elliptic_ec(1/2) using the above result?
-	   (mul (power 2 1//2)
-		(ftake '%elliptic_ec 1//2)))
+	   #$sqrt(2)*(gamma(3/4)^2/(2*sqrt(%pi))+%pi^(3/2)/(4*gamma(3/4)^2))$)
 	  (t
 	   ;; Nothing to do
 	   (give-up)))))
 
 (defprop %elliptic_ec
-    ((m)
-     ((mtimes) ((rat) 1 2)
-      ((mplus) ((%elliptic_ec) m)
-       ((mtimes) -1 ((%elliptic_kc)
-		     m)))
-      ((mexpt) m -1)))
+    (($m)
+     #.#$(elliptic_ec(m)-elliptic_kc(m))/(2*m)$)
   grad)
 
 ;;

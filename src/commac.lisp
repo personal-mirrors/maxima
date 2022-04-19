@@ -179,10 +179,114 @@
     (setq answer (third (mread stream)))
     answer))
 
+;;; Implements the lisp reader macro #$...$ that allows lisp code to
+;;; have embedded maxima expressions in it.  Thus #$sqrt(2)$ produces
+;;; ((MEXPT SIMP) 2 ((RAT SIMP) 1 2)).  This is easier than doing the
+;;; equivalent (power 2 (div 1 2)) and much easier to read.
+
 (defvar *sharp-read-buffer*
   (make-array 140 :element-type ' #.(array-element-type "a") :fill-pointer 0 :adjustable t))
 
-(defmfun $-read-aux (arg stream &aux (meval-flag t) (*mread-prompt* ""))
+;;; Takes a Maxima expression and makes code to build it.
+;;; Nothing is evaluated except for non-Maxima symbols (x as opposed to $x)
+;;;
+;;; Subexpressions without free variables and with simplifiers available at compile time
+;;;    are simplified at compile time.
+;;; Otherwise, build returns code to build the expression at runtime.
+;;;
+;;; Examples:
+;;; (build 'x)              => (identity x)       ; free variable
+;;; (build '$x)             => (quote $x)         ; no free variable
+;;; (build '((mplus) $x $y) => (quote ((mplus simp) $x $y))
+;;; (build '((f) $x $y)     => (identity (ftake 'f '$x '$y)) ; no simp function defined
+;;; (build '((mplus) x $y)) => (identity (ftake 'mplus (identity x) '$y))
+;;;
+;;; Return values are always of the form (quote ...) or (identity ...),
+;;; both of which disappear in compilation
+
+#+nil
+(defun build (ex)
+  (cond ((atom ex)
+	 (cond ((symbolp ex)
+		(cond ((eql (get-first-char ex) #\$) (list 'quote ex))
+		      (t (list 'identity ex))))
+	       (t (list 'quote ex))))
+	;; must special case bigfloat because cdar is significant
+	;; cdar of mrat is also significant, but never produced by the parser
+	((eq (caar ex) 'bigfloat) (list 'quote ex))
+	;; all other cases, including mplus/mtimes/mquotient/mexpt/rat/...
+	(t
+	 (let* ((args (mapcar #'build (cdr ex)))
+		(op (caar ex))
+		(simplifier (functionp (get op 'operators)))) ;has compile-time simplifier?
+	   (cond ((or (null simplifier)
+		      (notevery #'(lambda (q) (eq (car q) 'quote))
+				args))
+		  `(identity (ftake ',op ,@args)))
+		 ;; do not funcall simplifier here -- simplifya may do other things
+		 (t `',(simplifya (cons (list op)
+					(mapcar #'cadr args)) ;remove QUOTE
+				  t)))))))
+
+(defun build (ex)
+  (cond ((and (symbolp ex) (eql (get-first-char ex) #\$)) `',ex)
+	((atom ex) ex)
+	((eq (caar ex) 'bigfloat)
+	 ;must special case to preserve cdar
+	 `',ex)
+	;; Try to use more natural forms for mplus (add), mtimes
+	;; (mul), mminus (neg), and mquotient (div).
+	((eq (caar ex) 'mplus)
+	 `(add ,@(mapcar #'build (cdr ex))))
+	((eq (caar ex) 'mtimes)
+	 `(mul ,@(mapcar #'build (cdr ex))))
+	((eq (caar ex) 'mminus)
+	 `(neg ,@(mapcar #'build (cdr ex))))
+	((eq (caar ex) 'mquotient)
+	 `(div ,@(mapcar #'build (cdr ex))))
+	;; All other cases just use ftake.
+	(t `(ftake ',(caar ex) ,@(mapcar #'build (cdr ex))))))
+
+;;; Reader macro for incorporating Maxima expressions in Lisp code
+;;;
+;;; In the following, <x+y> is an expression in Maxima syntax and <+xy> is the equivalent Lisp expression
+;;;
+;;; #$ <x+y> $ => (meval* '<+xy>)
+;;; #$$ <x+y> $ => '<+xy> parsed, but not simplified
+;;; #$+ <x+y> $ => Lisp code to build the expression
+;;;                ?x is the *value* of the variable x
+;;;                use simplifiers when available at compile time
+;;;
+;;; Examples:
+;;;
+;;;   #$  x+1 $ =>  (meval* '((mplus) $x 1))
+;;;   #$$ x+1 $ =>  '((mplus) $x 1)
+;;;   #$+ x+1 $ =>  '((mplus simp) 1 $x)
+;;;   #$+ ?x+1 $ => (ftake 'mplus x 1)     ; x is not quoted
+;;;       Actually: (identify (ftake 'mplus (identity x) '1))
+
+(defun $-read-aux (arg stream &aux (meval-flag) (*mread-prompt* "") (expr))
+  (declare (special *mread-prompt*)
+	   (ignore arg))
+  (setf (fill-pointer *sharp-read-buffer*) 0)
+  (setq meval-flag (car (member (peek-char t stream) '(#\$ #\+))))
+  (if meval-flag (tyi stream))
+  (with-output-to-string (st *sharp-read-buffer*)
+    (let (char)
+      (loop while (not (eql char #\$))
+	     do
+	     (setq char (tyi stream))
+	     (write-char char st))))
+  (setq expr (macsyma-read-string *sharp-read-buffer*))
+  (case meval-flag
+    ((nil) `(meval* ',expr))		;eval
+    ((#\$) `',expr)			;quote
+    ((#\+) (build expr))		;build
+    (t (error "Impossible"))))
+
+
+#+nil
+(defun $-read-aux (arg stream &aux (meval-flag t) (*mread-prompt* ""))
   (declare (special *mread-prompt*)
 	   (ignore arg))
   (setf (fill-pointer *sharp-read-buffer*) 0)
@@ -204,6 +308,14 @@
   ($-read-aux sub-char stream))
 
 (set-dispatch-macro-character #\# #\$ #'x$-cl-macro-read)
+
+(defmacro with-maxima-expr (string)
+  (setf (fill-pointer *sharp-read-buffer*) 0)
+  (with-output-to-string (st *sharp-read-buffer*)
+    (loop for k from 0 below (length string)
+	  do
+	     (write-char (aref string k) st)))
+  `,(build (macsyma-read-string *sharp-read-buffer*)))
 
 (defvar *macsyma-readtable*)
 
