@@ -103,12 +103,11 @@
          (loop for j from k to (1- n) do
               (setf (aref s k) (m+ (aref s k) (power (aref x j) 2))))
          (setf (aref s k) ($sqrt (aref s k))))
-    (setf tt (aref s 0))
     
-    ;; Initialize y, normalize s
+    ;; Initialize y
+    (setf tt (aref s 0))
     (loop for k from 0 to (1- n) do
-         (setf (aref y k) (m// (aref x k) tt))
-         (setf (aref s k) (m// (aref s k) tt)))
+         (setf (aref y k) (m// (aref x k) tt)))
     
     ;; Initialize H
     (loop for i from 0 to (1- n) do
