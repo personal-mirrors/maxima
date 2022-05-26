@@ -64,6 +64,13 @@
 (defmfun $pslq_integer_relation (l)
   (if (not ($listp l))
       (merror (intl:gettext "pslq_integer_relation: argument must be a list; found: ~M") l))
+  (let*
+    ((sum-squares (mfuncall '$lsum '#$x^2$ '$x l))
+     (norm-l (m^ sum-squares '((rat) 1 2)))
+     (l-normalized (let (($listarith t)) (m// l norm-l))))
+    (pslq-integer-relation-1 l-normalized)))
+
+(defun pslq-integer-relation-1 (l)
   (let* ((n ($length l)) (l (cdr l)) (a (make-array n)) ($float2bf t))
     (loop for i from 0 to (1- n) do
          (let ((elm (car l)))
