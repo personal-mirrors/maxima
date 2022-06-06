@@ -1,5 +1,3 @@
-info_TEXINFOS = maxima.texi
-
 all-local: maxima-index.lisp maxima_toc.html
 
 maxima-index.lisp: maxima.info $(srcdir)/../build_index.pl

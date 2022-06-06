@@ -36,7 +36,7 @@
 (defvar *maxima-initmac* "maxima-init.mac")
 (defvar *maxima-initlisp* "maxima-init.lisp")
 (defvar *maxima-tempdir*)
-(defvar *maxima-lang-subdir* nil)
+(defvar *maxima-lang-subdir* "en")
 (defvar *maxima-demodir*)
 (defvar *maxima-objdir*)		;; Where to store object (fasl) files.
 (defvar $maxima_frontend nil "The frontend maxima is used with.")
@@ -218,9 +218,9 @@ When one changes, the other does too."
     ;;   2. from INTL::*LOCALE* if (1) fails
     (unless  (setq *maxima-lang-subdir* (maxima-getenv "MAXIMA_LANG_SUBDIR"))
       (cond ((or (null intl::*locale*) (equal intl::*locale* ""))
-             (setq *maxima-lang-subdir* nil))
+             (setq *maxima-lang-subdir* "en"))
             ((member intl::*locale* '("C" "POSIX" "c" "posix") :test #'equal)
-             (setq *maxima-lang-subdir* nil))
+             (setq *maxima-lang-subdir* "en"))
             (t
               ;; Code to parse code set in locale string, in case we figure out
               ;; something to do with it; it isn't needed for language
@@ -231,23 +231,14 @@ When one changes, the other does too."
               (when (eql (position #\_ intl::*locale*) 2)
                 (setq territory (string-downcase (subseq intl::*locale* 3 5))))
               (setq language (string-downcase (subseq intl::*locale* 0 2)))
-              ;; Set *maxima-lang-subdir* only for known languages.
-              ;; Extend procedure below as soon as new translation
-              ;; is available.
-              (cond ((equal language "en") ;; English
-                     (setq *maxima-lang-subdir* nil))
-                ;; Latin-1 aka iso-8859-1 languages
-                ((member language '("es" "pt" "de") :test #'equal)
+              ;; For known translations, set language subdirectory accordingly.
+              ;; Otherwise, assume English.
+              (cond
+                ((member language '("de" "en" "es" "ja" "pt" "ru") :test #'equal)
                  (if (and (string= language "pt") (string= territory "br"))
                    (setq *maxima-lang-subdir* (concatenate 'string language "_BR"))
                    (setq *maxima-lang-subdir* language)))
-                ;; Japanese.
-                ((string= language "ja")
-                 (setq *maxima-lang-subdir* language))
-                ;; Russian.
-                ((string= language "ru")
-                 (setq *maxima-lang-subdir* language))
-                (t  (setq *maxima-lang-subdir* nil))))))))
+                (t  (setq *maxima-lang-subdir* "en"))))))))
 
 (flet ((sanitize-string (s)
 	 (map 'string (lambda(x) (if (alphanumericp x) x #\_))
@@ -367,12 +358,20 @@ When one changes, the other does too."
     (setq $file_search_tests
 	  `((mlist) ,(combine-path *maxima-testsdir* lisp+maxima-patterns)))
 
-    ;; If *maxima-lang-subdir* is not nil test whether corresponding info directory
-    ;; with some data really exists.  If not this probably means that required
-    ;; language pack wasn't installed and we reset *maxima-lang-subdir* to nil.
-    (when (and *maxima-lang-subdir*
-	       (not (probe-file (combine-path *maxima-infodir* *maxima-lang-subdir* "maxima-index.lisp"))))
-       (setq *maxima-lang-subdir* nil))))
+    ;; Test whether *MAXIMA-LANG-SUBDIR* exists.
+    ;; If not this probably means that required language pack wasn't installed,
+    ;; and we reset *MAXIMA-LANG-SUBDIR* to "en".
+    ;; I suppose we should verify that "en" exists.
+
+    (when (null *maxima-lang-subdir*)
+      ;; Unexpected, but just keep going.
+      (format t "Language subdirectory is null; assume \"en\" (English).~%")
+      (setq *maxima-lang-subdir* "en"))
+
+    (let ((lang-index-path (combine-path *maxima-infodir* *maxima-lang-subdir* "maxima-index.lisp")))
+      (when (not (probe-file lang-index-path))
+        (format t "Can't find documentation index for language ~s; assume \"en\" (English).~%" *maxima-lang-subdir*)
+        (setq *maxima-lang-subdir* "en")))))
 
 (defun get-dirs (path &aux (ns (namestring path)))
   (directory (concatenate 'string
