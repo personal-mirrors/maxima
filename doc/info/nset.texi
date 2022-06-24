@@ -2074,11 +2074,11 @@ cardinality @var{n} can be partitioned into @var{m} disjoint subsets.
 Maxima knows the following identities.
 
 @enumerate
-@item @math{stirling2(n,0) = 1, n >= 1} (see @url{https://dlmf.nist.gov/26.8.E17} and stirling2(0,0) = 1)
-@item @math{stirling2(n,n) = 1, n >= 0}, (see @url{https://dlmf.nist.gov/26.8.E4})
-@item @math{stirling2(n,1) = 1, n >= 1}, (see @url{https://dlmf.nist.gov/26.8.E17} and stirling2(0,1) = 0)
-@item @math{stirling2(n,2) = 2^(n-1) -1, n >= 1}, (see @url{https://dlmf.nist.gov/26.8.E17})
-@item @math{stirling2(n,n-1) = binomial(n,2), n>= 1} (see @url{https://dlmf.nist.gov/26.8.E16})
+@item @math{stirling2(n,0) = 1, n >= 1} (see @urldlmf{26.8.E17} and stirling2(0,0) = 1)
+@item @math{stirling2(n,n) = 1, n >= 0}, (see @urldlmf{26.8.E4})
+@item @math{stirling2(n,1) = 1, n >= 1}, (see @urldlmf{26.8.E17} and stirling2(0,1) = 0)
+@item @math{stirling2(n,2) = 2^(n-1) -1, n >= 1}, (see @urldlmf{26.8.E17})
+@item @math{stirling2(n,n-1) = binomial(n,2), n>= 1} (see @urldlmf{26.8.E16})
 @item @math{stirling2(n,k) = 0, n >= 0} and @math{k > n}.
 @end enumerate
 

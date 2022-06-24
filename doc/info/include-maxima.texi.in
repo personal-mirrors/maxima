@@ -50,6 +50,20 @@ END-INFO-DIR-ENTRY
 @end macro
 @end ifinfo
 
+@c Produce a link to Abramowitz and Stegun.  ``eqn'' is the equation
+@c for A&S. ``page'' is the page where the equation occurs.  The
+@c second arg to @url is the text we want displayed in the HTML and
+@c pdf manual.  The info manual includes both.
+@macro urlaands {eqn, page}
+@url{https://personal.math.ubc.ca/~cbm/aands/page_\page\.htm, Abramowitz and Stegun eqn \eqn\}
+@end macro
+
+@c Produce a link to DLMF.  The ``link'' is the equation number/link
+@c that we want to use.
+@macro urldlmf {link}
+@url{https://dlmf.nist.gov/\link\,DLMF \link\}
+@end macro
+
 @mathjax_enable@
 
 @include category-macros.texi

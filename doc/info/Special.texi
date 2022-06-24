@@ -196,7 +196,7 @@ then the limit as @math{v} approaches @math{n} is taken.
 @deffn {Function} hankel_1 (@var{v}, @var{z})
 
 The Hankel function of the first kind of order @math{v} and argument @math{z}
-(A&S 9.1.3). @code{hankel_1} is defined as
+(@urlaands{9.1.3, 358}). @code{hankel_1} is defined as
 
 @example
    bessel_j(v,z) + %i * bessel_y(v,z)
@@ -2206,7 +2206,7 @@ shows.  Note that @var{L} is the generalized Laguerre polynomial.
 
 @deffn {Function} lambert_w (@var{z})
 The principal branch of Lambert's W function W(z), the solution of 
-@code{z = W(z) * exp(W(z))}.  (DLMF 4.13)
+@code{z = W(z) * exp(W(z))}.  (@urldlmf{4.13})
 @opencatbox{Categories:}
 @category{Special functions}
 @closecatbox
