@@ -232,7 +232,23 @@ For comments, bugs or suggestions, please contact the author at @var{'riotorto A
 
 @anchor{pdf_normal}
 @deffn {Function} pdf_normal (@var{x},@var{m},@var{s})
-Returns the value at @var{x} of the density function of a @math{Normal(m,s)} random variable, with @math{s>0}. To make use of this function, write first @code{load("distrib")}.
+Returns the value at @var{x} of the density function of a m4_math(<<<{\rm Normal}(m,s)>>>,<<<@math{Normal(m,s)}>>>) random variable, with @math{s>0}. To make use of this function, write first @code{load("distrib")}.
+
+The pdf is
+m4_displaymath(
+<<<{1\over s\sqrt{2\pi}} e^{-{(x-m)^2\over 2s^2}}>>>,
+<<<
+@example
+                                       2
+                                (x - m)
+                              - --------
+                                     2
+                                  2 s
+                            %e
+                         -------------------
+                         sqrt(2) sqrt(%pi) s
+@end example
+>>>)
 
 @opencatbox{Categories:}
 @category{Package distrib}
@@ -243,7 +259,20 @@ Returns the value at @var{x} of the density function of a @math{Normal(m,s)} ran
 
 @anchor{cdf_normal}
 @deffn {Function} cdf_normal (@var{x},@var{m},@var{s})
-Returns the value at @var{x} of the distribution function of a @math{Normal(m,s)} random variable, with @math{s>0}. This function is defined in terms of Maxima's built-in error function @code{erf}.
+Returns the value at @var{x} of the distribution function of a m4_math(<<<{\rm Normal}(m,s)>>>, <<<@math{Normal(m,s)}>>>) random variable, with @math{s>0}. This function is defined in terms of Maxima's built-in error function @code{erf}.
+
+It is defined by
+m4_displaymath(
+<<<{1\over 2} + {1\over 2}{\rm erf}\left({x-m\over s\sqrt{2}}\right)>>>,
+<<<
+@example
+                               x - m
+                         erf(---------)
+                             sqrt(2) s    1
+                         -------------- + -
+                               2          2
+@end example
+>>>)
 
 @c ===beg===
 @c load ("distrib")$
@@ -270,7 +299,7 @@ See also @mrefdot{erf}
 
 @anchor{quantile_normal}
 @deffn {Function} quantile_normal (@var{q},@var{m},@var{s})
-Returns the @var{q}-quantile of a @math{Normal(m,s)} random variable, with @math{s>0}; in other words, this is the inverse of @mrefdot{cdf_normal} Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load("distrib")}.
+Returns the @var{q}-quantile of a m4_math(<<<{\rm Normal}(m,s)>>>, <<<@math{Normal(m,s)}>>>) random variable, with @math{s>0}; in other words, this is the inverse of @mrefdot{cdf_normal} Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load("distrib")}.
 
 @c ===beg===
 @c load ("distrib")$
@@ -296,7 +325,7 @@ Returns the @var{q}-quantile of a @math{Normal(m,s)} random variable, with @math
 
 @anchor{mean_normal}
 @deffn {Function} mean_normal (@var{m},@var{s})
-Returns the mean of a @math{Normal(m,s)} random variable, with @math{s>0}, namely @var{m}. To make use of this function, write first @code{load("distrib")}.
+Returns the mean of a m4_math(<<<{\rm Normal}(m,s)>>>, <<<@math{Normal(m,s)}>>>) random variable, with @math{s>0}, namely @var{m}. To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @category{Package distrib}
@@ -307,7 +336,7 @@ Returns the mean of a @math{Normal(m,s)} random variable, with @math{s>0}, namel
 
 @anchor{var_normal}
 @deffn {Function} var_normal (@var{m},@var{s})
-Returns the variance of a @math{Normal(m,s)} random variable, with @math{s>0}, namely @var{s^2}. To make use of this function, write first @code{load("distrib")}.
+Returns the variance of a m4_math(<<<{\rm Normal}(m,s)>>>, <<<@math{Normal(m,s)}>>>) random variable, with @math{s>0}, namely @var{s^2}. To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @category{Package distrib}
@@ -317,7 +346,7 @@ Returns the variance of a @math{Normal(m,s)} random variable, with @math{s>0}, n
 
 @anchor{std_normal}
 @deffn {Function} std_normal (@var{m},@var{s})
-Returns the standard deviation of a @math{Normal(m,s)} random variable, with @math{s>0}, namely @var{s}. To make use of this function, write first @code{load("distrib")}.
+Returns the standard deviation of a m4_math(<<<{\rm Normal}(m,s)>>>, <<<@math{Normal(m,s)}>>>) random variable, with @math{s>0}, namely @var{s}. To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @category{Package distrib}
@@ -328,7 +357,7 @@ Returns the standard deviation of a @math{Normal(m,s)} random variable, with @ma
 
 @anchor{skewness_normal}
 @deffn {Function} skewness_normal (@var{m},@var{s})
-Returns the skewness coefficient of a @math{Normal(m,s)} random variable, with @math{s>0}, which is always equal to 0. To make use of this function, write first @code{load("distrib")}.
+Returns the skewness coefficient of a m4_math(<<<{\rm Normal}(m,s)>>>, <<<@math{Normal(m,s)}>>>) random variable, with @math{s>0}, which is always equal to 0. To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @category{Package distrib}
@@ -339,7 +368,7 @@ Returns the skewness coefficient of a @math{Normal(m,s)} random variable, with @
 
 @anchor{kurtosis_normal}
 @deffn {Function} kurtosis_normal (@var{m},@var{s})
-Returns the kurtosis coefficient of a @math{Normal(m,s)} random variable, with @math{s>0}, which is always equal to 0. To make use of this function, write first @code{load("distrib")}.
+Returns the kurtosis coefficient of a m4_math(<<<{\rm Normal}(m,s)>>>, <<<@math{Normal(m,s)}>>>) random variable, with @math{s>0}, which is always equal to 0. To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @category{Package distrib}
@@ -352,7 +381,7 @@ Returns the kurtosis coefficient of a @math{Normal(m,s)} random variable, with @
 @deffn {Function} random_normal (@var{m},@var{s}) @
 @fname{random_normal} (@var{m},@var{s},@var{n})
 
-Returns a @math{Normal(m,s)} random variate, with @math{s>0}. Calling @code{random_normal} with a third argument @var{n}, a random sample of size @var{n} will be simulated.
+Returns a m4_math(<<<{\rm Normal}(m,s)>>>, <<<@math{Normal(m,s)}>>>) random variate, with @math{s>0}. Calling @code{random_normal} with a third argument @var{n}, a random sample of size @var{n} will be simulated.
 
 This is an implementation of the Box-Mueller algorithm, as described in Knuth, D.E. (1981) @var{Seminumerical Algorithms. The Art of Computer Programming.} Addison-Wesley.
 
