@@ -110,48 +110,37 @@ m4_displaymath(
 @end example
 >>>)
 
-The mean, variance, standard deviation, skewness coefficient and kurtosis coefficient take the form
+The mean, variance, standard deviation, skewness coefficient and kurtosis coefficient takes the forms
 m4_displaymath(
-<<<E\left[X\right]=\sum_{x_{i}}{x_{i}f\left(x_{i}\right)},>>>,
+<<<\eqalign{
+E\left[X\right] &= \sum_{x_{i}}{x_{i}f\left(x_{i}\right)}, \cr
+V\left[X\right] &= \sum_{x_{i}}{f\left(x_{i}\right)\left(x_{i}-E\left[X\right]\right)^2}, \cr
+D\left[X\right] &= \sqrt{V\left[X\right]}, \cr
+K\left[X\right] &= {{\sum_{x_{i}}{f\left(x\right)\,
+ \left(x-E\left[X\right]\right)^3\;dx}}\over{D\left[X\right]^3}}, \cr
+KU\left[X\right] &= {{\sum_{x_{i}}{f\left(x\right)\,
+ \left(x-E\left[X\right]\right)^4\;dx}}\over{D\left[X\right]^4}}-3 \cr
+}>>>,
 <<<
 @example
-                       ====
-                       \
-                E[X] =  >  x  f(x ) ,
-                       /    i    i
-                       ====
-                        x 
-                         i
-@end example
->>>)
+          ====
+          \
+   E[X] =  >  x  f(x ) ,
+          /    i    i
+          ====
+           x 
+            i
 
-m4_displaymath(
-<<<V\left[X\right]=\sum_{x_{i}}{f\left(x_{i}\right)\left(x_{i}-E\left[X\right]\right)^2},>>>,
-<<<
-@example
-                ====
-                \                     2
-        V[X] =   >    f(x ) (x - E[X])  ,
-                /        i    i
-                ====
-                 x
-                  i
-@end example
->>>)
+           ====
+           \                     2
+   V[X] =   >    f(x ) (x - E[X])  ,
+           /        i    i
+           ====
+            x
+             i
 
-m4_displaymath(
-<<<D\left[X\right]=\sqrt{V\left[X\right]},>>>,
-<<<
-@example
-               D[X] = sqrt(V[X]),
-@end example
->>>)
+   D[X] = sqrt(V[X]),
 
-m4_displaymath(
-<<<K\left[X\right]={{\sum_{x_{i}}{f\left(x\right)\,
- \left(x-E\left[X\right]\right)^3\;dx}}\over{D\left[X\right]^3}}>>>,
-<<<
-@example
                      ====
               1      \                     3
   SK[X] =  -------    >    f(x ) (x - E[X])  
@@ -159,14 +148,7 @@ m4_displaymath(
                      ====
                       x
                        i
-@end example
->>>)
-and
-m4_displaymath(
-<<<KU\left[X\right]={{\sum_{x_{i}}{f\left(x\right)\,
- \left(x-E\left[X\right]\right)^4\;dx}}\over{D\left[X\right]^4}}-3,>>>,
-<<<
-@example
+
                      ====
               1      \                     4
   KU[X] =  -------    >    f(x ) (x - E[X])   - 3 ,
@@ -176,6 +158,7 @@ m4_displaymath(
                        i
 @end example
 >>>)
+
 respectively.
 
 There is a naming convention in package @code{distrib}. Every function name has two parts, the first one makes reference to the function or parameter we want to calculate,
