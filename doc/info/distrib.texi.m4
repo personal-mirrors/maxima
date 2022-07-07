@@ -399,6 +399,22 @@ To make use of this function, write first @code{load("distrib")}.
 @deffn {Function} pdf_student_t (@var{x},@var{n})
 Returns the value at @var{x} of the density function of a Student random variable @math{t(n)}, with @math{n>0} degrees of freedom. To make use of this function, write first @code{load("distrib")}.
 
+The pdf is
+m4_displaymath(
+<<<\left[\sqrt{n} B\left({1\over 2}, {n\over 2}\right)\right]^{-1} \left(1+{x^2\over n}\right)^{-(n+1)/2}>>>,
+<<<
+@example
+                                (- n) - 1
+                          2     ---------
+                         x          2
+                        (-- + 1)
+                         n
+                        ------------------
+                             1  n
+                        beta(-, -) sqrt(n)
+                             2  2
+@end example
+>>>)
 @opencatbox{Categories:}
 @category{Package distrib}
 @closecatbox
@@ -409,6 +425,23 @@ Returns the value at @var{x} of the density function of a Student random variabl
 @anchor{cdf_student_t}
 @deffn {Function} cdf_student_t (@var{x},@var{n})
 Returns the value at @var{x} of the distribution function of a Student random variable @math{t(n)}, with @math{n>0} degrees of freedom.
+
+The cdf is
+m4_displaymath(
+<<<{\rm cdf\_student\_t}(x,n) = 
+\cases{
+1-\displaystyle{1\over 2}I_z\left({n\over 2},{1\over 2}\right) &  for $x \ge 0$ \cr
+\displaystyle{1\over 2}I_z\left({n\over 2},{1\over 2}\right)  &  for $x < 0$
+}>>>,
+<<<
+@example
+                      [ 1-I_x(n/2,1/2,z)/2   for x >= 0
+cdf_student_t(x,n) =  [
+                      [ I_x(n/2,1/2,z)/2     x < 0
+@end example
+>>>)
+where @math{z = n/(x^2+n)} and m4_math(<<<I_x(a,b)>>>,<<<@math{I_x(a,b)}>>>) is
+the function @ref{beta_incomplete_regularized}.
 
 @c ===beg===
 @c load ("distrib")$
@@ -518,8 +551,13 @@ Returns the kurtosis coefficient of a Student random variable @math{t(n)}, with 
 
 Returns a Student random variate @math{t(n)}, with @math{n>0}. Calling @code{random_student_t} with a second argument @var{m}, a random sample of size @var{m} will be simulated.
 
-The implemented algorithm is based on the fact that if @var{Z} is a normal random variable @math{N(0,1)} and @math{S^2} is a chi square random variable with @var{n} degrees of freedom, @math{Chi^2(n)}, then
-@ifnottex
+The implemented algorithm is based on the fact that if @var{Z} is a
+normal random variable @math{N(0,1)} and @math{S^2} is a chi square
+random variable with @var{n} degrees of freedom, m4_math(<<<{\rm Chi}^2(n)>>>,<<<@math{Chi^2(n)}>>>), then
+
+m4_displaymath(
+<<<X={Z\over{\sqrt{S^2/n}}}>>>,
+<<<
 @example
                            Z
                  X = -------------
@@ -528,10 +566,7 @@ The implemented algorithm is based on the fact that if @var{Z} is a normal rando
                      | ---  |
                      \  n   /
 @end example
-@end ifnottex
-@tex
-$$X={{Z}\over{\sqrt{{S^2}\over{n}}}}$$
-@end tex
+>>>)
 is a Student random variable with @var{n} degrees of freedom, @math{t(n)}.
 
 To make use of this function, write first @code{load("distrib")}.
