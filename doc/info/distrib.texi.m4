@@ -399,6 +399,16 @@ To make use of this function, write first @code{load("distrib")}.
 @deffn {Function} pdf_student_t (@var{x},@var{n})
 Returns the value at @var{x} of the density function of a Student random variable @math{t(n)}, with @math{n>0} degrees of freedom. To make use of this function, write first @code{load("distrib")}.
 
+If @math{Z} is a standard normal random variable and @math{V} is an
+independent random variable following a chi-squared distribution with @math{n} degrees
+of freedom then 
+
+m4_displaymath(
+<<<T = {Z \over \sqrt{V/n}}>>>,
+<<<@math{T = Z/sqrt(V/n)>>>)
+
+is a Student's @math{t}-distributed random variable with @math{n} degrees of freedom.
+
 The pdf is
 m4_displaymath(
 <<<\left[\sqrt{n} B\left({1\over 2}, {n\over 2}\right)\right]^{-1} \left(1+{x^2\over n}\right)^{-(n+1)/2}>>>,
@@ -582,6 +592,14 @@ To make use of this function, write first @code{load("distrib")}.
 @anchor{pdf_noncentral_student_t}
 @deffn {Function} pdf_noncentral_student_t (@var{x},@var{n},@var{ncp})
 Returns the value at @var{x} of the density function of a noncentral Student random variable @math{nc_t(n,ncp)}, with @math{n>0} degrees of freedom and noncentrality parameter @math{ncp}. To make use of this function, write first @code{load("distrib")}.
+
+If @math{Z} is a standard normal random variable and @math{V} is a chi-squared distributed random variable with @math{n} degrees of freedom and @math{Z} and @math{V} are independent, then
+
+m4_displaymath(
+<<<T = {{Z + {\rm ncp}} \over \sqrt{V/n}}>>>,
+<<<@math{T = (Z + ncp)/sqrt(V/n)}>>>)
+
+is a noncentral @math{t}-distributed random variable with @math{n} degrees of freedom with a non-centrality parameter m4_math(<<<{\rm ncp}>>>, <<<@math{ncp}>>>).
 
 Sometimes an extra work is necessary to get the final result.
 
