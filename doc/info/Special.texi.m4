@@ -18,6 +18,103 @@
 
 Special function notation follows:
 
+@itemize @bullet
+@item @strong{Bessel functions}
+@multitable @columnfractions 0.4 .6
+@item @code{bessel_j(index,expr)}
+@tab Bessel function, 1st kind
+@item @code{bessel_y(index,expr)}
+@tab Bessel function, 2nd kind
+@item @code{bessel_i(index,expr)}
+@tab Modified Bessel function, 1st kind
+@item @code{bessel_k(index,expr)}
+@tab Modified Bessel function, 2nd kind
+@item @code{hankel_1 (v,z)}
+@tab Hankel function of the 1st kind
+@item @code{hankel_2 (v,z)}
+@tab Hankel function of the 2nd kind
+@item @code{scaled_bessel_i (v,z)}
+@tab Scaled modified Bessel function of the first kind
+@item @code{scaled_bessel_i0 (v,z)}
+@tab Scaled modified Bessel function of the first kind of order 0
+@item @code{scaled_bessel_i1 (v,z)}
+@tab Scaled modified Bessel function of the first kind of order 1
+@item @code{%s[u,v](z)}
+@tab Lommel's little m4_math(<<<s_{\mu,\nu}(z)>>>,
+<<<@math{s[u,v](z)}>>>) function
+@item @code{slommel[u,v] (z)}
+@tab Lommel's big m4_math(<<<S_{\mu,\nu}(z)>>>,
+<<<@math{S[u,v](z)}>>>) function
+@end multitable
+
+@item @strong{Airy Functions}
+@multitable @columnfractions 0.4 .6
+@item @code{airy_ai (x)}
+@tab Airy function m4_math(<<<{\rm Ai}(x)>>>, <<<@math{Ai(x)}>>>)
+@item @code{airy_dai (x)}
+@tab Derivative of the Airy function m4_math(<<<{\rm Ai}(x)>>>,
+<<<@math{Ai(x)}>>>)
+@item @code{airy_bi (x)}
+@tab Airy function m4_math(<<<{\rm Bi}(x)>>>, <<<@math{Bi(x)}>>>)
+@item @code{airy_dbi (x)}
+@tab Derivative of the Airy function m4_math(<<<{\rm Bi}(x)>>>,
+<<<@math{Ai(x)}>>>)
+@end multitable
+
+@item @strong{Gamma and Factorial Functions}
+@multitable @columnfractions 0.4 .6
+@item @code{bffac (expr, n)}
+@tab Bigfloat factorial function
+@item @code{bfpsi (n, z, fpprec)}
+@tab Polygamma functions
+@item @code{bfpsi0 (z, fpprec)}
+@tab Polygamma function of order 0
+@item @code{cbffac (z, fpprec)}
+@tab Complex bigfloat factorial
+@item @code{gamma (z)}
+@tab Gamma function
+@item @code{log_gamma (z)}
+@tab Natural log of the gamma function
+@item @code{gamma_incomplete_lower (a, z)}
+@tab Lower incomplete gamma function
+@item @code{gamma_incomplete (a,z)}
+@tab Incomplete upper gamma function
+@item @code{gamma_incomplete_regularized (a, z)}
+@tab Regularized incomplete upper gamma function
+@item @code{gamma_incomplete_generalized (a, z1, z2)}
+@tab Generalized incomplete gamma function
+@item @code{makegamma (expr)}
+@tab Transforms expressions to gamma functions
+@item @code{beta (a, b)}
+@tab Beta function
+@item @code{beta_incomplete (a, b, z)}
+@tab Incomplete beta function
+@item @code{beta_incomplete_regularized (a, b, z)}
+@tab Regularized incomplete beta function
+@item @code{beta_incomplete_generalized (a, b, z1, z2)}
+@tab Generalized incomplete beta function
+@item @code{psi[n] (x)}
+@tab Derivatives of the gamma function
+@item @code{makefact (expr)}
+@tab Transforms expressions to factorials
+@item @code{numfactor}
+@tab Returns the numerical factor multiplying the expression
+@end multitable
+
+@item @strong{Exponential Integrals}
+
+@item @strong{Error Functions}
+
+@item @strong{Struve Functions}
+
+@item @strong{Hypergeometric Functions}
+
+@item @strong{Parabolic Cylinder Functions}
+
+@item @strong{Other functions}
+@end itemize
+
+
 @example
 bessel_j (index, expr)         Bessel function, 1st kind
 bessel_y (index, expr)         Bessel function, 2nd kind
