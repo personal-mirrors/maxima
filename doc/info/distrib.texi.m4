@@ -106,6 +106,7 @@ m4_math(<<<{\it NegativeBinomial}($1,$2)>>>,<<<NegativeBinomial($1,$2)>>>))
 
 @node Introduction to distrib, Functions and Variables for continuous distributions
 @section Introduction to distrib
+@ptindex distrib @subentry Introduction to distrib
 
 
 Package @code{distrib} contains a set of functions for making probability computations on both discrete and continuous univariate models. 
@@ -357,6 +358,7 @@ by m4_Normal_RV(m, s) where
 @math{m} is the mean and @math{s > 0} is the standard deviation.
 
 @anchor{pdf_normal}
+@ptindex distrib @subentry pdf_normal
 @deffn {Function} pdf_normal (@var{x},@var{m},@var{s})
 Returns the value at @var{x} of the density function of a m4_Normal_RV(m,s) random variable, with @math{s>0}. To make use of this function, write first @code{load("distrib")}.
 
@@ -384,6 +386,7 @@ m4_displaymath(
 
 
 @anchor{cdf_normal}
+@ptindex distrib @subentry cdf_normal
 @deffn {Function} cdf_normal (@var{x},@var{m},@var{s})
 Returns the value at @var{x} of the distribution function of a m4_Normal_RV(m,s) random variable, with @math{s>0}. This function is defined in terms of Maxima's built-in error function @code{erf}.
 
@@ -426,6 +429,7 @@ See also @mrefdot{erf}
 
 
 @anchor{quantile_normal}
+@ptindex distrib @subentry quantile_normal
 @deffn {Function} quantile_normal (@var{q},@var{m},@var{s})
 Returns the @var{q}-quantile of a m4_Normal_RV(m,s) random variable, with @math{s>0}; in other words, this is the inverse of @mrefdot{cdf_normal} Argument @var{q} must be an element of @math{[0,1]}. To make use of this function, write first @code{load("distrib")}.
 
@@ -456,6 +460,7 @@ Returns the @var{q}-quantile of a m4_Normal_RV(m,s) random variable, with @math{
 
 
 @anchor{mean_normal}
+@ptindex distrib @subentry mean_normal
 @deffn {Function} mean_normal (@var{m},@var{s})
 Returns the mean of a m4_Normal_RV(m,s) random variable, with @math{s>0}. To make use of this function, write first @code{load("distrib")}.
 
@@ -476,6 +481,7 @@ m4_displaymath(
 
 
 @anchor{var_normal}
+@ptindex distrib @subentry var_normal
 @deffn {Function} var_normal (@var{m},@var{s})
 Returns the variance of a m4_Normal_RV(m,s) random variable, with @math{s>0}. To make use of this function, write first @code{load("distrib")}.
 
@@ -496,6 +502,7 @@ m4_displaymath(
 @end deffn
 
 @anchor{std_normal}
+@ptindex distrib @subentry std_normal
 @deffn {Function} std_normal (@var{m},@var{s})
 Returns the standard deviation of a m4_Normal_RV(m,s) random variable, with @math{s>0}, namely @var{s}. To make use of this function, write first @code{load("distrib")}.
 
@@ -516,6 +523,7 @@ m4_displaymath(
 
 
 @anchor{skewness_normal}
+@ptindex distrib @subentry skewness_normal
 @deffn {Function} skewness_normal (@var{m},@var{s})
 Returns the skewness coefficient of a m4_Normal_RV(m,s) random variable, with @math{s>0}. To make use of this function, write first @code{load("distrib")}.
 

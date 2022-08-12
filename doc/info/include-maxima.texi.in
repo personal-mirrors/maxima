@@ -17,6 +17,8 @@
 @synindex vr fn
 @synindex cp fn
 
+@defindex ct
+@defindex pt
 @setchapternewpage odd
 @c end of header
 
@@ -1097,3 +1099,12 @@ Understanding maxima's output
 @ifhtml
 @contents
 @end ifhtml
+
+@page
+@node Category Index
+@appendix Category Index
+@printindex ct
+
+@node Package Category Index
+@appendix Package Category Index
+@printindex pt
