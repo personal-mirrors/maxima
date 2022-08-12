@@ -62,8 +62,6 @@ parabolic_cylinder_d (v,z)     Parabolic cylinder D function
 @category{Bessel functions}
 @category{Airy functions}
 @category{Special functions}
-@ctindex Airy Functions @subentry Introduction to Special Functions
-@ctindex Special functions @subentry Introduction to Special Functions
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -99,7 +97,6 @@ although the infinite series is not used for computations.
 @opencatbox{Categories:}
 @category{Bessel functions}
 @category{Special functions}
-@ctindex Special functions @subentry bessel_j
 @closecatbox
 @end deffn
 
@@ -126,8 +123,6 @@ the limit as @math{v} approaches @math{n} is taken.
 @opencatbox{Categories:}
 @category{Bessel functions}
 @category{Special functions}
-@ctindex Bessel functions @subentry bessel_y
-@ctindex Special functions @subentry bessel_y
 @closecatbox
 @end deffn
 
@@ -484,7 +479,6 @@ See also @mrefcomma{airy_bi} @mrefcomma{airy_dai} and @mrefdot{airy_dbi}
 @opencatbox{Categories:}
 @category{Airy functions}
 @category{Special functions}
-@ctindex Airy Functions @subentry airy_ai
 @closecatbox
 @end deffn
 
@@ -502,7 +496,6 @@ See @mrefdot{airy_ai}.
 @opencatbox{Categories:}
 @category{Airy functions}
 @category{Special functions}
-@ctindex Airy Functions @subentry airy_dai
 @closecatbox
 @end deffn
 
@@ -516,7 +509,6 @@ See @mrefcomma{airy_ai} and @mrefdot{airy_dbi}
 @opencatbox{Categories:}
 @category{Airy functions}
 @category{Special functions}
-@ctindex Airy Functions @subentry airy_bi
 @closecatbox
 @end deffn
 
@@ -534,7 +526,6 @@ See @mrefcomma{airy_ai} and @mrefdot{airy_bi}
 @opencatbox{Categories:}
 @category{Airy functions}
 @category{Special functions}
-@ctindex Airy Functions @subentry airy_dbi
 @closecatbox
 @end deffn
 
