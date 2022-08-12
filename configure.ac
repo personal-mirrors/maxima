@@ -640,15 +640,27 @@ if test x"${enable_build_docs}" = xtrue ; then
     makeinfo_old=false
     if test x"${makeinfo_found}" = xtrue; then
 	AC_MSG_CHECKING([if makeinfo version >= 6.8])
-	dnl expr is looking for something like "junk<digits>.<digits>junk"
-	dnl and extracting out the "<digits>.<digits>"
-	makeinfo_version=`expr "\`makeinfo --version | head -1\`" : '.*\([[0-9]]\+\.[[0-9]]\+\)'`
+	# expr is looking for something like "junk<digits>.<digits>junk"
+	# and extracting out the "<digits>.<digits>"
+	vers=`makeinfo --version | head -1`
+	# echo vers = ${vers}
+	makeinfo_version=`expr "${vers}" : '.* \([[0-9]][[0-9]]*\.[[0-9]][[0-9]]*\)'`
+	if test -z "${makeinfo_version}"; then
+	    AC_MSG_ERROR([Unable to determine makeinfo version from "${vers}"])
+	fi
 	dnl echo Makeinfo version ${makeinfo_version}
-	dnl From makeinfo_version, extract out the major and minor version numbers.
-	makeinfo_major=`expr $makeinfo_version : '\([[0-9]]\+\)'`
-	makeinfo_minor=`expr $makeinfo_version : '.*\.\([[0-9]]\+\)'`
-	dnl echo major ${makeinfo_major}
-	dnl echo minor ${makeinfo_minor}
+	# From makeinfo_version, extract out the major and minor version numbers.
+	dnl echo expr "${makeinfo_version}" : '\([[0-9]][[0-9]]*\)'
+	# Test to see if we can find the major number.  Fail if not
+	makeinfo_major=`expr "${makeinfo_version}" : '\([[0-9]][[0-9]]*\)'`
+	makeinfo_minor=`expr "${makeinfo_version}" : '.*\.\([[0-9]][[0-9]]*\)'`
+	# Make sure we found something.  Error if not.
+	if test -z "${makeinfo_major}"; then
+	   AC_MSG_ERROR([Unable to determine major version number from ${makeinfo_version}])
+	fi
+	if test -z "${makeinfo_minor}"; then
+	   AC_MSG_ERROR([Unable to determine minor version number from ${makeinfo_version}])
+	fi
 	if test $makeinfo_major -lt 6; then
 	    dnl Major version < 6, so too old
 	    makeinfo_old=true
