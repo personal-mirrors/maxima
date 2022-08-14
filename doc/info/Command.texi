@@ -81,7 +81,7 @@ Current input expression = --------------
 
 @opencatbox{Categories:}
 @ctindex  Global variables  @subentry  __
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -175,9 +175,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  _
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @ctindex  Global variables  @subentry  _
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -201,9 +201,9 @@ See also @mrefcomma{_} @mrefcomma{%%} and @mrefdot{%th}
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  %
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @ctindex  Global variables  @subentry  %
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -268,7 +268,7 @@ _
 
 @opencatbox{Categories:}
 @ctindex  Global variables  @subentry  %%
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -308,7 +308,7 @@ output expressions.
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  %th
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -328,9 +328,9 @@ request for documentation.  See also @mrefdot{describe}
 
 @opencatbox{Categories:}
 @ctindex  Help  @subentry  ?
-@category{Help}
+@cat2{ Help ,  Help }
 @ctindex  Console interaction  @subentry  ?
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -346,9 +346,9 @@ for documentation.  See also @mrefdot{describe}
 
 @opencatbox{Categories:}
 @ctindex  Help  @subentry  ??
-@category{Help}
+@cat2{ Help ,  Help }
 @ctindex  Console interaction  @subentry  ??
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -441,7 +441,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  inchar
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -501,9 +501,9 @@ one is not explicitly set by the user.)
 
 @opencatbox{Categories:}
 @ctindex  Declarations and inferences  @subentry  infolists
-@category{Declarations and inferences}
+@cat2{ Declarations and inferences ,  Declarations-and-inferences }
 @ctindex  Global variables  @subentry  infolists
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -579,11 +579,11 @@ by @code{kill}.
 
 @opencatbox{Categories:}
 @ctindex  Evaluation  @subentry  kill
-@category{Evaluation}
+@cat2{ Evaluation ,  Evaluation }
 @ctindex  Console interaction  @subentry  kill
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @ctindex  Session management  @subentry  kill
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @closecatbox
 @end deffn
 
@@ -614,9 +614,9 @@ See also @mrefcomma{inchar} @mrefcomma{outchar} @mrefcomma{linechar} and
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  labels
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @ctindex  Console interaction  @subentry  labels
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -628,9 +628,9 @@ expression labels, including all previous labels if @code{inchar},
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  labels
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @ctindex  Console interaction  @subentry  labels
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end defvr
 
@@ -654,7 +654,7 @@ See @mref{programmode} and @mrefdot{labels}
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  linechar
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -668,9 +668,9 @@ The line number of the current pair of input and output expressions.
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  linenum
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @ctindex  Console interaction  @subentry  linenum
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end defvr
 
@@ -686,11 +686,11 @@ whether or not they get reset to their default value.
 
 @opencatbox{Categories:}
 @ctindex  Global variables  @subentry  myoptions
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @ctindex  Session management  @subentry  myoptions
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @ctindex  Console interaction  @subentry  myoptions
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end defvr
 
@@ -716,9 +716,9 @@ See also @mrefcomma{batch} @mrefcomma{load} and @mrefdot{labels}
 
 @opencatbox{Categories:}
 @ctindex  Global flags  @subentry  nolabels
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @ctindex  Session management  @subentry  nolabels
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @closecatbox
 @end defvr
 
@@ -747,11 +747,11 @@ assignment: assigning to option gamma_expand
 
 @opencatbox{Categories:}
 @ctindex  Global flags  @subentry  optionset
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @ctindex  Session management  @subentry  optionset
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @ctindex  Console interaction  @subentry  optionset
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end defvr
 
@@ -793,7 +793,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  outchar
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -854,9 +854,9 @@ Arguments may be combined, e.g., @code{playback ([5, 10], grind, time, slow)}.
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  playback
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @ctindex  Console interaction  @subentry  playback
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -872,9 +872,9 @@ Default value: @code{_}
 
 @opencatbox{Categories:}
 @ctindex  Global variables  @subentry  prompt
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @ctindex  Console interaction  @subentry  prompt
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end defvr
 
@@ -891,7 +891,7 @@ return to the Maxima prompt.  If @code{*debugger-hook*} is @code{nil},
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  quit
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -919,7 +919,7 @@ foo is 42  -- enter new value.
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  read
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -950,7 +950,7 @@ Enter an expression:
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  readonly
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -969,7 +969,7 @@ options are defined by @code{defmvar}, and some variables defined by
 
 @opencatbox{Categories:}
 @ctindex  Session management  @subentry  reset
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @closecatbox
 @end deffn
 
@@ -988,9 +988,9 @@ See also @mrefdot{timer}
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  showtime
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @ctindex  Debugging  @subentry  showtime
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 @end defvr
 
@@ -1027,7 +1027,7 @@ Returning to Maxima
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  to_lisp
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -1084,9 +1084,9 @@ See also @ref{eval_string}.
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  eval_string_lisp
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @ctindex  Evaluation  @subentry  eval_string_lisp
-@category{Evaluation}
+@cat2{ Evaluation ,  Evaluation }
 @closecatbox
 
 @end deffn
@@ -1139,9 +1139,9 @@ The values are removed from the variables.  @code{values} is the empty list.
 
 @opencatbox{Categories:}
 @ctindex  Evaluation  @subentry  values
-@category{Evaluation}
+@cat2{ Evaluation ,  Evaluation }
 @ctindex  Global variables  @subentry  values
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -1184,9 +1184,9 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Exponential and logarithm functions  @subentry  %edispflag
-@category{Exponential and logarithm functions}
+@cat2{ Exponential and logarithm functions ,  Exponential-and-logarithm-functions }
 @ctindex  Display flags and variables  @subentry  %edispflag
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -1208,7 +1208,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  absboxchar
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -1363,7 +1363,7 @@ A[w,x]$
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  declare_index_properties
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end deffn
 
@@ -1377,7 +1377,7 @@ See also @mrefdot{remove_index_properties}
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  get_index_properties
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end deffn
 
@@ -1392,7 +1392,7 @@ All index properties are removed from each symbol @var{a}, @var{b}, @var{c}, ...
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  remove_index_properties
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end deffn
 
@@ -1619,7 +1619,7 @@ Each symbol has its own value of @code{display_index_separator}.
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  display_index_separator
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -1658,7 +1658,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  disp
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -1700,7 +1700,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  display
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -1763,7 +1763,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  display2d
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -1796,7 +1796,7 @@ X*4/3;    ---        - X
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  display_format_internal
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -1814,7 +1814,7 @@ See also @mref{set_alt_display} and @mrefdot{display2d}
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  with_default_2d_display
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -1853,7 +1853,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  dispterms
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -1900,9 +1900,9 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Expressions  @subentry  exptdispflag
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Display flags and variables  @subentry  exptdispflag
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2058,7 +2058,7 @@ n do (for j from i+1 thru n do L[i,j]:0),L)
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  grind
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -2076,7 +2076,7 @@ format input expressions.
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  grind
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2194,7 +2194,7 @@ it is interpreted in base 10.
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  ibase
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end defvr
 
@@ -2235,7 +2235,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  ldisp
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -2279,7 +2279,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  ldisplay
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -2307,7 +2307,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  leftjust
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2324,7 +2324,7 @@ printed by built-in Maxima functions, such as error messages and the output of
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  linel
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2361,7 +2361,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  lispdisp
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2380,7 +2380,7 @@ displayed the same way.
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  negsumdispflag
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2450,9 +2450,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  obase
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @ctindex  Console interaction  @subentry  obase
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end defvr
 
@@ -2486,7 +2486,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  pfeformat
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2519,7 +2519,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  powerdisp
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2564,7 +2564,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  print
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -2579,9 +2579,9 @@ exponent 1/2.
 
 @opencatbox{Categories:}
 @ctindex  Mathematical functions  @subentry  sqrtdispflag
-@category{Mathematical functions}
+@cat2{ Mathematical functions ,  Mathematical-functions }
 @ctindex  Display flags and variables  @subentry  sqrtdispflag
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2595,7 +2595,7 @@ displayed with an asterisk @code{*} between operands.
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  stardisp
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -2612,7 +2612,7 @@ of @mrefcomma{describe} is not affected by @code{ttyoff}.
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  ttyoff
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 

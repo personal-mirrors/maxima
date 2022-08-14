@@ -112,11 +112,11 @@ simplifications.
 
 @opencatbox{Categories:}
 @ctindex  Tensors  @subentry  Introduction to atensor
-@category{Tensors}
+@cat2{ Tensors ,  Tensors }
 @ctindex  Share packages  @subentry  Introduction to atensor
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package atensor  @subentry  Introduction to atensor
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @closecatbox
 
 @c end concepts atensor
@@ -183,7 +183,7 @@ Cl(3,1). A call to @code{init_atensor(dirac)} is equivalent to
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  init_atensor
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @closecatbox
 @end deffn
 
@@ -200,9 +200,9 @@ for complex expressions.
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  atensimp
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @ctindex  Simplification functions  @subentry  atensimp
-@category{Simplification functions}
+@cat2{ Simplification functions ,  Simplification-functions }
 @closecatbox
 
 @end deffn
@@ -214,7 +214,7 @@ The algebra type. Valid values are @code{universal}, @code{grassmann},
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  alg_type
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @closecatbox
 
 @end deffn
@@ -228,9 +228,9 @@ to determine if an indexed object is a valid base vector.  See @code{abasep}.
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  adim
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @ctindex  Global variables  @subentry  adim
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 
 @end defvr
@@ -244,9 +244,9 @@ Default values for the bilinear forms @code{sf}, @code{af}, and
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  aform
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @ctindex  Global variables  @subentry  aform
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 
 @end defvr
@@ -259,9 +259,9 @@ The symbol for base vectors.
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  asymbol
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @ctindex  Global variables  @subentry  asymbol
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 
 @end defvr
@@ -276,7 +276,7 @@ corresponding value from the matrix @code{aform}.
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  sf
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @closecatbox
 
 @end deffn
@@ -291,7 +291,7 @@ corresponding value from the matrix @code{aform}.
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  af
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @closecatbox
 
 @end deffn
@@ -333,7 +333,7 @@ For instance:
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  av
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @closecatbox
 
 @end deffn
@@ -349,9 +349,9 @@ and @code{adim}.
 
 @opencatbox{Categories:}
 @ctindex  Package atensor  @subentry  abasep
-@category{Package atensor}
+@cat2{ Package atensor ,  Package-atensor }
 @ctindex  Predicate functions  @subentry  abasep
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 
 @end deffn

@@ -177,9 +177,9 @@ Incorrect syntax: # is not a prefix operator
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  Introduction to operators
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @ctindex  Syntax  @subentry  Introduction to operators
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -405,7 +405,7 @@ Arithmetic is carried out element-by-element for lists (depending on
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  +
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -444,7 +444,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  **
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -478,7 +478,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  ^^
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -507,7 +507,7 @@ and
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  .
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -606,7 +606,7 @@ values, although the arguments of relational expressions are evaluated.
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  <
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -644,7 +644,7 @@ accepted, and the result is a Boolean expression.
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  and
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -668,7 +668,7 @@ and the result is a Boolean expression.
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  not
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -701,7 +701,7 @@ due to the treatment of indeterminate operands.
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  or
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -749,7 +749,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  #
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -889,7 +889,7 @@ Because @code{not @var{expr}} causes evaluation of @var{expr},
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  =
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -1022,9 +1022,9 @@ The values of @code{a} and @code{b} are exchanged in this example.
 
 @opencatbox{Categories:}
 @ctindex  Evaluation  @subentry  :
-@category{Evaluation}
+@cat2{ Evaluation ,  Evaluation }
 @ctindex  Operators  @subentry  :
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -1072,9 +1072,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Evaluation  @subentry  ::
-@category{Evaluation}
+@cat2{ Evaluation ,  Evaluation }
 @ctindex  Operators  @subentry  ::
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -1187,9 +1187,9 @@ x is equal to 1234 - 1729 w
 
 @opencatbox{Categories:}
 @ctindex  Function definition  @subentry  ::=
-@category{Function definition}
+@cat2{ Function definition ,  Function-definition }
 @ctindex  Operators  @subentry  ::=
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -1384,9 +1384,9 @@ the function defined by @code{:=} accepts a variable number of arguments.
 
 @opencatbox{Categories:}
 @ctindex  Function definition  @subentry  :=
-@category{Function definition}
+@cat2{ Function definition ,  Function-definition }
 @ctindex  Operators  @subentry  :=
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -1522,11 +1522,11 @@ if x ## y then
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  infix
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @ctindex  Declarations and inferences  @subentry  infix
-@category{Declarations and inferences}
+@cat2{ Declarations and inferences ,  Declarations-and-inferences }
 @ctindex  Syntax  @subentry  infix
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @closecatbox
 @end deffn
 
@@ -1663,9 +1663,9 @@ Matchfix operators are ordinary user-defined functions.
 
 @opencatbox{Categories:}
 @ctindex  Syntax  @subentry  matchfix
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @ctindex  Operators  @subentry  matchfix
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end deffn
 
@@ -1686,9 +1686,9 @@ See also @ref{Introduction to operators}.
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  nary
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @ctindex  Syntax  @subentry  nary
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @closecatbox
 @end deffn
 
@@ -1709,9 +1709,9 @@ See also @ref{Introduction to operators}.
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  nofix
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @ctindex  Syntax  @subentry  nofix
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @closecatbox
 @end deffn
 
@@ -1731,9 +1731,9 @@ See also @ref{Introduction to operators}.
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  postfix
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @ctindex  Syntax  @subentry  postfix
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @closecatbox
 @end deffn
 
@@ -1752,9 +1752,9 @@ See also @ref{Introduction to operators}.
 
 @opencatbox{Categories:}
 @ctindex  Operators  @subentry  prefix
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @ctindex  Syntax  @subentry  prefix
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @closecatbox
 @end deffn
 

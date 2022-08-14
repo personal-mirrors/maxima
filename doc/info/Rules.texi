@@ -27,9 +27,9 @@ package.
 
 @opencatbox{Categories:}
 @ctindex  Simplification  @subentry  Introduction to Rules and Patterns
-@category{Simplification}
+@cat2{ Simplification ,  Simplification }
 @ctindex  Rules and patterns  @subentry  Introduction to Rules and Patterns
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 
 @c end concepts Rules and Patterns
@@ -60,7 +60,7 @@ See also @mrefcomma{applyb1} @mref{apply2} and @mrefdot{let}
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  apply1
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -83,7 +83,7 @@ See also @mref{apply1} and @mrefdot{let}
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  apply2
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -110,7 +110,7 @@ See also @mrefcomma{apply1} @mref{apply2} and @mrefdot{let}
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  applyb1
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -131,7 +131,7 @@ and the value of @code{current_let_rule_package} is not changed.
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  current_let_rule_package
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end defvr
 
@@ -148,7 +148,7 @@ is not explicitly set by the user with @code{let} or by changing the value of
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  default_let_rule_package
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end defvr
 
@@ -329,7 +329,7 @@ to see if it is a definite integral.
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  defmatch
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -353,7 +353,7 @@ If the match fails, the rule function returns @code{false}.
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  defrule
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -419,9 +419,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  disprule
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @ctindex  Display functions  @subentry  disprule
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -515,7 +515,7 @@ named by @code{current_let_rule_package} is used.  If a call such as
 @c NEEDS ADDITIONAL EXAMPLES
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  let
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -549,7 +549,7 @@ the numerator, denominator, and their quotient are simplified in that order.
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  letrat
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end defvr
 
@@ -575,7 +575,7 @@ See also @mrefcomma{disprule} which displays rules defined by @mref{tellsimp} an
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  letrules
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -649,7 +649,7 @@ For other ways to do substitutions see also @mrefcomma{subst}
 @end example
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  letsimp
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -663,7 +663,7 @@ plus the default package @code{default_let_rule_package}.
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  let_rule_packages
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end defvr
 
@@ -927,9 +927,9 @@ match variables.
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  matchdeclare
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @ctindex  Declarations and inferences  @subentry  matchdeclare
-@category{Declarations and inferences}
+@cat2{ Declarations and inferences ,  Declarations-and-inferences }
 @closecatbox
 @end deffn
 
@@ -945,7 +945,7 @@ and @code{apply2} will delve.
 
 @opencatbox{Categories:}
 @ctindex  Function application  @subentry  maxapplydepth
-@category{Function application}
+@cat2{ Function application ,  Function-application }
 @closecatbox
 @end defvr
 
@@ -961,7 +961,7 @@ will reach before giving up.
 
 @opencatbox{Categories:}
 @ctindex  Function application  @subentry  maxapplyheight
-@category{Function application}
+@cat2{ Function application ,  Function-application }
 @closecatbox
 @end defvr
 
@@ -994,7 +994,7 @@ See also @mrefcomma{remrule} which removes a rule defined by @mref{tellsimp} or
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  remlet
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -1092,7 +1092,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  remrule
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -1165,7 +1165,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  tellsimp
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -1515,7 +1515,7 @@ A worked example: anticommutative multiplication.
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  tellsimpafter
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 
@@ -1528,7 +1528,7 @@ for addition @code{+}, multiplication @code{*}, and exponentiation @code{^}.
 
 @opencatbox{Categories:}
 @ctindex  Rules and patterns  @subentry  clear_rules
-@category{Rules and patterns}
+@cat2{ Rules and patterns ,  Rules-and-patterns }
 @closecatbox
 @end deffn
 

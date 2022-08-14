@@ -11,11 +11,11 @@ as obtained from the SLATEC project.
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  Introduction to lapack
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Share packages  @subentry  Introduction to lapack
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package lapack  @subentry  Introduction to lapack
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @closecatbox
 
 
@@ -102,7 +102,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Package lapack  @subentry  dgeev
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @closecatbox
 
 @end deffn
@@ -151,7 +151,7 @@ is equal to @var{A} (ignoring floating point round-off errors).
 
 @opencatbox{Categories:}
 @ctindex  Package lapack  @subentry  dgeqrf
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @closecatbox
 
 @end deffn
@@ -253,9 +253,9 @@ The elements of @var{A} and @var{b} must evaluate to real floating point numbers
 
 @opencatbox{Categories:}
 @ctindex  Package lapack  @subentry  dgesv
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @ctindex  Linear equations  @subentry  dgesv
-@category{Linear equations}
+@cat2{ Linear equations ,  Linear-equations }
 @closecatbox
 
 @end deffn
@@ -385,7 +385,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Package lapack  @subentry  dgesvd
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @closecatbox
 
 @end deffn
@@ -418,7 +418,7 @@ that is, the square root of the sum of squares of the matrix elements.
 
 @opencatbox{Categories:}
 @ctindex  Package lapack  @subentry  dlange
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @closecatbox
 
 @end deffn
@@ -548,7 +548,7 @@ for the product.  The default is @code{false}.
 @end example
 @opencatbox{Categories:}
 @ctindex  Package lapack  @subentry  dgemm
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @closecatbox
 
 @end deffn
@@ -562,7 +562,7 @@ Like @code{dgeev}, but the matrix @var{A} is complex.
 
 @opencatbox{Categories:}
 @ctindex  Package lapack  @subentry  zgeev
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @closecatbox
 
 @end deffn
@@ -649,7 +649,7 @@ eigenvectors of an Hermitian matrix.
 
 @opencatbox{Categories:}
 @ctindex  Package lapack  @subentry  zheev
-@category{Package lapack}
+@cat2{ Package lapack ,  Package-lapack }
 @closecatbox
 
 @end deffn

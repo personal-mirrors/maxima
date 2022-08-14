@@ -29,7 +29,7 @@ value 2.718281828459045d0.  (See @urlaands{eqn 4.1.16, 67}, @urlaands{4.1.17, 67
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  %e
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -45,7 +45,7 @@ value 2.718281828459045d0.  (See @urlaands{eqn 4.1.16, 67}, @urlaands{4.1.17, 67
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  %i
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -58,7 +58,7 @@ Maxima implements @code{false} by the value @code{NIL} in Lisp.
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  false
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -88,7 +88,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  %gamma
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -115,7 +115,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  ind
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -130,7 +130,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  inf
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -145,7 +145,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  infinity
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -161,7 +161,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  minf
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -244,7 +244,7 @@ After evaluating @code{tellrat (%phi^2 - %phi - 1)} and @code{algebraic: true},
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  %phi
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -261,7 +261,7 @@ The numeric value of @code{%pi} is the double-precision floating-point value
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  %pi
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -274,7 +274,7 @@ Maxima implements @code{true} by the value @code{T} in Lisp.
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  true
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -301,7 +301,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  und
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -332,7 +332,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  zeroa
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 
@@ -348,7 +348,7 @@ See also @mref{zeroa} and @mrefdot{limit}
 
 @opencatbox{Categories:}
 @ctindex  Constants  @subentry  zerob
-@category{Constants}
+@cat2{ Constants ,  Constants }
 @closecatbox
 @end defvr
 

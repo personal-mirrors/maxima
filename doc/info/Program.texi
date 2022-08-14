@@ -131,7 +131,7 @@ Some Lisp functions are shadowed in the Maxima package, namely the following.
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  Lisp and Maxima
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -160,7 +160,7 @@ current lisp @code{garbage_collect} returns @code{true}, else @code{false}.
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  garbage_collect
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -243,7 +243,7 @@ functions, including the currently active function.
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  backtrace
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 @end deffn
 
@@ -522,7 +522,7 @@ non-atomic expression, and successive parts are taken.)
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  do
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -544,7 +544,7 @@ See also @mrefdot{errormsg}
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  errcatch
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -567,7 +567,7 @@ This is effectively reprinting the most recent error message.
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  error
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -583,7 +583,7 @@ The function @code{warning} always returns false.
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  warning
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -643,9 +643,9 @@ Example expression is --------------
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  error_size
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @ctindex  Display flags and variables  @subentry  error_size
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -667,9 +667,9 @@ See also @mref{error} and @mrefdot{error_size}
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  error_syms
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @ctindex  Display flags and variables  @subentry  error_syms
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -683,7 +683,7 @@ and @mref{errormsg} formats and prints it.
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  errormsg
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -758,7 +758,7 @@ value of errormsg is false
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  errormsg
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end defvr
 
@@ -781,7 +781,7 @@ other than the one containing the @code{go}.
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  go
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -851,9 +851,9 @@ not                  not         logical prefix
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  if
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @ctindex  Predicate functions  @subentry  if
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -914,7 +914,7 @@ See also @mrefcomma{scanmap} @mrefcomma{maplist} @mrefcomma{outermap} @mref{matr
 
 @opencatbox{Categories:}
 @ctindex  Function application  @subentry  map
-@category{Function application}
+@cat2{ Function application ,  Function-application }
 @closecatbox
 @end deffn
 
@@ -930,7 +930,7 @@ references.
 
 @opencatbox{Categories:}
 @ctindex  Predicate functions  @subentry  mapatom
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -958,7 +958,7 @@ is displayed in the above two instances.
 
 @opencatbox{Categories:}
 @ctindex  Function application  @subentry  maperror
-@category{Function application}
+@cat2{ Function application ,  Function-application }
 @closecatbox
 @end defvr
 
@@ -976,7 +976,7 @@ If @mref{mapprint} is @code{false}, these messages are suppressed.
 
 @opencatbox{Categories:}
 @ctindex  Function application  @subentry  mapprint
-@category{Function application}
+@cat2{ Function application ,  Function-application }
 @closecatbox
 @end defvr
 
@@ -996,7 +996,7 @@ which returns an expression with the same main operator as @var{expr_i} has
 
 @opencatbox{Categories:}
 @ctindex  Function application  @subentry  maplist
-@category{Function application}
+@cat2{ Function application ,  Function-application }
 @closecatbox
 @end deffn
 
@@ -1020,9 +1020,9 @@ See also @mref{is} and @mrefdot{maybe}
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  prederror
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @ctindex  Predicate functions  @subentry  prederror
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 
 @end defvr
@@ -1094,7 +1094,7 @@ See also @mrefcomma{for} @mrefcomma{while} @mref{do} and @mref{block}.
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  return
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -1153,7 +1153,7 @@ ways.
 
 @opencatbox{Categories:}
 @ctindex  Function application  @subentry  scanmap
-@category{Function application}
+@cat2{ Function application ,  Function-application }
 @closecatbox
 @end deffn
 
@@ -1167,7 +1167,7 @@ mechanism.
 
 @opencatbox{Categories:}
 @ctindex  Programming  @subentry  throw
-@category{Programming}
+@cat2{ Programming ,  Programming }
 @closecatbox
 @end deffn
 
@@ -1365,7 +1365,7 @@ while @code{cartesian_product} does not.
 
 @opencatbox{Categories:}
 @ctindex  Function application  @subentry  outermap
-@category{Function application}
+@cat2{ Function application ,  Function-application }
 @closecatbox
 @end deffn
 

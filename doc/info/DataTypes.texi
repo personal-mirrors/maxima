@@ -37,7 +37,7 @@ functions.
 
 @opencatbox{Categories:}
 @ctindex  Complex variables  @subentry  Introduction to Numbers
-@category{Complex variables}
+@cat2{ Complex variables ,  Complex-variables }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -112,7 +112,7 @@ in @var{expr} with bigfloat numbers.
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  bfloat
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 @end deffn
 
@@ -124,9 +124,9 @@ Returns @code{true} if @var{expr} is a bigfloat number, otherwise @code{false}.
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  bfloatp
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @ctindex  Predicate functions  @subentry  bfloatp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -168,7 +168,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  bftorat
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 @end defvr
 
@@ -184,7 +184,7 @@ displays as @code{1.000000000000000B0}.  Otherwise, this is displayed as
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  bftrunc
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 @end defvr
 
@@ -201,7 +201,7 @@ is declared @code{even}.
 
 @opencatbox{Categories:}
 @ctindex  Predicate functions  @subentry  evenp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -216,9 +216,9 @@ point.
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  float
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @ctindex  Evaluation flags  @subentry  float
-@category{Evaluation flags}
+@cat2{ Evaluation flags ,  Evaluation-flags }
 @closecatbox
 @end deffn
 
@@ -233,7 +233,7 @@ a floating point number is replaced by a bigfloat number with less precision.
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  float2bf
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 @end defvr
 
@@ -246,9 +246,9 @@ Returns @code{true} if @var{expr} is a floating point number, otherwise
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  floatnump
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @ctindex  Predicate functions  @subentry  floatnump
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -265,7 +265,7 @@ See also @mref{bfloat} and @mrefdot{fpprintprec}
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  fpprec
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 @end defvr
 
@@ -298,9 +298,9 @@ if there are trailing zero digits.
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  fpprintprec
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @ctindex  Display flags and variables  @subentry  fpprintprec
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 
@@ -350,7 +350,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Predicate functions  @subentry  integerp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -378,9 +378,9 @@ m1pbranch:false          m1pbranch:true
 
 @opencatbox{Categories:}
 @ctindex  Expressions  @subentry  m1pbranch
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Global flags  @subentry  m1pbranch
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -392,7 +392,7 @@ Return @code{true} if and only if @code{@var{n} >= 0} and @var{n} is an integer.
 
 @opencatbox{Categories:}
 @ctindex  Predicate functions  @subentry  nonnegintegerp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -440,7 +440,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Predicate functions  @subentry  numberp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -481,9 +481,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  numer
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @ctindex  Evaluation flags  @subentry  numer
-@category{Evaluation flags}
+@cat2{ Evaluation flags ,  Evaluation-flags }
 @closecatbox
 @end defvr
 
@@ -536,7 +536,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  numer_pbranch
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 @end defvr
 
@@ -558,9 +558,9 @@ not necessarily numeric.
 
 @opencatbox{Categories:}
 @ctindex  Declarations and inferences  @subentry  numerval
-@category{Declarations and inferences}
+@cat2{ Declarations and inferences ,  Declarations-and-inferences }
 @ctindex  Numerical evaluation  @subentry  numerval
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 @end deffn
 
@@ -577,7 +577,7 @@ is declared @code{odd}.
 
 @opencatbox{Categories:}
 @ctindex  Predicate functions  @subentry  oddp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -592,9 +592,9 @@ of floating point numbers to rational numbers, when the option variable
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  ratepsilon
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @ctindex  Rational expressions  @subentry  ratepsilon
-@category{Rational expressions}
+@cat2{ Rational expressions ,  Rational-expressions }
 @closecatbox
 @end defvr
 
@@ -655,7 +655,7 @@ representation.
 
 @opencatbox{Categories:}
 @ctindex  Numerical evaluation  @subentry  rationalize
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 @end deffn
 
@@ -668,9 +668,9 @@ integers, otherwise @code{false}.
 
 @opencatbox{Categories:}
 @ctindex  Predicate functions  @subentry  ratnump
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @ctindex  Rational expressions  @subentry  ratnump
-@category{Rational expressions}
+@cat2{ Rational expressions ,  Rational-expressions }
 @closecatbox
 @end deffn
 
@@ -781,7 +781,7 @@ this string.";
 
 @opencatbox{Categories:}
 @ctindex  Syntax  @subentry  Introduction to Strings
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -856,9 +856,9 @@ Note that although @code{concat (1, 2)} looks like a number, it is a string.
 
 @opencatbox{Categories:}
 @ctindex  Expressions  @subentry  concat
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Strings  @subentry  concat
-@category{Strings}
+@cat2{ Strings ,  Strings }
 @closecatbox
 @end deffn
 
@@ -900,9 +900,9 @@ Another purpose for @code{sconcat} is to convert arbitrary objects to strings.
 
 @opencatbox{Categories:}
 @ctindex  Expressions  @subentry  sconcat
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Strings  @subentry  sconcat
-@category{Strings}
+@cat2{ Strings ,  Strings }
 @closecatbox
 @end deffn
 
@@ -923,7 +923,7 @@ See also @mrefcomma{concat} @mrefcomma{sconcat} @mref{simplode} and
 
 @opencatbox{Categories:}
 @ctindex  Strings  @subentry  string
-@category{Strings}
+@cat2{ Strings ,  Strings }
 @closecatbox
 @end deffn
 
@@ -970,7 +970,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Display flags and variables  @subentry  stringdisp
-@category{Display flags and variables}
+@cat2{ Display flags and variables ,  Display-flags-and-variables }
 @closecatbox
 @end defvr
 

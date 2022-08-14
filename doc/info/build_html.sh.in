@@ -171,7 +171,8 @@ fi
 TEXIOPT="--html -c OUTPUT_ENCODING_NAME=UTF-8 --force -e 10000 --document-lang=$language -I . -I $languagedir -I ../.. --css-include=@abs_srcdir@/manual.css -I @abs_srcdir@/figures --init-file $texiinitfile --set-customization-variable HTML_MATH=mathjax"
 makeinfo --split=chapter --no-node-files --output="$languagedestdir" $TEXIOPT maxima.texi 
 makeinfo --no-split --output="$languagedestdir/maxima_singlepage.html" $TEXIOPT maxima.texi 
-
+# Insert id so we can reference them from the category macros.
+sed --in-place=bck 's;\(<a href=".*#index-\([^">]\+\)">\);<span id="catindex-\2"></span>\1;' maxima_407.html 
 if [ "X$DEBUG" = "Xyes" ]; then
     set -x
 fi

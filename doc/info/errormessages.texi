@@ -32,7 +32,7 @@ One common cause for this error message is that square brackets operator
 number was @code{< 1} or @code{> length(list)}.
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  No such list element
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -75,7 +75,7 @@ single-element list first:
 
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  argument must be a non-atomic expression
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -85,7 +85,7 @@ Maxima supports several assignment operators. When trying to define a function
 @code{:=} has to be used.
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  cannot assign to function
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -94,7 +94,7 @@ Maxima supports several assignment operators. When trying to define a function
 This message notifies about a classical division by zero error.
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  0 to a negative exponent
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -104,7 +104,7 @@ This might be caused by a command starting with a comma (@code{,}) or by one com
 being directly followed by another one..
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  Comma is not a prefix operator
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -114,7 +114,7 @@ Common reasons for this error appearing are a closing parenthesis without an
 opening one or a closing parenthesis directly preceded by a comma.
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  Illegal use of delimiter
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -141,7 +141,7 @@ If this directory is missing maxima will recreate it again as soon as it has to
 compile a package.
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  loadfile failed to load
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -153,7 +153,7 @@ something else, possibly a list or the name of a list.
 
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  makelist second argument must evaluate to a number
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -164,7 +164,7 @@ use a number or a variable whose numerical value is known as a loop
 counter.
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  Only symbols can be bound
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -207,7 +207,7 @@ single-element list first:
 
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  Operators of arguments must all be the same
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -233,7 +233,7 @@ approaches might be useful:
 @end itemize
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  out of memory
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -243,7 +243,7 @@ approaches might be useful:
 @code{n} items.
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  part fell off the end
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -281,7 +281,7 @@ draw2d (explicit): non defined variable
 
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  undefined variable during plotting
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -305,7 +305,7 @@ Note: The @code{scene()} command requrires VTK with TCL/TK bindings.
 
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  VTK is not installed
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -326,7 +326,7 @@ command prepending the named option by a single quote (@code{'}) should
 resolve this issue.
 @opencatbox{Categories:}
 @ctindex  Error messages  @subentry  undefined variable during translation
-@category{Error messages}
+@cat2{ Error messages ,  Error-messages }
 @closecatbox
 
 
@@ -345,5 +345,5 @@ See also @code{ratprint}, @code{ratepsilon}, @code{bftorat}, @code{fpprintprec}
 and @code{rationalize}.
 @opencatbox{Categories:}
 @ctindex  Warning messages  @subentry  replaced x by y
-@category{Warning messages}
+@cat2{ Warning messages ,  Warning-messages }
 @closecatbox

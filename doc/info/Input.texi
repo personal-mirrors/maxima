@@ -48,7 +48,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Syntax  @subentry  Comments
-@category{Syntax}
+@cat2{ Syntax ,  Syntax }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -95,9 +95,9 @@ always appended.
 
 @opencatbox{Categories:}
 @ctindex  File output  @subentry  appendfile
-@category{File output}
+@cat2{ File output ,  File-output }
 @ctindex  Console interaction  @subentry  appendfile
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -176,9 +176,9 @@ See also @mrefcomma{load} @mrefcomma{batchload} and @mrefdot{demo}
 
 @opencatbox{Categories:}
 @ctindex  Session management  @subentry  batch
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @ctindex  File input  @subentry  batch
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end deffn
 
@@ -215,9 +215,9 @@ See also @mrefcomma{batch} and @mrefdot{load}
 
 @opencatbox{Categories:}
 @ctindex  Session management  @subentry  batchload
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @ctindex  File input  @subentry  batchload
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end deffn
 
@@ -229,9 +229,9 @@ Closes the transcript file opened by @mref{writefile} or @mrefdot{appendfile}
 
 @opencatbox{Categories:}
 @ctindex  File output  @subentry  closefile
-@category{File output}
+@cat2{ File output ,  File-output }
 @ctindex  Console interaction  @subentry  closefile
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -253,9 +253,9 @@ functions always truncate their output file, and @mref{tex} and
 
 @opencatbox{Categories:}
 @ctindex  File output  @subentry  file_output_append
-@category{File output}
+@cat2{ File output ,  File-output }
 @ctindex  Global flags  @subentry  file_output_append
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -274,9 +274,9 @@ The result is a Lisp pathname object.
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  filename_merge
-@category{File input}
+@cat2{ File input ,  File-input }
 @ctindex  File output  @subentry  filename_merge
-@category{File output}
+@cat2{ File output ,  File-output }
 @closecatbox
 @end deffn
 
@@ -325,7 +325,7 @@ See @mrefdot{file_search_maxima}
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  file_search
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end deffn
 
@@ -382,9 +382,9 @@ expands into @code{/home/wfs/neumann.lisp}, @code{/home/gcj/neumann.lisp},
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  file_search_maxima
-@category{File input}
+@cat2{ File input ,  File-input }
 @ctindex  Global variables  @subentry  file_search_maxima
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -421,7 +421,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  file_type
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end deffn
 
@@ -491,9 +491,9 @@ being loaded.
 
 @opencatbox{Categories:}
 @ctindex  Session management  @subentry  load
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @ctindex  File input  @subentry  load
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end deffn
 
@@ -532,7 +532,7 @@ End of batchfile
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  load_pathname
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end defvr
 
@@ -552,9 +552,9 @@ more convenient to use @mref{load} instead of @code{loadfile}.
 
 @opencatbox{Categories:}
 @ctindex  Session management  @subentry  loadfile
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @ctindex  File input  @subentry  loadfile
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end deffn
 
@@ -584,9 +584,9 @@ When @code{loadprint} is @code{false}, never print a message.
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  loadprint
-@category{File input}
+@cat2{ File input ,  File-input }
 @ctindex  Global flags  @subentry  loadprint
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -607,7 +607,7 @@ which may have implementation-specific behavior.
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  directory
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end deffn
 
@@ -639,7 +639,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  pathname_directory
-@category{File input}
+@cat2{ File input ,  File-input }
 @closecatbox
 @end deffn
 
@@ -660,9 +660,9 @@ or otherwise the result of a successful filename merge.
 
 @opencatbox{Categories:}
 @ctindex  File input  @subentry  printfile
-@category{File input}
+@cat2{ File input ,  File-input }
 @ctindex  Console interaction  @subentry  printfile
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -728,9 +728,9 @@ have been assigned new values by the user; see @mrefdot{myoptions}
 
 @opencatbox{Categories:}
 @ctindex  Session management  @subentry  save
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @ctindex  File output  @subentry  save
-@category{File output}
+@cat2{ File output ,  File-output }
 @closecatbox
 @end deffn
 
@@ -783,9 +783,9 @@ variable, a colon, and its value.  Note that the general form of
 
 @opencatbox{Categories:}
 @ctindex  Session management  @subentry  stringout
-@category{Session management}
+@cat2{ Session management ,  Session-management }
 @ctindex  File output  @subentry  stringout
-@category{File output}
+@cat2{ File output ,  File-output }
 @closecatbox
 @end deffn
 
@@ -839,7 +839,7 @@ See also @mref{writefile} and @mrefdot{display2d}
 
 @opencatbox{Categories:}
 @ctindex  File output  @subentry  with_stdout
-@category{File output}
+@cat2{ File output ,  File-output }
 @closecatbox
 @end deffn
 
@@ -873,9 +873,9 @@ displayed by @code{playback}.
 
 @opencatbox{Categories:}
 @ctindex  File output  @subentry  writefile
-@category{File output}
+@cat2{ File output ,  File-output }
 @ctindex  Console interaction  @subentry  writefile
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @closecatbox
 @end deffn
 
@@ -958,9 +958,9 @@ $$-\cos x$$
 
 @opencatbox{Categories:}
 @ctindex  TeX output  @subentry  tex
-@category{TeX output}
+@cat2{ TeX output ,  TeX-output }
 @ctindex  File output  @subentry  tex
-@category{File output}
+@cat2{ File output ,  File-output }
 @closecatbox
 @end deffn
 
@@ -1193,7 +1193,7 @@ $$ \langle a \, | \,b \rangle $$
 
 @opencatbox{Categories:}
 @ctindex  TeX output  @subentry  texput
-@category{TeX output}
+@cat2{ TeX output ,  TeX-output }
 @closecatbox
 @end deffn
 
@@ -1247,7 +1247,7 @@ $$f(x):=1-x$$
 
 @opencatbox{Categories:}
 @ctindex  TeX output  @subentry  get_tex_environment
-@category{TeX output}
+@cat2{ TeX output ,  TeX-output }
 @closecatbox
 @end deffn
 
@@ -1297,7 +1297,7 @@ g\left(x\right)+f\left(x\right)
 
 @opencatbox{Categories:}
 @ctindex  TeX output  @subentry  get_tex_environment_default
-@category{TeX output}
+@cat2{ TeX output ,  TeX-output }
 @closecatbox
 @end deffn
 
@@ -1318,7 +1318,7 @@ expressions to be printed farther to the right.
 
 @opencatbox{Categories:}
 @ctindex  Translation and compilation  @subentry  fortindent
-@category{Translation and compilation}
+@cat2{ Translation and compilation ,  Translation-and-compilation }
 @closecatbox
 @end defvr
 
@@ -1384,7 +1384,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Translation and compilation  @subentry  fortran
-@category{Translation and compilation}
+@cat2{ Translation and compilation ,  Translation-and-compilation }
 @closecatbox
 @end deffn
 
@@ -1398,7 +1398,7 @@ each printed line with spaces to 80 columns.
 
 @opencatbox{Categories:}
 @ctindex  Translation and compilation  @subentry  fortspaces
-@category{Translation and compilation}
+@cat2{ Translation and compilation ,  Translation-and-compilation }
 @closecatbox
 @end defvr
 

@@ -122,7 +122,7 @@ evaluating the function into the Maxima, by typing @code{Alt-Control-x}.
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  Source Level Debugging
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -196,7 +196,7 @@ completing the computation
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  Keyword Commands
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -224,9 +224,9 @@ In either case, enabling @code{debugmode} will not catch Lisp errors.
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  debugmode
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @ctindex  Global flags  @subentry  debugmode
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -241,11 +241,11 @@ computation.
 
 @opencatbox{Categories:}
 @ctindex  Evaluation  @subentry  refcheck
-@category{Evaluation}
+@cat2{ Evaluation ,  Evaluation }
 @ctindex  Console interaction  @subentry  refcheck
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @ctindex  Global flags  @subentry  refcheck
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -286,9 +286,9 @@ variable on the @code{setcheck} list is assigned to itself, e.g., @code{X: 'X}.
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  setcheck
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @ctindex  Global flags  @subentry  setcheck
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -309,9 +309,9 @@ See also @mref{setcheck} and @mrefdot{setval}
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  setcheckbreak
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @ctindex  Global flags  @subentry  setcheckbreak
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -327,9 +327,9 @@ See also @mref{setcheck} and @mrefdot{setcheckbreak}
 
 @opencatbox{Categories:}
 @ctindex  Console interaction  @subentry  setval
-@category{Console interaction}
+@cat2{ Console interaction ,  Console-interaction }
 @ctindex  Global variables  @subentry  setval
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -366,7 +366,7 @@ See also @mrefdot{timer_devalue}
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  timer
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 @end deffn
 
@@ -390,7 +390,7 @@ and puts @code{f} on the timer list again.
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  untimer
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 @end deffn
 
@@ -409,9 +409,9 @@ See also @mref{timer} and @mrefdot{timer_info}
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  timer_devalue
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @ctindex  Global flags  @subentry  timer_devalue
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -441,7 +441,7 @@ See also @mrefdot{timer}
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  timer_info
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 @end deffn
 
@@ -477,7 +477,7 @@ If @code{timer (f)} is in effect, then @code{trace (f)} has no effect;
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  trace
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 @end deffn
 
@@ -554,7 +554,7 @@ on a predicate:
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  trace_options
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 @end deffn
 
@@ -573,7 +573,7 @@ it disabled tracing.
 
 @opencatbox{Categories:}
 @ctindex  Debugging  @subentry  untrace
-@category{Debugging}
+@cat2{ Debugging ,  Debugging }
 @closecatbox
 @end deffn
 

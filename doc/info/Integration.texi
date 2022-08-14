@@ -114,7 +114,7 @@ higher degree function.  E.g.,
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  changevar
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end deffn
 
@@ -178,7 +178,7 @@ example problem.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  dblint
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end deffn
 
@@ -199,7 +199,7 @@ numerical approximation of definite integrals.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  defint
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end deffn
 
@@ -214,7 +214,7 @@ begin with.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  erfflag
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end defvr
 
@@ -289,7 +289,7 @@ pos;
 
 @opencatbox{Categories:}
 @ctindex  Laplace transform  @subentry  ilt
-@category{Laplace transform}
+@cat2{ Laplace transform ,  Laplace-transform }
 @closecatbox
 @end deffn
 
@@ -343,7 +343,7 @@ The number 1 isn't in the domain of atanh
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  intanalysis
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end defvr
 
@@ -600,7 +600,7 @@ body of @code{f_2}.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  integrate
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end deffn
 
@@ -645,7 +645,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  integration_constant
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end defvr
 
@@ -707,7 +707,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  integration_constant_counter
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end defvr
 
@@ -780,7 +780,7 @@ Sometimes this will help Maxima obtain a more useful result.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  integrate_use_rootsof
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end defvr
 
@@ -805,7 +805,7 @@ special cases.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  ldefint
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end deffn
 
@@ -843,7 +843,7 @@ Two examples where @code{ilt} fails:
 
 @opencatbox{Categories:}
 @ctindex  Laplace transform  @subentry  pwilt
-@category{Laplace transform}
+@cat2{ Laplace transform ,  Laplace-transform }
 @closecatbox
 @end deffn
 
@@ -895,9 +895,9 @@ variable @var{z} assumes the value @var{z_0}.  The residue is the coefficient of
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  residue
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @ctindex  Complex variables  @subentry  residue
-@category{Complex variables}
+@cat2{ Complex variables ,  Complex-variables }
 @closecatbox
 @end deffn
 
@@ -938,7 +938,7 @@ with.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  risch
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end deffn
 
@@ -952,7 +952,7 @@ Equivalent to @code{ldefint} with @code{tlimswitch} set to @code{true}.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  tldefint
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
 @end deffn
 
@@ -1071,13 +1071,13 @@ for the integrator to produce a good solution.
 
 @opencatbox{Categories:}
 @ctindex  Integral calculus  @subentry  Introduction to QUADPACK
-@category{Integral calculus}
+@cat2{ Integral calculus ,  Integral-calculus }
 @ctindex  Numerical methods  @subentry  Introduction to QUADPACK
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Share packages  @subentry  Introduction to QUADPACK
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package quadpack  @subentry  Introduction to QUADPACK
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -1188,9 +1188,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_qag
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_qag
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 
@@ -1286,9 +1286,9 @@ Note that @code{quad_qags} is more accurate and efficient than @code{quad_qag} f
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_qags
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_qags
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 
@@ -1407,9 +1407,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_qagi
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_qagi
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 
@@ -1527,9 +1527,9 @@ Principal Value
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_qawc
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_qawc
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 
@@ -1642,9 +1642,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_qawf
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_qawf
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 
@@ -1793,9 +1793,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_qawo
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_qawo
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 
@@ -1934,9 +1934,9 @@ pos;
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_qaws
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_qaws
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 
@@ -2042,9 +2042,9 @@ more accurate and more efficient that @mrefdot{quad_qags}
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_qagp
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_qagp
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 
@@ -2071,9 +2071,9 @@ If @var{value} is not given, then the current value of the
 
 @opencatbox{Categories:}
 @ctindex  Numerical methods  @subentry  quad_control
-@category{Numerical methods}
+@cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Package quadpack  @subentry  quad_control
-@category{Package quadpack}
+@cat2{ Package quadpack ,  Package-quadpack }
 @closecatbox
 @end deffn
 

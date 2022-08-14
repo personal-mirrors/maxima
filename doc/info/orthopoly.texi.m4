@@ -37,11 +37,11 @@ is released under the GNU General Public License (GPL).
 
 @opencatbox{Categories:}
 @ctindex  Orthogonal polynomials  @subentry  Introduction to orthogonal polynomials
-@category{Orthogonal polynomials}
+@cat2{ Orthogonal polynomials ,  Orthogonal-polynomials }
 @ctindex  Share packages  @subentry  Introduction to orthogonal polynomials
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package orthopoly  @subentry  Introduction to orthogonal polynomials
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @subsection Getting Started with orthopoly
@@ -565,7 +565,7 @@ different than just quoting the function name using @code{'legendre_p (5, @var{x
 
 @opencatbox{Categories:}
 @ctindex  Plotting  @subentry  Introduction to orthogonal polynomials
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 
 
@@ -745,7 +745,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  assoc_legendre_p
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -792,7 +792,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  assoc_legendre_q
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -857,7 +857,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  chebyshev_t
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -923,7 +923,7 @@ w(x) &= \sqrt{1-x^2} \cr
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  chebyshev_u
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -994,7 +994,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  gen_laguerre
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1065,7 +1065,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  hermite
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1076,9 +1076,9 @@ Return @code{true} if the input is an interval and return false if it isn't.
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  intervalp
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @ctindex  Predicate functions  @subentry  intervalp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 
 @end deffn
@@ -1134,7 +1134,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  jacobi_p
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1186,7 +1186,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  laguerre
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1255,7 +1255,7 @@ Some examples:
 @end example
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  legendre_p
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1301,7 +1301,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  legendre_q
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1352,7 +1352,7 @@ A recursion relation for foo isn't known to Maxima
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  orthopoly_recur
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1367,7 +1367,7 @@ case, the interval is a disk in the complex plane.
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  orthopoly_returns_intervals
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end defvr
@@ -1399,7 +1399,7 @@ signals an error.
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  orthopoly_weight
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1457,9 +1457,9 @@ is symbolic, @code{pochhammer} returns a noun form.
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  pochhammer
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @ctindex  Gamma and factorial functions  @subentry  pochhammer
-@category{Gamma and factorial functions}
+@cat2{ Gamma and factorial functions ,  Gamma-and-factorial-functions }
 @closecatbox
 
 @end deffn
@@ -1488,9 +1488,9 @@ Reference: @urlaands{eqn 6.1.16,256}.
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  pochhammer_max_index
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @ctindex  Gamma and factorial functions  @subentry  pochhammer_max_index
-@category{Gamma and factorial functions}
+@cat2{ Gamma and factorial functions ,  Gamma-and-factorial-functions }
 @closecatbox
 
 @end defvr
@@ -1541,9 +1541,9 @@ Some examples:
 @end example
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  spherical_bessel_j
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @ctindex  Bessel functions  @subentry  spherical_bessel_j
-@category{Bessel functions}
+@cat2{ Bessel functions ,  Bessel-functions }
 @closecatbox
 
 @end deffn
@@ -1593,9 +1593,9 @@ m4_displaymath(
 @end example
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  spherical_bessel_y
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @ctindex  Bessel functions  @subentry  spherical_bessel_y
-@category{Bessel functions}
+@cat2{ Bessel functions ,  Bessel-functions }
 @closecatbox
 
 @end deffn
@@ -1615,9 +1615,9 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  spherical_hankel1
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @ctindex  Bessel functions  @subentry  spherical_hankel1
-@category{Bessel functions}
+@cat2{ Bessel functions ,  Bessel-functions }
 @closecatbox
 
 @end deffn
@@ -1637,9 +1637,9 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  spherical_hankel2
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @ctindex  Bessel functions  @subentry  spherical_hankel2
-@category{Bessel functions}
+@cat2{ Bessel functions ,  Bessel-functions }
 @closecatbox
 
 @end deffn
@@ -1711,7 +1711,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  spherical_harmonic
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn
@@ -1727,9 +1727,9 @@ use @mrefdot{hstep}
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  unit_step
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @ctindex  Mathematical functions  @subentry  unit_step
-@category{Mathematical functions}
+@cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
 
 @end deffn
@@ -1794,7 +1794,7 @@ Some examples:
 
 @opencatbox{Categories:}
 @ctindex  Package orthopoly  @subentry  ultraspherical
-@category{Package orthopoly}
+@cat2{ Package orthopoly ,  Package-orthopoly }
 @closecatbox
 
 @end deffn

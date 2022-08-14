@@ -19,11 +19,11 @@ summation.
 
 @opencatbox{Categories:}
 @ctindex  Sums and products  @subentry  Introduction to zeilberger
-@category{Sums and products}
+@cat2{ Sums and products ,  Sums-and-products }
 @ctindex  Share packages  @subentry  Introduction to zeilberger
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package zeilberger  @subentry  Introduction to zeilberger
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @subsection The indefinite summation problem
@@ -117,7 +117,7 @@ Otherwise @code{AntiDifference} returns @code{no_hyp_antidifference}.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  AntiDifference
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -137,7 +137,7 @@ Otherwise, @code{Gosper} returns @code{no_hyp_sol}.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  Gosper
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -215,7 +215,7 @@ Dependent equations eliminated:  (1)
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  GosperSum
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -240,7 +240,7 @@ $$\left[R\left(n, k\right), \left[a_0, a_1, \ldots, a_d\right]\right].$$
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  parGosper
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -261,7 +261,7 @@ Each solution has the form
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  parGosper
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -294,7 +294,7 @@ $$\left[R\left(n, k\right), \left[a_0, a_1, \ldots, a_d\right]\right].$$
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  Zeilberger
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -322,7 +322,7 @@ Each solution has the form
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  Zeilberger
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -340,7 +340,7 @@ Default value: 5
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  MAX_ORD
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -355,7 +355,7 @@ further simplification of the solution.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  simplified_output
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -369,7 +369,7 @@ of equations in Zeilberger's algorithm.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  linear_solver
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -384,7 +384,7 @@ warning messages during execution.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  warnings
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -399,7 +399,7 @@ Otherwise, @code{Zeilberger} goes immediately to @code{parGosper}.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  Gosper_in_Zeilberger
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -414,7 +414,7 @@ which have certificate equal to zero, or all coefficients equal to zero.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  trivial_solutions
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -431,7 +431,7 @@ modular test for discarding systems with no solutions.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  mod_test
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -444,7 +444,7 @@ Default value: @code{linsolve}
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  modular_linear_solver
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -458,7 +458,7 @@ when executing the modular test in @code{parGosper}.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  ev_point
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -471,7 +471,7 @@ Default value: @code{big_primes[1]}
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  mod_big_prime
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -485,7 +485,7 @@ greatest order for which the modular test in @code{parGosper} is attempted.
 
 @opencatbox{Categories:}
 @ctindex  Package zeilberger  @subentry  mod_threshold
-@category{Package zeilberger}
+@cat2{ Package zeilberger ,  Package-zeilberger }
 @closecatbox
 
 @end defvr

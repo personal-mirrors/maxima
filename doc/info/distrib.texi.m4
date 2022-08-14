@@ -318,11 +318,11 @@ For comments, bugs or suggestions, please contact the author at @var{'riotorto A
 
 @opencatbox{Categories:}
 @ctindex  Statistical functions  @subentry  Introduction to distrib
-@category{Statistical functions}
+@cat2{ Statistical functions ,  Statistical-functions }
 @ctindex  Share packages  @subentry  Introduction to distrib
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package distrib  @subentry  Introduction to distrib
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 
@@ -383,7 +383,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -427,7 +427,7 @@ See also @mrefdot{erf}
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -459,7 +459,7 @@ Returns the @var{q}-quantile of a m4_Normal_RV(m,s) random variable, with @math{
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -481,7 +481,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -504,7 +504,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -525,7 +525,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -546,7 +546,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -568,7 +568,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -586,9 +586,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_normal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_normal
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -633,7 +633,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -685,7 +685,7 @@ where m4_math(<<<t = n/(n+x^2)>>>, <<<t = n/(n+x^2)>>>) and m4_math(<<<I_t(a,b)>
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -697,7 +697,7 @@ Returns the @var{q}-quantile of a Student random variable m4_Student_T_RV(n), wi
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -717,7 +717,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -754,7 +754,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -778,7 +778,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -799,7 +799,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -822,7 +822,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -857,9 +857,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_student_t
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -978,7 +978,7 @@ rat: replaced 160.6269176184973 by 178374907/1110492 = 160.626917618497
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1002,7 +1002,7 @@ Returns the value at @var{x} of the distribution function of a noncentral Studen
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1014,7 +1014,7 @@ Returns the @var{q}-quantile of a noncentral Student random variable m4_Noncentr
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1062,7 +1062,7 @@ where m4_math(\mu, mu) is the noncentrality parameter @math{ncp}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1092,7 +1092,7 @@ where m4_math(\mu, mu) is the noncentrality parameter @math{ncp}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1121,7 +1121,7 @@ D[X] =   sqrt(------------ - --------------------)
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1176,7 +1176,7 @@ SK[U] =
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1233,7 +1233,7 @@ KU[U] =
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1266,9 +1266,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_noncentral_student_t
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_noncentral_student_t
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -1334,7 +1334,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1383,7 +1383,7 @@ where @math{Q(a,z)} is the @ref{gamma_incomplete_regularized} function.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1409,7 +1409,7 @@ This function has no closed form and it is numerically computed.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1444,7 +1444,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1479,7 +1479,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1514,7 +1514,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1555,7 +1555,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1594,7 +1594,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1612,9 +1612,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_chi2
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -1667,7 +1667,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1679,7 +1679,7 @@ Returns the value at @var{x} of the distribution function of a noncentral Chi-sq
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1693,7 +1693,7 @@ This function has no closed form and it is numerically computed.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1718,7 +1718,7 @@ where m4_math(\mu) is the noncentrality parameter @var{ncp}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1742,7 +1742,7 @@ where m4_math(\mu) is the noncentrality parameter @var{ncp}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1765,7 +1765,7 @@ where m4_math(\mu) is the noncentrality parameter @var{ncp}.
 @end ifnotinfo
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1795,7 +1795,7 @@ where m4_math(\mu) is the noncentrality parameter @var{ncp}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1822,7 +1822,7 @@ where m4_math(\mu) is the noncentrality parameter @var{ncp}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1838,9 +1838,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_noncentral_chi2
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_noncentral_chi2
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -1891,7 +1891,7 @@ x^{m/2-1}
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1947,7 +1947,7 @@ function.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1971,7 +1971,7 @@ Returns the @var{q}-quantile of a F random variable @math{F(m,n)}, with @math{m,
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -1994,7 +1994,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2018,7 +2018,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2040,7 +2040,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2064,7 +2064,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2088,7 +2088,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2116,9 +2116,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_f
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_f
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -2167,7 +2167,7 @@ f(x, m) = [
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2208,7 +2208,7 @@ F(x,n) = [
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2241,7 +2241,7 @@ The m4_Exponential_RV(m) random variable is equivalent to the m4_Weibull_RV(1,1/
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2280,7 +2280,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2321,7 +2321,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2360,7 +2360,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2395,7 +2395,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2430,7 +2430,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2448,9 +2448,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_exp
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_exp
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -2492,7 +2492,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2541,7 +2541,7 @@ See also @mrefdot{erf}
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2571,7 +2571,7 @@ Returns the @var{q}-quantile of a m4_Lognormal_RV(m,s) random variable, with @ma
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2597,7 +2597,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2621,7 +2621,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2647,7 +2647,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2670,7 +2670,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2695,7 +2695,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2713,9 +2713,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_lognormal
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_lognormal
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -2749,7 +2749,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2796,7 +2796,7 @@ where @math{Q(a,z)} is the @ref{gamma_incomplete_regularized} function.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2808,7 +2808,7 @@ Returns the @var{q}-quantile of a m4_Gamma_RV(a,b) random variable, with @math{a
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2829,7 +2829,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2851,7 +2851,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2871,7 +2871,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2894,7 +2894,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2918,7 +2918,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -2940,9 +2940,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_gamma
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_gamma
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -2981,7 +2981,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3030,7 +3030,7 @@ F(x, a, b) = [ beta_incomplete_regularized(a, b, x)  for 0 <= x <= 1
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3042,7 +3042,7 @@ Returns the @var{q}-quantile of a m4_Beta_RV(a,b) random variable, with @math{a,
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3065,7 +3065,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3089,7 +3089,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3113,7 +3113,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3135,7 +3135,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3160,7 +3160,7 @@ ab(a+b+2)(a+b+3)} - 3>>>,
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3178,9 +3178,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_beta
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_beta
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -3214,7 +3214,7 @@ and is 0 otherwise.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3243,7 +3243,7 @@ F(x,a,b) = [ (x-a)/(b-a)    for a <= x <= b
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3255,7 +3255,7 @@ Returns the @var{q}-quantile of a m4_Continuous_Uniform_RV(a,b) random variable,
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3278,7 +3278,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3302,7 +3302,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3325,7 +3325,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3346,7 +3346,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3367,7 +3367,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3385,9 +3385,9 @@ See also @mrefdot{random} To make use of this function, write first @code{load("
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_continuous_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_continuous_uniform
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -3424,7 +3424,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3450,7 +3450,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3462,7 +3462,7 @@ Returns the @var{q}-quantile of a m4_Logistic_RV(a,b) random variable , with @ma
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3483,7 +3483,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3508,7 +3508,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3531,7 +3531,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3552,7 +3552,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3575,7 +3575,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3593,9 +3593,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_logistic
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_logistic
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -3626,7 +3626,7 @@ f(x, a, b) = [
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3652,7 +3652,7 @@ F(x, a, b) = [
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3664,7 +3664,7 @@ Returns the @var{q}-quantile of a m4_Pareto_RV(a,b) random variable, with @math{
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3681,7 +3681,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3706,7 +3706,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3730,7 +3730,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3754,7 +3754,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3779,7 +3779,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3797,9 +3797,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_pareto
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_pareto
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -3835,7 +3835,7 @@ f(x, a, b) = [
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3861,7 +3861,7 @@ F(x, a, b) = [
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3873,7 +3873,7 @@ Returns the @var{q}-quantile of a m4_Weibull_RV(a,b) random variable, with @math
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3896,7 +3896,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3920,7 +3920,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3943,7 +3943,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -3978,7 +3978,7 @@ SK[X] = ------------------------------------------------------------
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4017,7 +4017,7 @@ where m4_math(\Gamma_k = \Gamma\left(1+k/a\right)).
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4035,9 +4035,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_weibull
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_weibull
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -4086,7 +4086,7 @@ f(x, b) = [
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4128,7 +4128,7 @@ F(x, b) = [
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4156,7 +4156,7 @@ The m4_Rayleigh_RV(b) random variable is equivalent to the m4_Weibull_RV(2,1/b).
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4195,7 +4195,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4240,7 +4240,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4283,7 +4283,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4332,7 +4332,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4381,7 +4381,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4399,9 +4399,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_rayleigh
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_rayleigh
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -4439,7 +4439,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4466,7 +4466,7 @@ F(x, a, b) = [
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4478,7 +4478,7 @@ Returns the @var{q}-quantile of a m4_Laplace_RV(a,b) random variable, with @math
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4499,7 +4499,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4521,7 +4521,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4542,7 +4542,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4563,7 +4563,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4584,7 +4584,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4602,9 +4602,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_laplace
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_laplace
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -4639,7 +4639,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_cauchy
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4663,7 +4663,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_cauchy
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4675,7 +4675,7 @@ Returns the @var{q}-quantile of a m4_Cauchy_RV(a,b) random variable, with @math{
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_cauchy
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4693,9 +4693,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_cauchy
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_cauchy
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -4727,7 +4727,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4751,7 +4751,7 @@ m4_displaymath(
 >>>)
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4763,7 +4763,7 @@ Returns the @var{q}-quantile of a m4_Gumbel_RV(a,b) random variable, with @math{
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4797,7 +4797,7 @@ where symbol @code{%gamma} stands for the Euler-Mascheroni constant. See also @m
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4821,7 +4821,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4844,7 +4844,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4886,7 +4886,7 @@ where @code{zeta} stands for the Riemann's zeta function.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4909,9 +4909,9 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Package distrib  @subentry  kurtosis_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -4929,9 +4929,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_gumbel
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_gumbel
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -4984,7 +4984,7 @@ Returns the value at @var{x} of the probability function of a general finite dis
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5026,7 +5026,7 @@ See @code{pdf_general_finite_discrete} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5040,7 +5040,7 @@ See @code{pdf_general_finite_discrete} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5054,7 +5054,7 @@ See @code{pdf_general_finite_discrete} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5068,7 +5068,7 @@ See @code{pdf_general_finite_discrete} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5082,7 +5082,7 @@ See @code{pdf_general_finite_discrete} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5096,7 +5096,7 @@ See @code{pdf_general_finite_discrete} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5110,7 +5110,7 @@ See @code{pdf_general_finite_discrete} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5143,9 +5143,9 @@ See @code{pdf_general_finite_discrete} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_general_finite_discrete
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_general_finite_discrete
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -5180,7 +5180,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5226,7 +5226,7 @@ function.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5238,7 +5238,7 @@ Returns the @var{q}-quantile of a m4_Binomial_RV(n,p) random variable, with @mat
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5260,7 +5260,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5281,7 +5281,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5302,7 +5302,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5326,7 +5326,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5350,7 +5350,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5368,9 +5368,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_binomial
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -5403,7 +5403,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5445,7 +5445,7 @@ function.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5457,7 +5457,7 @@ Returns the @var{q}-quantile of a m4_Poisson_RV(m) random variable, with @math{m
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5478,7 +5478,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5499,7 +5499,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5520,7 +5520,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5544,7 +5544,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5567,7 +5567,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5585,9 +5585,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_poisson
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_poisson
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -5632,7 +5632,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5655,7 +5655,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5667,7 +5667,7 @@ Returns the @var{q}-quantile of a m4_Bernoulli_RV(p) random variable, with @math
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5702,7 +5702,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5737,7 +5737,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5773,7 +5773,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5813,7 +5813,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5853,7 +5853,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5871,9 +5871,9 @@ See also @mrefdot{random} To make use of this function, write first @code{load("
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_bernoulli
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_bernoulli
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -5911,7 +5911,7 @@ This is interpreted as the probability of @math{x} failures before the first suc
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5937,7 +5937,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5962,7 +5962,7 @@ This is interpreted as the probability of @math{x} failures before the first suc
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -5992,7 +5992,7 @@ This is interpreted as the probability of @math{x} failures before the first suc
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6020,7 +6020,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6046,7 +6046,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6073,7 +6073,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6101,7 +6101,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6131,9 +6131,9 @@ This is interpreted as the probability of @math{x} failures before the first suc
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_geometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_geometric
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -6166,7 +6166,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6190,7 +6190,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6202,7 +6202,7 @@ Returns the @var{q}-quantile of a m4_DiscreteUniform_RV(n) random variable, with
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6226,7 +6226,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6251,7 +6251,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6276,7 +6276,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6297,7 +6297,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6322,7 +6322,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6340,9 +6340,9 @@ See also @mrefdot{random} To make use of this function, write first @code{load("
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_discrete_uniform
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_discrete_uniform
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -6385,7 +6385,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6421,7 +6421,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6435,7 +6435,7 @@ and @math{n\leq n1+n2}; in other words, this is the inverse of @code{cdf_hyperge
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6460,7 +6460,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6487,7 +6487,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6513,7 +6513,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6541,7 +6541,7 @@ SK[X] = -------------------------------------------------------------
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6588,7 +6588,7 @@ where m4_math(C(k) = n_1+n_2-k).
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6606,9 +6606,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_hypergeometric
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_hypergeometric
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn
@@ -6643,7 +6643,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  pdf_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6681,7 +6681,7 @@ where m4_math(I_p(a,b)) is the @ref{beta_incomplete_regularized} function.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  cdf_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6693,7 +6693,7 @@ Returns the @var{q}-quantile of a m4_NegativeBinomial_RV(n,p) random variable, w
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  quantile_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6716,7 +6716,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  mean_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6740,7 +6740,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  var_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6763,7 +6763,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  std_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6786,7 +6786,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  skewness_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6811,7 +6811,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  kurtosis_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @closecatbox
 
 @end deffn
@@ -6829,9 +6829,9 @@ To make use of this function, write first @code{load("distrib")}.
 
 @opencatbox{Categories:}
 @ctindex  Package distrib  @subentry  random_negative_binomial
-@category{Package distrib}
+@cat2{ Package distrib ,  Package-distrib }
 @ctindex  Random numbers  @subentry  random_negative_binomial
-@category{Random numbers}
+@cat2{ Random numbers ,  Random-numbers }
 @closecatbox
 
 @end deffn

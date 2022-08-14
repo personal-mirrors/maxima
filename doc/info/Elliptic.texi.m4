@@ -136,7 +136,7 @@ that governs the distribution of Maxima.
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  Introduction to Elliptic Functions and Integrals
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 
 @node Functions and Variables for Elliptic Functions, Functions and Variables for Elliptic Integrals, Introduction to Elliptic Functions and Integrals, Top
@@ -153,7 +153,7 @@ The Jacobian elliptic function m4_mathdot(<<<{\rm sn}(u,m)>>>, <<<sn(u,m)>>>)
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_sn
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -163,7 +163,7 @@ The Jacobian elliptic function m4_mathdot(<<<{\rm cn}(u,m)>>>, <<<cn(u,m)>>>)
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_cn
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -173,7 +173,7 @@ The Jacobian elliptic function m4_mathdot(<<<{\rm dn}(u,m)>>>, <<<dn(u,m)>>>)
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_dn
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -184,7 +184,7 @@ sn}(u,m)>>>, <<<ns(u,m) = 1/sn(u,m)>>>)
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_ns
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -195,7 +195,7 @@ sn}(u,m)/{\rm cn}(u,m)>>>, <<<sc(u,m) = sn(u,m)/cn(u,m)>>>)
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_sc
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -206,7 +206,7 @@ sn}(u,m)/{\rm dn}(u,m), <<<sd(u,m) = sn(u,m)/dn(u,m)>>>)
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_sd
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -216,7 +216,7 @@ The Jacobian elliptic function m4_mathdot(<<<{\rm nc}(u,m) = 1/{\rm cn}(u,m)>>>,
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_nc
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -227,7 +227,7 @@ cn}(u,m)/{\rm sn}(u,m)>>>, <<<cs(u,m) = cn(u,m)/sn(u,m)>>>)
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_cs
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -237,7 +237,7 @@ The Jacobian elliptic function m4_mathdot(<<<{\rm cd}(u,m) = {\rm cn}(u,m)/{\rm 
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_cd
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -248,7 +248,7 @@ The Jacobian elliptic function m4_mathdot(<<<{\rm nd}(u,m) = 1/{\rm dn}(u,m)>>>,
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_nd
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -259,7 +259,7 @@ The Jacobian elliptic function m4_mathdot(<<<{\rm ds}(u,m) =
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_ds
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -270,7 +270,7 @@ The Jacobian elliptic function m4_mathdot(<<<{\rm dc}(u,m) =
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  jacobi_dc
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -293,7 +293,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_sn
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -316,7 +316,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_cn
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -341,7 +341,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_dn
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -364,7 +364,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_ns
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -387,7 +387,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_sc
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -411,7 +411,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_sd
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -434,7 +434,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_nc
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -458,7 +458,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_cs
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -483,7 +483,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_cd
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -508,7 +508,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_nd
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -533,7 +533,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_ds
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -557,7 +557,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic functions  @subentry  inverse_jacobi_dc
-@category{Elliptic functions}
+@cat2{ Elliptic functions ,  Elliptic-functions }
 @closecatbox
 @end deffn
 
@@ -581,7 +581,7 @@ See also @ref{elliptic_e} and @ref{elliptic_kc}.
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  elliptic_f
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -599,7 +599,7 @@ See also @ref{elliptic_f} and @ref{elliptic_ec}.
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  elliptic_e
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -631,7 +631,7 @@ m4_displaymath(
 See also @ref{elliptic_e}.
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  elliptic_eu
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -647,7 +647,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  elliptic_pi
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -666,7 +666,7 @@ terms of @math{Gamma} functions.  Use @mref{makegamma} to evaluate them.
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  elliptic_kc
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -685,7 +685,7 @@ terms of @math{Gamma} functions.  Use @mref{makegamma} to evaluate them.
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  elliptic_ec
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -759,7 +759,7 @@ R_C(0,i) &= (1-i)\frac{\pi}{2\sqrt{2}} \cr
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  carlson_rc
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -800,7 +800,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  carlson_rd
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -839,7 +839,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  carlson_rf
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 
@@ -856,7 +856,7 @@ m4_displaymath(
 
 @opencatbox{Categories:}
 @ctindex  Elliptic integrals  @subentry  carlson_rj
-@category{Elliptic integrals}
+@cat2{ Elliptic integrals ,  Elliptic-integrals }
 @closecatbox
 @end deffn
 

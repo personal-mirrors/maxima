@@ -78,11 +78,11 @@ the Hamiltonian associated with the theory's scalar field.
 
 @opencatbox{Categories:}
 @ctindex  Tensors  @subentry  Introduction to itensor
-@category{Tensors}
+@cat2{ Tensors ,  Tensors }
 @ctindex  Share packages  @subentry  Introduction to itensor
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package itensor  @subentry  Introduction to itensor
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -291,7 +291,7 @@ which were defined.
 
 @opencatbox{Categories:}
 @ctindex  Display functions  @subentry  dispcon
-@category{Display functions}
+@cat2{ Display functions ,  Display-functions }
 @closecatbox
 @end deffn
 
@@ -306,7 +306,7 @@ null) is acceptable input (see the example under @mref{covdiff}).
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  entertensor
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -322,7 +322,7 @@ renamed to @var{new}.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  changename
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -348,7 +348,7 @@ Lists all tensors in a tensorial expression, complete with their indices. E.g.,
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  listoftens
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -364,7 +364,7 @@ throughout this document).
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ishow
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -397,7 +397,7 @@ illegal expression, its behavior should be considered undefined.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  indices
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -468,7 +468,7 @@ ichr2([%3,%5],[%1])*ichr2([%4,%6],[%3])*ichr2([%7,r],[%2]),noeval$
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  rename
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -490,7 +490,7 @@ under @code{rename}).
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  flipflag
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -518,7 +518,7 @@ contraction properties with @code{defcon}.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  defcon
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -534,7 +534,7 @@ properties from all indexed objects.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  remcon
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -552,7 +552,7 @@ cancellations are unnecessary.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  contract
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -566,7 +566,7 @@ a built in value already exists as with @code{ichr1}, @code{ichr2},
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  indexed_tensor
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -678,7 +678,7 @@ of covariant and contravariant indices and no derivative indices, and
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  components
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -690,7 +690,7 @@ Unbinds all values from @var{tensor} which were assigned with the
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  remcomps
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -747,7 +747,7 @@ rank higher than 2.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  showcomps
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -762,7 +762,7 @@ already in use (see the example under @mref{indices}).
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  idummy
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -774,7 +774,7 @@ Is the prefix for dummy indices (see the example under @mref{indices}).
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  idummyx
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -789,7 +789,7 @@ determined by the option @mref{idummy} (default: @code{%}).
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  icounter
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -811,7 +811,7 @@ imply that @code{kdelta([i,j],[])} is a valid tensorial object.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  kdelta
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -842,7 +842,7 @@ Symmetrized Kronecker delta, used in some calculations. For instance:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  kdels
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -856,7 +856,7 @@ repeated.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  levi_civita
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -941,7 +941,7 @@ To re-enable the Lisp debugger set *debugger-hook* to nil.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  lc2kdt
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -976,7 +976,7 @@ For example:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  lc_l
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -993,7 +993,7 @@ For details, see @mref{lc_l}.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  lc_u
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1013,7 +1013,7 @@ set to @code{true}.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  canten
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1024,7 +1024,7 @@ Similar to @mref{canten} but also performs index contraction.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  concan
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1045,7 +1045,7 @@ unless @code{iframe_flag} is set to @code{true}.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  allsym
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -1107,7 +1107,7 @@ illustrates.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  decsym
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1119,7 +1119,7 @@ covariant indices and @var{n} contravariant indices.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  remsym
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1145,7 +1145,7 @@ The optional second parameter @var{rename}, if set to @code{false}, suppresses r
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  canform
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1179,7 +1179,7 @@ the Einstein tensor and field equations from the action principle.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  diff
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1201,7 +1201,7 @@ is chosen appropriately.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  idiff
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1231,7 +1231,7 @@ field. For example:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  liediff
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1244,7 +1244,7 @@ expression @var{ten}.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  rediff
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1262,7 +1262,7 @@ in @var{expr} and then carry out the differentiation by saying
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  undiff
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1331,7 +1331,7 @@ so @code{evundiff} is no longer necessary for expressions like this:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  evundiff
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1343,7 +1343,7 @@ Set to zero, in
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  flush
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1355,7 +1355,7 @@ Set to zero, in
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  flushd
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1381,7 +1381,7 @@ derivative indices as the following example demonstrates.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  flushnd
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1397,7 +1397,7 @@ been done then @code{idiff(x([],[i]),j)} gives @code{kdelta([i],[j])}.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  coord
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1413,7 +1413,7 @@ removes this property from all indexed objects.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  remcoord
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1427,7 +1427,7 @@ symbol @code{[]}.  For example, @code{[]p([m],[n])} represents
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  makebox
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1457,7 +1457,7 @@ symbols as seen from the following:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  conmetderiv
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1553,7 +1553,7 @@ and @mref{conmetderiv} together to simplify contractions of the Weyl tensor.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  simpmetderiv
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1566,7 +1566,7 @@ exactly one derivative index.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  flush1deriv
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1587,7 +1587,7 @@ the @code{imetric(@var{g})} command.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  imetric
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1599,7 +1599,7 @@ properties of the Levi-Civita symbols for the given dimension.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  idim
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1618,7 +1618,7 @@ variable @code{imetric} must be assigned a name as in the example under @code{ch
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ichr1
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1635,7 +1635,7 @@ defined by the relation
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ichr2
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1656,7 +1656,7 @@ kind (@code{ichr2}).  The following notation is used:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  icurvature
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1713,7 +1713,7 @@ Enter a list of the derivative indices: [];
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  covdiff
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1726,7 +1726,7 @@ contravariant index.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  lorentz_gauge
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1775,7 +1775,7 @@ curvature tensor using the @code{igeodesic_coords} function.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  igeodesic_coords
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1868,7 +1868,7 @@ function does nothing.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  iframes
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -1914,7 +1914,7 @@ ifb    = (ifr    ifr    - ifr    ifr   ) ifri
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ifb
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -1941,7 +1941,7 @@ Lastly, of @code{inonmet_flag} is @code{false},
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  icc1
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -1969,7 +1969,7 @@ Lastly, of @code{inonmet_flag} is @code{false},
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  icc2
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -1994,7 +1994,7 @@ ifc1    = --------------------------------
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ifc1
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2017,7 +2017,7 @@ ifc2   = ifg   ifc1
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ifc2
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2030,7 +2030,7 @@ form the frame metric (@mref{ifg}).
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ifr
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2044,7 +2044,7 @@ frames.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ifri
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2057,7 +2057,7 @@ The frame metric. Defaults to @mref{kdelta}, but can be changed using
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ifg
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2070,7 +2070,7 @@ to @mref{kdelta}.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ifgi
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2083,7 +2083,7 @@ Specifies how the frame bracket (@mref{ifb}) is computed.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  iframe_bracket_form
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2114,7 +2114,7 @@ g     =- g  inm
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  inm
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2137,7 +2137,7 @@ inmc1    = ------------------------------
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  inmc1
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2163,7 +2163,7 @@ inmc2   = -------------------------------------------
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  inmc2
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2188,7 +2188,7 @@ ikt1    = ----------------------------------
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ikt1
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2211,7 +2211,7 @@ ikt2   = g   ikt1
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ikt2
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2277,7 +2277,7 @@ by the following example:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  itr
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2376,9 +2376,9 @@ The behavior of the wedge product operator is controlled by the
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ~
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @ctindex  Operators  @subentry  ~
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end defvr
 
@@ -2418,9 +2418,9 @@ the results will be incorrect.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  |
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @ctindex  Operators  @subentry  |
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end defvr
 
@@ -2462,7 +2462,7 @@ For instance:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  extdiff
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -2524,7 +2524,7 @@ Compute the Hodge-dual of @var{expr}. For instance:
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  hodge
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end deffn
 
@@ -2541,7 +2541,7 @@ of the volume element.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  igeowedge_flag
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @closecatbox
 @end defvr
 
@@ -2596,9 +2596,9 @@ NB: This version of the @code{tentex} function is somewhat experimental.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  tentex
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @ctindex  TeX output  @subentry  tentex
-@category{TeX output}
+@cat2{ TeX output ,  TeX-output }
 @closecatbox
 @end deffn
 
@@ -2677,9 +2677,9 @@ function.
 
 @opencatbox{Categories:}
 @ctindex  Package itensor  @subentry  ic_convert
-@category{Package itensor}
+@cat2{ Package itensor ,  Package-itensor }
 @ctindex  Package ctensor  @subentry  ic_convert
-@category{Package ctensor}
+@cat2{ Package ctensor ,  Package-ctensor }
 @closecatbox
 @end deffn
 

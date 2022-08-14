@@ -33,11 +33,11 @@ For comments, bugs or suggestions, please contact the author at
 
 @opencatbox{Categories:}
 @ctindex  Statistical inference  @subentry  Introduction to stats
-@category{Statistical inference}
+@cat2{ Statistical inference ,  Statistical-inference }
 @ctindex  Share packages  @subentry  Introduction to stats
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package stats  @subentry  Introduction to stats
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @node Functions and Variables for inference_result, Functions and Variables for stats, Introduction to stats, Top
@@ -102,7 +102,7 @@ See also @mrefdot{take_inference}
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  inference_result
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -120,7 +120,7 @@ Returns @code{true} or @code{false}, depending on whether @var{obj} is an
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  inferencep
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -159,7 +159,7 @@ of all items, no matter they are displayed or not.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  items_inference
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -235,7 +235,7 @@ See also @mrefcomma{inference_result} and @mrefdot{take_inference}
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  take_inference
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -262,9 +262,9 @@ results are given in symbolic and rational format.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  stats_numer
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @ctindex  Numerical evaluation  @subentry  stats_numer
-@category{Numerical evaluation}
+@cat2{ Numerical evaluation ,  Numerical-evaluation }
 @closecatbox
 
 @end defvr
@@ -413,7 +413,7 @@ this procedure should be applied to large samples.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_mean
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -585,7 +585,7 @@ equal.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_means_difference
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -684,7 +684,7 @@ is equal to or greater than 200.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_variance
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -800,7 +800,7 @@ against the alternative that the first is greater than the second.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_variance_ratio
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -937,7 +937,7 @@ A two sided asymptotic test. Confidence level is 99/100.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_proportion
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1069,7 +1069,7 @@ distribution when the data are unknown.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_proportions_difference
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1151,7 +1151,7 @@ against the alternative @math{H_1: median > 6}.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_sign
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1275,7 +1275,7 @@ since there are ties.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_signed_rank
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1391,7 +1391,7 @@ normal approximation. The alternative hypothesis is
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_rank_sum
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1452,7 +1452,7 @@ Checks for the normality of a population, based on a sample of size 9.
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  test_normality
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1597,9 +1597,9 @@ v_distribution, residuals, adc, aic, bic]
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  linear_regression
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @ctindex  Statistical estimation  @subentry  linear_regression
-@category{Statistical estimation}
+@cat2{ Statistical estimation ,  Statistical-estimation }
 @closecatbox
 
 @end deffn
@@ -1623,7 +1623,7 @@ See also @mrefdot{test_signed_rank}
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  pdf_signed_rank
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1638,7 +1638,7 @@ See also @mrefdot{test_signed_rank}
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  cdf_signed_rank
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1653,7 +1653,7 @@ See also @mrefdot{test_rank_sum}
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  pdf_rank_sum
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn
@@ -1668,7 +1668,7 @@ See also @mrefdot{test_rank_sum}
 
 @opencatbox{Categories:}
 @ctindex  Package stats  @subentry  cdf_rank_sum
-@category{Package stats}
+@cat2{ Package stats ,  Package-stats }
 @closecatbox
 
 @end deffn

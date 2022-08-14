@@ -133,9 +133,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  [
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Operators  @subentry  [
-@category{Operators}
+@cat2{ Operators ,  Operators }
 @closecatbox
 @end defvr
 
@@ -157,9 +157,9 @@ Do @code{example(append);} for an example.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  append
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  append
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -234,9 +234,9 @@ Otherwise, @code{false} is returned.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  assoc
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  assoc
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -296,9 +296,9 @@ to a nonlist sometimes gives a surprising result; for example
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  cons
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  cons
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -310,7 +310,7 @@ Returns a copy of the list @var{list}.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  copylist
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 @end deffn
 
@@ -370,7 +370,7 @@ depend on the current value of @code{i}.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  create_list
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 @end deffn
 
@@ -500,9 +500,9 @@ Arguments which are @code{equal} but not "=" are not removed.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  delete
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  delete
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -515,9 +515,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  eighth
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  eighth
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -574,9 +574,9 @@ to a nonlist sometimes gives a surprising result; for example
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  endcons
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  endcons
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -590,9 +590,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  fifth
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  fifth
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -647,9 +647,9 @@ See also @mref{firstn} and @mrefdot{part}
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  first
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  first
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -808,9 +808,9 @@ Note that @code{firstn(@var{expr}, 1)} is not the same as @code{first(@var{expr}
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  firstn
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  firstn
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -823,9 +823,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  fourth
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  fourth
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -869,7 +869,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  join
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 @end deffn
 
@@ -886,9 +886,9 @@ See also @mrefdot{lastn}
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  last
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  last
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1049,9 +1049,9 @@ Note that @code{lastn(@var{expr}, 1)} is not the same as @code{last(@var{expr})}
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  lastn
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  lastn
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1076,9 +1076,9 @@ is calculated outside the loop instead.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  length
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  length
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1094,9 +1094,9 @@ list-list operations should return lists.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  listarith
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Global flags  @subentry  listarith
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -1107,9 +1107,9 @@ Returns @code{true} if @var{expr} is a list else @code{false}.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  listp
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Predicate functions  @subentry  listp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -1185,7 +1185,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  lreduce
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 
 @end deffn
@@ -1260,7 +1260,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  makelist
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 @end deffn
 
@@ -1333,11 +1333,11 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  member
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  member
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Predicate functions  @subentry  member
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -1350,9 +1350,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  ninth
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  ninth
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1366,9 +1366,9 @@ not bound to a nonempty list, Maxima signals an error. For examples, see @mrefdo
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  pop
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  pop
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1443,9 +1443,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  push
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  push
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1486,9 +1486,9 @@ See also @mref{firstn} and @mrefdot{lastn}
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  rest
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  rest
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1507,9 +1507,9 @@ See also @mrefdot{sreverse}
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  reverse
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  reverse
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1587,7 +1587,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  rreduce
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 
 @end deffn
@@ -1601,9 +1601,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  second
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  second
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1616,9 +1616,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  seventh
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  seventh
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1631,9 +1631,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  sixth
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  sixth
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1861,7 +1861,7 @@ and all other elements the same as @code{orderlessp}.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  sort
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 @end deffn
 
@@ -1891,7 +1891,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  sublist
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 @end deffn
 
@@ -1948,7 +1948,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  sublist_indices
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 @end deffn
 
@@ -1961,9 +1961,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  tenth
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  tenth
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -1976,9 +1976,9 @@ See @mref{first} for more details.
 
 @opencatbox{Categories:}
 @ctindex  Lists  @subentry  third
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @ctindex  Expressions  @subentry  third
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @closecatbox
 @end deffn
 
@@ -2036,9 +2036,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Sets  @subentry  tree_reduce
-@category{Sets}
+@cat2{ Sets ,  Sets }
 @ctindex  Lists  @subentry  tree_reduce
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 
 @end deffn
@@ -2145,9 +2145,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Sets  @subentry  xreduce
-@category{Sets}
+@cat2{ Sets ,  Sets }
 @ctindex  Lists  @subentry  xreduce
-@category{Lists}
+@cat2{ Lists ,  Lists }
 @closecatbox
 
 @end deffn

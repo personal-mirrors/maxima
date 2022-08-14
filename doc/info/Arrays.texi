@@ -91,7 +91,7 @@ See also @mrefcomma{arraymake} @mref{arrayinfo} and @mrefdot{make_array}
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  array
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -107,9 +107,9 @@ instead of a function.
 
 @opencatbox{Categories:}
 @ctindex  Expressions  @subentry  arrayapply
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Arrays  @subentry  arrayapply
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -311,7 +311,7 @@ Using @code{arrayinfo} in order to convert an undeclared array to a declared arr
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  arrayinfo
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -409,9 +409,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Expressions  @subentry  arraymake
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Arrays  @subentry  arraymake
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -470,9 +470,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  arrays
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @ctindex  Global variables  @subentry  arrays
-@category{Global variables}
+@cat2{ Global variables ,  Global-variables }
 @closecatbox
 @end defvr
 
@@ -487,9 +487,9 @@ where @var{A} is an array and @var{i_1}, @dots{}, @var{i_n} are integers.
 
 @opencatbox{Categories:}
 @ctindex  Expressions  @subentry  arraysetapply
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Arrays  @subentry  arraysetapply
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -598,7 +598,7 @@ Multiple-dimension arrays are filled in row-major order.
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  fillarray
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -769,7 +769,7 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  listarray
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -877,7 +877,7 @@ IMP) -1 $Z))
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  make_array
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -897,7 +897,7 @@ changed.
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  rearray
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -922,7 +922,7 @@ desired to clear the cache of a @mrefdot{memoizing function}
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  remarray
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -974,9 +974,9 @@ Examples:
 
 @opencatbox{Categories:}
 @ctindex  Expressions  @subentry  subvar
-@category{Expressions}
+@cat2{ Expressions ,  Expressions }
 @ctindex  Arrays  @subentry  subvar
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @closecatbox
 @end deffn
 
@@ -991,7 +991,7 @@ Returns @code{true} if @var{expr} is a subscripted variable, for example
 
 @opencatbox{Categories:}
 @ctindex  Predicate functions  @subentry  subvarp
-@category{Predicate functions}
+@cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
 @end deffn
 
@@ -1016,9 +1016,9 @@ See also @mrefdot{translate_fast_arrays}
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  use_fast_arrays
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @ctindex  Global flags  @subentry  use_fast_arrays
-@category{Global flags}
+@cat2{ Global flags ,  Global-flags }
 @closecatbox
 @end defvr
 
@@ -1037,8 +1037,8 @@ as if @code{use_fast_arrays} were @code{false}.
 
 @opencatbox{Categories:}
 @ctindex  Arrays  @subentry  translate_fast_arrays
-@category{Arrays}
+@cat2{ Arrays ,  Arrays }
 @ctindex  Translation flags and variables  @subentry  translate_fast_arrays
-@category{Translation flags and variables}
+@cat2{ Translation flags and variables ,  Translation-flags-and-variables }
 @closecatbox
 @end defvr

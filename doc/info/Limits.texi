@@ -18,7 +18,7 @@ rule is used in @mref{limit}.  This prevents infinite looping in cases like
 
 @opencatbox{Categories:}
 @ctindex  Limits  @subentry  lhospitallim
-@category{Limits}
+@cat2{ Limits ,  Limits }
 @closecatbox
 @end defvr
 
@@ -72,7 +72,7 @@ Manipulation", Ph.D. thesis, MAC TR-92, October 1971.
 
 @opencatbox{Categories:}
 @ctindex  Limits  @subentry  limit
-@category{Limits}
+@cat2{ Limits ,  Limits }
 @closecatbox
 @end deffn
 
@@ -87,7 +87,7 @@ to avoid bugs like @code{limit (f(n)/f(n+1), n, inf)} giving 1.  Setting
 
 @opencatbox{Categories:}
 @ctindex  Limits  @subentry  limsubst
-@category{Limits}
+@cat2{ Limits ,  Limits }
 @closecatbox
 @end defvr
 
@@ -103,7 +103,7 @@ at @code{val} from direction @code{dir}.
 
 @opencatbox{Categories:}
 @ctindex  Limits  @subentry  tlimit
-@category{Limits}
+@cat2{ Limits ,  Limits }
 @closecatbox
 @end deffn
 
@@ -121,7 +121,7 @@ return an unevaluated limit expression.
 
 @opencatbox{Categories:}
 @ctindex  Limits  @subentry  tlimswitch
-@category{Limits}
+@cat2{ Limits ,  Limits }
 @closecatbox
 @end defvr
 
@@ -162,7 +162,7 @@ so, for example, it can't handle @code{limit((-2)^x, x, inf)}.
 
 @opencatbox{Categories:}
 @ctindex  Limits  @subentry  gruntz
-@category{Limits}
+@cat2{ Limits ,  Limits }
 @closecatbox
 
 @end deffn

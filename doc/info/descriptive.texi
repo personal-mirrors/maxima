@@ -195,11 +195,11 @@ One must take care when working with categorical data. In the next example, symb
 
 @opencatbox{Categories:}
 @ctindex  Descriptive statistics  @subentry  Introduction to descriptive
-@category{Descriptive statistics}
+@cat2{ Descriptive statistics ,  Descriptive-statistics }
 @ctindex  Share packages  @subentry  Introduction to descriptive
-@category{Share packages}
+@cat2{ Share packages ,  Share-packages }
 @ctindex  Package descriptive  @subentry  Introduction to descriptive
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 
 @node Functions and Variables for data manipulation, Functions and Variables for descriptive statistics, Introduction to descriptive, descriptive-pkg
@@ -282,7 +282,7 @@ Multivariate frequency table.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  build_sample
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -384,7 +384,7 @@ The first argument may be an array.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  continuous_freq
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -438,7 +438,7 @@ The argument may be an array.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  discrete_freq
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -457,7 +457,7 @@ divides each component by the corresponding standard deviation.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  standardize
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -631,7 +631,7 @@ Here, the first component is meaningless, since @code{A} and @code{B} are catego
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  subsample
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -684,7 +684,7 @@ Add a constant column and remove the third variable.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  transform_sample
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -752,7 +752,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  mean
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -801,7 +801,7 @@ See also function @mrefdot{var1}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  var
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -858,7 +858,7 @@ See also function @mrefdot{var}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  var1
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -899,7 +899,7 @@ See also functions @mref{var} and @mrefdot{std1}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  std
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -940,7 +940,7 @@ See also functions @mref{var1} and @mrefdot{std}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  std1
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -999,7 +999,7 @@ See also function @mrefdot{central_moment}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  noncentral_moment
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1056,7 +1056,7 @@ See also functions @mref{central_moment} and @mrefdot{mean}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  central_moment
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1095,7 +1095,7 @@ See also functions @mref{std} and @mrefdot{mean}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  cv
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1136,7 +1136,7 @@ See also function @mrefdot{smax}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  smin
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1177,7 +1177,7 @@ See also function @mrefdot{smin}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  smax
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1215,7 +1215,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  range
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1256,7 +1256,7 @@ Example:
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  quantile
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1300,7 +1300,7 @@ See also function @mrefdot{quantile}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  median
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1341,7 +1341,7 @@ See also function @mrefdot{quantile}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  qrange
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1400,7 +1400,7 @@ See also function @mrefdot{mean}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  mean_deviation
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1459,7 +1459,7 @@ See also function @mrefdot{mean}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  median_deviation
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1518,7 +1518,7 @@ See also functions @mref{mean} and @mrefdot{geometric_mean}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  harmonic_mean
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 
 @end deffn
@@ -1576,7 +1576,7 @@ See also functions @mref{mean} and @mrefdot{harmonic_mean}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  geometric_mean
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1633,7 +1633,7 @@ See also functions @mrefcomma{mean} @mref{var} and @mrefdot{skewness}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  kurtosis
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1690,7 +1690,7 @@ See also functions @mrefcomma{mean}, @mref{var} and @mrefdot{kurtosis}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  skewness
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1745,7 +1745,7 @@ See also functions @mrefcomma{mean} @mref{var} and @mrefdot{median}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  pearson_skewness
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1802,7 +1802,7 @@ See also function @mrefdot{quantile}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  quartile_skewness
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1874,7 +1874,7 @@ Estimate survival probabilities.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  km
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1929,7 +1929,7 @@ Empirical distribution function.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  cdf_empirical
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -1986,7 +1986,7 @@ See also function @mrefdot{cov1}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  cov
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -2043,7 +2043,7 @@ See also function @mrefdot{cov}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  cov1
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -2121,7 +2121,7 @@ See also @mref{cov} and @mrefdot{cov1}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  global_variances
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -2201,7 +2201,7 @@ See also @mref{cov} and @mrefdot{cov1}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  cor
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -2328,7 +2328,7 @@ See also @mref{cov} and @mrefdot{cov1}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  list_correlations
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -2439,7 +2439,7 @@ but option @code{data=false} must be used.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  principal_components
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @closecatbox
 @end deffn
 
@@ -2640,9 +2640,9 @@ See also functions @mref{histogram} and @mrefdot{piechart}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  barsplot
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  barsplot
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -2678,9 +2678,9 @@ Example: @code{barsplot} in a multiplot context.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  barsplot_description
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  barsplot_description
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -2833,9 +2833,9 @@ Option @var{range} can be used to handle outliers.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  boxplot
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  boxplot
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -2848,9 +2848,9 @@ graphic objects.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  boxplot_description
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  boxplot_description
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -2991,9 +2991,9 @@ Freedmann - Diakonis robust method for optimal search of the number of classes.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  histogram
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  histogram
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -3023,9 +3023,9 @@ the @code{xrange} and adding an explicit curve into the scene:
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  histogram_description
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  histogram_description
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -3096,9 +3096,9 @@ See also function @mrefdot{barsplot}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  piechart
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  piechart
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -3111,9 +3111,9 @@ graphic objects.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  piechart_description
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  piechart_description
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -3227,9 +3227,9 @@ see @code{points}. See also @mrefdot{histogram}
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  scatterplot
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  scatterplot
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -3242,9 +3242,9 @@ graphic objects.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  scatterplot_description
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  scatterplot_description
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -3323,9 +3323,9 @@ Location and radius defined by the user.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  starplot
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  starplot
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -3338,9 +3338,9 @@ graphic objects.
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  starplot_description
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  starplot_description
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
@@ -3404,9 +3404,9 @@ key: 6|3 =  6.3
 
 @opencatbox{Categories:}
 @ctindex  Package descriptive  @subentry  stemplot
-@category{Package descriptive}
+@cat2{ Package descriptive ,  Package-descriptive }
 @ctindex  Plotting  @subentry  stemplot
-@category{Plotting}
+@cat2{ Plotting ,  Plotting }
 @closecatbox
 @end deffn
 
