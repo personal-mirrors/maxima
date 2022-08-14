@@ -30,6 +30,7 @@ form.
 See @mref{ode2} for an example of its usage.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  bc2
 @category{Differential equations}
 @closecatbox
 @end deffn
@@ -102,7 +103,9 @@ If @code{desolve} cannot obtain a solution, it returns @code{false}.
 See also @mrefcomma{ode2} @mref{drawdf} and @mrefdot{rk}
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  desolve
 @category{Differential equations}
+@ctindex  Laplace transform  @subentry  desolve
 @category{Laplace transform}
 @closecatbox
 @end deffn
@@ -118,6 +121,7 @@ initial value for the dependent variable in the form @code{@var{y} =
 See @mref{ode2} for an example of its usage.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  ic1
 @category{Differential equations}
 @closecatbox
 @end deffn
@@ -136,6 +140,7 @@ variable, in the form @code{diff(@var{y},@var{x}) = @var{dy0}}
 See @mref{ode2} for an example of its usage.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  ic2
 @category{Differential equations}
 @closecatbox
 @end deffn
@@ -234,6 +239,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  ode2
 @category{Differential equations}
 @closecatbox
 @end deffn
@@ -245,7 +251,9 @@ The variable @code{method} is set by @mref{ode2} to the successful solution
 method. 
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  method
 @category{Differential equations}
+@ctindex  Package contrib_ode  @subentry  method
 @category{Package contrib_ode}
 @closecatbox
 
@@ -258,7 +266,9 @@ method.
 order ODEs returned from @mref{ode2}.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  %c
 @category{Differential equations}
+@ctindex  Package contrib_ode  @subentry  %c
 @category{Package contrib_ode}
 @closecatbox
 
@@ -271,7 +281,9 @@ order ODEs returned from @mref{ode2}.
 order ODEs returned from @mref{ode2}.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  %k1
 @category{Differential equations}
+@ctindex  Package contrib_ode  @subentry  %k1
 @category{Package contrib_ode}
 @closecatbox
 
@@ -284,7 +296,9 @@ order ODEs returned from @mref{ode2}.
 order ODEs returned from @mref{ode2}.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  %k2
 @category{Differential equations}
+@ctindex  Package contrib_ode  @subentry  %k2
 @category{Package contrib_ode}
 @closecatbox
 
@@ -298,6 +312,7 @@ order ODEs returned from @mref{ode2}.
 when using the variation of parameters technique.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  yp
 @category{Differential equations}
 @closecatbox
 

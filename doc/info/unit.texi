@@ -75,8 +75,11 @@ showabbr and friends.  Show examples with addition of quantities containing
 units.
 
 @opencatbox{Categories:}
+@ctindex  Physical units  @subentry  Introduction to Units
 @category{Physical units}
+@ctindex  Share packages  @subentry  Introduction to Units
 @category{Share packages}
+@ctindex  Package unit  @subentry  Introduction to Units
 @category{Package unit}
 @closecatbox
 
@@ -245,6 +248,7 @@ This would have worked equally well with @code{uforget(N)} or
 See also @mref{uforget}. To use this function write first @code{load("unit")}.
 
 @opencatbox{Categories:}
+@ctindex  Package unit  @subentry  setunits
 @category{Package unit}
 @closecatbox
 
@@ -289,6 +293,7 @@ dimension itself is also a legal argument.
 See also @mref{setunits}. To use this function write first @code{load("unit")}.
 
 @opencatbox{Categories:}
+@ctindex  Package unit  @subentry  uforget
 @category{Package unit}
 @closecatbox
 
@@ -396,6 +401,7 @@ simplify to a Derived Dimension.
 See also @mref{setunits} and @mref{uforget}. To use this function write first @code{load("unit")}.
 
 @opencatbox{Categories:}
+@ctindex  Package unit  @subentry  convert
 @category{Package unit}
 @closecatbox
 
@@ -685,6 +691,7 @@ control over their working environment.
 @c @code{setunitprefix} is provided for this case.  Here is an example of its use:
 
 @opencatbox{Categories:}
+@ctindex  Package unit  @subentry  usersetunits
 @category{Package unit}
 @closecatbox
 
@@ -715,6 +722,7 @@ in the @emph{unit.mac} file is @var{%unitexpand}.
 @c This should be made configurable as a maxima-init.mac controllable option.
 
 @opencatbox{Categories:}
+@ctindex  Package unit  @subentry  metricexpandall
 @category{Package unit}
 @closecatbox
 
@@ -727,6 +735,7 @@ This is the value supplied to @code{metricexpandall} during the initial loading
 of @emph{unit}.
 
 @opencatbox{Categories:}
+@ctindex  Package unit  @subentry  %unitexpand
 @category{Package unit}
 @closecatbox
 

@@ -132,7 +132,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  [
 @category{Lists}
+@ctindex  Operators  @subentry  [
 @category{Operators}
 @closecatbox
 @end defvr
@@ -154,7 +156,9 @@ See also @mrefcomma{addrow} @mref{addcol} and @mrefdot{join}
 Do @code{example(append);} for an example.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  append
 @category{Lists}
+@ctindex  Expressions  @subentry  append
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -229,7 +233,9 @@ Otherwise, @code{false} is returned.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  assoc
 @category{Lists}
+@ctindex  Expressions  @subentry  assoc
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -289,7 +295,9 @@ to a nonlist sometimes gives a surprising result; for example
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  cons
 @category{Lists}
+@ctindex  Expressions  @subentry  cons
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -301,6 +309,7 @@ to a nonlist sometimes gives a surprising result; for example
 Returns a copy of the list @var{list}.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  copylist
 @category{Lists}
 @closecatbox
 @end deffn
@@ -360,6 +369,7 @@ Note that the limits or list for the @code{j} variable can
 depend on the current value of @code{i}.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  create_list
 @category{Lists}
 @closecatbox
 @end deffn
@@ -489,7 +499,9 @@ Arguments which are @code{equal} but not "=" are not removed.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  delete
 @category{Lists}
+@ctindex  Expressions  @subentry  delete
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -502,7 +514,9 @@ Returns the 8th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  eighth
 @category{Lists}
+@ctindex  Expressions  @subentry  eighth
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -559,7 +573,9 @@ to a nonlist sometimes gives a surprising result; for example
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  endcons
 @category{Lists}
+@ctindex  Expressions  @subentry  endcons
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -573,7 +589,9 @@ Returns the 5th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  fifth
 @category{Lists}
+@ctindex  Expressions  @subentry  fifth
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -628,7 +646,9 @@ The functions @code{second} @dots{}
 See also @mref{firstn} and @mrefdot{part}
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  first
 @category{Lists}
+@ctindex  Expressions  @subentry  first
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -787,7 +807,9 @@ Note that @code{firstn(@var{expr}, 1)} is not the same as @code{first(@var{expr}
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  firstn
 @category{Lists}
+@ctindex  Expressions  @subentry  firstn
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -800,7 +822,9 @@ Returns the 4th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  fourth
 @category{Lists}
+@ctindex  Expressions  @subentry  fourth
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -844,6 +868,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  join
 @category{Lists}
 @closecatbox
 @end deffn
@@ -860,7 +885,9 @@ Returns the last part (term, row, element, etc.) of the @var{expr}.
 See also @mrefdot{lastn}
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  last
 @category{Lists}
+@ctindex  Expressions  @subentry  last
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1021,7 +1048,9 @@ Note that @code{lastn(@var{expr}, 1)} is not the same as @code{last(@var{expr})}
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  lastn
 @category{Lists}
+@ctindex  Expressions  @subentry  lastn
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1046,7 +1075,9 @@ a loop it therefore might drastically increase the performance if the length
 is calculated outside the loop instead.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  length
 @category{Lists}
+@ctindex  Expressions  @subentry  length
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1062,7 +1093,9 @@ converted to matrices yielding a result which is always a matrix.  However,
 list-list operations should return lists.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  listarith
 @category{Lists}
+@ctindex  Global flags  @subentry  listarith
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -1073,7 +1106,9 @@ list-list operations should return lists.
 Returns @code{true} if @var{expr} is a list else @code{false}.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  listp
 @category{Lists}
+@ctindex  Predicate functions  @subentry  listp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -1149,6 +1184,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  lreduce
 @category{Lists}
 @closecatbox
 
@@ -1223,6 +1259,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  makelist
 @category{Lists}
 @closecatbox
 @end deffn
@@ -1295,8 +1332,11 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  member
 @category{Lists}
+@ctindex  Expressions  @subentry  member
 @category{Expressions}
+@ctindex  Predicate functions  @subentry  member
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -1309,7 +1349,9 @@ Returns the 9th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  ninth
 @category{Lists}
+@ctindex  Expressions  @subentry  ninth
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1323,7 +1365,9 @@ See @mref{first} for more details.
 not bound to a nonempty list, Maxima signals an error. For examples, see @mrefdot{push}
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  pop
 @category{Lists}
+@ctindex  Expressions  @subentry  pop
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1398,7 +1442,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  push
 @category{Lists}
+@ctindex  Expressions  @subentry  push
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1439,7 +1485,9 @@ See also @mref{firstn} and @mrefdot{lastn}
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  rest
 @category{Lists}
+@ctindex  Expressions  @subentry  rest
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1458,7 +1506,9 @@ e.g.  @code{reverse(a=b);} gives @code{b=a}.
 See also @mrefdot{sreverse}
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  reverse
 @category{Lists}
+@ctindex  Expressions  @subentry  reverse
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1536,6 +1586,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  rreduce
 @category{Lists}
 @closecatbox
 
@@ -1549,7 +1600,9 @@ Returns the 2nd item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  second
 @category{Lists}
+@ctindex  Expressions  @subentry  second
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1562,7 +1615,9 @@ Returns the 7th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  seventh
 @category{Lists}
+@ctindex  Expressions  @subentry  seventh
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1575,7 +1630,9 @@ Returns the 6th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  sixth
 @category{Lists}
+@ctindex  Expressions  @subentry  sixth
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1803,6 +1860,7 @@ and all other elements the same as @code{orderlessp}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  sort
 @category{Lists}
 @closecatbox
 @end deffn
@@ -1832,6 +1890,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  sublist
 @category{Lists}
 @closecatbox
 @end deffn
@@ -1888,6 +1947,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  sublist_indices
 @category{Lists}
 @closecatbox
 @end deffn
@@ -1900,7 +1960,9 @@ Returns the 10th item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  tenth
 @category{Lists}
+@ctindex  Expressions  @subentry  tenth
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1913,7 +1975,9 @@ Returns the 3rd item of expression or list @var{expr}.
 See @mref{first} for more details.
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  third
 @category{Lists}
+@ctindex  Expressions  @subentry  third
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1971,7 +2035,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  tree_reduce
 @category{Sets}
+@ctindex  Lists  @subentry  tree_reduce
 @category{Lists}
 @closecatbox
 
@@ -2078,7 +2144,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  xreduce
 @category{Sets}
+@ctindex  Lists  @subentry  xreduce
 @category{Lists}
 @closecatbox
 

@@ -166,7 +166,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation  @subentry  Nouns and Verbs
 @category{Evaluation}
+@ctindex  Nouns and verbs  @subentry  Nouns and Verbs
 @category{Nouns and verbs}
 @closecatbox
 
@@ -268,6 +270,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Syntax  @subentry  Identifiers
 @category{Syntax}
 @closecatbox
 
@@ -295,6 +298,7 @@ provides an alternate name for a (user or system) function, variable, array,
 etc.  Any even number of arguments may be used.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  alias
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -309,7 +313,9 @@ the @mrefcomma{alias} @mrefcomma{ordergreat} @mref{orderless} functions or by
 declaring the atom a @mref{noun} with @mrefdot{declare})
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  aliases
 @category{Declarations and inferences}
+@ctindex  Global variables  @subentry  aliases
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -440,6 +446,7 @@ with @code{n} arguments args() can extract the list of terms in a sum:
 
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  args
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -457,7 +464,9 @@ Returns @code{true} if @var{expr} is atomic (i.e. a number, name or string) else
 unbound).
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  atom
 @category{Expressions}
+@ctindex  Predicate functions  @subentry  atom
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -546,6 +555,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  box
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -562,6 +572,7 @@ All boxes in an expression are drawn with the current value of @code{boxchar};
 the drawing character is not stored with the box expression.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  boxchar
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -582,6 +593,7 @@ collapse the elements of the array @code{A} by doing
 @code{collapse (listarray ('A))}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  collapse
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -641,6 +653,7 @@ Let's try the same experiment, but this time let @var{mm} be a copy of @var{m}
 This time, the assignment to @var{mm} does not change the value of @var{m}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  copy
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -659,6 +672,7 @@ variables.  This function is autoloaded from @file{simplification/disol.mac}.
 A demo is available by @code{demo("disol")$}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  disolate
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -767,6 +781,7 @@ Use of the optional argument @code{all}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  dispform
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -796,6 +811,7 @@ expression.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  dpart
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -811,6 +827,7 @@ examine exponents of atoms (such as @code{%e}) which contain @code{var}.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  exptisolate
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -857,7 +874,9 @@ for @code{%e^x} in @code{%e^(a x)}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Exponential and logarithm functions  @subentry  exptsubst
 @category{Exponential and logarithm functions}
+@ctindex  Expressions  @subentry  exptsubst
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -991,6 +1010,7 @@ An indefinite integral is not free of its variable of integration.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  freeof
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1018,6 +1038,7 @@ Functions affected by the setting of @code{inflag} are: @mrefcomma{part}@w{}
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  inflag
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1063,6 +1084,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  inpart
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1091,6 +1113,7 @@ with respect to products.  See @mrefdot{isolate_wrt_times} See also @mrefdot{dis
 Do @code{example (isolate)} for examples.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  isolate
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1126,6 +1149,7 @@ with respect to products.  E.g. compare both settings of the switch on
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  isolate_wrt_times
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1146,6 +1170,7 @@ for all variables declared as @code{constant}. The default is to
 omit constant variables from @code{listofvars} return value.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  listconstvars
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1179,6 +1204,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  listdummyvars
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1208,6 +1234,7 @@ See also the option variable @mref{listdummyvars} to exclude or include
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  listofvars
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1245,6 +1272,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  lfreeof
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1259,6 +1287,7 @@ is similar to @mref{dpart} but uses a labelled box.  A labelled box is similar
 to the one produced by @code{dpart} but it has a name in the top line.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  lpart
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1280,7 +1309,9 @@ necessary if cancellation is to occur.  Also, if you save an expression in which
 @code{x} is a @code{mainvar}, you probably should also save @code{x}.)
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  mainvar
 @category{Declarations and inferences}
+@ctindex  Expressions  @subentry  mainvar
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1325,6 +1356,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Nouns and verbs  @subentry  noun
 @category{Nouns and verbs}
 @closecatbox
 @end defvr
@@ -1341,7 +1373,9 @@ a single quote.  This switch is always @code{true} when displaying function
 definitions.
 
 @opencatbox{Categories:}
+@ctindex  Display flags and variables  @subentry  noundisp
 @category{Display flags and variables}
+@ctindex  Nouns and verbs  @subentry  noundisp
 @category{Nouns and verbs}
 @closecatbox
 @end defvr
@@ -1361,6 +1395,7 @@ the form returned if a function call is preceded by a quote.
 See also @mrefdot{verbify}
 
 @opencatbox{Categories:}
+@ctindex  Nouns and verbs  @subentry  nounify
 @category{Nouns and verbs}
 @closecatbox
 @end deffn
@@ -1378,6 +1413,7 @@ Note that expressions like @code{sin (@var{expr})}, @code{sqrt (@var{expr})},
 terms @var{expr} has (if it is a sum).
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  nterms
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1475,7 +1511,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  op
 @category{Expressions}
+@ctindex  Operators  @subentry  op
 @category{Operators}
 @closecatbox
 @end deffn
@@ -1496,7 +1534,9 @@ if @var{op} is equal to the operator of @var{expr}.
 operator of @var{expr}.
 
 @opencatbox{Categories:}
+@ctindex  Operators  @subentry  operatorp
 @category{Operators}
+@ctindex  Predicate functions  @subentry  operatorp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -1548,6 +1588,7 @@ substitute into the operator of an expression.  E.g.,
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  opsubst
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1565,6 +1606,7 @@ effect of "collapsing" its argument so that all common subexpressions
 are shared.  Do @code{example (optimize)} for examples.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  optimize
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1579,6 +1621,7 @@ Default value: @code{%}
 the @mref{optimize} command.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  optimprefix
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1605,6 +1648,7 @@ once each, unless @code{unorder} is called; only the last call to
 See also @mrefdot{ordergreatp}
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  ordergreat
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1750,7 +1794,9 @@ Ordering non-atomic expressions.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  ordergreatp
 @category{Expressions}
+@ctindex  Predicate functions  @subentry  ordergreatp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -1811,6 +1857,7 @@ Examples:
 @code{example (part)} displays additional examples.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  part
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1843,6 +1890,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  partition
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1859,6 +1907,7 @@ when a selected part of an expression doesn't exist, otherwise an
 error message is given.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  partswitch
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1957,6 +2006,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  pickapart
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1975,6 +2025,7 @@ the function itself.
 @c NEED "SEE ALSO" TO POINT TO LIST OF ALL RELEVANT FUNCTIONS
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  piece
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -2016,6 +2067,7 @@ substitution.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  psubst
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -2107,6 +2159,7 @@ dpart: fell off the end.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  rembox
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -2193,7 +2246,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  reveal
 @category{Expressions}
+@ctindex  Display functions  @subentry  reveal
 @category{Display functions}
 @closecatbox
 @end deffn
@@ -2231,6 +2286,7 @@ Sometimes it helps to apply @code{sqrtdenest} more than once, on such as
 @code{(19601-13860 sqrt(2))^(7/4)}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  sqrtdenest
 @category{Expressions}
 @closecatbox
 
@@ -2263,6 +2319,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  sublis
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -2277,6 +2334,7 @@ Controls whether @code{lambda}'s substituted are applied in simplification after
 apply.  @code{true} means do the application.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  sublis_apply_lambda
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -2308,6 +2366,7 @@ subst: cannot substitute 100 for operator g in expression g
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  subnumsimp
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -2435,6 +2494,7 @@ following example:
 For further examples, do @code{example (subst)}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  subst
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -2542,6 +2602,7 @@ Also, setting the option @mref{inflag} to @code{true} and calling @mref{part}
 or @mref{substpart} is the same as calling @mref{inpart} or @code{substinpart}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  substinpart
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -2596,6 +2657,7 @@ or @code{substpart} is the same as calling @code{inpart} or
 @mrefdot{substinpart}
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  substpart
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -2611,6 +2673,7 @@ Returns @code{true} if @var{expr} is a symbol, else @code{false}.
 See also @ref{Identifiers}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  symbolp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -2676,6 +2739,7 @@ output @code{%o7}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  unorder
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -2715,6 +2779,7 @@ $FOO
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Nouns and verbs  @subentry  verbify
 @category{Nouns and verbs}
 @closecatbox
 @end deffn

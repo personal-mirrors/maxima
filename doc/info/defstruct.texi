@@ -52,7 +52,9 @@ all fields are always visible.
 @code{structures} is the list of user-defined structures defined by @code{defstruct}.
 
 @opencatbox{Categories:}
+@ctindex  Structures  @subentry  structures
 @category{Structures}
+@ctindex  Global variables  @subentry  structures
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -111,6 +113,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Structures  @subentry  defstruct
 @category{Structures}
 @closecatbox
 @end deffn
@@ -147,6 +150,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Structures  @subentry  new
 @category{Structures}
 @closecatbox
 @end deffn
@@ -226,7 +230,9 @@ The field name is not evaluated.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Structures  @subentry  @@
 @category{Structures}
+@ctindex  Operators  @subentry  @@
 @category{Operators}
 @closecatbox
 @end deffn

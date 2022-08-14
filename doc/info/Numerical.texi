@@ -21,9 +21,13 @@ small primes.
 
 
 @opencatbox{Categories:}
+@ctindex  Fourier transform  @subentry  Introduction to fast Fourier transform
 @category{Fourier transform}
+@ctindex  Numerical methods  @subentry  Introduction to fast Fourier transform
 @category{Numerical methods}
+@ctindex  Share packages  @subentry  Introduction to fast Fourier transform
 @category{Share packages}
+@ctindex  Package fft  @subentry  Introduction to fast Fourier transform
 @category{Package fft}
 @closecatbox
 
@@ -57,7 +61,9 @@ b = r sin(t)
 @code{load("fft")} loads this function.  See also @mrefdot{fft}
 
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  polartorect
 @category{Package fft}
+@ctindex  Complex variables  @subentry  polartorect
 @category{Complex variables}
 @closecatbox
 @end deffn
@@ -87,7 +93,9 @@ The computed angle is in the range @code{-%pi} to @code{%pi}.
 @code{load("fft")} loads this function.  See also @mrefdot{fft}
 
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  recttopolar
 @category{Package fft}
+@ctindex  Complex variables  @subentry  recttopolar
 @category{Complex variables}
 @closecatbox
 @end deffn
@@ -182,6 +190,7 @@ Complex data.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  inverse_fft
 @category{Package fft}
 @closecatbox
 @end deffn
@@ -360,6 +369,7 @@ Computation of sine and cosine coefficients.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  fft
 @category{Package fft}
 @closecatbox
 @end deffn
@@ -383,6 +393,7 @@ may be computed more quickly than @code{fft}.
 Since the output length is short, the normal @mref{inverse_fft} cannot
 be directly used.  Use @mref{inverse_real_fft} to compute the inverse.
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  real_fft
 @category{Package fft}
 @closecatbox
 @end deffn
@@ -398,6 +409,7 @@ No check is made to ensure that the input has the correct format.
 (The first and last elements must be purely real.)
 
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  inverse_real_fft
 @category{Package fft}
 @closecatbox
 @end deffn
@@ -410,6 +422,7 @@ Computes the inverse complex fast Fourier transform.  This is the
 bigfloat version of @mref{inverse_fft} that converts the input to
 bigfloats and returns a bigfloat result.
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  bf_inverse_fft
 @category{Package fft}
 @closecatbox
 @end deffn
@@ -421,6 +434,7 @@ Computes the forward complex fast Fourier transform.  This is the
 bigfloat version of @mref{fft} that converts the input to
 bigfloats and returns a bigfloat result.
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  bf_fft
 @category{Package fft}
 @closecatbox
 @end deffn
@@ -433,6 +447,7 @@ returning a bigfloat result.  This is the bigfloat version of
 @code{real_fft}.
 
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  bf_real_fft
 @category{Package fft}
 @closecatbox
 @end deffn
@@ -443,6 +458,7 @@ Computes the inverse fast Fourier transform with a real-valued
 bigfloat output.  This is the bigfloat version of @code{inverse_real_fft}.
 
 @opencatbox{Categories:}
+@ctindex  Package fft  @subentry  bf_inverse_real_fft
 @category{Package fft}
 @closecatbox
 @end deffn
@@ -518,6 +534,7 @@ Complex data.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package fftpack5  @subentry  fftpack5_fft
 @category{Package fftpack5}
 @closecatbox
 @end deffn
@@ -529,6 +546,7 @@ Computes the inverse complex Fourier transform, like
 @code{inverse_fft}, but is not constrained to be a power of two.
 
 @opencatbox{Categories:}
+@ctindex  Package fftpack5  @subentry  fftpack5_inverse_fft
 @category{Package fftpack5}
 @closecatbox
 @end deffn
@@ -559,6 +577,7 @@ The last example shows how important it to set the length correctly
 for @code{fftpack5_inverse_real_fft}.
 
 @opencatbox{Categories:}
+@ctindex  Package fftpack5  @subentry  fftpack5_real_fft
 @category{Package fftpack5}
 @closecatbox
 @end deffn
@@ -574,6 +593,7 @@ The last element of @var{y} is always real if @var{n} is even, but it
 can be complex when @var{n} is odd.
 
 @opencatbox{Categories:}
+@ctindex  Package fftpack5  @subentry  fftpack5_inverse_real_fft
 @category{Package fftpack5}
 @closecatbox
 @end deffn
@@ -621,6 +641,7 @@ To enable the Lisp debugger set *debugger-hook* to nil.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Numerical methods  @subentry  horner
 @category{Numerical methods}
 @closecatbox
 @end deffn
@@ -748,7 +769,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  find_root
 @category{Algebraic equations}
+@ctindex  Numerical methods  @subentry  find_root
 @category{Numerical methods}
 @closecatbox
 @end deffn
@@ -800,7 +823,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  newton
 @category{Algebraic equations}
+@ctindex  Numerical methods  @subentry  newton
 @category{Numerical methods}
 @closecatbox
 @end deffn
@@ -846,8 +871,11 @@ given do not depend on that independent variable, the system is called
 autonomous.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  Introduction to numerical solution of differential equations
 @category{Differential equations}
+@ctindex  Numerical methods  @subentry  Introduction to numerical solution of differential equations
 @category{Numerical methods}
+@ctindex  Plotting  @subentry  Introduction to numerical solution of differential equations
 @category{Plotting}
 @closecatbox
 
@@ -1114,8 +1142,11 @@ the two state variables as a function of time:
 @end itemize
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  plotdf
 @category{Differential equations}
+@ctindex  Plotting  @subentry  plotdf
 @category{Plotting}
+@ctindex  Numerical methods  @subentry  plotdf
 @category{Numerical methods}
 @closecatbox
 
@@ -1153,8 +1184,11 @@ Clicking on a point will plot the equipotential curve that passes by that point
 (in red) and the orthogonal trajectory (in blue).
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  ploteq
 @category{Differential equations}
+@ctindex  Plotting  @subentry  ploteq
 @category{Plotting}
+@ctindex  Numerical methods  @subentry  ploteq
 @category{Numerical methods}
 @closecatbox
 
@@ -1262,7 +1296,9 @@ for t between 0 and 4, and with values of -1.25 and 0.75 for x and y at t=0:
 The plot will show the solution for variable @var{y} as a function of @var{t}.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  rk
 @category{Differential equations}
+@ctindex  Numerical methods  @subentry  rk
 @category{Numerical methods}
 @closecatbox
 

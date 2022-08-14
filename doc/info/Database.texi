@@ -45,6 +45,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  alphabetic
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -106,7 +107,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  constant
 @category{Declarations and inferences}
+@ctindex  Constants  @subentry  constant
 @category{Constants}
 @closecatbox
 @end deffn
@@ -159,7 +162,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  constantp
 @category{Predicate functions}
+@ctindex  Constants  @subentry  constantp
 @category{Constants}
 @closecatbox
 @end deffn
@@ -319,6 +324,7 @@ Examples of the usage of the properties are available in the documentation
 for each separate description of a property.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  declare
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -349,6 +355,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  decreasing
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -380,6 +387,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  even
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -425,7 +433,9 @@ See also @mref{declare} and @mrefdot{features}
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  featurep
 @category{Predicate functions}
+@ctindex  Declarations and inferences  @subentry  featurep
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -484,6 +494,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  features
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -535,6 +546,7 @@ x is not numeric.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  get
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -562,6 +574,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  integer
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -589,6 +602,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  integervalued
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -625,6 +639,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  nonarray
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -640,8 +655,11 @@ Makes atoms behave as does a list or matrix with respect to the dot operator.
 See also @mrefdot{declare}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  nonscalar
 @category{Declarations and inferences}
+@ctindex  Vectors  @subentry  nonscalar
 @category{Vectors}
+@ctindex  Matrices  @subentry  nonscalar
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -656,8 +674,11 @@ atoms declared as non-scalars, lists, or matrices.
 See also the predicate function @mref{scalarp} and @mrefdot{declare}
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  nonscalarp
 @category{Predicate functions}
+@ctindex  Vectors  @subentry  nonscalarp
 @category{Vectors}
+@ctindex  Matrices  @subentry  nonscalarp
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -674,7 +695,9 @@ See also the predicate function @mref{scalarp} and @mrefdot{declare}
 See also @mrefdot{declare}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  posfun
 @category{Declarations and inferences}
+@ctindex  Operators  @subentry  posfun
 @category{Operators}
 @closecatbox
 @end defvr
@@ -697,7 +720,9 @@ cannot otherwise be displayed, i.e.  for @mrefcomma{atvalue}@w{}
 @mrefcomma{atomgrad} @mrefcomma{gradef} and @mrefdot{matchdeclare}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  printprops
 @category{Declarations and inferences}
+@ctindex  Display functions  @subentry  printprops
 @category{Display functions}
 @closecatbox
 @end deffn
@@ -713,6 +738,7 @@ Returns a list of the names of all the properties associated with the atom
 @var{a}.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  properties
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -732,7 +758,9 @@ mentioned in @mrefcomma{infolists} such as specified by @mrefcomma{atvalue}@w{}
 @mref{declare} function.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  props
 @category{Declarations and inferences}
+@ctindex  Global variables  @subentry  props
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -749,6 +777,7 @@ have the property indicated by @var{prop}.  Thus @code{propvars (atvalue)}
 returns a list of atoms which have atvalues.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  propvars
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -791,6 +820,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  put
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -826,6 +856,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  qput
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -842,6 +873,7 @@ Maxima to recognize @var{a} as a rational or irrational real variable.
 See also @mrefdot{declare}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  rational
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -861,6 +893,7 @@ pure imaginary, or complex variable.
 See also @mrefdot{declare}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  real
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -881,6 +914,7 @@ Removes the property indicated by @var{indicator} from @var{atom}.
 when @code{rem} was called, or @code{false} if it had no such property.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  rem
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -941,6 +975,7 @@ property.  This behavior is unlike the more specific remove functions
 
 @c IN SERIOUS NEED OF EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  remove
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -955,6 +990,7 @@ variable.
 See also @mrefdot{declare}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  scalar
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -972,8 +1008,11 @@ constants, and such variables, but not containing matrices or lists.
 See also the predicate function @mrefdot{nonscalarp}
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  scalarp
 @category{Predicate functions}
+@ctindex  Vectors  @subentry  scalarp
 @category{Vectors}
+@ctindex  Matrices  @subentry  scalarp
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -996,6 +1035,7 @@ The variable @mref{activecontexts} is the list
 of contexts which are active by way of the @code{activate} function.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  activate
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1010,6 +1050,7 @@ by way of the @mref{activate} function, as opposed to being active because
 they are subcontexts of the current context.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  activecontexts
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -1036,6 +1077,7 @@ or provided by the user.
 See also @mrefdot{equal}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  askequal
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1064,6 +1106,7 @@ likewise attempt to determine if @var{expr} is an even integer or odd integer,
 respectively.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  askinteger
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1082,6 +1125,7 @@ computation.  The return value of @code{asksign} is one of @code{pos},
 @code{neg}, or @code{zero}.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  asksign
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1160,6 +1204,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  assume
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1190,6 +1235,7 @@ When @code{assumescalar} is @code{all}, such expressions will behave like
 scalars for all the operators listed above.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  assumescalar
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -1227,6 +1273,7 @@ a function which returns @code{true} for all arguments.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  assume_pos
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -1320,6 +1367,7 @@ p;
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  assume_pos_pred
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -1342,6 +1390,7 @@ The specified context is activated automatically.
 See @mref{contexts} for a general description of the context mechanism.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  context
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -1382,6 +1431,7 @@ See also @mrefcomma{facts} @mrefcomma{newcontext} @mrefcomma{supcontext}@w{}
 @mrefcomma{assume} and @mrefdot{forget}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  contexts
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -1393,6 +1443,7 @@ See also @mrefcomma{facts} @mrefcomma{newcontext} @mrefcomma{supcontext}@w{}
 Deactivates the specified contexts @var{context_1}, @dots{}, @var{context_n}.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  deactivate
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1413,6 +1464,7 @@ are active, but in a different context, are not listed.
 @code{facts ()} (i.e., without an argument) lists the current context.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  facts
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1431,6 +1483,7 @@ to) those previously assumed.
 forgets each item on the list.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  forget
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1514,7 +1567,9 @@ a > 0
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  is
 @category{Predicate functions}
+@ctindex  Declarations and inferences  @subentry  is
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1539,6 +1594,7 @@ context, or by use of the function @mrefdot{activate}
 @code{killcontext} returns @code{done}.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  killcontext
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1577,7 +1633,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  maybe
 @category{Predicate functions}
+@ctindex  Declarations and inferences  @subentry  maybe
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1598,6 +1656,7 @@ If @var{name} is not specified, a new name is created (via @code{gensym}) and re
 @code{newcontext} returns @var{name} (if specified) or the new context name.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  newcontext
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1615,6 +1674,7 @@ current data base.  It returns one of the following answers: @code{pos}
 See also @mrefdot{signum}
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  sign
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1637,6 +1697,7 @@ If @var{name} is not specified, a new name is created (via @code{gensym}) and re
 @code{supcontext} returns @var{name} (if specified) or the new context name.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  supcontext
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1673,6 +1734,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Mathematical functions  @subentry  charfun
 @category{Mathematical functions}
 @closecatbox
 @end deffn
@@ -1727,6 +1789,7 @@ its arguments are nonempty; thus
 The real domain of @code{acos (x^2 + 1)} is empty.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  compare
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1885,6 +1948,7 @@ Because @code{not @var{expr}} causes evaluation of @var{expr},
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Operators  @subentry  equal
 @category{Operators}
 @closecatbox
 @end deffn
@@ -1933,6 +1997,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Operators  @subentry  notequal
 @category{Operators}
 @closecatbox
 @end deffn
@@ -1945,7 +2010,9 @@ Returns @code{true} if and only if @var{expr} contains an operator or function
 not recognized by the Maxima simplifier.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  unknown
 @category{Predicate functions}
+@ctindex  Simplification functions  @subentry  unknown
 @category{Simplification functions}
 @closecatbox
 @end deffn
@@ -1984,6 +2051,7 @@ On the other hand @code{zeroequiv (log(a * b) - log(a) - log(b), a)} returns
 @code{dontknow} because of the presence of an extra parameter @code{b}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  zeroequiv
 @category{Predicate functions}
 @closecatbox
 @end deffn

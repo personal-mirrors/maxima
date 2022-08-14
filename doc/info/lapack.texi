@@ -10,8 +10,11 @@
 as obtained from the SLATEC project.
 
 @opencatbox{Categories:}
+@ctindex  Numerical methods  @subentry  Introduction to lapack
 @category{Numerical methods}
+@ctindex  Share packages  @subentry  Introduction to lapack
 @category{Share packages}
+@ctindex  Package lapack  @subentry  Introduction to lapack
 @category{Package lapack}
 @closecatbox
 
@@ -98,6 +101,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package lapack  @subentry  dgeev
 @category{Package lapack}
 @closecatbox
 
@@ -146,6 +150,7 @@ is equal to @var{A} (ignoring floating point round-off errors).
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package lapack  @subentry  dgeqrf
 @category{Package lapack}
 @closecatbox
 
@@ -247,7 +252,9 @@ The elements of @var{A} and @var{b} must evaluate to real floating point numbers
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package lapack  @subentry  dgesv
 @category{Package lapack}
+@ctindex  Linear equations  @subentry  dgesv
 @category{Linear equations}
 @closecatbox
 
@@ -377,6 +384,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package lapack  @subentry  dgesvd
 @category{Package lapack}
 @closecatbox
 
@@ -409,6 +417,7 @@ that is, the square root of the sum of squares of the matrix elements.
 @end table
 
 @opencatbox{Categories:}
+@ctindex  Package lapack  @subentry  dlange
 @category{Package lapack}
 @closecatbox
 
@@ -538,6 +547,7 @@ for the product.  The default is @code{false}.
 
 @end example
 @opencatbox{Categories:}
+@ctindex  Package lapack  @subentry  dgemm
 @category{Package lapack}
 @closecatbox
 
@@ -551,6 +561,7 @@ for the product.  The default is @code{false}.
 Like @code{dgeev}, but the matrix @var{A} is complex.
 
 @opencatbox{Categories:}
+@ctindex  Package lapack  @subentry  zgeev
 @category{Package lapack}
 @closecatbox
 
@@ -637,6 +648,7 @@ eigenvectors of an Hermitian matrix.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package lapack  @subentry  zheev
 @category{Package lapack}
 @closecatbox
 

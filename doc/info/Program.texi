@@ -130,6 +130,7 @@ Some Lisp functions are shadowed in the Maxima package, namely the following.
 @end verbatim
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  Lisp and Maxima
 @category{Programming}
 @closecatbox
 
@@ -158,6 +159,7 @@ If maxima knows how to do manually trigger the garbage collection for the
 current lisp @code{garbage_collect} returns @code{true}, else @code{false}.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  garbage_collect
 @category{Programming}
 @closecatbox
 @end deffn
@@ -240,6 +242,7 @@ functions, including the currently active function.
 @end itemize
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  backtrace
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -518,6 +521,7 @@ non-atomic expression, and successive parts are taken.)
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  do
 @category{Programming}
 @closecatbox
 @end deffn
@@ -539,6 +543,7 @@ would terminate the @code{batch} if the error weren't caught.
 See also @mrefdot{errormsg}
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  errcatch
 @category{Programming}
 @closecatbox
 @end deffn
@@ -561,6 +566,7 @@ and the remaining elements are the values of any non-string arguments.
 This is effectively reprinting the most recent error message.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  error
 @category{Programming}
 @closecatbox
 @end deffn
@@ -576,6 +582,7 @@ may be able to recognize the warning and to format it accordingly.
 The function @code{warning} always returns false.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  warning
 @category{Programming}
 @closecatbox
 @end deffn
@@ -635,7 +642,9 @@ Example expression is --------------
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  error_size
 @category{Debugging}
+@ctindex  Display flags and variables  @subentry  error_size
 @category{Display flags and variables}
 @closecatbox
 @end defvr
@@ -657,7 +666,9 @@ symbol equivalent to @code{concat ('errexp, @var{n})}.
 See also @mref{error} and @mrefdot{error_size}
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  error_syms
 @category{Debugging}
+@ctindex  Display flags and variables  @subentry  error_syms
 @category{Display flags and variables}
 @closecatbox
 @end defvr
@@ -671,6 +682,7 @@ The variable @code{error} holds the message,
 and @mref{errormsg} formats and prints it.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  errormsg
 @category{Programming}
 @closecatbox
 @end deffn
@@ -745,6 +757,7 @@ value of errormsg is false
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  errormsg
 @category{Programming}
 @closecatbox
 @end defvr
@@ -767,6 +780,7 @@ The argument to @code{go} must be the name of a tag appearing in the same
 other than the one containing the @code{go}.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  go
 @category{Programming}
 @closecatbox
 @end deffn
@@ -836,7 +850,9 @@ not                  not         logical prefix
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  if
 @category{Programming}
+@ctindex  Predicate functions  @subentry  if
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -897,6 +913,7 @@ See also @mrefcomma{scanmap} @mrefcomma{maplist} @mrefcomma{outermap} @mref{matr
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  map
 @category{Function application}
 @closecatbox
 @end deffn
@@ -912,6 +929,7 @@ references.
 @c WHAT ARE "THE MAPPING ROUTINES", AND WHY DO THEY HAVE A SPECIALIZED NOTION OF ATOMS ??
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  mapatom
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -939,6 +957,7 @@ If @code{maperror} is @code{true} then an error message
 is displayed in the above two instances.
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  maperror
 @category{Function application}
 @closecatbox
 @end defvr
@@ -956,6 +975,7 @@ situations.  These include situations where @code{map} would use
 If @mref{mapprint} is @code{false}, these messages are suppressed.
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  mapprint
 @category{Function application}
 @closecatbox
 @end defvr
@@ -975,6 +995,7 @@ which returns an expression with the same main operator as @var{expr_i} has
 (except for simplifications and the case where @mref{map} does an @mref{apply}).
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  maplist
 @category{Function application}
 @closecatbox
 @end deffn
@@ -998,7 +1019,9 @@ however, @code{maybe} is supported in translated code.
 See also @mref{is} and @mrefdot{maybe}
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  prederror
 @category{Programming}
+@ctindex  Predicate functions  @subentry  prederror
 @category{Predicate functions}
 @closecatbox
 
@@ -1070,6 +1093,7 @@ statement from C.
 See also @mrefcomma{for} @mrefcomma{while} @mref{do} and @mref{block}.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  return
 @category{Programming}
 @closecatbox
 @end deffn
@@ -1128,6 +1152,7 @@ In this case, you get the same answer both
 ways.
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  scanmap
 @category{Function application}
 @closecatbox
 @end deffn
@@ -1141,6 +1166,7 @@ Evaluates @var{expr} and throws the value back to the most recent
 mechanism.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  throw
 @category{Programming}
 @closecatbox
 @end deffn
@@ -1338,6 +1364,7 @@ while @code{cartesian_product} does not.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  outermap
 @category{Function application}
 @closecatbox
 @end deffn

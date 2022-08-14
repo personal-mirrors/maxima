@@ -72,6 +72,13 @@
 @end html
 @end macro
 
+@macro cat2 {name, index}
+@html
+<a href="maxima_407.html#catindex-\index\">\name\</a>
+&middot;
+@end html
+@end macro
+
 @macro closecatbox {}
 @html
 </div>

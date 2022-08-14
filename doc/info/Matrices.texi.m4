@@ -146,8 +146,11 @@ commutative operator.  To get a commutative dot operator @code{.}, the command
 @code{declare(".", commutative)} must be executed.
 
 @opencatbox{Categories:}
+@ctindex  Vectors  @subentry  Vectors
 @category{Vectors}
+@ctindex  Share packages  @subentry  Vectors
 @category{Share packages}
+@ctindex  Package vect  @subentry  Vectors
 @category{Package vect}
 @closecatbox
 
@@ -174,9 +177,13 @@ The functions in the @code{eigen} package are:@*
 @mrefdot{similaritytransform}
 
 @opencatbox{Categories:}
+@ctindex  Vectors  @subentry  eigen
 @category{Vectors}
+@ctindex  Matrices  @subentry  eigen
 @category{Matrices}
+@ctindex  Share packages  @subentry  eigen
 @category{Share packages}
+@ctindex  Package eigen  @subentry  eigen
 @category{Package eigen}
 @closecatbox
 
@@ -197,6 +204,7 @@ or more lists (or matrices) onto the matrix @var{M}.
 See also @mref{addrow} and @mrefdot{append}
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  addcol
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -211,6 +219,7 @@ more lists (or matrices) onto the matrix @var{M}.
 See also @mref{addcol} and @mrefdot{append}
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  addrow
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -223,6 +232,7 @@ Returns the adjoint of the matrix @var{M}.
 The adjoint matrix is the transpose of the matrix of cofactors of @var{M}.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  adjoint
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -246,7 +256,9 @@ terms not dependent upon @var{x_1}, @dots{}, @var{x_n}).
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Linear equations  @subentry  augcoefmatrix
 @category{Linear equations}
+@ctindex  Matrices  @subentry  augcoefmatrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -294,6 +306,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  cauchy_matrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -342,6 +355,7 @@ with respect to variable @var{x}.  That is,
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  charpoly
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -362,7 +376,9 @@ variables @var{x_1}, @dots{}, @var{x_n} of the system of linear equations
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Linear equations  @subentry  coefmatrix
 @category{Linear equations}
+@ctindex  Matrices  @subentry  coefmatrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -376,6 +392,7 @@ The return value is a matrix.
 @c EXAMPLE HERE
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  col
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -416,6 +433,7 @@ Warning - you are redefining the Macsyma function eigenvectors
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  columnvector
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -434,6 +452,7 @@ using assignment creates a separate, modified copy.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  copymatrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -454,6 +473,7 @@ when the switches @code{ratmx} and @mref{sparse} are both @code{true}.
 
 @c EXAMPLES NEEDED HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  determinant
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -491,7 +511,9 @@ Example:
 @c IT APPEARS THAT doallmxops IS CRUCIAL HERE.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  detout
 @category{Matrices}
+@ctindex  Evaluation flags  @subentry  detout
 @category{Evaluation flags}
 @closecatbox
 @end defvr
@@ -513,6 +535,7 @@ a matrix, it is not copied; all diagonal elements refer to the same instance,
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  diagmatrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -530,6 +553,7 @@ individual @code{dot} switches govern which operations are performed.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  doallmxops
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -571,6 +595,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  domxexpt
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -587,6 +612,7 @@ operations); if this switch is @code{false} such operations are not carried out.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  domxmxops
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -602,6 +628,7 @@ matrices are carried out.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  domxnctimes
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -618,6 +645,7 @@ the variable ordering assumed for canonical rational expression (CRE) form, than
 those on the @code{dontfactor} list.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  dontfactor
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -633,6 +661,7 @@ carried out.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  doscmxops
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -648,6 +677,7 @@ a matrix result.  This switch is not subsumed under @mrefdot{doallmxops}
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  doscmxplus
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -663,6 +693,7 @@ and a nonscalar term is simplified to a commutative product.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dot0nscsimp
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -679,6 +710,7 @@ a scalar term is simplified to a commutative product.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dot0simp
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -695,6 +727,7 @@ another term is simplified to a commutative product.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dot1simp
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -710,6 +743,7 @@ When @code{dotassoc} is @code{true}, an expression @code{(A.B).C} simplifies to
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dotassoc
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -728,6 +762,7 @@ Turning on this flag effectively turns on @mrefcomma{dot0simp}@w{}
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dotconstrules
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -742,6 +777,7 @@ to @code{A.B + A.C}.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dotdistrib
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -756,6 +792,7 @@ When @code{dotexptsimp} is @code{true}, an expression @code{A.A} simplifies to
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dotexptsimp
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -770,6 +807,7 @@ Default value: 1
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dotident
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -785,6 +823,7 @@ simplifies to @code{SC*A} and @code{A.(SC*B)} simplifies to @code{SC*(A.B)}.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  dotscrules
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -834,7 +873,9 @@ triangularized matrices.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Linear equations  @subentry  echelon
 @category{Linear equations}
+@ctindex  Matrices  @subentry  echelon
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -882,6 +923,7 @@ After loading, all functions and variables in the package are available.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Package eigen  @subentry  eigenvalues
 @category{Package eigen}
 @closecatbox
 @end deffn
@@ -1037,6 +1079,7 @@ A matrix which has two eigenvectors for one eigenvalue (namely 2).
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package eigen  @subentry  eigenvectors
 @category{Package eigen}
 @closecatbox
 @end deffn
@@ -1050,6 +1093,7 @@ are zero except for the @code{[@var{i}, @var{j}]} element which is @var{x}.
 @c WOW, THAT SEEMS PRETTY SPECIALIZED ...
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  ematrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1098,7 +1142,9 @@ Matrix entered.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Console interaction  @subentry  entermatrix
 @category{Console interaction}
+@ctindex  Matrices  @subentry  entermatrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1195,6 +1241,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  genmatrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1285,6 +1332,7 @@ Gram-Schmidt algorithm using a specified inner product function.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package eigen  @subentry  gramschmidt
 @category{Package eigen}
 @closecatbox
 @end deffn
@@ -1296,6 +1344,7 @@ Gram-Schmidt algorithm using a specified inner product function.
 Returns an @var{n} by @var{n} identity matrix.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  ident
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1317,6 +1366,7 @@ where @code{.} is the noncommutative multiplication operator.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Package eigen  @subentry  innerproduct
 @category{Package eigen}
 @closecatbox
 @end deffn
@@ -1362,6 +1412,7 @@ In particular, when @var{M} has polynomial elements,
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  invert
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1385,6 +1436,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  list_matrix_entries
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1410,7 +1462,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Display flags and variables  @subentry  lmxchar
 @category{Display flags and variables}
+@ctindex  Matrices  @subentry  lmxchar
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -1611,6 +1665,7 @@ matrix inverse, if it exists.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  matrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1670,6 +1725,7 @@ m4_displaymath(
 @c 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  matrixexp
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1686,6 +1742,7 @@ See also @mrefcomma{map} @mrefcomma{fullmap} @mrefcomma{fullmapl} and
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  matrixmap
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1697,7 +1754,9 @@ See also @mrefcomma{map} @mrefcomma{fullmap} @mrefcomma{fullmapl} and
 Returns @code{true} if @var{expr} is a matrix, otherwise @code{false}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  matrixp
 @category{Predicate functions}
+@ctindex  Matrices  @subentry  matrixp
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1741,6 +1800,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  matrix_element_add
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -1792,6 +1852,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  matrix_element_mult
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -1850,6 +1911,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  matrix_element_transpose
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -1870,7 +1932,9 @@ the square matrix @var{M}.
 @code{load ("nchrpl")} loads this function.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  mattrace
 @category{Matrices}
+@ctindex  Package nchrpl  @subentry  mattrace
 @category{Package nchrpl}
 @closecatbox
 @end deffn
@@ -1883,6 +1947,7 @@ Returns the @var{i}, @var{j} minor of the matrix @var{M}.  That is, @var{M}
 with row @var{i} and column @var{j} removed.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  minor
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1907,7 +1972,9 @@ with integers, since it avoids polynomial arithmetic altogether.
 @code{load ("nchrpl")} loads this file.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  ncharpoly
 @category{Matrices}
+@ctindex  Package nchrpl  @subentry  ncharpoly
 @category{Package nchrpl}
 @closecatbox
 @end deffn
@@ -1920,6 +1987,7 @@ Computes the determinant of the matrix @var{M} by the Johnson-Gentleman tree
 minor algorithm.  @code{newdet} returns the result in CRE form.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  newdet
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1935,6 +2003,7 @@ minor algorithm.  A permanent is like a determinant but with no sign changes.
 See also @code{newdet}.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  permanent
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1952,6 +2021,7 @@ wrong answer if it cannot determine that a matrix element that is
 equivalent to zero is indeed so.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  rank
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -1973,7 +2043,9 @@ cause the elements to be expanded (depending on the setting of @mref{ratfac})
 which might not always be desired.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  ratmx
 @category{Matrices}
+@ctindex  Rational expressions  @subentry  ratmx
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -1986,6 +2058,7 @@ Returns the @var{i}'th row of the matrix @var{M}.
 The return value is a matrix.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  row
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -2000,6 +2073,7 @@ Default value: @code{]}
 See also @mrefdot{lmxchar}
 
 @opencatbox{Categories:}
+@ctindex  Display flags and variables  @subentry  rmxchar
 @category{Display flags and variables}
 @closecatbox
 @end defvr
@@ -2020,7 +2094,9 @@ When @code{scalarmatrixp} is @code{false}, 1 x 1 matrices are not simplified
 to scalars.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  scalarmatrixp
 @category{Matrices}
+@ctindex  Simplification flags and variables  @subentry  scalarmatrixp
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -2047,6 +2123,7 @@ current coordinate system, there is a function with usage of the form
 @c SOME TEXT HAS GONE MISSING HERE
 
 @opencatbox{Categories:}
+@ctindex  Package vect  @subentry  scalefactors
 @category{Package vect}
 @closecatbox
 @end deffn
@@ -2062,6 +2139,7 @@ and returns the altered matrix.
 but returns @var{x} instead of @var{M}.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  setelmx
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -2096,6 +2174,7 @@ to be able to form @code{rightmatrix}.
 @code{simtran} is a synonym for @code{similaritytransform}.
 
 @opencatbox{Categories:}
+@ctindex  Package eigen  @subentry  similaritytransform
 @category{Package eigen}
 @closecatbox
 @end deffn
@@ -2109,6 +2188,7 @@ When @code{sparse} is @code{true}, and if @code{ratmx} is @code{true}, then
 @code{determinant} will use special routines for computing sparse determinants.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  sparse
 @category{Matrices}
 @closecatbox
 @end defvr
@@ -2124,6 +2204,7 @@ Returns a new matrix composed of the matrix @var{M} with rows @var{i_1},
 @dots{}, @var{i_m} deleted, and columns @var{j_1}, @dots{}, @var{j_n} deleted.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  submatrix
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -2144,6 +2225,7 @@ Otherwise @var{M} is a symbol,
 and the return value is a noun expression @code{'transpose (@var{M})}.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  transpose
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -2184,7 +2266,9 @@ triangularized matrices.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Linear equations  @subentry  triangularize
 @category{Linear equations}
+@ctindex  Matrices  @subentry  triangularize
 @category{Matrices}
 @closecatbox
 @end deffn
@@ -2222,6 +2306,7 @@ eigenvectors of which do not span the vector space of the appropriate dimension.
 @code{ueivects} is a synonym for @code{uniteigenvectors}.
 
 @opencatbox{Categories:}
+@ctindex  Package eigen  @subentry  uniteigenvectors
 @category{Package eigen}
 @closecatbox
 @end deffn
@@ -2240,6 +2325,7 @@ this is a unit vector in the same direction as @var{x}.
 @code{uvect} is a synonym for @code{unitvector}.
 
 @opencatbox{Categories:}
+@ctindex  Package eigen  @subentry  unitvector
 @category{Package eigen}
 @closecatbox
 @end deffn
@@ -2256,6 +2342,7 @@ the order of the left-hand sides of the equations must be a cyclic permutation
 of the coordinate variables.
 
 @opencatbox{Categories:}
+@ctindex  Package vect  @subentry  vectorpotential
 @category{Package vect}
 @closecatbox
 @end deffn
@@ -2309,7 +2396,9 @@ These flags have all been declared @code{evflag}.
 @c by the function invocation
 
 @opencatbox{Categories:}
+@ctindex  Package vect  @subentry  vectorsimp
 @category{Package vect}
+@ctindex  Simplification functions  @subentry  vectorsimp
 @category{Simplification functions}
 @closecatbox
 @end deffn
@@ -2324,7 +2413,9 @@ When @code{vect_cross} is @code{true}, it allows DIFF(X~Y,T) to work where
 ~ is defined in SHARE;VECT (where VECT_CROSS is set to @code{true}, anyway.)
 
 @opencatbox{Categories:}
+@ctindex  Package vect  @subentry  vect_cross
 @category{Package vect}
+@ctindex  Differential calculus  @subentry  vect_cross
 @category{Differential calculus}
 @closecatbox
 @end defvr
@@ -2336,6 +2427,7 @@ When @code{vect_cross} is @code{true}, it allows DIFF(X~Y,T) to work where
 Returns an @var{m} by @var{n} matrix, all elements of which are zero.
 
 @opencatbox{Categories:}
+@ctindex  Matrices  @subentry  zeromatrix
 @category{Matrices}
 @closecatbox
 @end deffn

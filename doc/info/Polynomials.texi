@@ -67,7 +67,9 @@ symbol @code{/T/} follows the line label of such expressions.
 @c TODO: An example of some code that yields the /T/ form.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  Introduction to Polynomials
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  Introduction to Polynomials
 @category{Rational expressions}
 @closecatbox
 
@@ -87,6 +89,7 @@ Default value: @code{false}
 algebraic integers to take effect.
 
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  algebraic
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -101,6 +104,7 @@ algorithm will be used otherwise the Berlekamp algorithm, which is the
 default, will be used.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  berlefact
 @category{Polynomials}
 @closecatbox
 @end defvr
@@ -134,6 +138,7 @@ Examples:
 (%o3)                      a  d + b  c
 @end example
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  bezout
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -166,6 +171,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  bothcoef
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -344,6 +350,7 @@ function.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  coeff
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -373,6 +380,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  content
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -417,6 +425,7 @@ See also @mref{num}
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  denom
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -450,6 +459,7 @@ Examples:
 Note that @code{y} is the main variable in the second example.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  divide
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -493,7 +503,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  eliminate
 @category{Polynomials}
+@ctindex  Algebraic equations  @subentry  eliminate
 @category{Algebraic equations}
 @closecatbox
 @end deffn
@@ -543,6 +555,7 @@ gcd is first calculated with the function @code{gcd} and then with the function
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  ezgcd
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -555,6 +568,7 @@ Default value: @code{true}
 @code{factor} are in expanded (the default) or recursive (normal CRE) form.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  facexpand
 @category{Polynomials}
 @closecatbox
 @end defvr
@@ -726,6 +740,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  factor
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -778,6 +793,7 @@ Refusing to factor polynomial x    - 1
 See also: @mref{factor_max_degree_print_warning}
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  factor_max_degree
 @category{Polynomials}
 @closecatbox
 @end defvr
@@ -794,6 +810,7 @@ its degree exceeds the value of factor_max_degree.
 See also: @mref{factor_max_degree}
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  factor_max_degree_print_warning
 @category{Polynomials}
 @closecatbox
 @end defvr 
@@ -808,6 +825,7 @@ When @code{factorflag} is @code{false}, suppresses the factoring of
 integer factors of rational expressions.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  factorflag
 @category{Polynomials}
 @closecatbox
 @end defvr
@@ -843,6 +861,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  factorout
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -876,6 +895,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  factorsum
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -893,6 +913,7 @@ and @code{n_2} is the degree of @code{p_2}.
 @code{fasttimes} is of order @code{max (n_1, n_2)^1.585}.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  fasttimes
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -948,7 +969,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Simplification functions  @subentry  fullratsimp
 @category{Simplification functions}
+@ctindex  Rational expressions  @subentry  fullratsimp
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -1048,6 +1071,7 @@ Warning: fullratsubst1(substexpr,forexpr,expr): reached maximum iterations of 15
 See also @mref{lrats_max_iter} and @mref{fullratsubstflag}.
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  fullratsubst
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -1062,7 +1086,9 @@ Default value: @code{false}
 An option variable that is set to @code{true} in @mref{fullratsubst}.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  fullratsubstflag
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  fullratsubstflag
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -1137,7 +1163,9 @@ the polynomials divided by the greatest common divisor.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  gcd
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  gcd
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -1208,7 +1236,9 @@ not the  @code{y+1} we would expect in @code{k[y, x]}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  gcdex
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  gcdex
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -1226,6 +1256,7 @@ rational integers (i.e.,  ordinary integers).  Factors are normalized by making
 @c NEED EXAMPLES HERE
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  gcfactor
 @category{Integers}
 @closecatbox
 @end deffn
@@ -1252,6 +1283,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  gfactor
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -1267,6 +1299,7 @@ is similar to @code{factorsum} but applies @code{gfactor} instead
 of @code{factor}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  gfactorsum
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1308,6 +1341,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  hipow
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1336,6 +1370,7 @@ the time spent factoring large integers.
 @c NEED EXAMPLES HERE
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  intfaclim
 @category{Integers}
 @closecatbox
 @end defvr
@@ -1388,6 +1423,7 @@ rat: replaced 1.0 by 1/1 = 1.0
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  keepfloat
 @category{Numerical evaluation}
 @closecatbox
 @end defvr
@@ -1408,6 +1444,7 @@ Returns the lowest exponent of @var{x} which explicitly appears in
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  lopow
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1488,7 +1525,9 @@ lratsubst: improper argument: [[a  = a b, b = c], [a = b]]
 See also @mref{fullratsubst}.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  lratsubst
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  lratsubst
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -1504,7 +1543,9 @@ The upper limit on the number of iterations that @mref{fullratsubst} and
 the example for @mref{fullratsubst}.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  lrats_max_iter
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  lrats_max_iter
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -1570,6 +1611,7 @@ Examples:
 (%o8)                      x  + x  + 1
 @end example
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  modulus
 @category{Integers}
 @closecatbox
 @end defvr
@@ -1629,6 +1671,7 @@ See also @mref{denom}
 
 @c NEED SOME EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  num
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1726,6 +1769,7 @@ returns @var{p} (unexpanded), @code{polydecomp (compose ([@var{p_1}, ...,
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  polydecomp
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -1745,6 +1789,7 @@ instead of the current value of @code{modulus}.
 See @mrefdot{modulus}
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  polymod
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -1814,7 +1859,9 @@ Polynomials with two variables:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  polynomialp
 @category{Predicate functions}
+@ctindex  Polynomials  @subentry  polynomialp
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -1833,6 +1880,7 @@ arguments @var{x_1}, @dots{}, @var{x_n} are interpreted as in @code{ratvars}.
 
 @c NEED SOME EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  quotient
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -1910,6 +1958,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  rat
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -1922,6 +1971,7 @@ with respect to radicals to take effect.  @code{ratalgdenom} has an effect only
 when canonical rational expressions (CRE) are used in algebraic mode.
 
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  ratalgdenom
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -1975,7 +2025,9 @@ Example:
 @c NEED MORE EXAMPLES HERE
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  ratcoef
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  ratcoef
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2001,6 +2053,7 @@ denominator, and thus some expressions which are considered ratios by
 
 @c NEEDS AN EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratdenom
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2065,7 +2118,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  ratdenomdivide
 @category{Simplification flags and variables}
+@ctindex  Rational expressions  @subentry  ratdenomdivide
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -2135,6 +2190,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratdiff
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2155,6 +2211,7 @@ use rational functions in non-rational contexts.
 See also @mrefdot{totaldisrep}
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratdisrep
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2224,6 +2281,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratexpand
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2255,6 +2313,7 @@ both be used at the same time.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratfac
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -2280,6 +2339,7 @@ are not considered ratios by @code{num}.
 
 @c NEEDS AN EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratnumer
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2295,7 +2355,9 @@ CRE are created by @code{rat} and related functions.
 Extended CRE are created by @code{taylor} and related functions.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  ratp
 @category{Predicate functions}
+@ctindex  Rational expressions  @subentry  ratp
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2309,8 +2371,11 @@ a message informing the user of the conversion of floating point numbers
 to rational numbers is displayed.
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratprint
 @category{Rational expressions}
+@ctindex  Numerical evaluation  @subentry  ratprint
 @category{Numerical evaluation}
+@ctindex  Console interaction  @subentry  ratprint
 @category{Console interaction}
 @closecatbox
 @end defvr
@@ -2381,7 +2446,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Simplification functions  @subentry  ratsimp
 @category{Simplification functions}
+@ctindex  Rational expressions  @subentry  ratsimp
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2395,7 +2462,9 @@ When @code{ratsimpexpons} is @code{true},
 
 @c NEED AN EXAMPLE HERE -- RECYCLE THE ratsimpexpons EXAMPLE FROM ratsimp ABOVE
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  ratsimpexpons
 @category{Simplification flags and variables}
+@ctindex  Rational expressions  @subentry  ratsimpexpons
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -2409,6 +2478,7 @@ Default value: @code{false}
 substitutions such as @code{u} for @code{sqrt (x)} in @code{x}.
 
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  radsubstflag
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -2484,6 +2554,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratsubst
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2513,6 +2584,7 @@ Each call to the function @code{ratvars} resets the list.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratvars
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2587,7 +2659,9 @@ evaluation are still present.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratvarswitch
 @category{Rational expressions}
+@ctindex  Global flags  @subentry  ratvarswitch
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -2633,6 +2707,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratweight
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2649,6 +2724,7 @@ each call to @code{ratweight} places additional items in the list.
 @code{kill (ratweights)} and @code{save (ratweights)} both work as expected.
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratweights
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -2663,6 +2739,7 @@ function to control the truncation of canonical rational expressions (CRE).
 For the default value of @code{false}, no truncation occurs.
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  ratwtlvl
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -2681,6 +2758,7 @@ of the two-element list returned by @code{divide}.
 
 @c NEED SOME EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  remainder
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -2736,6 +2814,7 @@ Examples:
 (%o6)                   4 a - (2 b - c) c
 @end example
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  resultant
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -2763,6 +2842,7 @@ On most problems the default value @code{subres} should be best.
 @c may be better.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  resultant
 @category{Polynomials}
 @closecatbox
 @end defvr
@@ -2779,6 +2859,7 @@ functions in order to speed up later factorizations of expressions
 containing some of the same factors.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  savefactors
 @category{Polynomials}
 @closecatbox
 @end defvr
@@ -2793,7 +2874,9 @@ expression @code{expr}.
 See also @mrefdot{ratvars}
 
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  showratvars
 @category{Rational expressions}
+@ctindex  Display functions  @subentry  showratvars
 @category{Display functions}
 @closecatbox
 @end deffn
@@ -2825,6 +2908,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  sqfr
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -2905,7 +2989,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  tellrat
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  tellrat
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2925,6 +3011,7 @@ have some subexpressions in CRE form.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Rational expressions  @subentry  totaldisrep
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -2937,7 +3024,9 @@ Removes @code{tellrat} properties from @var{x_1}, @dots{}, @var{x_n}.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  untellrat
 @category{Polynomials}
+@ctindex  Rational expressions  @subentry  untellrat
 @category{Rational expressions}
 @closecatbox
 @end deffn

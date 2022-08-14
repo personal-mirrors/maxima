@@ -17,6 +17,7 @@ rule is used in @mref{limit}.  This prevents infinite looping in cases like
 @code{limit (cot(x)/csc(x), x, 0)}.
 
 @opencatbox{Categories:}
+@ctindex  Limits  @subentry  lhospitallim
 @category{Limits}
 @closecatbox
 @end defvr
@@ -70,6 +71,7 @@ For the method see Wang, P., "Evaluation of Definite Integrals by Symbolic
 Manipulation", Ph.D. thesis, MAC TR-92, October 1971.
 
 @opencatbox{Categories:}
+@ctindex  Limits  @subentry  limit
 @category{Limits}
 @closecatbox
 @end deffn
@@ -84,6 +86,7 @@ to avoid bugs like @code{limit (f(n)/f(n+1), n, inf)} giving 1.  Setting
 @code{limsubst} to @code{true} will allow such substitutions.
 
 @opencatbox{Categories:}
+@ctindex  Limits  @subentry  limsubst
 @category{Limits}
 @closecatbox
 @end defvr
@@ -99,6 +102,7 @@ Take the limit of the Taylor series expansion of @code{expr} in @code{x}
 at @code{val} from direction @code{dir}.
 
 @opencatbox{Categories:}
+@ctindex  Limits  @subentry  tlimit
 @category{Limits}
 @closecatbox
 @end deffn
@@ -116,6 +120,7 @@ and the limit of input expression cannot be computed directly, @code{limit} will
 return an unevaluated limit expression.
 
 @opencatbox{Categories:}
+@ctindex  Limits  @subentry  tlimswitch
 @category{Limits}
 @closecatbox
 @end defvr
@@ -156,6 +161,7 @@ so, for example, it can't handle @code{limit((-2)^x, x, inf)}.
 @code{gruntz} is one of the methods called from @code{limit}.
 
 @opencatbox{Categories:}
+@ctindex  Limits  @subentry  gruntz
 @category{Limits}
 @closecatbox
 

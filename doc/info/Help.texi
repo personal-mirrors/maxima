@@ -39,6 +39,7 @@ yields
 and additional output.
 
 @opencatbox{Categories:}
+@ctindex  Console interaction  @subentry  Documentation
 @category{Console interaction}
 @closecatbox
 
@@ -100,6 +101,7 @@ The number of symbols in the current Maxima session. This will vary.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Help  @subentry  apropos
 @category{Help}
 @closecatbox
 @end deffn
@@ -145,8 +147,11 @@ _
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Help  @subentry  demo
 @category{Help}
+@ctindex  Console interaction  @subentry  demo
 @category{Console interaction}
+@ctindex  File input  @subentry  demo
 @category{File input}
 @closecatbox
 @end deffn
@@ -227,7 +232,9 @@ by @code{[...]}).  All or none of the items could have been selected by entering
 respectively.
 
 @opencatbox{Categories:}
+@ctindex  Help  @subentry  describe
 @category{Help}
+@ctindex  Console interaction  @subentry  describe
 @category{Console interaction}
 @closecatbox
 @end deffn
@@ -259,7 +266,9 @@ Any other value is a error.
 See also @mrefcomma{browser} and @mrefdot{url_base}
 
 @opencatbox{Categories:}
+@ctindex  Help  @subentry  output_format_for_help
 @category{Help}
+@ctindex  Global variables  @subentry  output_format_for_help
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -285,7 +294,9 @@ automatically.
 See also @mrefcomma{output_format_for_help} and @mrefdot{url_base}
 
 @opencatbox{Categories:}
+@ctindex  Help  @subentry  browser
 @category{Help}
+@ctindex  Global variables  @subentry  browser
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -304,7 +315,9 @@ translate a topic to the appropriate location in an html file.
 See also @ref{output_format_for_help} and @mrefdot{browser}
 
 @opencatbox{Categories:}
+@ctindex  Help  @subentry  url_base
 @category{Help}
+@ctindex  Global variables  @subentry  url_base
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -355,7 +368,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Help  @subentry  example
 @category{Help}
+@ctindex  Console interaction  @subentry  example
 @category{Console interaction}
 @closecatbox
 @end deffn
@@ -369,7 +384,9 @@ Default value: @code{"manual.demo"}
 the function @code{example}.  See @mrefdot{example}
 
 @opencatbox{Categories:}
+@ctindex  Help  @subentry  manual_demo
 @category{Help}
+@ctindex  Global variables  @subentry  manual_demo
 @category{Global variables}
 @closecatbox
 @end defvr

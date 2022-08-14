@@ -90,6 +90,7 @@ creates @math{m} arrays, all of the same dimensions.
 See also @mrefcomma{arraymake} @mref{arrayinfo} and @mrefdot{make_array}
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  array
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -105,7 +106,9 @@ This is reminiscent of @mrefcomma{apply} except the first argument is an array
 instead of a function.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  arrayapply
 @category{Expressions}
+@ctindex  Arrays  @subentry  arrayapply
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -307,6 +310,7 @@ Using @code{arrayinfo} in order to convert an undeclared array to a declared arr
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  arrayinfo
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -404,7 +408,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  arraymake
 @category{Expressions}
+@ctindex  Arrays  @subentry  arraymake
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -463,7 +469,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  arrays
 @category{Arrays}
+@ctindex  Global variables  @subentry  arrays
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -478,7 +486,9 @@ where @var{A} is an array and @var{i_1}, @dots{}, @var{i_n} are integers.
 @code{arraysetapply} evaluates its arguments.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  arraysetapply
 @category{Expressions}
+@ctindex  Arrays  @subentry  arraysetapply
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -587,6 +597,7 @@ Multiple-dimension arrays are filled in row-major order.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  fillarray
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -757,6 +768,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  listarray
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -864,6 +876,7 @@ IMP) -1 $Z))
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  make_array
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -883,6 +896,7 @@ depending on the type of the array.  The type of the array cannot be
 changed.
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  rearray
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -907,6 +921,7 @@ desired to clear the cache of a @mrefdot{memoizing function}
 @code{remarray} quotes its arguments.
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  remarray
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -958,7 +973,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  subvar
 @category{Expressions}
+@ctindex  Arrays  @subentry  subvar
 @category{Arrays}
 @closecatbox
 @end deffn
@@ -973,6 +990,7 @@ Returns @code{true} if @var{expr} is a subscripted variable, for example
 @code{a[i]}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  subvarp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -997,7 +1015,9 @@ than the default one; Arrays created by @mref{make_array} are not affected by
 See also @mrefdot{translate_fast_arrays}
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  use_fast_arrays
 @category{Arrays}
+@ctindex  Global flags  @subentry  use_fast_arrays
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -1016,7 +1036,9 @@ the Maxima-to-Lisp translator generates code that assumes arrays are properties,
 as if @code{use_fast_arrays} were @code{false}.
 
 @opencatbox{Categories:}
+@ctindex  Arrays  @subentry  translate_fast_arrays
 @category{Arrays}
+@ctindex  Translation flags and variables  @subentry  translate_fast_arrays
 @category{Translation flags and variables}
 @closecatbox
 @end defvr

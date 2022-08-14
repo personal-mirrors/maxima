@@ -18,7 +18,9 @@
 @c -----------------------------------------------------------------------------
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  Function
 @category{Function definition}
+@ctindex  Programming  @subentry  Function
 @category{Programming}
 @closecatbox
 
@@ -437,6 +439,7 @@ create another function for which some of the arguments are fixed.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  buildq
 @category{Function definition}
 @closecatbox
 @end deffn
@@ -497,6 +500,7 @@ Examples
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  macroexpand
 @category{Function application}
 @closecatbox
 @end deffn
@@ -555,6 +559,7 @@ Examples
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  macroexpand1
 @category{Function application}
 @closecatbox
 @end deffn
@@ -572,7 +577,9 @@ macro functions from the list.
 See also @mrefdot{infolists}
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  macros
 @category{Function definition}
+@ctindex  Global variables  @subentry  macros
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -629,6 +636,7 @@ Examples
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  splice
 @category{Function definition}
 @closecatbox
 @end deffn
@@ -769,6 +777,7 @@ How to convert a nested list into a matrix:
 
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  apply
 @category{Function application}
 @closecatbox
 @end deffn
@@ -840,7 +849,9 @@ See also @mref{return} and @mrefdot{go}
 @c Needs some examples.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  block
 @category{Expressions}
+@ctindex  Programming  @subentry  block
 @category{Programming}
 @closecatbox
 @end deffn
@@ -856,6 +867,7 @@ causes a Maxima break at which point the user can examine and change
 his environment.  Upon typing @code{exit;} the computation resumes.
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  break
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -899,6 +911,7 @@ The function @code{g} returns a list of @code{f} of each element of @code{l} if
 the first negative element of @code{l} and "throws" it up.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  catch
 @category{Programming}
 @closecatbox
 @end deffn
@@ -926,6 +939,7 @@ translates Maxima into Lisp, and then executes the Lisp compiler.
 See also @mrefcomma{translate} @mrefcomma{translate_file} and @mrefdot{compile_file}
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  compfile
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -976,6 +990,7 @@ to limit the code's functionality are the following:
 @end itemize
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  compile
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -1134,6 +1149,7 @@ When the first argument is an expression with operator @code{funmake},
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  define
 @category{Function definition}
 @closecatbox
 @end deffn
@@ -1318,6 +1334,7 @@ Cannot assign to `baz_quux'.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  define_variable
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -1436,7 +1453,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  dispfun
 @category{Function definition}
+@ctindex  Display functions  @subentry  dispfun
 @category{Display functions}
 @closecatbox
 @end deffn
@@ -1475,7 +1494,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  fullmap
 @category{Function application}
+@ctindex  Expressions  @subentry  fullmap
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1500,7 +1521,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  fullmapl
 @category{Function application}
+@ctindex  Expressions  @subentry  fullmapl
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1584,7 +1607,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  functions
 @category{Function definition}
+@ctindex  Global variables  @subentry  functions
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -1617,6 +1642,7 @@ and assigns the definition to the label.
 
 @c PROBABLY NEED SOME EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  fundef
 @category{Function definition}
 @closecatbox
 @end deffn
@@ -1792,7 +1818,9 @@ Maxima simplifies @code{funmake}'s return value.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  funmake
 @category{Function application}
+@ctindex  Expressions  @subentry  funmake
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -2032,6 +2060,7 @@ The arguments appear within the function body as a list.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  lambda
 @category{Function definition}
 @closecatbox
 @end deffn
@@ -2091,7 +2120,9 @@ A local function definition.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  local
 @category{Function definition}
+@ctindex  Programming  @subentry  local
 @category{Programming}
 @closecatbox
 @end deffn
@@ -2318,7 +2349,9 @@ x + 99 is equal to x
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function application  @subentry  macroexpansion
 @category{Function application}
+@ctindex  Global flags  @subentry  macroexpansion
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -2428,6 +2461,7 @@ Example:
 
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  mode_declare
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -2489,6 +2523,7 @@ To enable the Lisp debugger set *debugger-hook* to nil.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  mode_checkp
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2503,6 +2538,7 @@ error.
 @c NEED SOME EXAMPLES HERE.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  mode_check_errorp
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2518,6 +2554,7 @@ described.
 @c NEED SOME EXAMPLES HERE.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  mode_check_warnp
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2561,6 +2598,7 @@ compile(firstnumb)
 @code{firstnumb} now can be used every time you need the first element
 of a list that is guaranteed to be filled with numbers.
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  mode_identity
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -2587,6 +2625,7 @@ which there is no function definition.
 @mref{remarray} applies to those types of functions.
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  remfunction
 @category{Function definition}
 @closecatbox
 @end deffn
@@ -2606,6 +2645,7 @@ When @code{savedef} is @code{false}, the names of translated functions are
 removed from the @code{functions} list.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  savedef
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2672,6 +2712,7 @@ The result returned by @code{translate} is a list of the names of the
 functions translated.
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  translate
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -2748,6 +2789,7 @@ and @mrefdot{tr_warn_undefined_variable}
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  translate_file
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -2762,6 +2804,7 @@ version of all functions to be run (provided they are still around)
 rather than the translated version.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  transrun
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2784,6 +2827,7 @@ otherwise array names appear as literal symbols in translated code.
 @code{true}.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_array_as_ref
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2837,6 +2881,7 @@ note: instead I'll translate it as: apply(f,[3])
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_bound_function_applyp
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2852,6 +2897,7 @@ and inserted into the UNLISP file.  When @code{false}, messages about
 translation of the file are only inserted into the UNLISP file.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_file_tty_messagesp
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2872,6 +2918,7 @@ When @code{false} then @code{acos(x)} is of mode
 @code{float} if and only if @code{x} is of mode @code{float}.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_float_can_branch_complex
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2892,6 +2939,7 @@ messages implies full compatibility of translated and compiled code with the
 Maxima interpreter.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_function_call_default
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2905,6 +2953,7 @@ When @code{tr_numer} is @code{true}, @code{numer} properties are used for
 atoms which have them, e.g. @code{%pi}.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_numer
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2920,6 +2969,7 @@ considering a form.  This is to catch macro expansion errors, and
 non-terminating optimization properties.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_optimize_max_loop
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2945,6 +2995,7 @@ to what should have been produced for a given state, it is possible to
 track down bugs.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_state_vars
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2961,6 +3012,7 @@ Prints a list of warnings which have been given by
 the translator during the current translation.
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  tr_warnings_get
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -2974,6 +3026,7 @@ when function calls are being made which may not be correct due to
 improper declarations that were made at translate time.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_warn_bad_function_calls
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -2988,6 +3041,7 @@ encountered.  FEXPRs should not normally be output in translated code,
 all legitimate special program forms are translated.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_warn_fexpr
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -3001,6 +3055,7 @@ Default value: @code{compfile}
 called that indicates problems in the translation.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_warn_meval
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -3014,6 +3069,7 @@ Default value: @code{all}
 assigned values inappropriate for their mode.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_warn_mode
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -3027,6 +3083,7 @@ Default value: @code{compile}
 warnings about undeclared variables to the TTY.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_warn_undeclared
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -3040,6 +3097,7 @@ Default value: @code{all}
 undefined global variables are seen.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  tr_warn_undefined_variable
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -3084,6 +3142,7 @@ flags (@code{tr_numer}, etc.) have no effect on the translation.
 @code{compile_file} evaluates its arguments.
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  compile_file
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -3104,6 +3163,7 @@ call time.  @code{(MFUNCTION-CALL fn arg1 arg2 ...)} is generated when
 the translator does not know @code{fn} is going to be a Lisp function.
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  declare_translated
 @category{Translation and compilation}
 @closecatbox
 @end deffn

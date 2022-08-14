@@ -35,6 +35,7 @@ variable.  The @code{maxima-init.mac} file can contain any other assignments or
 other Maxima statements.
 
 @opencatbox{Categories:}
+@ctindex  Session management  @subentry  Introduction for Runtime Environment
 @category{Session management}
 @closecatbox
 
@@ -70,6 +71,7 @@ The @code{fg} command causes Maxima
 to resume from the point at which it was stopped.
 
 @opencatbox{Categories:}
+@ctindex  Console interaction  @subentry  Interrupts
 @category{Console interaction}
 @closecatbox
 
@@ -94,6 +96,7 @@ Maxima can locate it; otherwise Maxima makes a guess about a suitable directory.
 @code{maxima_tempdir} may be assigned a string which names a directory.
 
 @opencatbox{Categories:}
+@ctindex  Global variables  @subentry  maxima_tempdir
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -116,6 +119,7 @@ However, assigning to @code{maxima_userdir} does not automatically change
 those variables must be changed separately.
 
 @opencatbox{Categories:}
+@ctindex  Global variables  @subentry  maxima_userdir
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -141,6 +145,7 @@ the same name.
 @end itemize
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  room
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -159,6 +164,7 @@ loaded in.
 See also @mrefdot{status}
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  sstatus
 @category{Programming}
 @closecatbox
 @end deffn
@@ -194,6 +200,7 @@ mathematical expressions. See @code{features} and @code{featurep} for more
 information.
 
 @opencatbox{Categories:}
+@ctindex  Programming  @subentry  status
 @category{Programming}
 @closecatbox
 @end deffn
@@ -240,6 +247,7 @@ Set @code{showtime: true} to make Maxima print out the computation time
 and elapsed time with each output line.
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  time
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -312,6 +320,7 @@ timedate reports current time 2010-06-08 04:08:09+01:00
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Time and date functions  @subentry  timedate
 @category{Time and date functions}
 @closecatbox
 @end deffn
@@ -437,6 +446,7 @@ Midnight, January 1, 1900, GMT, in different indicated time zones.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Time and date functions  @subentry  parse_timedate
 @category{Time and date functions}
 @closecatbox
 @end deffn
@@ -511,6 +521,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Time and date functions  @subentry  encode_time
 @category{Time and date functions}
 @closecatbox
 @end deffn
@@ -568,6 +579,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Time and date functions  @subentry  decode_time
 @category{Time and date functions}
 @closecatbox
 @end deffn
@@ -595,6 +607,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Time and date functions  @subentry  absolute_real_time
 @category{Time and date functions}
 @closecatbox
 @end deffn
@@ -625,6 +638,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Time and date functions  @subentry  elapsed_real_time
 @category{Time and date functions}
 @closecatbox
 @end deffn
@@ -655,6 +669,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Time and date functions  @subentry  elapsed_run_time
 @category{Time and date functions}
 @closecatbox
 @end deffn

@@ -110,8 +110,11 @@ finally parsed by @ref{parse_string}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Strings  @subentry  Introduction to String Processing
 @category{Strings}
+@ctindex  Share packages  @subentry  Introduction to String Processing
 @category{Share packages}
+@ctindex  Package stringproc  @subentry  Introduction to String Processing
 @category{Package stringproc}
 @closecatbox
 
@@ -149,8 +152,11 @@ and an integer: ~20t~d~%"$
 Closes @var{stream} and returns @code{true} if @var{stream} had been open. 
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  close
 @category{File input}
+@ctindex  File output  @subentry  close
 @category{File output}
+@ctindex  Package stringproc  @subentry  close
 @category{Package stringproc}
 @closecatbox
 
@@ -166,8 +172,11 @@ Closes @var{stream} and returns @code{true} if @var{stream} had been open.
 Example: See @ref{writebyte} .
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  flength
 @category{File input}
+@ctindex  File output  @subentry  flength
 @category{File output}
+@ctindex  Package stringproc  @subentry  flength
 @category{Package stringproc}
 @closecatbox
 
@@ -182,7 +191,9 @@ Flushes @var{stream} where @var{stream} has to be an output stream to a file.
 Example: See @ref{writebyte} .
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  flush_output
 @category{File output}
+@ctindex  Package stringproc  @subentry  flush_output
 @category{Package stringproc}
 @closecatbox
 
@@ -203,8 +214,11 @@ Positions in data streams are like in strings or lists 1-indexed,
 i.e. the first element in @var{stream} is in position 1.
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  fposition
 @category{File input}
+@ctindex  File output  @subentry  fposition
 @category{File output}
+@ctindex  Package stringproc  @subentry  fposition
 @category{Package stringproc}
 @closecatbox
 
@@ -224,7 +238,9 @@ There are some cases, where @code{freshline()} does not work as expected.
 See also @ref{newline}.
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  freshline
 @category{File output}
+@ctindex  Package stringproc  @subentry  freshline
 @category{Package stringproc}
 @closecatbox
 
@@ -241,6 +257,7 @@ The returned characters are removed from @var{stream}.
 Example: See @ref{make_string_output_stream} .
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  get_output_stream_string
 @category{Package stringproc}
 @closecatbox
 
@@ -268,6 +285,7 @@ t e x
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  make_string_input_stream
 @category{Package stringproc}
 @closecatbox
 
@@ -297,6 +315,7 @@ in this stream can be retrieved by @ref{get_output_stream_string}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  make_string_output_stream
 @category{Package stringproc}
 @closecatbox
 
@@ -315,7 +334,9 @@ There are some cases, where @code{newline()} does not work as expected.
 See @ref{sprint} for an example of using @code{newline()}.
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  newline
 @category{File output}
+@ctindex  Package stringproc  @subentry  newline
 @category{Package stringproc}
 @closecatbox
 
@@ -331,7 +352,9 @@ If an existing file is opened, @code{opena} appends elements at the end of @var{
 For binary output see @ref{Functions and Variables for binary input and output, , opena_binary} .
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  opena
 @category{File output}
+@ctindex  Package stringproc  @subentry  opena
 @category{Package stringproc}
 @closecatbox
 
@@ -364,7 +387,9 @@ See also @mref{close} and @mrefdot{openw}
 
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  openr
 @category{File input}
+@ctindex  Package stringproc  @subentry  openr
 @category{Package stringproc}
 @closecatbox
 
@@ -383,7 +408,9 @@ For binary output see @ref{Functions and Variables for binary input and output, 
 See also @mref{close} and @mrefdot{openr}
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  openw
 @category{File output}
+@ctindex  Package stringproc  @subentry  openw
 @category{Package stringproc}
 @closecatbox
 
@@ -522,7 +549,9 @@ For conversion of objects to strings also see @mrefcomma{concat} @mrefcomma{scon
 @mref{string} and @mrefdot{simplode}
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  printf
 @category{File output}
+@ctindex  Package stringproc  @subentry  printf
 @category{Package stringproc}
 @closecatbox
 
@@ -554,7 +583,9 @@ Example: Read the first 16 bytes from a file encrypted with AES in OpenSSL.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  readbyte
 @category{File input}
+@ctindex  Package stringproc  @subentry  readbyte
 @category{Package stringproc}
 @closecatbox
 
@@ -570,7 +601,9 @@ If the end of file is encountered @code{readchar} returns @code{false}.
 Example: See @ref{make_string_input_stream}.
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  readchar
 @category{File input}
+@ctindex  Package stringproc  @subentry  readchar
 @category{Package stringproc}
 @closecatbox
 
@@ -585,7 +618,9 @@ in @var{stream} up to the end of the line or @code{false}
 if the end of the file is encountered.
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  readline
 @category{File input}
+@ctindex  Package stringproc  @subentry  readline
 @category{Package stringproc}
 @closecatbox
 
@@ -615,6 +650,7 @@ Creating a new line with @code{newline()}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sprint
 @category{Package stringproc}
 @closecatbox
 @end deffn
@@ -659,7 +695,9 @@ GNU/Linux
 @end example
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  writebyte
 @category{File output}
+@ctindex  Package stringproc  @subentry  writebyte
 @category{Package stringproc}
 @closecatbox
 
@@ -734,6 +772,7 @@ and has not been changed.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  adjust_external_format
 @category{Package stringproc}
 @closecatbox
 
@@ -774,7 +813,9 @@ package stringproc: @"u cannot be converted into a Lisp character.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  alphacharp
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  alphacharp
 @category{Package stringproc}
 @closecatbox
 
@@ -790,7 +831,9 @@ Returns @code{true} if @var{char} is an alphabetic character or a digit
 Note: See remarks on @ref{alphacharp}. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  alphanumericp
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  alphanumericp
 @category{Package stringproc}
 @closecatbox
 
@@ -817,6 +860,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  ascii
 @category{Package stringproc}
 @closecatbox
 
@@ -829,7 +873,9 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Returns @code{true} if @var{char_1} and @var{char_2} are the same character. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  cequal
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  cequal
 @category{Package stringproc}
 @closecatbox
 
@@ -844,7 +890,9 @@ characters when the underlying Lisp is able to recognize a character as an
 alphabetic character. See remarks on @ref{alphacharp}. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  cequalignore
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  cequalignore
 @category{Package stringproc}
 @closecatbox
 
@@ -858,7 +906,9 @@ Returns @code{true} if the code point of @var{char_1} is greater than the
 code point of @var{char_2}. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  cgreaterp
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  cgreaterp
 @category{Package stringproc}
 @closecatbox
 
@@ -873,7 +923,9 @@ characters when the underlying Lisp is able to recognize a character as an
 alphabetic character. See remarks on @ref{alphacharp}. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  cgreaterpignore
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  cgreaterpignore
 @category{Package stringproc}
 @closecatbox
 
@@ -887,7 +939,9 @@ Returns @code{true} if @var{obj} is a Maxima-character.
 See introduction for example.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  charp
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  charp
 @category{Package stringproc}
 @closecatbox
 
@@ -935,6 +989,7 @@ Converting a character to a code point via UTF-8-octets may serve as a workaroun
 See @ref{utf8_to_unicode}, @ref{string_to_octets}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  cint
 @category{Package stringproc}
 @closecatbox
 
@@ -948,7 +1003,9 @@ Returns @code{true} if the code point of @var{char_1} is less than the
 code point of @var{char_2}. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  clessp
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  clessp
 @category{Package stringproc}
 @closecatbox
 
@@ -963,7 +1020,9 @@ characters when the underlying Lisp is able to recognize a character as an
 alphabetic character. See remarks on @ref{alphacharp}. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  clesspignore
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  clesspignore
 @category{Package stringproc}
 @closecatbox
 
@@ -987,7 +1046,9 @@ d e f g h i j k l m n o p q r s t u v w x y z @{ | @} ~
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  constituent
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  constituent
 @category{Package stringproc}
 @closecatbox
 
@@ -1012,7 +1073,9 @@ Returns @code{true} if @var{char} is a digit where only the corresponding
 US-ASCII-character is regarded as a digit.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  digitcharp
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  digitcharp
 @category{Package stringproc}
 @closecatbox
 
@@ -1039,7 +1102,9 @@ Returns @code{true} if @var{char} is a lowercase character.
 Note: See remarks on @ref{alphacharp}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  lowercasep
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  lowercasep
 @category{Package stringproc}
 @closecatbox
 
@@ -1052,7 +1117,9 @@ Note: See remarks on @ref{alphacharp}.
 The newline character (ASCII-character 10). 
 
 @opencatbox{Categories:}
+@ctindex  Global variables  @subentry  newline 
 @category{Global variables}
+@ctindex  Package stringproc  @subentry  newline 
 @category{Package stringproc}
 @closecatbox
 
@@ -1065,7 +1132,9 @@ The newline character (ASCII-character 10).
 The space character.
 
 @opencatbox{Categories:}
+@ctindex  Global variables  @subentry  space   
 @category{Global variables}
+@ctindex  Package stringproc  @subentry  space   
 @category{Package stringproc}
 @closecatbox
 
@@ -1078,7 +1147,9 @@ The space character.
 The tab character.
 
 @opencatbox{Categories:}
+@ctindex  Global variables  @subentry  tab     
 @category{Global variables}
+@ctindex  Package stringproc  @subentry  tab     
 @category{Package stringproc}
 @closecatbox
 
@@ -1149,6 +1220,7 @@ Example (continued): Characters defined by names
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  unicode
 @category{Package stringproc}
 @closecatbox
 
@@ -1173,6 +1245,7 @@ Examples: Converting Unicode code points to UTF-8 and vice versa.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  unicode_to_utf8
 @category{Package stringproc}
 @closecatbox
 
@@ -1187,7 +1260,9 @@ Returns @code{true} if @var{char} is an uppercase character.
 Note: See remarks on @ref{alphacharp}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  uppercasep
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  uppercasep
 @category{Package stringproc}
 @closecatbox
 
@@ -1215,7 +1290,9 @@ used as arguments to string processing functions do not contain Non-US-ASCII cha
 Given that promise, Maxima avoids parsing UTF-8 and strings can be processed more efficiently.
 
 @opencatbox{Categories:}
+@ctindex  Global variables  @subentry  us_ascii_only
 @category{Global variables}
+@ctindex  Package stringproc  @subentry  us_ascii_only
 @category{Package stringproc}
 @closecatbox
 
@@ -1231,6 +1308,7 @@ the UTF-8 encoding of a single character.
 Examples: See @ref{unicode_to_utf8}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  utf8_to_unicode
 @category{Package stringproc}
 @closecatbox
 
@@ -1259,6 +1337,7 @@ The first character in @var{string} is returned with @var{n} = 1.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  charat
 @category{Package stringproc}
 @closecatbox
 
@@ -1276,6 +1355,7 @@ Returns the list of all characters in @var{string}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  charlist
 @category{Package stringproc}
 @closecatbox
 
@@ -1303,6 +1383,7 @@ Examples:
 See also @ref{parse_string} and @ref{eval_string_lisp}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  eval_string
 @category{Package stringproc}
 @closecatbox
 
@@ -1331,6 +1412,7 @@ Examples:
 See also @ref{eval_string}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  parse_string
 @category{Package stringproc}
 @closecatbox
 
@@ -1343,6 +1425,7 @@ See also @ref{eval_string}.
 Returns a copy of @var{string} as a new string. 
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  scopy
 @category{Package stringproc}
 @closecatbox
 
@@ -1358,6 +1441,7 @@ Returns a copy of @var{string} as a new string.
 Like @ref{supcase} but uppercase characters are converted to lowercase. 
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sdowncase
 @category{Package stringproc}
 @closecatbox
 
@@ -1371,7 +1455,9 @@ Returns @code{true} if @var{string_1} and @var{string_2} contain the same
 sequence of characters. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  sequal
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  sequal
 @category{Package stringproc}
 @closecatbox
 
@@ -1386,7 +1472,9 @@ characters when the underlying Lisp is able to recognize a character as an
 alphabetic character. See remarks on @ref{alphacharp}. 
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  sequalignore
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  sequalignore
 @category{Package stringproc}
 @closecatbox
 
@@ -1399,6 +1487,7 @@ alphabetic character. See remarks on @ref{alphacharp}.
 @code{sexplode} is an alias for function @code{charlist}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sexplode
 @category{Package stringproc}
 @closecatbox
 
@@ -1428,6 +1517,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  simplode
 @category{Package stringproc}
 @closecatbox
 
@@ -1451,6 +1541,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sinsert
 @category{Package stringproc}
 @closecatbox
 
@@ -1475,6 +1566,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sinvertcase
 @category{Package stringproc}
 @closecatbox
 
@@ -1487,6 +1579,7 @@ Examples:
 Returns the number of characters in @var{string}. 
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  slength
 @category{Package stringproc}
 @closecatbox
 
@@ -1506,6 +1599,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  smake
 @category{Package stringproc}
 @closecatbox
 
@@ -1529,6 +1623,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  smismatch
 @category{Package stringproc}
 @closecatbox
 
@@ -1560,6 +1655,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  split
 @category{Package stringproc}
 @closecatbox
 
@@ -1573,6 +1669,7 @@ The first character in @var{string} is in position 1.
 For matching characters ignoring case see @ref{ssearch}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sposition
 @category{Package stringproc}
 @closecatbox
 
@@ -1602,6 +1699,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sremove
 @category{Package stringproc}
 @closecatbox
 
@@ -1618,6 +1716,7 @@ Examples:
 Like @code{sremove} except that only the first substring that matches @var{seq} is removed.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sremovefirst
 @category{Package stringproc}
 @closecatbox
 
@@ -1632,6 +1731,7 @@ Returns a string with all the characters of @var{string} in reverse order.
 See also @mrefdot{reverse}
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sreverse
 @category{Package stringproc}
 @closecatbox
 
@@ -1659,6 +1759,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  ssearch
 @category{Package stringproc}
 @closecatbox
 
@@ -1684,6 +1785,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  ssort
 @category{Package stringproc}
 @closecatbox
 
@@ -1714,6 +1816,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  ssubst
 @category{Package stringproc}
 @closecatbox
 
@@ -1730,6 +1833,7 @@ Examples:
 Like @code{subst} except that only the first substring that matches @var{old} is replaced.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  ssubstfirst
 @category{Package stringproc}
 @closecatbox
 
@@ -1753,6 +1857,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  strim
 @category{Package stringproc}
 @closecatbox
 
@@ -1765,6 +1870,7 @@ Examples:
 Like @code{strim} except that only the left end of @var{string} is trimmed. 
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  striml
 @category{Package stringproc}
 @closecatbox
 
@@ -1777,6 +1883,7 @@ Like @code{strim} except that only the left end of @var{string} is trimmed.
 Like @code{strim} except that only the right end of @var{string} is trimmed.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  strimr
 @category{Package stringproc}
 @closecatbox
 
@@ -1790,7 +1897,9 @@ Returns @code{true} if @var{obj} is a string.
 See introduction for example.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  stringp
 @category{Predicate functions}
+@ctindex  Package stringproc  @subentry  stringp
 @category{Package stringproc}
 @closecatbox
 
@@ -1817,6 +1926,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  substring
 @category{Package stringproc}
 @closecatbox
 
@@ -1841,6 +1951,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  supcase
 @category{Package stringproc}
 @closecatbox
 
@@ -1870,6 +1981,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  tokens
 @category{Package stringproc}
 @closecatbox
 
@@ -1909,6 +2021,7 @@ the resulting base64-string is platform dependent.
 However the decoded string will be equal to the original.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  base64
 @category{Package stringproc}
 @closecatbox
 
@@ -1929,6 +2042,7 @@ alternatively return the corresponding number or list of octets.
 Example: See @ref{base64}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  base64_decode
 @category{Package stringproc}
 @closecatbox
 
@@ -1980,6 +2094,7 @@ WdiwkSPZ3gnIBhM9SuC076gLWZUNs6NqTeE3UzMjDAFhH3jYk1T7mysCvdtIkms=
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  crc24sum
 @category{Package stringproc}
 @closecatbox
 
@@ -2036,6 +2151,7 @@ The argument may be a binary input stream.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  md5sum
 @category{Package stringproc}
 @closecatbox
 
@@ -2070,6 +2186,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  mgf1_sha1
 @category{Package stringproc}
 @closecatbox
 
@@ -2094,6 +2211,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  number_to_octets
 @category{Package stringproc}
 @closecatbox
 
@@ -2108,6 +2226,7 @@ Returns a number by concatenating the octets in the list of @var{octets}.
 Example: See @ref{number_to_octets}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  octets_to_number
 @category{Package stringproc}
 @closecatbox
 
@@ -2130,6 +2249,7 @@ Example: RSA encryption OID
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  octets_to_oid
 @category{Package stringproc}
 @closecatbox
 
@@ -2183,6 +2303,7 @@ Example (continued): Using the optional encoding argument
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  octets_to_string
 @category{Package stringproc}
 @closecatbox
 
@@ -2197,6 +2318,7 @@ Converts an object identifier (OID) to a list of @var{octets}.
 Example: See @ref{octets_to_oid}.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  oid_to_octets
 @category{Package stringproc}
 @closecatbox
 
@@ -2234,6 +2356,7 @@ Note that in case @var{arg} contains German umlauts or other non-ASCII
 characters (resp. octets larger than 127) the @code{SHA1} fingerprint is platform dependent.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sha1sum
 @category{Package stringproc}
 @closecatbox
 
@@ -2262,6 +2385,7 @@ Note that in case @var{arg} contains German umlauts or other non-ASCII
 characters (resp. octets larger than 127) the @code{SHA256} fingerprint is platform dependent.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  sha256sum
 @category{Package stringproc}
 @closecatbox
 
@@ -2284,6 +2408,7 @@ If necessary see @ref{adjust_external_format} for changing the external format.
 See @ref{octets_to_string} for examples and some more information.
 
 @opencatbox{Categories:}
+@ctindex  Package stringproc  @subentry  string_to_octets
 @category{Package stringproc}
 @closecatbox
 

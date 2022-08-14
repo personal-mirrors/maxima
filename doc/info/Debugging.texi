@@ -121,6 +121,7 @@ visiting.  There are additional commands available in that file window, such as
 evaluating the function into the Maxima, by typing @code{Alt-Control-x}.
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  Source Level Debugging
 @category{Debugging}
 @closecatbox
 
@@ -194,6 +195,7 @@ completing the computation
 @end table 
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  Keyword Commands
 @category{Debugging}
 @closecatbox
 
@@ -221,7 +223,9 @@ In either case, enabling @code{debugmode} will not catch Lisp errors.
 @c I'M NOT CONVINCED WE WANT TO OPEN THAT CAN OF WORMS !!!
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  debugmode
 @category{Debugging}
+@ctindex  Global flags  @subentry  debugmode
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -236,8 +240,11 @@ each time a bound variable is used for the first time in a
 computation.
 
 @opencatbox{Categories:}
+@ctindex  Evaluation  @subentry  refcheck
 @category{Evaluation}
+@ctindex  Console interaction  @subentry  refcheck
 @category{Console interaction}
+@ctindex  Global flags  @subentry  refcheck
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -278,7 +285,9 @@ No printout is generated when a
 variable on the @code{setcheck} list is assigned to itself, e.g., @code{X: 'X}.
 
 @opencatbox{Categories:}
+@ctindex  Console interaction  @subentry  setcheck
 @category{Console interaction}
+@ctindex  Global flags  @subentry  setcheck
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -299,7 +308,9 @@ Hence, one may assign a different value by assigning to @code{setval}.
 See also @mref{setcheck} and @mrefdot{setval}
 
 @opencatbox{Categories:}
+@ctindex  Console interaction  @subentry  setcheckbreak
 @category{Console interaction}
+@ctindex  Global flags  @subentry  setcheckbreak
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -315,7 +326,9 @@ Hence, one may assign a different value by assigning to @mref{setval}.
 See also @mref{setcheck} and @mrefdot{setcheckbreak}
 
 @opencatbox{Categories:}
+@ctindex  Console interaction  @subentry  setval
 @category{Console interaction}
+@ctindex  Global variables  @subentry  setval
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -352,6 +365,7 @@ If @code{trace(f)} is in effect, then @code{timer(f)} has no effect;
 See also @mrefdot{timer_devalue}
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  timer
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -375,6 +389,7 @@ return information about any function not currently on the timer list.
 and puts @code{f} on the timer list again.
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  untimer
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -393,7 +408,9 @@ total time.
 See also @mref{timer} and @mrefdot{timer_info}
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  timer_devalue
 @category{Debugging}
+@ctindex  Global flags  @subentry  timer_devalue
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -423,6 +440,7 @@ get(f, 'calls);  get(f, 'runtime);  get(f, 'gctime);
 See also @mrefdot{timer}
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  timer_info
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -458,6 +476,7 @@ If @code{timer (f)} is in effect, then @code{trace (f)} has no effect;
 @code{trace} and @code{timer} can't both be in effect for the same function.
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  trace
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -534,6 +553,7 @@ on a predicate:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  trace_options
 @category{Debugging}
 @closecatbox
 @end deffn
@@ -552,6 +572,7 @@ With no arguments, @code{untrace} disables tracing for all functions.
 it disabled tracing.
 
 @opencatbox{Categories:}
+@ctindex  Debugging  @subentry  untrace
 @category{Debugging}
 @closecatbox
 @end deffn

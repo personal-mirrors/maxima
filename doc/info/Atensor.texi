@@ -111,8 +111,11 @@ consider setting @code{dotassoc} to @code{false}. In this case, however,
 simplifications.
 
 @opencatbox{Categories:}
+@ctindex  Tensors  @subentry  Introduction to atensor
 @category{Tensors}
+@ctindex  Share packages  @subentry  Introduction to atensor
 @category{Share packages}
+@ctindex  Package atensor  @subentry  Introduction to atensor
 @category{Package atensor}
 @closecatbox
 
@@ -179,6 +182,7 @@ Cl(3,1). A call to @code{init_atensor(dirac)} is equivalent to
 @code{init_atensor(clifford,3,0,1)}.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  init_atensor
 @category{Package atensor}
 @closecatbox
 @end deffn
@@ -195,7 +199,9 @@ safeguard is used to ensure that the function always terminates, even
 for complex expressions.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  atensimp
 @category{Package atensor}
+@ctindex  Simplification functions  @subentry  atensimp
 @category{Simplification functions}
 @closecatbox
 
@@ -207,6 +213,7 @@ The algebra type. Valid values are @code{universal}, @code{grassmann},
 @code{clifford}, @code{symmetric}, @code{symplectic} and @code{lie_envelop}.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  alg_type
 @category{Package atensor}
 @closecatbox
 
@@ -220,7 +227,9 @@ The dimensionality of the algebra. @code{atensor} uses the value of @code{adim}
 to determine if an indexed object is a valid base vector.  See @code{abasep}.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  adim
 @category{Package atensor}
+@ctindex  Global variables  @subentry  adim
 @category{Global variables}
 @closecatbox
 
@@ -234,7 +243,9 @@ Default values for the bilinear forms @code{sf}, @code{af}, and
 @code{av}. The default is the identity matrix @code{ident(3)}.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  aform
 @category{Package atensor}
+@ctindex  Global variables  @subentry  aform
 @category{Global variables}
 @closecatbox
 
@@ -247,7 +258,9 @@ Default value: @code{v}
 The symbol for base vectors.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  asymbol
 @category{Package atensor}
+@ctindex  Global variables  @subentry  asymbol
 @category{Global variables}
 @closecatbox
 
@@ -262,6 +275,7 @@ using @code{abasep} and if that is the case, substitutes the
 corresponding value from the matrix @code{aform}.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  sf
 @category{Package atensor}
 @closecatbox
 
@@ -276,6 +290,7 @@ using @code{abasep} and if that is the case, substitutes the
 corresponding value from the matrix @code{aform}.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  af
 @category{Package atensor}
 @closecatbox
 
@@ -317,6 +332,7 @@ For instance:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  av
 @category{Package atensor}
 @closecatbox
 
@@ -332,7 +348,9 @@ an indexed symbol, with the symbol being the same as the value of
 and @code{adim}.
 
 @opencatbox{Categories:}
+@ctindex  Package atensor  @subentry  abasep
 @category{Package atensor}
+@ctindex  Predicate functions  @subentry  abasep
 @category{Predicate functions}
 @closecatbox
 

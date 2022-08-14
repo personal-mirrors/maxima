@@ -78,6 +78,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integral calculus  @subentry  antid
 @category{Integral calculus}
 @closecatbox
 @end deffn
@@ -152,6 +153,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integral calculus  @subentry  antidiff
 @category{Integral calculus}
 @closecatbox
 @end deffn
@@ -265,7 +267,9 @@ seen in the following example:
 
 
 @opencatbox{Categories:}
+@ctindex  Evaluation  @subentry  at
 @category{Evaluation}
+@ctindex  Differential equations  @subentry  at
 @category{Differential equations}
 @closecatbox
 @end deffn
@@ -283,6 +287,7 @@ This property is assigned by @code{gradef}.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  atomgrad
 @category{Differential calculus}
 @closecatbox
 @end defvr
@@ -370,7 +375,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  atvalue
 @category{Differential equations}
+@ctindex  Declarations and inferences  @subentry  atvalue
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -396,6 +403,7 @@ description of these commands along with examples.
 @code{cartan} was implemented by F.B. Estabrook and H.D. Wahlquist.
 
 @opencatbox{Categories:}
+@ctindex  Differential geometry  @subentry  cartan
 @category{Differential geometry}
 @closecatbox
 @end deffn
@@ -420,7 +428,9 @@ it is necessary for @code{init_cartan} to be called before any expression
 containing the Cartan coordinates @code{@var{x_1}, ..., @var{x_n}} is parsed.
 
 @opencatbox{Categories:}
+@ctindex  Differential geometry  @subentry  init_cartan
 @category{Differential geometry}
+@ctindex  Package cartan  @subentry  init_cartan
 @category{Package cartan}
 @closecatbox
 @end deffn
@@ -457,6 +467,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  del
 @category{Differential calculus}
 @closecatbox
 @end deffn
@@ -485,7 +496,9 @@ p;
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Mathematical functions  @subentry  delta
 @category{Mathematical functions}
+@ctindex  Laplace transform  @subentry  delta
 @category{Laplace transform}
 @closecatbox
 @end deffn
@@ -557,7 +570,9 @@ See also @mref{depends} and @mrefdot{gradef}
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  dependencies
 @category{Declarations and inferences}
+@ctindex  Global variables  @subentry  dependencies
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -646,7 +661,9 @@ See also @mrefcomma{diff} @mrefcomma{del} @mref{derivdegree} and
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  depends
 @category{Differential calculus}
+@ctindex  Declarations and inferences  @subentry  depends
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -662,7 +679,9 @@ Otherwise, derivatives are displayed in the Leibniz notation @code{dy/dx}.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  derivabbrev
 @category{Differential calculus}
+@ctindex  Global flags  @subentry  derivabbrev
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -695,7 +714,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  derivdegree
 @category{Differential calculus}
+@ctindex  Expressions  @subentry  derivdegree
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -710,7 +731,9 @@ Causes only differentiations with respect to
 the indicated variables, within the @mref{ev} command.
 
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  derivlist
 @category{Differential calculus}
+@ctindex  Evaluation  @subentry  derivlist
 @category{Evaluation}
 @closecatbox
 @end deffn
@@ -724,7 +747,9 @@ When @code{derivsubst} is @code{true}, a non-syntactic substitution such as
 @code{subst (x, 'diff (y, t), 'diff (y, t, 2))} yields @code{'diff (x, t)}.
 
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  derivsubst
 @category{Differential calculus}
+@ctindex  Expressions  @subentry  derivsubst
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -823,6 +848,7 @@ treated as in (1) above.
 
 @c NEED EXAMPLES FOR TENSOR STUFF
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  diff
 @category{Differential calculus}
 @closecatbox
 @end deffn
@@ -932,8 +958,11 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  express
 @category{Differential calculus}
+@ctindex  Vectors  @subentry  express
 @category{Vectors}
+@ctindex  Operators  @subentry  express
 @category{Operators}
 @closecatbox
 @end deffn
@@ -1011,7 +1040,9 @@ higher order derivatives.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  gradef
 @category{Differential calculus}
+@ctindex  Declarations and inferences  @subentry  gradef
 @category{Declarations and inferences}
 @closecatbox
 @end deffn
@@ -1027,7 +1058,9 @@ for which partial derivatives have been defined by @code{gradef}.
 for which partial derivatives have been defined by @code{gradef}.
 
 @opencatbox{Categories:}
+@ctindex  Differential calculus  @subentry  gradefs
 @category{Differential calculus}
+@ctindex  Declarations and inferences  @subentry  gradefs
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -1153,7 +1186,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Laplace transform  @subentry  laplace
 @category{Laplace transform}
+@ctindex  Differential equations  @subentry  laplace
 @category{Differential equations}
 @closecatbox
 @end deffn

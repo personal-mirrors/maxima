@@ -12,8 +12,11 @@
 equations in one or more variables.
 
 @opencatbox{Categories:}
+@ctindex  Numerical methods  @subentry  Introduction to mnewton
 @category{Numerical methods}
+@ctindex  Share packages  @subentry  Introduction to mnewton
 @category{Share packages}
+@ctindex  Package mnewton  @subentry  Introduction to mnewton
 @category{Package mnewton}
 @closecatbox
 
@@ -32,6 +35,7 @@ the solution.  If @code{newtonepsilon} is a bigfloat, then @code{mnewton}
 computations are done with bigfloats.  See also @mrefdot{mnewton}
 
 @opencatbox{Categories:}
+@ctindex  Package mnewton  @subentry  newtonepsilon
 @category{Package mnewton}
 @closecatbox
 @end defvr
@@ -47,6 +51,7 @@ if it does not converge or if it converges too slowly.
 See also @mrefdot{mnewton}
 
 @opencatbox{Categories:}
+@ctindex  Package mnewton  @subentry  newtonmaxiter
 @category{Package mnewton}
 @closecatbox
 @end defvr
@@ -103,6 +108,7 @@ To use this function write first @code{load("mnewton")}.
 See also @mref{newtonepsilon} and @mrefdot{newtonmaxiter}
 
 @opencatbox{Categories:}
+@ctindex  Package mnewton  @subentry  mnewton
 @category{Package mnewton}
 @closecatbox
 @end deffn

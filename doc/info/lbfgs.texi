@@ -24,9 +24,13 @@ scale optimization". @i{Mathematical Programming B} 45:503--528 (1989)
 [2] @url{https://www.netlib.org/opt/lbfgs_um.shar}
 
 @opencatbox{Categories:}
+@ctindex  Numerical methods   @subentry  Introduction to lbfgs
 @category{Numerical methods} 
+@ctindex  Optimization  @subentry  Introduction to lbfgs
 @category{Optimization}
+@ctindex  Share packages  @subentry  Introduction to lbfgs
 @category{Share packages}
+@ctindex  Package lbfgs  @subentry  Introduction to lbfgs
 @category{Package lbfgs}
 @closecatbox
 
@@ -423,6 +427,7 @@ I& NFN&   FUNC&                    GNORM&                   STEPLENGTH\cr
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package lbfgs  @subentry  lbfgs
 @category{Package lbfgs}
 @closecatbox
 
@@ -437,6 +442,7 @@ When @code{lbfgs_nfeval_max} is reached,
 @code{lbfgs} returns the result of the last successful line search.
 
 @opencatbox{Categories:}
+@ctindex  Package lbfgs  @subentry  lbfgs_nfeval_max
 @category{Package lbfgs}
 @closecatbox
 
@@ -450,6 +456,7 @@ Default value: 25
 to the approximate inverse Hessian matrix which is maintained by @code{lbfgs}.
 
 @opencatbox{Categories:}
+@ctindex  Package lbfgs  @subentry  lbfgs_ncorrections
 @category{Package lbfgs}
 @closecatbox
 

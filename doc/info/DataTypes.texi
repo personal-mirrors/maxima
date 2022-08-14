@@ -36,6 +36,7 @@ of complex expressions can usually be accomplished by using the @code{realpart},
 functions.
 
 @opencatbox{Categories:}
+@ctindex  Complex variables  @subentry  Introduction to Numbers
 @category{Complex variables}
 @closecatbox
 
@@ -110,6 +111,7 @@ in @var{expr} with bigfloat numbers.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  bfloat
 @category{Numerical evaluation}
 @closecatbox
 @end deffn
@@ -121,7 +123,9 @@ in @var{expr} with bigfloat numbers.
 Returns @code{true} if @var{expr} is a bigfloat number, otherwise @code{false}.
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  bfloatp
 @category{Numerical evaluation}
+@ctindex  Predicate functions  @subentry  bfloatp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -163,6 +167,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  bftorat
 @category{Numerical evaluation}
 @closecatbox
 @end defvr
@@ -178,6 +183,7 @@ displays as @code{1.000000000000000B0}.  Otherwise, this is displayed as
 @code{1.0B0}.
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  bftrunc
 @category{Numerical evaluation}
 @closecatbox
 @end defvr
@@ -194,6 +200,7 @@ Returns @code{true} if @var{expr} is a literal even integer, otherwise
 is declared @code{even}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  evenp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -208,7 +215,9 @@ non-integral rational numbers and bigfloat numbers to be converted to floating
 point.
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  float
 @category{Numerical evaluation}
+@ctindex  Evaluation flags  @subentry  float
 @category{Evaluation flags}
 @closecatbox
 @end deffn
@@ -223,6 +232,7 @@ a floating point number is replaced by a bigfloat number with less precision.
 @c DOES THAT APPLY ONLY TO BFLOAT, OR DO OTHER FUNCTIONS CALL IT ??
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  float2bf
 @category{Numerical evaluation}
 @closecatbox
 @end defvr
@@ -235,7 +245,9 @@ Returns @code{true} if @var{expr} is a floating point number, otherwise
 @code{false}.
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  floatnump
 @category{Numerical evaluation}
+@ctindex  Predicate functions  @subentry  floatnump
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -252,6 +264,7 @@ numbers.
 See also @mref{bfloat} and @mrefdot{fpprintprec}
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  fpprec
 @category{Numerical evaluation}
 @closecatbox
 @end defvr
@@ -284,7 +297,9 @@ if there are trailing zero digits.
 @code{fpprintprec} cannot be 1.
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  fpprintprec
 @category{Numerical evaluation}
+@ctindex  Display flags and variables  @subentry  fpprintprec
 @category{Display flags and variables}
 @closecatbox
 @end defvr
@@ -334,6 +349,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  integerp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -361,7 +377,9 @@ m1pbranch:false          m1pbranch:true
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  m1pbranch
 @category{Expressions}
+@ctindex  Global flags  @subentry  m1pbranch
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -373,6 +391,7 @@ m1pbranch:false          m1pbranch:true
 Return @code{true} if and only if @code{@var{n} >= 0} and @var{n} is an integer.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  nonnegintegerp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -420,6 +439,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  numberp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -460,7 +480,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  numer
 @category{Numerical evaluation}
+@ctindex  Evaluation flags  @subentry  numer
 @category{Evaluation flags}
 @closecatbox
 @end defvr
@@ -513,6 +535,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  numer_pbranch
 @category{Numerical evaluation}
 @closecatbox
 @end defvr
@@ -534,7 +557,9 @@ The expressions @code{expr_1}, @dots{}, @code{expr_n} can be any expressions,
 not necessarily numeric.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  numerval
 @category{Declarations and inferences}
+@ctindex  Numerical evaluation  @subentry  numerval
 @category{Numerical evaluation}
 @closecatbox
 @end deffn
@@ -551,6 +576,7 @@ Returns @code{true} if @var{expr} is a literal odd integer, otherwise
 is declared @code{odd}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  oddp
 @category{Predicate functions}
 @closecatbox
 @end deffn
@@ -565,7 +591,9 @@ of floating point numbers to rational numbers, when the option variable
 @mref{bftorat} has the value @code{false}.  See @code{bftorat} for an example.
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  ratepsilon
 @category{Numerical evaluation}
+@ctindex  Rational expressions  @subentry  ratepsilon
 @category{Rational expressions}
 @closecatbox
 @end defvr
@@ -626,6 +654,7 @@ representation.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Numerical evaluation  @subentry  rationalize
 @category{Numerical evaluation}
 @closecatbox
 @end deffn
@@ -638,7 +667,9 @@ Returns @code{true} if @var{expr} is a literal integer or ratio of literal
 integers, otherwise @code{false}.
 
 @opencatbox{Categories:}
+@ctindex  Predicate functions  @subentry  ratnump
 @category{Predicate functions}
+@ctindex  Rational expressions  @subentry  ratnump
 @category{Rational expressions}
 @closecatbox
 @end deffn
@@ -749,6 +780,7 @@ this string.";
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Syntax  @subentry  Introduction to Strings
 @category{Syntax}
 @closecatbox
 
@@ -823,7 +855,9 @@ Note that although @code{concat (1, 2)} looks like a number, it is a string.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  concat
 @category{Expressions}
+@ctindex  Strings  @subentry  concat
 @category{Strings}
 @closecatbox
 @end deffn
@@ -865,7 +899,9 @@ Another purpose for @code{sconcat} is to convert arbitrary objects to strings.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  sconcat
 @category{Expressions}
+@ctindex  Strings  @subentry  sconcat
 @category{Strings}
 @closecatbox
 @end deffn
@@ -886,6 +922,7 @@ See also @mrefcomma{concat} @mrefcomma{sconcat} @mref{simplode} and
 @mrefdot{eval_string}
 
 @opencatbox{Categories:}
+@ctindex  Strings  @subentry  string
 @category{Strings}
 @closecatbox
 @end deffn
@@ -932,6 +969,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Display flags and variables  @subentry  stringdisp
 @category{Display flags and variables}
 @closecatbox
 @end defvr

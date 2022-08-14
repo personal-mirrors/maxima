@@ -84,8 +84,11 @@ and the fundamental units are the associated SI units,
 but other fundamental dimensions and units can be declared.
 
 @opencatbox{Categories:}
+@ctindex  Physical units  @subentry  Introduction to ezunits
 @category{Physical units}
+@ctindex  Share packages  @subentry  Introduction to ezunits
 @category{Share packages}
+@ctindex  Package ezunits  @subentry  Introduction to ezunits
 @category{Package ezunits}
 @closecatbox
 
@@ -283,8 +286,11 @@ Computing conversions to base units; may take a moment.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Physical units  @subentry  Introduction to physical_constants
 @category{Physical units}
+@ctindex  Share packages  @subentry  Introduction to physical_constants
 @category{Share packages}
+@ctindex  Package physical_constants  @subentry  Introduction to physical_constants
 @category{Package physical_constants}
 @closecatbox
 
@@ -415,6 +421,7 @@ Arithmetic operations on dimensional quantities.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  `
 @category{Package ezunits}
 @closecatbox
 
@@ -636,6 +643,7 @@ Computing conversions to base units; may take a moment.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  `@w{}`
 @category{Package ezunits}
 @closecatbox
 
@@ -673,6 +681,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  constvalue
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -704,6 +713,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  declare_constvalue
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -715,6 +725,7 @@ Reverts the effect of @mrefdot{declare_constvalue} This function should be
 loaded with @code{load ("ezunits")}.
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  remove_constvalue
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -771,6 +782,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  units
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -811,6 +823,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  declare_units
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -855,6 +868,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  qty
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -892,6 +906,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  declare_qty
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -958,6 +973,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  unitp
 @category{Package ezunits}
 @closecatbox
 
@@ -1025,6 +1041,7 @@ Computing conversions to base units; may take a moment.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  declare_unit_conversion
 @category{Package ezunits}
 @closecatbox
 
@@ -1067,6 +1084,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  declare_dimensions
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -1079,6 +1097,7 @@ loaded with @code{load ("ezunits")}.
 
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  remove_dimensions
 @category{Package ezunits}
 @closecatbox
 @end deffn
@@ -1125,6 +1144,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  declare_fundamental_dimensions
 @category{Package ezunits}
 @closecatbox
 
@@ -1181,6 +1201,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  declare_fundamental_units
 @category{Package ezunits}
 @closecatbox
 
@@ -1248,6 +1269,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  dimensions
 @category{Package ezunits}
 @closecatbox
 
@@ -1301,6 +1323,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  fundamental_units
 @category{Package ezunits}
 @closecatbox
 
@@ -1352,6 +1375,7 @@ is proportional to the fine-structure constant.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  dimensionless
 @category{Package ezunits}
 @closecatbox
 
@@ -1374,6 +1398,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package ezunits  @subentry  natural_unit
 @category{Package ezunits}
 @closecatbox
 

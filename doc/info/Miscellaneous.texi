@@ -51,6 +51,7 @@ At one time, it was possible for a user to inspect @code{askexp}
 by entering a Maxima break with control-A.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  askexp
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -64,6 +65,7 @@ Default value: @code{i}
 next variable of summation when necessary.
 
 @opencatbox{Categories:}
+@ctindex  Sums and products  @subentry  genindex
 @category{Sums and products}
 @closecatbox
 @end defvr
@@ -77,6 +79,7 @@ of summation.  If it is set to @code{false} then the index will consist only
 of @code{genindex} with no numeric suffix.
 
 @opencatbox{Categories:}
+@ctindex  Sums and products  @subentry  gensumnum
 @category{Sums and products}
 @closecatbox
 @end defvr
@@ -138,6 +141,7 @@ to the package file.  Setting the flag to @code{true} is also useful for
 creating Maxima init files.
 
 @opencatbox{Categories:}
+@ctindex  Translation flags and variables  @subentry  packagefile
 @category{Translation flags and variables}
 @closecatbox
 @end defvr
@@ -161,6 +165,7 @@ the list of all variables given names by the user
 See also @mrefdot{values}
 
 @opencatbox{Categories:}
+@ctindex  Evaluation  @subentry  remvalue
 @category{Evaluation}
 @closecatbox
 @end deffn
@@ -185,6 +190,7 @@ cancellations.
 @code{load("rncomb")} loads this function.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  rncombine
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -233,7 +239,9 @@ Warning - you are redefining the Macsyma function legendre_p
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Function definition  @subentry  setup_autoload
 @category{Function definition}
+@ctindex  File input  @subentry  setup_autoload
 @category{File input}
 @closecatbox
 @end deffn

@@ -244,7 +244,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Operators  @subentry  additive
 @category{Operators}
+@ctindex  Declarations and inferences  @subentry  additive
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -307,7 +309,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Operators  @subentry  antisymmetric
 @category{Operators}
+@ctindex  Declarations and inferences  @subentry  antisymmetric
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -343,6 +347,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  combine
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -393,7 +398,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Operators  @subentry  commutative
 @category{Operators}
+@ctindex  Declarations and inferences  @subentry  commutative
 @category{Declarations and inferences}
 @closecatbox
 @end defvr
@@ -420,8 +427,11 @@ form.  @code{demoivre} and @code{exponentialize} cannot both be true at the same
 time.
 
 @opencatbox{Categories:}
+@ctindex  Complex variables  @subentry  demoivre
 @category{Complex variables}
+@ctindex  Trigonometric functions  @subentry  demoivre
 @category{Trigonometric functions}
+@ctindex  Hyperbolic functions  @subentry  demoivre
 @category{Hyperbolic functions}
 @closecatbox
 @end deffn
@@ -461,6 +471,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  distrib
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -585,6 +596,7 @@ to the value @code{false}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  distribute_over
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -602,6 +614,7 @@ When @code{domain} is set to @code{complex}, @code{sqrt (x^2)} will remain
 @c and controls little more than this at the moment.
 
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  domain
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -775,6 +788,7 @@ Resimplify an expression without expansion:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  expand
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -799,6 +813,7 @@ This function is autoloaded from
 @file{simplification/stopex.mac}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  expandwrt
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -815,6 +830,7 @@ arguments of @code{expandwrt}, but if @code{expandwrt_denom} is @code{false},
 then only the numerator will be expanded in that way.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  expandwrt_denom
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -834,6 +850,7 @@ of @code{expr} that contain the variables @var{x_1}, @dots{}, @var{x_n}.
 This function is autoloaded from @file{simplification/stopex.mac}.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  expandwrt_factored
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -849,6 +866,7 @@ example, if @code{expon} is 4 then @code{(x+1)^(-5)} will not be automatically
 expanded.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  expon
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -871,8 +889,11 @@ The default value is @code{false}.
 both be true at the same time.
 
 @opencatbox{Categories:}
+@ctindex  Complex variables  @subentry  exponentialize
 @category{Complex variables}
+@ctindex  Trigonometric functions  @subentry  exponentialize
 @category{Trigonometric functions}
+@ctindex  Hyperbolic functions  @subentry  exponentialize
 @category{Hyperbolic functions}
 @closecatbox
 @end deffn
@@ -893,6 +914,7 @@ executing @code{expand ((x + 1)^n)} will work only if @code{maxposex} is not
 less than n.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  expop
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -908,8 +930,11 @@ left-associative.  E.g., @code{g (g (a, b), g (c, d))} will simplify to
 @code{g (g (g (a, b), c), d)}.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  lassociative
 @category{Declarations and inferences}
+@ctindex  Operators  @subentry  lassociative
 @category{Operators}
+@ctindex  Simplification  @subentry  lassociative
 @category{Simplification}
 @closecatbox
 @end defvr
@@ -994,8 +1019,11 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  linear
 @category{Declarations and inferences}
+@ctindex  Operators  @subentry  linear
 @category{Operators}
+@ctindex  Simplification  @subentry  linear
 @category{Simplification}
 @closecatbox
 @end defvr
@@ -1011,6 +1039,7 @@ Default value: 1000
 be expanded by the @code{expand} command, see also @mrefdot{maxposex}
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  maxnegex
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1026,6 +1055,7 @@ Default value: 1000
 expanded with the @code{expand} command, see also @mrefdot{maxnegex}
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  maxposex
 @category{Expressions}
 @closecatbox
 @end defvr
@@ -1108,8 +1138,11 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  multiplicative
 @category{Declarations and inferences}
+@ctindex  Expressions  @subentry  multiplicative
 @category{Expressions}
+@ctindex  Simplification  @subentry  multiplicative
 @category{Simplification}
 @closecatbox
 @end defvr
@@ -1176,6 +1209,7 @@ noncommutative) over sums.  Since quotients are represented as products
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  multthru
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1252,6 +1286,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  negdistrib
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -1280,8 +1315,11 @@ lassociative, rassociative]
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Global variables  @subentry  opproperties
 @category{Global variables}
+@ctindex  Operators  @subentry  opproperties
 @category{Operators}
+@ctindex  Simplification  @subentry  opproperties
 @category{Simplification}
 @closecatbox
 @end defvr
@@ -1347,7 +1385,9 @@ Declare that @code{f} and @code{g} have the new property.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Operators  @subentry  define_opproperty
 @category{Operators}
+@ctindex  Simplification  @subentry  define_opproperty
 @category{Simplification}
 @closecatbox
 @end deffn
@@ -1407,7 +1447,9 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  outative
 @category{Declarations and inferences}
+@ctindex  Operators  @subentry  outative
 @category{Operators}
 @closecatbox
 @end defvr
@@ -1469,6 +1511,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Simplification functions  @subentry  radcan
 @category{Simplification functions}
 @closecatbox
 @end deffn
@@ -1504,6 +1547,7 @@ If @code{radexpand} is @code{false}, or @code{radexpand} is @code{true} and
 Note that @code{domain} only matters when @code{radexpand} is @code{true}.
 
 @opencatbox{Categories:}
+@ctindex  Simplification flags and variables  @subentry  radexpand
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -1519,7 +1563,9 @@ simplifier that @code{g} is right-associative.  E.g.,
 @code{g(g(a, b), g(c, d))} simplifies to @code{g(a, g(b, g(c, d)))}.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  rassociative
 @category{Declarations and inferences}
+@ctindex  Operators  @subentry  rassociative
 @category{Operators}
 @closecatbox
 @end defvr
@@ -1540,6 +1586,7 @@ simplifications are tried, it returns the original answer.
 @code{example (scsimp)} displays some examples.
 
 @opencatbox{Categories:}
+@ctindex  Simplification functions  @subentry  scsimp
 @category{Simplification functions}
 @closecatbox
 @end deffn
@@ -1613,6 +1660,7 @@ assignment has occurred during the evaluation phase of the expression.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation flags  @subentry  simp
 @category{Evaluation flags}
 @closecatbox
 @end defvr
@@ -1630,7 +1678,9 @@ simplifies to @code{h (x, y, z)}.
 @code{commutative} is synonymous with @code{symmetric}.
 
 @opencatbox{Categories:}
+@ctindex  Declarations and inferences  @subentry  symmetric
 @category{Declarations and inferences}
+@ctindex  Operators  @subentry  symmetric
 @category{Operators}
 @closecatbox
 @end defvr
@@ -1676,6 +1726,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  xthru
 @category{Expressions}
 @closecatbox
 @end deffn

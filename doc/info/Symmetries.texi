@@ -67,9 +67,13 @@ Springer-Verlag, New York Berlin, 308-320, 1989.
 @end iftex
 
 @opencatbox{Categories:}
+@ctindex  Group theory  @subentry  Introduction to Symmetries
 @category{Group theory}
+@ctindex  Polynomials  @subentry  Introduction to Symmetries
 @category{Polynomials}
+@ctindex  Share packages  @subentry  Introduction to Symmetries
 @category{Share packages}
+@ctindex  Package sym  @subentry  Introduction to Symmetries
 @category{Package sym}
 @closecatbox
 
@@ -100,6 +104,7 @@ otherwise the size is set to @var{n}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  comp2pui
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -112,6 +117,7 @@ Similar to @code{comp2ele} and @code{comp2pui}.
 Other functions for changing bases: @code{comp2ele}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  ele2pui
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -124,6 +130,7 @@ Similar to @code{comp2ele} and @code{comp2pui}.
 Other functions for changing bases: @code{comp2ele}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  ele2comp
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -168,6 +175,7 @@ contracted form (which here depends on only two of its variables) is
 Other functions for changing bases: @code{comp2ele}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  elem
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -235,6 +243,7 @@ which means that for 3 variables this gives:
 Other functions for changing bases: @code{comp2ele}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  mon2schur
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -266,6 +275,7 @@ decomposes a multi-symmetric polynomial in the multi-contracted form
 Other functions for changing bases: @code{comp2ele}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  multi_elem
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -291,6 +301,7 @@ the function @code{elem}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  multi_pui
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -338,6 +349,7 @@ be 2). The function @code{pui} is used in the same way.
 Other functions for changing bases: @code{comp2ele}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  pui
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -384,6 +396,7 @@ otherwise it is its first element (as in @code{comp2ele} and
 Other functions for changing bases: @code{comp2ele}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  pui2comp
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -399,6 +412,7 @@ elementary symmetric functions from 1 to @var{n}, and if the flag is
 Other functions for changing bases: @code{comp2ele}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  pui2ele
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -429,6 +443,7 @@ first @var{m}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  puireduc
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -460,6 +475,7 @@ functions.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  schur2comp
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -491,6 +507,7 @@ returns the partitioned polynomial associated to the contracted form
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  cont2part
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -525,6 +542,7 @@ the polynomial.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  contract
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -544,6 +562,7 @@ returns the symmetric polynomial associated with the contracted form
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  explose
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -564,6 +583,7 @@ The contracted form is rendered with the variables in @var{lvar}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  part2cont
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -584,6 +604,7 @@ The contracted form is rendered with the variables in @var{lvar}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  partpol
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -595,6 +616,7 @@ list @var{lvar}.  If so, it returns a contracted representation like the
 function @code{contract}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  tcontract
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -607,6 +629,7 @@ list @var{lvar}.  If so, it returns its partitioned representation like
 the function @code{partpol}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  tpartpol
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -719,6 +742,7 @@ Functions of @code{sym} used in this function:
 (if the flag @code{direct} is in @code{puissances}).
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  direct
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -751,6 +775,7 @@ lists.
 Also see: @code{orbit} for the action of a single symmetric group.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  multi_orbit
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -784,6 +809,7 @@ Functions for changing the representations of a symmetric polynomial:
 @code{partpol}, @code{tcontract}, @code{tpartpol}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  multsym
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -814,6 +840,7 @@ See also @mref{multi_orbit} for the action of a product of symmetric
 groups on a polynomial.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  orbit
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -897,6 +924,7 @@ element is kept per orbit, under the action of @var{SD}.
 @c pui_direct ([y + x + 2*c, y + x + 2*b, y + x + 2*a], [[x, y], [a, b, c]], [3, 4]);
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  pui_direct
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -922,6 +950,7 @@ written by P. Esperet, calculates the Kostka number of the partition
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  kostka
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -943,6 +972,7 @@ returns the list of partitions of weight @var{n} and length @var{m}.
 Also see: @mrefcomma{ltreillis} @mref{treillis} and @mrefdot{treinat}
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  lgtreillis
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -965,6 +995,7 @@ equal to @var{m}.
 Also see: @mrefcomma{lgtreillis} @mref{treillis} and @mrefdot{treinat}
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  ltreillis
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -986,6 +1017,7 @@ returns all partitions of weight @var{n}.
 See also: @mrefcomma{lgtreillis} @mref{ltreillis} and @mrefdot{treinat}
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  treillis
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1020,6 +1052,7 @@ the natural order.
 See also: @mrefcomma{lgtreillis} @mref{ltreillis} and @mrefdot{treillis}
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  treinat
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1064,6 +1097,7 @@ Also see:
 @code{polynome2ele}, @code{pui2polynome}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  ele2polynome
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1094,6 +1128,7 @@ of the roots of @var{P}.
 The inverse: @code{ele2polynome (@var{l}, @var{x})}
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  polynome2ele
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1108,6 +1143,7 @@ are the @var{k} by @var{k} products of the elements of @var{A}.
 Also see @code{somrac}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  prodrac
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1149,6 +1185,7 @@ See also:
 @mrefcomma{polynome2ele} @mrefdot{ele2polynome}
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  pui2polynome
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1163,6 +1200,7 @@ The list @var{L} contains elementary symmetric functions of a polynomial
 Also see @code{prodrac}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  somrac
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1420,6 +1458,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1444,6 +1483,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante_alternee1
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1480,6 +1520,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante_bipartite
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1513,6 +1554,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante_diedrale
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1531,6 +1573,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante_klein
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1548,6 +1591,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante_klein3
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1596,6 +1640,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante_produit_sym
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1614,6 +1659,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante_unitaire
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1632,6 +1678,7 @@ See also:
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  resolvante_vierer
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1649,6 +1696,7 @@ returns the associate multinomial coefficient: if the parts of
 @code{@var{r}!/(@var{i_1}! @var{i_2}! ... @var{i_k}!)}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  multinomial
 @category{Package sym}
 @closecatbox
 @end deffn
@@ -1658,7 +1706,9 @@ returns the associate multinomial coefficient: if the parts of
 returns the list of permutations of the list @var{L}.
 
 @opencatbox{Categories:}
+@ctindex  Package sym  @subentry  permut
 @category{Package sym}
+@ctindex  Lists  @subentry  permut
 @category{Lists}
 @closecatbox
 @end deffn

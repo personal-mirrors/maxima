@@ -194,7 +194,9 @@ quote.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation  @subentry  '
 @category{Evaluation}
+@ctindex  Operators  @subentry  '
 @category{Operators}
 @closecatbox
 @end deffn
@@ -387,7 +389,9 @@ quote @code{'}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation  @subentry  ''
 @category{Evaluation}
+@ctindex  Operators  @subentry  ''
 @category{Operators}
 @closecatbox
 @end deffn
@@ -587,6 +591,7 @@ Solution
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation  @subentry  ev
 @category{Evaluation}
 @closecatbox
 @end deffn
@@ -621,6 +626,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation flags  @subentry  eval
 @category{Evaluation flags}
 @closecatbox
 @end defvr
@@ -711,7 +717,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation flags  @subentry  evflag
 @category{Evaluation flags}
+@ctindex  Simplification flags and variables  @subentry  evflag
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -813,6 +821,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation flags  @subentry  evfun
 @category{Evaluation flags}
 @closecatbox
 @end defvr
@@ -830,6 +839,7 @@ being evaluated away in this mode, simply include @code{X='X} as an argument to
 generate an infinite loop.
 
 @opencatbox{Categories:}
+@ctindex  Evaluation flags  @subentry  infeval
 @category{Evaluation flags}
 @closecatbox
 @end defvr
@@ -846,6 +856,7 @@ conjunction with other switches and in causing expressions
 to be resimplified without being reevaluated.
 
 @opencatbox{Categories:}
+@ctindex  Evaluation flags  @subentry  noeval
 @category{Evaluation flags}
 @closecatbox
 @end defvr
@@ -862,7 +873,9 @@ being @code{ev}'d to "verbs", i.e., evaluates them.  See also
 @mrefcomma{noun} @mrefcomma{nounify} @code{verb}, and @mrefdot{verbify}
 
 @opencatbox{Categories:}
+@ctindex  Evaluation flags  @subentry  nouns
 @category{Evaluation flags}
+@ctindex  Nouns and verbs  @subentry  nouns
 @category{Nouns and verbs}
 @closecatbox
 @end defvr
@@ -889,6 +902,7 @@ Example:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Evaluation flags  @subentry  pred
 @category{Evaluation flags}
 @closecatbox
 @end defvr

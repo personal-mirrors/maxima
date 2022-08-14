@@ -234,6 +234,7 @@ The section @ref{Functions and Variables for Sets} has a complete list of
 the set functions in Maxima.
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  Introduction to Sets
 @category{Sets}
 @closecatbox
 
@@ -318,6 +319,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  adjoin
 @category{Sets}
 @closecatbox
 
@@ -366,6 +368,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  belln
 @category{Sets}
 @closecatbox
 
@@ -399,6 +402,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  cardinality
 @category{Sets}
 @closecatbox
 
@@ -434,6 +438,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  cartesian_product
 @category{Sets}
 @closecatbox
 
@@ -541,6 +546,7 @@ is equal to the product of the lengths of the arguments.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  cartesian_product_list
 @category{Sets}
 @closecatbox
 
@@ -575,6 +581,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  disjoin
 @category{Sets}
 @closecatbox
 
@@ -600,7 +607,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  disjointp
 @category{Sets}
+@ctindex  Predicate functions  @subentry  disjointp
 @category{Predicate functions}
 @closecatbox
 
@@ -671,6 +680,7 @@ yields the divisors without reevaluating @code{divisors(8)}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  divisors
 @category{Integers}
 @closecatbox
 
@@ -697,7 +707,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  elementp
 @category{Sets}
+@ctindex  Predicate functions  @subentry  elementp
 @category{Predicate functions}
 @closecatbox
 
@@ -722,7 +734,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  emptyp
 @category{Sets}
+@ctindex  Predicate functions  @subentry  emptyp
 @category{Predicate functions}
 @closecatbox
 
@@ -784,6 +798,7 @@ The equivalence classes are numbers which differ by a multiple of 3.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  equiv_classes
 @category{Sets}
 @closecatbox
 
@@ -886,6 +901,7 @@ are governed by the global flag @code{prederror}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  every
 @category{Sets}
 @closecatbox
 
@@ -918,6 +934,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  extremal_subset
 @category{Sets}
 @closecatbox
 
@@ -1014,7 +1031,9 @@ Wrong number of arguments to mod
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  flatten
 @category{Sets}
+@ctindex  Lists  @subentry  flatten
 @category{Lists}
 @closecatbox
 
@@ -1043,6 +1062,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  full_listify
 @category{Sets}
 @closecatbox
 
@@ -1073,6 +1093,7 @@ because the main operator of @code{f([b])} isn't a list.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  fullsetify
 @category{Lists}
 @closecatbox
 
@@ -1162,6 +1183,7 @@ here is an example that finds all partitions of 10 that consist of prime numbers
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  integer_partitions
 @category{Integers}
 @closecatbox
 
@@ -1173,6 +1195,7 @@ here is an example that finds all partitions of 10 that consist of prime numbers
 @code{intersect} is the same as @code{intersection}, which see.
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  intersect
 @category{Sets}
 @closecatbox
 
@@ -1217,6 +1240,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  intersection
 @category{Sets}
 @closecatbox
 
@@ -1280,6 +1304,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  listify
 @category{Sets}
 @closecatbox
 
@@ -1335,6 +1360,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  makeset
 @category{Sets}
 @closecatbox
 
@@ -1389,6 +1415,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  moebius
 @category{Integers}
 @closecatbox
 
@@ -1437,6 +1464,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  multinomial_coeff
 @category{Integers}
 @closecatbox
 
@@ -1475,6 +1503,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  num_distinct_partitions
 @category{Integers}
 @closecatbox
 
@@ -1513,6 +1542,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  num_partitions
 @category{Integers}
 @closecatbox
 
@@ -1550,6 +1580,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  partition_set
 @category{Sets}
 @closecatbox
 
@@ -1582,7 +1613,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  permutations
 @category{Sets}
+@ctindex  Lists  @subentry  permutations
 @category{Lists}
 @closecatbox
 
@@ -1630,6 +1663,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  powerset
 @category{Sets}
 @closecatbox
 
@@ -1665,7 +1699,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  random_permutation
 @category{Sets}
+@ctindex  Lists  @subentry  random_permutation
 @category{Lists}
 @closecatbox
 
@@ -1708,6 +1744,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  setdifference
 @category{Sets}
 @closecatbox
 
@@ -1742,7 +1779,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  setequalp
 @category{Sets}
+@ctindex  Predicate functions  @subentry  setequalp
 @category{Predicate functions}
 @closecatbox
 
@@ -1774,6 +1813,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Lists  @subentry  setify
 @category{Lists}
 @closecatbox
 
@@ -1808,7 +1848,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  setp
 @category{Sets}
+@ctindex  Predicate functions  @subentry  setp
 @category{Predicate functions}
 @closecatbox
 
@@ -1895,6 +1937,7 @@ equal @code{s}; again let's check.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  set_partitions
 @category{Sets}
 @closecatbox
 
@@ -2001,7 +2044,9 @@ are governed by the global flag @code{prederror}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  some
 @category{Sets}
+@ctindex  Lists  @subentry  some
 @category{Lists}
 @closecatbox
 
@@ -2056,6 +2101,7 @@ Examples:
 
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  stirling1
 @category{Integers}
 @closecatbox
 
@@ -2111,6 +2157,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integers  @subentry  stirling2
 @category{Integers}
 @closecatbox
 
@@ -2143,6 +2190,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  subset
 @category{Sets}
 @closecatbox
 
@@ -2169,7 +2217,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  subsetp
 @category{Sets}
+@ctindex  Predicate functions  @subentry  subsetp
 @category{Predicate functions}
 @closecatbox
 
@@ -2218,6 +2268,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  symmdifference
 @category{Sets}
 @closecatbox
 
@@ -2263,6 +2314,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Sets  @subentry  union
 @category{Sets}
 @closecatbox
 

@@ -59,9 +59,12 @@ parabolic_cylinder_d (v,z)     Parabolic cylinder D function
 @end example
 
 @opencatbox{Categories:}
-@category{Bessel functions}
-@category{Airy functions}
-@category{Special functions}
+@ctindex  Bessel functions  @subentry  Introduction to Special Functions
+@cat2{Bessel functions, Bessel-functions}
+@ctindex  Airy functions  @subentry  Introduction to Special Functions
+@cat2{Airy functions, Airy-functions}
+@ctindex  Special functions  @subentry  Introduction to Special Functions
+@cat2{Special functions, Special-functions}
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -95,7 +98,9 @@ m4_displaymath(
 although the infinite series is not used for computations.
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  bessel_j
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  bessel_j
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -121,7 +126,9 @@ when @math{v} is not an integer.  When @math{v} is an integer @math{n},
 the limit as @math{v} approaches @math{n} is taken.
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  bessel_y
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  bessel_y
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -151,7 +158,9 @@ m4_displaymath(
 although the infinite series is not used for computations.
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  bessel_i
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  bessel_i
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -177,7 +186,9 @@ when @math{v} is not an integer.  If @math{v} is an integer @math{n},
 then the limit as @math{v} approaches @math{n} is taken.
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  bessel_k
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  bessel_k
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -264,7 +275,9 @@ order @math{v} is not supported. Maxima returns a noun form:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  hankel_1
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  hankel_1
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -299,7 +312,9 @@ Maxima knows the derivative of @code{hankel_2} wrt the argument @math{z}.
 For examples see @code{hankel_1}.
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  hankel_2
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  hankel_2
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -332,8 +347,11 @@ the Bessel function is expanded.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  besselexpand
 @category{Bessel functions}
+@ctindex  Simplification flags and variables   @subentry  besselexpand
 @category{Simplification flags and variables} 
+@ctindex  Special functions  @subentry  besselexpand
 @category{Special functions}
 @closecatbox
 @end defvr
@@ -356,6 +374,7 @@ symbolic work, it is probably preferable to work with the expression
 @code{exp(-abs(z))*bessel_i(v, z)}.
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  scaled_bessel_i
 @category{Bessel functions}
 @closecatbox
 @end deffn
@@ -366,7 +385,9 @@ symbolic work, it is probably preferable to work with the expression
 Identical to @code{scaled_bessel_i(0,z)}.
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  scaled_bessel_i0
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  scaled_bessel_i0
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -377,7 +398,9 @@ Identical to @code{scaled_bessel_i(0,z)}.
 
 Identical to @code{scaled_bessel_i(1,z)}.
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  scaled_bessel_i1
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  scaled_bessel_i1
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -408,7 +431,9 @@ m4_displaymath(
 <<<a[k](u,v) = product(((u+2*m-1)^2-v^2),m,1,k) = 4^k*pochhammer((u-v+1)/2,k)*pochhammer((u+v+1)/2,k)>>>)
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  %s
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  %s
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -435,7 +460,9 @@ When m4_math(<<<\mu\pm \nu>>>, u+/-v)) is an odd
 negative integer, the limit must be used.
 
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  slommel
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  slommel
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -477,7 +504,9 @@ The Airy function m4_mathdot(<<<{\rm Ai}(x)>>>, <<<Ai(x)>>>)  See @urlaands{eqn 
 See also @mrefcomma{airy_bi} @mrefcomma{airy_dai} and @mrefdot{airy_dbi}
 
 @opencatbox{Categories:}
+@ctindex  Airy functions  @subentry  airy_ai
 @category{Airy functions}
+@ctindex  Special functions  @subentry  airy_ai
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -494,7 +523,9 @@ m4_displaymath(
 See @mrefdot{airy_ai}.
 
 @opencatbox{Categories:}
+@ctindex  Airy functions  @subentry  airy_dai
 @category{Airy functions}
+@ctindex  Special functions  @subentry  airy_dai
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -507,7 +538,9 @@ The Airy function m4_math(<<<{\rm Bi}(x)>>>, Bi(x)).  See @urlaands{eqn 10.4.3, 
 See @mrefcomma{airy_ai} and @mrefdot{airy_dbi}
 
 @opencatbox{Categories:}
+@ctindex  Airy functions  @subentry  airy_bi
 @category{Airy functions}
+@ctindex  Special functions  @subentry  airy_bi
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -524,7 +557,9 @@ m4_displaymath(
 See @mrefcomma{airy_ai} and @mrefdot{airy_bi}
 
 @opencatbox{Categories:}
+@ctindex  Airy functions  @subentry  airy_dbi
 @category{Airy functions}
+@ctindex  Special functions  @subentry  airy_dbi
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -557,7 +592,9 @@ function.  The second argument is how many digits to retain and return,
 it's a good idea to request a couple of extra.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  bffac
 @category{Gamma and factorial functions}
+@ctindex  Numerical evaluation  @subentry  bffac
 @category{Numerical evaluation}
 @closecatbox
 @end deffn
@@ -580,7 +617,9 @@ These functions return bigfloat values.
 @c Note @code{-bfpsi0 (1, fpprec)} provides @code{%gamma} (Euler's constant) as a bigfloat.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  bfpsi
 @category{Gamma and factorial functions}
+@ctindex  Numerical evaluation  @subentry  bfpsi
 @category{Numerical evaluation}
 @closecatbox
 @end deffn
@@ -593,8 +632,11 @@ Complex bigfloat factorial.
 @code{load ("bffac")} loads this function.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  cbffac
 @category{Gamma and factorial functions}
+@ctindex  Complex variables  @subentry  cbffac
 @category{Complex variables}
+@ctindex  Numerical evaluation  @subentry  cbffac
 @category{Numerical evaluation}
 @closecatbox
 @end deffn
@@ -699,7 +741,9 @@ See also @mrefdot{makegamma}
 The Euler-Mascheroni constant is @code{%gamma}.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  gamma
 @category{Gamma and factorial functions}
+@ctindex  Special functions  @subentry  gamma
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -710,7 +754,9 @@ The Euler-Mascheroni constant is @code{%gamma}.
 The natural logarithm of the gamma function.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  log_gamma
 @category{Gamma and factorial functions}
+@ctindex  Special functions  @subentry  log_gamma
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -736,7 +782,9 @@ m4_displaymath(
 See also @mref{gamma_incomplete} (upper incomplete gamma function).
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  gamma_incomplete_lower
 @category{Gamma and factorial functions}
+@ctindex  Special functions  @subentry  gamma_incomplete_lower
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -769,7 +817,9 @@ Also see the related functions @code{gamma_incomplete_regularized} and
 @code{gamma_incomplete_generalized}.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  gamma_incomplete
 @category{Gamma and factorial functions}
+@ctindex  Special functions  @subentry  gamma_incomplete
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -797,7 +847,9 @@ and @mrefdot{erfc}
 Also see @code{gamma_incomplete}.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  gamma_incomplete_regularized
 @category{Gamma and factorial functions}
+@ctindex  Special functions  @subentry  gamma_incomplete_regularized
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -824,7 +876,9 @@ gamma_incomplete_generalized(a, z1, z2) =
 Also see @code{gamma_incomplete} and @code{gamma_incomplete_regularized}.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  gamma_incomplete_generalized
 @category{Gamma and factorial functions}
+@ctindex  Special functions  @subentry  gamma_incomplete_generalized
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -875,7 +929,9 @@ is expanded in terms of
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  gamma_expand
 @category{Gamma and factorial functions}
+@ctindex  Simplification flags and variables  @subentry  gamma_expand
 @category{Simplification flags and variables}
 @closecatbox
 
@@ -893,7 +949,9 @@ simplification will occur.  Note that the @code{factlim} switch controls
 simplification of the result of @code{gamma} of an integer argument as well.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  gammalim
 @category{Gamma and factorial functions}
+@ctindex  Simplification flags and variables  @subentry  gammalim
 @category{Simplification flags and variables}
 @closecatbox
 
@@ -911,6 +969,7 @@ functions in @var{expr} into gamma functions.
 See also @mrefdot{makefact}
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  makegamma
 @category{Gamma and factorial functions}
 @closecatbox
 @end deffn
@@ -1050,6 +1109,7 @@ The derivative of the beta function wrt @code{a}:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  beta
 @category{Gamma and factorial functions}
 @closecatbox
 @end deffn
@@ -1261,6 +1321,7 @@ Derivative and integral for @code{beta_incomplete}:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  beta_incomplete
 @category{Gamma and factorial functions}
 @closecatbox
 @end deffn
@@ -1389,6 +1450,7 @@ The derivative and the integral wrt @var{z}:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  beta_incomplete_regularized
 @category{Gamma and factorial functions}
 @closecatbox
 @end deffn
@@ -1548,6 +1610,7 @@ Derivative wrt the variable @var{z1} and integrals wrt @var{z1} and @var{z2}:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  beta_incomplete_generalized
 @category{Gamma and factorial functions}
 @closecatbox
 @end deffn
@@ -1560,7 +1623,9 @@ functions are expanded for arguments like @math{a+n} or @math{a-n},
 where @math{n} is an integer.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  beta_expand
 @category{Gamma and factorial functions}
+@ctindex  Simplification flags and variables  @subentry  beta_expand
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -1572,7 +1637,9 @@ When @code{beta_args_sum_to_integer} is @code{true}, Maxima simplifies
 @code{beta(a,b)}, when the arguments @var{a} and @var{b} sum to an integer.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  beta_args_sum_to_integer
 @category{Gamma and factorial functions}
+@ctindex  Simplification flags and variables  @subentry  beta_args_sum_to_integer
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -1607,6 +1674,7 @@ The function @code{bfpsi} in the @code{bffac} package can compute
 numerical values.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  psi
 @category{Gamma and factorial functions}
 @closecatbox
 @end deffn
@@ -1618,6 +1686,7 @@ Default value: 20
 @code{psi[n](x)} will try to compute an exact value.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  maxpsiposint
 @category{Gamma and factorial functions}
 @closecatbox
 
@@ -1632,6 +1701,7 @@ Default value: -10
 return simplified answer, even if it could.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  maxpsinegint
 @category{Gamma and factorial functions}
 @closecatbox
 
@@ -1646,6 +1716,7 @@ If @code{p} is greater than @code{maxpsifracnum}, then
 value.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  maxpsifracnum
 @category{Gamma and factorial functions}
 @closecatbox
 
@@ -1660,6 +1731,7 @@ If @code{q} is greater than @code{maxpsifracdenom}, then
 value.
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  maxpsifracdenom
 @category{Gamma and factorial functions}
 @closecatbox
 
@@ -1675,6 +1747,7 @@ functions in @var{expr} into factorials.
 See also @mrefdot{makegamma}
 
 @opencatbox{Categories:}
+@ctindex  Gamma and factorial functions  @subentry  makefact
 @category{Gamma and factorial functions}
 @closecatbox
 @end deffn
@@ -1700,6 +1773,7 @@ Returns the numerical factor multiplying the expression
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  numfactor
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1723,7 +1797,9 @@ with m4_math(<<<\left| \arg z \right| < \pi>>>, <<<abs(arg z) < %pi>>>).
 (@urlaands{eqn 5.1.1, 228}) and (@urldlmf{6.2E2})
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintegral_e1
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_e1
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1740,7 +1816,9 @@ m4_displaymath(
 with @math{x} real and @math{x > 0}. (@urlaands{eqn 5.1.2, 228}) and (@urldlmf{6.2E5})
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintegral_ei
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_ei
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1755,7 +1833,9 @@ m4_displaymath(
 with @math{x} real and @math{x > 1}. (@urlaands{eqn 5.1.3, 228}) and (@urldlmf{6.2E8})
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintegral_li
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_li
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1771,7 +1851,9 @@ with m4_math(<<<{\rm Re}(z) > 1>>>,<<<realpart(z) > 1>>>) and @math{n} a
 non-negative integer.
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintegral_e
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_e
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1784,7 +1866,9 @@ m4_displaymath(
 <<<@math{integrate(sin(t)/t, t, 0, z)}>>>)
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintegral_si
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_si
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1799,7 +1883,9 @@ m4_displaymath(
 with m4_math(<<<|\arg z| < \pi>>>, <<<abs(arg z) < %pi>>>).
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintegral_ci
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_ci
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1812,7 +1898,9 @@ m4_displaymath(
 <<<@math{integrate(sinh(t)/t, t, 0, z)}>>>)
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintegral_shi
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_shi
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1827,7 +1915,9 @@ m4_displaymath(
 with m4_math(<<<|\arg z| < \pi>>>, <<<abs(arg z) < %pi>>>).
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintegral_chi
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_chi
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1851,6 +1941,7 @@ function specified where @code{expintegral_trig} means
 means @code{expintegral_shi} or @code{expintegral_chi}.
 
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintrep
 @category{Exponential Integrals}
 @closecatbox
 @end defvr
@@ -1862,6 +1953,7 @@ Expand @code{expintegral_e(n,z)} for half
 integral values in terms of @code{erfc} or @code{erf} and
 for positive integers in terms of @code{expintegral_ei}.
 @opencatbox{Categories:}
+@ctindex  Exponential Integrals  @subentry  expintexpand 
 @category{Exponential Integrals}
 @closecatbox
 @end defvr
@@ -1886,6 +1978,7 @@ m4_displaymath(
 
 See also flag @mrefdot{erfflag}
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  erf
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1900,6 +1993,7 @@ m4_displaymath(
 (@urlaands{eqn 7.1.2, 297}) and (@urldlmf{7.2.E2}).
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  erfc
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1911,6 +2005,7 @@ m4_displaymath(
 <<<@math{erfi(z) = -%i*erf(%i*z)}>>>)
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  erfi
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1922,6 +2017,7 @@ m4_displaymath(
 <<<@math{erf(z) = 2/sqrt(%pi)*integrate(exp(-t^2), t, z1, z2)}>>>)
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  erf_generalized
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1944,6 +2040,7 @@ flag @code{%iargs} is true.
 
 See flags @mref{erf_representation} and @mref{hypergeometric_representation}.
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  fresnel_c
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -1965,6 +2062,7 @@ flag @code{%iargs} is true.
 
 See flags @mref{erf_representation} and @mref{hypergeometric_representation}.
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  fresnel_s
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2015,6 +2113,7 @@ m4_displaymath(
 (@urlaands{eqn 12.1.3, 496}) and (@urldlmf{11.2.E1}).
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  struve_h
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2030,6 +2129,7 @@ m4_displaymath(
 (@urlaands{eqn 12.2.1, 498}) and (@urldlmf{11.2.E2}).
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  struve_l
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2060,6 +2160,7 @@ m4_displaymath(
 <<<@math{%m[k,u](z) = %e^(-z/2)*z^(1/2+u)*sum(pochhammer(1/2+u-k,s)/(pochhammer(1+2*u,s)*s!)*z^s, s, 0, inf)}>>>)
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  %m
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2073,6 +2174,7 @@ m4_displaymath(
 where @math{U(a,b,z)} is Kummer's second solution of the confluent hypergeometric equation.
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  %w
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2083,7 +2185,9 @@ The m4_math(<<<_{p}F_{q}(a_1,a_2,...,a_p;b_1,b_2,...,b_q;z)>>>,<<<pFq(a_1,a_2,..
 where @var{a} a list of length @var{p} and 
 @var{b} a list of length @var{q}.
 @opencatbox{Categories:}
+@ctindex  Bessel functions  @subentry  %f
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  %f
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2152,6 +2256,7 @@ m4_displaymath(
 has two independent solutions, one of which is m4_math(<<<D_{\nu}(z)>>>, <<<@code{parabolic_cylinder_d(v,z)}>>>), the parabolic cylinder d function.
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  parabolic_cylinder_d
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2275,6 +2380,7 @@ the representation to @code{expintegral_e1}:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Laplace transform  @subentry  specint
 @category{Laplace transform}
 @closecatbox
 @end deffn
@@ -2321,8 +2427,11 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Hypergeometric functions  @subentry  hypergeometric_simp
 @category{Hypergeometric functions}
+@ctindex  Simplification functions  @subentry  hypergeometric_simp
 @category{Simplification functions}
+@ctindex  Special functions  @subentry  hypergeometric_simp
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2394,6 +2503,7 @@ m4_displaymath(
 <<<z = W(z)e^{W(z)}>>>,
 @math{z = W(z) * exp(W(z))})  
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  lambert_w
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2406,6 +2516,7 @@ The principal branch, denoted m4_math(W_p(z),Wp(z)) in DLMF, is @code{lambert_w(
 
 The other branch with real values, denoted m4_math(W_m(z), Wm(z)) in DLMF, is @code{generalized_lambert_w(-1,z)}.
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  generalized_lambert_w
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2425,6 +2536,7 @@ calculate the Laplace transform of @code{kbateman} using @mref{laplace}
 or @mrefcomma{specint} but has no other knowledge of this function.
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  kbateman
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2438,6 +2550,7 @@ m4_displaymath(
 <<<@math{nzeta(z) = %i*sqrt(%pi)*exp(-z^2)*(1-erf(-%i*z))}>>>)
 
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  nzeta
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2445,6 +2558,7 @@ m4_displaymath(
 @deffn {Function} nzetar (@var{z})
 Returns @code{realpart(nzeta(z))}.
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  nzetar
 @category{Special functions}
 @closecatbox
 @end deffn
@@ -2452,6 +2566,7 @@ Returns @code{realpart(nzeta(z))}.
 @deffn {Function} nzetai (@var{z})
 Returns @code{imagpart(nzeta(z))}.
 @opencatbox{Categories:}
+@ctindex  Special functions  @subentry  nzetai
 @category{Special functions}
 @closecatbox
 @end deffn

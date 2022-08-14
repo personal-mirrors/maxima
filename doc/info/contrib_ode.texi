@@ -232,8 +232,11 @@ Extensive debugging traces and messages are displayed if the command
 @code{put('contrib_ode,true,'verbose)} is executed.
 
 @opencatbox{Categories:}
+@ctindex  Differential equations  @subentry  Introduction to contrib_ode
 @category{Differential equations}
+@ctindex  Share packages  @subentry  Introduction to contrib_ode
 @category{Share packages}
+@ctindex  Package contrib_ode  @subentry  Introduction to contrib_ode
 @category{Package contrib_ode}
 @closecatbox
 
@@ -249,6 +252,7 @@ independent variable @var{x} and dependent variable @var{y}.
 
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  contrib_ode
 @category{Package contrib_ode}
 @closecatbox
 
@@ -282,6 +286,7 @@ special functions.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  odelin
 @category{Package contrib_ode}
 @closecatbox
 
@@ -328,6 +333,7 @@ zero if @var{soln} is a solution of @var{eqn}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  ode_check
 @category{Package contrib_ode}
 @closecatbox
 
@@ -349,6 +355,7 @@ functions may change in future releases of Maxima.
 See also @mrefcomma{gauss_b} @mref{dgauss_a} and @mrefdot{gauss_b}
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  gauss_a
 @category{Package contrib_ode}
 @closecatbox
 
@@ -359,6 +366,7 @@ See also @mrefcomma{gauss_b} @mref{dgauss_a} and @mrefdot{gauss_b}
 See @mrefdot{gauss_a}
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  gauss_b
 @category{Package contrib_ode}
 @closecatbox
 
@@ -370,6 +378,7 @@ The derivative with respect to @var{x}
 of @mref{gauss_a}@code{(@var{a}, @var{b}, @var{c}, @var{x})}.
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  dgauss_a
 @category{Package contrib_ode}
 @closecatbox
 
@@ -381,6 +390,7 @@ The derivative with respect to @var{x}
 of @mref{gauss_b}@code{(@var{a}, @var{b}, @var{c}, @var{x})}.
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  dgauss_b
 @category{Package contrib_ode}
 @closecatbox
 
@@ -400,6 +410,7 @@ function may change in future releases of Maxima.
 See also @mrefcomma{kummer_u} @mrefcomma{dkummer_m} and @mrefdot{dkummer_u}
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  kummer_m
 @category{Package contrib_ode}
 @closecatbox
 
@@ -414,6 +425,7 @@ Kummer's U function, as defined in Abramowitz and Stegun,
 See @mrefdot{kummer_m}
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  kummer_u
 @category{Package contrib_ode}
 @closecatbox
 
@@ -425,6 +437,7 @@ The derivative with respect to @var{x}
 of @mref{kummer_m}@code{(@var{a}, @var{b}, @var{x})}.
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  dkummer_m
 @category{Package contrib_ode}
 @closecatbox
 
@@ -436,6 +449,7 @@ The derivative with respect to @var{x}
 of @mref{kummer_u}@code{(@var{a}, @var{b}, @var{x})}.
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  dkummer_u
 @category{Package contrib_ode}
 @closecatbox
 
@@ -486,8 +500,11 @@ differ by less than 2.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  bessel_simplify
 @category{Package contrib_ode}
+@ctindex  Bessel functions  @subentry  bessel_simplify
 @category{Bessel functions}
+@ctindex  Special functions  @subentry  bessel_simplify
 @category{Special functions}
 @closecatbox
 
@@ -502,8 +519,11 @@ using the recurrence (A&S 5.1.14).
         = (1/n) * (exp(-z)-z*expintegral_e(n,z))      n = 1,2,3 ....
 
 @opencatbox{Categories:}
+@ctindex  Package contrib_ode  @subentry  expintegral_e_simplify
 @category{Package contrib_ode}
+@ctindex  Exponential Integrals  @subentry  expintegral_e_simplify
 @category{Exponential Integrals}
+@ctindex  Special functions  @subentry  expintegral_e_simplify
 @category{Special functions}
 @closecatbox
 

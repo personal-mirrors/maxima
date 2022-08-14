@@ -47,6 +47,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Syntax  @subentry  Comments
 @category{Syntax}
 @closecatbox
 
@@ -93,7 +94,9 @@ always appended.
 @code{writefile}.
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  appendfile
 @category{File output}
+@ctindex  Console interaction  @subentry  appendfile
 @category{Console interaction}
 @closecatbox
 @end deffn
@@ -172,7 +175,9 @@ the tests which have failed.
 See also @mrefcomma{load} @mrefcomma{batchload} and @mrefdot{demo}
 
 @opencatbox{Categories:}
+@ctindex  Session management  @subentry  batch
 @category{Session management}
+@ctindex  File input  @subentry  batch
 @category{File input}
 @closecatbox
 @end deffn
@@ -209,7 +214,9 @@ See also @mrefcomma{batch} and @mrefdot{load}
 @c WHY NOT GET RID OF batchload ???
 
 @opencatbox{Categories:}
+@ctindex  Session management  @subentry  batchload
 @category{Session management}
+@ctindex  File input  @subentry  batchload
 @category{File input}
 @closecatbox
 @end deffn
@@ -221,7 +228,9 @@ See also @mrefcomma{batch} and @mrefdot{load}
 Closes the transcript file opened by @mref{writefile} or @mrefdot{appendfile}
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  closefile
 @category{File output}
+@ctindex  Console interaction  @subentry  closefile
 @category{Console interaction}
 @closecatbox
 @end deffn
@@ -243,7 +252,9 @@ functions always truncate their output file, and @mref{tex} and
 @c WHAT ABOUT WRITEFILE ??
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  file_output_append
 @category{File output}
+@ctindex  Global flags  @subentry  file_output_append
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -262,7 +273,9 @@ component is simply replaced by @var{filename}.
 The result is a Lisp pathname object.
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  filename_merge
 @category{File input}
+@ctindex  File output  @subentry  filename_merge
 @category{File output}
 @closecatbox
 @end deffn
@@ -311,6 +324,7 @@ See @mrefdot{file_search_maxima}
 @mref{file_search_lisp} as the search directories.
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  file_search
 @category{File input}
 @closecatbox
 @end deffn
@@ -367,7 +381,9 @@ expands into @code{/home/wfs/neumann.lisp}, @code{/home/gcj/neumann.lisp},
 @end flushleft
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  file_search_maxima
 @category{File input}
+@ctindex  Global variables  @subentry  file_search_maxima
 @category{Global variables}
 @closecatbox
 @end defvr
@@ -404,6 +420,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  file_type
 @category{File input}
 @closecatbox
 @end deffn
@@ -473,7 +490,9 @@ being loaded.
 @code{load} evaluates its argument.
 
 @opencatbox{Categories:}
+@ctindex  Session management  @subentry  load
 @category{Session management}
+@ctindex  File input  @subentry  load
 @category{File input}
 @closecatbox
 @end deffn
@@ -512,6 +531,7 @@ End of batchfile
 @end example
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  load_pathname
 @category{File input}
 @closecatbox
 @end defvr
@@ -531,7 +551,9 @@ as much of the path as needed to find the file.
 more convenient to use @mref{load} instead of @code{loadfile}.
 
 @opencatbox{Categories:}
+@ctindex  Session management  @subentry  loadfile
 @category{Session management}
+@ctindex  File input  @subentry  loadfile
 @category{File input}
 @closecatbox
 @end deffn
@@ -561,7 +583,9 @@ When @code{loadprint} is @code{false}, never print a message.
 @end itemize
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  loadprint
 @category{File input}
+@ctindex  Global flags  @subentry  loadprint
 @category{Global flags}
 @closecatbox
 @end defvr
@@ -582,6 +606,7 @@ and possibly other characters, depending on the system.
 which may have implementation-specific behavior.
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  directory
 @category{File input}
 @closecatbox
 @end deffn
@@ -613,6 +638,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  pathname_directory
 @category{File input}
 @closecatbox
 @end deffn
@@ -633,7 +659,9 @@ attempts to locate the file by appending @var{path} to each of the elements of
 or otherwise the result of a successful filename merge.
 
 @opencatbox{Categories:}
+@ctindex  File input  @subentry  printfile
 @category{File input}
+@ctindex  Console interaction  @subentry  printfile
 @category{Console interaction}
 @closecatbox
 @end deffn
@@ -699,7 +727,9 @@ have been assigned new values by the user; see @mrefdot{myoptions}
 @code{save} evaluates @var{filename} and quotes all other arguments.
 
 @opencatbox{Categories:}
+@ctindex  Session management  @subentry  save
 @category{Session management}
+@ctindex  File output  @subentry  save
 @category{File output}
 @closecatbox
 @end deffn
@@ -752,7 +782,9 @@ variable, a colon, and its value.  Note that the general form of
 @code{stringout} does not print variables as assignment statements.
 
 @opencatbox{Categories:}
+@ctindex  Session management  @subentry  stringout
 @category{Session management}
+@ctindex  File output  @subentry  stringout
 @category{File output}
 @closecatbox
 @end deffn
@@ -806,6 +838,7 @@ See also @mref{writefile} and @mrefdot{display2d}
 @end example
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  with_stdout
 @category{File output}
 @closecatbox
 @end deffn
@@ -839,7 +872,9 @@ displayed by @code{playback}.
 @code{appendfile}.
 
 @opencatbox{Categories:}
+@ctindex  File output  @subentry  writefile
 @category{File output}
+@ctindex  Console interaction  @subentry  writefile
 @category{Console interaction}
 @closecatbox
 @end deffn
@@ -922,7 +957,9 @@ $$-\cos x$$
 @end example
 
 @opencatbox{Categories:}
+@ctindex  TeX output  @subentry  tex
 @category{TeX output}
+@ctindex  File output  @subentry  tex
 @category{File output}
 @closecatbox
 @end deffn
@@ -1155,6 +1192,7 @@ $$ \langle a \, | \,b \rangle $$
 @end example
 
 @opencatbox{Categories:}
+@ctindex  TeX output  @subentry  texput
 @category{TeX output}
 @closecatbox
 @end deffn
@@ -1208,6 +1246,7 @@ $$f(x):=1-x$$
 @end example
 
 @opencatbox{Categories:}
+@ctindex  TeX output  @subentry  get_tex_environment
 @category{TeX output}
 @closecatbox
 @end deffn
@@ -1257,6 +1296,7 @@ g\left(x\right)+f\left(x\right)
 @end example
 
 @opencatbox{Categories:}
+@ctindex  TeX output  @subentry  get_tex_environment_default
 @category{TeX output}
 @closecatbox
 @end deffn
@@ -1277,6 +1317,7 @@ printout (i.e., 6 spaces), and positive values will causes the
 expressions to be printed farther to the right.
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  fortindent
 @category{Translation and compilation}
 @closecatbox
 @end defvr
@@ -1342,6 +1383,7 @@ Examples:
 @end verbatim
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  fortran
 @category{Translation and compilation}
 @closecatbox
 @end deffn
@@ -1355,6 +1397,7 @@ When @code{fortspaces} is @code{true}, @code{fortran} fills out
 each printed line with spaces to 80 columns.
 
 @opencatbox{Categories:}
+@ctindex  Translation and compilation  @subentry  fortspaces
 @category{Translation and compilation}
 @closecatbox
 @end defvr

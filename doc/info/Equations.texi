@@ -18,6 +18,7 @@ Default value: @code{0}
 See also @mref{%rnum_list}.
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  %rnum
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -75,6 +76,7 @@ It's recommended to use this list rather than doing @code{concat ('%r, j)}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  %rnum_list
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -88,6 +90,7 @@ Default value: 10^8
 @code{algepsilon} is used by @mrefdot{algsys}
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  algepsilon
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -112,6 +115,7 @@ only yield approximations when all else fails.
 @c ABOVE DESCRIPTION NOT TOO CLEAR -- MAYBE EXAMPLES WILL HELP
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  algexact
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -238,6 +242,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  algsys
 @category{Algebraic equations}
 @closecatbox
 @end deffn
@@ -315,7 +320,9 @@ x = - .9659625152196369 %i - .4069597231924075, x = 1.0]
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  allroots
 @category{Polynomials}
+@ctindex  Numerical methods  @subentry  allroots
 @category{Numerical methods}
 @closecatbox
 @end deffn
@@ -334,7 +341,9 @@ that @code{bfallroots} computes the roots using bigfloats.  See
 @mref{allroots} for more information.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  bfallroots
 @category{Polynomials}
+@ctindex  Numerical methods  @subentry  bfallroots
 @category{Numerical methods}
 @closecatbox
 @end deffn
@@ -377,6 +386,7 @@ the generation of extremely large expressions.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  backsubst
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -458,6 +468,7 @@ Solution:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  breakup
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -474,6 +485,7 @@ Solution:
 @c I GUESS THIS SHOULD BE EXPANDED TO COVER EACH FUNCTION IN THE PACKAGE
 
 @opencatbox{Categories:}
+@ctindex  Share packages  @subentry  dimension
 @category{Share packages}
 @closecatbox
 @end deffn
@@ -490,7 +502,9 @@ Termination of the @code{block} with a dollar sign, @code{$}, sets @code{dispfla
 @code{false}.
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  dispflag
 @category{Algebraic equations}
+@ctindex  Display flags and variables  @subentry  dispflag
 @category{Display flags and variables}
 @closecatbox
 @end defvr
@@ -529,6 +543,7 @@ Warning: this is a very rudimentary implementation -- many safety checks
 and obvious generalizations are missing.
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  funcsolve
 @category{Algebraic equations}
 @closecatbox
 @end deffn
@@ -604,6 +619,7 @@ Solution
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Linear equations  @subentry  globalsolve
 @category{Linear equations}
 @closecatbox
 @end defvr
@@ -729,6 +745,7 @@ default 5th arg, initial guess:  none
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Integral equations  @subentry  ieqn
 @category{Integral equations}
 @closecatbox
 @end deffn
@@ -752,6 +769,7 @@ used, @var{nterms} gives the number of terms taken (which could be less than
 the n given to @code{ieqn} if an error prevented generation of further terms).
 
 @opencatbox{Categories:}
+@ctindex  Integral equations  @subentry  ieqnprint
 @category{Integral equations}
 @closecatbox
 @end defvr
@@ -820,6 +838,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  lhs
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -920,6 +939,7 @@ Solution
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Linear equations  @subentry  linsolve
 @category{Linear equations}
 @closecatbox
 @end deffn
@@ -935,6 +955,7 @@ When @code{linsolvewarn} is @code{true}, @mref{linsolve} prints a message
 "Dependent equations eliminated".
 
 @opencatbox{Categories:}
+@ctindex  Linear equations  @subentry  linsolvewarn
 @category{Linear equations}
 @closecatbox
 @end defvr
@@ -951,6 +972,7 @@ under-determined system of equations with some variables expressed in terms of
 others.
 
 @opencatbox{Categories:}
+@ctindex  Linear equations  @subentry  linsolve_params
 @category{Linear equations}
 @closecatbox
 @end defvr
@@ -965,7 +987,9 @@ solutions returned by @mref{solve} or @mrefdot{realroots}
 @c NEED AN EXAMPLE HERE
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  multiplicities
 @category{Algebraic equations}
+@ctindex  Polynomials  @subentry  multiplicities
 @category{Polynomials}
 @closecatbox
 @end defvr
@@ -991,7 +1015,9 @@ interval may be @code{minf} or @code{inf}.
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  nroots
 @category{Polynomials}
+@ctindex  Numerical methods  @subentry  nroots
 @category{Numerical methods}
 @closecatbox
 @end deffn
@@ -1009,6 +1035,7 @@ perfect nth power.  This routine is much faster than @mref{factor} or even
 @mrefdot{sqfr}
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  nthroot
 @category{Polynomials}
 @closecatbox
 @end deffn
@@ -1026,7 +1053,9 @@ polynomial is complex.
 See @code{allroots} for an example.
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  polyfactor
 @category{Polynomials}
+@ctindex  Numerical methods  @subentry  polyfactor
 @category{Numerical methods}
 @closecatbox
 @end defvr
@@ -1048,7 +1077,9 @@ expression labels @code{%t1}, @code{%t2}, etc., and assign the solutions to them
 @c NEED AN EXAMPLE HERE
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  programmode
 @category{Algebraic equations}
+@ctindex  Polynomials  @subentry  programmode
 @category{Polynomials}
 @closecatbox
 @end defvr
@@ -1062,6 +1093,7 @@ When @code{realonly} is @code{true}, @mref{algsys} returns only those solutions
 which are free of @code{%i}.
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  realonly
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -1132,7 +1164,9 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  realroots
 @category{Polynomials}
+@ctindex  Numerical methods  @subentry  realroots
 @category{Numerical methods}
 @closecatbox
 @end deffn
@@ -1203,6 +1237,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  rhs
 @category{Expressions}
 @closecatbox
 @end deffn
@@ -1216,7 +1251,9 @@ Default value: @code{true}
 See @mref{rootscontract} for details.
 
 @opencatbox{Categories:}
+@ctindex  Expressions  @subentry  rootsconmode
 @category{Expressions}
+@ctindex  Simplification flags and variables  @subentry  rootsconmode
 @category{Simplification flags and variables}
 @closecatbox
 @end defvr
@@ -1307,6 +1344,7 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
+@ctindex  Simplification functions  @subentry  rootscontract
 @category{Simplification functions}
 @closecatbox
 @end deffn
@@ -1322,7 +1360,9 @@ for the roots found by the @mref{realroots} function.
 @c NOTION ?? NEED EXAMPLE HERE
 
 @opencatbox{Categories:}
+@ctindex  Polynomials  @subentry  rootsepsilon
 @category{Polynomials}
+@ctindex  Numerical methods  @subentry  rootsepsilon
 @category{Numerical methods}
 @closecatbox
 @end defvr
@@ -1518,6 +1558,7 @@ solve: dependent equations eliminated: (2)
 See @mref{algsys} and @mref{%rnum_list} for more information.
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  solve
 @category{Algebraic equations}
 @closecatbox
 @end deffn
@@ -1532,6 +1573,7 @@ When @code{solvedecomposes} is @code{true}, @code{solve} calls
 @c OTHERWISE WHAT HAPPENS -- CAN'T SOLVE POLYNOMIALS, OR SOME OTHER METHOD IS USED ??
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  solvedecomposes
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -1547,6 +1589,7 @@ implicit solutions, that is, solutions of the form @code{F(x) = 0} where
 @c NEED AN EXAMPLE HERE
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  solveexplicit
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -1563,6 +1606,7 @@ factoring is not necessary.
 @c NEED AN EXAMPLE HERE
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  solvefactors
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -1578,6 +1622,7 @@ example, @code{solve ([], [])} would print two warning messages and return
 @code{[]}.
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  solvenullwarn
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -1593,6 +1638,7 @@ exponentials and logarithms to be solved.
 @c NEED AN EXAMPLE HERE
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  solveradcan
 @category{Algebraic equations}
 @closecatbox
 @end defvr
@@ -1609,6 +1655,7 @@ and thereby losing solutions.
 @c NEED AN EXAMPLE HERE
 
 @opencatbox{Categories:}
+@ctindex  Algebraic equations  @subentry  solvetrigwarn
 @category{Algebraic equations}
 @closecatbox
 @end defvr
