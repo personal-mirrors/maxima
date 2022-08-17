@@ -26,8 +26,8 @@ to store the data, and return that object.
 @cat2{ File output ,  File-output }
 @ctindex  Share packages  @subentry  Introduction to numericalio
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package numericalio  @subentry  Introduction to numericalio
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  Introduction to numericalio
+@catpackage{numericalio ,   Package-numericalio }
 @closecatbox
 
 @subsection Plain-text input and output
@@ -141,8 +141,8 @@ See also @mrefcomma{openr} @mrefcomma{read_array} @mrefcomma{read_hashed_array}
 @mrefdot{read_nested_list}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  read_matrix
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  read_matrix
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  read_matrix
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -172,8 +172,8 @@ See also @mrefcomma{openr} @mrefcomma{read_matrix} @mrefcomma{read_hashed_array}
 @mrefcomma{read_list} @mref{read_binary_array} and @mrefdot{read_nested_list}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  read_array
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  read_array
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  read_array
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -205,8 +205,8 @@ See also @mrefcomma{openr} @mrefcomma{read_matrix} @mrefcomma{read_array}
 @mref{read_list} and @mrefdot{read_nested_list}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  read_hashed_array
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  read_hashed_array
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  read_hashed_array
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -236,8 +236,8 @@ See also @mrefcomma{openr} @mrefcomma{read_matrix} @mrefcomma{read_array}
 @mref{read_list} and @mrefdot{read_hashed_array}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  read_nested_list
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  read_nested_list
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  read_nested_list
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -269,8 +269,8 @@ See also @mrefcomma{openr} @mrefcomma{read_matrix} @mrefcomma{read_array}
 @mrefcomma{read_nested_list} @mref{read_binary_list} and @mrefdot{read_hashed_array}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  read_list
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  read_list
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  read_list
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -316,8 +316,8 @@ If @var{separator_flag} is not specified, the file is assumed space-delimited.
 See also @mref{openw} and @mrefdot{read_matrix}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  write_data
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  write_data
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File output  @subentry  write_data
 @cat2{ File output ,  File-output }
 @closecatbox
@@ -337,8 +337,8 @@ and @code{msb} which indicates most-significant byte first, also called big-endi
 If not specified, @code{numericalio} assumes the external byte order is most-significant byte first.
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  assume_external_byte_order
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  assume_external_byte_order
+@catpackage{numericalio ,   Package-numericalio }
 @closecatbox
 @end deffn
 
@@ -349,8 +349,8 @@ Returns an input stream of 8-bit unsigned bytes to read the file named by @var{f
 See also @mref{openw_binary} and @mrefdot{openr}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  openr_binary
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  openr_binary
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  openr_binary
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -363,8 +363,8 @@ Returns an output stream of 8-bit unsigned bytes to write the file named by @var
 See also @mrefcomma{openr_binary} @mref{opena_binary} and @mrefdot{openw}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  openw_binary
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  openw_binary
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File output  @subentry  openw_binary
 @cat2{ File output ,  File-output }
 @closecatbox
@@ -375,8 +375,8 @@ See also @mrefcomma{openr_binary} @mref{opena_binary} and @mrefdot{openw}
 Returns an output stream of 8-bit unsigned bytes to append the file named by @var{file_name}.
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  opena_binary
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  opena_binary
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File output  @subentry  opena_binary
 @cat2{ File output ,  File-output }
 @closecatbox
@@ -395,8 +395,8 @@ The byte order in elements of the source is specified by @code{assume_external_b
 See also @mrefdot{read_matrix}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  read_binary_matrix
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  read_binary_matrix
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  read_binary_matrix
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -416,8 +416,8 @@ The byte order in elements of the source is specified by @code{assume_external_b
 See also @mrefdot{read_array}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  read_binary_array
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  read_binary_array
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  read_binary_array
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -440,8 +440,8 @@ The byte order in elements of the source is specified by @code{assume_external_b
 See also @mrefdot{read_list}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  read_binary_list
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  read_binary_list
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File input  @subentry  read_binary_list
 @cat2{ File input ,  File-input }
 @closecatbox
@@ -474,8 +474,8 @@ is specified by @code{assume_external_byte_order}.
 See also @mrefdot{write_data}
 
 @opencatbox{Categories:}
-@ctindex  Package numericalio  @subentry  write_binary_data
-@cat2{ Package numericalio ,  Package-numericalio }
+@ptindex  numericalio  @subentry  write_binary_data
+@catpackage{numericalio ,   Package-numericalio }
 @ctindex  File output  @subentry  write_binary_data
 @cat2{ File output ,  File-output }
 @closecatbox

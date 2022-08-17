@@ -123,8 +123,8 @@ y;
 @cat2{ Tensors ,  Tensors }
 @ctindex  Share packages  @subentry  Introduction to ctensor
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package ctensor  @subentry  Introduction to ctensor
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  Introduction to ctensor
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @c end concepts ctensor
@@ -140,8 +140,8 @@ which initializes the package and allows the user to enter a metric
 interactively. See @code{ctensor} for more details.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  csetup
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  csetup
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{cmetric}
@@ -167,8 +167,8 @@ defined. From these, the frame matrix @code{fr} and the inverse frame
 metric @code{ufg} are computed.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  cmetric
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  cmetric
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{ct}
@@ -312,8 +312,8 @@ The optional argument @var{extra_arg} can be any one of the following:
 If the global variable @code{verbose} is set to @code{true}, @code{ct_coordsys} displays the values of @code{dim}, @code{ct_coords}, and either @code{lg} or @code{lfg} and @code{fri}, depending on the value of @code{cframe_flag}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ct_coordsys
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ct_coordsys
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{init}
@@ -323,8 +323,8 @@ Initializes the @code{ctensor} package.
 The @code{init_ctensor} function reinitializes the @code{ctensor} package. It removes all arrays and matrices used by @code{ctensor}, resets all flags, resets @code{dim} to 4, and resets the frame metric to the Lorentz-frame.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  init_ctensor
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  init_ctensor
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -384,8 +384,8 @@ will not occur. The array elements @code{mcs[i,j,k]} are defined in such a
 manner that the final index is contravariant.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  christof
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  christof
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{ricci}
@@ -396,8 +396,8 @@ components @code{ric[i,j]} of the Ricci tensor.  If the argument @var{dis} is @c
 then the non-zero components are displayed.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ricci
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ricci
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{uricci}
@@ -412,8 +412,8 @@ directly.  Otherwise, @code{ricci(false)} will simply compute the entries
 of the array @code{uric[i,j]} without displaying the results.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  uricci
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  uricci
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{scurvature}
@@ -422,8 +422,8 @@ Returns the scalar curvature (obtained by contracting
 the Ricci tensor) of the Riemannian manifold with the given metric.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  scurvature
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  scurvature
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{einstein}
@@ -439,8 +439,8 @@ these components. If @code{ratfac} is @code{true} then the components will
 also be factored.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  einstein
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  einstein
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{leinstein}
@@ -448,8 +448,8 @@ also be factored.
 Covariant Einstein-tensor. @code{leinstein} stores the values of the covariant Einstein tensor in the array @code{lein}. The covariant Einstein-tensor is computed from the mixed Einstein tensor @code{ein} by multiplying it with the metric tensor. If the argument @var{dis} is @code{true}, then the non-zero values of the covariant Einstein tensor are displayed.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  leinstein
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  leinstein
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{riemann}
@@ -482,8 +482,8 @@ computed directly from the Christoffel-symbols. If @code{cframe_flag} is
 frame field coefficients.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  riemann
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  riemann
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{lriemann}
@@ -500,8 +500,8 @@ the (3,1) Riemann tensor is computed first.
 For information on index ordering, see @code{riemann}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  lriemann
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  lriemann
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{uriemann}
@@ -511,8 +511,8 @@ curvature tensor as array elements @code{uriem[i,j,k,l]}.  These are displayed
 if @var{dis} is @code{true}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  uriemann
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  uriemann
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{rinvariant}
@@ -527,8 +527,8 @@ lriem[i,j,k,l]*uriem[i,j,k,l].
 This object is not automatically simplified since it can be very large.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  rinvariant
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  rinvariant
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{weyl}
@@ -541,8 +541,8 @@ rationally simplified; if @code{ratfac} is @code{true} then the results will be
 factored as well.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  weyl
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  weyl
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -703,8 +703,8 @@ This capability can be useful, for instance, when working in the weak
 field limit far from a gravitational source.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ctaylor
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ctaylor
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -726,8 +726,8 @@ ifb   = ( ifri    - ifri    ) ifr   ifr
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  frame_bracket
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  frame_bracket
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -764,8 +764,8 @@ np  = (fri  - %i fri ) / sqrt(2)
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  nptetrad
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  nptetrad
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{psi}
@@ -790,8 +790,8 @@ computed in a frame base, some in a coordinate base, with no means to
 distinguish between the two.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  psi
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  psi
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{petrov}
@@ -877,8 +877,8 @@ Except for some simple test cases, the implementation is untested as of
 December 19, 2004, and is likely to contain errors.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  petrov
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  petrov
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -940,8 +940,8 @@ If necessary, @code{christof} calls the functions @code{contortion} and
 Computes the (2,1) contortion coefficients from the torsion tensor @var{tr}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  contortion
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  contortion
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{nonmetricity}
@@ -951,8 +951,8 @@ Computes the (2,1) nonmetricity coefficients from the nonmetricity
 vector @var{nm}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  nonmetricity
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  nonmetricity
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -968,8 +968,8 @@ functions which define the transformation.  (Formerly called @code{transform}.)
 These may also be supplied in the form of a list as an optional second argument.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ctransform
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ctransform
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{findde}
@@ -1036,8 +1036,8 @@ below, @code{findde} gives the following independent differential equations:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  findde
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  findde
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{cograd}
@@ -1047,8 +1047,8 @@ user to choose the corresponding vector name as the example under
 @code{contragrad} illustrates.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  cograd
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  cograd
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{contragrad}
@@ -1093,8 +1093,8 @@ below for the Schwarzschild metric illustrates:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  contragrad
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  contragrad
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{ctensor_dscalar}
@@ -1130,8 +1130,8 @@ dependencies have been declared upon the function. For example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  dscalar
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  dscalar
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{checkdiv}
@@ -1145,8 +1145,8 @@ divergence of the Einstein tensor will be formed and must be zero.
 In addition, the divergence (vector) is given the array name @code{div}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  checkdiv
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  checkdiv
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{cgeodesic}
@@ -1157,8 +1157,8 @@ motion for a given metric.  They are stored in the array @code{geod[i]}.  If
 the argument @var{dis} is @code{true} then these equations are displayed.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  cgeodesic
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  cgeodesic
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -1174,8 +1174,8 @@ The components of the second rank covariant field tensor are
 represented by the array @code{bd}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  bdvac
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  bdvac
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{invariant1}
@@ -1186,8 +1186,8 @@ invariant density of R^2. The field equations are the components of an
 array named @code{inv1}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  invariant1
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  invariant1
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{invariant2}
@@ -1201,8 +1201,8 @@ components of an array named @code{inv2}.
 
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  invariant2
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  invariant2
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{bimetric}
@@ -1214,8 +1214,8 @@ generates the field equations of Rosen's bimetric theory. The field
 equations are the components of an array named @code{rosen}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  bimetric
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  bimetric
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -1227,8 +1227,8 @@ Returns @code{true} if the first @var{n} rows and @var{n} columns of @var{M}
 form a diagonal matrix or (2D) array.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  diagmatrixp
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  diagmatrixp
+@catpackage{ctensor ,   Package-ctensor }
 @ctindex  Predicate functions  @subentry  diagmatrixp
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
@@ -1245,8 +1245,8 @@ If @var{n} is less than the size of @var{M},
 comprising rows 1 through @var{n} and columns 1 through @var{n}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  symmetricp
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  symmetricp
+@catpackage{ctensor ,   Package-ctensor }
 @ctindex  Predicate functions  @subentry  symmetricp
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
@@ -1261,8 +1261,8 @@ elements.  In this way, it is possible to quickly find the non-zero
 expressions and attempt simplification.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ntermst
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ntermst
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{cdisplay}
@@ -1484,8 +1484,8 @@ riem     = [        0         - -------------         0         0 ]
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  cdisplay
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  cdisplay
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 @anchor{deleten}
@@ -1494,8 +1494,8 @@ Returns a new list consisting of @var{L} with the @var{n}'th element
 deleted.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  deleten
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  deleten
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end deffn
 
@@ -1512,8 +1512,8 @@ default 4. The command @code{dim: n} will reset the dimension to any other
 value @code{n}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  dim
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  dim
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1530,8 +1530,8 @@ run times will, of course, result. Note: this option is set
 automatically by @code{csetup} if a diagonal metric is specified.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  diagmetric
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  diagmetric
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1543,8 +1543,8 @@ Causes trigonometric simplifications to be used when tensors are computed. Prese
 @code{ctrgsimp} affects only computations involving a moving frame.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ctrgsimp
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ctrgsimp
+@catpackage{ctensor ,   Package-ctensor }
 @ctindex  Simplification flags and variables  @subentry  ctrgsimp
 @cat2{ Simplification flags and variables ,  Simplification-flags-and-variables }
 @closecatbox
@@ -1562,8 +1562,8 @@ computations in a Lorentz frame, @code{lfg} should have the appropriate
 signature.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  cframe_flag
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  cframe_flag
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1576,8 +1576,8 @@ connection coefficients. The contortion tensor itself is computed by
 @code{contortion} from the user-supplied tensor @code{tr}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ctorsion_flag
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ctorsion_flag
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1591,8 +1591,8 @@ from the user-supplied nonmetricity vector @code{nm} by the function
 @code{nonmetricity}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  cnonmet_flag
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  cnonmet_flag
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1606,8 +1606,8 @@ Taylor-series expansions. Presently, @code{christof}, @code{ricci},
 setting.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ctayswitch
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ctayswitch
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1619,8 +1619,8 @@ Variable used for Taylor-series expansion if @code{ctayswitch} is set to
 @code{true}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ctayvar
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ctayvar
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1632,8 +1632,8 @@ Maximum power used in Taylor-series expansion when @code{ctayswitch} is
 set to @code{true}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ctaypov
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ctaypov
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1645,8 +1645,8 @@ Point around which Taylor-series expansion is carried out when
 @code{ctayswitch} is set to @code{true}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ctaypt
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ctaypt
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1658,8 +1658,8 @@ The determinant of the metric tensor @code{lg}. Computed by @code{cmetric} when
 @code{cframe_flag} is set to @code{false}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  gdet
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  gdet
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1670,8 +1670,8 @@ The determinant of the metric tensor @code{lg}. Computed by @code{cmetric} when
 Causes rational simplification to be applied by @code{christof}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ratchristof
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ratchristof
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1685,8 +1685,8 @@ performed on the non-zero components of Einstein tensors; if
 @code{ratfac} is @code{true} then the components will also be factored.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  rateinstein
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  rateinstein
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1700,8 +1700,8 @@ simplification will be done; if @code{ratfac} is @code{true} then each of the
 components will also be factored.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ratriemann
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ratriemann
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1715,8 +1715,8 @@ to apply rational simplification to the values of the Weyl tensor. If
 @code{ratfac} is @code{true}, then the components will also be factored.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ratweyl
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ratweyl
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1726,8 +1726,8 @@ to apply rational simplification to the values of the Weyl tensor. If
 The covariant frame metric. By default, it is initialized to the 4-dimensional Lorentz frame with signature (+,+,+,-). Used when @code{cframe_flag} is @code{true}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  lfg
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  lfg
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1737,8 +1737,8 @@ The covariant frame metric. By default, it is initialized to the 4-dimensional L
 The inverse frame metric. Computed from @code{lfg} when @code{cmetric} is called while @code{cframe_flag} is set to @code{true}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ufg
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ufg
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1750,8 +1750,8 @@ The (3,1) Riemann tensor. Computed when the function @code{riemann} is invoked. 
 If @code{cframe_flag} is @code{true}, @code{riem} is computed from the covariant Riemann-tensor @code{lriem}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  riem
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  riem
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1762,8 +1762,8 @@ If @code{cframe_flag} is @code{true}, @code{riem} is computed from the covariant
 The covariant Riemann tensor. Computed by @code{lriemann}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  lriem
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  lriem
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1774,8 +1774,8 @@ The covariant Riemann tensor. Computed by @code{lriemann}.
 The contravariant Riemann tensor. Computed by @code{uriemann}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  uriem
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  uriem
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1786,8 +1786,8 @@ The contravariant Riemann tensor. Computed by @code{uriemann}.
 The covariant Ricci-tensor. Computed by @code{ricci}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ric
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ric
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1798,8 +1798,8 @@ The covariant Ricci-tensor. Computed by @code{ricci}.
 The mixed-index Ricci-tensor. Computed by @code{uricci}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  uric
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  uric
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1811,8 +1811,8 @@ The metric tensor. This tensor must be specified (as a @code{dim} by @code{dim} 
 before other computations can be performed.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  lg
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  lg
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1823,8 +1823,8 @@ before other computations can be performed.
 The inverse of the metric tensor. Computed by @code{cmetric}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ug
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ug
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1835,8 +1835,8 @@ The inverse of the metric tensor. Computed by @code{cmetric}.
 The Weyl tensor. Computed by @code{weyl}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  weyl
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  weyl
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1847,8 +1847,8 @@ The Weyl tensor. Computed by @code{weyl}.
 Frame bracket coefficients, as computed by @code{frame_bracket}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  fb
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  fb
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1859,8 +1859,8 @@ Frame bracket coefficients, as computed by @code{frame_bracket}.
 The Kretschmann invariant. Computed by @code{rinvariant}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  kinvariant
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  kinvariant
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1871,8 +1871,8 @@ The Kretschmann invariant. Computed by @code{rinvariant}.
 A Newman-Penrose null tetrad. Computed by @code{nptetrad}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  np
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  np
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1895,8 +1895,8 @@ Defined as @code{ug.np}. The product @code{np.transpose(npi)} is constant:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  npi
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  npi
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1907,8 +1907,8 @@ Defined as @code{ug.np}. The product @code{np.transpose(npi)} is constant:
 User-supplied rank-3 tensor representing torsion. Used by @code{contortion}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  tr
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  tr
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end defvr
 
@@ -1918,8 +1918,8 @@ User-supplied rank-3 tensor representing torsion. Used by @code{contortion}.
 The contortion tensor, computed from @code{tr} by @code{contortion}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  kt
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  kt
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end defvr
 
@@ -1929,8 +1929,8 @@ The contortion tensor, computed from @code{tr} by @code{contortion}.
 User-supplied nonmetricity vector. Used by @code{nonmetricity}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  nm
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  nm
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 @end defvr
 
@@ -1940,8 +1940,8 @@ User-supplied nonmetricity vector. Used by @code{nonmetricity}.
 The nonmetricity coefficients, computed from @code{nm} by @code{nonmetricity}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  nmc
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  nmc
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1953,8 +1953,8 @@ Variable indicating if the tensor package has been initialized. Set and used by
 @code{csetup}, reset by @code{init_ctensor}.
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  tensorkill
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  tensorkill
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr
@@ -1971,8 +1971,8 @@ one may redefine the coordinates with the assignment
 See also @mrefdot{csetup}
 
 @opencatbox{Categories:}
-@ctindex  Package ctensor  @subentry  ct_coords
-@cat2{ Package ctensor ,  Package-ctensor }
+@ptindex  ctensor  @subentry  ct_coords
+@catpackage{ctensor ,   Package-ctensor }
 @closecatbox
 
 @end defvr

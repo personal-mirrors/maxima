@@ -71,8 +71,8 @@ Examples:
 @cat2{ Rules and patterns ,  Rules-and-patterns }
 @ctindex  Share packages  @subentry  Package absimp
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package absimp  @subentry  Package absimp
-@cat2{ Package absimp ,  Package-absimp }
+@ptindex  absimp  @subentry  Package absimp
+@catpackage{absimp ,   Package-absimp }
 @closecatbox
 
 
@@ -119,8 +119,8 @@ useful when the expressions are very large.
 @cat2{ Expressions ,  Expressions }
 @ctindex  Share packages  @subentry  Package facexp
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package facexp  @subentry  Package facexp
-@cat2{ Package facexp ,  Package-facexp }
+@ptindex  facexp  @subentry  Package facexp
+@catpackage{facexp ,   Package-facexp }
 @closecatbox
 
 
@@ -166,8 +166,8 @@ In  addition,  the  setting  of  the  switches   @code{facsum_combine}  and
 @code{nextlayerfactor} may affect the result of @code{facsum}.
 
 @opencatbox{Categories:}
-@ctindex  Package facexp  @subentry  facsum
-@cat2{ Package facexp ,  Package-facexp }
+@ptindex  facexp  @subentry  facsum
+@catpackage{facexp ,   Package-facexp }
 @ctindex  Expressions  @subentry  facsum
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -192,8 +192,8 @@ Since @code{nextlayerfactor} is  always bound to  either @code{true} or  @code{f
 must be presented single-quoted whenever it appears in the argument list of @code{facsum}.
 
 @opencatbox{Categories:}
-@ctindex  Package facexp  @subentry  nextlayerfactor
-@cat2{ Package facexp ,  Package-facexp }
+@ptindex  facexp  @subentry  nextlayerfactor
+@catpackage{facexp ,   Package-facexp }
 @ctindex  Expressions  @subentry  nextlayerfactor
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -217,8 +217,8 @@ expression,  but  does not  want  the denominator  to  be multiplied
 through the terms of the numerator.
 
 @opencatbox{Categories:}
-@ctindex  Package facexp  @subentry  facsum_combine
-@cat2{ Package facexp ,  Package-facexp }
+@ptindex  facexp  @subentry  facsum_combine
+@catpackage{facexp ,   Package-facexp }
 @ctindex  Expressions  @subentry  facsum_combine
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -233,8 +233,8 @@ arguments.  If any of the factors of @var{expr} is raised to a  power, both
 the factor and the exponent will be processed in this way.
 
 @opencatbox{Categories:}
-@ctindex  Package facexp  @subentry  factorfacsum
-@cat2{ Package facexp ,  Package-facexp }
+@ptindex  facexp  @subentry  factorfacsum
+@catpackage{facexp ,   Package-facexp }
 @ctindex  Expressions  @subentry  factorfacsum
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -280,8 +280,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package facexp  @subentry  collectterms
-@cat2{ Package facexp ,  Package-facexp }
+@ptindex  facexp  @subentry  collectterms
+@catpackage{facexp ,   Package-facexp }
 @ctindex  Expressions  @subentry  collectterms
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -296,8 +296,8 @@ Example:
 @opencatbox{Categories:}
 @ctindex  Share packages  @subentry  Package functs
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package functs  @subentry  Package functs
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  Package functs
+@catpackage{functs ,   Package-functs }
 @closecatbox
 
 @anchor{rempart}
@@ -310,8 +310,8 @@ then parts @var{l} thru @var{m} are removed.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  rempart
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  rempart
+@catpackage{functs ,   Package-functs }
 @ctindex  Expressions  @subentry  rempart
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -342,8 +342,8 @@ To use @code{wronskian}, first @code{load("functs")}. Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  wronskian
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  wronskian
+@catpackage{functs ,   Package-functs }
 @ctindex  Differential calculus  @subentry  wronskian
 @cat2{ Differential calculus ,  Differential-calculus }
 @closecatbox
@@ -359,8 +359,8 @@ Returns the trace (sum of the diagonal elements) of matrix @var{M}.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  tracematrix
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  tracematrix
+@catpackage{functs ,   Package-functs }
 @ctindex  Matrices  @subentry  tracematrix
 @cat2{ Matrices ,  Matrices }
 @closecatbox
@@ -375,8 +375,8 @@ Returns canonical rational expression (CRE) form if given one, else returns gene
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  rational
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  rational
+@catpackage{functs ,   Package-functs }
 @ctindex  Expressions  @subentry  rational
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -395,8 +395,8 @@ Returns @code{false} otherwise.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  nonzeroandfreeof
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  nonzeroandfreeof
+@catpackage{functs ,   Package-functs }
 @ctindex  Expressions  @subentry  nonzeroandfreeof
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -435,8 +435,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package antid  @subentry  linear
-@cat2{ Package antid ,  Package-antid }
+@ptindex  antid  @subentry  linear
+@catpackage{antid ,   Package-antid }
 @ctindex  Expressions  @subentry  linear
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -492,8 +492,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  gcdivide
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  gcdivide
+@catpackage{functs ,   Package-functs }
 @ctindex  Polynomials  @subentry  gcdivide
 @cat2{ Polynomials ,  Polynomials }
 @closecatbox
@@ -509,8 +509,8 @@ Returns the @var{n}-th term of the arithmetic series
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  arithmetic
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  arithmetic
+@catpackage{functs ,   Package-functs }
 @ctindex  Sums and products  @subentry  arithmetic
 @cat2{ Sums and products ,  Sums-and-products }
 @closecatbox
@@ -525,8 +525,8 @@ Returns the @var{n}-th term of the geometric series
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  geometric
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  geometric
+@catpackage{functs ,   Package-functs }
 @ctindex  Sums and products  @subentry  geometric
 @cat2{ Sums and products ,  Sums-and-products }
 @closecatbox
@@ -541,8 +541,8 @@ Returns the @var{n}-th term of the harmonic series
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  harmonic
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  harmonic
+@catpackage{functs ,   Package-functs }
 @ctindex  Sums and products  @subentry  harmonic
 @cat2{ Sums and products ,  Sums-and-products }
 @closecatbox
@@ -556,8 +556,8 @@ Returns the sum of the arithmetic series from 1 to @var{n}.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  arithsum
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  arithsum
+@catpackage{functs ,   Package-functs }
 @ctindex  Sums and products  @subentry  arithsum
 @cat2{ Sums and products ,  Sums-and-products }
 @closecatbox
@@ -573,8 +573,8 @@ of @var{r} is less than 1.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  geosum
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  geosum
+@catpackage{functs ,   Package-functs }
 @ctindex  Sums and products  @subentry  geosum
 @cat2{ Sums and products ,  Sums-and-products }
 @closecatbox
@@ -589,8 +589,8 @@ Returns the Gaussian probability function
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  gaussprob
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  gaussprob
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  gaussprob
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -605,8 +605,8 @@ Returns the Gudermannian function
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  gd
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  gd
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  gd
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -621,8 +621,8 @@ Returns the inverse Gudermannian function
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  agd
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  agd
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  agd
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -636,8 +636,8 @@ Returns the versed sine @code{1 - cos (x)}.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  vers
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  vers
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  vers
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -651,8 +651,8 @@ Returns the coversed sine @code{1 - sin (@var{x})}.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  covers
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  covers
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  covers
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -666,8 +666,8 @@ Returns the exsecant @code{sec (@var{x}) - 1}.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  exsec
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  exsec
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  exsec
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -681,8 +681,8 @@ Returns the haversine @code{(1 - cos(x))/2}.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  hav
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  hav
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  hav
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -698,8 +698,8 @@ taken @var{r} at a time.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  combination
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  combination
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  combination
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -715,8 +715,8 @@ selected from a set of @var{n} objects.
 To use this function write first @code{load("functs")}.
 
 @opencatbox{Categories:}
-@ctindex  Package functs  @subentry  permutation
-@cat2{ Package functs ,  Package-functs }
+@ptindex  functs  @subentry  permutation
+@catpackage{functs ,   Package-functs }
 @ctindex  Mathematical functions  @subentry  permutation
 @cat2{ Mathematical functions ,  Mathematical-functions }
 @closecatbox
@@ -859,8 +859,8 @@ or @code{disprule ("*rule2")} to display the definition of the second multiplica
 @cat2{ Rules and patterns ,  Rules-and-patterns }
 @ctindex  Share packages  @subentry  Package ineq
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package ineq  @subentry  Package ineq
-@cat2{ Package ineq ,  Package-ineq }
+@ptindex  ineq  @subentry  Package ineq
+@catpackage{ineq ,   Package-ineq }
 @closecatbox
 
 
@@ -876,8 +876,8 @@ or @code{disprule ("*rule2")} to display the definition of the second multiplica
 @cat2{ Expressions ,  Expressions }
 @ctindex  Share packages  @subentry  Package rducon
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package rducon  @subentry  Package rducon
-@cat2{ Package rducon ,  Package-rducon }
+@ptindex  rducon  @subentry  Package rducon
+@catpackage{rducon ,   Package-rducon }
 @closecatbox
 
 
@@ -917,8 +917,8 @@ symbols to represent each constant subexpression found by @code{reduce_consts}.
 @code{demo ("rducon")} shows a demonstration of this function.
 
 @opencatbox{Categories:}
-@ctindex  Package rducon  @subentry  reduce_consts
-@cat2{ Package rducon ,  Package-rducon }
+@ptindex  rducon  @subentry  reduce_consts
+@catpackage{rducon ,   Package-rducon }
 @ctindex  Expressions  @subentry  reduce_consts
 @cat2{ Expressions ,  Expressions }
 @closecatbox
@@ -936,8 +936,8 @@ symbols to represent each constant subexpression found by @code{reduce_consts}.
 @cat2{ Expressions ,  Expressions }
 @ctindex  Share packages  @subentry  Package scifac
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package scifac  @subentry  Package scifac
-@cat2{ Package scifac ,  Package-scifac }
+@ptindex  scifac  @subentry  Package scifac
+@catpackage{scifac ,   Package-scifac }
 @closecatbox
 
 
@@ -969,8 +969,8 @@ compact pair-factored result.
 @code{demo ("scifac")} shows a demonstration of this function.
 
 @opencatbox{Categories:}
-@ctindex  Package scifac  @subentry  gcfac
-@cat2{ Package scifac ,  Package-scifac }
+@ptindex  scifac  @subentry  gcfac
+@catpackage{scifac ,   Package-scifac }
 @ctindex  Expressions  @subentry  gcfac
 @cat2{ Expressions ,  Expressions }
 @closecatbox

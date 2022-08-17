@@ -74,7 +74,14 @@
 
 @macro cat2 {name, index}
 @html
-<a href="maxima_407.html#catindex-\index\">\name\</a>
+<a href="cat-index.html#catindex-\index\">\name\</a>
+&middot;
+@end html
+@end macro
+
+@macro catpackage {name, index}
+@html
+<a href="package-cat-index.html#catindex-\index\">Package \name\</a>
 &middot;
 @end html
 @end macro
@@ -141,6 +148,12 @@
 @end macro
 
 @macro category {name}
+@end macro
+
+@macro cat2 {name, index}
+@end macro
+
+@macro catpackage {name, index}
 @end macro
 
 @macro closecatbox {}

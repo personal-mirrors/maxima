@@ -143,8 +143,8 @@ PROMPT;>>(%i5) <<PROMPT;
 @end verbatim
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  alt_display_output_type
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  alt_display_output_type
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn
@@ -193,8 +193,8 @@ both bound to @code{false} in the body of @code{time_stamp} to prevent
 an infinite recursion in @code{displa}.
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  define_alt_display
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  define_alt_display
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn
@@ -216,8 +216,8 @@ an alternative 1-d or 2-d display function.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  info_display
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  info_display
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn
@@ -236,8 +236,8 @@ Produces MathML output.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  mathml_display
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  mathml_display
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn
@@ -254,8 +254,8 @@ Produces TeX output.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  tex_display
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  tex_display
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn
@@ -292,8 +292,8 @@ Produces Texinfo output using all three display functions.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  multi_display_for_texinfo
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  multi_display_for_texinfo
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn
@@ -304,8 +304,8 @@ Resets the prompt prefix and suffix to the empty string, and sets both
 1-d and 2-d display functions to the default.
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  reset_displays
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  reset_displays
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn
@@ -333,8 +333,8 @@ its output. A display function that returns a string will appear to
 display nothing, nor cause any errors.
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  set_alt_display
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  set_alt_display
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn
@@ -414,8 +414,8 @@ by an open square bracket (91); each string ends with a lower-case m
 information on how to use control strings to set the terminal colors.
 
 @opencatbox{Categories:}
-@ctindex  Package alt-display  @subentry  set_prompt
-@cat2{ Package alt-display ,  Package-alt-display }
+@ptindex  alt-display  @subentry  set_prompt
+@catpackage{alt-display ,   Package-alt-display }
 @closecatbox
 
 @end deffn

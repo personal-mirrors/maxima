@@ -16,8 +16,8 @@
 @cat2{ Groebner bases ,  Groebner-bases }
 @ctindex  Share packages  @subentry  Introduction to Affine
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package affine  @subentry  Introduction to Affine
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  Introduction to Affine
+@catpackage{affine ,   Package-affine }
 @closecatbox
 
 
@@ -41,8 +41,8 @@ are sparse.
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  fast_linsolve
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  fast_linsolve
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -66,8 +66,8 @@ if and only if @var{f} is a polynomial combination of the elements of
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  grobner_basis
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  grobner_basis
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -95,8 +95,8 @@ the weights of individual variables.
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  set_up_dot_simplifications
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  set_up_dot_simplifications
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -108,8 +108,8 @@ These are the weights used in computing @code{nc_degree}.
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  declare_weights
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  declare_weights
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -120,8 +120,8 @@ Returns the degree of a noncommutative polynomial @var{p}.  See @code{declare_we
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  nc_degree
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  nc_degree
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -134,8 +134,8 @@ if and only if @var{f} is a polynomial combination of the elements of the equati
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  dotsimp
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  dotsimp
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -154,8 +154,8 @@ fast_central_elements ([x, y], 2);
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  fast_central_elements
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  fast_central_elements
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -174,8 +174,8 @@ about resetting things.
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  check_overlaps
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  check_overlaps
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -188,8 +188,8 @@ in the variables @var{x_1}, @dots{}, @var{x_n}.
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  mono
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  mono
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -200,8 +200,8 @@ Compute the Hilbert series through degree @var{n} for the current algebra.
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  monomial_dimensions
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  monomial_dimensions
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -216,8 +216,8 @@ monomials.
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  extract_linear_equations
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  extract_linear_equations
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -232,8 +232,8 @@ or a list of polynomials @var{p_1}, @dots{}, @var{p_n}.
 @code{load("affine")} loads this function.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  list_nc_monomials
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  list_nc_monomials
+@catpackage{affine ,   Package-affine }
 @closecatbox
 @end deffn
 
@@ -287,8 +287,8 @@ before calling @code{dotsimp}.
 By default, denominators are not collected by @code{dotsimp}.
 
 @opencatbox{Categories:}
-@ctindex  Package affine  @subentry  all_dotsimp_denoms
-@cat2{ Package affine ,  Package-affine }
+@ptindex  affine  @subentry  all_dotsimp_denoms
+@catpackage{affine ,   Package-affine }
 @closecatbox
 
 @end defvr

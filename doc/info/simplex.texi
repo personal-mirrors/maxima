@@ -29,8 +29,8 @@ Example:
 @cat2{ Optimization ,  Optimization }
 @ctindex  Share packages  @subentry  Introduction to simplex
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package simplex  @subentry  Introduction to simplex
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  Introduction to simplex
+@catpackage{simplex ,   Package-simplex }
 @closecatbox
 
 @subsection Tests for simplex
@@ -133,8 +133,8 @@ Warning: Solution may be incorrect.
 See also: @mref{linear_program}, @mref{ratnump}.
 
 @opencatbox{Categories:}
-@ctindex  Package simplex  @subentry  epsilon_lp
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  epsilon_lp
+@catpackage{simplex ,   Package-simplex }
 @closecatbox
 
 @end defvr
@@ -177,8 +177,8 @@ Example:
 See also: @mref{minimize_lp}, @mref{scale_lp}, and @mref{epsilon_lp}.
 
 @opencatbox{Categories:}
-@ctindex  Package simplex  @subentry  linear_program
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  linear_program
+@catpackage{simplex ,   Package-simplex }
 @ctindex  Numerical methods  @subentry  linear_program
 @cat2{ Numerical methods ,  Numerical-methods }
 @closecatbox
@@ -196,8 +196,8 @@ description of arguments and return value.
 See also: @mref{minimize_lp}.
 
 @opencatbox{Categories:}
-@ctindex  Package simplex  @subentry  maximize_lp
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  maximize_lp
+@catpackage{simplex ,   Package-simplex }
 @ctindex  Numerical methods  @subentry  maximize_lp
 @cat2{ Numerical methods ,  Numerical-methods }
 @closecatbox
@@ -300,8 +300,8 @@ p;
 See also: @mref{maximize_lp}, @mref{nonnegative_lp}, @mref{epsilon_lp}.
 
 @opencatbox{Categories:}
-@ctindex  Package simplex  @subentry  minimize_lp
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  minimize_lp
+@catpackage{simplex ,   Package-simplex }
 @ctindex  Numerical methods  @subentry  minimize_lp
 @cat2{ Numerical methods ,  Numerical-methods }
 @closecatbox
@@ -320,8 +320,8 @@ If @code{nonnegative_lp} is true all decision variables to
 See also: @mref{minimize_lp}.
 
 @opencatbox{Categories:}
-@ctindex  Package simplex  @subentry  nonnegative_lp
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  nonnegative_lp
+@catpackage{simplex ,   Package-simplex }
 @closecatbox
 
 @end defvr
@@ -334,8 +334,8 @@ When @code{scale_lp} is @code{true},
 @code{linear_program} scales its input so that the maximum absolute value in each row or column is 1.
 
 @opencatbox{Categories:}
-@ctindex  Package simplex  @subentry  scale_lp
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  scale_lp
+@catpackage{simplex ,   Package-simplex }
 @closecatbox
 
 @end defvr
@@ -347,8 +347,8 @@ After @code{linear_program} returns,
 @code{pivot_count_sx} is the number of pivots in last computation.
 
 @opencatbox{Categories:}
-@ctindex  Package simplex  @subentry  pivot_count_sx
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  pivot_count_sx
+@catpackage{simplex ,   Package-simplex }
 @closecatbox
 
 @end defvr
@@ -359,8 +359,8 @@ After @code{linear_program} returns,
 @code{pivot_max_sx} is the maximum number of pivots allowed by @code{linear_program}.
 
 @opencatbox{Categories:}
-@ctindex  Package simplex  @subentry  pivot_max_sx
-@cat2{ Package simplex ,  Package-simplex }
+@ptindex  simplex  @subentry  pivot_max_sx
+@catpackage{simplex ,   Package-simplex }
 @closecatbox
 
 @end defvr

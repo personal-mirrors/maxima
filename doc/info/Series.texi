@@ -1348,8 +1348,8 @@ coefficients and some functions for manipulation of expressions.
 @cat2{ Fourier transform ,  Fourier-transform }
 @ctindex  Share packages  @subentry  Introduction to Fourier series
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package fourie  @subentry  Introduction to Fourier series
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  Introduction to Fourier series
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -1368,8 +1368,8 @@ Returns @code{true} if @code{equal (@var{x}, @var{y})} otherwise @code{false}
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  equalp
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  equalp
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1388,8 +1388,8 @@ the variable @var{x}.
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  remfun
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  remfun
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1408,8 +1408,8 @@ returns @code{true} if @var{expr} contains the function @var{f} and the variable
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  funp
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  funp
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1436,8 +1436,8 @@ of @var{f} with respect to @var{x} from @var{a} to @var{b}.
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  absint
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  absint
+@catpackage{fourie ,   Package-fourie }
 @ctindex  Integral calculus  @subentry  absint
 @cat2{ Integral calculus ,  Integral-calculus }
 @closecatbox
@@ -1454,8 +1454,8 @@ on the interval @code{[-p, p]}.
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  fourier
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  fourier
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1470,8 +1470,8 @@ Simplifies @code{sin (n %pi)} to 0 if @code{sinnpiflag} is @code{true} and
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  foursimp
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  foursimp
+@catpackage{fourie ,   Package-fourie }
 @ctindex  Trigonometric functions  @subentry  foursimp
 @cat2{ Trigonometric functions ,  Trigonometric-functions }
 @ctindex  Simplification functions  @subentry  foursimp
@@ -1487,8 +1487,8 @@ Default value: @code{true}
 See @code{foursimp}.
 
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  sinnpiflag
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  sinnpiflag
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end defvr
 
@@ -1500,8 +1500,8 @@ Default value: @code{true}
 See @code{foursimp}.
 
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  cosnpiflag
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  cosnpiflag
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end defvr
 
@@ -1517,8 +1517,8 @@ and @var{p} have same meaning as in @code{fourier}.
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  fourexpand
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  fourexpand
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1533,8 +1533,8 @@ Returns the Fourier cosine coefficients for @code{@var{f}(@var{x})} defined on
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  fourcos
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  fourcos
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1549,8 +1549,8 @@ Returns the Fourier sine coefficients for @code{@var{f}(@var{x})} defined on
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  foursin
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  foursin
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1565,8 +1565,8 @@ Returns @code{fourexpand (foursimp (fourier (@var{f}, @var{x}, @var{p})),
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  totalfourier
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  totalfourier
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1581,8 +1581,8 @@ Constructs and returns a list of the Fourier integral coefficients of
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  fourint
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  fourint
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1597,8 +1597,8 @@ on @code{[0, inf]}.
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  fourintcos
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  fourintcos
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 
@@ -1613,8 +1613,8 @@ Returns the Fourier sine integral coefficients for @code{@var{f}(@var{x})} on
 
 @c NEEDS EXAMPLES
 @opencatbox{Categories:}
-@ctindex  Package fourie  @subentry  fourintsin
-@cat2{ Package fourie ,  Package-fourie }
+@ptindex  fourie  @subentry  fourintsin
+@catpackage{fourie ,   Package-fourie }
 @closecatbox
 @end deffn
 

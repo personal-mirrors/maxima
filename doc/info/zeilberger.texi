@@ -22,8 +22,8 @@ summation.
 @cat2{ Sums and products ,  Sums-and-products }
 @ctindex  Share packages  @subentry  Introduction to zeilberger
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package zeilberger  @subentry  Introduction to zeilberger
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  Introduction to zeilberger
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @subsection The indefinite summation problem
@@ -116,8 +116,8 @@ Returns the hypergeometric anti-difference of @math{F_k}, if it exists.@*
 Otherwise @code{AntiDifference} returns @code{no_hyp_antidifference}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  AntiDifference
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  AntiDifference
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -136,8 +136,8 @@ if it exists.
 Otherwise, @code{Gosper} returns @code{no_hyp_sol}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  Gosper
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  Gosper
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -214,8 +214,8 @@ Dependent equations eliminated:  (1)
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  GosperSum
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  GosperSum
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -239,8 +239,8 @@ $$\left[R\left(n, k\right), \left[a_0, a_1, \ldots, a_d\right]\right].$$
 @code{parGosper} returns @code{[]} if it fails to find a recurrence.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  parGosper
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  parGosper
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -260,8 +260,8 @@ Each solution has the form
 @code{parGosper} returns @code{[]} if it fails to find a recurrence.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  parGosper
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  parGosper
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -293,8 +293,8 @@ $$\left[R\left(n, k\right), \left[a_0, a_1, \ldots, a_d\right]\right].$$
 @code{Zeilberger} invokes @code{Gosper} only if @code{Gosper_in_Zeilberger} is @code{true}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  Zeilberger
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  Zeilberger
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -321,8 +321,8 @@ Each solution has the form
 @code{Zeilberger} invokes @code{Gosper} only if @code{Gosper_in_Zeilberger} is @code{true}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  Zeilberger
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  Zeilberger
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end deffn
@@ -339,8 +339,8 @@ Default value: 5
 @code{MAX_ORD} is the maximum recurrence order attempted by @code{Zeilberger}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  MAX_ORD
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  MAX_ORD
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -354,8 +354,8 @@ functions in the @code{zeilberger} package attempt
 further simplification of the solution.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  simplified_output
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  simplified_output
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -368,8 +368,8 @@ Default value: @code{linsolve}
 of equations in Zeilberger's algorithm.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  linear_solver
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  linear_solver
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -383,8 +383,8 @@ functions in the @code{zeilberger} package print
 warning messages during execution.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  warnings
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  warnings
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -398,8 +398,8 @@ the @code{Zeilberger} function calls @code{Gosper} before calling @code{parGospe
 Otherwise, @code{Zeilberger} goes immediately to @code{parGosper}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  Gosper_in_Zeilberger
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  Gosper_in_Zeilberger
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -413,8 +413,8 @@ When @code{trivial_solutions} is @code{true},
 which have certificate equal to zero, or all coefficients equal to zero.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  trivial_solutions
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  trivial_solutions
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -430,8 +430,8 @@ When @code{mod_test} is @code{true},
 modular test for discarding systems with no solutions.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  mod_test
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  mod_test
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -443,8 +443,8 @@ Default value: @code{linsolve}
 @code{modular_linear_solver} names the linear solver used by the modular test in @code{parGosper}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  modular_linear_solver
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  modular_linear_solver
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -457,8 +457,8 @@ Default value: @code{big_primes[10]}
 when executing the modular test in @code{parGosper}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  ev_point
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  ev_point
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -470,8 +470,8 @@ Default value: @code{big_primes[1]}
 @code{mod_big_prime} is the modulus used by the modular test in @code{parGosper}.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  mod_big_prime
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  mod_big_prime
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr
@@ -484,8 +484,8 @@ Default value: 4
 greatest order for which the modular test in @code{parGosper} is attempted.
 
 @opencatbox{Categories:}
-@ctindex  Package zeilberger  @subentry  mod_threshold
-@cat2{ Package zeilberger ,  Package-zeilberger }
+@ptindex  zeilberger  @subentry  mod_threshold
+@catpackage{zeilberger ,   Package-zeilberger }
 @closecatbox
 
 @end defvr

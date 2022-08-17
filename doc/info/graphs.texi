@@ -28,8 +28,8 @@ To use the @code{graphs} package, first load it with @code{load("graphs")}.
 @opencatbox{Categories:}
 @ctindex  Share packages  @subentry  Introduction to graphs
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package graphs  @subentry  Introduction to graphs
-@cat2{ Package graphs ,  Package-graphs }
+@ptindex  graphs  @subentry  Introduction to graphs
+@catpackage{graphs ,   Package-graphs }
 @closecatbox
 
 @node Functions and Variables for graphs, , Introduction to graphs, graphs-pkg
@@ -122,8 +122,8 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  create_graph
-@cat2{ Package graphs ,  Package-graphs }
+@ptindex  graphs  @subentry  create_graph
+@catpackage{graphs ,   Package-graphs }
 @closecatbox
 @end deffn
 
@@ -132,10 +132,10 @@ Adjacencies:
 Returns a copy of the graph @var{g}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  copy_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  copy_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  copy_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  copy_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -168,10 +168,10 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  circulant_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  circulant_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  circulant_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  circulant_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -180,10 +180,10 @@ Adjacencies:
 Returns the Clebsch graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  clebsch_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  clebsch_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  clebsch_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  clebsch_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -192,10 +192,10 @@ Returns the Clebsch graph.
 Returns the complement of the graph @var{g}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  complement_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  complement_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  complement_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  complement_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -204,10 +204,10 @@ Returns the complement of the graph @var{g}.
 Returns the complete bipartite graph on @var{n+m} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  complete_bipartite_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  complete_bipartite_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  complete_bipartite_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  complete_bipartite_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -216,10 +216,10 @@ Returns the complete bipartite graph on @var{n+m} vertices.
 Returns the complete graph on @var{n} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  complete_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  complete_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  complete_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  complete_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -228,10 +228,10 @@ Returns the complete graph on @var{n} vertices.
 Returns the directed cycle on @var{n} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  cycle_digraph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  cycle_digraph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  cycle_digraph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  cycle_digraph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -240,10 +240,10 @@ Returns the directed cycle on @var{n} vertices.
 Returns the cycle on @var{n} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  cycle_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  cycle_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  cycle_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  cycle_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -252,10 +252,10 @@ Returns the cycle on @var{n} vertices.
 Returns the cuboctahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  cuboctahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  cuboctahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  cuboctahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  cuboctahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -264,10 +264,10 @@ Returns the cuboctahedron graph.
 Returns the @var{n}-dimensional cube.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  cube_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  cube_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  cube_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  cube_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -276,10 +276,10 @@ Returns the @var{n}-dimensional cube.
 Returns the dodecahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  dodecahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  dodecahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  dodecahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  dodecahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -288,10 +288,10 @@ Returns the dodecahedron graph.
 Returns the empty graph on @var{n} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  empty_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  empty_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  empty_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  empty_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -313,10 +313,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  flower_snark
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  flower_snark
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  flower_snark
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  flower_snark
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -325,10 +325,10 @@ Example:
 Returns the graph represented by its adjacency matrix @var{A}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  from_adjacency_matrix
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  from_adjacency_matrix
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  from_adjacency_matrix
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  from_adjacency_matrix
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -337,10 +337,10 @@ Returns the graph represented by its adjacency matrix @var{A}.
 Returns the Frucht graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  frucht_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  frucht_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  frucht_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  frucht_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -361,10 +361,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph_product
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  graph_product
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  graph_product
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  graph_product
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -377,10 +377,10 @@ Example:
 Returns the union (sum) of graphs @var{g1} and @var{g2}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph_union
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  graph_union
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  graph_union
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  graph_union
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -389,10 +389,10 @@ Returns the union (sum) of graphs @var{g1} and @var{g2}.
 Returns the @var{n x m} grid.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  grid_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  grid_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  grid_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  grid_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -401,10 +401,10 @@ Returns the @var{n x m} grid.
 Returns the great rhombicosidodecahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  great_rhombicosidodecahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  great_rhombicosidodecahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  great_rhombicosidodecahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  great_rhombicosidodecahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -413,10 +413,10 @@ Returns the great rhombicosidodecahedron graph.
 Returns the great rhombicuboctahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  great_rhombicuboctahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  great_rhombicuboctahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  great_rhombicuboctahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  great_rhombicuboctahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -425,10 +425,10 @@ Returns the great rhombicuboctahedron graph.
 Returns the Grotzch graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  grotzch_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  grotzch_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  grotzch_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  grotzch_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -437,10 +437,10 @@ Returns the Grotzch graph.
 Returns the Heawood graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  heawood_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  heawood_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  heawood_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  heawood_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -449,10 +449,10 @@ Returns the Heawood graph.
 Returns the icosahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  icosahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  icosahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  icosahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  icosahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -461,10 +461,10 @@ Returns the icosahedron graph.
 Returns the icosidodecahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  icosidodecahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  icosidodecahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  icosidodecahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  icosidodecahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -497,10 +497,10 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  induced_subgraph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  induced_subgraph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  induced_subgraph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  induced_subgraph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -509,10 +509,10 @@ Adjacencies:
 Returns the line graph of the graph @var{g}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  line_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  line_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  line_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  line_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -567,10 +567,10 @@ Example 2:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  make_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  make_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  make_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  make_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -579,10 +579,10 @@ Example 2:
 Returns the mycielskian graph of the graph @var{g}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  mycielski_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  mycielski_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  mycielski_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  mycielski_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -591,10 +591,10 @@ Returns the mycielskian graph of the graph @var{g}.
 Returns the graph with no vertices and no edges.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  new_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  new_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  new_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  new_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -603,10 +603,10 @@ Returns the graph with no vertices and no edges.
 Returns the directed path on @var{n} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  path_digraph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  path_digraph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  path_digraph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  path_digraph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -615,10 +615,10 @@ Returns the directed path on @var{n} vertices.
 Returns the path on @var{n} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  path_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  path_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  path_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  path_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -631,10 +631,10 @@ Returns the petersen graph @var{P_@{n,d@}}. The default values for
 @var{n} and @var{d} are @code{n=5} and @code{d=2}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  petersen_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  petersen_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  petersen_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  petersen_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -644,10 +644,10 @@ Returns a random bipartite graph on @code{a+b} vertices. Each edge is
 present with probability @var{p}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  random_bipartite_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  random_bipartite_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  random_bipartite_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  random_bipartite_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -657,10 +657,10 @@ Returns a random directed graph on @var{n} vertices. Each arc is present
 with probability @var{p}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  random_digraph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  random_digraph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  random_digraph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  random_digraph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -673,10 +673,10 @@ Returns a random @var{d}-regular graph on @var{n} vertices. The default
 value for @var{d} is @code{d=3}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  random_regular_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  random_regular_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  random_regular_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  random_regular_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -686,10 +686,10 @@ Returns a random graph on @var{n} vertices. Each edge is present with
 probability @var{p}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  random_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  random_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  random_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  random_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -698,10 +698,10 @@ probability @var{p}.
 Returns a random graph on @var{n} vertices and random @var{m} edges.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  random_graph1
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  random_graph1
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  random_graph1
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  random_graph1
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -728,10 +728,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  random_network
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  random_network
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  random_network
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  random_network
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -740,10 +740,10 @@ Example:
 Returns a random tournament on @var{n} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  random_tournament
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  random_tournament
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  random_tournament
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  random_tournament
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -752,10 +752,10 @@ Returns a random tournament on @var{n} vertices.
 Returns a random tree on @var{n} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  random_tree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  random_tree
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  random_tree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  random_tree
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -764,10 +764,10 @@ Returns a random tree on @var{n} vertices.
 Returns the small rhombicosidodecahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  small_rhombicosidodecahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  small_rhombicosidodecahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  small_rhombicosidodecahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  small_rhombicosidodecahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -776,10 +776,10 @@ Returns the small rhombicosidodecahedron graph.
 Returns the small rhombicuboctahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  small_rhombicuboctahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  small_rhombicuboctahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  small_rhombicuboctahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  small_rhombicuboctahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -788,10 +788,10 @@ Returns the small rhombicuboctahedron graph.
 Returns the snub cube graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  snub_cube_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  snub_cube_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  snub_cube_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  snub_cube_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -800,10 +800,10 @@ Returns the snub cube graph.
 Returns the snub dodecahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  snub_dodecahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  snub_dodecahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  snub_dodecahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  snub_dodecahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -812,10 +812,10 @@ Returns the snub dodecahedron graph.
 Returns the truncated cube graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  truncated_cube_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  truncated_cube_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  truncated_cube_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  truncated_cube_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -824,10 +824,10 @@ Returns the truncated cube graph.
 Returns the truncated dodecahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  truncated_dodecahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  truncated_dodecahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  truncated_dodecahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  truncated_dodecahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -837,10 +837,10 @@ Returns the truncated dodecahedron graph.
 Returns the truncated icosahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  truncated_icosahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  truncated_icosahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  truncated_icosahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  truncated_icosahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -850,10 +850,10 @@ Returns the truncated icosahedron graph.
 Returns the truncated tetrahedron graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  truncated_tetrahedron_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  truncated_tetrahedron_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  truncated_tetrahedron_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  truncated_tetrahedron_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -862,10 +862,10 @@ Returns the truncated tetrahedron graph.
 Returns the Tutte graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  tutte_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  tutte_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  tutte_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  tutte_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -874,10 +874,10 @@ Returns the Tutte graph.
 Returns the underlying graph of the directed graph @var{g}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  underlying_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  underlying_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  underlying_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  underlying_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -886,10 +886,10 @@ Returns the underlying graph of the directed graph @var{g}.
 Returns the wheel graph on @var{n+1} vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  wheel_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - constructions  @subentry  wheel_graph
-@cat2{ Package graphs - constructions ,  Package-graphs---constructions }
+@ptindex  graphs  @subentry  wheel_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - constructions  @subentry  wheel_graph
+@catpackage{graphs - constructions ,   Package-graphs---constructions }
 @closecatbox
 @end deffn
 
@@ -919,10 +919,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  adjacency_matrix
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  adjacency_matrix
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  adjacency_matrix
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  adjacency_matrix
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -944,10 +944,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  average_degree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  average_degree
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  average_degree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  average_degree
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -984,10 +984,10 @@ Example:
 @end ifhtml
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  biconnected_components
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  biconnected_components
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  biconnected_components
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  biconnected_components
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1013,10 +1013,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  bipartition
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  bipartition
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  bipartition
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  bipartition
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1042,10 +1042,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  chromatic_index
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  chromatic_index
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  chromatic_index
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  chromatic_index
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1068,10 +1068,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  chromatic_number
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  chromatic_number
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  chromatic_number
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  chromatic_number
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1099,10 +1099,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  clear_edge_weight
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  clear_edge_weight
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  clear_edge_weight
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  clear_edge_weight
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1130,10 +1130,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  clear_vertex_label
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  clear_vertex_label
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  clear_vertex_label
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  clear_vertex_label
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1155,10 +1155,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  connected_components
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  connected_components
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  connected_components
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  connected_components
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1178,10 +1178,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  diameter
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  diameter
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  diameter
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  diameter
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1215,10 +1215,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  edge_coloring
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  edge_coloring
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  edge_coloring
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  edge_coloring
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1238,10 +1238,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  degree_sequence
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  degree_sequence
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  degree_sequence
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  degree_sequence
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1252,10 +1252,10 @@ Returns the edge-connectivity of the graph @var{gr}.
 See also @mref{min_edge_cut}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  edge_connectivity
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  edge_connectivity
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  edge_connectivity
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  edge_connectivity
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1275,10 +1275,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  edges
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  edges
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  edges
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  edges
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1313,10 +1313,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  get_edge_weight
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  get_edge_weight
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  get_edge_weight
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  get_edge_weight
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1338,10 +1338,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  get_vertex_label
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  get_vertex_label
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  get_vertex_label
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  get_vertex_label
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1365,10 +1365,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph_charpoly
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  graph_charpoly
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  graph_charpoly
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  graph_charpoly
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1390,10 +1390,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph_center
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  graph_center
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  graph_center
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  graph_center
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1416,10 +1416,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph_eigenvalues
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  graph_eigenvalues
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  graph_eigenvalues
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  graph_eigenvalues
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1441,10 +1441,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph_periphery
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  graph_periphery
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  graph_periphery
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  graph_periphery
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1466,10 +1466,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph_size
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  graph_size
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  graph_size
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  graph_size
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1491,10 +1491,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph_order
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  graph_order
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  graph_order
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  graph_order
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1516,10 +1516,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  girth
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  girth
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  girth
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  girth
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1544,10 +1544,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  hamilton_cycle
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  hamilton_cycle
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  hamilton_cycle
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  hamilton_cycle
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1576,10 +1576,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  hamilton_path
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  hamilton_path
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  hamilton_path
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  hamilton_path
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1609,10 +1609,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  isomorphism
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  isomorphism
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  isomorphism
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  isomorphism
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1638,10 +1638,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  in_neighbors
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  in_neighbors
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  in_neighbors
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  in_neighbors
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1664,10 +1664,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_biconnected
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_biconnected
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_biconnected
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_biconnected
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1690,10 +1690,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_bipartite
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_bipartite
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_bipartite
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_bipartite
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1713,10 +1713,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_connected
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_connected
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_connected
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_connected
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1739,10 +1739,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_digraph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_digraph
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_digraph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_digraph
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1774,10 +1774,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_edge_in_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_edge_in_graph
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_edge_in_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_edge_in_graph
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1800,10 +1800,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_graph
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_graph
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1826,10 +1826,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_graph_or_digraph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_graph_or_digraph
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_graph_or_digraph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_graph_or_digraph
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1855,10 +1855,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_isomorphic
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_isomorphic
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_isomorphic
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_isomorphic
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1888,10 +1888,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_planar
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_planar
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_planar
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_planar
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1915,10 +1915,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_sconnected
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_sconnected
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_sconnected
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_sconnected
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1943,10 +1943,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_vertex_in_graph
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_vertex_in_graph
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_vertex_in_graph
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_vertex_in_graph
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -1969,10 +1969,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  is_tree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  is_tree
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  is_tree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  is_tree
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2000,10 +2000,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  laplacian_matrix
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  laplacian_matrix
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  laplacian_matrix
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  laplacian_matrix
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2025,10 +2025,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  max_clique
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  max_clique
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  max_clique
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  max_clique
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2054,10 +2054,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  max_degree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  max_degree
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  max_degree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  max_degree
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2114,10 +2114,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  max_flow
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  max_flow
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  max_flow
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  max_flow
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2141,10 +2141,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  max_independent_set
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  max_independent_set
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  max_independent_set
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  max_independent_set
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2173,10 +2173,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  max_matching
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  max_matching
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  max_matching
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  max_matching
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2206,10 +2206,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  min_degree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  min_degree
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  min_degree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  min_degree
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2220,10 +2220,10 @@ Returns the minimum edge cut in the graph @var{gr}.
 See also @mrefdot{edge_connectivity}
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  min_edge_cut
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  min_edge_cut
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  min_edge_cut
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  min_edge_cut
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2232,10 +2232,10 @@ See also @mrefdot{edge_connectivity}
 Returns the minimum vertex cover of the graph @var{gr}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  min_vertex_cover
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  min_vertex_cover
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  min_vertex_cover
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  min_vertex_cover
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2246,10 +2246,10 @@ Returns the minimum vertex cut in the graph @var{gr}.
 See also @mrefdot{vertex_connectivity}
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  min_vertex_cut
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  min_vertex_cut
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  min_vertex_cut
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  min_vertex_cut
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2272,10 +2272,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  minimum_spanning_tree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  minimum_spanning_tree
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  minimum_spanning_tree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  minimum_spanning_tree
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2301,10 +2301,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  neighbors
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  neighbors
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  neighbors
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  neighbors
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2329,10 +2329,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  odd_girth
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  odd_girth
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  odd_girth
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  odd_girth
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2358,10 +2358,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  out_neighbors
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  out_neighbors
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  out_neighbors
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  out_neighbors
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2389,10 +2389,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  planar_embedding
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  planar_embedding
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  planar_embedding
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  planar_embedding
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2434,8 +2434,8 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  print_graph
-@cat2{ Package graphs ,  Package-graphs }
+@ptindex  graphs  @subentry  print_graph
+@catpackage{graphs ,   Package-graphs }
 @closecatbox
 @end deffn
 
@@ -2455,10 +2455,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  radius
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  radius
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  radius
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  radius
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2486,10 +2486,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  set_edge_weight
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  set_edge_weight
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  set_edge_weight
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  set_edge_weight
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2517,10 +2517,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  set_vertex_label
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  set_vertex_label
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  set_vertex_label
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  set_vertex_label
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2544,10 +2544,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  shortest_path
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  shortest_path
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  shortest_path
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  shortest_path
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2580,10 +2580,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  shortest_weighted_path
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  shortest_weighted_path
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  shortest_weighted_path
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  shortest_weighted_path
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2608,10 +2608,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  strong_components
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  strong_components
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  strong_components
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  strong_components
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2647,10 +2647,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  topological_sort
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  topological_sort
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  topological_sort
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  topological_sort
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2661,10 +2661,10 @@ Returns the vertex connectivity of the graph @var{g}.
 See also @mrefdot{min_vertex_cut}
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_connectivity
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  vertex_connectivity
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  vertex_connectivity
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  vertex_connectivity
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2673,10 +2673,10 @@ See also @mrefdot{min_vertex_cut}
 Returns the degree of the vertex @var{v} in the graph @var{gr}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_degree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  vertex_degree
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  vertex_degree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  vertex_degree
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2702,10 +2702,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_distance
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  vertex_distance
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  vertex_distance
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  vertex_distance
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2728,10 +2728,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_eccentricity
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  vertex_eccentricity
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  vertex_eccentricity
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  vertex_eccentricity
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2765,10 +2765,10 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_in_degree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  vertex_in_degree
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  vertex_in_degree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  vertex_in_degree
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2793,10 +2793,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_out_degree
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  vertex_out_degree
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  vertex_out_degree
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  vertex_out_degree
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2816,10 +2816,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertices
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  vertices
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  vertices
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  vertices
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2845,10 +2845,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_coloring
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  vertex_coloring
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  vertex_coloring
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  vertex_coloring
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2867,10 +2867,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  wiener_index
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - properties  @subentry  wiener_index
-@cat2{ Package graphs - properties ,  Package-graphs---properties }
+@ptindex  graphs  @subentry  wiener_index
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - properties  @subentry  wiener_index
+@catpackage{graphs - properties ,   Package-graphs---properties }
 @closecatbox
 @end deffn
 
@@ -2900,10 +2900,10 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  add_edge
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - modifications  @subentry  add_edge
-@cat2{ Package graphs - modifications ,  Package-graphs---modifications }
+@ptindex  graphs  @subentry  add_edge
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - modifications  @subentry  add_edge
+@catpackage{graphs - modifications ,   Package-graphs---modifications }
 @closecatbox
 @end deffn
 
@@ -2931,10 +2931,10 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  add_edges
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - modifications  @subentry  add_edges
-@cat2{ Package graphs - modifications ,  Package-graphs---modifications }
+@ptindex  graphs  @subentry  add_edges
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - modifications  @subentry  add_edges
+@catpackage{graphs - modifications ,   Package-graphs---modifications }
 @closecatbox
 @end deffn
 
@@ -2962,10 +2962,10 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  add_vertex
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - modifications  @subentry  add_vertex
-@cat2{ Package graphs - modifications ,  Package-graphs---modifications }
+@ptindex  graphs  @subentry  add_vertex
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - modifications  @subentry  add_vertex
+@catpackage{graphs - modifications ,   Package-graphs---modifications }
 @closecatbox
 @end deffn
 
@@ -2974,10 +2974,10 @@ Adjacencies:
 Adds all vertices in the list @var{v_list} to the graph @var{gr}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  add_vertices
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - modifications  @subentry  add_vertices
-@cat2{ Package graphs - modifications ,  Package-graphs---modifications }
+@ptindex  graphs  @subentry  add_vertices
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - modifications  @subentry  add_vertices
+@catpackage{graphs - modifications ,   Package-graphs---modifications }
 @closecatbox
 @end deffn
 
@@ -3010,10 +3010,10 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  connect_vertices
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - modifications  @subentry  connect_vertices
-@cat2{ Package graphs - modifications ,  Package-graphs---modifications }
+@ptindex  graphs  @subentry  connect_vertices
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - modifications  @subentry  connect_vertices
+@catpackage{graphs - modifications ,   Package-graphs---modifications }
 @closecatbox
 @end deffn
 
@@ -3059,10 +3059,10 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  contract_edge
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - modifications  @subentry  contract_edge
-@cat2{ Package graphs - modifications ,  Package-graphs---modifications }
+@ptindex  graphs  @subentry  contract_edge
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - modifications  @subentry  contract_edge
+@catpackage{graphs - modifications ,   Package-graphs---modifications }
 @closecatbox
 @end deffn
 
@@ -3090,10 +3090,10 @@ Adjacencies:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  remove_edge
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - modifications  @subentry  remove_edge
-@cat2{ Package graphs - modifications ,  Package-graphs---modifications }
+@ptindex  graphs  @subentry  remove_edge
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - modifications  @subentry  remove_edge
+@catpackage{graphs - modifications ,   Package-graphs---modifications }
 @closecatbox
 @end deffn
 
@@ -3102,8 +3102,8 @@ Adjacencies:
 Removes the vertex @var{v} from the graph @var{gr}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  remove_vertex
-@cat2{ Package graphs ,  Package-graphs }
+@ptindex  graphs  @subentry  remove_vertex
+@catpackage{graphs ,   Package-graphs }
 @closecatbox
 @end deffn
 
@@ -3118,10 +3118,10 @@ Exports the graph into the file @var{fl} in the DIMACS format. Optional
 comments will be added to the top of the file.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  dimacs_export
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  dimacs_export
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  dimacs_export
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  dimacs_export
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3131,10 +3131,10 @@ comments will be added to the top of the file.
 Returns the graph from file @var{fl} in the DIMACS format.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  dimacs_import
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  dimacs_import
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  dimacs_import
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  dimacs_import
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3144,10 +3144,10 @@ Returns the graph from file @var{fl} in the DIMACS format.
 Returns the graph encoded in the graph6 format in the string @var{str}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph6_decode
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  graph6_decode
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  graph6_decode
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  graph6_decode
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3157,10 +3157,10 @@ Returns the graph encoded in the graph6 format in the string @var{str}.
 Returns a string which encodes the graph @var{gr} in the graph6 format.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph6_encode
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  graph6_encode
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  graph6_encode
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  graph6_encode
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3171,10 +3171,10 @@ Exports graphs in the list @var{gr_list} to the file @var{fl} in the
 graph6 format.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph6_export
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  graph6_export
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  graph6_export
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  graph6_export
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3184,10 +3184,10 @@ graph6 format.
 Returns a list of graphs from the file @var{fl} in the graph6 format.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  graph6_import
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  graph6_import
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  graph6_import
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  graph6_import
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3197,10 +3197,10 @@ Returns a list of graphs from the file @var{fl} in the graph6 format.
 Returns the graph encoded in the sparse6 format in the string @var{str}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  sparse6_decode
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  sparse6_decode
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  sparse6_decode
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  sparse6_decode
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3210,10 +3210,10 @@ Returns the graph encoded in the sparse6 format in the string @var{str}.
 Returns a string which encodes the graph @var{gr} in the sparse6 format.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  sparse6_encode
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  sparse6_encode
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  sparse6_encode
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  sparse6_encode
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3224,10 +3224,10 @@ Exports graphs in the list @var{gr_list} to the file @var{fl} in the
 sparse6 format.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  sparse6_export
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  sparse6_export
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  sparse6_export
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  sparse6_export
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3237,10 +3237,10 @@ sparse6 format.
 Returns a list of graphs from the file @var{fl} in the sparse6 format.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  sparse6_import
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - io  @subentry  sparse6_import
-@cat2{ Package graphs - io ,  Package-graphs---io }
+@ptindex  graphs  @subentry  sparse6_import
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - io  @subentry  sparse6_import
+@catpackage{graphs - io ,   Package-graphs---io }
 @closecatbox
 @end deffn
 
@@ -3474,8 +3474,8 @@ Example 6:
 @end ifhtml
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  draw_graph
-@cat2{ Package graphs ,  Package-graphs }
+@ptindex  graphs  @subentry  draw_graph
+@catpackage{graphs ,   Package-graphs }
 @closecatbox
 @end deffn
 
@@ -3487,10 +3487,10 @@ The default value for the program used to position vertices in
 @code{draw_graph} program.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  draw_graph_program
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  draw_graph_program
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  draw_graph_program
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  draw_graph_program
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3501,10 +3501,10 @@ Default value: @var{false}
 If @var{true} then ids of the vertices are displayed.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_id
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_id
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_id
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_id
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3515,10 +3515,10 @@ Default value: @var{false}
 If @var{true} then labels of the vertices are displayed.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_label
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_label
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_label
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_label
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3530,10 +3530,10 @@ Determines how to align the labels/ids of the vertices. Can
 be @code{left}, @code{center} or @code{right}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  label_alignment
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  label_alignment
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  label_alignment
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  label_alignment
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3544,10 +3544,10 @@ Default value: @var{false}
 If @var{true} then weights of the edges are displayed.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_weight 
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_weight 
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_weight 
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_weight 
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3559,10 +3559,10 @@ Defines how vertices are displayed. See the @var{point_type} option for
 the @code{draw} package for possible values.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_type
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  vertex_type
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  vertex_type
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  vertex_type
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3571,10 +3571,10 @@ the @code{draw} package for possible values.
 The size of vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_size
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  vertex_size
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  vertex_size
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  vertex_size
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3583,10 +3583,10 @@ The size of vertices.
 The color used for displaying vertices.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_color 
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  vertex_color 
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  vertex_color 
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  vertex_color 
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3597,10 +3597,10 @@ Default value: []
 Display selected vertices in the using a different color.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_vertices
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_vertices
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_vertices
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_vertices
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3611,10 +3611,10 @@ See the @var{point_type} option for the @code{draw} package for possible
 values.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_vertex_type
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_vertex_type
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_vertex_type
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_vertex_type
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3623,10 +3623,10 @@ values.
 The size of vertices in @var{show_vertices}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_vertex_size
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_vertex_size
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_vertex_size
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_vertex_size
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3635,10 +3635,10 @@ The size of vertices in @var{show_vertices}.
 The color used for displaying vertices in the @var{show_vertices} list.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_vertex_color 
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_vertex_color 
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_vertex_color 
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_vertex_color 
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3651,10 +3651,10 @@ graph. The vertices of each list in the partition will be drawn in a
 different color.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_partition
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  vertex_partition
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  vertex_partition
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  vertex_partition
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3664,10 +3664,10 @@ Specifies coloring of the vertices. The coloring @var{col} must be
 specified in the format as returned by @var{vertex_coloring}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertex_coloring
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  vertex_coloring
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  vertex_coloring
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  vertex_coloring
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3676,10 +3676,10 @@ specified in the format as returned by @var{vertex_coloring}.
 The color used for displaying edges.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  edge_color 
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  edge_color 
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  edge_color 
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  edge_color 
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3688,10 +3688,10 @@ The color used for displaying edges.
 The width of edges.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  edge_width
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  edge_width
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  edge_width
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  edge_width
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3701,10 +3701,10 @@ Defines how edges are displayed. See the @var{line_type} option for the
 @code{draw} package.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  edge_type
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  edge_type
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  edge_type
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  edge_type
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3714,10 +3714,10 @@ Display edges specified in the list @var{e_list} using a different
 color.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_edges
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_edges
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_edges
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_edges
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3726,10 +3726,10 @@ color.
 The color used for displaying edges in the @var{show_edges} list.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_edge_color
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_edge_color
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_edge_color
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_edge_color
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3738,10 +3738,10 @@ The color used for displaying edges in the @var{show_edges} list.
 The width of edges in @var{show_edges}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_edge_width
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_edge_width
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_edge_width
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_edge_width
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3751,10 +3751,10 @@ Defines how edges in @var{show_edges} are displayed. See the
 @var{line_type} option for the @code{draw} package.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  show_edge_type
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  show_edge_type
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  show_edge_type
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  show_edge_type
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3765,10 +3765,10 @@ graph. The edges of each list in the partition will be drawn using a
 different color.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  edge_partition
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  edge_partition
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  edge_partition
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  edge_partition
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3778,10 +3778,10 @@ The coloring of edges. The coloring must be specified in the
 format as returned by the function @var{edge_coloring}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  edge_coloring
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  edge_coloring
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  edge_coloring
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  edge_coloring
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3793,10 +3793,10 @@ If @code{true}, vertex positions are recomputed even if the positions
 have been saved from a previous drawing of the graph.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  redraw 
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  redraw 
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  redraw 
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  redraw 
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3807,10 +3807,10 @@ Default value: 15
 The angle for the arrows displayed on arcs (in directed graphs).
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  head_angle
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  head_angle
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  head_angle
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  head_angle
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3821,10 +3821,10 @@ Default value: 0.1
 The length for the arrows displayed on arcs (in directed graphs).
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  head_length
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  head_length
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  head_length
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  head_length
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3836,10 +3836,10 @@ The number of iterations in the spring embedding graph drawing
 algorithm.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  spring_embedding_depth
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  spring_embedding_depth
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  spring_embedding_depth
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  spring_embedding_depth
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3849,10 +3849,10 @@ The terminal used for drawing (see the @var{terminal} option in the
 @code{draw} package).
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  terminal
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  terminal
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  terminal
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  terminal
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3861,10 +3861,10 @@ The terminal used for drawing (see the @var{terminal} option in the
 The filename of the drawing if terminal is not screen.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  file_name
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  file_name
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  file_name
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  file_name
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3879,10 +3879,10 @@ of vertices with fixed position can be specified with the
 @var{fixed_vertices} option.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  program
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  program
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  program
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  program
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3892,10 +3892,10 @@ Specifies a list of vertices which will have positions fixed along a regular pol
 Can be used when @code{program=spring_embedding}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  fixed_vertices
-@cat2{ Package graphs ,  Package-graphs }
-@ctindex  Package graphs - draw_graphs options  @subentry  fixed_vertices
-@cat2{ Package graphs - draw_graphs options ,  Package-graphs---draw_graphs-options }
+@ptindex  graphs  @subentry  fixed_vertices
+@catpackage{graphs ,   Package-graphs }
+@ptindex  graphs - draw_graphs options  @subentry  fixed_vertices
+@catpackage{graphs - draw_graphs options ,   Package-graphs---draw_graphs-options }
 @closecatbox
 @end defvr
 
@@ -3905,8 +3905,8 @@ Converts a list @var{v_list} of vertices to a list of edges of the path
 defined by @var{v_list}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertices_to_path
-@cat2{ Package graphs ,  Package-graphs }
+@ptindex  graphs  @subentry  vertices_to_path
+@catpackage{graphs ,   Package-graphs }
 @closecatbox
 @end deffn
 
@@ -3916,7 +3916,7 @@ Converts a list @var{v_list} of vertices to a list of edges of the cycle
 defined by @var{v_list}.
 
 @opencatbox{Categories:}
-@ctindex  Package graphs  @subentry  vertices_to_cycle
-@cat2{ Package graphs ,  Package-graphs }
+@ptindex  graphs  @subentry  vertices_to_cycle
+@catpackage{graphs ,   Package-graphs }
 @closecatbox
 @end deffn

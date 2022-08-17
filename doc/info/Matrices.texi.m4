@@ -150,8 +150,8 @@ commutative operator.  To get a commutative dot operator @code{.}, the command
 @cat2{ Vectors ,  Vectors }
 @ctindex  Share packages  @subentry  Vectors
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package vect  @subentry  Vectors
-@cat2{ Package vect ,  Package-vect }
+@ptindex  vect  @subentry  Vectors
+@catpackage{vect ,   Package-vect }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -183,8 +183,8 @@ The functions in the @code{eigen} package are:@*
 @cat2{ Matrices ,  Matrices }
 @ctindex  Share packages  @subentry  eigen
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package eigen  @subentry  eigen
-@cat2{ Package eigen ,  Package-eigen }
+@ptindex  eigen  @subentry  eigen
+@catpackage{eigen ,   Package-eigen }
 @closecatbox
 
 @c end concepts Matrices and Linear Algebra
@@ -923,8 +923,8 @@ After loading, all functions and variables in the package are available.
 
 @c NEED EXAMPLES HERE
 @opencatbox{Categories:}
-@ctindex  Package eigen  @subentry  eigenvalues
-@cat2{ Package eigen ,  Package-eigen }
+@ptindex  eigen  @subentry  eigenvalues
+@catpackage{eigen ,   Package-eigen }
 @closecatbox
 @end deffn
 
@@ -1079,8 +1079,8 @@ A matrix which has two eigenvectors for one eigenvalue (namely 2).
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package eigen  @subentry  eigenvectors
-@cat2{ Package eigen ,  Package-eigen }
+@ptindex  eigen  @subentry  eigenvectors
+@catpackage{eigen ,   Package-eigen }
 @closecatbox
 @end deffn
 
@@ -1332,8 +1332,8 @@ Gram-Schmidt algorithm using a specified inner product function.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package eigen  @subentry  gramschmidt
-@cat2{ Package eigen ,  Package-eigen }
+@ptindex  eigen  @subentry  gramschmidt
+@catpackage{eigen ,   Package-eigen }
 @closecatbox
 @end deffn
 
@@ -1366,8 +1366,8 @@ where @code{.} is the noncommutative multiplication operator.
 
 @c NEED EXAMPLE HERE
 @opencatbox{Categories:}
-@ctindex  Package eigen  @subentry  innerproduct
-@cat2{ Package eigen ,  Package-eigen }
+@ptindex  eigen  @subentry  innerproduct
+@catpackage{eigen ,   Package-eigen }
 @closecatbox
 @end deffn
 
@@ -1934,8 +1934,8 @@ the square matrix @var{M}.
 @opencatbox{Categories:}
 @ctindex  Matrices  @subentry  mattrace
 @cat2{ Matrices ,  Matrices }
-@ctindex  Package nchrpl  @subentry  mattrace
-@cat2{ Package nchrpl ,  Package-nchrpl }
+@ptindex  nchrpl  @subentry  mattrace
+@catpackage{nchrpl ,   Package-nchrpl }
 @closecatbox
 @end deffn
 
@@ -1974,8 +1974,8 @@ with integers, since it avoids polynomial arithmetic altogether.
 @opencatbox{Categories:}
 @ctindex  Matrices  @subentry  ncharpoly
 @cat2{ Matrices ,  Matrices }
-@ctindex  Package nchrpl  @subentry  ncharpoly
-@cat2{ Package nchrpl ,  Package-nchrpl }
+@ptindex  nchrpl  @subentry  ncharpoly
+@catpackage{nchrpl ,   Package-nchrpl }
 @closecatbox
 @end deffn
 
@@ -2123,8 +2123,8 @@ current coordinate system, there is a function with usage of the form
 @c SOME TEXT HAS GONE MISSING HERE
 
 @opencatbox{Categories:}
-@ctindex  Package vect  @subentry  scalefactors
-@cat2{ Package vect ,  Package-vect }
+@ptindex  vect  @subentry  scalefactors
+@catpackage{vect ,   Package-vect }
 @closecatbox
 @end deffn
 
@@ -2174,8 +2174,8 @@ to be able to form @code{rightmatrix}.
 @code{simtran} is a synonym for @code{similaritytransform}.
 
 @opencatbox{Categories:}
-@ctindex  Package eigen  @subentry  similaritytransform
-@cat2{ Package eigen ,  Package-eigen }
+@ptindex  eigen  @subentry  similaritytransform
+@catpackage{eigen ,   Package-eigen }
 @closecatbox
 @end deffn
 
@@ -2306,8 +2306,8 @@ eigenvectors of which do not span the vector space of the appropriate dimension.
 @code{ueivects} is a synonym for @code{uniteigenvectors}.
 
 @opencatbox{Categories:}
-@ctindex  Package eigen  @subentry  uniteigenvectors
-@cat2{ Package eigen ,  Package-eigen }
+@ptindex  eigen  @subentry  uniteigenvectors
+@catpackage{eigen ,   Package-eigen }
 @closecatbox
 @end deffn
 
@@ -2325,8 +2325,8 @@ this is a unit vector in the same direction as @var{x}.
 @code{uvect} is a synonym for @code{unitvector}.
 
 @opencatbox{Categories:}
-@ctindex  Package eigen  @subentry  unitvector
-@cat2{ Package eigen ,  Package-eigen }
+@ptindex  eigen  @subentry  unitvector
+@catpackage{eigen ,   Package-eigen }
 @closecatbox
 @end deffn
 
@@ -2342,8 +2342,8 @@ the order of the left-hand sides of the equations must be a cyclic permutation
 of the coordinate variables.
 
 @opencatbox{Categories:}
-@ctindex  Package vect  @subentry  vectorpotential
-@cat2{ Package vect ,  Package-vect }
+@ptindex  vect  @subentry  vectorpotential
+@catpackage{vect ,   Package-vect }
 @closecatbox
 @end deffn
 
@@ -2396,8 +2396,8 @@ These flags have all been declared @code{evflag}.
 @c by the function invocation
 
 @opencatbox{Categories:}
-@ctindex  Package vect  @subentry  vectorsimp
-@cat2{ Package vect ,  Package-vect }
+@ptindex  vect  @subentry  vectorsimp
+@catpackage{vect ,   Package-vect }
 @ctindex  Simplification functions  @subentry  vectorsimp
 @cat2{ Simplification functions ,  Simplification-functions }
 @closecatbox
@@ -2413,8 +2413,8 @@ When @code{vect_cross} is @code{true}, it allows DIFF(X~Y,T) to work where
 ~ is defined in SHARE;VECT (where VECT_CROSS is set to @code{true}, anyway.)
 
 @opencatbox{Categories:}
-@ctindex  Package vect  @subentry  vect_cross
-@cat2{ Package vect ,  Package-vect }
+@ptindex  vect  @subentry  vect_cross
+@catpackage{vect ,   Package-vect }
 @ctindex  Differential calculus  @subentry  vect_cross
 @cat2{ Differential calculus ,  Differential-calculus }
 @closecatbox

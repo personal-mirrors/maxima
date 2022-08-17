@@ -16,8 +16,8 @@ to estimate parameters for a model from numerical data.
 @cat2{ Statistical estimation ,  Statistical-estimation }
 @ctindex  Share packages  @subentry  Introduction to lsquares
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package lsquares  @subentry  Introduction to lsquares
-@cat2{ Package lsquares ,  Package-lsquares }
+@ptindex  lsquares  @subentry  Introduction to lsquares
+@catpackage{lsquares ,   Package-lsquares }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -201,8 +201,8 @@ I NFN FUNC                  GNORM                 STEPLENGTH
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package lsquares  @subentry  lsquares_estimates
-@cat2{ Package lsquares ,  Package-lsquares }
+@ptindex  lsquares  @subentry  lsquares_estimates
+@catpackage{lsquares ,   Package-lsquares }
 @ctindex  Numerical methods  @subentry  lsquares_estimates
 @cat2{ Numerical methods ,  Numerical-methods }
 @closecatbox
@@ -274,8 +274,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package lsquares  @subentry  lsquares_estimates_exact
-@cat2{ Package lsquares ,  Package-lsquares }
+@ptindex  lsquares  @subentry  lsquares_estimates_exact
+@catpackage{lsquares ,   Package-lsquares }
 @closecatbox
 
 @end deffn
@@ -359,8 +359,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package lsquares  @subentry  lsquares_estimates_approximate
-@cat2{ Package lsquares ,  Package-lsquares }
+@ptindex  lsquares  @subentry  lsquares_estimates_approximate
+@catpackage{lsquares ,   Package-lsquares }
 @ctindex  Numerical methods  @subentry  lsquares_estimates_approximate
 @cat2{ Numerical methods ,  Numerical-methods }
 @closecatbox
@@ -494,8 +494,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package lsquares  @subentry  lsquares_mse
-@cat2{ Package lsquares ,  Package-lsquares }
+@ptindex  lsquares  @subentry  lsquares_mse
+@catpackage{lsquares ,   Package-lsquares }
 @closecatbox
 
 @end deffn
@@ -574,8 +574,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package lsquares  @subentry  lsquares_residuals
-@cat2{ Package lsquares ,  Package-lsquares }
+@ptindex  lsquares  @subentry  lsquares_residuals
+@catpackage{lsquares ,   Package-lsquares }
 @closecatbox
 
 @end deffn
@@ -654,8 +654,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package lsquares  @subentry  lsquares_residual_mse
-@cat2{ Package lsquares ,  Package-lsquares }
+@ptindex  lsquares  @subentry  lsquares_residual_mse
+@catpackage{lsquares ,   Package-lsquares }
 @closecatbox
 
 @end deffn
@@ -738,8 +738,8 @@ _Nor = a b - b - a + 1, _Nxor = 2 a b - b - a + 1]
 To use this function write first @code{load("lsquares")}.
 
 @opencatbox{Categories:}
-@ctindex  Package lsquares  @subentry  plsquares
-@cat2{ Package lsquares ,  Package-lsquares }
+@ptindex  lsquares  @subentry  plsquares
+@catpackage{lsquares ,   Package-lsquares }
 @ctindex  Numerical methods  @subentry  plsquares
 @cat2{ Numerical methods ,  Numerical-methods }
 @closecatbox

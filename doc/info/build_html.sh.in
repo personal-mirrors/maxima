@@ -171,8 +171,21 @@ fi
 TEXIOPT="--html -c OUTPUT_ENCODING_NAME=UTF-8 --force -e 10000 --document-lang=$language -I . -I $languagedir -I ../.. --css-include=@abs_srcdir@/manual.css -I @abs_srcdir@/figures --init-file $texiinitfile --set-customization-variable HTML_MATH=mathjax"
 makeinfo --split=chapter --no-node-files --output="$languagedestdir" $TEXIOPT maxima.texi 
 makeinfo --no-split --output="$languagedestdir/maxima_singlepage.html" $TEXIOPT maxima.texi 
-# Insert id so we can reference them from the category macros.
-sed --in-place=bck 's;\(<a href=".*#index-\([^">]\+\)">\);<span id="catindex-\2"></span>\1;' maxima_407.html 
+
+# Find the Category Index file
+ctindex=`grep -l "<title>Category Index" ../*.html`
+echo ctindex $ctindex
+if [ "x${ctindex}" != "x" ]; then
+    # Insert id so we can reference them from the category macros.
+    sed --in-place=bck 's;\(<a href=".*#index-\([^">]\+\)">\);<span id="catindex-\2"></span>\1;' $ctindex
+fi    
+# Find the Package Category Index file
+ptindex=`grep -l "<title>Package Category Index" ../*.html`
+echo ptindex $ptindex
+if [ "x${ptindex}" != "x" ]; then
+    sed --in-place=bck 's;\(<a href=".*#index-\([^">]\+\)">\);<span id="catindex-Package-\2-1"></span>\1;' $ptindex
+fi
+
 if [ "X$DEBUG" = "Xyes" ]; then
     set -x
 fi

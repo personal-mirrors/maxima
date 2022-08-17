@@ -25,8 +25,8 @@ This is an additional package that must be loaded with
 @opencatbox{Categories:}
 @ctindex  Share packages  @subentry  Package quantum_computing
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package quantum_computing  @subentry  Package quantum_computing
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  Package quantum_computing
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @node Functions and Variables for Quantum_Computing,  , Package quantum_computing, quantum_computing-pkg
@@ -46,8 +46,8 @@ necessary. Notice that for the result to represent a possible state of
 be between 0 and 2^@var{m}-1.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  binlist
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  binlist
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -59,8 +59,8 @@ Given a list @var{lst} with @var{n} binary digits, it returns the decimal
 number it represents.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  binlist2dec
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  binlist2dec
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -73,8 +73,8 @@ qubits, when the value of the @var{i}'th qubit equals 1. It modifies the
 list @var{q} and returns its modified value.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  CNOT
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  CNOT
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -94,8 +94,8 @@ qubits to be modified (@var{i} through @var{i}+@var{m}-1).
 shown in the output.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  controlled
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  controlled
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -126,8 +126,8 @@ matrix @var{U} to the in the positions @var{i1}, @dots{}, @var{im}.
 shown in the output.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  gate
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  gate
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -149,8 +149,8 @@ returns the matrix corresponding to the action of @var{U} on qubits
 @var{n}.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  gate_matrix
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  gate_matrix
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -163,8 +163,8 @@ Inserts the expression or list @var{e} into the list @var{lst} at position
 the length of @var{lst} plus 1.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  linsert
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  linsert
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -180,8 +180,8 @@ position @var{p} of list @var{lst} is replaced by that expression.
 @var{p} must be an integer between 1 and the length of @var{lst}.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  lreplace
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  lreplace
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -192,8 +192,8 @@ position @var{p} of list @var{lst} is replaced by that expression.
 Returns the normalized version of a quantum state given as a list @var{q}.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  normalize
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  normalize
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -206,8 +206,8 @@ combination of the computational states with @var{n} binary digits.  It
 returns an expression including strings and symbols.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  qdisplay
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  qdisplay
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -224,8 +224,8 @@ z matrix, @var{qmatrix}[H] the Hadamard matrix and @var{qmatrix}[S] the
 phase matrix.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  qmatrix
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  qmatrix
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end defvr
@@ -247,8 +247,8 @@ only argument given was @var{q}. It modifies the list @var{q},
 reflecting the collapse of the quantum state after the measurement.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  qmeasure
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  qmeasure
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -266,8 +266,8 @@ representing the state of @var{n} qubits with values @var{i1}, @dots{},
 @var{in}.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  qubits
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  qubits
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -280,8 +280,8 @@ Interchanges the states of qubits @var{i} and @var{j} in the state
 returns its modified value.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  qswap
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  qswap
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -293,8 +293,8 @@ Returns the 2 by two matrix (acting on one qubit) corresponding to a
 rotation of with an angle of @var{a} radians around the x axis.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  Rx
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  Rx
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -306,8 +306,8 @@ Returns the 2 by two matrix (acting on one qubit) corresponding to a
 rotation of with an angle of @var{a} radians around the y axis.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  Ry
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  Ry
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -319,8 +319,8 @@ Returns the 2 by two matrix (acting on one qubit) corresponding to a
 rotation of with an angle of @var{a} radians around the z axis.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  Rz
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  Rz
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -332,8 +332,8 @@ Returns the tensor product of the @var{n} matrices or lists @var{o1},
 @dots{}, @var{on}.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  tprod
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  tprod
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn
@@ -346,8 +346,8 @@ Changes the value of the @var{k}'th qubit, in the state @var{q} of
 are equal to 1. It modifies the list @var{q} and returns its new value.
 
 @opencatbox{Categories:}
-@ctindex  Package quantum_computing  @subentry  toffoli
-@cat2{ Package quantum_computing ,  Package-quantum_computing }
+@ptindex  quantum_computing  @subentry  toffoli
+@catpackage{quantum_computing ,   Package-quantum_computing }
 @closecatbox
 
 @end deffn

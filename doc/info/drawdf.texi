@@ -67,10 +67,10 @@ equation into a system of two autonomous equations.
 @cat2{ Plotting ,  Plotting }
 @ctindex  Share packages  @subentry  Introduction to drawdf
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package drawdf  @subentry  Introduction to drawdf
-@cat2{ Package drawdf ,  Package-drawdf }
-@ctindex  Package draw  @subentry  Introduction to drawdf
-@cat2{ Package draw ,  Package-draw }
+@ptindex  drawdf  @subentry  Introduction to drawdf
+@catpackage{drawdf ,   Package-drawdf }
+@ptindex  draw  @subentry  Introduction to drawdf
+@catpackage{draw ,   Package-draw }
 @closecatbox
 
 
@@ -282,8 +282,8 @@ generate graphics.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package drawdf  @subentry  drawdf
-@cat2{ Package drawdf ,  Package-drawdf }
+@ptindex  drawdf  @subentry  drawdf
+@catpackage{drawdf ,   Package-drawdf }
 @closecatbox
 
 @end deffn

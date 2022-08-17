@@ -64,8 +64,8 @@ January 20, 1999
 @cat2{ Groebner bases ,  Groebner-bases }
 @ctindex  Share packages  @subentry  Introduction to grobner
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package grobner  @subentry  Introduction to grobner
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  Introduction to grobner
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @subsection Implementations of admissible monomial orders in grobner
@@ -100,8 +100,8 @@ Default value: @code{lex}
 This global switch controls which monomial order is used in polynomial and Groebner Bases calculations. If not set, @code{lex} will be used.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_monomial_order
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_monomial_order
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -116,8 +116,8 @@ expression ring will be used. This variable may be set to
 @code{ring_of_integers} if desired.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_coefficient_ring
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_coefficient_ring
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -129,8 +129,8 @@ Name of the default order for eliminated variables in
 elimination-based functions. If not set, @code{lex} will be used.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_primary_elimination_order
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_primary_elimination_order
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -141,8 +141,8 @@ Default value: @code{false}
 Name of the default order for kept variables in elimination-based functions. If not set, @code{lex} will be used.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_secondary_elimination_order
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_secondary_elimination_order
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -157,8 +157,8 @@ The user must ensure that this is a true elimination order valid
 for the number of eliminated variables. 
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_elimination_order
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_elimination_order
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -171,8 +171,8 @@ polynomial as a list of terms in the current monomial order rather
 than a @emph{maxima} general expression.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_return_term_list
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_return_term_list
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -183,8 +183,8 @@ Default value: @code{false}
 If set to @code{true}, produce debugging and tracing output.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_grobner_debug
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_grobner_debug
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -202,8 +202,8 @@ Possible values:
 The name of the algorithm used to find the Groebner Bases.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_grobner_algorithm
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_grobner_algorithm
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -216,8 +216,8 @@ reduction means that division algorithm stops after the first
 reduction.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_top_reduction_only
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_top_reduction_only
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end defvr
@@ -239,8 +239,8 @@ Adds two polynomials @var{poly1} and @var{poly2}.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_add
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_add
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -256,8 +256,8 @@ Subtracts a polynomial @var{poly2} from @var{poly1}.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_subtract
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_subtract
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -272,8 +272,8 @@ Returns the product of polynomials @var{poly1} and @var{poly2}.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_multiply
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_multiply
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -283,8 +283,8 @@ Returns the product of polynomials @var{poly1} and @var{poly2}.
 Returns the @emph{syzygy polynomial} (@emph{S-polynomial}) of two polynomials @var{poly1} and @var{poly2}.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_s_polynomial
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_s_polynomial
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -299,8 +299,8 @@ Returns the polynomial @var{poly} divided by the GCD of its coefficients.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_primitive_part
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_primitive_part
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -312,8 +312,8 @@ It assumes that the division is possible, which may not always be the
 case in rings which are not fields.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_normalize
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_normalize
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -353,8 +353,8 @@ indexed and transcendental function variables are allowed.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_expand
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_expand
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -369,8 +369,8 @@ exponentitates @var{poly} by a positive integer @var{number}. If @var{number} is
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_expt
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_expt
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -385,8 +385,8 @@ exponentitates @var{poly} by a positive integer @var{number}. If @var{number} is
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_content
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_content
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -411,8 +411,8 @@ $$c*poly=\sum_{i=1}^{n}({a}_{i}*{polylist}_{i})+r$$
 @end ifnottex
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_pseudo_divide
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_pseudo_divide
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -423,8 +423,8 @@ Divide a polynomial @var{poly1} by another polynomial @var{poly2}. Assumes that 
 division with no remainder is possible. Returns the quotient.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_exact_divide
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_exact_divide
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -435,8 +435,8 @@ division with no remainder is possible. Returns the quotient.
 to a set of polynomials @var{polylist}.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_normal_form
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_normal_form
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -449,8 +449,8 @@ criterion: for every two polynomials @math{h1} and @math{h2} in @var{polylist} t
 S-polynomial @math{S(h1,h2)} reduces to 0 @math{modulo} @var{polylist}.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_buchberger_criterion
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_buchberger_criterion
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -461,8 +461,8 @@ S-polynomial @math{S(h1,h2)} reduces to 0 @math{modulo} @var{polylist}.
 polynomials and returns the resulting Groebner basis.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_buchberger
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_buchberger
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -512,8 +512,8 @@ The @emph{radical ideal} @math{sqrt(I)} is the ideal
 each polynomial is fully reduced with respect to the other polynomials.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_reduction
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_reduction
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -526,8 +526,8 @@ of a polynomial in the sublist divides the leading monomial
 of another polynomial.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_minimization
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_minimization
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -539,8 +539,8 @@ of another polynomial.
 That means it divides every polynomial in a list @var{polylist} by its leading coefficient.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_normalize_list
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_normalize_list
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -550,8 +550,8 @@ That means it divides every polynomial in a list @var{polylist} by its leading c
 Returns a Groebner basis of the ideal span by the polynomials @var{polylist}. Affected by the global flags.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_grobner
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_grobner
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -561,8 +561,8 @@ Returns a Groebner basis of the ideal span by the polynomials @var{polylist}. Af
 Returns a reduced Groebner basis of the ideal span by the polynomials @var{polylist}. Affected by the global flags.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_reduced_grobner
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_reduced_grobner
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -573,8 +573,8 @@ Returns a reduced Groebner basis of the ideal span by the polynomials @var{polyl
 @code{poly_depends} tests whether a polynomial depends on a variable @var{var}.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_depends_p
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_depends_p
+@catpackage{grobner ,   Package-grobner }
 @ctindex  Predicate functions  @subentry  poly_depends_p
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
@@ -590,8 +590,8 @@ Returns a reduced Groebner basis of the ideal span by the polynomials @var{polyl
 ideal specified as a list of generating polynomials (not necessarily Groebner basis).
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_elimination_ideal
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_elimination_ideal
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -607,8 +607,8 @@ Returns the reduced Groebner basis of the colon ideal
 where @math{polylist1} and @math{polylist2} are two lists of polynomials.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_colon_ideal
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_colon_ideal
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -619,8 +619,8 @@ where @math{polylist1} and @math{polylist2} are two lists of polynomials.
 @code{poly_ideal_intersection} returns the intersection of two ideals.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_ideal_intersection
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_ideal_intersection
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -631,8 +631,8 @@ where @math{polylist1} and @math{polylist2} are two lists of polynomials.
 Returns the lowest common multiple of @var{poly1} and @var{poly2}.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_lcm
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_lcm
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -661,8 +661,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_gcd
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_gcd
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 @end deffn
 
@@ -681,8 +681,8 @@ first list is not a Groebner basis, and thus the result is @code{false}.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_grobner_equal
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_grobner_equal
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -695,8 +695,8 @@ is contained in the ideal generated by @var{polylist2}. For this test to always 
 @var{polylist2} must be a Groebner basis.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_grobner_subsetp
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_grobner_subsetp
+@catpackage{grobner ,   Package-grobner }
 @ctindex  Predicate functions  @subentry  poly_grobner_subsetp
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
@@ -713,8 +713,8 @@ polynomial list @var{polylist}, which is assumed to be a Groebner basis. Returns
 which is assumed to be a Groebner basis. Equivalent to @code{normal_form} being 0. 
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_grobner_member
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_grobner_member
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -738,8 +738,8 @@ of polynomials in the ideal generated by @var{polylist} which do not identically
 vanish on the variety of @var{poly}.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_ideal_saturation1
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_ideal_saturation1
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -763,8 +763,8 @@ the ideal generated by @var{polylist1} which do not identically vanish on the
 variety of @var{polylist2}.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_ideal_saturation
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_ideal_saturation
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -790,8 +790,8 @@ of the polynomial list @var{polylist2} of the ideal generated by the
 polynomial list @var{polylist1}.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_ideal_polysaturation1
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_ideal_polysaturation1
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -811,8 +811,8 @@ I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf
 @end ifnottex
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_ideal_polysaturation
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_ideal_polysaturation
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -823,8 +823,8 @@ I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf
 @code{poly_saturation_extension} implements the famous Rabinowitz trick.
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_saturation_extension
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_saturation_extension
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn
@@ -833,8 +833,8 @@ I(polylist):I(polylist_1)^inf:...:I(polylist_n)^inf
 @deffn {Function} poly_polysaturation_extension (@var{poly}, @var{polylist}, @var{varlist1}, @var{varlist2})
 
 @opencatbox{Categories:}
-@ctindex  Package grobner  @subentry  poly_polysaturation_extension
-@cat2{ Package grobner ,  Package-grobner }
+@ptindex  grobner  @subentry  poly_polysaturation_extension
+@catpackage{grobner ,   Package-grobner }
 @closecatbox
 
 @end deffn

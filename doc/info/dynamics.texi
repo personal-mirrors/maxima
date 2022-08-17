@@ -22,8 +22,8 @@ time they are used.
 @cat2{ Dynamical systems ,  Dynamical-systems }
 @ctindex  Share packages  @subentry  The dynamics package
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package dynamics  @subentry  The dynamics package
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  The dynamics package
+@catpackage{dynamics ,   Package-dynamics }
 @closecatbox
 
 @node Graphical analysis of discrete dynamical systems,  Visualization with VTK, The dynamics package, dynamics-pkg
@@ -53,8 +53,8 @@ same as for @mrefdot{plot2d}
 @end ifnotinfo
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  chaosgame
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  chaosgame
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  chaosgame
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -94,8 +94,8 @@ depend on @var{y}, but any other variable can be used),
 
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  evolution
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  evolution
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  evolution
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -146,8 +146,8 @@ And an enlargement of a small region in that fractal:
 @end ifnotinfo
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  evolution2d
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  evolution2d
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  evolution2d
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -190,8 +190,8 @@ options are the same as for @mrefdot{plot2d}
 @end ifnotinfo
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ifs
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ifs
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ifs
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -240,8 +240,8 @@ To enlarge the region around the lower bifurcation near x @code{=} -1.25 use:
 @end ifnotinfo
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  orbits
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  orbits
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  orbits
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -282,8 +282,8 @@ reached. The options are the same as for @mrefdot{plot2d}
 @end ifnotinfo
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  staircase
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  staircase
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  staircase
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -371,8 +371,8 @@ The accepted values for the colors are the same as for the @mref{color}
 option of plot2d. 
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  scene
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  scene
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  scene
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -391,8 +391,8 @@ must be a real number; an angle of 0 means that the camera points in the
 direction of the y axis and the x axis will appear on the right.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -406,8 +406,8 @@ The color of the graphics window's background. It accepts color names or
 hexadecimal red-green-blue strings (see the @mref{color} option of plot2d).
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -423,8 +423,8 @@ and the default angle of 30 means that the camera is pointing 30 degrees
 down from the horizontal.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -438,8 +438,8 @@ The height, in pixels, of the graphics window. @var{pixels} must be a
 positive integer number.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -454,8 +454,8 @@ end of the list is reached. Writing just ``restart'' is equivalent to
 [restart, @var{true}].
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -469,8 +469,8 @@ The amount of time, in mili-seconds, between iterations among
 consecutive animation frames. @var{time} must be a real number.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -484,8 +484,8 @@ The width, in pixels, of the graphics window. @var{pixels} must be a
 positive integer number.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -500,8 +500,8 @@ window created by Xmaxima for the @code{scene} graphics. The default
 value @code{.scene} implies that a new top level window will be created.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -515,8 +515,8 @@ Default value: @code{Xmaxima: scene}
 window created by @code{scene}.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -548,8 +548,8 @@ axis when the play button is pressed.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -565,8 +565,8 @@ planes. The lengths of the three edges can be changed with options
 the faces can be rotated with option @mxrefdot{object_orientation,orientation}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -587,8 +587,8 @@ be at the origin; use options @mxref{object_orientation,orientation} and
 @mxref{object_center,center} to change those defaults.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -600,8 +600,8 @@ be at the origin; use options @mxref{object_orientation,orientation} and
 A sphere with default radius of 0.5 units and center at the origin. 
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -626,8 +626,8 @@ the animation restart after the play button is pressed again.
 See also @mxrefdot{object_track,track}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -642,8 +642,8 @@ shown. A value of 1 for @var{number} makes the base visible and a value
 of 0 makes it invisible.
  
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -659,8 +659,8 @@ real numbers, or 3 real numbers separated by commas. In a cylinder, cone
 or cube it will be at half its height and in a sphere at its center.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -674,8 +674,8 @@ The color of the object. It accepts color names or hexadecimal
 red-green-blue strings (see the @mref{color} option of plot2d).
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -695,8 +695,8 @@ See also @mxref{object_startphi,startphi} and
 @mxrefdot{object_phiresolution,phiresolution}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -716,8 +716,8 @@ See also @mxref{object_starttheta,starttheta} and
 @mxrefdot{object_thetaresolution,thetaresolution}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -731,8 +731,8 @@ Default value: @code{1}
 or a cylinder.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -746,8 +746,8 @@ The width of the lines, when option @mxref{object_wireframe,wireframe} is
 used. @var{value} must be a positive number.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -762,8 +762,8 @@ more transparent the object will become. The default value of 1 means a
 completely opaque object.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -779,8 +779,8 @@ numbers separated by commas. @strong{Example}: @code{[0, 0, 90]} rotates
 the x axis of the object to the y axis of the reference frame.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -795,8 +795,8 @@ other dimensions are defined. @var{point} can be a list with 3
 real numbers, or 3 real numbers separated by commas.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -814,8 +814,8 @@ See also @mxref{object_startphi,startphi} and
 @mxrefdot{object_endphi,endphi}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -831,8 +831,8 @@ See also @mxref{object_surface,surface} and
 @mxrefdot{object_wireframe,wireframe}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  points  [points]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  points  [points]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  points  [points]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -846,8 +846,8 @@ The size of the points, when option @mxref{object_points,points} is
 used. @var{value} must be a positive number.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -861,8 +861,8 @@ The coordinates of the object's position. @var{point} can be a list with 3
 real numbers, or 3 real numbers separated by commas.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -876,8 +876,8 @@ The radius or a sphere or the distance from the axis to the base's
 vertices in a cylinder or a cone. @var{value} must be a positive number.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -891,8 +891,8 @@ Default value: @code{6}
 edges in the base of a cone or a cylinder.
  
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -910,8 +910,8 @@ dimensions in the y direction to half and leaves the z dimensions
 unchanged.
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -931,8 +931,8 @@ See also @mxref{object_endphi,endphi} and
 @mxrefdot{object_phiresolution,phiresolution}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -952,8 +952,8 @@ See also @mxref{object_endtheta,endtheta} and
 @mxrefdot{object_thetaresolution,thetaresolution}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -968,8 +968,8 @@ the default behavior, which can be changed using either the option
 @mxref{object_points,points} or @mxrefdot{object_wireframe,wireframe}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  surface [surface]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  surface [surface]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  surface [surface]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -987,8 +987,8 @@ See also @mxref{object_starttheta,starttheta} and
 @mxrefdot{object_endtheta,endtheta}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -1024,8 +1024,8 @@ See also @mxrefdot{object_animation,animation}
 
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -1040,8 +1040,8 @@ number. See also @mxref{object_ylength,ylength} and
 @mxrefdot{object_zlength,zlength}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -1056,8 +1056,8 @@ number. See also @mxref{object_xlength,xlength} and
 @mxrefdot{object_zlength,zlength}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -1072,8 +1072,8 @@ The height of a cube in z the direction. @var{length} must be a positive
  @mxrefdot{object_ylength,ylength}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  ]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  ]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  ]
 @cat2{ Plotting ,  Plotting }
 @closecatbox
@@ -1089,8 +1089,8 @@ See also @mxref{object_surface,surface} and
 @mxrefdot{object_points,points}
 
 @opencatbox{Categories:}
-@ctindex  Package dynamics  @subentry  wireframe  [wireframe]
-@cat2{ Package dynamics ,  Package-dynamics }
+@ptindex  dynamics  @subentry  wireframe  [wireframe]
+@catpackage{dynamics ,   Package-dynamics }
 @ctindex  Plotting  @subentry  wireframe  [wireframe]
 @cat2{ Plotting ,  Plotting }
 @closecatbox

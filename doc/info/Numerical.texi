@@ -27,8 +27,8 @@ small primes.
 @cat2{ Numerical methods ,  Numerical-methods }
 @ctindex  Share packages  @subentry  Introduction to fast Fourier transform
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package fft  @subentry  Introduction to fast Fourier transform
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  Introduction to fast Fourier transform
+@catpackage{fft ,   Package-fft }
 @closecatbox
 
 @c end concepts Numerical
@@ -61,8 +61,8 @@ b = r sin(t)
 @code{load("fft")} loads this function.  See also @mrefdot{fft}
 
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  polartorect
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  polartorect
+@catpackage{fft ,   Package-fft }
 @ctindex  Complex variables  @subentry  polartorect
 @cat2{ Complex variables ,  Complex-variables }
 @closecatbox
@@ -93,8 +93,8 @@ The computed angle is in the range @code{-%pi} to @code{%pi}.
 @code{load("fft")} loads this function.  See also @mrefdot{fft}
 
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  recttopolar
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  recttopolar
+@catpackage{fft ,   Package-fft }
 @ctindex  Complex variables  @subentry  recttopolar
 @cat2{ Complex variables ,  Complex-variables }
 @closecatbox
@@ -190,8 +190,8 @@ Complex data.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  inverse_fft
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  inverse_fft
+@catpackage{fft ,   Package-fft }
 @closecatbox
 @end deffn
 
@@ -369,8 +369,8 @@ Computation of sine and cosine coefficients.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  fft
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  fft
+@catpackage{fft ,   Package-fft }
 @closecatbox
 @end deffn
 
@@ -393,8 +393,8 @@ may be computed more quickly than @code{fft}.
 Since the output length is short, the normal @mref{inverse_fft} cannot
 be directly used.  Use @mref{inverse_real_fft} to compute the inverse.
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  real_fft
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  real_fft
+@catpackage{fft ,   Package-fft }
 @closecatbox
 @end deffn
 
@@ -409,8 +409,8 @@ No check is made to ensure that the input has the correct format.
 (The first and last elements must be purely real.)
 
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  inverse_real_fft
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  inverse_real_fft
+@catpackage{fft ,   Package-fft }
 @closecatbox
 @end deffn
 
@@ -422,8 +422,8 @@ Computes the inverse complex fast Fourier transform.  This is the
 bigfloat version of @mref{inverse_fft} that converts the input to
 bigfloats and returns a bigfloat result.
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  bf_inverse_fft
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  bf_inverse_fft
+@catpackage{fft ,   Package-fft }
 @closecatbox
 @end deffn
 
@@ -434,8 +434,8 @@ Computes the forward complex fast Fourier transform.  This is the
 bigfloat version of @mref{fft} that converts the input to
 bigfloats and returns a bigfloat result.
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  bf_fft
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  bf_fft
+@catpackage{fft ,   Package-fft }
 @closecatbox
 @end deffn
 
@@ -447,8 +447,8 @@ returning a bigfloat result.  This is the bigfloat version of
 @code{real_fft}.
 
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  bf_real_fft
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  bf_real_fft
+@catpackage{fft ,   Package-fft }
 @closecatbox
 @end deffn
 
@@ -458,8 +458,8 @@ Computes the inverse fast Fourier transform with a real-valued
 bigfloat output.  This is the bigfloat version of @code{inverse_real_fft}.
 
 @opencatbox{Categories:}
-@ctindex  Package fft  @subentry  bf_inverse_real_fft
-@cat2{ Package fft ,  Package-fft }
+@ptindex  fft  @subentry  bf_inverse_real_fft
+@catpackage{fft ,   Package-fft }
 @closecatbox
 @end deffn
 
@@ -534,8 +534,8 @@ Complex data.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package fftpack5  @subentry  fftpack5_fft
-@cat2{ Package fftpack5 ,  Package-fftpack5 }
+@ptindex  fftpack5  @subentry  fftpack5_fft
+@catpackage{fftpack5 ,   Package-fftpack5 }
 @closecatbox
 @end deffn
 
@@ -546,8 +546,8 @@ Computes the inverse complex Fourier transform, like
 @code{inverse_fft}, but is not constrained to be a power of two.
 
 @opencatbox{Categories:}
-@ctindex  Package fftpack5  @subentry  fftpack5_inverse_fft
-@cat2{ Package fftpack5 ,  Package-fftpack5 }
+@ptindex  fftpack5  @subentry  fftpack5_inverse_fft
+@catpackage{fftpack5 ,   Package-fftpack5 }
 @closecatbox
 @end deffn
 
@@ -577,8 +577,8 @@ The last example shows how important it to set the length correctly
 for @code{fftpack5_inverse_real_fft}.
 
 @opencatbox{Categories:}
-@ctindex  Package fftpack5  @subentry  fftpack5_real_fft
-@cat2{ Package fftpack5 ,  Package-fftpack5 }
+@ptindex  fftpack5  @subentry  fftpack5_real_fft
+@catpackage{fftpack5 ,   Package-fftpack5 }
 @closecatbox
 @end deffn
 
@@ -593,8 +593,8 @@ The last element of @var{y} is always real if @var{n} is even, but it
 can be complex when @var{n} is odd.
 
 @opencatbox{Categories:}
-@ctindex  Package fftpack5  @subentry  fftpack5_inverse_real_fft
-@cat2{ Package fftpack5 ,  Package-fftpack5 }
+@ptindex  fftpack5  @subentry  fftpack5_inverse_real_fft
+@catpackage{fftpack5 ,   Package-fftpack5 }
 @closecatbox
 @end deffn
 

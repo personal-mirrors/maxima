@@ -115,8 +115,8 @@ simplifications.
 @cat2{ Tensors ,  Tensors }
 @ctindex  Share packages  @subentry  Introduction to atensor
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package atensor  @subentry  Introduction to atensor
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  Introduction to atensor
+@catpackage{atensor ,   Package-atensor }
 @closecatbox
 
 @c end concepts atensor
@@ -182,8 +182,8 @@ Cl(3,1). A call to @code{init_atensor(dirac)} is equivalent to
 @code{init_atensor(clifford,3,0,1)}.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  init_atensor
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  init_atensor
+@catpackage{atensor ,   Package-atensor }
 @closecatbox
 @end deffn
 
@@ -199,8 +199,8 @@ safeguard is used to ensure that the function always terminates, even
 for complex expressions.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  atensimp
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  atensimp
+@catpackage{atensor ,   Package-atensor }
 @ctindex  Simplification functions  @subentry  atensimp
 @cat2{ Simplification functions ,  Simplification-functions }
 @closecatbox
@@ -213,8 +213,8 @@ The algebra type. Valid values are @code{universal}, @code{grassmann},
 @code{clifford}, @code{symmetric}, @code{symplectic} and @code{lie_envelop}.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  alg_type
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  alg_type
+@catpackage{atensor ,   Package-atensor }
 @closecatbox
 
 @end deffn
@@ -227,8 +227,8 @@ The dimensionality of the algebra. @code{atensor} uses the value of @code{adim}
 to determine if an indexed object is a valid base vector.  See @code{abasep}.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  adim
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  adim
+@catpackage{atensor ,   Package-atensor }
 @ctindex  Global variables  @subentry  adim
 @cat2{ Global variables ,  Global-variables }
 @closecatbox
@@ -243,8 +243,8 @@ Default values for the bilinear forms @code{sf}, @code{af}, and
 @code{av}. The default is the identity matrix @code{ident(3)}.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  aform
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  aform
+@catpackage{atensor ,   Package-atensor }
 @ctindex  Global variables  @subentry  aform
 @cat2{ Global variables ,  Global-variables }
 @closecatbox
@@ -258,8 +258,8 @@ Default value: @code{v}
 The symbol for base vectors.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  asymbol
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  asymbol
+@catpackage{atensor ,   Package-atensor }
 @ctindex  Global variables  @subentry  asymbol
 @cat2{ Global variables ,  Global-variables }
 @closecatbox
@@ -275,8 +275,8 @@ using @code{abasep} and if that is the case, substitutes the
 corresponding value from the matrix @code{aform}.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  sf
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  sf
+@catpackage{atensor ,   Package-atensor }
 @closecatbox
 
 @end deffn
@@ -290,8 +290,8 @@ using @code{abasep} and if that is the case, substitutes the
 corresponding value from the matrix @code{aform}.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  af
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  af
+@catpackage{atensor ,   Package-atensor }
 @closecatbox
 
 @end deffn
@@ -332,8 +332,8 @@ For instance:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  av
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  av
+@catpackage{atensor ,   Package-atensor }
 @closecatbox
 
 @end deffn
@@ -348,8 +348,8 @@ an indexed symbol, with the symbol being the same as the value of
 and @code{adim}.
 
 @opencatbox{Categories:}
-@ctindex  Package atensor  @subentry  abasep
-@cat2{ Package atensor ,  Package-atensor }
+@ptindex  atensor  @subentry  abasep
+@catpackage{atensor ,   Package-atensor }
 @ctindex  Predicate functions  @subentry  abasep
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox

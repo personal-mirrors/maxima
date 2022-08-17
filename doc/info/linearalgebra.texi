@@ -124,8 +124,8 @@ Example:
 @cat2{ Linear algebra ,  Linear-algebra }
 @ctindex  Share packages  @subentry  Introduction to linearalgebra
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package linearalgebra  @subentry  Introduction to linearalgebra
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  Introduction to linearalgebra
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 
 @c -----------------------------------------------------------------------------
@@ -161,8 +161,8 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  addmatrices
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  addmatrices
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -174,8 +174,8 @@ Return true if and only if @var{M} is a matrix and every entry of
 @var{M} is a matrix.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  blockmatrixp
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  blockmatrixp
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @ctindex  Predicate functions  @subentry  blockmatrixp
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
@@ -190,8 +190,8 @@ operation @code{C_i <- C_i - @var{theta} * C_j}. If @var{M} doesn't have a row
 @var{i} or @var{j}, signal an error.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  columnop
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  columnop
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -203,8 +203,8 @@ If @var{M} is a matrix, swap columns @var{i} and @var{j}.  If @var{M} doesn't
 have a column @var{i} or @var{j}, signal an error.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  columnswap
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  columnswap
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -218,8 +218,8 @@ of the empty set is @code{@{0@}}.  Thus, when the column space has only
 one member, return @code{span ()}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  columnspace
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  columnspace
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -236,8 +236,8 @@ description of the possible values for @var{field}, see @code{lu_factor}.
 @opencatbox{Categories:}
 @ctindex  Matrix decompositions  @subentry  cholesky
 @cat2{ Matrix decompositions ,  Matrix-decompositions }
-@ctindex  Package linearalgebra  @subentry  cholesky
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  cholesky
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -250,8 +250,8 @@ Return the complex conjugate transpose of the matrix @var{M}.  The function
 element.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  ctranspose
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  ctranspose
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -285,8 +285,8 @@ returned matrix are zero matrices of the appropriate size; for example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  diag_matrix
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  diag_matrix
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -299,8 +299,8 @@ Return the dotproduct of vectors @var{u} and @var{v}.  This is the same as
 @var{v} must be column vectors.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  dotproduct
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  dotproduct
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -378,8 +378,8 @@ number of rotations: 1
 @opencatbox{Categories:}
 @ctindex  Matrix decompositions  @subentry  eigens_by_jacobi
 @cat2{ Matrix decompositions ,  Matrix-decompositions }
-@ctindex  Package linearalgebra  @subentry  eigens_by_jacobi
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  eigens_by_jacobi
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -393,8 +393,8 @@ list of the form @code{[P, L, U]}, where @var{P} is a permutation matrix,
 triangular, and @code{@var{A} = @var{P} @var{L} @var{U}}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  get_lu_factors
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  get_lu_factors
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -409,8 +409,8 @@ except for the first entry, the last row of @var{H} is @var{row}.  The
 default for @var{row} is the zero vector with the same length as @var{col}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  hankel
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  hankel
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -453,8 +453,8 @@ Examples:
 @opencatbox{Categories:}
 @ctindex  Differential calculus  @subentry  hessian
 @cat2{ Differential calculus ,  Differential-calculus }
-@ctindex  Package linearalgebra  @subentry  hessian
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  hessian
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -466,8 +466,8 @@ Return the @var{n} by @var{n} Hilbert matrix.  When @var{n} isn't a positive
 integer, signal an error.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  hilbert_matrix
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  hilbert_matrix
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -490,8 +490,8 @@ The first argument @var{M} should be a square matrix or a non-matrix.  When
 See also @mref{zerofor}
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  identfor
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  identfor
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -503,8 +503,8 @@ Invert a matrix @var{M} by using the LU factorization.  The LU factorization
 is done using the ring @var{rng}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  invert_by_lu
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  invert_by_lu
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -543,8 +543,8 @@ Examples:
 @opencatbox{Categories:}
 @ctindex  Differential calculus  @subentry  jacobian
 @cat2{ Differential calculus ,  Differential-calculus }
-@ctindex  Package linearalgebra  @subentry  jacobian
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  jacobian
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -555,8 +555,8 @@ Examples:
 Return the Kronecker product of the matrices @var{A} and @var{B}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  kronecker_product
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  kronecker_product
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -572,8 +572,8 @@ list and @var{p} evaluates to @code{true} for every list element.  When
 is a Maxima list.  In all other cases, return @code{false}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  listp
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  listp
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @ctindex  Predicate functions  @subentry  listp
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
@@ -607,8 +607,8 @@ Scan the sub-matrix looking for an entry that minimizes @var{f}.
 Return the index of a minimizing entry.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  locate_matrix_entry
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  locate_matrix_entry
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -706,8 +706,8 @@ Examples:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  lu_backsub
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  lu_backsub
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -845,8 +845,8 @@ Evaluation took 109.24 seconds (152.10 elapsed)
 @opencatbox{Categories:}
 @ctindex  Matrix decompositions  @subentry  lu_factor
 @cat2{ Matrix decompositions ,  Matrix-decompositions }
-@ctindex  Package linearalgebra  @subentry  lu_factor
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  lu_factor
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -865,8 +865,8 @@ for the infinity norm condition number in time proportional to the
 square of the matrix size.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  mat_cond
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  mat_cond
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -882,8 +882,8 @@ Return the matrix @var{p}-norm of the matrix @var{M}.  The allowed values for
 The matrix @var{M} should be an unblocked matrix.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  mat_norm
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  mat_norm
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -901,8 +901,8 @@ if @code{e} is a matrix.  In all other cases, return @code{false}.
 See also @mref{blockmatrixp}
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  matrixp
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  matrixp
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @ctindex  Predicate functions  @subentry  matrixp
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox
@@ -916,8 +916,8 @@ Return a two member list that gives the number of rows and columns, respectively
 of the matrix @var{M}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  matrix_size
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  matrix_size
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -929,8 +929,8 @@ If @var{M} is a block matrix, unblock the matrix to all levels.  If @var{M} is
 a matrix, return @var{M}; otherwise, signal an error.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  mat_fullunblocker
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  mat_fullunblocker
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -943,8 +943,8 @@ noun form.  When @var{M} is a block matrix, @code{mat_trace(M)} returns
 the same value as does @code{mat_trace(mat_unblocker(m))}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  mat_trace
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  mat_trace
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -993,8 +993,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  mat_unblocker
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  mat_unblocker
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1008,8 +1008,8 @@ the empty set is @code{@{0@}}.  Thus, when the nullspace has only one member,
 return @code{span ()}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  nullspace
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  nullspace
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1020,8 +1020,8 @@ return @code{span ()}.
 If @var{M} is a matrix, return the dimension of the nullspace of @var{M}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  nullity
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  nullity
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1035,8 +1035,8 @@ basis for the orthogonal complement of the set @code{(v_1, ..., v_n)}.
 Each vector @var{v_1} through @var{v_n} must be a column vector.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  orthogonal_complement
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  orthogonal_complement
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1051,8 +1051,8 @@ For a monic polynomial @var{p} of degree @var{n}, we have
 When @var{p} isn't a polynomial in @var{x}, signal an error.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  polytocompanion
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  polytocompanion
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1074,8 +1074,8 @@ whose entries are polynomials in @var{v},
 Note: This function doesn't check that every entry is a polynomial in @var{v}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  ptriangularize
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  ptriangularize
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1088,8 +1088,8 @@ row operation @code{R_i <- R_i - theta * R_j}.  If @var{M} doesn't have a row
 @var{i} or @var{j}, signal an error.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  rowop
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  rowop
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 
 @end deffn
@@ -1118,8 +1118,8 @@ of a matrix is the dimension of its column space.
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  linalg_rank
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  linalg_rank
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1131,8 +1131,8 @@ If @var{M} is a matrix, swap rows @var{i} and @var{j}.  If @var{M} doesn't
 have a row @var{i} or @var{j}, signal an error.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  rowswap
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  rowswap
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1167,8 +1167,8 @@ The default for @var{row} is complex conjugate of @var{col}.  Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  toeplitz
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  toeplitz
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1180,8 +1180,8 @@ Return a @var{n} by @var{n} matrix whose @var{i}-th row is
 @code{[1, @var{x_i}, @var{x_i}^2, ... @var{x_i}^(@var{n}-1)]}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  vandermonde_matrix
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  vandermonde_matrix
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1204,8 +1204,8 @@ matrix can be blocked to any (finite) depth.
 See also @mref{identfor}
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  zerofor
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  zerofor
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @closecatbox
 @end deffn
 
@@ -1219,8 +1219,8 @@ If @var{M} is not a block matrix, return @code{true} if
 evaluates to @code{true} for each element of @var{e}.
 
 @opencatbox{Categories:}
-@ctindex  Package linearalgebra  @subentry  zeromatrixp
-@cat2{ Package linearalgebra ,  Package-linearalgebra }
+@ptindex  linearalgebra  @subentry  zeromatrixp
+@catpackage{linearalgebra ,   Package-linearalgebra }
 @ctindex  Predicate functions  @subentry  zeromatrixp
 @cat2{ Predicate functions ,  Predicate-functions }
 @closecatbox

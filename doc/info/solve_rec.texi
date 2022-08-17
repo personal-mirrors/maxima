@@ -30,8 +30,8 @@ Example:
 @cat2{ Linear recurrences ,  Linear-recurrences }
 @ctindex  Share packages  @subentry  Introduction to solve_rec
 @cat2{ Share packages ,  Share-packages }
-@ctindex  Package solve_rec  @subentry  Introduction to solve_rec
-@cat2{ Package solve_rec ,  Package-solve_rec }
+@ptindex  solve_rec  @subentry  Introduction to solve_rec
+@catpackage{solve_rec ,   Package-solve_rec }
 @closecatbox
 
 @node Functions and Variables for solve_rec,  , Introduction to solve_rec, solve_rec-pkg
@@ -96,8 +96,8 @@ So the general solution is
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package solve_rec  @subentry  reduce_order
-@cat2{ Package solve_rec ,  Package-solve_rec }
+@ptindex  solve_rec  @subentry  reduce_order
+@catpackage{solve_rec ,   Package-solve_rec }
 @closecatbox
 
 @end deffn
@@ -112,8 +112,8 @@ simplify products in result.
 See also: @mrefdot{solve_rec}
 
 @opencatbox{Categories:}
-@ctindex  Package solve_rec  @subentry  simplify_products
-@cat2{ Package solve_rec ,  Package-solve_rec }
+@ptindex  solve_rec  @subentry  simplify_products
+@catpackage{solve_rec ,   Package-solve_rec }
 @closecatbox
 
 @end defvr
@@ -154,8 +154,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package solve_rec  @subentry  simplify_sum
-@cat2{ Package solve_rec ,  Package-solve_rec }
+@ptindex  solve_rec  @subentry  simplify_sum
+@catpackage{solve_rec ,   Package-solve_rec }
 @ctindex  Sums and products  @subentry  simplify_sum
 @cat2{ Sums and products ,  Sums-and-products }
 @ctindex  Simplification functions  @subentry  simplify_sum
@@ -245,8 +245,8 @@ Example of Ricatti type recurrence:
 See also: @mrefcomma{solve_rec_rat} @mref{simplify_products} and @mrefdot{product_use_gamma}
 
 @opencatbox{Categories:}
-@ctindex  Package solve_rec  @subentry  solve_rec
-@cat2{ Package solve_rec ,  Package-solve_rec }
+@ptindex  solve_rec  @subentry  solve_rec
+@catpackage{solve_rec ,   Package-solve_rec }
 @closecatbox
 
 @end deffn
@@ -283,8 +283,8 @@ Example:
 See also: @mrefdot{solve_rec}
 
 @opencatbox{Categories:}
-@ctindex  Package solve_rec  @subentry  solve_rec_rat
-@cat2{ Package solve_rec ,  Package-solve_rec }
+@ptindex  solve_rec  @subentry  solve_rec_rat
+@catpackage{solve_rec ,   Package-solve_rec }
 @closecatbox
 
 @end deffn
@@ -299,8 +299,8 @@ into the expression if @code{product_use_gamma} is @code{true}.
 See also: @mrefcomma{simplify_products} @mrefdot{solve_rec}
 
 @opencatbox{Categories:}
-@ctindex  Package solve_rec  @subentry  product_use_gamma
-@cat2{ Package solve_rec ,  Package-solve_rec }
+@ptindex  solve_rec  @subentry  product_use_gamma
+@catpackage{solve_rec ,   Package-solve_rec }
 @closecatbox
 
 @end defvr
@@ -357,8 +357,8 @@ Example:
 @end example
 
 @opencatbox{Categories:}
-@ctindex  Package solve_rec  @subentry  summand_to_rec
-@cat2{ Package solve_rec ,  Package-solve_rec }
+@ptindex  solve_rec  @subentry  summand_to_rec
+@catpackage{solve_rec ,   Package-solve_rec }
 @closecatbox
 
 @end deffn
