@@ -2,4 +2,10 @@
 @setfilename  maxima.info
 @finalout
 @include include-maxima.texi
+
+@ifhtml
+@node Documentation Categories, , Índice de Funções e Variáveis
+@chapter Documentation Categories
+@c Documentation categories section gets filled in by the script build_html.sh
+@end ifhtml
 @bye
