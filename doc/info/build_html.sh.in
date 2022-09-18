@@ -187,14 +187,16 @@ TEXIOPT="--html -c OUTPUT_ENCODING_NAME=UTF-8 -e 10000 --document-lang=$language
 # Show the commands. 
 set -x
 makeinfo --split=chapter --no-node-files --output="$languagedestdir" $TEXIOPT maxima.texi
-if [ $? -ne 0 ]; then
+rc=$?
+if [ $rc -ne 0 ]; then
     echo Failed to build multi-page html docs
-    exit $?
+    exit $rc
 fi    
 makeinfo --no-split --output="$languagedestdir/maxima_singlepage.html" $TEXIOPT maxima.texi
-if [ $? -ne 0 ]; then
+rc=$?
+if [ $rc -ne 0 ]; then
     echo Failed to build single page html doc
-    exit $?
+    exit $rc
 fi
 set +x
 
