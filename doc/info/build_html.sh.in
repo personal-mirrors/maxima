@@ -22,6 +22,8 @@ do
   esac
 done
 
+DEBUG=yes
+
 pwd=`pwd`
 if [ "x$language" = "x" ]
 then
@@ -149,7 +151,10 @@ fi
 echo "$0: execute category program: \"$lispprog\" $lispargs"
 "$lispprog" $lispargs
 
-@SED@ -e 's/^@bye/@node Documentation Categories, , Function and Variable Index\n@chapter Documentation Categories/' $languagedir/maxima.texi > maxima.texi 
+set -x
+#@SED@ -e 's/^@bye/@node Documentation Categories, , Function and Variable Index\n@chapter Documentation Categories/' $languagedir/maxima.texi > maxima.texi
+@SED@ -e 's/^@bye/@ifhtml/' $languagedir/maxima.texi > maxima.texi
+
 
 # Add all Category-*.texi files to maxima.texi.
 # If there aren't any the file named "Category-*.texi" cannot be found
@@ -159,6 +164,7 @@ echo "$0: execute category program: \"$lispprog\" $lispargs"
 	 echo '@include' $f
       fi
   done
+  echo @end ifhtml
   echo @bye
 ) >> maxima.texi 
    
@@ -182,7 +188,15 @@ TEXIOPT="--html -c OUTPUT_ENCODING_NAME=UTF-8 -e 10000 --document-lang=$language
 # Show the commands. 
 set -x
 makeinfo --split=chapter --no-node-files --output="$languagedestdir" $TEXIOPT maxima.texi
+if [ $? -ne 0 ]; then
+    echo Failed to build html docs
+    exit $?
+fi    
 makeinfo --no-split --output="$languagedestdir/maxima_singlepage.html" $TEXIOPT maxima.texi
+if [ $? -ne 0 ]; then
+    echo Failed to build single page html doc
+    exit $?
+fi
 set +x
 
 if [ "X$DEBUG" = "Xyes" ]; then
