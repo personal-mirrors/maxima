@@ -22,8 +22,6 @@ do
   esac
 done
 
-DEBUG=yes
-
 pwd=`pwd`
 if [ "x$language" = "x" ]
 then
@@ -151,8 +149,7 @@ fi
 echo "$0: execute category program: \"$lispprog\" $lispargs"
 "$lispprog" $lispargs
 
-set -x
-#@SED@ -e 's/^@bye/@node Documentation Categories, , Function and Variable Index\n@chapter Documentation Categories/' $languagedir/maxima.texi > maxima.texi
+# Add documentation categories.  First, replace @bye with @ifhtml
 @SED@ -e 's/^@bye/@ifhtml/' $languagedir/maxima.texi > maxima.texi
 
 
@@ -164,6 +161,8 @@ set -x
 	 echo '@include' $f
       fi
   done
+  # Done with categories files, so close the @ifhtml and mark the end
+  # of the file with @bye that was removed above.
   echo @end ifhtml
   echo @bye
 ) >> maxima.texi 
@@ -189,7 +188,7 @@ TEXIOPT="--html -c OUTPUT_ENCODING_NAME=UTF-8 -e 10000 --document-lang=$language
 set -x
 makeinfo --split=chapter --no-node-files --output="$languagedestdir" $TEXIOPT maxima.texi
 if [ $? -ne 0 ]; then
-    echo Failed to build html docs
+    echo Failed to build multi-page html docs
     exit $?
 fi    
 makeinfo --no-split --output="$languagedestdir/maxima_singlepage.html" $TEXIOPT maxima.texi
