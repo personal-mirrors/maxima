@@ -154,7 +154,7 @@ echo "$0: execute category program: \"$lispprog\" $lispargs"
 # language that has categories, maxima.texi MUST have the line "@c
 # Include documentation categories" to indicate that we will add the
 # section to the manual.
-if grep '^@c Include documentation categories' $languagedir/maxima.texi; then
+if @GREP@ -q '^@c Include documentation categories' $languagedir/maxima.texi; then
     # Add documentation categories.  First, replace @bye with @ifhtml
     @SED@ -e 's/^@bye/@ifhtml/' $languagedir/maxima.texi > maxima.texi
 
