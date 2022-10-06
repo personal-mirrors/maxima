@@ -62,7 +62,7 @@ or if apply is being used are printed.")
   '($integer $noninteger $even $odd $rational $irrational $real $imaginary $complex
     $analytic $increasing $decreasing $oddfun $evenfun $posfun $constant
     $commutative $lassociative $rassociative $symmetric $antisymmetric
-    $integervalued))
+    $integervalued $global))
 
 (defmvar $features (cons '(mlist simp) (append featurel nil)))
 (defmvar $%enumer nil)

@@ -648,6 +648,12 @@ When one changes, the other does too."
 (defun initialize-runtime-globals ()
   (setf *load-verbose* nil)
 
+  ;; Temporary expedient: declare all global variables.
+  ;; The right thing to do is declare a variable global in DEFMVAR.
+
+  (with-context-$global
+    (maphash #'(lambda (k v) (declare (ignore v)) (mkind k '$global)) *variable-initial-values*))
+
   (disable-some-lisp-warnings)
 
   (setf *debugger-hook* #'maxima-lisp-debugger)

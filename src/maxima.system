@@ -616,6 +616,10 @@
 	    :depends-on ("defmfun" "compatibility-macros" "compatibility-macros1")
 	    :components
 	    ((:file "nparse")))
+   (:module lexical-symbols :source-pathname ""
+	    :depends-on ("reader")
+	    :components
+	    ((:file "lexical_symbols")))
    (:module display :source-pathname ""
 	    :depends-on ("defmfun")
 	    :components

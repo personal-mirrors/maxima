@@ -80,6 +80,8 @@
   (unless (symbolp (car l))
     (merror (intl:gettext "define_variable: first argument must be a symbol; found: ~M") (car l)))
   (meval `(($modedeclare) ,(car l) ,(caddr l)))
+  (with-context-$global
+    (declare1 (list (car l)) t '$global 'kind))
   (unless (eq (caddr l) '$any)
     (putprop (car l) 'assign-mode-check 'assign))
   (if (mseemingly-unbound (car l))

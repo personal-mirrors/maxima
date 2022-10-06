@@ -480,6 +480,10 @@
 			:depends-on (compatibility-macros)
 			:components ((:file "nparse")))
 
+	       (:module lexical-symbols :pathname ""
+			:depends-on (reader)
+			:components ((:file "lexical_symbols")))
+
 	       (:module display :pathname ""
 			:depends-on (compatibility-macros)
 			:components ((:file "displa") 

@@ -1023,22 +1023,22 @@ reduce_order(eqn, sol, fn) := block(
  *
  *************************************************************************/
 
-simplify_product(prod) := block(
+simplify_product(myprod) := block(
   [term, %n, lo, hi, %kk : 0, nu, de, comm : [], p% : 1,
    deg : simplify_products_deg, %j1],
-  if simplify_products=false then return(prod),
-  if atom(prod) then return(prod),
-  if member(part(prod, 0), ["+", "-", "*", "/", "^"]) then
-    return(apply(part(prod, 0), map('simplify_product, args(prod)))),
-  if part(prod, 0)#nounify('product) then return(prod),
+  if simplify_products=false then return(myprod),
+  if atom(myprod) then return(myprod),
+  if member(part(myprod, 0), ["+", "-", "*", "/", "^"]) then
+    return(apply(part(myprod, 0), map('simplify_product, args(myprod)))),
+  if part(myprod, 0)#nounify('product) then return(myprod),
 
   /* Read product arguments. */
-  %n : part(prod, 2),
-  lo : part(prod, 3),
-  hi : part(prod, 4),
-  term : factor(part(prod, 1)),
+  %n : part(myprod, 2),
+  lo : part(myprod, 3),
+  hi : part(myprod, 4),
+  term : factor(part(myprod, 1)),
 
-  if lo#1 then return(simplify_product(changevar(prod, %j1=%n-lo+1, %j1, %n))),
+  if lo#1 then return(simplify_product(changevar(myprod, %j1=%n-lo+1, %j1, %n))),
 
   /* Check for simple cases.   */
   if term=%n then return(hi!/(lo-1)!),
@@ -1106,7 +1106,7 @@ simplify_product(prod) := block(
         gamma(subst(hi+1, %n, expand(term/aa)))/
         gamma(subst(lo, %n, expand(term/aa)))*aa^(hi-lo+1)
       else
-        prod
+        myprod
     )
     else if part(term, 0)="-" and length(args(term))=1 then
       (-1)^(hi-lo+1)*simplify_product(apply(nounify('product), [-term, %n, lo, hi]))

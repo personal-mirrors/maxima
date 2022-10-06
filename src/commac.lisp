@@ -224,6 +224,18 @@
   "Hash table containing all Maxima defmvar variables and their initial
 values")
 
+;; Most of the context-handling code is in src/compar.lisp.
+;; Moved this declaration to here so that it's available for DEFMVAR.
+
+(defvar $context '$global
+  "Whenever a user assumes a new fact, it is placed in the context
+named as the current value of the variable CONTEXT.  Similarly, FORGET
+references the current value of CONTEXT.  To add or DELETE a fact from a
+different context, one must bind CONTEXT to the intended context and then
+perform the desired additions or deletions.  The context specified by the
+value of CONTEXT is automatically activated.  All of MACSYMA's built-in
+relational knowledge is contained in the default context GLOBAL.")
+
 (defmacro defmvar (var &rest val-and-doc)
   "If *reset-var* is true then loading or eval'ing will reset value, otherwise like defvar"
   (cond ((> (length val-and-doc) 2)
@@ -232,6 +244,10 @@ values")
     (unless (gethash ',var *variable-initial-values*)
       (setf (gethash ',var *variable-initial-values*)
 	    ,(first val-and-doc)))
+    ;; DISABLE THIS BUSINESS. IT'S NOT WORKING DUE TO MKIND NOT BEING DEFINED IN TIME,
+    ;; SO PUT THIS ON THE BACK BURNER AND COME BACK IF I GET OTHER STUFF WORKING
+    #+nil (with-context-$global
+      (mkind ',var '$global))
     (defvar ,var ,@val-and-doc)))
 
 (defmfun $mkey (variable)

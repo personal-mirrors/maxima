@@ -47,6 +47,16 @@
          (progn ,@forms)
          ($killcontext ,my-context)))))
 
+;; Tried to make this more general, and ran into problems with MSET and then ASSCONTEXT.
+;; This version which is specific to $GLOBAL is enough for DEFMVAR.
+
+(defmacro with-context-$global (&rest forms)
+  `(let ((current-context $context))
+     (setq context '$global $context '$global)
+     (unwind-protect
+       (progn ,@forms)
+       (setq context current-context $context current-context))))
+
 ;; For creating a macsyma evaluator variable binding context.
 ;; (MBINDING (VARIABLES &OPTIONAL VALUES FUNCTION-NAME)
 ;;    ... BODY ...)
