@@ -318,9 +318,10 @@
 	 (and (atom g) (equal f g)))
 		     
 	((op-equalp f 'lambda)
-	 (and (op-equalp g 'lambda)
-	      (approx-alike-list (mapcar #'(lambda (s) (simplifya s nil)) (margs f))
-				 (mapcar #'(lambda (s) (simplifya s nil)) (margs g)))))
+     (alike1-lambda f g))
+
+	((op-equalp f 'mdefine)
+     (alike1-mdefine f g))
 	
 	(($ratp f)
 	 (and ($ratp g) (approx-alike (ratdisrep f) (ratdisrep g))))

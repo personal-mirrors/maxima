@@ -3136,6 +3136,10 @@
 	  ((specrepp x)
 	   ;; Punt back to LIKE, which handles specreps
 	   (like x y))
+          ((eq (caar x) 'lambda)
+           (and (eq (caar y) 'lambda) (alike1-lambda-or-simple-mdefine x y)))
+          ((eq (caar x) 'mdefine)
+           (and (eq (caar y) 'mdefine) (alike1-mdefine x y)))
 	  (t (and
 	      (eq (memqarr (cdar x)) (memqarr (cdar y)))
 	      (alike (cdr x) (cdr y))))))))
@@ -3156,6 +3160,36 @@
   (and
     (alike1 (mfuncall '$arrayinfo x) (mfuncall '$arrayinfo y))
     (alike1 ($listarray x) ($listarray y))))
+
+(defun alike1-lambda-or-simple-mdefine (x y)
+  (let
+    ((args-x (cdr (second x)))
+     (args-y (cdr (second y))))
+    (when (= (length args-x) (length args-y))
+      (let ((args-replace (mapcar #'(lambda (a) (declare (ignore a)) (gensym)) args-x)))
+        (alike (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-x args-replace)) x))
+               (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-y args-replace)) y)))))))
+
+(defun alike1-mdefine (x y)
+  (if (eq (caar (second x)) 'mqapply)
+    (and (eq (caar (second y)) 'mqapply)
+         (alike1-mdefine-mqapply x y))
+    (alike1-lambda-or-simple-mdefine x y)))
+
+(defun alike1-mdefine-mqapply (x y)
+  ;; Given something like f[a](b), combine arguments a and b,
+  ;; then substitute as in simple case.
+  (let*
+    ((args-x-a (cdr (second (second x))))
+     (args-x-b (cddr (second x)))
+     (args-y-a (cdr (second (second y))))
+     (args-y-b (cddr (second y)))
+     (args-x (append args-x-a args-x-b))
+     (args-y (append args-y-a args-y-b)))
+    (when (and (= (length args-x-a) (length args-y-a)) (= (length args-x-b) (length args-y-b)))
+      (let ((args-replace (mapcar #'(lambda (a) (declare (ignore a)) (gensym)) args-x)))
+        (alike (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-x args-replace)) x))
+               (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-y args-replace)) y)))))))
 
 ;; Maps ALIKE1 down two lists.
 
