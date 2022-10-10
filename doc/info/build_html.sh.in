@@ -111,6 +111,12 @@ do
   cat $f
 done | @AWK@ '!/^@c / && !/^@c$/ && (/^@deffn/ || /^@defvr/ || /^@end deffn/ || /^@end defvr/ || /@category/ || /@node/ || /^.setq .filenamebase/ || /^.setq items nil/)' | @SED@ -f @abs_srcdir@/extract_categories1.sed | @AWK@ -f @abs_srcdir@/extract_categories1.awk > $catprogname 
 
+# Decide what lisp to use for creating the category file and supply
+# the appropriate command-line arugments to create the file.
+#
+# We want to be sure not to load the user's lisp init file when
+# possible; we don't want init files possibly changing how the lisp
+# behaves.
 if [ "@DEFAULTLISP@" = "gcl" ]
     then lispprog="@GCL_NAME@"
          lispargs="-batch -load $catprogname"
@@ -138,10 +144,10 @@ elif [ "@DEFAULTLISP@" = "sbcl" ]
          lispargs="--no-userinit --no-sysinit --script $catprogname"
 elif [ "@DEFAULTLISP@" = "abcl" ]
     then lispprog="@JRE@"
-         lispargs="-jar @ABCL_JAR@ --load $catprogname --eval (quit)"
+         lispargs="-jar @ABCL_JAR@ --noinit --nosystem --load $catprogname --eval (quit)"
 elif [ "@DEFAULTLISP@" = "acl" ]
     then lispprog="@ACL_NAME@"
-         lispargs="-L $catprogname --kill"
+         lispargs="-qq -L $catprogname --kill"
 else
     echo "$0: DEFAULTLISP = @DEFAULTLISP@ not recognized, assume '@DEFAULTLISP@ $catprogname' is acceptable."
     lispprog="@DEFAULTLISP@"
