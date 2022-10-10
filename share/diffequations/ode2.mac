@@ -31,17 +31,18 @@ ode2a(eq,y,x):=block([de,a1,a2,a3,a4,%q%],
      then if a4=0 then return(%q%) else return(varp(%q%,-a4/a1)),
    if ftest(reduce(de)) then return(%q%) else return(false))$
 
-ode1a(eq,y,x):=block([de,des], /* f, g, %q% */
+ode1a(eq,y,x):=block([de,des,%f%,%g%,fg], /* f, g, %q% */
    if derivdegree(de: expand(lhs(eq)-rhs(eq)),y,x) # 1
      then return(failure(msg1,eq)),
-   if linear2(de,'diff(y,x)) = false then return(failure(msg2,eq)),
+   if (fg: linear2(de,'diff(y,x))) = false then return(failure(msg2,eq)),
+   [%f%, %g%]: fg,
    des: desimp(de),
    de: solve1(des,'diff(y,x)),
    if ftest(solvelnr(de)) then return(%q%),
    if ftest(separable(de)) then return(%q%),
    if ftest(integfactor(%g%,%f%)) then return(exact(%q%*%g%,%q%*%f%)),
-			       /* linear2 binds %f% and %g% */
-   if linear2(des,'diff(y,x)) = false then return(failure(msg2,eq)),
+   if (fg: linear2(des,'diff(y,x))) = false then return(failure(msg2,eq)),
+   [%f%, %g%]: fg,
    if ftest(integfactor(%g%,%f%)) then return(exact(%q%*%g%,%q%*%f%)),
    if ftest(solvehom(de)) then return(%q%),
    if ftest(solvebernoulli(de)) then return(%q%),
@@ -61,11 +62,11 @@ solve1(eq,y):=block([programmode:true],first(solve(eq,y)))$
 
 /* linear2 tests for the form fx+%g% */
 
-linear2(expr,x):=block([],
+linear2(expr,x):=block([%f%, %g%],
    %f%: ratcoef(expr,x),
    if not(freeof(x,%f%)) then return(false),
    %g%: ratsimp(expr - %f%*x),
-   return(freeof(x,%g%)))$
+   if freeof(x,%g%) then [%f%, %g%]) $
 
 /*  variables used to denote constants: %C, %K1, %K2.
     METHOD denotes the method of solution.
@@ -75,8 +76,9 @@ linear2(expr,x):=block([],
 
 /*  B&DiP, pp. 13-14  */
 
-solvelnr(eq):=block([%f%,%g%,w,%c],
-   if linear2(rhs(eq),y) = false then return(false),
+solvelnr(eq):=block([%f%,%g%,w,%c,fg],
+   if (fg: linear2(rhs(eq),y)) = false then return(false),
+   [%f%, %g%]: fg,
    w: %e^(integrate(%f%,x)),
    method: 'linear,
    return(y=w*(integrate(%g%/w,x)+%c)))$
