@@ -74,16 +74,16 @@ linear2(expr,x):=block([%f%, %g%],
 
 /*  B&DiP, pp. 13-14  */
 
-solvelnr(x,y,eq):=block([%f%,%g%,w,%c,fg],
+solvelnr(x,y,eq):=block([%f%,%g%,w,fg],
    if (fg: linear2(rhs(eq),y)) = false then return(false),
    [%f%, %g%]: fg,
    w: %e^(integrate(%f%,x)),
    method: 'linear,
-   return(y=w*(integrate(%g%/w,x)+%c)))$
+   return(y=w*(integrate(%g%/w,x)+'%c)))$
 
 /*  B&DiP, pp. 29-34  */
 
-separable(x,y,eq):=block([xpart:[],ypart:[],flag:false,inflag:true,%c],
+separable(x,y,eq):=block([xpart:[],ypart:[],flag:false,inflag:true],
    eq: factor(rhs(eq)),
    if atom(eq) or not(inpart(eq,0)="*") then eq: [eq],
    for u in eq do
@@ -93,7 +93,7 @@ separable(x,y,eq):=block([xpart:[],ypart:[],flag:false,inflag:true,%c],
    if xpart = [] then xpart: 1 else xpart: apply("*",xpart),
    if ypart = [] then ypart: 1 else ypart: apply("*",ypart),
    method: 'separable,
-   return(ratsimp(integrate(1/ypart,y)) = ratsimp(integrate(xpart,x)) + %c))$
+   return(ratsimp(integrate(1/ypart,y)) = ratsimp(integrate(xpart,x)) + '%c))$
 
 /*  B&DiP, pp. 34-41  */
 
@@ -106,24 +106,24 @@ integfactor(x,y,m,n):=block([b1,b2,dmdx,dmdy,dndx,dndy,dd,%e_to_numlog:true],
    if freeof(x, (b2: ratsimp(dd/m)))
      then return(%e^(integrate(-b2,y))) else return(false))$
 
-exact(x,y,yold,%q%,m,n):=block([a,ynew,%c],
+exact(x,y,yold,%q%,m,n):=block([a,ynew],
    intfactor: subst(yold,ynew,%q%),
    a: integrate(ratsimp(m),x),
    method: 'exact,
-   return(ratsimp(a + integrate(ratsimp(n-diff(a,y)),y)) = %c))$
+   return(ratsimp(a + integrate(ratsimp(n-diff(a,y)),y)) = '%c))$
 
 /*  B&DiP, pp. 43-44  */
 
-solvehom(x,y,eq):=block([qq,a1,a2,%c],
+solvehom(x,y,eq):=block([qq,a1,a2],
    a1: ratsimp(subst(x*qq,y,rhs(eq))),
    if not(freeof(x,a1)) then return(false),
    a2: ratsimp(subst(y/x,qq,integrate(1/(a1-qq),qq))),
    method: 'homogeneous,
-   return(%c*x = %e^a2))$
+   return('%c*x = %e^a2))$
 
 /*  B&DiP, p. 21, problem 15  */
 
-solvebernoulli(x,y,eq):=block([a1,a2,n,%c],
+solvebernoulli(x,y,eq):=block([a1,a2,n],
    a1: coeff(eq: expand(rhs(eq)),y,1),
    if not(freeof(y,a1)) then return(false),
    n: hipow(ratsimp(eq-a1*y),y),
@@ -133,12 +133,12 @@ solvebernoulli(x,y,eq):=block([a1,a2,n,%c],
      then return(false),
    a1: integrate(a1,x),
    method: 'bernoulli, odeindex: n,
-   return(y = %e^a1 * ((1-n)*integrate(a2*%e^((n-1)*a1),x) + %c) ^ (1/(1-n))))$
+   return(y = %e^a1 * ((1-n)*integrate(a2*%e^((n-1)*a1),x) + '%c) ^ (1/(1-n))))$
 
 /*  Generalized homogeneous equation:  y' = y/x * H(yx^n)
 	Reference:  Moses' thesis.  */
 
-genhom(x,y,eq):=block([%g%,u,n,a1,a2,a3,%c],
+genhom(x,y,eq):=block([%g%,u,n,a1,a2,a3],
    %g%: rhs(eq)*x/y,
    n: ratsimp(x*diff(%g%,x)/(y*diff(%g%,y))),
    if not(freeof(x,y,n)) then return(false),
@@ -147,7 +147,7 @@ genhom(x,y,eq):=block([%g%,u,n,a1,a2,a3,%c],
    if not(freeof(nounify('integrate),a2)) then return(false),
    a3: ratsimp(subst(y*x^n,u,a2)),
    method: 'genhom, odeindex: n,
-   return(x = %c*%e^a3))$
+   return(x = '%c*%e^a3))$
 
 /*  Chain of solution methods for second order linear homogeneous equations  */
 
@@ -228,26 +228,26 @@ reduce(x,y,yold,eq):=block([b1,qq],
 
 /*  B&DiP, p. 89, problem 1  */
 
-nlx(x,y,yold,eq):=block([de,b,a1,v,%k1,%c,%q%],
+nlx(x,y,yold,eq):=block([de,b,a1,v,%k1,%q%],
    de: subst(['diff(y,x,2)='diff(v,x), 'diff(y,x)=v], eq),
    if (b: ode1a(yold,de,v,x)) = false then return(false),
-   a1: subst([v='diff(y,x),%c=%k1], b),
+   a1: subst([v='diff(y,x),'%c=%k1], b),
    if (%q%:nlxy(x,y,yold,a1,'diff(y,x))) # false
      then (method: 'freeofy, return(%q%)) else return(false))$
 
 /*  B&DiP, p. 89, problem 2  */
 
-nly(x,y,yold,eq):=block([de,b,a1,yz,v,%c,%k1,%q%],
+nly(x,y,yold,eq):=block([de,b,a1,yz,v,%k1,%q%],
    de: subst(['diff(y,x,2)=v*'diff(v,yz), 'diff(y,x)=v, y=yz], eq),
    if (b: ode1a(yold,de,v,yz)) = false then return(false),
-   a1: subst([v='diff(y,x),yz=y,%c=%k1], b),
+   a1: subst([v='diff(y,x),yz=y,'%c=%k1], b),
    if (%q%:nlxy(x,y,yold,a1,'diff(y,x))) # false
      then (method: 'freeofx, return(%q%)) else return(false))$
 
-nlxy(x,y,yold,eq,de):=block([programmode:true,eq1,%k2,%c,%q%],
+nlxy(x,y,yold,eq,de):=block([programmode:true,eq1,%k2,%q%],
    eq1: solve(eq,de),
    eq1: maplist(lambda([zz], if (%q%:ode1a(yold,zz,y,x)) # false
-			       then subst(%k2,%c,%q%) else false),
+			       then subst(%k2,'%c,%q%) else false),
 		eq1),
    if length(eq1)=1 then return(first(eq1)) else return(eq1))$
 
@@ -290,7 +290,7 @@ bessel2(x,y,pt,a,b):=block([nu,b1,intp,radexpand:'all,%k1,%k2],
    return(y = %k1*bessel_j(nu,x-pt) + %k2*bessel_j(-nu,x-pt)))$
 
 ic1(soln,xc,yc):=
-   block([%c],
+   block([],
    (noteqn(xc), noteqn(yc), boundtest('%c,%c),
    ratsimp(subst(['%c=rhs(solve1(at(soln,[xc,yc]),%c))],soln))))$
 
