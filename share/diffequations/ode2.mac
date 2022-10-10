@@ -156,8 +156,8 @@ hom2(a1,a2,a3):=block([ap,aq,pt,%q%],
    if (%q%:cc2(ap,aq,y,x)) # false then return(%q%),
    if (%q%:exact2(a1,a2,a3)) # false then return(%q%),
    if (pt: pttest(ap)) = false then go(end),
-   if (%q%:euler2(ap,aq)) # false then return(%q%),
-   if (%q%:bessel2(ap,aq)) # false then return(%q%),
+   if (%q%:euler2(pt,ap,aq)) # false then return(%q%),
+   if (%q%:bessel2(pt,ap,aq)) # false then return(%q%),
  end, 
    if (%q%:xcc2(ap,aq)) # false then return(%q%) else return(false))$
 
@@ -268,7 +268,7 @@ pttest(a):=block([a1,a2,a3],
    a3: coeff(a1,x,0),
    if not(a1 = a2*x + a3) then return(false) else return(-a3/a2))$
 
-euler2(a,b):=block([dc,rp,ip,alpha,beta,sign,radexpand:false,%k1,%k2,pos,zero],
+euler2(pt,a,b):=block([dc,rp,ip,alpha,beta,sign,radexpand:false,%k1,%k2,pos,zero],
    if not(freeof(x,y,beta: ratsimp(b*(x-pt)^2))) then return(false),
    method: 'euler, alpha: a*(x-pt),
    dc: ratsimp((alpha-1)^2 - 4*beta),
@@ -280,7 +280,7 @@ euler2(a,b):=block([dc,rp,ip,alpha,beta,sign,radexpand:false,%k1,%k2,pos,zero],
    dc: -dc, ip: sqrt(dc)/2,
    return(y = (x-pt)^rp * (%k1*sin(ip*log(x-pt)) + %k2*cos(ip*log(x-pt)))))$
 
-bessel2(a,b):=block([nu,b1,intp,radexpand:'all,%k1,%k2],
+bessel2(pt,a,b):=block([nu,b1,intp,radexpand:'all,%k1,%k2],
    if not(freeof(x,y,b1: ratsimp((1-b)*(x-pt)^2))) then return(false),
    if ratsimp(a*(x-pt)) # 1 then return(false),
    nu: sqrt(b1), method: 'bessel,
