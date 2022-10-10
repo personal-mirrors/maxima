@@ -14,14 +14,14 @@ declare_translated(boundtest,noteqn,nlxy,nly,nlx,xcc2,bessel2,euler2,
    ode1a,ode2a));
 
 ode2(eq,yold,x):=block([derivsubst:false,ynew],
-   subst(yold,ynew,ode2a(subst(ynew,yold,eq),ynew,x)))$
+   subst(yold,ynew,ode2a(yold,subst(ynew,yold,eq),ynew,x)))$
 
-ode2a(eq,y,x):=block([de,a1,a2,a3,a4,%q%],
+ode2a(yold,eq,y,x):=block([de,a1,a2,a3,a4,%q%],
    intfactor: false, method: 'none,
    if freeof('diff(y,x,2),eq)
-     then if (%q%:ode1a(eq,y,x)) # false then return(%q%) else return(false),
+     then if (%q%:ode1a(yold,eq,y,x)) # false then return(%q%) else return(false),
    if derivdegree(de: desimp(lhs(eq)-rhs(eq)),y,x) # 2
-     then return(failure(msg1,eq)),
+     then return(failure(yold,msg1,eq)),
    a1: coeff(de,'diff(y,x,2)),
    a2: coeff(de,'diff(y,x)),
    a3: coeff(de,y),
@@ -29,21 +29,21 @@ ode2a(eq,y,x):=block([de,a1,a2,a3,a4,%q%],
    if pr2(a1) and pr2(a2) and pr2(a3) and pr2(a4) and
       (%q%:hom2(a1,a2,a3)) # false
      then if a4=0 then return(%q%) else return(varp(%q%,-a4/a1)),
-   if (%q%:reduce(de)) # false then return(%q%) else return(false))$
+   if (%q%:reduce(yold,de)) # false then return(%q%) else return(false))$
 
-ode1a(eq,y,x):=block([de,des,%f%,%g%,fg,%q%],
+ode1a(yold,eq,y,x):=block([de,des,%f%,%g%,fg,%q%],
    if derivdegree(de: expand(lhs(eq)-rhs(eq)),y,x) # 1
-     then return(failure(msg1,eq)),
-   if (fg: linear2(de,'diff(y,x))) = false then return(failure(msg2,eq)),
+     then return(failure(yold,msg1,eq)),
+   if (fg: linear2(de,'diff(y,x))) = false then return(failure(yold,msg2,eq)),
    [%f%, %g%]: fg,
    des: desimp(de),
    de: solve1(des,'diff(y,x)),
    if (%q%:solvelnr(de)) # false then return(%q%),
    if (%q%:separable(de)) # false then return(%q%),
-   if (%q%:integfactor(%g%,%f%)) # false then return(exact(%q%,%q%*%g%,%q%*%f%)),
-   if (fg: linear2(des,'diff(y,x))) = false then return(failure(msg2,eq)),
+   if (%q%:integfactor(%g%,%f%)) # false then return(exact(yold,%q%,%q%*%g%,%q%*%f%)),
+   if (fg: linear2(des,'diff(y,x))) = false then return(failure(yold,msg2,eq)),
    [%f%, %g%]: fg,
-   if (%q%:integfactor(%g%,%f%)) # false then return(exact(%q%,%q%*%g%,%q%*%f%)),
+   if (%q%:integfactor(%g%,%f%)) # false then return(exact(yold,%q%,%q%*%g%,%q%*%f%)),
    if (%q%:solvehom(de)) # false then return(%q%),
    if (%q%:solvebernoulli(de)) # false then return(%q%),
    if (%q%:genhom(de)) # false then return(%q%) else return(false))$
@@ -106,7 +106,7 @@ integfactor(m,n):=block([b1,b2,dmdx,dmdy,dndx,dndy,dd,%e_to_numlog:true],
    if freeof(x, (b2: ratsimp(dd/m)))
      then return(%e^(integrate(-b2,y))) else return(false))$
 
-exact(%q%,m,n):=block([a,ynew,%c],
+exact(yold,%q%,m,n):=block([a,ynew,%c],
    intfactor: subst(yold,ynew,%q%),
    a: integrate(ratsimp(m),x),
    method: 'exact,
@@ -221,32 +221,32 @@ varp(soln,%g%):=block([y1,y2,y3,y4,wr,heuristic:false,%k1,%k2],
 
 /*  Methods to reduce second-order equations free of x or y  */
 
-reduce(eq):=block([b1,qq],
+reduce(yold,eq):=block([b1,qq],
    b1: subst(['diff(y,x,2)=qq, 'diff(y,x)=qq], eq),
-   if freeof(y,b1) then return(nlx(eq)),
-   if freeof(x,b1) then return(nly(eq)) else return(false))$
+   if freeof(y,b1) then return(nlx(yold,eq)),
+   if freeof(x,b1) then return(nly(yold,eq)) else return(false))$
 
 /*  B&DiP, p. 89, problem 1  */
 
-nlx(eq):=block([de,b,a1,v,%k1,%c,%q%],
+nlx(yold,eq):=block([de,b,a1,v,%k1,%c,%q%],
    de: subst(['diff(y,x,2)='diff(v,x), 'diff(y,x)=v], eq),
-   if (b: ode1a(de,v,x)) = false then return(false),
+   if (b: ode1a(yold,de,v,x)) = false then return(false),
    a1: subst([v='diff(y,x),%c=%k1], b),
-   if (%q%:nlxy(a1,'diff(y,x))) # false
+   if (%q%:nlxy(yold,a1,'diff(y,x))) # false
      then (method: 'freeofy, return(%q%)) else return(false))$
 
 /*  B&DiP, p. 89, problem 2  */
 
-nly(eq):=block([de,b,a1,yz,v,%c,%k1,%q%],
+nly(yold,eq):=block([de,b,a1,yz,v,%c,%k1,%q%],
    de: subst(['diff(y,x,2)=v*'diff(v,yz), 'diff(y,x)=v, y=yz], eq),
-   if (b: ode1a(de,v,yz)) = false then return(false),
+   if (b: ode1a(yold,de,v,yz)) = false then return(false),
    a1: subst([v='diff(y,x),yz=y,%c=%k1], b),
-   if (%q%:nlxy(a1,'diff(y,x))) # false
+   if (%q%:nlxy(yold,a1,'diff(y,x))) # false
      then (method: 'freeofx, return(%q%)) else return(false))$
 
-nlxy(eq,de):=block([programmode:true,eq1,%k2,%c,%q%],
+nlxy(yold,eq,de):=block([programmode:true,eq1,%k2,%c,%q%],
    eq1: solve(eq,de),
-   eq1: maplist(lambda([zz], if (%q%:ode1a(zz,y,x)) # false
+   eq1: maplist(lambda([zz], if (%q%:ode1a(yold,zz,y,x)) # false
 			       then subst(%k2,%c,%q%) else false),
 		eq1),
    if length(eq1)=1 then return(first(eq1)) else return(eq1))$
@@ -328,7 +328,7 @@ noteqn(x):=if atom(x) or not inpart(x,0)="="
 boundtest(x,y):=
    if x#y then (disp(x), disp("must not be bound"), error())$
 
-failure(msg,eq):=
+failure(yold,msg,eq):=
    block([ynew],   (if not status(feature,"ode")
       then (ldisp(subst(yold,ynew,eq)), disp(msg)),
     false))$
