@@ -119,16 +119,16 @@ elif [ "@DEFAULTLISP@" = "clisp" ]
          lispargs="$catprogname"
 elif [ "@DEFAULTLISP@" = "cmucl" ]
     then lispprog="@CMUCL_NAME@"
-         lispargs="-load $catprogname -eval (quit)"
+         lispargs="-noinit -nositeinit -load $catprogname -eval (quit)"
 elif [ "@DEFAULTLISP@" = "scl" ]
     then lispprog="@SCL_NAME@"
          lispargs="-load $catprogname -eval (quit)"
 elif [ "@DEFAULTLISP@" = "ecl" ]
     then lispprog="@ECL_NAME@"
-         lispargs="--shell $catprogname"
+         lispargs="--norc --shell $catprogname"
 elif [ "@DEFAULTLISP@" = "ccl64" ]
     then lispprog="@CCL64_NAME@"
-         lispargs="--load $catprogname --eval (quit)"
+         lispargs="--no-init --load $catprogname --eval (quit)"
 # NOT SURE ABOUT OPENMCL; SAME ARGS AS CCL/CCL64 OR DIFFERENT ??
 elif [ "@DEFAULTLISP@" = "ccl" -o "@DEFAULTLISP@" = "openmcl" ]
     then lispprog="@OPENMCL_NAME@"
