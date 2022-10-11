@@ -167,7 +167,7 @@ hom2(x,y,a1,a2,a3):=block([ap,aq,pt,%q%],
    'diff(y,x,2) + %f%*'diff(y,x) + %g%*y = 0
    %f% and %g% independent of x and y */
 
-cc2(%f%,%g%,y,x):=block([a,sign,radexpand:'all,alpha,zero,pos,ynew,%k1,%k2],
+cc2(%f%,%g%,y,x):=block([a,sign,radexpand:'all,alpha,zero,pos,ynew],
    if not(freeof(x,y,%f%) and freeof(x,y,%g%)) then return(false),
    method: 'constcoeff,
    a: %f%^2-4*%g%,
@@ -175,24 +175,24 @@ cc2(%f%,%g%,y,x):=block([a,sign,radexpand:'all,alpha,zero,pos,ynew,%k1,%k2],
 		   else (radexpand: true, sign: 'pnz),
    if sign = zero then
      if asksign(%f%^2) = zero then
-       return(y = %k1 + %k2*x)
+       return(y = '%k1 + '%k2*x)
      else
-       return(y = %e^(-%f%*x/2) * (%k1 + %k2*x)),
+       return(y = %e^(-%f%*x/2) * ('%k1 + '%k2*x)),
    if sign = pos then
-     return(y = %k1*%e^((-%f%+sqrt(a))*x/2) + %k2*%e^((-%f%-sqrt(a))*x/2)),
+     return(y = '%k1*%e^((-%f%+sqrt(a))*x/2) + '%k2*%e^((-%f%-sqrt(a))*x/2)),
    a: -a, alpha: x*sqrt(a)/2,
    if exponentialize = false then
-     return(y = %e^(-%f%*x/2) * (%k1*sin(alpha) + %k2*cos(alpha))),
-   return(y = %e^(-%f%*x/2) * (%k1*exp(%i*alpha) + %k2*exp(-%i*alpha))))$ 
+     return(y = %e^(-%f%*x/2) * ('%k1*sin(alpha) + '%k2*cos(alpha))),
+   return(y = %e^(-%f%*x/2) * ('%k1*exp(%i*alpha) + '%k2*exp(-%i*alpha))))$ 
 
 /*  B&DiP, pp. 98-99, problem 17  */
 
-exact2(x,y,a1,a2,a3):=block([b1,%k1,%k2],
+exact2(x,y,a1,a2,a3):=block([b1],
    if ratsimp(diff(a1,x,2) - diff(a2,x) + a3) = 0
      then b1: %e^(-integrate(ratsimp((a2 - diff(a1,x))/a1), x))
      else return(false),
    method: 'exact,
-   return(y = %k1*b1*integrate(1/(a1*b1),x) + %k2*b1))$
+   return(y = '%k1*b1*integrate(1/(a1*b1),x) + '%k2*b1))$
 
 /*  B&DiP, pp. 113-114, problem 16  */
 
@@ -205,9 +205,9 @@ xcc2(x,y,ap,aq):=block([d,b1,z,radexpand:'all],
 
 /*  B&DiP, pp. 124-127  */
 
-varp(x,y,soln,%g%):=block([y1,y2,y3,y4,wr,heuristic:false,%k1,%k2],
-   y1: ratsimp(subst([%k1=1,%k2=0],rhs(soln))),
-   y2: ratsimp(subst([%k1=0,%k2=1],rhs(soln))),
+varp(x,y,soln,%g%):=block([y1,y2,y3,y4,wr,heuristic:false],
+   y1: ratsimp(subst(['%k1=1,'%k2=0],rhs(soln))),
+   y2: ratsimp(subst(['%k1=0,'%k2=1],rhs(soln))),
    wr: y1*diff(y2,x) - y2*diff(y1,x),
    if wr=0 then return(false),
    if method='constcoeff and not(freeof('sin,wr)) and not(freeof('cos,wr))
@@ -228,26 +228,26 @@ reduce(x,y,yold,eq):=block([b1,qq],
 
 /*  B&DiP, p. 89, problem 1  */
 
-nlx(x,y,yold,eq):=block([de,b,a1,v,%k1,%q%],
+nlx(x,y,yold,eq):=block([de,b,a1,v,%q%],
    de: subst(['diff(y,x,2)='diff(v,x), 'diff(y,x)=v], eq),
    if (b: ode1a(yold,de,v,x)) = false then return(false),
-   a1: subst([v='diff(y,x),'%c=%k1], b),
+   a1: subst([v='diff(y,x),'%c='%k1], b),
    if (%q%:nlxy(x,y,yold,a1,'diff(y,x))) # false
      then (method: 'freeofy, return(%q%)) else return(false))$
 
 /*  B&DiP, p. 89, problem 2  */
 
-nly(x,y,yold,eq):=block([de,b,a1,yz,v,%k1,%q%],
+nly(x,y,yold,eq):=block([de,b,a1,yz,v,%q%],
    de: subst(['diff(y,x,2)=v*'diff(v,yz), 'diff(y,x)=v, y=yz], eq),
    if (b: ode1a(yold,de,v,yz)) = false then return(false),
-   a1: subst([v='diff(y,x),yz=y,'%c=%k1], b),
+   a1: subst([v='diff(y,x),yz=y,'%c='%k1], b),
    if (%q%:nlxy(x,y,yold,a1,'diff(y,x))) # false
      then (method: 'freeofx, return(%q%)) else return(false))$
 
-nlxy(x,y,yold,eq,de):=block([programmode:true,eq1,%k2,%q%],
+nlxy(x,y,yold,eq,de):=block([programmode:true,eq1,%q%],
    eq1: solve(eq,de),
    eq1: maplist(lambda([zz], if (%q%:ode1a(yold,zz,y,x)) # false
-			       then subst(%k2,'%c,%q%) else false),
+			       then subst('%k2,'%c,%q%) else false),
 		eq1),
    if length(eq1)=1 then return(first(eq1)) else return(eq1))$
 
@@ -268,26 +268,26 @@ pttest(x,a):=block([a1,a2,a3],
    a3: coeff(a1,x,0),
    if not(a1 = a2*x + a3) then return(false) else return(-a3/a2))$
 
-euler2(x,y,pt,a,b):=block([dc,rp,ip,alpha,beta,sign,radexpand:false,%k1,%k2,pos,zero],
+euler2(x,y,pt,a,b):=block([dc,rp,ip,alpha,beta,sign,radexpand:false,pos,zero],
    if not(freeof(x,y,beta: ratsimp(b*(x-pt)^2))) then return(false),
    method: 'euler, alpha: a*(x-pt),
    dc: ratsimp((alpha-1)^2 - 4*beta),
    rp: ratsimp(-(alpha-1)/2),
    sign: asksign(dc),
-   if sign = zero then return(y = (x-pt)^rp * (%k1 + %k2*log(x-pt))),
+   if sign = zero then return(y = (x-pt)^rp * ('%k1 + '%k2*log(x-pt))),
    if sign = pos then 
-     (ip: sqrt(dc)/2, return(y = %k1*(x-pt)^(rp+ip) + %k2*(x-pt)^(rp-ip))),
+     (ip: sqrt(dc)/2, return(y = '%k1*(x-pt)^(rp+ip) + '%k2*(x-pt)^(rp-ip))),
    dc: -dc, ip: sqrt(dc)/2,
-   return(y = (x-pt)^rp * (%k1*sin(ip*log(x-pt)) + %k2*cos(ip*log(x-pt)))))$
+   return(y = (x-pt)^rp * ('%k1*sin(ip*log(x-pt)) + '%k2*cos(ip*log(x-pt)))))$
 
-bessel2(x,y,pt,a,b):=block([nu,b1,intp,radexpand:'all,%k1,%k2],
+bessel2(x,y,pt,a,b):=block([nu,b1,intp,radexpand:'all],
    if not(freeof(x,y,b1: ratsimp((1-b)*(x-pt)^2))) then return(false),
    if ratsimp(a*(x-pt)) # 1 then return(false),
    nu: sqrt(b1), method: 'bessel,
-   if nu = 1/2 then return(y = (%k1*sin(x-pt) + %k2*cos(x-pt))/sqrt(x-pt)),
+   if nu = 1/2 then return(y = ('%k1*sin(x-pt) + '%k2*cos(x-pt))/sqrt(x-pt)),
    intp:askinteger(nu),
-   if intp = 'yes then return(y = %k1*bessel_j(nu,x-pt) + %k2*bessel_y(nu,x-pt)),
-   return(y = %k1*bessel_j(nu,x-pt) + %k2*bessel_j(-nu,x-pt)))$
+   if intp = 'yes then return(y = '%k1*bessel_j(nu,x-pt) + '%k2*bessel_y(nu,x-pt)),
+   return(y = '%k1*bessel_j(nu,x-pt) + '%k2*bessel_j(-nu,x-pt)))$
 
 ic1(soln,xc,yc):=
    block([],
@@ -295,19 +295,17 @@ ic1(soln,xc,yc):=
    ratsimp(subst(['%c=rhs(solve1(at(soln,[xc,yc]),%c))],soln))))$
 
 bc2(soln,xa,ya,xb,yb):=
-   block([programmode:true,backsubst:true,singsolve:true,temp,%k1,%k2],
+   block([programmode:true,backsubst:true,singsolve:true,temp],
       noteqn(xa), noteqn(ya), noteqn(xb), noteqn(yb),
-      boundtest('%k1,%k1), boundtest('%k2,%k2),
       temp: maplist(lambda([zz], subst(zz,soln)),
 		    solve([subst([xa,ya],soln),
 			   subst([xb,yb],soln)],
-			  [%k1,%k2])),
+			  ['%k1,'%k2])),
       if length(temp)=1 then return(first(temp)) else return(temp))$
 
 ic2(soln,xa,ya,dya):=
-   block([programmode:true,backsubst:true,singsolve:true,temp,%k2,%k1,yas],
+   block([programmode:true,backsubst:true,singsolve:true,temp,yas],
       noteqn(xa), noteqn(ya), noteqn(dya),
-      boundtest('%k1,%k1), boundtest('%k2,%k2),
       yas:lhs(ya),
       /* We need a dependency for the algorithm. Add it, if it is not present */
       if diff(yas,lhs(xa)) = 0 then depends(yas,lhs(xa)),
@@ -319,7 +317,7 @@ ic2(soln,xa,ya,dya):=
       temp: maplist(lambda([zz], subst(zz,soln)),
                     solve(flatten([subst([xa,ya], soln),
                                    subst([dya,xa,ya], diff(soln,lhs(xa)))]),
-                          [%k1,%k2])),
+                          ['%k1,'%k2])),
       if length(temp)=1 then return(first(temp)) else return(temp))$
 
 noteqn(x):=if atom(x) or not inpart(x,0)="="
