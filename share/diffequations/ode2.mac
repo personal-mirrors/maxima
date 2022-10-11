@@ -21,7 +21,7 @@ ode2a(yold,eq,y,x):=block([de,a1,a2,a3,a4,%q%],
    if freeof('diff(y,x,2),eq)
      then if (%q%:ode1a(yold,eq,y,x)) # false then return(%q%) else return(false),
    if derivdegree(de: desimp(lhs(eq)-rhs(eq)),y,x) # 2
-     then return(failure(yold,msg1,eq)),
+     then return(failure(yold,y,msg1,eq)),
    a1: coeff(de,'diff(y,x,2)),
    a2: coeff(de,'diff(y,x)),
    a3: coeff(de,y),
@@ -33,15 +33,15 @@ ode2a(yold,eq,y,x):=block([de,a1,a2,a3,a4,%q%],
 
 ode1a(yold,eq,y,x):=block([de,des,%f%,%g%,fg,%q%],
    if derivdegree(de: expand(lhs(eq)-rhs(eq)),y,x) # 1
-     then return(failure(yold,msg1,eq)),
-   if (fg: linear2(de,'diff(y,x))) = false then return(failure(yold,msg2,eq)),
+     then return(failure(yold,y,msg1,eq)),
+   if (fg: linear2(de,'diff(y,x))) = false then return(failure(yold,y,msg2,eq)),
    [%f%, %g%]: fg,
    des: desimp(de),
    de: solve1(des,'diff(y,x)),
    if (%q%:solvelnr(x,y,de)) # false then return(%q%),
    if (%q%:separable(x,y,de)) # false then return(%q%),
    if (%q%:integfactor(x,y,%g%,%f%)) # false then return(exact(x,y,yold,%q%,%q%*%g%,%q%*%f%)),
-   if (fg: linear2(des,'diff(y,x))) = false then return(failure(yold,msg2,eq)),
+   if (fg: linear2(des,'diff(y,x))) = false then return(failure(yold,y,msg2,eq)),
    [%f%, %g%]: fg,
    if (%q%:integfactor(x,y,%g%,%f%)) # false then return(exact(x,y,yold,%q%,%q%*%g%,%q%*%f%)),
    if (%q%:solvehom(x,y,de)) # false then return(%q%),
@@ -106,8 +106,8 @@ integfactor(x,y,m,n):=block([b1,b2,dmdx,dmdy,dndx,dndy,dd,%e_to_numlog:true],
    if freeof(x, (b2: ratsimp(dd/m)))
      then return(%e^(integrate(-b2,y))) else return(false))$
 
-exact(x,y,yold,%q%,m,n):=block([a,ynew],
-   intfactor: subst(yold,ynew,%q%),
+exact(x,y,yold,%q%,m,n):=block([a],
+   intfactor: subst(yold,y,%q%),
    a: integrate(ratsimp(m),x),
    method: 'exact,
    return(ratsimp(a + integrate(ratsimp(n-diff(a,y)),y)) = '%c))$
@@ -167,18 +167,18 @@ hom2(x,y,a1,a2,a3):=block([ap,aq,pt,%q%],
    'diff(y,x,2) + %f%*'diff(y,x) + %g%*y = 0
    %f% and %g% independent of x and y */
 
-cc2(%f%,%g%,y,x):=block([a,sign,radexpand:'all,alpha,zero,pos,ynew],
+cc2(%f%,%g%,y,x):=block([a,sign,radexpand:'all,alpha],
    if not(freeof(x,y,%f%) and freeof(x,y,%g%)) then return(false),
    method: 'constcoeff,
    a: %f%^2-4*%g%,
    if freeof(%i,a) then sign: asksign(a)
 		   else (radexpand: true, sign: 'pnz),
-   if sign = zero then
-     if asksign(%f%^2) = zero then
+   if sign = 'zero then
+     if asksign(%f%^2) = 'zero then
        return(y = '%k1 + '%k2*x)
      else
        return(y = %e^(-%f%*x/2) * ('%k1 + '%k2*x)),
-   if sign = pos then
+   if sign = 'pos then
      return(y = '%k1*%e^((-%f%+sqrt(a))*x/2) + '%k2*%e^((-%f%-sqrt(a))*x/2)),
    a: -a, alpha: x*sqrt(a)/2,
    if exponentialize = false then
@@ -268,14 +268,14 @@ pttest(x,a):=block([a1,a2,a3],
    a3: coeff(a1,x,0),
    if not(a1 = a2*x + a3) then return(false) else return(-a3/a2))$
 
-euler2(x,y,pt,a,b):=block([dc,rp,ip,alpha,beta,sign,radexpand:false,pos,zero],
+euler2(x,y,pt,a,b):=block([dc,rp,ip,alpha,beta,sign,radexpand:false],
    if not(freeof(x,y,beta: ratsimp(b*(x-pt)^2))) then return(false),
    method: 'euler, alpha: a*(x-pt),
    dc: ratsimp((alpha-1)^2 - 4*beta),
    rp: ratsimp(-(alpha-1)/2),
    sign: asksign(dc),
-   if sign = zero then return(y = (x-pt)^rp * ('%k1 + '%k2*log(x-pt))),
-   if sign = pos then 
+   if sign = 'zero then return(y = (x-pt)^rp * ('%k1 + '%k2*log(x-pt))),
+   if sign = 'pos then 
      (ip: sqrt(dc)/2, return(y = '%k1*(x-pt)^(rp+ip) + '%k2*(x-pt)^(rp-ip))),
    dc: -dc, ip: sqrt(dc)/2,
    return(y = (x-pt)^rp * ('%k1*sin(ip*log(x-pt)) + '%k2*cos(ip*log(x-pt)))))$
@@ -326,8 +326,8 @@ noteqn(x):=if atom(x) or not inpart(x,0)="="
 boundtest(x,y):=
    if x#y then (disp(x), disp("must not be bound"), error())$
 
-failure(yold,msg,eq):=
-   block([ynew],   (if not status(feature,"ode")
+failure(yold,ynew,msg,eq):=
+   block([],   (if not status(feature,"ode")
       then (ldisp(subst(yold,ynew,eq)), disp(msg)),
     false))$
 
