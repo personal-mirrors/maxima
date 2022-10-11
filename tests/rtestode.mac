@@ -4,6 +4,7 @@ kill(all);
 done;
 
 /* Bug #2796 ode2 with n declared constant
+ * probably same as bug #3403: "Function/lambda parameters declared constant cause error"
  *
  * Can't load ode2.mac if any formal function args are
  * declared constant

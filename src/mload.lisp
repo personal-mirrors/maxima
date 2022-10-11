@@ -318,7 +318,7 @@
 	 (and (atom g) (equal f g)))
 		     
 	((op-equalp f 'lambda)
-     (alike1-lambda f g))
+     (alike1-lambda-or-simple-mdefine f g))
 
 	((op-equalp f 'mdefine)
      (alike1-mdefine f g))
