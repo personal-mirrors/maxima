@@ -1,5 +1,10 @@
 (in-package :maxima)
 
+;; Communicating between functions via global variables is poor design,
+;; but anyway just make it work as before.
+;; Circle back and reorganize to eliminate global variables later.
+(meval #$declare ([d2%, lg, lexp], global)$)
+
 (defun $listofei (e )
    (declare (special $d2% $lg $lexp))
 	(setq $d2% (copy-tree (car e)))
