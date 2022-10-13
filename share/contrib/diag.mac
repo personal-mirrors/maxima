@@ -35,7 +35,7 @@ diag_matrixify (expr) :=
   zeros on the left hand side.
 */
 diag_zeropad_row (r, indent, width) :=
-  block([right: width - (left + length(r))],
+  block([right: width - (indent + length(r))],
     if is(right < 0) then
       error(r, "does not fit in a row of length", width,
             "with indent", indent),
