@@ -3140,6 +3140,8 @@
            (and (eq (caar y) 'lambda) (alike1-lambda-or-simple-mdefine x y)))
           ((eq (caar x) 'mdefine)
            (and (eq (caar y) 'mdefine) (alike1-mdefine x y)))
+          ((eq (caar x) 'mprog)
+           (and (eq (caar y) 'mprog) (alike1-mprog x y)))
 	  (t (and
 	      (eq (memqarr (cdar x)) (memqarr (cdar y)))
 	      (alike (cdr x) (cdr y))))))))
@@ -3187,6 +3189,15 @@
      (args-x (append args-x-a args-x-b))
      (args-y (append args-y-a args-y-b)))
     (when (and (= (length args-x-a) (length args-y-a)) (= (length args-x-b) (length args-y-b)))
+      (let ((args-replace (mapcar #'(lambda (a) (declare (ignore a)) (gensym)) args-x)))
+        (alike (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-x args-replace)) x))
+               (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-y args-replace)) y)))))))
+
+(defun alike1-mprog (x y)
+  (let
+    ((args-x (mapcar #'(lambda (e) (if (symbolp e) e (second e))) (cdr (second x))))
+     (args-y (mapcar #'(lambda (e) (if (symbolp e) e (second e))) (cdr (second y)))))
+    (when (= (length args-x) (length args-y))
       (let ((args-replace (mapcar #'(lambda (a) (declare (ignore a)) (gensym)) args-x)))
         (alike (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-x args-replace)) x))
                (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-y args-replace)) y)))))))
