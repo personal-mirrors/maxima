@@ -111,45 +111,54 @@ do
   cat $f
 done | @AWK@ '!/^@c / && !/^@c$/ && (/^@deffn/ || /^@defvr/ || /^@end deffn/ || /^@end defvr/ || /@category/ || /@node/ || /^.setq .filenamebase/ || /^.setq items nil/)' | @SED@ -f @abs_srcdir@/extract_categories1.sed | @AWK@ -f @abs_srcdir@/extract_categories1.awk > $catprogname 
 
+runlisp () {
+    lispprog=$1
+    shift
+    set -x
+    echo "$0: execute category program: \"$lispprog\" $@"
+    "$lispprog" "$@"
+    #../args "$@"
+    set +x
+}
+
 if [ "@DEFAULTLISP@" = "gcl" ]
-    then lispprog="@GCL_NAME@"
-         lispargs="-batch -load $catprogname"
+    then
+         runlisp "@GCL_NAME@" -batch -load $catprogname
 elif [ "@DEFAULTLISP@" = "clisp" ]
     then lispprog="@CLISP_NAME@"
-         lispargs="$catprogname"
+         runlisp "@CLISP_NAME@" "$catprogname"
 elif [ "@DEFAULTLISP@" = "cmucl" ]
-    then lispprog="@CMUCL_NAME@"
-         lispargs="-load $catprogname -eval (quit)"
+    then
+	 # For cmucl, turn off any user init files, disable verbose GC
+	 # messages, and set the terminal external format to utf8 and
+	 # set file name encoding to utf8.
+	runlisp "@CMUCL_NAME@" -noinit -nositeinit -eval '(setf *gc-verbose* nil *default-external-format* :utf8)' -eval '(set-system-external-format :utf8 :utf8)' -load $catprogname -eval '(quit)'
 elif [ "@DEFAULTLISP@" = "scl" ]
     then lispprog="@SCL_NAME@"
-         lispargs="-load $catprogname -eval (quit)"
+         runlisp "@SCL_NAME@" -load $catprogname -eval '(quit)'
 elif [ "@DEFAULTLISP@" = "ecl" ]
-    then lispprog="@ECL_NAME@"
-         lispargs="--shell $catprogname"
+    then
+         runlisp "@ECL_NAME@" --shell $catprogname
 elif [ "@DEFAULTLISP@" = "ccl64" ]
-    then lispprog="@CCL64_NAME@"
-         lispargs="--load $catprogname --eval (quit)"
+    then
+         runlisp "@CCL64_NAME@" --load $catprogname --eval '(quit)'
 # NOT SURE ABOUT OPENMCL; SAME ARGS AS CCL/CCL64 OR DIFFERENT ??
 elif [ "@DEFAULTLISP@" = "ccl" -o "@DEFAULTLISP@" = "openmcl" ]
-    then lispprog="@OPENMCL_NAME@"
-         lispargs="--load $catprogname --eval (quit)"
+    then
+         runlisp "@OPENMCL_NAME@" --load $catprogname --eval '(quit)'
 elif [ "@DEFAULTLISP@" = "sbcl" ]
-    then lispprog="@SBCL_NAME@"
-         lispargs="--script $catprogname"
+    then
+         runlisp "@SBCL_NAME@" --script $catprogname
 elif [ "@DEFAULTLISP@" = "abcl" ]
     then lispprog="@JRE@"
-         lispargs="-jar @ABCL_JAR@ --load $catprogname --eval (quit)"
+         runlisp "@JRE@" -jar @ABCL_JAR@ --load $catprogname --eval '(quit)'
 elif [ "@DEFAULTLISP@" = "acl" ]
     then lispprog="@ACL_NAME@"
-         lispargs="-L $catprogname --kill"
+         runlisp "@ACL_NAME@" -L $catprogname --kill
 else
     echo "$0: DEFAULTLISP = @DEFAULTLISP@ not recognized, assume '@DEFAULTLISP@ $catprogname' is acceptable."
-    lispprog="@DEFAULTLISP@"
-    lispargs="$catprogname"
+    runlisp "@DEFAULTLISP@ $catprogname"
 fi
-
-echo "$0: execute category program: \"$lispprog\" $lispargs"
-"$lispprog" $lispargs
 
 # Some languages don't have documentation categories so we don't want
 # to add the extra section if it's going to be empty.  So for any
