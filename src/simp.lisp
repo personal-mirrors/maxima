@@ -3142,6 +3142,10 @@
            (and (eq (caar y) 'mdefine) (alike1-mdefine x y)))
           ((eq (caar x) 'mprog)
            (and (eq (caar y) 'mprog) (alike1-mprog x y)))
+          ((eq (caar x) 'mdo)
+           (and (eq (caar y) 'mdo) (alike1-mdo-mdoin x y)))
+          ((eq (caar x) 'mdoin)
+           (and (eq (caar y) 'mdoin) (alike1-mdo-mdoin x y)))
 	  (t (and
 	      (eq (memqarr (cdar x)) (memqarr (cdar y)))
 	      (alike (cdr x) (cdr y))))))))
@@ -3201,6 +3205,13 @@
       (let ((args-replace (mapcar #'(lambda (a) (declare (ignore a)) (gensym)) args-x)))
         (alike (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-x args-replace)) x))
                (rest ($substitute (cons '(mlist) (mapcar #'(lambda (a b) `((mequal) ,a ,b)) args-y args-replace)) y)))))))
+
+(defun alike1-mdo-mdoin (x y)
+  (let
+    ((var-x (second x))
+     (var-y (second y))
+     (var-replace (gensym)))
+    (alike (rest ($substitute var-replace var-x x)) (rest ($substitute var-replace var-y y)))))
 
 ;; Maps ALIKE1 down two lists.
 

@@ -147,7 +147,8 @@ matrix ([x]);
 (kill (all),
  load (diag),
  A : matrix ([a, 1], [1, 0]),
- integer_pow(x) := block ([k], declare (k, integer), x^k),
+ declare (k, integer),
+ integer_pow(x) := x^k,
  mat_function (integer_pow, A));
 
 matrix([(sqrt(a^2+4)-a)^(k+1)*2^(-k-1)*(-1)^k
@@ -555,7 +556,7 @@ bar(x) := 1 + x;
 fundef ("bar");
 bar(x) := 1 + x;
 
-member ('(bar(x)), functions);
+member ('(bar(x)), unlexicalize (functions));
 true;
 
 "baz"[x] := x^2;
@@ -1061,17 +1062,17 @@ listarray (b);
 /* mailing list 2017-12-28: "op('(do 1))" */
 
 (e : '(for i:111 thru 114 do push(i, L)),
- [op(e), args(e)]);
+ [op(e), unlexicalize (args(e))]);
 ["do", [i,111,false,false,114,false,push(i,L)]];
 
 e1 : apply (funmake, ["do", '[i,111,false,false,114,false,push(i,L)]]);
 for i:111 thru 114 do push(i, L);
 
-block ([L:[]], ev(e1), L);
+(L:[], ev(e1), L);
 [114, 113, 112, 111];
 
 (e : '(for x in [100, 200, 300] do push(x - 1, M)),
- [op(e), args(e)]);
+ [op(e), unlexicalize (args(e))]);
 ["do_in", [x,[100,200,300],false,false,false,false,push(x-1,M)]];
 
 e1 : apply (funmake, ["do_in", '[x,[100,200,300],false,false,false,false,push(x-1,M)]]);
@@ -1144,8 +1145,7 @@ block ([use_fast_arrays : true,
 
 block ([use_fast_arrays : false,
         arr],
-  local (arr),
   array (arr, complete, 5),
-  [arr[3], arrayapply (arr, [3])]);
+  unlexicalize ([arr[3], arrayapply (arr, [3])]));
 [arr[3], arr[3]];
 

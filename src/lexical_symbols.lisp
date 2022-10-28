@@ -30,6 +30,16 @@
 ;; ($auto_mexpr '$factorfacsum "facexp.mac")
 ;; ($auto_mexpr '$collectterms "facexp.mac")
 
+;; At present, this is just a convenience for testing.
+;; Not sure whether this should be made permanent.
+
+(defun $unlexicalize (e)
+  (if (atom e)
+    (if (symbolp e)
+      (or (get e 'reversealias) e)
+      e)
+    (cons (cons ($unlexicalize (caar e)) (cdar e)) (mapcar '$unlexicalize (cdr e)))))
+
 ;; Lexicalize MPROG (i.e., block([a, b, c, ...], ...))
 
 (defun maybe-subst-lexical-symbols-into-mprog (e)
