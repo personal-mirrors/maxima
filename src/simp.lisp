@@ -121,7 +121,6 @@
 (defmvar $listarith t)
 (defmvar $domain '$real)
 (defmvar $m1pbranch nil)
-(defmvar $%e_to_numlog nil)
 (defmvar $%emode t)
 (defmvar $lognegint nil)
 (defmvar $ratsimpexpons nil)
