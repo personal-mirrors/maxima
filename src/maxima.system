@@ -249,7 +249,7 @@
 	    ((:file "comm")
 	     (:file "comm2")))
    (:module evaluator :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "mlisp")
 	     (:file "mmacro")
@@ -555,7 +555,7 @@
 	    :depends-on ("defmfun")
 	    :components ((:file "server")))
    (:module i-o :source-pathname ""
-	    :depends-on ("defmfun" "compatibility-macros" "compatibility-macros1")
+	    :depends-on ("globals" "defmfun" "compatibility-macros" "compatibility-macros1")
 	    :components
 	    ((:file "macsys")
 	     (:file "testsuite")
@@ -632,7 +632,7 @@
 	    ((:file "spgcd")
 	     (:file "ezgcd")))
    (:module documentation :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "option")
 	     (:file "macdes")))
@@ -701,7 +701,7 @@
 	     (:file "polyrz")
 	     (:file "cpoly")))
    (:module debugging :source-pathname ""
-	    :depends-on ("defmfun" "compatibility-macros1")
+	    :depends-on ("globals" "defmfun" "compatibility-macros1")
 	    :components
 	    ((:file "mtrace")
 	     (:file "mdebug")))

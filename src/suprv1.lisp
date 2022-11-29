@@ -62,9 +62,6 @@
 (defmvar $labels (list '(mlist simp)))
 (defmvar $dispflag t)
 
-(defmvar $% '$% "The last out-line computed, corresponds to lisp *"
-	 no-reset)
-
 (defmvar $inchar '$%i
   "The alphabetic prefix of the names of expressions typed by the user.")
 

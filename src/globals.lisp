@@ -18,3 +18,9 @@
   "The infinitesimals recognized by Maxima. ZEROA zero from above,
    ZEROB zero from below")
 
+;; Declare user-visible special variables.
+;; Most of these come from lmdcls.lisp
+
+(defmvar $% '$% "The last out-line computed, corresponds to lisp *"
+	 no-reset)
+
