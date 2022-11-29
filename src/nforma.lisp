@@ -16,8 +16,6 @@
 
 (defmvar $powerdisp nil)
 (defmvar $pfeformat nil)
-(defmvar $%edispflag nil)
-(defmvar $exptdispflag t)
 (defmvar $sqrtdispflag t)
 (defmvar $negsumdispflag t)
 

@@ -537,7 +537,7 @@
 		       )
 		      )))
    (:module simplification :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "simp")
 	     (:file "float")
@@ -608,7 +608,7 @@
 	     (:file "trprop")
 	     (:file "mdefun")))
    (:module numerical-functions :source-pathname ""
-	    :depends-on ("defmfun" "trigonometry" "algebraic-database" "utility-macros")
+	    :depends-on ("globals" "defmfun" "trigonometry" "algebraic-database" "utility-macros")
 	    :components
 	    ((:file "bessel")
 	     (:file "ellipt")
@@ -621,7 +621,7 @@
 	    :components
 	    ((:file "nparse")))
    (:module display :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "displa")
 	     (:file "nforma")

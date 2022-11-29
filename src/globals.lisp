@@ -21,6 +21,25 @@
 ;; Declare user-visible special variables.
 ;; Most of these come from lmdcls.lisp
 
+(defvar *reset-var* t)
+
+(defvar *variable-initial-values* (make-hash-table)
+  "Hash table containing all Maxima defmvar variables and their initial
+values")
+
+(defmacro defmvar (var &rest val-and-doc)
+  "If *reset-var* is true then loading or eval'ing will reset value, otherwise like defvar"
+  (cond ((> (length val-and-doc) 2)
+	 (setq val-and-doc (list (car val-and-doc) (second val-and-doc)))))
+  `(progn
+    (unless (gethash ',var *variable-initial-values*)
+      (setf (gethash ',var *variable-initial-values*)
+	    ,(first val-and-doc)))
+    (defvar ,var ,@val-and-doc)))
+
 (defmvar $% '$% "The last out-line computed, corresponds to lisp *"
 	 no-reset)
 
+(defmvar $%edispflag nil)
+
+(defmvar $%enumer nil)

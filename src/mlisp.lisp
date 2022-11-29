@@ -65,7 +65,6 @@ or if apply is being used are printed.")
     $integervalued))
 
 (defmvar $features (cons '(mlist simp) (append featurel nil)))
-(defmvar $%enumer nil)
 (defmvar $float nil)
 (defmvar $refcheck nil)
 (defmvar $translate nil)
