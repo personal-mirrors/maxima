@@ -45,3 +45,5 @@ values")
 (defmvar $%enumer nil)
 
 (defmvar $%e_to_numlog nil)
+
+(defmvar $%iargs t)
