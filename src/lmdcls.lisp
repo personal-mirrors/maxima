@@ -44,7 +44,7 @@
 ;;; except for some specials declared in the macro files, eg displm
 
 (declaim (special
-	  $%% $%emode $%e_to_numlog $%iargs $%piargs
+	  $%% $%emode $%iargs $%piargs
 	  o$%rnum $%rnum_list $absboxchar $activecontexts $algebraic $algexact
 	  $aliases $arrays $askexp $assumescalar $backsubst $berlefact
 	  $beta_args_sum_to_integer $bftorat $bftrunc $boxchar
