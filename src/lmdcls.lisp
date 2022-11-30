@@ -45,10 +45,10 @@
 
 (declaim (special
 	  $%% 
-	  $aliases $arrays $askexp $assumescalar $backsubst $berlefact
+	  $arrays $askexp $assumescalar $backsubst $berlefact
 	  $beta_args_sum_to_integer $bftorat $bftrunc $boxchar
 	  $breakup $cauchysum $compgrind $context
-	  $contexts $current_let_rule_package $debugmode
+	  $contexts $current_let_rule_package
 	  $default_let_rule_package $demoivre $dependencies $derivabbrev
 	  $derivsubst $detout $dispflag $display2d
 	  $display_format_internal $doallmxops $domain $domxexpt $domxmxops
@@ -72,10 +72,10 @@
 	  $maxapplydepth $maxapplyheight $maxnegex $maxposex
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $multiplicities $mx0simp $myoptions $nalgfac $negdistrib
-	  $negsumdispflag $nolabels $norepeat $noundisp $numer
+	  $negsumdispflag $norepeat $noundisp $numer
 	  $numer_pbranch $opsubst $optimprefix $optionset $outchar
 	  $parsewindow $partswitch $pfeformat $piece $pointbound
-	  $poislim $powerdisp $prederror $programmode $props
+	  $powerdisp $prederror $programmode $props
 	  $radexpand $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
           $ratfac $ratmx $ratprint $ratsimpexpons $ratvars $ratvarswitch
           $ratweights

@@ -12,7 +12,7 @@
 
 (macsyma-module comm)
 
-(declare-top (special $exptsubst $linechar $nolabels $inflag $piece $dispflag
+(declare-top (special $exptsubst $linechar $inflag $piece $dispflag
 		      $gradefs $props $dependencies derivflag derivlist
 		      $linenum $partswitch *linelabel* nn* dn*
 		      $powerdisp atvars $errexp $derivsubst $dotdistrib

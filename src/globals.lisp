@@ -60,6 +60,17 @@ values")
 (defmvar $logarc nil)
 (defmvar $halfangles nil)
 
+;; From suprv1.lisp
+(defmvar $disptime nil)
+(defmvar $strdisp t)
+(defmvar $grind nil)
+(defmvar $backtrace '$backtrace)
+(defmvar $debugmode nil)
+(defmvar $poislim 5)
+(defmvar $loadprint nil)
+(defmvar $nolabels nil)
+(defmvar $aliases '((mlist simp)))
+
 (defmvar $%rnum 0)
 
 (defmvar $%rnum_list '((mlist))
