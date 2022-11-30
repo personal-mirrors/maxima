@@ -47,3 +47,6 @@ values")
 (defmvar $%e_to_numlog nil)
 
 (defmvar $%iargs t)
+
+(defmvar $exptdispflag t
+  "When true, Maxima displays expressions with negative exponents using quotients.")
