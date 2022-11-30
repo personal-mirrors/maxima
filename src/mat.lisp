@@ -112,8 +112,6 @@
 
 (defvar *mosesflag nil)
 
-(defmvar $%rnum 0)
-
 (defun make-param ()
   (let ((param (intern (format nil "~A~D" '$%r (incf $%rnum)))))
     (tuchus $%rnum_list param)

@@ -16,7 +16,6 @@
 
 (declare-top (special errorsw $demoivre 1//2 -1//2))
 
-(defmvar $%piargs t)
 (defmvar $triginverses t)
 (defmvar $trigexpand nil)
 (defmvar $trigexpandplus t)

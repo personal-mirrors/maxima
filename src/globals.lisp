@@ -50,5 +50,9 @@ values")
 
 (defmvar $%iargs t)
 
+(defmvar $%piargs t)
+
+(defmvar $%rnum 0)
+
 (defmvar $exptdispflag t
   "When true, Maxima displays expressions with negative exponents using quotients.")
