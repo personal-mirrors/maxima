@@ -42,6 +42,8 @@ values")
 
 (defmvar $%edispflag nil)
 
+(defmvar $%emode t)
+
 (defmvar $%enumer nil)
 
 (defmvar $%e_to_numlog nil)

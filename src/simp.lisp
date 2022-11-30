@@ -121,7 +121,6 @@
 (defmvar $listarith t)
 (defmvar $domain '$real)
 (defmvar $m1pbranch nil)
-(defmvar $%emode t)
 (defmvar $lognegint nil)
 (defmvar $ratsimpexpons nil)
 (defmvar $logexpand t) ; Possible values are T, $ALL and $SUPER

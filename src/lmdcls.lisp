@@ -44,7 +44,7 @@
 ;;; except for some specials declared in the macro files, eg displm
 
 (declaim (special
-	  $%% $%emode $%piargs
+	  $%% $%piargs
 	  o$%rnum $%rnum_list $absboxchar $activecontexts $algebraic $algexact
 	  $aliases $arrays $askexp $assumescalar $backsubst $berlefact
 	  $beta_args_sum_to_integer $bftorat $bftrunc $boxchar
@@ -57,7 +57,7 @@
 	  $doscmxplus $dot0nscsimp $dot0simp $dot1simp $dotassoc
 	  $dotconstrules $dotdistrib $dotexptsimp $dotident $dotscrules
 	  $erfflag $errexp $error $error_size $error_syms $expon
-	  $exponentialize $expop $exptdispflag $exptisolate $exptsubst
+	  $exponentialize $expop $exptisolate $exptsubst
 	  $facexpand $factorflag $features $file_search
 	  $float $float2bf $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
