@@ -140,7 +140,7 @@
 					;expvar
 	     (special $intanalysis $noprincipal $nointegrate)
 					;impvar
-	     (special $solveradcan $solvetrigwarn *roots *failures
+	     (special *roots *failures
 		      $logabs $tlimswitch $maxposex $maxnegex
 		      $savefactors $radexpand $breakup $%emode
 		      $float $exptsubst dosimp context rp-polylogp

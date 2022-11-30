@@ -47,7 +47,7 @@
 	  $%% 
 	  $arrays $askexp $berlefact
 	  $beta_args_sum_to_integer $boxchar
-	  $breakup $cauchysum $compgrind $context
+	  $cauchysum $compgrind $context
 	  $contexts $current_let_rule_package
 	  $default_let_rule_package $demoivre $dependencies $derivabbrev
 	  $derivsubst $detout $dispflag $display2d
@@ -64,25 +64,23 @@
 	  $inchar $infeval $inflag $intfaclim
 	  $isolate_wrt_times $keepfloat $labels $leftjust $letrat $letvarsimp
 	  $let_rule_packages $liflag $linechar $linenum $linel
-	  $linsolvewarn $linsolve_params $lispdisp $listarith $listconstvars
+	  $linsolve_params $lispdisp $listarith $listconstvars
 	  $lmxchar $logconcoeffp $logexpand $lognegint
 	  $logsimp $m1pbranch $macroexpansion $macros $maperror $mapprint
 	  $matrix_element_add $matrix_element_mult $matrix_element_transpose
 	  $maxapplydepth $maxapplyheight $maxnegex $maxposex
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
-	  $multiplicities $mx0simp $myoptions $nalgfac $negdistrib
+	  $mx0simp $myoptions $nalgfac $negdistrib
 	  $negsumdispflag $norepeat $noundisp $numer
 	  $numer_pbranch $opsubst $optimprefix $optionset $outchar
 	  $parsewindow $partswitch $pfeformat $piece $pointbound
-	  $powerdisp $prederror $programmode $props
+	  $powerdisp $prederror $props
 	  $radexpand $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
           $ratfac $ratmx $ratprint $ratsimpexpons $ratvars $ratvarswitch
           $ratweights
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
 	  $setcheckbreak $setval $showtime $signbfloat $simp $simpsum
-	  $solvedecomposes $solveexplicit $solvefactors $solvenullwarn
-	  $solveradcan $solvetrigwarn
 	  $sqrtdispflag $stardisp $sublis_apply_lambda
 	  $subnumsimp $sumexpand $sumsplitfact
 	  $taylor_logexpand

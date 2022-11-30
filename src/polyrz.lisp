@@ -12,10 +12,10 @@
 
 (macsyma-module polyrz)
 
-(declare-top (special $programmode varlist
+(declare-top (special varlist
 		      $ratprint $factorflag genvar
 		      equations $keepfloat $ratfac $rootsepsilon
-		      $multiplicities))
+		      ))
 
 (load-macsyma-macros ratmac)
 
