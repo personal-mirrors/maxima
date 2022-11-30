@@ -17,7 +17,7 @@
 		      *infsumsimp *times *plus sum usum makef
 		      varlist genvar $sumsplitfact $ratfac $simpsum
 		      $prederror $listarith
-		      $ratprint $zeta%pi))
+		      $ratprint $zeta%pi $bftorat))
 
 (load-macsyma-macros mhayat rzmac ratmac)
 

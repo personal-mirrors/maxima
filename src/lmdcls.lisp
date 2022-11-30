@@ -46,7 +46,7 @@
 (declaim (special
 	  $%% 
 	  $arrays $askexp $berlefact
-	  $beta_args_sum_to_integer $boxchar
+	  $beta_args_sum_to_integer $bftorat $bftrunc $boxchar
 	  $breakup $cauchysum $compgrind $context
 	  $contexts $current_let_rule_package
 	  $default_let_rule_package $demoivre $dependencies $derivabbrev
@@ -57,9 +57,9 @@
 	  $erfflag $errexp $error $error_size $error_syms $expon
 	  $expop $exptisolate $exptsubst
 	  $facexpand $factorflag $features $file_search
-	  $float $floatformat $floatfrac $floatint
+	  $float $float2bf $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
-	  $fortspaces $functions $gammalim $gcd
+	  $fortspaces $fpprec $fpprintprec $functions $gammalim $gcd
 	  $genindex $gensumnum $gradefs $homog_hack
 	  $inchar $infeval $inflag $intfaclim
 	  $isolate_wrt_times $keepfloat $labels $leftjust $letrat $letvarsimp
