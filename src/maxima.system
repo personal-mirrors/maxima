@@ -232,7 +232,7 @@
 	     (:file "mhayat")))
    #+gcl (:file "optimize")		; jfa check this
    (:module utilities :source-pathname ""
-	    :depends-on ("defmfun" "utility-macros")
+	    :depends-on ("globals" "defmfun" "utility-macros")
 	    :components
 	    ((:file "opers")
 	     (:file "utils")

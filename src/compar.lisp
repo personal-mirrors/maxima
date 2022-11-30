@@ -33,9 +33,6 @@ relational knowledge is contained in the default context GLOBAL.")
 (defvar $contexts '((mlist) $global)
   "A list of the currently active contexts.")
 
-(defvar $activecontexts '((mlist))
-  "A list of the currently activated contexts")
-
 (defmvar sign-imag-errp t
   "If T errors out in case COMPAR meets up with an imaginary quantity.
 	  If NIL THROWs in that case."

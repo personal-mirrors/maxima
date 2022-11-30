@@ -59,5 +59,8 @@ values")
 which where introduced into the expression. Useful for mapping over
 and using as an argument to SUBST.")
 
+(defvar $activecontexts '((mlist))
+  "A list of the currently activated contexts")
+
 (defmvar $exptdispflag t
   "When true, Maxima displays expressions with negative exponents using quotients.")

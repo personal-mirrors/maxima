@@ -120,7 +120,7 @@
 		   (t (cons u v)))))))
 
 (declare-top (special atvars munbound $props $gradefs $features opers
-		      $contexts $activecontexts $aliases))
+		      $contexts $aliases))
 
 (defmspec $properties (x)
   (setq x (getopr (fexprcheck x)))
