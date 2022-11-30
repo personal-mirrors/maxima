@@ -27,7 +27,7 @@ or if apply is being used are printed.")
                       $rules $gradefs $dependencies
 		      $myoptions $props genvar $maxposex $maxnegex $expop $expon
 		      $numer *mdebug* *refchkl*
-		      $norepeat $detout $doallmxops $doscmxops opers
+		      $norepeat $detout opers
 		      *mopl* *alphabet* $%% %e-val
 		      $macros linel $ratfac $ratwtlvl
 		      $partswitch *gcdl*

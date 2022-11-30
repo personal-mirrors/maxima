@@ -15,7 +15,7 @@
 (declare-top (special $exptsubst $linechar $inflag $piece $dispflag
 		      $gradefs $props $dependencies derivflag derivlist
 		      $linenum $partswitch *linelabel* nn* dn*
-		      $powerdisp atvars $errexp $derivsubst $dotdistrib
+		      $powerdisp atvars $errexp $derivsubst
 		      $opsubst $subnumsimp $transrun in-p substp $sqrtdispflag
 		      $pfeformat dummy-variable-operators))
 

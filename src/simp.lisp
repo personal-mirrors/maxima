@@ -14,10 +14,10 @@
 
 (declare-top (special rulesw *inv* substp limitp
 		      prods negprods sums negsums
-		      $scalarmatrixp *nounl*
+		      *nounl*
 		      $keepfloat $ratprint
 		      $demoivre $float
-		      bigfloatzero bigfloatone $assumescalar
+		      bigfloatzero bigfloatone
 		      opers-list *opers-list $dontfactor *n
 		      *out *in varlist genvar $factorflag radcanp
                       *builtin-numeric-constants*))

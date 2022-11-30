@@ -45,16 +45,15 @@
 
 (declaim (special
 	  $%% 
-	  $arrays $askexp $assumescalar $backsubst $berlefact
+	  $arrays $askexp $backsubst $berlefact
 	  $beta_args_sum_to_integer $bftorat $bftrunc $boxchar
 	  $breakup $cauchysum $compgrind $context
 	  $contexts $current_let_rule_package
 	  $default_let_rule_package $demoivre $dependencies $derivabbrev
 	  $derivsubst $detout $dispflag $display2d
-	  $display_format_internal $doallmxops $domain $domxexpt $domxmxops
-	  $domxnctimes $domxplus $domxtimes $dontfactor $doscmxops
-	  $doscmxplus $dot0nscsimp $dot0simp $dot1simp $dotassoc
-	  $dotconstrules $dotdistrib $dotexptsimp $dotident $dotscrules
+	  $display_format_internal $domain $domxexpt
+	  $domxplus $domxtimes $dontfactor
+	  $doscmxplus
 	  $erfflag $errexp $error $error_size $error_syms $expon
 	  $expop $exptisolate $exptsubst
 	  $facexpand $factorflag $features $file_search
@@ -80,7 +79,7 @@
           $ratfac $ratmx $ratprint $ratsimpexpons $ratvars $ratvarswitch
           $ratweights
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
-	  $rules $savedef $savefactors $scalarmatrixp $setcheck
+	  $rules $savedef $savefactors $setcheck
 	  $setcheckbreak $setval $showtime $signbfloat $simp $simpsum
 	  $solvedecomposes $solveexplicit $solvefactors $solvenullwarn
 	  $solveradcan $solvetrigwarn $sparse
