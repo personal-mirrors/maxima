@@ -43,7 +43,6 @@
 (defmvar $ratweights '((mlist simp)))
 
 (defmvar $ratfac nil "If `t' cre-forms are kept factored")
-(defmvar $algebraic nil)
 (defmvar $ratvars '((mlist simp)))
 (defmvar $facexpand t)
 

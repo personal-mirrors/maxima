@@ -150,7 +150,6 @@
 	  ivars			;Pairlist if gensym and disreped version
 	  key-vars		;Pairlist of gensym and key var (for searching
 				;TLIST)
-	  $algebraic		;
 	  *psacirc		;
 	  *pscirc		;
 	  full-log		;
