@@ -45,7 +45,7 @@
 
 (declaim (special
 	  $%% 
-	  $arrays $askexp $backsubst $berlefact
+	  $arrays $askexp $berlefact
 	  $beta_args_sum_to_integer $bftorat $bftrunc $boxchar
 	  $breakup $cauchysum $compgrind $context
 	  $contexts $current_let_rule_package
@@ -60,7 +60,7 @@
 	  $float $float2bf $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $fpprec $fpprintprec $functions $gammalim $gcd
-	  $genindex $gensumnum $globalsolve $gradefs $homog_hack
+	  $genindex $gensumnum $gradefs $homog_hack
 	  $inchar $infeval $inflag $intfaclim
 	  $isolate_wrt_times $keepfloat $labels $leftjust $letrat $letvarsimp
 	  $let_rule_packages $liflag $linechar $linenum $linel
@@ -82,7 +82,7 @@
 	  $rules $savedef $savefactors $setcheck
 	  $setcheckbreak $setval $showtime $signbfloat $simp $simpsum
 	  $solvedecomposes $solveexplicit $solvefactors $solvenullwarn
-	  $solveradcan $solvetrigwarn $sparse
+	  $solveradcan $solvetrigwarn
 	  $sqrtdispflag $stardisp $sublis_apply_lambda
 	  $subnumsimp $sumexpand $sumsplitfact
 	  $taylor_logexpand

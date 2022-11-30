@@ -146,6 +146,16 @@ is no need to rely on the setting of this switch.")
 which where introduced into the expression. Useful for mapping over
 and using as an argument to SUBST.")
 
+;; From mat.lisp
+(defmvar $globalsolve nil)
+(defmvar $sparse nil)
+(defmvar $backsubst t)
+
+;; Probably should be defvar and not defmvar.
+(defmvar *rank* nil)
+(defmvar *inv* nil)
+
+
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")
 

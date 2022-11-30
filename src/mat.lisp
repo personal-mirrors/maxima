@@ -23,13 +23,6 @@
 (defvar *col*)
 (defvar *colinv*)
 
-(defmvar $globalsolve nil)
-(defmvar $sparse nil)
-(defmvar $backsubst t)
-
-(defmvar *rank* nil)
-(defmvar *inv* nil)
-
 (defun solcoef (m *c varl flag)
   (prog (cc answer leftover)
      (setq cc (cdr (ratrep* *c)))
