@@ -91,7 +91,6 @@
 	  $taylor_truncate_polynomials $timer $timer_devalue
 	  $trace $trace_break_arg $trace_max_indent
 	  $trace_safety $translate $transrun
-	  $trigexpand 
 	  $tr_array_as_ref $tr_bound_function_applyp
 	  $tr_file_tty_messagesp $tr_float_can_branch_complex
 	  $tr_function_call_default $tr_numer
