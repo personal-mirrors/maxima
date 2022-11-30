@@ -155,7 +155,37 @@ and using as an argument to SUBST.")
 (defmvar *rank* nil)
 (defmvar *inv* nil)
 
+;; From float.lisp
+(defmvar $float2bf t
+  "If TRUE, no MAXIMA-ERROR message is printed when a floating point number is
+converted to a bigfloat number.")
 
+
+(defmvar $bftorat nil
+  "Controls the conversion of bigfloat numbers to rational numbers.  If
+FALSE, RATEPSILON will be used to control the conversion (this results in
+relatively small rational numbers).  If TRUE, the rational number generated
+will accurately represent the bigfloat.")
+
+(defmvar $bftrunc t
+  "If TRUE, printing of bigfloat numbers will truncate trailing zeroes.
+  Otherwise, all trailing zeroes are printed.")
+
+(defmvar $fpprintprec 0
+  "Controls the number of significant digits printed for floats.  If
+  0, then full precision is used."
+  fixnum)
+
+(defmvar $maxfpprintprec (ceiling (log (expt 2 (float-digits 1d0)) 10d0))
+  "The maximum number of significant digits printed for floats.")
+
+(defmvar $fpprec $maxfpprintprec
+  "Number of decimal digits of precision to use when creating new bigfloats.
+One extra decimal digit in actual representation for rounding purposes.")
+
+
+
+;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")
 
