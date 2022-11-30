@@ -54,5 +54,10 @@ values")
 
 (defmvar $%rnum 0)
 
+(defmvar $%rnum_list '((mlist))
+  "Upon exit from ALGSYS this is bound to a list of the %RNUMS
+which where introduced into the expression. Useful for mapping over
+and using as an argument to SUBST.")
+
 (defmvar $exptdispflag t
   "When true, Maxima displays expressions with negative exponents using quotients.")
