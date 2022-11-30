@@ -45,7 +45,7 @@
 
 (declaim (special
 	  $%% 
-	  $absboxchar $algexact
+	  $absboxchar
 	  $aliases $arrays $askexp $assumescalar $backsubst $berlefact
 	  $beta_args_sum_to_integer $bftorat $bftrunc $boxchar
 	  $breakup $cauchysum $compgrind $context
