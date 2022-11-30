@@ -226,7 +226,7 @@
 	     (:file "displm")
 	     (:file "safe-recursion")))
    (:module rat-macros :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "ratmac")
 	     (:file "mhayat")))
@@ -244,7 +244,7 @@
 	     (:file "outmis")
 	     (:file "ar")))
    (:module commands :source-pathname ""
-	    :depends-on ("defmfun" "compatibility-macros1")
+	    :depends-on ("globals" "defmfun" "compatibility-macros1")
 	    :components
 	    ((:file "comm")
 	     (:file "comm2")))
@@ -563,7 +563,7 @@
 	     (:file "suprv1")
 	     (:file "dskfn")))
    (:module factoring :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "lesfac")
 	     (:file "factor")
@@ -576,7 +576,7 @@
 	    :components
 	    ((:file "ifactor")))
    (:module rational-functions :source-pathname ""
-	    :depends-on ("defmfun" "rat-macros" "other-macros" "compatibility-macros1")
+	    :depends-on ("globals" "defmfun" "rat-macros" "other-macros" "compatibility-macros1")
 	    :components
 	    ((:file "rat3a")
 	     (:file "rat3b")
@@ -627,7 +627,7 @@
 	     (:file "nforma")
 	     (:file "grind")))
    (:module gcd :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "spgcd")
 	     (:file "ezgcd")))
@@ -651,7 +651,7 @@
 	     (:file "sin")
 	     (:file "risch")))
    (:module taylor-series :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components ((:file "hayat")))
    (:module definite-integration :source-pathname ""
 	    :depends-on ("globals" "defmfun")
@@ -739,7 +739,7 @@
 	    ((:file "pois2")
 	     (:file "pois3")))
    (:module translated-packages :source-pathname ""
-	    :depends-on ("maxima-language-compiler-macros"
+	    :depends-on ("globals" "maxima-language-compiler-macros"
 			 "compatibility-macros1"
 			 "defmfun")
 	    :components

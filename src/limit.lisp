@@ -29,8 +29,8 @@
 
 (declare-top (special errorsw origval $lhospitallim low*
 		      *indicator half%pi nn* dn* numer denom exp var val varlist
-		      *zexptsimp? $tlimswitch $logarc taylored logcombed
-		      $exponentialize lhp? lhcount $ratfac genvar
+		      *zexptsimp? $tlimswitch taylored logcombed
+		      lhp? lhcount $ratfac genvar
 		      loginprod? $limsubst $logabs a context limit-assumptions
 		      limit-top limitp integer-info old-integer-info $keepfloat $logexpand))
 

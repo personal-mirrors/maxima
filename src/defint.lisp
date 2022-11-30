@@ -131,7 +131,6 @@
 		      *updn *ul* *ll* exp pe* pl* rl* pl*1 rl*1
 		      loopstop* var nn* nd* dn* p*
 		      factors rlm*
-		      $trigexpandplus $trigexpandtimes
 		      plogabs *scflag*
 		      *sin-cos-recur* *rad-poly-recur* *dintlog-recur*
 		      *dintexp-recur* defintdebug *defint-assumptions*
@@ -143,7 +142,7 @@
 					;impvar
 	     (special $solveradcan $solvetrigwarn *roots *failures
 		      $logabs $tlimswitch $maxposex $maxnegex
-		      $trigsign $savefactors $radexpand $breakup $%emode
+		      $savefactors $radexpand $breakup $%emode
 		      $float $exptsubst dosimp context rp-polylogp
 		      %p%i half%pi %pi2 half%pi3 varlist genvar
 		      $domain $m1pbranch errorsw

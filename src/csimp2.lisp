@@ -633,7 +633,7 @@
 		 (merror (intl:gettext "gamma: overflow in GAMMAFLOAT."))
 		 result))))))
 
-(declare-top (special $numer $trigsign))
+(declare-top (special $numer))
 
 (defmfun $zeromatrix (m n) ($ematrix m n 0 1 1))
 

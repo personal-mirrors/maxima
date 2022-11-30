@@ -57,17 +57,17 @@
 	  $doscmxplus $dot0nscsimp $dot0simp $dot1simp $dotassoc
 	  $dotconstrules $dotdistrib $dotexptsimp $dotident $dotscrules
 	  $erfflag $errexp $error $error_size $error_syms $expon
-	  $exponentialize $expop $exptisolate $exptsubst
+	  $expop $exptisolate $exptsubst
 	  $facexpand $factorflag $features $file_search
 	  $float $float2bf $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $fpprec $fpprintprec $functions $gammalim $gcd
-	  $genindex $gensumnum $globalsolve $gradefs $halfangles $homog_hack
+	  $genindex $gensumnum $globalsolve $gradefs $homog_hack
 	  $inchar $infeval $inflag $intfaclim
 	  $isolate_wrt_times $keepfloat $labels $leftjust $letrat $letvarsimp
 	  $let_rule_packages $liflag $linechar $linenum $linel
 	  $linsolvewarn $linsolve_params $lispdisp $listarith $listconstvars
-	  $lmxchar $logarc $logconcoeffp $logexpand $lognegint
+	  $lmxchar $logconcoeffp $logexpand $lognegint
 	  $logsimp $m1pbranch $macroexpansion $macros $maperror $mapprint
 	  $matrix_element_add $matrix_element_mult $matrix_element_transpose
 	  $maxapplydepth $maxapplyheight $maxnegex $maxposex
@@ -91,8 +91,8 @@
 	  $taylor_truncate_polynomials $timer $timer_devalue
 	  $trace $trace_break_arg $trace_max_indent
 	  $trace_safety $translate $transrun
-	  $trigexpand $trigexpandplus $trigexpandtimes $triginverses
-	  $trigsign $tr_array_as_ref $tr_bound_function_applyp
+	  $trigexpand 
+	  $tr_array_as_ref $tr_bound_function_applyp
 	  $tr_file_tty_messagesp $tr_float_can_branch_complex
 	  $tr_function_call_default $tr_numer
 	  $tr_optimize_max_loop

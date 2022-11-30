@@ -48,9 +48,17 @@ values")
 
 (defmvar $%e_to_numlog nil)
 
+;; From trigi.lisp
 (defmvar $%iargs t)
-
 (defmvar $%piargs t)
+(defmvar $triginverses t)
+(defmvar $trigexpand nil)
+(defmvar $trigexpandplus t)
+(defmvar $trigexpandtimes t)
+(defmvar $trigsign t)
+(defmvar $exponentialize nil)
+(defmvar $logarc nil)
+(defmvar $halfangles nil)
 
 (defmvar $%rnum 0)
 

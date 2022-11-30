@@ -17,8 +17,8 @@
 (declare-top (special parnumer pardenom logptdx wholepart
                       $ratalgdenom expexpflag $logsimp switch1 degree cary
                       $ratfac $logexpand ratform genvar *var var rootfactor
-                      expint $keepfloat trigint operator $exponentialize $gcd
-                      $logarc changevp klth r s beta gamma b mainvar expflag
+                      expint $keepfloat trigint operator $gcd
+                      changevp klth r s beta gamma b mainvar expflag
                       expstuff liflag intvar switch varlist nogood genvar
                       $erfflag $liflag rischp $factorflag alphar m
                       genpairs hypertrigint *mosesflag *exp y
