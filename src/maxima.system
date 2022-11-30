@@ -665,7 +665,7 @@
 	     (:file "trigo")
 	     (:file "trgred")))
    (:module special-functions :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "specfn")))
    (:module matrix-algebra :source-pathname ""

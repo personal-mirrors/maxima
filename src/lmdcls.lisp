@@ -47,7 +47,7 @@
 	  $%% 
 	  $arrays $askexp $berlefact
 	  $beta_args_sum_to_integer $boxchar
-	  $cauchysum $compgrind $context
+	  $compgrind $context
 	  $contexts $current_let_rule_package
 	  $default_let_rule_package $demoivre $dependencies $derivabbrev
 	  $derivsubst $detout $dispflag $display2d
@@ -60,7 +60,7 @@
 	  $float $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $functions $gammalim $gcd
-	  $genindex $gensumnum $gradefs $homog_hack
+	  $gradefs $homog_hack
 	  $inchar $infeval $inflag $intfaclim
 	  $isolate_wrt_times $keepfloat $labels $leftjust $letrat $letvarsimp
 	  $let_rule_packages $liflag $linechar $linenum $linel
@@ -80,7 +80,7 @@
           $ratweights
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
-	  $setcheckbreak $setval $showtime $signbfloat $simp $simpsum
+	  $setcheckbreak $setval $showtime $signbfloat $simp
 	  $sqrtdispflag $stardisp $sublis_apply_lambda
 	  $subnumsimp $sumexpand $sumsplitfact
 	  $taylor_logexpand
@@ -96,7 +96,7 @@
 	  $tr_warn_fexpr $tr_warn_meval $tr_warn_mode $tr_warn_undeclared
 	  $tr_warn_undefined_variable $ttyoff
 	  $use_fast_arrays $values $vect_cross
-	  $zerobern %e-val %p%i %pi-val %pi//2 %pi//4 %pi2 *$any-modes*
+	  %e-val %p%i %pi-val %pi//2 %pi//4 %pi2 *$any-modes*
 	  *alpha *const* *fnewvarsw *gcdl* *in *in-compile*
 	  *in-translate-file* *inv* *irreds *min* *mx*
 	  *n *opers-list *out *ratweights *tr-warn-break* *transl-backtrace*

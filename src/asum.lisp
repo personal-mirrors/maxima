@@ -366,30 +366,6 @@
 
 ;; sum begins
 
-(defmvar $cauchysum nil
-  "When multiplying together sums with INF as their upper limit, 
-causes the Cauchy product to be used rather than the usual product.
-In the Cauchy product the index of the inner summation is a function of 
-the index of the outer one rather than varying independently."
-  modified-commands '$sum)
-
-(defmvar $gensumnum 0
-  "The numeric suffix used to generate the next variable of
-summation.  If it is set to FALSE then the index will consist only of
-GENINDEX with no numeric suffix."
-  modified-commands '$sum
-  setting-predicate #'(lambda (x) (or (null x) (integerp x))))
-
-(defmvar $genindex '$i
-  "The alphabetic prefix used to generate the next variable of
-summation when necessary."
-  modified-commands '$sum
-  setting-predicate #'symbolp)
-
-(defmvar $zerobern t)
-(defmvar $simpsum nil)
-(defmvar $simpproduct nil)
-
 (defvar *infsumsimp t)
 
 ;; These variables should be initialized where they belong.
