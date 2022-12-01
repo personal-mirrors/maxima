@@ -485,6 +485,11 @@ relational knowledge is contained in the default context GLOBAL.")
 
 (putprop '$let_rule_packages 'let-rule-setter 'assign)
 
+;; From risch.lisp
+(defmvar $liflag t "Controls whether `risch' generates polylogs")
+
+(defmvar $erfflag t "Controls whether `risch' generates `erfs'")
+
 
 ;;
 (defvar $activecontexts '((mlist))

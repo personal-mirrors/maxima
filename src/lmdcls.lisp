@@ -51,7 +51,7 @@
 	  $display_format_internal $domxexpt
 	  $domxplus $domxtimes
 	  $doscmxplus
-	  $erfflag $errexp $error_size $error_syms
+	  $errexp $error_size $error_syms
 	  $exptisolate
 	  $features $file_search
 	  $floatformat $floatfrac $floatint
@@ -59,7 +59,7 @@
 	  $fortspaces $functions $gammalim
 	  $homog_hack
 	  $isolate_wrt_times
-	  $liflag $linel
+	  $linel
 	  $linsolve_params $listconstvars
 	  $lmxchar $logconcoeffp
 	  $macroexpansion $macros $mapprint
