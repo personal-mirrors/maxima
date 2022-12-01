@@ -50,7 +50,7 @@
 	  $compgrind
 	  $current_let_rule_package
 	  $default_let_rule_package
-	  $detout $dispflag
+	  $dispflag
 	  $display_format_internal $domain $domxexpt
 	  $domxplus $domxtimes $dontfactor
 	  $doscmxplus
@@ -67,7 +67,6 @@
 	  $linsolve_params $listarith $listconstvars
 	  $lmxchar $logconcoeffp $logexpand $lognegint
 	  $logsimp $m1pbranch $macroexpansion $macros $maperror $mapprint
-	  $matrix_element_add $matrix_element_mult $matrix_element_transpose
 	  $maxapplydepth $maxapplyheight $maxnegex $maxposex
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac $negdistrib
@@ -76,7 +75,7 @@
 	  $parsewindow $pfeformat $piece $pointbound
 	  $powerdisp $props
 	  $radexpand $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
-          $ratfac $ratmx $ratprint $ratsimpexpons $ratvars $ratvarswitch
+          $ratfac $ratprint $ratsimpexpons $ratvars $ratvarswitch
           $ratweights
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck

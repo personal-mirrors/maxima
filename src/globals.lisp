@@ -314,6 +314,12 @@ relational knowledge is contained in the default context GLOBAL.")
 	 Normally this is off, but is turned on when a procedure definition is
 	 being displayed.")
 
+;; From matrix.lisp
+(defmvar $detout nil)
+(defmvar $ratmx nil)
+(defmvar $matrix_element_mult "*")  ;;; Else, most useful when "."
+(defmvar $matrix_element_add "+")
+(defmvar $matrix_element_transpose nil)
 
 ;;
 (defvar $activecontexts '((mlist))

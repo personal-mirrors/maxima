@@ -659,8 +659,6 @@
        (l nil (cons (ncons '(mlist simp)) l)))
       ((= n 0) l)))
 
-(declare-top (special $ratmx))
-
 (defmfun $coefmatrix (eql varl) (coefmatrix eql varl nil))
 
 (defmfun $augcoefmatrix (eql varl) (coefmatrix eql varl t))
