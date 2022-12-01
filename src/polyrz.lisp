@@ -14,7 +14,7 @@
 
 (declare-top (special varlist
 		      $ratprint genvar
-		      equations $ratfac
+		      equations
 		      ))
 
 (load-macsyma-macros ratmac)

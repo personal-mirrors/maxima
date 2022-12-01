@@ -13,7 +13,7 @@
 (macsyma-module laplac)
 
 (declare-top (special var $savefactors
-		      checkfactors $ratfac *nounl* *nounsflag*
+		      checkfactors *nounl* *nounsflag*
                       errcatch $errormsg))
 
 ;;; The properties NOUN and VERB give correct linear display

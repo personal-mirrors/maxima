@@ -23,7 +23,6 @@
 		      *failures	;alternating list of equations and multiplicities
 		      *myvar $listconstvars
 		      *has*var *var
-		      $ratfac
 		      xm* xn* mul*))
 
 ;; Utility macros

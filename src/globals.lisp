@@ -369,6 +369,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $distribute_over t) ; If T, functions are distributed over bags.
 
 ;; From rat3e
+;; User level global variables.
 (defmvar $keepfloat nil  "If `t' floating point coeffs are not converted to rationals")
 (defmvar $factorflag nil "If `t' constant factor of polynomial is also factored")
 (defmvar $dontfactor '((mlist)))
@@ -376,6 +377,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $ratweights '((mlist simp)))
 (defmvar $ratvars '((mlist simp)))
 (defmvar $facexpand t)
+(defmvar $ratfac nil "If `t' cre-forms are kept factored")
 
 ;;
 (defvar $activecontexts '((mlist))

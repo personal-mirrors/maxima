@@ -22,7 +22,7 @@
 		      *failures	;alternating list of equations and multiplicities
 		      *myvar $listconstvars
 		      *has*var *var
-		      $keepfloat $ratfac
+		      $keepfloat
 		      xm* xn* mul*))
 
 (defmvar flag4 nil)

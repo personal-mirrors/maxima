@@ -30,7 +30,7 @@
 (declare-top (special errorsw origval low*
 		      *indicator half%pi nn* dn* numer denom exp var val varlist
 		      *zexptsimp? taylored logcombed
-		      lhp? lhcount $ratfac genvar
+		      lhp? lhcount genvar
 		      loginprod? a context limit-assumptions
 		      limit-top limitp integer-info old-integer-info))
 
@@ -3319,7 +3319,7 @@ ignoring dummy variables and array indices."
 	(t (some #'%einvolve (cdr e)))))
 
 (declare-top (unspecial *indicator nn* dn* exp var val origval taylored
-			$tlimswitch logcombed lhp? lhcount $ratfac))
+			$tlimswitch logcombed lhp? lhcount))
 
 
 ;; GRUNTZ ALGORITHM

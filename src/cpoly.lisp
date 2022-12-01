@@ -22,7 +22,7 @@
 ;;; mre 0.01 times the published values.
 
 (declare-top (special $listconstvars
-		      $ratfac))
+		      ))
 
 (declare-top (special *logbas* *infin* *are* *mre* *cr* *ci* *sr* *si*
 		      *tr* *ti* *zr* *zi* *n* *nn* *bool*

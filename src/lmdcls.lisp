@@ -74,7 +74,7 @@
 	  $parsewindow $pfeformat $piece $pointbound
 	  $powerdisp $props
 	  $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
-          $ratfac $ratprint
+          $ratprint
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
 	  $setcheckbreak $setval $showtime $simp

@@ -34,11 +34,6 @@
 
 (defmvar factorresimp nil "If `t' resimplifies factor(x-y) to x-y")
 
-;; User level global variables.
-
-
-(defmvar $ratfac nil "If `t' cre-forms are kept factored")
-
 (declare-top (special evp $infeval))
 
 (defun mrateval (x)
