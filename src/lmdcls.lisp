@@ -50,7 +50,7 @@
 	  $compgrind
 	  $current_let_rule_package
 	  $default_let_rule_package
-	  $display_format_internal $domain $domxexpt
+	  $display_format_internal $domxexpt
 	  $domxplus $domxtimes $dontfactor
 	  $doscmxplus
 	  $erfflag $errexp $error $error_size $error_syms $expon
@@ -63,9 +63,9 @@
 	  $infeval $intfaclim
 	  $isolate_wrt_times $keepfloat $letrat $letvarsimp
 	  $let_rule_packages $liflag $linel
-	  $linsolve_params $listarith $listconstvars
-	  $lmxchar $logconcoeffp $logexpand $lognegint
-	  $logsimp $m1pbranch $macroexpansion $macros $maperror $mapprint
+	  $linsolve_params $listconstvars
+	  $lmxchar $logconcoeffp
+	  $macroexpansion $macros $maperror $mapprint
 	  $maxapplydepth $maxapplyheight $maxnegex $maxposex
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac $negdistrib
@@ -73,14 +73,14 @@
 	  $numer_pbranch $optimprefix $optionset
 	  $parsewindow $pfeformat $piece $pointbound
 	  $powerdisp $props
-	  $radexpand $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
-          $ratfac $ratprint $ratsimpexpons $ratvars
+	  $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
+          $ratfac $ratprint $ratvars
           $ratweights
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
 	  $setcheckbreak $setval $showtime $simp
 	  $sqrtdispflag $sublis_apply_lambda
-	  $subnumsimp $sumexpand $sumsplitfact
+	  $sumexpand $sumsplitfact
 	  $taylor_logexpand
 	  $taylor_truncate_polynomials $timer $timer_devalue
 	  $trace $trace_break_arg $trace_max_indent

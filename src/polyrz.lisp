@@ -14,7 +14,7 @@
 
 (declare-top (special varlist
 		      $ratprint $factorflag genvar
-		      equations $keepfloat $ratfac $rootsepsilon
+		      equations $keepfloat $ratfac
 		      ))
 
 (load-macsyma-macros ratmac)

@@ -141,11 +141,11 @@
 	     (special $intanalysis $noprincipal)
 					;impvar
 	     (special *roots *failures
-		      $logabs $maxposex $maxnegex
-		      $savefactors $radexpand $breakup $%emode
+		      $maxposex $maxnegex
+		      $savefactors $breakup $%emode
 		      $float dosimp context rp-polylogp
 		      %p%i half%pi %pi2 half%pi3 varlist genvar
-		      $domain $m1pbranch errorsw
+		      errorsw
 		      limitp $algebraic
 		      ;;LIMITP T Causes $ASKSIGN to do special things
 		      ;;For DEFINT like eliminate epsilon look for prin-inf

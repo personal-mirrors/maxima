@@ -391,8 +391,6 @@
 
 ;;;; RTCON
 
-(declare-top (special $radexpand $domain))
-
 (defmvar $rootsconmode t)
 
 (defmfun $rootscontract (e)	       ; E is assumed to be simplified

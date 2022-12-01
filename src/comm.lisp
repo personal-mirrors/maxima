@@ -16,7 +16,7 @@
 		      $props derivflag derivlist
 		      $linenum *linelabel* nn* dn*
 		      $powerdisp atvars $errexp
-		      $subnumsimp $transrun in-p substp $sqrtdispflag
+		      $transrun in-p substp $sqrtdispflag
 		      $pfeformat dummy-variable-operators))
 
 (defvar *islinp* nil) ; When T, sdiff is called from the function islinear.

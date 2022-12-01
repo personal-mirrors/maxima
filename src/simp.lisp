@@ -109,25 +109,6 @@
 
 (defmvar derivsimp t "Hack in `simpderiv' for `rwg'")
 
-(defmvar $rootsepsilon #+gcl (float 1/10000000) #-gcl 1e-7)
-(defmvar $grindswitch nil)
-(defmvar $algepsilon 100000000)
-(defmvar $true t)
-(defmvar $false nil)
-(defmvar $on t)
-(defmvar $off nil)
-(defmvar $logabs nil)
-(defmvar $limitdomain '$complex)
-(defmvar $listarith t)
-(defmvar $domain '$real)
-(defmvar $m1pbranch nil)
-(defmvar $lognegint nil)
-(defmvar $ratsimpexpons nil)
-(defmvar $logexpand t) ; Possible values are T, $ALL and $SUPER
-(defmvar $radexpand t)
-(defmvar $subnumsimp nil)
-(defmvar $logsimp t)
-(defmvar $distribute_over t) ; If T, functions are distributed over bags.
 
 (defvar rischp nil)
 (defvar rp-polylogp nil)

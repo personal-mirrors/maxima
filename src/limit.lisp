@@ -31,8 +31,8 @@
 		      *indicator half%pi nn* dn* numer denom exp var val varlist
 		      *zexptsimp? taylored logcombed
 		      lhp? lhcount $ratfac genvar
-		      loginprod? $logabs a context limit-assumptions
-		      limit-top limitp integer-info old-integer-info $keepfloat $logexpand))
+		      loginprod? a context limit-assumptions
+		      limit-top limitp integer-info old-integer-info $keepfloat))
 
 (defconstant +behavior-count+ 4)
 (defvar *behavior-count-now*)

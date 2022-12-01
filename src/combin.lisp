@@ -16,7 +16,7 @@
 		      *n $cflength *a* *a $prevfib $next_lucas
 		      *infsumsimp *times *plus sum usum makef
 		      varlist genvar $sumsplitfact $ratfac
-		      $prederror $listarith
+		      $prederror
 		      $ratprint $zeta%pi))
 
 (load-macsyma-macros mhayat rzmac ratmac)
@@ -1392,8 +1392,6 @@
   (arg-count-check 4 l)
   (setq l (cdr l))
   (dosum (car l) (cadr l) (meval (caddr l)) (meval (cadddr l)) nil :evaluate-summand t))
-
-(declare-top (special $ratsimpexpons))
 
 ;; Is this guy actually looking at the value of its middle arg?
 

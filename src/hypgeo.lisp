@@ -25,7 +25,7 @@
 
 (macsyma-module hypgeo)
 
-(declare-top (special checkcoefsignlist $radexpand $logexpand 
+(declare-top (special checkcoefsignlist 
                       $expintrep))
 
 (defmvar $prefer_d nil
