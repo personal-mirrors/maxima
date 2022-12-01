@@ -374,6 +374,8 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $dontfactor '((mlist)))
 (defmvar $norepeat t)
 (defmvar $ratweights '((mlist simp)))
+(defmvar $ratvars '((mlist simp)))
+(defmvar $facexpand t)
 
 ;;
 (defvar $activecontexts '((mlist))

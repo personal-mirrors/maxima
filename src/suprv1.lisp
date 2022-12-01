@@ -23,7 +23,7 @@
 
 (declare-top  (special bindlist loclist errset *mopl*
 		       $values $functions $arrays
-		       $rules $props $ratvars
+		       $rules $props
 		       varlist genvar
 		       checkfactors $features featurel
 		       tellratlist

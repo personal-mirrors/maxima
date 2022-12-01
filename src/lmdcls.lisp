@@ -55,7 +55,7 @@
 	  $doscmxplus
 	  $erfflag $errexp $error $error_size $error_syms $expon
 	  $expop $exptisolate
-	  $facexpand $features $file_search
+	  $features $file_search
 	  $float $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $functions $gammalim $gcd
@@ -74,7 +74,7 @@
 	  $parsewindow $pfeformat $piece $pointbound
 	  $powerdisp $props
 	  $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
-          $ratfac $ratprint $ratvars
+          $ratfac $ratprint
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
 	  $setcheckbreak $setval $showtime $simp

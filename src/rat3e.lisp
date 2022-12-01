@@ -38,8 +38,6 @@
 
 
 (defmvar $ratfac nil "If `t' cre-forms are kept factored")
-(defmvar $ratvars '((mlist simp)))
-(defmvar $facexpand t)
 
 (declare-top (special evp $infeval))
 
