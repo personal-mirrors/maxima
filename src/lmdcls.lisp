@@ -48,8 +48,6 @@
 	  $arrays
 	  $beta_args_sum_to_integer $boxchar
 	  $compgrind
-	  $current_let_rule_package
-	  $default_let_rule_package
 	  $display_format_internal $domxexpt
 	  $domxplus $domxtimes
 	  $doscmxplus
@@ -60,8 +58,8 @@
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $functions $gammalim
 	  $homog_hack
-	  $isolate_wrt_times $letrat $letvarsimp
-	  $let_rule_packages $liflag $linel
+	  $isolate_wrt_times
+	  $liflag $linel
 	  $linsolve_params $listconstvars
 	  $lmxchar $logconcoeffp
 	  $macroexpansion $macros $mapprint
