@@ -53,7 +53,7 @@
 	  $display_format_internal $domxexpt
 	  $domxplus $domxtimes
 	  $doscmxplus
-	  $erfflag $errexp $error $error_size $error_syms $expon
+	  $erfflag $errexp $error_size $error_syms $expon
 	  $expop $exptisolate
 	  $features $file_search
 	  $float $floatformat $floatfrac $floatint

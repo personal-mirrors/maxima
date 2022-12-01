@@ -308,7 +308,7 @@
 
 (defun maybe-simplifya-protected (x z)
   (let ((errcatch t) ($errormsg nil))
-    (declare (special errcatch $errormsg))
+    (declare (special errcatch))
     (ignore-errors (maybe-simplifya x z) x)))
 
 (defun simp-$is (x yy z)

@@ -379,6 +379,15 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $facexpand t)
 (defmvar $ratfac nil "If `t' cre-forms are kept factored")
 
+;; From merror.lisp
+(defmvar $error `((mlist simp) "No error.")
+  "During an MAXIMA-ERROR break this is bound to a list
+  of the arguments to the call to MAXIMA-ERROR, with the message
+  text in a compact format.")
+
+(defmvar $errormsg 't
+  "If `false' then no maxima-error message is printed!")
+
 ;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")

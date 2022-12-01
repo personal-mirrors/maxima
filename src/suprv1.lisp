@@ -27,7 +27,7 @@
 		       varlist genvar
 		       checkfactors $features featurel
 		       tellratlist
-		       dispflag savefile $%% $error
+		       dispflag savefile $%%
 		       opers *ratweights
 		       $stringdisp $lispdisp
 		       transp $setcheck $macros autoload))
