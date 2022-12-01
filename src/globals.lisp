@@ -252,6 +252,26 @@ summation when necessary."
 (defmvar $simpsum nil)
 (defmvar $simpproduct nil)
 
+;; From compar.lisp
+(defmvar $context '$global
+  "Whenever a user assumes a new fact, it is placed in the context
+named as the current value of the variable CONTEXT.  Similarly, FORGET
+references the current value of CONTEXT.  To add or DELETE a fact from a
+different context, one must bind CONTEXT to the intended context and then
+perform the desired additions or deletions.  The context specified by the
+value of CONTEXT is automatically activated.  All of MACSYMA's built-in
+relational knowledge is contained in the default context GLOBAL.")
+
+(defmvar $contexts '((mlist) $global)
+  "A list of the currently active contexts.")
+
+(defmvar $prederror nil)
+(defmvar $signbfloat t)
+(defmvar $askexp)
+(defmvar $assume_pos nil)
+(defmvar $assume_pos_pred nil)
+
+
 ;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")

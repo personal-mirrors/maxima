@@ -17,7 +17,7 @@
 		      $labels varlist *mopl* $props
 		      $infolists $features featurel savefile $gradefs
 		      $values $functions $arrays
-		      $contexts context))
+		      context))
 
 (defmvar $packagefile nil)
 (defvar indlist '(evfun evflag bindtest nonarray sp2 sp2subs opers

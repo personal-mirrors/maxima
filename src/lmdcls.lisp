@@ -45,10 +45,10 @@
 
 (declaim (special
 	  $%% 
-	  $arrays $askexp $berlefact
+	  $arrays $berlefact
 	  $beta_args_sum_to_integer $boxchar
-	  $compgrind $context
-	  $contexts $current_let_rule_package
+	  $compgrind
+	  $current_let_rule_package
 	  $default_let_rule_package $demoivre $dependencies $derivabbrev
 	  $derivsubst $detout $dispflag $display2d
 	  $display_format_internal $domain $domxexpt
@@ -74,13 +74,13 @@
 	  $negsumdispflag $norepeat $noundisp $numer
 	  $numer_pbranch $opsubst $optimprefix $optionset $outchar
 	  $parsewindow $partswitch $pfeformat $piece $pointbound
-	  $powerdisp $prederror $props
+	  $powerdisp $props
 	  $radexpand $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
           $ratfac $ratmx $ratprint $ratsimpexpons $ratvars $ratvarswitch
           $ratweights
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
-	  $setcheckbreak $setval $showtime $signbfloat $simp
+	  $setcheckbreak $setval $showtime $simp
 	  $sqrtdispflag $stardisp $sublis_apply_lambda
 	  $subnumsimp $sumexpand $sumsplitfact
 	  $taylor_logexpand
