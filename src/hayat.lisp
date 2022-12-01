@@ -127,8 +127,6 @@
 				;is passed in at toplevel invocation.
 	  $float		;Indicates whether to convert rational numbers
 				;to floating point numbers.
-	  $keepfloat		;When true retains floatin point numbers
-				;internal to Taylor.
 	  log-1			;What log(-1) should be log(-1) or pi*i.
 	  log%i			;Similarly for log(i)
 	  exact-poly		;Inicates whether polynomials are to be

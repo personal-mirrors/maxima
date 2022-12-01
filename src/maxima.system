@@ -572,7 +572,7 @@
 	     (:file "ufact")
 	     (:file "result")))
    (:module ifactor :source-pathname ""
-	    :depends-on ("defmfun")
+	    :depends-on ("globals" "defmfun")
 	    :components
 	    ((:file "ifactor")))
    (:module rational-functions :source-pathname ""

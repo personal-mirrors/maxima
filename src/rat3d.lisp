@@ -17,7 +17,7 @@
 
 (declare-top (special *min* *mx* *odr* nn* scanmapp *checkagain adn*))
 
-(declare-top (special $factorflag $dontfactor $ratfac))
+(declare-top (special $ratfac))
 
 ;;There really do seem to be two such variables...
 (declare-top (special alpha *alpha gauss genvar minpoly*))

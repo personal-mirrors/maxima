@@ -21,7 +21,7 @@
 ;;; their own arrays.  The algorithm seems to benefit be taking are
 ;;; mre 0.01 times the published values.
 
-(declare-top (special $keepfloat $listconstvars
+(declare-top (special $listconstvars
 		      $ratfac))
 
 (declare-top (special *logbas* *infin* *are* *mre* *cr* *ci* *sr* *si*

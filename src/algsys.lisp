@@ -32,7 +32,7 @@
 ;;in an effort to reduce extraneous solutions, or Reducing to a linear
 ;;equation before taking resultants.
 
-(declare-top (special $algdelta $ratepsilon $keepfloat
+(declare-top (special $algdelta $ratepsilon
 		     varlist genvar *roots *failures $ratprint $numer $ratfac
 		     *tvarxlist* errorsw *ivar* errset $polyfactor
 		     bindlist loclist $float $infeval))

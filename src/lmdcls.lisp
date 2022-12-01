@@ -51,17 +51,17 @@
 	  $current_let_rule_package
 	  $default_let_rule_package
 	  $display_format_internal $domxexpt
-	  $domxplus $domxtimes $dontfactor
+	  $domxplus $domxtimes
 	  $doscmxplus
 	  $erfflag $errexp $error $error_size $error_syms $expon
 	  $expop $exptisolate
-	  $facexpand $factorflag $features $file_search
+	  $facexpand $features $file_search
 	  $float $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $functions $gammalim $gcd
 	  $homog_hack
 	  $infeval $intfaclim
-	  $isolate_wrt_times $keepfloat $letrat $letvarsimp
+	  $isolate_wrt_times $letrat $letvarsimp
 	  $let_rule_packages $liflag $linel
 	  $linsolve_params $listconstvars
 	  $lmxchar $logconcoeffp
@@ -69,13 +69,12 @@
 	  $maxapplydepth $maxapplyheight $maxnegex $maxposex
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac $negdistrib
-	  $negsumdispflag $norepeat $noundisp $numer
+	  $negsumdispflag $noundisp $numer
 	  $numer_pbranch $optimprefix $optionset
 	  $parsewindow $pfeformat $piece $pointbound
 	  $powerdisp $props
 	  $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
           $ratfac $ratprint $ratvars
-          $ratweights
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
 	  $setcheckbreak $setval $showtime $simp

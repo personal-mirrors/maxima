@@ -13,8 +13,8 @@
 (macsyma-module polyrz)
 
 (declare-top (special varlist
-		      $ratprint $factorflag genvar
-		      equations $keepfloat $ratfac
+		      $ratprint genvar
+		      equations $ratfac
 		      ))
 
 (load-macsyma-macros ratmac)

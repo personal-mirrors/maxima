@@ -15,11 +15,11 @@
 (declare-top (special rulesw *inv* substp limitp
 		      prods negprods sums negsums
 		      *nounl*
-		      $keepfloat $ratprint
+		      $ratprint
 		      $float
 		      bigfloatzero bigfloatone
-		      opers-list *opers-list $dontfactor *n
-		      *out *in varlist genvar $factorflag radcanp
+		      opers-list *opers-list *n
+		      *out *in varlist genvar radcanp
                       *builtin-numeric-constants*))
 
 ;; General purpose simplification and conversion switches.

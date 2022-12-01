@@ -21,7 +21,7 @@
 		      *roots ;alternating list of solutions and multiplicities
 		      *failures	;alternating list of equations and multiplicities
 		      *myvar $listconstvars
-		      *has*var *var $dontfactor
+		      *has*var *var
 		      $keepfloat $ratfac
 		      xm* xn* mul*))
 
