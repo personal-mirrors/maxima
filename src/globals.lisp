@@ -321,6 +321,32 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $matrix_element_add "+")
 (defmvar $matrix_element_transpose nil)
 
+;; From suprv1.lisp
+(defmvar $infolists
+  '((mlist simp) $labels $values $functions $macros $arrays
+                 $myoptions $props $aliases $rules $gradefs
+                 $dependencies $let_rule_packages $structures))
+
+(defmvar $labels (list '(mlist simp)))
+(defmvar $dispflag t)
+
+(defmvar $inchar '$%i
+  "The alphabetic prefix of the names of expressions typed by the user.")
+
+(defmvar $outchar '$%o
+  "The alphabetic prefix of the names of expressions returned by the system.")
+
+(defmvar $linechar '$%t
+  "The alphabetic prefix of the names of intermediate displayed expressions.")
+
+(defmvar $linenum 1 "the line number of the last expression."
+	 fixnum no-reset)
+
+(defmvar $file_output_append nil
+  "Flag to tell file-writing functions whether to append or clobber the output file.")
+
+(defmvar $ratvarswitch t) ; If T, start an evaluation with a fresh list VARLIST.
+
 ;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")

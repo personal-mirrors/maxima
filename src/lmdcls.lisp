@@ -50,7 +50,6 @@
 	  $compgrind
 	  $current_let_rule_package
 	  $default_let_rule_package
-	  $dispflag
 	  $display_format_internal $domain $domxexpt
 	  $domxplus $domxtimes $dontfactor
 	  $doscmxplus
@@ -61,9 +60,9 @@
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $functions $gammalim $gcd
 	  $homog_hack
-	  $inchar $infeval $intfaclim
-	  $isolate_wrt_times $keepfloat $labels $letrat $letvarsimp
-	  $let_rule_packages $liflag $linechar $linenum $linel
+	  $infeval $intfaclim
+	  $isolate_wrt_times $keepfloat $letrat $letvarsimp
+	  $let_rule_packages $liflag $linel
 	  $linsolve_params $listarith $listconstvars
 	  $lmxchar $logconcoeffp $logexpand $lognegint
 	  $logsimp $m1pbranch $macroexpansion $macros $maperror $mapprint
@@ -71,11 +70,11 @@
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac $negdistrib
 	  $negsumdispflag $norepeat $noundisp $numer
-	  $numer_pbranch $optimprefix $optionset $outchar
+	  $numer_pbranch $optimprefix $optionset
 	  $parsewindow $pfeformat $piece $pointbound
 	  $powerdisp $props
 	  $radexpand $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
-          $ratfac $ratprint $ratsimpexpons $ratvars $ratvarswitch
+          $ratfac $ratprint $ratsimpexpons $ratvars
           $ratweights
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
@@ -127,7 +126,7 @@
 	  tstack varlist wflag
 	  $cflength *trunclist $taylordepth
 	  $maxtaydiff $verbose $psexpand ps-bmt-disrep
-	  silent-taylor-flag $define_variable $infolists
+	  silent-taylor-flag $define_variable
 	  $factor_max_degree $factor_max_degree_print_warning))
 
 (declaim (declaration unspecial))

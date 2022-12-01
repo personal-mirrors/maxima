@@ -23,7 +23,7 @@
   "If TRUE, messages about map/fullmap truncating on the shortest list
 or if apply is being used are printed.")
   
-(declare-top (special derivflag derivlist $labels $values $functions $arrays 
+(declare-top (special derivflag derivlist $values $functions $arrays 
                       $rules $dependencies
 		      $myoptions $props genvar $maxposex $maxnegex $expop $expon
 		      $numer *mdebug* *refchkl*
@@ -31,7 +31,7 @@ or if apply is being used are printed.")
 		      *mopl* *alphabet* $%% %e-val
 		      $macros linel $ratfac $ratwtlvl
 		      *gcdl*
-		      *builtin-$props* $infolists))
+		      *builtin-$props*))
 
 (declare-top (unspecial args))
 

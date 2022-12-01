@@ -14,8 +14,8 @@
 
 (declare-top (special opers $packagefile
 		      aaaaa errset lessorder greatorder indlist
-		      $labels varlist *mopl* $props
-		      $infolists $features featurel savefile
+		      varlist *mopl* $props
+		      $features featurel savefile
 		      $values $functions $arrays
 		      context))
 
