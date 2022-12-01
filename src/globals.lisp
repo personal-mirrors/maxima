@@ -428,6 +428,20 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $errormsg 't
   "If `false' then no maxima-error message is printed!")
 
+;; From mlisp.lisp
+(defmvar $float nil)
+(defmvar $refcheck nil)
+(defmvar $translate nil)
+(defmvar $transrun t)
+(defmvar $savedef t)
+(defmvar $maperror t)
+(defmvar $optionset nil)
+(defmvar $setcheckbreak nil)
+(defmvar $infeval nil)
+(defmvar $piece '$piece)
+(defmvar $setval '$setval)
+
+
 ;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")

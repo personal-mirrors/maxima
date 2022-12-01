@@ -35,7 +35,7 @@
 (declare-top (special $algdelta $ratepsilon
 		     varlist genvar *roots *failures $ratprint $numer
 		     *tvarxlist* errorsw *ivar* errset $polyfactor
-		     bindlist loclist $float $infeval))
+		     bindlist loclist))
 
 ;;note if $algepsilon is too large you may lose some roots.
 

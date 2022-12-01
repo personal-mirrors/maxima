@@ -125,8 +125,6 @@
 	  tlist			;An association list which contains the
 				;relevant information for the expansion which
 				;is passed in at toplevel invocation.
-	  $float		;Indicates whether to convert rational numbers
-				;to floating point numbers.
 	  log-1			;What log(-1) should be log(-1) or pi*i.
 	  log%i			;Similarly for log(i)
 	  exact-poly		;Inicates whether polynomials are to be

@@ -56,34 +56,34 @@
 	  $erfflag $errexp $error_size $error_syms
 	  $exptisolate
 	  $features $file_search
-	  $float $floatformat $floatfrac $floatint
+	  $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $functions $gammalim $gcd
 	  $homog_hack
-	  $infeval $intfaclim
+	  $intfaclim
 	  $isolate_wrt_times $letrat $letvarsimp
 	  $let_rule_packages $liflag $linel
 	  $linsolve_params $listconstvars
 	  $lmxchar $logconcoeffp
-	  $macroexpansion $macros $maperror $mapprint
+	  $macroexpansion $macros $mapprint
 	  $maxapplydepth $maxapplyheight
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac $negdistrib
 	  $negsumdispflag $noundisp $numer
-	  $numer_pbranch $optimprefix $optionset
-	  $parsewindow $pfeformat $piece $pointbound
+	  $numer_pbranch $optimprefix
+	  $parsewindow $pfeformat $pointbound
 	  $powerdisp $props
 	  $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
           $ratprint
-	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
-	  $rules $savedef $savefactors $setcheck
-	  $setcheckbreak $setval $showtime $simp
+	  $ratwtlvl $realonly $resultant $rmxchar $rootsconmode
+	  $rules $savefactors $setcheck
+	  $showtime $simp
 	  $sqrtdispflag $sublis_apply_lambda
 	  $sumexpand $sumsplitfact
 	  $taylor_logexpand
 	  $taylor_truncate_polynomials $timer $timer_devalue
 	  $trace $trace_break_arg $trace_max_indent
-	  $trace_safety $translate $transrun
+	  $trace_safety
 	  $tr_array_as_ref $tr_bound_function_applyp
 	  $tr_file_tty_messagesp $tr_float_can_branch_complex
 	  $tr_function_call_default $tr_numer

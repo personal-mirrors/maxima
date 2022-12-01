@@ -142,7 +142,7 @@
 					;impvar
 	     (special *roots *failures
 		      $savefactors $breakup $%emode
-		      $float dosimp context rp-polylogp
+		      dosimp context rp-polylogp
 		      %p%i half%pi %pi2 half%pi3 varlist genvar
 		      errorsw
 		      limitp $algebraic

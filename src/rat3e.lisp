@@ -34,7 +34,7 @@
 
 (defmvar factorresimp nil "If `t' resimplifies factor(x-y) to x-y")
 
-(declare-top (special evp $infeval))
+(declare-top (special evp))
 
 (defun mrateval (x)
   (let ((varlist (caddar x)))

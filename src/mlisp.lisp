@@ -65,17 +65,6 @@ or if apply is being used are printed.")
     $integervalued))
 
 (defmvar $features (cons '(mlist simp) (append featurel nil)))
-(defmvar $float nil)
-(defmvar $refcheck nil)
-(defmvar $translate nil)
-(defmvar $transrun t)
-(defmvar $savedef t)
-(defmvar $maperror t)
-(defmvar $optionset nil)
-(defmvar $setcheckbreak nil)
-(defmvar $infeval nil)
-(defmvar $piece '$piece)
-(defmvar $setval '$setval)
 
 ;; These three variables are what get stuck in array slots as magic
 ;; unbound objects.  They are for T, FIXNUM, and FLONUM type arrays
