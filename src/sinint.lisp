@@ -15,7 +15,7 @@
 (load-macsyma-macros ratmac)
 
 (declare-top (special genvar checkfactors
-		      exp var $expop $expon
+		      exp var
 		      ratform rootfactor pardenom 
 		      wholepart parnumer varlist logptdx switch1))
 

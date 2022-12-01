@@ -18,8 +18,7 @@
 
 ;; Specials defined elsewhere.
 
-(declare-top (special $expop $expon	; Controls behavior of EXPAND
-		      errorsw))
+(declare-top (special errorsw))
 
 ;; The operators "." and "^^" distribute over equations.
 

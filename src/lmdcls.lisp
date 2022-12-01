@@ -54,7 +54,7 @@
 	  $domxplus $domxtimes
 	  $doscmxplus
 	  $erfflag $errexp $error_size $error_syms $expon
-	  $expop $exptisolate
+	  $exptisolate
 	  $features $file_search
 	  $float $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
@@ -66,7 +66,7 @@
 	  $linsolve_params $listconstvars
 	  $lmxchar $logconcoeffp
 	  $macroexpansion $macros $maperror $mapprint
-	  $maxapplydepth $maxapplyheight $maxnegex $maxposex
+	  $maxapplydepth $maxapplyheight
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac $negdistrib
 	  $negsumdispflag $noundisp $numer

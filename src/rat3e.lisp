@@ -18,7 +18,7 @@
 
 (declare-top (special intbs* alflag var dosimp alc $myoptions
 		      vlist scanmapp radlist expsumsplit *ratsimp* mplc*
-		      $expop $expon $negdistrib $gcd))
+		      $negdistrib $gcd))
 
 (defmvar genvar nil
   "List of gensyms used to point to kernels from within polynomials.

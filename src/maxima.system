@@ -178,6 +178,7 @@
 	    :components
 	    ((:file "letmac")))
    (:module compatibility-macros1 :source-pathname ""
+	    :depends-on ("globals")
 	    :components
 	    ((:file "generr")
 	     (:file "clmacs")))
