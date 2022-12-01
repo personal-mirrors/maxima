@@ -49,8 +49,8 @@
 	  $beta_args_sum_to_integer $boxchar
 	  $compgrind
 	  $current_let_rule_package
-	  $default_let_rule_package $derivabbrev
-	  $detout $dispflag $display2d
+	  $default_let_rule_package
+	  $detout $dispflag
 	  $display_format_internal $domain $domxexpt
 	  $domxplus $domxtimes $dontfactor
 	  $doscmxplus
@@ -62,9 +62,9 @@
 	  $fortspaces $functions $gammalim $gcd
 	  $homog_hack
 	  $inchar $infeval $intfaclim
-	  $isolate_wrt_times $keepfloat $labels $leftjust $letrat $letvarsimp
+	  $isolate_wrt_times $keepfloat $labels $letrat $letvarsimp
 	  $let_rule_packages $liflag $linechar $linenum $linel
-	  $linsolve_params $lispdisp $listarith $listconstvars
+	  $linsolve_params $listarith $listconstvars
 	  $lmxchar $logconcoeffp $logexpand $lognegint
 	  $logsimp $m1pbranch $macroexpansion $macros $maperror $mapprint
 	  $matrix_element_add $matrix_element_mult $matrix_element_transpose
@@ -81,7 +81,7 @@
 	  $ratwtlvl $realonly $refcheck $resultant $rmxchar $rootsconmode
 	  $rules $savedef $savefactors $setcheck
 	  $setcheckbreak $setval $showtime $simp
-	  $sqrtdispflag $stardisp $sublis_apply_lambda
+	  $sqrtdispflag $sublis_apply_lambda
 	  $subnumsimp $sumexpand $sumsplitfact
 	  $taylor_logexpand
 	  $taylor_truncate_polynomials $timer $timer_devalue
@@ -94,7 +94,7 @@
 	  $tr_state_vars
 	  $tr_true_name_of_file_being_translated $tr_warn_bad_function_calls
 	  $tr_warn_fexpr $tr_warn_meval $tr_warn_mode $tr_warn_undeclared
-	  $tr_warn_undefined_variable $ttyoff
+	  $tr_warn_undefined_variable
 	  $use_fast_arrays $values $vect_cross
 	  %e-val %p%i %pi-val %pi//2 %pi//4 %pi2 *$any-modes*
 	  *alpha *const* *fnewvarsw *gcdl* *in *in-compile*
@@ -122,7 +122,7 @@
 	  preserve-direction prods radcanp
 	  realonlyratnum *refchkl* return-mode returns rulefcnl
 	  rulesw scanmapp sign-imag-errp simplimplus-problems
-	  *small-primes* sqrt3//2 $stringdisp substp
+	  *small-primes* sqrt3//2 substp
 	  sums tellratlist timesinp tr-abort tr-progret tr-unique
 	  transl-file translate-time-evalables transp
 	  tstack varlist wflag

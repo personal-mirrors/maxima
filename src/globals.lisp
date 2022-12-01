@@ -287,6 +287,34 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $gradefs '((mlist simp)))
 (defmvar $dependencies '((mlist simp)))
 
+;; From displa.lisp
+(defmvar $ttyoff nil)
+
+(defmvar $stardisp nil
+  "Causes factors of products to be separated by * when displayed.")
+
+(defmvar $leftjust nil
+  "Causes equations to be drawn left justified rather than centered.
+	 For slow consoles.")
+
+(defmvar $display2d t
+  "Causes equations to be drawn in two dimensions.  Otherwise, drawn
+	 linearly.")
+
+(defmvar $lispdisp nil
+  "Causes symbols not having $ as the first character in their pnames
+	 to be preceded with a ? when displayed.")
+
+(defmvar $derivabbrev nil)
+
+(defmvar $noundisp nil)
+
+(defmvar $stringdisp nil
+  "Causes strings to be bracketed in double quotes when displayed.
+	 Normally this is off, but is turned on when a procedure definition is
+	 being displayed.")
+
+
 ;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")
