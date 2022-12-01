@@ -58,7 +58,7 @@
 	  $features $file_search
 	  $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
-	  $fortspaces $functions $gammalim $gcd
+	  $fortspaces $functions $gammalim
 	  $homog_hack
 	  $intfaclim
 	  $isolate_wrt_times $letrat $letvarsimp
@@ -94,7 +94,7 @@
 	  $tr_warn_undefined_variable
 	  $use_fast_arrays $values $vect_cross
 	  %e-val %p%i %pi-val %pi//2 %pi//4 %pi2 *$any-modes*
-	  *alpha *const* *fnewvarsw *gcdl* *in *in-compile*
+	  *alpha *const* *fnewvarsw *in *in-compile*
 	  *in-translate-file* *inv* *irreds *min* *mx*
 	  *n *opers-list *out *ratweights *tr-warn-break* *transl-backtrace*
 	  *transl-debug* *warned-fexprs*

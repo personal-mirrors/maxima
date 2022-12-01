@@ -441,6 +441,12 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $piece '$piece)
 (defmvar $setval '$setval)
 
+;; From rat3c.lisp
+;; List of GCD algorithms.  Default one is first.
+(defvar *gcdl* '($spmod $subres $ez $red $mod $algebraic))
+
+(defmvar $gcd (car *gcdl*))		;Sparse Modular
+
 
 ;;
 (defvar $activecontexts '((mlist))

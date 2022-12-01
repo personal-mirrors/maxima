@@ -30,7 +30,6 @@ or if apply is being used are printed.")
 		      opers
 		      *mopl* *alphabet* $%% %e-val
 		      $macros linel $ratwtlvl
-		      *gcdl*
 		      *builtin-$props*))
 
 (declare-top (unspecial args))
