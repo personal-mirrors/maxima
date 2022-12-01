@@ -448,6 +448,23 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $gcd (car *gcdl*))		;Sparse Modular
 
 
+;; From rat3d.lisp
+(defmvar $intfaclim t)
+(defmvar $berlefact t)
+
+(defmvar $factor_max_degree 1000
+  "If set to an integer n, some potentially large (many factors) polynomials
+   of degree > n won't be factored, preventing huge memory allocations and
+   stack overflows. Set to zero to deactivate."
+  fixnum)
+(putprop '$factor_max_degree 'posintegerset 'assign)
+
+(defmvar $factor_max_degree_print_warning t
+  "Print a warning message when a polynomial is not factored because its
+   degree is larger than $factor_max_degree?"
+  boolean)
+
+
 ;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")

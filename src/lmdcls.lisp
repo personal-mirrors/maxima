@@ -45,7 +45,7 @@
 
 (declaim (special
 	  $%% 
-	  $arrays $berlefact
+	  $arrays
 	  $beta_args_sum_to_integer $boxchar
 	  $compgrind
 	  $current_let_rule_package
@@ -60,7 +60,6 @@
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $functions $gammalim
 	  $homog_hack
-	  $intfaclim
 	  $isolate_wrt_times $letrat $letvarsimp
 	  $let_rule_packages $liflag $linel
 	  $linsolve_params $listconstvars
@@ -126,6 +125,6 @@
 	  $cflength *trunclist $taylordepth
 	  $maxtaydiff $verbose $psexpand ps-bmt-disrep
 	  silent-taylor-flag $define_variable
-	  $factor_max_degree $factor_max_degree_print_warning))
+	  ))
 
 (declaim (declaration unspecial))
