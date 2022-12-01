@@ -24,13 +24,13 @@
 or if apply is being used are printed.")
   
 (declare-top (special derivflag derivlist $labels $values $functions $arrays 
-                      $rules $gradefs $dependencies
+                      $rules $dependencies
 		      $myoptions $props genvar $maxposex $maxnegex $expop $expon
 		      $numer *mdebug* *refchkl*
 		      $norepeat $detout opers
 		      *mopl* *alphabet* $%% %e-val
 		      $macros linel $ratfac $ratwtlvl
-		      $partswitch *gcdl*
+		      *gcdl*
 		      *builtin-$props* $infolists))
 
 (declare-top (unspecial args))

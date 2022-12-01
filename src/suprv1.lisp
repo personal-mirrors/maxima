@@ -22,7 +22,7 @@
   (setq *read-base* 10. *print-base* 10.))
 
 (declare-top  (special bindlist loclist errset *mopl*
-		       $values $functions $arrays $gradefs $dependencies
+		       $values $functions $arrays
 		       $rules $props $ratvars
 		       varlist genvar
 		       checkfactors $features featurel

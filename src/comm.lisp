@@ -12,11 +12,11 @@
 
 (macsyma-module comm)
 
-(declare-top (special $exptsubst $linechar $inflag $piece $dispflag
-		      $gradefs $props $dependencies derivflag derivlist
-		      $linenum $partswitch *linelabel* nn* dn*
-		      $powerdisp atvars $errexp $derivsubst
-		      $opsubst $subnumsimp $transrun in-p substp $sqrtdispflag
+(declare-top (special $linechar $piece $dispflag
+		      $props derivflag derivlist
+		      $linenum *linelabel* nn* dn*
+		      $powerdisp atvars $errexp
+		      $subnumsimp $transrun in-p substp $sqrtdispflag
 		      $pfeformat dummy-variable-operators))
 
 (defvar *islinp* nil) ; When T, sdiff is called from the function islinear.
@@ -70,13 +70,6 @@
 (mapc #'(lambda (x) (putprop (car x) (cadr x) 'op))
       '((mqapply $subvar) (bigfloat $bfloat)))
 
-(defmvar $exptsubst nil)
-(defmvar $partswitch nil)
-(defmvar $inflag nil)
-(defmvar $derivsubst nil)
-(defmvar $opsubst t)
-(defvar $gradefs '((mlist simp)))
-(defvar $dependencies '((mlist simp)))
 (defvar atvars '($@1 $@2 $@3 $@4))
 (defvar in-p nil)
 (defvar substp nil)

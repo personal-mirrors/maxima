@@ -143,7 +143,7 @@
 	     (special *roots *failures
 		      $logabs $maxposex $maxnegex
 		      $savefactors $radexpand $breakup $%emode
-		      $float $exptsubst dosimp context rp-polylogp
+		      $float dosimp context rp-polylogp
 		      %p%i half%pi %pi2 half%pi3 varlist genvar
 		      $domain $m1pbranch errorsw
 		      limitp $algebraic

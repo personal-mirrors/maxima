@@ -49,19 +49,19 @@
 	  $beta_args_sum_to_integer $boxchar
 	  $compgrind
 	  $current_let_rule_package
-	  $default_let_rule_package $dependencies $derivabbrev
-	  $derivsubst $detout $dispflag $display2d
+	  $default_let_rule_package $derivabbrev
+	  $detout $dispflag $display2d
 	  $display_format_internal $domain $domxexpt
 	  $domxplus $domxtimes $dontfactor
 	  $doscmxplus
 	  $erfflag $errexp $error $error_size $error_syms $expon
-	  $expop $exptisolate $exptsubst
+	  $expop $exptisolate
 	  $facexpand $factorflag $features $file_search
 	  $float $floatformat $floatfrac $floatint
 	  $floatoptions $floatprec $floatwidth $fortfloat $fortindent
 	  $fortspaces $functions $gammalim $gcd
-	  $gradefs $homog_hack
-	  $inchar $infeval $inflag $intfaclim
+	  $homog_hack
+	  $inchar $infeval $intfaclim
 	  $isolate_wrt_times $keepfloat $labels $leftjust $letrat $letvarsimp
 	  $let_rule_packages $liflag $linechar $linenum $linel
 	  $linsolve_params $lispdisp $listarith $listconstvars
@@ -72,8 +72,8 @@
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac $negdistrib
 	  $negsumdispflag $norepeat $noundisp $numer
-	  $numer_pbranch $opsubst $optimprefix $optionset $outchar
-	  $parsewindow $partswitch $pfeformat $piece $pointbound
+	  $numer_pbranch $optimprefix $optionset $outchar
+	  $parsewindow $pfeformat $piece $pointbound
 	  $powerdisp $props
 	  $radexpand $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
           $ratfac $ratmx $ratprint $ratsimpexpons $ratvars $ratvarswitch

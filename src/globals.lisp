@@ -278,6 +278,15 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $tlimswitch t)
 (defmvar $limsubst nil)
 
+;; From comm.lisp
+(defmvar $exptsubst nil)
+(defmvar $partswitch nil)
+(defmvar $inflag nil)
+(defmvar $derivsubst nil)
+(defmvar $opsubst t)
+(defmvar $gradefs '((mlist simp)))
+(defmvar $dependencies '((mlist simp)))
+
 ;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")
