@@ -110,8 +110,6 @@
     (tuchus $%rnum_list param)
     param))
 
-(defmvar $linsolve_params t "`linsolve' generates %Rnums")
-
 (defun ith (x n)
   (if (atom x) nil (nth (1- n) x)))
 

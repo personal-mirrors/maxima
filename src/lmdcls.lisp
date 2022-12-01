@@ -59,7 +59,7 @@
 	  $fortspaces $functions $gammalim
 	  $homog_hack
 	  $isolate_wrt_times
-	  $linsolve_params $listconstvars
+	  $listconstvars
 	  $lmxchar $logconcoeffp
 	  $macroexpansion $macros $mapprint
 	  $maxapplydepth $maxapplyheight

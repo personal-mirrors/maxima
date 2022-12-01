@@ -155,6 +155,7 @@ and using as an argument to SUBST.")
 (defmvar $globalsolve nil)
 (defmvar $sparse nil)
 (defmvar $backsubst t)
+(defmvar $linsolve_params t "`linsolve' generates %Rnums")
 
 ;; Probably should be defvar and not defmvar.
 (defmvar *rank* nil)
