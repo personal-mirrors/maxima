@@ -271,6 +271,12 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $assume_pos nil)
 (defmvar $assume_pos_pred nil)
 
+;; From csimp.lisp
+(defmvar $demoivre nil)
+(defmvar $nointegrate nil)
+(defmvar $lhospitallim 4)
+(defmvar $tlimswitch t)
+(defmvar $limsubst nil)
 
 ;;
 (defvar $activecontexts '((mlist))

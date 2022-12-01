@@ -138,10 +138,10 @@
 		      *global-defint-assumptions*)
 ;;;rsn* is in comdenom. does a ratsimp of numerator.
 					;expvar
-	     (special $intanalysis $noprincipal $nointegrate)
+	     (special $intanalysis $noprincipal)
 					;impvar
 	     (special *roots *failures
-		      $logabs $tlimswitch $maxposex $maxnegex
+		      $logabs $maxposex $maxnegex
 		      $savefactors $radexpand $breakup $%emode
 		      $float $exptsubst dosimp context rp-polylogp
 		      %p%i half%pi %pi2 half%pi3 varlist genvar

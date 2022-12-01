@@ -49,7 +49,7 @@
 	  $beta_args_sum_to_integer $boxchar
 	  $compgrind
 	  $current_let_rule_package
-	  $default_let_rule_package $demoivre $dependencies $derivabbrev
+	  $default_let_rule_package $dependencies $derivabbrev
 	  $derivsubst $detout $dispflag $display2d
 	  $display_format_internal $domain $domxexpt
 	  $domxplus $domxtimes $dontfactor
