@@ -319,6 +319,12 @@ relational knowledge is contained in the default context GLOBAL.")
 	 Normally this is off, but is turned on when a procedure definition is
 	 being displayed.")
 
+;; These variables are bound within Macsyma Listeners since they are different
+;; for each window.  Set them here, anyway, so that RETRIEVE can be called from
+;; top level.  The size of TOP-WINDOW is wired in here.
+
+(defmvar $linel 79.)
+
 ;; From matrix.lisp
 (defmvar $detout nil)
 (defmvar $ratmx nil)
@@ -490,7 +496,7 @@ relational knowledge is contained in the default context GLOBAL.")
 
 (defmvar $erfflag t "Controls whether `risch' generates `erfs'")
 
-
+;; From displa
 ;;
 (defvar $activecontexts '((mlist))
   "A list of the currently activated contexts")

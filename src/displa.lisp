@@ -16,8 +16,6 @@
 
 (load-macsyma-macros displm)
 
-(declare-top (special $linel))
-
 (defmvar displayp nil "Is T when inside of `displa'")
 
 ;; Parameters which control how boxes, absolute value signs,
@@ -32,7 +30,6 @@
 ;; for each window.  Set them here, anyway, so that RETRIEVE can be called from
 ;; top level.  The size of TOP-WINDOW is wired in here.
 
-(defmvar $linel 79.)
 (defvar linel 79.)
 (defvar ttyheight 24.)
 
