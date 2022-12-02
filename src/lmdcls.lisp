@@ -64,18 +64,18 @@
 	  $macroexpansion $macros $mapprint
 	  $maxapplydepth $maxapplyheight
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
-	  $mx0simp $myoptions $nalgfac $negdistrib
+	  $mx0simp $myoptions $nalgfac
 	  $negsumdispflag
-	  $numer_pbranch $optimprefix
+	  $optimprefix
 	  $parsewindow $pfeformat $pointbound
 	  $powerdisp $props
 	  $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
           $ratprint
 	  $ratwtlvl $realonly $resultant $rmxchar $rootsconmode
 	  $rules $savefactors $setcheck
-	  $showtime $simp
+	  $showtime
 	  $sqrtdispflag $sublis_apply_lambda
-	  $sumexpand $sumsplitfact
+	  $sumsplitfact
 	  $taylor_logexpand
 	  $taylor_truncate_polynomials $timer $timer_devalue
 	  $trace $trace_break_arg $trace_max_indent
