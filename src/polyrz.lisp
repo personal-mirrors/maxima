@@ -13,7 +13,7 @@
 (macsyma-module polyrz)
 
 (declare-top (special varlist
-		      $ratprint genvar
+		      genvar
 		      equations
 		      ))
 

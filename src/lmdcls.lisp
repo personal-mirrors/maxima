@@ -68,8 +68,7 @@
 	  $negsumdispflag
 	  $pointbound
 	  $props
-	  $ratdenomdivide $ratepsilon $ratexpand
-          $ratprint
+	  $ratdenomdivide $ratexpand
 	  $realonly $resultant $rmxchar $rootsconmode
 	  $rules $savefactors $setcheck
 	  $showtime

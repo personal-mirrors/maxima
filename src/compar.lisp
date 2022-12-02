@@ -1105,7 +1105,6 @@ TDNEG TDZERO TDPN) to store it, and also sets SIGN."
    (progn
      (dotimes (i (array-total-size p))
        (let ((z (let ($ratprint)
-		  (declare (special $ratprint))
 		  (meqp (row-major-aref p i) (row-major-aref q i)))))
 	 (cond ((eq z nil) (return-from array-meqp nil))
 	       ((eq z t))
@@ -1119,7 +1118,6 @@ TDNEG TDZERO TDPN) to store it, and also sets SIGN."
   (and
    (alike1 (mfuncall '$arrayinfo p) (mfuncall '$arrayinfo q))
    (let ($ratprint)
-     (declare (special $ratprint))
      (meqp ($listarray p) ($listarray q)))))
 
 (defun list-meqp (p q)
@@ -1590,7 +1588,6 @@ TDNEG TDZERO TDPN) to store it, and also sets SIGN."
 (defun factor-if-small (x)
   (if (< (conssize x) 51.)
       (let ($ratprint)
-	(declare (special $ratprint))
 	(factor x)) x))
 
 (defun sign-mexpt (x)

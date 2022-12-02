@@ -454,6 +454,14 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $facexpand t)
 (defmvar $ratfac nil "If `t' cre-forms are kept factored")
 
+;;  Any program which calls RATF on
+;;  a floating point number but does not wish to see "RAT replaced ..."
+;;  message, must bind $RATPRINT to NIL.
+
+(defmvar $ratprint t)
+
+(defmvar $ratepsilon 2d-15)
+
 ;; From merror.lisp
 (defmvar $error `((mlist simp) "No error.")
   "During an MAXIMA-ERROR break this is bound to a list

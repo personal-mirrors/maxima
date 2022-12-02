@@ -842,14 +842,6 @@
        (putprop g p 'tellrat))
      (return (rget g))))
 
-;;  Any program which calls RATF on
-;;  a floating point number but does not wish to see "RAT replaced ..."
-;;  message, must bind $RATPRINT to NIL.
-
-(defmvar $ratprint t)
-
-(defmvar $ratepsilon 2e-15)
-
 ;; This control of conversion from float to rational appears to be explained
 ;; nowhere. - RJF
 

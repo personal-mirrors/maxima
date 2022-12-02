@@ -32,8 +32,8 @@
 ;;in an effort to reduce extraneous solutions, or Reducing to a linear
 ;;equation before taking resultants.
 
-(declare-top (special $algdelta $ratepsilon
-		     varlist genvar *roots *failures $ratprint
+(declare-top (special $algdelta
+		     varlist genvar *roots *failures
 		     *tvarxlist* errorsw *ivar* errset $polyfactor
 		     bindlist loclist))
 
