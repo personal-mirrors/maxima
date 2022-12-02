@@ -71,7 +71,6 @@
 	  $ratdenomdivide
 	  $realonly $rmxchar
 	  $rules
-	  $showtime
 	  $sublis_apply_lambda
 	  $sumsplitfact
 	  $taylor_logexpand

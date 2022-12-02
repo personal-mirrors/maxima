@@ -571,6 +571,18 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 ;; From rat3d.lisp
 (defmvar $savefactors nil "If t factors of ratreped forms will be saved")
 
+;; From macsys.lisp
+(defmvar $showtime nil
+  "When T, the computation time is printed with each output expression.")
+
+;;; Standard Kinds of Input Prompts
+
+(defmvar $prompt '_
+  "Prompt symbol of the demo function, playback, and the Maxima break loop.")
+
+(defmvar $_ '$_ "last thing read in, corresponds to lisp +")
+(defmvar $__ '$__ "thing read in which will be evaluated, corresponds to -")
+
 
 ;;
 (defmvar $algebraic nil)
