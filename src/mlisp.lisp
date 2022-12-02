@@ -79,8 +79,6 @@ or if apply is being used are printed.")
   "Used for safely `munbind'ing incorrectly-bound variables."
   no-reset)
 
-(defmvar $setcheck nil)
-
 (mapc #'(lambda (x) (setf (symbol-value x) (ncons '(mlist simp))))
       '($values $functions $macros $arrays $myoptions $rules $props))
 

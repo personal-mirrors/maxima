@@ -489,6 +489,8 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $infeval nil)
 (defmvar $piece '$piece)
 (defmvar $setval '$setval)
+(defmvar $setcheck nil)
+
 
 ;; From rat3c.lisp
 ;; List of GCD algorithms.  Default one is first.
