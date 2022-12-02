@@ -542,6 +542,11 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 (defmvar $pfeformat nil)
 (defmvar $sqrtdispflag t)
 
+;; From rat3b.lisp
+(defmvar $ratwtlvl nil) 
+(defmvar $ratalgdenom t)       ;If T then denominator is rationalized.
+
+
 ;;
 (defmvar $algebraic nil)
 

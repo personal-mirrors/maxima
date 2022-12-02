@@ -16,7 +16,7 @@
 
 (declare-top (special varlist ss *y* f modulus
 		      genvar *alpha *x* *p *max *var *res *chk *l
-		      u* $ratwtlvl *ratweights))
+		      u* *ratweights))
 
 (declare-top (special xv bigf1 bigf2
 		      gcd))
@@ -469,7 +469,7 @@
       ((null q)))
   p)
 
-(declare-top (special wtsofar xweight $ratwtlvl v *x*))
+(declare-top (special wtsofar xweight v *x*))
 
 ;;; TO TRUNCATE ON E, DO RATWEIGHT(E,1);
 ;;;THEN DO RATWTLVL:N.  ALL POWERS >N GO TO 0.
