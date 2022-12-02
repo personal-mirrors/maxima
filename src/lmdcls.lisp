@@ -66,7 +66,6 @@
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac
 	  $negsumdispflag
-	  $optimprefix
 	  $parsewindow $pfeformat $pointbound
 	  $powerdisp $props
 	  $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand

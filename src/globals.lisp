@@ -525,6 +525,10 @@ relational knowledge is contained in the default context GLOBAL.")
 
 (defmvar $erfflag t "Controls whether `risch' generates `erfs'")
 
+;; From optim.lisp
+(defmvar $optimprefix '$%)
+
+;;
 (defmvar $algebraic nil)
 
 (defmvar $exptdispflag t
