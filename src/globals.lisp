@@ -528,6 +528,16 @@ relational knowledge is contained in the default context GLOBAL.")
 ;; From optim.lisp
 (defmvar $optimprefix '$%)
 
+;; From nparse.lisp
+(defmvar $parsewindow 10.
+	 "The maximum number of 'lexical tokens' that are printed out on
+each side of the error-point when a syntax (parsing) MAXIMA-ERROR occurs.  This
+option is especially useful on slow terminals.  Setting it to -1 causes the
+entire input string to be printed out when an MAXIMA-ERROR occurs."
+	 fixnum)
+
+
+
 ;;
 (defmvar $algebraic nil)
 
