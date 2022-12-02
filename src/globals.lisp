@@ -493,6 +493,10 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $piece '$piece)
 (defmvar $setval '$setval)
 (defmvar $setcheck nil)
+;; If this is T then arrays are stored in the value cell,
+;; whereas if it is false they are stored in the function cell
+(defmvar $use_fast_arrays nil)
+
 
 
 ;; From rat3c.lisp

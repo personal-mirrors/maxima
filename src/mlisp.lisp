@@ -1842,10 +1842,6 @@ wrapper for this."
 (defmfun $show_hash_array (x)
   (maphash #'(lambda (k v) (format t "~%~A-->~A" k v)) x))
 
-;; If this is T then arrays are stored in the value cell,
-;; whereas if it is false they are stored in the function cell
-(defmvar $use_fast_arrays nil)
-
 (defun arrstore (l r)
 	 (let ((fun (caar l)) ary sub (lispsub 0) hashl mqapplyp)
 	   (cond ((setq ary (mget fun 'array))
