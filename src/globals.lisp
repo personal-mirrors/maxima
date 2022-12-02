@@ -326,6 +326,12 @@ relational knowledge is contained in the default context GLOBAL.")
 
 (defmvar $linel 79.)
 
+;; DO NOT change this to a DEFMVAR.  This breaks the testsuite,
+;; presumably because the values get reset when reset() is done.
+(defvar $activecontexts '((mlist))
+  "A list of the currently activated contexts")
+
+
 ;; From matrix.lisp
 (defmvar $detout nil)
 (defmvar $ratmx nil)
@@ -496,11 +502,6 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $liflag t "Controls whether `risch' generates polylogs")
 
 (defmvar $erfflag t "Controls whether `risch' generates `erfs'")
-
-;; From displa
-;;
-(defvar $activecontexts '((mlist))
-  "A list of the currently activated contexts")
 
 (defmvar $algebraic nil)
 
