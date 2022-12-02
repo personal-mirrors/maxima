@@ -537,6 +537,10 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 	 fixnum)
 
 
+;; From nforma
+(defmvar $powerdisp nil)
+(defmvar $pfeformat nil)
+(defmvar $sqrtdispflag t)
 
 ;;
 (defmvar $algebraic nil)

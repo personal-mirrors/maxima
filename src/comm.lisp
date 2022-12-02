@@ -14,9 +14,9 @@
 
 (declare-top (special $props derivflag derivlist
 		      $linenum *linelabel* nn* dn*
-		      $powerdisp atvars $errexp
-		      in-p substp $sqrtdispflag
-		      $pfeformat dummy-variable-operators))
+		      atvars $errexp
+		      in-p substp
+		      dummy-variable-operators))
 
 (defvar *islinp* nil) ; When T, sdiff is called from the function islinear.
 (defvar *atp* nil)    ; When T, prevents substitution from applying to vars 

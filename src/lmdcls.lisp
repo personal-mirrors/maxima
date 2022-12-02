@@ -66,14 +66,14 @@
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac
 	  $negsumdispflag
-	  $pfeformat $pointbound
-	  $powerdisp $props
+	  $pointbound
+	  $props
 	  $ratalgdenom $ratdenomdivide $ratepsilon $ratexpand
           $ratprint
 	  $ratwtlvl $realonly $resultant $rmxchar $rootsconmode
 	  $rules $savefactors $setcheck
 	  $showtime
-	  $sqrtdispflag $sublis_apply_lambda
+	  $sublis_apply_lambda
 	  $sumsplitfact
 	  $taylor_logexpand
 	  $taylor_truncate_polynomials $timer $timer_devalue
