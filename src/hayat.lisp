@@ -138,7 +138,6 @@
 	  trigdisp		;
 	  last-exp		;last-expression through taylor2
 	  $taylordepth		;
-	  $ratexpand		;
 	  genpairs		;List of dotted pairs
 	  ps-bmt-disrep		;
 	  ivars			;Pairlist if gensym and disreped version

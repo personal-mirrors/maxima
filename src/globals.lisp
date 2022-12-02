@@ -454,6 +454,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $facexpand t)
 (defmvar $ratfac nil "If `t' cre-forms are kept factored")
 
+
 ;;  Any program which calls RATF on
 ;;  a floating point number but does not wish to see "RAT replaced ..."
 ;;  message, must bind $RATPRINT to NIL.
@@ -461,6 +462,11 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $ratprint t)
 
 (defmvar $ratepsilon 2d-15)
+
+;; IF $RATEXPAND IS TRUE, (X+1)*(Y+1) WILL DISPLAY AS
+;; XY + Y + X + 1  OTHERWISE, AS (X+1)Y + X + 1
+(defmvar $ratexpand nil)
+
 
 ;; From merror.lisp
 (defmvar $error `((mlist simp) "No error.")
