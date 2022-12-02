@@ -566,6 +566,10 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 ;; From comm2.lisp
 (defmvar $rootsconmode t)
 
+;; From rat3d.lisp
+(defmvar $savefactors nil "If t factors of ratreped forms will be saved")
+
+
 ;;
 (defmvar $algebraic nil)
 

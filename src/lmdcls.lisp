@@ -70,7 +70,7 @@
 	  $props
 	  $ratdenomdivide
 	  $realonly $rmxchar
-	  $rules $savefactors $setcheck
+	  $rules $setcheck
 	  $showtime
 	  $sublis_apply_lambda
 	  $sumsplitfact

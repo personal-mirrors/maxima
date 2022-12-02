@@ -174,8 +174,6 @@
 		 (cons (pmodroot (cadr x))
 		       (pmodroot1 (cddr x)))))))
 
-(defmvar $savefactors nil "If t factors of ratreped forms will be saved")
-
 (defvar checkfactors () "List of saved factors")
 
 (defun savefactors (l)

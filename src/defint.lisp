@@ -141,7 +141,7 @@
 	     (special $intanalysis $noprincipal)
 					;impvar
 	     (special *roots *failures
-		      $savefactors $breakup $%emode
+		      $breakup $%emode
 		      dosimp context rp-polylogp
 		      %p%i half%pi %pi2 half%pi3 varlist genvar
 		      errorsw
