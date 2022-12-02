@@ -586,6 +586,9 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 (defmvar $_ '$_ "last thing read in, corresponds to lisp +")
 (defmvar $__ '$__ "thing read in which will be evaluated, corresponds to -")
 
+;; From mtrace.lisp
+(defmvar $trace (list '(mlist)) "List of functions actively traced")
+
 
 ;;
 (defmvar $algebraic nil)

@@ -186,8 +186,6 @@
 
 ;;; User interface functions.
 
-(defmvar $trace (list '(mlist)) "List of functions actively traced")
-
 (defun mlistcan-$all (fun llist default)
   "totally random utility function"
   (let (trace-allp)
