@@ -72,7 +72,6 @@
 	  $realonly $rmxchar
 	  $rules
 	  $sublis_apply_lambda
-	  $sumsplitfact
 	  $taylor_logexpand
 	  $taylor_truncate_polynomials $timer $timer_devalue
 	  $trace $trace_break_arg $trace_max_indent

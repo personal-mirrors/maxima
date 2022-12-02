@@ -306,6 +306,9 @@ relational knowledge is contained in the default context GLOBAL.")
 
 (defmvar $numer_pbranch nil)
 
+(defmvar $sumsplitfact t) ;= nil minfactorial is applied after a factocomb.
+
+
 ;; From comm.lisp
 (defmvar $exptsubst nil)
 (defmvar $partswitch nil)
