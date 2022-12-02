@@ -77,8 +77,6 @@
 			    (pexpon*// p2 var nil)) var))
 	(t (list 1 (resultant p1 p2) 1))))
 
-(defmvar $resultant '$subres "Designates which resultant algorithm")
-
 (defvar *resultlist '($subres $mod $red))
 
 (defun resultant (p1 p2)		;assumes same main var

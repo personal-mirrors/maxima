@@ -560,6 +560,9 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 (defmvar $ratwtlvl nil) 
 (defmvar $ratalgdenom t)       ;If T then denominator is rationalized.
 
+;; From result.lisp
+(defmvar $resultant '$subres "Designates which resultant algorithm")
+
 
 ;;
 (defmvar $algebraic nil)
