@@ -271,6 +271,9 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $contexts '((mlist) $global)
   "A list of the currently active contexts.")
 
+(defmvar $activecontexts '((mlist))
+  "A list of the currently activated contexts")
+
 (defmvar $prederror nil)
 (defmvar $signbfloat t)
 (defmvar $askexp)
@@ -497,10 +500,6 @@ relational knowledge is contained in the default context GLOBAL.")
 
 (defmvar $erfflag t "Controls whether `risch' generates `erfs'")
 
-;; From displa
-;;
-(defvar $activecontexts '((mlist))
-  "A list of the currently activated contexts")
 
 (defmvar $algebraic nil)
 
