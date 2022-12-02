@@ -563,6 +563,8 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 ;; From result.lisp
 (defmvar $resultant '$subres "Designates which resultant algorithm")
 
+;; From comm2.lisp
+(defmvar $rootsconmode t)
 
 ;;
 (defmvar $algebraic nil)

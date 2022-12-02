@@ -69,7 +69,7 @@
 	  $pointbound
 	  $props
 	  $ratdenomdivide
-	  $realonly $rmxchar $rootsconmode
+	  $realonly $rmxchar
 	  $rules $savefactors $setcheck
 	  $showtime
 	  $sublis_apply_lambda
