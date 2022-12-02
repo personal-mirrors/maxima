@@ -33,7 +33,7 @@
 ;;equation before taking resultants.
 
 (declare-top (special $algdelta $ratepsilon
-		     varlist genvar *roots *failures $ratprint $numer
+		     varlist genvar *roots *failures $ratprint
 		     *tvarxlist* errorsw *ivar* errset $polyfactor
 		     bindlist loclist))
 

@@ -65,7 +65,7 @@
 	  $maxapplydepth $maxapplyheight
 	  $maxtayorder $mode_checkp $mode_check_errorp $mode_check_warnp
 	  $mx0simp $myoptions $nalgfac $negdistrib
-	  $negsumdispflag $numer
+	  $negsumdispflag
 	  $numer_pbranch $optimprefix
 	  $parsewindow $pfeformat $pointbound
 	  $powerdisp $props
