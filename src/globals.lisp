@@ -623,3 +623,13 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 ;; From mtrace.lisp
 (defmvar $trace (list '(mlist)) "List of functions actively traced")
 
+;;------------------------------------------------------------------------
+;; From inmis.lisp
+(defmvar $listconstvars nil
+  "Causes LISTOFVARS to include %E, %PI, %I, and any variables declared
+   constant in the list it returns if they appear in exp.  The default is
+   to omit these." boolean see-also $listofvars)
+
+(defmvar $listdummyvars t)
+;;------------------------------------------------------------------------
+

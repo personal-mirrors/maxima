@@ -2360,7 +2360,6 @@ TDNEG TDZERO TDPN) to store it, and also sets SIGN."
 ;; whose numerical value we know.
 (defun unknown-atoms (x)
   (let (($listconstvars t))
-    (declare (special $listconstvars))
     (remove-if (lambda (sym) (mget sym '$numer))
                (cdr ($listofvars x)))))
 
@@ -2492,7 +2491,6 @@ TDNEG TDZERO TDPN) to store it, and also sets SIGN."
 
 (defun symbols (x)
   (let (($listconstvars %initiallearnflag))
-    (declare (special $listconstvars))
     (cdr ($listofvars x))))
 
 ;; %initiallearnflag is only necessary so that %PI, %E, etc. can be LEARNed.
