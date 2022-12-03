@@ -7,20 +7,6 @@
 
 (in-package "MAXIMA")
 
-(defvar infinities '($inf $minf $infinity)
-  "The types of infinities recognized by Maxima.
-   INFINITY is complex infinity")
-
-(defvar real-infinities '($inf $minf)
-  "The real infinities, `inf' is positive infinity, `minf' negative infinity")
-
-(defvar infinitesimals '($zeroa $zerob)
-  "The infinitesimals recognized by Maxima. ZEROA zero from above,
-   ZEROB zero from below")
-
-;; Declare user-visible special variables.
-;; Most of these come from lmdcls.lisp
-
 (defvar *reset-var* t)
 
 (defvar *variable-initial-values* (make-hash-table)
@@ -42,17 +28,24 @@ values")
       (setf (getf (cdr sym) indic) val)
       (setf (get sym indic) val)))
 
-(defmvar $% '$% "The last out-line computed, corresponds to lisp *"
-	 no-reset)
+;;; Declare user-visible special variables.
+;;; Most of these come from lmdcls.lisp
 
-(defmvar $%edispflag nil)
+;;------------------------------------------------------------------------
+;; From limit.lisp
+(defvar infinities '($inf $minf $infinity)
+  "The types of infinities recognized by Maxima.
+   INFINITY is complex infinity")
 
-(defmvar $%emode t)
+(defvar real-infinities '($inf $minf)
+  "The real infinities, `inf' is positive infinity, `minf' negative infinity")
 
-(defmvar $%enumer nil)
+(defvar infinitesimals '($zeroa $zerob)
+  "The infinitesimals recognized by Maxima. ZEROA zero from above,
+   ZEROB zero from below")
 
-(defmvar $%e_to_numlog nil)
 
+;;------------------------------------------------------------------------
 ;; From trigi.lisp
 (defmvar $%iargs t)
 (defmvar $%piargs t)
@@ -65,6 +58,7 @@ values")
 (defmvar $logarc nil)
 (defmvar $halfangles nil)
 
+;;------------------------------------------------------------------------
 ;; From suprv1.lisp
 (defmvar $disptime nil)
 (defmvar $strdisp t)
@@ -75,7 +69,10 @@ values")
 (defmvar $loadprint nil)
 (defmvar $nolabels nil)
 (defmvar $aliases '((mlist simp)))
+(defmvar $% '$% "The last out-line computed, corresponds to lisp *"
+	 no-reset)
 
+;;------------------------------------------------------------------------
 ;; From mdot.lisp
 (defmvar $dotconstrules t
   "Causes a non-commutative product of a constant and
@@ -151,6 +148,7 @@ is no need to rely on the setting of this switch.")
 which where introduced into the expression. Useful for mapping over
 and using as an argument to SUBST.")
 
+;;------------------------------------------------------------------------
 ;; From mat.lisp
 (defmvar $globalsolve nil)
 (defmvar $sparse nil)
@@ -161,6 +159,7 @@ and using as an argument to SUBST.")
 (defmvar *rank* nil)
 (defmvar *inv* nil)
 
+;;------------------------------------------------------------------------
 ;; From float.lisp
 (defmvar $float2bf t
   "If TRUE, no MAXIMA-ERROR message is printed when a floating point number is
@@ -189,8 +188,7 @@ will accurately represent the bigfloat.")
   "Number of decimal digits of precision to use when creating new bigfloats.
 One extra decimal digit in actual representation for rounding purposes.")
 
-
-
+;;------------------------------------------------------------------------
 ;; From solve.lisp
 (defmvar $breakup t
   "Causes solutions to cubic and quartic equations to be expressed in
@@ -233,6 +231,7 @@ One extra decimal digit in actual representation for rounding purposes.")
 	 certain problems containing exponentials and logs to be solved.")
 
 
+;;------------------------------------------------------------------------
 ;; From asum.lisp
 (defmvar $cauchysum nil
   "When multiplying together sums with INF as their upper limit, 
@@ -258,6 +257,7 @@ summation when necessary."
 (defmvar $simpsum nil)
 (defmvar $simpproduct nil)
 
+;;------------------------------------------------------------------------
 ;; From compar.lisp
 (defmvar $context '$global
   "Whenever a user assumes a new fact, it is placed in the context
@@ -277,6 +277,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $assume_pos nil)
 (defmvar $assume_pos_pred nil)
 
+;;------------------------------------------------------------------------
 ;; From csimp.lisp
 (defmvar $demoivre nil)
 (defmvar $nointegrate nil)
@@ -309,6 +310,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $sumsplitfact t) ;= nil minfactorial is applied after a factocomb.
 
 
+;;------------------------------------------------------------------------
 ;; From comm.lisp
 (defmvar $exptsubst nil)
 (defmvar $partswitch nil)
@@ -318,6 +320,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $gradefs '((mlist simp)))
 (defmvar $dependencies '((mlist simp)))
 
+;;------------------------------------------------------------------------
 ;; From displa.lisp
 (defmvar $ttyoff nil)
 
@@ -357,6 +360,7 @@ relational knowledge is contained in the default context GLOBAL.")
   "A list of the currently activated contexts")
 
 
+;;------------------------------------------------------------------------
 ;; From matrix.lisp
 (defmvar $detout nil)
 (defmvar $ratmx nil)
@@ -364,6 +368,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $matrix_element_add "+")
 (defmvar $matrix_element_transpose nil)
 
+;;------------------------------------------------------------------------
 ;; From suprv1.lisp
 (defmvar $infolists
   '((mlist simp) $labels $values $functions $macros $arrays
@@ -390,27 +395,8 @@ relational knowledge is contained in the default context GLOBAL.")
 
 (defmvar $ratvarswitch t) ; If T, start an evaluation with a fresh list VARLIST.
 
+;;------------------------------------------------------------------------
 ;; From simp.lisp
-(defmvar $rootsepsilon #+gcl (float 1/10000000) #-gcl 1e-7)
-(defmvar $grindswitch nil)
-(defmvar $algepsilon 100000000)
-(defmvar $true t)
-(defmvar $false nil)
-(defmvar $on t)
-(defmvar $off nil)
-(defmvar $logabs nil)
-(defmvar $limitdomain '$complex)
-(defmvar $listarith t)
-(defmvar $domain '$real)
-(defmvar $m1pbranch nil)
-(defmvar $lognegint nil)
-(defmvar $ratsimpexpons nil)
-(defmvar $logexpand t) ; Possible values are T, $ALL and $SUPER
-(defmvar $radexpand t)
-(defmvar $subnumsimp nil)
-(defmvar $logsimp t)
-(defmvar $distribute_over t) ; If T, functions are distributed over bags.
-
 ;; Switches dealing with expansion.
 
 (defmvar $expop 0
@@ -445,7 +431,31 @@ relational knowledge is contained in the default context GLOBAL.")
 ;; Check assignment to be a positive integer
 (putprop '$maxnegex 'posintegerset 'assign)
 
+(defmvar $rootsepsilon #+gcl (float 1/10000000) #-gcl 1e-7)
+(defmvar $grindswitch nil)
+(defmvar $algepsilon 100000000)
+(defmvar $true t)
+(defmvar $false nil)
+(defmvar $on t)
+(defmvar $off nil)
+(defmvar $logabs nil)
+(defmvar $limitdomain '$complex)
+(defmvar $listarith t)
+(defmvar $domain '$real)
+(defmvar $m1pbranch nil)
+(defmvar $%e_to_numlog nil)
+(defmvar $%emode t)
+(defmvar $lognegint nil)
+(defmvar $ratsimpexpons nil)
+(defmvar $logexpand t) ; Possible values are T, $ALL and $SUPER
+(defmvar $radexpand t)
+(defmvar $subnumsimp nil)
+(defmvar $logsimp t)
+(defmvar $distribute_over t) ; If T, functions are distributed over bags.
 
+
+
+;;------------------------------------------------------------------------
 ;; From rat3e
 ;; User level global variables.
 (defmvar $keepfloat nil  "If `t' floating point coeffs are not converted to rationals")
@@ -453,6 +463,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $dontfactor '((mlist)))
 (defmvar $norepeat t)
 (defmvar $ratweights '((mlist simp)))
+(defmvar $algebraic nil)
 (defmvar $ratvars '((mlist simp)))
 (defmvar $facexpand t)
 (defmvar $ratfac nil "If `t' cre-forms are kept factored")
@@ -471,6 +482,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $ratexpand nil)
 
 
+;;------------------------------------------------------------------------
 ;; From merror.lisp
 (defmvar $error `((mlist simp) "No error.")
   "During an MAXIMA-ERROR break this is bound to a list
@@ -480,7 +492,9 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $errormsg 't
   "If `false' then no maxima-error message is printed!")
 
+;;------------------------------------------------------------------------
 ;; From mlisp.lisp
+(defmvar $%enumer nil)
 (defmvar $float nil)
 (defmvar $refcheck nil)
 (defmvar $translate nil)
@@ -499,6 +513,7 @@ relational knowledge is contained in the default context GLOBAL.")
 
 
 
+;;------------------------------------------------------------------------
 ;; From rat3c.lisp
 ;; List of GCD algorithms.  Default one is first.
 (defvar *gcdl* '($spmod $subres $ez $red $mod $algebraic))
@@ -506,6 +521,7 @@ relational knowledge is contained in the default context GLOBAL.")
 (defmvar $gcd (car *gcdl*))		;Sparse Modular
 
 
+;;------------------------------------------------------------------------
 ;; From rat3d.lisp
 (defmvar $intfaclim t)
 (defmvar $berlefact t)
@@ -523,6 +539,7 @@ relational knowledge is contained in the default context GLOBAL.")
   boolean)
 
 
+;;------------------------------------------------------------------------
 ;; From nisimp.lisp
 (defmvar $letvarsimp nil)
 
@@ -543,14 +560,17 @@ relational knowledge is contained in the default context GLOBAL.")
 
 (putprop '$let_rule_packages 'let-rule-setter 'assign)
 
+;;------------------------------------------------------------------------
 ;; From risch.lisp
 (defmvar $liflag t "Controls whether `risch' generates polylogs")
 
 (defmvar $erfflag t "Controls whether `risch' generates `erfs'")
 
+;;------------------------------------------------------------------------
 ;; From optim.lisp
 (defmvar $optimprefix '$%)
 
+;;------------------------------------------------------------------------
 ;; From nparse.lisp
 (defmvar $parsewindow 10.
 	 "The maximum number of 'lexical tokens' that are printed out on
@@ -560,24 +580,33 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 	 fixnum)
 
 
+;;------------------------------------------------------------------------
 ;; From nforma
 (defmvar $powerdisp nil)
 (defmvar $pfeformat nil)
+(defmvar $%edispflag nil)
+(defmvar $exptdispflag t
+  "When true, Maxima displays expressions with negative exponents using quotients.")
 (defmvar $sqrtdispflag t)
 
+;;------------------------------------------------------------------------
 ;; From rat3b.lisp
 (defmvar $ratwtlvl nil) 
 (defmvar $ratalgdenom t)       ;If T then denominator is rationalized.
 
+;;------------------------------------------------------------------------
 ;; From result.lisp
 (defmvar $resultant '$subres "Designates which resultant algorithm")
 
+;;------------------------------------------------------------------------
 ;; From comm2.lisp
 (defmvar $rootsconmode t)
 
+;;------------------------------------------------------------------------
 ;; From rat3d.lisp
 (defmvar $savefactors nil "If t factors of ratreped forms will be saved")
 
+;;------------------------------------------------------------------------
 ;; From macsys.lisp
 (defmvar $showtime nil
   "When T, the computation time is printed with each output expression.")
@@ -590,12 +619,7 @@ entire input string to be printed out when an MAXIMA-ERROR occurs."
 (defmvar $_ '$_ "last thing read in, corresponds to lisp +")
 (defmvar $__ '$__ "thing read in which will be evaluated, corresponds to -")
 
+;;------------------------------------------------------------------------
 ;; From mtrace.lisp
 (defmvar $trace (list '(mlist)) "List of functions actively traced")
 
-
-;;
-(defmvar $algebraic nil)
-
-(defmvar $exptdispflag t
-  "When true, Maxima displays expressions with negative exponents using quotients.")
