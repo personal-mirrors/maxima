@@ -89,6 +89,13 @@
        (defvar ,var ,val ,doc)
        ,@maybe-set-props)))
 
+;; Puts the property INDIC with the value VAL for the symbol SYM.
+;;
+;; Some important properties:
+;;
+;;   ASSIGN - A function that is called to verify that when SYM is
+;;            assigned a value, it has the correct value.
+;;
 (defun putprop (sym val  indic)
   (if (consp sym)
       (setf (getf (cdr sym) indic) val)
@@ -715,8 +722,9 @@
   "If set to an integer n, some potentially large (many factors)
   polynomials of degree > n won't be factored, preventing huge memory
   allocations and stack overflows. Set to zero to deactivate."
-  fixnum)
-(putprop '$factor_max_degree 'posintegerset 'assign)
+  fixnum
+  ;; Check assignment to be a positive integer
+  :properties ((assign posintegerset)))
 
 (defmvar $savefactors nil "If t factors of ratreped forms will be saved")
 
@@ -819,18 +827,17 @@
   "The largest positive exponent which will be expanded by the EXPAND
   command."
   fixnum
-  see-also ($maxnegex $expop $expand))
-;; Check assignment to be a positive integer
-(putprop '$maxposex 'posintegerset 'assign)
+  see-also ($maxnegex $expop $expand)
+  ;; Check assignment to be a positive integer
+  :properties ((assign posintegerset)))
 
 (defmvar $maxnegex 1000.
   "The largest negative exponent which will be expanded by the EXPAND
   command."
   fixnum
-  see-also ($maxposex $expon $expand))
-
-;; Check assignment to be a positive integer
-(putprop '$maxnegex 'posintegerset 'assign)
+  see-also ($maxposex $expon $expand)
+  ;; Check assignment to be a positive integer
+  :properties ((assign posintegerset)))
 
 ;; Lisp level variables
 (defmvar dosimp nil
@@ -951,6 +958,7 @@
 (defmvar $%iargs t)
 (defmvar $triginverses t)
 (defmvar $trigexpand nil)
+
 (defmvar $trigexpandplus t)
 (defmvar $trigexpandtimes t)
 (defmvar $trigsign t)
