@@ -45,11 +45,11 @@
 
 (declaim (special
 	  $% $%% $%edispflag $%emode $%enumer $%e_to_numlog $%iargs $%piargs
-	  $%rnum $absboxchar $algebraic $algexact
+	  $%rnum $absboxchar $activecontexts $algebraic $algexact
 	  $aliases $arrays $askexp $assumescalar $backsubst $berlefact
 	  $beta_args_sum_to_integer $bftorat $bftrunc $boxchar
-	  $breakup $compgrind
-	  $current_let_rule_package $debugmode
+	  $breakup $compgrind $context
+	  $contexts $current_let_rule_package $debugmode
 	  $default_let_rule_package $demoivre $derivabbrev
 	  $detout $dispflag $display2d
 	  $display_format_internal $doallmxops $domain $domxexpt $domxmxops
