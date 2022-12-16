@@ -407,7 +407,7 @@
 ;; These routines are specially coded to be as fast as possible given the
 ;; current $TAYLOR; too bad they have to be so ugly.
 
-(declare-top (special var subl *last* sign last-exp))
+(declare-top (special var sign last-exp))
 
 (defun expgam-fun (pw temp)
   (setq temp (get-datum (get-key-var (car var))))
@@ -417,48 +417,51 @@
 		   (psexpt-fn (getexp-fun '(($psi) -1) var (e1+ pw))))
 	   (make-ps var (ncons pw) '(((-1 . 1) 1 . 1))))))
 
-(defun expplygam-funs (pw subl l)	; l is a irrelevant here
-  (setq subl (car subl))
-  (if (or (not (integerp subl)) (< subl -1))
+(defun expplygam-funs (pw *subl* l)	; l is a irrelevant here
+  (declare (special *last* *subl*))
+  (setq *subl* (car *subl*))
+  (if (or (not (integerp *subl*)) (< *subl* -1))
       (tay-err "Unable to expand at a subscript in")
       (prog ((e 0) (sign 0) npw)
 	 (declare (fixnum e) (fixnum sign))
 	 (setq npw (/ (float (car pw)) (float (cdr pw))))
 	 (setq
-	  l (cond ((= subl -1)
+	  l (cond ((= *subl* -1)
 		   `(((1 . 1) . ,(prep1 '((mtimes) -1 $%gamma)))))
-		  ((= subl 0)
+		  ((= *subl* 0)
 		   (cons '((-1 . 1) -1 . 1)
 			 (if (> 0.0 npw) ()
 			     `(((0 . 1)
 				. ,(prep1 '((mtimes) -1 $%gamma)))))))
-		  (t (setq *last* (factorial subl))
-		     `(((,(- (1+ subl)) . 1)
-			,(* (expt -1 (1+ subl))
-				(factorial subl)) . 1))))
-	  e (if (< subl 1) (- subl) -1)
-	  sign (if (< subl 1) -1 (expt -1 subl)))
+		  (t (setq *last* (factorial *subl*))
+		     `(((,(- (1+ *subl*)) . 1)
+			,(* (expt -1 (1+ *subl*))
+				(factorial *subl*)) . 1))))
+	  e (if (< *subl* 1) (- *subl*) -1)
+	  sign (if (< *subl* 1) -1 (expt -1 *subl*)))
 	 a (setq e (1+ e) sign (- sign))
 	 (if (> e npw) (return l)
 	     (rplacd (last l)
 		     `(((,e . 1)
 			. ,(rctimes (rcplygam e)
-				    (prep1 ($zeta (+ (1+ subl) e))))))))
+				    (prep1 ($zeta (+ (1+ *subl*) e))))))))
 	 (go a))))
 
 (defun rcplygam (k)
-  (declare (fixnum k) )
-  (cond ((= subl -1) (cons sign k))
-	((= subl 0) (cons sign 1))
+  (declare (fixnum k)
+	   (special *last* *subl*))
+  (cond ((= *subl* -1) (cons sign k))
+	((= *subl* 0) (cons sign 1))
 	(t (prog1
 	       (cons (* sign *last*) 1)
 	     (setq *last*
-		   (quot (* *last* (+ subl (1+ k)))
+		   (quot (* *last* (+ *subl* (1+ k)))
 			 (1+ k)))))))
 
-(defun plygam-ord (subl)
-  (if (equal (car subl) -1) (ncons (rcone))
-      `((,(m- (m1+ (car subl))) . 1))))
+(defun plygam-ord (*subl*)
+  (declare (special *subl*))
+  (if (equal (car *subl*) -1) (ncons (rcone))
+      `((,(m- (m1+ (car *subl*))) . 1))))
 
 (defun plygam-pole (a c func)
   (if (rcmintegerp c)
@@ -514,7 +517,7 @@
 	       (tsprsum `((mexpt) ,(m+t a '%%taylor-index%%) ,(- (1+ sub)))
 			`(%%taylor-index%% 0 ,(- (1+ const))) '%sum))))))))
 
-(declare-top (unspecial var subl *last* sign last-exp))
+(declare-top (unspecial var sign last-exp))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Lambert W function
