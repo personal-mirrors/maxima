@@ -21,11 +21,15 @@
 ;;  $MAXAPPLYDEPTH is the maximum depth within an expression to which
 ;;  APPLYi will delve.  If $MAXAPPLYDEPTH is 0, it is applied only to 
 ;;  top level.
-(defmvar $maxapplydepth 10000.)
+(defmvar $maxapplydepth 10000.
+  nil
+  :properties ((mode '$boolean)))
 
 ;;  If $MAXAPPLYHEIGHT is 0, only atoms are affected by $APPLYB1 and 
 ;;  $APPLYB2.
-(defmvar $maxapplyheight 10000.)
+(defmvar $maxapplyheight 10000.
+  nil
+  :properties ((mode '$boolean)))
 
 (defmvar matchreverse nil)
 

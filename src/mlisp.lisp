@@ -41,7 +41,9 @@ or if apply is being used are printed.")
 (defvar mfexprp t)
 (defvar rulefcnl nil)
 (defmvar $refcheck nil)
-(defmvar $maperror t)
+(defmvar $maperror t
+  nil
+  :properties ((mode '$boolean)))
 (defmvar $optionset nil)
 (defmvar $setcheckbreak nil)
 (defmvar $setval '$setval)

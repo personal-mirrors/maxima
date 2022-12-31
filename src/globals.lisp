@@ -138,6 +138,9 @@
 ;;       When true, it denotes that the symbol is a constant and
 ;;       cannot be changed by the user.  This includes things like
 ;;       $%pi, $%e, $inf, $minf, $true, and $false.
+;;   MODE
+;;       Set to '$BOOLEAN for for variables that should be boolean for
+;;       the translator.
 (defun putprop (sym val  indic)
   (if (consp sym)
       (setf (getf (cdr sym) indic) val)
@@ -537,7 +540,8 @@
 ;;------------------------------------------------------------------------
 ;; From displa.lisp
 (defmvar $ttyoff nil
-  "When true, output expressions are not displayed.")
+  "When true, output expressions are not displayed."
+  :properties ((mode '$boolean)))
 
 (defmvar $display2d t
   "Causes equations to be drawn in two dimensions.  Otherwise, drawn
@@ -710,7 +714,8 @@
 ;; From matrix.lisp
 (defmvar $detout nil
   "When true, the determinant of a matrix whose inverse is computed is
-  factored out of the inverse.")
+  factored out of the inverse."
+  :properties ((mode '$boolean)))
 (defmvar $ratmx nil
   "When 'ratmx' is 'false', determinant and matrix addition,
   subtraction, and multiplication are performed in the representation
@@ -736,11 +741,13 @@
   "Causes a non-commutative product of a scalar and another term to be
   simplified to a commutative product.  Scalars and constants are
   carried to the front of the expression."
-  :properties ((evflag t)))
+  :properties ((evflag t)
+	       (mode '$boolean)))
 
 (defmvar $dotdistrib nil
   "Causes every non-commutative product to be expanded each time it is
-  simplified, i.e.  A . (B + C) will simplify to A . B + A . C.")
+  simplified, i.e.  A . (B + C) will simplify to A . B + A . C."
+  :properties ((mode '$boolean)))
 
 (defmvar $dotexptsimp t "Causes A . A to be simplified to A ^^ 2.")
 
@@ -751,21 +758,28 @@
   to A . (B . C)."
   :properties ((assign #'(lambda (name val)
 			   (declare (ignore name))
-			   (cput 'mnctimes val 'associative)))))
+			   (cput 'mnctimes val 'associative)))
+	       (mode '$boolean)))
 
 (defmvar $doallmxops t
   "Causes all operations relating to matrices (and lists) to be carried
   out.  For example, the product of two matrices will actually be
   computed rather than simply being returned.  Turning on this switch
-  effectively turns on the following three.")
+  effectively turns on the following three."
+  :properties ((mode '$boolean)))
 
-(defmvar $domxmxops t "Causes matrix-matrix operations to be carried out.")
+(defmvar $domxmxops t
+  "Causes matrix-matrix operations to be carried out."
+  :properties ((mode '$boolean)))
 
-(defmvar $doscmxops nil "Causes scalar-matrix operations to be carried out.")
+(defmvar $doscmxops nil
+  "Causes scalar-matrix operations to be carried out."
+  :properties ((mode '$boolean)))
 
 (defmvar $scalarmatrixp t
   "Causes a square matrix of dimension one to be converted to a scalar,
-  i.e. its only element.")
+  i.e. its only element."
+  :properties ((mode '$boolean)))
 
 (defmvar $assumescalar t
   "This governs whether unknown expressions 'exp' are assumed to
@@ -826,7 +840,8 @@
 (defmvar $infeval nil
   "When true, Enables \"infinite evaluation\" mode.  'ev' repeatedly
   evaluates an expression until it stops changing."
-  :properties ((evflag t)))
+  :properties ((evflag t)
+	       (mode '$boolean)))
 (defmvar $piece '$piece
   "Holds the last expression selected when using the 'part' functions.")
 
@@ -904,7 +919,8 @@
 ;; From nforma.lisp
 (defmvar $powerdisp nil
   "When true, a sum is displayed with its terms in order of increasing
-  power.")
+  power."
+  :properties ((mode '$boolean)))
 (defmvar $pfeformat nil
   "When true, a ratio of integers is displayed with the solidus (forward
   slash) character, and an integer denominator 'n' is displayed as a
@@ -975,7 +991,8 @@
 ;; User level global variables.
 (defmvar $keepfloat nil
   "If `t' floating point coeffs are not converted to rationals"
-  :properties ((evflag t)))
+  :properties ((evflag t)
+	       (mode '$boolean)))
 (defmvar $factorflag nil
   "If `t' constant factor of polynomial is also factored"
   :properties ((evflag t)))
@@ -1004,7 +1021,8 @@
 	       (assign #'(lambda (name val)
 			   (declare (ignore name))
 			   (when (and val $ratwtlvl)
-			       (merror (intl:gettext "assignment: 'ratfac' and 'ratwtlvl' may not both be used at the same time.")))))))
+			     (merror (intl:gettext "assignment: 'ratfac' and 'ratwtlvl' may not both be used at the same time.")))))
+	       (mode '$boolean)))
 
 (defmvar $ratvars '((mlist simp))
   "A list of the arguments of the function 'ratvars' when it was called
@@ -1084,7 +1102,8 @@
 
 (defmvar $simp t
   "Enables simplification."
-  :properties ((evflag t)))
+  :properties ((evflag t)
+	       (mode '$boolean)))
 
 (defmvar $sumexpand nil
   "If TRUE, products of sums and exponentiated sums go into nested
@@ -1144,8 +1163,12 @@
   "The tolerance which establishes the confidence interval for the
   roots found by the 'realroots' function.")
 (defmvar $algepsilon 100000000)
-(defmvar $true t)
-(defmvar $false nil)
+(defmvar $true t
+  nil
+  :properties ((mode '$boolean)))
+(defmvar $false nil
+  nil
+  :properties ((mode '$boolean)))
 (defmvar $logabs nil
   "When true, indefinite integration where logs are generated,
   e.g. 'integrate(1/x,x) produces answers in terms of log(...) instead
@@ -1156,7 +1179,8 @@
   suppressed; when 'true', list-matrix operations are contagious
   causing lists to be converted to matrices yielding a result which is
   always a matrix."
-  :properties ((evflag t)))
+  :properties ((evflag t)
+	       (mode '$boolean)))
 (defmvar $domain '$real)
 (defmvar $m1pbranch nil
   "When true, the principal branch for -1 to a power is returned,
@@ -1190,7 +1214,8 @@
   is given.")
 (defmvar $logsimp t
   "If 'false' then no simplification of '%e' to a power containing
-  'log''s is done.")
+  'log''s is done."
+  :properties ((mode '$boolean)))
 
 (defvar rischp nil)
 (defvar rp-polylogp nil)
@@ -1423,7 +1448,8 @@
 (defmvar $exponentialize nil
   "When true, all circular and hyperbolic functions are converted to
   exponential form."
-  :properties ((evflag t)))
+  :properties ((evflag t)
+	       (mode '$boolean)))
 (defmvar $logarc nil
   "When true, inverse circular and hyperbolic functions are replaced by
   equivalent logarithmic functions."

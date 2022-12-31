@@ -41,13 +41,14 @@
 
 ;;; MODEDECLARE(TRUE,BOOLEAN)
 
+;;; Not all possible variables are listed here.  The 'mode property is
+;;; set when the variable is defined.
+
     (mapc #'(lambda (x) (putprop x '$boolean 'mode))
-	  '($true $false $doallmxops $domxmxops $doscmxops $detout
-	    $dotassoc $dotdistrib $dotscrules $exponentialize
-	    $keepfloat $listarith $logsimp
-	    $maxapplyheight $maxapplydepth $maperror $powerdisp
-	    $scalarmatrix $simp $ttyoff $underflow $infeval
-	    $xaxis $yaxis $ratfac))
+	  '(;; These two don't seem to be used anywhere?
+	    $scalarmatrix $underflow
+	    ;; These seem to be defined only in draw?
+	    $xaxis $yaxis))
 
     (mapc #'(lambda (x) (putprop x t 'implied-quotep))
 	  '($eval $done $%i $%pi $%e $%phi $%gamma
