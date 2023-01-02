@@ -723,7 +723,8 @@
 		    (tdzero (sub a b))
 		    (return '$yes))
 		   (t
-		    (mtell (intl:gettext "Acceptable answers are yes, y, Y, no, n, N. ~%")))))))))
+		    (when (not (eq answer '$ask_user))
+			  (mtell (intl:gettext "Acceptable answers are yes, y, Y, no, n, N. ~%"))))))))))
 
 (defmfun $asksign (exp)
   (let (sign minus odds evens factored)
