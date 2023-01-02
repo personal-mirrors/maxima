@@ -1707,3 +1707,9 @@
 
 ;;------------------------------------------------------------------------
 
+(defmvar $intercept_questions_fn nil
+  "If set to a function, that function will be called whenever Maxima is
+  about to ask a question to the user.  The function is given the type of
+  the question and the subject of the question.  If the function returns a
+  valid answer, that answer will be used, and the user will not be asked.
+  If the function returns an invalid answer, the user will be asked.")

@@ -707,21 +707,24 @@
 (setq limitp nil)
 
 (defmfun $askequal (a b)
-  (let ((answer (meqp (sratsimp a) (sratsimp b)))) ; presumably handles mbags and extended reals.
+  (let ((answer (meqp (sratsimp a) (sratsimp b))) (second-try)) ; presumably handles mbags and extended reals.
     (cond ((eq answer t) '$yes)
 	  ((eq answer nil) '$no)
 	  (t
-	   (setq answer (retrieve `((mtext) ,(intl:gettext "Is ") ,a ,(intl:gettext " equal to ") ,b ,(intl:gettext "?")) nil))
-	   (cond ((member answer '($no |$n| |$N|) :test #'eq)
-		  (tdpn (sub b a))
-		  '$no)
-		 ((member answer '($yes |$y| |$Y|) :test #'eq)
-		  (tdzero (sub a b))
-		  '$yes)
-		 (t  
-		  (mtell (intl:gettext "Acceptable answers are yes, y, Y, no, n, N. ~%"))
-		  ($askequal a b)))))))
-	   
+	   (loop
+	     (if (and $intercept_questions_fn (not second-try))
+	       (setq answer (mfuncall $intercept_questions_fn '$equal `((mlist) ,a ,b))
+		         second-try t)
+	       (setq answer (retrieve `((mtext) ,(intl:gettext "Is ") ,a ,(intl:gettext " equal to ") ,b ,(intl:gettext "?")) nil)))
+	     (cond ((member answer '($no |$n| |$N|) :test #'eq)
+		    (tdpn (sub b a))
+		    (return '$no))
+		   ((member answer '($yes |$y| |$Y|) :test #'eq)
+		    (tdzero (sub a b))
+		    (return '$yes))
+		   (t
+		    (mtell (intl:gettext "Acceptable answers are yes, y, Y, no, n, N. ~%")))))))))
+
 (defmfun $asksign (exp)
   (let (sign minus odds evens factored)
     (asksign01 (cond (limitp (restorelim exp))
@@ -937,20 +940,24 @@ such, a nonzero sign should be regarded as positive.
 When calling ENSURE-SIGN, set the special variable SIGN to the best current
 guess for the sign of EXPR. The function returns the sign, calls one of (TDPOS
 TDNEG TDZERO TDPN) to store it, and also sets SIGN."
-  (loop
-     (let ((new-sign (match-sign sign domain expr squared)))
-       (when new-sign (return new-sign)))
-     (setf sign (retrieve
-                 (list '(mtext)
-                       "Is " expr
-                       (or (second
-                            (assoc domain
-                                   '(($znz " zero or nonzero?")
-                                     ($pz  " positive or zero?")
-                                     ($nz  " negative or zero?")
-                                     ($pn  " positive or negative?"))))
-                           " positive, negative or zero?"))
-                 nil))))
+  (let ((second-try))
+    (loop
+      (let ((new-sign (match-sign sign domain expr squared)))
+        (when new-sign (return new-sign)))
+      (if (and $intercept_questions_fn (not second-try))
+        (setf sign (mfuncall $intercept_questions_fn '$sign `((mlist) ,expr ,domain))
+              second-try t)
+        (setf sign (retrieve
+                    (list '(mtext)
+                          "Is " expr
+                          (or (second
+                               (assoc domain
+                                      '(($znz " zero or nonzero?")
+                                        ($pz  " positive or zero?")
+                                        ($nz  " negative or zero?")
+                                        ($pn  " positive or negative?"))))
+                              " positive, negative or zero?"))
+                    nil))))))
 
 ;; During one evaluation phase asksign writes answers from the user into the
 ;; global context '$initial. These facts are removed by clearsign after
