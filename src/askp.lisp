@@ -88,13 +88,13 @@
 ;;; Returns only $yes, $no or $unknown.
 (defun ask-prop (object property fun-or-number)
   (if fun-or-number (setq fun-or-number (list " " fun-or-number)))
-  (do ((end-flag) (answer) (second-try))
+  (do ((end-flag) (answer) (first-try t))
       (end-flag (cond ((member answer '($yes |$Y| |$y|) :test #'eq) '$yes)
 		      ((member answer '($no |$N| |$n|) :test #'eq) '$no)
 		      ((member answer '($unknown $uk) :test #'eq) '$unknown)))
-    (if (and $intercept_questions_fn (not second-try))
+    (if (and $intercept_questions_fn first-try)
 	  (setq answer (mfuncall $intercept_questions_fn '$property `((mlist) ,object ,property))
-			second-try t)
+			first-try nil)
 	  (setq answer (retrieve
 		    `((mtext) "Is " ,object 
 		      ,(if (member (char (symbol-name property) 0)

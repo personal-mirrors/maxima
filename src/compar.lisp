@@ -707,14 +707,14 @@
 (setq limitp nil)
 
 (defmfun $askequal (a b)
-  (let ((answer (meqp (sratsimp a) (sratsimp b))) (second-try)) ; presumably handles mbags and extended reals.
+  (let ((answer (meqp (sratsimp a) (sratsimp b))) (first-try t)) ; presumably handles mbags and extended reals.
     (cond ((eq answer t) '$yes)
 	  ((eq answer nil) '$no)
 	  (t
 	   (loop
-	     (if (and $intercept_questions_fn (not second-try))
+	     (if (and $intercept_questions_fn first-try)
 	       (setq answer (mfuncall $intercept_questions_fn '$equal `((mlist) ,a ,b))
-		         second-try t)
+		         first-try nil)
 	       (setq answer (retrieve `((mtext) ,(intl:gettext "Is ") ,a ,(intl:gettext " equal to ") ,b ,(intl:gettext "?")) nil)))
 	     (cond ((member answer '($no |$n| |$N|) :test #'eq)
 		    (tdpn (sub b a))
@@ -940,13 +940,13 @@ such, a nonzero sign should be regarded as positive.
 When calling ENSURE-SIGN, set the special variable SIGN to the best current
 guess for the sign of EXPR. The function returns the sign, calls one of (TDPOS
 TDNEG TDZERO TDPN) to store it, and also sets SIGN."
-  (let ((second-try))
+  (let ((first-try t))
     (loop
       (let ((new-sign (match-sign sign domain expr squared)))
         (when new-sign (return new-sign)))
-      (if (and $intercept_questions_fn (not second-try))
+      (if (and $intercept_questions_fn first-try)
         (setf sign (mfuncall $intercept_questions_fn '$sign `((mlist) ,expr ,domain))
-              second-try t)
+              first-try nil)
         (setf sign (retrieve
                     (list '(mtext)
                           "Is " expr
