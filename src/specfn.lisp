@@ -514,7 +514,7 @@
 	       (tsprsum `((mexpt) ,(m+t a '%%taylor-index%%) ,(- (1+ sub)))
 			`(%%taylor-index%% 0 ,(- (1+ const))) '%sum))))))))
 
-(declare-top (unspecial var subl *last* last-exp))
+(declare-top (unspecial var subl *last* sign last-exp))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Lambert W function

@@ -718,8 +718,7 @@
 	    ((:file "mtrace")
 	     (:file "mdebug")))
    (:module miscellaneous :source-pathname ""
-	    :depends-on ("globals" "defmfun" "pattern-matching" "compatibility-macros1"
-				   "algebraic-database")
+	    :depends-on ("globals" "defmfun" "pattern-matching" "compatibility-macros1")
 	    :components
 	    ((:file "scs")
 	     (:file "asum")
