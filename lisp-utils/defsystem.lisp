@@ -866,6 +866,7 @@
       :mcl
       :lispworks
       :clisp
+      :clasp
       :gcl
       :sbcl
       :cormanlisp
@@ -995,10 +996,10 @@
 
 #+abcl (defpackage make (:use "COMMON-LISP") (:nicknames "MK"))
 
-#+(or clisp cormanlisp ecl (and gcl defpackage) sbcl ccl)
+#+(or clisp cormanlisp ecl (and gcl defpackage) sbcl clasp ccl)
 (defpackage "MAKE" (:use "COMMON-LISP") (:nicknames "MK"))
 
-#-(or :sbcl :cltl2 :lispworks :ecl :scl :abcl :ccl)
+#-(or :sbcl :cltl2 :lispworks :ecl :clasp :scl :abcl :ccl)
 (in-package :make :nicknames '("MK"))
 
 ;;; For CLtL2 compatible lisps...
@@ -1029,7 +1030,7 @@
 ;;; The code below, is originally executed also for CMUCL. However I
 ;;; believe this is wrong, since CMUCL comes with its own defpackage.
 ;;; I added the extra :CMU in the 'or'.
-#+(and :cltl2 (not (or :cmu :scl :clisp :sbcl :abcl
+#+(and :cltl2 (not (or :cmu :scl :clisp :sbcl :clasp :abcl
 		       (and :excl (or :allegro-v4.0 :allegro-v4.1))
 		       :mcl)))
 (eval-when (compile load eval)
@@ -1043,6 +1044,10 @@
   (:nicknames "MK"))
 
 #+:sbcl
+(defpackage "MAKE" (:use "COMMON-LISP")
+  (:nicknames "MK"))
+
+#+:clasp
 (defpackage "MAKE" (:use "COMMON-LISP")
   (:nicknames "MK"))
 
@@ -1168,13 +1173,13 @@
 ;;; easier to use. Since some lisps have already defined defsystem
 ;;; in the user package, we may have to shadowing-import it.
 #|
-#-(or :sbcl :cmu :ccl :allegro :excl :lispworks :symbolics)
+#-(or :sbcl :clasp :cmu :ccl :allegro :excl :lispworks :symbolics)
 (eval-when (compile load eval)
   (import *exports* #-(or :cltl2 :lispworks) :user
 	            #+(or :cltl2 :lispworks) :common-lisp-user)
   (import *special-exports* #-(or :cltl2 :lispworks) :user
 	                    #+(or :cltl2 :lispworks) :common-lisp-user))
-#+(or :sbcl :cmu :ccl :allegro :excl :lispworks :symbolics)
+#+(or :sbcl :clasp :cmu :ccl :allegro :excl :lispworks :symbolics)
 (eval-when (compile load eval)
   (import *exports* #-(or :cltl2 :lispworks) :user
 	            #+(or :cltl2 :lispworks) :common-lisp-user)
@@ -1200,8 +1205,8 @@
 
 (defvar *dont-redefine-require*
   #+cmu (if (find-symbol "*MODULE-PROVIDER-FUNCTIONS*" :ext) t nil)
-  #+(or allegro ccl clisp sbcl) t
-  #-(or allegro ccl clisp cmu sbcl) nil
+  #+(or allegro ccl clisp sbcl clasp) t
+  #-(or allegro ccl clisp cmu sbcl clasp) nil
   "If T, prevents the redefinition of REQUIRE. This is useful for
    lisps that treat REQUIRE specially in the compiler.")
 
