@@ -58,6 +58,10 @@ sbclcopy:
 	test -d "$(prefix)/bin" || mkdir -p "$(prefix)/bin"
 	cp "$(SBCL_NAME)" "$(prefix)/bin/"
 
+claspcopy:
+	test -d "$(prefix)/bin" || mkdir -p "$(prefix)/bin"
+	cp "$(CLASP_NAME)" "$(prefix)/bin/"
+
 RUNTIMECOPY = 
 # Install files for lisp runtime support
 if GCL
@@ -70,6 +74,10 @@ endif
 
 if SBCL
 RUNTIMECOPY += sbclcopy
+endif
+
+if CLASP
+RUNTIMECOPY += claspcopy
 endif
 
 # Install files for lisp runtime support

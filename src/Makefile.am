@@ -67,7 +67,7 @@ clean-local: $(CLEAN_TARGETS)
 ## Tell make clean to delete all the <foo>-depends.mk files.
 DEPENDS_FILES = \
   clisp-depends.mk cmucl-depends.mk scl-depends.mk acl-depends.mk \
-  sbcl-depends.mk gcl-depends.mk openmcl-depends.mk ecl-depends.mk abcl-depends.mk
+  sbcl-depends.mk clasp-depends.mk gcl-depends.mk openmcl-depends.mk ecl-depends.mk abcl-depends.mk
 CLEANFILES = $(DEPENDS_FILES) tools/sys-proclaim.lisp
 
 ## Similarly, we do something hacky with the install rule. Most of the
@@ -313,6 +313,49 @@ clean-sbcl:
 	rm -rf binary-sbcl numerical/binary-sbcl numerical/slatec/binary-sbcl
 CLEAN_TARGETS += clean-sbcl
 
+
+## CLASP ########################################################################
+if CLASP
+
+clasplibdir = $(verpkglibdir)/binary-clasp
+
+EXTRA_SCRIPTS += $(CLASP_MAXIMA)
+
+if CLASP_EXEC
+CLASP_MAXIMA = binary-clasp/maxima$(EXEEXT)
+clasplib_SCRIPTS = $(CLASP_MAXIMA)
+sb_slad = (sb-ext:save-lisp-and-die "$@" :executable t)
+else
+CLASP_MAXIMA = binary-clasp/maxima.core
+clasplib_DATA = $(CLASP_MAXIMA)
+sb_slad = (sb-ext:save-lisp-and-die "$@")
+endif
+
+EXECUTECLASP = "$(CLASP_NAME)" --noinform --noprint $(CLASP_EXTRA_ARGS)
+BUILT_FILES += $(CLASP_MAXIMA)
+
+COMPILE_CLASP = echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (sb-ext:quit)' | $(EXECUTECLASP) 
+WRITE_CLASP = echo '$(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) $(sb_slad) (sb-ext:quit)' | $(EXECUTECLASP)
+BUILD_CLASP = $(COMPILE_CLASP) && $(WRITE_CLASP)
+
+clasp: $(CLASP_MAXIMA)
+
+$(CLASP_MAXIMA):
+	$(MAKE) bd
+	$(BUILD_CLASP)
+
+clasp-depends.mk: maxima.system Makefile *.lisp
+	echo $(call MAKE_DEPENDS,"$(CLASP_MAXIMA)",clasp-depends.mk.tmp,(sb-ext:quit)) | $(EXECUTECLASP)
+	cat clasp-depends.mk.tmp | sed -e "s#\\\\#/#g" > clasp-depends.mk
+
+-include clasp-depends.mk
+
+endif
+
+clean-clasp:
+	rm -rf binary-clasp numerical/binary-clasp numerical/slatec/binary-clasp
+CLEAN_TARGETS += clean-clasp
+
 ## GCL #########################################################################
 #
 # For gcl we execute all commands from a temp file for the following motive:
@@ -551,3 +594,4 @@ CLEAN_TARGETS += clean-abcl
 
 distclean-local:
 	rm -f sbcl-depends.mk.tmp
+	rm -f clasp-depends.mk.tmp
