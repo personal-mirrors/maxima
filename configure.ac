@@ -352,7 +352,62 @@ if test x"${sbcl}" = xtrue ; then
 		AC_MSG_WARN(sbcl executable "${SBCL_NAME}" not found in PATH)
 	fi
 fi
-	
+
+dnl n.b. clasp_default_name is hardcoded in "with" message
+clasp_default_name=clasp
+AC_ARG_ENABLE(clasp,
+	[  --enable-clasp                Use CLASP],
+     	[case "${enableval}" in
+       		yes) clasp=true 
+		     lisps_enabled="${lisps_enabled} clasp"
+                     explicit_lisp=true ;;
+       		no)  clasp=false ;;
+		*) AC_MSG_ERROR(bad value ${enableval} for --enable-clasp) ;;
+     	esac
+	explicit_lisp=true],
+	[clasp=false])
+AC_ARG_WITH(clasp,
+	[  --with-clasp=<prog>           Use CLASP executable <prog> (default clasp)],
+	[clasp=true
+	lisps_enabled="${lisps_enabled} clasp"
+	explicit_lisp=true
+	if test "$withval" = "yes"; then
+		CLASP_NAME="${clasp_default_name}"
+	else
+		CLASP_NAME="$withval"
+	fi],
+	[CLASP_NAME="${clasp_default_name}"])
+AC_ARG_ENABLE(clasp-exec,
+	[  --enable-clasp-exec           Create a maxima executable image using CLASP.
+                                No check is made if the version of 
+                                CLASP supports executable images],
+	[case "${enableval}" in
+	    yes) clasp_exec=true 
+                 clasp=true 
+		 lisps_enabled="${lisps_enabled} clasp"
+                 explicit_lisp=true ;;
+	    no) clasp_exec=false ;;
+	    *) AC_MSG_ERROR(bad value ${enableval} for --enable-clasp-exec) ;;
+         esac
+	 CLASP_EXEC=${clasp_exec}],
+	[clasp_exec=false
+	 CLASP_EXEC=false])
+if test x"${clasp}" = xtrue ; then
+	if test `echo "$CLASP_NAME" | sed 's/\(.\).*/\1/'` = "/" ; then
+		if test -x "$CLASP_NAME" ; then
+			clasp_found=true
+		else
+			clasp_found=false
+		fi
+	else
+		AC_CHECK_PROG(clasp_found,"$CLASP_NAME",true,false)
+	fi
+	AC_CHECK_PROG(clasp_found,"$CLASP_NAME",true,false)
+	if test x"${clasp_found}" = xfalse ; then
+		AC_MSG_WARN(clasp executable "${CLASP_NAME}" not found in PATH)
+	fi
+fi
+
 dnl n.b. acl_default_name is hardcoded in "with" message
 acl_default_name=lisp
 AC_ARG_ENABLE(acl,
@@ -879,6 +934,7 @@ if test x"${explicit_lisp}" = xfalse ; then
 	AC_CHECK_PROG(cmucl_found,$CMUCL_NAME,true,false)
 	AC_CHECK_PROG(scl_found,$SCL_NAME,true,false)
 	AC_CHECK_PROG(sbcl_found,$SBCL_NAME,true,false)
+	AC_CHECK_PROG(clasp_found,$CLASP_NAME,true,false)
 	AC_CHECK_PROG(acl_found,$ACL_NAME,true,false)
 	AC_CHECK_PROG(openmcl_found,$OPENMCL_NAME,true,false)
 	AC_CHECK_PROG(ccl64_found,$CCL64_NAME,true,false)
@@ -899,6 +955,9 @@ if test x"${explicit_lisp}" = xfalse ; then
 	elif test x"${sbcl_found}" = xtrue ; then
 	   	sbcl=true
 		lisps_enabled="${lisps_enabled} sbcl"
+	elif test x"${clasp_found}" = xtrue ; then
+	   	clasp=true
+		lisps_enabled="${lisps_enabled} clasp"
 	elif test x"${acl_found}" = xtrue ; then
 		acl=true
 		lisps_enabled="${lisps_enabled} acl"
@@ -906,7 +965,7 @@ if test x"${explicit_lisp}" = xfalse ; then
 		ecl=true
 		lisps_enabled="${lisps_enabled} ecl"
 	else
-		AC_MSG_ERROR(No lisp implementation specified and none of the default executables [${clisp_default_name}(clisp),${gcl_default_name}(GCL),${cmucl_default_name}(CMUCL),${scl_default_name}(SCL),${sbcl_default_name}(SBCL),${acl_default_name}(ACL),${openmcl_default_name}(OpenMCL),${ecl_default_name}(ECL)] were found in PATH)
+		AC_MSG_ERROR(No lisp implementation specified and none of the default executables [${clisp_default_name}(clisp),${gcl_default_name}(GCL),${cmucl_default_name}(CMUCL),${scl_default_name}(SCL),${sbcl_default_name}(SBCL),${clasp_default_name}(CLASP),${acl_default_name}(ACL),${openmcl_default_name}(OpenMCL),${ecl_default_name}(ECL)] were found in PATH)
 	fi
 fi
 
@@ -919,6 +978,8 @@ AM_CONDITIONAL(CMUCL_EXEC, test x${cmucl_exec} = xtrue)
 AM_CONDITIONAL(SCL, test x$scl = xtrue)
 AM_CONDITIONAL(SBCL, test x$sbcl = xtrue)
 AM_CONDITIONAL(SBCL_EXEC, test x$sbcl_exec = xtrue)
+AM_CONDITIONAL(CLASP, test x$clasp = xtrue)
+AM_CONDITIONAL(CLASP_EXEC, test x$clasp_exec = xtrue)
 AM_CONDITIONAL(ACL, test x$acl = xtrue)
 AM_CONDITIONAL(OPENMCL, test x$openmcl = xtrue)
 AM_CONDITIONAL(OPENMCL_EXEC, test x${openmcl_exec} = xtrue)
@@ -1061,6 +1122,13 @@ AC_ARG_WITH(default-lisp,
 				AC_MSG_ERROR(sbcl not enabled)
 			fi
 			;;
+		clasp)
+			if test x"${clasp}" = xtrue ; then
+				DEFAULTLISP=clasp
+			else
+				AC_MSG_ERROR(clasp not enabled)
+			fi
+			;;
 		gcl)
 			if test x"${gcl}" = xtrue ; then
 				DEFAULTLISP=gcl
@@ -1109,6 +1177,8 @@ AC_ARG_WITH(default-lisp,
      	esac],
 	[if test x"${sbcl}" = xtrue ; then
 		DEFAULTLISP=sbcl
+	[if test x"${clasp}" = xtrue ; then
+		DEFAULTLISP=clasp
 	elif test x"${cmucl}" = xtrue ; then
 		DEFAULTLISP=cmucl
 	elif test x"${scl}" = xtrue ; then
@@ -1142,6 +1212,7 @@ AC_SUBST(SCL_NAME)
 AC_SUBST(SCL_RUNTIME)
 AC_SUBST(SCL_RUNTIME_PATH)
 AC_SUBST(SBCL_NAME)
+AC_SUBST(CLASP_NAME)
 AC_SUBST(GCL_NAME)
 AC_SUBST(ACL_NAME)
 AC_SUBST(OPENMCL_NAME)
@@ -1357,6 +1428,14 @@ if test x"${sbcl}" = xtrue ; then
 	   	echo "sbcl executable image enabled for maxima."
 	else
 		echo Use "--enable-sbcl-exec to build a standalone executable instead."
+	fi
+fi
+if test x"${clasp}" = xtrue ; then
+   	echo "Compiling a maxima image using \"${CLASP_NAME}\""
+	if test x"${clasp_exec}" = xtrue ; then
+	   	echo "clasp executable image enabled for maxima."
+	else
+		echo Use "--enable-clasp-exec to build a standalone executable instead."
 	fi
 fi
 if test x"${gcl}" = xtrue ; then
