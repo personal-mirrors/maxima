@@ -1177,7 +1177,7 @@ AC_ARG_WITH(default-lisp,
      	esac],
 	[if test x"${sbcl}" = xtrue ; then
 		DEFAULTLISP=sbcl
-	[if test x"${clasp}" = xtrue ; then
+	elif test x"${clasp}" = xtrue ; then
 		DEFAULTLISP=clasp
 	elif test x"${cmucl}" = xtrue ; then
 		DEFAULTLISP=cmucl
