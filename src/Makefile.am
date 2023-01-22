@@ -324,18 +324,18 @@ EXTRA_SCRIPTS += $(CLASP_MAXIMA)
 if CLASP_EXEC
 CLASP_MAXIMA = binary-clasp/maxima$(EXEEXT)
 clasplib_SCRIPTS = $(CLASP_MAXIMA)
-sb_slad = (sb-ext:save-lisp-and-die "$@" :executable t)
+sb_slad = (ext:save-lisp-and-die "$@" :executable t)
 else
 CLASP_MAXIMA = binary-clasp/maxima.core
 clasplib_DATA = $(CLASP_MAXIMA)
-sb_slad = (sb-ext:save-lisp-and-die "$@")
+sb_slad = (ext:save-lisp-and-die "$@")
 endif
 
 EXECUTECLASP = "$(CLASP_NAME)" --noinform --noprint $(CLASP_EXTRA_ARGS)
 BUILT_FILES += $(CLASP_MAXIMA)
 
-COMPILE_CLASP = echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (sb-ext:quit)' | $(EXECUTECLASP) 
-WRITE_CLASP = echo '$(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) $(sb_slad) (sb-ext:quit)' | $(EXECUTECLASP)
+COMPILE_CLASP = echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (ext:quit)' | $(EXECUTECLASP) 
+WRITE_CLASP = echo '$(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) $(sb_slad) (ext:quit)' | $(EXECUTECLASP)
 BUILD_CLASP = $(COMPILE_CLASP) && $(WRITE_CLASP)
 
 clasp: $(CLASP_MAXIMA)
@@ -345,7 +345,7 @@ $(CLASP_MAXIMA):
 	$(BUILD_CLASP)
 
 clasp-depends.mk: maxima.system Makefile *.lisp
-	echo $(call MAKE_DEPENDS,"$(CLASP_MAXIMA)",clasp-depends.mk.tmp,(sb-ext:quit)) | $(EXECUTECLASP)
+	echo $(call MAKE_DEPENDS,"$(CLASP_MAXIMA)",clasp-depends.mk.tmp,(ext:quit)) | $(EXECUTECLASP)
 	cat clasp-depends.mk.tmp | sed -e "s#\\\\#/#g" > clasp-depends.mk
 
 -include clasp-depends.mk
