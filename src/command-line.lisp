@@ -172,4 +172,7 @@
      (rest ccl:*command-line-argument-list*)
 
      #+abcl
-     ext:*command-line-argument-list*)))
+     ext:*command-line-argument-list*
+
+     #+clasp
+     (rest (loop :for n :below (ext:argc) :collect (ext:argv n))))))

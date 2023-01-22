@@ -780,5 +780,7 @@ DESTINATION is an actual stream (rather than nil for a string)."
   (progn (sb-ext::gc :full t) t)
   #+cmucl
   (progn (ext:gc :full t) t)
-  #-(or allegro clisp ecl gcl sbcl cmucl)
+  #+clasp
+  (ext::garbage-collect)
+  #-(or allegro clisp ecl gcl sbcl cmucl clasp)
   nil)
