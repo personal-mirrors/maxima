@@ -589,10 +589,38 @@
 			 (delete-file file)))))
 	   *temp-files-list*))
 
+(defun sort-property-lists ()
+  "Sort property lists of all symbols in the MAXIMA package so that the
+  property list has OPERATORS and DISTRIBUTE_OVER first.  If the
+  property doesn't exist, assign a suitable value."
+  (flet ((update (sym property default-value)
+	   (let ((prop (get sym property)))
+	     (cond (prop
+		    ;; Property exists.  Remove it and set it again
+		    ;; with the original value so that the property is
+		    ;; at the front of the plist.  (Probably could be
+		    ;; done better, but this is simple and easy to
+		    ;; understand.)
+		    (remprop sym property)
+		    (setf (get sym property) prop))
+		   (t
+		    ;; Property doesn't exist.  Add the property with
+		    ;; a value of DEFAULT-VALUE.
+		    (setf (get sym property) default-value))))))
+    (loop for sym being the symbols of "MAXIMA"
+	  do
+	     ;; This will reorder the properties or define a default
+	     ;; value if it's missing.  This should be done in the
+	     ;; reverse order so that the first property should be
+	     ;; done last.
+	     (update sym 'distribute_over nil)
+	     (update sym 'operators nil))))
+
 (defun cl-user::run ()
   "Run Maxima in its own package."
   (in-package :maxima)
   (initialize-runtime-globals)
+  (sort-property-lists)
   (let ((input-stream *standard-input*)
 	(batch-flag nil))
     (unwind-protect
