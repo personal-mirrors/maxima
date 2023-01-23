@@ -91,6 +91,7 @@ bd:
 LOADDEFSYSTEM = (load "$(top_srcdir)/lisp-utils/defsystem.lisp") (mk:add-registry-location "$(top_srcdir)/src/")
 LOADMAKEDEPENDS = (load "$(top_srcdir)/lisp-utils/make-depends.lisp")
 DS_OOS = funcall (intern (symbol-name :operate-on-system) :mk) "maxima"
+ASDFCOMPILE = "(require 'asdf) (push \"$(abs_top_srcdir)/src/\" asdf:*central-registry*) (asdf:oos 'asdf:compile-op \"maxima\") (asdf:oos 'asdf:load-op \"maxima\")"
 if QUIET_BUILD
 QUIET="(setf *compile-print* nil) (setq *compile-verbose* nil)"
 DEFSYSTEMCOMPILE = ($(DS_OOS) :compile :verbose nil)
@@ -334,9 +335,7 @@ endif
 EXECUTECLASP = "$(CLASP_NAME)" --noinform --noprint $(CLASP_EXTRA_ARGS)
 BUILT_FILES += $(CLASP_MAXIMA)
 
-COMPILE_CLASP = echo '$(QUIET) $(LOADDEFSYSTEM) $(DEFSYSTEMCOMPILE) (ext:quit)' | $(EXECUTECLASP) 
-WRITE_CLASP = echo '$(LOADDEFSYSTEM) $(DEFSYSTEMLOAD) $(sb_slad) (ext:quit)' | $(EXECUTECLASP)
-BUILD_CLASP = $(COMPILE_CLASP) && $(WRITE_CLASP)
+BUILD_CLASP = echo $(ASDFCOMPILE) " (ext:quit)" | $(EXECUTECLASP) 
 
 clasp: $(CLASP_MAXIMA)
 
@@ -344,11 +343,11 @@ $(CLASP_MAXIMA):
 	$(MAKE) bd
 	$(BUILD_CLASP)
 
-clasp-depends.mk: maxima.system Makefile *.lisp
-	echo $(call MAKE_DEPENDS,"$(CLASP_MAXIMA)",clasp-depends.mk.tmp,(ext:quit)) | $(EXECUTECLASP)
-	cat clasp-depends.mk.tmp | sed -e "s#\\\\#/#g" > clasp-depends.mk
+# clasp-depends.mk: maxima.system Makefile *.lisp
+# 	echo $(call MAKE_DEPENDS,"$(CLASP_MAXIMA)",clasp-depends.mk.tmp,(ext:quit)) | $(EXECUTECLASP)
+# 	cat clasp-depends.mk.tmp | sed -e "s#\\\\#/#g" > clasp-depends.mk
 
--include clasp-depends.mk
+# -include clasp-depends.mk
 
 endif
 
