@@ -593,7 +593,7 @@
   "Sort property lists of all symbols in the MAXIMA package so that the
   property list has OPERATORS and DISTRIBUTE_OVER first.  If the
   property doesn't exist, assign a suitable value."
-  (flet ((update (sym property default-value)
+  (flet ((move-to-front (sym property default-value)
 	   (let ((prop (get sym property)))
 	     (cond (prop
 		    ;; Property exists.  Remove it and set it again
@@ -606,15 +606,29 @@
 		   (t
 		    ;; Property doesn't exist.  Add the property with
 		    ;; a value of DEFAULT-VALUE.
-		    (setf (get sym property) default-value))))))
+		    (setf (get sym property) default-value)))))
+	 (move-to-back (sym property)
+	   (let ((prop (get sym property)))
+	     (when prop
+		    (remprop sym property)
+		    (setf (symbol-plist sym)
+			  (append (symbol-plist sym)
+				  (list property prop)))))))
     (loop for sym being the symbols of "MAXIMA"
 	  do
 	     ;; This will reorder the properties or define a default
 	     ;; value if it's missing.  This should be done in the
 	     ;; reverse order so that the first property should be
 	     ;; done last.
-	     (update sym 'distribute_over nil)
-	     (update sym 'operators nil))))
+	     (move-to-front sym 'distribute_over nil)
+	     (move-to-front sym 'operators nil)
+	     ;; Move TeX properties to the back
+	     (move-to-back sym 'texword)
+	     (move-to-back sym 'tex-rbp)
+	     (move-to-back sym 'texsym)
+	     (move-to-back sym 'tex))))
+
+
 
 (defun cl-user::run ()
   "Run Maxima in its own package."
