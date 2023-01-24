@@ -144,7 +144,7 @@ elif [ "@DEFAULTLISP@" = "acl" ]
          lispargs="-L $catprogname --kill"
 elif [ "@DEFAULTLISP@" = "clasp" ]
     then lispprog="@CLASP_NAME@"
-         lispargs="-l $catprogname --kill"
+         lispargs="-l $catprogname --non-interactive"
 else
     echo "$0: DEFAULTLISP = @DEFAULTLISP@ not recognized, assume '@DEFAULTLISP@ $catprogname' is acceptable."
     lispprog="@DEFAULTLISP@"
