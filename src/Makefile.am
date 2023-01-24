@@ -325,17 +325,17 @@ EXTRA_SCRIPTS += $(CLASP_MAXIMA)
 if CLASP_EXEC
 CLASP_MAXIMA = binary-clasp/maxima$(EXEEXT)
 clasplib_SCRIPTS = $(CLASP_MAXIMA)
-sb_slad = (ext:save-lisp-and-die "$@" :executable t)
+clasp_slad = "(ext:save-lisp-and-die \"$@\" :executable t)"
 else
 CLASP_MAXIMA = binary-clasp/maxima.core
 clasplib_DATA = $(CLASP_MAXIMA)
-sb_slad = (ext:save-lisp-and-die "$@")
+clasp_slad = "(ext:save-lisp-and-die \"$@\")"
 endif
 
 EXECUTECLASP = "$(CLASP_NAME)" --noinform --noprint $(CLASP_EXTRA_ARGS)
 BUILT_FILES += $(CLASP_MAXIMA)
 
-BUILD_CLASP = echo $(ASDFCOMPILE) " (ext:quit)" | $(EXECUTECLASP) 
+BUILD_CLASP = echo $(ASDFCOMPILE) $(clasp_slad)" (ext:quit)" | $(EXECUTECLASP) 
 
 clasp: $(CLASP_MAXIMA)
 
