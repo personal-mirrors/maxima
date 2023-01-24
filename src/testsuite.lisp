@@ -19,8 +19,7 @@
 	 #+allegro ((mlist simp) 11 13))
         "rtestnset" 
         ((mlist simp) "rtest1"
-	 #+gcl ((mlist simp) 183 185 186 203 206)
-	 #-gcl ((mlist simp) 183 185 186))
+	 ((mlist simp) 183 185 186))
         ((mlist simp) "rtest1a" ((mlist simp) 33))
         ((mlist simp) "rtest2" ((mlist simp) 86 95))
 	"rtest4"
@@ -147,8 +146,7 @@
 	 #+(or gcl abcl) ((mlist simp) 87 120)
 	 #-(or gcl abcl) ((mlist simp) 87))
 	((mlist simp) "rtest_nfloat"
-	 #-(or gcl)
-	 ((mlist simp) 25))
+	 #-gcl((mlist simp) 25))
         ))
 
 ;; The list of share testsuite files. As they are given without a path
@@ -213,7 +211,7 @@
     ((mlist simp) "rtest_dgesv")
     ;;  The following functions were used but not defined: ODEPACK::DUMACH in gcl 2.6.12
     ;;  and abcl 1.5.0
-    #-(or gcl abcl gcl)
+    #-abcl
     "rtest_dlsode"
     ((mlist simp) "rtest_fourier_elim"
      ((mlist simp) 146 147 148 149))
@@ -249,7 +247,7 @@
      #+clisp
      ((mlist simp) 27 38 61 63 65 69)
      #+gcl
-     ((mlist simp) 7 29 38 39 40 48 61 70)
+     ((mlist simp) 7 29 38 39 40 48 61)
      ;; The tests that failed with abcl 1.5.0
      #+abcl
      ((mlist simp) 38 40 61 63 65 69)
@@ -267,19 +265,6 @@
     ((mlist simp) "rtest_abs_integrate" ((mlist) 177 253))
     "rtest_pochhammer"
     ((mlist simp) "rtest_to_poly_solve"
-     #-(or cmucl ccl ecl gcl sbcl sbcl clisp)
-     ((mlist simp) 64 74 80 116 140 141 168 184 242 245 322)
-     #+clisp
-     ((mlist simp) 64 74 80 116 140 141 168 184 242 245 322)
-     #+gcl
-     ((mlist simp) 64 74 80 116 140 141 168 184 212 242 245 322)
-     #+cmucl
-     ((mlist simp) 64 74 80 116 140 141 168 184 242 245 322)
-     #+ecl
-     ((mlist simp) 64 74 80 116 140 141 168 184 242 245 322)
-     #+sbcl
-     ((mlist simp) 64 74 80 116 140 141 168 184 242 245 322)
-     #+ccl
      ((mlist simp) 64 74 80 116 140 141 168 184 242 245 322))
     ((mlist simp) "rtest_sym"
      #-(or sbcl gcl clisp cmucl ecl) ((mlist simp) 15 64)
@@ -291,9 +276,7 @@
     ((mlist simp) "rtest_vect"
      #-(or cmucl gcl ecl)
      ((mlist simp) 4 9 10 13 16 19 20 21 24 25)
-     #+(or cmucl ecl)
-     ((mlist simp) 4 9 10 13 16 20 21 24 25)
-     #+gcl
+     #+(or cmucl ecl gcl)
      ((mlist simp) 4 9 10 13 16 20 21 24 25))
      "rtest_antid"
      "rtest_bffac"
@@ -305,8 +288,7 @@
       ((mlist simp) 9 10 11))
      "rtest_fft"
      "rtest_rfft"
-     ((mlist simp) "rtest_decfp"
-      #+gcl ((mlist simp) 1 2 3 4))
+     "rtest_decfp"
      "rtest_wrstcse"
      ;; ACL 10.1 cannot load stringproc as it has no (get-encoding) function.
      #-(or ecl abcl)
