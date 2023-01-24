@@ -206,6 +206,7 @@ is (sum+1/10^50=1.0L0) ;  should be true
 
 ;; overwrite this one, too
 (defun bigfloat2rat (x)
+  #+gcl(declare (notinline write-char))
   (if (decimalfpp x) (let ((k (* (cadr x)(expt 10 (caddr x)))))
 		       (list '(rat) (numerator k)(denominator k)))
     (let ()
@@ -399,11 +400,10 @@ is (sum+1/10^50=1.0L0) ;  should be true
 	  (setf (get j 'floatprog) (compile nil program))))))
 
 (eval-when
-    #+gcl (load eval)
-    #-gcl (:load-toplevel :execute)
-     (do-symbols (j :maxima 'decimal-floats-installed) 
-       (unless (member j '(mabs mplus mtimes rat) :test 'eq)
-		       (make-decimalfp-prog j))))
+    (:load-toplevel :execute)
+  (do-symbols (j :maxima 'decimal-floats-installed)
+    (unless (member j '(mabs mplus mtimes rat) :test 'eq)
+      (make-decimalfp-prog j))))
 
 ;; exceptions to the uniform treatment above...
 
@@ -722,10 +722,8 @@ rationalize(1.0L-1)-1/10		; ; should be zero
 |#
 
 (eval-when
-    #+gcl (load eval)
-    #-gcl (:load-toplevel :execute)
-     (fpprec1 nil $fpprec)		; Set up user's precision
-     )
+    (:load-toplevel :execute)
+  (fpprec1 nil $fpprec))		; Set up user's precision
 
 ;; these 3 functions below are not needed .. see advise-fun-simp
 ;; for the workaround.
