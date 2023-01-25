@@ -610,8 +610,11 @@
 	     ;; value if it's missing.  This should be done in the
 	     ;; reverse order so that the first property should be
 	     ;; done last.
+	     (move-to-front sym 'opers nil)
 	     (move-to-front sym 'distribute_over nil)
 	     (move-to-front sym 'operators nil)
+
+	     (move-to-back sym 'translate)
 	     ;; Move TeX properties to the back
 	     (move-to-back sym 'texword)
 	     (move-to-back sym 'tex-rbp)
