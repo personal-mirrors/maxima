@@ -928,7 +928,7 @@ Maxima code for evaluating orthogonal polynomials listed in Chapter 22 of Abramo
 (setf (get '$spherical_hankel1 'dimension) 'dimension-spherical-hankel-1)
 
 (defun dimension-spherical-hankel-1 (form result)
-  (let ((form1 `((mexpt) (($\h simp array) ,(nth 1 form)) 
+  (let ((form1 `((mexpt) (($h simp array) ,(nth 1 form)) 
 		 (1))))
     (dimension-function `((,form1 simp) ,(nth 2 form)) result)))
 
@@ -958,7 +958,7 @@ Maxima code for evaluating orthogonal polynomials listed in Chapter 22 of Abramo
 (setf (get '$spherical_hankel2 'dimension) 'dimension-spherical-hankel-2)
 
 (defun dimension-spherical-hankel-2 (form result)
-  (let ((form1 `((mexpt) (($\h simp array) ,(nth 1 form))  (2))))
+  (let ((form1 `((mexpt) (($h simp array) ,(nth 1 form))  (2))))
     (dimension-function `((,form1 simp) ,(nth 2 form)) result)))
   
 ;;---------------------------------------------------------------------
