@@ -1048,12 +1048,12 @@ Maxima code for evaluating orthogonal polynomials listed in Chapter 22 of Abramo
 (defprop $spherical_bessel_j tex-spherical-bessel-j tex)
 
 (defun tex-spherical-bessel-j (x l r)
-  (tex-sub-and-super-scripted-function "j^{(2)}" `(0) nil nil nil 1 x l r))
+  (tex-sub-and-super-scripted-function "j" `(0) nil nil nil 1 x l r))
 
 (setf (get '$spherical_bessel_j 'dimension) 'dimension-spherical-bessel-j)
 
 (defun dimension-spherical-bessel-j (form result)
-  (let ((form1 `(($\j simp array) ,(nth 1 form)))) 
+  (let ((form1 `(($j simp array) ,(nth 1 form)))) 
     (dimension-function `((,form1 simp) ,(nth 2 form)) result)))
 
 ;; For analytic continuation, see A&S 10.1.35.
@@ -1098,12 +1098,12 @@ Maxima code for evaluating orthogonal polynomials listed in Chapter 22 of Abramo
 (defprop $spherical_bessel_y tex-spherical-bessel-y tex)
 
 (defun tex-spherical-bessel-y (x l r)
-  (tex-sub-and-super-scripted-function "y^{(2)}" `(0) nil nil nil 1 x l r))
+  (tex-sub-and-super-scripted-function "y" `(0) nil nil nil 1 x l r))
 
  (setf (get '$spherical_bessel_y 'dimension) 'dimension-spherical-bessel-y)
 
 (defun dimension-spherical-bessel-y (form result)
-  (let ((form1 `(($\y simp array) ,(nth 1 form)))) 
+  (let ((form1 `(($y simp array) ,(nth 1 form)))) 
     (dimension-function `((,form1 simp) ,(nth 2 form)) result)))
 
 ;; Compute P_n^m(cos(theta)).  See Merzbacher, 9.59 page 184
