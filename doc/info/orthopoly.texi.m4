@@ -1,4 +1,11 @@
 @c -*- mode: texinfo -*-
+@c
+@c BE VERY CAREFUL if you run doc/info/update_examples on this file.
+@c It doesn't quite work because some of the examples continue where
+@c the previous example left off.  Update_examples doesn't seem to
+@c know how to do that, so the generated results are just plain wrong
+@c or produce an error instead.
+@c
 @menu
 * Introduction to orthogonal polynomials::
 * Functions and Variables for orthogonal polynomials::
@@ -163,7 +170,7 @@ respect other arguments usually result in an error message; for example
 
 Maxima doesn't know the derivative of hermite with respect the first
 argument
- -- an error.  Quitting.  To debug this try debugmode(true);
+ -- an error. To debug this try: debugmode(true);
 @end example
 
 Generally, functions in @code{orthopoly} map over lists and matrices. For
@@ -709,34 +716,43 @@ Reference: @urlaands{eqn 22.5.37, 779}, @urlaands{eqn 8.6.6, 334}, and @urlaands
 
 Some examples:
 @c ===beg===
+@c assoc_legendre_p(n,m,x);
 @c assoc_legendre_p(2,0,x);
 @c factor(%);
 @c factor(assoc_legendre_p(2,1,x));
-@c (-1)^1*(1-x^2)^(1/2)*diff(legendre_p(2,x),1);
 @c factor(%);
 @c ===end===
 @example
-(%i1) assoc_legendre_p(2,0,x);
-                                                 2
-                                        3 (1 - x)
-(%o1)                   (- 3 (1 - x)) + ---------- + 1
-                                            2
-(%i2) factor(%);
-                                      2
-                                   3 x  - 1
-(%o2)                              --------
-                                      2
-(%i3) factor(assoc_legendre_p(2,1,x));
-                                              2
-(%o3)                         - 3 x sqrt(1 - x )
-
-(%i4) (-1)^1*(1-x^2)^(1/2)*diff(legendre_p(2,x),x);
-                                                    2
-(%o4)                   - (3 - 3 (1 - x)) sqrt(1 - x )
-
+@group
+(%i1) assoc_legendre_p(n,m,x);
+                               m
+(%o1)                         P (x)
+                               n
+@end group
+@group
+(%i2) assoc_legendre_p(2,0,x);
+                                          2
+                                 3 (1 - x)
+(%o2)            (- 3 (1 - x)) + ---------- + 1
+                                     2
+@end group
+@group
+(%i3) factor(%);
+                               2
+                            3 x  - 1
+(%o3)                       --------
+                               2
+@end group
+@group
+(%i4) factor(assoc_legendre_p(2,1,x));
+                                       2
+(%o4)                  - 3 x sqrt(1 - x )
+@end group
+@group
 (%i5) factor(%);
-                                              2
-(%o5)                         - 3 x sqrt(1 - x )
+                                       2
+(%o5)                  - 3 x sqrt(1 - x )
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -758,31 +774,43 @@ Reference: Abramowitz and Stegun, equation 8.5.3 and 8.1.8.
 
 Some examples:
 @c ===beg===
+@c assoc_legendre_q(n,m,x);
 @c assoc_legendre_q(0,0,x);
 @c assoc_legendre_q(1,0,x);
 @c assoc_legendre_q(1,1,x);
 @c ===end===
 @example
-(%i1) assoc_legendre_q(0,0,x);
-                                       x + 1
-                                 log(- -----)
-                                       x - 1
-(%o1)                            ------------
-                                      2
-(%i2) assoc_legendre_q(1,0,x);
-                                    x + 1
-                              log(- -----) x - 2
-                                    x - 1
-(%o2)/R/                      ------------------
-                                      2
-(%i3) assoc_legendre_q(1,1,x);
-(%o3)/R/ 
-          x + 1            2   2               2            x + 1            2
-    log(- -----) sqrt(1 - x ) x  - 2 sqrt(1 - x ) x - log(- -----) sqrt(1 - x )
-          x - 1                                             x - 1
-  - ---------------------------------------------------------------------------
-                                        2
-                                     2 x  - 2
+@group
+(%i1) assoc_legendre_q(n,m,x);
+                               m
+(%o1)                         Q (x)
+                               n
+@end group
+@group
+(%i2) assoc_legendre_q(0,0,x);
+                                x + 1
+                          log(- -----)
+                                x - 1
+(%o2)                     ------------
+                               2
+@end group
+@group
+(%i3) assoc_legendre_q(1,0,x);
+                             x + 1
+                       log(- -----) x - 2
+                             x - 1
+(%o3)/R/               ------------------
+                               2
+@end group
+@group
+(%i4) assoc_legendre_q(1,1,x);
+                  x + 1            2   2               2
+(%o4)/R/ - (log(- -----) sqrt(1 - x ) x  - 2 sqrt(1 - x ) x
+                  x - 1
+                                  x + 1            2       2
+                          - log(- -----) sqrt(1 - x ))/(2 x  - 2)
+                                  x - 1
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -829,24 +857,38 @@ w(x) &= 1/\sqrt{1-x^2} \cr
 
 Some examples:
 @c ===beg===
+@c chebyshev_t(n,x);
 @c chebyshev_t(2,x);
 @c factor(%);
 @c factor(chebyshev_t(3,x));
 @c factor(hgfred([-3,3],[1/2],(1-x)/2));
 @c ===end===
 @example
-(%i1) chebyshev_t(2,x);
-                                                 2
-(%o1)                   (- 4 (1 - x)) + 2 (1 - x)  + 1
-(%i2) factor(%);
-                                      2
-(%o2)                              2 x  - 1
-(%i3) factor(chebyshev_t(3,x));
-                                       2
-(%o3)                            x (4 x  - 3)
-(%i4) factor(hgfred([-3,3],[1/2],(1-x)/2));
-                                       2
-(%o4)                            x (4 x  - 3)
+@group
+(%i1) chebyshev_t(n,x);
+(%o1)                         T (x)
+                               n
+@end group
+@group
+(%i2) chebyshev_t(2,x);
+                                          2
+(%o2)            (- 4 (1 - x)) + 2 (1 - x)  + 1
+@end group
+@group
+(%i3) factor(%);
+                               2
+(%o3)                       2 x  - 1
+@end group
+@group
+(%i4) factor(chebyshev_t(3,x));
+                                2
+(%o4)                     x (4 x  - 3)
+@end group
+@group
+(%i5) factor(hgfred([-3,3],[1/2],(1-x)/2));
+                                2
+(%o5)                     x (4 x  - 3)
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -892,26 +934,40 @@ w(x) &= \sqrt{1-x^2} \cr
 @math{k(n) = (-2)^n*pochhammer(3/2,n)/(n+1)}>>>).
 
 @c ===beg===
+@c chebyshev_u(n,x);
 @c chebyshev_u(2,x);
 @c expand(%);
 @c expand(chebyshev_u(3,x));
 @c expand(4*hgfred([-3,5],[3/2],(1-x)/2));
 @c ===end===
 @example
-(%i1) chebyshev_u(2,x);
-                                                  2
-                            8 (1 - x)    4 (1 - x)
-(%o1)                 3 ((- ---------) + ---------- + 1)
-                                3            3
-(%i2) expand(%);
-                                      2
-(%o2)                              4 x  - 1
-(%i3) expand(chebyshev_u(3,x));
-                                     3
-(%o3)                             8 x  - 4 x
-(%i4) expand(4*hgfred([-3,5],[3/2],(1-x)/2));
-                                     3
-(%o4)                             8 x  - 4 x
+@group
+(%i1) chebyshev_u(n,x);
+(%o1)                         U (x)
+                               n
+@end group
+@group
+(%i2) chebyshev_u(2,x);
+                                           2
+                     8 (1 - x)    4 (1 - x)
+(%o2)          3 ((- ---------) + ---------- + 1)
+                         3            3
+@end group
+@group
+(%i3) expand(%);
+                               2
+(%o3)                       4 x  - 1
+@end group
+@group
+(%i4) expand(chebyshev_u(3,x));
+                              3
+(%o4)                      8 x  - 4 x
+@end group
+@group
+(%i5) expand(4*hgfred([-3,5],[3/2],(1-x)/2));
+                              3
+(%o5)                      8 x  - 4 x
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -958,30 +1014,42 @@ Reference: @urlaands{eqn 22.5.54,780}.
 
 Some examples:
 @c ===beg===
+@c gen_laguerre(n,k,x);
 @c gen_laguerre(1,k,x);
 @c gen_laguerre(2,k,x);
 @c binomial(2+k,2)*hgfred([-2],[1+k],x);
 @c ===end===
 @example
-(%i1) gen_laguerre(1,k,x);
-                                             x
-(%o1)                         (k + 1) (1 - -----)
-                                           k + 1
-(%i2) gen_laguerre(2,k,x);
-                                         2
-                                        x            2 x
-                 (k + 1) (k + 2) (--------------- - ----- + 1)
-                                  (k + 1) (k + 2)   k + 1
-(%o2)            ---------------------------------------------
-                                       2
-(%i3) binomial(2+k,2)*hgfred([-2],[1+k],x);
-                                         2
-                                        x            2 x
-                 (k + 1) (k + 2) (--------------- - ----- + 1)
-                                  (k + 1) (k + 2)   k + 1
-(%o3)            ---------------------------------------------
-                                       2
-
+@group
+(%i1) gen_laguerre(n,k,x);
+                              (k)
+(%o1)                        L   (x)
+                              n
+@end group
+@group
+(%i2) gen_laguerre(1,k,x);
+                                      x
+(%o2)                  (k + 1) (1 - -----)
+                                    k + 1
+@end group
+@group
+(%i3) gen_laguerre(2,k,x);
+                                  2
+                                 x            2 x
+          (k + 1) (k + 2) (--------------- - ----- + 1)
+                           (k + 1) (k + 2)   k + 1
+(%o3)     ---------------------------------------------
+                                2
+@end group
+@group
+(%i4) binomial(2+k,2)*hgfred([-2],[1+k],x);
+                                  2
+                                 x            2 x
+          (k + 1) (k + 2) (--------------- - ----- + 1)
+                           (k + 1) (k + 2)   k + 1
+(%o4)     ---------------------------------------------
+                                2
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -1028,6 +1096,7 @@ Reference: @urlaands{eqn 22.5.55,780}.
 
 Some examples:
 @c ===beg===
+@c hermite(n,x);
 @c hermite(3,x);
 @c expand(%);
 @c expand(hermite(4,x));
@@ -1035,23 +1104,38 @@ Some examples:
 @c expand(4!*sum((-1)^k*(2*x)^(4-2*k)/(k!*(4-2*k)!),k,0,floor(4/2)));
 @c ===end===
 @example
-(%i1) hermite(3,x);
-                                              2
-                                           2 x
-(%o1)                          - 12 x (1 - ----)
-                                            3
-(%i2) expand(%);
+@group
+(%i1) hermite(n,x);
+(%o1)                         H (x)
+                               n
+@end group
+@group
+(%i2) hermite(3,x);
+                                       2
+                                    2 x
+(%o2)                   - 12 x (1 - ----)
                                      3
-(%o2)                             8 x  - 12 x
-(%i3) expand(hermite(4,x));
-                                  4       2
-(%o3)                         16 x  - 48 x  + 12
-(%i4) expand((2*x)^4*hgfred([-2,-2+1/2],[],-1/x^2));
-                                  4       2
-(%o4)                         16 x  - 48 x  + 12
-(%i5) expand(4!*sum((-1)^k*(2*x)^(4-2*k)/(k!*(4-2*k)!),k,0,floor(4/2)));
-                                  4       2
-(%o5)                         16 x  - 48 x  + 12
+@end group
+@group
+(%i3) expand(%);
+                              3
+(%o3)                      8 x  - 12 x
+@end group
+@group
+(%i4) expand(hermite(4,x));
+                           4       2
+(%o4)                  16 x  - 48 x  + 12
+@end group
+@group
+(%i5) expand((2*x)^4*hgfred([-2,-2+1/2],[],-1/x^2));
+                           4       2
+(%o5)                  16 x  - 48 x  + 12
+@end group
+@group
+(%i6) expand(4!*sum((-1)^k*(2*x)^(4-2*k)/(k!*(4-2*k)!),k,0,floor(4/2)));
+                           4       2
+(%o6)                  16 x  - 48 x  + 12
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -1108,16 +1192,27 @@ w(x) &= (1-x)^a(1-x)^b \cr
 
 Some examples:
 @c ===beg===
+@c jacobi_p(n,a,b,x);
 @c jacobi_p(0,a,b,x);
 @c jacobi_p(1,a,b,x);
 @c ===end===
 @example
-(%i1) jacobi_p(0,a,b,x);
-(%o1)                                  1
-(%i2) jacobi_p(1,a,b,x);
-                                    (b + a + 2) (1 - x)
-(%o2)                  (a + 1) (1 - -------------------)
-                                         2 (a + 1)
+@group
+(%i1) jacobi_p(n,a,b,x);
+                            (a, b)
+(%o1)                      P      (x)
+                            n
+@end group
+@group
+(%i2) jacobi_p(0,a,b,x);
+(%o2)                           1
+@end group
+@group
+(%i3) jacobi_p(1,a,b,x);
+                             (b + a + 2) (1 - x)
+(%o3)           (a + 1) (1 - -------------------)
+                                  2 (a + 1)
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -1146,29 +1241,43 @@ m4_displaymath(
 
 Some examples:
 @c ===beg===
+@c laguerre(n,x);
 @c laguerre(1,x);
 @c laguerre(2,x);
 @c gen_laguerre(2,0,x);
 @c sum((-1)^k/k!*binomial(2,k)*x^k,k,0,2);
 @c ===end===
 @example
-(%i1) laguerre(1,x);
-(%o1)                                1 - x
-(%i2) laguerre(2,x);
-                                  2
-                                 x
-(%o2)                            -- - 2 x + 1
-                                 2
-(%i3) gen_laguerre(2,0,x);
-                                  2
-                                 x
-(%o3)                            -- - 2 x + 1
-                                 2
-(%i4) sum((-1)^k/k!*binomial(2,k)*x^k,k,0,2);
-                                  2
-                                 x
-(%o4)                            -- - 2 x + 1
-                                 2
+@group
+(%i1) laguerre(n,x);
+(%o1)                         L (x)
+                               n
+@end group
+@group
+(%i2) laguerre(1,x);
+(%o2)                         1 - x
+@end group
+@group
+(%i3) laguerre(2,x);
+                           2
+                          x
+(%o3)                     -- - 2 x + 1
+                          2
+@end group
+@group
+(%i4) gen_laguerre(2,0,x);
+                           2
+                          x
+(%o4)                     -- - 2 x + 1
+                          2
+@end group
+@group
+(%i5) sum((-1)^k/k!*binomial(2,k)*x^k,k,0,2);
+                           2
+                          x
+(%o5)                     -- - 2 x + 1
+                          2
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -1209,6 +1318,7 @@ w(x) &= 1 \cr
 
 Some examples:
 @c ===beg===
+@c legendre_p(n,x);
 @c legendre_p(1,x);
 @c legendre_p(2,x);
 @c expand(%);
@@ -1216,28 +1326,43 @@ Some examples:
 @c expand(jacobi_p(3,0,0,x));
 @c ===end===
 @example
-(%i1) legendre_p(1,x);
-(%o1)                                  x
-(%i2) legendre_p(2,x);
-                                                 2
-                                        3 (1 - x)
-(%o2)                   (- 3 (1 - x)) + ---------- + 1
-                                            2
-(%i3) expand(%);
-                                      2
-                                   3 x    1
-(%o3)                              ---- - -
-                                    2     2
-(%i4) expand(legendre_p(3,x));
-                                     3
-                                  5 x    3 x
-(%o4)                             ---- - ---
-                                   2      2
-(%i5) expand(jacobi_p(3,0,0,x));
-                                     3
-                                  5 x    3 x
-(%o5)                             ---- - ---
-                                   2      2
+@group
+(%i1) legendre_p(n,x);
+(%o1)                         P (x)
+                               n
+@end group
+@group
+(%i2) legendre_p(1,x);
+(%o2)                           x
+@end group
+@group
+(%i3) legendre_p(2,x);
+                                          2
+                                 3 (1 - x)
+(%o3)            (- 3 (1 - x)) + ---------- + 1
+                                     2
+@end group
+@group
+(%i4) expand(%);
+                               2
+                            3 x    1
+(%o4)                       ---- - -
+                             2     2
+@end group
+@group
+(%i5) expand(legendre_p(3,x));
+                              3
+                           5 x    3 x
+(%o5)                      ---- - ---
+                            2      2
+@end group
+@group
+(%i6) expand(jacobi_p(3,0,0,x));
+                              3
+                           5 x    3 x
+(%o6)                      ---- - ---
+                            2      2
+@end group
 @end example
 @opencatbox{Categories:}
 @category{Package orthopoly}
@@ -1259,29 +1384,41 @@ m4_displaymath(
 
 Some examples:
 @c ===beg===
+@c legendre_q(n,x);
 @c legendre_q(0,x);
 @c legendre_q(1,x);
 @c assoc_legendre_q(1,0,x);
 @c ===end===
 @example
-(%i1) legendre_q(0,x);
-                                       x + 1
-                                 log(- -----)
-                                       x - 1
-(%o1)                            ------------
-                                      2
-(%i2) legendre_q(1,x);
-                                    x + 1
-                              log(- -----) x - 2
-                                    x - 1
-(%o2)/R/                      ------------------
-                                      2
-(%i3) assoc_legendre_q(1,0,x);
-                                    x + 1
-                              log(- -----) x - 2
-                                    x - 1
-(%o3)/R/                      ------------------
-                                      2
+@group
+(%i1) legendre_q(n,x);
+(%o1)                         Q (x)
+                               n
+@end group
+@group
+(%i2) legendre_q(0,x);
+                                x + 1
+                          log(- -----)
+                                x - 1
+(%o2)                     ------------
+                               2
+@end group
+@group
+(%i3) legendre_q(1,x);
+                             x + 1
+                       log(- -----) x - 2
+                             x - 1
+(%o3)/R/               ------------------
+                               2
+@end group
+@group
+(%i4) assoc_legendre_q(1,0,x);
+                             x + 1
+                       log(- -----) x - 2
+                             x - 1
+(%o4)/R/               ------------------
+                               2
+@end group
 @end example
 
 @opencatbox{Categories:}
@@ -1486,35 +1623,49 @@ m4_displaymath(
 
 Some examples:
 @c ===beg===
+@c spherical_bessel_j(n,x);
 @c spherical_bessel_j(1,x);
 @c spherical_bessel_j(2,x);
 @c expand(%);
 @c expand(sqrt(%pi/(2*x))*bessel_j(2+1/2,x)),besselexpand:true;
 @c ===end===
 @example
-(%i1) spherical_bessel_j(1,x);
-                                sin(x)
-                                ------ - cos(x)
-                                  x
-(%o1)                           ---------------
-                                       x
-(%i2) spherical_bessel_j(2,x);
-                                3             3 cos(x)
-                        (- (1 - --) sin(x)) - --------
-                                 2               x
+@group
+(%i1) spherical_bessel_j(n,x);
+(%o1)                         j (x)
+                               n
+@end group
+@group
+(%i2) spherical_bessel_j(1,x);
+                         sin(x)
+                         ------ - cos(x)
+                           x
+(%o2)                    ---------------
                                 x
-(%o2)                   ------------------------------
-                                      x
-(%i3) expand(%);
-                          sin(x)    3 sin(x)   3 cos(x)
-(%o3)                  (- ------) + -------- - --------
-                            x           3          2
-                                       x          x
-(%i4) expand(sqrt(%pi/(2*x))*bessel_j(2+1/2,x)),besselexpand:true;
-                          sin(x)    3 sin(x)   3 cos(x)
-(%o4)                  (- ------) + -------- - --------
-                            x           3          2
-                                       x          x
+@end group
+@group
+(%i3) spherical_bessel_j(2,x);
+                         3             3 cos(x)
+                 (- (1 - --) sin(x)) - --------
+                          2               x
+                         x
+(%o3)            ------------------------------
+                               x
+@end group
+@group
+(%i4) expand(%);
+                   sin(x)    3 sin(x)   3 cos(x)
+(%o4)           (- ------) + -------- - --------
+                     x           3          2
+                                x          x
+@end group
+@group
+(%i5) expand(sqrt(%pi/(2*x))*bessel_j(2+1/2,x)),besselexpand:true;
+                   sin(x)    3 sin(x)   3 cos(x)
+(%o5)           (- ------) + -------- - --------
+                     x           3          2
+                                x          x
+@end group
 @end example
 @opencatbox{Categories:}
 @category{Package orthopoly}
@@ -1536,35 +1687,49 @@ m4_displaymath(
 <<<spherical_bessel_y(n,x) = sqrt(%pi/(2*x))*bessel_y(n+1/2,x)>>>)
 
 @c ===beg===
+@c spherical_bessel_y(n,x);
 @c spherical_bessel_y(1,x);
 @c spherical_bessel_y(2,x);
 @c expand(%);
 @c expand(sqrt(%pi/(2*x))*bessel_y(2+1/2,x)),besselexpand:true;
 @c ===end===
 @example
-(%i1) spherical_bessel_y(1,x);
-                                           cos(x)
-                              (- sin(x)) - ------
-                                             x
-(%o1)                         -------------------
-                                       x
-(%i2) spherical_bessel_y(2,x);
-                           3 sin(x)        3
-                           -------- - (1 - --) cos(x)
-                              x             2
-                                           x
-(%o2)                    - --------------------------
-                                       x
-(%i3) expand(%);
-                          3 sin(x)    cos(x)   3 cos(x)
-(%o3)                  (- --------) + ------ - --------
-                              2         x          3
-                             x                    x
-(%i4) expand(sqrt(%pi/(2*x))*bessel_y(2+1/2,x)),besselexpand:true;
-                          3 sin(x)    cos(x)   3 cos(x)
-(%o4)                  (- --------) + ------ - --------
-                              2         x          3
-                             x                    x
+@group
+(%i1) spherical_bessel_y(n,x);
+(%o1)                         y (x)
+                               n
+@end group
+@group
+(%i2) spherical_bessel_y(1,x);
+                                    cos(x)
+                       (- sin(x)) - ------
+                                      x
+(%o2)                  -------------------
+                                x
+@end group
+@group
+(%i3) spherical_bessel_y(2,x);
+                    3 sin(x)        3
+                    -------- - (1 - --) cos(x)
+                       x             2
+                                    x
+(%o3)             - --------------------------
+                                x
+@end group
+@group
+(%i4) expand(%);
+                   3 sin(x)    cos(x)   3 cos(x)
+(%o4)           (- --------) + ------ - --------
+                       2         x          3
+                      x                    x
+@end group
+@group
+(%i5) expand(sqrt(%pi/(2*x))*bessel_y(2+1/2,x)),besselexpand:true;
+                   3 sin(x)    cos(x)   3 cos(x)
+(%o5)           (- --------) + ------ - --------
+                       2         x          3
+                      x                    x
+@end group
 @end example
 @opencatbox{Categories:}
 @category{Package orthopoly}
@@ -1586,9 +1751,20 @@ m4_displaymath(
 <<<h_n^{(1)}(x) = j_n(x) + iy_n(x)>>>,
 <<<spherical_hankel1(n,x) = spherical_bessel_j(n,x) + %i*spherical_bessel_y(n,x)>>>)
 
+@c ===beg===
+@c spherical_hankel1(n,x);
+@c ===end===
+@example
+@group
+(%i1) spherical_hankel1(n,x);
+                              (1)
+(%o1)                        h   (x)
+                              n
+@end group
+@end example
+
 @opencatbox{Categories:}
 @category{Package orthopoly}
-@category{Bessel functions}
 @closecatbox
 
 @end deffn
@@ -1605,6 +1781,18 @@ This is defined by
 m4_displaymath(
 <<<h_n^{(2)}(x) = j_n(x) + iy_n(x)>>>,
 <<<spherical_hankel2(n,x) = spherical_bessel_j(n,x) - %i*spherical_bessel_y(n,x)>>>)
+
+@c ===beg===
+@c spherical_hankel2(n,x);
+@c ===end===
+@example
+@group
+(%i1) spherical_hankel2(n,x);
+                              (2)
+(%o1)                        h   (x)
+                              n
+@end group
+@end example
 
 @opencatbox{Categories:}
 @category{Package orthopoly}
@@ -1641,6 +1829,7 @@ Reference: Merzbacher 9.64.
 
 Some examples:
 @c ===beg===
+@c spherical_harmonic(n,m,theta,phi);
 @c spherical_harmonic(1,0,theta,phi);
 @c spherical_harmonic(1,1,theta,phi);
 @c spherical_harmonic(1,-1,theta,phi);
@@ -1740,22 +1929,35 @@ w(x) &= \left(1-x^2\right)^{\alpha-{1\over 2}} \cr
 
 Some examples:
 @c ===beg===
+@c ultraspherical(n,a,x);
 @c ultraspherical(1,a,x);
 @c factor(%);
 @c factor(ultraspherical(2,a,x));
 @c ===end===
 @example
-(%i1) ultraspherical(1,a,x);
-                                   (2 a + 1) (1 - x)
-(%o1)                     2 a (1 - -----------------)
-                                              1
-                                       2 (a + -)
-                                              2
-(%i2) factor(%);
-(%o2)                                2 a x
-(%i3) factor(ultraspherical(2,a,x));
-                                     2      2
-(%o3)                        a (2 a x  + 2 x  - 1)
+@group
+(%i1) ultraspherical(n,a,x);
+                              (a)
+(%o1)                        C   (x)
+                              n
+@end group
+@group
+(%i2) ultraspherical(1,a,x);
+                            (2 a + 1) (1 - x)
+(%o2)              2 a (1 - -----------------)
+                                       1
+                                2 (a + -)
+                                       2
+@end group
+@group
+(%i3) factor(%);
+(%o3)                         2 a x
+@end group
+@group
+(%i4) factor(ultraspherical(2,a,x));
+                              2      2
+(%o4)                 a (2 a x  + 2 x  - 1)
+@end group
 @end example
 
 @opencatbox{Categories:}
