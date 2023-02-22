@@ -22,7 +22,7 @@
 ;; minfactorial and factcomb stuff
 
 (defmfun $makefact (e)
-  (let ((makef t)) (if (atom e) e (simplify (makefact1 e)))))
+  (let ((*makef* t)) (if (atom e) e (simplify (makefact1 e)))))
 
 (defun makefact1 (e)
   (cond ((atom e) e)
@@ -1359,7 +1359,7 @@
 				 (list '(mtimes) -1 (list '(mexpt) r lo)))
 			   (list '(mexpt) (list '(mplus) r -1) -1))))))))
       (cond ((eq hi '$inf)
-	     (cond (*infsumsimp
+	     (cond (*infsumsimp*
 		    (isum e lo poly-var))
 		   ((setq combin-usum (list e)))))
 	    ((finite-sum e 1 lo hi)))

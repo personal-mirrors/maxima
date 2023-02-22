@@ -37,7 +37,7 @@
 (defun taylim (exp var val *i*)
   (prog (ex)
      (setq ex (catch 'taylor-catch
-		(let ((silent-taylor-flag t))
+		(let ((*silent-taylor-flag* t))
 		  ($taylor exp var (ridofab val) $lhospitallim))))
      (or ex (return (cond ((eq *i* t)
 			   (limit1 exp var val))

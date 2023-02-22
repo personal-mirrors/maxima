@@ -392,7 +392,7 @@
 (defmvar $factlim 100000 ; set to a big integer which will work (not -1)
   "specifies the highest factorial which is automatically expanded.  If
   it is -1 then all integers are expanded.") 
-(defvar makef nil)
+(defvar *makef* nil)
 
 (defmvar $cauchysum nil
   "When multiplying together sums with INF as their upper limit, causes
@@ -432,7 +432,7 @@
   simplification may sometimes be able to produce a closed form."
   :properties ((evflag t)))
 
-(defvar *infsumsimp t)
+(defvar *infsumsimp* t)
 
 (defmvar $cflength 1
   "Controls the number of terms of the continued fraction the function
@@ -444,13 +444,13 @@
 (defmvar $verbose nil
   "When true, 'powerseries' prints progress messages.")
 
-(defvar silent-taylor-flag nil
+(defvar *silent-taylor-flag* nil
   ;; From comment in hayat.lisp
   "If true indicates that errors will be returned via a throw to
   TAY-ERR")
 
 ;; linear operator stuff
-(defparameter *opers-list '(($linear . linearize1)))
+(defparameter *opers-list* '(($linear . linearize1)))
 
 (defparameter  opers (list '$linear))
 

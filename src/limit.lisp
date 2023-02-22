@@ -223,8 +223,8 @@
 		  ;; try gruntz
 		  (if (not ans)
 		      (setq ans (catch 'taylor-catch
-				  (let ((silent-taylor-flag t))
-				    (declare (special silent-taylor-flag))       
+				  (let ((*silent-taylor-flag* t))
+				    (declare (special *silent-taylor-flag*))       
 				    (gruntz1 exp var val)))))
 
 		  ;; try taylor series expansion if simple limit didn't work
@@ -3667,7 +3667,7 @@ ignoring dummy variables and array indices."
         (intl:gettext "gruntz: direction must be 'plus' or 'minus'")))
     (setq ans
           (catch 'taylor-catch
-            (let ((silent-taylor-flag t))
+            (let ((*silent-taylor-flag* t))
               (gruntz1 expr var val dir))))
      (if (or (null ans) (eq ans t))
          (if dir

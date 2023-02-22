@@ -105,7 +105,7 @@ integration / differentiation variable."))
 (defun seriesexpand* (x)
   (let ((*index (gensumindex)) *n *a *m *c
         ($cauchysum t) ($ratsimpexpons t)
-        $ratexpand *infsumsimp *ratexp *trigred *noexpand)
+        $ratexpand *infsumsimp* *ratexp *trigred *noexpand)
     (meval `(($declare) ,*index $integer))
 
     (sp2expand (seriespass1 x))))

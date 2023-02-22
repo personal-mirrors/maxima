@@ -130,7 +130,7 @@
                            (or $numer
                                ($bfloatp ($realpart y))
                                ($bfloatp ($imagpart y))))))
-             (and (not makef) (ratnump y) (equal (caddr y) 2)))
+             (and (not *makef*) (ratnump y) (equal (caddr y) 2)))
          ;; Numerically evaluate for real or complex argument in float or
          ;; bigfloat precision using the Gamma function
 	 (simplify (list '(%gamma) (add 1 y))))
@@ -802,13 +802,13 @@
                            (if (or (fboundp ',fn) (mget ',fn 'mexpr))
                              (let ((e1 (let ($simp) (mfuncall ',fn e))))
                                (if ($mapatom e1) e1 (oper-apply e1 nil)))
-                             (list '(,fn) (let ((*opers-list (cdr *opers-list))) (oper-apply e z)))))
+                             (list '(,fn) (let ((*opers-list* (cdr *opers-list*))) (oper-apply e z)))))
                         `(lambda (e z)
                            (declare (ignore z))
                            (let ((e1 (let ($simp) (mfuncall ',fn e))))
                              (if ($mapatom e1) e1 (oper-apply e1 nil)))))
                       'function)))
-    (push `(,op . ,fn-glue) *opers-list))
+    (push `(,op . ,fn-glue) *opers-list*))
   (mfuncall '$declare op '$feature))
 
 (defun linearize1 (e z)		; z = t means args already simplified.
@@ -887,7 +887,7 @@
 	w)))
 
 (setq opers (cons '$additive opers)
-      *opers-list (cons '($additive . additive) *opers-list))
+      *opers-list* (cons '($additive . additive) *opers-list*))
 
 (defun rem-opers-p (p)
   (cond ((eq (caar opers-list) p)
@@ -904,26 +904,26 @@
          (linearize1 e z))
         ((mplusp (cadr e))
          (addn (mapcar #'(lambda (q)
-                           (let ((opers-list *opers-list))
+                           (let ((opers-list *opers-list*))
                              (oper-apply (list* (car e) q (cddr e)) z)))
                        (cdr (cadr e)))
                z))
         (t (oper-apply e z))))
 
 (setq opers (cons '$multiplicative opers)
-      *opers-list (cons '($multiplicative . multiplicative) *opers-list))
+      *opers-list* (cons '($multiplicative . multiplicative) *opers-list*))
 
 (defun multiplicative (e z)
   (cond ((mtimesp (cadr e))
          (muln (mapcar #'(lambda (q)
-                           (let ((opers-list *opers-list))
+                           (let ((opers-list *opers-list*))
                              (oper-apply (list* (car e) q (cddr e)) z)))
                        (cdr (cadr e)))
                z))
         (t (oper-apply e z))))
 
 (setq opers (cons '$outative opers)
-      *opers-list (cons '($outative . outative) *opers-list))
+      *opers-list* (cons '($outative . outative) *opers-list*))
 
 (defun outative (e z)
   (setq e (cons (car e) (mapcar #'(lambda (q) (simpcheck q z)) (cdr e))))
@@ -954,10 +954,10 @@
 (defprop %limit t opers)
 
 (setq opers (cons '$evenfun opers)
-      *opers-list (cons '($evenfun . evenfun) *opers-list))
+      *opers-list* (cons '($evenfun . evenfun) *opers-list*))
 
 (setq opers (cons '$oddfun opers)
-      *opers-list (cons '($oddfun . oddfun) *opers-list))
+      *opers-list* (cons '($oddfun . oddfun) *opers-list*))
 
 (defun evenfun (e z)
   (if (or (null (cdr e)) (cddr e))
@@ -973,10 +973,10 @@
 	(oper-apply (list (car e) arg) t))))
 
 (setq opers (cons '$commutative opers)
-      *opers-list (cons '($commutative . commutative1) *opers-list))
+      *opers-list* (cons '($commutative . commutative1) *opers-list*))
 
 (setq opers (cons '$symmetric opers)
-      *opers-list (cons '($symmetric . commutative1) *opers-list))
+      *opers-list* (cons '($symmetric . commutative1) *opers-list*))
 
 (defun commutative1 (e z)
   (oper-apply (cons (car e)
@@ -987,7 +987,7 @@
 	      t))
 
 (setq opers (cons '$antisymmetric opers)
-      *opers-list (cons '($antisymmetric . antisym) *opers-list))
+      *opers-list* (cons '($antisymmetric . antisym) *opers-list*))
 
 (defun antisym (e z)
   (when (and $dotscrules (mnctimesp e))
@@ -1021,7 +1021,7 @@
      (go loop)))
 
 (setq opers (cons '$nary opers)
-      *opers-list (cons '($nary . nary1) *opers-list))
+      *opers-list* (cons '($nary . nary1) *opers-list*))
 
 (defun nary1 (e z)
   (oper-apply (nary2 e z) z))
@@ -1043,7 +1043,7 @@
             (cons (car l) ans)))))
 
 (setq opers (cons '$lassociative opers)
-      *opers-list (cons '($lassociative . lassociative) *opers-list))
+      *opers-list* (cons '($lassociative . lassociative) *opers-list*))
 
 (defun lassociative (e z)
   (let*
@@ -1056,7 +1056,7 @@
                ((null ans) newans))))))
 
 (setq opers (cons '$rassociative opers)
-      *opers-list (cons '($rassociative . rassociative) *opers-list))
+      *opers-list* (cons '($rassociative . rassociative) *opers-list*))
 
 (defun rassociative (e z)
   (let*

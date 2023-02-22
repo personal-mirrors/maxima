@@ -2928,7 +2928,7 @@
 	     (if zerocheck?
 		 (tay-depth-err)
 	         (progn
-		   (unless silent-taylor-flag (zero-warn exp))
+		   (unless *silent-taylor-flag* (zero-warn exp))
 		   (rczero))))
 	  (declare (fixnum i))
 	  (cond ((and (rczerop (setq psexp (if zerocheck?
@@ -3209,7 +3209,7 @@
 ;;;		 subtitle error handling
 
 (defun tay-error (msg exp)
-  (if silent-taylor-flag (throw 'taylor-catch ())
+  (if *silent-taylor-flag* (throw 'taylor-catch ())
       (if exp
 	  (merror "taylor: ~A~%~M" msg exp)
 	  (merror "taylor: ~A" msg))))

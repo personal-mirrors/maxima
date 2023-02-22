@@ -501,7 +501,7 @@
               ;; Look, if we have a bag as argument to the function.
               (distribute-over x)))
 	((get (caar x) 'opers)
-	 (let ((opers-list *opers-list)) (oper-apply x y)))
+	 (let ((opers-list *opers-list*)) (oper-apply x y)))
 	((and (eq (caar x) 'mqapply)
 	      (or (atom (cadr x))
 		  (and (eq substp 'mqapply)
