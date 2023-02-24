@@ -2,6 +2,8 @@
 @menu
 * Introduction to Polynomials::  
 * Functions and Variables for Polynomials::  
+* Introduction to Algebraic Extensions::
+* Functions and Variables for Algebraic Extensions::
 @end menu
 
 @c -----------------------------------------------------------------------------
@@ -2957,3 +2959,175 @@ Removes @code{tellrat} properties from @var{x_1}, @dots{}, @var{x_n}.
 @closecatbox
 @end deffn
 
+@node Introduction to Algebraic Extensions, Functions and Variables for Algebraic Extensions, Functions and Variables for Polynomials
+@section Introduction to Algebraic Extensions
+We assume here that the fields are of characteristic 0 so that
+irreductible polynomials have simple roots (are separable, thus square
+free). The base fields K of interest are the field Q of rational
+numbers, for algebraic numbers, and the fields of rational functions on
+the real numbers R or the complex numbers C, that is R(t) or C(t), when
+considering algebraic functions. An extension of degree n is defined by
+an irreducible degree n polynomial P(x) with coefficients in the base
+field, and consists of the quotient of the ring K[x] of polynomials by
+the multiples of P(x). So if P(x)=x^n+p0*x^(n-1)+...+pn, each time one
+encounters x^n one substitutes -(p0*x^(n-1)+...+pn). This is a field
+because of Bezout's identity, and a vector space of dimension n over K
+spanned by 1,x,...,x^(n-1).  When K=C(t), this field can be identified
+to the field of algebraic functions on the algebraic curve of equation
+P(x,t)=0.
+
+In Maxima the process of taking rationals modulo P is obtained by the
+function tellrat when @code{algebraic} is true. The best way to ensure,
+in particular when considering the case where P depends on other
+variables that this simplification property is attached to x is to write
+(note the polynomial must be monic):
+@code{tellrat(x^n=-(p0*x^(n-1)+...+pn))} where the pi may depend on
+other variables. When one wants to remove this tellrat property one then
+has to write @code{untellrat(x)}.
+
+
+In the field K[x] one may do all sorts of algebraic computations, taking
+quotients, gcd of 2 elements, etc. by the same algorithms as in the
+usual case.  In particular one can do factorization of polynomials on an
+extension, using the function @code{algfac} below.  Moreover
+multiplication by an element f is a linear operation of the vector space
+K[x] over K and as such has a trace and a determinant. These are called
+@code{algtrace} and @code{algnorm} below. One can see that the trace of
+an element f(x) in K[x] is the sum of the values f(a) when a runs over
+roots of P and the norm is the product of the f(a). Both are symmetric
+in the roots of P and thus belong to K.
+
+
+The field K[x] is also called the field obtained by adjoining a root a
+of P(x) to K. One can similarly adjoin a second root b of another
+polynomial obtaining a new extension K[a,b]. In fact there is a ``prime
+element'' c in K[a,b] such that K[a,b]=K[c]. This is obtained by
+function @code{primeelmt} below. Recursively one can thus adjoin any
+number of elements.  In particular adjoining all the roots of P(x) to K
+one gets the splitting field of P, which is the smallest extension in
+which P completely splits in linear functions. The function
+@code{splitfield} constructs a primitive element of the splitting field,
+which in general is of very high degree.
+
+The relevant concepts are explained in a concise and self-contained way in the
+small books edited by Dover:
+Algebraic theory of numbers by Pierre Samuel
+Algebraic curves by  Robert Walker.
+and the methods presented here are described in the article
+``Algebraic factoring and rational function integration'' by B. Trager
+Proceedings of the 1976 AMS symposium on symbolic and algebraic computation.
+
+@node  Functions and Variables for Algebraic Extensions,  , Introduction to Algebraic Extensions
+@section Functions and Variables for Algebraic Extensions
+
+@anchor{algfac}
+@deffn {Function} algfac(@var{f},@var{p})
+
+Returns the factorization of f in the field K[a]. Does the same
+as @code{factor(f,p)} which in fact calls algfac. One can also
+specify the variable @var{a} as in @code{algfac(f,p,a)}.
+
+@example
+(%i1) algfac(x^4+1,a^2-2);
+                           2              2
+(%o1)                    (x  - a x + 1) (x  + a x + 1)
+(%i2) algfac(x^4-t*x^2+1,a^2-t-2,a);
+                           2              2
+(%o2)                    (x  - a x + 1) (x  + a x + 1)
+@end example
+
+In the second example note that @code{a=sqrt(2+t)}.
+@end deffn
+
+@anchor{algnorm}
+@deffn {Function} algnorm(@var{f},@var{p},@var{a})
+Returns the norm of the polynomial @code{f(a)} in the extension
+obtained by a root @var{a} of polynomial @var{p}. The coefficients of
+@var{f} may depend on other variables.
+
+@example
+(%i1) algnorm(x*a^2+y*a+z,a^2-2,a);
+                            2              2      2
+(%o1)/R/                   z  + 4 x z - 2 y  + 4 x
+@end example
+
+The norm is also the resultant of polynomials f and p, and the product
+of the differences of the roots of f and p.
+@end deffn
+
+
+@anchor{algtrace}
+@deffn {Function} algtrace(@var{f},@var{p},@var{a})
+Returns the trace of the polynomial @code{f(a)} in the extension
+obtained by a root @var{a} of polynomial @var{p}. The coefficients of
+@var{f} may depend on other variables which remain ``inert''.
+
+@example
+(%i1) algtrace(x*a^5+y*a^3+z+1,a^2+a+1,a);
+(%o1)/R/                       2 z + 2 y - x + 2
+@end example
+@end deffn
+
+@anchor{bdiscr}
+@deffn {Function} bdiscr(@var{args})
+Computes the discriminant of a basis @code{x_i} in @code{K[a]} as
+the determinant of the matrix of elements @code{trace(x_i*x_j)}.
+
+@example
+
+@end example
+
+This is mainly of interest in lagebraic number theory.
+
+@end deffn
+
+
+@anchor{primelmt}
+@deffn {Function} primelmt(@var{f},@var{p})
+Computes a prime element for the extension of @code{K[a]} by a root
+@var{b} of a polynomial @code{f(x)} whose coefficients may depend on
+@var{a}. One assumes that @var{f} is square free. The function returns
+an irreductible polynomial, a root of which generates @code{K[a,b]}, and
+the expression of this primitive element in terms of @var{a} and
+@var{b}
+
+@example
+
+@end example
+@end deffn
+
+@anchor{splitfield}
+@deffn {Function} splitfield(@var{p},@var{x})
+Computes the splitting field of the polynomial @code{p(x)}.
+In the generic case it is of degree @code{n!} in terms of the degree
+of @var{p}, but may be of lower order if the Galois group of @var{p}
+is a strict subgroup of the group of permutations of @var{n}
+elements. The function returns a primitive polynomial for this extension
+and the expressions of the roots of @var{p} as polynomials of a root
+of this primitive polynomial. The polynomial @var{f} may be
+irreducible or factorizable.
+
+@example
+(%i1) splitfield(x^3+x+1,x);
+                                              4         2
+              6         4         2       alg1  + 5 alg1  - 9 alg1 + 4
+(%o1)/R/ [alg1  + 6 alg1  + 9 alg1  + 31, ----------------------------, 
+                                                       18
+                                 4         2          4         2
+                             alg1  + 5 alg1  + 4  alg1  + 5 alg1  + 9 alg1 + 4
+                           - -------------------, ----------------------------]
+                                      9                        18
+(%i2) splitfield(x^4+10*x^2-96*x-71,x)[1];
+             8           6           5            4             3
+(%o2)/R/ alg2  + 148 alg2  - 576 alg2  + 9814 alg2  - 42624 alg2
+                                                    2
+                                       + 502260 alg2  + 1109952 alg2 + 18860337
+@end example
+
+In the first case we have the primitive polynomial of degree 6 and the 3 roots
+of the third degree equations in terms of a variable @var{alg1} produced by
+the system. In the second case the primitive polynomial is of degree 8
+instead of 24, because the Galois group of the equation is reduced to D8
+since there are relations between the roots.
+
+@end deffn
