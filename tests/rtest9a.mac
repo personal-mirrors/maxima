@@ -524,3 +524,186 @@ print_string_2d (-((a + b)/c));
 
 string (-((a + b)/c));
 "-((b+a)/c)";
+
+/* following tests are to verify calculated height and depth of expressions
+ * (i.e., how many lines at or above baseline, and how many below baseline,
+ * respectively).
+ */
+
+/* verify that repeated subscripts are displayed correctly */
+
+printf (false, "~m", foo[bar][baz]);
+"(foo   )
+    bar baz
+";
+
+printf (false, "~m", '(arraymake (foo[bar][baz], [quux])));
+"arraymake((foo   )   , [quux])
+              bar baz
+";
+
+printf (false, "~m", foo[bar][baz][quux]);
+"((foo   )   )
+     bar baz quux
+";
+
+printf (false, "~m", foo[bar, baz][111, 222]);
+"(foo        )
+    bar, baz 111, 222
+";
+
+/* make it easier to draw boxes in input,
+ * avoiding need to escape double quotes
+ */
+boxchar: "'";
+"'";
+
+printf (false, "~m", box (foo[bar][baz]));
+"'''''''''''''
+'(foo   )   '
+'    bar baz'
+'''''''''''''
+";
+
+printf (false, "~m", box ('(arraymake (foo[bar][baz], [quux]))));
+"''''''''''''''''''''''''''''''''
+'arraymake((foo   )   , [quux])'
+'              bar baz         '
+''''''''''''''''''''''''''''''''
+";
+
+printf (false, "~m", box (foo[bar][baz][quux]));
+"'''''''''''''''''''
+'((foo   )   )    '
+'     bar baz quux'
+'''''''''''''''''''
+";
+
+printf (false, "~m", box (foo[bar, baz][111, 222]));
+"'''''''''''''''''''''''
+'(foo        )        '
+'    bar, baz 111, 222'
+'''''''''''''''''''''''
+";
+
+/* verify that 'diff(...) is displayed correctly */
+
+printf (false, "~m", 'diff(f,x[1],1,x[2],1,x[3],1));
+"     3
+    d f
+-----------
+dx  dx  dx
+  1   2   3
+";
+
+printf (false, "~m", box ('diff(f,x[1],1,x[2],1,x[3],1)));
+"'''''''''''''
+'     3     '
+'    d f    '
+'-----------'
+'dx  dx  dx '
+'  1   2   3'
+'''''''''''''
+";
+
+/* verify that quad_qags expression is printed correctly */
+
+printf (false, "~m", '(quad_qags (w^2 * quad_qags (1/(s - w), s, 1, 5) [1], w, -5, -1) [1]));
+"                      1               2
+quad_qags(quad_qags(-----, s, 1, 5)  w , w, - 5, - 1)
+                    s - w          1                 1
+";
+
+printf (false, "~m", box ('(quad_qags (w^2 * quad_qags (1/(s - w), s, 1, 5) [1], w, -5, -1) [1])));
+"''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'                      1               2               '
+'quad_qags(quad_qags(-----, s, 1, 5)  w , w, - 5, - 1) '
+'                    s - w          1                 1'
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+";
+
+/* verify that expression with long numbers is printed correctly */
+
+fpprec: 80;
+80;
+
+block ([linel: 79, simp: false], printf (false, "~m", '(closeto(generalized_lambert_w(-1,bfloat(-1/%e)+1b-30), - 1.000000000000002331643981597126015551421701533827747686376229738168073845444881159b0, 1.0b-64))));
+"                                          - 1
+closeto(generalized_lambert_w(- 1, bfloat(---) + 1.0b-30), - 1.000000000000002\\
+                                          %e
+3316439815971260155514217015338277476863762297381680738454448812b0, 1.0b-64)
+";
+
+/* next test fails with error from display code, "failed to break up a long expression."
+ * with linel = 65; I find it succeeds with linel = 79.
+ * Not testing that error in these tests, so just work around it.
+ * See: https://sourceforge.net/p/maxima/bugs/803/
+ */
+linel: 79;
+79;
+
+block ([linel: 79, simp: false], printf (false, "~m", '(closeto(generalized_lambert_w(1,-754.0b0/2048),
+ -3.088042730569348561456014556706168490039090862315553536854637271843252771228714625b0
+  +7.461585404728464111653134458076750679263104524925586270112477441975032123188737473b0*%i,
+   1.0b-77))));
+"                                 - 7.54b2
+closeto(generalized_lambert_w(1, --------), - 3.088042730569348561456014556706\\
+                                   2048
+1684900390908623155535368546372718432527712287146b0 + 7.4615854047284641116531\\
+344580767506792631045249255862701124774419750321231887375b0 %i, 1.0b-77)
+";
+
+(reset (fpprec, linel), 0);
+0;
+
+/* verify that repeated subscript expression is printed correctly */
+
+printf (false, "~m", '(l[2][1] : 789, listarray (bb)));
+"((l )  : 789, listarray(bb))
+   2 1
+";
+
+printf (false, "~m", '(h1[mumble][3] : 333, listarray (aa)));
+"((h1      )  : 333, listarray(aa))
+    mumble 3
+";
+
+printf (false, "~m", '(h2[blurf][2] : 555, listarray (bb)));
+"((h2     )  : 555, listarray(bb))
+    blurf 2
+";
+
+printf (false, "~m", box ('(l[2][1] : 789, listarray (bb))));
+"''''''''''''''''''''''''''''''
+'((l )  : 789, listarray(bb))'
+'   2 1                      '
+''''''''''''''''''''''''''''''
+";
+
+printf (false, "~m", box ('(h1[mumble][3] : 333, listarray (aa))));
+"''''''''''''''''''''''''''''''''''''
+'((h1      )  : 333, listarray(aa))'
+'    mumble 3                      '
+''''''''''''''''''''''''''''''''''''
+";
+
+printf (false, "~m", box ('(h2[blurf][2] : 555, listarray (bb))));
+"'''''''''''''''''''''''''''''''''''
+'((h2     )  : 555, listarray(bb))'
+'    blurf 2                      '
+'''''''''''''''''''''''''''''''''''
+";
+
+/* verify that result with long integers is printed correctly */
+
+block ([linel: 65], printf (false, "~m", 
+[8796519617,x^8+3*x^6+x+1,x+9,
+        35849822058178726610670969179311817327626124038937602048832281182665519944803841,
+        35849822058178726610670969179311817327626124038937602048832281182665519944803840]));
+"              8      6
+[8796519617, x  + 3 x  + x + 1, x + 9, 3584982205817872661067096\\
+9179311817327626124038937602048832281182665519944803841, 3584982\\
+2058178726610670969179311817327626124038937602048832281182665519\\
+944803840]
+";
+

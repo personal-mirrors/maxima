@@ -1356,12 +1356,65 @@
 ;; Block mode i/o isn't needed since PRINC is used instead of WRITE-CHAR and
 ;; CURSORPOS.
 
+(defun remove-characters (e)
+  (let* ((non-chars (remove-if #'characterp e)))
+    (mapcar (lambda (e1) (if (consp e1) (remove-characters e1) e1)) non-chars)))
+
+(defun signs-to-ys (e)
+  ;; I suppose there's a better way to do this.
+  (if (and (consp e) (member (car e) '(d-hbar d-vbar d-integralsign d-prodsign d-sumsign d-matrix d-box)))
+    (cond
+      ((eq (car e) 'd-hbar) (list nil 0))
+      ((eq (car e) 'd-vbar) (list (list nil (1- (second e))) (list nil (- (third e)))))
+      ((eq (car e) 'd-integralsign) (list (list nil 2) (list nil -2)))
+      ((eq (car e) 'd-prodsign) (list (list nil 2) (list nil -1)))
+      ((eq (car e) 'd-sumsign) (list (list nil 2) (list nil -2)))
+      ((eq (car e) 'd-matrix) (list (list nil (1- (third e))) (list nil (- (fourth e)))))
+      ((eq (car e) 'd-box) (list (list nil (second e)) (list nil (- (1+ (third e)))))))
+    (if (consp e)
+      (mapcar #'signs-to-ys e)
+      e)))
+
+(defun remove-x (e)
+  (when e
+    (if (atom (first e))
+      (cons (second e) (mapcar #'remove-x (cddr e)))
+      (mapcar #'remove-x e))))
+
+(defun cumulative-y (e partial-sum)
+  (if e
+    (if (atom (car e))
+      (let ((y-so-far (+ partial-sum (car e))))
+        (cons y-so-far (mapcar (lambda (e1) (if (integerp e1) (+ y-so-far e1) (cumulative-y e1 y-so-far))) (cdr e))))
+      (mapcar (lambda (e1) (cumulative-y e1 partial-sum)) e))
+    (list partial-sum)))
+
+(defun min-recursive (e)
+  (if e (apply #'min (mapcar (lambda (e1) (if (atom e1) e1 (min-recursive e1))) e)) 0))
+
+(defun max-recursive (e)
+  (if e (apply #'max (mapcar (lambda (e1) (if (atom e1) e1 (max-recursive e1))) e)) 0))
+
+(defun extract-height-depth (result)
+  (if result
+    (let*
+      ((foo (remove-characters result))
+       (quux (signs-to-ys foo))
+       (bar (remove-x quux))
+       ;; Ensure BAR always has 0 as a starting point; in some cases that's lacking.
+       (baz (cumulative-y (cons '(0) bar) 0)))
+      ;; Add 1 to calculated height to make it match observed BKPTHT.
+      (values (1+ (max-recursive baz)) (- (min-recursive baz))))
+    (values 1 0)))
+
 (defun output-linear (result w)
-  (draw-linear result bkptdp w)
-  (do ((i (1- (+ bkptht bkptdp)) (1- i)))
+  (multiple-value-bind (my-bkptht my-bkptdp) (extract-height-depth result)
+    (setq bkptht my-bkptht bkptdp my-bkptdp)
+    (draw-linear result my-bkptdp w)
+    (do ((i (1- (+ my-bkptht my-bkptdp)) (1- i)))
       ((< i 0))
-    (cond ((null (aref linearray i)))
-	  (t (output-linear-one-line i)))))
+      (cond ((null (aref linearray i)))
+            (t (output-linear-one-line i))))))
 
 (defun output-linear-one-line (i)
   (prog (line (n 0))
