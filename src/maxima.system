@@ -790,6 +790,7 @@
 	    :components
 	    ((:file "autol")
 	     (:file "max_ext")
+	     (:file "global-var-init")
 	     ;; If a file is declared as private-file it is loaded
 	     ;; from the build tree (which makes an out-of-tree
 	     ;; build possible), but not compiled (which means
